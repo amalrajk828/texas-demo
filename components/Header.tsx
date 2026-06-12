@@ -28,14 +28,15 @@ const NAV: NavItem[] = [
     label: "Industries",
     href: "/industries/",
     children: [
-      { label: "Oil & Gas", href: "/industries/oil-gas/" },
-      { label: "Refinery", href: "/industries/refinery/" },
-      { label: "Petrochemicals", href: "/industries/petrochemicals/" },
-      { label: "LNG", href: "/industries/lng/" },
-      { label: "Power Plant", href: "/industries/power-plant/" },
-      { label: "Water Treatment", href: "/industries/water-treatment/" },
-      { label: "Cement", href: "/industries/cement/" },
-      { label: "Metal & Steel", href: "/industries/metal-steel/" },
+      { label: "Oil & Gas",        href: "/industries/oil-gas/" },
+      { label: "Refinery",         href: "/industries/refinery/" },
+      { label: "Petrochemicals",   href: "/industries/petrochemicals/" },
+      { label: "LNG",              href: "/industries/lng/" },
+      { label: "Power Plant",      href: "/industries/power-plant/" },
+      { label: "Water Treatment",  href: "/industries/water-treatment/" },
+      { label: "Cement",           href: "/industries/cement/" },
+      { label: "Metal & Steel",    href: "/industries/metal-steel/" },
+      { label: "View all industries →", href: "/industries/", highlight: true },
     ],
   },
   {
@@ -139,19 +140,30 @@ export default function Header() {
                       {open === item.label && (
                         <div className="absolute top-full left-1/2 -translate-x-1/2 mt-1.5 w-72 bg-[#12163A] border border-white/10 rounded-xl shadow-2xl shadow-black/50 overflow-hidden">
                           <div className="p-1.5">
-                            {item.children.map((child) => (
-                              <Link
-                                key={child.href}
-                                href={child.href}
-                                className={`block px-3 py-2 text-[12px] rounded-lg transition-colors ${
-                                  child.highlight
-                                    ? "text-[#e7212b] font-medium hover:bg-[#e7212b]/10"
-                                    : "text-white/60 hover:text-white hover:bg-white/5"
-                                }`}
-                              >
-                                {child.label}
-                              </Link>
-                            ))}
+                            {item.children.map((child) => {
+                              const childActive =
+                                !child.highlight &&
+                                (pathname === child.href ||
+                                  pathname.startsWith(child.href.replace(/\/$/, "") + "/"));
+                              return (
+                                <Link
+                                  key={child.href}
+                                  href={child.href}
+                                  className={`flex items-center gap-2 px-3 py-2 text-[12px] rounded-lg transition-colors ${
+                                    child.highlight
+                                      ? "text-[#e7212b] font-medium hover:bg-[#e7212b]/10"
+                                      : childActive
+                                      ? "text-white bg-white/8 font-medium"
+                                      : "text-white/60 hover:text-white hover:bg-white/5"
+                                  }`}
+                                >
+                                  {childActive && (
+                                    <span className="w-1 h-1 rounded-full bg-[#e7212b] shrink-0" />
+                                  )}
+                                  {child.label}
+                                </Link>
+                              );
+                            })}
                           </div>
                         </div>
                       )}
@@ -229,17 +241,30 @@ export default function Header() {
                 </div>
                 {item.children && mobileExpanded === item.label && (
                   <div className="ml-4 border-l border-white/10 pl-3 pb-1 space-y-0.5">
-                    {item.children.map((child) => (
-                      <Link
-                        key={child.href}
-                        href={child.href}
-                        className={`block px-2 py-1.5 text-[11px] rounded ${
-                          child.highlight ? "text-[#e7212b]" : "text-white/40 hover:text-white/70"
-                        }`}
-                      >
-                        {child.label}
-                      </Link>
-                    ))}
+                    {item.children.map((child) => {
+                      const childActive =
+                        !child.highlight &&
+                        (pathname === child.href ||
+                          pathname.startsWith(child.href.replace(/\/$/, "") + "/"));
+                      return (
+                        <Link
+                          key={child.href}
+                          href={child.href}
+                          className={`flex items-center gap-2 px-2 py-1.5 text-[11px] rounded ${
+                            child.highlight
+                              ? "text-[#e7212b]"
+                              : childActive
+                              ? "text-white font-medium"
+                              : "text-white/40 hover:text-white/70"
+                          }`}
+                        >
+                          {childActive && (
+                            <span className="w-1 h-1 rounded-full bg-[#e7212b] shrink-0" />
+                          )}
+                          {child.label}
+                        </Link>
+                      );
+                    })}
                   </div>
                 )}
               </div>
