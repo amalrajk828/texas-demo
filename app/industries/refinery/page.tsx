@@ -109,7 +109,7 @@ const products = [
     category: "Gas Analyzer",
     name: "Gas Analyzers",
     slug: "gas-analyzers",
-    image: "/gas_analyzers.png",
+    image: "/gas_analyzer.png",
     brand: "SICK",
     desc: "In-situ and extractive gas analyzers for refinery process streams — measuring H₂S, CO, SO₂, NOₓ, O₂ and combustibles for process optimisation, safety, and environmental compliance.",
   },

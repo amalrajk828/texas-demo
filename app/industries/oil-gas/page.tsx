@@ -109,7 +109,7 @@ const products = [
     category: "Gas Analyzer",
     name: "Gas Analyzers",
     slug: "gas-analyzers",
-    image: "/gas_analyzers.png",
+    image: "/gas_analyzer.png",
     brand: "SICK",
     desc: "A diverse selection of gas analyzers using powerful in-situ and extractive measurement principles — versatile enough to equip entire facilities and tackle complex measurement tasks.",
   },
