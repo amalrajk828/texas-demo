@@ -58,18 +58,18 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
 }
 
 const categoryColors: Record<string, string> = {
-  "CEMS":               "bg-emerald-500/20 text-emerald-300 border-emerald-500/30",
-  "Metering Skid":      "bg-blue-500/20 text-blue-300 border-blue-500/30",
-  "Flow Meter":         "bg-amber-500/20 text-amber-300 border-amber-500/30",
-  "Flow Metering":      "bg-amber-500/20 text-amber-300 border-amber-500/30",
-  "Flow Computer":      "bg-purple-500/20 text-purple-300 border-purple-500/30",
-  "Gas Analyzer":       "bg-rose-500/20 text-rose-300 border-rose-500/30",
+  "CEMS": "bg-emerald-500/20 text-emerald-300 border-emerald-500/30",
+  "Metering Skid": "bg-blue-500/20 text-blue-300 border-blue-500/30",
+  "Flow Meter": "bg-amber-500/20 text-amber-300 border-amber-500/30",
+  "Flow Metering": "bg-amber-500/20 text-amber-300 border-amber-500/30",
+  "Flow Computer": "bg-purple-500/20 text-purple-300 border-purple-500/30",
+  "Gas Analyzer": "bg-rose-500/20 text-rose-300 border-rose-500/30",
   "Industrial Sensors": "bg-orange-500/20 text-orange-300 border-orange-500/30",
-  "PLC":                "bg-blue-500/20 text-blue-300 border-blue-500/30",
-  "ICONICS":            "bg-purple-500/20 text-purple-300 border-purple-500/30",
-  "GOT":                "bg-teal-500/20 text-teal-300 border-teal-500/30",
+  "PLC": "bg-blue-500/20 text-blue-300 border-blue-500/30",
+  "ICONICS": "bg-purple-500/20 text-purple-300 border-purple-500/30",
+  "GOT": "bg-teal-500/20 text-teal-300 border-teal-500/30",
   "Frequency Inverters (VFD)": "bg-amber-500/20 text-amber-300 border-amber-500/30",
-  "AC Servos":          "bg-rose-500/20 text-rose-300 border-rose-500/30",
+  "AC Servos": "bg-rose-500/20 text-rose-300 border-rose-500/30",
 };
 
 function BulletList({ section }: { section: BulletSection }) {
@@ -218,9 +218,8 @@ export default async function ProductPage({ params }: Props) {
           <div className="max-w-3xl">
             <div className="flex flex-wrap items-center gap-2 mb-5">
               <span
-                className={`text-[9px] font-medium tracking-[1.5px] uppercase px-2.5 py-1 rounded-full border ${
-                  categoryColors[product.category] ?? "bg-white/10 text-white/60 border-white/15"
-                }`}
+                className={`text-[9px] font-medium tracking-[1.5px] uppercase px-2.5 py-1 rounded-full border ${categoryColors[product.category] ?? "bg-white/10 text-white/60 border-white/15"
+                  }`}
               >
                 {product.category}
               </span>
