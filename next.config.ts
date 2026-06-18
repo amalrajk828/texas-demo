@@ -5,8 +5,10 @@ const nextConfig: NextConfig = {
   images: {
     remotePatterns: [
       { protocol: "https", hostname: "texastechserv.com", pathname: "/wp-content/**" },
+      { protocol: "https", hostname: "emea.mitsubishielectric.com" },
     ],
     formats: ["image/avif", "image/webp"],
+    unoptimized: true,
   },
   async headers() {
     return [

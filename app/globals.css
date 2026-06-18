@@ -154,7 +154,7 @@
     color: #333;
     -webkit-font-smoothing: antialiased;
   }
-  html {
+  [data-scroll-behavior="smooth"] {
     scroll-behavior: smooth;
   }
   h1, h2, h3, h4 {
