@@ -23,12 +23,13 @@ const nextConfig: NextConfig = {
       // Fix old wrong PLC slug
       { source: '/portfolio/melsec-iq-r', destination: '/portfolio/melsec-iq-r-series',         permanent: true },
       // Nested product URLs → /portfolio/[slug]
-      { source: '/products/sensors/:slug([\\w-]+)',                destination: '/portfolio/:slug', permanent: true },
-      { source: '/products/plc/:slug([\\w-]+)',                    destination: '/portfolio/:slug', permanent: true },
-      { source: '/products/iconics/:slug([\\w-]+)',                destination: '/portfolio/:slug', permanent: true },
-      { source: '/products/got/:slug([\\w-]+)',                    destination: '/portfolio/:slug', permanent: true },
-      { source: '/products/frequency-inverter-vfd/:slug([\\w-]+)', destination: '/portfolio/:slug', permanent: true },
-      { source: '/products/acservos/:slug([\\w-]+)',               destination: '/portfolio/:slug', permanent: true },
+      // Use :slug+ NOT :slug* so listing pages are NOT caught
+      { source: '/products/sensors/:slug+',                destination: '/portfolio/:slug', permanent: true },
+      { source: '/products/plc/:slug+',                    destination: '/portfolio/:slug', permanent: true },
+      { source: '/products/iconics/:slug+',                destination: '/portfolio/:slug', permanent: true },
+      { source: '/products/got/:slug+',                    destination: '/portfolio/:slug', permanent: true },
+      { source: '/products/frequency-inverter-vfd/:slug+', destination: '/portfolio/:slug', permanent: true },
+      { source: '/products/acservos/:slug+',               destination: '/portfolio/:slug', permanent: true },
     ]
   },
 };
