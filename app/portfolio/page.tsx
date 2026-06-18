@@ -42,20 +42,20 @@ export const portfolioProducts: PortfolioProduct[] = [
   { slug: "melsec-iq-r", name: "MELSEC iQ-R Series", category: "PLC", image: "/images/plc/MELSEC-iQ-R-Series.png" },
 
   // ── Industrial Sensors ────────────────────────────
-  { slug: "radar-sensors",       name: "Radar Sensors",         category: "Sensors", image: "/images/sensors/Radar Sensors.png" },
-  { slug: "photoelectric-sensors", name: "Photoelectric Sensors", category: "Sensors", image: "/images/sensors/Photoelectric Sensors.png" },
-  { slug: "safety-light-curtains", name: "Safety Light Curtains", category: "Sensors", image: "/images/sensors/4.-SAFETY-LIGHT-CURTAIN.png" },
-  { slug: "fiber-optic-sensors",   name: "Fiber-Optic Sensors",   category: "Sensors", image: "/images/sensors/FIBER-OPTICAL-SENSOR.png" },
+  { slug: "radar-sensors",       name: "Radar Sensors",         category: "Industrial Sensors", image: "/images/sensors/Radar Sensors.png" },
+  { slug: "photoelectric-sensors", name: "Photoelectric Sensors", category: "Industrial Sensors", image: "/images/sensors/Photoelectric Sensors.png" },
+  { slug: "safety-light-curtains", name: "Safety Light Curtains", category: "Industrial Sensors", image: "/images/sensors/4.-SAFETY-LIGHT-CURTAIN.png" },
+  { slug: "fiber-optic-sensors",   name: "Fiber-Optic Sensors",   category: "Industrial Sensors", image: "/images/sensors/FIBER-OPTICAL-SENSOR.png" },
 ];
 
-const categories = ["All", "Sensors", "PLC", "ICONICS", "GOT", "VFD", "AC Servos"];
+const categories = ["All", "Industrial Sensors", "PLC", "ICONICS", "GOT", "VFD", "AC Servos"];
 
 export default function PortfolioPage() {
   const [selectedCategory, setSelectedCategory] = useState("All");
 
   const filteredProducts = selectedCategory === "All"
     ? portfolioProducts
-    : portfolioProducts.filter((p) => p.category.toLowerCase() === selectedCategory.toLowerCase() || (selectedCategory === "Sensors" && p.category === "Sensors"));
+    : portfolioProducts.filter((p) => p.category.toLowerCase() === selectedCategory.toLowerCase() || (selectedCategory === "Industrial Sensors" && p.category === "Industrial Sensors"));
 
   // Helper to group products by category
   const groupedProducts = filteredProducts.reduce((acc, product) => {
@@ -67,7 +67,7 @@ export default function PortfolioPage() {
   }, {} as Record<string, PortfolioProduct[]>);
 
   // Define category sorting order for consistent layout
-  const orderedCategories = ["Sensors", "PLC", "ICONICS", "GOT", "VFD", "AC Servos"].filter(
+  const orderedCategories = ["Industrial Sensors", "PLC", "ICONICS", "GOT", "VFD", "AC Servos"].filter(
     (cat) => groupedProducts[cat] && groupedProducts[cat].length > 0
   );
 

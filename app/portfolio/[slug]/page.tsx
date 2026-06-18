@@ -10,7 +10,7 @@ import RelatedProducts from "@/components/RelatedProducts";
 type Params = Promise<{ slug: string }>;
 
 const categorySlugMap: Record<string, string> = {
-  "Sensors": "sensors",
+  "Industrial Sensors": "sensors",
   "PLC": "plc",
   "ICONICS": "iconics",
   "GOT": "got",
@@ -19,7 +19,7 @@ const categorySlugMap: Record<string, string> = {
 };
 
 const tagMap: Record<string, string> = {
-  "Sensors": "SICK Industrial Sensors",
+  "Industrial Sensors": "SICK Industrial Sensors",
   "PLC": "Mitsubishi Electric PLC",
   "ICONICS": "Mitsubishi Electric HMI / SCADA",
   "GOT": "Mitsubishi Electric HMI",

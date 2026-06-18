@@ -45,7 +45,7 @@ const NAV: NavItem[] = [
       { label: "Flow Meters", href: "/products/flow-meters/" },
       { label: "Analyzers", href: "/products/analyzers/" },
       { label: "Industrial Automation", href: "/products/industrial-automation/" },
-      { label: "Sensors", href: "/products/sensors/" },
+      { label: "Industrial Sensors", href: "/products/sensors/" },
       { label: "PLC", href: "/products/plc" },
       { label: "ICONICS", href: "/products/iconics" },
       { label: "GOT (Graphic Operator Panels)", href: "/products/got" },

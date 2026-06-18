@@ -26,7 +26,7 @@ export default function ProductCard({
   const targetCategory = product.category || category || "";
 
   const tagMap: Record<string, string> = {
-    "Sensors": "SICK Industrial Sensors",
+    "Industrial Sensors": "SICK Industrial Sensors",
     "PLC": "Mitsubishi Electric PLC",
     "ICONICS": "Mitsubishi Electric HMI / SCADA",
     "GOT": "Mitsubishi Electric HMI",

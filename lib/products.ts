@@ -1,7 +1,7 @@
 export type Product = {
   slug: string;
   name: string;
-  category: "Sensors" | "PLC" | "ICONICS" | "GOT" | "VFD" | "AC Servos";
+  category: "Industrial Sensors" | "PLC" | "ICONICS" | "GOT" | "VFD" | "AC Servos";
   parentPath: string;
   image?: string;
   description?: string;
@@ -19,7 +19,7 @@ export const products: Product[] = [
   {
     slug: "radar-sensors",
     name: "Radar Sensors",
-    category: "Sensors",
+    category: "Industrial Sensors",
     parentPath: "/products/sensors/",
     image: "/images/sensors/Radar Sensors.png",
     description: "Radar sensors in the SICK portfolio are commonly used in ports and industrial mining sites to prevent collisions, especially in adverse weather conditions or polluted environments. They reliably detect objects within their range, regardless of harsh environmental conditions.",
@@ -52,7 +52,7 @@ export const products: Product[] = [
   {
     slug: "photoelectric-sensors",
     name: "Photoelectric Sensors",
-    category: "Sensors",
+    category: "Industrial Sensors",
     parentPath: "/products/sensors/",
     image: "/images/sensors/Photoelectric Sensors.png",
     description: "SICK offers an extensive selection of photoelectric sensors that stand out with their precise optics and cutting-edge technology, resulting in market-leading solutions enriched with sensor intelligence.",
@@ -85,7 +85,7 @@ export const products: Product[] = [
   {
     slug: "safety-light-curtains",
     name: "Safety Light Curtains",
-    category: "Sensors",
+    category: "Industrial Sensors",
     parentPath: "/products/sensors/",
     image: "/images/sensors/4.-SAFETY-LIGHT-CURTAIN.png",
     description: "Safety light curtains offer dependable and budget-friendly access protection for hazardous points and areas. Depending on the specific variant, they can incorporate various machine functions or be customized through safe control solutions.",
@@ -118,7 +118,7 @@ export const products: Product[] = [
   {
     slug: "fiber-optic-sensors",
     name: "Fiber-Optic Sensors",
-    category: "Sensors",
+    category: "Industrial Sensors",
     parentPath: "/products/sensors/",
     image: "/images/sensors/FIBER-OPTICAL-SENSOR.png",
     description: "In cases of limited installation space or when detecting small objects, fiber-optic sensors present the optimal solution. The intelligent fusion of sensors and fiber-optic cables offers the perfect solution.",
