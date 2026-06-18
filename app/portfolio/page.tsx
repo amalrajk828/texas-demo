@@ -4,58 +4,16 @@ import React, { useState } from "react";
 import Link from "next/link";
 import Image from "next/image";
 import { ChevronRight } from "lucide-react";
+import { products, type Product } from "@/lib/products";
 
-export type PortfolioProduct = {
-  slug: string;
-  name: string;
-  category: string;
-  image?: string;
-};
-
-export const portfolioProducts: PortfolioProduct[] = [
-  // ── AC Servos ──────────────────────────────────────
-  { slug: "melservo-jet-hg-sns-servo-motor",  name: "MELSERVO-JET Series / HG-SNS Series Motors",    category: "AC Servos", image: "/images/acservos/MR-JET_SERVO_MOTOR.webp" },
-  { slug: "melservo-jet-hg-kns-servo-motor",  name: "MELSERVO-JET Series / HG-KNS Series Motors",   category: "AC Servos", image: "/images/acservos/MR-JET_SERVO_MOTOR.webp" },
-  { slug: "melservo-jet-servo-drive",          name: "MELSERVO-JET Series / MR-JET Series Servo Drive", category: "AC Servos", image: "/images/acservos/mr_jet_lineup_1.webp" },
-  { slug: "melservo-je-hg-sn-servo-motor",    name: "MELSERVO-JE Series / HG-SN Series Motors",     category: "AC Servos", image: "/images/acservos/mr_j5_lineup_2.webp" },
-  { slug: "melservo-je-hg-kn-servo-motor",    name: "MELSERVO-JE Series / HG-KN Series Motors",     category: "AC Servos", image: "/images/acservos/mr_j5_lineup_2.webp" },
-  { slug: "melservo-je-servo-drive",          name: "MELSERVO-JE Series / MR-JE Series Servo Drive", category: "AC Servos", image: "/images/acservos/MR-JE-Servo-Amplifier.webp" },
-
-  // ── Frequency Inverters (VFD) ──────────────────────
-  { slug: "a741",     name: "A741 Regenerative Series",                    category: "VFD", image: "/images/frequency-inverters/FR-A800.webp" },
-  { slug: "fra800e",  name: "FR-A800-E Series",                            category: "VFD", image: "/images/frequency-inverters/FR-A800.webp" },
-  { slug: "f846e",    name: "F846-E Series",                               category: "VFD", image: "/images/frequency-inverters/FR-F800.webp" },
-  { slug: "f800e",    name: "F800-E Series",                               category: "VFD", image: "/images/frequency-inverters/FR-F800.webp" },
-  { slug: "frf800",   name: "FR-F800 Series",                              category: "VFD", image: "/images/frequency-inverters/FR-F800.webp" },
-  { slug: "e800sce",  name: "E800-SCE Series (Ethernet Safety Communication)", category: "VFD", image: "/images/frequency-inverters/FR-E800-2.webp" },
-  { slug: "cs80",     name: "CS80 Series",                                 category: "VFD", image: "/images/frequency-inverters/CS80.webp" },
-  { slug: "frd700",   name: "FR-D700 Series",                              category: "VFD", image: "/images/frequency-inverters/FR-E800.webp" },
-  { slug: "fre800",   name: "FR-E800 Series",                              category: "VFD", image: "/images/frequency-inverters/FR-E800-2.webp" },
-
-  // ── GOT (Graphic Operator Panels) ─────────────────
-  { slug: "got2000series", name: "GOT2000 Series", category: "GOT", image: "/images/got/GOT2000-Series.png" },
-
-  // ── ICONICS ───────────────────────────────────────
-  { slug: "genesis64", name: "GENESIS64", category: "ICONICS", image: "/images/iconics/GENESIS64.webp" },
-
-  // ── PLC ───────────────────────────────────────────
-  { slug: "melsec-iq-r", name: "MELSEC iQ-R Series", category: "PLC", image: "/images/plc/MELSEC-iQ-R-Series.png" },
-
-  // ── Industrial Sensors ────────────────────────────
-  { slug: "radar-sensors",       name: "Radar Sensors",         category: "Industrial Sensors", image: "/images/sensors/Radar Sensors.png" },
-  { slug: "photoelectric-sensors", name: "Photoelectric Sensors", category: "Industrial Sensors", image: "/images/sensors/Photoelectric Sensors.png" },
-  { slug: "safety-light-curtains", name: "Safety Light Curtains", category: "Industrial Sensors", image: "/images/sensors/4.-SAFETY-LIGHT-CURTAIN.png" },
-  { slug: "fiber-optic-sensors",   name: "Fiber-Optic Sensors",   category: "Industrial Sensors", image: "/images/sensors/FIBER-OPTICAL-SENSOR.png" },
-];
-
-const categories = ["All", "Industrial Sensors", "PLC", "ICONICS", "GOT", "VFD", "AC Servos"];
+const categories = ["All", "Industrial Sensors", "PLC", "ICONICS", "GOT", "Frequency Inverters (VFD)", "AC Servos"];
 
 export default function PortfolioPage() {
   const [selectedCategory, setSelectedCategory] = useState("All");
 
   const filteredProducts = selectedCategory === "All"
-    ? portfolioProducts
-    : portfolioProducts.filter((p) => p.category.toLowerCase() === selectedCategory.toLowerCase() || (selectedCategory === "Industrial Sensors" && p.category === "Industrial Sensors"));
+    ? products
+    : products.filter((p) => p.category.toLowerCase() === selectedCategory.toLowerCase());
 
   // Helper to group products by category
   const groupedProducts = filteredProducts.reduce((acc, product) => {
@@ -64,10 +22,10 @@ export default function PortfolioPage() {
     }
     acc[product.category].push(product);
     return acc;
-  }, {} as Record<string, PortfolioProduct[]>);
+  }, {} as Record<string, Product[]>);
 
   // Define category sorting order for consistent layout
-  const orderedCategories = ["Industrial Sensors", "PLC", "ICONICS", "GOT", "VFD", "AC Servos"].filter(
+  const orderedCategories = ["Industrial Sensors", "PLC", "ICONICS", "GOT", "Frequency Inverters (VFD)", "AC Servos"].filter(
     (cat) => groupedProducts[cat] && groupedProducts[cat].length > 0
   );
 
@@ -167,7 +125,7 @@ export default function PortfolioPage() {
 }
 
 // Child Component for single Product Card representation
-function PortfolioCard({ product }: { product: PortfolioProduct }) {
+function PortfolioCard({ product }: { product: Product }) {
   const [imgError, setImgError] = useState(false);
 
   return (

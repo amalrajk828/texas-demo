@@ -14,7 +14,7 @@ const categorySlugMap: Record<string, string> = {
   "PLC": "plc",
   "ICONICS": "iconics",
   "GOT": "got",
-  "VFD": "frequency-inverter-vfd",
+  "Frequency Inverters (VFD)": "frequency-inverter-vfd",
   "AC Servos": "acservos",
 };
 
@@ -23,7 +23,7 @@ const tagMap: Record<string, string> = {
   "PLC": "Mitsubishi Electric PLC",
   "ICONICS": "Mitsubishi Electric HMI / SCADA",
   "GOT": "Mitsubishi Electric HMI",
-  "VFD": "Mitsubishi Electric VFD",
+  "Frequency Inverters (VFD)": "Mitsubishi Electric VFD",
   "AC Servos": "Mitsubishi Electric AC Servo",
 };
 

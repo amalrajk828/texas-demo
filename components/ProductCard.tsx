@@ -30,7 +30,7 @@ export default function ProductCard({
     "PLC": "Mitsubishi Electric PLC",
     "ICONICS": "Mitsubishi Electric HMI / SCADA",
     "GOT": "Mitsubishi Electric HMI",
-    "VFD": "Mitsubishi Electric VFD",
+    "Frequency Inverters (VFD)": "Mitsubishi Electric VFD",
     "AC Servos": "Mitsubishi Electric AC Servo",
   };
   const displayTag = product.tag || tagMap[product.category || ""] || tagMap[category || ""] || "Texas Technical Services Product";
