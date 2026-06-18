@@ -6,14 +6,12 @@ import ProductCard from "@/components/ProductCard";
 import { getProductsByPath } from "@/lib/products";
 
 export const metadata: Metadata = {
-  title: "Industrial Sensors",
-  description:
-    "SICK industrial sensors for precision detection, safety monitoring, identification, and measurement in ports, mining, automation, and manufacturing environments.",
+  title: "Sensors - Texas Technical Services",
+  description: "Texas Technical Services offers a wide range of sensors for precise data acquisition, enhancing the efficiency and control of industrial processes.",
   alternates: { canonical: "https://texastechserv.com/products/sensors/" },
   openGraph: {
-    title: "Industrial Sensors | Texas Technical Services",
-    description:
-      "SICK sensors engineered for precision, reliability, and performance in the most demanding environments.",
+    title: "Sensors - Texas Technical Services",
+    description: "Texas Technical Services offers a wide range of sensors for precise data acquisition, enhancing the efficiency and control of industrial processes.",
     url: "https://texastechserv.com/products/sensors/",
   },
 };

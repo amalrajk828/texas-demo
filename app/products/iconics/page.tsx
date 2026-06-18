@@ -6,14 +6,12 @@ import ProductCard from "@/components/ProductCard";
 import { getProductsByPath } from "@/lib/products";
 
 export const metadata: Metadata = {
-  title: "ICONICS SCADA & HMI Software",
-  description:
-    "Explore ICONICS software solutions for real-time industrial visualization, alarm management, historical logging, and process control systems.",
+  title: "ICONICS - Texas Technical Services",
+  description: "ICONICS GENESIS64 SCADA and HMI software for real-time visualization and control of industrial processes.",
   alternates: { canonical: "https://texastechserv.com/products/iconics/" },
   openGraph: {
-    title: "ICONICS Software | Texas Technical Services",
-    description:
-      "ICONICS industry-leading SCADA, HMI, and analytics software for real-time operations visualization.",
+    title: "ICONICS - Texas Technical Services",
+    description: "ICONICS GENESIS64 SCADA and HMI software for real-time visualization and control of industrial processes.",
     url: "https://texastechserv.com/products/iconics/",
   },
 };

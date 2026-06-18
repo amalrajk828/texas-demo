@@ -6,14 +6,12 @@ import ProductCard from "@/components/ProductCard";
 import { getProductsByPath } from "@/lib/products";
 
 export const metadata: Metadata = {
-  title: "Frequency Inverters (VFD) | Variable Frequency Drives",
-  description:
-    "Explore Mitsubishi Electric's FR Series frequency inverters (VFD) for precise motor speed control, energy savings, and industrial reliability.",
+  title: "Frequency Inverters (VFD) - Texas Technical Services",
+  description: "Mitsubishi Electric FR Series frequency inverters for precise motor speed control across industrial applications.",
   alternates: { canonical: "https://texastechserv.com/products/frequency-inverter-vfd/" },
   openGraph: {
-    title: "Mitsubishi Electric Frequency Inverters (VFD) | Texas Technical Services",
-    description:
-      "Mitsubishi Electric's FR Series frequency inverters (VFD) delivering energy savings and motor speed control across industrial applications.",
+    title: "Frequency Inverters (VFD) - Texas Technical Services",
+    description: "Mitsubishi Electric FR Series frequency inverters for precise motor speed control across industrial applications.",
     url: "https://texastechserv.com/products/frequency-inverter-vfd/",
   },
 };

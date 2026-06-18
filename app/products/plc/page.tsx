@@ -6,14 +6,12 @@ import ProductCard from "@/components/ProductCard";
 import { getProductsByPath } from "@/lib/products";
 
 export const metadata: Metadata = {
-  title: "Programmable Logic Controllers (PLC)",
-  description:
-    "Explore Mitsubishi Electric's complete PLC lineup — MELSEC iQ-R modular, MELSEC-Q series, and compact iQ-F series (FX5U, FX5UJ, FX5S) programmable controllers.",
+  title: "PLC - Texas Technical Services",
+  description: "Mitsubishi Electric PLC solutions for industrial automation including MELSEC iQ-R, MELSEC-Q, FX5U, FX5UJ, and FX5S series.",
   alternates: { canonical: "https://texastechserv.com/products/plc/" },
   openGraph: {
-    title: "Mitsubishi Electric PLC | Texas Technical Services",
-    description:
-      "Mitsubishi Electric's high-reliability programmable logic controllers engineered for precision automation and process control.",
+    title: "PLC - Texas Technical Services",
+    description: "Mitsubishi Electric PLC solutions for industrial automation including MELSEC iQ-R, MELSEC-Q, FX5U, FX5UJ, and FX5S series.",
     url: "https://texastechserv.com/products/plc/",
   },
 };

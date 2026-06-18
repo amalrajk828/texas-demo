@@ -5,10 +5,22 @@ import Image from "next/image";
 import { usePathname } from "next/navigation";
 import { ChevronDown, Menu, X } from "lucide-react";
 
+type SubChild = {
+  label: string;
+  href: string;
+};
+
+type ChildItem = {
+  label: string;
+  href: string;
+  highlight?: boolean;
+  children?: SubChild[];
+};
+
 type NavItem = {
   label: string;
   href: string;
-  children?: { label: string; href: string; highlight?: boolean }[];
+  children?: ChildItem[];
 };
 
 const NAV: NavItem[] = [
@@ -42,18 +54,34 @@ const NAV: NavItem[] = [
     label: "Products",
     href: "/products/",
     children: [
-      { label: "Flow Meters", href: "/products/flow-meters/" },
-      { label: "Analyzers", href: "/products/analyzers/" },
-      { label: "Industrial Automation", href: "/products/industrial-automation/" },
-      { label: "Industrial Sensors", href: "/products/sensors/" },
-      { label: "PLC", href: "/products/plc" },
-      { label: "ICONICS", href: "/products/iconics" },
-      { label: "GOT (Graphic Operator Panels)", href: "/products/got" },
-      { label: "Frequency Inverters (VFD)", href: "/products/frequency-inverter-vfd" },
-      { label: "AC Servos", href: "/products/acservos" },
       { label: "Custody Metering Solutions", href: "/products/custody-metering-solutions/" },
+      {
+        label: "Flow Meters",
+        href: "/products/flow-meters/",
+        children: [
+          { label: "Liquid Flow Meters", href: "/products/flow-meters/liquid-flow-meters/" },
+          { label: "Flare Meters", href: "/products/flow-meters/flare-meters/" },
+          { label: "Gas Flow Meters", href: "/products/flow-meters/gas-flow-meters/" },
+        ],
+      },
+      {
+        label: "Analyzer's",
+        href: "/products/analyzers/",
+        children: [
+          { label: "CEMS", href: "/products/analyzers/cems/" },
+          { label: "Dust Analyzers", href: "/products/analyzers/dust-analyzers/" },
+          { label: "Gas Analyzers", href: "/products/analyzers/gas-analyzers/" },
+        ],
+      },
+      { label: "Control Room Interior And Console", href: "/products/control-room-interior-and-console/" },
+      { label: "Industrial Automation", href: "/products/industrial-automation/" },
       { label: "Field Instruments", href: "/products/field-instruments/" },
-      { label: "View all products →", href: "/products/", highlight: true },
+      { label: "Industrial Sensors", href: "/products/sensors/" },
+      { label: "PLC", href: "/products/plc/" },
+      { label: "ICONICS", href: "/products/iconics/" },
+      { label: "GOT (Graphic Operator Panels)", href: "/products/got/" },
+      { label: "Frequency Inverters (VFD)", href: "/products/frequency-inverter-vfd/" },
+      { label: "AC Servos", href: "/products/acservos/" },
     ],
   },
   { label: "Clients", href: "/clients/" },
@@ -137,20 +165,34 @@ export default function Header() {
 
                       {/* Dropdown */}
                       {open === item.label && (
-                        <div className="absolute top-full left-1/2 -translate-x-1/2 mt-1.5 w-72 bg-[#12163A] border border-white/10 rounded-xl shadow-2xl shadow-black/50 overflow-hidden">
+                        <div className="absolute top-full left-1/2 -translate-x-1/2 mt-1.5 w-80 bg-[#12163A] border border-white/10 rounded-xl shadow-2xl shadow-black/50 overflow-hidden max-h-[85vh] overflow-y-auto">
                           <div className="p-1.5">
                             {item.children.map((child) => (
-                              <Link
-                                key={child.href}
-                                href={child.href}
-                                className={`block px-3 py-2 text-[12px] rounded-lg transition-colors ${
-                                  child.highlight
-                                    ? "text-[#e7212b] font-medium hover:bg-[#e7212b]/10"
-                                    : "text-white/60 hover:text-white hover:bg-white/5"
-                                }`}
-                              >
-                                {child.label}
-                              </Link>
+                              <div key={child.href}>
+                                <Link
+                                  href={child.href}
+                                  className={`block px-3 py-1.5 text-[12px] rounded-lg transition-colors ${
+                                    child.highlight
+                                      ? "text-[#e7212b] font-medium hover:bg-[#e7212b]/10"
+                                      : "text-white/80 hover:text-white hover:bg-white/5"
+                                  }`}
+                                >
+                                  {child.label}
+                                </Link>
+                                {child.children && (
+                                  <div className="ml-4 border-l border-white/10 pl-3.5 py-0.5 space-y-0.5">
+                                    {child.children.map((subChild) => (
+                                      <Link
+                                        key={subChild.href}
+                                        href={subChild.href}
+                                        className="block px-2.5 py-1 text-[11px] text-white/50 hover:text-white hover:bg-white/5 rounded transition-colors"
+                                      >
+                                        {subChild.label}
+                                      </Link>
+                                    ))}
+                                  </div>
+                                )}
+                              </div>
                             ))}
                           </div>
                         </div>
@@ -230,15 +272,29 @@ export default function Header() {
                 {item.children && mobileExpanded === item.label && (
                   <div className="ml-4 border-l border-white/10 pl-3 pb-1 space-y-0.5">
                     {item.children.map((child) => (
-                      <Link
-                        key={child.href}
-                        href={child.href}
-                        className={`block px-2 py-1.5 text-[11px] rounded ${
-                          child.highlight ? "text-[#e7212b]" : "text-white/40 hover:text-white/70"
-                        }`}
-                      >
-                        {child.label}
-                      </Link>
+                      <div key={child.href}>
+                        <Link
+                          href={child.href}
+                          className={`block px-2 py-1.5 text-[11px] rounded ${
+                            child.highlight ? "text-[#e7212b]" : "text-white/50 hover:text-white/70"
+                          }`}
+                        >
+                          {child.label}
+                        </Link>
+                        {child.children && (
+                          <div className="ml-3 border-l border-white/5 pl-3 space-y-0.5">
+                            {child.children.map((subChild) => (
+                              <Link
+                                key={subChild.href}
+                                href={subChild.href}
+                                className="block px-2 py-1 text-[10px] text-white/35 hover:text-white/60"
+                              >
+                                {subChild.label}
+                              </Link>
+                            ))}
+                          </div>
+                        )}
+                      </div>
                     ))}
                   </div>
                 )}

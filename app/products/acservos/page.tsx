@@ -6,23 +6,21 @@ import ProductCard from "@/components/ProductCard";
 import { getProductsByPath } from "@/lib/products";
 
 export const metadata: Metadata = {
-  title: "AC Servos | AC Servo Drives & Motors",
-  description:
-    "Explore Mitsubishi Electric's MELSERVO series AC servo drives and motors — including MR-JE and MR-JET systems for precise machine positioning and multi-axis control.",
+  title: "AC Servos - Texas Technical Services",
+  description: "Mitsubishi Electric MELSERVO AC servo drives and motors for precise motion control in industrial automation.",
   alternates: { canonical: "https://texastechserv.com/products/acservos/" },
   openGraph: {
-    title: "Mitsubishi Electric AC Servos | Texas Technical Services",
-    description:
-      "Mitsubishi Electric's MELSERVO series AC servo drives and motors delivering precise high-performance positioning.",
+    title: "AC Servos - Texas Technical Services",
+    description: "Mitsubishi Electric MELSERVO AC servo drives and motors for precise motion control in industrial automation.",
     url: "https://texastechserv.com/products/acservos/",
   },
 };
 
 export default function AcServosPage() {
   const acServosData = getProductsByPath("/products/acservos/");
-  // Group products by series
-  const jeSeriesProducts = acServosData.filter((p) => p.series === "MELSERVO-JE Series");
-  const jetSeriesProducts = acServosData.filter((p) => p.series === "MELSERVO-JET Series");
+  // Group products by series using slug prefixes for compatibility
+  const jeSeriesProducts = acServosData.filter((p) => p.slug.startsWith("melservo-je-"));
+  const jetSeriesProducts = acServosData.filter((p) => p.slug.startsWith("melservo-jet-"));
 
   return (
     <div className="min-h-screen bg-white font-sans antialiased selection:bg-[#F5821F] selection:text-white">

@@ -6,14 +6,12 @@ import ProductCard from "@/components/ProductCard";
 import { getProductsByPath } from "@/lib/products";
 
 export const metadata: Metadata = {
-  title: "GOT HMI Panels | Graphic Operator Terminals",
-  description:
-    "Explore Mitsubishi Electric GOT2000 HMI series panels for high-performance machine visualization and seamless PLC connectivity.",
+  title: "GOT (Graphic Operator Panels) - Texas Technical Services",
+  description: "Mitsubishi Electric GOT2000 Series graphic operation terminals for industrial automation systems.",
   alternates: { canonical: "https://texastechserv.com/products/got/" },
   openGraph: {
-    title: "GOT HMI Panels | Texas Technical Services",
-    description:
-      "Mitsubishi Electric's Graphic Operator Terminals combining high-resolution visualization and intuitive touch control.",
+    title: "GOT (Graphic Operator Panels) - Texas Technical Services",
+    description: "Mitsubishi Electric GOT2000 Series graphic operation terminals for industrial automation systems.",
     url: "https://texastechserv.com/products/got/",
   },
 };

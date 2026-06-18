@@ -4,6 +4,8 @@ import Link from "next/link";
 import { notFound } from "next/navigation";
 import { ChevronRight, Check, Download, ExternalLink, ArrowRight } from "lucide-react";
 import { products, getProductBySlug } from "@/lib/products";
+import ProductInquiryForm from "@/components/ProductInquiryForm";
+import RelatedProducts from "@/components/RelatedProducts";
 
 type Props = {
   params: Promise<{ slug: string }>;
@@ -44,12 +46,12 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const product = getProduct(slug);
   if (!product) return {};
   return {
-    title: `${product.name} | Texas Technical Services`,
-    description: product.paragraphs?.[0] ?? `${product.name} — ${product.brand}`,
+    title: `${product.name} - Texas Technical Services`,
+    description: product.paragraphs?.[0] ?? `${product.name} - Texas Technical Services`,
     alternates: { canonical: `https://texastechserv.com/portfolio/${slug}/` },
     openGraph: {
-      title: `${product.name} | Texas Technical Services`,
-      description: product.paragraphs?.[0] ?? `${product.name} — ${product.brand}`,
+      title: `${product.name} - Texas Technical Services`,
+      description: product.paragraphs?.[0] ?? `${product.name} - Texas Technical Services`,
       url: `https://texastechserv.com/portfolio/${slug}/`,
     },
   };
@@ -206,6 +208,10 @@ export default async function ProductPage({ params }: Props) {
             <ChevronRight className="w-3 h-3 shrink-0" />
             <Link href="/products/" className="hover:text-white/70 transition-colors">Products</Link>
             <ChevronRight className="w-3 h-3 shrink-0" />
+            <Link href={product.parentPath.endsWith("/") ? product.parentPath : `${product.parentPath}/`} className="hover:text-white/70 transition-colors">
+              {product.category}
+            </Link>
+            <ChevronRight className="w-3 h-3 shrink-0" />
             <span className="text-white/60">{product.name}</span>
           </nav>
 
@@ -266,32 +272,29 @@ export default async function ProductPage({ params }: Props) {
                   {p}
                 </p>
               ))}
-              {/* Quick-access actions for simple products */}
-              {!product.subBlocks && (product.downloadHref || (product.detailHref && product.detailHref !== "#")) && (
-                <div className="flex flex-wrap items-center gap-4 mt-8 pt-6 border-t border-[#f0f0f0]">
-                  {product.downloadHref && (
-                    <a
-                      href={product.downloadHref}
-                      {...(product.downloadHref !== "#" ? { target: "_blank", rel: "noopener noreferrer" } : {})}
-                      className="inline-flex items-center gap-2 bg-[#e7212b] hover:bg-[#aa0b1b] text-white font-medium text-[13px] px-5 py-2.5 rounded-lg transition-colors"
-                    >
-                      <Download className="w-4 h-4" />
-                      Download Brochure
-                    </a>
-                  )}
-                  {product.detailHref && product.detailHref !== "#" && (
-                    <a
-                      href={product.detailHref}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="inline-flex items-center gap-2 border border-[#e7212b] text-[#e7212b] hover:bg-[#e7212b] hover:text-white font-medium text-[13px] px-5 py-2.5 rounded-lg transition-colors"
-                    >
-                      <ExternalLink className="w-4 h-4" />
-                      Visit Website
-                    </a>
-                  )}
-                </div>
-              )}
+              {/* Quick-access actions */}
+              <div className="flex flex-wrap items-center gap-4 mt-8 pt-6 border-t border-[#f0f0f0]">
+                <a
+                  href={product.externalLink || `https://texastechserv.com/portfolio/${product.slug}/`}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center gap-2 border border-[#e7212b] text-[#e7212b] hover:bg-[#e7212b] hover:text-white font-medium text-[13px] px-5 py-2.5 rounded-lg transition-colors"
+                >
+                  <ExternalLink className="w-4 h-4" />
+                  For More Detail
+                </a>
+                {product.downloadLink && (
+                  <a
+                    href={product.downloadLink}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-flex items-center gap-2 bg-[#e7212b] hover:bg-[#aa0b1b] text-white font-medium text-[13px] px-5 py-2.5 rounded-lg transition-colors"
+                  >
+                    <Download className="w-4 h-4" />
+                    Download
+                  </a>
+                )}
+              </div>
             </div>
           </div>
 
@@ -403,7 +406,7 @@ export default async function ProductPage({ params }: Props) {
       )}
 
       {/* ══ PAGE-LEVEL ACTIONS — for sub-block products ═══════════ */}
-      {product.subBlocks && product.downloadHref && (
+      {product.downloadLink && (
         <section className="bg-white py-12">
           <div className="max-w-7xl mx-auto px-4 sm:px-6">
             <div className="flex items-center gap-3 mb-6">
@@ -414,17 +417,29 @@ export default async function ProductPage({ params }: Props) {
             </div>
             <div className="flex flex-wrap items-center gap-5">
               <a
-                href={product.downloadHref}
-                {...(product.downloadHref !== "#" ? { target: "_blank", rel: "noopener noreferrer" } : {})}
+                href={product.downloadLink}
+                target="_blank"
+                rel="noopener noreferrer"
                 className="inline-flex items-center gap-2 bg-[#e7212b] hover:bg-[#aa0b1b] text-white font-medium text-[13px] px-6 py-3 rounded-lg transition-colors"
               >
                 <Download className="w-4 h-4" />
-                Download Brochure
+                Download
               </a>
             </div>
           </div>
         </section>
       )}
+
+      {/* ══ PRODUCT INQUIRY FORM ═════════════════════════════════ */}
+      <ProductInquiryForm productName={product.name} category={product.category} />
+
+      {/* ══ RELATED PRODUCTS ════════════════════════════════════ */}
+      <RelatedProducts
+        currentSlug={product.slug}
+        products={products.filter((p) => p.category === product.category && p.slug !== product.slug)}
+        category={product.category}
+        title="Related Products"
+      />
 
       {/* ══ CTA BANNER ════════════════════════════════════════════ */}
       <section className="bg-[#0B0D26] py-20">
