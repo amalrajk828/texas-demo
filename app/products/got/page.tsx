@@ -2,7 +2,8 @@ import React from "react";
 import type { Metadata } from "next";
 import Link from "next/link";
 import { ChevronRight } from "lucide-react";
-import ProductCard, { type Product } from "@/components/ProductCard";
+import ProductCard from "@/components/ProductCard";
+import { getProductsByPath } from "@/lib/products";
 
 export const metadata: Metadata = {
   title: "GOT HMI Panels | Graphic Operator Terminals",
@@ -17,24 +18,8 @@ export const metadata: Metadata = {
   },
 };
 
-const gotProducts: Product[] = [
-  {
-    id: 1,
-    name: "GOT2000 Series",
-    slug: "got2000series",
-    tag: "Mitsubishi Electric HMI",
-    image: "/images/got/GOT2000-Series.png",
-    description: "The GOT2000 Series is a high-performance graphic operation terminal (HMI) from Mitsubishi Electric, designed to enhance operability, visualization, and monitoring in industrial automation systems. It offers high-resolution displays, advanced graphics, and intuitive touch operation, enabling efficient interaction between operators and control systems. With strong connectivity and compatibility with Mitsubishi PLCs and other controllers, the GOT2000 Series supports improved productivity, reduced downtime, and easier system operation.",
-    variants: [
-      "GT27 Advanced",
-      "GT25 Superior Performance Intermediate",
-      "GT25/21 Wide",
-      "GT21 Compact Series"
-    ]
-  }
-];
-
 export default function GotPage() {
+  const gotProducts = getProductsByPath("/products/got/");
   return (
     <div className="min-h-screen bg-white font-sans antialiased selection:bg-[#F5821F] selection:text-white">
       {/* ── Hero Banner ─────────────────────────────────────── */}
@@ -98,7 +83,7 @@ export default function GotPage() {
         <div className="max-w-[1100px] mx-auto px-10 pb-[80px]">
           <div className="flex flex-col">
             {gotProducts.map((prod, index) => (
-              <React.Fragment key={prod.id}>
+              <React.Fragment key={prod.slug}>
                 <ProductCard product={prod} category="got" />
                 {index < gotProducts.length - 1 && (
                   <div className="border-t border-[#E8E8F0] my-[10px]" />

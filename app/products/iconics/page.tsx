@@ -2,7 +2,8 @@ import React from "react";
 import type { Metadata } from "next";
 import Link from "next/link";
 import { ChevronRight } from "lucide-react";
-import ProductCard, { type Product } from "@/components/ProductCard";
+import ProductCard from "@/components/ProductCard";
+import { getProductsByPath } from "@/lib/products";
 
 export const metadata: Metadata = {
   title: "ICONICS SCADA & HMI Software",
@@ -17,18 +18,8 @@ export const metadata: Metadata = {
   },
 };
 
-const iconicsProducts: Product[] = [
-  {
-    id: 1,
-    name: "GENESIS64",
-    slug: "genesis64",
-    tag: "ICONICS SCADA & HMI",
-    image: "/images/iconics/GENESIS64.webp",
-    description: "GENESIS64 is a 64-bit, web-enabled SCADA and HMI software suite from ICONICS, designed for real-time visualization, monitoring, and control of industrial processes. Built on a modern, scalable architecture, GENESIS64 provides advanced graphics, alarm management, historical data logging, and analytics. It supports seamless integration with PLCs, DCS, and field devices, making it suitable for industrial, infrastructure, and energy applications."
-  }
-];
-
 export default function IconicsPage() {
+  const iconicsProducts = getProductsByPath("/products/iconics/");
   return (
     <div className="min-h-screen bg-white font-sans antialiased selection:bg-[#F5821F] selection:text-white">
       {/* ── Hero Banner ─────────────────────────────────────── */}
@@ -92,7 +83,7 @@ export default function IconicsPage() {
         <div className="max-w-[1100px] mx-auto px-10 pb-[80px]">
           <div className="flex flex-col">
             {iconicsProducts.map((prod, index) => (
-              <React.Fragment key={prod.id}>
+              <React.Fragment key={prod.slug}>
                 <ProductCard product={prod} category="iconics" />
                 {index < iconicsProducts.length - 1 && (
                   <div className="border-t border-[#E8E8F0] my-[10px]" />

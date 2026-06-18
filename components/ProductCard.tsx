@@ -5,12 +5,12 @@ import Image from "next/image";
 import Link from "next/link";
 
 export type Product = {
-  id: number;
+  id?: number;
   name: string;
   slug: string;
-  tag: string;
-  image: string;
-  description: string;
+  tag?: string;
+  image?: string;
+  description?: string;
   variants?: string[];
   category?: string;
 };
@@ -20,16 +20,27 @@ export default function ProductCard({
   category,
 }: {
   product: Product;
-  category: string;
+  category?: string;
 }) {
   const [imgError, setImgError] = useState(false);
-  const targetCategory = product.category || category;
+  const targetCategory = product.category || category || "";
+
+  const tagMap: Record<string, string> = {
+    "Sensors": "SICK Industrial Sensors",
+    "PLC": "Mitsubishi Electric PLC",
+    "ICONICS": "Mitsubishi Electric HMI / SCADA",
+    "GOT": "Mitsubishi Electric HMI",
+    "VFD": "Mitsubishi Electric VFD",
+    "AC Servos": "Mitsubishi Electric AC Servo",
+  };
+  const displayTag = product.tag || tagMap[product.category || ""] || tagMap[category || ""] || "Texas Technical Services Product";
+  const displayImage = product.image || "";
 
   return (
     <div className="product-card group relative bg-white border border-[#E8E8F0] border-l-4 border-l-transparent hover:border-l-[#F5821F] rounded-[12px] p-5 min-[480px]:p-[28px] shadow-[0_2px_12px_rgba(0,0,0,0.08)] transition-all duration-300 ease-in-out hover:-translate-y-1">
       {/* Absolute overlay link for card clickability */}
       <Link
-        href={`/products/${targetCategory}/${product.slug}`}
+        href={`/portfolio/${product.slug}`}
         className="absolute inset-0 z-10"
         aria-label={product.name}
       />
@@ -37,9 +48,9 @@ export default function ProductCard({
       <div className="grid grid-cols-1 min-[769px]:grid-cols-[300px_1fr] gap-8 items-start">
         {/* Image Area */}
         <div className="relative w-full h-[220px] min-[769px]:w-[300px] min-[769px]:h-[220px] bg-[#1a1d35] rounded-[8px] overflow-hidden shrink-0">
-          {!imgError ? (
+          {!imgError && displayImage ? (
             <Image
-              src={product.image}
+              src={displayImage}
               alt={product.name}
               fill
               className="object-cover transition-transform duration-500 group-hover:scale-105"
@@ -78,7 +89,7 @@ export default function ProductCard({
         <div className="flex flex-col h-full justify-between">
           <div>
             <span className="text-[#F5821F] text-[11px] font-bold tracking-wider uppercase">
-              {product.tag}
+              {displayTag}
             </span>
             <h3 className="text-[#1A1A2E] text-[20px] font-bold leading-tight mt-1">
               {product.name}

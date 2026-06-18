@@ -2,7 +2,8 @@ import React from "react";
 import type { Metadata } from "next";
 import Link from "next/link";
 import { ChevronRight } from "lucide-react";
-import ProductCard, { type Product } from "@/components/ProductCard";
+import ProductCard from "@/components/ProductCard";
+import { getProductsByPath } from "@/lib/products";
 
 export const metadata: Metadata = {
   title: "AC Servos | AC Servo Drives & Motors",
@@ -17,64 +18,8 @@ export const metadata: Metadata = {
   },
 };
 
-const acServosData: (Product & { series: string })[] = [
-  {
-    id: 1,
-    name: "MR-JE Series Servo Drive",
-    slug: "melservo-je-servo-drive",
-    tag: "Mitsubishi Electric AC Servo",
-    series: "MELSERVO-JE Series",
-    image: "/images/acservos/MR-JE-Servo-Amplifier.webp",
-    description: "The MR-JE Series is Mitsubishi Electric's compact and cost-effective AC servo drive platform designed for basic positioning, speed, and torque control in small to mid-size machines. It provides reliable servo performance in a simple, easy-to-integrate design, making it ideal for OEM equipment and light automation systems."
-  },
-  {
-    id: 2,
-    name: "HG-KN Series Servo Motors",
-    slug: "melservo-je-hg-kn-servo-motor",
-    tag: "Mitsubishi Electric AC Servo",
-    series: "MELSERVO-JE Series",
-    image: "/images/acservos/mr_j5_lineup_2.webp",
-    description: "The HG-KN Series is Mitsubishi Electric's compact AC servo motor range designed for high-response, precise motion control in small to medium-size machines. These motors are optimized for use with MR-JE and MR-J4 servo amplifiers, delivering smooth motion, high speed, and accurate positioning in a space-saving design."
-  },
-  {
-    id: 3,
-    name: "HG-SN Series Servo Motors",
-    slug: "melservo-je-hg-sn-servo-motor",
-    tag: "Mitsubishi Electric AC Servo",
-    series: "MELSERVO-JE Series",
-    image: "/images/acservos/mr_j5_lineup_2.webp",
-    description: "The HG-SN Series is Mitsubishi Electric's medium-capacity AC servo motor range designed for high-torque, high-accuracy motion control in industrial and OEM machinery. These motors are optimized for use with MR-JE servo amplifiers, delivering stable speed, strong torque, and precise positioning in a robust industrial design."
-  },
-  {
-    id: 4,
-    name: "MR-JET Series Servo Drive",
-    slug: "melservo-jet-servo-drive",
-    tag: "Mitsubishi Electric AC Servo",
-    series: "MELSERVO-JET Series",
-    image: "/images/acservos/mr_jet_lineup_1.webp",
-    description: "The MR-JET Series is Mitsubishi Electric's EtherCAT-based servo drive platform designed for high-speed, synchronized, multi-axis motion control in modern automation systems. It provides real-time networked motion, advanced control modes, and compact hardware, making it ideal for packaging lines, robotics, conveyors, and coordinated machine axes. MR-JET covers a power range of 100 W to 1 kW and supports EtherCAT, CC-Link IE Field Basic, and CC-Link IE Field TSN depending on model."
-  },
-  {
-    id: 5,
-    name: "HG-KNS Series Servo Motors",
-    slug: "melservo-jet-hg-kns-servo-motor",
-    tag: "Mitsubishi Electric AC Servo",
-    series: "MELSERVO-JET Series",
-    image: "/images/acservos/MR-JET_SERVO_MOTOR.webp",
-    description: "The HG-KNS Series is Mitsubishi Electric's compact, high-response AC servo motor range designed specifically for EtherCAT-based MR-JET servo systems. These motors deliver fast acceleration, smooth motion, and precise positioning, making them ideal for high-speed, multi-axis OEM machines."
-  },
-  {
-    id: 6,
-    name: "HG-SNS Series Servo Motors",
-    slug: "melservo-jet-hg-sns-servo-motor",
-    tag: "Mitsubishi Electric AC Servo",
-    series: "MELSERVO-JET Series",
-    image: "/images/acservos/MR-JET_SERVO_MOTOR.webp",
-    description: "The HG-SNS Series is Mitsubishi Electric's medium- to high-capacity AC servo motor range developed for EtherCAT-based MR-JET servo systems. It provides high torque, smooth speed control, and precise positioning, making it ideal for synchronized multi-axis industrial machines."
-  }
-];
-
 export default function AcServosPage() {
+  const acServosData = getProductsByPath("/products/acservos/");
   // Group products by series
   const jeSeriesProducts = acServosData.filter((p) => p.series === "MELSERVO-JE Series");
   const jetSeriesProducts = acServosData.filter((p) => p.series === "MELSERVO-JET Series");
