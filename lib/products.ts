@@ -12,6 +12,20 @@ export type Product = {
   downloadLink?: string | null;
   series?: string;
   variants?: string[];
+
+  // Optional fields for detail pages
+  heroImage?: string;
+  brand?: string;
+  tagline?: string;
+  intro?: string;
+  paragraphs?: string[];
+  bulletSections?: { heading: string; items: string[] }[];
+  gallery?: { src: string; alt: string }[];
+  subBlocks?: any[];
+  youtubeUrl?: string;
+  models?: string[];
+  downloadHref?: string;
+  detailHref?: string;
 };
 
 export const products: Product[] = [

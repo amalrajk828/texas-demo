@@ -27,7 +27,7 @@ export default function RelatedProducts({
         </h2>
         <div className="flex flex-col gap-5">
           {related.map((prod) => (
-            <ProductCard key={prod.id} product={prod} category={category} />
+            <ProductCard key={prod.slug} product={prod} category={category} />
           ))}
         </div>
       </div>
