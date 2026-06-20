@@ -1,0 +1,193 @@
+"use client";
+import { motion, useInView } from "framer-motion";
+import { useRef } from "react";
+import { Clock, ThumbsUp, ShieldCheck, HardHat } from "lucide-react";
+
+function FadeUp({
+  children,
+  delay = 0,
+  className = "",
+}: {
+  children: React.ReactNode;
+  delay?: number;
+  className?: string;
+}) {
+  const ref = useRef<HTMLDivElement>(null);
+  const inView = useInView(ref, { once: true, margin: "-60px" });
+  return (
+    <motion.div
+      ref={ref}
+      initial={{ opacity: 0, y: 24 }}
+      animate={inView ? { opacity: 1, y: 0 } : {}}
+      transition={{ duration: 0.6, ease: [0.22, 1, 0.36, 1], delay }}
+      className={className}
+    >
+      {children}
+    </motion.div>
+  );
+}
+
+const BENEFITS = [
+  {
+    Icon: Clock,
+    title: "Timely Completion of All Works",
+    body: "We plan and execute every project on schedule, ensuring minimal disruption to your operations and reliable on-time delivery across all service areas.",
+  },
+  {
+    Icon: ThumbsUp,
+    title: "Greater Customer Satisfaction",
+    body: "We blend technology and quality workmanship with personal, one-on-one service — building long-term relationships and ensuring every client's requirements are fully met.",
+  },
+  {
+    Icon: ShieldCheck,
+    title: "No Concession in Quality",
+    body: "Backed by ISO 9001:2015 certification, we maintain uncompromising quality standards across all services, from flow measurement to construction — every single time.",
+  },
+  {
+    Icon: HardHat,
+    title: "Safe Work Practices",
+    body: "Safety is embedded in our culture. All works are executed under strict HSE guidelines, ensuring the wellbeing of our personnel and your assets throughout the project lifecycle.",
+  },
+];
+
+export default function ServicesBenefits() {
+  return (
+    <section className="relative bg-white py-24 lg:py-28 overflow-hidden">
+
+      {/* Subtle top divider glow */}
+      <div
+        className="absolute top-0 left-1/2 -translate-x-1/2 w-[600px] h-[1px] pointer-events-none"
+        style={{
+          background:
+            "linear-gradient(90deg, transparent, rgba(231,33,43,0.18) 50%, transparent)",
+        }}
+      />
+
+      <div className="relative max-w-7xl mx-auto px-4 sm:px-6">
+
+        {/* ── Header ── */}
+        <FadeUp delay={0} className="max-w-2xl mb-16">
+          <div className="flex items-center gap-2.5 mb-4">
+            <span className="w-5 h-px bg-[#e7212b]" />
+            <span className="text-[#e7212b] text-[10px] font-semibold tracking-[3.5px] uppercase">
+              Our Benefits
+            </span>
+          </div>
+          <h2 className="text-4xl sm:text-[2.8rem] font-bold text-[#0B0D26] leading-[1.12] mb-4">
+            Why We Are the Best
+            <br />
+            to Do Your Next Job
+          </h2>
+          <p className="text-gray-500 text-[15px] leading-relaxed">
+            We blend technology and quality workmanship with personal, one-on-one service.
+            Our skilled team will provide high quality results — whatever the scale or complexity.
+          </p>
+        </FadeUp>
+
+        {/* ── Cards grid ── */}
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+          {BENEFITS.map((benefit, i) => (
+            <FadeUp key={benefit.title} delay={0.08 + i * 0.08}>
+              <BenefitCard benefit={benefit} index={i} />
+            </FadeUp>
+          ))}
+        </div>
+
+        {/* ── Bottom ISO strip ── */}
+        <FadeUp delay={0.42}>
+          <div className="mt-16 rounded-2xl bg-[#0B0D26] overflow-hidden relative">
+            {/* Grid texture */}
+            <div
+              className="absolute inset-0 pointer-events-none"
+              style={{
+                backgroundImage:
+                  "repeating-linear-gradient(0deg,transparent,transparent 39px,rgba(255,255,255,0.02) 40px),repeating-linear-gradient(90deg,transparent,transparent 39px,rgba(255,255,255,0.02) 40px)",
+              }}
+            />
+            {/* Red glow */}
+            <div
+              className="absolute right-0 top-0 w-64 h-full pointer-events-none"
+              style={{
+                background:
+                  "radial-gradient(ellipse at right, rgba(231,33,43,0.10) 0%, transparent 70%)",
+              }}
+            />
+            <div className="relative z-10 px-8 py-7 flex flex-col sm:flex-row items-start sm:items-center gap-6 justify-between">
+              <div className="flex items-center gap-5">
+                {/* ISO badge */}
+                <div className="w-12 h-12 rounded-xl bg-[#e7212b] flex flex-col items-center justify-center shrink-0 shadow-lg shadow-[#e7212b]/30">
+                  <span className="text-white text-[9px] font-bold tracking-[0.5px] leading-tight text-center">ISO<br/>9001</span>
+                </div>
+                <div>
+                  <p className="text-white font-semibold text-[15px]">ISO 9001:2015 &amp; ISO 14001:2015 Certified</p>
+                  <p className="text-white/40 text-[13px] mt-0.5">Certified quality and environmental management · Est. 2008</p>
+                </div>
+              </div>
+              <div className="flex flex-wrap gap-3">
+                {[
+                  "Quality Management",
+                  "Environmental Compliance",
+                  "HSE Standards",
+                ].map((tag) => (
+                  <span
+                    key={tag}
+                    className="text-[12px] text-white/50 border border-white/10 px-3 py-1.5 rounded-lg"
+                  >
+                    {tag}
+                  </span>
+                ))}
+              </div>
+            </div>
+          </div>
+        </FadeUp>
+
+      </div>
+    </section>
+  );
+}
+
+/* ── Benefit card ── */
+function BenefitCard({
+  benefit,
+  index,
+}: {
+  benefit: (typeof BENEFITS)[number];
+  index: number;
+}) {
+  const ref = useRef<HTMLDivElement>(null);
+  const inView = useInView(ref, { once: true, margin: "-40px" });
+
+  return (
+    <motion.div
+      ref={ref}
+      initial={{ opacity: 0, y: 24 }}
+      animate={inView ? { opacity: 1, y: 0 } : {}}
+      transition={{ duration: 0.55, ease: [0.22, 1, 0.36, 1], delay: 0.08 + index * 0.08 }}
+      whileHover={{ y: -3, transition: { duration: 0.22 } }}
+      className="group relative rounded-2xl border border-[#e8eaf0] bg-[#f4f5f8] p-7 flex flex-col hover:border-[#e7212b]/25 hover:bg-white hover:shadow-xl hover:shadow-[#e7212b]/5 transition-all duration-300 cursor-default"
+    >
+      {/* Number */}
+      <span className="text-[10px] font-bold text-[#e7212b]/25 tracking-[3px] mb-4 block">
+        {String(index + 1).padStart(2, "0")}
+      </span>
+
+      {/* Icon */}
+      <div className="w-12 h-12 rounded-xl bg-white border border-[#e8eaf0] group-hover:border-[#e7212b]/20 group-hover:bg-[#e7212b]/5 flex items-center justify-center mb-5 transition-all duration-300 shadow-sm">
+        <benefit.Icon className="w-5 h-5 text-[#e7212b]" strokeWidth={1.8} />
+      </div>
+
+      {/* Red divider */}
+      <div className="w-8 h-[2px] bg-[#e7212b] rounded-full mb-4 group-hover:w-12 transition-all duration-300" />
+
+      {/* Title */}
+      <h3 className="text-[16px] font-bold text-[#0B0D26] leading-snug mb-3">
+        {benefit.title}
+      </h3>
+
+      {/* Body */}
+      <p className="text-gray-500 text-[14px] leading-[1.75]">
+        {benefit.body}
+      </p>
+    </motion.div>
+  );
+}

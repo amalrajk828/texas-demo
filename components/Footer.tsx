@@ -66,11 +66,11 @@ export default function Footer() {
 
           {/* Brand */}
           <div>
-            <Link href="/" className="flex items-center gap-3 mb-5">
-              <Image src="/logo.svg" alt="Texas Technical Services" width={44} height={44} />
-              <div>
-                <p className="text-white font-medium tracking-[3px] text-[11px]">TEXAS</p>
-                <p className="text-white/30 text-[7px] tracking-[1.5px]">TECHNICAL SERVICES</p>
+            <Link href="/" className="flex flex-col items-center gap-3 mb-6 w-fit">
+              <Image src="/logo.svg" alt="Texas Technical Services" width={100} height={100} />
+              <div className="text-center">
+                <p className="text-white font-semibold tracking-[6px] text-[18px] leading-none">TEXAS</p>
+                <p className="text-white/50 text-[10px] tracking-[3px] leading-none mt-1 font-medium">TECHNICAL SERVICES</p>
               </div>
             </Link>
             <p className="text-white/40 text-sm leading-relaxed mb-4">
@@ -186,7 +186,7 @@ export default function Footer() {
       <div className="border-t border-white/6">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 py-4 flex flex-col sm:flex-row items-center justify-between gap-2">
           <p className="text-white/20 text-[11px]">
-            © {new Date().getFullYear()} Texas Technical Services Co. All rights reserved.
+            TEXAS TECHNICAL SERVICE COMPANY W.L.L. © 2026. All Rights Reserved.
           </p>
           <div className="flex items-center gap-4">
             <span className="text-brand-red text-[11px] font-medium">ISO 9001:2015 Certified</span>

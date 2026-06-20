@@ -1,0 +1,77 @@
+"use client";
+import Link from "next/link";
+import { motion, useInView } from "framer-motion";
+import { useRef } from "react";
+import { ArrowRight } from "lucide-react";
+
+export default function AboutStrip() {
+  const ref = useRef<HTMLDivElement>(null);
+  const inView = useInView(ref, { once: true, margin: "-80px" });
+
+  return (
+    <section className="py-16 lg:py-20" style={{ background: "var(--color-brand-navy-mid)" }}>
+      <div className="max-w-7xl mx-auto px-4 sm:px-6">
+        <div ref={ref} className="grid grid-cols-1 lg:grid-cols-[1fr_auto] gap-10 items-center">
+
+          {/* Left — copy */}
+          <motion.div
+            initial={{ opacity: 0, x: -24 }}
+            animate={inView ? { opacity: 1, x: 0 } : {}}
+            transition={{ duration: 0.6, ease: [0.22, 1, 0.36, 1] }}
+            className="max-w-2xl"
+          >
+            <div className="flex items-center gap-2 mb-4">
+              <span className="w-5 h-px" style={{ background: "var(--color-brand-red)" }} />
+              <span
+                className="text-[11px] font-semibold tracking-[3px] uppercase"
+                style={{ color: "var(--color-brand-red)" }}
+              >
+                About Texas Technical Services
+              </span>
+            </div>
+            <h2 className="text-2xl sm:text-3xl font-bold text-white mb-4">
+              Established 2008. Built on precision.
+            </h2>
+            <p className="text-white/50 text-[15px] leading-relaxed mb-6">
+              Texas Technical Service Company is an ISO 9001:2015 certified company established
+              in 2008. We are primarily focused on Flow measurement solutions, Inspection and
+              testing, and industrial automation requirements for the oil and gas, power plants,
+              manufacturing and commercial sectors.
+            </p>
+            <Link
+              href="/about-us/"
+              className="inline-flex items-center gap-2 text-[14px] font-semibold transition-colors hover:text-white"
+              style={{ color: "var(--color-brand-red)" }}
+            >
+              Learn more about us <ArrowRight className="w-4 h-4" />
+            </Link>
+          </motion.div>
+
+          {/* Right — ISO badges */}
+          <motion.div
+            initial={{ opacity: 0, x: 24 }}
+            animate={inView ? { opacity: 1, x: 0 } : {}}
+            transition={{ duration: 0.6, delay: 0.1, ease: [0.22, 1, 0.36, 1] }}
+            className="flex flex-col sm:flex-row lg:flex-col gap-3"
+          >
+            <div
+              className="rounded-xl px-8 py-5 text-center border"
+              style={{
+                background: "color-mix(in srgb, var(--color-brand-red) 10%, transparent)",
+                borderColor: "color-mix(in srgb, var(--color-brand-red) 25%, transparent)",
+              }}
+            >
+              <p className="text-[15px] font-bold" style={{ color: "var(--color-brand-red)" }}>ISO 9001:2015</p>
+              <p className="text-white/40 text-[12px] mt-1 font-medium">Certified</p>
+            </div>
+            <div className="bg-white/[0.04] border border-white/[0.08] rounded-xl px-8 py-5 text-center">
+              <p className="text-white text-[15px] font-bold">ISO 14001:2015</p>
+              <p className="text-white/40 text-[12px] mt-1 font-medium">Environmental</p>
+            </div>
+          </motion.div>
+
+        </div>
+      </div>
+    </section>
+  );
+}
