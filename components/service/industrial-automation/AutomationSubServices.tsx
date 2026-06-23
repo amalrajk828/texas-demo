@@ -34,24 +34,24 @@ const SUB_SERVICES = [
     Icon: Factory,
     title: "Process Plant Automation",
     body: "Plant Automation Excellence: At TTS, we specialize in delivering top-tier Plant Automation solutions that streamline your industrial processes. Our cutting-edge automation systems are designed to boost efficiency, reduce operational costs, and enhance overall productivity — ensuring your plant operates at peak performance levels with full visibility and control.",
-    imageSrc: "/services/industrial-automation/plant-automation.jpg",
-    imagePlaceholder: "/services/industrial-automation/plant-automation.jpg",
+    imageSrc: "/images/services/plant-automation.jpg",
+    imagePlaceholder: "/images/services/plant-automation.jpg",
     href: "/service/plant-automation/",
   },
   {
     Icon: Network,
     title: "Control System Integration and Upgradation",
     body: "At TTS, we are your trusted partner for PLC (Programmable Logic Controller) and SCADA (Supervisory Control and Data Acquisition)-based automation and system integration. Our expertise in this field empowers industries to achieve higher levels of efficiency, reliability, and control — from legacy system migrations to full greenfield automation builds.",
-    imageSrc: "/services/industrial-automation/control-system.jpg",
-    imagePlaceholder: "/services/industrial-automation/control-system.jpg",
+    imageSrc: "/images/services/control-system.jpg",
+    imagePlaceholder: "/images/services/control-system.jpg",
     href: "/service/system-software-upgrade/",
   },
   {
     Icon: Rocket,
     title: "Commissioning and Start-up Support",
     body: "Commissioning for Industrial Process Automation involves the meticulous process of validating and fine-tuning automation systems to ensure they operate in strict accordance with predefined specifications. Our experienced team guides your project from pre-commissioning through hot commissioning, start-up, and post-commissioning handover — minimizing downtime and risk.",
-    imageSrc: "/services/industrial-automation/commissioning.jpg",
-    imagePlaceholder: "/services/industrial-automation/commissioning.jpg",
+    imageSrc: "/images/services/commissioning2.jpg",
+    imagePlaceholder: "/images/services/commissioning2.jpg",
     href: "/service/commissioning-and-start-up-support/",
   },
 ];
@@ -87,15 +87,6 @@ function SubServiceCard({
           sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
           className="object-cover group-hover:scale-105 transition-transform duration-500"
         />
-        {/* Placeholder overlay */}
-        <div className="absolute inset-0 flex flex-col items-center justify-center bg-[#0B0D26]/92 gap-2">
-          <div className="w-10 h-10 rounded-full border border-white/10 flex items-center justify-center group-hover:border-[#e7212b]/30 transition-colors duration-300">
-            <item.Icon className="w-4.5 h-4.5 text-white/20 group-hover:text-[#e7212b]/50 transition-colors duration-300" strokeWidth={1.6} />
-          </div>
-          <p className="text-white/15 text-[9px] tracking-[1.5px] uppercase text-center px-4 leading-relaxed">
-            {item.imagePlaceholder}
-          </p>
-        </div>
         {/* Hover top accent */}
         <div className="absolute top-0 left-0 right-0 h-[2px] bg-gradient-to-r from-transparent via-[#e7212b] to-transparent opacity-0 group-hover:opacity-70 transition-opacity duration-300" />
         {/* Category tag */}

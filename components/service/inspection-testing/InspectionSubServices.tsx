@@ -34,24 +34,24 @@ const SUB_SERVICES = [
     Icon: Hammer,
     title: "Mechanical Testing",
     body: "Tensile testing is a process that provides information about the tensile strength, yield strength, and ductility of the metallic material. It measures the force required to break a composite or plastic specimen and the extent to which the specimen stretches or elongates to that breaking point — ensuring full material conformity.",
-    imageSrc: "/services/inspection-testing/mechanical-testing.jpg",
-    imagePlaceholder: "/services/inspection-testing/mechanical-testing.jpg",
+    imageSrc: "/images/services/mechanical-testing.jpg",
+    imagePlaceholder: "/images/services/mechanical-testing.jpg",
     href: "/service/mechanical-testing/",
   },
   {
     Icon: ScanLine,
     title: "Non Destructive Testing (NDT)",
     body: "The following non-destructive examination services are available at TTS with technical expertise, qualified and experienced technicians, and modern equipment: Visual Inspection (VI), Liquid / Dye Penetrant Examination (PT), Magnetic Particle Inspection (MT), Radiographic Testing (RT), and Ultrasonic Testing (UT).",
-    imageSrc: "/services/inspection-testing/ndt.jpg",
-    imagePlaceholder: "/services/inspection-testing/ndt.jpg",
+    imageSrc: "/images/services/ndt.jpg",
+    imagePlaceholder: "/images/services/ndt.jpg",
     href: "/service/non-destructive-testing-ndt/",
   },
   {
     Icon: Microscope,
     title: "Specialized Inspection Service",
     body: "Phased Array Ultrasonic Testing — phased arrays are used to detect image defects including cracks, voids, and pits caused by corrosion. They are used to measure material thickness and evaluate weld integrity, providing high-resolution imaging far beyond conventional UT techniques.",
-    imageSrc: "/services/inspection-testing/specialized-inspection.jpg",
-    imagePlaceholder: "/services/inspection-testing/specialized-inspection.jpg",
+    imageSrc: "/images/services/specialized-inspection.jpg",
+    imagePlaceholder: "/images/services/specialized-inspection.jpg",
     href: "/service/specialized-inspection-service/",
   },
 ];
@@ -87,15 +87,6 @@ function SubServiceCard({
           sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
           className="object-cover group-hover:scale-105 transition-transform duration-500"
         />
-        {/* Placeholder overlay */}
-        <div className="absolute inset-0 flex flex-col items-center justify-center bg-[#0B0D26]/92 gap-2">
-          <div className="w-10 h-10 rounded-full border border-white/10 flex items-center justify-center group-hover:border-[#e7212b]/30 transition-colors duration-300">
-            <item.Icon className="w-4.5 h-4.5 text-white/20 group-hover:text-[#e7212b]/50 transition-colors duration-300" strokeWidth={1.6} />
-          </div>
-          <p className="text-white/15 text-[9px] tracking-[1.5px] uppercase text-center px-4 leading-relaxed">
-            {item.imagePlaceholder}
-          </p>
-        </div>
         {/* Hover top accent */}
         <div className="absolute top-0 left-0 right-0 h-[2px] bg-gradient-to-r from-transparent via-[#e7212b] to-transparent opacity-0 group-hover:opacity-70 transition-opacity duration-300" />
         {/* Category tag */}

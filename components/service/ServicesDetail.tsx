@@ -55,10 +55,10 @@ const SERVICES = [
       "Specialized consultancy & process optimization",
       "Compliance with OIML, AGA, API, ISO standards",
     ],
-    imageSrc: "/services/flow-measurement.jpg",
+    imageSrc: "/images/services/flow-measurement.jpg",
     imageAlt: "Flow measurement control system",
     href: "/service/flow-measurement-solutions/",
-    imagePlaceholder: "/services/flow-measurement.jpg",
+    imagePlaceholder: "/images/services/flow-measurement.jpg",
     reverse: false,
   },
   {
@@ -78,10 +78,10 @@ const SERVICES = [
       "Metering system validation & performance audits",
       "Certification & compliance reporting",
     ],
-    imageSrc: "/services/inspection-testing.jpg",
+    imageSrc: "/images/services/inspection-testing.jpg",
     imageAlt: "Inspection and testing equipment",
     href: "/service/inspection-testing/",
-    imagePlaceholder: "/services/inspection-testing.jpg",
+    imagePlaceholder: "/images/services/inspection-testing.jpg",
     reverse: true,
   },
   {
@@ -101,10 +101,10 @@ const SERVICES = [
       "CEMS — Continuous Emissions Monitoring Systems",
       "Plant-wide automation & DCS migration",
     ],
-    imageSrc: "/services/automation.jpg",
+    imageSrc: "/images/services/automation.jpg",
     imageAlt: "Industrial automation control room",
     href: "/service/industrial-automation/",
-    imagePlaceholder: "/services/automation.jpg",
+    imagePlaceholder: "/images/services/automation.jpg",
     reverse: false,
   },
 ];
@@ -128,15 +128,6 @@ function ServiceImage({
         sizes="(max-width: 1024px) 100vw, 50vw"
         className="object-cover"
       />
-      {/* Live placeholder overlay — remove once image is added */}
-      <div className="absolute inset-0 flex flex-col items-center justify-center bg-[#0B0D26]/90 gap-2">
-        <div className="w-12 h-12 rounded-full border border-white/10 flex items-center justify-center">
-          <span className="text-white/20 text-2xl">+</span>
-        </div>
-        <p className="text-white/20 text-[10px] tracking-[2px] uppercase text-center px-6">
-          {placeholder}
-        </p>
-      </div>
       {/* Bottom fade */}
       <div className="absolute bottom-0 left-0 right-0 h-16 bg-gradient-to-t from-[#0B0D26]/40 to-transparent" />
     </div>
