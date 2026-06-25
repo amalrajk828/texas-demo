@@ -34,24 +34,18 @@ const SUB_SERVICES = [
     Icon: Factory,
     title: "Process Plant Automation",
     body: "Plant Automation Excellence: At TTS, we specialize in delivering top-tier Plant Automation solutions that streamline your industrial processes. Our cutting-edge automation systems are designed to boost efficiency, reduce operational costs, and enhance overall productivity — ensuring your plant operates at peak performance levels with full visibility and control.",
-    imageSrc: "/images/services/plant-automation.jpg",
-    imagePlaceholder: "/images/services/plant-automation.jpg",
     href: "/service/plant-automation/",
   },
   {
     Icon: Network,
     title: "Control System Integration and Upgradation",
     body: "At TTS, we are your trusted partner for PLC (Programmable Logic Controller) and SCADA (Supervisory Control and Data Acquisition)-based automation and system integration. Our expertise in this field empowers industries to achieve higher levels of efficiency, reliability, and control — from legacy system migrations to full greenfield automation builds.",
-    imageSrc: "/images/services/control-system.jpg",
-    imagePlaceholder: "/images/services/control-system.jpg",
     href: "/service/system-software-upgrade/",
   },
   {
     Icon: Rocket,
     title: "Commissioning and Start-up Support",
     body: "Commissioning for Industrial Process Automation involves the meticulous process of validating and fine-tuning automation systems to ensure they operate in strict accordance with predefined specifications. Our experienced team guides your project from pre-commissioning through hot commissioning, start-up, and post-commissioning handover — minimizing downtime and risk.",
-    imageSrc: "/images/services/commissioning2.jpg",
-    imagePlaceholder: "/images/services/commissioning2.jpg",
     href: "/service/commissioning-and-start-up-support/",
   },
 ];
@@ -78,25 +72,6 @@ function SubServiceCard({
       href={item.href}
       className="group relative rounded-2xl border border-[#e8eaf0] bg-white overflow-hidden flex flex-col hover:border-[#e7212b]/25 hover:shadow-xl hover:shadow-[#e7212b]/6 transition-all duration-300 h-full"
     >
-      {/* Image */}
-      <div className="relative aspect-[16/9] bg-[#0B0D26] overflow-hidden">
-        <Image
-          src={item.imageSrc}
-          alt={item.title}
-          fill
-          sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
-          className="object-cover group-hover:scale-105 transition-transform duration-500"
-        />
-        {/* Hover top accent */}
-        <div className="absolute top-0 left-0 right-0 h-[2px] bg-gradient-to-r from-transparent via-[#e7212b] to-transparent opacity-0 group-hover:opacity-70 transition-opacity duration-300" />
-        {/* Category tag */}
-        <div className="absolute top-3 left-3">
-          <span className="text-[10px] font-semibold text-white/60 bg-[#0B0D26]/70 backdrop-blur-sm border border-white/10 px-2.5 py-1 rounded-full tracking-[1.5px] uppercase">
-            Industrial Automation
-          </span>
-        </div>
-      </div>
-
       {/* Content */}
       <div className="flex flex-col flex-1 p-6">
         <div className="flex items-center justify-between mb-4">
@@ -172,6 +147,20 @@ export default function AutomationSubServices() {
                 Get More Information
                 <ArrowRight className="w-3.5 h-3.5" />
               </Link>
+            </div>
+          </FadeUp>
+
+          <FadeUp delay={0.1} className="mb-16">
+            <div className="relative rounded-2xl overflow-hidden aspect-[21/7] shadow-2xl shadow-black/20">
+              <Image
+                src="/images/services/automation_full.jpg"
+                alt="Industrial Process Automation"
+                fill
+                sizes="100vw"
+                className="object-cover"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-[#0B0D26]/40 to-transparent" />
+              <div className="absolute top-0 left-0 right-0 h-[2px] bg-gradient-to-r from-transparent via-[#e7212b] to-transparent opacity-60" />
             </div>
           </FadeUp>
 

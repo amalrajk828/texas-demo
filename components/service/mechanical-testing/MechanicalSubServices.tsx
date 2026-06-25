@@ -1,4 +1,5 @@
 "use client";
+import Image from "next/image";
 import Link from "next/link";
 import { motion, useInView } from "framer-motion";
 import { useRef } from "react";
@@ -19,36 +20,42 @@ const TESTS = [
     Icon: MoveHorizontal,
     title: "Tensile Test",
     body: "One of the most fundamental mechanical tests — determines tensile strength, yield strength, and ductility of metals, plastics, ceramics, and composites by measuring the force required to stretch a specimen until it breaks.",
+    imageSrc: "/images/services/tensile-test2.jpg",
     href: "/service/tensile-test/",
   },
   {
     Icon: Shield,
     title: "Hardness Test",
     body: "Measures a material's resistance to permanent deformation by penetration of a harder indenter under a specified load. Widely used for metals, plastics, and ceramics to determine surface hardness and material quality.",
+    imageSrc: "/images/services/Hardness-Test.jpg",
     href: "/service/hardness-test/",
   },
   {
     Icon: Zap,
     title: "Impact Test",
     body: "Measures a material's resistance to sudden shock loading that causes immediate deformation, fracture, or rupture. Critical for construction, automotive, and aerospace applications where impact resistance is paramount.",
+    imageSrc: "/images/services/charpy_impact_test.jpg",
     href: "/service/impact-test/",
   },
   {
     Icon: Rotate3D,
     title: "Bend Test",
     body: "Assesses a material's ability to withstand bending forces without breaking. A qualitative test evaluating both ductility and soundness — essential for structural applications in construction, aerospace, and engineering.",
+    imageSrc: "/images/services/Three_point_flexural_test-scaled.jpg",
     href: "/service/bend-test/",
   },
   {
     Icon: Scissors,
     title: "Fracture Test",
     body: "Fracture toughness tests measure a material's ability to resist growth or propagation of a pre-existing flaw — whether a fatigue crack, void, or any inconsistency present in the test material.",
+    imageSrc: "/images/services/fracture-testing.jpg",
     href: "/service/fracture-test/",
   },
   {
     Icon: Microscope,
     title: "Macro and Micro Test",
     body: "Two categories of experiments conducted to study mechanical properties at different length scales — providing insights into material behaviour under various loading conditions for characterisation, design optimisation, and quality control.",
+    imageSrc: "/images/services/Macro-and-Micro-Test.jpg",
     href: "/service/macro-and-micro-test/",
   },
 ];
@@ -76,6 +83,19 @@ export default function MechanicalSubServices() {
             <FadeUp key={item.title} delay={0.06 + i * 0.08}>
               <motion.div whileHover={{ y: -4, transition: { duration: 0.22 } }}>
                 <Link href={item.href} className="group relative rounded-2xl border border-[#e8eaf0] bg-white overflow-hidden flex flex-col hover:border-[#e7212b]/25 hover:shadow-xl hover:shadow-[#e7212b]/6 transition-all duration-300 h-full">
+                  <div className="relative aspect-[16/9] bg-[#0B0D26] overflow-hidden">
+                    <Image
+                      src={item.imageSrc}
+                      alt={item.title}
+                      fill
+                      sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+                      className="object-cover group-hover:scale-105 transition-transform duration-500"
+                    />
+                    <div className="absolute top-0 left-0 right-0 h-[2px] bg-gradient-to-r from-transparent via-[#e7212b] to-transparent opacity-0 group-hover:opacity-70 transition-opacity duration-300" />
+                    <div className="absolute top-3 left-3">
+                      <span className="text-[10px] font-semibold text-white/60 bg-[#0B0D26]/70 backdrop-blur-sm border border-white/10 px-2.5 py-1 rounded-full tracking-[1.5px] uppercase">Mechanical Testing</span>
+                    </div>
+                  </div>
                   <div className="flex flex-col flex-1 p-6">
                     <div className="flex items-center justify-between mb-4">
                       <div className="w-10 h-10 rounded-xl bg-[#e7212b]/8 border border-[#e7212b]/15 flex items-center justify-center group-hover:bg-[#e7212b]/15 group-hover:border-[#e7212b]/30 transition-all duration-300">
