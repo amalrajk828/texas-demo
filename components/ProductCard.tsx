@@ -27,13 +27,19 @@ export default function ProductCard({
 
   const tagMap: Record<string, string> = {
     "Industrial Sensors": "SICK Industrial Sensors",
-    "PLC": "Mitsubishi Electric PLC",
-    "ICONICS": "Mitsubishi Electric HMI / SCADA",
-    "GOT": "Mitsubishi Electric HMI",
+    PLC: "Mitsubishi Electric PLC",
+    ICONICS: "Mitsubishi Electric HMI / SCADA",
+    GOT: "Mitsubishi Electric HMI",
     "Frequency Inverters (VFD)": "Mitsubishi Electric VFD",
     "AC Servos": "Mitsubishi Electric AC Servo",
+    "Custody Metering Solutions": "Custody Transfer Solutions",
+    "Flow Meters": "SICK Flow Measurement",
   };
-  const displayTag = product.tag || tagMap[product.category || ""] || tagMap[category || ""] || "Texas Technical Services Product";
+  const displayTag =
+    product.tag ||
+    tagMap[product.category || ""] ||
+    tagMap[category || ""] ||
+    "Texas Technical Services Product";
   const displayImage = product.image || "";
 
   return (
@@ -58,27 +64,59 @@ export default function ProductCard({
               onError={() => setImgError(true)}
             />
           ) : (
-            <div style={{
-              width: "100%", height: "100%",
-              background: "linear-gradient(135deg, #1a1d35 0%, #0d1024 100%)",
-              borderRadius: "8px",
-              display: "flex", flexDirection: "column",
-              alignItems: "center", justifyContent: "center",
-              gap: "8px", padding: "16px",
-              border: "1px solid #2A2D4A"
-            }}>
-              <div style={{
-                width: "48px", height: "48px",
-                background: "#F5821F22", borderRadius: "50%",
-                display: "flex", alignItems: "center", justifyContent: "center"
-              }}>
+            <div
+              style={{
+                width: "100%",
+                height: "100%",
+                background: "linear-gradient(135deg, #1a1d35 0%, #0d1024 100%)",
+                borderRadius: "8px",
+                display: "flex",
+                flexDirection: "column",
+                alignItems: "center",
+                justifyContent: "center",
+                gap: "8px",
+                padding: "16px",
+                border: "1px solid #2A2D4A",
+              }}
+            >
+              <div
+                style={{
+                  width: "48px",
+                  height: "48px",
+                  background: "#F5821F22",
+                  borderRadius: "50%",
+                  display: "flex",
+                  alignItems: "center",
+                  justifyContent: "center",
+                }}
+              >
                 <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
-                  <rect x="3" y="3" width="18" height="18" rx="2" stroke="#F5821F" strokeWidth="1.5"/>
-                  <circle cx="8.5" cy="8.5" r="1.5" fill="#F5821F"/>
-                  <path d="M21 15L16 10L5 21" stroke="#F5821F" strokeWidth="1.5" strokeLinecap="round"/>
+                  <rect
+                    x="3"
+                    y="3"
+                    width="18"
+                    height="18"
+                    rx="2"
+                    stroke="#F5821F"
+                    strokeWidth="1.5"
+                  />
+                  <circle cx="8.5" cy="8.5" r="1.5" fill="#F5821F" />
+                  <path
+                    d="M21 15L16 10L5 21"
+                    stroke="#F5821F"
+                    strokeWidth="1.5"
+                    strokeLinecap="round"
+                  />
                 </svg>
               </div>
-              <span style={{ color: "#A0A8C0", fontSize: "12px", textAlign: "center", lineHeight: "1.4" }}>
+              <span
+                style={{
+                  color: "#A0A8C0",
+                  fontSize: "12px",
+                  textAlign: "center",
+                  lineHeight: "1.4",
+                }}
+              >
                 {product.name}
               </span>
             </div>

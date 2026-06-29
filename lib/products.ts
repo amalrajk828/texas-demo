@@ -1,7 +1,15 @@
 export type Product = {
   slug: string;
   name: string;
-  category: "Industrial Sensors" | "PLC" | "ICONICS" | "GOT" | "Frequency Inverters (VFD)" | "AC Servos";
+  category:
+    | "Industrial Sensors"
+    | "PLC"
+    | "ICONICS"
+    | "GOT"
+    | "Frequency Inverters (VFD)"
+    | "AC Servos"
+    | "Custody Metering Solutions"
+    | "Flow Meters";
   parentPath: string;
   image?: string;
   tag?: string;
@@ -30,7 +38,6 @@ export type Product = {
 };
 
 export const products: Product[] = [
-
   // ── INDUSTRIAL SENSORS (22) ──────────────────────────────
   {
     slug: "radar-sensors",
@@ -39,14 +46,15 @@ export const products: Product[] = [
     parentPath: "/products/sensors",
     image: "/images/sensors/Radar Sensors.png",
     tag: "SICK Industrial Sensors",
-    description: "The advantages of radar over other sensor technologies lie in its ruggedness. Radar sensors can reliably detect objects within their range, regardless of harsh environmental conditions, and can even analyze or provide the speed of the object. As a result, radar sensors in the SICK portfolio are commonly used in ports and industrial mining sites to prevent collisions, especially in adverse weather conditions or polluted environments. They are essential for collision prevention and distance measurement in large and mobile systems like gantry cranes, ship-to-shore cranes in ports, and booms of open pit excavators and dump trucks in the mining industry.",
+    description:
+      "The advantages of radar over other sensor technologies lie in its ruggedness. Radar sensors can reliably detect objects within their range, regardless of harsh environmental conditions, and can even analyze or provide the speed of the object. As a result, radar sensors in the SICK portfolio are commonly used in ports and industrial mining sites to prevent collisions, especially in adverse weather conditions or polluted environments. They are essential for collision prevention and distance measurement in large and mobile systems like gantry cranes, ship-to-shore cranes in ports, and booms of open pit excavators and dump trucks in the mining industry.",
     keyApplications: [
       "Collision prevention in ports and ship-to-shore cranes",
       "Distance measurement in gantry cranes and mobile systems",
       "Open pit excavators and dump trucks in mining",
       "Object detection in adverse weather and polluted environments",
       "Speed measurement of moving objects in industrial zones",
-      "Large-scale industrial site perimeter monitoring"
+      "Large-scale industrial site perimeter monitoring",
     ],
     keyBenefits: [
       "Reliable detection regardless of harsh environmental conditions",
@@ -54,17 +62,19 @@ export const products: Product[] = [
       "Rugged design for outdoor and industrial environments",
       "Performs in fog, dust, rain, and polluted conditions",
       "Wide detection range for large and mobile systems",
-      "Proven in critical safety and collision prevention applications"
+      "Proven in critical safety and collision prevention applications",
     ],
     industries: [
       "Ports and Logistics",
       "Mining and Quarrying",
       "Oil & Gas (Outdoor Facilities)",
       "Heavy Industry and Steel",
-      "Infrastructure and Transportation"
+      "Infrastructure and Transportation",
     ],
-    externalLink: "https://www.sick.com/ae/en/radar-sensors/c/g575803?q=:Def_Type:ProductFamily",
-    downloadLink: "https://cdn.sick.com/media/docs/0/30/930/product_segment_overview_detection_and_ranging_solutions_2d_laser_scanners_3d_laser_scanners_radar_sensors_en_im0063930.pdf"
+    externalLink:
+      "https://www.sick.com/ae/en/radar-sensors/c/g575803?q=:Def_Type:ProductFamily",
+    downloadLink:
+      "https://cdn.sick.com/media/docs/0/30/930/product_segment_overview_detection_and_ranging_solutions_2d_laser_scanners_3d_laser_scanners_radar_sensors_en_im0063930.pdf",
   },
   {
     slug: "photoelectric-sensors",
@@ -73,14 +83,15 @@ export const products: Product[] = [
     parentPath: "/products/sensors",
     image: "/images/sensors/Photoelectric Sensors.png",
     tag: "SICK Industrial Sensors",
-    description: "SICK offers an extensive selection of photoelectric sensors that stand out with their precise optics and cutting-edge technology, resulting in market-leading solutions enriched with sensor intelligence. With the incorporation of the latest SIRIC® and LED technologies, these sensors guarantee exceptional operational reliability, even in the presence of potential interference factors. Furthermore, the supplementary sensor information proves valuable in streamlining contemporary production processes. This comprehensive range of photoelectric sensors finds widespread usage in automation applications across the globe.",
+    description:
+      "SICK offers an extensive selection of photoelectric sensors that stand out with their precise optics and cutting-edge technology, resulting in market-leading solutions enriched with sensor intelligence. With the incorporation of the latest SIRIC® and LED technologies, these sensors guarantee exceptional operational reliability, even in the presence of potential interference factors. Furthermore, the supplementary sensor information proves valuable in streamlining contemporary production processes. This comprehensive range of photoelectric sensors finds widespread usage in automation applications across the globe.",
     keyApplications: [
       "Object detection on conveyor and production lines",
       "Presence and absence detection in packaging machines",
       "Part counting and sorting in manufacturing",
       "Label and mark detection in printing and labeling",
       "End-of-line inspection systems",
-      "Automation applications across global industries"
+      "Automation applications across global industries",
     ],
     keyBenefits: [
       "Precise optics for reliable detection",
@@ -88,17 +99,19 @@ export const products: Product[] = [
       "Market-leading sensor intelligence features",
       "Exceptional operational reliability under interference",
       "Supplementary sensor data for modern production processes",
-      "Wide product range for all automation needs"
+      "Wide product range for all automation needs",
     ],
     industries: [
       "Manufacturing and Factory Automation",
       "Packaging and Food & Beverage",
       "Logistics and Warehousing",
       "Printing and Labeling",
-      "Oil & Gas and Process Industries"
+      "Oil & Gas and Process Industries",
     ],
-    externalLink: "https://www.sick.com/ae/en/photoelectric-sensors/c/g172752?q=:Def_Type:Product",
-    downloadLink: "https://cdn.sick.com/media/familyoverview/5/65/765/familyOverview_W12_g555765_en.pdf"
+    externalLink:
+      "https://www.sick.com/ae/en/photoelectric-sensors/c/g172752?q=:Def_Type:Product",
+    downloadLink:
+      "https://cdn.sick.com/media/familyoverview/5/65/765/familyOverview_W12_g555765_en.pdf",
   },
   {
     slug: "safety-light-beam-sensors",
@@ -107,14 +120,15 @@ export const products: Product[] = [
     parentPath: "/products/sensors",
     image: "/images/sensors/3.-SAFETY-LIGHT-BEAM-SENSORS.png",
     tag: "SICK Industrial Sensors",
-    description: "Safety light-beam sensors provide reliable personnel and access protection for industrial machinery and hazardous zones. Designed to detect the interruption of a light beam between emitter and receiver, they trigger an immediate safety response when a person or object enters a protected area. Certified to international safety standards, these sensors are trusted in machine guarding and industrial safety applications worldwide.",
+    description:
+      "Safety light-beam sensors provide reliable personnel and access protection for industrial machinery and hazardous zones. Designed to detect the interruption of a light beam between emitter and receiver, they trigger an immediate safety response when a person or object enters a protected area. Certified to international safety standards, these sensors are trusted in machine guarding and industrial safety applications worldwide.",
     keyApplications: [
       "Access protection for industrial machines and presses",
       "Hazardous area entry detection",
       "Safety interlocking for automated production lines",
       "Perimeter protection for robotic cells",
       "Door and gate monitoring on industrial equipment",
-      "Conveyor and material handling safety systems"
+      "Conveyor and material handling safety systems",
     ],
     keyBenefits: [
       "Certified to international functional safety standards",
@@ -122,17 +136,18 @@ export const products: Product[] = [
       "Simple installation with emitter-receiver alignment",
       "Long sensing range for wide machine guarding",
       "Robust design for industrial environments",
-      "Fast response time for critical safety applications"
+      "Fast response time for critical safety applications",
     ],
     industries: [
       "Manufacturing and Machine Building",
       "Automotive and Assembly",
       "Packaging and Material Handling",
       "Oil & Gas (Auxiliary Systems)",
-      "Robotics and Automation"
+      "Robotics and Automation",
     ],
-    externalLink: "https://www.sick.com/ae/en/safety-sensors/safety-light-beam-devices/c/g185033",
-    downloadLink: null
+    externalLink:
+      "https://www.sick.com/ae/en/safety-sensors/safety-light-beam-devices/c/g185033",
+    downloadLink: null,
   },
   {
     slug: "safety-light-curtains",
@@ -141,14 +156,15 @@ export const products: Product[] = [
     parentPath: "/products/sensors",
     image: "/images/sensors/4.-SAFETY-LIGHT-CURTAIN.png",
     tag: "SICK Industrial Sensors",
-    description: "Safety light curtains offer dependable and budget-friendly access protection for hazardous points and areas. Depending on the specific variant, they can incorporate various machine functions or be customized through safe control solutions. The range encompasses both compact and robust designs, catering to diverse ambient conditions with exceptional durability.",
+    description:
+      "Safety light curtains offer dependable and budget-friendly access protection for hazardous points and areas. Depending on the specific variant, they can incorporate various machine functions or be customized through safe control solutions. The range encompasses both compact and robust designs, catering to diverse ambient conditions with exceptional durability.",
     keyApplications: [
       "Point-of-operation guarding on presses and stamping machines",
       "Perimeter access protection for robotic work cells",
       "Safety guarding for automated assembly lines",
       "Machine tool and CNC equipment protection",
       "Conveyor and transfer system access control",
-      "Packaging and palletizing machine safety"
+      "Packaging and palletizing machine safety",
     ],
     keyBenefits: [
       "Dependable and cost-effective access protection",
@@ -156,17 +172,19 @@ export const products: Product[] = [
       "Customizable via safe control solutions",
       "Incorporates machine function integration options",
       "Suitable for diverse ambient and industrial conditions",
-      "Certified to international safety standards"
+      "Certified to international safety standards",
     ],
     industries: [
       "Manufacturing and Machine Building",
       "Automotive and Assembly",
       "Packaging and Material Handling",
       "Robotics and Industrial Automation",
-      "Oil & Gas (Auxiliary Systems)"
+      "Oil & Gas (Auxiliary Systems)",
     ],
-    externalLink: "https://www.sick.com/ae/en/safety-light-curtains/c/g184853?q=:Def_Type:ProductFamily",
-    downloadLink: "https://cdn.sick.com/media/docs/9/79/379/product_segment_overview_opto_electronic_protective_devices_en_im0069379.pdf"
+    externalLink:
+      "https://www.sick.com/ae/en/safety-light-curtains/c/g184853?q=:Def_Type:ProductFamily",
+    downloadLink:
+      "https://cdn.sick.com/media/docs/9/79/379/product_segment_overview_opto_electronic_protective_devices_en_im0069379.pdf",
   },
   {
     slug: "safety-distance-sensors",
@@ -175,14 +193,15 @@ export const products: Product[] = [
     parentPath: "/products/sensors",
     image: "/images/sensors/5.SAFETY-DISTANCE-SENSOR.png",
     tag: "SICK Industrial Sensors",
-    description: "Safety distance sensors provide non-contact, reliable detection of personnel and objects in hazardous zones, triggering safety responses when the defined protection field is breached. Designed for integration into safety control systems, they offer certified protection for industrial machinery and automated equipment without the need for physical guards.",
+    description:
+      "Safety distance sensors provide non-contact, reliable detection of personnel and objects in hazardous zones, triggering safety responses when the defined protection field is breached. Designed for integration into safety control systems, they offer certified protection for industrial machinery and automated equipment without the need for physical guards.",
     keyApplications: [
       "Non-contact safety guarding for industrial machines",
       "Hazardous zone monitoring around automated equipment",
       "Presence detection at machine access points",
       "Safety interlock systems on production lines",
       "Collaborative robot (cobot) safety applications",
-      "Mobile platform and AGV protection zones"
+      "Mobile platform and AGV protection zones",
     ],
     keyBenefits: [
       "Non-contact detection for flexible machine guarding",
@@ -190,17 +209,17 @@ export const products: Product[] = [
       "No physical guard structure required",
       "Reliable operation in industrial environments",
       "Fast response for critical safety applications",
-      "Easy integration into existing safety control systems"
+      "Easy integration into existing safety control systems",
     ],
     industries: [
       "Manufacturing and Machine Building",
       "Automotive and Assembly",
       "Robotics and Collaborative Automation",
       "Packaging and Material Handling",
-      "Oil & Gas (Auxiliary Systems)"
+      "Oil & Gas (Auxiliary Systems)",
     ],
     externalLink: "https://www.sick.com/ae/en/safety-sensors/c/g185027",
-    downloadLink: null
+    downloadLink: null,
   },
   {
     slug: "safety-laser-scanners",
@@ -209,14 +228,15 @@ export const products: Product[] = [
     parentPath: "/products/sensors",
     image: "/images/sensors/6.SAFETY-LASER-SENSOR.png",
     tag: "SICK Industrial Sensors",
-    description: "Safety laser scanners from SICK provide 2D area monitoring for personnel protection, access guarding, and mobile robot navigation. Using laser technology, they scan a defined protection zone and trigger a safety response when a person or object is detected within the field. Certified to IEC 61496 and ISO 13849, they are trusted globally for machine and vehicle safety.",
+    description:
+      "Safety laser scanners from SICK provide 2D area monitoring for personnel protection, access guarding, and mobile robot navigation. Using laser technology, they scan a defined protection zone and trigger a safety response when a person or object is detected within the field. Certified to IEC 61496 and ISO 13849, they are trusted globally for machine and vehicle safety.",
     keyApplications: [
       "Personnel protection around industrial machinery",
       "AGV and mobile robot navigation safety zones",
       "Area monitoring for robotic cells and work stations",
       "Access guarding at conveyor entry and exit points",
       "Forklift and vehicle protection in warehouses",
-      "Perimeter protection for large industrial equipment"
+      "Perimeter protection for large industrial equipment",
     ],
     keyBenefits: [
       "2D area monitoring with configurable protection fields",
@@ -224,17 +244,17 @@ export const products: Product[] = [
       "Suitable for stationary and mobile safety applications",
       "Multiple simultaneous protection and warning fields",
       "Compact design for easy machine integration",
-      "Reliable performance in industrial environments"
+      "Reliable performance in industrial environments",
     ],
     industries: [
       "Manufacturing and Machine Building",
       "Automotive and Assembly",
       "Warehousing and Logistics",
       "Robotics and Automated Guided Vehicles",
-      "Oil & Gas (Auxiliary Systems)"
+      "Oil & Gas (Auxiliary Systems)",
     ],
     externalLink: "https://www.sick.com/ae/en/safety-laser-scanners/c/g184794",
-    downloadLink: null
+    downloadLink: null,
   },
   {
     slug: "safety-camera-sensors",
@@ -243,14 +263,15 @@ export const products: Product[] = [
     parentPath: "/products/sensors",
     image: "/images/sensors/7.-SAFETY-SENSOR-CAMERA.png",
     tag: "SICK Industrial Sensors",
-    description: "Safety camera sensors from SICK use vision-based technology to monitor defined safety zones and detect the presence of personnel or objects. They provide intelligent area protection with high-resolution imaging, enabling flexible and configurable safety applications. Certified to international safety standards, they are suited for complex machine guarding scenarios.",
+    description:
+      "Safety camera sensors from SICK use vision-based technology to monitor defined safety zones and detect the presence of personnel or objects. They provide intelligent area protection with high-resolution imaging, enabling flexible and configurable safety applications. Certified to international safety standards, they are suited for complex machine guarding scenarios.",
     keyApplications: [
       "Intelligent area monitoring for complex machine layouts",
       "Personnel detection in collaborative robot work cells",
       "Configurable safety zones for flexible manufacturing",
       "Access control monitoring at machine entry points",
       "Vision-based presence detection for automated systems",
-      "Safety monitoring for moving and rotating equipment"
+      "Safety monitoring for moving and rotating equipment",
     ],
     keyBenefits: [
       "Vision-based technology for intelligent area monitoring",
@@ -258,17 +279,17 @@ export const products: Product[] = [
       "Flexible and configurable protection zones",
       "Certified functional safety performance",
       "Suitable for complex guarding scenarios",
-      "Reduces need for multiple separate safety devices"
+      "Reduces need for multiple separate safety devices",
     ],
     industries: [
       "Manufacturing and Machine Building",
       "Automotive and Assembly",
       "Robotics and Collaborative Automation",
       "Packaging and Material Handling",
-      "Oil & Gas (Auxiliary Systems)"
+      "Oil & Gas (Auxiliary Systems)",
     ],
     externalLink: "https://www.sick.com/ae/en/safety-camera-systems/c/g305775",
-    downloadLink: null
+    downloadLink: null,
   },
   {
     slug: "rfid",
@@ -277,14 +298,15 @@ export const products: Product[] = [
     parentPath: "/products/sensors",
     image: "/images/sensors/8.RFID_.png",
     tag: "SICK Industrial Sensors",
-    description: "SICK RFID systems provide reliable identification, tracking, and data management for industrial automation and logistics applications. Operating across HF and UHF frequency ranges, SICK RFID readers and tags enable contactless data capture at high speeds and over varying distances. They integrate seamlessly into production lines, conveyor systems, and warehouse management applications.",
+    description:
+      "SICK RFID systems provide reliable identification, tracking, and data management for industrial automation and logistics applications. Operating across HF and UHF frequency ranges, SICK RFID readers and tags enable contactless data capture at high speeds and over varying distances. They integrate seamlessly into production lines, conveyor systems, and warehouse management applications.",
     keyApplications: [
       "Work-in-progress tracking on production lines",
       "Tool and asset identification in manufacturing",
       "Pallet and container tracking in logistics and warehouses",
       "Automated sorting and routing on conveyors",
       "Maintenance and service record management",
-      "Access control and personnel identification systems"
+      "Access control and personnel identification systems",
     ],
     keyBenefits: [
       "Contactless data capture at high speed",
@@ -292,17 +314,17 @@ export const products: Product[] = [
       "Reliable performance in harsh industrial conditions",
       "High read rates and long read distances (UHF)",
       "Seamless integration with PLC, SCADA, and WMS systems",
-      "Compact reader and antenna designs for easy installation"
+      "Compact reader and antenna designs for easy installation",
     ],
     industries: [
       "Manufacturing and Factory Automation",
       "Logistics and Warehousing",
       "Automotive and Assembly",
       "Oil & Gas (Asset Tracking)",
-      "Food & Beverage and Pharmaceuticals"
+      "Food & Beverage and Pharmaceuticals",
     ],
     externalLink: "https://www.sick.com/ae/en/rfid-systems/c/g301836",
-    downloadLink: null
+    downloadLink: null,
   },
   {
     slug: "non-contact-motion-sensors",
@@ -311,14 +333,15 @@ export const products: Product[] = [
     parentPath: "/products/sensors",
     image: "/images/sensors/Non-Contact Motion.png",
     tag: "SICK Industrial Sensors",
-    description: "Non-contact motion sensors from SICK provide wear-free, precise measurement of speed, distance, and position without physical contact with the moving object. Using technologies such as laser Doppler, ultrasonic, or inductive sensing, they deliver reliable measurements on conveyors, drives, and web-handling systems, even in dirty or demanding industrial environments.",
+    description:
+      "Non-contact motion sensors from SICK provide wear-free, precise measurement of speed, distance, and position without physical contact with the moving object. Using technologies such as laser Doppler, ultrasonic, or inductive sensing, they deliver reliable measurements on conveyors, drives, and web-handling systems, even in dirty or demanding industrial environments.",
     keyApplications: [
       "Speed and length measurement on conveyors and webs",
       "Position detection on moving machinery and drives",
       "Slip detection on conveyor belts and rollers",
       "Length measurement of cut materials on production lines",
       "Non-contact speed control feedback for drives",
-      "Distance measurement on mobile industrial equipment"
+      "Distance measurement on mobile industrial equipment",
     ],
     keyBenefits: [
       "Wear-free operation with no physical contact required",
@@ -326,17 +349,17 @@ export const products: Product[] = [
       "Reliable in dirty, wet, and harsh environments",
       "No mechanical wear or maintenance on the sensor",
       "Fast response for dynamic motion applications",
-      "Compatible with standard industrial interfaces"
+      "Compatible with standard industrial interfaces",
     ],
     industries: [
       "Manufacturing and Printing",
       "Logistics and Conveyor Systems",
       "Steel and Metal Processing",
       "Paper and Packaging",
-      "Oil & Gas (Drive and Conveyor Systems)"
+      "Oil & Gas (Drive and Conveyor Systems)",
     ],
     externalLink: "https://www.sick.com/ae/en/distance-sensors/c/g102363",
-    downloadLink: null
+    downloadLink: null,
   },
   {
     slug: "motor-feedback-systems",
@@ -345,14 +368,15 @@ export const products: Product[] = [
     parentPath: "/products/sensors",
     image: "/images/sensors/10.-MOTION-FEEDBACK-SENSOR.png",
     tag: "SICK Industrial Sensors",
-    description: "Motor feedback systems from SICK provide high-resolution position and speed data directly from the motor shaft to the servo drive. Supporting standard interfaces such as HIPERFACE®, HIPERFACE DSL®, and EnDat, these systems enable precise closed-loop motion control for servo and torque motors. They are designed for demanding applications requiring high accuracy, dynamic response, and reliable operation.",
+    description:
+      "Motor feedback systems from SICK provide high-resolution position and speed data directly from the motor shaft to the servo drive. Supporting standard interfaces such as HIPERFACE®, HIPERFACE DSL®, and EnDat, these systems enable precise closed-loop motion control for servo and torque motors. They are designed for demanding applications requiring high accuracy, dynamic response, and reliable operation.",
     keyApplications: [
       "Closed-loop control for servo and torque motors",
       "Precision positioning in CNC and machine tool axes",
       "Motion control in robotic arms and automation systems",
       "Speed and position feedback for drive systems",
       "High-dynamic applications requiring fast response",
-      "Motor integration in packaging and assembly machines"
+      "Motor integration in packaging and assembly machines",
     ],
     keyBenefits: [
       "High-resolution position and speed feedback",
@@ -360,17 +384,17 @@ export const products: Product[] = [
       "Enables precise closed-loop servo motion control",
       "Compact design for direct motor shaft integration",
       "Reliable operation in high-dynamic drive applications",
-      "Reduces cabling with single-cable technology (DSL)"
+      "Reduces cabling with single-cable technology (DSL)",
     ],
     industries: [
       "Machine Building and CNC",
       "Robotics and Automation",
       "Packaging and Assembly",
       "Printing and Converting",
-      "Manufacturing and Drive Systems"
+      "Manufacturing and Drive Systems",
     ],
     externalLink: "https://www.sick.com/ae/en/motor-feedback-systems/c/g192782",
-    downloadLink: null
+    downloadLink: null,
   },
   {
     slug: "mobile-handheld-scanners",
@@ -379,14 +403,15 @@ export const products: Product[] = [
     parentPath: "/products/sensors",
     image: "/images/sensors/11.MOBILE-HANDHELD-SCANNER.png",
     tag: "SICK Industrial Sensors",
-    description: "SICK mobile handheld scanners are rugged, portable barcode and data matrix readers designed for industrial warehouse, logistics, and production environments. With ergonomic designs and wireless connectivity options, they enable flexible data capture for inventory management, goods receiving, order picking, and traceability applications.",
+    description:
+      "SICK mobile handheld scanners are rugged, portable barcode and data matrix readers designed for industrial warehouse, logistics, and production environments. With ergonomic designs and wireless connectivity options, they enable flexible data capture for inventory management, goods receiving, order picking, and traceability applications.",
     keyApplications: [
       "Goods receiving and inventory management in warehouses",
       "Order picking and dispatch verification",
       "Production traceability and work-in-progress tracking",
       "Asset and equipment identification",
       "Returns processing and stock counting",
-      "Field service and maintenance data capture"
+      "Field service and maintenance data capture",
     ],
     keyBenefits: [
       "Rugged design for industrial and warehouse environments",
@@ -394,17 +419,18 @@ export const products: Product[] = [
       "Wireless connectivity for flexible operation",
       "Ergonomic design for comfortable extended use",
       "Fast scan rates for high-throughput applications",
-      "Easy integration with WMS and ERP systems"
+      "Easy integration with WMS and ERP systems",
     ],
     industries: [
       "Logistics and Warehousing",
       "Manufacturing and Production",
       "Retail and Distribution",
       "Oil & Gas (Asset Management)",
-      "Food & Beverage and Pharmaceuticals"
+      "Food & Beverage and Pharmaceuticals",
     ],
-    externalLink: "https://www.sick.com/ae/en/barcode-readers/mobile-barcode-scanners/c/g299513",
-    downloadLink: null
+    externalLink:
+      "https://www.sick.com/ae/en/barcode-readers/mobile-barcode-scanners/c/g299513",
+    downloadLink: null,
   },
   {
     slug: "magnetic-sensors",
@@ -413,14 +439,15 @@ export const products: Product[] = [
     parentPath: "/products/sensors",
     image: "/images/sensors/12.MAGNETIC-SENSOR.png",
     tag: "SICK Industrial Sensors",
-    description: "SICK magnetic sensors detect the position of the piston inside pneumatic and hydraulic cylinders without direct contact. Available in T-slot and band mounting configurations, they are compact, reliable, and easy to install on standard cylinder profiles. Their robust design ensures long service life in demanding industrial automation environments.",
+    description:
+      "SICK magnetic sensors detect the position of the piston inside pneumatic and hydraulic cylinders without direct contact. Available in T-slot and band mounting configurations, they are compact, reliable, and easy to install on standard cylinder profiles. Their robust design ensures long service life in demanding industrial automation environments.",
     keyApplications: [
       "Pneumatic cylinder piston position detection",
       "Hydraulic actuator end-position sensing",
       "Automated assembly and handling machines",
       "Clamping and gripping system feedback",
       "Conveyor and material handling equipment",
-      "General industrial machine position control"
+      "General industrial machine position control",
     ],
     keyBenefits: [
       "Non-contact, wear-free piston position detection",
@@ -428,17 +455,17 @@ export const products: Product[] = [
       "Compact design for space-constrained installations",
       "Long service life in industrial environments",
       "Available in NPN, PNP, and reed contact outputs",
-      "Easy installation and replacement"
+      "Easy installation and replacement",
     ],
     industries: [
       "Manufacturing and Machine Building",
       "Automotive and Assembly",
       "Packaging and Material Handling",
       "Pneumatics and Fluid Power",
-      "General Industrial Automation"
+      "General Industrial Automation",
     ],
     externalLink: "https://www.sick.com/ae/en/magnetic-sensors/c/g183641",
-    downloadLink: null
+    downloadLink: null,
   },
   {
     slug: "inductive-proximity-sensors",
@@ -447,14 +474,15 @@ export const products: Product[] = [
     parentPath: "/products/sensors",
     image: "/images/sensors/INDUCTIVE-SAFETY-SWITCH.png",
     tag: "SICK Industrial Sensors",
-    description: "SICK inductive proximity sensors provide reliable non-contact detection of metallic objects in industrial automation applications. Available in a wide range of housing sizes, sensing ranges, and output configurations, they are designed for robust performance in harsh industrial environments, including high-temperature, high-pressure, and chemically aggressive conditions.",
+    description:
+      "SICK inductive proximity sensors provide reliable non-contact detection of metallic objects in industrial automation applications. Available in a wide range of housing sizes, sensing ranges, and output configurations, they are designed for robust performance in harsh industrial environments, including high-temperature, high-pressure, and chemically aggressive conditions.",
     keyApplications: [
       "Metal part presence and position detection",
       "End-of-stroke detection on cylinders and actuators",
       "Gear tooth and cam speed sensing",
       "Part counting on production and conveyor lines",
       "Tool and workpiece detection in CNC machines",
-      "Level detection in metal tanks and hoppers"
+      "Level detection in metal tanks and hoppers",
     ],
     keyBenefits: [
       "Reliable non-contact detection of metallic objects",
@@ -462,17 +490,18 @@ export const products: Product[] = [
       "Flush and non-flush mounting options available",
       "Robust performance in harsh industrial conditions",
       "High switching frequency for dynamic applications",
-      "Long service life with no mechanical wear"
+      "Long service life with no mechanical wear",
     ],
     industries: [
       "Manufacturing and Machine Building",
       "Automotive and Assembly",
       "Oil & Gas and Process Industries",
       "Packaging and Material Handling",
-      "Steel and Metal Processing"
+      "Steel and Metal Processing",
     ],
-    externalLink: "https://www.sick.com/ae/en/inductive-proximity-sensors/c/g183656",
-    downloadLink: null
+    externalLink:
+      "https://www.sick.com/ae/en/inductive-proximity-sensors/c/g183656",
+    downloadLink: null,
   },
   {
     slug: "image-based-code-readers",
@@ -481,14 +510,15 @@ export const products: Product[] = [
     parentPath: "/products/sensors",
     image: "/images/sensors/IMAGE-BASED-CODE-READER.png",
     tag: "SICK Industrial Sensors",
-    description: "SICK image-based code readers use camera technology to reliably read 1D barcodes, 2D codes, QR codes, and data matrix codes at high speeds on production and logistics lines. With integrated illumination and decoding intelligence, they provide robust reading performance even on damaged, poorly printed, or direct part-marked codes.",
+    description:
+      "SICK image-based code readers use camera technology to reliably read 1D barcodes, 2D codes, QR codes, and data matrix codes at high speeds on production and logistics lines. With integrated illumination and decoding intelligence, they provide robust reading performance even on damaged, poorly printed, or direct part-marked codes.",
     keyApplications: [
       "High-speed barcode and 2D code reading on conveyor lines",
       "Direct part marking (DPM) reading on metal and plastic parts",
       "Traceability and serialization in manufacturing",
       "Pharmaceutical and medical device label verification",
       "Parcel and postal sorting in logistics",
-      "Quality control and print verification systems"
+      "Quality control and print verification systems",
     ],
     keyBenefits: [
       "Reads 1D, 2D, QR, and data matrix codes reliably",
@@ -496,17 +526,18 @@ export const products: Product[] = [
       "Reads damaged, poorly printed, and DPM codes",
       "Integrated illumination for consistent read performance",
       "Compact design for easy line integration",
-      "Simple setup and configuration tools"
+      "Simple setup and configuration tools",
     ],
     industries: [
       "Manufacturing and Traceability",
       "Pharmaceuticals and Medical Devices",
       "Logistics and Postal Sorting",
       "Food & Beverage",
-      "Automotive and Electronics"
+      "Automotive and Electronics",
     ],
-    externalLink: "https://www.sick.com/ae/en/image-based-code-readers/c/g250853",
-    downloadLink: null
+    externalLink:
+      "https://www.sick.com/ae/en/image-based-code-readers/c/g250853",
+    downloadLink: null,
   },
   {
     slug: "glare-sensors",
@@ -515,14 +546,15 @@ export const products: Product[] = [
     parentPath: "/products/sensors",
     image: "/images/sensors/GLARE-SENSOR.png",
     tag: "SICK Industrial Sensors",
-    description: "SICK glare sensors are specialized photoelectric sensors designed for reliable detection of shiny, reflective, and transparent materials where standard sensors may struggle. Using polarized light technology, they suppress unwanted reflections and provide stable switching signals on highly reflective surfaces such as glass, foil, and polished metals.",
+    description:
+      "SICK glare sensors are specialized photoelectric sensors designed for reliable detection of shiny, reflective, and transparent materials where standard sensors may struggle. Using polarized light technology, they suppress unwanted reflections and provide stable switching signals on highly reflective surfaces such as glass, foil, and polished metals.",
     keyApplications: [
       "Detection of glass bottles, jars, and containers",
       "Foil and transparent film detection on packaging lines",
       "Polished metal part presence detection",
       "Label presence detection on reflective surfaces",
       "Clear and transparent object detection",
-      "High-gloss surface detection in automotive manufacturing"
+      "High-gloss surface detection in automotive manufacturing",
     ],
     keyBenefits: [
       "Reliable detection of reflective and transparent materials",
@@ -530,17 +562,17 @@ export const products: Product[] = [
       "Stable switching signal on challenging surfaces",
       "Suitable where standard photoelectric sensors fail",
       "Compact design for easy machine integration",
-      "Wide range of housing and connection options"
+      "Wide range of housing and connection options",
     ],
     industries: [
       "Packaging and Food & Beverage",
       "Glass and Plastics Manufacturing",
       "Automotive and Assembly",
       "Printing and Labeling",
-      "Cosmetics and Pharmaceuticals"
+      "Cosmetics and Pharmaceuticals",
     ],
     externalLink: "https://www.sick.com/ae/en/photoelectric-sensors/c/g172752",
-    downloadLink: null
+    downloadLink: null,
   },
   {
     slug: "fork-sensors",
@@ -549,14 +581,15 @@ export const products: Product[] = [
     parentPath: "/products/sensors",
     image: "/images/sensors/FORK-TYPE-SENSOR.png",
     tag: "SICK Industrial Sensors",
-    description: "SICK fork sensors (also known as slotted optical sensors or fork light barriers) integrate the emitter and receiver into a single U-shaped housing, eliminating the need for alignment during installation. They provide reliable detection of small parts, labels, edges, and registration marks on high-speed conveyor, packaging, and printing lines.",
+    description:
+      "SICK fork sensors (also known as slotted optical sensors or fork light barriers) integrate the emitter and receiver into a single U-shaped housing, eliminating the need for alignment during installation. They provide reliable detection of small parts, labels, edges, and registration marks on high-speed conveyor, packaging, and printing lines.",
     keyApplications: [
       "Label and mark detection on packaging machines",
       "Edge detection and registration on printing lines",
       "Small part detection on conveyor and assembly lines",
       "Thread and wire breakage detection in textile machines",
       "Tab and slot detection on high-speed machines",
-      "Fill level detection in transparent containers"
+      "Fill level detection in transparent containers",
     ],
     keyBenefits: [
       "Integrated emitter and receiver — no alignment needed",
@@ -564,17 +597,17 @@ export const products: Product[] = [
       "High switching frequency for fast production lines",
       "Compact U-shaped design for easy integration",
       "Available in various slot widths for different applications",
-      "Robust design for continuous industrial operation"
+      "Robust design for continuous industrial operation",
     ],
     industries: [
       "Packaging and Printing",
       "Food & Beverage",
       "Textile and Converting",
       "Electronics and Assembly",
-      "Manufacturing and Automation"
+      "Manufacturing and Automation",
     ],
     externalLink: "https://www.sick.com/ae/en/fork-sensors/c/g183672",
-    downloadLink: null
+    downloadLink: null,
   },
   {
     slug: "fixed-mount-barcode-scanners",
@@ -583,14 +616,15 @@ export const products: Product[] = [
     parentPath: "/products/sensors",
     image: "/images/sensors/BARCODE-SCANNER.png",
     tag: "SICK Industrial Sensors",
-    description: "SICK fixed mount barcode scanners are designed for automated, high-throughput identification of 1D barcodes on production, logistics, and conveyor lines. With laser and LED scanning technologies, they deliver fast and reliable read performance at varying distances and speeds, integrating seamlessly into automated sorting, routing, and traceability systems.",
+    description:
+      "SICK fixed mount barcode scanners are designed for automated, high-throughput identification of 1D barcodes on production, logistics, and conveyor lines. With laser and LED scanning technologies, they deliver fast and reliable read performance at varying distances and speeds, integrating seamlessly into automated sorting, routing, and traceability systems.",
     keyApplications: [
       "Automated barcode reading on conveyor sorting lines",
       "Parcel and pallet identification in logistics centers",
       "Production line part tracking and traceability",
       "Automated storage and retrieval systems (AS/RS)",
       "Baggage handling and airport logistics",
-      "Distribution center and goods routing applications"
+      "Distribution center and goods routing applications",
     ],
     keyBenefits: [
       "High read rates for fast-moving conveyor lines",
@@ -598,17 +632,18 @@ export const products: Product[] = [
       "Laser and LED scanning technology options",
       "Compact design for conveyor line integration",
       "Flexible mounting positions and angles",
-      "Easy integration with PLC and WMS systems"
+      "Easy integration with PLC and WMS systems",
     ],
     industries: [
       "Logistics and Warehousing",
       "Manufacturing and Production",
       "Postal and Courier Services",
       "Food & Beverage Distribution",
-      "Airports and Transportation"
+      "Airports and Transportation",
     ],
-    externalLink: "https://www.sick.com/ae/en/barcode-readers/stationary-barcode-scanners/c/g172775",
-    downloadLink: null
+    externalLink:
+      "https://www.sick.com/ae/en/barcode-readers/stationary-barcode-scanners/c/g172775",
+    downloadLink: null,
   },
   {
     slug: "fiber-optic-sensors-and-fibers",
@@ -617,14 +652,15 @@ export const products: Product[] = [
     parentPath: "/products/sensors",
     image: "/images/sensors/FIBER-OPTICAL-SENSOR.png",
     tag: "SICK Industrial Sensors",
-    description: "In cases of limited installation space or when detecting small objects, fiber-optic sensors present the optimal solution. For more demanding requirements, such as extended sensing range, temperature resistance, material durability, or flexible mounting, the intelligent fusion of sensors and fiber-optic cables offers the perfect solution. With a variety of fiber-optic cables featuring application-specific optical heads, SICK ensures that all needs are catered to.",
+    description:
+      "In cases of limited installation space or when detecting small objects, fiber-optic sensors present the optimal solution. For more demanding requirements, such as extended sensing range, temperature resistance, material durability, or flexible mounting, the intelligent fusion of sensors and fiber-optic cables offers the perfect solution. With a variety of fiber-optic cables featuring application-specific optical heads, SICK ensures that all needs are catered to.",
     keyApplications: [
       "Small object detection in confined installation spaces",
       "High-temperature environment sensing applications",
       "Detection inside machine tools and tight enclosures",
       "Precise edge and position detection on small parts",
       "Color mark and contrast detection on small surfaces",
-      "Detection on rotating or hard-to-reach machine parts"
+      "Detection on rotating or hard-to-reach machine parts",
     ],
     keyBenefits: [
       "Ideal for confined spaces with limited installation room",
@@ -632,17 +668,19 @@ export const products: Product[] = [
       "Flexible mounting with remote sensor head placement",
       "Wide range of application-specific optical heads",
       "Extends capabilities of standard photoelectric sensors",
-      "Durable and long-lasting fiber cable designs"
+      "Durable and long-lasting fiber cable designs",
     ],
     industries: [
       "Manufacturing and Machine Building",
       "Automotive and Assembly",
       "Electronics and Semiconductor",
       "Food & Beverage (High-Temperature Processes)",
-      "Packaging and Printing"
+      "Packaging and Printing",
     ],
-    externalLink: "https://www.sick.com/ae/en/fiber-optic-sensors-and-fibers/c/g508551?q=:Def_Type:Product",
-    downloadLink: "https://cdn.sick.com/media/docs/4/04/204/flyer_sick_fiber_optic_sensors_en_im0074204.pdf"
+    externalLink:
+      "https://www.sick.com/ae/en/fiber-optic-sensors-and-fibers/c/g508551?q=:Def_Type:Product",
+    downloadLink:
+      "https://cdn.sick.com/media/docs/4/04/204/flyer_sick_fiber_optic_sensors_en_im0074204.pdf",
   },
   {
     slug: "encoders",
@@ -651,14 +689,15 @@ export const products: Product[] = [
     parentPath: "/products/sensors",
     image: "/images/sensors/ENCODER-SENSOR.png",
     tag: "SICK Industrial Sensors",
-    description: "SICK encoders provide precise measurement of angular position, rotational speed, and linear displacement in industrial drive and automation systems. Available as incremental and absolute variants, with solid shaft and hollow shaft designs, SICK encoders are engineered for reliable performance in harsh conditions including high vibration, temperature extremes, and demanding industrial environments.",
+    description:
+      "SICK encoders provide precise measurement of angular position, rotational speed, and linear displacement in industrial drive and automation systems. Available as incremental and absolute variants, with solid shaft and hollow shaft designs, SICK encoders are engineered for reliable performance in harsh conditions including high vibration, temperature extremes, and demanding industrial environments.",
     keyApplications: [
       "Angular position and speed feedback on motors and drives",
       "Conveyor belt speed and length measurement",
       "Crane and hoist position monitoring",
       "CNC and machine tool axis position feedback",
       "Printing and converting web tension control",
-      "Elevator and material handling positioning systems"
+      "Elevator and material handling positioning systems",
     ],
     keyBenefits: [
       "High-resolution incremental and absolute position data",
@@ -666,17 +705,17 @@ export const products: Product[] = [
       "Robust design for high vibration and shock environments",
       "Wide temperature range for extreme environments",
       "Standard interfaces: TTL, HTL, SSI, CANopen, PROFIBUS",
-      "Long service life for continuous industrial operation"
+      "Long service life for continuous industrial operation",
     ],
     industries: [
       "Manufacturing and Drive Systems",
       "Cranes and Material Handling",
       "Printing and Converting",
       "Oil & Gas (Drive and Pump Systems)",
-      "Elevators and Transportation"
+      "Elevators and Transportation",
     ],
     externalLink: "https://www.sick.com/ae/en/encoders/c/g183695",
-    downloadLink: null
+    downloadLink: null,
   },
   {
     slug: "distance-sensors",
@@ -685,14 +724,15 @@ export const products: Product[] = [
     parentPath: "/products/sensors",
     image: "/images/sensors/DISTANCE-SENSOR1.png",
     tag: "SICK Industrial Sensors",
-    description: "SICK distance sensors provide precise, non-contact measurement of distance, position, and displacement in industrial automation applications. Using laser, ultrasonic, or time-of-flight technologies, they deliver reliable measurements across a wide range of distances and target surfaces, from millimeter-precise positioning to long-range detection in logistics and cranes.",
+    description:
+      "SICK distance sensors provide precise, non-contact measurement of distance, position, and displacement in industrial automation applications. Using laser, ultrasonic, or time-of-flight technologies, they deliver reliable measurements across a wide range of distances and target surfaces, from millimeter-precise positioning to long-range detection in logistics and cranes.",
     keyApplications: [
       "Precise positioning of machine axes and actuators",
       "Level measurement in tanks, silos, and hoppers",
       "Height detection and profile measurement",
       "Gap and step measurement on production lines",
       "Crane positioning and anti-collision systems",
-      "Robot and AGV distance and obstacle sensing"
+      "Robot and AGV distance and obstacle sensing",
     ],
     keyBenefits: [
       "Non-contact measurement for wear-free operation",
@@ -700,17 +740,17 @@ export const products: Product[] = [
       "Millimeter-level precision for demanding applications",
       "Wide measurement range from mm to hundreds of meters",
       "Reliable performance on various target surfaces",
-      "Compact and easy to integrate into machines"
+      "Compact and easy to integrate into machines",
     ],
     industries: [
       "Manufacturing and Machine Building",
       "Logistics and Warehousing",
       "Cranes and Material Handling",
       "Oil & Gas (Tank and Level Measurement)",
-      "Robotics and Automation"
+      "Robotics and Automation",
     ],
     externalLink: "https://www.sick.com/ae/en/distance-sensors/c/g102363",
-    downloadLink: null
+    downloadLink: null,
   },
   {
     slug: "cylinder-sensors",
@@ -719,14 +759,15 @@ export const products: Product[] = [
     parentPath: "/products/sensors",
     image: "/images/sensors/CYLINDER-SENSOR.png",
     tag: "SICK Industrial Sensors",
-    description: "SICK cylinder sensors detect the end positions of pneumatic cylinder pistons, providing reliable feedback for machine and process control systems. Available in T-slot, C-slot, and band mounting versions to fit standard cylinder profiles, they are compact, easy to install, and designed for long service life in continuous industrial automation environments.",
+    description:
+      "SICK cylinder sensors detect the end positions of pneumatic cylinder pistons, providing reliable feedback for machine and process control systems. Available in T-slot, C-slot, and band mounting versions to fit standard cylinder profiles, they are compact, easy to install, and designed for long service life in continuous industrial automation environments.",
     keyApplications: [
       "End-position detection on pneumatic cylinders",
       "Piston position feedback for automated handling machines",
       "Clamping and gripping system position control",
       "Conveyor and material handling actuator feedback",
       "Assembly machine cylinder position monitoring",
-      "General industrial pneumatic system control"
+      "General industrial pneumatic system control",
     ],
     keyBenefits: [
       "Reliable piston end-position detection",
@@ -734,17 +775,17 @@ export const products: Product[] = [
       "Compact design for standard cylinder profiles",
       "Easy and fast installation and replacement",
       "Long service life in continuous operation",
-      "Available in reed, GMR, and Hall-effect technologies"
+      "Available in reed, GMR, and Hall-effect technologies",
     ],
     industries: [
       "Manufacturing and Machine Building",
       "Automotive and Assembly",
       "Packaging and Material Handling",
       "Pneumatics and Fluid Power",
-      "General Industrial Automation"
+      "General Industrial Automation",
     ],
     externalLink: "https://www.sick.com/ae/en/magnetic-sensors/c/g183641",
-    downloadLink: null
+    downloadLink: null,
   },
   {
     slug: "contrast-sensors",
@@ -753,14 +794,15 @@ export const products: Product[] = [
     parentPath: "/products/sensors",
     image: "/images/sensors/CONTRAST-SENSOR.png",
     tag: "SICK Industrial Sensors",
-    description: "SICK contrast sensors detect differences in brightness and color on printed marks, registration marks, and labels at high speeds. Using RGB LED or white light technology, they provide reliable switching signals on a wide variety of print and packaging materials, making them essential for registration control, label detection, and print mark sensing in high-speed production.",
+    description:
+      "SICK contrast sensors detect differences in brightness and color on printed marks, registration marks, and labels at high speeds. Using RGB LED or white light technology, they provide reliable switching signals on a wide variety of print and packaging materials, making them essential for registration control, label detection, and print mark sensing in high-speed production.",
     keyApplications: [
       "Registration mark detection on printing and packaging lines",
       "Label gap and splice detection on labeling machines",
       "Print mark sensing for cutting and folding registration",
       "Color mark detection on flexible packaging films",
       "Web guiding and edge control systems",
-      "Position control on converting and slitting machines"
+      "Position control on converting and slitting machines",
     ],
     keyBenefits: [
       "Reliable contrast and color mark detection at high speeds",
@@ -768,17 +810,17 @@ export const products: Product[] = [
       "Teaches quickly to marks and backgrounds",
       "Stable detection on various print and packaging materials",
       "High switching frequency for fast production lines",
-      "Compact design for tight machine installations"
+      "Compact design for tight machine installations",
     ],
     industries: [
       "Printing and Converting",
       "Packaging and Labeling",
       "Food & Beverage",
       "Pharmaceutical and Cosmetics",
-      "Flexible Packaging and Films"
+      "Flexible Packaging and Films",
     ],
     externalLink: "https://www.sick.com/ae/en/contrast-sensors/c/g183685",
-    downloadLink: null
+    downloadLink: null,
   },
 
   // ── PLC (5) ───────────────────────────────────────────────
@@ -789,7 +831,8 @@ export const products: Product[] = [
     parentPath: "/products/plc",
     image: "/images/plc/MELSEC-iQ-R-Series.png",
     tag: "Mitsubishi Electric PLC",
-    description: "The MELSEC iQ-R Series is Mitsubishi Electric's next-generation modular PLC platform designed for advanced and large-scale industrial automation. It delivers high-speed, high-performance control while improving productivity, engineering efficiency, and system availability. With a scalable modular architecture and a wide range of compatible modules, the iQ-R Series supports logic, process, motion, and information control within a unified system. It is ideally suited as a core controller for mission-critical industrial and oil & gas applications.",
+    description:
+      "The MELSEC iQ-R Series is Mitsubishi Electric's next-generation modular PLC platform designed for advanced and large-scale industrial automation. It delivers high-speed, high-performance control while improving productivity, engineering efficiency, and system availability. With a scalable modular architecture and a wide range of compatible modules, the iQ-R Series supports logic, process, motion, and information control within a unified system. It is ideally suited as a core controller for mission-critical industrial and oil & gas applications.",
     keyApplications: [
       "Oil & gas production facilities and gathering stations",
       "Refineries and petrochemical process units",
@@ -797,7 +840,7 @@ export const products: Product[] = [
       "Compressor, pump, and utility control systems",
       "Package units and skid-mounted systems",
       "Emergency shutdown (ESD) and interlock interface systems",
-      "SCADA-based industrial plants and manufacturing facilities"
+      "SCADA-based industrial plants and manufacturing facilities",
     ],
     keyBenefits: [
       "High-speed, deterministic control performance",
@@ -805,17 +848,19 @@ export const products: Product[] = [
       "Modular and scalable system architecture",
       "Multi-CPU capability for logic, process, and motion control",
       "Seamless integration with DCS, SCADA, MCCs, and field devices",
-      "Reduced engineering, commissioning, and maintenance effort"
+      "Reduced engineering, commissioning, and maintenance effort",
     ],
     industries: [
       "Oil & Gas (Upstream, Midstream, Downstream)",
       "Refineries and Petrochemical Industries",
       "Power Generation and Utilities",
       "Manufacturing Plants and Factories",
-      "EPC Projects and System Integrators"
+      "EPC Projects and System Integrators",
     ],
-    externalLink: "https://www.mitsubishielectric.com/fa/products/cnt/plcr/items/index.html",
-    downloadLink: "https://www.mitsubishielectric.com/dl/fa/document/catalog/plcr/l08298eng/l08298engz.pdf"
+    externalLink:
+      "https://www.mitsubishielectric.com/fa/products/cnt/plcr/items/index.html",
+    downloadLink:
+      "https://www.mitsubishielectric.com/dl/fa/document/catalog/plcr/l08298eng/l08298engz.pdf",
   },
   {
     slug: "melsec-q-series",
@@ -824,14 +869,15 @@ export const products: Product[] = [
     parentPath: "/products/plc",
     image: "/images/plc/MELSEC-Q-Series-.webp",
     tag: "Mitsubishi Electric PLC",
-    description: "The MELSEC-Q Series is a Mitsubishi Electric modular PLC platform designed for medium to large-scale industrial automation systems. It offers reliable and stable control performance with a flexible, expandable architecture to suit a wide range of applications. With its proven hardware design and extensive module lineup, the MELSEC-Q Series supports logic, process, and motion control, making it a dependable choice for long-term industrial and oil & gas operations.",
+    description:
+      "The MELSEC-Q Series is a Mitsubishi Electric modular PLC platform designed for medium to large-scale industrial automation systems. It offers reliable and stable control performance with a flexible, expandable architecture to suit a wide range of applications. With its proven hardware design and extensive module lineup, the MELSEC-Q Series supports logic, process, and motion control, making it a dependable choice for long-term industrial and oil & gas operations.",
     keyApplications: [
       "Oil & gas production and processing facilities",
       "Refineries and petrochemical units",
       "Tank farms, terminals, and pipeline systems",
       "Compressor, pump, and utility control systems",
       "Package units and skid-mounted systems",
-      "SCADA-based industrial plants and factories"
+      "SCADA-based industrial plants and factories",
     ],
     keyBenefits: [
       "Reliable and stable industrial control performance",
@@ -839,17 +885,18 @@ export const products: Product[] = [
       "Suitable for continuous operation in harsh environments",
       "Wide range of I/O, motion, process, and communication modules",
       "Seamless integration with SCADA, DCS (interface level), and field devices",
-      "Proven platform with long lifecycle support"
+      "Proven platform with long lifecycle support",
     ],
     industries: [
       "Oil & Gas (Upstream, Midstream, Downstream)",
       "Refineries and Petrochemical Industries",
       "Power Generation and Utilities",
       "Manufacturing Plants and Factories",
-      "EPC Projects and System Integrators"
+      "EPC Projects and System Integrators",
     ],
-    externalLink: "https://www.mitsubishielectric.com/fa/products/cnt/plcq/items/index.html",
-    downloadLink: null
+    externalLink:
+      "https://www.mitsubishielectric.com/fa/products/cnt/plcq/items/index.html",
+    downloadLink: null,
   },
   {
     slug: "fx5u-plc",
@@ -858,14 +905,15 @@ export const products: Product[] = [
     parentPath: "/products/plc",
     image: "/images/plc/FX5U.png",
     tag: "Mitsubishi Electric PLC",
-    description: "The FX5U is a compact, high-performance PLC from the iQ-F Series by Mitsubishi Electric, designed for efficient control of machines, packages, and auxiliary systems. It combines high-speed processing, built-in I/O, and integrated motion and communication functions in a space-saving design. The FX5U supports system expansion and networking, making it suitable for factory automation and package-based applications within industrial and oil & gas facilities, typically interfaced to higher-level PLC or DCS systems.",
+    description:
+      "The FX5U is a compact, high-performance PLC from the iQ-F Series by Mitsubishi Electric, designed for efficient control of machines, packages, and auxiliary systems. It combines high-speed processing, built-in I/O, and integrated motion and communication functions in a space-saving design. The FX5U supports system expansion and networking, making it suitable for factory automation and package-based applications within industrial and oil & gas facilities, typically interfaced to higher-level PLC or DCS systems.",
     keyApplications: [
       "Package units and skid-mounted systems (pump skids, dosing skids, lube oil skids)",
       "Auxiliary and utility systems in oil & gas facilities",
       "Machine automation in refineries, plants, and workshops",
       "Packaging, bottling, and material handling systems",
       "Production lines and assembly systems",
-      "Local control panels interfaced to PLC / DCS / SCADA"
+      "Local control panels interfaced to PLC / DCS / SCADA",
     ],
     keyBenefits: [
       "High-speed control performance for machine and package automation",
@@ -873,17 +921,18 @@ export const products: Product[] = [
       "Scalable system with easy expansion options",
       "Integrated communication and positioning functions",
       "Reliable operation for continuous industrial use",
-      "Reduced panel space, wiring, and engineering effort"
+      "Reduced panel space, wiring, and engineering effort",
     ],
     industries: [
       "Oil & Gas (Package units and auxiliary systems)",
       "Manufacturing Plants and Factories",
       "Food & Beverage Processing",
       "Packaging and Material Handling",
-      "OEM Machine Builders"
+      "OEM Machine Builders",
     ],
-    externalLink: "https://www.mitsubishielectric.com/fa/products/cnt/plcf/items/index.html",
-    downloadLink: null
+    externalLink:
+      "https://www.mitsubishielectric.com/fa/products/cnt/plcf/items/index.html",
+    downloadLink: null,
   },
   {
     slug: "fx5uj-plc-2",
@@ -892,13 +941,14 @@ export const products: Product[] = [
     parentPath: "/products/plc",
     image: "/images/plc/FX5UJ.png",
     tag: "Mitsubishi Electric PLC",
-    description: "The FX5UJ is a compact PLC from the iQ-F Series by Mitsubishi Electric, equipped as standard with an SD memory card slot, built-in USB (Mini-B) connector, and built-in Ethernet port. It includes built-in functions such as positioning control and high-speed counters, allowing multiple control functions to be integrated into a single unit. By condensing these functions, the FX5UJ improves ease of use, system flexibility, and overall efficiency for machine and package automation applications.",
+    description:
+      "The FX5UJ is a compact PLC from the iQ-F Series by Mitsubishi Electric, equipped as standard with an SD memory card slot, built-in USB (Mini-B) connector, and built-in Ethernet port. It includes built-in functions such as positioning control and high-speed counters, allowing multiple control functions to be integrated into a single unit. By condensing these functions, the FX5UJ improves ease of use, system flexibility, and overall efficiency for machine and package automation applications.",
     keyApplications: [
       "Simple package units and auxiliary skids",
       "Cost-sensitive OEM machines",
       "Basic pump, fan, and utility panels",
       "Simple material handling and conveyors",
-      "Standalone local control panels"
+      "Standalone local control panels",
     ],
     keyBenefits: [
       "High-speed basic control performance",
@@ -906,17 +956,18 @@ export const products: Product[] = [
       "Compact design with essential I/O",
       "Easy programming with GX Works3",
       "Reliable operation for standard industrial use",
-      "Reduced system complexity and cost"
+      "Reduced system complexity and cost",
     ],
     industries: [
       "Oil & Gas (auxiliary and non-critical packages)",
       "Manufacturing Plants and Factories",
       "OEM Machine Builders",
       "Packaging and Light Industry",
-      "Utilities and Auxiliary Systems"
+      "Utilities and Auxiliary Systems",
     ],
-    externalLink: "https://www.mitsubishielectric.com/fa/products/cnt/plcf/items/index.html",
-    downloadLink: null
+    externalLink:
+      "https://www.mitsubishielectric.com/fa/products/cnt/plcf/items/index.html",
+    downloadLink: null,
   },
   {
     slug: "fx5s-plc",
@@ -925,30 +976,32 @@ export const products: Product[] = [
     parentPath: "/products/plc",
     image: "/images/plc/FX5S.jpg",
     tag: "Mitsubishi Electric PLC",
-    description: "The FX5S is a PLC from the iQ-F Series by Mitsubishi Electric, standard equipped with a built-in USB (Mini-B) connector and built-in Ethernet port. It features a compact design while condensing high basic performance, including positioning and IoT-related functions, along with ease of use. These features facilitate simple and efficient configuration of user systems, making the FX5S suitable for basic and compact automation applications.",
+    description:
+      "The FX5S is a PLC from the iQ-F Series by Mitsubishi Electric, standard equipped with a built-in USB (Mini-B) connector and built-in Ethernet port. It features a compact design while condensing high basic performance, including positioning and IoT-related functions, along with ease of use. These features facilitate simple and efficient configuration of user systems, making the FX5S suitable for basic and compact automation applications.",
     keyApplications: [
       "Basic machine control and simple automation systems",
       "Small OEM machines and standardized equipment",
       "Basic pump, fan, and utility control panels",
       "Simple material handling and conveyor systems",
-      "Standalone control applications"
+      "Standalone control applications",
     ],
     keyBenefits: [
       "High-speed basic control performance",
       "Compact and economical PLC solution",
       "Simple system configuration and programming",
       "Compatible with iQ-F Series engineering environment",
-      "Reliable operation for continuous industrial use"
+      "Reliable operation for continuous industrial use",
     ],
     industries: [
       "Manufacturing Plants and Factories",
       "OEM Machine Builders",
       "Packaging and Light Industry",
       "Utilities and Auxiliary Systems",
-      "General Industrial Applications"
+      "General Industrial Applications",
     ],
-    externalLink: "https://www.mitsubishielectric.com/fa/products/cnt/plcf/items/index.html",
-    downloadLink: null
+    externalLink:
+      "https://www.mitsubishielectric.com/fa/products/cnt/plcf/items/index.html",
+    downloadLink: null,
   },
 
   // ── ICONICS (1) ───────────────────────────────────────────
@@ -959,14 +1012,15 @@ export const products: Product[] = [
     parentPath: "/products/iconics",
     image: "/images/iconics/GENESIS64.webp",
     tag: "ICONICS SCADA & HMI",
-    description: "GENESIS64 is a 64-bit, web-enabled SCADA and HMI software suite from ICONICS, designed for real-time visualization, monitoring, and control of industrial processes. Built on a modern, scalable architecture, GENESIS64 provides advanced analytics, alarm management, historical data logging, and analytics. It supports seamless integration with PLCs, DCS, and field devices, making it suitable for industrial, infrastructure, and energy applications.",
+    description:
+      "GENESIS64 is a 64-bit, web-enabled SCADA and HMI software suite from ICONICS, designed for real-time visualization, monitoring, and control of industrial processes. Built on a modern, scalable architecture, GENESIS64 provides advanced analytics, alarm management, historical data logging, and analytics. It supports seamless integration with PLCs, DCS, and field devices, making it suitable for industrial, infrastructure, and energy applications.",
     keyApplications: [
       "Oil & gas production facilities and refineries",
       "Power generation, water, and utility plants",
       "SCADA systems for pipelines, tank farms, and terminals",
       "Manufacturing plants and factories",
       "Building and infrastructure management systems",
-      "Centralized control rooms and remote monitoring systems"
+      "Centralized control rooms and remote monitoring systems",
     ],
     keyBenefits: [
       "High-performance 64-bit SCADA and HMI platform",
@@ -974,17 +1028,17 @@ export const products: Product[] = [
       "Integrated alarm management and historical trending",
       "Scalable architecture for small systems to large plants",
       "Seamless connectivity with PLCs, DCS, and OPC UA devices",
-      "Secure, web-enabled access for operators and engineers"
+      "Secure, web-enabled access for operators and engineers",
     ],
     industries: [
       "Oil & Gas",
       "Power and Utilities",
       "Manufacturing Plants and Factories",
       "Infrastructure and Smart Facilities",
-      "EPC Projects and System Integrators"
+      "EPC Projects and System Integrators",
     ],
     externalLink: "https://iconics.com/Products/GENESIS64",
-    downloadLink: null
+    downloadLink: null,
   },
 
   // ── GOT (1) ───────────────────────────────────────────────
@@ -995,12 +1049,13 @@ export const products: Product[] = [
     parentPath: "/products/got",
     image: "/images/got/GOT2000-Series.png",
     tag: "Mitsubishi Electric HMI",
-    description: "The GOT2000 Series is a high-performance graphic operation terminal (HMI) from Mitsubishi Electric, designed to enhance operability, visualization, and monitoring in industrial automation systems. It offers high-resolution displays, advanced graphics, and intuitive touch operation, enabling efficient interaction between operators and control systems. With strong connectivity and compatibility with Mitsubishi PLCs and other controllers, the GOT2000 Series supports improved productivity, reduced downtime, and easier system operation.",
+    description:
+      "The GOT2000 Series is a high-performance graphic operation terminal (HMI) from Mitsubishi Electric, designed to enhance operability, visualization, and monitoring in industrial automation systems. It offers high-resolution displays, advanced graphics, and intuitive touch operation, enabling efficient interaction between operators and control systems. With strong connectivity and compatibility with Mitsubishi PLCs and other controllers, the GOT2000 Series supports improved productivity, reduced downtime, and easier system operation.",
     variants: [
       "GT27 Advanced",
       "GT25 Superior Performance Intermediate",
       "GT25/21 Wide",
-      "GT21 Compact Series"
+      "GT21 Compact Series",
     ],
     keyApplications: [
       "Operator panels for oil & gas facilities and refineries",
@@ -1008,7 +1063,7 @@ export const products: Product[] = [
       "Monitoring and control of utilities (power, water, air, fuel gas)",
       "Machine and process visualization in factories",
       "Local operator interface for PLC- and SCADA-based systems",
-      "Control room panels and field operator stations"
+      "Control room panels and field operator stations",
     ],
     keyBenefits: [
       "High-resolution, wide-screen displays for clear visualization",
@@ -1016,17 +1071,18 @@ export const products: Product[] = [
       "Advanced graphics, alarms, and trend display",
       "Seamless connectivity with Mitsubishi PLCs (iQ-R, Q, FX Series)",
       "Supports multiple communication protocols",
-      "Robust industrial design for harsh environments"
+      "Robust industrial design for harsh environments",
     ],
     industries: [
       "Electrical, Industrial, and Pump System Integrators",
       "HVAC, Crane, and Lift System Integrators",
       "Power, Water, and Wastewater Treatment Facilities",
       "Oil & Gas and Petrochemical Facilities",
-      "Manufacturing Plants and Factories"
+      "Manufacturing Plants and Factories",
     ],
-    externalLink: "https://www.mitsubishielectric.com/fa/products/hmi/got/items/got2000/index.html",
-    downloadLink: null
+    externalLink:
+      "https://www.mitsubishielectric.com/fa/products/hmi/got/items/got2000/index.html",
+    downloadLink: null,
   },
 
   // ── FREQUENCY INVERTERS VFD (10) ─────────────────────────
@@ -1037,14 +1093,15 @@ export const products: Product[] = [
     parentPath: "/products/frequency-inverter-vfd",
     image: "/images/frequency-inverters/CS80.webp",
     tag: "Mitsubishi Electric VFD",
-    description: "The FR-CS80 Series is a compact and smart frequency inverter (VFD) from Mitsubishi Electric, offering general-purpose magnetic flux vector motor control in one of the industry's smallest compact bodies. The design focuses on space-saving installation, ease of use, and reliable performance for a wide range of industrial applications.",
+    description:
+      "The FR-CS80 Series is a compact and smart frequency inverter (VFD) from Mitsubishi Electric, offering general-purpose magnetic flux vector motor control in one of the industry's smallest compact bodies. The design focuses on space-saving installation, ease of use, and reliable performance for a wide range of industrial applications.",
     keyApplications: [
       "Speed control of pumps and compressors in oil & gas facilities",
       "Fan and blower motor control for utility systems",
       "Conveyor and material handling drives",
       "HVAC and industrial ventilation systems",
       "General machine and production equipment requiring motor speed control",
-      "Local drive control on packaged and skid-mounted units"
+      "Local drive control on packaged and skid-mounted units",
     ],
     keyBenefits: [
       "Compact, low-heat, space-saving design",
@@ -1052,17 +1109,18 @@ export const products: Product[] = [
       "Reduced wiring and faster installation",
       "Reliable continuous-duty operation",
       "Flexible expansion with Mitsubishi options",
-      "Easy operation and maintenance"
+      "Easy operation and maintenance",
     ],
     industries: [
       "Electrical, Industrial, and Pump System Integrators",
       "HVAC, Crane, and Lift System Integrators",
       "Power, Water, and Wastewater Treatment Facilities",
       "Oil & Gas and Petrochemical Facilities",
-      "Manufacturing Plants and Factories"
+      "Manufacturing Plants and Factories",
     ],
-    externalLink: "https://emea.mitsubishielectric.com/fa/products/drv/inv/fr_cs",
-    downloadLink: null
+    externalLink:
+      "https://emea.mitsubishielectric.com/fa/products/drv/inv/fr_cs",
+    downloadLink: null,
   },
   {
     slug: "fr-d700-series",
@@ -1071,13 +1129,14 @@ export const products: Product[] = [
     parentPath: "/products/frequency-inverter-vfd",
     image: "/images/frequency-inverters/FR-E800.webp",
     tag: "Mitsubishi Electric VFD",
-    description: "The FR-D700 Series from Mitsubishi Electric is a compact, general-purpose frequency inverter designed for simple, reliable, and cost-efficient motor speed control. Featuring a space-saving design, easy operation, and stable performance, the FR-D700 Series is well suited for basic industrial drive applications. It provides an economical solution for factories, utilities, and auxiliary systems where simplicity, reliability, and low total cost are key requirements.",
+    description:
+      "The FR-D700 Series from Mitsubishi Electric is a compact, general-purpose frequency inverter designed for simple, reliable, and cost-efficient motor speed control. Featuring a space-saving design, easy operation, and stable performance, the FR-D700 Series is well suited for basic industrial drive applications. It provides an economical solution for factories, utilities, and auxiliary systems where simplicity, reliability, and low total cost are key requirements.",
     keyApplications: [
       "Speed control of pumps, fans, and blowers",
       "Conveyor and material handling motor control",
       "Utility and auxiliary motor systems",
       "Basic machines and production equipment",
-      "OEM packages and local drive panels"
+      "OEM packages and local drive panels",
     ],
     keyBenefits: [
       "Simple and easy setup and operation with built-in controls",
@@ -1085,17 +1144,18 @@ export const products: Product[] = [
       "Compact and space-saving body for panel-mounted applications",
       "Reliable and stable motor control for continuous operation",
       "Supports wide application range with flexible settings",
-      "Designed for easy maintenance and long service life"
+      "Designed for easy maintenance and long service life",
     ],
     industries: [
       "Electrical, Pump, and Industrial System Integrators",
       "Industrial and Utility Auxiliary Systems",
       "Manufacturing Plants and Factories",
       "Power, Water, and Wastewater Treatment Utilities",
-      "Oil & Gas Facilities (Auxiliary and Non-Critical Systems)"
+      "Oil & Gas Facilities (Auxiliary and Non-Critical Systems)",
     ],
-    externalLink: "https://emea.mitsubishielectric.com/fa/products/drv/inv/frd-series/frd700",
-    downloadLink: null
+    externalLink:
+      "https://emea.mitsubishielectric.com/fa/products/drv/inv/frd-series/frd700",
+    downloadLink: null,
   },
   {
     slug: "fr-e800-series",
@@ -1104,21 +1164,22 @@ export const products: Product[] = [
     parentPath: "/products/frequency-inverter-vfd",
     image: "/images/frequency-inverters/FR-E800-2.webp",
     tag: "Mitsubishi Electric VFD",
-    description: "The FR-E800 Series is Mitsubishi Electric's advanced compact frequency inverter designed for high-efficiency motor control in general-purpose, pump, and fan applications. It delivers vector control performance, high-speed stability, built-in safety, and Ethernet connectivity in a space-saving design, making it ideal for modern HVAC systems, water treatment plants, and industrial utility drives.",
+    description:
+      "The FR-E800 Series is Mitsubishi Electric's advanced compact frequency inverter designed for high-efficiency motor control in general-purpose, pump, and fan applications. It delivers vector control performance, high-speed stability, built-in safety, and Ethernet connectivity in a space-saving design, making it ideal for modern HVAC systems, water treatment plants, and industrial utility drives.",
     keyApplications: [
       "Pumps for water supply, wastewater, and desalination systems",
       "HVAC fans, blowers, AHUs, and cooling towers",
       "Oil & gas utility skids and auxiliary pump systems",
       "Compressors and industrial ventilation systems",
       "Conveyors and material handling drives",
-      "General machinery and packaged industrial equipment"
+      "General machinery and packaged industrial equipment",
     ],
     keyBenefits: [
       "High-performance vector control with stable high-speed operation",
       "Energy-saving pump and fan functions",
       "Compact, space-saving design",
       "Built-in Ethernet connectivity",
-      "Integrated safety and industrial reliability"
+      "Integrated safety and industrial reliability",
     ],
     industries: [
       "Electrical and Control Panel Integrators",
@@ -1126,10 +1187,11 @@ export const products: Product[] = [
       "Water, Wastewater & Desalination Facilities",
       "Oil & Gas and Petrochemical Utility Systems",
       "Power Generation Auxiliary Systems",
-      "OEM Machine Builders and Skid Manufacturers"
+      "OEM Machine Builders and Skid Manufacturers",
     ],
-    externalLink: "https://emea.mitsubishielectric.com/fa/products/drv/inv/fr_a800/fra800e",
-    downloadLink: null
+    externalLink:
+      "https://emea.mitsubishielectric.com/fa/products/drv/inv/fr_a800/fra800e",
+    downloadLink: null,
   },
   {
     slug: "e800-e-series",
@@ -1138,21 +1200,22 @@ export const products: Product[] = [
     parentPath: "/products/frequency-inverter-vfd",
     image: "/images/frequency-inverters/FR-E800.webp",
     tag: "Mitsubishi Electric VFD",
-    description: "The FR-E800-E Series is Mitsubishi Electric's advanced compact frequency inverter with dedicated Ethernet communication, designed for high-efficiency motor control in general-purpose, pump, and fan applications. It delivers vector control performance, high-speed stability, built-in safety, and seamless Ethernet network integration for modern industrial and HVAC utility drives.",
+    description:
+      "The FR-E800-E Series is Mitsubishi Electric's advanced compact frequency inverter with dedicated Ethernet communication, designed for high-efficiency motor control in general-purpose, pump, and fan applications. It delivers vector control performance, high-speed stability, built-in safety, and seamless Ethernet network integration for modern industrial and HVAC utility drives.",
     keyApplications: [
       "Pumps for water supply, wastewater, and desalination systems",
       "HVAC fans, blowers, AHUs, and cooling towers",
       "Oil & gas utility skids and auxiliary pump systems",
       "Compressors and industrial ventilation systems",
       "Conveyors and material handling drives",
-      "General machinery and packaged industrial equipment"
+      "General machinery and packaged industrial equipment",
     ],
     keyBenefits: [
       "High-performance vector control with stable high-speed operation",
       "Energy-saving pump and fan functions",
       "Compact, space-saving design",
       "Built-in Ethernet communication for network integration",
-      "Integrated safety and industrial reliability"
+      "Integrated safety and industrial reliability",
     ],
     industries: [
       "Electrical and Control Panel Integrators",
@@ -1160,10 +1223,11 @@ export const products: Product[] = [
       "Water, Wastewater & Desalination Facilities",
       "Oil & Gas and Petrochemical Utility Systems",
       "Power Generation Auxiliary Systems",
-      "OEM Machine Builders and Skid Manufacturers"
+      "OEM Machine Builders and Skid Manufacturers",
     ],
-    externalLink: "https://emea.mitsubishielectric.com/fa/products/drv/inv/fr_a800/fra800e",
-    downloadLink: null
+    externalLink:
+      "https://emea.mitsubishielectric.com/fa/products/drv/inv/fr_a800/fra800e",
+    downloadLink: null,
   },
   {
     slug: "e800-sce-series",
@@ -1172,21 +1236,22 @@ export const products: Product[] = [
     parentPath: "/products/frequency-inverter-vfd",
     image: "/images/frequency-inverters/FR-E800-2.webp",
     tag: "Mitsubishi Electric VFD",
-    description: "The FR-E800-SCE Series is Mitsubishi Electric's advanced compact frequency inverter with Ethernet Safety Communication, designed for applications requiring both high-efficiency motor control and integrated functional safety. It supports Safety over EtherNet/IP and delivers vector control performance, high-speed stability, and built-in safety functions in a space-saving design.",
+    description:
+      "The FR-E800-SCE Series is Mitsubishi Electric's advanced compact frequency inverter with Ethernet Safety Communication, designed for applications requiring both high-efficiency motor control and integrated functional safety. It supports Safety over EtherNet/IP and delivers vector control performance, high-speed stability, and built-in safety functions in a space-saving design.",
     keyApplications: [
       "Pumps for water supply, wastewater, and desalination systems",
       "HVAC fans, blowers, AHUs, and cooling towers",
       "Oil & gas utility skids and auxiliary pump systems",
       "Compressors and industrial ventilation systems",
       "Conveyors and material handling drives",
-      "Safety-critical machinery and packaged industrial equipment"
+      "Safety-critical machinery and packaged industrial equipment",
     ],
     keyBenefits: [
       "High-performance vector control with stable high-speed operation",
       "Energy-saving pump and fan functions",
       "Compact, space-saving design",
       "Built-in Ethernet Safety Communication (Safety over EtherNet/IP)",
-      "Integrated functional safety for SIL-rated applications"
+      "Integrated functional safety for SIL-rated applications",
     ],
     industries: [
       "Electrical and Control Panel Integrators",
@@ -1194,10 +1259,11 @@ export const products: Product[] = [
       "Water, Wastewater & Desalination Facilities",
       "Oil & Gas and Petrochemical Utility Systems",
       "Power Generation Auxiliary Systems",
-      "OEM Machine Builders and Skid Manufacturers"
+      "OEM Machine Builders and Skid Manufacturers",
     ],
-    externalLink: "https://emea.mitsubishielectric.com/fa/products/drv/inv/fr_a800/fra800e",
-    downloadLink: null
+    externalLink:
+      "https://emea.mitsubishielectric.com/fa/products/drv/inv/fr_a800/fra800e",
+    downloadLink: null,
   },
   {
     slug: "fr-f800-series",
@@ -1206,21 +1272,22 @@ export const products: Product[] = [
     parentPath: "/products/frequency-inverter-vfd",
     image: "/images/frequency-inverters/FR-F800.webp",
     tag: "Mitsubishi Electric VFD",
-    description: "The FR-F800 Series is Mitsubishi Electric's high-performance energy-saving inverter designed specifically for pump, fan, and HVAC applications. It combines advanced vector control, high efficiency, built-in energy optimization, and robust industrial design, making it ideal for large HVAC plants, water treatment facilities, and oil & gas utility systems. The FR-F800 is optimized for continuous-duty, high-reliability operation in demanding environments.",
+    description:
+      "The FR-F800 Series is Mitsubishi Electric's high-performance energy-saving inverter designed specifically for pump, fan, and HVAC applications. It combines advanced vector control, high efficiency, built-in energy optimization, and robust industrial design, making it ideal for large HVAC plants, water treatment facilities, and oil & gas utility systems. The FR-F800 is optimized for continuous-duty, high-reliability operation in demanding environments.",
     keyApplications: [
       "Large pumps in water, wastewater, and desalination plants",
       "HVAC systems (chillers, cooling towers, AHUs, and ventilation fans)",
       "Oil & gas utility pumps and ventilation systems",
       "Power plant auxiliary pumps and fans",
       "District cooling and building utility systems",
-      "Industrial air handling and process ventilation"
+      "Industrial air handling and process ventilation",
     ],
     keyBenefits: [
       "High-efficiency vector control for pumps and fans",
       "Built-in energy-saving functions",
       "Wide power range for utility and industrial drives",
       "Ethernet and fieldbus connectivity",
-      "24/7 industrial-grade reliability"
+      "24/7 industrial-grade reliability",
     ],
     industries: [
       "Electrical and Control Panel Integrators",
@@ -1228,10 +1295,11 @@ export const products: Product[] = [
       "Water, Wastewater & Desalination Facilities",
       "Oil & Gas and Petrochemical Utility Systems",
       "Power Generation Plants",
-      "Large Industrial and Infrastructure Facilities"
+      "Large Industrial and Infrastructure Facilities",
     ],
-    externalLink: "https://emea.mitsubishielectric.com/fa/products/drv/inv/fr_f800",
-    downloadLink: null
+    externalLink:
+      "https://emea.mitsubishielectric.com/fa/products/drv/inv/fr_f800",
+    downloadLink: null,
   },
   {
     slug: "fr-f800-e-series",
@@ -1240,21 +1308,22 @@ export const products: Product[] = [
     parentPath: "/products/frequency-inverter-vfd",
     image: "/images/frequency-inverters/FR-F800.webp",
     tag: "Mitsubishi Electric VFD",
-    description: "The FR-F800-E Series is an energy-optimized pump and fan inverter with built-in Ethernet and BACnet/IP, designed for direct integration into HVAC, BMS, and utility networks. It delivers high-efficiency pump and fan control with seamless connectivity to building management and industrial automation systems.",
+    description:
+      "The FR-F800-E Series is an energy-optimized pump and fan inverter with built-in Ethernet and BACnet/IP, designed for direct integration into HVAC, BMS, and utility networks. It delivers high-efficiency pump and fan control with seamless connectivity to building management and industrial automation systems.",
     keyApplications: [
       "Large pumps in water, wastewater, and desalination plants",
       "HVAC systems (chillers, cooling towers, ...)", // wait! Let's write full lists as extracted from vfd_slug_7ae7001.tsx
       "Oil & gas utility pumps and ventilation systems",
       "Power plant auxiliary pumps and fans",
       "District cooling and building utility systems",
-      "Industrial air handling and process ventilation"
+      "Industrial air handling and process ventilation",
     ],
     keyBenefits: [
       "High-efficiency vector control for pumps and fans",
       "Built-in Ethernet and BACnet/IP for BMS integration",
       "Wide power range for utility and industrial drives",
       "Energy-saving optimization functions",
-      "24/7 industrial-grade reliability"
+      "24/7 industrial-grade reliability",
     ],
     industries: [
       "Electrical and Control Panel Integrators",
@@ -1262,10 +1331,11 @@ export const products: Product[] = [
       "Water, Wastewater & Desalination Facilities",
       "Oil & Gas and Petrochemical Utility Systems",
       "Power Generation Plants",
-      "Large Industrial and Infrastructure Facilities"
+      "Large Industrial and Infrastructure Facilities",
     ],
-    externalLink: "https://emea.mitsubishielectric.com/fa/products/drv/inv/fr_f800/frf800e",
-    downloadLink: null
+    externalLink:
+      "https://emea.mitsubishielectric.com/fa/products/drv/inv/fr_f800/frf800e",
+    downloadLink: null,
   },
   {
     slug: "fr-f846-e-series",
@@ -1274,14 +1344,15 @@ export const products: Product[] = [
     parentPath: "/products/frequency-inverter-vfd",
     image: "/images/frequency-inverters/FR-F800.webp",
     tag: "Mitsubishi Electric VFD",
-    description: "The FR-F846-E2 is the IP55 stand-alone version of the proven FR-F800 series, designed for installation outside control panels in demanding industrial and HVAC environments. Its IP55 enclosure rating allows direct field mounting, eliminating the need for an additional control panel enclosure in many applications.",
+    description:
+      "The FR-F846-E2 is the IP55 stand-alone version of the proven FR-F800 series, designed for installation outside control panels in demanding industrial and HVAC environments. Its IP55 enclosure rating allows direct field mounting, eliminating the need for an additional control panel enclosure in many applications.",
     keyApplications: [
       "Large pumps in water, wastewater, and desalination plants",
       "HVAC systems (chillers, cooling towers, AHUs, and ventilation fans)",
       "Oil & gas utility pumps and ventilation systems",
       "Power plant auxiliary pumps and fans",
       "District cooling and building utility systems",
-      "Industrial air handling and process ventilation"
+      "Industrial air handling and process ventilation",
     ],
     keyBenefits: [
       "IP55 enclosure for outdoor and field installation",
@@ -1289,7 +1360,7 @@ export const products: Product[] = [
       "High-efficiency vector control for pumps and fans",
       "Built-in energy-saving functions",
       "Wide power range for utility and industrial drives",
-      "24/7 industrial-grade reliability"
+      "24/7 industrial-grade reliability",
     ],
     industries: [
       "Electrical and Control Panel Integrators",
@@ -1297,10 +1368,11 @@ export const products: Product[] = [
       "Water, Wastewater & Desalination Facilities",
       "Oil & Gas and Petrochemical Utility Systems",
       "Power Generation Plants",
-      "Large Industrial and Infrastructure Facilities"
+      "Large Industrial and Infrastructure Facilities",
     ],
-    externalLink: "https://emea.mitsubishielectric.com/fa/products/drv/inv/fr_f800/frf846e2",
-    downloadLink: null
+    externalLink:
+      "https://emea.mitsubishielectric.com/fa/products/drv/inv/fr_f800/frf846e2",
+    downloadLink: null,
   },
   {
     slug: "fr-a800-e-series",
@@ -1309,21 +1381,22 @@ export const products: Product[] = [
     parentPath: "/products/frequency-inverter-vfd",
     image: "/images/frequency-inverters/FR-A800.webp",
     tag: "Mitsubishi Electric VFD",
-    description: "The FR-A800-E Series is Mitsubishi Electric's high-performance industrial inverter with built-in 100 Mbit Ethernet TCP/IP, enabling advanced remote monitoring, parameter adjustment, and seamless integration into modern networked control systems. It delivers servo-like vector control, high torque, and fast dynamic response for demanding applications such as cranes, hoists, conveyors, and heavy industrial machinery.",
+    description:
+      "The FR-A800-E Series is Mitsubishi Electric's high-performance industrial inverter with built-in 100 Mbit Ethernet TCP/IP, enabling advanced remote monitoring, parameter adjustment, and seamless integration into modern networked control systems. It delivers servo-like vector control, high torque, and fast dynamic response for demanding applications such as cranes, hoists, conveyors, and heavy industrial machinery.",
     keyApplications: [
       "Cranes, hoists, and elevators",
       "Heavy conveyors and material handling systems",
       "Extruders, mixers, and crushers",
       "Winders, unwinders, and tension control systems",
       "Oil & gas process equipment and skids",
-      "High-performance machine drives"
+      "High-performance machine drives",
     ],
     keyBenefits: [
       "High-performance, servo-like motor control",
       "Stable low- and zero-speed operation",
       "Wide power range for light to heavy duty drives",
       "Built-in safety and protection functions",
-      "Industrial network connectivity via 100 Mbit Ethernet TCP/IP"
+      "Industrial network connectivity via 100 Mbit Ethernet TCP/IP",
     ],
     industries: [
       "Heavy Industrial Machine Builders",
@@ -1331,10 +1404,11 @@ export const products: Product[] = [
       "Electrical and Control Panel Integrators",
       "Steel, Cement, and Mining Industries",
       "Ports, Cranes, and Material Handling Systems",
-      "Manufacturing and Process Plants"
+      "Manufacturing and Process Plants",
     ],
-    externalLink: "https://emea.mitsubishielectric.com/fa/products/drv/inv/fr_a800/fra800e",
-    downloadLink: null
+    externalLink:
+      "https://emea.mitsubishielectric.com/fa/products/drv/inv/fr_a800/fra800e",
+    downloadLink: null,
   },
   {
     slug: "fr-a741-regenerative-series",
@@ -1343,21 +1417,22 @@ export const products: Product[] = [
     parentPath: "/products/frequency-inverter-vfd",
     image: "/images/frequency-inverters/FR-A800.webp",
     tag: "Mitsubishi Electric VFD",
-    description: "The FR-A741 Regenerative Inverter is a compact, high-performance frequency inverter designed for hoist drives and high-powered machines where motor torque is used for regenerative braking. It features a built-in regenerative converter that feeds braking energy back into the power supply instead of dissipating it as heat, providing an energy-efficient and low-heat solution for lifting, lowering, and overhauling load applications.",
+    description:
+      "The FR-A741 Regenerative Inverter is a compact, high-performance frequency inverter designed for hoist drives and high-powered machines where motor torque is used for regenerative braking. It features a built-in regenerative converter that feeds braking energy back into the power supply instead of dissipating it as heat, providing an energy-efficient and low-heat solution for lifting, lowering, and overhauling load applications.",
     keyApplications: [
       "Cranes, hoists, and lifting systems",
       "Elevators and vertical transport systems",
       "Winders and unwinders",
       "Overhauling conveyors and downhill loads",
       "Test benches and dynamometers",
-      "Heavy machines with frequent braking cycles"
+      "Heavy machines with frequent braking cycles",
     ],
     keyBenefits: [
       "Built-in regenerative braking — feeds energy back to supply",
       "High-performance vector control for precise hoist operation",
       "Compact all-in-one design with no external braking resistor",
       "Reduced heat generation and energy loss",
-      "Heavy-duty industrial reliability for continuous operation"
+      "Heavy-duty industrial reliability for continuous operation",
     ],
     industries: [
       "Electrical and Control Panel Integrators",
@@ -1365,10 +1440,11 @@ export const products: Product[] = [
       "Steel, Metal, and Rolling Mill Plants",
       "Oil & Gas and Petrochemical Facilities",
       "Manufacturing and Test Facilities",
-      "Heavy Industrial Plants"
+      "Heavy Industrial Plants",
     ],
-    externalLink: "https://emea.mitsubishielectric.com/fa/products/drv/inv/fr_a800/fra741",
-    downloadLink: null
+    externalLink:
+      "https://emea.mitsubishielectric.com/fa/products/drv/inv/fr_a800/fra741",
+    downloadLink: null,
   },
 
   // ── AC SERVOS (6) ─────────────────────────────────────────
@@ -1380,7 +1456,8 @@ export const products: Product[] = [
     image: "/images/acservos/MR-JE-Servo-Amplifier.webp",
     tag: "Mitsubishi Electric AC Servo",
     series: "MELSERVO-JE Series",
-    description: "The MR-JE Series is Mitsubishi Electric's compact and cost-effective AC servo drive platform designed for basic positioning, speed, and torque control in small to mid-size machines. It provides reliable servo performance in a simple, easy-to-integrate design, making it ideal for OEM equipment and light automation systems.",
+    description:
+      "The MR-JE Series is Mitsubishi Electric's compact and cost-effective AC servo drive platform designed for basic positioning, speed, and torque control in small to mid-size machines. It provides reliable servo performance in a simple, easy-to-integrate design, making it ideal for OEM equipment and light automation systems.",
     keyApplications: [
       "Indexing tables and feeders",
       "Packaging and labeling machines",
@@ -1404,8 +1481,10 @@ export const products: Product[] = [
       "Automation system integrators",
       "General industrial machinery",
     ],
-    externalLink: "https://emea.mitsubishielectric.com/fa/products/drv/servo/mr_je/servo-amplifier",
-    downloadLink: "https://emea.mitsubishielectric.com/fa/get-asset?asset=https%3A%2F%2Feu-assets.contentstack.com%2Fv3%2Fassets%2Fblt5412ff9af9aef77f%2Fbltcf571e9202addd21%2F660e56710a59125ad21530cc%2Fl03086engh.pdf",
+    externalLink:
+      "https://emea.mitsubishielectric.com/fa/products/drv/servo/mr_je/servo-amplifier",
+    downloadLink:
+      "https://emea.mitsubishielectric.com/fa/get-asset?asset=https%3A%2F%2Feu-assets.contentstack.com%2Fv3%2Fassets%2Fblt5412ff9af9aef77f%2Fbltcf571e9202addd21%2F660e56710a59125ad21530cc%2Fl03086engh.pdf",
   },
   {
     slug: "melservo-je-hg-kn-servo-motor",
@@ -1415,7 +1494,8 @@ export const products: Product[] = [
     image: "/images/acservos/mr_j5_lineup_2.webp",
     tag: "Mitsubishi Electric AC Servo",
     series: "MELSERVO-JE Series",
-    description: "The HG-KN Series is Mitsubishi Electric's compact AC servo motor range designed for high-response, precise motion control in small to medium-size machines. These motors are optimized for use with MR-JE and MR-J4 servo amplifiers, delivering smooth motion, high speed, and accurate positioning in a space-saving design.",
+    description:
+      "The HG-KN Series is Mitsubishi Electric's compact AC servo motor range designed for high-response, precise motion control in small to medium-size machines. These motors are optimized for use with MR-JE and MR-J4 servo amplifiers, delivering smooth motion, high speed, and accurate positioning in a space-saving design.",
     keyApplications: [
       "Packaging and labeling machines",
       "Pick-and-place and small robotics",
@@ -1439,8 +1519,10 @@ export const products: Product[] = [
       "Automation system integrators",
       "Light industrial machinery manufacturers",
     ],
-    externalLink: "https://emea.mitsubishielectric.com/fa/products/drv/servo/mr_je/rotary-servo-motor",
-    downloadLink: "https://emea.mitsubishielectric.com/fa/get-asset?asset=https%3A%2F%2Feu-assets.contentstack.com%2Fv3%2Fassets%2Fblt5412ff9af9aef77f%2Fbltcf571e9202addd21%2F660e56710a59125ad21530cc%2Fl03086engh.pdf",
+    externalLink:
+      "https://emea.mitsubishielectric.com/fa/products/drv/servo/mr_je/rotary-servo-motor",
+    downloadLink:
+      "https://emea.mitsubishielectric.com/fa/get-asset?asset=https%3A%2F%2Feu-assets.contentstack.com%2Fv3%2Fassets%2Fblt5412ff9af9aef77f%2Fbltcf571e9202addd21%2F660e56710a59125ad21530cc%2Fl03086engh.pdf",
   },
   {
     slug: "melservo-je-hg-sn-servo-motor",
@@ -1450,7 +1532,8 @@ export const products: Product[] = [
     image: "/images/acservos/mr_j5_lineup_2.webp",
     tag: "Mitsubishi Electric AC Servo",
     series: "MELSERVO-JE Series",
-    description: "The HG-SN Series is Mitsubishi Electric's medium-capacity AC servo motor range designed for high-torque, high-accuracy motion control in industrial and OEM machinery. These motors are optimized for use with MR-JE servo amplifiers, delivering stable speed, strong torque, and precise positioning in a robust industrial design.",
+    description:
+      "The HG-SN Series is Mitsubishi Electric's medium-capacity AC servo motor range designed for high-torque, high-accuracy motion control in industrial and OEM machinery. These motors are optimized for use with MR-JE servo amplifiers, delivering stable speed, strong torque, and precise positioning in a robust industrial design.",
     keyApplications: [
       "Packaging and material handling machines",
       "Indexing tables and rotary axes",
@@ -1474,8 +1557,10 @@ export const products: Product[] = [
       "Automation system integrators",
       "General industrial machinery manufacturers",
     ],
-    externalLink: "https://emea.mitsubishielectric.com/fa/products/drv/servo/mr_je/rotary-servo-motor",
-    downloadLink: "https://emea.mitsubishielectric.com/fa/get-asset?asset=https%3A%2F%2Feu-assets.contentstack.com%2Fv3%2Fassets%2Fblt5412ff9af9aef77f%2Fbltcf571e9202addd21%2F660e56710a59125ad21530cc%2Fl03086engh.pdf",
+    externalLink:
+      "https://emea.mitsubishielectric.com/fa/products/drv/servo/mr_je/rotary-servo-motor",
+    downloadLink:
+      "https://emea.mitsubishielectric.com/fa/get-asset?asset=https%3A%2F%2Feu-assets.contentstack.com%2Fv3%2Fassets%2Fblt5412ff9af9aef77f%2Fbltcf571e9202addd21%2F660e56710a59125ad21530cc%2Fl03086engh.pdf",
   },
   {
     slug: "melservo-jet-servo-drive",
@@ -1485,7 +1570,8 @@ export const products: Product[] = [
     image: "/images/acservos/mr_jet_lineup_1.webp",
     tag: "Mitsubishi Electric AC Servo",
     series: "MELSERVO-JET Series",
-    description: "The MR-JET Series is Mitsubishi Electric's EtherCAT-based servo drive platform designed for high-speed, synchronized, multi-axis motion control in modern automation systems. It provides real-time networked motion, advanced control modes, and compact hardware, making it ideal for packaging lines, robotics, conveyors, and coordinated machine axes. MR-JET covers a power range of 100 W to 1 kW and supports EtherCAT, CC-Link IE Field Basic, and CC-Link IE Field TSN depending on model.",
+    description:
+      "The MR-JET Series is Mitsubishi Electric's EtherCAT-based servo drive platform designed for high-speed, synchronized, multi-axis motion control in modern automation systems. It provides real-time networked motion, advanced control modes, and compact hardware, making it ideal for packaging lines, robotics, conveyors, and coordinated machine axes. MR-JET covers a power range of 100 W to 1 kW and supports EtherCAT, CC-Link IE Field Basic, and CC-Link IE Field TSN depending on model.",
     keyApplications: [
       "Multi-axis packaging and filling machines",
       "Pick-and-place and small robotics",
@@ -1509,7 +1595,8 @@ export const products: Product[] = [
       "Printing and labeling machinery",
       "General industrial automation",
     ],
-    externalLink: "https://emea.mitsubishielectric.com/fa/products/drv/servo/mr_jet/servo-amplifier",
+    externalLink:
+      "https://emea.mitsubishielectric.com/fa/products/drv/servo/mr_jet/servo-amplifier",
     downloadLink: null,
   },
   {
@@ -1520,7 +1607,8 @@ export const products: Product[] = [
     image: "/images/acservos/MR-JET_SERVO_MOTOR.webp",
     tag: "Mitsubishi Electric AC Servo",
     series: "MELSERVO-JET Series",
-    description: "The HG-KNS Series is Mitsubishi Electric's compact, high-response AC servo motor range designed specifically for EtherCAT-based MR-JET servo systems. These motors deliver fast acceleration, smooth motion, and precise positioning, making them ideal for high-speed, multi-axis OEM machines.",
+    description:
+      "The HG-KNS Series is Mitsubishi Electric's compact, high-response AC servo motor range designed specifically for EtherCAT-based MR-JET servo systems. These motors deliver fast acceleration, smooth motion, and precise positioning, making them ideal for high-speed, multi-axis OEM machines.",
     keyApplications: [
       "High-speed packaging and labeling machines",
       "Pick-and-place and small robotics",
@@ -1544,7 +1632,8 @@ export const products: Product[] = [
       "Printing and labeling machinery",
       "General industrial automation",
     ],
-    externalLink: "https://emea.mitsubishielectric.com/fa/products/drv/servo/mr_jet/rotary-servo-motor",
+    externalLink:
+      "https://emea.mitsubishielectric.com/fa/products/drv/servo/mr_jet/rotary-servo-motor",
     downloadLink: null,
   },
   {
@@ -1555,7 +1644,8 @@ export const products: Product[] = [
     image: "/images/acservos/MR-JET_SERVO_MOTOR.webp",
     tag: "Mitsubishi Electric AC Servo",
     series: "MELSERVO-JET Series",
-    description: "The HG-SNS Series is Mitsubishi Electric's medium- to high-capacity AC servo motor range developed for EtherCAT-based MR-JET servo systems. It provides high torque, smooth speed control, and precise positioning, making it ideal for synchronized multi-axis industrial machines.",
+    description:
+      "The HG-SNS Series is Mitsubishi Electric's medium- to high-capacity AC servo motor range developed for EtherCAT-based MR-JET servo systems. It provides high torque, smooth speed control, and precise positioning, making it ideal for synchronized multi-axis industrial machines.",
     keyApplications: [
       "High-speed packaging and filling lines",
       "Synchronized conveyors and indexing systems",
@@ -1579,15 +1669,241 @@ export const products: Product[] = [
       "Automation system integrators",
       "General industrial automation",
     ],
-    externalLink: "https://emea.mitsubishielectric.com/fa/products/drv/servo/mr_jet/rotary-servo-motor",
-    downloadLink: "https://emea.mitsubishielectric.com/fa/get-asset?asset=https%3A%2F%2Feu-assets.contentstack.com%2Fv3%2Fassets%2Fblt5412ff9af9aef77f%2Fbltcb872e84617f7d40%2F6784fb8f03384849f9a7a3be%2FMR-JET_Brochure_L03187ENG_G.pdf",
-  }
+    externalLink:
+      "https://emea.mitsubishielectric.com/fa/products/drv/servo/mr_jet/rotary-servo-motor",
+    downloadLink:
+      "https://emea.mitsubishielectric.com/fa/get-asset?asset=https%3A%2F%2Feu-assets.contentstack.com%2Fv3%2Fassets%2Fblt5412ff9af9aef77f%2Fbltcb872e84617f7d40%2F6784fb8f03384849f9a7a3be%2FMR-JET_Brochure_L03187ENG_G.pdf",
+  },
+
+  // ── CUSTODY METERING SOLUTIONS (3) ───────────────────────
+  {
+    slug: "flow-metering-skid",
+    name: "Flow Metering Skid",
+    category: "Custody Metering Solutions",
+    parentPath: "/products/custody-metering-solutions",
+    image: "/images/flow_metering_skid/1.png",
+    tag: "FLOWSKID · SICK",
+    description:
+      "FLOWSKID flow metering systems are the full gas flow metering system offering from SICK, provided as a reliable turnkey solution for fiscal metering. Each skid is engineered and pre-assembled to deliver accurate, repeatable, and fully compliant custody transfer measurement for natural gas and process gas applications — reducing on-site integration effort, minimizing project risk, and accelerating commissioning.",
+    keyApplications: [
+      "Fiscal and custody transfer metering of natural gas",
+      "Gas processing plants, gathering stations, and compressor stations",
+      "Pipeline receipt and delivery points",
+      "LNG, GTL, and gas-to-power facilities",
+      "Refinery and petrochemical feed and product metering",
+      "Turnkey metering packages for EPC projects",
+    ],
+    keyBenefits: [
+      "Reliable turnkey solution for fiscal metering from SICK",
+      "Pre-engineered, pre-assembled skid for faster site installation",
+      "High-accuracy flow measurement for custody transfer compliance",
+      "Reduced integration effort and project execution risk",
+      "Designed for natural gas and process gas applications",
+      "Backed by SICK's global metering expertise and support",
+    ],
+    industries: [
+      "Oil & Gas Production and Gathering",
+      "Gas Processing and Pipeline Operators",
+      "LNG and GTL Facilities",
+      "Refineries and Petrochemical Plants",
+      "Power Generation and Utilities",
+      "EPC Contractors and System Integrators",
+    ],
+    externalLink: "https://www.sick.com/ae/en/flow/flowskid/c/g417651",
+    downloadLink: null,
+  },
+  {
+    slug: "flow-computer",
+    name: "Flow Computer",
+    category: "Custody Metering Solutions",
+    parentPath: "/products/custody-metering-solutions",
+    image: "/images/flow_computer/1.png",
+    tag: "OMNI · 4000/7000 Series",
+    description:
+      "“Turn to OMNI – the most recognized and trusted brand of custody flow computers for oil and gas measurement.” The OMNI 4000/7000 Series Flow Computers are designed to reduce uncertainty and deliver trusted, auditable results across custody transfer applications. They combine proven calculation algorithms, comprehensive audit trails, and flexible communication capabilities to support the most demanding oil, gas, and multi-stream metering requirements.",
+    keyApplications: [
+      "Custody transfer flow measurement for oil and gas",
+      "Gas pipelines, gathering systems, and distribution networks",
+      "Liquefied natural gas (LNG) and natural gas liquids (NGL) metering",
+      "Crude oil production, allocation, and LACT skid measurement",
+      "Multi-stream and multi-run metering stations",
+      "Fiscal and allocation metering for refineries and terminals",
+    ],
+    keyBenefits: [
+      "Industry's most recognized and trusted brand of custody flow computers",
+      "Reduces measurement uncertainty in oil and gas custody transfer",
+      "Supports AGA, ISO, and API calculation standards",
+      "Comprehensive audit trail and historical data logging",
+      "Flexible communication: Modbus, TCP/IP, and serial protocols",
+      "Suitable for single and multi-stream metering applications",
+    ],
+    industries: [
+      "Oil & Gas Production and Gathering",
+      "Gas Processing and Pipeline Operators",
+      "LNG and NGL Facilities",
+      "Refineries and Terminals",
+      "Allocation and LACT Skid Operators",
+      "EPC Contractors and System Integrators",
+    ],
+    externalLink: "https://www.omniflow.com/products/4000-7000-series",
+    downloadLink: null,
+  },
+  {
+    slug: "flow-metering-control-system",
+    name: "Flow Metering Control System",
+    category: "Custody Metering Solutions",
+    parentPath: "/products/custody-metering-solutions",
+    image: "/images/flow_metering_control_system/1.jpg",
+    tag: "Custody Transfer · Control Systems",
+    description:
+      "Our Custody Transfer Flow Metering Control Systems come equipped with a wide array of functionalities to meet your specific needs. Experience the flexibility of Automatic/Manual Operation, allowing you to seamlessly switch between modes for full operational control. With comprehensive alarming, data logging, and real-time diagnostics, the system ensures accurate, auditable, and reliable custody transfer measurement across oil, gas, and multi-phase applications.",
+    keyApplications: [
+      "Custody transfer flow metering stations for oil and gas",
+      "Automatic and manual operation of metering runs",
+      "Pipeline receipt, delivery, and check metering",
+      "Refinery and terminal custody transfer skids",
+      "Multi-run and multi-product metering systems",
+      "Integration with SCADA, DCS, and plant historians",
+    ],
+    keyBenefits: [
+      "Flexible Automatic/Manual operation for full process control",
+      "Comprehensive alarm management and event logging",
+      "Real-time diagnostics and system health monitoring",
+      "Accurate, auditable custody transfer measurement",
+      "Seamless integration with SCADA, DCS, and historians",
+      "Engineered for oil, gas, and multi-phase applications",
+    ],
+    industries: [
+      "Oil & Gas Production and Gathering",
+      "Gas Processing and Pipeline Operators",
+      "Refineries and Petrochemical Plants",
+      "LNG and NGL Facilities",
+      "Terminals, Storage, and Distribution",
+      "EPC Contractors and System Integrators",
+    ],
+    externalLink: "https://texastechserv.com/contact/",
+    downloadLink: null,
+  },
+
+  // ── FLOW METERS (3) ──────────────────────────────────────
+  {
+    slug: "liquid-flow-meters",
+    name: "Liquid Flow Meters",
+    category: "Flow Meters",
+    parentPath: "/products/flow-meters",
+    image: "/images/liquid_flow_meters/1.png",
+    tag: "SICK · Faure Herman",
+    description:
+      "We take pride in being a premier provider of a wide range of liquid flow meters, including both non-custody and custody solutions from renowned brands like Faure Herman and SICK. Our liquid flow meter portfolio covers high-accuracy Coriolis, ultrasonic, and differential pressure technologies, engineered to deliver reliable, repeatable, and fully traceable measurement for the most demanding process and custody transfer applications.",
+    keyApplications: [
+      "Custody and non-custody transfer of crude oil and refined products",
+      "Pipeline receipt, delivery, and check metering of liquids",
+      "Refineries, terminals, and tank farm operations",
+      "Chemical and petrochemical process measurement",
+      "Water injection and produced water measurement in oil & gas",
+      "Loading and unloading of tankers, ships, and rail cars",
+    ],
+    keyBenefits: [
+      "Wide range of custody and non-custody liquid flow meters",
+      "Renowned brands including Faure Herman and SICK",
+      "High-accuracy Coriolis, ultrasonic, and DP technologies",
+      "Reliable, repeatable measurement for process and fiscal applications",
+      "Suitable for crude oil, refined products, and chemicals",
+      "Proven in refineries, terminals, and pipeline operations",
+    ],
+    industries: [
+      "Oil & Gas Production and Gathering",
+      "Refineries and Petrochemical Plants",
+      "Pipeline and Terminal Operators",
+      "Tank Farms and Storage Facilities",
+      "Chemical and Process Industries",
+      "Marine Loading and Unloading",
+    ],
+    externalLink: "https://www.sick.com/ae/en/flow/",
+    downloadLink: null,
+  },
+  {
+    slug: "flare-meters",
+    name: "Flare Meters",
+    category: "Flow Meters",
+    parentPath: "/products/flow-meters",
+    image: "/images/flare_meters/1.png",
+    tag: "SICK · Flare Gas Measurement",
+    description:
+      "We take pride in being a premier provider of a wide range of liquid flow meters, including both non-custody and custody solutions from renowned brands like Faure Herman and SICK. Our flare gas meters are purpose-built to accurately measure low-pressure, low-flow, and highly variable waste and flare gas streams — supporting compliance with environmental regulations, emissions reporting, and flare efficiency monitoring in oil & gas and petrochemical facilities.",
+    keyApplications: [
+      "Flare gas flow measurement at refineries and petrochemical plants",
+      "Low-pressure and low-flow waste gas monitoring",
+      "Highly variable and pulsating flow streams in flare headers",
+      "Compliance with environmental and emissions reporting regulations",
+      "Flare efficiency and destruction / removal efficiency (DRE) monitoring",
+      "Vapor recovery and vent gas measurement systems",
+    ],
+    keyBenefits: [
+      "Purpose-built for low-pressure, low-flow flare and waste gas streams",
+      "Handles highly variable and pulsating flow conditions",
+      "Supports compliance with environmental and emissions regulations",
+      "Enables accurate flare efficiency and DRE reporting",
+      "Trusted brands including SICK and Faure Herman",
+      "Proven in refinery and petrochemical flare applications",
+    ],
+    industries: [
+      "Refineries and Petrochemical Plants",
+      "Oil & Gas Production and Gathering",
+      "LNG and Gas Processing Facilities",
+      "Chemical and Process Industries",
+      "Environmental and Emissions Monitoring",
+      "EPC Contractors and System Integrators",
+    ],
+    externalLink: "https://www.sick.com/ae/en/flow/",
+    downloadLink: null,
+  },
+  {
+    slug: "gas-flow-meters",
+    name: "Gas Flow Meters",
+    category: "Flow Meters",
+    parentPath: "/products/flow-meters",
+    image: "/images/gas_flow_meters/1.png",
+    tag: "SICK · Gas Flow Measurement",
+    description:
+      "Flow measurement technology finds applications across various industries, and SICK is well-equipped to address this diverse challenge. The company boasts a comprehensive product portfolio of cutting-edge sensor technology, catering to a wide range of needs. Whether it’s custody transfer meters or devices for monitoring and control, SICK’s flow measurement technology consistently operates with utmost safety and reliability — even in challenging process and ambient conditions.",
+    keyApplications: [
+      "Custody transfer and fiscal metering of natural gas",
+      "Gas processing plants, gathering stations, and compressor stations",
+      "Pipeline receipt and delivery points for gas",
+      "Industrial gas flow monitoring and process control",
+      "Biogas, landfill gas, and specialty gas measurement",
+      "Refinery and petrochemical feed and product gas metering",
+    ],
+    keyBenefits: [
+      "Comprehensive gas flow measurement portfolio from SICK",
+      "Custody transfer and process monitoring solutions",
+      "Cutting-edge sensor technology for accurate and reliable measurement",
+      "Operates with utmost safety and reliability in harsh conditions",
+      "Suitable for natural gas, process gas, and specialty gases",
+      "Proven across oil & gas, power, and process industries",
+    ],
+    industries: [
+      "Oil & Gas Production and Gathering",
+      "Gas Processing and Pipeline Operators",
+      "LNG and GTL Facilities",
+      "Refineries and Petrochemical Plants",
+      "Power Generation and Utilities",
+      "Biogas and Environmental Industries",
+    ],
+    externalLink: "https://www.sick.com/ae/en/flow/",
+    downloadLink: null,
+  },
 ];
 
 export function getProductsByPath(parentPath: string): Product[] {
-  const normalizedPath = parentPath.endsWith("/") ? parentPath.slice(0, -1) : parentPath;
+  const normalizedPath = parentPath.endsWith("/")
+    ? parentPath.slice(0, -1)
+    : parentPath;
   return products.filter((p) => {
-    const pPath = p.parentPath.endsWith("/") ? p.parentPath.slice(0, -1) : p.parentPath;
+    const pPath = p.parentPath.endsWith("/")
+      ? p.parentPath.slice(0, -1)
+      : p.parentPath;
     return pPath === normalizedPath;
   });
 }
