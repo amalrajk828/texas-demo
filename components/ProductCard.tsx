@@ -18,9 +18,13 @@ export type Product = {
 export default function ProductCard({
   product,
   category,
+  href,
+  imageFit = "cover",
 }: {
   product: Product;
   category?: string;
+  href?: string;
+  imageFit?: "cover" | "contain";
 }) {
   const [imgError, setImgError] = useState(false);
   const targetCategory = product.category || category || "";
@@ -34,6 +38,8 @@ export default function ProductCard({
     "AC Servos": "Mitsubishi Electric AC Servo",
     "Custody Metering Solutions": "Custody Transfer Solutions",
     "Flow Meters": "SICK Flow Measurement",
+    "Liquid Flow Meters": "Liquid Flow Solutions",
+    "Flare Flow Meters": "Flare Gas Measurement",
   };
   const displayTag =
     product.tag ||
@@ -46,20 +52,30 @@ export default function ProductCard({
     <div className="product-card group relative bg-white border border-[#E8E8F0] border-l-4 border-l-transparent hover:border-l-[#F5821F] rounded-[12px] p-5 min-[480px]:p-[28px] shadow-[0_2px_12px_rgba(0,0,0,0.08)] transition-all duration-300 ease-in-out hover:-translate-y-1">
       {/* Absolute overlay link for card clickability */}
       <Link
-        href={`/portfolio/${product.slug}`}
+        href={href ?? `/portfolio/${product.slug}`}
         className="absolute inset-0 z-10"
         aria-label={product.name}
       />
 
       <div className="grid grid-cols-1 min-[769px]:grid-cols-[300px_1fr] gap-8 items-start">
         {/* Image Area */}
-        <div className="relative w-full h-[220px] min-[769px]:w-[300px] min-[769px]:h-[220px] bg-[#1a1d35] rounded-[8px] overflow-hidden shrink-0">
+        <div
+          className={
+            imageFit === "contain"
+              ? "relative w-full h-[220px] min-[769px]:w-[300px] min-[769px]:h-[220px] bg-white border border-[#E8E8F0] rounded-[8px] overflow-hidden shrink-0"
+              : "relative w-full h-[220px] min-[769px]:w-[300px] min-[769px]:h-[220px] bg-[#1a1d35] rounded-[8px] overflow-hidden shrink-0"
+          }
+        >
           {!imgError && displayImage ? (
             <Image
               src={displayImage}
               alt={product.name}
               fill
-              className="object-cover transition-transform duration-500 group-hover:scale-105"
+              className={
+                imageFit === "contain"
+                  ? "object-contain p-6 transition-transform duration-500 group-hover:scale-105"
+                  : "object-cover transition-transform duration-500 group-hover:scale-105"
+              }
               sizes="(max-width: 768px) 100vw, 300px"
               onError={() => setImgError(true)}
             />

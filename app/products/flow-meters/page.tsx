@@ -36,16 +36,24 @@ export default function FlowMetersPage() {
         <div
           className="absolute bottom-0 left-1/2 -translate-x-1/2 w-[600px] h-40 pointer-events-none"
           style={{
-            background: "radial-gradient(ellipse, rgba(245,130,31,0.06) 0%, transparent 70%)",
+            background:
+              "radial-gradient(ellipse, rgba(245,130,31,0.06) 0%, transparent 70%)",
           }}
         />
 
         <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 py-16 lg:py-20">
           {/* Breadcrumb */}
           <nav className="flex items-center gap-1.5 text-[11px] text-white/50 mb-6">
-            <Link href="/" className="hover:text-white transition-colors">Home</Link>
+            <Link href="/" className="hover:text-white transition-colors">
+              Home
+            </Link>
             <ChevronRight className="w-3 h-3 text-white/30" />
-            <Link href="/products" className="hover:text-white transition-colors">Products</Link>
+            <Link
+              href="/products"
+              className="hover:text-white transition-colors"
+            >
+              Products
+            </Link>
             <ChevronRight className="w-3 h-3 text-white/30" />
             <span className="text-white">Flow Meters</span>
           </nav>
@@ -73,12 +81,15 @@ export default function FlowMetersPage() {
           </h2>
           <div className="w-[60px] h-[3px] bg-[#F5821F] mx-auto mt-3 mb-4" />
           <p className="text-[#555770] text-base leading-relaxed">
-            Flow measurement technology finds applications across various industries, and SICK is well-equipped to
-            address this diverse challenge. The company boasts a comprehensive product portfolio of cutting-edge
-            sensor technology, catering to a wide range of needs. Whether it&apos;s custody transfer meters or
-            devices for monitoring and control, SICK&apos;s flow measurement technology consistently operates with
-            utmost safety and reliability. Even in challenging process and ambient conditions, the technology
-            remains up-to-date and ensures accurate performance.
+            Flow measurement technology finds applications across various
+            industries, and SICK is well-equipped to address this diverse
+            challenge. The company boasts a comprehensive product portfolio of
+            cutting-edge sensor technology, catering to a wide range of needs.
+            Whether it&apos;s custody transfer meters or devices for monitoring
+            and control, SICK&apos;s flow measurement technology consistently
+            operates with utmost safety and reliability. Even in challenging
+            process and ambient conditions, the technology remains up-to-date
+            and ensures accurate performance.
           </p>
         </div>
       </section>
@@ -87,14 +98,26 @@ export default function FlowMetersPage() {
       <section className="bg-[#F8F9FA] py-14 border-t border-[#E8E8F0] border-b border-[#E8E8F0]">
         <div className="max-w-[1100px] mx-auto px-10 pb-[80px]">
           <div className="flex flex-col">
-            {flowMetersProducts.map((prod, index) => (
-              <React.Fragment key={prod.slug}>
-                <ProductCard product={prod} category="Flow Meters" />
-                {index < flowMetersProducts.length - 1 && (
-                  <div className="border-t border-[#E8E8F0] my-[10px]" />
-                )}
-              </React.Fragment>
-            ))}
+            {flowMetersProducts.map((prod, index) => {
+              const cardHref =
+                prod.slug === "liquid-flow-meters"
+                  ? "/products/flow-meters/liquid-flow-meters/"
+                  : prod.slug === "flare-meters"
+                    ? "/products/flow-meters/flare-meters/"
+                    : undefined;
+              return (
+                <React.Fragment key={prod.slug}>
+                  <ProductCard
+                    product={prod}
+                    category="Flow Meters"
+                    href={cardHref}
+                  />
+                  {index < flowMetersProducts.length - 1 && (
+                    <div className="border-t border-[#E8E8F0] my-[10px]" />
+                  )}
+                </React.Fragment>
+              );
+            })}
           </div>
         </div>
       </section>
@@ -108,8 +131,9 @@ export default function FlowMetersPage() {
                 Need help selecting the right flow meter?
               </h3>
               <p className="text-[#A0A8C0] text-sm">
-                Our flow measurement specialists can help you choose and configure the right liquid, gas, or
-                flare flow meter for your application.
+                Our flow measurement specialists can help you choose and
+                configure the right liquid, gas, or flare flow meter for your
+                application.
               </p>
             </div>
             <Link
