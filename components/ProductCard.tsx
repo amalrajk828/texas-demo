@@ -40,6 +40,7 @@ export default function ProductCard({
     "Flow Meters": "SICK Flow Measurement",
     "Liquid Flow Meters": "Liquid Flow Solutions",
     "Flare Flow Meters": "Flare Gas Measurement",
+    "Gas Flow Meters": "SICK Ultrasonic Gas Flow",
   };
   const displayTag =
     product.tag ||

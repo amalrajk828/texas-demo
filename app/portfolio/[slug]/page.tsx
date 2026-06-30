@@ -4,6 +4,7 @@ import Link from "next/link";
 import { notFound } from "next/navigation";
 import { ChevronRight, Check, Download, ExternalLink, ArrowRight } from "lucide-react";
 import { products, getProductBySlug } from "@/lib/products";
+import YouTubeEmbed from "@/components/YouTubeEmbed";
 
 type Props = {
   params: Promise<{ slug: string }>;
@@ -41,6 +42,7 @@ export default async function ProductPage({ params }: Props) {
   const downloadLink = product.downloadLink ?? null;
   const tag = product.tag ?? product.category;
   const variants = product.variants ?? [];
+  const youtubeUrl = product.youtubeUrl ?? null;
 
   // Build bulletSections from keyApplications, keyBenefits, industries
   const bulletSections = [
@@ -133,7 +135,7 @@ export default async function ProductPage({ params }: Props) {
                     href={externalLink}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="inline-flex items-center gap-2 border border-[#e7212b] text-[#e7212b] hover:bg-[#e7212b] hover:text-white font-medium text-[13px] px-5 py-2.5 rounded-lg transition-colors"
+                    className="inline-flex items-center gap-2 border border-[#F5821F] text-[#F5821F] hover:bg-[#F5821F] hover:text-white font-medium text-[13px] px-5 py-2.5 rounded-lg transition-colors"
                   >
                     <ExternalLink className="w-4 h-4" />
                     For More Detail
@@ -144,7 +146,7 @@ export default async function ProductPage({ params }: Props) {
                     href={downloadLink}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="inline-flex items-center gap-2 bg-[#e7212b] hover:bg-[#aa0b1b] text-white font-medium text-[13px] px-5 py-2.5 rounded-lg transition-colors"
+                    className="inline-flex items-center gap-2 bg-[#F5821F] hover:bg-[#e07214] text-white font-medium text-[13px] px-5 py-2.5 rounded-lg transition-colors"
                   >
                     <Download className="w-4 h-4" />
                     Download
@@ -162,14 +164,14 @@ export default async function ProductPage({ params }: Props) {
                   key={sec.heading}
                   className="bg-[#f9fafb] border border-[#e8eaf0] rounded-2xl p-6"
                 >
-                  <p className="text-[10px] font-medium text-[#e7212b] tracking-[2px] uppercase mb-4">
+                  <p className="text-[10px] font-medium text-[#F5821F] tracking-[2px] uppercase mb-4">
                     {sec.heading}
                   </p>
                   <ul className="space-y-2.5">
                     {sec.items.map((item) => (
                       <li key={item} className="flex items-start gap-3">
-                        <span className="mt-0.5 w-4 h-4 rounded-full bg-[#e7212b]/10 border border-[#e7212b]/25 flex items-center justify-center shrink-0">
-                          <Check className="w-2.5 h-2.5 text-[#e7212b]" strokeWidth={2.5} />
+                        <span className="mt-0.5 w-4 h-4 rounded-full bg-[#F5821F]/10 border border-[#F5821F]/25 flex items-center justify-center shrink-0">
+                          <Check className="w-2.5 h-2.5 text-[#F5821F]" strokeWidth={2.5} />
                         </span>
                         <span className="text-[13px] text-gray-600 leading-relaxed">{item}</span>
                       </li>
@@ -177,6 +179,13 @@ export default async function ProductPage({ params }: Props) {
                   </ul>
                 </div>
               ))}
+            </div>
+          )}
+
+          {/* YouTube embed — full width below columns */}
+          {youtubeUrl && (
+            <div className="mt-10 max-w-3xl mx-auto">
+              <YouTubeEmbed url={youtubeUrl} />
             </div>
           )}
         </div>
@@ -187,8 +196,8 @@ export default async function ProductPage({ params }: Props) {
         <section className="bg-[#f4f5f8] py-14">
           <div className="max-w-7xl mx-auto px-4 sm:px-6">
             <div className="flex items-center gap-3 mb-8">
-              <span className="w-8 h-px bg-[#e7212b]/40" />
-              <span className="text-[#e7212b] text-[9px] font-medium tracking-[2.5px] uppercase">
+              <span className="w-8 h-px bg-[#F5821F]/40" />
+              <span className="text-[#F5821F] text-[9px] font-medium tracking-[2.5px] uppercase">
                 Available Models
               </span>
             </div>
@@ -198,7 +207,7 @@ export default async function ProductPage({ params }: Props) {
                   key={model}
                   className="inline-flex items-center gap-1.5 bg-white border border-[#e8eaf0] text-[#0B0D26] text-[12px] font-medium px-4 py-2 rounded-lg"
                 >
-                  <span className="w-1.5 h-1.5 rounded-full bg-[#e7212b] shrink-0" />
+                  <span className="w-1.5 h-1.5 rounded-full bg-[#F5821F] shrink-0" />
                   {model}
                 </span>
               ))}
@@ -219,7 +228,7 @@ export default async function ProductPage({ params }: Props) {
           <div className="flex flex-wrap items-center justify-center gap-3">
             <Link
               href="/contacts/"
-              className="inline-flex items-center gap-2 bg-[#e7212b] hover:bg-[#aa0b1b] text-white font-medium px-8 py-3.5 rounded-lg transition-colors duration-200"
+              className="inline-flex items-center gap-2 bg-[#F5821F] hover:bg-[#e07214] text-white font-medium px-8 py-3.5 rounded-lg transition-colors duration-200"
             >
               Contact Us <ArrowRight className="w-4 h-4" />
             </Link>

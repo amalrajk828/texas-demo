@@ -104,7 +104,9 @@ export default function FlowMetersPage() {
                   ? "/products/flow-meters/liquid-flow-meters/"
                   : prod.slug === "flare-meters"
                     ? "/products/flow-meters/flare-meters/"
-                    : undefined;
+                    : prod.slug === "gas-flow-meters"
+                      ? "/products/flow-meters/gas-flow-meters/"
+                      : undefined;
               return (
                 <React.Fragment key={prod.slug}>
                   <ProductCard
