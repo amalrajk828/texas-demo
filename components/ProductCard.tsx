@@ -41,6 +41,10 @@ export default function ProductCard({
     "Liquid Flow Meters": "Liquid Flow Solutions",
     "Flare Flow Meters": "Flare Gas Measurement",
     "Gas Flow Meters": "SICK Ultrasonic Gas Flow",
+    "Analyzers": "SICK Gas Analysis",
+    "CEMS": "CEMS Monitoring",
+    "Dust Analyzers": "Dust Measurement",
+    "Gas Analyzers": "SICK In-Situ Gas Analysis",
   };
   const displayTag =
     product.tag ||
