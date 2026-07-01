@@ -16,7 +16,8 @@ export type Product = {
     | "Analyzers"
     | "CEMS"
     | "Dust Analyzers"
-    | "Gas Analyzers";
+    | "Gas Analyzers"
+    | "Industrial Automation";
   parentPath: string;
   image?: string;
   tag?: string;
@@ -3124,6 +3125,85 @@ export const products: Product[] = [
     ],
     externalLink: "https://www.sick.com/ae/en/gas-analyzers/c/g295776",
     downloadLink: null,
+  },
+
+  // ── INDUSTRIAL AUTOMATION (7) ───────────────────────────
+  {
+    slug: "plc-io-module",
+    name: "PLC & I/O Module",
+    category: "Industrial Automation",
+    parentPath: "/products/industrial-automation",
+    image: "/images/industrial_automation/plc_&_io_module/1.jpg",
+    tag: "PLC & I/O Systems",
+    description:
+      "Experience Seamless Automation with Our PLC & I/O Modules. Welcome to a realm of industrial automation where efficiency meets innovation. Our range of PLC (Programmable Logic Controller) and I/O (Input/Output) module products sets a new standard for seamless and intelligent operations.",
+  },
+  {
+    slug: "industrial-control-panels",
+    name: "Industrial Control Panels",
+    category: "Industrial Automation",
+    parentPath: "/products/industrial-automation",
+    image: "/images/industrial_automation/industrial_control_panels/1.jpg",
+    tag: "PLC SCADA & Control Panels",
+    description:
+      "Empowering Industries with Advanced Industrial Control Panels. Welcome to a world of precision and control, where our Industrial Control Panels redefine the way industries operate. Whether you're in need of PLC SCADA systems or Custody Metering solutions, our panels set a new standard for reliability and efficiency. Experience the power of precision, control, and adaptability with our Industrial Control Panels. Elevate your PLC SCADA systems and Custody Metering capabilities, and shape the future of your industry.",
+    keyBenefits: [
+      "Efficiency Redefined: Experience streamlined operations like never before. Our Industrial Control Panels seamlessly integrate with PLC SCADA systems and Custody Metering setups, optimizing processes and boosting productivity.",
+      "Unleash Automation: Navigate complex processes with ease. Our panels empower you to control, monitor, and manage intricate tasks, ensuring your operations are finely tuned and effortlessly controlled.",
+      "Custom Solutions, Tailored Results: Every industry is unique, and so are our solutions. Our Industrial Control Panels are designed with customization in mind, adapting to your specific needs for PLC SCADA or Custody Metering projects.",
+      "Ahead of the Curve: Stay ahead in the realm of industrial innovation. Our advanced technology ensures that your operations not only meet today's demands but are also future-ready for the dynamic landscape of tomorrow.",
+    ],
+  },
+  {
+    slug: "industrial-workstation-server-desktop-pc",
+    name: "Industrial Workstation / Server / Desktop PC",
+    category: "Industrial Automation",
+    parentPath: "/products/industrial-automation",
+    image: "/images/industrial_automation/industrial_workstation_server_desktop_pc/1.jpg",
+    tag: "Industrial Computing",
+    description:
+      "Explore our diverse range of Industrial Workstations, Servers, and Desktop PCs designed to enhance your operations. From robust Servers that ensure seamless data management to dependable Desktop PCs tailored to your needs, our solutions are engineered for reliability and performance. Elevate your industrial computing with our comprehensive offerings, built to withstand demanding environments and drive efficiency.",
+  },
+  {
+    slug: "controller",
+    name: "Controller",
+    category: "Industrial Automation",
+    parentPath: "/products/industrial-automation",
+    image: "/images/industrial_automation/controller/1.jpg",
+    tag: "Industrial Controllers",
+    description:
+      "Discover our array of Industrial Automation Controllers, each meticulously crafted to optimize your processes. From PLCs that enable precision control to SCADA systems that provide real-time insights, our controllers empower your operations. Choose reliability, flexibility, and advanced technology for your industrial automation needs with our wide range of controllers.",
+  },
+  {
+    slug: "converters",
+    name: "Converters",
+    category: "Industrial Automation",
+    parentPath: "/products/industrial-automation",
+    image: "/images/industrial_automation/converters/1.png",
+    tag: "Industrial Converters",
+    description:
+      "Elevate your industrial connectivity with our diverse range of Industrial Converters. Whether you require protocol converters to bridge communication gaps or signal converters to ensure seamless data transmission, our solutions are designed to enhance your operational efficiency. Experience reliable and adaptable industrial conversion solutions that bridge the gap between legacy systems and modern technology.",
+  },
+  {
+    slug: "industrial-ethernet-network-switch",
+    name: "Industrial Ethernet Network Switch",
+    category: "Industrial Automation",
+    parentPath: "/products/industrial-automation",
+    image: "/images/industrial_automation/industrial_ethernet_network_switch/1.jpg",
+    tag: "Industrial Networking",
+    description:
+      "Experience enhanced networking capabilities with our diverse selection of Industrial Ethernet Network Switches. Designed to provide reliable connectivity in demanding environments, our switches ensure seamless data transmission and communication across your industrial infrastructure. Choose from our range of Industrial Ethernet Network Switches to optimize your network performance and drive operational efficiency.",
+  },
+  {
+    slug: "industrial-consoles",
+    name: "Industrial Consoles",
+    category: "Industrial Automation",
+    parentPath: "/products/industrial-automation",
+    image: "/images/industrial_automation/industrial_consoles/1.jpg",
+    tag: "Control Room Solutions",
+    description:
+      "Pyrotech Workspace Solutions is a founder for delivering turnkey Control Room Solutions and Ergonomic Command Centre Console. Their idea of a command centre is based on sustainable, safe and contemporary workspace for both the operators and the equipment. They are looking further to provide ultra-modern designs with strict adherence to international standards of Control Rooms Solutions & Control desks.",
+    externalLink: "https://www.pyrotechworkspace.com/expertise/control-room-console/",
   },
 ];
 
