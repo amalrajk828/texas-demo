@@ -46,6 +46,7 @@ export default function ProductCard({
     "Dust Analyzers": "Dust Measurement",
     "Gas Analyzers": "SICK In-Situ Gas Analysis",
     "Control Room Interior & Console": "Pyrotech Control Room Solutions",
+    "Field Instruments": "SICK Field Instruments",
   };
   const displayTag =
     product.tag ||

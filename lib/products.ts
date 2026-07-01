@@ -18,7 +18,8 @@ export type Product = {
     | "Dust Analyzers"
     | "Gas Analyzers"
     | "Industrial Automation"
-    | "Control Room Interior & Console";
+    | "Control Room Interior & Console"
+    | "Field Instruments";
   parentPath: string;
   image?: string;
   tag?: string;
@@ -3303,6 +3304,65 @@ export const products: Product[] = [
     tag: "Pyrotech Control Room Solutions",
     description:
       "The XTRON series features cutting-edge control room consoles designed for next-generation command centres. With a contemporary aesthetic and robust construction, these consoles meet the highest standards of control room ergonomics and operational efficiency.",
+  },
+
+  // ── FIELD INSTRUMENTS (5) ───────────────────────────────
+  {
+    slug: "temperature-sensors",
+    name: "Temperature Sensors",
+    category: "Field Instruments",
+    parentPath: "/products/field-instruments",
+    image: "/images/field_instruments/temperature_sensors/1.png",
+    tag: "SICK Field Instruments",
+    description:
+      "SICK provides top-notch solutions for contact temperature measurement in liquids and gases, offering a product portfolio that includes screw-in and insertion thermometers, along with temperature switches. With various insertion lengths and flexible mechanical configuration options, these devices can be perfectly tailored to meet individual requirements.",
+    externalLink: "https://www.sick.com/in/en/temperature-sensors/c/g173252?q=:Def_Type:ProductFamily",
+  },
+  {
+    slug: "level-sensors",
+    name: "Level Sensors",
+    category: "Field Instruments",
+    parentPath: "/products/field-instruments",
+    image: "/images/field_instruments/level_sensors/1.png",
+    tag: "SICK Field Instruments",
+    description:
+      "SICK presents a diverse array of solutions for process engineering, storage, and protection, catering to both continuous level measurement and point level measurement needs. Our sensors are designed to ensure efficient processes, taking into account the installation situation, medium properties, and ambient conditions. With one of the broadest technology portfolios in the industry, SICK is at the forefront, leveraging our knowledge to deliver top-notch solutions.",
+    externalLink: "https://www.sick.com/in/en/temperature-sensors/c/g173252?q=:Def_Type:ProductFamily",
+    downloadLink: "https://www.sick.com/ae/en/presence/level-sensors/c/g98155?q=:Def_Type:ProductFamily",
+  },
+  {
+    slug: "pressure-sensors",
+    name: "Pressure Sensors",
+    category: "Field Instruments",
+    parentPath: "/products/field-instruments",
+    image: "/images/field_instruments/pressure_sensors/1.png",
+    tag: "SICK Field Instruments",
+    description:
+      "SICK provides a range of electronic pressure measurement transmitters and switches that can be customized to meet specific customer needs, thanks to their intelligent and diverse configuration options. All SICK devices are known for their high-quality materials, robust properties, and precise measurement technology, while also being user-friendly and easy to install.",
+    externalLink: "https://www.sick.com/in/en/temperature-sensors/c/g173252?q=:Def_Type:ProductFamily",
+  },
+  {
+    slug: "condition-monitoring-sensors",
+    name: "Condition Monitoring Sensors",
+    category: "Field Instruments",
+    parentPath: "/products/field-instruments",
+    image: "/images/field_instruments/condition_monitoring_sensors/1.png",
+    tag: "SICK Field Instruments",
+    description:
+      "SICK's Condition Monitoring sensors enable intelligent condition-based monitoring by assessing essential physical parameters for mission-critical processes and applications. The gathered sensor data serves as the basis for analyses that facilitate condition-dependent maintenance. This not only minimizes unplanned downtimes but also extends the service life of components and helps in reducing overall costs.",
+    externalLink: "https://www.sick.com/ae/en/condition-monitoring-sensors/condition-monitoring-sensors/multi-physics-box/c/g569306",
+    downloadLink: "https://cdn.sick.com/media/familyoverview/6/06/306/familyOverview_Multi-Physics-Box_g569306_en.pdf",
+  },
+  {
+    slug: "pressure-sensors-2",
+    name: "Flow Sensor",
+    category: "Field Instruments",
+    parentPath: "/products/field-instruments",
+    image: "/images/field_instruments/flow_sensor/1.png",
+    tag: "SICK Field Instruments",
+    description:
+      "Optimized control of process parameters is the main driver for increasing efficiency and reducing input of valuable resources. Whether it's pressure measurement, temperature measurement, level control or flow metering, SICK offers a wide range of solutions for measuring process variables for liquids, gases and bulk solids and protecting against overfill and dry run. SICK devices are rugged and easy to use. Innovative sensor technology enables accurate, universal measurement independent of material type.",
+    externalLink: "https://www.sick.com/in/en/temperature-sensors/c/g173252?q=:Def_Type:ProductFamily",
   },
 ];
 
