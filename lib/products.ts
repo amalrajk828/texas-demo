@@ -17,7 +17,8 @@ export type Product = {
     | "CEMS"
     | "Dust Analyzers"
     | "Gas Analyzers"
-    | "Industrial Automation";
+    | "Industrial Automation"
+    | "Control Room Interior & Console";
   parentPath: string;
   image?: string;
   tag?: string;
@@ -3204,6 +3205,104 @@ export const products: Product[] = [
     description:
       "Pyrotech Workspace Solutions is a founder for delivering turnkey Control Room Solutions and Ergonomic Command Centre Console. Their idea of a command centre is based on sustainable, safe and contemporary workspace for both the operators and the equipment. They are looking further to provide ultra-modern designs with strict adherence to international standards of Control Rooms Solutions & Control desks.",
     externalLink: "https://www.pyrotechworkspace.com/expertise/control-room-console/",
+  },
+
+  // ── CONTROL ROOM INTERIOR & CONSOLE (9) ─────────────────
+  {
+    slug: "dynamic-m",
+    name: "DYNAMIC M",
+    category: "Control Room Interior & Console",
+    parentPath: "/products/control-room-interior-and-console",
+    image: "/images/control_room_interior_and_console/dynamic_m/1.jpg",
+    tag: "Pyrotech Control Room Solutions",
+    description:
+      "The DYNAMIC M series offers versatile and ergonomic control room consoles designed for modern operations. With a focus on operator comfort and efficiency, these consoles provide a sustainable and contemporary workspace for critical control room environments.",
+  },
+  {
+    slug: "dynamic-xe",
+    name: "DYNAMIC XE",
+    category: "Control Room Interior & Console",
+    parentPath: "/products/control-room-interior-and-console",
+    image: "/images/control_room_interior_and_console/dynamic_xe/1.jpg",
+    tag: "Pyrotech Control Room Solutions",
+    description:
+      "The DYNAMIC XE series delivers advanced ergonomic command centre consoles with ultra-modern design. Engineered for demanding control room applications, these consoles combine aesthetics with functionality to enhance operator performance.",
+    downloadLink: "https://texastechserv.com/wp-content/uploads/2023/09/01-Dynamic-XE.pdf",
+  },
+  {
+    slug: "infi-xe",
+    name: "INFI XE",
+    category: "Control Room Interior & Console",
+    parentPath: "/products/control-room-interior-and-console",
+    image: "/images/control_room_interior_and_console/infi_xe/1.jpg",
+    tag: "Pyrotech Control Room Solutions",
+    description:
+      "The INFI XE series represents the pinnacle of control room console design, offering infinite configurability and premium ergonomics. Built to international standards, these consoles provide a future-ready workspace for mission-critical operations.",
+    downloadLink: "https://texastechserv.com/wp-content/uploads/2023/09/06-INFI-XE.pdf",
+  },
+  {
+    slug: "xlat",
+    name: "XLAT",
+    category: "Control Room Interior & Console",
+    parentPath: "/products/control-room-interior-and-console",
+    image: "/images/control_room_interior_and_console/xlat/1.jpg",
+    tag: "Pyrotech Control Room Solutions",
+    description:
+      "The XLAT series features modular control room consoles with flexible layouts to suit any operational requirement. Designed for adaptability, these consoles support seamless integration of equipment while maintaining operator comfort and efficiency.",
+    downloadLink: "https://texastechserv.com/wp-content/uploads/2023/09/04-Xlat.pdf",
+  },
+  {
+    slug: "xlat-cyber",
+    name: "XLAT CYBER",
+    category: "Control Room Interior & Console",
+    parentPath: "/products/control-room-interior-and-console",
+    image: "/images/control_room_interior_and_console/xlat_cyber/1.jpg",
+    tag: "Pyrotech Control Room Solutions",
+    description:
+      "The XLAT CYBER series offers cyber-secure control room console solutions with enhanced data protection features. These consoles are engineered for environments where security and operational integrity are paramount, without compromising on ergonomic design.",
+  },
+  {
+    slug: "xlat-se",
+    name: "XLAT SE",
+    category: "Control Room Interior & Console",
+    parentPath: "/products/control-room-interior-and-console",
+    image: "/images/control_room_interior_and_console/xlat_se/1.jpg",
+    tag: "Pyrotech Control Room Solutions",
+    description:
+      "The XLAT SE series provides specialized control room consoles tailored for specific operational needs. With a focus on reliability and functionality, these consoles deliver a safe and efficient workspace for operators in demanding environments.",
+    downloadLink: "https://texastechserv.com/wp-content/uploads/2023/09/05-Xlat-SE.pdf",
+  },
+  {
+    slug: "xlat-xe",
+    name: "XLAT XE",
+    category: "Control Room Interior & Console",
+    parentPath: "/products/control-room-interior-and-console",
+    image: "/images/control_room_interior_and_console/xlat_xe/1.jpg",
+    tag: "Pyrotech Control Room Solutions",
+    description:
+      "The XLAT XE series combines the versatility of the XLAT platform with enhanced ergonomic features for extended operator use. Designed for complex control room operations, these consoles support multi-monitor setups and advanced equipment integration.",
+    downloadLink: "https://texastechserv.com/wp-content/uploads/2023/09/02-Xlat-XE.pdf",
+  },
+  {
+    slug: "xlat-ze",
+    name: "XLAT ZE",
+    category: "Control Room Interior & Console",
+    parentPath: "/products/control-room-interior-and-console",
+    image: "/images/control_room_interior_and_console/xlat_ze/1.jpg",
+    tag: "Pyrotech Control Room Solutions",
+    description:
+      "The XLAT ZE series offers premium control room consoles with advanced ergonomics and sophisticated design. Engineered for high-performance command centres, these consoles provide an optimal balance of form, function, and operator well-being.",
+    downloadLink: "https://texastechserv.com/wp-content/uploads/2023/09/03-Xlat-ZE.pdf",
+  },
+  {
+    slug: "xtron",
+    name: "XTRON",
+    category: "Control Room Interior & Console",
+    parentPath: "/products/control-room-interior-and-console",
+    image: "/images/control_room_interior_and_console/xtron/1.jpg",
+    tag: "Pyrotech Control Room Solutions",
+    description:
+      "The XTRON series features cutting-edge control room consoles designed for next-generation command centres. With a contemporary aesthetic and robust construction, these consoles meet the highest standards of control room ergonomics and operational efficiency.",
   },
 ];
 

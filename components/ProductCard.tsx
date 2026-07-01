@@ -45,6 +45,7 @@ export default function ProductCard({
     "CEMS": "CEMS Monitoring",
     "Dust Analyzers": "Dust Measurement",
     "Gas Analyzers": "SICK In-Situ Gas Analysis",
+    "Control Room Interior & Console": "Pyrotech Control Room Solutions",
   };
   const displayTag =
     product.tag ||
