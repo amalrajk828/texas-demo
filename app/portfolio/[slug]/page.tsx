@@ -1,41 +1,13 @@
 import type { Metadata } from "next";
-import Image from "next/image";
-import Link from "next/link";
 import { notFound } from "next/navigation";
-import { ChevronRight, Check, Download, ExternalLink, ArrowRight } from "lucide-react";
-import { products, getProductBySlug } from "@/lib/products";
+import Link from "next/link";
+import Image from "next/image";
+import { ChevronRight, Check, ArrowRight, ExternalLink, Download } from "lucide-react";
+import { products, getProductBySlug, getProduct, getAllProductSlugs, type BulletSection, type SubBlock } from "@/lib/products";
 import ProductInquiryForm from "@/components/ProductInquiryForm";
 import RelatedProducts from "@/components/RelatedProducts";
 
-type Props = {
-  params: Promise<{ slug: string }>;
-};
-
-type BulletSection = {
-  heading: string;
-  items: string[];
-};
-
-type SubBlock = {
-  id: string;
-  heading: string;
-  tagline?: string;
-  paragraphs: string[];
-  subHeading?: string;
-  subParagraphs?: string[];
-  bulletSections?: BulletSection[];
-  image?: string;
-  imageAlt?: string;
-  downloadHref?: string;
-};
-
-function getAllProductSlugs(): string[] {
-  return products.map((p) => p.slug);
-}
-
-function getProduct(slug: string) {
-  return getProductBySlug(slug);
-}
+type Props = { params: Promise<{ slug: string }> };
 
 export async function generateStaticParams() {
   return getAllProductSlugs().map((slug) => ({ slug }));
@@ -46,17 +18,17 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const product = getProduct(slug);
   if (!product) return {};
   return {
-    title: `${product.name} - Texas Technical Services`,
-    description: product.paragraphs?.[0] ?? `${product.name} - Texas Technical Services`,
+    title: `${product.name} | Texas Technical Services`,
+    description: product.paragraphs?.[0] ?? `${product.name} — ${product.brand}`,
     alternates: { canonical: `https://texastechserv.com/portfolio/${slug}/` },
     openGraph: {
-      title: `${product.name} - Texas Technical Services`,
-      description: product.paragraphs?.[0] ?? `${product.name} - Texas Technical Services`,
+      title: `${product.name} | Texas Technical Services`,
+      description: product.paragraphs?.[0] ?? `${product.name} — ${product.brand}`,
       url: `https://texastechserv.com/portfolio/${slug}/`,
     },
   };
 }
-{/*test */ }
+
 const categoryColors: Record<string, string> = {
   "CEMS": "bg-emerald-500/20 text-emerald-300 border-emerald-500/30",
   "Metering Skid": "bg-blue-500/20 text-blue-300 border-blue-500/30",
@@ -115,7 +87,7 @@ function SubBlockSection({ block, index }: { block: SubBlock; index: number }) {
                 {block.tagline}
               </p>
             )}
-            {block.paragraphs.map((p, i) => (
+            {block.paragraphs && block.paragraphs.map((p, i) => (
               <p key={i} className="text-gray-500 text-[14px] leading-relaxed mb-3">
                 {p}
               </p>
@@ -137,16 +109,39 @@ function SubBlockSection({ block, index }: { block: SubBlock; index: number }) {
                 ))}
               </div>
             )}
-            {block.downloadHref && (
+            {(block.detailHref || block.downloadHref) && (
               <div className="flex flex-wrap items-center gap-4 mt-8 pt-6 border-t border-[#f0f0f0]">
-                <a
-                  href={block.downloadHref}
-                  {...(block.downloadHref !== "#" ? { target: "_blank", rel: "noopener noreferrer" } : {})}
-                  className="inline-flex items-center gap-2 bg-[#e7212b] hover:bg-[#aa0b1b] text-white text-[12px] font-medium px-5 py-2.5 rounded-lg transition-colors"
-                >
-                  <Download className="w-3.5 h-3.5" />
-                  Download Product Information
-                </a>
+                {block.downloadHref && block.downloadHref !== "#" && (
+                  <a
+                    href={block.downloadHref}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-flex items-center gap-2 bg-[#e7212b] hover:bg-[#aa0b1b] text-white text-[12px] font-medium px-5 py-2.5 rounded-lg transition-colors"
+                  >
+                    <Download className="w-3.5 h-3.5" />
+                    Download Product Information
+                  </a>
+                )}
+                {block.downloadHref === "#" && (
+                  <a
+                    href={block.downloadHref}
+                    className="inline-flex items-center gap-2 bg-[#e7212b] hover:bg-[#aa0b1b] text-white text-[12px] font-medium px-5 py-2.5 rounded-lg transition-colors"
+                  >
+                    <Download className="w-3.5 h-3.5" />
+                    Download Product Information
+                  </a>
+                )}
+                {block.detailHref && block.detailHref !== "#" && (
+                  <a
+                    href={block.detailHref}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-flex items-center gap-1.5 text-[#e7212b] hover:text-[#aa0b1b] text-[13px] font-medium transition-colors"
+                  >
+                    For more detail — Click here
+                    <ExternalLink className="w-3.5 h-3.5" />
+                  </a>
+                )}
               </div>
             )}
           </div>
@@ -208,18 +203,23 @@ export default async function ProductPage({ params }: Props) {
             <ChevronRight className="w-3 h-3 shrink-0" />
             <Link href="/products/" className="hover:text-white/70 transition-colors">Products</Link>
             <ChevronRight className="w-3 h-3 shrink-0" />
-            <Link href={product.parentPath.endsWith("/") ? product.parentPath : `${product.parentPath}/`} className="hover:text-white/70 transition-colors">
-              {product.category}
-            </Link>
-            <ChevronRight className="w-3 h-3 shrink-0" />
+            {product.parentPath && (
+              <>
+                <Link href={product.parentPath.endsWith("/") ? product.parentPath : `${product.parentPath}/`} className="hover:text-white/70 transition-colors">
+                  {product.category}
+                </Link>
+                <ChevronRight className="w-3 h-3 shrink-0" />
+              </>
+            )}
             <span className="text-white/60">{product.name}</span>
           </nav>
 
           <div className="max-w-3xl">
             <div className="flex flex-wrap items-center gap-2 mb-5">
               <span
-                className={`text-[9px] font-medium tracking-[1.5px] uppercase px-2.5 py-1 rounded-full border ${categoryColors[product.category] ?? "bg-white/10 text-white/60 border-white/15"
-                  }`}
+                className={`text-[9px] font-medium tracking-[1.5px] uppercase px-2.5 py-1 rounded-full border ${
+                  categoryColors[product.category] ?? "bg-white/10 text-white/60 border-white/15"
+                }`}
               >
                 {product.category}
               </span>
@@ -271,29 +271,42 @@ export default async function ProductPage({ params }: Props) {
                   {p}
                 </p>
               ))}
-              {/* Quick-access actions */}
-              <div className="flex flex-wrap items-center gap-4 mt-8 pt-6 border-t border-[#f0f0f0]">
-                <a
-                  href={product.externalLink || `https://texastechserv.com/portfolio/${product.slug}/`}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="inline-flex items-center gap-2 border border-[#e7212b] text-[#e7212b] hover:bg-[#e7212b] hover:text-white font-medium text-[13px] px-5 py-2.5 rounded-lg transition-colors"
-                >
-                  <ExternalLink className="w-4 h-4" />
-                  For More Detail
-                </a>
-                {product.downloadLink && (
-                  <a
-                    href={product.downloadLink}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="inline-flex items-center gap-2 bg-[#e7212b] hover:bg-[#aa0b1b] text-white font-medium text-[13px] px-5 py-2.5 rounded-lg transition-colors"
-                  >
-                    <Download className="w-4 h-4" />
-                    Download
-                  </a>
-                )}
-              </div>
+              {/* Quick-access action for simple products */}
+              {!product.subBlocks && (product.detailHref || product.downloadHref || product.externalLink || product.downloadLink || product.detailHrefs) && (
+                <div className="flex flex-wrap items-center gap-4 mt-8 pt-6 border-t border-[#f0f0f0]">
+                  {(product.downloadHref || product.downloadLink) && (
+                    <a
+                      href={product.downloadHref || product.downloadLink}
+                      {...((product.downloadHref || product.downloadLink) !== "#" ? { target: "_blank", rel: "noopener noreferrer" } : {})}
+                      className="inline-flex items-center gap-2 bg-[#e7212b] hover:bg-[#aa0b1b] text-white font-medium text-[13px] px-5 py-2.5 rounded-lg transition-colors"
+                    >
+                      <Download className="w-4 h-4" />
+                      Download Brochure
+                    </a>
+                  )}
+                  {(product.detailHref || product.externalLink) && (
+                    <a
+                      href={product.detailHref || product.externalLink || `https://texastechserv.com/portfolio/${product.slug}/`}
+                      {...((product.detailHref || product.externalLink) !== "#" ? { target: "_blank", rel: "noopener noreferrer" } : {})}
+                      className="inline-flex items-center gap-1.5 text-[#e7212b] hover:text-[#aa0b1b] font-medium text-[13px] transition-colors"
+                    >
+                      For more detail — Click here
+                      <ExternalLink className="w-3.5 h-3.5" />
+                    </a>
+                  )}
+                  {product.detailHrefs && product.detailHrefs.map((href, i) => (
+                    <a
+                      key={i}
+                      href={href}
+                      {...(href !== "#" ? { target: "_blank", rel: "noopener noreferrer" } : {})}
+                      className="inline-flex items-center gap-1.5 text-[#e7212b] hover:text-[#aa0b1b] font-medium text-[13px] transition-colors"
+                    >
+                      {i === 0 ? "For more detail — Click here" : "and here"}
+                      <ExternalLink className="w-3.5 h-3.5" />
+                    </a>
+                  ))}
+                </div>
+              )}
             </div>
           </div>
 
@@ -405,7 +418,7 @@ export default async function ProductPage({ params }: Props) {
       )}
 
       {/* ══ PAGE-LEVEL ACTIONS — for sub-block products ═══════════ */}
-      {product.downloadLink && (
+      {product.subBlocks && (product.detailHrefs || product.downloadHref || product.downloadLink) && (
         <section className="bg-white py-12">
           <div className="max-w-7xl mx-auto px-4 sm:px-6">
             <div className="flex items-center gap-3 mb-6">
@@ -415,15 +428,32 @@ export default async function ProductPage({ params }: Props) {
               </span>
             </div>
             <div className="flex flex-wrap items-center gap-5">
-              <a
-                href={product.downloadLink}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="inline-flex items-center gap-2 bg-[#e7212b] hover:bg-[#aa0b1b] text-white font-medium text-[13px] px-6 py-3 rounded-lg transition-colors"
-              >
-                <Download className="w-4 h-4" />
-                Download
-              </a>
+              {(product.downloadHref || product.downloadLink) && (
+                <a
+                  href={product.downloadHref || product.downloadLink}
+                  {...((product.downloadHref || product.downloadLink) !== "#" ? { target: "_blank", rel: "noopener noreferrer" } : {})}
+                  className="inline-flex items-center gap-2 bg-[#e7212b] hover:bg-[#aa0b1b] text-white font-medium text-[13px] px-6 py-3 rounded-lg transition-colors"
+                >
+                  <Download className="w-4 h-4" />
+                  Download Brochure
+                </a>
+              )}
+              {product.detailHrefs && (
+                <span className="inline-flex items-center gap-3 text-[13px] text-gray-500">
+                  For more detail —
+                  {product.detailHrefs.map((href, i) => (
+                    <a
+                      key={i}
+                      href={href}
+                      {...(href !== "#" ? { target: "_blank", rel: "noopener noreferrer" } : {})}
+                      className="inline-flex items-center gap-1 text-[#e7212b] hover:text-[#aa0b1b] font-medium transition-colors"
+                    >
+                      {i === 0 ? "Click here" : "and here"}
+                      <ExternalLink className="w-3 h-3" />
+                    </a>
+                  ))}
+                </span>
+              )}
             </div>
           </div>
         </section>
