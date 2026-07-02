@@ -62,7 +62,7 @@ const categories: ProductCategory[] = [
   {
     title: "Control Room Interior & Console",
     description: "Ergonomic control room furniture and console systems for critical operations.",
-    href: "/products/control-room/",
+    href: "/products/control-room-interior-and-console/",
     Icon: Monitor,
   },
   {

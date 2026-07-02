@@ -18,67 +18,128 @@ export type Product = {
 export default function ProductCard({
   product,
   category,
+  href,
+  imageFit = "cover",
 }: {
   product: Product;
   category?: string;
+  href?: string;
+  imageFit?: "cover" | "contain";
 }) {
   const [imgError, setImgError] = useState(false);
   const targetCategory = product.category || category || "";
 
   const tagMap: Record<string, string> = {
     "Industrial Sensors": "SICK Industrial Sensors",
-    "PLC": "Mitsubishi Electric PLC",
-    "ICONICS": "Mitsubishi Electric HMI / SCADA",
-    "GOT": "Mitsubishi Electric HMI",
+    PLC: "Mitsubishi Electric PLC",
+    ICONICS: "Mitsubishi Electric HMI / SCADA",
+    GOT: "Mitsubishi Electric HMI",
     "Frequency Inverters (VFD)": "Mitsubishi Electric VFD",
     "AC Servos": "Mitsubishi Electric AC Servo",
+    "Custody Metering Solutions": "Custody Transfer Solutions",
+    "Flow Meters": "SICK Flow Measurement",
+    "Liquid Flow Meters": "Liquid Flow Solutions",
+    "Flare Flow Meters": "Flare Gas Measurement",
+    "Gas Flow Meters": "SICK Ultrasonic Gas Flow",
+    "Analyzers": "SICK Gas Analysis",
+    "CEMS": "CEMS Monitoring",
+    "Dust Analyzers": "Dust Measurement",
+    "Gas Analyzers": "SICK In-Situ Gas Analysis",
+    "Control Room Interior & Console": "Pyrotech Control Room Solutions",
+    "Field Instruments": "SICK Field Instruments",
   };
-  const displayTag = product.tag || tagMap[product.category || ""] || tagMap[category || ""] || "Texas Technical Services Product";
+  const displayTag =
+    product.tag ||
+    tagMap[product.category || ""] ||
+    tagMap[category || ""] ||
+    "Texas Technical Services Product";
   const displayImage = product.image || "";
 
   return (
     <div className="product-card group relative bg-white border border-[#E8E8F0] border-l-4 border-l-transparent hover:border-l-[#F5821F] rounded-[12px] p-5 min-[480px]:p-[28px] shadow-[0_2px_12px_rgba(0,0,0,0.08)] transition-all duration-300 ease-in-out hover:-translate-y-1">
       {/* Absolute overlay link for card clickability */}
       <Link
-        href={`/portfolio/${product.slug}`}
+        href={href ?? `/portfolio/${product.slug}`}
         className="absolute inset-0 z-10"
         aria-label={product.name}
       />
 
       <div className="grid grid-cols-1 min-[769px]:grid-cols-[300px_1fr] gap-8 items-start">
         {/* Image Area */}
-        <div className="relative w-full h-[220px] min-[769px]:w-[300px] min-[769px]:h-[220px] bg-[#1a1d35] rounded-[8px] overflow-hidden shrink-0">
+        <div
+          className={
+            imageFit === "contain"
+              ? "relative w-full h-[220px] min-[769px]:w-[300px] min-[769px]:h-[220px] bg-white border border-[#E8E8F0] rounded-[8px] overflow-hidden shrink-0"
+              : "relative w-full h-[220px] min-[769px]:w-[300px] min-[769px]:h-[220px] bg-[#1a1d35] rounded-[8px] overflow-hidden shrink-0"
+          }
+        >
           {!imgError && displayImage ? (
             <Image
               src={displayImage}
               alt={product.name}
               fill
-              className="object-cover transition-transform duration-500 group-hover:scale-105"
+              className={
+                imageFit === "contain"
+                  ? "object-contain p-6 transition-transform duration-500 group-hover:scale-105"
+                  : "object-cover transition-transform duration-500 group-hover:scale-105"
+              }
               sizes="(max-width: 768px) 100vw, 300px"
               onError={() => setImgError(true)}
             />
           ) : (
-            <div style={{
-              width: "100%", height: "100%",
-              background: "linear-gradient(135deg, #1a1d35 0%, #0d1024 100%)",
-              borderRadius: "8px",
-              display: "flex", flexDirection: "column",
-              alignItems: "center", justifyContent: "center",
-              gap: "8px", padding: "16px",
-              border: "1px solid #2A2D4A"
-            }}>
-              <div style={{
-                width: "48px", height: "48px",
-                background: "#F5821F22", borderRadius: "50%",
-                display: "flex", alignItems: "center", justifyContent: "center"
-              }}>
+            <div
+              style={{
+                width: "100%",
+                height: "100%",
+                background: "linear-gradient(135deg, #1a1d35 0%, #0d1024 100%)",
+                borderRadius: "8px",
+                display: "flex",
+                flexDirection: "column",
+                alignItems: "center",
+                justifyContent: "center",
+                gap: "8px",
+                padding: "16px",
+                border: "1px solid #2A2D4A",
+              }}
+            >
+              <div
+                style={{
+                  width: "48px",
+                  height: "48px",
+                  background: "#F5821F22",
+                  borderRadius: "50%",
+                  display: "flex",
+                  alignItems: "center",
+                  justifyContent: "center",
+                }}
+              >
                 <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
-                  <rect x="3" y="3" width="18" height="18" rx="2" stroke="#F5821F" strokeWidth="1.5"/>
-                  <circle cx="8.5" cy="8.5" r="1.5" fill="#F5821F"/>
-                  <path d="M21 15L16 10L5 21" stroke="#F5821F" strokeWidth="1.5" strokeLinecap="round"/>
+                  <rect
+                    x="3"
+                    y="3"
+                    width="18"
+                    height="18"
+                    rx="2"
+                    stroke="#F5821F"
+                    strokeWidth="1.5"
+                  />
+                  <circle cx="8.5" cy="8.5" r="1.5" fill="#F5821F" />
+                  <path
+                    d="M21 15L16 10L5 21"
+                    stroke="#F5821F"
+                    strokeWidth="1.5"
+                    strokeLinecap="round"
+                  />
                 </svg>
               </div>
-              <span style={{ color: "#A0A8C0", fontSize: "12px", textAlign: "center", lineHeight: "1.4" }}>
+              <span
+                style={{
+                  color: "#A0A8C0",
+                  fontSize: "12px",
+                  textAlign: "center",
+                  lineHeight: "1.4",
+                }}
+              >
                 {product.name}
               </span>
             </div>

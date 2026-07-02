@@ -6,28 +6,47 @@ import Image from "next/image";
 import { ChevronRight } from "lucide-react";
 import { products, type Product } from "@/lib/products";
 
-const categories = ["All", "Industrial Sensors", "PLC", "ICONICS", "GOT", "Frequency Inverters (VFD)", "AC Servos"];
+const categories = [
+  "All",
+  "Industrial Sensors",
+  "PLC",
+  "ICONICS",
+  "GOT",
+  "Frequency Inverters (VFD)",
+  "AC Servos",
+];
 
 export default function PortfolioPage() {
   const [selectedCategory, setSelectedCategory] = useState("All");
 
-  const filteredProducts = selectedCategory === "All"
-    ? products
-    : products.filter((p) => p.category.toLowerCase() === selectedCategory.toLowerCase());
+  const filteredProducts =
+    selectedCategory === "All"
+      ? products
+      : products.filter(
+          (p) => p.category.toLowerCase() === selectedCategory.toLowerCase(),
+        );
 
   // Helper to group products by category
-  const groupedProducts = filteredProducts.reduce((acc, product) => {
-    if (!acc[product.category]) {
-      acc[product.category] = [];
-    }
-    acc[product.category].push(product);
-    return acc;
-  }, {} as Record<string, Product[]>);
+  const groupedProducts = filteredProducts.reduce(
+    (acc, product) => {
+      if (!acc[product.category]) {
+        acc[product.category] = [];
+      }
+      acc[product.category].push(product);
+      return acc;
+    },
+    {} as Record<string, Product[]>,
+  );
 
   // Define category sorting order for consistent layout
-  const orderedCategories = ["Industrial Sensors", "PLC", "ICONICS", "GOT", "Frequency Inverters (VFD)", "AC Servos"].filter(
-    (cat) => groupedProducts[cat] && groupedProducts[cat].length > 0
-  );
+  const orderedCategories = [
+    "Industrial Sensors",
+    "PLC",
+    "ICONICS",
+    "GOT",
+    "Frequency Inverters (VFD)",
+    "AC Servos",
+  ].filter((cat) => groupedProducts[cat] && groupedProducts[cat].length > 0);
 
   return (
     <div className="min-h-screen bg-white font-sans antialiased selection:bg-[#F5821F] selection:text-white">
@@ -43,13 +62,16 @@ export default function PortfolioPage() {
         <div
           className="absolute bottom-0 left-1/2 -translate-x-1/2 w-[600px] h-40 pointer-events-none"
           style={{
-            background: "radial-gradient(ellipse, rgba(245,130,31,0.06) 0%, transparent 70%)",
+            background:
+              "radial-gradient(ellipse, rgba(245,130,31,0.06) 0%, transparent 70%)",
           }}
         />
 
         <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 py-16 lg:py-20">
           <nav className="flex items-center gap-1.5 text-[11px] text-white/50 mb-6">
-            <Link href="/" className="hover:text-white transition-colors">Home</Link>
+            <Link href="/" className="hover:text-white transition-colors">
+              Home
+            </Link>
             <ChevronRight className="w-3 h-3 text-white/30" />
             <span className="text-white">Portfolio</span>
           </nav>
@@ -64,7 +86,8 @@ export default function PortfolioPage() {
             Product Portfolio
           </h1>
           <p className="text-white/60 text-base max-w-xl font-medium">
-            Explore our complete lineup of industrial automation hardware, software, and sensors.
+            Explore our complete lineup of industrial automation hardware,
+            software, and sensors.
           </p>
         </div>
       </section>
@@ -99,7 +122,6 @@ export default function PortfolioPage() {
           <div className="flex flex-col gap-12">
             {orderedCategories.map((category) => (
               <div key={category} className="flex flex-col gap-6">
-                
                 {/* Visual Category Header */}
                 <div className="bg-[#FFF8F3] border-l-4 border-[#F5821F] py-3 px-6 flex items-center gap-4 shadow-sm rounded-[4px]">
                   <h2 className="text-[#1A1A2E] font-bold text-base font-sans leading-none uppercase tracking-wider">
@@ -114,7 +136,6 @@ export default function PortfolioPage() {
                     <PortfolioCard key={product.slug} product={product} />
                   ))}
                 </div>
-
               </div>
             ))}
           </div>
