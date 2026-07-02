@@ -93,21 +93,12 @@ export default function ServicesConstruction() {
             {/* Primary image */}
             <div className="relative rounded-2xl overflow-hidden aspect-[16/11] bg-[#12163A] shadow-2xl shadow-black/40 border border-white/[0.06]">
               <Image
-                src="/services/construction.jpg"
+                src="/images/services/construction.jpg"
                 alt="SKYLIGHT GANTRY construction project"
                 fill
                 sizes="(max-width: 1024px) 100vw, 50vw"
                 className="object-cover"
               />
-              {/* Placeholder overlay */}
-              <div className="absolute inset-0 flex flex-col items-center justify-center bg-[#0B0D26]/90 gap-2">
-                <div className="w-12 h-12 rounded-full border border-white/10 flex items-center justify-center">
-                  <span className="text-white/20 text-2xl">+</span>
-                </div>
-                <p className="text-white/20 text-[10px] tracking-[2px] uppercase text-center px-6">
-                  /services/construction.jpg
-                </p>
-              </div>
               {/* Top red accent line */}
               <div className="absolute top-0 left-0 right-0 h-[2px] bg-gradient-to-r from-transparent via-[#e7212b] to-transparent opacity-60" />
               {/* Bottom gradient */}
@@ -117,20 +108,12 @@ export default function ServicesConstruction() {
             {/* Secondary image — overlapping */}
             <div className="absolute bottom-0 right-0 lg:-right-6 w-[42%] rounded-2xl overflow-hidden aspect-[4/3] bg-[#12163A] shadow-2xl shadow-black/50 border-[3px] border-[#0B0D26]">
               <Image
-                src="/services/construction-detail.jpg"
+                src="/images/services/construction-detail.jpg"
                 alt="Construction detail"
                 fill
                 sizes="25vw"
                 className="object-cover"
               />
-              <div className="absolute inset-0 flex flex-col items-center justify-center bg-[#12163A]/90 gap-1.5">
-                <div className="w-8 h-8 rounded-full border border-white/10 flex items-center justify-center">
-                  <span className="text-white/20 text-[15px]">+</span>
-                </div>
-                <p className="text-white/20 text-[10px] tracking-[1.5px] uppercase text-center px-3">
-                  /services/construction-detail.jpg
-                </p>
-              </div>
             </div>
 
             {/* Stats row */}

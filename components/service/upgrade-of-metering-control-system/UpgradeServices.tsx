@@ -174,21 +174,12 @@ export default function UpgradeServices() {
         <FadeUp delay={0.06} className="mb-16">
           <div className="relative rounded-2xl overflow-hidden aspect-[21/7] bg-[#12163A]">
             <Image
-              src="/services/flow-measurement/metering-upgrade.jpg"
+              src="/images/services/metering-upgrade.png"
               alt="Upgrade of Metering Control System"
               fill
               sizes="100vw"
               className="object-cover"
             />
-            {/* Placeholder */}
-            <div className="absolute inset-0 flex flex-col items-center justify-center bg-[#0B0D26]/90 gap-2">
-              <div className="w-12 h-12 rounded-full border border-white/10 flex items-center justify-center">
-                <span className="text-white/20 text-2xl">+</span>
-              </div>
-              <p className="text-white/20 text-[10px] tracking-[2px] uppercase text-center px-6">
-                /services/flow-measurement/metering-upgrade.jpg
-              </p>
-            </div>
             <div className="absolute top-0 left-0 right-0 h-[2px] bg-gradient-to-r from-transparent via-[#e7212b] to-transparent opacity-60" />
             <div className="absolute bottom-0 left-0 right-0 h-24 bg-gradient-to-t from-[#0B0D26] to-transparent" />
           </div>

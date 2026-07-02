@@ -48,80 +48,80 @@ const SUB_SERVICES = [
     Icon: Cpu,
     title: "Metering Control System Integration",
     body: "Welcome to TTS, where we specialize in Custody Transfer Flow Metering Control System Development and Integration. With an unwavering commitment to precision, accuracy, and compliance, we are your trusted partner for all metering control system integration needs.",
-    imageSrc: "/services/flow-measurement/metering-control-integration.jpg",
-    imagePlaceholder: "/services/flow-measurement/metering-control-integration.jpg",
+    imageSrc: "/images/services/metering-control-integration.png",
+    imagePlaceholder: "/images/services/metering-control-integration.png",
     href: "/service/metering-control-system-integration/",
   },
   {
     Icon: ArrowUpCircle,
     title: "Upgrade of Metering Control System",
     body: "Elevate your industrial operations with our expert Metering Control System Upgradation service. At TTS, we specialize in optimizing your existing control systems, ensuring they meet the latest industry standards and deliver peak performance for your custody metering applications.",
-    imageSrc: "/services/flow-measurement/metering-upgrade.jpg",
-    imagePlaceholder: "/services/flow-measurement/metering-upgrade.jpg",
+    imageSrc: "/images/services/metering-upgrade.png",
+    imagePlaceholder: "/images/services/metering-upgrade.png",
     href: "/service/upgrade-of-metering-control-system/",
   },
   {
     Icon: Settings2,
     title: "Flow Computer Configuration",
     body: "Our dedicated team customizes solutions to your specific flow computational and configuration needs in compliance with global standards (API MPMS, AGA, ISO, NTEP & OIML), guaranteeing seamless integration into your existing systems.",
-    imageSrc: "/services/flow-measurement/flow-computer.jpg",
-    imagePlaceholder: "/services/flow-measurement/flow-computer.jpg",
+    imageSrc: "/images/services/flow-computer.png",
+    imagePlaceholder: "/images/services/flow-computer.png",
     href: "/service/flow-computer-configuration/",
   },
   {
     Icon: Ruler,
     title: "Flow Meter Calibration",
     body: "Faure Herman offers calibration services in our world class ILAC/COFRAC ISO 17025 accredited facility located in France to handle your range of flowmeters, with service available for other brands as well — ensuring certified, traceable measurement accuracy.",
-    imageSrc: "/services/flow-measurement/calibration.jpg",
-    imagePlaceholder: "/services/flow-measurement/calibration.jpg",
+    imageSrc: "/images/services/calibration.jpg",
+    imagePlaceholder: "/images/services/calibration.jpg",
     href: "/service/flow-meter-calibration/",
   },
   {
     Icon: Wrench,
     title: "Repair & Upgrades for Helical Flow Meters",
     body: "We offer flow meters preventive and corrective maintenance services, performance and failure analysis and provide suitable solutions to restore and enhance the reliability of your helical flow meter assets.",
-    imageSrc: "/services/flow-measurement/helical-repair.jpg",
-    imagePlaceholder: "/services/flow-measurement/helical-repair.jpg",
+    imageSrc: "/images/services/helical-repair.png",
+    imagePlaceholder: "/images/services/helical-repair.png",
     href: "/service/repair-upgrades-helical-flow-meters/",
   },
   {
     Icon: ClipboardCheck,
     title: "Audits and Specialized Consultancy",
     body: "We offer comprehensive audits to ensure compliance with industry regulations and standards, minimizing risks and ensuring precise measurements within your custody metering skid system. Our team of expert consultants provides actionable guidance for process optimization.",
-    imageSrc: "/services/flow-measurement/audits.jpg",
-    imagePlaceholder: "/services/flow-measurement/audits.jpg",
+    imageSrc: "/images/services/audits.png",
+    imagePlaceholder: "/images/services/audits.png",
     href: "/service/audits-specialized-consultancy/",
   },
   {
     Icon: BarChart3,
     title: "Validation and Uncertainty Calculations",
     body: "Our team of skilled experts employs advanced techniques and calculations to assess and minimize uncertainties, giving you confidence in the reliability of your measurement data. Whether you need validation services for new installations or existing systems, we deliver thorough, documented results.",
-    imageSrc: "/services/flow-measurement/validation.jpg",
-    imagePlaceholder: "/services/flow-measurement/validation.jpg",
+    imageSrc: "/images/services/validation.jpg",
+    imagePlaceholder: "/images/services/validation.jpg",
     href: "/service/validation-uncertainty-calculations/",
   },
   {
     Icon: Rocket,
     title: "Commissioning and After Sales Support",
     body: "Elevate your industrial processes with our Commissioning and After Sales Support services. At TTS, we specialize in ensuring the seamless integration and performance of critical equipment, including flow meters, metering skids, flow computers, and control systems.",
-    imageSrc: "/services/flow-measurement/commissioning.jpg",
-    imagePlaceholder: "/services/flow-measurement/commissioning.jpg",
+    imageSrc: "/images/services/commissioning.png",
+    imagePlaceholder: "/images/services/commissioning.png",
     href: "/service/commissioning-after-sales-support/",
   },
   {
     Icon: Package,
     title: "Genuine Spare Parts",
     body: "Being an Authorized OEM Representative — discover top-quality genuine spare parts for flow metering, flow meters, control systems, analyzers, CEMS, and industrial sensors at TTS. With a commitment to excellence, we ensure your systems maintain peak performance.",
-    imageSrc: "/services/flow-measurement/spare-parts.jpg",
-    imagePlaceholder: "/services/flow-measurement/spare-parts.jpg",
+    imageSrc: "/images/services/spare-parts.png",
+    imagePlaceholder: "/images/services/spare-parts.png",
     href: "/service/genuine-spare-parts/",
   },
   {
     Icon: Users,
     title: "Metering Expert Services",
     body: "We take pride in offering an elite team of flow metering specialists, exclusively dedicated to enhancing your custody metering solutions. Our certified experts possess a profound understanding of custody metering systems and deliver measurable results.",
-    imageSrc: "/services/flow-measurement/metering-experts.jpg",
-    imagePlaceholder: "/services/flow-measurement/metering-experts.jpg",
+    imageSrc: "/images/services/metering-experts.jpg",
+    imagePlaceholder: "/images/services/metering-experts.jpg",
     href: "/service/metering-expert-services/",
   },
 ];
@@ -159,15 +159,6 @@ function SubServiceCard({
             sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
             className="object-cover group-hover:scale-105 transition-transform duration-500"
           />
-          {/* Placeholder overlay */}
-          <div className="absolute inset-0 flex flex-col items-center justify-center bg-[#0B0D26]/92 gap-2">
-            <div className="w-10 h-10 rounded-full border border-white/10 flex items-center justify-center group-hover:border-[#e7212b]/30 transition-colors duration-300">
-              <item.Icon className="w-4.5 h-4.5 text-white/20 group-hover:text-[#e7212b]/50 transition-colors duration-300" strokeWidth={1.6} />
-            </div>
-            <p className="text-white/15 text-[9px] tracking-[1.5px] uppercase text-center px-4 leading-relaxed">
-              {item.imagePlaceholder}
-            </p>
-          </div>
           {/* Top accent line */}
           <div className="absolute top-0 left-0 right-0 h-[2px] bg-gradient-to-r from-transparent via-[#e7212b] to-transparent opacity-0 group-hover:opacity-70 transition-opacity duration-300" />
           {/* Category tag */}

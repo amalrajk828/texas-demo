@@ -1,5 +1,6 @@
 "use client";
 import Link from "next/link";
+import Image from "next/image";
 import { motion, useInView } from "framer-motion";
 import { useRef } from "react";
 import { FlaskConical, ChevronRight, ArrowRight } from "lucide-react";
@@ -42,6 +43,10 @@ export default function MetallurgicalHero() {
           </nav>
         </FadeUp>
         <div className="max-w-4xl">
+          <div className="relative rounded-2xl overflow-hidden aspect-[16/7] mb-10 shadow-2xl shadow-black/40">
+            <Image src="/images/services/Metallurgical-Services.jpg" alt="Metallurgical Services" fill sizes="100vw" className="object-cover opacity-60" />
+            <div className="absolute inset-0 bg-gradient-to-t from-[#0B0D26] via-transparent to-transparent" />
+          </div>
           <FadeUp delay={0.05}>
             <div className="inline-flex items-center gap-2.5 bg-[#e7212b]/10 border border-[#e7212b]/20 rounded-full px-4 py-2 mb-6">
               <FlaskConical className="w-3.5 h-3.5 text-[#e7212b]" strokeWidth={2} />
