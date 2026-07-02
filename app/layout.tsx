@@ -39,7 +39,7 @@ const GTM = "GTM-NK9KQVKJ";
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
-    <html lang="en" className={`${plusJakarta.variable} ${inter.variable}`} data-scroll-behavior="smooth">
+    <html lang="en" data-scroll-behavior="smooth" className={`${plusJakarta.variable} ${inter.variable}`}>
       <head>
         <Script
           id="gtm"
