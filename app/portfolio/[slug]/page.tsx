@@ -87,7 +87,7 @@ function SubBlockSection({ block, index }: { block: SubBlock; index: number }) {
                 {block.tagline}
               </p>
             )}
-            {block.paragraphs && block.paragraphs.map((p, i) => (
+            {block.paragraphs && block.paragraphs.map((p: any, i: any) => (
               <p key={i} className="text-gray-500 text-[14px] leading-relaxed mb-3">
                 {p}
               </p>
@@ -97,14 +97,14 @@ function SubBlockSection({ block, index }: { block: SubBlock; index: number }) {
                 {block.subHeading}
               </h3>
             )}
-            {block.subParagraphs?.map((p, i) => (
+            {block.subParagraphs?.map((p: any, i: any) => (
               <p key={i} className="text-gray-500 text-[14px] leading-relaxed mb-3">
                 {p}
               </p>
             ))}
             {block.bulletSections && block.bulletSections.length > 0 && (
               <div className="mt-7 space-y-7">
-                {block.bulletSections.map((sec) => (
+                {block.bulletSections.map((sec: any) => (
                   <BulletList key={sec.heading} section={sec} />
                 ))}
               </div>
@@ -266,7 +266,7 @@ export default async function ProductPage({ params }: Props) {
                   <p className="text-gray-700 text-base italic leading-relaxed">{product.intro}</p>
                 </blockquote>
               )}
-              {product.paragraphs && product.paragraphs.map((p, i) => (
+              {product.paragraphs && product.paragraphs.map((p: any, i: any) => (
                 <p key={i} className="text-gray-500 text-[14px] sm:text-[15px] leading-relaxed mb-4 last:mb-0">
                   {p}
                 </p>
@@ -294,7 +294,7 @@ export default async function ProductPage({ params }: Props) {
                       <ExternalLink className="w-3.5 h-3.5" />
                     </a>
                   )}
-                  {product.detailHrefs && product.detailHrefs.map((href, i) => (
+                  {product.detailHrefs && product.detailHrefs.map((href: any, i: any) => (
                     <a
                       key={i}
                       href={href}
@@ -313,7 +313,7 @@ export default async function ProductPage({ params }: Props) {
           {/* Bullet sections — below the image+text on wider cards */}
           {product.bulletSections && product.bulletSections.length > 0 && (
             <div className="mt-14 grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-6">
-              {product.bulletSections.map((sec) => (
+              {product.bulletSections.map((sec: any) => (
                 <div
                   key={sec.heading}
                   className="bg-[#f9fafb] border border-[#e8eaf0] rounded-2xl p-6"
@@ -337,7 +337,7 @@ export default async function ProductPage({ params }: Props) {
               </span>
             </div>
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
-              {product.gallery.map((img) => (
+              {product.gallery.map((img: any) => (
                 <div
                   key={img.src}
                   className="bg-white border border-[#e8eaf0] rounded-2xl p-6 shadow-sm"
@@ -364,7 +364,7 @@ export default async function ProductPage({ params }: Props) {
       {/* ══ SUB-BLOCKS — e.g. OMNI + Flow-X ══════════════════════ */}
       {product.subBlocks && product.subBlocks.length > 0 && (
         <div>
-          {product.subBlocks.map((block, i) => (
+          {product.subBlocks.map((block: any, i: any) => (
             <SubBlockSection key={block.id} block={block} index={i} />
           ))}
         </div>
@@ -403,7 +403,7 @@ export default async function ProductPage({ params }: Props) {
               </span>
             </div>
             <div className="flex flex-wrap gap-2.5">
-              {product.models.map((model) => (
+              {product.models.map((model: any) => (
                 <span
                   key={model}
                   className="inline-flex items-center gap-1.5 bg-white border border-[#e8eaf0] text-[#0B0D26] text-[12px] font-medium px-4 py-2 rounded-lg"
@@ -441,7 +441,7 @@ export default async function ProductPage({ params }: Props) {
               {product.detailHrefs && (
                 <span className="inline-flex items-center gap-3 text-[13px] text-gray-500">
                   For more detail —
-                  {product.detailHrefs.map((href, i) => (
+                  {product.detailHrefs.map((href: any, i: any) => (
                     <a
                       key={i}
                       href={href}
@@ -465,7 +465,7 @@ export default async function ProductPage({ params }: Props) {
       {/* ══ RELATED PRODUCTS ════════════════════════════════════ */}
       <RelatedProducts
         currentSlug={product.slug}
-        products={products.filter((p) => p.category === product.category && p.slug !== product.slug)}
+        products={products.filter((p: any) => p.category === product.category && p.slug !== product.slug)}
         category={product.category}
         title="Related Products"
       />

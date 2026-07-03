@@ -2,6 +2,8 @@ import type { Metadata } from "next";
 import { Plus_Jakarta_Sans, Inter } from "next/font/google";
 import Script from "next/script";
 import ScrollObserver from "@/components/ScrollObserver";
+import Header from "@/components/Header";
+import Footer from "@/components/Footer";
 import "./globals.css";
 
 const plusJakarta = Plus_Jakarta_Sans({
@@ -59,7 +61,9 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
           />
         </noscript>
         <ScrollObserver />
+        <Header />
         {children}
+        <Footer />
       </body>
     </html>
   );
