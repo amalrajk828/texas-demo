@@ -1,0 +1,53 @@
+(function ($) {
+    "use strict";
+    $(document).ready(function () {
+        $('.sc_layouts_logo').attr('href', 'https://texastechserv.com/');
+    });
+
+    document.addEventListener("DOMContentLoaded", function () {
+        var form = document.querySelector('.search_form');
+
+        form.addEventListener('submit', function (event) {
+            var searchText = document.querySelector('.search_field').value;
+
+            if (searchText.trim() === '') {
+                $('.search-submit').attr('disabled', true);
+                event.preventDefault(); // Prevent form submission
+            }
+            // else, allow form submission
+        });
+    });
+
+    $(window).on("load", function () {
+
+        var currentURL = window.location.pathname; // Use pathname to get only the path part
+
+        $(".quicklink ul li").each(function () {
+            var link = $(this).find("a").attr('href');
+            var linkSlug = new URL(link).pathname;
+            if (currentURL === linkSlug) {
+                $(this).find('a').addClass('activemenu');
+            }
+        });
+    });
+
+
+    $('.wpcf7-form input').on('keydown', function (e) {
+        var inputValue = $(this).val().trim();
+        if (e.key === " " && inputValue.length === 0) {
+            e.preventDefault();
+            $(this).val('');
+        }
+    });
+
+    $('.search-form input').on('input', function (e) {
+
+        var searchvalue = $('.search-field').val();
+        if (searchvalue == "" && searchvalue === " ") {
+            $('.search-submit').attr('disabled', true);
+        } else {
+            $('.search-submit').removeAttr('disabled');
+        }
+    });
+
+})(jQuery);

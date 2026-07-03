@@ -1,7 +1,5 @@
 import type { Metadata } from "next";
 import ThemeWrapper from "@/components/ThemeWrapper";
-import Header from "@/components/Header";
-import Footer from "@/components/Footer";
 import HeroSlider from "@/components/HeroSlider";
 import PartnersTicker from "@/components/PartnersTicker";
 import TickerBanner from "@/components/TickerBanner";
@@ -63,7 +61,6 @@ const VARS: Record<string, string> = {
 export default function DarkPage() {
   return (
     <ThemeWrapper vars={VARS}>
-      <Header />
       <main>
         <HeroSlider />
         <PartnersTicker />
@@ -75,7 +72,6 @@ export default function DarkPage() {
         <GreyAbout />
         <GreyCta />
       </main>
-      <Footer />
-    </ThemeWrapper>
+      </ThemeWrapper>
   );
 }

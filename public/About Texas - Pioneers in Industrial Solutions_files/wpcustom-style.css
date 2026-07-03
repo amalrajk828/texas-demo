@@ -1,0 +1,57 @@
+.sidebar .phone :hover{
+    color: #9ba2ad !important;
+   }
+   .sidebar .mail :hover{
+    color: #fff !important;
+   }
+   .activemenu{
+       border-bottom : 2px solid #fff !important;
+   }
+   .underline_hover:hover{
+       padding-bottom: 6px !important;
+   }
+   .underline_hover:after {
+       bottom: 7px !important; 
+   }
+   .links:hover
+   {
+    border-bottom : 1px solid #ca1405 !important;
+   }
+   body::after{
+    background-color: #1c1e36 !important;
+   }
+ .rounded-6:hover{
+  color: #ca1405 !important;
+ }
+ .content_wrap_fullscreen .elementor-section-full_width .sc_portfolio.sc_portfolio_band .sc_portfolio_content .sc_portfolio_item .post_content_wrap .theme_button {
+    margin-top: 9% !important;
+ }
+ .widget_banner:not(.widget_fullwidth) .image_wrap {
+    background-color: #857f7f !important;
+   
+}
+@media (max-width: 576px){
+    input[type="text"]{
+        font-size: 16px !important;
+    }
+    .wpcf7 {
+        width: 100% !important;
+    }
+ .single-cpt_portfolio .portfolio_page_featured img {
+        object-fit: cover !important;
+
+    }
+}
+.sc_portfolio_item h2{
+    font-size: 32px !important;
+
+}
+
+.hom-services-desc {
+  margin-top: 70px;
+}
+/* @media (min-width: 1023px){
+.portfolio_page_details_right .portfolio_page_content_wrap {
+    width: 100% !important;
+}
+} */

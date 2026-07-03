@@ -158,6 +158,9 @@
     color: #333;
     -webkit-font-smoothing: antialiased;
   }
+  [data-scroll-behavior="smooth"] {
+    scroll-behavior: smooth;
+  }
   h1, h2, h3, h4 {
     font-family: var(--font-display);
     font-weight: 700;

@@ -89,21 +89,12 @@ export default function CalibrationContent() {
           <FadeUp delay={0} className="relative">
             <div className="relative rounded-2xl overflow-hidden aspect-[16/11] bg-[#0B0D26] shadow-2xl shadow-black/15">
               <Image
-                src="/services/flow-measurement/calibration.jpg"
+                src="/images/services/Banc-Calibr.jpg"
                 alt="Flow meter calibration facility"
                 fill
                 sizes="(max-width: 1024px) 100vw, 50vw"
                 className="object-cover"
               />
-              {/* Placeholder */}
-              <div className="absolute inset-0 flex flex-col items-center justify-center bg-[#0B0D26]/90 gap-2">
-                <div className="w-12 h-12 rounded-full border border-white/10 flex items-center justify-center">
-                  <span className="text-white/20 text-2xl">+</span>
-                </div>
-                <p className="text-white/20 text-[10px] tracking-[2px] uppercase text-center px-6">
-                  /services/flow-measurement/calibration.jpg
-                </p>
-              </div>
               <div className="absolute bottom-0 left-0 right-0 h-16 bg-gradient-to-t from-[#0B0D26]/40 to-transparent" />
             </div>
 

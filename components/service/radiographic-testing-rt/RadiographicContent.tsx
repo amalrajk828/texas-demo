@@ -41,11 +41,7 @@ export default function RadiographicContent() {
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-14 lg:gap-20 items-center">
           <FadeUp delay={0} className="relative">
             <div className="relative rounded-2xl overflow-hidden aspect-[16/11] bg-[#0B0D26] shadow-2xl shadow-black/15">
-              <Image src="/services/inspection-testing/radiographic-testing.jpg" alt="Radiographic testing" fill sizes="(max-width: 1024px) 100vw, 50vw" className="object-cover" />
-              <div className="absolute inset-0 flex flex-col items-center justify-center bg-[#0B0D26]/90 gap-2">
-                <div className="w-12 h-12 rounded-full border border-white/10 flex items-center justify-center"><span className="text-white/20 text-2xl">+</span></div>
-                <p className="text-white/20 text-[10px] tracking-[2px] uppercase text-center px-6">/services/inspection-testing/radiographic-testing.jpg</p>
-              </div>
+              <Image src="/images/services/rgt.webp" alt="Radiographic testing" fill sizes="(max-width: 1024px) 100vw, 50vw" className="object-cover" />
               <div className="absolute bottom-0 left-0 right-0 h-16 bg-gradient-to-t from-[#0B0D26]/40 to-transparent" />
             </div>
             <div className="absolute -bottom-5 -right-4 lg:-right-6 bg-gradient-to-br from-[#e7212b] to-[#aa0b1b] rounded-xl px-5 py-3.5 shadow-lg shadow-[#e7212b]/30">
