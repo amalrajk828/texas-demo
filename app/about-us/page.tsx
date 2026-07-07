@@ -167,11 +167,11 @@ export default function AboutPage() {
               <span className="text-[11px] font-bold tracking-[0.28em] uppercase text-[#181D4E]">
                 OUR COMMITMENT
               </span>
-              <h2 className="mt-3 text-[2rem] lg:text-[2.5rem] font-bold text-[#181D4E] leading-tight">
+              <h1 className="mt-3 text-[2rem] lg:text-[2.5rem] font-bold text-[#181D4E] leading-tight">
                 Full Commitment to
                 <br />
                 Your Schedule
-              </h2>
+              </h1>
               <div className="mt-6 space-y-4 text-[15px] text-gray-600 leading-[1.75]">
                 <p>
                   Texas Technical Services Co. (TTS) is committed to health and

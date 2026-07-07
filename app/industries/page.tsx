@@ -20,7 +20,7 @@ export const metadata: Metadata = {
     "Texas Technical Services delivers flow measurement, industrial automation, and inspection solutions across oil & gas, refinery, power plant, LNG, petrochemicals, water treatment, cement, and metal & steel.",
   alternates: { canonical: "https://texastechserv.com/industries/" },
   openGraph: {
-    title: "Industries We Serve | Texas Technical Services",
+  title: "Industries We Serve",
     description:
       "Comprehensive OEM solutions for oil & gas, refinery, power plant, LNG, and more — backed by 15+ years of precision engineering.",
     url: "https://texastechserv.com/industries/",

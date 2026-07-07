@@ -11,7 +11,7 @@ import GreyAbout from "@/components/t-grey/GreyAbout";
 import GreyCta from "@/components/t-grey/GreyCta";
 
 export const metadata: Metadata = {
-  title: "Texas Technical Services | Industrial Automation, PLC SCADA & Flow Measurement",
+  title: "Industrial Automation, PLC SCADA & Flow Measurement",
   description:
     "Texas Technical Services is a leading industrial automation company in Kuwait and the UAE — specializing in PLC SCADA integration, flow measurement services in Ahmadi, inspection & testing, and automation engineering services in Fahaheel for oil & gas, refinery, and petrochemical sectors across the GCC.",
   alternates: { canonical: "https://texastechserv.com/" },
