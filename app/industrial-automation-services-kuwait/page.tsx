@@ -282,6 +282,36 @@ export default function IndustrialAutomationKuwaitPage() {
 
 
 
+      {/* ══ MAP ════════════════════════════════════════════ */}
+      <section className="bg-[#f4f5f8] py-16 lg:py-20">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6">
+          <div className="flex items-center gap-2.5 mb-4">
+            <span className="w-5 h-px bg-[#e7212b]" />
+            <span className="text-[#e7212b] text-[10px] font-semibold tracking-[3.5px] uppercase">
+              Our Location
+            </span>
+          </div>
+          <h2 className="text-3xl sm:text-[2rem] font-bold text-[#0B0D26] leading-[1.15] mb-1">
+            Visit Our Fahaheel Office
+          </h2>
+          <p className="text-gray-500 text-[14px] mb-6">
+            Munira Tower, 9th Floor – Makkah Street, Block 7, Fahaheel, Kuwait
+          </p>
+          <div className="rounded-2xl overflow-hidden shadow-lg border border-[#e8eaf0]">
+            <iframe
+              src="https://www.google.com/maps?q=Munira+Tower+Office+Fahaheel+Kuwait&output=embed&z=15"
+              width="100%"
+              height="380"
+              style={{ border: 0 }}
+              allowFullScreen
+              loading="lazy"
+              referrerPolicy="no-referrer-when-downgrade"
+              title="Texas Technical Services — Fahaheel, Kuwait office location"
+            />
+          </div>
+        </div>
+      </section>
+
       {/* ══ CTA ════════════════════════════════════════════ */}
       <section className="bg-[#0B0D26] py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 text-center">
