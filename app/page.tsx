@@ -13,14 +13,20 @@ import GreyCta from "@/components/t-grey/GreyCta";
 export const metadata: Metadata = {
   title: "Texas Technical Services | Industrial Automation, PLC SCADA & Flow Measurement",
   description:
-    "Texas Technical Services is a leading industrial automation company specializing in PLC SCADA integration, SCADA system development, flow measurement, and inspection & testing for oil & gas, refinery, and petrochemical sectors in Kuwait and the GCC.",
+    "Texas Technical Services is a leading industrial automation company in Kuwait and the UAE — specializing in PLC SCADA integration, flow measurement services in Ahmadi, inspection & testing, and automation engineering services in Fahaheel for oil & gas, refinery, and petrochemical sectors across the GCC.",
   alternates: { canonical: "https://texastechserv.com/" },
   openGraph: {
     title: "Texas Technical Services — Industrial Automation Company in Kuwait & GCC",
     description:
-      "Leading industrial automation company — PLC SCADA integration, SCADA system development, flow measurement, and inspection services for oil & gas and industrial sectors.",
+      "Leading industrial automation company in Kuwait and UAE — PLC SCADA integration, flow measurement, inspection, and automation engineering services in Fahaheel and across Dubai, Bahrain, and Saudi Arabia.",
     url: "https://texastechserv.com/",
   },
+  keywords: [
+    "industrial automation companies in Kuwait",
+    "automation companies in Dubai",
+    "industrial automation companies in UAE",
+    "automation and engineering services Fahaheel",
+  ],
 };
 
 // Grey light theme — oil & gas industry standard.

@@ -5,14 +5,14 @@ import FlowSubServices from "@/components/service/flow-measurement/FlowSubServic
 export const metadata: Metadata = {
   title: "Flow Measurement & Control System Solutions",
   description:
-    "Texas Technical Services provides metering control system upgrades, maintenance, validation, flow computer configuration, calibration, and specialized consultancy for custody metering systems — compliant with API MPMS, AGA, ISO, OIML standards.",
+    "Texas Technical Services provides flow measurement services in Ahmadi, Kuwait and across the GCC — metering control system upgrades, maintenance, validation, flow computer configuration, calibration, and specialized consultancy for custody metering systems compliant with API MPMS, AGA, ISO, OIML standards.",
   alternates: {
     canonical: "https://texastechserv.com/service/flow-measurement-solutions/",
   },
   openGraph: {
     title: "Flow Measurement & Control System Solutions | Texas Technical Services",
     description:
-      "Expert custody transfer metering services — system integration, upgrades, flow computer configuration, calibration, validation, commissioning, and spare parts supply.",
+      "Flow measurement services in Ahmadi, Kuwait — expert custody transfer metering, system integration, upgrades, flow computer configuration, calibration, and validation across the GCC.",
     url: "https://texastechserv.com/service/flow-measurement-solutions/",
     images: [
       {
@@ -27,9 +27,10 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "Flow Measurement & Control System Solutions | Texas Technical Services",
     description:
-      "Custody metering upgrades, calibration, validation, flow computer configuration and expert consultancy — compliant with API, AGA, ISO & OIML standards.",
+      "Flow measurement services in Ahmadi Kuwait — custody metering upgrades, calibration, validation, flow computer configuration across Kuwait and the GCC.",
   },
   keywords: [
+    "flow measurement services in Ahmadi Kuwait",
     "flow measurement solutions Kuwait",
     "custody transfer metering Kuwait",
     "metering control system integration",

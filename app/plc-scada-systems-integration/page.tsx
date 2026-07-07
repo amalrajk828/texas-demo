@@ -5,23 +5,28 @@ import { ArrowRight, ChevronRight, Cpu, Monitor, Code, Settings } from "lucide-r
 export const metadata: Metadata = {
   title: "PLC & SCADA Systems Integration | Industrial Automation Solutions",
   description:
-    "Texas Technical Services offers advanced PLC and SCADA system integration — PLC programming, SCADA monitoring, HMI development, control system upgrades, and industrial automation across oil & gas, power, and industrial sectors in Kuwait and the GCC.",
+    "Texas Technical Services offers advanced PLC and SCADA system integration — PLC and SCADA system integrators in Kuwait and Dubai, PLC programming, SCADA UAE, SCADA monitoring, HMI development, and control system upgrades across oil & gas, power, and industrial sectors in Kuwait, UAE, Dubai, and Saudi Arabia.",
   alternates: {
     canonical: "https://texastechserv.com/plc-scada-systems-integration/",
   },
   openGraph: {
     title: "PLC & SCADA Systems Integration | Texas Technical Services",
     description:
-      "Expert PLC programming, SCADA system integration, HMI development, and control system upgrades for oil & gas, power, and industrial automation. Multi-brand support for Siemens, Allen-Bradley, Schneider, and Mitsubishi.",
+      "PLC and SCADA system integrators in Kuwait and Dubai — expert PLC programming, SCADA UAE, SCADA Saudi Arabia, HMI development, and control system upgrades for industrial automation.",
     url: "https://texastechserv.com/plc-scada-systems-integration/",
   },
   twitter: {
     card: "summary_large_image",
     title: "PLC & SCADA Systems Integration | Texas Technical Services",
     description:
-      "PLC programming, SCADA integration, HMI development, and control system upgrades — Texas Technical Services, Kuwait & GCC.",
+      "PLC and SCADA system integrators in Kuwait, Dubai, and UAE — PLC programming, SCADA integration, HMI development across the GCC.",
   },
   keywords: [
+    "PLC and SCADA system integrators in Kuwait",
+    "PLC automation companies in Dubai",
+    "PLC automation companies in UAE",
+    "SCADA UAE",
+    "SCADA Dubai",
     "PLC SCADA",
     "PLC and industrial automation",
     "PLC and SCADA system",
@@ -153,11 +158,12 @@ export default function PlcScadaPage() {
             </h1>
 
             <p className="text-white/50 text-base sm:text-[16px] leading-relaxed mb-8 max-w-2xl">
-              We deliver expert PLC and SCADA system integration — from PLC programming and
-              SCADA monitoring to HMI development and control system upgrades. As experienced
-              industrial automation using PLC and SCADA technologies, we serve oil &amp; gas,
-              power, and industrial sectors across Kuwait and the GCC with multi-brand support
-              for Siemens, Allen-Bradley, Schneider, and Mitsubishi.
+            We are trusted PLC and SCADA system integrators in Kuwait, Dubai, and across
+            the GCC — delivering expert PLC programming, SCADA system development, HMI
+            engineering, and control system upgrades. As experienced industrial automation
+            professionals, we serve oil &amp; gas, power, and industrial sectors in Kuwait, UAE,
+            Dubai, and Saudi Arabia with multi-brand support for Siemens, Allen-Bradley,
+            Schneider, and Mitsubishi.
             </p>
 
             <div className="flex flex-wrap gap-3">

@@ -5,7 +5,7 @@ import { ArrowRight, ChevronRight, Cpu, Monitor, Zap, Server } from "lucide-reac
 export const metadata: Metadata = {
   title: "Mitsubishi Electric Factory Automation Solutions | Authorized Integrator",
   description:
-    "Texas Technical Services is a Mitsubishi system integrator in Kuwait — offering Mitsubishi electric factory automation, PLC Mitsubishi electric, HMI, servo drives, and Iconics SCADA Mitsubishi integration for oil & gas and industrial sectors.",
+    "Texas Technical Services is a Mitsubishi system integrator in Kuwait, UAE, and Dubai — offering Mitsubishi electric factory automation, PLC Mitsubishi electric, HMI, servo drives, and Iconics SCADA Mitsubishi integration for oil & gas and industrial sectors across the GCC.",
   alternates: {
     canonical: "https://texastechserv.com/mitsubishi-electric-factory-automation/",
   },
@@ -22,6 +22,9 @@ export const metadata: Metadata = {
       "Mitsubishi PLC, HMI, servo, VFD, and Iconics SCADA integration — Texas Technical Services, Kuwait & GCC.",
   },
   keywords: [
+    "Mitsubishi electric factory automation Kuwait",
+    "Mitsubishi electric factory automation UAE",
+    "Mitsubishi system integrator Dubai",
     "Mitsubishi electric factory automation",
     "Mitsubishi factory automation",
     "Mitsubishi electric industrial automation",
@@ -29,7 +32,6 @@ export const metadata: Metadata = {
     "Mitsubishi automation products",
     "PLC Mitsubishi electric",
     "Iconics SCADA Mitsubishi",
-    "Mitsubishi electric factory automation Kuwait",
     "Mitsubishi PLC Kuwait",
   ],
 };
@@ -38,7 +40,7 @@ const solutions = [
   {
     Icon: Cpu,
     title: "Mitsubishi PLC Programming & Integration",
-    body: "As a trusted Mitsubishi system integrator in Kuwait, we specialize in programming and integrating Mitsubishi electric PLCs — including the MELSEC iQ-F, iQ-R, and L Series. Our expertise covers logic development, industrial network configuration (CC-Link, Ethernet/IP), and seamless integration with SCADA and HMI systems for complete factory automation solutions.",
+    body: "As a trusted Mitsubishi system integrator in Kuwait, UAE, and Dubai, we specialize in programming and integrating Mitsubishi electric PLCs — including the MELSEC iQ-F, iQ-R, and L Series. Our expertise covers logic development, industrial network configuration (CC-Link, Ethernet/IP), and seamless integration with SCADA and HMI systems for complete factory automation solutions.",
     href: "/products/plc/",
   },
   {
@@ -126,7 +128,7 @@ export default function MitsubishiPage() {
             </h1>
 
             <p className="text-white/50 text-base sm:text-[16px] leading-relaxed mb-8 max-w-2xl">
-              Texas Technical Services is your trusted Mitsubishi system integrator in Kuwait
+              Texas Technical Services is your trusted Mitsubishi system integrator in Kuwait, UAE, and Dubai
               and the GCC. We deliver Mitsubishi electric factory automation solutions including
               PLC Mitsubishi electric programming, GOT HMI integration, AC servo drives,
               frequency inverters, and Iconics SCADA Mitsubishi systems — backed by our

@@ -87,11 +87,11 @@ export default function FlowHero() {
             transition={{ duration: 0.55, delay: 0.18, ease: [0.22, 1, 0.36, 1] }}
             className="text-white/50 text-base sm:text-[17px] leading-relaxed mb-8 max-w-2xl"
           >
-            We provide metering control system upgrades, maintenance, and validation services for
-            custody metering systems. Our experienced team ensures that your metering systems operate
-            efficiently and accurately, meeting industry standards and compliance requirements.
-            Additionally, we offer specialized consultancy services to optimize your custody metering
-            processes and enhance productivity.
+            We provide flow measurement services in Ahmadi, Kuwait and across the GCC — metering
+            control system upgrades, maintenance, and validation for custody metering systems. Our
+            experienced team ensures your metering systems operate efficiently and accurately, meeting
+            API, AGA, ISO, and OIML standards. We also offer specialized consultancy to optimize your
+            custody metering processes and enhance productivity.
           </motion.p>
 
           {/* CTAs */}

@@ -87,11 +87,11 @@ export default function AutomationHero() {
             transition={{ duration: 0.55, delay: 0.18, ease: [0.22, 1, 0.36, 1] }}
             className="text-white/50 text-base sm:text-[16px] leading-relaxed mb-8 max-w-2xl"
           >
-            As a leading automation company, we provide total industrial automation solutions
-            and PLC SCADA integration using various brands of PLCs, SCADA, and HMIs. We develop
-            customized software solutions and reporting software, perform SCADA system upgrades
-            and process &amp; control engineering — delivering end-to-end automation across oil &amp;
-            gas, power, and industrial sectors.
+            As a leading PLC and SCADA system integrator in Kuwait and the GCC, we provide
+            total industrial automation solutions using various brands of PLCs, SCADA, and HMIs.
+            We develop customized software and reporting solutions, perform SCADA system upgrades,
+            and deliver process control automation solutions from our Fahaheel base — serving
+            oil &amp; gas, power, and industrial sectors across Kuwait, UAE, Dubai, and Saudi Arabia.
           </motion.p>
 
           {/* CTAs */}

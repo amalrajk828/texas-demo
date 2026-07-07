@@ -6,14 +6,20 @@ import { Gauge, ClipboardCheck, Cpu } from "lucide-react";
 export const metadata: Metadata = {
   title: "About Us | Industrial Automation Company in Kuwait & GCC",
   description:
-    "Texas Technical Services Co. (TTS) is a leading industrial automation company in Kuwait — specializing in PLC SCADA integration, flow measurement, and inspection & testing for oil & gas and industrial sectors since 2008.",
+    "Texas Technical Services Co. (TTS) is a leading industrial automation company in Kuwait, UAE, and Dubai — specializing in PLC SCADA integration, flow measurement, and inspection & testing for oil & gas and industrial sectors across the GCC since 2008.",
   alternates: { canonical: "https://texastechserv.com/about-us/" },
   openGraph: {
     title: "About Us | Industrial Automation Company in Kuwait & GCC",
     description:
-      "Leading industrial automation company in Kuwait — PLC SCADA, flow measurement, inspection & testing since 2008.",
+      "Leading industrial automation company in Kuwait, UAE, and Dubai — PLC SCADA, flow measurement, inspection & testing since 2008.",
     url: "https://texastechserv.com/about-us/",
   },
+  keywords: [
+    "industrial automation companies in Kuwait",
+    "automation companies in Dubai",
+    "industrial automation companies in UAE",
+    "automation companies in Saudi Arabia",
+  ],
 };
 
 const partners = [

@@ -6,14 +6,14 @@ import InspectionSubServices from "@/components/service/inspection-testing/Inspe
 export const metadata: Metadata = {
   title: "Inspection & Testing Services",
   description:
-    "Texas Technical Services Co. (TTS) is a certified third-party inspection and testing company offering NDT (UT, MT, PT, RT, VI), mechanical testing, specialized phased array ultrasonic inspection, and QA consultancy services — compliant with ISO 9001:2015, ISO 14001:2015, and ISO 45001:2018.",
+    "Texas Technical Services Co. (TTS) is a leading industrial inspection and testing company in Kuwait — offering NDT (UT, MT, PT, RT, VI), mechanical testing, specialized phased array ultrasonic inspection, and QA consultancy services compliant with ISO 9001:2015, ISO 14001:2015, and ISO 45001:2018 across Kuwait and the GCC.",
   alternates: {
     canonical: "https://texastechserv.com/service/inspection-testing/",
   },
   openGraph: {
     title: "Inspection & Testing Services | Texas Technical Services",
     description:
-      "Independent third-party inspection and testing — NDT, mechanical testing, phased array UT, QA consultancy, and full ISO 9001/14001/45001 certified quality management.",
+      "Industrial inspection and testing company in Kuwait — NDT, mechanical testing, phased array UT, QA consultancy, and ISO-certified quality management across the GCC.",
     url: "https://texastechserv.com/service/inspection-testing/",
     images: [
       {
@@ -28,9 +28,10 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "Inspection & Testing Services | Texas Technical Services",
     description:
-      "Third-party NDT, mechanical testing, phased array UT, and QA consultancy — ISO 9001, 14001, 45001 certified.",
+      "Industrial inspection and testing company in Kuwait — NDT, mechanical testing, phased array UT, ISO 9001/14001/45001 certified.",
   },
   keywords: [
+    "industrial inspection and testing companies Kuwait",
     "inspection testing services Kuwait",
     "NDT services Kuwait Dubai",
     "non destructive testing Kuwait",
