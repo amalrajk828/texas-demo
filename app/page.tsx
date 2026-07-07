@@ -22,6 +22,8 @@ export const metadata: Metadata = {
     url: "https://texastechserv.com/",
   },
   keywords: [
+    "industrial automation companies near me",
+    "vision industrial automation services & products",
     "industrial automation companies in Kuwait",
     "automation companies in Dubai",
     "industrial automation companies in UAE",

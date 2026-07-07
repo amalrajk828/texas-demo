@@ -5,14 +5,14 @@ import AutomationSubServices from "@/components/service/industrial-automation/Au
 export const metadata: Metadata = {
   title: "Industrial Automation, PLC SCADA & Process Control Solutions",
   description:
-    "Texas Technical Services Co. (TTS) is a leading industrial automation company in Kuwait, UAE, and Saudi Arabia — providing PLC and SCADA system integrator services, process control automation solutions, plant automation, control system upgrades, commissioning, and automation engineering services in Fahaheel for oil & gas, power, and industrial sectors across the GCC.",
+    "Texas Technical Services Co. (TTS) is a leading industrial automation company in Kuwait, UAE, and Saudi Arabia — providing industrial automation & control systems, control and automation engineering, PLC and SCADA system integrator services, process control automation solutions, plant automation, automation in manufacturing industry, and control systems and automation for oil & gas, power, and industrial sectors across the GCC.",
   alternates: {
     canonical: "https://texastechserv.com/service/industrial-automation/",
   },
   openGraph: {
     title: "Industrial Automation, PLC SCADA & Process Control | Texas Technical Services",
     description:
-      "PLC and SCADA system integrators in Kuwait, UAE, and Saudi Arabia — process control automation solutions, plant automation, and engineering services in Fahaheel and across the GCC.",
+      "Industrial automation & control systems, control and automation engineering, and plant and process automation — PLC and SCADA system integrators in Kuwait, UAE, and Saudi Arabia serving manufacturing, power plant, and oil & gas sectors.",
     url: "https://texastechserv.com/service/industrial-automation/",
     images: [
       {
@@ -27,7 +27,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "Industrial Automation, PLC SCADA & Process Control | Texas Technical Services",
     description:
-      "PLC SCADA integration, process & control engineering — serving Kuwait, UAE, Dubai, and Saudi Arabia with industrial automation services.",
+      "Industrial automation & control systems, control and automation engineering, plant and process automation, and automation in power plant — serving Kuwait, UAE, Dubai, and Saudi Arabia.",
   },
   keywords: [
     "industrial automation companies in Kuwait",
@@ -37,6 +37,14 @@ export const metadata: Metadata = {
     "industrial automation companies in UAE",
     "automation companies in Dubai",
     "automation companies in Saudi Arabia",
+    "industrial automation & control systems",
+    "industrial automation control system",
+    "control and automation engineering",
+    "automation in manufacturing industry",
+    "automation in the manufacturing industry",
+    "control systems and automation",
+    "plant and process automation",
+    "automation in power plant",
     "PLC SCADA",
     "process & control",
     "automation company",

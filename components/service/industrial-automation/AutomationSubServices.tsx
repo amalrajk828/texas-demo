@@ -104,7 +104,9 @@ function SubServiceCard({
 
 /* ── Capabilities strip ── */
 const CAPABILITIES = [
-  "Multi-brand PLC programming (Siemens, Allen-Bradley, Schneider, Mitsubishi)",
+  "Multi-brand industrial automation control system — PLC, SCADA, HMI",
+  "Control and automation engineering for manufacturing industry",
+  "Plant and process automation for power plants & industrial facilities",
   "SCADA development, integration & legacy migration",
   "HMI panel design, engineering & programming",
   "Variable frequency drives (VFD) & AC servo systems",

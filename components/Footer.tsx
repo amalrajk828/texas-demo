@@ -189,7 +189,7 @@ export default function Footer() {
             TEXAS TECHNICAL SERVICE COMPANY W.L.L. © 2026. All Rights Reserved.
           </p>
           <div className="flex items-center gap-4">
-            <span className="text-white/20 text-[10px] hidden sm:inline">Serving the Middle East — industrial automation in Kuwait, UAE, Dubai, Bahrain &amp; Saudi Arabia</span>
+            <span className="text-white/20 text-[10px] hidden sm:inline">Serving the Middle East — industrial automation companies near me, Kuwait, UAE, Dubai, Bahrain &amp; Saudi Arabia</span>
             <span className="text-brand-red text-[11px] font-medium">ISO 9001:2015 Certified</span>
           </div>
         </div>
