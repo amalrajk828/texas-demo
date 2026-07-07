@@ -4,8 +4,8 @@ import ServicesAllGrid from "@/components/service/ServicesAllGrid";
 import ServicesCtaBanner from "@/components/service/ServicesCtaBanner";
 
 export const metadata: Metadata = {
-  title: "Our Services | Flow Measurement, Automation & Inspection",
-  description: "Texas Technical Services offers flow measurement & control system solutions, inspection & testing, industrial process automation, and construction services across oil & gas, refinery, and petrochemical sectors.",
+  title: "Our Services | Industrial Automation Company — PLC SCADA, Flow Measurement & Inspection",
+  description: "Texas Technical Services is a leading automation company offering PLC SCADA integration, flow measurement & control system solutions, inspection & testing, and industrial process automation for oil & gas, refinery, and petrochemical sectors across Kuwait and the GCC.",
   alternates: { canonical: "https://texastechserv.com/service/" },
 };
 

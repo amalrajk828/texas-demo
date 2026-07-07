@@ -87,10 +87,11 @@ export default function AutomationHero() {
             transition={{ duration: 0.55, delay: 0.18, ease: [0.22, 1, 0.36, 1] }}
             className="text-white/50 text-base sm:text-[16px] leading-relaxed mb-8 max-w-2xl"
           >
-            We provide total industrial automation solutions and system integration using various
-            brands of PLCs, SCADA, and HMIs. We develop customized software solutions and reporting
-            software, and perform upgrades of legacy systems and SCADA software — delivering
-            end-to-end automation across oil &amp; gas, power, and industrial sectors.
+            As a leading automation company, we provide total industrial automation solutions
+            and PLC SCADA integration using various brands of PLCs, SCADA, and HMIs. We develop
+            customized software solutions and reporting software, perform SCADA system upgrades
+            and process &amp; control engineering — delivering end-to-end automation across oil &amp;
+            gas, power, and industrial sectors.
           </motion.p>
 
           {/* CTAs */}

@@ -23,10 +23,10 @@ const SLIDES = [
   {
     type: "video" as const,
     src: "/homevideos/Automated-1-2.mp4",
-    alt: "Industrial Process Automation Solutions — PLC SCADA automation systems by TTS",
+    alt: "Industrial Process Automation — PLC SCADA automation systems by leading automation company TTS",
     eyebrow: "Industrial Automation",
     heading: ["Industrial Process", "Automation", "Solutions"],
-    sub: "Empowering industries through automation. PLC and SCADA-based systems, control integration, and commissioning for oil & gas, manufacturing, and power generation.",
+    sub: "Empowering industries through industrial automation. PLC SCADA systems, control integration, and commissioning for oil & gas, manufacturing, and power generation.",
     tag: "Automation",
     ctas: [
       { label: "Know More", href: "/service/industrial-automation/", primary: true },

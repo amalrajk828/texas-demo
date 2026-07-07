@@ -4,11 +4,16 @@ import Link from "next/link";
 import { Gauge, ClipboardCheck, Cpu } from "lucide-react";
 
 export const metadata: Metadata = {
-  title: "About Us",
+  title: "About Us | Industrial Automation Company in Kuwait & GCC",
   description:
-    "Texas Technical Services Co. (TTS) — Pioneers in Industrial Solutions. Committed to health, safety, environment and quality since 2008.",
+    "Texas Technical Services Co. (TTS) is a leading industrial automation company in Kuwait — specializing in PLC SCADA integration, flow measurement, and inspection & testing for oil & gas and industrial sectors since 2008.",
   alternates: { canonical: "https://texastechserv.com/about-us/" },
-  openGraph: { url: "https://texastechserv.com/about-us/" },
+  openGraph: {
+    title: "About Us | Industrial Automation Company in Kuwait & GCC",
+    description:
+      "Leading industrial automation company in Kuwait — PLC SCADA, flow measurement, inspection & testing since 2008.",
+    url: "https://texastechserv.com/about-us/",
+  },
 };
 
 const partners = [

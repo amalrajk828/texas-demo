@@ -11,13 +11,14 @@ import GreyAbout from "@/components/t-grey/GreyAbout";
 import GreyCta from "@/components/t-grey/GreyCta";
 
 export const metadata: Metadata = {
-  title: "Texas Technical Services | Flow Measurement & Industrial Automation",
+  title: "Texas Technical Services | Industrial Automation, PLC SCADA & Flow Measurement",
   description:
-    "Texas specializes in flow measurement, control systems, inspection, and industrial automation solutions for oil & gas, refinery, petrochemical, and power plant sectors.",
+    "Texas Technical Services is a leading industrial automation company specializing in PLC SCADA integration, SCADA system development, flow measurement, and inspection & testing for oil & gas, refinery, and petrochemical sectors in Kuwait and the GCC.",
   alternates: { canonical: "https://texastechserv.com/" },
   openGraph: {
-    title: "Texas Technical Services Company - Innovative Industrial Solutions",
-    description: "In quality, we believe.",
+    title: "Texas Technical Services — Industrial Automation Company in Kuwait & GCC",
+    description:
+      "Leading industrial automation company — PLC SCADA integration, SCADA system development, flow measurement, and inspection services for oil & gas and industrial sectors.",
     url: "https://texastechserv.com/",
   },
 };

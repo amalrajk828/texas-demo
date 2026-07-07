@@ -3,34 +3,38 @@ import AutomationHero from "@/components/service/industrial-automation/Automatio
 import AutomationSubServices from "@/components/service/industrial-automation/AutomationSubServices";
 
 export const metadata: Metadata = {
-  title: "Industrial Process Automation Solutions",
+  title: "Industrial Automation, PLC SCADA & Process Control Solutions",
   description:
-    "Texas Technical Services Co. (TTS) provides total industrial automation solutions — PLC programming, SCADA integration, HMI development, plant automation, control system upgrades, commissioning support, and custom software solutions for oil & gas, power, and industrial sectors.",
+    "Texas Technical Services Co. (TTS) is a leading automation company providing total industrial automation solutions — PLC SCADA integration, SCADA system development, HMI, process & control engineering, plant automation, control system upgrades, and commissioning for oil & gas, power, and industrial sectors in Kuwait and the GCC.",
   alternates: {
     canonical: "https://texastechserv.com/service/industrial-automation/",
   },
   openGraph: {
-    title: "Industrial Process Automation Solutions | Texas Technical Services",
+    title: "Industrial Automation, PLC SCADA & Process Control | Texas Technical Services",
     description:
-      "Multi-brand PLC, SCADA & HMI automation — plant automation, control system integration & upgrades, legacy migration, commissioning, and custom reporting software.",
+      "Multi-brand PLC SCADA integration, process & control engineering, HMI development, plant automation, control system upgrades, legacy migration, and commissioning services.",
     url: "https://texastechserv.com/service/industrial-automation/",
     images: [
       {
         url: "https://texastechserv.com/og-industrial-automation.jpg",
         width: 1200,
         height: 630,
-        alt: "Industrial Process Automation Solutions — Texas Technical Services",
+        alt: "Industrial Automation, PLC SCADA & Process Control — Texas Technical Services",
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "Industrial Process Automation Solutions | Texas Technical Services",
+    title: "Industrial Automation, PLC SCADA & Process Control | Texas Technical Services",
     description:
-      "PLC, SCADA, HMI integration — plant automation, system upgrades, commissioning support, and CEMS solutions for oil & gas and industrial sectors.",
+      "PLC SCADA integration, process & control engineering, HMI development, plant automation, system upgrades, commissioning, and CEMS solutions for oil & gas and industrial sectors.",
   },
   keywords: [
     "industrial automation Kuwait",
+    "PLC SCADA",
+    "process & control",
+    "automation company",
+    "SCADA system",
     "PLC programming Kuwait Dubai",
     "SCADA integration Kuwait",
     "HMI development Kuwait",
