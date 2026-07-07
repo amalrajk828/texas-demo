@@ -14,14 +14,6 @@ export const metadata: Metadata = {
     description:
       "Flow measurement services in Ahmadi, Kuwait — expert custody transfer metering, system integration, upgrades, flow computer configuration, calibration, and validation across the GCC.",
     url: "https://texastechserv.com/service/flow-measurement-solutions/",
-    images: [
-      {
-        url: "https://texastechserv.com/og-flow-measurement.jpg",
-        width: 1200,
-        height: 630,
-        alt: "Flow Measurement & Control System Solutions — Texas Technical Services",
-      },
-    ],
   },
   twitter: {
     card: "summary_large_image",

@@ -25,9 +25,27 @@ export const metadata: Metadata = {
   openGraph: {
     title: "Products | Texas Technical Services",
     description:
-      "Flow meters, analyzers, sensors, PLCs, ICONICS SCADA, HMI panels, VFDs, and more.",
+      "Explore Texas Technical Services' full product range — flow meters, analyzers, sensors, PLCs, ICONICS SCADA, HMI panels, VFDs, AC servos, custody metering skids, and industrial automation solutions from leading OEMs.",
     url: "https://texastechserv.com/products/",
   },
+  twitter: {
+    card: "summary_large_image",
+    title: "Products | Texas Technical Services",
+    description:
+      "Flow meters, analyzers, sensors, PLCs, ICONICS SCADA, HMI panels, VFDs, AC servos, and custody metering solutions from leading OEMs.",
+  },
+  keywords: [
+    "flow meters Kuwait",
+    "industrial analyzers Kuwait",
+    "PLC and SCADA products",
+    "VFD and AC servo drives Kuwait",
+    "HMI panels Kuwait",
+    "ICONICS SCADA Kuwait",
+    "custody transfer metering skid",
+    "industrial sensors and instrumentation",
+    "process automation products GCC",
+    "Mitsubishi electric products Kuwait",
+  ],
 };
 
 type ProductCategory = {

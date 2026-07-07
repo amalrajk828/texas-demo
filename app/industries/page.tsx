@@ -20,11 +20,29 @@ export const metadata: Metadata = {
     "Texas Technical Services delivers flow measurement, industrial automation, and inspection solutions across oil & gas, refinery, power plant, LNG, petrochemicals, water treatment, cement, and metal & steel.",
   alternates: { canonical: "https://texastechserv.com/industries/" },
   openGraph: {
-  title: "Industries We Serve",
+    title: "Industries We Serve | Texas Technical Services",
     description:
-      "Comprehensive OEM solutions for oil & gas, refinery, power plant, LNG, and more — backed by 15+ years of precision engineering.",
+      "Comprehensive OEM solutions for oil & gas, refinery, power plant, LNG, petrochemicals, water treatment, cement, and metal & steel — backed by 15+ years of precision engineering.",
     url: "https://texastechserv.com/industries/",
   },
+  twitter: {
+    card: "summary_large_image",
+    title: "Industries We Serve | Texas Technical Services",
+    description:
+      "Flow measurement, automation, and inspection solutions for oil & gas, refinery, power, LNG, petrochemicals, water, cement, and steel industries across the GCC.",
+  },
+  keywords: [
+    "oil and gas industry solutions Kuwait",
+    "refinery automation and metering",
+    "power plant instrumentation Kuwait",
+    "LNG metering solutions GCC",
+    "petrochemical automation solutions",
+    "water treatment flow measurement",
+    "cement industry automation",
+    "metal and steel inspection services",
+    "industrial automation for oil and gas",
+    "flow measurement for refineries",
+  ],
 };
 
 const industries = [

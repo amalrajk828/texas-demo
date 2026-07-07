@@ -14,14 +14,6 @@ export const metadata: Metadata = {
     description:
       "Industrial automation & control systems, control and automation engineering, and plant and process automation — PLC and SCADA system integrators in Kuwait, UAE, and Saudi Arabia serving manufacturing, power plant, and oil & gas sectors.",
     url: "https://texastechserv.com/service/industrial-automation/",
-    images: [
-      {
-        url: "https://texastechserv.com/og-industrial-automation.jpg",
-        width: 1200,
-        height: 630,
-        alt: "Industrial Automation, PLC SCADA & Process Control — Texas Technical Services",
-      },
-    ],
   },
   twitter: {
     card: "summary_large_image",

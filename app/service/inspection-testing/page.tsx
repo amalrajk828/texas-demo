@@ -15,14 +15,6 @@ export const metadata: Metadata = {
     description:
       "Industrial inspection and testing company in Kuwait — NDT, mechanical testing, phased array UT, QA consultancy, and ISO-certified quality management across the GCC.",
     url: "https://texastechserv.com/service/inspection-testing/",
-    images: [
-      {
-        url: "https://texastechserv.com/og-inspection-testing.jpg",
-        width: 1200,
-        height: 630,
-        alt: "Inspection & Testing Services — Texas Technical Services",
-      },
-    ],
   },
   twitter: {
     card: "summary_large_image",

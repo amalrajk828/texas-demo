@@ -19,6 +19,14 @@ export const metadata: Metadata = {
     "automation companies in Dubai",
     "industrial automation companies in UAE",
     "automation companies in Saudi Arabia",
+    "flow measurement companies Kuwait",
+    "PLC SCADA system integrator Kuwait",
+    "inspection and testing companies Kuwait",
+    "oil and gas service company Fahaheel",
+    "industrial engineering services GCC",
+    "Texas Technical Services Co",
+    "Mitsubishi electric authorized integrator Kuwait",
+    "industrial automation companies in GCC",
   ],
 };
 

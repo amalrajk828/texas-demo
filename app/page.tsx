@@ -21,6 +21,12 @@ export const metadata: Metadata = {
       "Leading industrial automation company in Kuwait and UAE — PLC SCADA integration, flow measurement, inspection, and automation engineering services in Fahaheel and across Dubai, Bahrain, and Saudi Arabia.",
     url: "https://texastechserv.com/",
   },
+  twitter: {
+    card: "summary_large_image",
+    title: "Texas Technical Services — Industrial Automation Company in Kuwait & GCC",
+    description:
+      "Leading industrial automation company in Kuwait and UAE — PLC SCADA integration, flow measurement, inspection, and automation engineering across the GCC.",
+  },
   keywords: [
     "industrial automation companies near me",
     "vision industrial automation services & products",

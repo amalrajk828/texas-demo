@@ -7,6 +7,31 @@ export const metadata: Metadata = {
   title: "Our Services | Industrial Automation Company — PLC SCADA, Flow Measurement & Inspection",
   description: "Texas Technical Services is a leading automation company offering PLC SCADA integration, flow measurement & control system solutions, inspection & testing, and industrial process automation for oil & gas, refinery, and petrochemical sectors across Kuwait and the GCC.",
   alternates: { canonical: "https://texastechserv.com/service/" },
+  openGraph: {
+    title: "Industrial Services — PLC SCADA, Flow Measurement & Inspection | Texas Technical Services",
+    description:
+      "Texas Technical Services is a leading automation company offering PLC SCADA integration, flow measurement & control system solutions, inspection & testing, and industrial process automation for oil & gas, refinery, and petrochemical sectors across Kuwait and the GCC.",
+    url: "https://texastechserv.com/service/",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Industrial Services — PLC SCADA, Flow Measurement & Inspection | Texas Technical Services",
+    description:
+      "PLC SCADA integration, flow measurement, inspection & testing, and process automation for oil & gas and industrial sectors across Kuwait and the GCC.",
+  },
+  keywords: [
+    "industrial automation services Kuwait",
+    "PLC SCADA integration Kuwait",
+    "flow measurement services Kuwait",
+    "inspection and testing Kuwait",
+    "automation company Kuwait",
+    "process control solutions GCC",
+    "oil and gas service company Kuwait",
+    "industrial service provider Ahmadi",
+    "metering and automation Kuwait",
+    "engineering services Kuwait",
+    "industrial automation companies GCC",
+  ],
 };
 
 export default function ServicesPage() {

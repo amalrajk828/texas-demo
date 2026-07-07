@@ -9,11 +9,29 @@ export const metadata: Metadata = {
     "Texas Technical Services delivers precision flow metering, CEMS, analyzers, and industrial automation solutions for the oil & gas industry — upstream, midstream, and downstream.",
   alternates: { canonical: "https://texastechserv.com/industries/oil-gas/" },
   openGraph: {
-  title: "Oil & Gas Industry Solutions",
+    title: "Oil & Gas Industry Solutions | Texas Technical Services",
     description:
-      "From flow computers to ultrasonic meters and gas analyzers — complete OEM solutions for the oil & gas sector.",
+      "Complete OEM flow metering, CEMS, gas analyzers, and industrial automation solutions for the oil & gas sector — upstream, midstream, and downstream — backed by 15+ years in Kuwait and the GCC.",
     url: "https://texastechserv.com/industries/oil-gas/",
   },
+  twitter: {
+    card: "summary_large_image",
+    title: "Oil & Gas Industry Solutions | Texas Technical Services",
+    description:
+      "Flow metering, CEMS, analyzers, and automation solutions for upstream, midstream, and downstream oil & gas — serving Kuwait and the GCC since 2008.",
+  },
+  keywords: [
+    "oil and gas flow metering Kuwait",
+    "upstream flow measurement solutions",
+    "midstream metering systems GCC",
+    "downstream automation Kuwait",
+    "CEMS oil and gas Kuwait",
+    "gas analyzers for oil and gas",
+    "industrial automation oil and gas Kuwait",
+    "flow computers for oil and gas",
+    "custody transfer metering oil and gas",
+    "oil and gas instrumentation Kuwait",
+  ],
 };
 
 const products = [
