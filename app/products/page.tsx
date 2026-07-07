@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import { BreadcrumbJsonLd } from "@/components/schema/BreadcrumbJsonLd";
 import {
   Gauge,
   Activity,
@@ -184,6 +185,10 @@ function ProductCard({ item, index }: { item: ProductCategory; index: number }) 
 export default function ProductsPage() {
   return (
     <>
+      <BreadcrumbJsonLd items={[
+        { name: "Home", href: "/" },
+        { name: "Products", href: "/products/" },
+      ]} />
       {/* ── Hero Banner ─────────────────────────────────────── */}
       <section className="relative bg-[#0B0D26] overflow-hidden">
         {/* Grid texture */}

@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
 import { Gauge, ClipboardCheck, Cpu } from "lucide-react";
+import { BreadcrumbJsonLd } from "@/components/schema/BreadcrumbJsonLd";
 
 export const metadata: Metadata = {
   title: "About Us | Industrial Automation Company in Kuwait & GCC",
@@ -120,6 +121,7 @@ const certifications = [
 export default function AboutPage() {
   return (
     <div className="bg-white">
+      <BreadcrumbJsonLd items={[{ name: "Home", href: "/" }, { name: "About Us", href: "/about-us/" }]} />
 
       {/* ═══ COMMITMENT ═══════════════════════════════════════════ */}
       <section className="py-16 lg:py-24 bg-[#F8F8F8]">

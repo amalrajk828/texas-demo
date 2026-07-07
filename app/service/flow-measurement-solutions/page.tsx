@@ -1,6 +1,8 @@
 import type { Metadata } from "next";
 import FlowHero from "@/components/service/flow-measurement/FlowHero";
 import FlowSubServices from "@/components/service/flow-measurement/FlowSubServices";
+import { BreadcrumbJsonLd } from "@/components/schema/BreadcrumbJsonLd";
+import { ServiceJsonLd } from "@/components/schema/ServiceJsonLd";
 
 export const metadata: Metadata = {
   title: "Flow Measurement & Control System Solutions",
@@ -38,6 +40,14 @@ export const metadata: Metadata = {
 export default function FlowMeasurementPage() {
   return (
     <>
+      <BreadcrumbJsonLd items={[{ name: "Home", href: "/" }, { name: "Services", href: "/service/" }, { name: "Flow Measurement", href: "/service/flow-measurement-solutions/" }]} />
+      <ServiceJsonLd
+        name="Flow Measurement & Control System Solutions"
+        description="Flow measurement services in Ahmadi, Kuwait and across the GCC — metering control system upgrades, maintenance, validation, flow computer configuration, calibration, and specialized consultancy for custody metering systems."
+        url="/service/flow-measurement-solutions/"
+        serviceType="Flow Measurement"
+        areaServed={["Kuwait", "United Arab Emirates", "Saudi Arabia", "Bahrain", "Qatar", "Oman"]}
+      />
       <FlowHero />
       <FlowSubServices />
       {/* Contact section — to be added */}

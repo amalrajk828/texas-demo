@@ -1,6 +1,9 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { ArrowRight, ChevronRight, Cpu, Monitor, Zap, Server } from "lucide-react";
+import { BreadcrumbJsonLd } from "@/components/schema/BreadcrumbJsonLd";
+import { ServiceJsonLd } from "@/components/schema/ServiceJsonLd";
+import { ProductJsonLd } from "@/components/schema/ProductJsonLd";
 
 export const metadata: Metadata = {
   title: "Mitsubishi Electric Factory Automation Solutions | Authorized Integrator",
@@ -79,6 +82,21 @@ const capabilities = [
 export default function MitsubishiPage() {
   return (
     <>
+      <BreadcrumbJsonLd items={[{ name: "Home", href: "/" }, { name: "Mitsubishi Electric Factory Automation", href: "/mitsubishi-electric-factory-automation/" }]} />
+      <ServiceJsonLd
+        name="Mitsubishi Electric Factory Automation Solutions"
+        description="Authorized Mitsubishi Electric system integrator in Kuwait and the GCC — PLC, servo drives, VFDs, SCADA, HMI, and CNC solutions for industrial automation across oil & gas, manufacturing, and process industries."
+        url="/mitsubishi-electric-factory-automation/"
+        serviceType="Industrial Automation"
+        areaServed={["Kuwait", "United Arab Emirates", "Saudi Arabia", "Bahrain", "Qatar", "Oman"]}
+      />
+      <ProductJsonLd
+        name="Mitsubishi Electric Factory Automation"
+        description="Complete Mitsubishi Electric automation portfolio — PLC (MELSEC iQ-R/F/L/Q series), servo drives (MR-J5), VFDs (FR-E800/F800), SCADA (ICONICS), HMI (GOT2000), and CNC solutions — as an authorized system integrator in Kuwait and the GCC."
+        url="/mitsubishi-electric-factory-automation/"
+        brand="Mitsubishi Electric"
+        category="Industrial Automation"
+      />
       {/* ══ HERO ════════════════════════════════════════════ */}
       <section className="relative bg-[#0B0D26] overflow-hidden pt-32 pb-20 lg:pb-28">
         <div

@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import ServicesHero from "@/components/service/ServicesHero";
 import ServicesAllGrid from "@/components/service/ServicesAllGrid";
 import ServicesCtaBanner from "@/components/service/ServicesCtaBanner";
+import { BreadcrumbJsonLd } from "@/components/schema/BreadcrumbJsonLd";
 
 export const metadata: Metadata = {
   title: "Our Services | Industrial Automation Company — PLC SCADA, Flow Measurement & Inspection",
@@ -37,6 +38,7 @@ export const metadata: Metadata = {
 export default function ServicesPage() {
   return (
     <>
+      <BreadcrumbJsonLd items={[{ name: "Home", href: "/" }, { name: "Services", href: "/service/" }]} />
       <ServicesHero />
       <ServicesAllGrid initialPage={1} />
       <ServicesCtaBanner />

@@ -2,6 +2,8 @@ import type { Metadata } from "next";
 import InspectionHero from "@/components/service/inspection-testing/InspectionHero";
 import InspectionOverview from "@/components/service/inspection-testing/InspectionOverview";
 import InspectionSubServices from "@/components/service/inspection-testing/InspectionSubServices";
+import { BreadcrumbJsonLd } from "@/components/schema/BreadcrumbJsonLd";
+import { ServiceJsonLd } from "@/components/schema/ServiceJsonLd";
 
 export const metadata: Metadata = {
   title: "Inspection & Testing Services",
@@ -39,6 +41,14 @@ export const metadata: Metadata = {
 export default function InspectionTestingPage() {
   return (
     <>
+      <BreadcrumbJsonLd items={[{ name: "Home", href: "/" }, { name: "Services", href: "/service/" }, { name: "Inspection & Testing", href: "/service/inspection-testing/" }]} />
+      <ServiceJsonLd
+        name="Inspection & Testing Services"
+        description="Industrial inspection and testing company in Kuwait — NDT (UT, MT, PT, RT, VI), mechanical testing, phased array ultrasonic inspection, and QA consultancy services compliant with ISO 9001:2015, ISO 14001:2015, and ISO 45001:2018 across Kuwait and the GCC."
+        url="/service/inspection-testing/"
+        serviceType="Inspection & Testing"
+        areaServed={["Kuwait", "United Arab Emirates", "Saudi Arabia", "Bahrain", "Qatar", "Oman"]}
+      />
       <InspectionHero />
       <InspectionOverview />
       <InspectionSubServices />

@@ -1,6 +1,8 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { ArrowRight, ChevronRight, MapPin, Cpu, Thermometer, ShieldCheck } from "lucide-react";
+import { BreadcrumbJsonLd } from "@/components/schema/BreadcrumbJsonLd";
+import { ServiceJsonLd } from "@/components/schema/ServiceJsonLd";
 
 export const metadata: Metadata = {
   title: "Industrial Automation Services Dubai, UAE | PLC, SCADA & Flow Measurement",
@@ -73,6 +75,14 @@ const capabilities = [
 export default function IndustrialAutomationDubaiPage() {
   return (
     <>
+      <BreadcrumbJsonLd items={[{ name: "Home", href: "/" }, { name: "Industrial Automation Dubai", href: "/industrial-automation-services-dubai/" }]} />
+      <ServiceJsonLd
+        name="Industrial Automation Services Dubai, UAE"
+        description="Industrial automation company in Dubai, UAE — PLC and SCADA system integration, flow measurement, and industrial inspection and testing services for oil & gas and industrial sectors across the United Arab Emirates and GCC."
+        url="/industrial-automation-services-dubai/"
+        serviceType="Industrial Automation"
+        areaServed={["Dubai", "United Arab Emirates", "Abu Dhabi", "Sharjah", "Saudi Arabia", "Kuwait", "Bahrain", "Qatar", "Oman"]}
+      />
       {/* ══ HERO ════════════════════════════════════════════ */}
       <section className="relative bg-[#0B0D26] overflow-hidden pt-32 pb-20 lg:pb-28">
         <div

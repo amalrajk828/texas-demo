@@ -1,6 +1,9 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { ArrowRight, ChevronRight, Cpu, Monitor, Code, Settings } from "lucide-react";
+import { BreadcrumbJsonLd } from "@/components/schema/BreadcrumbJsonLd";
+import { FaqPageJsonLd } from "@/components/schema/FaqPageJsonLd";
+import { ServiceJsonLd } from "@/components/schema/ServiceJsonLd";
 
 export const metadata: Metadata = {
   title: "PLC & SCADA Systems Integration | Industrial Automation Solutions",
@@ -109,6 +112,15 @@ const faqItems = [
 export default function PlcScadaPage() {
   return (
     <>
+      <BreadcrumbJsonLd items={[{ name: "Home", href: "/" }, { name: "PLC & SCADA Systems Integration", href: "/plc-scada-systems-integration/" }]} />
+      <FaqPageJsonLd items={faqItems} />
+      <ServiceJsonLd
+        name="PLC & SCADA Systems Integration"
+        description="Expert PLC programming, SCADA system integration, HMI development, and control system upgrades for oil & gas, power, and industrial sectors across Kuwait, UAE, and the GCC."
+        url="/plc-scada-systems-integration/"
+        serviceType="Industrial Automation"
+        areaServed={["Kuwait", "Dubai", "United Arab Emirates", "Saudi Arabia", "Bahrain", "Qatar", "Oman"]}
+      />
       {/* ══ HERO ════════════════════════════════════════════ */}
       <section className="relative bg-[#0B0D26] overflow-hidden pt-32 pb-20 lg:pb-28">
         <div

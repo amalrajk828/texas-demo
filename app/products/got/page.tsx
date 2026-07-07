@@ -1,6 +1,7 @@
 import React from "react";
 import type { Metadata } from "next";
 import Link from "next/link";
+import { BreadcrumbJsonLd } from "@/components/schema/BreadcrumbJsonLd";
 import { ChevronRight } from "lucide-react";
 import ProductCard from "@/components/ProductCard";
 import { getProductsByPath } from "@/lib/products";
@@ -20,6 +21,11 @@ export default function GotPage() {
   const gotProducts = getProductsByPath("/products/got/");
   return (
     <div className="min-h-screen bg-white font-sans antialiased selection:bg-[#F5821F] selection:text-white">
+      <BreadcrumbJsonLd items={[
+        { name: "Home", href: "/" },
+        { name: "Products", href: "/products/" },
+        { name: "GOT", href: "/products/got/" },
+      ]} />
       {/* ── Hero Banner ─────────────────────────────────────── */}
       <section className="relative bg-[#0B0D26] overflow-hidden border-b-4 border-[#F5821F]">
         {/* Grid texture */}

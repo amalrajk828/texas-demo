@@ -5,6 +5,7 @@ import { ChevronRight } from "lucide-react";
 import ProductCard from "@/components/ProductCard";
 import YouTubeEmbed from "@/components/YouTubeEmbed";
 import { getProductsByPath } from "@/lib/products";
+import { BreadcrumbJsonLd } from "@/components/schema/BreadcrumbJsonLd";
 
 export const metadata: Metadata = {
   title: "Control Room Interior & Console - Texas Technical Services",
@@ -21,6 +22,11 @@ export default function ControlRoomPage() {
   const products = getProductsByPath("/products/control-room-interior-and-console/");
   return (
     <div className="min-h-screen bg-white font-sans antialiased selection:bg-[#F5821F] selection:text-white">
+      <BreadcrumbJsonLd items={[
+        { name: "Home", href: "/" },
+        { name: "Products", href: "/products/" },
+        { name: "Control Room Interior & Console", href: "/products/control-room-interior-and-console/" },
+      ]} />
       {/* ── Hero Banner ─────────────────────────────────────── */}
       <section className="relative bg-[#0B0D26] overflow-hidden border-b-4 border-[#F5821F]">
         {/* Grid texture */}
