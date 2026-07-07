@@ -90,8 +90,12 @@ export default function FlowHero() {
             We provide flow measurement services in Ahmadi, Kuwait and across the GCC — metering
             control system upgrades, maintenance, and validation for custody metering systems. Our
             experienced team ensures your metering systems operate efficiently and accurately, meeting
-            API, AGA, ISO, and OIML standards. We also offer specialized consultancy to optimize your
-            custody metering processes and enhance productivity.
+            API, AGA, ISO, and OIML standards. We also offer{" "}
+            <Link href="/plc-scada-systems-integration/" className="text-[#e7212b] hover:underline">
+              SCADA flow meter integration
+            </Link>{" "}
+            for real-time monitoring and control of your metering systems, and specialized
+            consultancy to optimize your custody metering processes.
           </motion.p>
 
           {/* CTAs */}

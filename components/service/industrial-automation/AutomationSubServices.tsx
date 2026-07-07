@@ -156,7 +156,7 @@ export default function AutomationSubServices() {
             <div className="relative rounded-2xl overflow-hidden aspect-[21/7] shadow-2xl shadow-black/20">
               <Image
                 src="/images/services/automation_full.jpg"
-                alt="Industrial Process Automation"
+                alt="Industrial automation control system — PLC SCADA integration by Texas Technical Services Kuwait"
                 fill
                 sizes="100vw"
                 className="object-cover"

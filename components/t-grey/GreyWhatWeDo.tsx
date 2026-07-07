@@ -86,11 +86,11 @@ export default function GreyWhatWeDo() {
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-14 lg:gap-20 items-center">
           <FadeUp className="relative pb-10 lg:pb-0">
             <div className="relative rounded-2xl overflow-hidden aspect-[16/11] shadow-xl" style={{ border: "1px solid var(--g-border)" }}>
-              <Image src="/our-team/Oil-Gas.jpg" alt="Oil & Gas" fill sizes="(max-width: 1024px) 100vw, 50vw" className="object-cover" quality={90} />
+              <Image src="/our-team/Oil-Gas.jpg" alt="Texas Technical Services — oil and gas industrial automation and flow measurement solutions" fill sizes="(max-width: 1024px) 100vw, 50vw" className="object-cover" quality={90} />
               <div className="absolute bottom-0 inset-x-0 h-20" style={{ background: "linear-gradient(to top, rgba(0,0,0,0.3), transparent)" }} />
             </div>
             <div className="absolute bottom-0 right-0 lg:-right-6 w-[46%] rounded-2xl overflow-hidden aspect-[4/3] shadow-2xl" style={{ border: "3px solid var(--g-section-a)" }}>
-              <Image src="/our-team/whatwedo.jpg" alt="What we do" fill sizes="30vw" className="object-cover" quality={90} />
+              <Image src="/our-team/whatwedo.jpg" alt="Texas Technical Services — precision flow measurement and industrial automation company" fill sizes="30vw" className="object-cover" quality={90} />
             </div>
             <div className="absolute -top-4 -left-4 rounded-xl px-4 py-3 shadow-lg" style={{ background: "var(--color-brand-red)", boxShadow: "0 8px 24px color-mix(in srgb, var(--color-brand-red) 40%, transparent)" }}>
               <p className="text-white text-[10px] font-bold tracking-[2px] uppercase leading-none">ISO 9001:2015</p>

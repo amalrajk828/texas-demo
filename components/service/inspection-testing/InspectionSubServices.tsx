@@ -141,7 +141,7 @@ export default function InspectionSubServices() {
           <div className="relative rounded-2xl overflow-hidden aspect-[21/7] mb-10 shadow-2xl shadow-black/20">
             <Image
               src="/images/services/Usinage-2.jpg"
-              alt="Inspection and Testing Services"
+              alt="Industrial inspection and testing company Kuwait — NDT and mechanical testing services"
               fill
               sizes="100vw"
               className="object-cover"

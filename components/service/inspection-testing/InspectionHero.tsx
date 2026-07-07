@@ -90,7 +90,12 @@ export default function InspectionHero() {
               in the industry, mainly as a Third Party Inspection &amp; Testing Company. Since it was
               founded, TTS has participated in supporting our clients in ensuring quality and safety of
               their products — committed to providing objective, independent assessments of product
-              compliance and conformity.
+              compliance and conformity. We also provide{" "}
+              <Link href="/plc-scada-systems-integration/" className="text-[#e7212b] hover:underline">
+                industrial automation testing
+              </Link>{" "}
+              for automated control systems, ensuring your PLC and SCADA assets meet operational
+              and safety standards.
             </p>
             <p className="text-white/40 text-[15px] leading-relaxed max-w-2xl">
               TTS is led by strong management, technical expertise, engineers and well-trained
