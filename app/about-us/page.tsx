@@ -3,6 +3,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { Gauge, ClipboardCheck, Cpu } from "lucide-react";
 import { BreadcrumbJsonLd } from "@/components/schema/BreadcrumbJsonLd";
+import { ReviewJsonLd, AggregateRatingJsonLd } from "@/components/schema/ReviewJsonLd";
 
 export const metadata: Metadata = {
   title: "About Us | Industrial Automation Company in Kuwait & GCC",
@@ -122,6 +123,14 @@ export default function AboutPage() {
   return (
     <div className="bg-white">
       <BreadcrumbJsonLd items={[{ name: "Home", href: "/" }, { name: "About Us", href: "/about-us/" }]} />
+      <ReviewJsonLd
+        items={[
+          { author: "Peter John", reviewBody: testimonials[0].text, ratingValue: 5 },
+          { author: "Kevin Rogers", reviewBody: testimonials[1].text, ratingValue: 5 },
+          { author: "Jason Bright", reviewBody: testimonials[2].text, ratingValue: 5 },
+        ]}
+      />
+      <AggregateRatingJsonLd ratingValue={4.8} reviewCount={49} />
 
       {/* ═══ COMMITMENT ═══════════════════════════════════════════ */}
       <section className="py-16 lg:py-24 bg-[#F8F8F8]">

@@ -3,6 +3,7 @@ import Link from "next/link";
 import { ArrowRight, ChevronRight, MapPin, Cpu, Thermometer, ShieldCheck } from "lucide-react";
 import { BreadcrumbJsonLd } from "@/components/schema/BreadcrumbJsonLd";
 import { ServiceJsonLd } from "@/components/schema/ServiceJsonLd";
+import { FaqPageJsonLd } from "@/components/schema/FaqPageJsonLd";
 
 export const metadata: Metadata = {
   title: "Industrial Automation Services Dubai, UAE | PLC, SCADA & Flow Measurement",
@@ -72,6 +73,29 @@ const capabilities = [
   "Automation and engineering services across Dubai, UAE & GCC",
 ];
 
+const faqItems = [
+  {
+    q: "What industrial automation services do you offer in Dubai and the UAE?",
+    a: "We provide comprehensive industrial automation services across Dubai and the UAE including PLC and SCADA system integration, custody transfer flow metering, NDT inspection and mechanical testing, process control automation, CEMS solutions, and metering control system upgrades. Our Dubai-based team serves clients across the UAE and the wider GCC region.",
+  },
+  {
+    q: "Where is your Dubai office located?",
+    a: "Our Dubai office is located at Amna Naseer Building, Al Marar Area, 20th Street, Deira, Dubai, UAE. Deira is a central business district with excellent access to Dubai's industrial zones including Jebel Ali, Dubai Industrial City, and the Dubai Multi Commodities Centre (DMCC), allowing us to serve clients throughout the UAE.",
+  },
+  {
+    q: "Which industries do you serve in the UAE?",
+    a: "We serve oil and gas (upstream, midstream, downstream), refinery and petrochemical plants, power generation and water desalination, LNG terminals, and industrial manufacturing sectors across the UAE. Our ISO 9001:2015, ISO 14001:2015, and ISO 45001:2018 certifications demonstrate our commitment to quality, environment, and occupational health and safety.",
+  },
+  {
+    q: "What is the scope of your services across the UAE?",
+    a: "Our services span the entire UAE including Dubai, Abu Dhabi, Sharjah, and the Northern Emirates. We provide multi-brand PLC and SCADA integration, custody transfer flow metering and flow computer configuration, NDT inspection, mechanical testing, CEMS, and control system upgrades for oil and gas, power, and industrial facilities throughout the country.",
+  },
+  {
+    q: "How can I contact your Dubai team for a project consultation?",
+    a: "You can reach our Dubai team through the website contact form, by phone, or by visiting our Deira office. Our engineering team will discuss your project requirements, arrange a site visit if necessary, and provide a comprehensive proposal tailored to your specific needs and applicable UAE and international standards.",
+  },
+];
+
 export default function IndustrialAutomationDubaiPage() {
   return (
     <>
@@ -83,6 +107,7 @@ export default function IndustrialAutomationDubaiPage() {
         serviceType="Industrial Automation"
         areaServed={["Dubai", "United Arab Emirates", "Abu Dhabi", "Sharjah", "Saudi Arabia", "Kuwait", "Bahrain", "Qatar", "Oman"]}
       />
+      <FaqPageJsonLd items={faqItems} />
       {/* ══ HERO ════════════════════════════════════════════ */}
       <section className="relative bg-[#0B0D26] overflow-hidden pt-32 pb-20 lg:pb-28">
         <div
@@ -292,6 +317,99 @@ export default function IndustrialAutomationDubaiPage() {
         </div>
       </section>
 
+      {/* ══ HOW WE DELIVER ═════════════════════════════════ */}
+      <section className="py-20 lg:py-24 bg-white">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6">
+          <div className="flex items-center gap-2.5 mb-4">
+            <span className="w-5 h-px bg-[#e7212b]" />
+            <span className="text-[#e7212b] text-[10px] font-semibold tracking-[3.5px] uppercase">
+              How We Deliver
+            </span>
+          </div>
+          <h2 className="text-3xl sm:text-[2rem] font-bold text-[#0B0D26] leading-[1.15] mb-4">
+            Our Engagement Process
+          </h2>
+          <p className="text-gray-500 text-[14px] mb-12 max-w-2xl leading-relaxed">
+            From initial consultation through to commissioning and ongoing support, we follow a
+            structured project methodology that ensures quality, compliance, and on-time delivery
+            for every industrial automation project in the UAE.
+          </p>
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+            {[
+              {
+                step: "01",
+                title: "Discover & Assess",
+                desc: "We evaluate your current systems, identify pain points, and define project scope, deliverables, and compliance requirements specific to UAE and international standards.",
+              },
+              {
+                step: "02",
+                title: "Design & Engineer",
+                desc: "Our engineering team develops detailed system architecture, control philosophy, panel layouts, and software design — fully documented and reviewed against industry standards.",
+              },
+              {
+                step: "03",
+                title: "Implement & Integrate",
+                desc: "We procure, configure, and integrate all components — PLCs, SCADA, instrumentation, and networking — with rigorous in-house testing and FAT before site deployment.",
+              },
+              {
+                step: "04",
+                title: "Commission & Support",
+                desc: "On-site commissioning, SAT, operator training, and handover. We provide ongoing maintenance, remote monitoring, and 24/7 technical support from our Dubai base.",
+              },
+            ].map((item) => (
+              <div
+                key={item.step}
+                className="relative rounded-2xl border border-[#e8eaf0] bg-white p-6 hover:border-[#e7212b]/25 hover:shadow-lg hover:shadow-[#e7212b]/6 transition-all duration-300"
+              >
+                <span className="text-[2.5rem] font-bold text-[#e7212b]/10 leading-none">
+                  {item.step}
+                </span>
+                <h3 className="text-[15px] font-bold text-[#0B0D26] mt-1 mb-2">{item.title}</h3>
+                <p className="text-gray-500 text-[13px] leading-relaxed">{item.desc}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* ══ INDUSTRIES ══════════════════════════════════════ */}
+      <section className="py-20 lg:py-24 bg-[#f4f5f8]">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6">
+          <div className="flex items-center gap-2.5 mb-4">
+            <span className="w-5 h-px bg-[#e7212b]" />
+            <span className="text-[#e7212b] text-[10px] font-semibold tracking-[3.5px] uppercase">
+              Industries
+            </span>
+          </div>
+          <h2 className="text-3xl sm:text-[2rem] font-bold text-[#0B0D26] leading-[1.15] mb-4">
+            Industries We Serve in the UAE
+          </h2>
+          <p className="text-gray-500 text-[14px] mb-10 max-w-2xl leading-relaxed">
+            Our automation, flow measurement, and inspection solutions support critical operations
+            across the UAE key industrial sectors — from upstream oil and gas to downstream refining
+            and power generation.
+          </p>
+          <div className="grid grid-cols-2 md:grid-cols-3 gap-4">
+            {[
+              { name: "Oil & Gas", desc: "Upstream, midstream, and downstream — across Abu Dhabi and Dubai" },
+              { name: "Refinery & Petrochemical", desc: "ADNOC refineries and downstream complexes" },
+              { name: "Power & Desalination", desc: "Gas turbine, steam, and water desalination plants" },
+              { name: "LNG & Gas Processing", desc: "LNG terminals and gas treatment facilities" },
+              { name: "Manufacturing", desc: "Industrial automation for factories and processing plants" },
+              { name: "Infrastructure", desc: "Water, wastewater, and municipal infrastructure" },
+            ].map((ind) => (
+              <div
+                key={ind.name}
+                className="rounded-xl bg-white border border-[#e8eaf0] p-5 hover:border-[#e7212b]/20 hover:shadow-md transition-all duration-300"
+              >
+                <h3 className="text-[#0B0D26] font-bold text-sm mb-1">{ind.name}</h3>
+                <p className="text-gray-400 text-[12px] leading-snug">{ind.desc}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
       {/* ══ MAP ════════════════════════════════════════════ */}
       <section className="bg-[#f4f5f8] py-16 lg:py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6">
@@ -318,6 +436,42 @@ export default function IndustrialAutomationDubaiPage() {
               referrerPolicy="no-referrer-when-downgrade"
               title="Texas Technical Services — Dubai, UAE office location"
             />
+          </div>
+        </div>
+      </section>
+
+      {/* ══ FAQ ════════════════════════════════════════════ */}
+      <section className="bg-[#f4f5f8] py-20 lg:py-24">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6">
+          <div className="flex items-center gap-2.5 mb-4">
+            <span className="w-5 h-px bg-[#e7212b]" />
+            <span className="text-[#e7212b] text-[10px] font-semibold tracking-[3.5px] uppercase">
+              FAQ
+            </span>
+          </div>
+          <h2 className="text-3xl sm:text-[2.4rem] font-bold text-[#0B0D26] leading-[1.15] mb-12">
+            Questions About Industrial Automation in{" "}
+            <em className="not-italic text-[#e7212b]">Dubai &amp; the UAE</em>
+          </h2>
+          <div className="max-w-4xl mx-auto space-y-4">
+            {faqItems.map((item) => (
+              <details
+                key={item.q}
+                className="group bg-white border border-[#e8eaf0] rounded-2xl overflow-hidden transition-all duration-200 open:border-[#e7212b]/25 open:shadow-lg"
+              >
+                <summary className="flex items-center justify-between p-5 lg:p-6 cursor-pointer list-none">
+                  <span className="text-[15px] font-semibold text-[#0B0D26] pr-4 leading-snug">
+                    {item.q}
+                  </span>
+                  <span className="w-6 h-6 rounded-full bg-[#e7212b]/10 border border-[#e7212b]/20 flex items-center justify-center shrink-0 group-open:bg-[#e7212b] group-open:border-[#e7212b] transition-all duration-200">
+                    <ChevronRight className="w-3.5 h-3.5 text-[#e7212b] group-open:text-white group-open:rotate-90 transition-all duration-200" />
+                  </span>
+                </summary>
+                <div className="px-5 lg:px-6 pb-5 lg:pb-6 pt-0">
+                  <p className="text-gray-500 text-[14px] leading-[1.8]">{item.a}</p>
+                </div>
+              </details>
+            ))}
           </div>
         </div>
       </section>

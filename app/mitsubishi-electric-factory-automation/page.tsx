@@ -4,6 +4,7 @@ import { ArrowRight, ChevronRight, Cpu, Monitor, Zap, Server } from "lucide-reac
 import { BreadcrumbJsonLd } from "@/components/schema/BreadcrumbJsonLd";
 import { ServiceJsonLd } from "@/components/schema/ServiceJsonLd";
 import { ProductJsonLd } from "@/components/schema/ProductJsonLd";
+import { FaqPageJsonLd } from "@/components/schema/FaqPageJsonLd";
 
 export const metadata: Metadata = {
   title: "Mitsubishi Electric Factory Automation Solutions | Authorized Integrator",
@@ -79,6 +80,29 @@ const capabilities = [
   "Mitsubishi automation products — sales, support & spares",
 ];
 
+const faqItems = [
+  {
+    q: "Are you an authorized Mitsubishi Electric system integrator?",
+    a: "Yes, Texas Technical Services Co. is an authorized Mitsubishi Electric system integrator in Kuwait and the GCC. We have certified engineers trained on the full Mitsubishi automation portfolio including MELSEC PLC series, GOT HMI panels, MR-J servo drives, FREQROL VFDs, and ICONICS SCADA platforms. Our authorization ensures genuine products, factory-trained support, and warranty-backed installations.",
+  },
+  {
+    q: "Which Mitsubishi PLC series do you support?",
+    a: "We support the complete Mitsubishi MELSEC PLC lineup: the iQ-R series (high-end, modular, for complex automation), iQ-F series (compact, cost-effective for medium applications), L series (high-speed, mid-range), and legacy Q series (for existing installations). We also provide migration services from older A-series and Q-series to the latest iQ-R and iQ-F platforms.",
+  },
+  {
+    q: "What is the difference between MELSEC iQ-R and iQ-F series?",
+    a: "The MELSEC iQ-R series is Mitsubishi's flagship high-performance PLC designed for large-scale, complex automation systems with advanced motion control, high-speed networking (CC-Link IE), and extensive I/O capabilities. The iQ-F series is a compact, cost-optimized PLC for standalone machines and medium-scale applications, offering built-in Ethernet, positioning, and analog functions in a space-saving form factor. Both series share the same engineering software (GX Works3), simplifying development and maintenance.",
+  },
+  {
+    q: "Do you supply Mitsubishi spare parts and replacements?",
+    a: "Yes, we supply genuine Mitsubishi Electric automation components including MELSEC PLCs, GOT HMIs, MR-J servo drives and motors, FREQROL VFDs, and spare parts. As an authorized integrator, we provide competitive pricing, fast delivery across Kuwait and the GCC, and technical support for part selection and compatibility ensuring minimal downtime for your operations.",
+  },
+  {
+    q: "Which industries use Mitsubishi factory automation solutions?",
+    a: "Mitsubishi factory automation solutions are deployed across oil and gas (pipeline control, terminal automation), manufacturing (assembly lines, packaging, material handling), water and wastewater (pump control, treatment plants), power generation (turbine control, SCADA), cement and metals (process control), and food and beverage (filling, packaging, inspection). The reliability and precision of Mitsubishi equipment make it ideal for demanding industrial environments.",
+  },
+];
+
 export default function MitsubishiPage() {
   return (
     <>
@@ -97,6 +121,7 @@ export default function MitsubishiPage() {
         brand="Mitsubishi Electric"
         category="Industrial Automation"
       />
+      <FaqPageJsonLd items={faqItems} />
       {/* ══ HERO ════════════════════════════════════════════ */}
       <section className="relative bg-[#0B0D26] overflow-hidden pt-32 pb-20 lg:pb-28">
         <div
@@ -305,6 +330,135 @@ export default function MitsubishiPage() {
                 </div>
               </div>
             </div>
+          </div>
+        </div>
+      </section>
+
+      {/* ══ HOW WE DELIVER ═════════════════════════════════ */}
+      <section className="py-20 lg:py-24 bg-white">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6">
+          <div className="flex items-center gap-2.5 mb-4">
+            <span className="w-5 h-px bg-[#e7212b]" />
+            <span className="text-[#e7212b] text-[10px] font-semibold tracking-[3.5px] uppercase">
+              How We Deliver
+            </span>
+          </div>
+          <h2 className="text-3xl sm:text-[2rem] font-bold text-[#0B0D26] leading-[1.15] mb-4">
+            Our Engagement Process
+          </h2>
+          <p className="text-gray-500 text-[14px] mb-12 max-w-2xl leading-relaxed">
+            From product selection through to commissioning and after-sales support, we follow a
+            structured delivery methodology that ensures quality, compliance, and optimal performance
+            for every Mitsubishi automation project.
+          </p>
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+            {[
+              {
+                step: "01",
+                title: "Consult & Specify",
+                desc: "We assess your automation requirements, recommend the optimal Mitsubishi product selection, and define system architecture, budget, and timeline.",
+              },
+              {
+                step: "02",
+                title: "Engineer & Configure",
+                desc: "Our certified engineers develop PLC programs (GX Works3), HMI screens (GT Designer3), servo configurations (MR Configurator), and VFD setups (FR Configurator).",
+              },
+              {
+                step: "03",
+                title: "Integrate & Test",
+                desc: "We integrate all components, perform comprehensive in-house testing and FAT, and verify system performance against your specifications before shipment.",
+              },
+              {
+                step: "04",
+                title: "Install & Support",
+                desc: "On-site installation, commissioning, SAT, and operator training. We provide ongoing technical support, spare parts supply, and maintenance services across Kuwait and the GCC.",
+              },
+            ].map((item) => (
+              <div
+                key={item.step}
+                className="relative rounded-2xl border border-[#e8eaf0] bg-white p-6 hover:border-[#e7212b]/25 hover:shadow-lg hover:shadow-[#e7212b]/6 transition-all duration-300"
+              >
+                <span className="text-[2.5rem] font-bold text-[#e7212b]/10 leading-none">
+                  {item.step}
+                </span>
+                <h3 className="text-[15px] font-bold text-[#0B0D26] mt-1 mb-2">{item.title}</h3>
+                <p className="text-gray-500 text-[13px] leading-relaxed">{item.desc}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* ══ INDUSTRIES ══════════════════════════════════════ */}
+      <section className="py-20 lg:py-24 bg-[#f4f5f8]">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6">
+          <div className="flex items-center gap-2.5 mb-4">
+            <span className="w-5 h-px bg-[#e7212b]" />
+            <span className="text-[#e7212b] text-[10px] font-semibold tracking-[3.5px] uppercase">
+              Industries
+            </span>
+          </div>
+          <h2 className="text-3xl sm:text-[2rem] font-bold text-[#0B0D26] leading-[1.15] mb-4">
+            Industries Using Mitsubishi Automation
+          </h2>
+          <p className="text-gray-500 text-[14px] mb-10 max-w-2xl leading-relaxed">
+            Mitsubishi Electric factory automation solutions power critical operations across
+            diverse industries — from oil and gas pipeline control to high-speed manufacturing
+            and packaging lines.
+          </p>
+          <div className="grid grid-cols-2 md:grid-cols-3 gap-4">
+            {[
+              { name: "Oil & Gas", desc: "Pipeline SCADA, terminal automation, and process control" },
+              { name: "Manufacturing", desc: "Assembly lines, packaging, and material handling" },
+              { name: "Power & Utilities", desc: "Turbine control, SCADA, and plant automation" },
+              { name: "Water & Wastewater", desc: "Pump control, treatment plant automation" },
+              { name: "Cement & Metals", desc: "Process control and heavy machinery automation" },
+              { name: "Food & Beverage", desc: "Filling, packaging, inspection, and line control" },
+            ].map((ind) => (
+              <div
+                key={ind.name}
+                className="rounded-xl bg-white border border-[#e8eaf0] p-5 hover:border-[#e7212b]/20 hover:shadow-md transition-all duration-300"
+              >
+                <h3 className="text-[#0B0D26] font-bold text-sm mb-1">{ind.name}</h3>
+                <p className="text-gray-400 text-[12px] leading-snug">{ind.desc}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* ══ FAQ ════════════════════════════════════════════ */}
+      <section className="bg-[#f4f5f8] py-20 lg:py-24">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6">
+          <div className="flex items-center gap-2.5 mb-4">
+            <span className="w-5 h-px bg-[#e7212b]" />
+            <span className="text-[#e7212b] text-[10px] font-semibold tracking-[3.5px] uppercase">
+              FAQ
+            </span>
+          </div>
+          <h2 className="text-3xl sm:text-[2.4rem] font-bold text-[#0B0D26] leading-[1.15] mb-12">
+            Questions About{" "}
+            <em className="not-italic text-[#e7212b]">Mitsubishi Factory Automation</em>
+          </h2>
+          <div className="max-w-4xl mx-auto space-y-4">
+            {faqItems.map((item) => (
+              <details
+                key={item.q}
+                className="group bg-white border border-[#e8eaf0] rounded-2xl overflow-hidden transition-all duration-200 open:border-[#e7212b]/25 open:shadow-lg"
+              >
+                <summary className="flex items-center justify-between p-5 lg:p-6 cursor-pointer list-none">
+                  <span className="text-[15px] font-semibold text-[#0B0D26] pr-4 leading-snug">
+                    {item.q}
+                  </span>
+                  <span className="w-6 h-6 rounded-full bg-[#e7212b]/10 border border-[#e7212b]/20 flex items-center justify-center shrink-0 group-open:bg-[#e7212b] group-open:border-[#e7212b] transition-all duration-200">
+                    <ChevronRight className="w-3.5 h-3.5 text-[#e7212b] group-open:text-white group-open:rotate-90 transition-all duration-200" />
+                  </span>
+                </summary>
+                <div className="px-5 lg:px-6 pb-5 lg:pb-6 pt-0">
+                  <p className="text-gray-500 text-[14px] leading-[1.8]">{item.a}</p>
+                </div>
+              </details>
+            ))}
           </div>
         </div>
       </section>

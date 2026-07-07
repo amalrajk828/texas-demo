@@ -334,6 +334,98 @@ export default function PlcScadaPage() {
         </div>
       </section>
 
+      {/* ══ HOW WE DELIVER ═════════════════════════════════ */}
+      <section className="py-20 lg:py-24 bg-white">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6">
+          <div className="flex items-center gap-2.5 mb-4">
+            <span className="w-5 h-px bg-[#e7212b]" />
+            <span className="text-[#e7212b] text-[10px] font-semibold tracking-[3.5px] uppercase">
+              How We Deliver
+            </span>
+          </div>
+          <h2 className="text-3xl sm:text-[2rem] font-bold text-[#0B0D26] leading-[1.15] mb-4">
+            Our Engagement Process
+          </h2>
+          <p className="text-gray-500 text-[14px] mb-12 max-w-2xl leading-relaxed">
+            From initial consultation through to commissioning and ongoing support, we follow a
+            structured project methodology that ensures quality, compliance, and on-time delivery
+            for every PLC and SCADA integration project.
+          </p>
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+            {[
+              {
+                step: "01",
+                title: "Discover & Assess",
+                desc: "We evaluate your current control systems, identify automation gaps, and define project scope, architecture, and compliance requirements.",
+              },
+              {
+                step: "02",
+                title: "Design & Engineer",
+                desc: "Our team develops detailed PLC program architecture, SCADA system design, HMI layouts, network topology, and control philosophy documentation.",
+              },
+              {
+                step: "03",
+                title: "Implement & Integrate",
+                desc: "We develop, configure, and integrate all system components with rigorous in-house testing, FAT, and protocol-level verification.",
+              },
+              {
+                step: "04",
+                title: "Commission & Support",
+                desc: "On-site commissioning, SAT, operator training, documentation, and handover. We provide remote monitoring, maintenance, and 24/7 technical support.",
+              },
+            ].map((item) => (
+              <div
+                key={item.step}
+                className="relative rounded-2xl border border-[#e8eaf0] bg-white p-6 hover:border-[#e7212b]/25 hover:shadow-lg hover:shadow-[#e7212b]/6 transition-all duration-300"
+              >
+                <span className="text-[2.5rem] font-bold text-[#e7212b]/10 leading-none">
+                  {item.step}
+                </span>
+                <h3 className="text-[15px] font-bold text-[#0B0D26] mt-1 mb-2">{item.title}</h3>
+                <p className="text-gray-500 text-[13px] leading-relaxed">{item.desc}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* ══ INDUSTRIES ══════════════════════════════════════ */}
+      <section className="py-20 lg:py-24 bg-[#f4f5f8]">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6">
+          <div className="flex items-center gap-2.5 mb-4">
+            <span className="w-5 h-px bg-[#e7212b]" />
+            <span className="text-[#e7212b] text-[10px] font-semibold tracking-[3.5px] uppercase">
+              Industries
+            </span>
+          </div>
+          <h2 className="text-3xl sm:text-[2rem] font-bold text-[#0B0D26] leading-[1.15] mb-4">
+            Industries Using PLC &amp; SCADA Systems
+          </h2>
+          <p className="text-gray-500 text-[14px] mb-10 max-w-2xl leading-relaxed">
+            PLC and SCADA systems are the backbone of industrial automation across virtually every
+            sector — enabling precise control, remote monitoring, and operational intelligence.
+          </p>
+          <div className="grid grid-cols-2 md:grid-cols-3 gap-4">
+            {[
+              { name: "Oil & Gas", desc: "Upstream, midstream, downstream — pipeline SCADA and wellhead control" },
+              { name: "Refinery & Petrochemical", desc: "Distributed control and safety systems for complex processes" },
+              { name: "Power Generation", desc: "Gas turbine, steam turbine, and combined cycle plant control" },
+              { name: "Water & Wastewater", desc: "Pump station automation and treatment plant SCADA" },
+              { name: "Manufacturing", desc: "Assembly line automation, packaging, and quality control" },
+              { name: "LNG & Gas Processing", desc: "Liquefaction, regasification, and gas treatment control" },
+            ].map((ind) => (
+              <div
+                key={ind.name}
+                className="rounded-xl bg-white border border-[#e8eaf0] p-5 hover:border-[#e7212b]/20 hover:shadow-md transition-all duration-300"
+              >
+                <h3 className="text-[#0B0D26] font-bold text-sm mb-1">{ind.name}</h3>
+                <p className="text-gray-400 text-[12px] leading-snug">{ind.desc}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
       {/* ══ FAQ SECTION ════════════════════════════════════ */}
       <section className="bg-[#f4f5f8] py-20 lg:py-24">
         <div className="max-w-7xl mx-auto px-4 sm:px-6">

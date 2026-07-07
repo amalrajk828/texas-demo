@@ -3,6 +3,7 @@ import Link from "next/link";
 import { ArrowRight, ChevronRight, MapPin, Cpu, Thermometer, ShieldCheck } from "lucide-react";
 import { BreadcrumbJsonLd } from "@/components/schema/BreadcrumbJsonLd";
 import { ServiceJsonLd } from "@/components/schema/ServiceJsonLd";
+import { FaqPageJsonLd } from "@/components/schema/FaqPageJsonLd";
 
 export const metadata: Metadata = {
   title: "Industrial Automation Services Kuwait | PLC, SCADA & Flow Measurement",
@@ -69,6 +70,29 @@ const capabilities = [
   "Automation and engineering services across Fahaheel & GCC",
 ];
 
+const faqItems = [
+  {
+    q: "What industrial automation services does Texas Technical Services offer in Kuwait?",
+    a: "We provide comprehensive industrial automation services in Kuwait including PLC and SCADA system integration, custody transfer flow metering and flow computer configuration, NDT inspection and mechanical testing, process control automation, CEMS solutions, and metering control system upgrades. Our Fahaheel-based team serves clients across Kuwait and the GCC.",
+  },
+  {
+    q: "Where is your Kuwait office located?",
+    a: "Our Kuwait office is located in Munira Tower, 9th Floor — Makkah Street, Block 7, Fahaheel, Kuwait. Fahaheel is strategically positioned near the heart of Kuwait's oil and gas industrial zone, allowing us to provide rapid on-site support to refineries, petrochemical plants, and upstream facilities across the region including Ahmadi, Shuaiba, and Mina Al-Ahmadi.",
+  },
+  {
+    q: "Which industries do you serve in Kuwait?",
+    a: "We serve oil and gas (upstream, midstream, downstream), refinery and petrochemical plants, power generation and distribution, LNG terminals, water and wastewater treatment facilities, cement and metal production, and industrial manufacturing sectors across Kuwait. Our ISO 9001:2015, ISO 14001:2015, and ISO 45001:2018 certifications ensure compliance with the highest industry standards.",
+  },
+  {
+    q: "What PLC and SCADA systems do you work with?",
+    a: "We are multi-brand system integrators working with Siemens (S7-300/400/1200/1500), Allen-Bradley (ControlLogix, CompactLogix), Schneider Electric (Modicon, Unity Pro), and Mitsubishi Electric (MELSEC iQ-R, iQ-F, L, Q series). Our SCADA expertise spans ICONICS, WinCC, iFIX, and custom HMI development, supporting protocols including Modbus, Profibus, EtherNet/IP, and OPC UA.",
+  },
+  {
+    q: "How can I request a quote for automation services in Kuwait?",
+    a: "You can contact our Fahaheel office directly through the contact form on our website, call us, or visit our office in Munira Tower. Our engineering team will discuss your requirements, conduct a site assessment if needed, and provide a detailed proposal tailored to your project scope and industry standards.",
+  },
+];
+
 export default function IndustrialAutomationKuwaitPage() {
   return (
     <>
@@ -80,6 +104,7 @@ export default function IndustrialAutomationKuwaitPage() {
         serviceType="Industrial Automation"
         areaServed={["Kuwait", "United Arab Emirates", "Saudi Arabia", "Bahrain", "Qatar", "Oman"]}
       />
+      <FaqPageJsonLd items={faqItems} />
       {/* ══ HERO ════════════════════════════════════════════ */}
       <section className="relative bg-[#0B0D26] overflow-hidden pt-32 pb-20 lg:pb-28">
         <div
@@ -292,6 +317,99 @@ export default function IndustrialAutomationKuwaitPage() {
 
 
 
+      {/* ══ HOW WE DELIVER ═════════════════════════════════ */}
+      <section className="py-20 lg:py-24 bg-white">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6">
+          <div className="flex items-center gap-2.5 mb-4">
+            <span className="w-5 h-px bg-[#e7212b]" />
+            <span className="text-[#e7212b] text-[10px] font-semibold tracking-[3.5px] uppercase">
+              How We Deliver
+            </span>
+          </div>
+          <h2 className="text-3xl sm:text-[2rem] font-bold text-[#0B0D26] leading-[1.15] mb-4">
+            Our Engagement Process
+          </h2>
+          <p className="text-gray-500 text-[14px] mb-12 max-w-2xl leading-relaxed">
+            From initial consultation through to commissioning and ongoing support, we follow a
+            structured project methodology that ensures quality, compliance, and on-time delivery
+            for every industrial automation project in Kuwait.
+          </p>
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+            {[
+              {
+                step: "01",
+                title: "Discover & Assess",
+                desc: "We evaluate your current systems, identify pain points, and define project scope, deliverables, and compliance requirements specific to Kuwait's industrial regulations.",
+              },
+              {
+                step: "02",
+                title: "Design & Engineer",
+                desc: "Our engineering team develops detailed system architecture, control philosophy, panel layouts, and software design — fully documented and reviewed against industry standards.",
+              },
+              {
+                step: "03",
+                title: "Implement & Integrate",
+                desc: "We procure, configure, and integrate all components — PLCs, SCADA, instrumentation, and networking — with rigorous in-house testing and FAT before site deployment.",
+              },
+              {
+                step: "04",
+                title: "Commission & Support",
+                desc: "On-site commissioning, SAT, operator training, and handover. We provide ongoing maintenance, remote monitoring, and 24/7 technical support from our Fahaheel base.",
+              },
+            ].map((item) => (
+              <div
+                key={item.step}
+                className="relative rounded-2xl border border-[#e8eaf0] bg-white p-6 hover:border-[#e7212b]/25 hover:shadow-lg hover:shadow-[#e7212b]/6 transition-all duration-300"
+              >
+                <span className="text-[2.5rem] font-bold text-[#e7212b]/10 leading-none">
+                  {item.step}
+                </span>
+                <h3 className="text-[15px] font-bold text-[#0B0D26] mt-1 mb-2">{item.title}</h3>
+                <p className="text-gray-500 text-[13px] leading-relaxed">{item.desc}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* ══ INDUSTRIES ══════════════════════════════════════ */}
+      <section className="py-20 lg:py-24 bg-[#f4f5f8]">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6">
+          <div className="flex items-center gap-2.5 mb-4">
+            <span className="w-5 h-px bg-[#e7212b]" />
+            <span className="text-[#e7212b] text-[10px] font-semibold tracking-[3.5px] uppercase">
+              Industries
+            </span>
+          </div>
+          <h2 className="text-3xl sm:text-[2rem] font-bold text-[#0B0D26] leading-[1.15] mb-4">
+            Industries We Serve in Kuwait
+          </h2>
+          <p className="text-gray-500 text-[14px] mb-10 max-w-2xl leading-relaxed">
+            Our automation, flow measurement, and inspection solutions support critical operations
+            across Kuwait key industrial sectors — from upstream oil and gas to downstream refining
+            and power generation.
+          </p>
+          <div className="grid grid-cols-2 md:grid-cols-3 gap-4">
+            {[
+              { name: "Oil & Gas", desc: "Upstream, midstream, and downstream — from wellhead to export" },
+              { name: "Refinery & Petrochemical", desc: "KNPC, KIPIC refineries and integrated petchem complexes" },
+              { name: "Power Generation", desc: "Gas turbine, steam, and co-generation plants across Kuwait" },
+              { name: "LNG & Gas Processing", desc: "LNG terminals, gas treatment, and NGL fractionation" },
+              { name: "Water & Wastewater", desc: "Desalination, water treatment, and distribution networks" },
+              { name: "Cement & Metals", desc: "Process automation and control for heavy manufacturing" },
+            ].map((ind) => (
+              <div
+                key={ind.name}
+                className="rounded-xl bg-white border border-[#e8eaf0] p-5 hover:border-[#e7212b]/20 hover:shadow-md transition-all duration-300"
+              >
+                <h3 className="text-[#0B0D26] font-bold text-sm mb-1">{ind.name}</h3>
+                <p className="text-gray-400 text-[12px] leading-snug">{ind.desc}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
       {/* ══ MAP ════════════════════════════════════════════ */}
       <section className="bg-[#f4f5f8] py-16 lg:py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6">
@@ -318,6 +436,42 @@ export default function IndustrialAutomationKuwaitPage() {
               referrerPolicy="no-referrer-when-downgrade"
               title="Texas Technical Services — Fahaheel, Kuwait office location"
             />
+          </div>
+        </div>
+      </section>
+
+      {/* ══ FAQ ════════════════════════════════════════════ */}
+      <section className="bg-[#f4f5f8] py-20 lg:py-24">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6">
+          <div className="flex items-center gap-2.5 mb-4">
+            <span className="w-5 h-px bg-[#e7212b]" />
+            <span className="text-[#e7212b] text-[10px] font-semibold tracking-[3.5px] uppercase">
+              FAQ
+            </span>
+          </div>
+          <h2 className="text-3xl sm:text-[2.4rem] font-bold text-[#0B0D26] leading-[1.15] mb-12">
+            Questions About Industrial Automation in{" "}
+            <em className="not-italic text-[#e7212b]">Kuwait</em>
+          </h2>
+          <div className="max-w-4xl mx-auto space-y-4">
+            {faqItems.map((item) => (
+              <details
+                key={item.q}
+                className="group bg-white border border-[#e8eaf0] rounded-2xl overflow-hidden transition-all duration-200 open:border-[#e7212b]/25 open:shadow-lg"
+              >
+                <summary className="flex items-center justify-between p-5 lg:p-6 cursor-pointer list-none">
+                  <span className="text-[15px] font-semibold text-[#0B0D26] pr-4 leading-snug">
+                    {item.q}
+                  </span>
+                  <span className="w-6 h-6 rounded-full bg-[#e7212b]/10 border border-[#e7212b]/20 flex items-center justify-center shrink-0 group-open:bg-[#e7212b] group-open:border-[#e7212b] transition-all duration-200">
+                    <ChevronRight className="w-3.5 h-3.5 text-[#e7212b] group-open:text-white group-open:rotate-90 transition-all duration-200" />
+                  </span>
+                </summary>
+                <div className="px-5 lg:px-6 pb-5 lg:pb-6 pt-0">
+                  <p className="text-gray-500 text-[14px] leading-[1.8]">{item.a}</p>
+                </div>
+              </details>
+            ))}
           </div>
         </div>
       </section>
