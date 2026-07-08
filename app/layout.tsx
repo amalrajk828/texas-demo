@@ -78,7 +78,12 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
                   addressCountry: "AE",
                 },
               ],
-              sameAs: ["https://linkedin.com", "https://facebook.com", "https://instagram.com"],
+              sameAs: [
+                "https://www.linkedin.com/company/texas-technical-service-company",
+                "https://www.facebook.com/texastechserv",
+                "https://www.instagram.com/texas_technical_services",
+                "https://x.com/texastechserv",
+              ],
               knowsAbout: [
                 "Industrial Automation",
                 "PLC SCADA Integration",

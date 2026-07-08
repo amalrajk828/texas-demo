@@ -1,6 +1,6 @@
 import Link from "next/link";
 import Image from "next/image";
-import { Mail, Phone, MapPin } from "lucide-react";
+import { Mail, Phone, MapPin, LayoutGrid } from "lucide-react";
 
 const services = [
   { label: "Flow Measurement Solutions", href: "/service/flow-measurement-solutions/" },
@@ -25,17 +25,17 @@ const industries = [
 const socials = [
   {
     label: "LinkedIn",
-    href: "https://linkedin.com",
+    href: "https://www.linkedin.com/company/texas-technical-service-company",
     path: "M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6zM2 9h4v12H2z M4 6a2 2 0 1 0 0-4 2 2 0 0 0 0 4z",
   },
   {
     label: "Facebook",
-    href: "https://facebook.com",
+    href: "https://www.facebook.com/texastechserv",
     path: "M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z",
   },
   {
     label: "Instagram",
-    href: "https://instagram.com",
+    href: "https://www.instagram.com/texas_technical_services",
     path: "M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z M17.5 6.5h.01 M7.5 2h9A5.5 5.5 0 0 1 22 7.5v9A5.5 5.5 0 0 1 16.5 22h-9A5.5 5.5 0 0 1 2 16.5v-9A5.5 5.5 0 0 1 7.5 2z",
   },
 ];
@@ -84,7 +84,7 @@ export default function Footer() {
               <Mail className="w-3.5 h-3.5 shrink-0" />
               sales@texastechserv.com
             </a>
-            <div className="flex gap-2">
+            <div className="flex flex-wrap gap-2">
               {socials.map(({ href, label, path }) => (
                 <a
                   key={label}
@@ -100,6 +100,13 @@ export default function Footer() {
                 </a>
               ))}
             </div>
+              <Link
+                href="/social-media/"
+                className="text-white/30 text-[11px] hover:text-white transition-colors flex items-center gap-1.5 mt-3"
+              >
+                <LayoutGrid className="w-3 h-3" />
+                View all platforms
+              </Link>
           </div>
 
           {/* Locations */}

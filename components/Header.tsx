@@ -3,7 +3,7 @@ import { useState, useEffect, useRef } from "react";
 import Link from "next/link";
 import Image from "next/image";
 import { usePathname } from "next/navigation";
-import { ChevronDown, Menu, X, LayoutGrid } from "lucide-react";
+import { ChevronDown, ChevronRight, Menu, X, LayoutGrid } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
 
 type NavItem = {
@@ -64,28 +64,23 @@ const NAV: NavItem[] = [
 const SOCIALS = [
   {
     label: "LinkedIn",
-    href: "https://linkedin.com",
+    href: "https://www.linkedin.com/company/texas-technical-service-company",
     path: "M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6zM2 9h4v12H2z M4 6a2 2 0 1 0 0-4 2 2 0 0 0 0 4z",
   },
   {
     label: "Facebook",
-    href: "https://facebook.com",
+    href: "https://www.facebook.com/texastechserv",
     path: "M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z",
   },
   {
     label: "Instagram",
-    href: "https://instagram.com",
+    href: "https://www.instagram.com/texas_technical_services",
     path: "M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z M17.5 6.5h.01 M7.5 2h9A5.5 5.5 0 0 1 22 7.5v9A5.5 5.5 0 0 1 16.5 22h-9A5.5 5.5 0 0 1 2 16.5v-9A5.5 5.5 0 0 1 7.5 2z",
   },
   {
     label: "Twitter / X",
-    href: "https://twitter.com",
+    href: "https://x.com/texastechserv",
     path: "M4 4 L20 20 M20 4 L4 20",
-  },
-  {
-    label: "Google",
-    href: "https://google.com",
-    path: "M21.35 11.1H12v2.8h5.35C16.75 17 14.6 18.6 12 18.6c-3.64 0-6.6-2.96-6.6-6.6s2.96-6.6 6.6-6.6c1.65 0 3.14.62 4.28 1.62L18.08 5C16.3 3.46 14.28 2.5 12 2.5 6.48 2.5 2 6.98 2 12.5s4.48 10 10 10c5.88 0 9.8-4.14 9.8-9.96 0-.64-.06-1.28-.17-1.9z",
   },
 ];
 
@@ -298,6 +293,18 @@ export default function Header() {
 
               {/* Social links */}
               <div className="px-3 py-4 space-y-1">
+                <Link
+                  href="/social-media/"
+                  onClick={() => setSocialOpen(false)}
+                  className="flex items-center gap-3.5 px-3 py-3 rounded-xl text-white/70 hover:text-white hover:bg-white/5 transition-colors group mb-1"
+                >
+                  <span className="w-8 h-8 rounded-full border border-white/10 group-hover:border-brand-red/40 flex items-center justify-center transition-colors shrink-0">
+                    <LayoutGrid className="w-3.5 h-3.5" />
+                  </span>
+                  <span className="text-[13px] font-medium">All Platforms</span>
+                  <ChevronRight className="w-3.5 h-3.5 ml-auto text-white/30 group-hover:text-white/60" />
+                </Link>
+                <div className="border-t border-white/10 my-2" />
                 {SOCIALS.map(({ label, href, path }) => (
                   <a
                     key={label}
