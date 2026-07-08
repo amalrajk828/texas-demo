@@ -6,6 +6,7 @@ import { ChevronRight, Check, ArrowRight, ExternalLink, Download } from "lucide-
 import { products, getProductBySlug, getProduct, getAllProductSlugs, type BulletSection, type SubBlock } from "@/lib/products";
 import ProductInquiryForm from "@/components/ProductInquiryForm";
 import RelatedProducts from "@/components/RelatedProducts";
+import { ProductJsonLd } from "@/components/schema/ProductJsonLd";
 
 type Props = { params: Promise<{ slug: string }> };
 
@@ -181,6 +182,13 @@ export default async function ProductPage({ params }: Props) {
 
   return (
     <>
+      <ProductJsonLd
+        name={product.name}
+        description={product.paragraphs?.[0] ?? `${product.name} — ${product.brand}`}
+        url={`/portfolio/${product.slug}/`}
+        brand={product.brand}
+        category={product.category}
+      />
       {/* ══ HERO ══════════════════════════════════════════════════ */}
       <section className="relative overflow-hidden min-h-[400px] flex items-end">
         <div className="absolute inset-0">

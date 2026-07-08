@@ -10,10 +10,21 @@ export const metadata: Metadata = {
   title: "AC Servos - Texas Technical Services",
   description: "Mitsubishi Electric MELSERVO AC servo drives and motors for precise motion control in industrial automation.",
   alternates: { canonical: "https://texastechserv.com/products/acservos/" },
+  keywords: [
+    "Mitsubishi AC servo drives",
+    "MELSERVO servo motors",
+    "MR-J5 servo amplifier",
+    "motion control solutions Kuwait",
+  ],
   openGraph: {
     title: "AC Servos - Texas Technical Services",
     description: "Mitsubishi Electric MELSERVO AC servo drives and motors for precise motion control in industrial automation.",
     url: "https://texastechserv.com/products/acservos/",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "AC Servos - Texas Technical Services",
+    description: "Mitsubishi Electric MELSERVO AC servo drives and motors for precise motion control in industrial automation.",
   },
 };
 

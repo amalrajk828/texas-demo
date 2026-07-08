@@ -8,11 +8,24 @@ export const metadata: Metadata = {
   description:
     "Texas Technical Services delivers CEMS, flow meters, flow computers, analyzers, and industrial process automation systems for power plants — optimising performance, emissions monitoring, and operational efficiency.",
   alternates: { canonical: "https://texastechserv.com/industries/power-plant/" },
+  keywords: [
+    "power plant CEMS solutions",
+    "power plant flow meters",
+    "power plant industrial automation",
+    "emissions monitoring power generation",
+    "flow computer power plant Kuwait",
+  ],
   openGraph: {
     title: "Power Plant Industry Solutions | Texas Technical Services",
     description:
       "Comprehensive OEM solutions for power generation — CEMS, flow meters, analyzers, and automation systems backed by 15+ years of industrial expertise.",
     url: "https://texastechserv.com/industries/power-plant/",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Power Plant Industry Solutions | Texas Technical Services",
+    description:
+      "Comprehensive OEM solutions for power generation — CEMS, flow meters, analyzers, and automation systems backed by 15+ years of industrial expertise.",
   },
 };
 

@@ -8,11 +8,24 @@ export const metadata: Metadata = {
   description:
     "Texas Technical Services delivers CEMS, analyzers, flow meters, and industrial process automation systems for water treatment — ensuring precise monitoring, quality control, and operational efficiency.",
   alternates: { canonical: "https://texastechserv.com/industries/water-treatment/" },
+  keywords: [
+    "water treatment flow meters",
+    "water treatment CEMS solutions",
+    "water treatment dust analyzers",
+    "industrial water treatment automation",
+    "water treatment monitoring systems Kuwait",
+  ],
   openGraph: {
     title: "Water Treatment Industry Solutions | Texas Technical Services",
     description:
       "Advanced OEM solutions for municipal and industrial water treatment — flow meters, CEMS, dust analyzers, and automation systems backed by 15+ years of expertise.",
     url: "https://texastechserv.com/industries/water-treatment/",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Water Treatment Industry Solutions | Texas Technical Services",
+    description:
+      "Advanced OEM solutions for municipal and industrial water treatment — flow meters, CEMS, dust analyzers, and automation systems backed by 15+ years of expertise.",
   },
 };
 

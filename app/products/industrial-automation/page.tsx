@@ -10,10 +10,21 @@ export const metadata: Metadata = {
   title: "Industrial Automation - Texas Technical Services",
   description: "End-to-end industrial automation solutions including PLC & I/O modules, control panels, industrial workstations, controllers, converters, Ethernet switches, and command centre consoles.",
   alternates: { canonical: "https://texastechserv.com/products/industrial-automation/" },
+  keywords: [
+    "industrial automation solutions Kuwait",
+    "PLC I/O modules",
+    "industrial control panels",
+    "Ethernet switches industrial",
+  ],
   openGraph: {
     title: "Industrial Automation - Texas Technical Services",
     description: "End-to-end industrial automation solutions including PLC & I/O modules, control panels, industrial workstations, controllers, converters, Ethernet switches, and command centre consoles.",
     url: "https://texastechserv.com/products/industrial-automation/",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Industrial Automation - Texas Technical Services",
+    description: "End-to-end industrial automation solutions including PLC & I/O modules, control panels, industrial workstations, controllers, converters, Ethernet switches, and command centre consoles.",
   },
 };
 

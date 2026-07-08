@@ -10,10 +10,21 @@ export const metadata: Metadata = {
   title: "GOT (Graphic Operator Panels) - Texas Technical Services",
   description: "Mitsubishi Electric GOT2000 Series graphic operation terminals for industrial automation systems.",
   alternates: { canonical: "https://texastechserv.com/products/got/" },
+  keywords: [
+    "Mitsubishi GOT HMI",
+    "GOT2000 graphic operator panel",
+    "HMI touchscreen Kuwait",
+    "industrial HMI solutions",
+  ],
   openGraph: {
     title: "GOT (Graphic Operator Panels) - Texas Technical Services",
     description: "Mitsubishi Electric GOT2000 Series graphic operation terminals for industrial automation systems.",
     url: "https://texastechserv.com/products/got/",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "GOT (Graphic Operator Panels) - Texas Technical Services",
+    description: "Mitsubishi Electric GOT2000 Series graphic operation terminals for industrial automation systems.",
   },
 };
 

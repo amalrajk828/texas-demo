@@ -10,10 +10,21 @@ export const metadata: Metadata = {
   title: "Frequency Inverters (VFD) - Texas Technical Services",
   description: "Mitsubishi Electric FR Series frequency inverters for precise motor speed control across industrial applications.",
   alternates: { canonical: "https://texastechserv.com/products/frequency-inverter-vfd/" },
+  keywords: [
+    "Mitsubishi frequency inverter",
+    "FR Series VFD",
+    "variable frequency drive Kuwait",
+    "motor speed control solutions",
+  ],
   openGraph: {
     title: "Frequency Inverters (VFD) - Texas Technical Services",
     description: "Mitsubishi Electric FR Series frequency inverters for precise motor speed control across industrial applications.",
     url: "https://texastechserv.com/products/frequency-inverter-vfd/",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Frequency Inverters (VFD) - Texas Technical Services",
+    description: "Mitsubishi Electric FR Series frequency inverters for precise motor speed control across industrial applications.",
   },
 };
 

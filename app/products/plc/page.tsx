@@ -10,10 +10,22 @@ export const metadata: Metadata = {
   title: "PLC - Texas Technical Services",
   description: "Mitsubishi Electric PLC solutions for industrial automation including MELSEC iQ-R, MELSEC-Q, FX5U, FX5UJ, and FX5S series.",
   alternates: { canonical: "https://texastechserv.com/products/plc/" },
+  keywords: [
+    "Mitsubishi PLC Kuwait",
+    "MELSEC iQ-R series",
+    "MELSEC-Q PLC",
+    "FX5U programmable controller",
+    "industrial PLC solutions",
+  ],
   openGraph: {
     title: "PLC - Texas Technical Services",
     description: "Mitsubishi Electric PLC solutions for industrial automation including MELSEC iQ-R, MELSEC-Q, FX5U, FX5UJ, and FX5S series.",
     url: "https://texastechserv.com/products/plc/",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "PLC - Texas Technical Services",
+    description: "Mitsubishi Electric PLC solutions for industrial automation including MELSEC iQ-R, MELSEC-Q, FX5U, FX5UJ, and FX5S series.",
   },
 };
 

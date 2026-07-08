@@ -10,10 +10,21 @@ export const metadata: Metadata = {
   title: "ICONICS - Texas Technical Services",
   description: "ICONICS GENESIS64 SCADA and HMI software for real-time visualization and control of industrial processes.",
   alternates: { canonical: "https://texastechserv.com/products/iconics/" },
+  keywords: [
+    "ICONICS SCADA software",
+    "GENESIS64 HMI",
+    "SCADA visualization Kuwait",
+    "industrial SCADA solutions",
+  ],
   openGraph: {
     title: "ICONICS - Texas Technical Services",
     description: "ICONICS GENESIS64 SCADA and HMI software for real-time visualization and control of industrial processes.",
     url: "https://texastechserv.com/products/iconics/",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "ICONICS - Texas Technical Services",
+    description: "ICONICS GENESIS64 SCADA and HMI software for real-time visualization and control of industrial processes.",
   },
 };
 

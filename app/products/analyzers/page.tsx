@@ -11,11 +11,24 @@ export const metadata: Metadata = {
   description:
     "SICK gas analyzers, CEMS, dust analyzers, and in-situ gas analysis solutions for emissions monitoring, process control, and environmental compliance.",
   alternates: { canonical: "https://texastechserv.com/products/analyzers/" },
+  keywords: [
+    "gas analyzers Kuwait",
+    "CEMS emissions monitoring",
+    "dust analyzers SICK",
+    "in-situ gas analysis",
+    "industrial process analyzers",
+  ],
   openGraph: {
     title: "Analyzers - Texas Technical Services",
     description:
       "SICK gas analyzers, CEMS, dust analyzers, and in-situ gas analysis solutions.",
     url: "https://texastechserv.com/products/analyzers/",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Analyzers - Texas Technical Services",
+    description:
+      "SICK gas analyzers, CEMS, dust analyzers, and in-situ gas analysis solutions.",
   },
 };
 

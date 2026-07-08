@@ -10,11 +10,23 @@ export const metadata: Metadata = {
   description:
     "SICK dust analyzers for continuous monitoring of dust concentration and opacity in stack emissions from power plants, waste incineration, and industrial facilities.",
   alternates: { canonical: "https://texastechserv.com/products/analyzers/dust-analyzers/" },
+  keywords: [
+    "dust analyzers Kuwait",
+    "SICK DUSTHUNTER",
+    "stack emissions monitoring",
+    "dust concentration measurement",
+  ],
   openGraph: {
     title: "Dust Analyzers - Texas Technical Services",
     description:
       "SICK dust analyzers for dust concentration and opacity monitoring in stack emissions.",
     url: "https://texastechserv.com/products/analyzers/dust-analyzers/",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Dust Analyzers - Texas Technical Services",
+    description:
+      "SICK dust analyzers for dust concentration and opacity monitoring in stack emissions.",
   },
 };
 

@@ -10,10 +10,22 @@ export const metadata: Metadata = {
   title: "Sensors - Texas Technical Services",
   description: "Texas Technical Services offers a wide range of sensors for precise data acquisition, enhancing the efficiency and control of industrial processes.",
   alternates: { canonical: "https://texastechserv.com/products/sensors/" },
+  keywords: [
+    "industrial sensors Kuwait",
+    "SICK photoelectric sensors",
+    "proximity sensors",
+    "safety light curtains",
+    "industrial automation sensors",
+  ],
   openGraph: {
     title: "Sensors - Texas Technical Services",
     description: "Texas Technical Services offers a wide range of sensors for precise data acquisition, enhancing the efficiency and control of industrial processes.",
     url: "https://texastechserv.com/products/sensors/",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Sensors - Texas Technical Services",
+    description: "Texas Technical Services offers a wide range of sensors for precise data acquisition, enhancing the efficiency and control of industrial processes.",
   },
 };
 

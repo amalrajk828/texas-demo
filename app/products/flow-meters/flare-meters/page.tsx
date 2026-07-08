@@ -11,11 +11,23 @@ export const metadata: Metadata = {
   description:
     "SICK ultrasonic flare gas and steam flow meters — FLOWSIC100 Flare and FLOWSIC100-Flare-XT for reliable, low-maintenance measurement on refinery and petrochemical flare stacks.",
   alternates: { canonical: "https://texastechserv.com/products/flow-meters/flare-meters/" },
+  keywords: [
+    "flare gas flow meters",
+    "SICK FLOWSIC100 Flare",
+    "flare stack measurement",
+    "steam flow meters refinery",
+  ],
   openGraph: {
     title: "Flare Meters - Texas Technical Services",
     description:
       "SICK ultrasonic flare gas and steam flow meters — FLOWSIC100 Flare and FLOWSIC100-Flare-XT for reliable, low-maintenance measurement on flare stacks.",
     url: "https://texastechserv.com/products/flow-meters/flare-meters/",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Flare Meters - Texas Technical Services",
+    description:
+      "SICK ultrasonic flare gas and steam flow meters — FLOWSIC100 Flare and FLOWSIC100-Flare-XT for reliable, low-maintenance measurement on flare stacks.",
   },
 };
 

@@ -11,11 +11,24 @@ export const metadata: Metadata = {
   description:
     "Precision flow measurement instruments for liquids, gases, and flare applications from SICK and Faure Herman — custody transfer and process monitoring solutions.",
   alternates: { canonical: "https://texastechserv.com/products/flow-meters/" },
+  keywords: [
+    "flow meters Kuwait",
+    "ultrasonic flow meters",
+    "SICK flow meters",
+    "Faure Herman flow meters",
+    "custody transfer flow measurement",
+  ],
   openGraph: {
     title: "Flow Meters - Texas Technical Services",
     description:
       "Precision flow measurement instruments for liquids, gases, and flare applications from SICK and Faure Herman.",
     url: "https://texastechserv.com/products/flow-meters/",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Flow Meters - Texas Technical Services",
+    description:
+      "Precision flow measurement instruments for liquids, gases, and flare applications from SICK and Faure Herman.",
   },
 };
 

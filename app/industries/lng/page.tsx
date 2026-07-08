@@ -9,11 +9,24 @@ export const metadata: Metadata = {
   description:
     "Texas Technical Services delivers precision flow metering, CEMS, analyzers, and industrial automation solutions for LNG plant operations — ensuring accurate measurement, efficiency, and safety.",
   alternates: { canonical: "https://texastechserv.com/industries/lng/" },
+  keywords: [
+    "LNG flow metering Kuwait",
+    "LNG custody transfer solutions",
+    "LNG CEMS monitoring",
+    "LNG gas analyzers",
+    "industrial automation LNG plants",
+  ],
   openGraph: {
     title: "LNG Industry Solutions | Texas Technical Services",
     description:
       "Cutting-edge flow metering, flow computers, and analyzers for LNG custody transfer and plant operations — backed by 15+ years of precision engineering.",
     url: "https://texastechserv.com/industries/lng/",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "LNG Industry Solutions | Texas Technical Services",
+    description:
+      "Cutting-edge flow metering, flow computers, and analyzers for LNG custody transfer and plant operations — backed by 15+ years of precision engineering.",
   },
 };
 

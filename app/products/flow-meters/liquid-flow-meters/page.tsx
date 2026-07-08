@@ -11,11 +11,23 @@ export const metadata: Metadata = {
   description:
     "Wide range of liquid flow meters from Faure Herman, Ultraflux, and SICK — custody and non-custody solutions including helical turbine, ultrasonic, and portable flowmeters.",
   alternates: { canonical: "https://texastechserv.com/products/flow-meters/liquid-flow-meters/" },
+  keywords: [
+    "liquid flow meters Kuwait",
+    "Faure Herman helical turbine",
+    "Ultraflux ultrasonic flowmeter",
+    "custody transfer liquid metering",
+  ],
   openGraph: {
     title: "Liquid Flow Meters - Texas Technical Services",
     description:
       "Wide range of liquid flow meters from Faure Herman, Ultraflux, and SICK — custody and non-custody solutions.",
     url: "https://texastechserv.com/products/flow-meters/liquid-flow-meters/",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Liquid Flow Meters - Texas Technical Services",
+    description:
+      "Wide range of liquid flow meters from Faure Herman, Ultraflux, and SICK — custody and non-custody solutions.",
   },
 };
 

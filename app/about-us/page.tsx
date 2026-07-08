@@ -30,6 +30,12 @@ export const metadata: Metadata = {
     "Mitsubishi electric authorized integrator Kuwait",
     "industrial automation companies in GCC",
   ],
+  twitter: {
+    card: "summary_large_image",
+    title: "About Us | Industrial Automation Company in Kuwait & GCC",
+    description:
+      "Leading industrial automation company in Kuwait, UAE, and Dubai — PLC SCADA, flow measurement, inspection & testing since 2008.",
+  },
 };
 
 const partners = [

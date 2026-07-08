@@ -10,10 +10,22 @@ export const metadata: Metadata = {
   title: "Field Instruments - Texas Technical Services",
   description: "Pressure, temperature, level, and flow field instruments for industrial processes. SICK provides top-notch solutions for contact temperature measurement, level sensing, pressure measurement, condition monitoring, and flow metering.",
   alternates: { canonical: "https://texastechserv.com/products/field-instruments/" },
+  keywords: [
+    "field instruments Kuwait",
+    "SICK temperature sensors",
+    "pressure level flow sensors",
+    "condition monitoring sensors",
+    "industrial field instrumentation",
+  ],
   openGraph: {
     title: "Field Instruments - Texas Technical Services",
     description: "Pressure, temperature, level, and flow field instruments for industrial processes. SICK provides top-notch solutions for contact temperature measurement, level sensing, pressure measurement, condition monitoring, and flow metering.",
     url: "https://texastechserv.com/products/field-instruments/",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Field Instruments - Texas Technical Services",
+    description: "Pressure, temperature, level, and flow field instruments for industrial processes. SICK provides top-notch solutions for contact temperature measurement, level sensing, pressure measurement, condition monitoring, and flow metering.",
   },
 };
 

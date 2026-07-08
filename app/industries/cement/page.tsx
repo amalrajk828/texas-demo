@@ -8,11 +8,24 @@ export const metadata: Metadata = {
   description:
     "Texas Technical Services delivers CEMS, gas analyzers, and extractive gas analyzers for the cement industry — optimising emissions monitoring, quality control, and operational excellence.",
   alternates: { canonical: "https://texastechserv.com/industries/cement/" },
+  keywords: [
+    "cement industry CEMS",
+    "cement gas analyzers Kuwait",
+    "cement emissions monitoring",
+    "extractive gas analyzer cement",
+    "industrial automation cement manufacturing",
+  ],
   openGraph: {
     title: "Cement Industry Solutions | Texas Technical Services",
     description:
       "Advanced OEM analyzer and CEMS solutions for cement manufacturing — backed by 15+ years of industrial expertise.",
     url: "https://texastechserv.com/industries/cement/",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Cement Industry Solutions | Texas Technical Services",
+    description:
+      "Advanced OEM analyzer and CEMS solutions for cement manufacturing — backed by 15+ years of industrial expertise.",
   },
 };
 

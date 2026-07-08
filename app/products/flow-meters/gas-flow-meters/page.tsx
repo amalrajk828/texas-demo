@@ -11,11 +11,23 @@ export const metadata: Metadata = {
   description:
     "Ultrasonic gas flow meters from SICK — FLOWSIC600-XT, FLOWSIC600, FLOWSIC500, FLOWSIC600 DRU, and FLOWSIC30 for custody transfer and process gas measurement applications.",
   alternates: { canonical: "https://texastechserv.com/products/flow-meters/gas-flow-meters/" },
+  keywords: [
+    "gas flow meters Kuwait",
+    "SICK FLOWSIC600 ultrasonic",
+    "custody transfer gas metering",
+    "natural gas flow measurement",
+  ],
   openGraph: {
     title: "Gas Flow Meters - Texas Technical Services",
     description:
       "Ultrasonic gas flow meters from SICK — custody transfer and process gas flow measurement solutions.",
     url: "https://texastechserv.com/products/flow-meters/gas-flow-meters/",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Gas Flow Meters - Texas Technical Services",
+    description:
+      "Ultrasonic gas flow meters from SICK — custody transfer and process gas flow measurement solutions.",
   },
 };
 
