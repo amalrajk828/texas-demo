@@ -213,7 +213,7 @@ export default function AboutPage() {
               </div>
               <div className="mt-8 flex flex-wrap gap-4">
                 <Link
-                  href="/services/"
+                  href="/service/"
                   className="bg-[#e7212b] hover:bg-[#c01020] text-white font-semibold text-sm px-8 py-3 transition-colors"
                 >
                   Our Services

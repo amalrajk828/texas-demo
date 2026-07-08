@@ -7,7 +7,6 @@ const services = [
   { label: "Industrial Automation", href: "/service/industrial-automation/" },
   { label: "Inspection & Testing", href: "/service/inspection-testing/" },
   { label: "Flow Meter Calibration", href: "/service/flow-meter-calibration/" },
-  { label: "CEMS Solutions", href: "/service/cems-solutions/" },
   { label: "Plant Automation", href: "/service/plant-automation/" },
 ];
 
