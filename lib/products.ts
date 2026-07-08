@@ -469,7 +469,7 @@ export type Product = {
 };
 
 export const products: Product[] = [
-  // ΓöÇΓöÇ INDUSTRIAL SENSORS (22) ΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇ
+  // ══ INDUSTRIAL SENSORS (22) ══════════════════════════════
   {
     slug: "radar-sensors",
     name: "Radar Sensors",
@@ -515,7 +515,7 @@ export const products: Product[] = [
     image: "/images/sensors/Photoelectric Sensors.png",
     tag: "SICK Industrial Sensors",
     description:
-      "SICK offers an extensive selection of photoelectric sensors that stand out with their precise optics and cutting-edge technology, resulting in market-leading solutions enriched with sensor intelligence. With the incorporation of the latest SIRIC┬« and LED technologies, these sensors guarantee exceptional operational reliability, even in the presence of potential interference factors. Furthermore, the supplementary sensor information proves valuable in streamlining contemporary production processes. This comprehensive range of photoelectric sensors finds widespread usage in automation applications across the globe.",
+      "SICK offers an extensive selection of photoelectric sensors that stand out with their precise optics and cutting-edge technology, resulting in market-leading solutions enriched with sensor intelligence. With the incorporation of the latest SIRIC® and LED technologies, these sensors guarantee exceptional operational reliability, even in the presence of potential interference factors. Furthermore, the supplementary sensor information proves valuable in streamlining contemporary production processes. This comprehensive range of photoelectric sensors finds widespread usage in automation applications across the globe.",
     keyApplications: [
       "Object detection on conveyor and production lines",
       "Presence and absence detection in packaging machines",
@@ -526,7 +526,7 @@ export const products: Product[] = [
     ],
     keyBenefits: [
       "Precise optics for reliable detection",
-      "Latest SIRIC┬« and LED technologies for superior reliability",
+      "Latest SIRIC® and LED technologies for superior reliability",
       "Market-leading sensor intelligence features",
       "Exceptional operational reliability under interference",
       "Supplementary sensor data for modern production processes",
@@ -800,7 +800,7 @@ export const products: Product[] = [
     image: "/images/sensors/10.-MOTION-FEEDBACK-SENSOR.png",
     tag: "SICK Industrial Sensors",
     description:
-      "Motor feedback systems from SICK provide high-resolution position and speed data directly from the motor shaft to the servo drive. Supporting standard interfaces such as HIPERFACE┬«, HIPERFACE DSL┬«, and EnDat, these systems enable precise closed-loop motion control for servo and torque motors. They are designed for demanding applications requiring high accuracy, dynamic response, and reliable operation.",
+      "Motor feedback systems from SICK provide high-resolution position and speed data directly from the motor shaft to the servo drive. Supporting standard interfaces such as HIPERFACE®, HIPERFACE DSL®, and EnDat, these systems enable precise closed-loop motion control for servo and torque motors. They are designed for demanding applications requiring high accuracy, dynamic response, and reliable operation.",
     keyApplications: [
       "Closed-loop control for servo and torque motors",
       "Precision positioning in CNC and machine tool axes",
@@ -811,7 +811,7 @@ export const products: Product[] = [
     ],
     keyBenefits: [
       "High-resolution position and speed feedback",
-      "Supports HIPERFACE┬«, HIPERFACE DSL┬«, and EnDat interfaces",
+      "Supports HIPERFACE®, HIPERFACE DSL®, and EnDat interfaces",
       "Enables precise closed-loop servo motion control",
       "Compact design for direct motor shaft integration",
       "Reliable operation in high-dynamic drive applications",
@@ -1023,7 +1023,7 @@ export const products: Product[] = [
       "Fill level detection in transparent containers",
     ],
     keyBenefits: [
-      "Integrated emitter and receiver ΓÇö no alignment needed",
+      "Integrated emitter and receiver — no alignment needed",
       "Reliable detection of small parts and thin materials",
       "High switching frequency for fast production lines",
       "Compact U-shaped design for easy integration",
@@ -1254,7 +1254,7 @@ export const products: Product[] = [
     downloadLink: null,
   },
 
-  // ΓöÇΓöÇ PLC (5) ΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇ
+  // ══ PLC (5) ═══════════════════════════════════════════════
   {
     slug: "melsec-iq-r-series",
     name: "MELSEC iQ-R Series",
@@ -1435,7 +1435,7 @@ export const products: Product[] = [
     downloadLink: null,
   },
 
-  // ΓöÇΓöÇ ICONICS (1) ΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇ
+  // ══ ICONICS (1) ═══════════════════════════════════════════
   {
     slug: "genesis64",
     name: "GENESIS64",
@@ -1472,7 +1472,7 @@ export const products: Product[] = [
     downloadLink: null,
   },
 
-  // ΓöÇΓöÇ GOT (1) ΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇ
+  // ══ GOT (1) ═══════════════════════════════════════════════
   {
     slug: "got2000series",
     name: "GOT2000 Series",
@@ -1516,7 +1516,7 @@ export const products: Product[] = [
     downloadLink: null,
   },
 
-  // ΓöÇΓöÇ FREQUENCY INVERTERS VFD (10) ΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇ
+  // ══ FREQUENCY INVERTERS VFD (10) ═════════════════════════
   {
     slug: "fr-cs80-series",
     name: "FR-CS80 Series",
@@ -1859,7 +1859,7 @@ export const products: Product[] = [
       "Heavy machines with frequent braking cycles",
     ],
     keyBenefits: [
-      "Built-in regenerative braking ΓÇö feeds energy back to supply",
+      "Built-in regenerative braking — feeds energy back to supply",
       "High-performance vector control for precise hoist operation",
       "Compact all-in-one design with no external braking resistor",
       "Reduced heat generation and energy loss",
@@ -1878,7 +1878,7 @@ export const products: Product[] = [
     downloadLink: null,
   },
 
-  // ΓöÇΓöÇ AC SERVOS (6) ΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇ
+  // ══ AC SERVOS (6) ═════════════════════════════════════════
   {
     slug: "melservo-je-servo-drive",
     name: "MR-JE Series Servo Drive",
@@ -2106,16 +2106,16 @@ export const products: Product[] = [
       "https://emea.mitsubishielectric.com/fa/get-asset?asset=https%3A%2F%2Feu-assets.contentstack.com%2Fv3%2Fassets%2Fblt5412ff9af9aef77f%2Fbltcb872e84617f7d40%2F6784fb8f03384849f9a7a3be%2FMR-JET_Brochure_L03187ENG_G.pdf",
   },
 
-  // ΓöÇΓöÇ CUSTODY METERING SOLUTIONS (3) ΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇ
+  // ══ CUSTODY METERING SOLUTIONS (3) ═══════════════════════
   {
     slug: "flow-metering-skid",
     name: "Flow Metering Skid",
     category: "Custody Metering Solutions",
     parentPath: "/products/custody-metering-solutions",
     image: "/images/flow_metering_skid/1.png",
-    tag: "FLOWSKID ┬╖ SICK",
+    tag: "FLOWSKID · SICK",
     description:
-      "FLOWSKID flow metering systems are the full gas flow metering system offering from SICK, provided as a reliable turnkey solution for fiscal metering. Each skid is engineered and pre-assembled to deliver accurate, repeatable, and fully compliant custody transfer measurement for natural gas and process gas applications ΓÇö reducing on-site integration effort, minimizing project risk, and accelerating commissioning.",
+      "FLOWSKID flow metering systems are the full gas flow metering system offering from SICK, provided as a reliable turnkey solution for fiscal metering. Each skid is engineered and pre-assembled to deliver accurate, repeatable, and fully compliant custody transfer measurement for natural gas and process gas applications — reducing on-site integration effort, minimizing project risk, and accelerating commissioning.",
     keyApplications: [
       "Fiscal and custody transfer metering of natural gas",
       "Gas processing plants, gathering stations, and compressor stations",
@@ -2149,9 +2149,9 @@ export const products: Product[] = [
     category: "Custody Metering Solutions",
     parentPath: "/products/custody-metering-solutions",
     image: "/images/flow_computer/1.png",
-    tag: "OMNI ┬╖ 4000/7000 Series",
+    tag: "OMNI · 4000/7000 Series",
     description:
-      "ΓÇ£Turn to OMNI ΓÇô the most recognized and trusted brand of custody flow computers for oil and gas measurement.ΓÇ¥ The OMNI 4000/7000 Series Flow Computers are designed to reduce uncertainty and deliver trusted, auditable results across custody transfer applications. They combine proven calculation algorithms, comprehensive audit trails, and flexible communication capabilities to support the most demanding oil, gas, and multi-stream metering requirements.",
+      "\u201CTurn to OMNI – the most recognized and trusted brand of custody flow computers for oil and gas measurement.\u201D The OMNI 4000/7000 Series Flow Computers are designed to reduce uncertainty and deliver trusted, auditable results across custody transfer applications. They combine proven calculation algorithms, comprehensive audit trails, and flexible communication capabilities to support the most demanding oil, gas, and multi-stream metering requirements.",
     keyApplications: [
       "Custody transfer flow measurement for oil and gas",
       "Gas pipelines, gathering systems, and distribution networks",
@@ -2185,7 +2185,7 @@ export const products: Product[] = [
     category: "Custody Metering Solutions",
     parentPath: "/products/custody-metering-solutions",
     image: "/images/flow_metering_control_system/1.jpg",
-    tag: "Custody Transfer ┬╖ Control Systems",
+    tag: "Custody Transfer · Control Systems",
     description:
       "Our Custody Transfer Flow Metering Control Systems come equipped with a wide array of functionalities to meet your specific needs. Experience the flexibility of Automatic/Manual Operation, allowing you to seamlessly switch between modes for full operational control. With comprehensive alarming, data logging, and real-time diagnostics, the system ensures accurate, auditable, and reliable custody transfer measurement across oil, gas, and multi-phase applications.",
     keyApplications: [
@@ -2216,14 +2216,14 @@ export const products: Product[] = [
     downloadLink: null,
   },
 
-  // ΓöÇΓöÇ FLOW METERS (3) ΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇ
+  // ══ FLOW METERS (3) ══════════════════════════════════════
   {
     slug: "liquid-flow-meters",
     name: "Liquid Flow Meters",
     category: "Flow Meters",
     parentPath: "/products/flow-meters",
     image: "/images/liquid_flow_meters/1.png",
-    tag: "SICK ┬╖ Faure Herman",
+    tag: "SICK · Faure Herman",
     description:
       "We take pride in being a premier provider of a wide range of liquid flow meters, including both non-custody and custody solutions from renowned brands like Faure Herman and SICK. Our liquid flow meter portfolio covers high-accuracy Coriolis, ultrasonic, and differential pressure technologies, engineered to deliver reliable, repeatable, and fully traceable measurement for the most demanding process and custody transfer applications.",
     keyApplications: [
@@ -2259,9 +2259,9 @@ export const products: Product[] = [
     category: "Flow Meters",
     parentPath: "/products/flow-meters",
     image: "/images/flare_meters/1.png",
-    tag: "SICK ┬╖ Flare Gas Measurement",
+    tag: "SICK · Flare Gas Measurement",
     description:
-      "We take pride in being a premier provider of a wide range of liquid flow meters, including both non-custody and custody solutions from renowned brands like Faure Herman and SICK. Our flare gas meters are purpose-built to accurately measure low-pressure, low-flow, and highly variable waste and flare gas streams ΓÇö supporting compliance with environmental regulations, emissions reporting, and flare efficiency monitoring in oil & gas and petrochemical facilities.",
+      "We take pride in being a premier provider of a wide range of liquid flow meters, including both non-custody and custody solutions from renowned brands like Faure Herman and SICK. Our flare gas meters are purpose-built to accurately measure low-pressure, low-flow, and highly variable waste and flare gas streams — supporting compliance with environmental regulations, emissions reporting, and flare efficiency monitoring in oil & gas and petrochemical facilities.",
     keyApplications: [
       "Flare gas flow measurement at refineries and petrochemical plants",
       "Low-pressure and low-flow waste gas monitoring",
@@ -2295,9 +2295,9 @@ export const products: Product[] = [
     category: "Flow Meters",
     parentPath: "/products/flow-meters",
     image: "/images/gas_flow_meters/1.png",
-    tag: "SICK ┬╖ Gas Flow Measurement",
+    tag: "SICK · Gas Flow Measurement",
     description:
-      "Flow measurement technology finds applications across various industries, and SICK is well-equipped to address this diverse challenge. The company boasts a comprehensive product portfolio of cutting-edge sensor technology, catering to a wide range of needs. Whether itΓÇÖs custody transfer meters or devices for monitoring and control, SICKΓÇÖs flow measurement technology consistently operates with utmost safety and reliability ΓÇö even in challenging process and ambient conditions.",
+      "Flow measurement technology finds applications across various industries, and SICK is well-equipped to address this diverse challenge. The company boasts a comprehensive product portfolio of cutting-edge sensor technology, catering to a wide range of needs. Whether it\u2019s custody transfer meters or devices for monitoring and control, SICK\u2019s flow measurement technology consistently operates with utmost safety and reliability — even in challenging process and ambient conditions.",
     keyApplications: [
       "Custody transfer and fiscal metering of natural gas",
       "Gas processing plants, gathering stations, and compressor stations",
@@ -2326,16 +2326,16 @@ export const products: Product[] = [
     downloadLink: null,
   },
 
-  // ΓöÇΓöÇ GAS FLOW METERS ΓÇö SUB-PRODUCTS (5) ΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇ
+  // ══ GAS FLOW METERS — SUB-PRODUCTS (5) ════════════════════
   {
     slug: "flowsic600-xt",
     name: "FLOWSIC600 XT",
     category: "Gas Flow Meters",
     parentPath: "/products/flow-meters/gas-flow-meters",
     image: "/images/gas_flow_meters/flowsic600_xt/1.png",
-    tag: "SICK ┬╖ FLOWSIC600-XT",
+    tag: "SICK · FLOWSIC600-XT",
     description:
-      "The perfect ultrasonic gas flow meter for CUSTODY METERING. Every ultrasonic gas flow meter of the FLOWSIC600-XT product family is designed for custody transfer gas flow measurement. The device family satisfies national and international standards and guidelines for metrology (for example MID, OIML R137, AGA9, ISO17089), explosion protection (for example ATEX, IECEX, NEC, GOST) and pressure devices (ASME, EN2014/68/EU). Four device variants are available, whereby every gas flow meter satisfies very special performance requirements. The requirements on a gas flow meter are not always the same. This performance-oriented classification of the FLOWSIC600-XT, ΓÇô XT Forte, -XT 2plex and -XT Quatro is therefore helpful as the first step in focusing and solving tasks and meeting customer requirements in a unique manner. No matter which version you chose, every FLOWSIC600-XT can be easily installed into all custody transfer applications with a nominal width between 3 and 48 inches. Connection to all conventional Flow computers on the market is also easy. As the follow-up to the successful FLOWSIC600, the FLOWSIC600-XT ultrasonic gas flow measuring device is setting new standards in its market segment. The FLOWSIC600-XT is available in variants with 4, 4+1, 4+4, and 8 measurement paths to meet the requirements of every application. It contains i-diagnosticsΓäó ΓÇô an intelligent application diagnostics function ΓÇô and PowerIn TechnologyΓäó, which enables continuous measurement operation for up to three weeks in the event of a mains voltage failure.",
+      "The perfect ultrasonic gas flow meter for CUSTODY METERING. Every ultrasonic gas flow meter of the FLOWSIC600-XT product family is designed for custody transfer gas flow measurement. The device family satisfies national and international standards and guidelines for metrology (for example MID, OIML R137, AGA9, ISO17089), explosion protection (for example ATEX, IECEX, NEC, GOST) and pressure devices (ASME, EN2014/68/EU). Four device variants are available, whereby every gas flow meter satisfies very special performance requirements. The requirements on a gas flow meter are not always the same. This performance-oriented classification of the FLOWSIC600-XT, – XT Forte, -XT 2plex and -XT Quatro is therefore helpful as the first step in focusing and solving tasks and meeting customer requirements in a unique manner. No matter which version you chose, every FLOWSIC600-XT can be easily installed into all custody transfer applications with a nominal width between 3 and 48 inches. Connection to all conventional Flow computers on the market is also easy. As the follow-up to the successful FLOWSIC600, the FLOWSIC600-XT ultrasonic gas flow measuring device is setting new standards in its market segment. The FLOWSIC600-XT is available in variants with 4, 4+1, 4+4, and 8 measurement paths to meet the requirements of every application. It contains i-diagnostics® – an intelligent application diagnostics function – and PowerIn Technology®, which enables continuous measurement operation for up to three weeks in the event of a mains voltage failure.",
     keyApplications: [
       "Custody transfer measurement of natural gas",
       "Custody transfer measurement of natural gas with up to 30% H2",
@@ -2347,15 +2347,15 @@ export const products: Product[] = [
       "User-friendly product family",
       "Automatic adjustment of pressure and temperature influences",
       "Available for all operating conditions",
-      "PowerIn TechnologyΓäó for reliable backup operation",
-      "Intelligent application diagnostics with i-diagnosticsΓäó",
+      "PowerIn Technology® for reliable backup operation",
+      "Intelligent application diagnostics with i-diagnostics®",
       "Can be extended to include flow computers using connect-and-go technology",
       "Measuring capability up to 30% hydrogen in natural gas",
       "Gas quality indicator for quantifying the H2 content",
       "Low measurement uncertainty in every application",
       "Excellent measurement data reliability and availability",
-      "The right ultrasonic gas flow measuring device for every application ΓÇô without compromise",
-      "Simple device integration ΓÇô even in compact systems",
+      "The right ultrasonic gas flow measuring device for every application – without compromise",
+      "Simple device integration – even in compact systems",
       "Quick and easy commissioning and checks",
       "Economical quantification of the H2 content in natural gas",
     ],
@@ -2379,7 +2379,7 @@ export const products: Product[] = [
     category: "Gas Flow Meters",
     parentPath: "/products/flow-meters/gas-flow-meters",
     image: "/images/gas_flow_meters/flowsic600/1.png",
-    tag: "SICK ┬╖ FLOWSIC600",
+    tag: "SICK · FLOWSIC600",
     description:
       "Gas flow meters for custody transfer and process applications. The FLOWSIC600 measurement device is an ultrasonic gas flow meter and sets the standard in its market segment for custody transfer of natural gas as well as steam flow measurement. The visually technical design demonstrates that it is geared to the tough industry conditions. The compact design with integrated cable routing means that the measuring system is rugged, insensitive to interference, low-maintenance, and has long-term stability. The FLOWSIC600 features extensive diagnostics options to allow detection of malfunctions even before the measurement is affected. Versions with 2, 4, 4 + 1, or 4 + 4 measuring paths enable a variety of process applications, including custody transfer measurements.",
     keyApplications: [
@@ -2387,12 +2387,12 @@ export const products: Product[] = [
       "Onshore and offshore applications",
       "Steam flow measurement",
       "Underground gas storage facilities (bidirectional measurement possible)",
-      "Cryogenic gas applications down to ΓÇô194 ┬░C",
+      "Cryogenic gas applications down to –194 °C",
       "Process gases",
       "Gas with high H2S component such as sour gas or biogas",
     ],
     keyBenefits: [
-      "Highly efficient ultrasonic transducer ΓÇô up to gas temperatures of 280 ┬░C and pressures up to 450 bar",
+      "Highly efficient ultrasonic transducer – up to gas temperatures of 280 °C and pressures up to 450 bar",
       "Direct path layout",
       "Intelligent self-diagnostics",
       "Compact, robust design",
@@ -2424,9 +2424,9 @@ export const products: Product[] = [
     category: "Gas Flow Meters",
     parentPath: "/products/flow-meters/gas-flow-meters",
     image: "/images/gas_flow_meters/flowsic500/1.png",
-    tag: "SICK ┬╖ FLOWSIC500",
+    tag: "SICK · FLOWSIC500",
     description:
-      "Gas flow meter and volume correction in one. Why use two devices for one task? Gas flow meters and volume correctors are used for the same thing: precise measurement of the transported gas volume. It makes sense to combine both into one device, saving on installation costs and reducing the number of interfaces. When leaving the factory, the FLOWSIC500 gas flow meter already has everything you need. This makes installation easy and keeps installation costs low. The volume corrector can be integrated into the FLOWSIC500 on request. The volume corrector supports all typical correction algorithms, such as SGERG88, AGA 8, and AGA NX-19. There is the option of TZ or pTZ correction. The pTZ variant approved in accordance with MID. The right temperature and pressure sensors always come with the meter. The latest technology for the ultimate in measurement accuracy: The FLOWSIC500 ultrasonic compact gas meter from SICK enables extremely accurate natural gas distribution measurement. Thanks to its lack of mechanical moving parts, the FLOWSIC500 is rugged, reliable, and maintenance-free ΓÇô allowing for a significant reduction in operating costs. It is overload-proof, accurate and is monitored by an intelligent diagnostics system. Recalibration is extremely straightforward, as it is simply a matter of exchanging the cartridge. The FLOWSIC500 can easily be integrated into existing measuring stations.",
+      "Gas flow meter and volume correction in one. Why use two devices for one task? Gas flow meters and volume correctors are used for the same thing: precise measurement of the transported gas volume. It makes sense to combine both into one device, saving on installation costs and reducing the number of interfaces. When leaving the factory, the FLOWSIC500 gas flow meter already has everything you need. This makes installation easy and keeps installation costs low. The volume corrector can be integrated into the FLOWSIC500 on request. The volume corrector supports all typical correction algorithms, such as SGERG88, AGA 8, and AGA NX-19. There is the option of TZ or pTZ correction. The pTZ variant approved in accordance with MID. The right temperature and pressure sensors always come with the meter. The latest technology for the ultimate in measurement accuracy: The FLOWSIC500 ultrasonic compact gas meter from SICK enables extremely accurate natural gas distribution measurement. Thanks to its lack of mechanical moving parts, the FLOWSIC500 is rugged, reliable, and maintenance-free – allowing for a significant reduction in operating costs. It is overload-proof, accurate and is monitored by an intelligent diagnostics system. Recalibration is extremely straightforward, as it is simply a matter of exchanging the cartridge. The FLOWSIC500 can easily be integrated into existing measuring stations.",
     keyApplications: [
       "Natural gas distribution in transfer and measuring stations for municipal and regional gas suppliers",
       "Measuring stations in industrial and commercial applications",
@@ -2467,9 +2467,9 @@ export const products: Product[] = [
     category: "Gas Flow Meters",
     parentPath: "/products/flow-meters/gas-flow-meters",
     image: "/images/gas_flow_meters/flowsic600_dru/1.png",
-    tag: "SICK ┬╖ FLOWSIC600 DRU",
+    tag: "SICK · FLOWSIC600 DRU",
     description:
-      "Ultrasonic gas flow meter for upstream applications. The innovative FLOWSIC600 DRU gas flow meter for upstream applications is based on the FLOWSIC600. With a measuring range of up to 150:1, the FLOWSIC600 DRU also covers flow ranges that previously required several orifice plates. Low manufacturing tolerances and wet-gas tolerant ultrasonic sensors ensure consistently low measurement uncertainty, even under challenging conditions. SICK therefore makes it possible to skip the otherwise common cost-intensive high-pressure flow calibration. The FLOWSIC600 DRU enables real-time diagnostics of devices and processes and is virtually maintenance-free ΓÇô even with high liquid loads.",
+      "Ultrasonic gas flow meter for upstream applications. The innovative FLOWSIC600 DRU gas flow meter for upstream applications is based on the FLOWSIC600. With a measuring range of up to 150:1, the FLOWSIC600 DRU also covers flow ranges that previously required several orifice plates. Low manufacturing tolerances and wet-gas tolerant ultrasonic sensors ensure consistently low measurement uncertainty, even under challenging conditions. SICK therefore makes it possible to skip the otherwise common cost-intensive high-pressure flow calibration. The FLOWSIC600 DRU enables real-time diagnostics of devices and processes and is virtually maintenance-free – even with high liquid loads.",
     keyApplications: [
       "Natural gas measurement in gas production",
       "Gas flow meter for well pads with multiple bores",
@@ -2481,14 +2481,14 @@ export const products: Product[] = [
     keyBenefits: [
       "Wide measuring range that covers the measuring ranges of several orifice plates",
       "Precision manufactured 10D inlet piping included",
-      "Accuracy of ┬▒ 1% ΓÇô no high pressure flow calibration required",
+      "Accuracy of ± 1% – no high pressure flow calibration required",
       "Capable of remote diagnostics",
       "Design for wet gas applications",
-      "New diagnostic feature ΓÇô wet gas detection",
+      "New diagnostic feature – wet gas detection",
       "Low maintenance",
-      "Low initial investment ΓÇô precise measurement without an expensive high-pressure flow calibration",
-      "Low subsequent investments ΓÇô no costly measurement station upgrades or orifice plate changeovers thanks to the wide measuring range",
-      "Lower operating costs ΓÇô long maintenance-free operation, and servicing only when required as indicated by remote diagnostics",
+      "Low initial investment – precise measurement without an expensive high-pressure flow calibration",
+      "Low subsequent investments – no costly measurement station upgrades or orifice plate changeovers thanks to the wide measuring range",
+      "Lower operating costs – long maintenance-free operation, and servicing only when required as indicated by remote diagnostics",
       "High reliability thanks to real time monitoring of all device diagnostics data",
       "Extended process monitoring with unique wet gas detection feature",
       "Better measurement accuracy than orifice measurements under wet gas conditions",
@@ -2512,9 +2512,9 @@ export const products: Product[] = [
     category: "Gas Flow Meters",
     parentPath: "/products/flow-meters/gas-flow-meters",
     image: "/images/gas_flow_meters/flowsic30/1.png",
-    tag: "SICK ┬╖ FLOWSIC30",
+    tag: "SICK · FLOWSIC30",
     description:
-      "Versatile gas flow meter for measuring tasks in gas production. Ultrasonic gas flow meter FLOWSIC30 is designed for use in natural gas production applications such as coal seam gas. The dual-path meter comes with a robust carbon steel meter body and full-titanium transducers. The ultrasonic measurement technology has no moving parts and is virtually maintenance free. The rugged design with integrated wires protects the meter from harsh ambient conditions while the large turn-down ratio typically covers all flow rates from a gas production well. FLOWSIC30 is equipped with integrated diagnostics that monitor the meter status and indicate the presence of liquids in the gas stream. With integrated pressure- and temperature measurement and volume conversion according AGA 8 it provides standard flow readings and reduces installation efforts. Power consumption of only 65 mW and the two-wire loop powered concept make integration easy while HART┬« and Modbus communication provide versatility in data transfer.",
+      "Versatile gas flow meter for measuring tasks in gas production. Ultrasonic gas flow meter FLOWSIC30 is designed for use in natural gas production applications such as coal seam gas. The dual-path meter comes with a robust carbon steel meter body and full-titanium transducers. The ultrasonic measurement technology has no moving parts and is virtually maintenance free. The rugged design with integrated wires protects the meter from harsh ambient conditions while the large turn-down ratio typically covers all flow rates from a gas production well. FLOWSIC30 is equipped with integrated diagnostics that monitor the meter status and indicate the presence of liquids in the gas stream. With integrated pressure- and temperature measurement and volume conversion according AGA 8 it provides standard flow readings and reduces installation efforts. Power consumption of only 65 mW and the two-wire loop powered concept make integration easy while HART® and Modbus communication provide versatility in data transfer.",
     keyApplications: [
       "Wellhead metering in coal seam gas production",
       "Natural gas measurement up- and downstream of separators",
@@ -2525,15 +2525,15 @@ export const products: Product[] = [
       "Designed for wet gas applications",
       "Intelligent meter diagnostics incl. wet-gas detection",
       "Possibility for remote monitoring thanks to digital interfaces",
-      "Two-wire-transmitter with digital HART┬« interface",
+      "Two-wire-transmitter with digital HART® interface",
       "Full integration of pressure- and temperature measurement, volume conversion and energy flow rate calculation",
-      "No plate changes required ΓÇô one gas flow meter for the complete well lifetime",
-      "No pressure loss ΓÇô due to ultrasonic measurement principle",
-      "Optimum availability ΓÇô almost wear-free operation, no liquid build up in the meter and the possibility of remote monitoring",
-      "Highly reliable ΓÇô continuous measurement even under challenging process conditions",
-      "Long service life ΓÇô wet gas capable ultrasonic sensors made of titanium",
-      "Full process control and predictable service ΓÇô due to intelligent meter diagnostics",
-      "Low installation efforts ΓÇô integration of pressure- and temperature measurement, HART┬«-interface and commissioning assistant",
+      "No plate changes required – one gas flow meter for the complete well lifetime",
+      "No pressure loss – due to ultrasonic measurement principle",
+      "Optimum availability – almost wear-free operation, no liquid build up in the meter and the possibility of remote monitoring",
+      "Highly reliable – continuous measurement even under challenging process conditions",
+      "Long service life – wet gas capable ultrasonic sensors made of titanium",
+      "Full process control and predictable service – due to intelligent meter diagnostics",
+      "Low installation efforts – integration of pressure- and temperature measurement, HART®-interface and commissioning assistant",
     ],
     industries: [
       "Coal Seam Gas and Coal Mine Methane",
@@ -2548,7 +2548,7 @@ export const products: Product[] = [
       "https://texastechserv.com/wp-content/uploads/2023/09/familyOverview_FLOWSIC30_g352051_en.pdf",
   },
 
-  // ΓöÇΓöÇ LIQUID FLOW METERS ΓÇö SUB-PRODUCTS (13) ΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇ
+  // ══ LIQUID FLOW METERS — SUB-PRODUCTS (13) ═══════════════
   {
     slug: "helical-tzn",
     name: "HELICAL TZN",
@@ -2592,9 +2592,9 @@ export const products: Product[] = [
     category: "Liquid Flow Meters",
     parentPath: "/products/flow-meters/liquid-flow-meters",
     image: "/images/liquid_flow_meters/helical_tlm/1.png",
-    tag: "Heliflu ┬╖ Faure Herman",
+    tag: "Heliflu · Faure Herman",
     description:
-      "The HelifluΓäó TLM flowmeter is designed for high accuracy measurement of low to medium viscosity liquids and refined products. Meter installations and custody transfer operations are improved by the unique weight and space saving design which includes integrated flow conditioning. The HelifluΓäó TLM is fitted with a removable measuring cartridge and includes an integrated flow conditioner that allows installation without any upstream and downstream pipe runs.",
+      "The Heliflu® TLM flowmeter is designed for high accuracy measurement of low to medium viscosity liquids and refined products. Meter installations and custody transfer operations are improved by the unique weight and space saving design which includes integrated flow conditioning. The Heliflu® TLM is fitted with a removable measuring cartridge and includes an integrated flow conditioner that allows installation without any upstream and downstream pipe runs.",
     keyApplications: [
       "High-accuracy measurement of low to medium viscosity liquids",
       "Custody transfer of refined products and light hydrocarbons",
@@ -2629,9 +2629,9 @@ export const products: Product[] = [
     category: "Liquid Flow Meters",
     parentPath: "/products/flow-meters/liquid-flow-meters",
     image: "/images/liquid_flow_meters/heliflu_cta/1.jpg",
-    tag: "Heliflu ┬╖ Faure Herman",
+    tag: "Heliflu · Faure Herman",
     description:
-      "The HelifluΓäó CTA is a new generation of compact autonomous bi-directional flow meter with integrated electronics. The advanced design and robust construction of the CTA enables it to be installed at the end of a flexible fuelling hose and straight upstream from a fueling nozzle. The CTA precisely measures volumetric flowrates of liquid during fueling or re-fueling. The operating principle for this flow meter relies on the centrally located rotational velocity of a helical bladed impeller, embedded with magnets and a pick up coil (positioned in the flowmeter body). If you consider its performance, capabilities and all its features, the HelifluΓäó CTA is the obvious choice.",
+      "The Heliflu® CTA is a new generation of compact autonomous bi-directional flow meter with integrated electronics. The advanced design and robust construction of the CTA enables it to be installed at the end of a flexible fuelling hose and straight upstream from a fueling nozzle. The CTA precisely measures volumetric flowrates of liquid during fueling or re-fueling. The operating principle for this flow meter relies on the centrally located rotational velocity of a helical bladed impeller, embedded with magnets and a pick up coil (positioned in the flowmeter body). If you consider its performance, capabilities and all its features, the Heliflu® CTA is the obvious choice.",
     keyApplications: [
       "Bi-directional custody transfer of refined products and crude",
       "Pipeline receipt and delivery metering",
@@ -2705,7 +2705,7 @@ export const products: Product[] = [
     image: "/images/liquid_flow_meters/fh83_neo/1.jpg",
     tag: "Faure Herman",
     description:
-      "Faure HermanΓÇÖs FH83NEO is an evolutive range of ultrasonic flowmeters for liquid metering. The metrological solution adapted to your needs. This ultrasonic flowmeter is designed to measure all types of conductive or non-conductive liquids and even the most aggressive ones. Thanks to its electronics, digital and analogue inputs/outputs, the FH83Neo is a flowmeter that offers great flexibility of use, it can be easily connected to all industrial control systems.",
+      "Faure Herman\u2019s FH83NEO is an evolutive range of ultrasonic flowmeters for liquid metering. The metrological solution adapted to your needs. This ultrasonic flowmeter is designed to measure all types of conductive or non-conductive liquids and even the most aggressive ones. Thanks to its electronics, digital and analogue inputs/outputs, the FH83Neo is a flowmeter that offers great flexibility of use, it can be easily connected to all industrial control systems.",
     keyApplications: [
       "Custody transfer of crude oil and refined products",
       "Pipeline receipt, delivery, and check metering",
@@ -2827,7 +2827,7 @@ export const products: Product[] = [
     ],
     keyBenefits: [
       "Compact, battery-powered portable ultrasonic flowmeter",
-      "Clamp-on installation ΓÇö no process interruption",
+      "Clamp-on installation — no process interruption",
       "Fast, non-intrusive flow measurement",
       "Ideal for temporary measurement and verification",
       "Simplifies on-site checks and commissioning",
@@ -3031,7 +3031,7 @@ export const products: Product[] = [
       "https://texastechserv.com/wp-content/uploads/2023/09/UF_841_En.pdf",
   },
 
-  // ΓöÇΓöÇ FLARE FLOW METERS ΓÇö SUB-PRODUCTS (2) ΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇ
+  // ══ FLARE FLOW METERS — SUB-PRODUCTS (2) ═════════════════
   {
     slug: "flowsic100-flare-xt",
     name: "FLOWSIC100-Flare-XT",
@@ -3040,7 +3040,7 @@ export const products: Product[] = [
     image: "/images/flare_meters/flowsic100_flare_xt/1.png",
     tag: "SICK Ultrasonic Flare",
     description:
-      "Reliable gas flow measurement on flare stacks in petroleum refineries, chemical plants and natural gas processing with SICK ultrasonic gas flow meters. Ready for the future: ultrasonic gas flow measurement for flare gas systems. The FLOWSIC100 Flare-XT is characterized by a unique flow-optimized sensor design that provides reliable gas flow measurement and monitoring at extremely high speeds and changing gas compositions. The rugged design guarantees uninterrupted availability of measurements even under adverse conditions. The FLOWSIC100 Flare-XT takes into account a wide range of applicable standards worldwide and is suitable for use in new and existing plants. The measurement and diagnostic data can be easily visualized with the FLOWgateΓäó software. Thanks to the intelligent i-diagnosticsΓäó function, the system is able to monitor itself and independently report the need for maintenance. For upstream requirements, e.g. in fracking applications, the FLOWSIC100 Flare-XT transmitter is the right choice as it is rugged and reliable without recalibration. Powerful. Reliable. Robust.",
+      "Reliable gas flow measurement on flare stacks in petroleum refineries, chemical plants and natural gas processing with SICK ultrasonic gas flow meters. Ready for the future: ultrasonic gas flow measurement for flare gas systems. The FLOWSIC100 Flare-XT is characterized by a unique flow-optimized sensor design that provides reliable gas flow measurement and monitoring at extremely high speeds and changing gas compositions. The rugged design guarantees uninterrupted availability of measurements even under adverse conditions. The FLOWSIC100 Flare-XT takes into account a wide range of applicable standards worldwide and is suitable for use in new and existing plants. The measurement and diagnostic data can be easily visualized with the FLOWgate® software. Thanks to the intelligent i-diagnostics® function, the system is able to monitor itself and independently report the need for maintenance. For upstream requirements, e.g. in fracking applications, the FLOWSIC100 Flare-XT transmitter is the right choice as it is rugged and reliable without recalibration. Powerful. Reliable. Robust.",
     keyApplications: [
       "Flare gas flow measurement on refinery and petrochemical flare stacks",
       "Compliance with environmental and emissions reporting regulations",
@@ -3055,9 +3055,9 @@ export const products: Product[] = [
       "Unique flow-optimized sensor design for extremely high gas velocities",
       "Reliable measurement with changing gas compositions",
       "Rugged design for uninterrupted availability under adverse conditions",
-      "FLOWgateΓäó software for easy visualization of measurement and diagnostic data",
-      "i-diagnosticsΓäó function for self-monitoring and predictive maintenance",
-      "Rugged and reliable transmitter for upstream / fracking applications ΓÇö no recalibration",
+      "FLOWgate® software for easy visualization of measurement and diagnostic data",
+      "i-diagnostics® function for self-monitoring and predictive maintenance",
+      "Rugged and reliable transmitter for upstream / fracking applications — no recalibration",
       "Three types with single or dual path configuration",
       "Cross-duct and probe versions for flexible installation",
       "Device changing unit enables fast sensor changes during ongoing operation",
@@ -3096,7 +3096,7 @@ export const products: Product[] = [
       "Designed for flare gas and steam flow measurements",
       "Unique flow-optimized sensor design minimizes flow-generated noise and signal drift",
       "High-resolution measurement and short response time",
-      "Innovative sensor design for very high gas velocities and gas temperatures up to 280 ┬░C",
+      "Innovative sensor design for very high gas velocities and gas temperatures up to 280 °C",
       "Optimal signal transmission even under atmospheric pressure",
       "Detached installation of the control unit up to 1,000 m away",
       "Single and multi-path configuration, optional probe version",
@@ -3119,14 +3119,14 @@ export const products: Product[] = [
     downloadLink:
       "https://texastechserv.com/wp-content/uploads/2023/09/familyOverview_FLOWSIC100-Flare_g198253_en.pdf",
   },
-  // ΓöÇΓöÇ ANALYZERS (3 sub-categories + 8 sub-products) ΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇ
+  // ══ ANALYZERS (3 sub-categories + 8 sub-products) ════════════
   {
     slug: "cems",
     name: "CEMS",
     category: "Analyzers",
     parentPath: "/products/analyzers",
     image: "/images/cems/1.jpg",
-    tag: "SICK ┬╖ CEMS",
+    tag: "SICK · CEMS",
     description:
       "Continuous emissions monitoring of all pollutant components in exhaust gases. Environmental regulations stipulate that certain pollutants in the exhaust gas of waste incineration plants, as well as the reference parameters, must be monitored continuously. Our CEMS solutions provide reliable, accurate, and compliant monitoring of all regulated emissions components.",
     keyApplications: [
@@ -3162,7 +3162,7 @@ export const products: Product[] = [
     category: "Analyzers",
     parentPath: "/products/analyzers",
     image: "/images/dust_analyzers/1.jpg",
-    tag: "SICK ┬╖ Dust Measurement",
+    tag: "SICK · Dust Measurement",
     description:
       "Measuring the dust concentration or opacity in the stack of a power plant fired by liquid or gaseous fuels is a standard requirement. The exact measuring ranges and requirements depend on the applicable national and international regulations. Our dust analyzers provide accurate, reliable measurement for compliance and process control.",
     keyApplications: [
@@ -3198,7 +3198,7 @@ export const products: Product[] = [
     category: "Analyzers",
     parentPath: "/products/analyzers",
     image: "/images/gas_analyzers/1.jpg",
-    tag: "SICK ┬╖ In-Situ Gas Analysis",
+    tag: "SICK · In-Situ Gas Analysis",
     description:
       "In-situ gas analyzers provide real-time gas analysis directly within the process. Reliable measurement technology that allows the devices to be mounted directly at the measurement site. In-situ gas analyzers take measurements directly in the process gas stream without the need for gas sampling and conditioning systems, providing fast response and reliable data.",
     keyApplications: [
@@ -3229,14 +3229,14 @@ export const products: Product[] = [
     downloadLink: null,
   },
 
-  // ΓöÇΓöÇ CEMS ΓÇö SUB-PRODUCTS (4) ΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇ
+  // ══ CEMS — SUB-PRODUCTS (4) ══════════════════════════════
   {
     slug: "cems-das",
     name: "CEMS DAS",
     category: "CEMS",
     parentPath: "/products/analyzers/cems",
     image: "/images/cems/cems_das/1.png",
-    tag: "SICK ┬╖ CEMS DAS",
+    tag: "SICK · CEMS DAS",
     description:
       "Clear and cost-efficient emissions data management. The MEAC300 offers continuous acquisition, evaluation, storage, and visualization, as well as transmission of emissions data for modern emissions data management. The central emissions PC can acquire and output data on up to 16 different interfaces at the same time. The measuring devices are connected both directly and via analog data acquisition units, which are each equipped with a ring buffer for data security purposes. It is also possible to integrate into distributed control systems. The MEAC300 EP variant is designed to meet European evaluation guidelines for firing systems; the MEAC300 EPW is also suitable for waste incineration and co-incineration plants.",
     keyApplications: [
@@ -3277,7 +3277,7 @@ export const products: Product[] = [
     category: "CEMS",
     parentPath: "/products/analyzers/cems",
     image: "/images/cems/mcs100ft/1.png",
-    tag: "SICK ┬╖ MCS100FT",
+    tag: "SICK · MCS100FT",
     description:
       "Stay in control with proven FTIR measurement technology. The FTIR measurement principle enables the simultaneous acquisition of more than 12 measuring components tailored to the respective customer requirement. The MCS100FT FTIR analyzer system with its heated measuring cell made of corrosion-resistant material also enables monitoring of hydrogen fluoride limits as required by legislation. The MCS100FT is equipped with an oxygen sensor as standard and can be supplemented with a total hydrocarbon analyzer. With its reliable measurement technology, easy operation, and low maintenance requirements, the MCS100FT provides a hassle-free solution concept that offers unequaled opportunities. The MCS100FT can continuously measure the following components using one single extractive heated gas sample: HCl, CO, NOx as the sum of NO and NO2, SO2, NH3, O2, H2O, CO2, Cges, and HF. For normalization, the pressure and temperature parameters are also recorded. The QAL3 thorough check can be carried out without test gas with the certified, integrated calibration filter.",
     keyApplications: [
@@ -3289,7 +3289,7 @@ export const products: Product[] = [
       "Industrial exhaust gas analysis for environmental compliance",
     ],
     keyBenefits: [
-      "Reliable HF limit value monitoring with small suitability-tested measuring range: 0ΓÇô3 mg/m┬│",
+      "Reliable HF limit value monitoring with small suitability-tested measuring range: 0–3 mg/m³",
       "Just one analyzer for over 12 measuring components",
       "Easy integration into the customer network environment",
       "Long 6-month maintenance interval for many measuring components",
@@ -3320,9 +3320,9 @@ export const products: Product[] = [
     category: "CEMS",
     parentPath: "/products/analyzers/cems",
     image: "/images/cems/mcs200hw/1.png",
-    tag: "SICK ┬╖ MCS200HW",
+    tag: "SICK · MCS200HW",
     description:
-      "MCS200HW ΓÇô Multi-component analyzer system with proven measurement technology for flue gas monitoring. One analyzer system, many possibilities, high efficiency. The MCS200HW is a multi-component analyzer system for continuous monitoring of up to 10 IR measurement components in flue gases of industrial combustion plants. The MCS200HW is hot/wet extractive: all parts which touch media, from the gas sampling probe to the cell, are heated above the dew point and therefore protected from corrosion. An integrated oxygen sensor also measures oxygen. As an option, a TOC measurement can be supplemented via an integrated GMS811 FIDORi. Internal reference point monitoring allows for a quick check of the measured values with test gases. The web display and the task assistant integrated in the software makes operation very easy. With the MCS200HW, reference point checking and adjustment of HCl and NH3 are possible for the first time exclusively with dry test gases certified according to EN 15267 and EN 14181 ΓÇö test gas generators or evaporators to create wet test gases are no longer required. Thanks to internal adjustment filters, drift checking and adjustment are possible even without a test gas.",
+      "MCS200HW – Multi-component analyzer system with proven measurement technology for flue gas monitoring. One analyzer system, many possibilities, high efficiency. The MCS200HW is a multi-component analyzer system for continuous monitoring of up to 10 IR measurement components in flue gases of industrial combustion plants. The MCS200HW is hot/wet extractive: all parts which touch media, from the gas sampling probe to the cell, are heated above the dew point and therefore protected from corrosion. An integrated oxygen sensor also measures oxygen. As an option, a TOC measurement can be supplemented via an integrated GMS811 FIDORi. Internal reference point monitoring allows for a quick check of the measured values with test gases. The web display and the task assistant integrated in the software makes operation very easy. With the MCS200HW, reference point checking and adjustment of HCl and NH3 are possible for the first time exclusively with dry test gases certified according to EN 15267 and EN 14181 — test gas generators or evaporators to create wet test gases are no longer required. Thanks to internal adjustment filters, drift checking and adjustment are possible even without a test gas.",
     keyApplications: [
       "Continuous monitoring of up to 10 IR components plus O2 and TOC in flue gases",
       "Hot/wet extractive measurement for water-soluble gases such as HCl and NH3",
@@ -3333,12 +3333,12 @@ export const products: Product[] = [
     ],
     keyBenefits: [
       "Measurement of up to 10 IR components plus O2 and TOC in one analyzer",
-      "Hot/wet extractive measurement technology ΓÇö all parts heated above dew point",
+      "Hot/wet extractive measurement technology — all parts heated above dew point",
       "Wear-free gas distribution through ejector pumps",
       "Reference point monitoring with internal calibration cells",
-      "Certified digital Modbus┬« interface for easy integration",
+      "Certified digital Modbus® interface for easy integration",
       "Web server for platform-independent device control without additional software",
-      "Use of dry test gases for HCl and NH3 ΓÇö no test gas generators or evaporators needed",
+      "Use of dry test gases for HCl and NH3 — no test gas generators or evaporators needed",
       "Internal adjustment filters enable drift checking without any test gas",
       "Reliable measurement results, even for water-soluble gas components",
       "Measurement components can be put together flexibly and extended at any time",
@@ -3365,7 +3365,7 @@ export const products: Product[] = [
     category: "CEMS",
     parentPath: "/products/analyzers/cems",
     image: "/images/cems/special_shelter/1.png",
-    tag: "SICK ┬╖ CEMS Shelter",
+    tag: "SICK · CEMS Shelter",
     description:
       "The exact device specifications and performance data of the product may deviate from the information provided here, and depend on the application in which the product is being used and the relevant customer specifications. TTS will help you to select the optimum device configuration. Special shelter solutions for CEMS installations provide a controlled environment for emissions monitoring equipment. These shelters protect sensitive analysis equipment from harsh ambient conditions, ensuring reliable operation and accurate measurement data in outdoor and industrial environments.",
     keyApplications: [
@@ -3397,14 +3397,14 @@ export const products: Product[] = [
       "https://texastechserv.com/wp-content/uploads/2023/09/dataSheet_Special-Shelter_p660974_en.pdf",
   },
 
-  // ΓöÇΓöÇ DUST ANALYZERS ΓÇö SUB-PRODUCTS (2) ΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇ
+  // ══ DUST ANALYZERS — SUB-PRODUCTS (2) ════════════════════
   {
     slug: "dusthunter-t100",
     name: "DUSTHUNTER T100",
     category: "Dust Analyzers",
     parentPath: "/products/analyzers/dust-analyzers",
     image: "/images/dust_analyzers/dusthunder_t100/1.png",
-    tag: "SICK ┬╖ DUSTHUNTER T100",
+    tag: "SICK · DUSTHUNTER T100",
     description:
       "The type approved transmissiometer with emission monitoring. The DUSTHUNTER T100 is a measuring device for dust at medium to high concentrations. Basic measuring value is transmittance. Opacity and extinction can be calculated and displayed as well as the dust concentration after gravimetric calibration. The device has an integrated contamination check. The DUSTHUNTER T100 is approved according to EN 15267.",
     keyApplications: [
@@ -3441,7 +3441,7 @@ export const products: Product[] = [
     category: "Dust Analyzers",
     parentPath: "/products/analyzers/dust-analyzers",
     image: "/images/dust_analyzers/dusthunder_t200/1.png",
-    tag: "SICK ┬╖ DUSTHUNTER T200",
+    tag: "SICK · DUSTHUNTER T200",
     description:
       "The type approved transmissiometer with self-alignment function. The DUSTHUNTER T200 is a measuring device for dust at medium to high concentrations. Basic measuring value is transmittance. Opacity and extinction can be calculated and displayed as well as the dust concentration after gravimetric calibration. Furthermore, it has an integrated contamination check of the sender/receiver and reflector unit as well as an automatic self-alignment of the optical assembly. The DUSTHUNTER T200 is approved according to EN 15267.",
     keyApplications: [
@@ -3473,16 +3473,16 @@ export const products: Product[] = [
       "https://texastechserv.com/wp-content/uploads/2023/09/dataSheet_DUSTHUNTER-T200_p475055_en.pdf",
   },
 
-  // ΓöÇΓöÇ GAS ANALYZERS ΓÇö SUB-PRODUCTS (2) ΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇ
+  // ══ GAS ANALYZERS — SUB-PRODUCTS (2) ═════════════════════
   {
     slug: "gm32",
     name: "GM32",
     category: "Gas Analyzers",
     parentPath: "/products/analyzers/gas-analyzers",
     image: "/images/gas_analyzers/gm32/1.jpg",
-    tag: "SICK ┬╖ GM32 ┬╖ In-Situ Gas Analyzer",
+    tag: "SICK · GM32 · In-Situ Gas Analyzer",
     description:
-      "Measure aggressive gases directly and quickly ΓÇô even in ATEX zones. The GM32 in-situ gas analyzer measures SO2, NO, NO2 and NH3, pressure and temperature in the gas duct. Direct, fast and without gas sampling and transport. This means that control systems work directly with almost uncompromised values. Due to self-monitoring, the measured values are reliable. In case of a malfunction, an early warning will be shown. For emission measurement of SO2 and NO, the GM32 is tested for suitability according to European standard EN 15267. An Ex-type with extensive safety functions and sophisticated system technology is also available.",
+      "Measure aggressive gases directly and quickly – even in ATEX zones. The GM32 in-situ gas analyzer measures SO2, NO, NO2 and NH3, pressure and temperature in the gas duct. Direct, fast and without gas sampling and transport. This means that control systems work directly with almost uncompromised values. Due to self-monitoring, the measured values are reliable. In case of a malfunction, an early warning will be shown. For emission measurement of SO2 and NO, the GM32 is tested for suitability according to European standard EN 15267. An Ex-type with extensive safety functions and sophisticated system technology is also available.",
     keyApplications: [
       "Emission monitoring of SO2 and NO per EN 15267 in power plants and industrial facilities",
       "In-situ gas analysis in ATEX-classified areas with Ex-type analyzer",
@@ -3497,8 +3497,8 @@ export const products: Product[] = [
       "Representative measurement by selection of cross-duct or measuring probe type",
       "Fast on-site service possible due to modular design",
       "Long maintenance-free intervals for reduced operational costs",
-      "Cost-effective in-situ gas analyzer ΓÇö Ex-type also available",
-      "Low cost of installation and operation ΓÇö no test gases required",
+      "Cost-effective in-situ gas analyzer — Ex-type also available",
+      "Low cost of installation and operation — no test gases required",
     ],
     industries: [
       "Power Generation and Utilities",
@@ -3518,9 +3518,9 @@ export const products: Product[] = [
     category: "Gas Analyzers",
     parentPath: "/products/analyzers/gas-analyzers",
     image: "/images/gas_analyzers/gm35/1.png",
-    tag: "SICK ┬╖ GM35 ┬╖ In-Situ Gas Analyzer",
+    tag: "SICK · GM35 · In-Situ Gas Analyzer",
     description:
-      "For efficient control of combustion and drying processes. Simultaneous or as individual measurement: the GM35 gas analyzer measures CO2, H2O and CO, as well temperature and pressure ΓÇô and it does this reliably, quickly, and economically. As an in-situ gas analyzer, the GM35 detects these gas components directly in the gas stream without gas sampling. Reliability, accuracy, and short response time of the GM35 offer a key advantage for efficient control loops in CO and CO2-generating processes.",
+      "For efficient control of combustion and drying processes. Simultaneous or as individual measurement: the GM35 gas analyzer measures CO2, H2O and CO, as well temperature and pressure – and it does this reliably, quickly, and economically. As an in-situ gas analyzer, the GM35 detects these gas components directly in the gas stream without gas sampling. Reliability, accuracy, and short response time of the GM35 offer a key advantage for efficient control loops in CO and CO2-generating processes.",
     keyApplications: [
       "Emission monitoring according to EN 14181 in power and cement plants",
       "Control of water injection upstream of the electrostatic precipitator",
@@ -3550,7 +3550,7 @@ export const products: Product[] = [
     downloadLink: null,
   },
 
-  // ΓöÇΓöÇ INDUSTRIAL AUTOMATION (7) ΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇ
+  // ══ INDUSTRIAL AUTOMATION (7) ═══════════════════════════
   {
     slug: "plc-io-module",
     name: "PLC & I/O Module",
@@ -3629,7 +3629,7 @@ export const products: Product[] = [
     externalLink: "https://www.pyrotechworkspace.com/expertise/control-room-console/",
   },
 
-  // ΓöÇΓöÇ CONTROL ROOM INTERIOR & CONSOLE (9) ΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇ
+  // ══ CONTROL ROOM INTERIOR & CONSOLE (9) ═════════════════
   {
     slug: "dynamic-m",
     name: "DYNAMIC M",
@@ -3727,7 +3727,7 @@ export const products: Product[] = [
       "The XTRON series features cutting-edge control room consoles designed for next-generation command centres. With a contemporary aesthetic and robust construction, these consoles meet the highest standards of control room ergonomics and operational efficiency.",
   },
 
-  // ΓöÇΓöÇ FIELD INSTRUMENTS (5) ΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇ
+  // ══ FIELD INSTRUMENTS (5) ═══════════════════════════════
   {
     slug: "temperature-sensors",
     name: "Temperature Sensors",
