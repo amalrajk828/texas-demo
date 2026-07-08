@@ -58,6 +58,7 @@ const NAV: NavItem[] = [
       { label: "View all products →", href: "/products/", highlight: true },
     ],
   },
+  { label: "Blog", href: "/blog/" },
   { label: "Clients", href: "/clients/" },
 ];
 
