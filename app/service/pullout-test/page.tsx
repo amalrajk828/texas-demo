@@ -1,6 +1,8 @@
 import type { Metadata } from "next";
 import PulloutHero from "@/components/service/pullout-test/PulloutHero";
 import PulloutContent from "@/components/service/pullout-test/PulloutContent";
+import { BreadcrumbJsonLd } from "@/components/schema/BreadcrumbJsonLd";
+import { ServiceJsonLd } from "@/components/schema/ServiceJsonLd";
 
 export const metadata: Metadata = {
   title: "Pullout Test for Bolts & Anchors",
@@ -20,6 +22,18 @@ export const metadata: Metadata = {
 export default function PulloutTestPage() {
   return (
     <>
+      <BreadcrumbJsonLd items={[
+  { name: "Home", href: "/" },
+  { name: "Services", href: "/service/" },
+  { name: "Pullout Test for Bolts & Anchors", href: "/service/pullout-test/" },
+]} />
+<ServiceJsonLd
+  name="Pullout Test for Bolts & Anchors"
+  description="Pullout testing to determine bond strength and integrity between bolts and concrete or masonry substrates — structural anchor verification, cast-in insert testing to ASTM C900, EN 12504-3, ACI 318 in Kuwait and Dubai."
+  url="/service/pullout-test/"
+  serviceType="Specialized Inspection"
+  areaServed={["Kuwait", "United Arab Emirates", "Saudi Arabia", "Bahrain", "Qatar", "Oman"]}
+/>
       <PulloutHero />
       <PulloutContent />
       {/* Contact section — to be added */}

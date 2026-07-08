@@ -2,6 +2,8 @@ import type { Metadata } from "next";
 import McsiHero from "@/components/service/metering-control-system-integration/McsiHero";
 import McsiServices from "@/components/service/metering-control-system-integration/McsiServices";
 import McsiWhyUs from "@/components/service/metering-control-system-integration/McsiWhyUs";
+import { BreadcrumbJsonLd } from "@/components/schema/BreadcrumbJsonLd";
+import { ServiceJsonLd } from "@/components/schema/ServiceJsonLd";
 
 export const metadata: Metadata = {
   title: "Metering Control System Integration",
@@ -45,6 +47,18 @@ export const metadata: Metadata = {
 export default function McsiPage() {
   return (
     <>
+      <BreadcrumbJsonLd items={[
+  { name: "Home", href: "/" },
+  { name: "Services", href: "/service/" },
+  { name: "Metering Control System Integration", href: "/service/metering-control-system-integration/" },
+]} />
+<ServiceJsonLd
+  name="Metering Control System Integration"
+  description="Texas Technical Services (TTS) specializes in Custody Transfer Flow Metering Control System Development and Integration — SCADA, PLC, HMI, server configuration, and full system integration for precise, compliant custody transfer operations."
+  url="/service/metering-control-system-integration/"
+  serviceType="Flow Measurement"
+  areaServed={["Kuwait", "United Arab Emirates", "Saudi Arabia", "Bahrain", "Qatar", "Oman"]}
+/>
       <McsiHero />
       <McsiServices />
       <McsiWhyUs />

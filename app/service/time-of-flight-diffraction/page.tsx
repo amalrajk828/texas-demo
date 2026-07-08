@@ -1,6 +1,8 @@
 import type { Metadata } from "next";
 import TOFDHero from "@/components/service/time-of-flight-diffraction/TOFDHero";
 import TOFDContent from "@/components/service/time-of-flight-diffraction/TOFDContent";
+import { BreadcrumbJsonLd } from "@/components/schema/BreadcrumbJsonLd";
+import { ServiceJsonLd } from "@/components/schema/ServiceJsonLd";
 
 export const metadata: Metadata = {
   title: "Time of Flight Diffraction (TOFD)",
@@ -20,6 +22,18 @@ export const metadata: Metadata = {
 export default function TOFDPage() {
   return (
     <>
+      <BreadcrumbJsonLd items={[
+  { name: "Home", href: "/" },
+  { name: "Services", href: "/service/" },
+  { name: "Time of Flight Diffraction (TOFD)", href: "/service/time-of-flight-diffraction/" },
+]} />
+<ServiceJsonLd
+  name="Time of Flight Diffraction (TOFD)"
+  description="Time of Flight Diffraction (TOFD) for accurate weld crack detection and depth sizing using diffracted ultrasonic waves — pressure vessel and pipeline inspection to ASME V, EN ISO 10863, BS 7706 standards in Kuwait and Dubai."
+  url="/service/time-of-flight-diffraction/"
+  serviceType="Non-Destructive Testing"
+  areaServed={["Kuwait", "United Arab Emirates", "Saudi Arabia", "Bahrain", "Qatar", "Oman"]}
+/>
       <TOFDHero />
       <TOFDContent />
       {/* Contact section — to be added */}

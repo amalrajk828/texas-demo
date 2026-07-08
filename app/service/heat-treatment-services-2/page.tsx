@@ -1,6 +1,8 @@
 import type { Metadata } from "next";
 import HeatTreatmentHero from "@/components/service/heat-treatment-services-2/HeatTreatmentHero";
 import HeatTreatmentContent from "@/components/service/heat-treatment-services-2/HeatTreatmentContent";
+import { BreadcrumbJsonLd } from "@/components/schema/BreadcrumbJsonLd";
+import { ServiceJsonLd } from "@/components/schema/ServiceJsonLd";
 
 export const metadata: Metadata = {
   title: "Heat Treatment Services",
@@ -20,6 +22,18 @@ export const metadata: Metadata = {
 export default function HeatTreatmentPage() {
   return (
     <>
+      <BreadcrumbJsonLd items={[
+  { name: "Home", href: "/" },
+  { name: "Services", href: "/service/" },
+  { name: "Heat Treatment Services", href: "/service/heat-treatment-services-2/" },
+]} />
+<ServiceJsonLd
+  name="Heat Treatment Services"
+  description="Heat treatment services including Post Weld Heat Treatment (PWHT), stress relief, and annealing using electrical resistance and high-velocity fuel-fired burner systems to ASME VIII, AWS D1.1, ASME B31.3 standards in Kuwait and Dubai."
+  url="/service/heat-treatment-services-2/"
+  serviceType="Mechanical Testing"
+  areaServed={["Kuwait", "United Arab Emirates", "Saudi Arabia", "Bahrain", "Qatar", "Oman"]}
+/>
       <HeatTreatmentHero />
       <HeatTreatmentContent />
       {/* Contact section — to be added */}

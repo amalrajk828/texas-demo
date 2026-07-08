@@ -1,6 +1,8 @@
 import type { Metadata } from "next";
 import AirPermeabilityHero from "@/components/service/air-permeability-test-2/AirPermeabilityHero";
 import AirPermeabilityContent from "@/components/service/air-permeability-test-2/AirPermeabilityContent";
+import { BreadcrumbJsonLd } from "@/components/schema/BreadcrumbJsonLd";
+import { ServiceJsonLd } from "@/components/schema/ServiceJsonLd";
 
 export const metadata: Metadata = {
   title: "Air Permeability Test",
@@ -20,6 +22,18 @@ export const metadata: Metadata = {
 export default function AirPermeabilityPage() {
   return (
     <>
+      <BreadcrumbJsonLd items={[
+  { name: "Home", href: "/" },
+  { name: "Services", href: "/service/" },
+  { name: "Air Permeability Test", href: "/service/air-permeability-test-2/" },
+]} />
+<ServiceJsonLd
+  name="Air Permeability Test"
+  description="Air permeability testing for exterior windows, doors, and curtain walls to measure air infiltration and locate leakage paths — per ASTM E783, ASTM E283, EN 12207 standards in Kuwait and Dubai."
+  url="/service/air-permeability-test-2/"
+  serviceType="Specialized Inspection"
+  areaServed={["Kuwait", "United Arab Emirates", "Saudi Arabia", "Bahrain", "Qatar", "Oman"]}
+/>
       <AirPermeabilityHero />
       <AirPermeabilityContent />
       {/* Contact section — to be added */}

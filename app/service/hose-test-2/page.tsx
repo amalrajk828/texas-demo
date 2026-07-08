@@ -1,6 +1,8 @@
 import type { Metadata } from "next";
 import HoseTestHero from "@/components/service/hose-test-2/HoseTestHero";
 import HoseTestContent from "@/components/service/hose-test-2/HoseTestContent";
+import { BreadcrumbJsonLd } from "@/components/schema/BreadcrumbJsonLd";
+import { ServiceJsonLd } from "@/components/schema/ServiceJsonLd";
 
 export const metadata: Metadata = {
   title: "Hose Test — Curtain Wall & Facade Water Check",
@@ -20,6 +22,18 @@ export const metadata: Metadata = {
 export default function HoseTestPage() {
   return (
     <>
+      <BreadcrumbJsonLd items={[
+  { name: "Home", href: "/" },
+  { name: "Services", href: "/service/" },
+  { name: "Hose Test — Curtain Wall & Facade Water Check", href: "/service/hose-test-2/" },
+]} />
+<ServiceJsonLd
+  name="Hose Test — Curtain Wall & Facade Water Check"
+  description="Hose test quality assurance water checking for installed curtain walls, exterior windows, and doors — field leakage identification and diagnostic reporting to AAMA 501.2, ASTM E1105 in Kuwait and Dubai."
+  url="/service/hose-test-2/"
+  serviceType="Specialized Inspection"
+  areaServed={["Kuwait", "United Arab Emirates", "Saudi Arabia", "Bahrain", "Qatar", "Oman"]}
+/>
       <HoseTestHero />
       <HoseTestContent />
       {/* Contact section — to be added */}

@@ -1,6 +1,8 @@
 import type { Metadata } from "next";
 import ValidationHero from "@/components/service/validation-uncertainty-calculations/ValidationHero";
 import ValidationContent from "@/components/service/validation-uncertainty-calculations/ValidationContent";
+import { BreadcrumbJsonLd } from "@/components/schema/BreadcrumbJsonLd";
+import { ServiceJsonLd } from "@/components/schema/ServiceJsonLd";
 
 export const metadata: Metadata = {
   title: "Validation and Uncertainty Calculations",
@@ -44,6 +46,18 @@ export const metadata: Metadata = {
 export default function ValidationUncertaintyPage() {
   return (
     <>
+      <BreadcrumbJsonLd items={[
+  { name: "Home", href: "/" },
+  { name: "Services", href: "/service/" },
+  { name: "Validation and Uncertainty Calculations", href: "/service/validation-uncertainty-calculations/" },
+]} />
+<ServiceJsonLd
+  name="Validation and Uncertainty Calculations"
+  description="GUM-compliant measurement uncertainty calculations and comprehensive validation services for custody metering skids, flow computers, and metering systems. API MPMS Chapter 21, ISO, OIML compliant — Kuwait and Dubai."
+  url="/service/validation-uncertainty-calculations/"
+  serviceType="Flow Measurement"
+  areaServed={["Kuwait", "United Arab Emirates", "Saudi Arabia", "Bahrain", "Qatar", "Oman"]}
+/>
       <ValidationHero />
       <ValidationContent />
       {/* Contact section — to be added */}

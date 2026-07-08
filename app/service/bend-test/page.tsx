@@ -1,6 +1,8 @@
 import type { Metadata } from "next";
 import BendHero from "@/components/service/bend-test/BendHero";
 import BendContent from "@/components/service/bend-test/BendContent";
+import { BreadcrumbJsonLd } from "@/components/schema/BreadcrumbJsonLd";
+import { ServiceJsonLd } from "@/components/schema/ServiceJsonLd";
 
 export const metadata: Metadata = {
   title: "Bend Test",
@@ -20,6 +22,18 @@ export const metadata: Metadata = {
 export default function BendTestPage() {
   return (
     <>
+      <BreadcrumbJsonLd items={[
+  { name: "Home", href: "/" },
+  { name: "Services", href: "/service/" },
+  { name: "Bend Test", href: "/service/bend-test/" },
+]} />
+<ServiceJsonLd
+  name="Bend Test"
+  description="Guided bend testing, weld procedure qualification bend tests, and flexural testing to evaluate ductility and soundness of materials — face, root, and side bend to ASTM A370, E290, ISO 7438 standards in Kuwait and Dubai."
+  url="/service/bend-test/"
+  serviceType="Mechanical Testing"
+  areaServed={["Kuwait", "United Arab Emirates", "Saudi Arabia", "Bahrain", "Qatar", "Oman"]}
+/>
       <BendHero />
       <BendContent />
       {/* Contact section — to be added */}

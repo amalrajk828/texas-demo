@@ -1,6 +1,8 @@
 import type { Metadata } from "next";
 import AuditsHero from "@/components/service/audits-specialized-consultancy/AuditsHero";
 import AuditsContent from "@/components/service/audits-specialized-consultancy/AuditsContent";
+import { BreadcrumbJsonLd } from "@/components/schema/BreadcrumbJsonLd";
+import { ServiceJsonLd } from "@/components/schema/ServiceJsonLd";
 
 export const metadata: Metadata = {
   title: "Audits and Specialized Consultancy",
@@ -44,6 +46,18 @@ export const metadata: Metadata = {
 export default function AuditsSpecializedConsultancyPage() {
   return (
     <>
+      <BreadcrumbJsonLd items={[
+  { name: "Home", href: "/" },
+  { name: "Services", href: "/service/" },
+  { name: "Audits and Specialized Consultancy", href: "/service/audits-specialized-consultancy/" },
+]} />
+<ServiceJsonLd
+  name="Audits and Specialized Consultancy"
+  description="Comprehensive custody metering skid audits, compliance assessments, process optimization, and specialized consultancy services — ensuring accuracy, regulatory conformity, and operational excellence in Kuwait and Dubai."
+  url="/service/audits-specialized-consultancy/"
+  serviceType="Flow Measurement"
+  areaServed={["Kuwait", "United Arab Emirates", "Saudi Arabia", "Bahrain", "Qatar", "Oman"]}
+/>
       <AuditsHero />
       <AuditsContent />
       {/* Contact section — to be added */}

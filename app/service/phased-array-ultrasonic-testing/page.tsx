@@ -1,6 +1,8 @@
 import type { Metadata } from "next";
 import PhasedArrayHero from "@/components/service/phased-array-ultrasonic-testing/PhasedArrayHero";
 import PhasedArrayContent from "@/components/service/phased-array-ultrasonic-testing/PhasedArrayContent";
+import { BreadcrumbJsonLd } from "@/components/schema/BreadcrumbJsonLd";
+import { ServiceJsonLd } from "@/components/schema/ServiceJsonLd";
 
 export const metadata: Metadata = {
   title: "Phased Array Ultrasonic Testing (PAUT)",
@@ -20,6 +22,18 @@ export const metadata: Metadata = {
 export default function PhasedArrayPage() {
   return (
     <>
+      <BreadcrumbJsonLd items={[
+  { name: "Home", href: "/" },
+  { name: "Services", href: "/service/" },
+  { name: "Phased Array Ultrasonic Testing (PAUT)", href: "/service/phased-array-ultrasonic-testing/" },
+]} />
+<ServiceJsonLd
+  name="Phased Array Ultrasonic Testing (PAUT)"
+  description="Phased Array Ultrasonic Testing (PAUT) for detecting cracks, voids, pits, and corrosion defects, measuring material and coating thickness, and inspecting welds to ASME V, API 1104, EN ISO 13588 standards in Kuwait and Dubai."
+  url="/service/phased-array-ultrasonic-testing/"
+  serviceType="Non-Destructive Testing"
+  areaServed={["Kuwait", "United Arab Emirates", "Saudi Arabia", "Bahrain", "Qatar", "Oman"]}
+/>
       <PhasedArrayHero />
       <PhasedArrayContent />
       {/* Contact section — to be added */}

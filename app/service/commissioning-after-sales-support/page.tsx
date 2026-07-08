@@ -1,6 +1,8 @@
 import type { Metadata } from "next";
 import CommissioningHero from "@/components/service/commissioning-after-sales-support/CommissioningHero";
 import CommissioningContent from "@/components/service/commissioning-after-sales-support/CommissioningContent";
+import { BreadcrumbJsonLd } from "@/components/schema/BreadcrumbJsonLd";
+import { ServiceJsonLd } from "@/components/schema/ServiceJsonLd";
 
 export const metadata: Metadata = {
   title: "Commissioning and After Sales Support",
@@ -44,6 +46,18 @@ export const metadata: Metadata = {
 export default function CommissioningAfterSalesPage() {
   return (
     <>
+      <BreadcrumbJsonLd items={[
+  { name: "Home", href: "/" },
+  { name: "Services", href: "/service/" },
+  { name: "Commissioning and After Sales Support", href: "/service/commissioning-after-sales-support/" },
+]} />
+<ServiceJsonLd
+  name="Commissioning and After Sales Support"
+  description="Expert commissioning and 24/7 after-sales support for flow meters, metering control systems, metering skids, analyzers, and CEMS — ensuring seamless integration and peak performance in Kuwait and Dubai."
+  url="/service/commissioning-after-sales-support/"
+  serviceType="Commissioning"
+  areaServed={["Kuwait", "United Arab Emirates", "Saudi Arabia", "Bahrain", "Qatar", "Oman"]}
+/>
       <CommissioningHero />
       <CommissioningContent />
       {/* Contact section — to be added */}

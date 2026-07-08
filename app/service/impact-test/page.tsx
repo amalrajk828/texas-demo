@@ -1,6 +1,8 @@
 import type { Metadata } from "next";
 import ImpactHero from "@/components/service/impact-test/ImpactHero";
 import ImpactContent from "@/components/service/impact-test/ImpactContent";
+import { BreadcrumbJsonLd } from "@/components/schema/BreadcrumbJsonLd";
+import { ServiceJsonLd } from "@/components/schema/ServiceJsonLd";
 
 export const metadata: Metadata = {
   title: "Impact Test",
@@ -20,6 +22,18 @@ export const metadata: Metadata = {
 export default function ImpactTestPage() {
   return (
     <>
+      <BreadcrumbJsonLd items={[
+  { name: "Home", href: "/" },
+  { name: "Services", href: "/service/" },
+  { name: "Impact Test", href: "/service/impact-test/" },
+]} />
+<ServiceJsonLd
+  name="Impact Test"
+  description="Charpy and Izod impact testing to measure material resistance to sudden shock loading — including low-temperature impact testing and ductile-to-brittle transition assessment to ASTM E23, ISO 148 standards in Kuwait and Dubai."
+  url="/service/impact-test/"
+  serviceType="Mechanical Testing"
+  areaServed={["Kuwait", "United Arab Emirates", "Saudi Arabia", "Bahrain", "Qatar", "Oman"]}
+/>
       <ImpactHero />
       <ImpactContent />
       {/* Contact section — to be added */}

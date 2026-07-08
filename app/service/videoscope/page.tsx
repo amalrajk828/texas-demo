@@ -1,6 +1,8 @@
 import type { Metadata } from "next";
 import VideoscopeHero from "@/components/service/videoscope/VideoscopeHero";
 import VideoscopeContent from "@/components/service/videoscope/VideoscopeContent";
+import { BreadcrumbJsonLd } from "@/components/schema/BreadcrumbJsonLd";
+import { ServiceJsonLd } from "@/components/schema/ServiceJsonLd";
 
 export const metadata: Metadata = {
   title: "Videoscope Remote Visual Inspection",
@@ -20,6 +22,18 @@ export const metadata: Metadata = {
 export default function VideoscopePage() {
   return (
     <>
+      <BreadcrumbJsonLd items={[
+  { name: "Home", href: "/" },
+  { name: "Services", href: "/service/" },
+  { name: "Videoscope Remote Visual Inspection", href: "/service/videoscope/" },
+]} />
+<ServiceJsonLd
+  name="Videoscope Remote Visual Inspection"
+  description="Videoscope remote visual inspection for confined and inaccessible areas — internal pipe, vessel, turbine, and engine inspection with HD image and video recording capability in Kuwait and Dubai."
+  url="/service/videoscope/"
+  serviceType="Inspection Services"
+  areaServed={["Kuwait", "United Arab Emirates", "Saudi Arabia", "Bahrain", "Qatar", "Oman"]}
+/>
       <VideoscopeHero />
       <VideoscopeContent />
       {/* Contact section — to be added */}

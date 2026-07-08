@@ -1,6 +1,8 @@
 import type { Metadata } from "next";
 import SparePartsHero from "@/components/service/genuine-spare-parts/SparePartsHero";
 import SparePartsContent from "@/components/service/genuine-spare-parts/SparePartsContent";
+import { BreadcrumbJsonLd } from "@/components/schema/BreadcrumbJsonLd";
+import { ServiceJsonLd } from "@/components/schema/ServiceJsonLd";
 
 export const metadata: Metadata = {
   title: "Genuine Spare Parts",
@@ -44,6 +46,18 @@ export const metadata: Metadata = {
 export default function GenuineSpareParts() {
   return (
     <>
+      <BreadcrumbJsonLd items={[
+  { name: "Home", href: "/" },
+  { name: "Services", href: "/service/" },
+  { name: "Genuine Spare Parts", href: "/service/genuine-spare-parts/" },
+]} />
+<ServiceJsonLd
+  name="Genuine Spare Parts"
+  description="Genuine OEM spare parts for Faure Herman helical flow meters and associated metering equipment — authentic, traceable, and quality-certified. Authorised Faure Herman OEM Representative in Kuwait and Dubai."
+  url="/service/genuine-spare-parts/"
+  serviceType="Commissioning"
+  areaServed={["Kuwait", "United Arab Emirates", "Saudi Arabia", "Bahrain", "Qatar", "Oman"]}
+/>
       <SparePartsHero />
       <SparePartsContent />
       {/* Contact section — to be added */}

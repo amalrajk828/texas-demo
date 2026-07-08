@@ -1,6 +1,8 @@
 import type { Metadata } from "next";
 import UltrasonicHero from "@/components/service/ultrasonic-testing-ut/UltrasonicHero";
 import UltrasonicContent from "@/components/service/ultrasonic-testing-ut/UltrasonicContent";
+import { BreadcrumbJsonLd } from "@/components/schema/BreadcrumbJsonLd";
+import { ServiceJsonLd } from "@/components/schema/ServiceJsonLd";
 
 export const metadata: Metadata = {
   title: "Ultrasonic Testing (UT)",
@@ -20,6 +22,18 @@ export const metadata: Metadata = {
 export default function UltrasonicTestingPage() {
   return (
     <>
+      <BreadcrumbJsonLd items={[
+  { name: "Home", href: "/" },
+  { name: "Services", href: "/service/" },
+  { name: "Ultrasonic Testing (UT)", href: "/service/ultrasonic-testing-ut/" },
+]} />
+<ServiceJsonLd
+  name="Ultrasonic Testing (UT)"
+  description="Ultrasonic Testing using high-frequency sound waves to inspect the internal structure of materials and detect defects — conventional UT, TOFD, and wall thickness measurement to ASME V, API 1104, EN ISO 11666 standards in Kuwait and Dubai."
+  url="/service/ultrasonic-testing-ut/"
+  serviceType="Non-Destructive Testing"
+  areaServed={["Kuwait", "United Arab Emirates", "Saudi Arabia", "Bahrain", "Qatar", "Oman"]}
+/>
       <UltrasonicHero />
       <UltrasonicContent />
       {/* Contact section — to be added */}

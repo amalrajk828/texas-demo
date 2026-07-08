@@ -1,6 +1,8 @@
 import type { Metadata } from "next";
 import VisualInspectionHero from "@/components/service/visual-inspection-vi/VisualInspectionHero";
 import VisualInspectionContent from "@/components/service/visual-inspection-vi/VisualInspectionContent";
+import { BreadcrumbJsonLd } from "@/components/schema/BreadcrumbJsonLd";
+import { ServiceJsonLd } from "@/components/schema/ServiceJsonLd";
 
 export const metadata: Metadata = {
   title: "Visual Inspection (VI)",
@@ -20,6 +22,18 @@ export const metadata: Metadata = {
 export default function VisualInspectionPage() {
   return (
     <>
+      <BreadcrumbJsonLd items={[
+  { name: "Home", href: "/" },
+  { name: "Services", href: "/service/" },
+  { name: "Visual Inspection (VI)", href: "/service/visual-inspection-vi/" },
+]} />
+<ServiceJsonLd
+  name="Visual Inspection (VI)"
+  description="Visual inspection NDT services examining surface and external characteristics of components and materials — detecting cracks, corrosion, surface irregularities, and dimensional discrepancies. The first and essential step in any NDT programme. Kuwait and Dubai."
+  url="/service/visual-inspection-vi/"
+  serviceType="Non-Destructive Testing"
+  areaServed={["Kuwait", "United Arab Emirates", "Saudi Arabia", "Bahrain", "Qatar", "Oman"]}
+/>
       <VisualInspectionHero />
       <VisualInspectionContent />
       {/* Contact section — to be added */}

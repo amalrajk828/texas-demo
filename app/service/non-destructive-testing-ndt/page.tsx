@@ -1,6 +1,8 @@
 import type { Metadata } from "next";
 import NDTHero from "@/components/service/non-destructive-testing-ndt/NDTHero";
 import NDTSubServices from "@/components/service/non-destructive-testing-ndt/NDTSubServices";
+import { BreadcrumbJsonLd } from "@/components/schema/BreadcrumbJsonLd";
+import { ServiceJsonLd } from "@/components/schema/ServiceJsonLd";
 
 export const metadata: Metadata = {
   title: "Non Destructive Testing (NDT)",
@@ -20,6 +22,18 @@ export const metadata: Metadata = {
 export default function NDTPage() {
   return (
     <>
+      <BreadcrumbJsonLd items={[
+  { name: "Home", href: "/" },
+  { name: "Services", href: "/service/" },
+  { name: "Non Destructive Testing (NDT)", href: "/service/non-destructive-testing-ndt/" },
+]} />
+<ServiceJsonLd
+  name="Non Destructive Testing (NDT)"
+  description="Full range of NDT inspection services with qualified technicians and modern equipment — Visual Inspection (VI), Liquid/Dye Penetrant (PT), Magnetic Particle (MT), Radiographic Testing (RT), and Ultrasonic Testing (UT) in Kuwait and Dubai."
+  url="/service/non-destructive-testing-ndt/"
+  serviceType="Non-Destructive Testing"
+  areaServed={["Kuwait", "United Arab Emirates", "Saudi Arabia", "Bahrain", "Qatar", "Oman"]}
+/>
       <NDTHero />
       <NDTSubServices />
       {/* Contact section — to be added */}

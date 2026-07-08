@@ -1,6 +1,8 @@
 import type { Metadata } from "next";
 import PlantAutomationHero from "@/components/service/plant-automation/PlantAutomationHero";
 import PlantAutomationContent from "@/components/service/plant-automation/PlantAutomationContent";
+import { BreadcrumbJsonLd } from "@/components/schema/BreadcrumbJsonLd";
+import { ServiceJsonLd } from "@/components/schema/ServiceJsonLd";
 
 export const metadata: Metadata = {
   title: "Process Plant Automation",
@@ -20,6 +22,18 @@ export const metadata: Metadata = {
 export default function PlantAutomationPage() {
   return (
     <>
+      <BreadcrumbJsonLd items={[
+  { name: "Home", href: "/" },
+  { name: "Services", href: "/service/" },
+  { name: "Process Plant Automation", href: "/service/plant-automation/" },
+]} />
+<ServiceJsonLd
+  name="Process Plant Automation"
+  description="Process plant automation solutions that streamline industrial processes — customised automation systems for efficiency, remote monitoring, safety compliance, and ongoing support. Siemens, Allen-Bradley, Schneider, DCS. Kuwait and Dubai."
+  url="/service/plant-automation/"
+  serviceType="Industrial Automation"
+  areaServed={["Kuwait", "United Arab Emirates", "Saudi Arabia", "Bahrain", "Qatar", "Oman"]}
+/>
       <PlantAutomationHero />
       <PlantAutomationContent />
       {/* Contact section — to be added */}

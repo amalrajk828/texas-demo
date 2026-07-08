@@ -1,6 +1,8 @@
 import type { Metadata } from "next";
 import RadiographicHero from "@/components/service/radiographic-testing-rt/RadiographicHero";
 import RadiographicContent from "@/components/service/radiographic-testing-rt/RadiographicContent";
+import { BreadcrumbJsonLd } from "@/components/schema/BreadcrumbJsonLd";
+import { ServiceJsonLd } from "@/components/schema/ServiceJsonLd";
 
 export const metadata: Metadata = {
   title: "Radiographic Testing (RT)",
@@ -20,6 +22,18 @@ export const metadata: Metadata = {
 export default function RadiographicTestingPage() {
   return (
     <>
+      <BreadcrumbJsonLd items={[
+  { name: "Home", href: "/" },
+  { name: "Services", href: "/service/" },
+  { name: "Radiographic Testing (RT)", href: "/service/radiographic-testing-rt/" },
+]} />
+<ServiceJsonLd
+  name="Radiographic Testing (RT)"
+  description="Radiographic Testing using X-rays and gamma rays to examine the internal structure of materials and detect flaws — weld RT, castings inspection, and digital radiography to ASME V, API 1104, EN ISO 17636 standards in Kuwait and Dubai."
+  url="/service/radiographic-testing-rt/"
+  serviceType="Non-Destructive Testing"
+  areaServed={["Kuwait", "United Arab Emirates", "Saudi Arabia", "Bahrain", "Qatar", "Oman"]}
+/>
       <RadiographicHero />
       <RadiographicContent />
       {/* Contact section — to be added */}

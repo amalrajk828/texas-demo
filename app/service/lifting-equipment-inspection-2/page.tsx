@@ -1,6 +1,8 @@
 import type { Metadata } from "next";
 import LiftingInspectionHero from "@/components/service/lifting-equipment-inspection-2/LiftingInspectionHero";
 import LiftingInspectionContent from "@/components/service/lifting-equipment-inspection-2/LiftingInspectionContent";
+import { BreadcrumbJsonLd } from "@/components/schema/BreadcrumbJsonLd";
+import { ServiceJsonLd } from "@/components/schema/ServiceJsonLd";
 
 export const metadata: Metadata = {
   title: "Lifting Equipment Inspection",
@@ -20,6 +22,18 @@ export const metadata: Metadata = {
 export default function LiftingInspectionPage() {
   return (
     <>
+      <BreadcrumbJsonLd items={[
+  { name: "Home", href: "/" },
+  { name: "Services", href: "/service/" },
+  { name: "Lifting Equipment Inspection", href: "/service/lifting-equipment-inspection-2/" },
+]} />
+<ServiceJsonLd
+  name="Lifting Equipment Inspection"
+  description="Lifting equipment inspection services for cranes, hoists, forklifts, and elevators — systematic examination by certified competent persons with written reports per LOLER 1998, ASME B30, BS EN 13001 in Kuwait and Dubai."
+  url="/service/lifting-equipment-inspection-2/"
+  serviceType="Specialized Inspection"
+  areaServed={["Kuwait", "United Arab Emirates", "Saudi Arabia", "Bahrain", "Qatar", "Oman"]}
+/>
       <LiftingInspectionHero />
       <LiftingInspectionContent />
       {/* Contact section — to be added */}

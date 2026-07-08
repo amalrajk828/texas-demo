@@ -2,6 +2,8 @@ import type { Metadata } from "next";
 import UpgradeHero from "@/components/service/upgrade-of-metering-control-system/UpgradeHero";
 import UpgradeServices from "@/components/service/upgrade-of-metering-control-system/UpgradeServices";
 import UpgradeWhyUs from "@/components/service/upgrade-of-metering-control-system/UpgradeWhyUs";
+import { BreadcrumbJsonLd } from "@/components/schema/BreadcrumbJsonLd";
+import { ServiceJsonLd } from "@/components/schema/ServiceJsonLd";
 
 export const metadata: Metadata = {
   title: "Upgrade of Metering Control System",
@@ -46,6 +48,18 @@ export const metadata: Metadata = {
 export default function UpgradeMeteringPage() {
   return (
     <>
+      <BreadcrumbJsonLd items={[
+  { name: "Home", href: "/" },
+  { name: "Services", href: "/service/" },
+  { name: "Upgrade of Metering Control System", href: "/service/upgrade-of-metering-control-system/" },
+]} />
+<ServiceJsonLd
+  name="Upgrade of Metering Control System"
+  description="Texas Technical Services (TTS) specializes in Metering Control System upgradation — comprehensive assessment, tailored upgrade plans, SCADA & PLC enhancements, Flow Computer integration, and seamless data management for custody transfer operations in Kuwait and Dubai."
+  url="/service/upgrade-of-metering-control-system/"
+  serviceType="Flow Measurement"
+  areaServed={["Kuwait", "United Arab Emirates", "Saudi Arabia", "Bahrain", "Qatar", "Oman"]}
+/>
       <UpgradeHero />
       <UpgradeServices />
       <UpgradeWhyUs />

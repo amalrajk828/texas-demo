@@ -1,6 +1,8 @@
 import type { Metadata } from "next";
 import TorqueHero from "@/components/service/torque-tightening-bolt-tensioning-2/TorqueHero";
 import TorqueContent from "@/components/service/torque-tightening-bolt-tensioning-2/TorqueContent";
+import { BreadcrumbJsonLd } from "@/components/schema/BreadcrumbJsonLd";
+import { ServiceJsonLd } from "@/components/schema/ServiceJsonLd";
 
 export const metadata: Metadata = {
   title: "Torque Tightening & Bolt Tensioning",
@@ -20,6 +22,18 @@ export const metadata: Metadata = {
 export default function TorquePage() {
   return (
     <>
+      <BreadcrumbJsonLd items={[
+  { name: "Home", href: "/" },
+  { name: "Services", href: "/service/" },
+  { name: "Torque Tightening & Bolt Tensioning", href: "/service/torque-tightening-bolt-tensioning-2/" },
+]} />
+<ServiceJsonLd
+  name="Torque Tightening & Bolt Tensioning"
+  description="Torque tightening and bolt tensioning services using calibrated hydraulic tools and torque sensors — bolted flange connections, pressure vessel fasteners, and structural bolting to ASME PCC-1, EN 1591, API 6A in Kuwait and Dubai."
+  url="/service/torque-tightening-bolt-tensioning-2/"
+  serviceType="Specialized Inspection"
+  areaServed={["Kuwait", "United Arab Emirates", "Saudi Arabia", "Bahrain", "Qatar", "Oman"]}
+/>
       <TorqueHero />
       <TorqueContent />
       {/* Contact section — to be added */}

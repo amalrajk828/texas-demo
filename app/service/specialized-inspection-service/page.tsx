@@ -1,6 +1,8 @@
 import type { Metadata } from "next";
 import SpecializedHero from "@/components/service/specialized-inspection-service/SpecializedHero";
 import SpecializedSubServices from "@/components/service/specialized-inspection-service/SpecializedSubServices";
+import { BreadcrumbJsonLd } from "@/components/schema/BreadcrumbJsonLd";
+import { ServiceJsonLd } from "@/components/schema/ServiceJsonLd";
 
 export const metadata: Metadata = {
   title: "Specialized Inspection Service",
@@ -20,6 +22,18 @@ export const metadata: Metadata = {
 export default function SpecializedInspectionPage() {
   return (
     <>
+      <BreadcrumbJsonLd items={[
+  { name: "Home", href: "/" },
+  { name: "Services", href: "/service/" },
+  { name: "Specialized Inspection Service", href: "/service/specialized-inspection-service/" },
+]} />
+<ServiceJsonLd
+  name="Specialized Inspection Service"
+  description="Advanced specialized inspection services including Phased Array Ultrasonic Testing (PAUT), Eddy Current Testing, TOFD, Magnetic Flux Leakage, Videoscope, Gamma Ray Pipe Crawler, Corrosion Control, Metallurgical Services, Heat Treatment, and more — Kuwait and Dubai."
+  url="/service/specialized-inspection-service/"
+  serviceType="Specialized Inspection"
+  areaServed={["Kuwait", "United Arab Emirates", "Saudi Arabia", "Bahrain", "Qatar", "Oman"]}
+/>
       <SpecializedHero />
       <SpecializedSubServices />
       {/* Contact section — to be added */}

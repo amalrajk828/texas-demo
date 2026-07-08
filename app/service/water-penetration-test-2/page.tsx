@@ -1,6 +1,8 @@
 import type { Metadata } from "next";
 import WaterPenetrationHero from "@/components/service/water-penetration-test-2/WaterPenetrationHero";
 import WaterPenetrationContent from "@/components/service/water-penetration-test-2/WaterPenetrationContent";
+import { BreadcrumbJsonLd } from "@/components/schema/BreadcrumbJsonLd";
+import { ServiceJsonLd } from "@/components/schema/ServiceJsonLd";
 
 export const metadata: Metadata = {
   title: "Water Penetration Test",
@@ -20,6 +22,18 @@ export const metadata: Metadata = {
 export default function WaterPenetrationPage() {
   return (
     <>
+      <BreadcrumbJsonLd items={[
+  { name: "Home", href: "/" },
+  { name: "Services", href: "/service/" },
+  { name: "Water Penetration Test", href: "/service/water-penetration-test-2/" },
+]} />
+<ServiceJsonLd
+  name="Water Penetration Test"
+  description="Water penetration testing for windows, doors, and curtain wall systems to identify leakage and assess building envelope integrity — static pressure testing to ASTM E1105, AAMA 502, BS 6375 standards in Kuwait and Dubai."
+  url="/service/water-penetration-test-2/"
+  serviceType="Specialized Inspection"
+  areaServed={["Kuwait", "United Arab Emirates", "Saudi Arabia", "Bahrain", "Qatar", "Oman"]}
+/>
       <WaterPenetrationHero />
       <WaterPenetrationContent />
       {/* Contact section — to be added */}

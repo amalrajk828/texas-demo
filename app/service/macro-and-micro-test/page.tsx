@@ -1,6 +1,8 @@
 import type { Metadata } from "next";
 import MacroMicroHero from "@/components/service/macro-and-micro-test/MacroMicroHero";
 import MacroMicroContent from "@/components/service/macro-and-micro-test/MacroMicroContent";
+import { BreadcrumbJsonLd } from "@/components/schema/BreadcrumbJsonLd";
+import { ServiceJsonLd } from "@/components/schema/ServiceJsonLd";
 
 export const metadata: Metadata = {
   title: "Macro and Micro Test",
@@ -20,6 +22,18 @@ export const metadata: Metadata = {
 export default function MacroAndMicroTestPage() {
   return (
     <>
+      <BreadcrumbJsonLd items={[
+  { name: "Home", href: "/" },
+  { name: "Services", href: "/service/" },
+  { name: "Macro and Micro Test", href: "/service/macro-and-micro-test/" },
+]} />
+<ServiceJsonLd
+  name="Macro and Micro Test"
+  description="Macro and micro mechanical testing for material characterisation at different length scales — weld macro examination, metallographic grain structure analysis, inclusion assessment, and microstructural characterisation to ASTM and ISO standards in Kuwait and Dubai."
+  url="/service/macro-and-micro-test/"
+  serviceType="Mechanical Testing"
+  areaServed={["Kuwait", "United Arab Emirates", "Saudi Arabia", "Bahrain", "Qatar", "Oman"]}
+/>
       <MacroMicroHero />
       <MacroMicroContent />
       {/* Contact section — to be added */}

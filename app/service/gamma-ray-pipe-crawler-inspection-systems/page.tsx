@@ -1,6 +1,8 @@
 import type { Metadata } from "next";
 import GammaRayHero from "@/components/service/gamma-ray-pipe-crawler-inspection-systems/GammaRayHero";
 import GammaRayContent from "@/components/service/gamma-ray-pipe-crawler-inspection-systems/GammaRayContent";
+import { BreadcrumbJsonLd } from "@/components/schema/BreadcrumbJsonLd";
+import { ServiceJsonLd } from "@/components/schema/ServiceJsonLd";
 
 export const metadata: Metadata = {
   title: "Gamma Ray Pipe Crawler Inspection Systems",
@@ -20,6 +22,18 @@ export const metadata: Metadata = {
 export default function GammaRayPage() {
   return (
     <>
+      <BreadcrumbJsonLd items={[
+  { name: "Home", href: "/" },
+  { name: "Services", href: "/service/" },
+  { name: "Gamma Ray Pipe Crawler Inspection Systems", href: "/service/gamma-ray-pipe-crawler-inspection-systems/" },
+]} />
+<ServiceJsonLd
+  name="Gamma Ray Pipe Crawler Inspection Systems"
+  description="Gamma ray and X-ray pipe crawler inspection — battery-powered remote-controlled mobile radiographic machine producing SWSI radiographs of circumferential pipeline welds to ASME V, API 1104 standards in Kuwait and Dubai."
+  url="/service/gamma-ray-pipe-crawler-inspection-systems/"
+  serviceType="Non-Destructive Testing"
+  areaServed={["Kuwait", "United Arab Emirates", "Saudi Arabia", "Bahrain", "Qatar", "Oman"]}
+/>
       <GammaRayHero />
       <GammaRayContent />
       {/* Contact section — to be added */}

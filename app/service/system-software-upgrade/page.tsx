@@ -1,6 +1,8 @@
 import type { Metadata } from "next";
 import ControlSystemHero from "@/components/service/system-software-upgrade/ControlSystemHero";
 import ControlSystemContent from "@/components/service/system-software-upgrade/ControlSystemContent";
+import { BreadcrumbJsonLd } from "@/components/schema/BreadcrumbJsonLd";
+import { ServiceJsonLd } from "@/components/schema/ServiceJsonLd";
 
 export const metadata: Metadata = {
   title: "Control System Integration and Upgradation",
@@ -20,6 +22,18 @@ export const metadata: Metadata = {
 export default function ControlSystemPage() {
   return (
     <>
+      <BreadcrumbJsonLd items={[
+  { name: "Home", href: "/" },
+  { name: "Services", href: "/service/" },
+  { name: "Control System Integration and Upgradation", href: "/service/system-software-upgrade/" },
+]} />
+<ServiceJsonLd
+  name="Control System Integration and Upgradation"
+  description="PLC and SCADA-based automation and system integration — multi-brand PLC programming, SCADA development, HMI design, legacy system upgrades, and MIS reporting for industrial operations in Kuwait and Dubai."
+  url="/service/system-software-upgrade/"
+  serviceType="Industrial Automation"
+  areaServed={["Kuwait", "United Arab Emirates", "Saudi Arabia", "Bahrain", "Qatar", "Oman"]}
+/>
       <ControlSystemHero />
       <ControlSystemContent />
       {/* Contact section — to be added */}

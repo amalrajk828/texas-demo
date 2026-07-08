@@ -1,6 +1,8 @@
 import type { Metadata } from "next";
 import EddyCurrentHero from "@/components/service/eddy-current-testing/EddyCurrentHero";
 import EddyCurrentContent from "@/components/service/eddy-current-testing/EddyCurrentContent";
+import { BreadcrumbJsonLd } from "@/components/schema/BreadcrumbJsonLd";
+import { ServiceJsonLd } from "@/components/schema/ServiceJsonLd";
 
 export const metadata: Metadata = {
   title: "Eddy Current Testing (ECT)",
@@ -20,6 +22,18 @@ export const metadata: Metadata = {
 export default function EddyCurrentPage() {
   return (
     <>
+      <BreadcrumbJsonLd items={[
+  { name: "Home", href: "/" },
+  { name: "Services", href: "/service/" },
+  { name: "Eddy Current Testing (ECT)", href: "/service/eddy-current-testing/" },
+]} />
+<ServiceJsonLd
+  name="Eddy Current Testing (ECT)"
+  description="Eddy Current Testing (ECT) for detecting flaws in tubes and material surfaces using electromagnetic induction — heat exchanger tube inspection, surface crack detection, conductivity measurement to ASTM E426, ASME V standards in Kuwait and Dubai."
+  url="/service/eddy-current-testing/"
+  serviceType="Non-Destructive Testing"
+  areaServed={["Kuwait", "United Arab Emirates", "Saudi Arabia", "Bahrain", "Qatar", "Oman"]}
+/>
       <EddyCurrentHero />
       <EddyCurrentContent />
       {/* Contact section — to be added */}

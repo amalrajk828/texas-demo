@@ -1,6 +1,8 @@
 import type { Metadata } from "next";
 import MagneticParticleHero from "@/components/service/magnetic-particle-inspection-mt/MagneticParticleHero";
 import MagneticParticleContent from "@/components/service/magnetic-particle-inspection-mt/MagneticParticleContent";
+import { BreadcrumbJsonLd } from "@/components/schema/BreadcrumbJsonLd";
+import { ServiceJsonLd } from "@/components/schema/ServiceJsonLd";
 
 export const metadata: Metadata = {
   title: "Magnetic Particle Inspection (MT)",
@@ -20,6 +22,18 @@ export const metadata: Metadata = {
 export default function MagneticParticlePage() {
   return (
     <>
+      <BreadcrumbJsonLd items={[
+  { name: "Home", href: "/" },
+  { name: "Services", href: "/service/" },
+  { name: "Magnetic Particle Inspection (MT)", href: "/service/magnetic-particle-inspection-mt/" },
+]} />
+<ServiceJsonLd
+  name="Magnetic Particle Inspection (MT)"
+  description="Magnetic Particle Testing (MPT/MPI) for surface and near-surface defect detection in ferromagnetic materials — iron, steel, nickel, and cobalt. Wet fluorescent and colour contrast methods to ASME V, ISO 17638, ASTM E709 in Kuwait and Dubai."
+  url="/service/magnetic-particle-inspection-mt/"
+  serviceType="Non-Destructive Testing"
+  areaServed={["Kuwait", "United Arab Emirates", "Saudi Arabia", "Bahrain", "Qatar", "Oman"]}
+/>
       <MagneticParticleHero />
       <MagneticParticleContent />
       {/* Contact section — to be added */}

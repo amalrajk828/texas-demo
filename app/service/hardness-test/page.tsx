@@ -1,6 +1,8 @@
 import type { Metadata } from "next";
 import HardnessHero from "@/components/service/hardness-test/HardnessHero";
 import HardnessContent from "@/components/service/hardness-test/HardnessContent";
+import { BreadcrumbJsonLd } from "@/components/schema/BreadcrumbJsonLd";
+import { ServiceJsonLd } from "@/components/schema/ServiceJsonLd";
 
 export const metadata: Metadata = {
   title: "Hardness Test",
@@ -20,6 +22,18 @@ export const metadata: Metadata = {
 export default function HardnessTestPage() {
   return (
     <>
+      <BreadcrumbJsonLd items={[
+  { name: "Home", href: "/" },
+  { name: "Services", href: "/service/" },
+  { name: "Hardness Test", href: "/service/hardness-test/" },
+]} />
+<ServiceJsonLd
+  name="Hardness Test"
+  description="Rockwell, Brinell, and Vickers hardness testing for metals, plastics, and ceramics — measuring material resistance to permanent deformation to ASTM E18, E10, E92, ISO 6508, 6506, 6507 standards in Kuwait and Dubai."
+  url="/service/hardness-test/"
+  serviceType="Mechanical Testing"
+  areaServed={["Kuwait", "United Arab Emirates", "Saudi Arabia", "Bahrain", "Qatar", "Oman"]}
+/>
       <HardnessHero />
       <HardnessContent />
       {/* Contact section — to be added */}

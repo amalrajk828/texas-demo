@@ -1,6 +1,8 @@
 import type { Metadata } from "next";
 import CommissioningHero from "@/components/service/commissioning-and-start-up-support/CommissioningHero";
 import CommissioningContent from "@/components/service/commissioning-and-start-up-support/CommissioningContent";
+import { BreadcrumbJsonLd } from "@/components/schema/BreadcrumbJsonLd";
+import { ServiceJsonLd } from "@/components/schema/ServiceJsonLd";
 
 export const metadata: Metadata = {
   title: "Commissioning and Start-up Support",
@@ -20,6 +22,18 @@ export const metadata: Metadata = {
 export default function CommissioningPage() {
   return (
     <>
+      <BreadcrumbJsonLd items={[
+  { name: "Home", href: "/" },
+  { name: "Services", href: "/service/" },
+  { name: "Commissioning and Start-up Support", href: "/service/commissioning-and-start-up-support/" },
+]} />
+<ServiceJsonLd
+  name="Commissioning and Start-up Support"
+  description="Industrial process automation commissioning and start-up support — validation and fine-tuning of PLCs, DCS, SCADA, sensors, and safety systems from pre-commissioning through hot start-up and post-commissioning handover in Kuwait and Dubai."
+  url="/service/commissioning-and-start-up-support/"
+  serviceType="Commissioning"
+  areaServed={["Kuwait", "United Arab Emirates", "Saudi Arabia", "Bahrain", "Qatar", "Oman"]}
+/>
       <CommissioningHero />
       <CommissioningContent />
       {/* Contact section — to be added */}
