@@ -4,6 +4,7 @@ import Image from "next/image";
 import { ChevronRight, ExternalLink, ArrowRight } from "lucide-react";
 import ClientsMarquee from "@/components/clients/ClientsMarquee";
 import TestimonialsSection from "@/components/clients/TestimonialsSection";
+import { BreadcrumbJsonLd } from "@/components/schema/BreadcrumbJsonLd";
 
 export const metadata: Metadata = {
   title: "Our Clients | Texas Technical Services",
@@ -114,6 +115,7 @@ const featuredClients = clients.filter(c =>
 export default function ClientsPage() {
   return (
     <>
+      <BreadcrumbJsonLd items={[{ name: "Home", href: "/" }, { name: "Clients", href: "/clients/" }]} />
       {/* ══ HERO ══════════════════════════════════════════════════ */}
       <section className="bg-[#0B0D26] relative overflow-hidden">
         {/* Grid texture */}

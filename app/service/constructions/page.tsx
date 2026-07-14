@@ -25,6 +25,14 @@ export const metadata: Metadata = {
     description:
       "Structural steel fabrication, gantry fabrication, piping, electrical works, and EPC project execution across Kuwait and the GCC.",
   },
+  keywords: [
+    "industrial construction Kuwait",
+    "steel fabrication Kuwait",
+    "EPC contractor Kuwait",
+    "piping fabrication GCC",
+    "structural steel erection",
+    "Texas Technical Services construction",
+  ],
 };
 
 const faqItems = [

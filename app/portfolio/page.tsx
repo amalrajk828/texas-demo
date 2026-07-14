@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import PortfolioClient from "./_components/PortfolioClient";
+import { BreadcrumbJsonLd } from "@/components/schema/BreadcrumbJsonLd";
 
 export const metadata: Metadata = {
   title: "Product Portfolio",
@@ -32,5 +33,10 @@ export const metadata: Metadata = {
 };
 
 export default function PortfolioPage() {
-  return <PortfolioClient />;
+  return (
+    <>
+      <BreadcrumbJsonLd items={[{ name: "Home", href: "/" }, { name: "Portfolio", href: "/portfolio/" }]} />
+      <PortfolioClient />
+    </>
+  );
 }

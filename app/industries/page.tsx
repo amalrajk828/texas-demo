@@ -13,6 +13,7 @@ import {
   ArrowRight,
   ChevronRight,
 } from "lucide-react";
+import { BreadcrumbJsonLd } from "@/components/schema/BreadcrumbJsonLd";
 
 export const metadata: Metadata = {
   title: "Industries We Serve | Texas Technical Services",
@@ -121,6 +122,7 @@ const stats = [
 export default function IndustriesPage() {
   return (
     <>
+      <BreadcrumbJsonLd items={[{ name: "Home", href: "/" }, { name: "Industries", href: "/industries/" }]} />
       {/* ══ HERO ══════════════════════════════════════════════ */}
       <section className="bg-[#0B0D26] relative overflow-hidden">
         {/* Grid texture */}
