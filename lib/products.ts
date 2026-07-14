@@ -1518,113 +1518,6 @@ export const products: Product[] = [
 
   // ══ FREQUENCY INVERTERS VFD (10) ═════════════════════════
   {
-    slug: "fr-cs80-series",
-    name: "FR-CS80 Series",
-    category: "Frequency Inverters (VFD)",
-    parentPath: "/products/frequency-inverter-vfd",
-    image: "/images/frequency-inverters/CS80.webp",
-    tag: "Mitsubishi Electric VFD",
-    description:
-      "The FR-CS80 Series is a compact and smart frequency inverter (VFD) from Mitsubishi Electric, offering general-purpose magnetic flux vector motor control in one of the industry's smallest compact bodies. The design focuses on space-saving installation, ease of use, and reliable performance for a wide range of industrial applications.",
-    keyApplications: [
-      "Speed control of pumps and compressors in oil & gas facilities",
-      "Fan and blower motor control for utility systems",
-      "Conveyor and material handling drives",
-      "HVAC and industrial ventilation systems",
-      "General machine and production equipment requiring motor speed control",
-      "Local drive control on packaged and skid-mounted units",
-    ],
-    keyBenefits: [
-      "Compact, low-heat, space-saving design",
-      "General-purpose vector motor control",
-      "Reduced wiring and faster installation",
-      "Reliable continuous-duty operation",
-      "Flexible expansion with Mitsubishi options",
-      "Easy operation and maintenance",
-    ],
-    industries: [
-      "Electrical, Industrial, and Pump System Integrators",
-      "HVAC, Crane, and Lift System Integrators",
-      "Power, Water, and Wastewater Treatment Facilities",
-      "Oil & Gas and Petrochemical Facilities",
-      "Manufacturing Plants and Factories",
-    ],
-    externalLink:
-      "https://emea.mitsubishielectric.com/fa/products/drv/inv/fr_cs",
-    downloadLink: null,
-  },
-  {
-    slug: "fr-d700-series",
-    name: "FR-D700 Series",
-    category: "Frequency Inverters (VFD)",
-    parentPath: "/products/frequency-inverter-vfd",
-    image: "/images/frequency-inverters/FR-E800.webp",
-    tag: "Mitsubishi Electric VFD",
-    description:
-      "The FR-D700 Series from Mitsubishi Electric is a compact, general-purpose frequency inverter designed for simple, reliable, and cost-efficient motor speed control. Featuring a space-saving design, easy operation, and stable performance, the FR-D700 Series is well suited for basic industrial drive applications. It provides an economical solution for factories, utilities, and auxiliary systems where simplicity, reliability, and low total cost are key requirements.",
-    keyApplications: [
-      "Speed control of pumps, fans, and blowers",
-      "Conveyor and material handling motor control",
-      "Utility and auxiliary motor systems",
-      "Basic machines and production equipment",
-      "OEM packages and local drive panels",
-    ],
-    keyBenefits: [
-      "Simple and easy setup and operation with built-in controls",
-      "General-purpose control with V/F and magnetic flux vector options",
-      "Compact and space-saving body for panel-mounted applications",
-      "Reliable and stable motor control for continuous operation",
-      "Supports wide application range with flexible settings",
-      "Designed for easy maintenance and long service life",
-    ],
-    industries: [
-      "Electrical, Pump, and Industrial System Integrators",
-      "Industrial and Utility Auxiliary Systems",
-      "Manufacturing Plants and Factories",
-      "Power, Water, and Wastewater Treatment Utilities",
-      "Oil & Gas Facilities (Auxiliary and Non-Critical Systems)",
-    ],
-    externalLink:
-      "https://emea.mitsubishielectric.com/fa/products/drv/inv/frd-series/frd700",
-    downloadLink: null,
-  },
-  {
-    slug: "fr-e800-series",
-    name: "FR-E800 Series",
-    category: "Frequency Inverters (VFD)",
-    parentPath: "/products/frequency-inverter-vfd",
-    image: "/images/frequency-inverters/FR-E800-2.webp",
-    tag: "Mitsubishi Electric VFD",
-    description:
-      "The FR-E800 Series is Mitsubishi Electric's advanced compact frequency inverter designed for high-efficiency motor control in general-purpose, pump, and fan applications. It delivers vector control performance, high-speed stability, built-in safety, and Ethernet connectivity in a space-saving design, making it ideal for modern HVAC systems, water treatment plants, and industrial utility drives.",
-    keyApplications: [
-      "Pumps for water supply, wastewater, and desalination systems",
-      "HVAC fans, blowers, AHUs, and cooling towers",
-      "Oil & gas utility skids and auxiliary pump systems",
-      "Compressors and industrial ventilation systems",
-      "Conveyors and material handling drives",
-      "General machinery and packaged industrial equipment",
-    ],
-    keyBenefits: [
-      "High-performance vector control with stable high-speed operation",
-      "Energy-saving pump and fan functions",
-      "Compact, space-saving design",
-      "Built-in Ethernet connectivity",
-      "Integrated safety and industrial reliability",
-    ],
-    industries: [
-      "Electrical and Control Panel Integrators",
-      "HVAC & Building Management System Integrators",
-      "Water, Wastewater & Desalination Facilities",
-      "Oil & Gas and Petrochemical Utility Systems",
-      "Power Generation Auxiliary Systems",
-      "OEM Machine Builders and Skid Manufacturers",
-    ],
-    externalLink:
-      "https://emea.mitsubishielectric.com/fa/products/drv/inv/fr_a800/fra800e",
-    downloadLink: null,
-  },
-  {
     slug: "e800-e-series",
     name: "E800-E Series (Ethernet Communication)",
     category: "Frequency Inverters (VFD)",
@@ -1661,7 +1554,114 @@ export const products: Product[] = [
     downloadLink: null,
   },
   {
-    slug: "e800-sce-series",
+    slug: "cs80",
+    name: "FR-CS80 Series",
+    category: "Frequency Inverters (VFD)",
+    parentPath: "/products/frequency-inverter-vfd",
+    image: "/images/frequency-inverters/CS80.webp",
+    tag: "Mitsubishi Electric VFD",
+    description:
+      "The FR-CS80 Series is a compact and smart frequency inverter (VFD) from Mitsubishi Electric, offering general-purpose magnetic flux vector motor control in one of the industry's smallest compact bodies. The design focuses on space-saving installation, ease of use, and reliable performance for a wide range of industrial applications.",
+    keyApplications: [
+      "Speed control of pumps and compressors in oil & gas facilities",
+      "Fan and blower motor control for utility systems",
+      "Conveyor and material handling drives",
+      "HVAC and industrial ventilation systems",
+      "General machine and production equipment requiring motor speed control",
+      "Local drive control on packaged and skid-mounted units",
+    ],
+    keyBenefits: [
+      "Compact, low-heat, space-saving design",
+      "General-purpose vector motor control",
+      "Reduced wiring and faster installation",
+      "Reliable continuous-duty operation",
+      "Flexible expansion with Mitsubishi options",
+      "Easy operation and maintenance",
+    ],
+    industries: [
+      "Electrical, Industrial, and Pump System Integrators",
+      "HVAC, Crane, and Lift System Integrators",
+      "Power, Water, and Wastewater Treatment Facilities",
+      "Oil & Gas and Petrochemical Facilities",
+      "Manufacturing Plants and Factories",
+    ],
+    externalLink:
+      "https://emea.mitsubishielectric.com/fa/products/drv/inv/fr_cs",
+    downloadLink: null,
+  },
+  {
+    slug: "frd700",
+    name: "FR-D700 Series",
+    category: "Frequency Inverters (VFD)",
+    parentPath: "/products/frequency-inverter-vfd",
+    image: "/images/frequency-inverters/FR-E800.webp",
+    tag: "Mitsubishi Electric VFD",
+    description:
+      "The FR-D700 Series from Mitsubishi Electric is a compact, general-purpose frequency inverter designed for simple, reliable, and cost-efficient motor speed control. Featuring a space-saving design, easy operation, and stable performance, the FR-D700 Series is well suited for basic industrial drive applications. It provides an economical solution for factories, utilities, and auxiliary systems where simplicity, reliability, and low total cost are key requirements.",
+    keyApplications: [
+      "Speed control of pumps, fans, and blowers",
+      "Conveyor and material handling motor control",
+      "Utility and auxiliary motor systems",
+      "Basic machines and production equipment",
+      "OEM packages and local drive panels",
+    ],
+    keyBenefits: [
+      "Simple and easy setup and operation with built-in controls",
+      "General-purpose control with V/F and magnetic flux vector options",
+      "Compact and space-saving body for panel-mounted applications",
+      "Reliable and stable motor control for continuous operation",
+      "Supports wide application range with flexible settings",
+      "Designed for easy maintenance and long service life",
+    ],
+    industries: [
+      "Electrical, Pump, and Industrial System Integrators",
+      "Industrial and Utility Auxiliary Systems",
+      "Manufacturing Plants and Factories",
+      "Power, Water, and Wastewater Treatment Utilities",
+      "Oil & Gas Facilities (Auxiliary and Non-Critical Systems)",
+    ],
+    externalLink:
+      "https://emea.mitsubishielectric.com/fa/products/drv/inv/frd-series/frd700",
+    downloadLink: null,
+  },
+  {
+    slug: "fre800",
+    name: "FR-E800 Series",
+    category: "Frequency Inverters (VFD)",
+    parentPath: "/products/frequency-inverter-vfd",
+    image: "/images/frequency-inverters/FR-E800-2.webp",
+    tag: "Mitsubishi Electric VFD",
+    description:
+      "The FR-E800 Series is Mitsubishi Electric's advanced compact frequency inverter designed for high-efficiency motor control in general-purpose, pump, and fan applications. It delivers vector control performance, high-speed stability, built-in safety, and Ethernet connectivity in a space-saving design, making it ideal for modern HVAC systems, water treatment plants, and industrial utility drives.",
+    keyApplications: [
+      "Pumps for water supply, wastewater, and desalination systems",
+      "HVAC fans, blowers, AHUs, and cooling towers",
+      "Oil & gas utility skids and auxiliary pump systems",
+      "Compressors and industrial ventilation systems",
+      "Conveyors and material handling drives",
+      "General machinery and packaged industrial equipment",
+    ],
+    keyBenefits: [
+      "High-performance vector control with stable high-speed operation",
+      "Energy-saving pump and fan functions",
+      "Compact, space-saving design",
+      "Built-in Ethernet connectivity",
+      "Integrated safety and industrial reliability",
+    ],
+    industries: [
+      "Electrical and Control Panel Integrators",
+      "HVAC & Building Management System Integrators",
+      "Water, Wastewater & Desalination Facilities",
+      "Oil & Gas and Petrochemical Utility Systems",
+      "Power Generation Auxiliary Systems",
+      "OEM Machine Builders and Skid Manufacturers",
+    ],
+    externalLink:
+      "https://emea.mitsubishielectric.com/fa/products/drv/inv/fr_a800/fra800e",
+    downloadLink: null,
+  },
+  {
+    slug: "e800sce",
     name: "E800-SCE Series (Ethernet Safety Communication)",
     category: "Frequency Inverters (VFD)",
     parentPath: "/products/frequency-inverter-vfd",
@@ -1697,7 +1697,7 @@ export const products: Product[] = [
     downloadLink: null,
   },
   {
-    slug: "fr-f800-series",
+    slug: "frf800",
     name: "FR-F800 Series",
     category: "Frequency Inverters (VFD)",
     parentPath: "/products/frequency-inverter-vfd",
@@ -1733,7 +1733,7 @@ export const products: Product[] = [
     downloadLink: null,
   },
   {
-    slug: "fr-f800-e-series",
+    slug: "f800e",
     name: "FR-F800-E Series",
     category: "Frequency Inverters (VFD)",
     parentPath: "/products/frequency-inverter-vfd",
@@ -1743,7 +1743,7 @@ export const products: Product[] = [
       "The FR-F800-E Series is an energy-optimized pump and fan inverter with built-in Ethernet and BACnet/IP, designed for direct integration into HVAC, BMS, and utility networks. It delivers high-efficiency pump and fan control with seamless connectivity to building management and industrial automation systems.",
     keyApplications: [
       "Large pumps in water, wastewater, and desalination plants",
-      "HVAC systems (chillers, cooling towers, ...)", // wait! Let's write full lists as extracted from vfd_slug_7ae7001.tsx
+      "HVAC systems (chillers, cooling towers, AHUs, and ventilation fans)",
       "Oil & gas utility pumps and ventilation systems",
       "Power plant auxiliary pumps and fans",
       "District cooling and building utility systems",
@@ -1769,7 +1769,7 @@ export const products: Product[] = [
     downloadLink: null,
   },
   {
-    slug: "fr-f846-e-series",
+    slug: "f846e",
     name: "FR-F846-E Series",
     category: "Frequency Inverters (VFD)",
     parentPath: "/products/frequency-inverter-vfd",
@@ -1806,7 +1806,7 @@ export const products: Product[] = [
     downloadLink: null,
   },
   {
-    slug: "fr-a800-e-series",
+    slug: "fra800e",
     name: "FR-A800-E Series",
     category: "Frequency Inverters (VFD)",
     parentPath: "/products/frequency-inverter-vfd",
@@ -1842,7 +1842,7 @@ export const products: Product[] = [
     downloadLink: null,
   },
   {
-    slug: "fr-a741-regenerative-series",
+    slug: "a741",
     name: "FR-A741 Regenerative Series",
     category: "Frequency Inverters (VFD)",
     parentPath: "/products/frequency-inverter-vfd",
@@ -2772,7 +2772,7 @@ export const products: Product[] = [
       "https://texastechserv.com/wp-content/uploads/2023/09/FT-Minisonic-Fixed-En.pdf",
   },
   {
-    slug: "minisonic-ii",
+    slug: "miniosonic-ii",
     name: "MINIOSONIC II",
     category: "Liquid Flow Meters",
     parentPath: "/products/flow-meters/liquid-flow-meters",
@@ -3399,7 +3399,7 @@ export const products: Product[] = [
 
   // ══ DUST ANALYZERS — SUB-PRODUCTS (2) ════════════════════
   {
-    slug: "dusthunter-t100",
+    slug: "dusthunder-t100",
     name: "DUSTHUNTER T100",
     category: "Dust Analyzers",
     parentPath: "/products/analyzers/dust-analyzers",
@@ -3552,7 +3552,7 @@ export const products: Product[] = [
 
   // ══ INDUSTRIAL AUTOMATION (7) ═══════════════════════════
   {
-    slug: "plc-io-module",
+    slug: "plc-i-o-module",
     name: "PLC & I/O Module",
     category: "Industrial Automation",
     parentPath: "/products/industrial-automation",
