@@ -1518,7 +1518,7 @@ export const products: Product[] = [
 
   // ══ FREQUENCY INVERTERS VFD (10) ═════════════════════════
   {
-    slug: "e800-e-series",
+    slug: "e800e",
     name: "E800-E Series (Ethernet Communication)",
     category: "Frequency Inverters (VFD)",
     parentPath: "/products/frequency-inverter-vfd",
