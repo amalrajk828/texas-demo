@@ -22,6 +22,10 @@ const industries = [
   { label: "Metal & Steel", href: "/industries/metal-steel/" },
 ];
 
+const blogLinks = [
+  { label: "Technical Resource Hub", href: "/blog/" },
+];
+
 const socials = [
   { label: "LinkedIn",  href: "https://linkedin.com",  path: "M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6zM2 9h4v12H2z M4 6a2 2 0 1 0 0-4 2 2 0 0 0 0 4z" },
   { label: "Facebook",  href: "https://facebook.com",  path: "M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z" },
@@ -51,7 +55,7 @@ export default function ThemedFooter() {
 
       {/* Main footer */}
       <div className="max-w-7xl mx-auto px-4 sm:px-6 py-14">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-10">
 
           {/* Brand */}
           <div>
@@ -129,6 +133,22 @@ export default function ThemedFooter() {
                     <span className="w-1 h-1 rounded-full shrink-0 transition-colors group-hover:bg-white"
                       style={{ background: "color-mix(in srgb, var(--color-brand-red) 40%, transparent)" }} />
                     {i.label}
+                  </Link>
+                </li>
+              ))}
+            </ul>
+          </div>
+
+          {/* Blog */}
+          <div>
+            <h3 className="text-white/40 text-[9px] font-medium tracking-[2px] uppercase mb-5">Blog</h3>
+            <ul className="space-y-2">
+              {blogLinks.map((b, idx) => (
+                <li key={`${b.label}-${idx}`}>
+                  <Link href={b.href} className="text-white/40 text-[12px] hover:text-white transition-colors flex items-center gap-1.5 group">
+                    <span className="w-1 h-1 rounded-full shrink-0 transition-colors group-hover:bg-white"
+                      style={{ background: "color-mix(in srgb, var(--color-brand-red) 40%, transparent)" }} />
+                    {b.label}
                   </Link>
                 </li>
               ))}
