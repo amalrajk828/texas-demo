@@ -143,7 +143,7 @@ export default function GasFlowMetersPage() {
               </p>
             </div>
             <Link
-              href="/contact"
+              href="/contacts/"
               className="shrink-0 inline-flex items-center gap-2 bg-[#F5821F] hover:bg-[#e07214] text-white font-bold px-6 py-3.5 rounded-[6px] shadow-lg hover:shadow-[#F5821F]/20 transition-all duration-200"
             >
               Contact Us &rarr;
