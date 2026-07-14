@@ -33,6 +33,14 @@ export const metadata: Metadata = {
     locale: "en_US",
     url: "https://texastechserv.com",
     siteName: "Texas Technical Services",
+    images: [
+      {
+        url: "https://texastechserv.com/og-default.png",
+        width: 1200,
+        height: 630,
+        alt: "Texas Technical Services — Flow Measurement & Industrial Automation",
+      },
+    ],
   },
   robots: { index: true, follow: true },
 };

@@ -188,6 +188,7 @@ export default async function ProductPage({ params }: Props) {
         url={`/portfolio/${product.slug}/`}
         brand={product.brand}
         category={product.category}
+        image={product.heroImage}
       />
       {/* ══ HERO ══════════════════════════════════════════════════ */}
       <section className="relative overflow-hidden min-h-[400px] flex items-end">

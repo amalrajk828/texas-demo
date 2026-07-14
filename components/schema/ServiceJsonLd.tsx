@@ -27,7 +27,7 @@ export function ServiceJsonLd({
   if (serviceType) jsonLd.serviceType = serviceType;
   if (areaServed) {
     jsonLd.areaServed = areaServed.map((a) => ({
-      "@type": "City",
+      "@type": "Country",
       name: a,
     }));
   }
