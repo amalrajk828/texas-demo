@@ -47,8 +47,8 @@ export default function GreyServices() {
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-12">
           {SERVICES.map((svc, i) => (
             <FadeUp key={svc.title} delay={0.1 + i * 0.1}>
-              <motion.div whileHover={{ y: -5, boxShadow: "0 16px 48px rgba(0,0,0,0.13)", transition: { duration: 0.2 } }}
-                className="group relative rounded-2xl flex flex-col h-full"
+              <motion.div whileHover={{ y: -8, scale: 1.02, boxShadow: "0 24px 48px rgba(0,0,0,0.12), 0 12px 24px rgba(229,57,53,0.04)", transition: { duration: 0.3, ease: "easeOut" } }}
+                className="group relative rounded-2xl flex flex-col h-full cursor-pointer"
                 style={{
                   background: "var(--g-card-bg)",
                   border: "1px solid var(--g-card-border)",

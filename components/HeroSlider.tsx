@@ -6,6 +6,7 @@ import { useRef, useState, useEffect, useCallback } from "react";
 import { AnimatePresence, motion, type Variants } from "framer-motion";
 import { ArrowRight, Play } from "lucide-react";
 
+/* ── Slide data ─────────────────────────────────────────────────── */
 const SLIDES = [
   {
     type: "image" as const,
@@ -15,6 +16,7 @@ const SLIDES = [
     heading: ["Welcome to", "Texas Technical", "Services"],
     sub: "In quality, we believe. Providing flow measurement, inspection, and automation solutions for the world's most demanding industrial environments.",
     tag: "Industrial Services",
+    light: false,
     ctas: [
       { label: "About Us", href: "/about-us/", primary: true },
       { label: "Our Services", href: "/service/", primary: false },
@@ -28,6 +30,7 @@ const SLIDES = [
     heading: ["Industrial Process", "Automation", "Solutions"],
     sub: "Empowering industries through automation. PLC and SCADA-based systems, control integration, and commissioning for oil & gas, manufacturing, and power generation.",
     tag: "Automation",
+    light: false,
     ctas: [
       { label: "Know More", href: "/service/industrial-automation/", primary: true },
       { label: "Our Services", href: "/service/", primary: false },
@@ -41,6 +44,7 @@ const SLIDES = [
     heading: ["Flow Measurement &", "Control System", "Solutions"],
     sub: "Where flow measurement challenges meet solutions. Expert metering consultants with in-depth knowledge of API, AGA, and custody metering standards.",
     tag: "Metering",
+    light: false,
     ctas: [
       { label: "Know More", href: "/service/flow-measurement/", primary: true },
       { label: "Our Products", href: "/products/", primary: false },
@@ -54,6 +58,7 @@ const SLIDES = [
     heading: ["Inspection", "and", "Testing"],
     sub: "Your partner in inspecting excellence and testing confidence. ISO 14001:2015, ISO 45001:2018, and ISO 9001:2015 certified inspection and NDT services.",
     tag: "NDT & Testing",
+    light: false,
     ctas: [
       { label: "Know More", href: "/service/inspection-testing/", primary: true },
       { label: "Our Services", href: "/service/", primary: false },
@@ -73,17 +78,32 @@ const STATS = [
 const EASE = [0.22, 1, 0.36, 1] as [number, number, number, number];
 
 const textVariants: Variants = {
-  enter:  { opacity: 0, x: -28 },
-  center: { opacity: 1, x: 0, transition: { duration: 0.65, ease: EASE, delay: 0.15 } },
-  exit:   { opacity: 0, x: 20, transition: { duration: 0.35, ease: "easeIn" } },
+  enter:  { opacity: 0, y: 20, filter: "blur(4px)" },
+  center: { opacity: 1, y: 0, filter: "blur(0px)", transition: { duration: 0.7, ease: EASE, delay: 0.15 } },
+  exit:   { opacity: 0, y: -15, filter: "blur(4px)", transition: { duration: 0.35, ease: "easeIn" } },
 };
 
 const mediaVariants: Variants = {
-  enter:  { opacity: 0, scale: 0.96, y: 16 },
-  center: { opacity: 1, scale: 1, y: 0, transition: { duration: 0.7, ease: EASE, delay: 0.1 } },
-  exit:   { opacity: 0, scale: 0.98, y: -10, transition: { duration: 0.35, ease: "easeIn" } },
+  enter:  { opacity: 0, scale: 0.94, y: 20 },
+  center: { opacity: 1, scale: 1, y: 0, transition: { duration: 0.8, ease: EASE, delay: 0.1 } },
+  exit:   { opacity: 0, scale: 0.97, y: -10, transition: { duration: 0.35, ease: "easeIn" } },
 };
 
+/* ── Swipe hook ──────────────────────────────────────────────────── */
+function useSwipe(onLeft: () => void, onRight: () => void) {
+  const touchStart = useRef<number | null>(null);
+  return {
+    onTouchStart: (e: React.TouchEvent) => { touchStart.current = e.touches[0].clientX; },
+    onTouchEnd:   (e: React.TouchEvent) => {
+      if (touchStart.current === null) return;
+      const delta = e.changedTouches[0].clientX - touchStart.current;
+      if (Math.abs(delta) > 50) { delta < 0 ? onLeft() : onRight(); }
+      touchStart.current = null;
+    },
+  };
+}
+
+/* ── Component ───────────────────────────────────────────────────── */
 export default function HeroSlider() {
   const [current, setCurrent] = useState(0);
   const [paused, setPaused] = useState(false);
@@ -100,7 +120,11 @@ export default function HeroSlider() {
   }, []);
 
   const next = useCallback(() => goTo((current + 1) % SLIDES.length), [current, goTo]);
+  const prev = useCallback(() => goTo((current - 1 + SLIDES.length) % SLIDES.length), [current, goTo]);
 
+  const swipe = useSwipe(next, prev);
+
+  /* Auto‑advance timer */
   useEffect(() => {
     if (paused) {
       if (rafRef.current) cancelAnimationFrame(rafRef.current);
@@ -122,31 +146,29 @@ export default function HeroSlider() {
     return () => { if (rafRef.current) cancelAnimationFrame(rafRef.current); };
   }, [current, paused]);
 
+  /* Reset video on slide change */
   useEffect(() => {
     const v = mainVideoRef.current;
     if (!v) return;
     if (SLIDES[current].type === "video") { v.currentTime = 0; v.play().catch(() => {}); }
   }, [current]);
 
+  /* Auto-play thumb videos */
   useEffect(() => {
     thumbVideoRefs.current.forEach((v) => { if (v) v.play().catch(() => {}); });
   }, []);
 
   const slide = SLIDES[current];
+  const isLight = slide.light;
 
   return (
     <section
-      className="relative w-full overflow-hidden"
-      style={{ minHeight: "640px", height: "100svh", maxHeight: "920px", background: "var(--color-brand-navy)" }}
+      className="relative w-full overflow-hidden flex flex-col justify-center"
+      style={{ minHeight: "clamp(680px, 100svh, 920px)", background: "var(--color-brand-navy)" }}
       onMouseEnter={() => setPaused(true)}
       onMouseLeave={() => setPaused(false)}
+      {...swipe}
     >
-      {/* Theme overlay — transparent/gradient effect when --color-brand-hero-overlay is set */}
-      <div
-        className="absolute inset-0 pointer-events-none z-0"
-        style={{ background: "var(--color-brand-hero-overlay, transparent)" }}
-      />
-
       {/* Noise texture */}
       <div
         className="absolute inset-0 pointer-events-none z-0 opacity-[0.025]"
@@ -156,19 +178,33 @@ export default function HeroSlider() {
         }}
       />
 
+      {/* Grid texture */}
+      <div
+        className="absolute inset-0 pointer-events-none z-0 opacity-40"
+        style={{ background: "var(--background-grid-dark)", backgroundSize: "40px 40px" }}
+      />
+
       {/* Ambient glow */}
       <div
         className="absolute right-0 top-0 w-[60%] h-full pointer-events-none z-0"
         style={{ background: "radial-gradient(ellipse at 80% 35%, color-mix(in srgb, var(--color-brand-red) 18%, transparent) 0%, transparent 60%)" }}
       />
-      {/* Secondary left glow */}
       <div
         className="absolute left-0 bottom-0 w-[45%] h-[65%] pointer-events-none z-0"
         style={{ background: "radial-gradient(ellipse at 15% 85%, color-mix(in srgb, var(--color-brand-red) 10%, transparent) 0%, transparent 65%)" }}
       />
 
-      {/* Progress bar */}
-      <div className="absolute top-0 left-0 right-0 h-[2px] bg-white/5 z-30">
+      {/* Progress bar — top on desktop, bottom on mobile */}
+      <div className="absolute top-0 left-0 right-0 h-[2px] bg-white/5 z-30 hidden lg:block">
+        <div
+          className="h-full transition-none"
+          style={{
+            width: `${progress}%`,
+            background: "linear-gradient(to right, var(--color-brand-red), color-mix(in srgb, var(--color-brand-red) 80%, #fff))",
+          }}
+        />
+      </div>
+      <div className="absolute bottom-16 left-0 right-0 h-[2px] bg-white/5 z-30 lg:hidden">
         <div
           className="h-full transition-none"
           style={{
@@ -178,24 +214,50 @@ export default function HeroSlider() {
         />
       </div>
 
-      {/* Two-column layout */}
-      <div className="relative z-10 h-full max-w-[1400px] mx-auto px-6 sm:px-10 lg:px-16 grid grid-cols-1 lg:grid-cols-[1fr_480px] xl:grid-cols-[1fr_540px] gap-8 lg:gap-12 items-center">
+      {/* ── Two-column layout ──────────────────────────────── */}
+      <div className="relative z-10 w-full max-w-[1536px] mx-auto px-5 sm:px-10 lg:px-16 grid grid-cols-1 lg:grid-cols-[1fr_560px] xl:grid-cols-[1fr_680px] 2xl:grid-cols-[1fr_780px] gap-8 lg:gap-14 items-center">
 
-        {/* LEFT: Text */}
-        <div className="flex flex-col justify-center pt-24 pb-10 lg:py-0">
+        {/* LEFT: Text column */}
+        <div className="flex flex-col justify-center pt-16 pb-8 lg:py-0">
           <AnimatePresence mode="wait" initial={false}>
-            <motion.div key={current} variants={textVariants} initial="enter" animate="center" exit="exit">
+            <motion.div
+              key={current}
+              variants={textVariants}
+              initial="enter"
+              animate="center"
+              exit="exit"
+              className={isLight ? "relative" : ""}
+            >
+              {/* Light-slide frosted card overlay */}
+              {isLight && (
+                <div
+                  className="absolute -inset-8 sm:-inset-10 rounded-3xl -z-10"
+                  style={{
+                    background: "rgba(255,255,255,0.88)",
+                    backdropFilter: "blur(20px)",
+                    WebkitBackdropFilter: "blur(20px)",
+                    boxShadow: "0 8px 40px rgba(0,0,0,0.10)",
+                    border: "1px solid rgba(255,255,255,0.40)",
+                  }}
+                />
+              )}
 
               {/* Eyebrow */}
               <div className="flex items-center gap-3 mb-6">
                 <span className="w-6 h-[2px] rounded-full" style={{ background: "var(--color-brand-red)" }} />
-                <span className="text-[10px] font-bold tracking-[3px] uppercase" style={{ color: "var(--color-brand-red)" }}>
+                <span
+                  className="text-[10px] font-bold tracking-[3px] uppercase"
+                  style={{ color: "var(--color-brand-red)" }}
+                >
                   {slide.eyebrow}
                 </span>
               </div>
 
               {/* Heading */}
-              <h1 className="text-[2.4rem] sm:text-5xl lg:text-[3.2rem] xl:text-[3.6rem] font-black text-white leading-[1.08] mb-6 tracking-tight">
+              <h1
+                className="text-[clamp(2rem,6vw,3.6rem)] font-black leading-[1.08] mb-6 tracking-tight"
+                style={{ color: isLight ? "#111827" : "white" }}
+              >
                 {slide.heading.map((line, i) => (
                   <span key={i} className="block">
                     {i === 1 ? <span style={{ color: "var(--color-brand-red)" }}>{line}</span> : line}
@@ -203,9 +265,15 @@ export default function HeroSlider() {
                 ))}
               </h1>
 
-              <div className="w-10 h-[2px] bg-white/10 rounded-full mb-5" />
+              <div
+                className="w-10 h-[2px] rounded-full mb-5"
+                style={{ background: isLight ? "rgba(0,0,0,0.08)" : "rgba(255,255,255,0.10)" }}
+              />
 
-              <p className="text-white/45 text-[15px] sm:text-base leading-[1.8] mb-9 max-w-[480px]">
+              <p
+                className="text-[15px] sm:text-base leading-[1.8] mb-9 max-w-[480px]"
+                style={{ color: isLight ? "rgba(0,0,0,0.55)" : "rgba(255,255,255,0.45)" }}
+              >
                 {slide.sub}
               </p>
 
@@ -227,7 +295,11 @@ export default function HeroSlider() {
                     <Link
                       key={cta.label}
                       href={cta.href}
-                      className="inline-flex items-center gap-2 border border-white/10 hover:border-white/25 bg-white/[0.04] hover:bg-white/[0.08] text-white/60 hover:text-white font-semibold px-7 py-3.5 rounded-xl transition-all duration-200 text-[13px] backdrop-blur-sm"
+                      className={`inline-flex items-center gap-2 font-semibold px-7 py-3.5 rounded-xl transition-all duration-200 text-[13px] backdrop-blur-sm ${
+                        isLight
+                          ? "border border-gray-200 bg-white/60 text-gray-600 hover:text-gray-900 hover:border-gray-300"
+                          : "border border-white/10 hover:border-white/25 bg-white/[0.04] hover:bg-white/[0.08] text-white/60 hover:text-white"
+                      }`}
                     >
                       {cta.label}
                     </Link>
@@ -239,10 +311,25 @@ export default function HeroSlider() {
               <div className="flex items-center gap-6 sm:gap-8">
                 {STATS.map((s, i) => (
                   <div key={s.label} className="flex items-center gap-3">
-                    {i > 0 && <div className="w-px h-7 bg-white/10" />}
+                    {i > 0 && (
+                      <div
+                        className="w-px h-7"
+                        style={{ background: isLight ? "rgba(0,0,0,0.08)" : "rgba(255,255,255,0.10)" }}
+                      />
+                    )}
                     <div>
-                      <p className="text-[1.35rem] font-black text-white leading-none">{s.num}</p>
-                      <p className="text-[10px] text-white/30 tracking-[1.5px] uppercase mt-0.5">{s.label}</p>
+                      <p
+                        className="text-[1.35rem] font-black leading-none"
+                        style={{ color: isLight ? "#111827" : "white" }}
+                      >
+                        {s.num}
+                      </p>
+                      <p
+                        className="text-[10px] tracking-[1.5px] uppercase mt-0.5"
+                        style={{ color: isLight ? "rgba(0,0,0,0.35)" : "rgba(255,255,255,0.30)" }}
+                      >
+                        {s.label}
+                      </p>
                     </div>
                   </div>
                 ))}
@@ -251,8 +338,8 @@ export default function HeroSlider() {
           </AnimatePresence>
         </div>
 
-        {/* RIGHT: Media panel */}
-        <div className="hidden lg:flex flex-col gap-4 justify-center py-20">
+        {/* RIGHT: Media panel — responsive */}
+        <div className="flex flex-col gap-4 justify-center pb-16 pt-4 lg:py-20 w-full max-w-[600px] mx-auto lg:max-w-none">
 
           {/* Main media frame */}
           <AnimatePresence mode="wait" initial={false}>
@@ -262,11 +349,11 @@ export default function HeroSlider() {
               initial="enter"
               animate="center"
               exit="exit"
-              className="relative rounded-2xl overflow-hidden border border-white/[0.07]"
-              style={{ aspectRatio: "16/10", background: "var(--color-brand-navy-mid)" }}
+              className="relative rounded-3xl overflow-hidden border border-white/[0.07] shadow-2xl shadow-black/60"
+              style={{ aspectRatio: "16/9", background: "var(--color-brand-navy-mid)" }}
             >
               {slide.type === "image" ? (
-                <Image src={slide.src} alt={slide.alt} fill priority={current === 0} sizes="540px" className="object-cover" quality={90} />
+                <Image src={slide.src} alt={slide.alt} fill priority={current === 0} sizes="600px" className="object-cover" quality={90} />
               ) : (
                 <video ref={mainVideoRef} key={slide.src} src={slide.src} aria-label={slide.alt} autoPlay muted loop playsInline className="w-full h-full object-cover" />
               )}
@@ -293,26 +380,26 @@ export default function HeroSlider() {
             </motion.div>
           </AnimatePresence>
 
-          {/* Thumbnail filmstrip */}
-          <div className="grid grid-cols-4 gap-2.5">
+          {/* Thumbnail filmstrip — taller cards */}
+          <div className="grid grid-cols-4 gap-3">
             {SLIDES.map((s, i) => (
               <button
                 key={i}
                 onClick={() => goTo(i)}
                 aria-label={`Go to slide ${i + 1}: ${s.tag}`}
                 className={`relative rounded-xl overflow-hidden transition-all duration-300 ${
-                  i === current ? "opacity-100" : "opacity-40 hover:opacity-70"
+                  i === current ? "opacity-100 ring-2 ring-offset-2" : "opacity-40 hover:opacity-70"
                 }`}
                 style={{
-                  aspectRatio: "16/10",
+                  aspectRatio: "4/3",
                   ...(i === current ? {
-                    outline: "2px solid var(--color-brand-red)",
-                    outlineOffset: "2px",
-                  } : {}),
+                    ringColor: "var(--color-brand-red)",
+                    outlineColor: "var(--color-brand-navy)",
+                  } as React.CSSProperties : {}),
                 }}
               >
                 {s.type === "image" ? (
-                  <Image src={s.src} alt={s.tag} fill sizes="140px" className="object-cover" quality={60} />
+                  <Image src={s.src} alt={s.tag} fill sizes="160px" className="object-cover" quality={60} />
                 ) : (
                   <video ref={(el) => { thumbVideoRefs.current[i] = el; }} src={s.src} muted loop playsInline className="w-full h-full object-cover" />
                 )}
@@ -321,13 +408,13 @@ export default function HeroSlider() {
                 {/* Circular progress on active thumb */}
                 {i === current && (
                   <div className="absolute inset-0 flex items-center justify-center">
-                    <svg className="w-7 h-7 -rotate-90" viewBox="0 0 28 28">
-                      <circle cx="14" cy="14" r="11" fill="none" stroke="rgba(255,255,255,0.12)" strokeWidth="2" />
+                    <svg className="w-8 h-8 -rotate-90" viewBox="0 0 32 32">
+                      <circle cx="16" cy="16" r="13" fill="none" stroke="rgba(255,255,255,0.12)" strokeWidth="2" />
                       <circle
-                        cx="14" cy="14" r="11" fill="none" strokeWidth="2" strokeLinecap="round"
+                        cx="16" cy="16" r="13" fill="none" strokeWidth="2" strokeLinecap="round"
                         stroke="var(--color-brand-red)"
-                        strokeDasharray={`${2 * Math.PI * 11}`}
-                        strokeDashoffset={`${2 * Math.PI * 11 * (1 - progress / 100)}`}
+                        strokeDasharray={`${2 * Math.PI * 13}`}
+                        strokeDashoffset={`${2 * Math.PI * 13 * (1 - progress / 100)}`}
                         style={{ transition: "stroke-dashoffset 0.1s linear" }}
                       />
                     </svg>
@@ -350,14 +437,14 @@ export default function HeroSlider() {
         </div>
       </div>
 
-      {/* Mobile dot nav */}
-      <div className="lg:hidden absolute bottom-6 left-1/2 -translate-x-1/2 z-20 flex items-center gap-2">
+      {/* Mobile dot nav — larger dots */}
+      <div className="lg:hidden absolute bottom-6 left-1/2 -translate-x-1/2 z-20 flex items-center gap-2.5">
         {SLIDES.map((_, i) => (
           <button key={i} onClick={() => goTo(i)} aria-label={`Go to slide ${i + 1}`}>
             <span
-              className="block h-[3px] rounded-full transition-all duration-300"
+              className="block h-[4px] rounded-full transition-all duration-300"
               style={{
-                width: i === current ? "28px" : "12px",
+                width: i === current ? "36px" : "14px",
                 background: i === current ? "var(--color-brand-red)" : "rgba(255,255,255,0.25)",
               }}
             />
