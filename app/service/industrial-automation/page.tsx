@@ -11,13 +11,13 @@ export const metadata: Metadata = {
   description:
     "Texas Technical Services Co. (TTS) is a leading industrial automation company in Kuwait, UAE, and Saudi Arabia — providing industrial automation & control systems, control and automation engineering, PLC and SCADA system integrator services, process control automation solutions, plant automation, automation in manufacturing industry, and control systems and automation for oil & gas, power, and industrial sectors across the GCC.",
   alternates: {
-    canonical: "https://texastechserv.com/service/industrial-automation/",
+    canonical: "/service/industrial-automation/",
   },
   openGraph: {
     title: "Industrial Automation, PLC SCADA & Process Control | Texas Technical Services",
     description:
       "Industrial automation & control systems, control and automation engineering, and plant and process automation — PLC and SCADA system integrators in Kuwait, UAE, and Saudi Arabia serving manufacturing, power plant, and oil & gas sectors.",
-    url: "https://texastechserv.com/service/industrial-automation/",
+    url: "/service/industrial-automation/",
   },
   twitter: {
     card: "summary_large_image",

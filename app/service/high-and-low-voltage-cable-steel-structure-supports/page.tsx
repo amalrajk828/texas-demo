@@ -6,12 +6,12 @@ export const metadata: Metadata = {
   title: "High and Low Voltage Cable Steel Structure Supports | Texas Technical Services",
   description:
     "Design, fabrication, and erection of high and low voltage cable support structures, pathways, and steel structural supports for industrial electrical infrastructure.",
-  alternates: { canonical: "https://texastechserv.com/service/high-and-low-voltage-cable-steel-structure-supports/" },
+  alternates: { canonical: "/service/high-and-low-voltage-cable-steel-structure-supports/" },
   openGraph: {
     title: "Cable Steel Structure Supports | Texas Technical Services",
     description: "Design, fabrication, and erection of cable support structures, pathways, and steel structural supports.",
-    url: "https://texastechserv.com/service/high-and-low-voltage-cable-steel-structure-supports/",
-    images: [{ url: "https://texastechserv.com/og-cable-supports.jpg", width: 1200, height: 630, alt: "Cable Steel Structure Supports — Texas Technical Services" }],
+    url: "/service/high-and-low-voltage-cable-steel-structure-supports/",
+    images: [{ url: "/og-cable-supports.jpg", width: 1200, height: 630, alt: "Cable Steel Structure Supports — Texas Technical Services" }],
   },
 };
 

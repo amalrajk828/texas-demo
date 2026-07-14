@@ -9,7 +9,7 @@ export const metadata: Metadata = {
   title: "CEMS - Texas Technical Services",
   description:
     "Continuous emissions monitoring systems (CEMS) from SICK for compliance monitoring of all pollutant components in exhaust gases from waste incineration, power plants, and industrial facilities.",
-  alternates: { canonical: "https://texastechserv.com/products/analyzers/cems/" },
+  alternates: { canonical: "/products/analyzers/cems/" },
   keywords: [
     "CEMS solutions Kuwait",
     "continuous emissions monitoring",
@@ -20,7 +20,7 @@ export const metadata: Metadata = {
     title: "CEMS - Texas Technical Services",
     description:
       "Continuous emissions monitoring systems (CEMS) from SICK for emissions compliance.",
-    url: "https://texastechserv.com/products/analyzers/cems/",
+    url: "/products/analyzers/cems/",
   },
   twitter: {
     card: "summary_large_image",

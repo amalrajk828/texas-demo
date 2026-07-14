@@ -9,16 +9,16 @@ export const metadata: Metadata = {
   description:
     "GUM-compliant measurement uncertainty calculations and comprehensive validation services for custody metering skids, flow computers, and metering systems. API MPMS Chapter 21, ISO, OIML compliant — Kuwait and Dubai.",
   alternates: {
-    canonical: "https://texastechserv.com/service/validation-and-uncertainty-calculations/",
+    canonical: "/service/validation-and-uncertainty-calculations/",
   },
   openGraph: {
     title: "Validation and Uncertainty Calculations | Texas Technical Services",
     description:
       "Advanced GUM-methodology uncertainty calculations and custody metering system validation — API MPMS, ISO, OIML compliant. Kuwait & Dubai.",
-    url: "https://texastechserv.com/service/validation-and-uncertainty-calculations/",
+    url: "/service/validation-and-uncertainty-calculations/",
     images: [
       {
-        url: "https://texastechserv.com/og-validation-uncertainty.jpg",
+        url: "/og-validation-uncertainty.jpg",
         width: 1200,
         height: 630,
         alt: "Validation and Uncertainty Calculations — Texas Technical Services",

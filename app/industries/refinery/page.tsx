@@ -8,7 +8,7 @@ export const metadata: Metadata = {
   title: "Refinery Industry Solutions | Texas Technical Services",
   description:
     "Texas Technical Services provides cutting-edge flow metering, CEMS, analyzers, and industrial automation solutions tailored for the demanding world of refinery operations.",
-  alternates: { canonical: "https://texastechserv.com/industries/refinery/" },
+  alternates: { canonical: "/industries/refinery/" },
   keywords: [
     "refinery flow metering Kuwait",
     "refinery CEMS solutions",
@@ -21,7 +21,7 @@ export const metadata: Metadata = {
     title: "Refinery Industry Solutions | Texas Technical Services",
     description:
       "Precision flow meters, flow computers, CEMS and analyzers for refinery process control — backed by 15+ years of industrial expertise.",
-    url: "https://texastechserv.com/industries/refinery/",
+    url: "/industries/refinery/",
   },
   twitter: {
     card: "summary_large_image",

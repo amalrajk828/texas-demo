@@ -7,6 +7,7 @@ import { products, getProductBySlug, getProduct, getAllProductSlugs, type Bullet
 import ProductInquiryForm from "@/components/ProductInquiryForm";
 import RelatedProducts from "@/components/RelatedProducts";
 import { ProductJsonLd } from "@/components/schema/ProductJsonLd";
+import { SITE_URL } from "@/lib/site";
 
 type Props = { params: Promise<{ slug: string }> };
 
@@ -22,11 +23,11 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     title: `${product.name} | Texas Technical Services`,
     description: product.paragraphs?.[0] ?? `${product.name} — ${product.brand}`,
     keywords: [product.name, product.brand, product.category, "industrial automation"],
-    alternates: { canonical: `https://texastechserv.com/portfolio/${slug}/` },
+    alternates: { canonical: `/portfolio/${slug}/` },
     openGraph: {
       title: `${product.name} | Texas Technical Services`,
       description: product.paragraphs?.[0] ?? `${product.name} — ${product.brand}`,
-      url: `https://texastechserv.com/portfolio/${slug}/`,
+      url: `/portfolio/${slug}/`,
     },
     twitter: {
       card: "summary_large_image",
@@ -301,7 +302,7 @@ export default async function ProductPage({ params }: Props) {
                   )}
                   {(product.detailHref || product.externalLink) && (
                     <a
-                      href={product.detailHref || product.externalLink || `https://texastechserv.com/portfolio/${product.slug}/`}
+                      href={product.detailHref || product.externalLink || `${SITE_URL}/portfolio/${product.slug}/`}
                       {...((product.detailHref || product.externalLink) !== "#" ? { target: "_blank", rel: "noopener noreferrer" } : {})}
                       className="inline-flex items-center gap-1.5 text-[#e7212b] hover:text-[#aa0b1b] font-medium text-[13px] transition-colors"
                     >

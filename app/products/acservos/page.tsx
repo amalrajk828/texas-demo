@@ -9,7 +9,7 @@ import { getProductsByPath } from "@/lib/products";
 export const metadata: Metadata = {
   title: "AC Servos - Texas Technical Services",
   description: "Mitsubishi Electric MELSERVO AC servo drives and motors for precise motion control in industrial automation.",
-  alternates: { canonical: "https://texastechserv.com/products/acservos/" },
+  alternates: { canonical: "/products/acservos/" },
   keywords: [
     "Mitsubishi AC servo drives",
     "MELSERVO servo motors",
@@ -19,7 +19,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "AC Servos - Texas Technical Services",
     description: "Mitsubishi Electric MELSERVO AC servo drives and motors for precise motion control in industrial automation.",
-    url: "https://texastechserv.com/products/acservos/",
+    url: "/products/acservos/",
   },
   twitter: {
     card: "summary_large_image",

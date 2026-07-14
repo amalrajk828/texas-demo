@@ -7,7 +7,7 @@ export const metadata: Metadata = {
   title: "Metal & Steel Industry Solutions | Texas Technical Services",
   description:
     "Texas Technical Services delivers CEMS, dust analyzers, gas analyzers, and extractive gas analyzers for the metal and steel industry — enhancing efficiency, quality control, and emissions monitoring.",
-  alternates: { canonical: "https://texastechserv.com/industries/metal-steel/" },
+  alternates: { canonical: "/industries/metal-steel/" },
   keywords: [
     "metal and steel CEMS solutions",
     "metal industry dust analyzers",
@@ -19,7 +19,7 @@ export const metadata: Metadata = {
     title: "Metal & Steel Industry Solutions | Texas Technical Services",
     description:
       "Cutting-edge OEM analyzer and CEMS solutions for metal and steel production — backed by 15+ years of industrial expertise.",
-    url: "https://texastechserv.com/industries/metal-steel/",
+    url: "/industries/metal-steel/",
   },
   twitter: {
     card: "summary_large_image",

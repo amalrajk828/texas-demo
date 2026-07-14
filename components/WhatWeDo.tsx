@@ -5,6 +5,7 @@ import { motion, useInView } from "framer-motion";
 import { useRef } from "react";
 import { ArrowRight, Gauge, FlaskConical, Cpu } from "lucide-react";
 import { ThemePrimaryLink } from "@/components/ThemeButton";
+import { SITE_URL } from "@/lib/site";
 
 const SERVICES = [
   { Icon: Gauge,       title: "Flow Measurement & Control System Solutions", desc: "Comprehensive custody metering, flow computers, metering skids, and control system upgrades for liquid, gas, and water applications." },
@@ -192,7 +193,7 @@ export default function WhatWeDo() {
 
             <FadeUp delay={0.22}>
               <div className="flex flex-wrap gap-3">
-                <ThemePrimaryLink href="https://texastechserv.com/contacts/" external>
+                <ThemePrimaryLink href={`${SITE_URL}/contacts/`} external>
                   Contact Us <ArrowRight className="w-4 h-4" />
                 </ThemePrimaryLink>
                 <Link

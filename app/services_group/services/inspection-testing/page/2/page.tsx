@@ -12,12 +12,12 @@ export const metadata: Metadata = {
   description:
     "Advanced inspection services including TOFD, Eddy Current Testing, Phased Array Ultrasonic Testing, and mechanical testing (macro/micro, fracture, bend, impact, hardness, tensile) in Kuwait and the GCC.",
   alternates: {
-    canonical: "https://texastechserv.com/services_group/services/inspection-testing/page/2/",
+    canonical: "/services_group/services/inspection-testing/page/2/",
   },
   openGraph: {
     title: "Inspection & Testing Services — Page 2 | Texas Technical Services",
     description: "TOFD, Eddy Current, Phased Array UT, and mechanical testing services in Kuwait and Dubai.",
-    url: "https://texastechserv.com/services_group/services/inspection-testing/page/2/",
+    url: "/services_group/services/inspection-testing/page/2/",
   },
   twitter: {
     card: "summary_large_image",

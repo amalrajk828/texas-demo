@@ -1,7 +1,8 @@
 import type { MetadataRoute } from "next";
 import { getAllProductSlugs } from "@/lib/products";
+import { SITE_URL } from "@/lib/site";
 
-const BASE = "https://texastechserv.com";
+const BASE = SITE_URL;
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const now = new Date().toISOString();

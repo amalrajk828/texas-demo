@@ -18,7 +18,7 @@ export async function generateMetadata({ params }: { params: Promise<{ page: str
   return {
     title: `Main Services — Page ${pageNum} | Texas Technical Services`,
     description: `Page ${pageNum} of our complete range of industrial services — flow measurement, inspection & testing, process automation, and construction solutions.`,
-    alternates: { canonical: `https://texastechserv.com/services_group/services/page/${pageNum}/` },
+    alternates: { canonical: `/services_group/services/page/${pageNum}/` },
   };
 }
 

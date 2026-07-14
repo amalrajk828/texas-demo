@@ -9,16 +9,16 @@ export const metadata: Metadata = {
   description:
     "Comprehensive custody metering skid audits, compliance assessments, process optimization, and specialized consultancy services — ensuring accuracy, regulatory conformity, and operational excellence in Kuwait and Dubai.",
   alternates: {
-    canonical: "https://texastechserv.com/service/audits-and-specialized-consultancy/",
+    canonical: "/service/audits-and-specialized-consultancy/",
   },
   openGraph: {
     title: "Audits and Specialized Consultancy | Texas Technical Services",
     description:
       "Custody metering audits, compliance assessments, and expert consultancy for process optimization — API, AGA, ISO, OIML standards. Kuwait & Dubai.",
-    url: "https://texastechserv.com/service/audits-and-specialized-consultancy/",
+    url: "/service/audits-and-specialized-consultancy/",
     images: [
       {
-        url: "https://texastechserv.com/og-audits-consultancy.jpg",
+        url: "/og-audits-consultancy.jpg",
         width: 1200,
         height: 630,
         alt: "Audits and Specialized Consultancy — Texas Technical Services",

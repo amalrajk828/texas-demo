@@ -10,7 +10,7 @@ export const metadata: Metadata = {
   title: "Flow Meters - Texas Technical Services",
   description:
     "Precision flow measurement instruments for liquids, gases, and flare applications from SICK and Faure Herman — custody transfer and process monitoring solutions.",
-  alternates: { canonical: "https://texastechserv.com/products/flow-meters/" },
+  alternates: { canonical: "/products/flow-meters/" },
   keywords: [
     "flow meters Kuwait",
     "ultrasonic flow meters",
@@ -22,7 +22,7 @@ export const metadata: Metadata = {
     title: "Flow Meters - Texas Technical Services",
     description:
       "Precision flow measurement instruments for liquids, gases, and flare applications from SICK and Faure Herman.",
-    url: "https://texastechserv.com/products/flow-meters/",
+    url: "/products/flow-meters/",
   },
   twitter: {
     card: "summary_large_image",

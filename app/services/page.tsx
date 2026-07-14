@@ -7,12 +7,12 @@ import { BreadcrumbJsonLd } from "@/components/schema/BreadcrumbJsonLd";
 export const metadata: Metadata = {
   title: "Our Services | Industrial Automation Company — PLC SCADA, Flow Measurement & Inspection",
   description: "Texas Technical Services is a leading automation company offering PLC SCADA integration, flow measurement & control system solutions, inspection & testing, and industrial process automation for oil & gas, refinery, and petrochemical sectors across Kuwait and the GCC.",
-  alternates: { canonical: "https://texastechserv.com/services/" },
+  alternates: { canonical: "/services/" },
   openGraph: {
     title: "Industrial Services — PLC SCADA, Flow Measurement & Inspection | Texas Technical Services",
     description:
       "Texas Technical Services is a leading automation company offering PLC SCADA integration, flow measurement & control system solutions, inspection & testing, and industrial process automation for oil & gas, refinery, and petrochemical sectors across Kuwait and the GCC.",
-    url: "https://texastechserv.com/services/",
+    url: "/services/",
   },
   twitter: {
     card: "summary_large_image",

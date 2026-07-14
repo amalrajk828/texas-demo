@@ -10,16 +10,16 @@ export const metadata: Metadata = {
   description:
     "Texas Technical Services (TTS) specializes in Metering Control System upgradation — comprehensive assessment, tailored upgrade plans, SCADA & PLC enhancements, Flow Computer integration, and seamless data management for custody transfer operations in Kuwait and Dubai.",
   alternates: {
-    canonical: "https://texastechserv.com/service/upgrade-of-metering-control-system/",
+    canonical: "/service/upgrade-of-metering-control-system/",
   },
   openGraph: {
     title: "Upgrade of Metering Control System | Texas Technical Services",
     description:
       "Cost-effective metering control system upgrades — SCADA, PLC, Flow Computer & HMI integration, comprehensive system assessment, and minimal disruption delivery. Authorised OEM representative.",
-    url: "https://texastechserv.com/service/upgrade-of-metering-control-system/",
+    url: "/service/upgrade-of-metering-control-system/",
     images: [
       {
-        url: "https://texastechserv.com/og-upgrade-metering-control-system.jpg",
+        url: "/og-upgrade-metering-control-system.jpg",
         width: 1200,
         height: 630,
         alt: "Upgrade of Metering Control System — Texas Technical Services",

@@ -2,6 +2,7 @@
 import Link from "next/link";
 import Image from "next/image";
 import { Mail, Phone, MapPin } from "lucide-react";
+import { SITE_EMAIL } from "@/lib/site";
 
 const services = [
   { label: "Flow Measurement Solutions", href: "/service/flow-measurement-solutions/" },
@@ -59,13 +60,13 @@ export default function LightFooter() {
               ISO 9001:2015 certified company established in 2008. Flow measurement,
               automation &amp; inspection for oil &amp; gas and industrial sectors.
             </p>
-            <a href="mailto:sales@texastechserv.com"
+            <a href={`mailto:${SITE_EMAIL}`}
               className="flex items-center gap-2 text-[13px] transition-colors mb-4"
               style={{ color: "var(--color-footer-muted)" }}
               onMouseEnter={e => (e.currentTarget.style.color = "var(--color-brand-red)")}
               onMouseLeave={e => (e.currentTarget.style.color = "var(--color-footer-muted)")}>
               <Mail className="w-3.5 h-3.5 shrink-0" />
-              sales@texastechserv.com
+              {SITE_EMAIL}
             </a>
           </div>
 

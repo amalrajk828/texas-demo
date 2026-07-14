@@ -9,7 +9,7 @@ import { getProductsByPath } from "@/lib/products";
 export const metadata: Metadata = {
   title: "Field Instruments - Texas Technical Services",
   description: "Pressure, temperature, level, and flow field instruments for industrial processes. SICK provides top-notch solutions for contact temperature measurement, level sensing, pressure measurement, condition monitoring, and flow metering.",
-  alternates: { canonical: "https://texastechserv.com/products/field-instruments/" },
+  alternates: { canonical: "/products/field-instruments/" },
   keywords: [
     "field instruments Kuwait",
     "SICK temperature sensors",
@@ -20,7 +20,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "Field Instruments - Texas Technical Services",
     description: "Pressure, temperature, level, and flow field instruments for industrial processes. SICK provides top-notch solutions for contact temperature measurement, level sensing, pressure measurement, condition monitoring, and flow metering.",
-    url: "https://texastechserv.com/products/field-instruments/",
+    url: "/products/field-instruments/",
   },
   twitter: {
     card: "summary_large_image",

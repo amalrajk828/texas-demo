@@ -11,13 +11,13 @@ export const metadata: Metadata = {
   description:
     "Texas Technical Services provides industrial construction and project delivery services in Kuwait and across the GCC — structural steel fabrication, gantry fabrication, piping, electrical works, and EPC project execution for oil and gas plants.",
   alternates: {
-    canonical: "https://texastechserv.com/services_group/services/constructions/",
+    canonical: "/services_group/services/constructions/",
   },
   openGraph: {
     title: "Industrial Construction & Project Delivery | Texas Technical Services",
     description:
       "Structural steel fabrication, gantry fabrication, piping, electrical works, and EPC project execution for oil and gas plants in Kuwait and the GCC.",
-    url: "https://texastechserv.com/services_group/services/constructions/",
+    url: "/services_group/services/constructions/",
   },
   twitter: {
     card: "summary_large_image",

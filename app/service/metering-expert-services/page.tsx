@@ -9,16 +9,16 @@ export const metadata: Metadata = {
   description:
     "Specialist metering engineering services for on-site assignments, project support, training, and technical secondment — deep custody transfer expertise available in Kuwait, Dubai, and the wider region.",
   alternates: {
-    canonical: "https://texastechserv.com/service/metering-expert-services/",
+    canonical: "/service/metering-expert-services/",
   },
   openGraph: {
     title: "Metering Expert Services | Texas Technical Services",
     description:
       "Specialist metering engineers for on-site assignments, project support, and knowledge transfer. Custody transfer expertise in Kuwait & Dubai.",
-    url: "https://texastechserv.com/service/metering-expert-services/",
+    url: "/service/metering-expert-services/",
     images: [
       {
-        url: "https://texastechserv.com/og-metering-expert-services.jpg",
+        url: "/og-metering-expert-services.jpg",
         width: 1200,
         height: 630,
         alt: "Metering Expert Services — Texas Technical Services",

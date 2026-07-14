@@ -1,3 +1,5 @@
+import { SITE_URL } from "@/lib/site";
+
 export function ServiceJsonLd({
   name,
   description,
@@ -18,7 +20,7 @@ export function ServiceJsonLd({
     "@type": "Service",
     name,
     description,
-    url: `https://texastechserv.com${url}`,
+    url: `${SITE_URL}${url}`,
     provider: {
       "@type": "Organization",
       name: providerName || "Texas Technical Service Company W.L.L.",

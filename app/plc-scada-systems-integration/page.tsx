@@ -10,13 +10,13 @@ export const metadata: Metadata = {
   description:
     "Texas Technical Services offers advanced PLC and SCADA system integration — PLC and SCADA system integrators in Kuwait and Dubai, PLC programming, SCADA UAE, SCADA monitoring, HMI development, and control system upgrades across oil & gas, power, and industrial sectors in Kuwait, UAE, Dubai, and Saudi Arabia.",
   alternates: {
-    canonical: "https://texastechserv.com/plc-scada-systems-integration/",
+    canonical: "/plc-scada-systems-integration/",
   },
   openGraph: {
     title: "PLC & SCADA Systems Integration | Texas Technical Services",
     description:
       "PLC and SCADA system integrators in Kuwait and Dubai — expert PLC programming, SCADA UAE, SCADA Saudi Arabia, HMI development, and control system upgrades for industrial automation.",
-    url: "https://texastechserv.com/plc-scada-systems-integration/",
+    url: "/plc-scada-systems-integration/",
   },
   twitter: {
     card: "summary_large_image",

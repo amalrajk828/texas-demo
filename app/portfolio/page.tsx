@@ -16,12 +16,12 @@ export const metadata: Metadata = {
     "HMI",
     "SCADA",
   ],
-  alternates: { canonical: "https://texastechserv.com/portfolio/" },
+  alternates: { canonical: "/portfolio/" },
   openGraph: {
     title: "Product Portfolio | Texas Technical Services",
     description:
       "Explore our complete lineup of industrial automation hardware, software, and sensors.",
-    url: "https://texastechserv.com/portfolio/",
+    url: "/portfolio/",
   },
   twitter: {
     card: "summary_large_image",

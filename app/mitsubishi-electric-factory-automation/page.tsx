@@ -11,13 +11,13 @@ export const metadata: Metadata = {
   description:
     "Texas Technical Services is a Mitsubishi system integrator in Kuwait, UAE, and Dubai — offering Mitsubishi electric factory automation, PLC Mitsubishi electric, HMI, servo drives, and Iconics SCADA Mitsubishi integration for oil & gas and industrial sectors across the GCC.",
   alternates: {
-    canonical: "https://texastechserv.com/mitsubishi-electric-factory-automation/",
+    canonical: "/mitsubishi-electric-factory-automation/",
   },
   openGraph: {
     title: "Mitsubishi Electric Factory Automation Solutions | Texas Technical Services",
     description:
       "Authorized Mitsubishi electric factory automation integrator — PLC Mitsubishi electric, HMI, AC servo systems, frequency inverters, and Iconics SCADA Mitsubishi solutions for industrial automation across Kuwait and the GCC.",
-    url: "https://texastechserv.com/mitsubishi-electric-factory-automation/",
+    url: "/mitsubishi-electric-factory-automation/",
   },
   twitter: {
     card: "summary_large_image",

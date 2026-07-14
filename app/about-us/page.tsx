@@ -9,12 +9,12 @@ export const metadata: Metadata = {
   title: "About Us | Industrial Automation Company in Kuwait & GCC",
   description:
     "Texas Technical Services Co. (TTS) is a leading industrial automation company in Kuwait, UAE, and Dubai — specializing in PLC SCADA integration, flow measurement, and inspection & testing for oil & gas and industrial sectors across the GCC since 2008.",
-  alternates: { canonical: "https://texastechserv.com/about-us/" },
+  alternates: { canonical: "/about-us/" },
   openGraph: {
     title: "About Us | Industrial Automation Company in Kuwait & GCC",
     description:
       "Leading industrial automation company in Kuwait, UAE, and Dubai — PLC SCADA, flow measurement, inspection & testing since 2008.",
-    url: "https://texastechserv.com/about-us/",
+    url: "/about-us/",
   },
   keywords: [
     "industrial automation companies in Kuwait",

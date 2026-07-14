@@ -8,12 +8,12 @@ export const metadata: Metadata = {
   title: "Torque Tightening & Bolt Tensioning",
   description:
     "Torque tightening and bolt tensioning services using calibrated hydraulic tools and torque sensors — bolted flange connections, pressure vessel fasteners, and structural bolting to ASME PCC-1, EN 1591, API 6A in Kuwait and Dubai.",
-  alternates: { canonical: "https://texastechserv.com/service/torque-tightening-bolt-tensioning/" },
+  alternates: { canonical: "/service/torque-tightening-bolt-tensioning/" },
   openGraph: {
     title: "Torque Tightening & Bolt Tensioning | Texas Technical Services",
     description: "Hydraulic torque and bolt tensioning for flanges and pressure vessels. ASME PCC-1, API 6A. Kuwait & Dubai.",
-    url: "https://texastechserv.com/service/torque-tightening-bolt-tensioning/",
-    images: [{ url: "https://texastechserv.com/og-torque-tightening.jpg", width: 1200, height: 630, alt: "Torque Tightening & Bolt Tensioning — Texas Technical Services" }],
+    url: "/service/torque-tightening-bolt-tensioning/",
+    images: [{ url: "/og-torque-tightening.jpg", width: 1200, height: 630, alt: "Torque Tightening & Bolt Tensioning — Texas Technical Services" }],
   },
   twitter: { card: "summary_large_image", title: "Torque Tightening & Bolt Tensioning | Texas Technical Services", description: "Hydraulic bolt tensioning and torque services. ASME PCC-1. Kuwait & Dubai." },
   keywords: ["torque tightening Kuwait", "bolt tensioning Kuwait", "hydraulic torque Kuwait", "flange management Kuwait", "bolt preload Kuwait", "ASME PCC-1 Kuwait", "Texas Technical Services torque"],

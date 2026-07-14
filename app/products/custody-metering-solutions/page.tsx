@@ -11,7 +11,7 @@ export const metadata: Metadata = {
   description:
     "Custody metering solutions for oil and gas — flow metering skids, flow computers, and flow metering control systems for accurate, auditable custody transfer measurement.",
   alternates: {
-    canonical: "https://texastechserv.com/products/custody-metering-solutions/",
+    canonical: "/products/custody-metering-solutions/",
   },
   keywords: [
     "custody metering solutions Kuwait",
@@ -23,7 +23,7 @@ export const metadata: Metadata = {
     title: "Custody Metering Solutions - Texas Technical Services",
     description:
       "Custody metering solutions for oil and gas — flow metering skids, flow computers, and flow metering control systems for accurate, auditable custody transfer measurement.",
-    url: "https://texastechserv.com/products/custody-metering-solutions/",
+    url: "/products/custody-metering-solutions/",
   },
   twitter: {
     card: "summary_large_image",

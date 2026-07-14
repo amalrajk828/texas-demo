@@ -9,16 +9,16 @@ export const metadata: Metadata = {
   description:
     "Expert commissioning and 24/7 after-sales support for flow meters, metering control systems, metering skids, analyzers, and CEMS — ensuring seamless integration and peak performance in Kuwait and Dubai.",
   alternates: {
-    canonical: "https://texastechserv.com/service/commissioning-and-after-sales-support/",
+    canonical: "/service/commissioning-and-after-sales-support/",
   },
   openGraph: {
     title: "Commissioning and After Sales Support | Texas Technical Services",
     description:
       "Expert commissioning of flow meters, metering control systems, analyzers, and CEMS with 24/7 after-sales support and maintenance. Kuwait & Dubai.",
-    url: "https://texastechserv.com/service/commissioning-and-after-sales-support/",
+    url: "/service/commissioning-and-after-sales-support/",
     images: [
       {
-        url: "https://texastechserv.com/og-commissioning-support.jpg",
+        url: "/og-commissioning-support.jpg",
         width: 1200,
         height: 630,
         alt: "Commissioning and After Sales Support — Texas Technical Services",

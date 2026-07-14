@@ -146,7 +146,7 @@ export async function generateMetadata({ params }: { params: Promise<{ slug?: st
   return {
     title: result.title,
     description: `Portfolio items in ${result.breadcrumb} — browse our range of industrial products and solutions.`,
-    alternates: { canonical: `https://texastechserv.com/portfolio_group/${slug.join("/")}/` },
+    alternates: { canonical: `/portfolio_group/${slug.join("/")}/` },
   };
 }
 

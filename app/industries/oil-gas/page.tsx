@@ -8,12 +8,12 @@ export const metadata: Metadata = {
   title: "Oil & Gas Industry Solutions | Texas Technical Services",
   description:
     "Texas Technical Services delivers precision flow metering, CEMS, analyzers, and industrial automation solutions for the oil & gas industry — upstream, midstream, and downstream.",
-  alternates: { canonical: "https://texastechserv.com/industries/oil-gas/" },
+  alternates: { canonical: "/industries/oil-gas/" },
   openGraph: {
     title: "Oil & Gas Industry Solutions | Texas Technical Services",
     description:
       "Complete OEM flow metering, CEMS, gas analyzers, and industrial automation solutions for the oil & gas sector — upstream, midstream, and downstream — backed by 15+ years in Kuwait and the GCC.",
-    url: "https://texastechserv.com/industries/oil-gas/",
+    url: "/industries/oil-gas/",
   },
   twitter: {
     card: "summary_large_image",

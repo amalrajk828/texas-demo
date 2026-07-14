@@ -10,13 +10,13 @@ export const metadata: Metadata = {
   description:
     "Texas Technical Services Co. is a leading industrial automation company in Kuwait — PLC & SCADA system integrators, flow measurement services in Ahmadi, and industrial inspection & testing across Fahaheel and the GCC.",
   alternates: {
-    canonical: "https://texastechserv.com/industrial-automation-services-kuwait/",
+    canonical: "/industrial-automation-services-kuwait/",
   },
   openGraph: {
     title: "Industrial Automation Services Kuwait | Texas Technical Services",
     description:
       "Premier industrial automation, PLC & SCADA integration, flow measurement, and inspection & testing services in Fahaheel, Kuwait — serving oil & gas, power, and industrial sectors across the GCC.",
-    url: "https://texastechserv.com/industrial-automation-services-kuwait/",
+    url: "/industrial-automation-services-kuwait/",
   },
   twitter: {
     card: "summary_large_image",

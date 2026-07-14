@@ -8,12 +8,12 @@ export const metadata: Metadata = {
   title: "Exterior Windows, Doors & Curtain Wall Testing",
   description:
     "Performance testing of exterior windows, doors, and curtain walls — water penetration testing (ASTM E1105), air permeability testing (ASTM E783), and structural performance testing in Kuwait and the GCC.",
-  alternates: { canonical: "https://texastechserv.com/services_group/services/inspection-testing/exterior-windows-doors-curtain-wall-testing/" },
+  alternates: { canonical: "/services_group/services/inspection-testing/exterior-windows-doors-curtain-wall-testing/" },
   openGraph: {
     title: "Exterior Windows, Doors & Curtain Wall Testing | Texas Technical Services",
     description: "Water penetration, air permeability, and structural testing of exterior windows, doors, and curtain walls in Kuwait and the GCC.",
-    url: "https://texastechserv.com/services_group/services/inspection-testing/exterior-windows-doors-curtain-wall-testing/",
-    images: [{ url: "https://texastechserv.com/og-inspection.jpg", width: 1200, height: 630, alt: "Exterior Windows, Doors & Curtain Wall Testing" }],
+    url: "/services_group/services/inspection-testing/exterior-windows-doors-curtain-wall-testing/",
+    images: [{ url: "/og-inspection.jpg", width: 1200, height: 630, alt: "Exterior Windows, Doors & Curtain Wall Testing" }],
   },
   twitter: { card: "summary_large_image", title: "Exterior Windows, Doors & Curtain Wall Testing | Texas Technical Services", description: "Water penetration, air permeability, and structural testing. Kuwait & GCC." },
   keywords: ["curtain wall testing Kuwait", "window testing Kuwait", "door testing Kuwait", "water penetration test ASTM E1105", "air permeability test ASTM E783", "Texas Technical Services"],

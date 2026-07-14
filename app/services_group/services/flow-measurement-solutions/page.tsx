@@ -11,13 +11,13 @@ export const metadata: Metadata = {
   description:
     "Texas Technical Services provides flow measurement services in Ahmadi, Kuwait and across the GCC — metering control system upgrades, maintenance, validation, flow computer configuration, calibration, and specialized consultancy for custody metering systems compliant with API MPMS, AGA, ISO, OIML standards.",
   alternates: {
-    canonical: "https://texastechserv.com/services_group/services/flow-measurement-solutions/",
+    canonical: "/services_group/services/flow-measurement-solutions/",
   },
   openGraph: {
     title: "Flow Measurement & Control System Solutions | Texas Technical Services",
     description:
       "Flow measurement services in Ahmadi, Kuwait — expert custody transfer metering, system integration, upgrades, flow computer configuration, calibration, and validation across the GCC.",
-    url: "https://texastechserv.com/services_group/services/flow-measurement-solutions/",
+    url: "/services_group/services/flow-measurement-solutions/",
   },
   twitter: {
     card: "summary_large_image",

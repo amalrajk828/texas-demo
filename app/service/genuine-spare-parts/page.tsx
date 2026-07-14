@@ -9,16 +9,16 @@ export const metadata: Metadata = {
   description:
     "Genuine OEM spare parts for Faure Herman helical flow meters and associated metering equipment — authentic, traceable, and quality-certified. Authorised Faure Herman OEM Representative in Kuwait and Dubai.",
   alternates: {
-    canonical: "https://texastechserv.com/service/genuine-spare-parts/",
+    canonical: "/service/genuine-spare-parts/",
   },
   openGraph: {
     title: "Genuine Spare Parts | Texas Technical Services",
     description:
       "Genuine Faure Herman OEM spare parts for helical flow meters — authentic, traceable, quality-certified. Authorised representative in Kuwait & Dubai.",
-    url: "https://texastechserv.com/service/genuine-spare-parts/",
+    url: "/service/genuine-spare-parts/",
     images: [
       {
-        url: "https://texastechserv.com/og-genuine-spare-parts.jpg",
+        url: "/og-genuine-spare-parts.jpg",
         width: 1200,
         height: 630,
         alt: "Genuine Spare Parts — Texas Technical Services",

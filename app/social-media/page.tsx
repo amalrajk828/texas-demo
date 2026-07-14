@@ -2,17 +2,18 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { ChevronRight, ArrowRight, ExternalLink } from "lucide-react";
 import { BreadcrumbJsonLd } from "@/components/schema/BreadcrumbJsonLd";
+import { SITE_EMAIL } from "@/lib/site";
 
 export const metadata: Metadata = {
   title: "Social Media Platforms | Connect With Us",
   description:
     "Find Texas Technical Service Company on LinkedIn, Facebook, Instagram, X (Twitter), Medium, Quora, and more — your source for industrial automation and flow measurement expertise across the GCC.",
-  alternates: { canonical: "https://texastechserv.com/social-media/" },
+  alternates: { canonical: "/social-media/" },
   openGraph: {
     title: "Social Media Platforms | Texas Technical Services",
     description:
       "Follow Texas Technical Service Company on LinkedIn, Facebook, Instagram, X, and industry directories for automation and flow measurement expertise.",
-    url: "https://texastechserv.com/social-media/",
+    url: "/social-media/",
   },
   twitter: {
     card: "summary_large_image",
@@ -332,7 +333,7 @@ export default function SocialMediaPage() {
           </p>
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
             <Link
-              href="mailto:sales@texastechserv.com"
+              href={`mailto:${SITE_EMAIL}`}
               className="inline-flex items-center gap-2 bg-[#e7212b] hover:bg-[#aa0b1b] text-white font-medium px-8 py-3.5 rounded-lg transition-colors duration-200"
             >
               Email Us <ArrowRight className="w-4 h-4" />

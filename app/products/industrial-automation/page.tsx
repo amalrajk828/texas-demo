@@ -9,7 +9,7 @@ import { getProductsByPath } from "@/lib/products";
 export const metadata: Metadata = {
   title: "Industrial Automation - Texas Technical Services",
   description: "End-to-end industrial automation solutions including PLC & I/O modules, control panels, industrial workstations, controllers, converters, Ethernet switches, and command centre consoles.",
-  alternates: { canonical: "https://texastechserv.com/products/industrial-automation/" },
+  alternates: { canonical: "/products/industrial-automation/" },
   keywords: [
     "industrial automation solutions Kuwait",
     "PLC I/O modules",
@@ -19,7 +19,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "Industrial Automation - Texas Technical Services",
     description: "End-to-end industrial automation solutions including PLC & I/O modules, control panels, industrial workstations, controllers, converters, Ethernet switches, and command centre consoles.",
-    url: "https://texastechserv.com/products/industrial-automation/",
+    url: "/products/industrial-automation/",
   },
   twitter: {
     card: "summary_large_image",

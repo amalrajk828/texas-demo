@@ -1,8 +1,10 @@
+import { SITE_URL } from "@/lib/site";
+
 type Crumb = { name: string; href: string };
 
 export function BreadcrumbJsonLd({
   items,
-  baseUrl = "https://texastechserv.com",
+  baseUrl = SITE_URL,
 }: {
   items: Crumb[];
   baseUrl?: string;

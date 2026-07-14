@@ -9,16 +9,16 @@ export const metadata: Metadata = {
   description:
     "Authorised Faure Herman OEM Representative providing preventive and corrective maintenance, performance analysis, failure investigation, and repair services for helical flow meters in Kuwait and Dubai.",
   alternates: {
-    canonical: "https://texastechserv.com/service/repair-upgrades-for-helical-flow-meters/",
+    canonical: "/service/repair-upgrades-for-helical-flow-meters/",
   },
   openGraph: {
     title: "Repair & Upgrades for Helical Flow Meters | Texas Technical Services",
     description:
       "Expert preventive and corrective maintenance, performance analysis, and repair for Faure Herman helical flow meters. Authorised OEM Representative — Kuwait & Dubai.",
-    url: "https://texastechserv.com/service/repair-upgrades-for-helical-flow-meters/",
+    url: "/service/repair-upgrades-for-helical-flow-meters/",
     images: [
       {
-        url: "https://texastechserv.com/og-helical-flow-meter-repair.jpg",
+        url: "/og-helical-flow-meter-repair.jpg",
         width: 1200,
         height: 630,
         alt: "Repair & Upgrades for Helical Flow Meters — Texas Technical Services",

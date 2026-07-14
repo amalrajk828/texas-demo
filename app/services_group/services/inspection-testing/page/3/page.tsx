@@ -12,12 +12,12 @@ export const metadata: Metadata = {
   description:
     "Non-Destructive Testing (NDT) methods — Ultrasonic Testing (UT), Radiographic Testing (RT), Magnetic Particle Inspection (MT), Liquid/Dye Penetrant (PT), and Visual Inspection (VI) in Kuwait and the GCC.",
   alternates: {
-    canonical: "https://texastechserv.com/services_group/services/inspection-testing/page/3/",
+    canonical: "/services_group/services/inspection-testing/page/3/",
   },
   openGraph: {
     title: "Inspection & Testing Services — Page 3 | Texas Technical Services",
     description: "NDT methods — UT, RT, MT, PT, and VI services in Kuwait and Dubai.",
-    url: "https://texastechserv.com/services_group/services/inspection-testing/page/3/",
+    url: "/services_group/services/inspection-testing/page/3/",
   },
   twitter: {
     card: "summary_large_image",

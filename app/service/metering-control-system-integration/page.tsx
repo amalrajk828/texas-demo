@@ -10,16 +10,16 @@ export const metadata: Metadata = {
   description:
     "Texas Technical Services (TTS) specializes in Custody Transfer Flow Metering Control System Development and Integration — SCADA, PLC, HMI, server configuration, and full system integration for precise, compliant custody transfer operations.",
   alternates: {
-    canonical: "https://texastechserv.com/service/metering-control-system-integration/",
+    canonical: "/service/metering-control-system-integration/",
   },
   openGraph: {
     title: "Metering Control System Integration | Texas Technical Services",
     description:
       "Custody transfer flow metering control system development, SCADA & PLC integration, HMI configuration, and IT/OT cybersecurity — authorised OEM representative.",
-    url: "https://texastechserv.com/service/metering-control-system-integration/",
+    url: "/service/metering-control-system-integration/",
     images: [
       {
-        url: "https://texastechserv.com/og-metering-control-system-integration.jpg",
+        url: "/og-metering-control-system-integration.jpg",
         width: 1200,
         height: 630,
         alt: "Metering Control System Integration — Texas Technical Services",

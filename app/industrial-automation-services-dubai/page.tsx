@@ -10,13 +10,13 @@ export const metadata: Metadata = {
   description:
     "Texas Technical Services Co. is a leading industrial automation company in Dubai, UAE — PLC and SCADA system integrators, flow measurement, and industrial inspection & testing serving oil & gas and industrial sectors across the United Arab Emirates.",
   alternates: {
-    canonical: "https://texastechserv.com/industrial-automation-services-dubai/",
+    canonical: "/industrial-automation-services-dubai/",
   },
   openGraph: {
     title: "Industrial Automation Services Dubai, UAE | Texas Technical Services",
     description:
       "Industrial automation company in Dubai, UAE — PLC & SCADA integration, flow measurement, and inspection & testing services serving oil & gas, power, and industrial sectors across the United Arab Emirates and GCC.",
-    url: "https://texastechserv.com/industrial-automation-services-dubai/",
+    url: "/industrial-automation-services-dubai/",
   },
   twitter: {
     card: "summary_large_image",

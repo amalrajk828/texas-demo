@@ -9,12 +9,12 @@ export const metadata: Metadata = {
   title: "Our Clients | Texas Technical Services",
   description:
     "Texas Technical Services proudly serves 49+ clients across Kuwait and Dubai — from national oil companies and government bodies to international engineering groups.",
-  alternates: { canonical: "https://texastechserv.com/clients/" },
+  alternates: { canonical: "/clients/" },
   openGraph: {
     title: "Our Clients | Texas Technical Services",
     description:
       "49+ clients across oil & gas, power, water, and industrial sectors — trusted by Kuwait Oil Company, KNPC, KIPIC, Chevron, Siemens, Honeywell and many more.",
-    url: "https://texastechserv.com/clients/",
+    url: "/clients/",
   },
   twitter: {
     card: "summary_large_image",

@@ -1,3 +1,5 @@
+import { SITE_URL } from "@/lib/site";
+
 export function ProductJsonLd({
   name,
   description,
@@ -18,7 +20,7 @@ export function ProductJsonLd({
     "@type": "Product",
     name,
     description,
-    url: `https://texastechserv.com${url}`,
+    url: `${SITE_URL}${url}`,
   };
   if (brand) jsonLd.brand = { "@type": "Brand", name: brand };
   if (category) jsonLd.category = category;

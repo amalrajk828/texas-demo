@@ -1,6 +1,7 @@
 import Link from "next/link";
 import Image from "next/image";
 import { Mail, Phone, MapPin, LayoutGrid } from "lucide-react";
+import { SITE_EMAIL } from "@/lib/site";
 
 const services = [
   { label: "Flow Measurement Solutions", href: "/service/flow-measurement-solutions/" },
@@ -77,11 +78,11 @@ export default function Footer() {
               automation &amp; inspection for oil &amp; gas and industrial sectors.
             </p>
             <a
-              href="mailto:sales@texastechserv.com"
+              href={`mailto:${SITE_EMAIL}`}
               className="flex items-center gap-2 text-white/50 text-sm hover:text-brand-red transition-colors mb-4"
             >
               <Mail className="w-3.5 h-3.5 shrink-0" />
-              sales@texastechserv.com
+              {SITE_EMAIL}
             </a>
             <div className="flex flex-wrap gap-2">
               {socials.map(({ href, label, path }) => (

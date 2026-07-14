@@ -9,7 +9,7 @@ import { getProductsByPath } from "@/lib/products";
 export const metadata: Metadata = {
   title: "ICONICS - Texas Technical Services",
   description: "ICONICS GENESIS64 SCADA and HMI software for real-time visualization and control of industrial processes.",
-  alternates: { canonical: "https://texastechserv.com/products/iconics/" },
+  alternates: { canonical: "/products/iconics/" },
   keywords: [
     "ICONICS SCADA software",
     "GENESIS64 HMI",
@@ -19,7 +19,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "ICONICS - Texas Technical Services",
     description: "ICONICS GENESIS64 SCADA and HMI software for real-time visualization and control of industrial processes.",
-    url: "https://texastechserv.com/products/iconics/",
+    url: "/products/iconics/",
   },
   twitter: {
     card: "summary_large_image",

@@ -8,12 +8,12 @@ export const metadata: Metadata = {
   title: "Tensile Test",
   description:
     "Fundamental tensile testing to determine tensile strength, yield strength, and ductility of metals, plastics, ceramics, and composites — conducted to ASTM E8, ISO 6892, and BS EN standards in Kuwait and Dubai.",
-  alternates: { canonical: "https://texastechserv.com/service/tensile-test/" },
+  alternates: { canonical: "/service/tensile-test/" },
   openGraph: {
     title: "Tensile Test | Texas Technical Services",
     description: "Tensile strength, yield strength, and ductility testing to ASTM E8, ISO 6892 standards. Metals, plastics, ceramics, composites. Kuwait & Dubai.",
-    url: "https://texastechserv.com/service/tensile-test/",
-    images: [{ url: "https://texastechserv.com/og-tensile-test.jpg", width: 1200, height: 630, alt: "Tensile Test — Texas Technical Services" }],
+    url: "/service/tensile-test/",
+    images: [{ url: "/og-tensile-test.jpg", width: 1200, height: 630, alt: "Tensile Test — Texas Technical Services" }],
   },
   twitter: { card: "summary_large_image", title: "Tensile Test | Texas Technical Services", description: "Tensile strength, yield strength, ductility testing. ASTM E8, ISO 6892. Kuwait & Dubai." },
   keywords: ["tensile test Kuwait", "tensile strength testing Kuwait", "yield strength test Kuwait", "tensile testing metals Kuwait", "ASTM E8 tensile test Kuwait", "ISO 6892 tensile test Kuwait", "Texas Technical Services tensile test"],

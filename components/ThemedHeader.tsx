@@ -5,6 +5,7 @@ import Image from "next/image";
 import { usePathname } from "next/navigation";
 import { ChevronDown, ChevronRight, Menu, X, LayoutGrid } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
+import { SITE_EMAIL } from "@/lib/site";
 
 type NavItem = {
   label: string;
@@ -264,7 +265,7 @@ export default function ThemedHeader() {
               <div className="border-t border-white/10 mx-3 my-1" />
               <div className="px-5 py-4 space-y-2">
                 <a href="tel:+96566347267" className="block text-white/40 text-[12px] hover:text-white transition-colors">+965 66347267</a>
-                <a href="mailto:sales@texastechserv.com" className="block text-white/40 text-[12px] hover:text-white transition-colors">sales@texastechserv.com</a>
+                <a href={`mailto:${SITE_EMAIL}`} className="block text-white/40 text-[12px] hover:text-white transition-colors">{SITE_EMAIL}</a>
               </div>
             </motion.div>
           )}

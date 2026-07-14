@@ -9,7 +9,7 @@ import { getProductsByPath } from "@/lib/products";
 export const metadata: Metadata = {
   title: "PLC - Texas Technical Services",
   description: "Mitsubishi Electric PLC solutions for industrial automation including MELSEC iQ-R, MELSEC-Q, FX5U, FX5UJ, and FX5S series.",
-  alternates: { canonical: "https://texastechserv.com/products/plc/" },
+  alternates: { canonical: "/products/plc/" },
   keywords: [
     "Mitsubishi PLC Kuwait",
     "MELSEC iQ-R series",
@@ -20,7 +20,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "PLC - Texas Technical Services",
     description: "Mitsubishi Electric PLC solutions for industrial automation including MELSEC iQ-R, MELSEC-Q, FX5U, FX5UJ, and FX5S series.",
-    url: "https://texastechserv.com/products/plc/",
+    url: "/products/plc/",
   },
   twitter: {
     card: "summary_large_image",

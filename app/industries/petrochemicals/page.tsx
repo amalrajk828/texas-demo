@@ -8,7 +8,7 @@ export const metadata: Metadata = {
   title: "Petrochemicals Industry Solutions | Texas Technical Services",
   description:
     "Texas Technical Services delivers state-of-the-art flow metering, CEMS, analyzers, and industrial automation solutions for the petrochemical industry.",
-  alternates: { canonical: "https://texastechserv.com/industries/petrochemicals/" },
+  alternates: { canonical: "/industries/petrochemicals/" },
   keywords: [
     "petrochemical flow metering Kuwait",
     "petrochemical CEMS solutions",
@@ -20,7 +20,7 @@ export const metadata: Metadata = {
     title: "Petrochemicals Industry Solutions | Texas Technical Services",
     description:
       "From flow meters and flow computers to gas analyzers and CEMS — precision OEM solutions for the petrochemical industry.",
-    url: "https://texastechserv.com/industries/petrochemicals/",
+    url: "/industries/petrochemicals/",
   },
   twitter: {
     card: "summary_large_image",

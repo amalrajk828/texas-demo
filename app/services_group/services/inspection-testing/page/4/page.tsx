@@ -12,12 +12,12 @@ export const metadata: Metadata = {
   description:
     "Non-Destructive Testing (NDT) and Mechanical Testing category overview — comprehensive inspection solutions for industrial applications in Kuwait and the GCC.",
   alternates: {
-    canonical: "https://texastechserv.com/services_group/services/inspection-testing/page/4/",
+    canonical: "/services_group/services/inspection-testing/page/4/",
   },
   openGraph: {
     title: "Inspection & Testing Services — Page 4 | Texas Technical Services",
     description: "NDT and Mechanical Testing category overview — comprehensive inspection solutions in Kuwait and the GCC.",
-    url: "https://texastechserv.com/services_group/services/inspection-testing/page/4/",
+    url: "/services_group/services/inspection-testing/page/4/",
   },
   twitter: {
     card: "summary_large_image",

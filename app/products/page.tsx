@@ -22,12 +22,12 @@ export const metadata: Metadata = {
   title: "Products",
   description:
     "Explore Texas Technical Services' full product range — flow meters, analyzers, sensors, PLCs, ICONICS SCADA, HMI panels, VFDs, AC servos, custody metering, and industrial automation solutions.",
-  alternates: { canonical: "https://texastechserv.com/products/" },
+  alternates: { canonical: "/products/" },
   openGraph: {
     title: "Products | Texas Technical Services",
     description:
       "Explore Texas Technical Services' full product range — flow meters, analyzers, sensors, PLCs, ICONICS SCADA, HMI panels, VFDs, AC servos, custody metering skids, and industrial automation solutions from leading OEMs.",
-    url: "https://texastechserv.com/products/",
+    url: "/products/",
   },
   twitter: {
     card: "summary_large_image",

@@ -4,6 +4,7 @@ import Script from "next/script";
 import ScrollObserver from "@/components/ScrollObserver";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
+import { SITE_URL } from "@/lib/site";
 import "./globals.css";
 
 const plusJakarta = Plus_Jakarta_Sans({
@@ -21,7 +22,7 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://texastechserv.com"),
+  metadataBase: new URL(SITE_URL),
   title: {
     default: "Texas Technical Services | Flow Measurement & Industrial Automation",
     template: "%s | Texas Technical Services",
@@ -31,11 +32,11 @@ export const metadata: Metadata = {
   openGraph: {
     type: "website",
     locale: "en_US",
-    url: "https://texastechserv.com",
+    url: SITE_URL,
     siteName: "Texas Technical Services",
     images: [
       {
-        url: "https://texastechserv.com/og-default.png",
+        url: `${SITE_URL}/og-default.png`,
         width: 1200,
         height: 630,
         alt: "Texas Technical Services — Flow Measurement & Industrial Automation",
@@ -68,7 +69,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
               name: "Texas Technical Service Company W.L.L.",
               description:
                 "Industrial automation, PLC SCADA integration, flow measurement, and inspection & testing company serving Kuwait, UAE, Dubai, and the GCC.",
-              url: "https://texastechserv.com/",
+              url: `${SITE_URL}/`,
               telephone: ["+965 97243755", "+965 66347267", "+971 569553747"],
               foundingDate: "2008",
               areaServed: ["Kuwait", "United Arab Emirates", "Saudi Arabia", "Bahrain", "Qatar", "Oman"],

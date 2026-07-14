@@ -9,7 +9,7 @@ export const metadata: Metadata = {
   title: "Gas Analyzers - Texas Technical Services",
   description:
     "SICK in-situ and extractive gas analyzers for real-time gas analysis directly within industrial processes — GM32 and GM35 for emissions monitoring and process control.",
-  alternates: { canonical: "https://texastechserv.com/products/analyzers/gas-analyzers/" },
+  alternates: { canonical: "/products/analyzers/gas-analyzers/" },
   keywords: [
     "SICK gas analyzers Kuwait",
     "GM32 in-situ gas analyzer",
@@ -20,7 +20,7 @@ export const metadata: Metadata = {
     title: "Gas Analyzers - Texas Technical Services",
     description:
       "SICK in-situ and extractive gas analyzers for real-time process gas analysis.",
-    url: "https://texastechserv.com/products/analyzers/gas-analyzers/",
+    url: "/products/analyzers/gas-analyzers/",
   },
   twitter: {
     card: "summary_large_image",
