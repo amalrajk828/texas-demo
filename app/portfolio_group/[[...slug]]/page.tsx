@@ -43,6 +43,27 @@ const STANDALONE_TITLES: Record<string, string> = {
   "factory": "Factory",
 };
 
+interface CategoryLink {
+  href: string;
+  label: string;
+  imageUrl: string;
+  description: string;
+  count: number;
+}
+
+function findCategoryImage(category: string): string {
+  return products.find(p => p.category === category && p.image)?.image ?? "";
+}
+
+function findIndustryImage(industrySlug: string): string {
+  const parts = industrySlug.split("-");
+  return products.find(p =>
+    (p.industries ?? []).some(ind =>
+      parts.some(part => ind.toLowerCase().includes(part))
+    ) && p.image
+  )?.image ?? "";
+}
+
 type FilterFn = (product: Product) => boolean;
 
 function getFilter(slug: string[]): { filter: FilterFn; title: string; breadcrumb: string } | null {
@@ -133,15 +154,46 @@ export default async function PortfolioGroupPage({ params }: { params: Promise<{
   const { slug } = await params;
 
   if (!slug || slug.length === 0) {
-    const allLinks: { href: string; label: string }[] = [
-      ...Object.entries(INDUSTRY_TITLES).map(([k, v]) => ({ href: `/portfolio_group/industries/${k}/`, label: v })),
-      ...Object.entries(STANDALONE_TITLES).map(([k, v]) => ({ href: `/portfolio_group/${k}/`, label: v })),
-      ...Object.keys(CATEGORY_MAP).map(k => ({ href: `/portfolio_group/products/${k}/`, label: CATEGORY_MAP[k] })),
-    ];
+    const industryLinks: CategoryLink[] = Object.entries(INDUSTRY_TITLES).map(([key, title]) => {
+      const count = products.filter(p =>
+        (p.industries ?? []).some(ind =>
+          key.split("-").some(part => ind.toLowerCase().includes(part))
+        )
+      ).length;
+      return {
+        href: `/portfolio_group/industries/${key}/`,
+        label: title,
+        imageUrl: findIndustryImage(key),
+        description: `${count} portfolio item${count !== 1 ? "s" : ""} in the ${title} sector`,
+        count,
+      };
+    });
+
+    const standaloneLinks: CategoryLink[] = Object.entries(STANDALONE_TITLES).map(([key, title]) => ({
+      href: `/portfolio_group/${key}/`,
+      label: title,
+      imageUrl: products.find(p => p.image)?.image ?? "",
+      description: `Browse all ${products.length} portfolio items`,
+      count: products.length,
+    }));
+
+    const productLinks: CategoryLink[] = Object.keys(CATEGORY_MAP).map(key => {
+      const category = CATEGORY_MAP[key];
+      const count = products.filter(p => p.category === category).length;
+      return {
+        href: `/portfolio_group/products/${key}/`,
+        label: category,
+        imageUrl: findCategoryImage(category),
+        description: `Explore ${count} ${category} product${count !== 1 ? "s" : ""}`,
+        count,
+      };
+    });
+
+    const allLinks: CategoryLink[] = [...industryLinks, ...standaloneLinks, ...productLinks];
 
     return (
       <main>
-        <section className="relative bg-[#0B0D26] overflow-hidden pt-32 pb-20">
+        <section className="relative bg-[#0B0D26] overflow-hidden pt-32 pb-24">
           <div className="absolute inset-0 pointer-events-none" style={{ backgroundImage: "repeating-linear-gradient(0deg,transparent,transparent 39px,rgba(255,255,255,0.03) 40px),repeating-linear-gradient(90deg,transparent,transparent 39px,rgba(255,255,255,0.03) 40px)" }} />
           <div className="absolute top-0 right-0 w-[700px] h-[500px] pointer-events-none" style={{ background: "radial-gradient(ellipse at top right, rgba(231,33,43,0.14) 0%, transparent 65%)" }} />
           <div className="relative max-w-7xl mx-auto px-4 sm:px-6">
@@ -162,10 +214,33 @@ export default async function PortfolioGroupPage({ params }: { params: Promise<{
                 Browse our product portfolio by industry, product category, or application area.
               </p>
             </div>
-            <div className="mt-12 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
+            <div className="mt-12 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
               {allLinks.map((link) => (
-                <Link key={link.href} href={link.href} className="group bg-white/[0.04] border border-white/[0.08] hover:border-[#e7212b]/35 hover:bg-white/[0.07] rounded-xl px-5 py-4 transition-all duration-200">
-                  <span className="text-white/50 text-[13px] font-medium group-hover:text-white transition-colors">{link.label}</span>
+                <Link key={link.href} href={link.href} className="group rounded-2xl border border-white/[0.08] bg-white/[0.06] overflow-hidden flex flex-col hover:border-[#e7212b]/35 hover:shadow-xl hover:shadow-[#e7212b]/10 transition-all duration-300">
+                  <div className="relative aspect-[16/10] bg-[#0B0D26] overflow-hidden flex items-center justify-center">
+                    {link.imageUrl ? (
+                      <Image src={link.imageUrl} alt={link.label} fill sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw" className="object-cover group-hover:scale-105 transition-transform duration-500" />
+                    ) : (
+                      <div className="w-full h-full bg-gradient-to-br from-[#0B0D26] to-[#1a1d3e] flex items-center justify-center">
+                        <span className="text-[56px] font-black text-white/10 group-hover:text-[#e7212b]/20 group-hover:scale-110 transition-all duration-500 select-none">
+                          {link.label[0]}
+                        </span>
+                      </div>
+                    )}
+                    <div className="absolute top-0 left-0 right-0 h-[2px] bg-gradient-to-r from-transparent via-[#e7212b] to-transparent opacity-0 group-hover:opacity-70 transition-opacity duration-300" />
+                    <div className="absolute top-3 left-3">
+                      <span className="text-[10px] font-semibold text-white/70 bg-[#0B0D26]/75 backdrop-blur-sm border border-white/10 px-2.5 py-1 rounded-full tracking-[1.5px] uppercase">{link.count} item{link.count !== 1 ? "s" : ""}</span>
+                    </div>
+                  </div>
+                  <div className="flex flex-col flex-1 p-5">
+                    <div className="w-7 h-[2px] bg-[#e7212b] rounded-full mb-3 group-hover:w-10 transition-all duration-300" />
+                    <h3 className="text-[15px] font-bold text-white leading-snug mb-1.5">{link.label}</h3>
+                    <p className="text-white/40 text-[12px] leading-relaxed flex-1">{link.description}</p>
+                    <div className="mt-3 pt-3 border-t border-white/[0.08] text-[#e7212b] text-[12px] font-semibold flex items-center gap-1">
+                      Browse
+                      <ArrowRight className="w-3 h-3 group-hover:translate-x-1 transition-transform duration-200" />
+                    </div>
+                  </div>
                 </Link>
               ))}
             </div>
