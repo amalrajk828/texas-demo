@@ -61,18 +61,8 @@
   --font-body: var(--font-inter), "Inter", sans-serif;
 
   /* Background patterns */
-  --background-grid-dark: repeating-linear-gradient(
-      0deg,
-      transparent,
-      transparent 39px,
-      rgba(255, 255, 255, 0.03) 40px
-    ),
-    repeating-linear-gradient(
-      90deg,
-      transparent,
-      transparent 39px,
-      rgba(255, 255, 255, 0.03) 40px
-    );
+  --background-grid-dark: linear-gradient(to right, rgba(255, 255, 255, 0.15) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(255, 255, 255, 0.15) 1px, transparent 1px);
 }
 
 :root {
@@ -149,7 +139,6 @@
     @apply border-border outline-ring/50;
   }
   html {
-    scroll-behavior: smooth;
     font-size: 17px;
   }
   body {
@@ -159,7 +148,7 @@
     -webkit-font-smoothing: antialiased;
   }
   [data-scroll-behavior="smooth"] {
-    scroll-behavior: smooth;
+    /* Lenis handles smooth scroll */
   }
   h1, h2, h3, h4 {
     font-family: var(--font-display);
@@ -217,6 +206,7 @@ a, button, [role="button"], label, select,
 :focus-visible { outline: 2px solid #e7212b; outline-offset: 2px; border-radius: 4px; }
 
 /* Scrollbar */
-::-webkit-scrollbar { width: 6px; }
-::-webkit-scrollbar-thumb { background: #e7212b40; border-radius: 3px; }
-::-webkit-scrollbar-thumb:hover { background: #e7212b80; }
+::-webkit-scrollbar { width: 12px; }
+::-webkit-scrollbar-track { background: #0A0C11; }
+::-webkit-scrollbar-thumb { background: #E53935; border-radius: 6px; border: 3px solid #0A0C11; }
+::-webkit-scrollbar-thumb:hover { background: #B71C1C; }
