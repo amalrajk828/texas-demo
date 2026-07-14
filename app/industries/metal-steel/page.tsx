@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import ProductCard from "@/components/ProductCard";
 import Image from "next/image";
 import { Layers, ArrowRight, ChevronRight } from "lucide-react";
 
