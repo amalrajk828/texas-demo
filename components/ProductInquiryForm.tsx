@@ -47,7 +47,7 @@ export default function ProductInquiryForm({
           <h2 className="text-[#1A1A2E] text-2xl sm:text-3xl font-bold">
             Get More Information
           </h2>
-          <div className="w-[60px] h-[3px] bg-[#F5821F] mx-auto mt-3" />
+          <div className="w-[60px] h-[3px] bg-[#e7212b] mx-auto mt-3" />
         </div>
 
         {submitted ? (
@@ -78,7 +78,7 @@ export default function ProductInquiryForm({
                   onChange={handleChange}
                   required
                   placeholder="John Doe"
-                  className="border border-[#E8E8F0] focus:border-[#F5821F] outline-none rounded-[6px] px-4 py-3 text-sm text-[#1A1A2E] bg-white transition-colors duration-200"
+                  className="border border-[#E8E8F0] focus:border-[#e7212b] outline-none rounded-[6px] px-4 py-3 text-sm text-[#1A1A2E] bg-white transition-colors duration-200"
                 />
               </div>
 
@@ -94,7 +94,7 @@ export default function ProductInquiryForm({
                   onChange={handleChange}
                   required
                   placeholder="Acme Corporation"
-                  className="border border-[#E8E8F0] focus:border-[#F5821F] outline-none rounded-[6px] px-4 py-3 text-sm text-[#1A1A2E] bg-white transition-colors duration-200"
+                  className="border border-[#E8E8F0] focus:border-[#e7212b] outline-none rounded-[6px] px-4 py-3 text-sm text-[#1A1A2E] bg-white transition-colors duration-200"
                 />
               </div>
 
@@ -110,7 +110,7 @@ export default function ProductInquiryForm({
                   onChange={handleChange}
                   required
                   placeholder="john.doe@company.com"
-                  className="border border-[#E8E8F0] focus:border-[#F5821F] outline-none rounded-[6px] px-4 py-3 text-sm text-[#1A1A2E] bg-white transition-colors duration-200"
+                  className="border border-[#E8E8F0] focus:border-[#e7212b] outline-none rounded-[6px] px-4 py-3 text-sm text-[#1A1A2E] bg-white transition-colors duration-200"
                 />
               </div>
 
@@ -125,7 +125,7 @@ export default function ProductInquiryForm({
                   value={formData.phone}
                   onChange={handleChange}
                   placeholder="+1 (555) 000-0000"
-                  className="border border-[#E8E8F0] focus:border-[#F5821F] outline-none rounded-[6px] px-4 py-3 text-sm text-[#1A1A2E] bg-white transition-colors duration-200"
+                  className="border border-[#E8E8F0] focus:border-[#e7212b] outline-none rounded-[6px] px-4 py-3 text-sm text-[#1A1A2E] bg-white transition-colors duration-200"
                 />
               </div>
 
@@ -140,7 +140,7 @@ export default function ProductInquiryForm({
                   value={formData.country}
                   onChange={handleChange}
                   placeholder="United States"
-                  className="border border-[#E8E8F0] focus:border-[#F5821F] outline-none rounded-[6px] px-4 py-3 text-sm text-[#1A1A2E] bg-white transition-colors duration-200"
+                  className="border border-[#E8E8F0] focus:border-[#e7212b] outline-none rounded-[6px] px-4 py-3 text-sm text-[#1A1A2E] bg-white transition-colors duration-200"
                 />
               </div>
 
@@ -154,7 +154,7 @@ export default function ProductInquiryForm({
                   name="subject"
                   value={formData.subject}
                   onChange={handleChange}
-                  className="border border-[#E8E8F0] focus:border-[#F5821F] outline-none rounded-[6px] px-4 py-3 text-sm text-[#1A1A2E] bg-white transition-colors duration-200"
+                  className="border border-[#E8E8F0] focus:border-[#e7212b] outline-none rounded-[6px] px-4 py-3 text-sm text-[#1A1A2E] bg-white transition-colors duration-200"
                 />
               </div>
 
@@ -171,14 +171,14 @@ export default function ProductInquiryForm({
                 onChange={handleChange}
                 rows={4}
                 placeholder="Describe your request or requirements here..."
-                className="border border-[#E8E8F0] focus:border-[#F5821F] outline-none rounded-[6px] px-4 py-3 text-sm text-[#1A1A2E] bg-white transition-colors duration-200 resize-y"
+                className="border border-[#E8E8F0] focus:border-[#e7212b] outline-none rounded-[6px] px-4 py-3 text-sm text-[#1A1A2E] bg-white transition-colors duration-200 resize-y"
               />
             </div>
 
             {/* Submit Button */}
             <button
               type="submit"
-              className="w-full bg-[#F5821F] hover:bg-[#e07214] text-white font-bold py-3.5 px-6 rounded-[6px] transition-all duration-200 text-sm shadow-md hover:shadow-[#F5821F]/15 active:scale-[0.99] cursor-pointer"
+              className="w-full bg-[#e7212b] hover:bg-[#aa0b1b] text-white font-bold py-3.5 px-6 rounded-[6px] transition-all duration-200 text-sm shadow-md hover:shadow-[#e7212b]/15 active:scale-[0.99] cursor-pointer"
             >
               Send Inquiry &rarr;
             </button>

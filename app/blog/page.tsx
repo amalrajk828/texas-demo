@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import Image from "next/image";
+import ProductCard from "@/components/ProductCard";
 import { 
   BookOpen, 
   Calendar, 
@@ -36,7 +37,7 @@ interface BlogPost {
   readTime: string;
   category: string;
   pillar: string;
-  icon: React.ComponentType<any>;
+  icon: string;
   image: string;
   imageAlt: string;
   imageCredit?: {
@@ -47,11 +48,11 @@ interface BlogPost {
 }
 
 const blogPosts: BlogPost[] = Object.entries(blogArticles).map(([slug, article]) => {
-  let icon = Activity;
+  let icon = "Activity";
   if (article.category === "Flow Measurement") {
-    icon = Gauge;
+    icon = "Gauge";
   } else if (article.category === "Industrial Automation") {
-    icon = Cpu;
+    icon = "Cpu";
   }
 
   return {
@@ -143,82 +144,25 @@ export default function BlogIndexPage() {
           {/* Cards Grid */}
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {blogPosts.map((post) => {
-              const Icon = post.icon;
+              // We pass custom mapping for fields and custom tags/badge
+              const mappedPost = {
+                name: post.title,
+                slug: post.slug,
+                image: post.image,
+                description: post.description,
+                category: post.category,
+                brand: post.pillar,
+                date: post.date,
+                readTime: post.readTime,
+              };
               return (
-                <article 
+                <ProductCard
                   key={post.slug}
-                  className="flex flex-col bg-white rounded-xl border border-gray-150 shadow-sm hover:shadow-md hover:border-gray-300 transition-all duration-300 group overflow-hidden"
-                >
-                  {/* Card Image Header */}
-                  <div className="relative aspect-video w-full overflow-hidden bg-slate-100 shrink-0">
-                    <div className="absolute inset-0 bg-slate-200 animate-pulse" />
-                    <Image
-                      src={post.image}
-                      alt={post.imageAlt}
-                      fill
-                      sizes="(max-w-768px) 100vw, (max-w-1024px) 50vw, 33vw"
-                      className="object-cover transition-transform duration-500 group-hover:scale-105"
-                      priority={false}
-                    />
-                    <div className="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-transparent opacity-60" />
-                    
-                    {/* Category overlay */}
-                    <div className="absolute top-4 left-4 z-10">
-                      <span className="inline-flex items-center text-[10px] font-bold uppercase tracking-wider text-white bg-[#e7212b] px-2.5 py-1 rounded shadow-sm">
-                        {post.category}
-                      </span>
-                    </div>
-
-                    {/* Icon overlay */}
-                    <div className="absolute top-4 right-4 z-10">
-                      <div className="w-8 h-8 rounded-lg bg-white/90 backdrop-blur-sm flex items-center justify-center border border-white/20 shadow-sm group-hover:bg-[#e7212b] group-hover:text-white transition-all duration-300">
-                        <Icon className="w-4 h-4 text-[#0B0D26] group-hover:text-white transition-colors" />
-                      </div>
-                    </div>
-                  </div>
-
-                  {/* Card Body Info */}
-                  <div className="p-6 sm:p-7 flex-1 flex flex-col justify-between">
-                    <div>
-                      <p className="text-[11px] font-semibold text-gray-400 uppercase tracking-wider mb-2">
-                        {post.pillar}
-                      </p>
-
-                      <h3 className="text-base sm:text-[17px] font-bold text-[#0B0D26] leading-snug mb-3 group-hover:text-[#e7212b] transition-colors">
-                        <Link href={`/blog/${post.slug}/`}>
-                          {post.title}
-                        </Link>
-                      </h3>
-
-                      <p className="text-gray-500 text-[13px] leading-relaxed line-clamp-3">
-                        {post.description}
-                      </p>
-                    </div>
-                  </div>
-
-                  {/* Card Footer Info */}
-                  <div className="px-6 sm:px-7 py-4 border-t border-gray-100 bg-[#f8f9fb]/50 rounded-b-xl flex items-center justify-between text-[11.5px] text-gray-400">
-                    <div className="flex items-center gap-3">
-                      <span className="flex items-center gap-1">
-                        <Calendar className="w-3.5 h-3.5" />
-                        {post.date}
-                      </span>
-                      <span className="w-1 h-1 rounded-full bg-gray-300" />
-                      <span className="flex items-center gap-1">
-                        <Clock className="w-3.5 h-3.5" />
-                        {post.readTime}
-                      </span>
-                    </div>
-
-                    <Link 
-                      href={`/blog/${post.slug}/`}
-                      className="inline-flex items-center gap-1 text-[12px] font-semibold text-[#0B0D26] hover:text-[#e7212b] transition-colors shrink-0 group/btn"
-                    >
-                      Read Article
-                      <ArrowRight className="w-3.5 h-3.5 transition-transform duration-200 group-hover/btn:translate-x-0.5" />
-                    </Link>
-                  </div>
-                </article>
+                  product={mappedPost}
+                  iconName={post.icon}
+                  readMoreText="Read Article"
+                  href={`/blog/${post.slug}/`}
+                />
               );
             })}
           </div>
