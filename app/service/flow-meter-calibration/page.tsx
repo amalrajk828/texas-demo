@@ -49,7 +49,7 @@ export default function FlowMeterCalibrationPage() {
     <>
       <BreadcrumbJsonLd items={[
   { name: "Home", href: "/" },
-  { name: "Services", href: "/service/" },
+  { name: "Services", href: "/services/" },
   { name: "Flow Meter Calibration", href: "/service/flow-meter-calibration/" },
 ]} />
 <ServiceJsonLd

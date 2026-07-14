@@ -141,7 +141,7 @@ export default function LightServices() {
 
         {/* Bottom CTA */}
         <FadeUp delay={0.4} className="text-center">
-          <Link href="/service/"
+          <Link href="/services/"
             className="inline-flex items-center gap-2 font-semibold px-7 py-3.5 rounded-lg text-[15px] transition-all border hover:-translate-y-0.5 shadow-sm"
             style={{
               color: "var(--color-text-primary)",

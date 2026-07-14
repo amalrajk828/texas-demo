@@ -20,7 +20,7 @@ export const SLIDES = [
     sub: "Flow measurement, industrial automation and precision inspection — trusted by the world's leading oil & gas operators across Kuwait and the UAE.",
     tag: "Industrial Services",
     ctas: [
-      { label: "Explore Our Services", href: "/service/", primary: true },
+      { label: "Explore Our Services", href: "/services/", primary: true },
       { label: "About Us", href: "/about-us/", primary: false },
     ],
   },
@@ -35,7 +35,7 @@ export const SLIDES = [
     tag: "Automation",
     ctas: [
       { label: "Automation Services", href: "/service/industrial-automation/", primary: true },
-      { label: "Our Services", href: "/service/", primary: false },
+      { label: "Our Services", href: "/services/", primary: false },
     ],
   },
   {
@@ -63,7 +63,7 @@ export const SLIDES = [
     tag: "NDT & Inspection",
     ctas: [
       { label: "Inspection Services", href: "/service/inspection-testing/", primary: true },
-      { label: "Our Services", href: "/service/", primary: false },
+      { label: "Our Services", href: "/services/", primary: false },
     ],
   },
 ] as const;

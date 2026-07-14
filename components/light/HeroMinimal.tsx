@@ -19,7 +19,7 @@ const SLIDES = [
     sub: "Flow measurement, inspection, and automation services trusted by oil & gas operators since 2008.",
     tag: "Industrial Services",
     ctas: [
-      { label: "Explore Services", href: "/service/", primary: true },
+      { label: "Explore Services", href: "/services/", primary: true },
       { label: "Contact Us", href: "/contacts/", primary: false },
     ],
   },
@@ -33,7 +33,7 @@ const SLIDES = [
     tag: "Automation",
     ctas: [
       { label: "Know More", href: "/service/industrial-automation/", primary: true },
-      { label: "Our Services", href: "/service/", primary: false },
+      { label: "Our Services", href: "/services/", primary: false },
     ],
   },
   {
@@ -59,7 +59,7 @@ const SLIDES = [
     tag: "NDT & QA",
     ctas: [
       { label: "Know More", href: "/service/inspection-testing/", primary: true },
-      { label: "Our Services", href: "/service/", primary: false },
+      { label: "Our Services", href: "/services/", primary: false },
     ],
   },
 ] as const;

@@ -24,7 +24,7 @@ export default function UltrasonicTestingPage() {
     <>
       <BreadcrumbJsonLd items={[
   { name: "Home", href: "/" },
-  { name: "Services", href: "/service/" },
+  { name: "Services", href: "/services/" },
   { name: "Ultrasonic Testing (UT)", href: "/service/ultrasonic-testing-ut/" },
 ]} />
 <ServiceJsonLd

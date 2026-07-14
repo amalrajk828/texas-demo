@@ -82,7 +82,7 @@ export default function ServicesCtaBanner() {
                   <ArrowRight className="w-4 h-4" />
                 </Link>
                 <Link
-                  href="/service/"
+                  href="/services/"
                   className="inline-flex items-center justify-center gap-2 border border-white/15 hover:border-white/35 text-white/60 hover:text-white px-8 py-3.5 rounded-lg transition-all duration-200 text-[14px]"
                 >
                   Back to Services

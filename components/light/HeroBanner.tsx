@@ -19,7 +19,7 @@ const SLIDES = [
     heading: "Industrial Measurement & Automation",
     sub: "Delivering precision flow measurement, inspection, and process automation solutions to oil & gas, refinery, and power sector clients.",
     kicker: "Trusted by 200+ industrial clients across Kuwait and Dubai",
-    href: "/service/",
+    href: "/services/",
     cta: "Explore Services",
   },
   {

@@ -24,7 +24,7 @@ export default function MidCta() {
             style={{ color: "var(--color-brand-red)" }}>
             Contact Us <ArrowRight className="w-5 h-5" />
           </Link>
-          <Link href="/service/" className="inline-flex items-center gap-2 font-semibold text-[16px] px-8 py-4 rounded-xl border border-white/30 text-white hover:border-white/60 transition-all backdrop-blur-sm"
+          <Link href="/services/" className="inline-flex items-center gap-2 font-semibold text-[16px] px-8 py-4 rounded-xl border border-white/30 text-white hover:border-white/60 transition-all backdrop-blur-sm"
             style={{ background: "rgba(255,255,255,0.10)" }}>
             Our Services
           </Link>

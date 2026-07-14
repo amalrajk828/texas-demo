@@ -65,7 +65,7 @@ const faqItems = [
 export default function FlowMeasurementPage() {
   return (
     <>
-      <BreadcrumbJsonLd items={[{ name: "Home", href: "/" }, { name: "Services", href: "/service/" }, { name: "Flow Measurement", href: "/service/flow-measurement-solutions/" }]} />
+      <BreadcrumbJsonLd items={[{ name: "Home", href: "/" }, { name: "Services", href: "/services/" }, { name: "Flow Measurement", href: "/service/flow-measurement-solutions/" }]} />
       <ServiceJsonLd
         name="Flow Measurement & Control System Solutions"
         description="Flow measurement services in Ahmadi, Kuwait and across the GCC — metering control system upgrades, maintenance, validation, flow computer configuration, calibration, and specialized consultancy for custody metering systems."

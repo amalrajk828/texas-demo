@@ -24,7 +24,7 @@ export default function MagneticParticlePage() {
     <>
       <BreadcrumbJsonLd items={[
   { name: "Home", href: "/" },
-  { name: "Services", href: "/service/" },
+  { name: "Services", href: "/services/" },
   { name: "Magnetic Particle Inspection (MT)", href: "/service/magnetic-particle-inspection-mt/" },
 ]} />
 <ServiceJsonLd

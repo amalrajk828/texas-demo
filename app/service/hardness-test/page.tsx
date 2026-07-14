@@ -24,7 +24,7 @@ export default function HardnessTestPage() {
     <>
       <BreadcrumbJsonLd items={[
   { name: "Home", href: "/" },
-  { name: "Services", href: "/service/" },
+  { name: "Services", href: "/services/" },
   { name: "Hardness Test", href: "/service/hardness-test/" },
 ]} />
 <ServiceJsonLd

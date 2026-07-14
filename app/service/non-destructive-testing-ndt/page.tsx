@@ -24,7 +24,7 @@ export default function NDTPage() {
     <>
       <BreadcrumbJsonLd items={[
   { name: "Home", href: "/" },
-  { name: "Services", href: "/service/" },
+  { name: "Services", href: "/services/" },
   { name: "Non Destructive Testing (NDT)", href: "/service/non-destructive-testing-ndt/" },
 ]} />
 <ServiceJsonLd

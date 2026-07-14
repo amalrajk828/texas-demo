@@ -24,7 +24,7 @@ export default function VisualInspectionPage() {
     <>
       <BreadcrumbJsonLd items={[
   { name: "Home", href: "/" },
-  { name: "Services", href: "/service/" },
+  { name: "Services", href: "/services/" },
   { name: "Visual Inspection (VI)", href: "/service/visual-inspection-vi/" },
 ]} />
 <ServiceJsonLd

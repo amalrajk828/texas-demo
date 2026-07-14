@@ -24,7 +24,7 @@ export default function GammaRayPage() {
     <>
       <BreadcrumbJsonLd items={[
   { name: "Home", href: "/" },
-  { name: "Services", href: "/service/" },
+  { name: "Services", href: "/services/" },
   { name: "Gamma Ray Pipe Crawler Inspection Systems", href: "/service/gamma-ray-pipe-crawler-inspection-systems/" },
 ]} />
 <ServiceJsonLd

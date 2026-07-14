@@ -26,7 +26,7 @@ export default function LightCta() {
             style={{ color: "var(--color-brand-red)" }}>
             Contact Us <ArrowRight className="w-4 h-4" />
           </Link>
-          <Link href="/service/"
+          <Link href="/services/"
             className="inline-flex items-center gap-2 border-2 border-white/30 hover:border-white/60 text-white font-semibold px-8 py-3.5 rounded-lg text-[14px] transition-all">
             Our Services <ArrowRight className="w-4 h-4" />
           </Link>

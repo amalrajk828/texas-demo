@@ -48,7 +48,7 @@ export default function RepairUpgradesHelicalPage() {
     <>
       <BreadcrumbJsonLd items={[
   { name: "Home", href: "/" },
-  { name: "Services", href: "/service/" },
+  { name: "Services", href: "/services/" },
   { name: "Repair & Upgrades for Helical Flow Meters", href: "/service/repair-upgrades-helical-flow-meters/" },
 ]} />
 <ServiceJsonLd

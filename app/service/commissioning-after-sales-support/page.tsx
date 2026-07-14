@@ -48,7 +48,7 @@ export default function CommissioningAfterSalesPage() {
     <>
       <BreadcrumbJsonLd items={[
   { name: "Home", href: "/" },
-  { name: "Services", href: "/service/" },
+  { name: "Services", href: "/services/" },
   { name: "Commissioning and After Sales Support", href: "/service/commissioning-after-sales-support/" },
 ]} />
 <ServiceJsonLd

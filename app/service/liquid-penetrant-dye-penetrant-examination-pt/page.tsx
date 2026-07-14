@@ -24,7 +24,7 @@ export default function PenetrantTestPage() {
     <>
       <BreadcrumbJsonLd items={[
   { name: "Home", href: "/" },
-  { name: "Services", href: "/service/" },
+  { name: "Services", href: "/services/" },
   { name: "Liquid Penetrant / Dye Penetrant Examination (PT)", href: "/service/liquid-penetrant-dye-penetrant-examination-pt/" },
 ]} />
 <ServiceJsonLd

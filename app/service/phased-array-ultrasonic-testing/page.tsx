@@ -24,7 +24,7 @@ export default function PhasedArrayPage() {
     <>
       <BreadcrumbJsonLd items={[
   { name: "Home", href: "/" },
-  { name: "Services", href: "/service/" },
+  { name: "Services", href: "/services/" },
   { name: "Phased Array Ultrasonic Testing (PAUT)", href: "/service/phased-array-ultrasonic-testing/" },
 ]} />
 <ServiceJsonLd

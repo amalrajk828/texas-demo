@@ -15,6 +15,8 @@ import {
   Rocket,
   Package,
   Users,
+  GraduationCap,
+  PenTool,
 } from "lucide-react";
 
 /* ─── Fade-up helper ─────────────────────────────────────────── */
@@ -123,6 +125,22 @@ const SUB_SERVICES = [
     imageSrc: "/images/services/metering-experts.jpg",
     imagePlaceholder: "/images/services/metering-experts.jpg",
     href: "/service/metering-expert-services/",
+  },
+  {
+    Icon: GraduationCap,
+    title: "Advanced Training",
+    body: "On demand training courses at OEM premises, videoconferencing, or customer sites — covering metering installation, commissioning, and operation.",
+    imageSrc: "/images/services/TRAINING.jpg",
+    imagePlaceholder: "/images/services/TRAINING.jpg",
+    href: "/service/advanced-training/",
+  },
+  {
+    Icon: PenTool,
+    title: "New Installation Design and Commissioning",
+    body: "As authorized OEM Representative, we assist in specification, design, sizing and operation of future metering systems.",
+    imageSrc: "/images/services/20220524_110650-scaled.jpg",
+    imagePlaceholder: "/images/services/20220524_110650-scaled.jpg",
+    href: "/service/new-installation-design-and-commissioning/",
   },
 ];
 

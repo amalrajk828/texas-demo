@@ -73,7 +73,7 @@ export default function GreyWhatWeDo() {
                   <div className="w-8 h-[2px] rounded-full mb-4" style={{ background: "var(--g-border)" }} />
                   <p className="text-[16px] leading-[1.9] flex-1 font-medium" style={{ color: "var(--g-muted)" }}>{svc.desc}</p>
                   <div className="mt-7 pt-5 border-t" style={{ borderColor: "rgba(0,0,0,0.07)" }}>
-                    <Link href="/service/" className="inline-flex items-center gap-1.5 text-[14px] font-bold hover:gap-3 transition-all duration-200" style={{ color: "var(--color-brand-red)" }}>
+                    <Link href="/services/" className="inline-flex items-center gap-1.5 text-[14px] font-bold hover:gap-3 transition-all duration-200" style={{ color: "var(--color-brand-red)" }}>
                       Learn more <ArrowRight className="w-4 h-4" />
                     </Link>
                   </div>
@@ -121,7 +121,7 @@ export default function GreyWhatWeDo() {
                   onMouseLeave={e => (e.currentTarget.style.background = "var(--color-brand-red)")}>
                   Contact Us <ArrowRight className="w-4 h-4" />
                 </Link>
-                <Link href="/service/" className="inline-flex items-center gap-2 font-semibold px-7 py-4 rounded-xl text-[15px] border transition-all"
+                <Link href="/services/" className="inline-flex items-center gap-2 font-semibold px-7 py-4 rounded-xl text-[15px] border transition-all"
                   style={{ color: "var(--g-heading)", borderColor: "var(--g-border)", background: "var(--g-card-bg)" }}>
                   Our Services <ChevronRight className="w-4 h-4" />
                 </Link>

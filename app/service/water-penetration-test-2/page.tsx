@@ -24,7 +24,7 @@ export default function WaterPenetrationPage() {
     <>
       <BreadcrumbJsonLd items={[
   { name: "Home", href: "/" },
-  { name: "Services", href: "/service/" },
+  { name: "Services", href: "/services/" },
   { name: "Water Penetration Test", href: "/service/water-penetration-test-2/" },
 ]} />
 <ServiceJsonLd

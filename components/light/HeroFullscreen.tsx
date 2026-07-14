@@ -18,7 +18,7 @@ const SLIDES = [
     heading: "Welcome to Texas Technical Services",
     sub: "Precision flow measurement, inspection and automation solutions for the world's most demanding industrial environments.",
     ctas: [
-      { label: "Explore Services", href: "/service/", primary: true },
+      { label: "Explore Services", href: "/services/", primary: true },
       { label: "About Us", href: "/about-us/", primary: false },
     ],
   },
@@ -31,7 +31,7 @@ const SLIDES = [
     sub: "PLC and SCADA-based systems, control integration, and commissioning for oil & gas, manufacturing, and power generation.",
     ctas: [
       { label: "Know More", href: "/service/industrial-automation/", primary: true },
-      { label: "Our Services", href: "/service/", primary: false },
+      { label: "Our Services", href: "/services/", primary: false },
     ],
   },
   {
@@ -55,7 +55,7 @@ const SLIDES = [
     sub: "ISO 14001:2015, ISO 45001:2018, and ISO 9001:2015 certified inspection and NDT services.",
     ctas: [
       { label: "Know More", href: "/service/inspection-testing/", primary: true },
-      { label: "Our Services", href: "/service/", primary: false },
+      { label: "Our Services", href: "/services/", primary: false },
     ],
   },
 ] as const;

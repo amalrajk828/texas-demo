@@ -50,7 +50,7 @@ export default function UpgradeMeteringPage() {
     <>
       <BreadcrumbJsonLd items={[
   { name: "Home", href: "/" },
-  { name: "Services", href: "/service/" },
+  { name: "Services", href: "/services/" },
   { name: "Upgrade of Metering Control System", href: "/service/upgrade-of-metering-control-system/" },
 ]} />
 <ServiceJsonLd

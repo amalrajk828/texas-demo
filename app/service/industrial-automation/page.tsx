@@ -81,7 +81,7 @@ const faqItems = [
 export default function IndustrialAutomationPage() {
   return (
     <>
-      <BreadcrumbJsonLd items={[{ name: "Home", href: "/" }, { name: "Services", href: "/service/" }, { name: "Industrial Automation", href: "/service/industrial-automation/" }]} />
+      <BreadcrumbJsonLd items={[{ name: "Home", href: "/" }, { name: "Services", href: "/services/" }, { name: "Industrial Automation", href: "/service/industrial-automation/" }]} />
       <ServiceJsonLd
         name="Industrial Automation, PLC SCADA & Process Control Solutions"
         description="Industrial automation & control systems, control and automation engineering, PLC and SCADA system integrator, and process control automation solutions for oil & gas, power, and manufacturing in Kuwait, UAE, Saudi Arabia, and the GCC."

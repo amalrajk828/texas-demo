@@ -24,7 +24,7 @@ export default function ImpactTestPage() {
     <>
       <BreadcrumbJsonLd items={[
   { name: "Home", href: "/" },
-  { name: "Services", href: "/service/" },
+  { name: "Services", href: "/services/" },
   { name: "Impact Test", href: "/service/impact-test/" },
 ]} />
 <ServiceJsonLd

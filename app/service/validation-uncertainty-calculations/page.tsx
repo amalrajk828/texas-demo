@@ -48,7 +48,7 @@ export default function ValidationUncertaintyPage() {
     <>
       <BreadcrumbJsonLd items={[
   { name: "Home", href: "/" },
-  { name: "Services", href: "/service/" },
+  { name: "Services", href: "/services/" },
   { name: "Validation and Uncertainty Calculations", href: "/service/validation-uncertainty-calculations/" },
 ]} />
 <ServiceJsonLd

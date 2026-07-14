@@ -17,12 +17,12 @@ const NAV: NavItem[] = [
   { label: "About Us", href: "/about-us/" },
   {
     label: "Services",
-    href: "/service/",
+    href: "/services/",
     children: [
       { label: "Flow Measurement & Control System Solutions", href: "/service/flow-measurement-solutions/" },
       { label: "Inspection & Testing", href: "/service/inspection-testing/" },
       { label: "Industrial Process Automation Solutions", href: "/service/industrial-automation/" },
-      { label: "View all services →", href: "/service/", highlight: true },
+      { label: "View all services →", href: "/services/", highlight: true },
     ],
   },
   {

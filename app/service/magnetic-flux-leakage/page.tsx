@@ -24,7 +24,7 @@ export default function MFLPage() {
     <>
       <BreadcrumbJsonLd items={[
   { name: "Home", href: "/" },
-  { name: "Services", href: "/service/" },
+  { name: "Services", href: "/services/" },
   { name: "Magnetic Flux Leakage (MFL)", href: "/service/magnetic-flux-leakage/" },
 ]} />
 <ServiceJsonLd

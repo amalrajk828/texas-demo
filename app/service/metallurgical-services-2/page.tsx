@@ -24,7 +24,7 @@ export default function MetallurgicalPage() {
     <>
       <BreadcrumbJsonLd items={[
   { name: "Home", href: "/" },
-  { name: "Services", href: "/service/" },
+  { name: "Services", href: "/services/" },
   { name: "Metallurgical Services — Positive Material Identification (PMI)", href: "/service/metallurgical-services-2/" },
 ]} />
 <ServiceJsonLd

@@ -24,7 +24,7 @@ export default function TOFDPage() {
     <>
       <BreadcrumbJsonLd items={[
   { name: "Home", href: "/" },
-  { name: "Services", href: "/service/" },
+  { name: "Services", href: "/services/" },
   { name: "Time of Flight Diffraction (TOFD)", href: "/service/time-of-flight-diffraction/" },
 ]} />
 <ServiceJsonLd

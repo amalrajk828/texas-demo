@@ -24,7 +24,7 @@ export default function HoseTestPage() {
     <>
       <BreadcrumbJsonLd items={[
   { name: "Home", href: "/" },
-  { name: "Services", href: "/service/" },
+  { name: "Services", href: "/services/" },
   { name: "Hose Test — Curtain Wall & Facade Water Check", href: "/service/hose-test-2/" },
 ]} />
 <ServiceJsonLd

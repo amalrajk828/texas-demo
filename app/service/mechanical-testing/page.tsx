@@ -40,7 +40,7 @@ export default function MechanicalTestingPage() {
     <>
       <BreadcrumbJsonLd items={[
   { name: "Home", href: "/" },
-  { name: "Services", href: "/service/" },
+  { name: "Services", href: "/services/" },
   { name: "Mechanical Testing Services", href: "/service/mechanical-testing/" },
 ]} />
 <ServiceJsonLd

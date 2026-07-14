@@ -86,7 +86,7 @@ export default function MidServices() {
         </div>
 
         <FadeUp delay={0.4} className="text-center">
-          <Link href="/service/" className="inline-flex items-center gap-2 font-semibold px-8 py-4 rounded-xl text-[15px] border hover:-translate-y-0.5 transition-all"
+          <Link href="/services/" className="inline-flex items-center gap-2 font-semibold px-8 py-4 rounded-xl text-[15px] border hover:-translate-y-0.5 transition-all"
             style={{ color: "var(--t-heading)", borderColor: "var(--t-border)", background: "var(--t-card-bg)", boxShadow: "var(--t-card-shadow)" }}>
             View all services <ArrowRight className="w-4 h-4" />
           </Link>

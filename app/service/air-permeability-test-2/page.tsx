@@ -24,7 +24,7 @@ export default function AirPermeabilityPage() {
     <>
       <BreadcrumbJsonLd items={[
   { name: "Home", href: "/" },
-  { name: "Services", href: "/service/" },
+  { name: "Services", href: "/services/" },
   { name: "Air Permeability Test", href: "/service/air-permeability-test-2/" },
 ]} />
 <ServiceJsonLd

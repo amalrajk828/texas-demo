@@ -168,7 +168,7 @@ export default function IndustrialAutomationKuwaitPage() {
                 <ArrowRight className="w-4 h-4" />
               </Link>
               <Link
-                href="/service/"
+                href="/services/"
                 className="inline-flex items-center gap-2 border border-white/15 hover:border-white/35 text-white/60 hover:text-white px-7 py-3.5 rounded-lg transition-all duration-200 text-[14px]"
               >
                 All Services →
@@ -501,7 +501,7 @@ export default function IndustrialAutomationKuwaitPage() {
               Contact Us <ArrowRight className="w-4 h-4" />
             </Link>
             <Link
-              href="/service/"
+              href="/services/"
               className="inline-flex items-center gap-2 border border-white/20 hover:border-white/40 text-white/70 hover:text-white px-6 py-3.5 rounded-lg transition-colors duration-200 text-sm"
             >
               All Services

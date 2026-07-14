@@ -20,7 +20,7 @@ const SLIDES = [
     accent: "Precision. Performance. Partnership.",
     sub: "Comprehensive flow measurement, inspection & automation solutions trusted by leading operators across oil & gas, refinery, and power sectors.",
     ctas: [
-      { label: "Our Services", href: "/service/", primary: true },
+      { label: "Our Services", href: "/services/", primary: true },
       { label: "About Us", href: "/about-us/", primary: false },
     ],
   },
@@ -34,7 +34,7 @@ const SLIDES = [
     sub: "End-to-end automation engineering — from control system design to commissioning and support for oil & gas and manufacturing plants.",
     ctas: [
       { label: "Know More", href: "/service/industrial-automation/", primary: true },
-      { label: "Our Services", href: "/service/", primary: false },
+      { label: "Our Services", href: "/services/", primary: false },
     ],
   },
   {
@@ -60,7 +60,7 @@ const SLIDES = [
     sub: "Certified inspection, non-destructive testing, and validation services ensuring compliance across industrial operations.",
     ctas: [
       { label: "Know More", href: "/service/inspection-testing/", primary: true },
-      { label: "Our Services", href: "/service/", primary: false },
+      { label: "Our Services", href: "/services/", primary: false },
     ],
   },
 ] as const;

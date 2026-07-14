@@ -106,7 +106,7 @@ export default function LightWhatWeDo() {
                   </p>
 
                   <div className="mt-6 pt-5 border-t" style={{ borderColor: "var(--color-border)" }}>
-                    <Link href="/service/" className="inline-flex items-center gap-1.5 text-[15px] font-bold hover:gap-2.5 transition-all duration-200"
+                    <Link href="/services/" className="inline-flex items-center gap-1.5 text-[15px] font-bold hover:gap-2.5 transition-all duration-200"
                       style={{ color: "var(--color-brand-red)" }}>
                       Learn more <ArrowRight className="w-3.5 h-3.5" />
                     </Link>
@@ -185,7 +185,7 @@ export default function LightWhatWeDo() {
                 >
                   Contact Us <ArrowRight className="w-4 h-4" />
                 </Link>
-                <Link href="/service/"
+                <Link href="/services/"
                   className="inline-flex items-center gap-2 font-semibold px-7 py-3.5 rounded-lg text-[15px] transition-all border"
                   style={{ color: "var(--color-text-primary)", borderColor: "var(--color-border-accent)", background: "white" }}
                 >

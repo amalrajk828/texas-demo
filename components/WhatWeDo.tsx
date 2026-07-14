@@ -105,7 +105,7 @@ export default function WhatWeDo() {
 
                   <div className="mt-6 pt-5 border-t border-white/[0.07]">
                     <Link
-                      href="/service/"
+                      href="/services/"
                       className="inline-flex items-center gap-1.5 text-[14px] font-semibold tracking-wide hover:gap-2.5 transition-all duration-200"
                       style={{ color: "var(--color-brand-red)" }}
                     >
@@ -196,7 +196,7 @@ export default function WhatWeDo() {
                   Contact Us <ArrowRight className="w-4 h-4" />
                 </ThemePrimaryLink>
                 <Link
-                  href="/service/"
+                  href="/services/"
                   className="inline-flex items-center gap-2 border border-gray-200 hover:border-gray-400 bg-white text-gray-600 hover:text-gray-900 text-[14px] font-medium px-7 py-3.5 rounded-lg transition-all duration-200"
                 >
                   Our Services →

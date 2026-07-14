@@ -24,7 +24,7 @@ export default function TorquePage() {
     <>
       <BreadcrumbJsonLd items={[
   { name: "Home", href: "/" },
-  { name: "Services", href: "/service/" },
+  { name: "Services", href: "/services/" },
   { name: "Torque Tightening & Bolt Tensioning", href: "/service/torque-tightening-bolt-tensioning-2/" },
 ]} />
 <ServiceJsonLd

@@ -24,7 +24,7 @@ export default function HeatTreatmentPage() {
     <>
       <BreadcrumbJsonLd items={[
   { name: "Home", href: "/" },
-  { name: "Services", href: "/service/" },
+  { name: "Services", href: "/services/" },
   { name: "Heat Treatment Services", href: "/service/heat-treatment-services-2/" },
 ]} />
 <ServiceJsonLd

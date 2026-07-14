@@ -20,7 +20,7 @@ const SLIDES = [
     headline2: "Excellence.",
     tagline: "Flow · Automation · Inspection",
     sub: "ISO 9001:2015 certified provider of precision measurement, automation, and testing for oil & gas since 2008.",
-    href: "/service/",
+    href: "/services/",
     cta: "Explore Services",
   },
   {

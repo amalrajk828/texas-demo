@@ -77,7 +77,7 @@ export default function G4WhatWeDo() {
                     <div className="flex-1">
                       <h3 className="text-[1.7rem] lg:text-[2rem] font-black leading-snug mb-3" style={{ color: "var(--g-heading)" }}>{svc.title}</h3>
                       <p className="text-[16px] leading-[1.85] mb-5" style={{ color: "var(--g-muted)" }}>{svc.desc}</p>
-                      <Link href="/service/" className="inline-flex items-center gap-1.5 text-[14px] font-bold opacity-0 group-hover:opacity-100 transition-all duration-200"
+                      <Link href="/services/" className="inline-flex items-center gap-1.5 text-[14px] font-bold opacity-0 group-hover:opacity-100 transition-all duration-200"
                         style={{ color: "var(--color-brand-red)" }}>
                         Learn more <ArrowRight className="w-3.5 h-3.5" />
                       </Link>

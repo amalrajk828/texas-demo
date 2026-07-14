@@ -149,7 +149,7 @@ export default function PlcScadaPage() {
           <nav className="flex items-center gap-1.5 mb-8 text-[11px] text-white/35 flex-wrap">
             <Link href="/" className="hover:text-white/70 transition-colors">Home</Link>
             <ChevronRight className="w-3 h-3 shrink-0" />
-            <Link href="/service/" className="hover:text-white/70 transition-colors">Services</Link>
+            <Link href="/services/" className="hover:text-white/70 transition-colors">Services</Link>
             <ChevronRight className="w-3 h-3 shrink-0" />
             <span className="text-white/60">PLC &amp; SCADA Integration</span>
           </nav>

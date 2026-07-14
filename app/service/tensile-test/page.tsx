@@ -24,7 +24,7 @@ export default function TensileTestPage() {
     <>
       <BreadcrumbJsonLd items={[
   { name: "Home", href: "/" },
-  { name: "Services", href: "/service/" },
+  { name: "Services", href: "/services/" },
   { name: "Tensile Test", href: "/service/tensile-test/" },
 ]} />
 <ServiceJsonLd

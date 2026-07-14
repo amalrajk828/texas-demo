@@ -48,7 +48,7 @@ export default function AuditsSpecializedConsultancyPage() {
     <>
       <BreadcrumbJsonLd items={[
   { name: "Home", href: "/" },
-  { name: "Services", href: "/service/" },
+  { name: "Services", href: "/services/" },
   { name: "Audits and Specialized Consultancy", href: "/service/audits-specialized-consultancy/" },
 ]} />
 <ServiceJsonLd

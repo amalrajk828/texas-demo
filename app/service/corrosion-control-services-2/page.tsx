@@ -24,7 +24,7 @@ export default function CorrosionControlPage() {
     <>
       <BreadcrumbJsonLd items={[
   { name: "Home", href: "/" },
-  { name: "Services", href: "/service/" },
+  { name: "Services", href: "/services/" },
   { name: "Corrosion Control Services", href: "/service/corrosion-control-services-2/" },
 ]} />
 <ServiceJsonLd

@@ -24,7 +24,7 @@ export default function FractureTestPage() {
     <>
       <BreadcrumbJsonLd items={[
   { name: "Home", href: "/" },
-  { name: "Services", href: "/service/" },
+  { name: "Services", href: "/services/" },
   { name: "Fracture Test", href: "/service/fracture-test/" },
 ]} />
 <ServiceJsonLd

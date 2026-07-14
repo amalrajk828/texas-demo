@@ -41,7 +41,7 @@ export default function LightFooterAlt() {
               style={{ color: "var(--color-brand-red)" }}>
               Get in Touch <ArrowRight className="w-4 h-4" />
             </Link>
-            <Link href="/service/"
+            <Link href="/services/"
               className="shrink-0 border-2 border-white/30 hover:border-white/60 text-white font-semibold text-sm px-7 py-3 rounded-lg transition-colors flex items-center gap-2">
               Our Services <ArrowRight className="w-4 h-4" />
             </Link>

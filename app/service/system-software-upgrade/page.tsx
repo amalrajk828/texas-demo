@@ -24,7 +24,7 @@ export default function ControlSystemPage() {
     <>
       <BreadcrumbJsonLd items={[
   { name: "Home", href: "/" },
-  { name: "Services", href: "/service/" },
+  { name: "Services", href: "/services/" },
   { name: "Control System Integration and Upgradation", href: "/service/system-software-upgrade/" },
 ]} />
 <ServiceJsonLd

@@ -24,7 +24,7 @@ export default function LiftingInspectionPage() {
     <>
       <BreadcrumbJsonLd items={[
   { name: "Home", href: "/" },
-  { name: "Services", href: "/service/" },
+  { name: "Services", href: "/services/" },
   { name: "Lifting Equipment Inspection", href: "/service/lifting-equipment-inspection-2/" },
 ]} />
 <ServiceJsonLd

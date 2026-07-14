@@ -49,7 +49,7 @@ export default function FlowComputerConfigurationPage() {
     <>
       <BreadcrumbJsonLd items={[
   { name: "Home", href: "/" },
-  { name: "Services", href: "/service/" },
+  { name: "Services", href: "/services/" },
   { name: "Flow Computer Configuration", href: "/service/flow-computer-configuration/" },
 ]} />
 <ServiceJsonLd

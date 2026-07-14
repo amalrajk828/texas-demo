@@ -24,7 +24,7 @@ export default function PlantAutomationPage() {
     <>
       <BreadcrumbJsonLd items={[
   { name: "Home", href: "/" },
-  { name: "Services", href: "/service/" },
+  { name: "Services", href: "/services/" },
   { name: "Process Plant Automation", href: "/service/plant-automation/" },
 ]} />
 <ServiceJsonLd

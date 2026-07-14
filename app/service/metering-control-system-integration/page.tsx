@@ -49,7 +49,7 @@ export default function McsiPage() {
     <>
       <BreadcrumbJsonLd items={[
   { name: "Home", href: "/" },
-  { name: "Services", href: "/service/" },
+  { name: "Services", href: "/services/" },
   { name: "Metering Control System Integration", href: "/service/metering-control-system-integration/" },
 ]} />
 <ServiceJsonLd

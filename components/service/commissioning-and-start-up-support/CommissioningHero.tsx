@@ -32,7 +32,7 @@ export default function CommissioningHero() {
           <nav className="flex items-center gap-1.5 text-[11px] text-white/35 tracking-[1.5px] uppercase mb-10 flex-wrap">
             <Link href="/" className="hover:text-white/60 transition-colors">Home</Link>
             <ChevronRight className="w-3 h-3" />
-            <Link href="/service/" className="hover:text-white/60 transition-colors">Services</Link>
+            <Link href="/services/" className="hover:text-white/60 transition-colors">Services</Link>
             <ChevronRight className="w-3 h-3" />
             <Link href="/service/industrial-automation/" className="hover:text-white/60 transition-colors">Industrial Automation</Link>
             <ChevronRight className="w-3 h-3" />

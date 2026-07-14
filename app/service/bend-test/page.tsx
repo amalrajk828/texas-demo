@@ -24,7 +24,7 @@ export default function BendTestPage() {
     <>
       <BreadcrumbJsonLd items={[
   { name: "Home", href: "/" },
-  { name: "Services", href: "/service/" },
+  { name: "Services", href: "/services/" },
   { name: "Bend Test", href: "/service/bend-test/" },
 ]} />
 <ServiceJsonLd

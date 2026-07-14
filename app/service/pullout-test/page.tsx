@@ -24,7 +24,7 @@ export default function PulloutTestPage() {
     <>
       <BreadcrumbJsonLd items={[
   { name: "Home", href: "/" },
-  { name: "Services", href: "/service/" },
+  { name: "Services", href: "/services/" },
   { name: "Pullout Test for Bolts & Anchors", href: "/service/pullout-test/" },
 ]} />
 <ServiceJsonLd

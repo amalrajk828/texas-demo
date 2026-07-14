@@ -17,7 +17,7 @@ const SLIDES = [
     tag: "Industrial Services",
     ctas: [
       { label: "About Us", href: "/about-us/", primary: true },
-      { label: "Our Services", href: "/service/", primary: false },
+      { label: "Our Services", href: "/services/", primary: false },
     ],
   },
   {
@@ -30,7 +30,7 @@ const SLIDES = [
     tag: "Automation",
     ctas: [
       { label: "Know More", href: "/service/industrial-automation/", primary: true },
-      { label: "Our Services", href: "/service/", primary: false },
+      { label: "Our Services", href: "/services/", primary: false },
     ],
   },
   {
@@ -56,7 +56,7 @@ const SLIDES = [
     tag: "NDT & Testing",
     ctas: [
       { label: "Know More", href: "/service/inspection-testing/", primary: true },
-      { label: "Our Services", href: "/service/", primary: false },
+      { label: "Our Services", href: "/services/", primary: false },
     ],
   },
 ] as const;

@@ -48,7 +48,7 @@ export default function GenuineSpareParts() {
     <>
       <BreadcrumbJsonLd items={[
   { name: "Home", href: "/" },
-  { name: "Services", href: "/service/" },
+  { name: "Services", href: "/services/" },
   { name: "Genuine Spare Parts", href: "/service/genuine-spare-parts/" },
 ]} />
 <ServiceJsonLd

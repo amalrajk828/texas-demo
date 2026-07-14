@@ -48,7 +48,7 @@ export default function MeteringExpertServicesPage() {
     <>
       <BreadcrumbJsonLd items={[
   { name: "Home", href: "/" },
-  { name: "Services", href: "/service/" },
+  { name: "Services", href: "/services/" },
   { name: "Metering Expert Services", href: "/service/metering-expert-services/" },
 ]} />
 <ServiceJsonLd

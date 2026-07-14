@@ -24,7 +24,7 @@ export default function EddyCurrentPage() {
     <>
       <BreadcrumbJsonLd items={[
   { name: "Home", href: "/" },
-  { name: "Services", href: "/service/" },
+  { name: "Services", href: "/services/" },
   { name: "Eddy Current Testing (ECT)", href: "/service/eddy-current-testing/" },
 ]} />
 <ServiceJsonLd
