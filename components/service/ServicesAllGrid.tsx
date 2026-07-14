@@ -3,8 +3,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { motion, useInView } from "framer-motion";
 import { useRef, useState, useEffect, useMemo } from "react";
-import { useRouter } from "next/navigation";
-import { ArrowRight, ChevronLeft, ChevronRight, Search, X } from "lucide-react";
+import { ArrowRight, Search, X } from "lucide-react";
 
 interface ServiceItem {
   title: string;
@@ -85,7 +84,38 @@ const ALL_SERVICES: ServiceItem[] = [
   { title: "Constructions", category: "Main Services", image: "/images/services/SKYLIGHT-GANTRY-scaled.jpg", href: "/service/#construction", body: "Gantry & structural fabrication, industrial facility design, piping, civil & mechanical construction, turnkey EPC execution." },
 ];
 
-const PER_PAGE = 9;
+const CATEGORY_GROUPS: Record<string, { label: string; categories: string[] }> = {
+  "flow-measurement": {
+    label: "Flow Measurement",
+    categories: ["Flow Measurement Solutions"],
+  },
+  "inspection-testing": {
+    label: "Inspection & Testing",
+    categories: ["Specialized Inspection Services", "Mechanical Testing", "Non Destructive Testing", "Inspection & Testing"],
+  },
+  "process-automation": {
+    label: "Process Automation",
+    categories: ["Industrial Automation"],
+  },
+  "construction": {
+    label: "Construction",
+    categories: ["Constructions"],
+  },
+};
+
+type CategoryKey = keyof typeof CATEGORY_GROUPS | "all";
+
+const FILTERS: { key: CategoryKey; label: string }[] = [
+  { key: "all", label: "All" },
+  ...Object.entries(CATEGORY_GROUPS).map(([key, val]) => ({ key: key as CategoryKey, label: val.label })),
+];
+
+const MAIN_SERVICE_ROUTES: Record<string, string[]> = {
+  "flow-measurement": ["/service/flow-measurement-solutions/"],
+  "inspection-testing": ["/service/inspection-testing/"],
+  "process-automation": ["/service/industrial-automation/"],
+  "construction": ["/service/#construction"],
+};
 
 function ServiceCard({ service, index }: { service: ServiceItem; index: number }) {
   const ref = useRef<HTMLDivElement>(null);
@@ -120,69 +150,99 @@ function ServiceCard({ service, index }: { service: ServiceItem; index: number }
   );
 }
 
-export default function ServicesAllGrid({ initialPage = 1 }: { initialPage?: number }) {
-  const [page, setPage] = useState(initialPage);
-  const [prevInitialPage, setPrevInitialPage] = useState(initialPage);
+export default function ServicesAllGrid({ initialPage: _initialPage }: { initialPage?: number }) {
   const [searchQuery, setSearchQuery] = useState("");
-  const router = useRouter();
+  const [category, setCategory] = useState<CategoryKey>("all");
+  const gridRef = useRef<HTMLDivElement>(null);
+  const initialHashDone = useRef(false);
 
-  // Sync page with initialPage synchronously during render (handles browser back/forward
-  // and direct URL navigation without the async delay of useEffect).
-  if (prevInitialPage !== initialPage) {
-    setPrevInitialPage(initialPage);
-    setPage(initialPage);
-  }
+  useEffect(() => {
+    if (initialHashDone.current) return;
+    initialHashDone.current = true;
 
-  const filteredServices = useMemo(() => ALL_SERVICES.filter((svc) => {
-    const query = searchQuery.toLowerCase().trim();
-    if (!query) return true;
-    return (
-      svc.title.toLowerCase().includes(query) ||
-      svc.body.toLowerCase().includes(query) ||
-      svc.category.toLowerCase().includes(query)
-    );
-  }), [searchQuery]);
+    const applyHash = () => {
+      const hash = window.location.hash.replace("#", "");
+      if (hash && hash in CATEGORY_GROUPS) {
+        setCategory(hash as CategoryKey);
+      }
+    };
+    applyHash();
 
-  const totalPages = Math.ceil(filteredServices.length / PER_PAGE);
-  const start = (page - 1) * PER_PAGE;
-  const currentServices = filteredServices.slice(start, start + PER_PAGE);
+    const onHashChange = () => {
+      const hash = window.location.hash.replace("#", "");
+      if (hash && hash in CATEGORY_GROUPS) {
+        setCategory(hash as CategoryKey);
+      } else {
+        setCategory("all");
+      }
+    };
+    window.addEventListener("hashchange", onHashChange);
+    return () => window.removeEventListener("hashchange", onHashChange);
+  }, []);
 
-  // Page reset is handled directly in the search input's onChange and X button's onClick
+  const filteredServices = useMemo(() => {
+    let result = ALL_SERVICES;
 
-  const goTo = (p: number) => {
-    setPage(p);
-    if (p === 1) {
-      router.push("/service/");
-    } else {
-      router.push(`/service/page/${p}/`);
+    if (category !== "all") {
+      const allowed = CATEGORY_GROUPS[category].categories;
+      const mainRoutes = MAIN_SERVICE_ROUTES[category] || [];
+      result = result.filter(svc =>
+        allowed.includes(svc.category) ||
+        (svc.category === "Main Services" && mainRoutes.includes(svc.href))
+      );
     }
-    window.scrollTo({ top: 0, behavior: "smooth" });
+
+    const query = searchQuery.toLowerCase().trim();
+    if (query) {
+      result = result.filter(svc =>
+        svc.title.toLowerCase().includes(query) ||
+        svc.body.toLowerCase().includes(query) ||
+        svc.category.toLowerCase().includes(query)
+      );
+    }
+
+    return result;
+  }, [searchQuery, category]);
+
+  const handleFilterClick = (key: CategoryKey) => {
+    setCategory(key);
+    if (gridRef.current) {
+      gridRef.current.scrollIntoView({ behavior: "smooth", block: "start" });
+    }
+    if (key === "all") {
+      window.history.replaceState(null, "", window.location.pathname);
+    } else {
+      window.history.replaceState(null, "", `#${key}`);
+    }
   };
 
   return (
-    <section className="relative bg-[#f4f5f8] py-20 overflow-hidden">
+    <section ref={gridRef} className="relative bg-[#f4f5f8] py-20 overflow-hidden">
       <div className="relative max-w-7xl mx-auto px-4 sm:px-6">
-        
+
+        {/* Anchor targets for nav hash links */}
+        <div className="relative">
+          <span id="all-services" className="absolute -top-28" />
+          <span id="flow-measurement" className="absolute -top-28" />
+          <span id="inspection-testing" className="absolute -top-28" />
+          <span id="process-automation" className="absolute -top-28" />
+          <span id="construction" className="absolute -top-28" />
+        </div>
+
         {/* Search Bar */}
-        <div className="relative max-w-md mx-auto mb-12">
+        <div className="relative max-w-md mx-auto mb-8">
           <div className="relative flex items-center">
             <Search className="absolute left-4 w-5 h-5 text-gray-400 pointer-events-none" />
             <input
               type="text"
               value={searchQuery}
-              onChange={(e) => {
-                setSearchQuery(e.target.value);
-                setPage(1);
-              }}
+              onChange={(e) => { setSearchQuery(e.target.value); }}
               placeholder="Search services..."
               className="w-full pl-12 pr-10 py-3 bg-white border border-[#e8eaf0] rounded-xl text-[14px] text-[#0B0D26] placeholder-gray-400 focus:outline-none focus:border-[#e7212b]/40 focus:ring-1 focus:ring-[#e7212b]/20 transition-all duration-200"
             />
             {searchQuery && (
               <button
-                onClick={() => {
-                  setSearchQuery("");
-                  setPage(1);
-                }}
+                onClick={() => { setSearchQuery(""); }}
                 className="absolute right-4 text-gray-400 hover:text-gray-600 transition-colors"
               >
                 <X className="w-4 h-4" />
@@ -191,41 +251,45 @@ export default function ServicesAllGrid({ initialPage = 1 }: { initialPage?: num
           </div>
         </div>
 
+        {/* Category filter pills */}
+        <div className="flex flex-wrap justify-center gap-2 mb-10">
+          {FILTERS.map(({ key, label }) => (
+            <button
+              key={key}
+              onClick={() => handleFilterClick(key)}
+              className={`px-5 py-2.5 rounded-lg text-[13px] font-semibold transition-all duration-200 ${
+                category === key
+                  ? "bg-[#e7212b] text-white shadow-lg shadow-[#e7212b]/20"
+                  : "bg-white border border-[#e8eaf0] text-[#0B0D26] hover:border-[#e7212b]/40 hover:text-[#e7212b]"
+              }`}
+            >
+              {label}
+            </button>
+          ))}
+        </div>
+
         {/* Empty State vs Grid */}
         {filteredServices.length === 0 ? (
           <div className="text-center py-16 bg-white border border-[#e8eaf0] rounded-2xl p-8 mb-14">
             <Search className="w-10 h-10 text-gray-300 mx-auto mb-4" />
             <h3 className="text-[16px] font-bold text-[#0B0D26] mb-1">No services found</h3>
             <p className="text-[13px] text-gray-500">
-              We couldn't find any services matching &ldquo;{searchQuery}&rdquo;.
+              We couldn't find any services matching your criteria.
             </p>
           </div>
         ) : (
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 mb-14">
-            {currentServices.map((svc, i) => (
+            {filteredServices.map((svc, i) => (
               <ServiceCard key={`${svc.title}-${i}`} service={svc} index={i} />
             ))}
           </div>
         )}
 
-        {/* Pagination */}
+        {/* Result count */}
         {filteredServices.length > 0 && (
-          <>
-            <div className="flex items-center justify-center gap-2 flex-wrap">
-              <button onClick={() => goTo(Math.max(1, page - 1))} disabled={page === 1} className="w-9 h-9 rounded-lg border border-[#e8eaf0] bg-white flex items-center justify-center text-[#0B0D26] hover:border-[#e7212b]/40 hover:text-[#e7212b] disabled:opacity-30 disabled:cursor-not-allowed transition-all duration-200">
-                <ChevronLeft className="w-4 h-4" />
-              </button>
-              {Array.from({ length: totalPages }, (_, i) => i + 1).map((p) => (
-                <button key={p} onClick={() => goTo(p)} className={`w-9 h-9 rounded-lg border text-[13px] font-semibold transition-all duration-200 ${p === page ? "bg-[#e7212b] border-[#e7212b] text-white shadow-lg shadow-[#e7212b]/20" : "bg-white border-[#e8eaf0] text-[#0B0D26] hover:border-[#e7212b]/40 hover:text-[#e7212b]"}`}>
-                  {p}
-                </button>
-              ))}
-              <button onClick={() => goTo(Math.min(totalPages, page + 1))} disabled={page === totalPages} className="w-9 h-9 rounded-lg border border-[#e8eaf0] bg-white flex items-center justify-center text-[#0B0D26] hover:border-[#e7212b]/40 hover:text-[#e7212b] disabled:opacity-30 disabled:cursor-not-allowed transition-all duration-200">
-                <ChevronRight className="w-4 h-4" />
-              </button>
-            </div>
-            <p className="text-center text-[12px] text-gray-400 mt-4">Page {page} of {totalPages}</p>
-          </>
+          <p className="text-center text-[12px] text-gray-400">
+            Showing {filteredServices.length} service{filteredServices.length !== 1 ? "s" : ""}
+          </p>
         )}
       </div>
     </section>
