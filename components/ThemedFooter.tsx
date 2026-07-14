@@ -97,7 +97,7 @@ export default function ThemedFooter() {
             <div className="space-y-5">
               {[
                 { city: "Kuwait", address: "Munira Tower Office No. 30, 9th Floor – Building No.6702, Block 7 – Makkah Street Fahaheel, Kuwait", phones: ["+965 97243755", "+965 66347267"] },
-                { city: "Dubai",  address: "Amna Naseer Building, Al Marar Area 20th Street #529 Plot #302 Office #201-19, Deira, Dubai", phones: ["+971 569553747"] },
+                { city: "Dubai",  address: "Amna Naseer Building, Al Marar Area 20th Street #529 Plot #302 Office #201-19, Deira, Dubai", phones: ["+971 569553747", "+971 567793973"] },
               ].map((office) => (
                 <div key={office.city}>
                   <p className="text-white text-sm font-medium mb-1.5 flex items-center gap-1.5">

@@ -83,7 +83,7 @@ export default function LightFooterAlt() {
             <div className="space-y-5">
               {[
                 { city: "Kuwait", address: "Munira Tower Office No. 30, 9th Floor – Fahaheel, Kuwait", phones: ["+965 97243755", "+965 66347267"] },
-                { city: "Dubai",  address: "Amna Naseer Building, Al Marar Area, Deira, Dubai", phones: ["+971 569553747"] },
+                { city: "Dubai",  address: "Amna Naseer Building, Al Marar Area, Deira, Dubai", phones: ["+971 569553747", "+971 567793973"] },
               ].map((office) => (
                 <div key={office.city}>
                   <p className="text-sm font-bold mb-1.5 flex items-center gap-1.5" style={{ color: "var(--color-footer-text)" }}>

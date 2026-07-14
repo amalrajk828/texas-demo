@@ -126,7 +126,7 @@ export default function Footer() {
                   city: "Dubai",
                   address:
                     "Amna Naseer Building, Al Marar Area 20th Street #529 Plot #302 Office #201-19, Deira, Dubai",
-                  phones: ["+971 569553747"],
+                  phones: ["+971 569553747", "+971 567793973"],
                 },
               ].map((office) => (
                 <div key={office.city}>

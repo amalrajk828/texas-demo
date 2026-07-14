@@ -131,6 +131,7 @@ export default function ServicesCtaBanner() {
               <div>
                 <p className="text-white/30 text-[11px] tracking-[1.5px] uppercase mb-0.5">Dubai Office</p>
                 <p className="text-white text-[14px] font-medium">+971 569553747</p>
+                      <p className="text-white text-[14px] font-medium">+971 567793973</p>
               </div>
             </a>
 
