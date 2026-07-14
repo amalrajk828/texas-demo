@@ -1,5 +1,7 @@
 import type { Metadata } from "next";
+import Script from "next/script";
 import ThemeWrapper from "@/components/ThemeWrapper";
+import { SITE_URL } from "@/lib/site";
 import HeroSlider from "@/components/HeroSlider";
 import PartnersTicker from "@/components/PartnersTicker";
 import TickerBanner from "@/components/TickerBanner";
@@ -89,6 +91,23 @@ const VARS: Record<string, string> = {
 export default function HomePage() {
   return (
     <ThemeWrapper vars={VARS}>
+      <Script
+        id="website-schema"
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "WebSite",
+            name: "Texas Technical Services",
+            url: SITE_URL,
+            potentialAction: {
+              "@type": "SearchAction",
+              target: `${SITE_URL}/portfolio/?q={search_term_string}`,
+              "query-input": "required name=search_term_string",
+            },
+          }),
+        }}
+      />
       <main>
         <HeroSlider />
         <PartnersTicker />

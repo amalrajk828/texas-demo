@@ -13,6 +13,13 @@ export const metadata: Metadata = {
   alternates: {
     canonical: "/services_group/services/constructions/",
   },
+  keywords: [
+    "industrial construction Kuwait",
+    "structural steel fabrication",
+    "EPC project execution",
+    "piping fabrication GCC",
+    "gantry fabrication services",
+  ],
   openGraph: {
     title: "Industrial Construction & Project Delivery | Texas Technical Services",
     description:

@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import Image from "next/image";
 import { Zap, ArrowRight, ChevronRight } from "lucide-react";
+import { BreadcrumbJsonLd } from "@/components/schema/BreadcrumbJsonLd";
 
 export const metadata: Metadata = {
   title: "Power Plant Industry Solutions | Texas Technical Services",
@@ -131,6 +132,7 @@ const categoryColors: Record<string, string> = {
 export default function PowerPlantPage() {
   return (
     <>
+      <BreadcrumbJsonLd items={[{ name: "Home", href: "/" }, { name: "Industries", href: "/industries/" }, { name: "Power Plant", href: "/industries/power-plant/" }]} />
       {/* ══ HERO — full-bleed image ════════════════════════════ */}
       <section className="relative overflow-hidden min-h-[480px] flex items-end">
         <div className="absolute inset-0">
