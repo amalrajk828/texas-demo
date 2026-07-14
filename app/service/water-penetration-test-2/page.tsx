@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
-import WaterPenetrationHero from "@/components/service/water-penetration-test-2/WaterPenetrationHero";
-import WaterPenetrationContent from "@/components/service/water-penetration-test-2/WaterPenetrationContent";
+import WaterPenetrationHero from "@/components/service/water-penetration-test/WaterPenetrationHero";
+import WaterPenetrationContent from "@/components/service/water-penetration-test/WaterPenetrationContent";
 import { BreadcrumbJsonLd } from "@/components/schema/BreadcrumbJsonLd";
 import { ServiceJsonLd } from "@/components/schema/ServiceJsonLd";
 
@@ -19,7 +19,7 @@ export const metadata: Metadata = {
   keywords: ["water penetration test Kuwait", "curtain wall testing Kuwait", "window water test Kuwait", "building envelope testing Kuwait", "ASTM E1105 Kuwait", "Texas Technical Services water test"],
 };
 
-export default function WaterPenetrationPage() {
+export default function WaterPenetrationPage2() {
   return (
     <>
       <BreadcrumbJsonLd items={[
@@ -36,7 +36,6 @@ export default function WaterPenetrationPage() {
 />
       <WaterPenetrationHero />
       <WaterPenetrationContent />
-      {/* Contact section — to be added */}
     </>
   );
 }

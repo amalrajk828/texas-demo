@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
-import AirPermeabilityHero from "@/components/service/air-permeability-test-2/AirPermeabilityHero";
-import AirPermeabilityContent from "@/components/service/air-permeability-test-2/AirPermeabilityContent";
+import AirPermeabilityHero from "@/components/service/air-permeability-test/AirPermeabilityHero";
+import AirPermeabilityContent from "@/components/service/air-permeability-test/AirPermeabilityContent";
 import { BreadcrumbJsonLd } from "@/components/schema/BreadcrumbJsonLd";
 import { ServiceJsonLd } from "@/components/schema/ServiceJsonLd";
 
@@ -19,7 +19,7 @@ export const metadata: Metadata = {
   keywords: ["air permeability test Kuwait", "air leakage test Kuwait", "curtain wall air test Kuwait", "ASTM E783 Kuwait", "window air infiltration Kuwait", "building envelope air test Kuwait", "Texas Technical Services air test"],
 };
 
-export default function AirPermeabilityPage() {
+export default function AirPermeabilityPage2() {
   return (
     <>
       <BreadcrumbJsonLd items={[
@@ -36,7 +36,6 @@ export default function AirPermeabilityPage() {
 />
       <AirPermeabilityHero />
       <AirPermeabilityContent />
-      {/* Contact section — to be added */}
     </>
   );
 }

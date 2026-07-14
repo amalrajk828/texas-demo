@@ -17,7 +17,7 @@ const MAIN_SERVICES: ServiceItem[] = [
   { title: "Flow Measurement & Control System Solutions", category: "Main Services", image: "/images/services/calibration.jpg", href: "/service/flow-measurement-solutions/", body: "Metering control system upgrades, maintenance, and validation for custody metering systems — precision and compliance." },
   { title: "Inspection & Testing", category: "Main Services", image: "/images/services/Usinage-2.jpg", href: "/service/inspection-testing/", body: "Comprehensive inspection and testing — equipment inspections, NDT, functional testing, and certification to industry standards." },
   { title: "Industrial Process Automation Solutions", category: "Main Services", image: "/images/services/automation_full.jpg", href: "/service/industrial-automation/", body: "Total industrial automation — PLC, SCADA, HMI, custom software for oil & gas and industrial sectors." },
-  { title: "Constructions", category: "Main Services", image: "/images/services/SKYLIGHT-GANTRY-scaled.jpg", href: "/service/construction/", body: "Gantry & structural fabrication, industrial facility design, piping, civil & mechanical construction, turnkey EPC execution." },
+  { title: "Constructions", category: "Main Services", image: "/images/services/SKYLIGHT-GANTRY-scaled.jpg", href: "/service/constructions/", body: "Gantry & structural fabrication, industrial facility design, piping, civil & mechanical construction, turnkey EPC execution." },
 ];
 
 function ServiceCard({ service, index }: { service: ServiceItem; index: number }) {

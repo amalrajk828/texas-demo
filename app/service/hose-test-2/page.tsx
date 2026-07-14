@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
-import HoseTestHero from "@/components/service/hose-test-2/HoseTestHero";
-import HoseTestContent from "@/components/service/hose-test-2/HoseTestContent";
+import HoseTestHero from "@/components/service/hose-test/HoseTestHero";
+import HoseTestContent from "@/components/service/hose-test/HoseTestContent";
 import { BreadcrumbJsonLd } from "@/components/schema/BreadcrumbJsonLd";
 import { ServiceJsonLd } from "@/components/schema/ServiceJsonLd";
 
@@ -19,7 +19,7 @@ export const metadata: Metadata = {
   keywords: ["hose test Kuwait", "curtain wall hose test Kuwait", "facade water test Kuwait", "window hose test Kuwait", "AAMA 501.2 Kuwait", "building leakage test Kuwait", "Texas Technical Services hose test"],
 };
 
-export default function HoseTestPage() {
+export default function HoseTestPage2() {
   return (
     <>
       <BreadcrumbJsonLd items={[
@@ -36,7 +36,6 @@ export default function HoseTestPage() {
 />
       <HoseTestHero />
       <HoseTestContent />
-      {/* Contact section — to be added */}
     </>
   );
 }

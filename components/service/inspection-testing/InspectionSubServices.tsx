@@ -48,15 +48,15 @@ interface SubServiceItem {
 }
 
 const SUB_SERVICES: SubServiceItem[] = [
-  { Icon: Wrench, title: "Lifting Equipment Inspection", body: "Systematic inspection of cranes, hoists, forklifts, and elevators — certified inspectors identify defects, wear, and safety standard deviations.", imageSrc: "/images/services/lifting_equp.png", href: "/service/lifting-equipment-inspection-2/" },
-  { Icon: Droplets, title: "Hose Test", body: "Quality assurance field water check for installed curtain walls, exterior windows and doors — identifies leakage vulnerabilities.", imageSrc: "/images/services/HOSE-TEST.jpg", href: "/service/hose-test-2/" },
-  { Icon: Wind, title: "Air Permeability Test", body: "Measures air infiltration through windows, doors, and curtain walls per ASTM E783 — locates air leakage paths.", imageSrc: "/images/services/AIR-PERMEABILITY-TEST-800x664.jpg", href: "/service/air-permeability-test-2/" },
-  { Icon: Droplets, title: "Water Penetration Test", body: "Determines whether leakage is present through windows, doors, and curtain wall systems from exterior to interior.", imageSrc: "/images/services/WATER-PENETRATION-TEST.jpg", href: "/service/water-penetration-test-2/" },
-  { Icon: Search, title: "Exterior Windows, Doors & Curtain Wall Testing", body: "Performance testing of exterior windows, doors, and curtain walls for water penetration, air permeability, and structural soundness.", imageSrc: "/images/services/water-penetration.png", href: "/service/water-penetration-test-2/" },
+  { Icon: Wrench, title: "Lifting Equipment Inspection", body: "Systematic inspection of cranes, hoists, forklifts, and elevators — certified inspectors identify defects, wear, and safety standard deviations.", imageSrc: "/images/services/lifting_equp.png", href: "/service/lifting-equipment-inspection/" },
+  { Icon: Droplets, title: "Hose Test", body: "Quality assurance field water check for installed curtain walls, exterior windows and doors — identifies leakage vulnerabilities.", imageSrc: "/images/services/HOSE-TEST.jpg", href: "/service/hose-test/" },
+  { Icon: Wind, title: "Air Permeability Test", body: "Measures air infiltration through windows, doors, and curtain walls per ASTM E783 — locates air leakage paths.", imageSrc: "/images/services/AIR-PERMEABILITY-TEST-800x664.jpg", href: "/service/air-permeability-test/" },
+  { Icon: Droplets, title: "Water Penetration Test", body: "Determines whether leakage is present through windows, doors, and curtain wall systems from exterior to interior.", imageSrc: "/images/services/WATER-PENETRATION-TEST.jpg", href: "/service/water-penetration-test/" },
+  { Icon: Search, title: "Exterior Windows, Doors & Curtain Wall Testing", body: "Performance testing of exterior windows, doors, and curtain walls for water penetration, air permeability, and structural soundness.", imageSrc: "/images/services/water-penetration.png", href: "/service/water-penetration-test/" },
   { Icon: Anchor, title: "Pullout Test", body: "Determines strength and integrity of the bond between a bolt and embedded material — concrete or masonry structural anchorage testing.", imageSrc: "/images/services/ANCHORS-PULL-TESTING.jpg", href: "/service/pullout-test/" },
-  { Icon: Wrench, title: "Torque Tightening & Bolt Tensioning", body: "Assesses tightness and preload of fasteners using calibrated torque sensors — proper installation and integrity of bolted connections.", imageSrc: "/images/services/torque.png", href: "/service/torque-tightening-bolt-tensioning-2/" },
-  { Icon: Thermometer, title: "Heat Treatment Services", body: "Low, mid, and high range temperature heating using electrical and fuel-fired methods — specialized on-site heat treatment for oil and gas.", imageSrc: "/images/services/Heat-Treatment-Services.jpeg", href: "/service/heat-treatment-services-2/" },
-  { Icon: ShieldCheck, title: "Metallurgical Services (PMI)", body: "Positive Material Identification (PMI) — fast, non-destructive verification of chemical composition of metals and alloys.", imageSrc: "/images/services/Metallurgical-Services.jpg", href: "/service/metallurgical-services-2/" },
+  { Icon: Wrench, title: "Torque Tightening & Bolt Tensioning", body: "Assesses tightness and preload of fasteners using calibrated torque sensors — proper installation and integrity of bolted connections.", imageSrc: "/images/services/torque.png", href: "/service/torque-tightening-bolt-tensioning/" },
+  { Icon: Thermometer, title: "Heat Treatment Services", body: "Low, mid, and high range temperature heating using electrical and fuel-fired methods — specialized on-site heat treatment for oil and gas.", imageSrc: "/images/services/Heat-Treatment-Services.jpeg", href: "/service/heat-treatment-services/" },
+  { Icon: ShieldCheck, title: "Metallurgical Services (PMI)", body: "Positive Material Identification (PMI) — fast, non-destructive verification of chemical composition of metals and alloys.", imageSrc: "/images/services/Metallurgical-Services.jpg", href: "/service/metallurgical-services/" },
   { Icon: ShieldCheck, title: "Corrosion Control Services", body: "Techniques and strategies to prevent, mitigate, and manage corrosion in metals across oil & gas, construction, and marine industries.", imageSrc: "/images/services/maxresdefault.jpg", href: "/service/corrosion-control-services-2/" },
   { Icon: Radio, title: "Gamma Ray Pipe Crawler", body: "Battery-powered remote-controlled radiographic machine producing SWSI radiographs of circumferential welds in pipelines.", imageSrc: "/images/services/jme-her-pipeline-crawler-buggy-controller.webp", href: "/service/gamma-ray-pipe-crawler-inspection-systems/" },
   { Icon: Monitor, title: "Videoscope", body: "Specialized visual inspection for areas accessible only through bends or turns — excellent image quality and recording capability.", imageSrc: "/images/services/Videoscope.webp", href: "/service/videoscope/" },
@@ -118,7 +118,7 @@ function SubServiceCard({ item, index }: { item: SubServiceItem; index: number }
   );
 }
 
-export default function InspectionSubServices() {
+export default function InspectionSubServices({ slices: inSlices }: { slices?: [number, number][] }) {
   return (
     <section className="relative bg-[#f4f5f8] py-24 lg:py-32 overflow-hidden">
       <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[600px] h-[1px] pointer-events-none" style={{ background: "linear-gradient(90deg, transparent, rgba(231,33,43,0.15) 50%, transparent)" }} />
@@ -136,7 +136,7 @@ export default function InspectionSubServices() {
           </div>
         </FadeUp>
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-          {SUB_SERVICES.map((item, i) => (
+          {(inSlices ? inSlices.flatMap(([s, e]) => SUB_SERVICES.slice(s, e)) : SUB_SERVICES).map((item, i) => (
             <SubServiceCard key={item.title} item={item} index={i} />
           ))}
         </div>

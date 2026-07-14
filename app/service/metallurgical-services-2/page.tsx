@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
-import MetallurgicalHero from "@/components/service/metallurgical-services-2/MetallurgicalHero";
-import MetallurgicalContent from "@/components/service/metallurgical-services-2/MetallurgicalContent";
+import MetallurgicalHero from "@/components/service/metallurgical-services/MetallurgicalHero";
+import MetallurgicalContent from "@/components/service/metallurgical-services/MetallurgicalContent";
 import { BreadcrumbJsonLd } from "@/components/schema/BreadcrumbJsonLd";
 import { ServiceJsonLd } from "@/components/schema/ServiceJsonLd";
 
@@ -19,7 +19,7 @@ export const metadata: Metadata = {
   keywords: ["PMI Kuwait", "positive material identification Kuwait", "metallurgical services Kuwait", "XRF analysis Kuwait", "alloy verification Kuwait", "material traceability Kuwait", "Texas Technical Services PMI"],
 };
 
-export default function MetallurgicalPage() {
+export default function MetallurgicalPage2() {
   return (
     <>
       <BreadcrumbJsonLd items={[
@@ -36,7 +36,6 @@ export default function MetallurgicalPage() {
 />
       <MetallurgicalHero />
       <MetallurgicalContent />
-      {/* Contact section — to be added */}
     </>
   );
 }

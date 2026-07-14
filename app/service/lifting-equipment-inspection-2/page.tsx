@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
-import LiftingInspectionHero from "@/components/service/lifting-equipment-inspection-2/LiftingInspectionHero";
-import LiftingInspectionContent from "@/components/service/lifting-equipment-inspection-2/LiftingInspectionContent";
+import LiftingInspectionHero from "@/components/service/lifting-equipment-inspection/LiftingInspectionHero";
+import LiftingInspectionContent from "@/components/service/lifting-equipment-inspection/LiftingInspectionContent";
 import { BreadcrumbJsonLd } from "@/components/schema/BreadcrumbJsonLd";
 import { ServiceJsonLd } from "@/components/schema/ServiceJsonLd";
 
@@ -19,7 +19,7 @@ export const metadata: Metadata = {
   keywords: ["lifting equipment inspection Kuwait", "crane inspection Kuwait", "hoist inspection Kuwait", "LOLER inspection Kuwait", "forklift inspection Kuwait", "lifting gear inspection Kuwait", "Texas Technical Services lifting inspection"],
 };
 
-export default function LiftingInspectionPage() {
+export default function LiftingInspectionPage2() {
   return (
     <>
       <BreadcrumbJsonLd items={[
@@ -36,7 +36,6 @@ export default function LiftingInspectionPage() {
 />
       <LiftingInspectionHero />
       <LiftingInspectionContent />
-      {/* Contact section — to be added */}
     </>
   );
 }

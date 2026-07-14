@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
-import TorqueHero from "@/components/service/torque-tightening-bolt-tensioning-2/TorqueHero";
-import TorqueContent from "@/components/service/torque-tightening-bolt-tensioning-2/TorqueContent";
+import TorqueHero from "@/components/service/torque-tightening-bolt-tensioning/TorqueHero";
+import TorqueContent from "@/components/service/torque-tightening-bolt-tensioning/TorqueContent";
 import { BreadcrumbJsonLd } from "@/components/schema/BreadcrumbJsonLd";
 import { ServiceJsonLd } from "@/components/schema/ServiceJsonLd";
 
@@ -19,7 +19,7 @@ export const metadata: Metadata = {
   keywords: ["torque tightening Kuwait", "bolt tensioning Kuwait", "hydraulic torque Kuwait", "flange management Kuwait", "bolt preload Kuwait", "ASME PCC-1 Kuwait", "Texas Technical Services torque"],
 };
 
-export default function TorquePage() {
+export default function TorquePage2() {
   return (
     <>
       <BreadcrumbJsonLd items={[
@@ -36,7 +36,6 @@ export default function TorquePage() {
 />
       <TorqueHero />
       <TorqueContent />
-      {/* Contact section — to be added */}
     </>
   );
 }

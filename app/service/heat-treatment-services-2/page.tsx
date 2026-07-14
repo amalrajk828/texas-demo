@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
-import HeatTreatmentHero from "@/components/service/heat-treatment-services-2/HeatTreatmentHero";
-import HeatTreatmentContent from "@/components/service/heat-treatment-services-2/HeatTreatmentContent";
+import HeatTreatmentHero from "@/components/service/heat-treatment-services/HeatTreatmentHero";
+import HeatTreatmentContent from "@/components/service/heat-treatment-services/HeatTreatmentContent";
 import { BreadcrumbJsonLd } from "@/components/schema/BreadcrumbJsonLd";
 import { ServiceJsonLd } from "@/components/schema/ServiceJsonLd";
 
@@ -19,7 +19,7 @@ export const metadata: Metadata = {
   keywords: ["heat treatment Kuwait", "PWHT Kuwait", "post weld heat treatment Kuwait", "stress relief Kuwait", "electrical resistance heating Kuwait", "heat treatment services Kuwait", "Texas Technical Services heat treatment"],
 };
 
-export default function HeatTreatmentPage() {
+export default function HeatTreatmentPage2() {
   return (
     <>
       <BreadcrumbJsonLd items={[
@@ -36,7 +36,6 @@ export default function HeatTreatmentPage() {
 />
       <HeatTreatmentHero />
       <HeatTreatmentContent />
-      {/* Contact section — to be added */}
     </>
   );
 }
