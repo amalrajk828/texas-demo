@@ -1,6 +1,5 @@
 import type { Metadata } from "next";
 import Link from "next/link";
-import Image from "next/image";
 import {
   Flame,
   Factory,
@@ -10,10 +9,11 @@ import {
   Snowflake,
   Building2,
   Layers,
-  ArrowRight,
   ChevronRight,
 } from "lucide-react";
 import { BreadcrumbJsonLd } from "@/components/schema/BreadcrumbJsonLd";
+import IndustryCtaBanner from "@/components/industries/IndustryCtaBanner";
+import IndustryFeatureCard from "@/components/industries/IndustryFeatureCard";
 
 export const metadata: Metadata = {
   title: "Industries We Serve | Texas Technical Services",
@@ -123,9 +123,9 @@ export default function IndustriesPage() {
   return (
     <>
       <BreadcrumbJsonLd items={[{ name: "Home", href: "/" }, { name: "Industries", href: "/industries/" }]} />
-      {/* ══ HERO ══════════════════════════════════════════════ */}
+
+      {/* HERO */}
       <section className="bg-[#0B0D26] relative overflow-hidden">
-        {/* Grid texture */}
         <div
           className="absolute inset-0 pointer-events-none"
           style={{
@@ -133,7 +133,6 @@ export default function IndustriesPage() {
               "repeating-linear-gradient(0deg,transparent,transparent 39px,rgba(255,255,255,0.03) 40px),repeating-linear-gradient(90deg,transparent,transparent 39px,rgba(255,255,255,0.03) 40px)",
           }}
         />
-        {/* Red glow — top right */}
         <div
           className="absolute top-0 right-0 w-[520px] h-[520px] pointer-events-none"
           style={{
@@ -143,7 +142,6 @@ export default function IndustriesPage() {
         />
 
         <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 py-16 lg:py-24">
-          {/* Breadcrumb */}
           <nav className="flex items-center gap-1.5 mb-8 text-[11px] text-white/30">
             <Link href="/" className="hover:text-white/60 transition-colors">
               Home
@@ -153,7 +151,6 @@ export default function IndustriesPage() {
           </nav>
 
           <div className="flex flex-col lg:flex-row lg:items-end gap-10 lg:gap-16">
-            {/* Left — headline */}
             <div className="flex-1 max-w-2xl">
               <div className="flex items-center gap-2 mb-5">
                 <span className="w-5 h-px bg-[#e7212b]" />
@@ -172,7 +169,6 @@ export default function IndustriesPage() {
               </p>
             </div>
 
-            {/* Right — stats */}
             <div className="flex flex-row lg:flex-col gap-3 shrink-0">
               {stats.map((s) => (
                 <div
@@ -188,11 +184,9 @@ export default function IndustriesPage() {
         </div>
       </section>
 
-      {/* ══ INDUSTRY CARDS ════════════════════════════════════ */}
+      {/* INDUSTRY CARDS */}
       <section className="bg-[#f4f5f8] py-20 lg:py-24">
         <div className="max-w-7xl mx-auto px-4 sm:px-6">
-
-          {/* Section label row */}
           <div className="flex items-center justify-between mb-10">
             <div className="flex items-center gap-3">
               <span className="w-8 h-px bg-[#e7212b]/40" />
@@ -203,106 +197,29 @@ export default function IndustriesPage() {
             <span className="text-gray-400 text-[12px]">8 Industries</span>
           </div>
 
-          {/* Grid */}
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
             {industries.map((ind, i) => (
-              <Link
+              <IndustryFeatureCard
                 key={ind.slug}
-                href={`/industries/${ind.slug}/`}
-                className={`fade-up d${i + 1} group block rounded-2xl overflow-hidden bg-white border border-[#e8eaf0] hover:border-[#e7212b]/60 transition-all duration-300 hover:shadow-2xl`}
-                style={
-                  {
-                    "--tw-shadow-color": "rgba(231,33,43,0.12)",
-                    "--tw-shadow": "var(--tw-shadow-colored)",
-                  } as React.CSSProperties
-                }
-              >
-                {/* ── Image area ── */}
-                <div className="relative h-60 overflow-hidden bg-[#0B0D26]">
-                  <Image
-                    src={ind.image}
-                    alt={`${ind.name} industry solutions — Texas Technical Services`}
-                    fill
-                    className="object-cover transition-transform duration-700 ease-out group-hover:scale-[1.06]"
-                    sizes="(max-width: 768px) 100vw, (max-width: 1280px) 50vw, 640px"
-                  />
-
-                  {/* Gradient: bottom-heavy for text readability */}
-                  <div className="absolute inset-0 bg-gradient-to-t from-[#0B0D26]/80 via-[#0B0D26]/20 to-transparent" />
-
-                  {/* Industry pill — top left */}
-                  <div className="absolute top-4 left-4">
-                    <span className="inline-flex items-center gap-1.5 text-[9px] text-white/75 tracking-[2px] uppercase bg-black/40 backdrop-blur-sm px-2.5 py-1 rounded-full border border-white/[0.12]">
-                      <span className="w-1 h-1 rounded-full bg-[#e7212b]" />
-                      Industry
-                    </span>
-                  </div>
-
-                  {/* Icon box — top right */}
-                  <div className="absolute top-4 right-4 w-9 h-9 bg-[#e7212b] rounded-lg flex items-center justify-center shadow-lg transition-transform duration-300 group-hover:scale-110">
-                    <ind.Icon className="w-4 h-4 text-white" strokeWidth={1.5} />
-                  </div>
-
-                  {/* Industry name overlay — bottom */}
-                  <div className="absolute bottom-0 left-0 right-0 px-5 pb-4 pt-10">
-                    <h2 className="text-white font-medium text-xl leading-tight group-hover:text-[#e7212b] transition-colors duration-200">
-                      {ind.name}
-                    </h2>
-                    <p className="text-white/45 text-[11px] mt-0.5 tracking-wide">
-                      {ind.sub}
-                    </p>
-                  </div>
-                </div>
-
-                {/* ── Content area ── */}
-                <div className="px-5 pt-4 pb-5">
-                  <p className="text-gray-500 text-[13px] leading-relaxed line-clamp-3 mb-4">
-                    {ind.desc}
-                  </p>
-
-                  <div className="flex items-center justify-between">
-                    <span className="inline-flex items-center gap-1.5 text-[#e7212b] text-[12px] font-medium group-hover:gap-2.5 transition-all duration-200">
-                      Read More
-                      <ArrowRight className="w-3.5 h-3.5" />
-                    </span>
-                    {/* Expanding red line accent */}
-                    <span className="block h-px w-6 bg-[#e7212b]/25 group-hover:w-14 transition-all duration-300 ease-out" />
-                  </div>
-                </div>
-
-                {/* Red bottom border reveal on hover */}
-                <div className="h-[3px] bg-[#e7212b] scale-x-0 group-hover:scale-x-100 transition-transform duration-300 origin-left" />
-              </Link>
+                name={ind.name}
+                slug={ind.slug}
+                Icon={ind.Icon}
+                image={ind.image}
+                sub={ind.sub}
+                desc={ind.desc}
+                animationDelay={i}
+              />
             ))}
           </div>
         </div>
       </section>
 
-      {/* ══ CTA BANNER ════════════════════════════════════════ */}
-      <section className="bg-[#0B0D26] py-20">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 text-center">
-          <div className="flex items-center justify-center gap-3 mb-4">
-            <span className="w-8 h-px bg-[#e7212b]/40" />
-            <span className="text-[#e7212b] text-[9px] font-medium tracking-[2.5px] uppercase">
-              Get in touch
-            </span>
-            <span className="w-8 h-px bg-[#e7212b]/40" />
-          </div>
-          <h2 className="text-3xl sm:text-4xl font-medium text-white mb-3">
-            Have a project in mind?
-          </h2>
-          <p className="text-white/50 text-base mb-8 max-w-md mx-auto">
-            Talk to our team about your requirements. Kuwait and Dubai offices
-            ready to help.
-          </p>
-          <Link
-            href="/contacts/"
-            className="inline-flex items-center gap-2 bg-[#e7212b] hover:bg-[#aa0b1b] text-white font-medium px-8 py-3.5 rounded-lg transition-colors duration-200"
-          >
-            Contact Us <ArrowRight className="w-4 h-4" />
-          </Link>
-        </div>
-      </section>
+      {/* CTA */}
+      <IndustryCtaBanner
+        heading="Have a project in mind?"
+        subtext="Talk to our team about your requirements. Kuwait and Dubai offices ready to help."
+        showAllIndustriesLink={false}
+      />
     </>
   );
 }
