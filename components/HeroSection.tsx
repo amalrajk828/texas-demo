@@ -2,7 +2,7 @@ import Link from "next/link";
 import { ArrowRight } from "lucide-react";
 
 const stats = [
-  { num: "15+", label: "Years" },
+  { num: "18+", label: "Years" },
   { num: "8", label: "Industries" },
   { num: "200+", label: "Clients" },
 ];

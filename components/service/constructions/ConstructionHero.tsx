@@ -47,7 +47,7 @@ export default function ConstructionHero() {
 
         <motion.div initial={{ opacity: 0, y: 16 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.55, delay: 0.3, ease: [0.22, 1, 0.36, 1] }} className="mt-16 grid grid-cols-2 sm:grid-cols-4 gap-4">
           {[
-            { num: "15+", label: "Years of Project Delivery" },
+            { num: "18+", label: "Years of Project Delivery" },
             { num: "100%", label: "Quality Assured" },
             { num: "EPC", label: "Turnkey Capability" },
             { num: "ISO", label: "9001 Certified" },

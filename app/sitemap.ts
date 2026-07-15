@@ -34,6 +34,12 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { url: `${BASE}/mitsubishi-electric-factory-automation/`, lastModified: now, changeFrequency: "monthly", priority: 0.7 },
     { url: `${BASE}/plc-scada-systems-integration/`, lastModified: now, changeFrequency: "monthly", priority: 0.7 },
 
+    // Global network & proprietary solutions
+    { url: `${BASE}/partners/`, lastModified: now, changeFrequency: "monthly", priority: 0.7 },
+    { url: `${BASE}/solutions/texaflow/`, lastModified: now, changeFrequency: "monthly", priority: 0.7 },
+    { url: `${BASE}/solutions/space-ai/`, lastModified: now, changeFrequency: "monthly", priority: 0.7 },
+    { url: `${BASE}/products/access-flooring/`, lastModified: now, changeFrequency: "monthly", priority: 0.6 },
+
     // Product category pages
     { url: `${BASE}/products/flow-meters/`, lastModified: now, changeFrequency: "monthly", priority: 0.7 },
     { url: `${BASE}/products/flow-meters/liquid-flow-meters/`, lastModified: now, changeFrequency: "monthly", priority: 0.6 },

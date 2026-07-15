@@ -178,10 +178,10 @@ export default function WhatWeDo() {
             <FadeUp delay={0.16}>
               <div className="grid grid-cols-2 gap-4 mb-10">
                 {[
-                  { num: "15+",  label: "Years of Excellence" },
+                  { num: "18+",  label: "Years of Excellence" },
                   { num: "200+", label: "Clients Served" },
-                  { num: "8",    label: "Industries Covered" },
-                  { num: "100%", label: "ISO Certified Quality" },
+                  { num: "16+",  label: "Approved Vendors" },
+                  { num: "24/7", label: "Technical Support" },
                 ].map((stat) => (
                   <div key={stat.label} className="rounded-xl px-5 py-4 border border-gray-100" style={{ background: "var(--color-brand-gray, #f4f5f8)" }}>
                     <p className="text-[1.6rem] font-bold leading-none" style={{ color: "var(--color-brand-red)" }}>{stat.num}</p>

@@ -20,14 +20,14 @@ export const metadata: Metadata = {
   openGraph: {
     title: "Refinery Industry Solutions | Texas Technical Services",
     description:
-      "Precision flow meters, flow computers, CEMS and analyzers for refinery process control — backed by 15+ years of industrial expertise.",
+      "Precision flow meters, flow computers, CEMS and analyzers for refinery process control — backed by 18+ years of industrial expertise.",
     url: "/industries/refinery/",
   },
   twitter: {
     card: "summary_large_image",
     title: "Refinery Industry Solutions | Texas Technical Services",
     description:
-      "Precision flow meters, flow computers, CEMS and analyzers for refinery process control — backed by 15+ years of industrial expertise.",
+      "Precision flow meters, flow computers, CEMS and analyzers for refinery process control — backed by 18+ years of industrial expertise.",
   },
 };
 
@@ -228,7 +228,7 @@ export default function RefineryPage() {
               {[
                 { num: "13", label: "Products" },
                 { num: "5+", label: "OEM Brands" },
-                { num: "15+", label: "Years" },
+                { num: "18+", label: "Years" },
               ].map((s) => (
                 <div
                   key={s.label}

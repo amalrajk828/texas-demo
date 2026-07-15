@@ -227,7 +227,7 @@ export default function PetrochemicalsPage() {
               {[
                 { num: "13", label: "Products" },
                 { num: "5+", label: "OEM Brands" },
-                { num: "15+", label: "Years" },
+                { num: "18+", label: "Years" },
               ].map((s) => (
                 <div
                   key={s.label}

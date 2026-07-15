@@ -154,7 +154,7 @@ export default function IndustrialAutomationKuwaitPage() {
             <p className="text-white/50 text-base sm:text-[16px] leading-relaxed mb-8 max-w-2xl">
               Texas Technical Services Co. is a leading industrial automation company in Kuwait,
               providing PLC and SCADA system integration, flow measurement services in Ahmadi,
-              and industrial inspection and testing across Fahaheel and the GCC. With 15+ years
+              and industrial inspection and testing across Fahaheel and the GCC. With 18+ years
               of domain expertise, we deliver process control automation solutions tailored to
               the region&apos;s oil &amp; gas, power, and industrial sectors.
             </p>
@@ -182,7 +182,7 @@ export default function IndustrialAutomationKuwaitPage() {
               { num: "Oil & Gas", label: "Core Sector" },
               { num: "PLC", label: "SCADA Integration" },
               { num: "Flow", label: "Metering Experts" },
-              { num: "15+", label: "Years Experience" },
+              { num: "18+", label: "Years Experience" },
             ].map((stat) => (
               <div
                 key={stat.label}

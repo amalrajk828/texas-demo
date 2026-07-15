@@ -99,7 +99,7 @@ const clients: Client[] = [
 const stats = [
   { num: `${clients.length}+`, label: "Clients" },
   { num: "8",                  label: "Industries" },
-  { num: "15+",                label: "Years" },
+  { num: "18+", label: "Years" },
   { num: "2",                  label: "Countries" },
 ];
 

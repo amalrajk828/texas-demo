@@ -39,7 +39,7 @@ const HIGHLIGHTS = [
 ];
 
 const STATS = [
-  { num: "15+", label: "Years of Project Delivery" },
+  { num: "18+", label: "Years of Project Delivery" },
   { num: "100%", label: "Quality Assured" },
   { num: "EPC", label: "Turnkey Capability" },
 ];

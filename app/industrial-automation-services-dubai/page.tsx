@@ -184,7 +184,7 @@ export default function IndustrialAutomationDubaiPage() {
               { num: "Dubai", label: "UAE Office" },
               { num: "PLC", label: "SCADA Integration" },
               { num: "Flow", label: "Metering Experts" },
-              { num: "15+", label: "Years Experience" },
+              { num: "18+", label: "Years Experience" },
             ].map((stat) => (
               <div
                 key={stat.label}

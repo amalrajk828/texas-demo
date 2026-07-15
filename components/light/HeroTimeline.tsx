@@ -13,7 +13,7 @@ const SLIDES = [
   { type: "image" as const, src: "/homevideos/INSPECTION-AND-TESTING1.jpg",  alt: "Inspection & Testing",      eyebrow: "NDT & Quality Assurance",   heading: "Inspection, Testing & Certification Services",        sub: "ISO-accredited NDT and testing across all industrial sectors.",  cta: "Know More",        href: "/service/inspection-testing/" },
 ] as const;
 
-const TICKERS = ["ISO 9001:2015", "ISO 14001:2015", "ISO 45001:2018", "Est. 2008", "Kuwait & Dubai", "200+ Clients", "15+ Years", "8 Industries", "Custody Transfer", "SCADA / PLC / HMI"];
+const TICKERS = ["ISO 9001:2015", "ISO 14001:2015", "ISO 45001:2018", "Est. 2008", "Kuwait & Dubai", "200+ Clients", "18+ Years", "8 Industries", "Custody Transfer", "SCADA / PLC / HMI"];
 const DURATION = 7000;
 const EASE = [0.22, 1, 0.36, 1] as [number, number, number, number];
 const bgV:   Variants = { enter: { opacity: 0, scale: 1.05 }, center: { opacity: 1, scale: 1, transition: { duration: 1.2, ease: EASE } }, exit: { opacity: 0, transition: { duration: 0.4 } } };

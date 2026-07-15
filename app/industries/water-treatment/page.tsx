@@ -19,14 +19,14 @@ export const metadata: Metadata = {
   openGraph: {
     title: "Water Treatment Industry Solutions | Texas Technical Services",
     description:
-      "Advanced OEM solutions for municipal and industrial water treatment — flow meters, CEMS, dust analyzers, and automation systems backed by 15+ years of expertise.",
+      "Advanced OEM solutions for municipal and industrial water treatment — flow meters, CEMS, dust analyzers, and automation systems backed by 18+ years of expertise.",
     url: "/industries/water-treatment/",
   },
   twitter: {
     card: "summary_large_image",
     title: "Water Treatment Industry Solutions | Texas Technical Services",
     description:
-      "Advanced OEM solutions for municipal and industrial water treatment — flow meters, CEMS, dust analyzers, and automation systems backed by 15+ years of expertise.",
+      "Advanced OEM solutions for municipal and industrial water treatment — flow meters, CEMS, dust analyzers, and automation systems backed by 18+ years of expertise.",
   },
 };
 
@@ -187,7 +187,7 @@ export default function WaterTreatmentPage() {
               {[
                 { num: "9",   label: "Products" },
                 { num: "3+",  label: "OEM Brands" },
-                { num: "15+", label: "Years" },
+                { num: "18+", label: "Years" },
               ].map((s) => (
                 <div
                   key={s.label}

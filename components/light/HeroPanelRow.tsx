@@ -95,7 +95,7 @@ export default function HeroPanelRow() {
 
               {/* Stats */}
               <div className="flex gap-8">
-                {[["15+", "Years"], ["200+", "Clients"], ["8", "Industries"]].map(([n, l], i) => (
+                {[["18+", "Years"], ["200+", "Clients"], ["8", "Industries"]].map(([n, l], i) => (
                   <div key={l} className="flex items-center gap-8">
                     {i > 0 && <div className="w-px h-7" style={{ background: "var(--g-border)" }} />}
                     <div>

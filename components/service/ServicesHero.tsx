@@ -150,7 +150,7 @@ export default function ServicesHero() {
           className="mt-16 grid grid-cols-2 sm:grid-cols-4 gap-4"
         >
           {[
-            { num: "15+",  label: "Years of Excellence" },
+            { num: "18+", label: "Years of Excellence" },
             { num: "200+", label: "Clients Served" },
             { num: "4",    label: "Core Service Areas" },
             { num: "8",    label: "Industries Covered" },

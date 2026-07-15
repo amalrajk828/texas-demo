@@ -3,14 +3,24 @@
 import Image from "next/image";
 
 const PARTNERS = [
-  { src: "/homecompanies/SICK-1.jpg",         alt: "SICK Sensor Intelligence"  },
-  { src: "/homecompanies/Mist.jpeg",           alt: "Mitsubishi Electric"        },
-  { src: "/homecompanies/PyroTech.jpg",        alt: "Pyrotech Workspace"         },
-  { src: "/homecompanies/FaureHerman.png",     alt: "Faure Herman Ultraflux"     },
-  { src: "/homecompanies/Omni.png",            alt: "Omni Flow Computers"        },
-  { src: "/homecompanies/bis.svg",             alt: "BIS"                        },
-  { src: "/homecompanies/Meter-Engineer.jpeg", alt: "Meter Engineers"            },
-  { src: "/homecompanies/KEP.jpeg",            alt: "KEP"                        },
+  { src: "/homecompanies/mitsubishi-electric.svg", alt: "Mitsubishi Electric" },
+  { src: "/homecompanies/endress-hauser.svg",      alt: "Endress+Hauser" },
+  { src: "/homecompanies/SICK-1.jpg",              alt: "SICK Sensor Intelligence" },
+  { src: "/homecompanies/meter-engineers.svg",     alt: "Meter Engineers" },
+  { src: "/homecompanies/FaureHerman.png",         alt: "Faure Herman" },
+  { src: "/homecompanies/Omni.png",                alt: "OMNI Flow Computers" },
+  { src: "/homecompanies/kem-kuppers.svg",         alt: "KEM Küppers" },
+  { src: "/homecompanies/tek-trol.svg",            alt: "Tek-Trol" },
+  { src: "/homecompanies/rockwin.svg",             alt: "Rockwin" },
+  { src: "/homecompanies/kurz-instruments.svg",    alt: "Kurz Instruments" },
+  { src: "/homecompanies/hms-networks.svg",        alt: "HMS Networks" },
+  { src: "/homecompanies/PyroTech.jpg",            alt: "Pyrotech Workspace" },
+  { src: "/homecompanies/autocontrol.svg",         alt: "Autocontrol" },
+  { src: "/homecompanies/euromag.svg",             alt: "Euromag International" },
+  { src: "/homecompanies/texaflow.svg",            alt: "Texaflow" },
+  { src: "/homecompanies/novus-automation.svg",    alt: "NOVUS Automation" },
+  { src: "/homecompanies/bis.svg",                 alt: "BIS" },
+  { src: "/homecompanies/space-ai.svg",            alt: "Space AI" },
 ];
 
 function Track() {

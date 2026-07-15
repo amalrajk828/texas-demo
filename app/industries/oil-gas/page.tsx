@@ -12,7 +12,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "Oil & Gas Industry Solutions | Texas Technical Services",
     description:
-      "Complete OEM flow metering, CEMS, gas analyzers, and industrial automation solutions for the oil & gas sector — upstream, midstream, and downstream — backed by 15+ years in Kuwait and the GCC.",
+      "Complete OEM flow metering, CEMS, gas analyzers, and industrial automation solutions for the oil & gas sector — upstream, midstream, and downstream — backed by 18+ years in Kuwait and the GCC.",
     url: "/industries/oil-gas/",
   },
   twitter: {
@@ -237,7 +237,7 @@ export default function OilGasPage() {
               {[
                 { num: "13", label: "Products" },
                 { num: "5+", label: "OEM Brands" },
-                { num: "15+", label: "Years" },
+                { num: "18+", label: "Years" },
               ].map((s) => (
                 <div
                   key={s.label}

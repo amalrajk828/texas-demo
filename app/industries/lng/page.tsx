@@ -19,14 +19,14 @@ export const metadata: Metadata = {
   openGraph: {
     title: "LNG Industry Solutions | Texas Technical Services",
     description:
-      "Cutting-edge flow metering, flow computers, and analyzers for LNG custody transfer and plant operations — backed by 15+ years of precision engineering.",
+      "Cutting-edge flow metering, flow computers, and analyzers for LNG custody transfer and plant operations — backed by 18+ years of precision engineering.",
     url: "/industries/lng/",
   },
   twitter: {
     card: "summary_large_image",
     title: "LNG Industry Solutions | Texas Technical Services",
     description:
-      "Cutting-edge flow metering, flow computers, and analyzers for LNG custody transfer and plant operations — backed by 15+ years of precision engineering.",
+      "Cutting-edge flow metering, flow computers, and analyzers for LNG custody transfer and plant operations — backed by 18+ years of precision engineering.",
   },
 };
 
@@ -210,7 +210,7 @@ export default function LngPage() {
               {[
                 { num: "11", label: "Products" },
                 { num: "5+", label: "OEM Brands" },
-                { num: "15+", label: "Years" },
+                { num: "18+", label: "Years" },
               ].map((s) => (
                 <div
                   key={s.label}

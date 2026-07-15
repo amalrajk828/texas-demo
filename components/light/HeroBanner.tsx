@@ -163,7 +163,7 @@ export default function HeroBanner() {
 
               {/* Mini stats row */}
               <div className="flex items-center gap-6">
-                {[["15+", "Years"], ["200+", "Clients"], ["8", "Industries"]].map(([num, lbl], i) => (
+                {[["18+", "Years"], ["200+", "Clients"], ["8", "Industries"]].map(([num, lbl], i) => (
                   <div key={lbl} className="flex items-center gap-6">
                     {i > 0 && <div className="w-px h-7" style={{ background: "var(--color-border)" }} />}
                     <div>

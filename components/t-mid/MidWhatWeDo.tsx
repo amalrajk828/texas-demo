@@ -111,7 +111,7 @@ export default function MidWhatWeDo() {
             </FadeUp>
             <FadeUp delay={0.14}>
               <div className="grid grid-cols-2 gap-3 mb-9">
-                {[{ num: "15+", label: "Years" }, { num: "200+", label: "Clients" }, { num: "8", label: "Industries" }, { num: "100%", label: "ISO Quality" }].map(s => (
+                {[{ num: "18+", label: "Years" }, { num: "200+", label: "Clients" }, { num: "8", label: "Industries" }, { num: "100%", label: "ISO Quality" }].map(s => (
                   <div key={s.label} className="rounded-xl px-5 py-4" style={{ background: "var(--t-stat-bg)", border: "1px solid var(--t-border)" }}>
                     <p className="text-[1.7rem] font-black leading-none" style={{ color: "var(--color-brand-red)" }}>{s.num}</p>
                     <p className="text-[13px] mt-1.5 font-semibold" style={{ color: "var(--t-muted)" }}>{s.label}</p>

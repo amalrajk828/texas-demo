@@ -66,7 +66,7 @@ const SLIDES = [
 
 const DURATION = 7000;
 const STATS = [
-  { num: "15+",  label: "Years of Excellence" },
+  { num: "18+", label: "Years of Excellence" },
   { num: "200+", label: "Clients Served" },
   { num: "8",    label: "Industries" },
   { num: "2",    label: "Countries" },

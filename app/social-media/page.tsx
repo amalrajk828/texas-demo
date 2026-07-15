@@ -124,7 +124,7 @@ const registered: Platform[] = [
 const stats = [
   { num: "4", label: "Active Channels" },
   { num: "9", label: "Total Profiles" },
-  { num: "15+", label: "Years of Expertise" },
+  { num: "18+", label: "Years of Expertise" },
 ];
 
 export default function SocialMediaPage() {

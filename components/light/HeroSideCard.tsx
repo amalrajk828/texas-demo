@@ -100,7 +100,7 @@ export default function HeroSideCard() {
 
             {/* Stats */}
             <div className="flex gap-6 pt-6 border-t" style={{ borderColor: "var(--g-border)" }}>
-              {[["15+", "Years"], ["200+", "Clients"], ["8", "Industries"]].map(([n, l]) => (
+              {[["18+", "Years"], ["200+", "Clients"], ["8", "Industries"]].map(([n, l]) => (
                 <div key={l}>
                   <p className="text-[1.3rem] font-black leading-none" style={{ color: "var(--color-brand-red)" }}>{n}</p>
                   <p className="text-[10px] uppercase tracking-wide font-semibold mt-0.5" style={{ color: "var(--g-muted)" }}>{l}</p>

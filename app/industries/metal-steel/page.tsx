@@ -19,14 +19,14 @@ export const metadata: Metadata = {
   openGraph: {
     title: "Metal & Steel Industry Solutions | Texas Technical Services",
     description:
-      "Cutting-edge OEM analyzer and CEMS solutions for metal and steel production — backed by 15+ years of industrial expertise.",
+      "Cutting-edge OEM analyzer and CEMS solutions for metal and steel production — backed by 18+ years of industrial expertise.",
     url: "/industries/metal-steel/",
   },
   twitter: {
     card: "summary_large_image",
     title: "Metal & Steel Industry Solutions | Texas Technical Services",
     description:
-      "Cutting-edge OEM analyzer and CEMS solutions for metal and steel production — backed by 15+ years of industrial expertise.",
+      "Cutting-edge OEM analyzer and CEMS solutions for metal and steel production — backed by 18+ years of industrial expertise.",
   },
 };
 
@@ -145,7 +145,7 @@ export default function MetalSteelPage() {
               {[
                 { num: "4",   label: "Products" },
                 { num: "1+",  label: "OEM Brand" },
-                { num: "15+", label: "Years" },
+                { num: "18+", label: "Years" },
               ].map((s) => (
                 <div
                   key={s.label}

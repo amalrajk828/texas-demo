@@ -19,14 +19,14 @@ export const metadata: Metadata = {
   openGraph: {
     title: "Cement Industry Solutions | Texas Technical Services",
     description:
-      "Advanced OEM analyzer and CEMS solutions for cement manufacturing — backed by 15+ years of industrial expertise.",
+      "Advanced OEM analyzer and CEMS solutions for cement manufacturing — backed by 18+ years of industrial expertise.",
     url: "/industries/cement/",
   },
   twitter: {
     card: "summary_large_image",
     title: "Cement Industry Solutions | Texas Technical Services",
     description:
-      "Advanced OEM analyzer and CEMS solutions for cement manufacturing — backed by 15+ years of industrial expertise.",
+      "Advanced OEM analyzer and CEMS solutions for cement manufacturing — backed by 18+ years of industrial expertise.",
   },
 };
 
@@ -136,7 +136,7 @@ export default function CementPage() {
               {[
                 { num: "3",   label: "Products" },
                 { num: "1+",  label: "OEM Brand" },
-                { num: "15+", label: "Years" },
+                { num: "18+", label: "Years" },
               ].map((s) => (
                 <div
                   key={s.label}

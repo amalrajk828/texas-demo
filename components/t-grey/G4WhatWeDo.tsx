@@ -90,7 +90,7 @@ export default function G4WhatWeDo() {
             {/* Stats */}
             <FadeUp delay={0.4}>
               <div className="mt-6 pt-8 border-t grid grid-cols-3 gap-6" style={{ borderColor: "var(--g-border)" }}>
-                {[{ num: "15+", label: "Years" }, { num: "200+", label: "Clients" }, { num: "8", label: "Industries" }].map(s => (
+                {[{ num: "18+", label: "Years" }, { num: "200+", label: "Clients" }, { num: "8", label: "Industries" }].map(s => (
                   <div key={s.label}>
                     <p className="text-[2rem] font-black leading-none" style={{ color: "var(--color-brand-red)" }}>{s.num}</p>
                     <p className="text-[12px] font-semibold uppercase tracking-wide mt-1" style={{ color: "var(--g-muted)" }}>{s.label}</p>

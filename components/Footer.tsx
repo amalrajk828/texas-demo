@@ -22,6 +22,14 @@ const industries = [
   { label: "Metal & Steel", href: "/industries/metal-steel/" },
 ];
 
+const solutions = [
+  { label: "Global Network", href: "/partners/" },
+  { label: "Texaflow Custody Metering", href: "/solutions/texaflow/" },
+  { label: "Space AI Industrial AI", href: "/solutions/space-ai/" },
+  { label: "Mitsubishi Electric", href: "/mitsubishi-electric-factory-automation/" },
+  { label: "PLC & SCADA Integration", href: "/plc-scada-systems-integration/" },
+];
+
 const socials = [
   {
     label: "LinkedIn",
@@ -62,7 +70,7 @@ export default function Footer() {
 
       {/* Main footer */}
       <div className="max-w-7xl mx-auto px-4 sm:px-6 py-14">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-10">
 
           {/* Brand */}
           <div>
@@ -181,6 +189,26 @@ export default function Footer() {
                   >
                     <span className="w-1 h-1 rounded-full bg-brand-red/40 group-hover:bg-brand-red transition-colors shrink-0" />
                     {i.label}
+                  </Link>
+                </li>
+              ))}
+            </ul>
+          </div>
+
+          {/* Solutions */}
+          <div>
+            <h3 className="text-white/40 text-[9px] font-medium tracking-[2px] uppercase mb-5">
+              Solutions
+            </h3>
+            <ul className="space-y-2">
+              {solutions.map((s) => (
+                <li key={s.href}>
+                  <Link
+                    href={s.href}
+                    className="text-white/40 text-[12px] hover:text-white transition-colors flex items-center gap-1.5 group"
+                  >
+                    <span className="w-1 h-1 rounded-full bg-brand-red/40 group-hover:bg-brand-red transition-colors shrink-0" />
+                    {s.label}
                   </Link>
                 </li>
               ))}

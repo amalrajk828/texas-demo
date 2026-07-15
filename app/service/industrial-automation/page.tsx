@@ -78,6 +78,219 @@ const faqItems = [
   },
 ];
 
+const ISA95_LAYERS = [
+  {
+    label: "Enterprise Planning & Analytics (ERP/BI)",
+    code: "BUSINESS",
+    items: [
+      { name: "Space AI", sub: "Predictive Analytics" },
+      { name: "Enterprise Link", sub: "HMS / Anybus" },
+    ],
+  },
+  {
+    label: "Operations Management (MES/MOM)",
+    code: "OPS",
+    items: [
+      { name: "GENESIS64", sub: "Iconics Advanced Suite" },
+      { name: "Hyper Historian", sub: "High Speed Logging" },
+      { name: "AnalytiX", sub: "Big Data Visualization" },
+    ],
+  },
+  {
+    label: "Supervisory Control (SCADA/HMI)",
+    code: "SCADA",
+    items: [
+      { name: "SCADA", sub: "iFIX / ICONICS" },
+      { name: "HMI", sub: "Mitsubishi Electric" },
+      { name: "Operator Consoles", sub: "Pyrotech Workspace" },
+    ],
+  },
+  {
+    label: "Sensing & Manipulation (PLC/Drives)",
+    code: "CONTROL",
+    items: [
+      { name: "MELSEC PLC", sub: "iQ-R / iQ-F Series" },
+      { name: "FREQROL VFD", sub: "Inverter Drives" },
+      { name: "MELSERVO", sub: "Motion Control" },
+      { name: "Industrial Gateway", sub: "HMS Networks" },
+    ],
+  },
+  {
+    label: "Physical Process (Instruments/Sensors)",
+    code: "FIELD",
+    items: [
+      { name: "Sensors", sub: "Novus Automation" },
+      { name: "Flow Meters", sub: "KEM / Tek-Trol" },
+      { name: "LVS", sub: "Mitsubishi Electric" },
+      { name: "Analyzers", sub: "SICK / E+H" },
+      { name: "Metering Skids", sub: "Rockwin" },
+    ],
+  },
+];
+
+const BMS_HIGHLIGHTS = [
+  {
+    title: "Genesis64 Core",
+    body: "Unified visualization with 3D graphics and IoT connectivity.",
+  },
+  {
+    title: "Energy Analytics",
+    body: "Advanced functions to monitor usage patterns & reduce costs.",
+  },
+  {
+    title: "Wireless Freedom",
+    body: "NOVUS AirGate technology eliminates expensive cabling.",
+  },
+  {
+    title: "Climate Control",
+    body: "Precise, wireless regulation of building environmental conditions.",
+  },
+];
+
+const IFIX_MODULES = [
+  {
+    label: "Module 01",
+    title: "Core SCADA Engine",
+    body: "Real-time monitoring, alarm management, tag database, failover redundancy, high availability.",
+    perf:
+      "Reliable data acquisition with high-speed processing for thousands of I/O points.",
+  },
+  {
+    label: "Module 02",
+    title: "Visualization & UI",
+    body: "Web HMI, historical trending, Dynamo objects, dashboarding, mobile access, HTML5 support.",
+    perf:
+      "Context-rich screens reduce errors and speed up decision-making processes.",
+  },
+  {
+    label: "Module 03",
+    title: "Data Integration",
+    body: "OPC UA / DA support, SQL / relational databases, MES / ERP integration, IoT & cloud connectors.",
+    perf:
+      "Open architecture that grows with your facility's automation needs.",
+  },
+];
+
+const HMS_FAMILIES = [
+  {
+    title: "ANYBUS",
+    sub: "Connecting Devices",
+    items: [
+      "Multi-network Gateways",
+      "Protocol Converters",
+      "Wireless Bridge & Bolt",
+      "Embedded Modules",
+      "CompactCom Technology",
+    ],
+  },
+  {
+    title: "EWON",
+    sub: "Remote Solutions",
+    items: [
+      "Talk2M Cloud Platform",
+      "Cosy+ Industrial VPN",
+      "Flexy Edge Gateways",
+      "Remote Maintenance",
+      "Data Monitoring",
+    ],
+  },
+  {
+    title: "INTESIS",
+    sub: "Building Automation",
+    items: [
+      "AC Interfaces (WiFi/KNX)",
+      "Protocol Translators",
+      "BACnet & Modbus Gateways",
+      "Home Automation",
+      "Cloud Solutions",
+    ],
+  },
+  {
+    title: "IXXAT",
+    sub: "CAN & Safety",
+    items: [
+      "PC Interfaces (CAN/LIN)",
+      "Bridges & Repeaters",
+      "Functional Safety (FSoE)",
+      "Automotive Testing",
+      "Smart Grid Gateways",
+    ],
+  },
+  {
+    title: "REDLION N-TRON",
+    sub: "Industrial Networking",
+    items: [
+      "Unmanaged Switches",
+      "Managed Ethernet Switches",
+      "Wi-Fi Radios",
+      "Process Control Switches",
+      "PoE Solutions",
+    ],
+  },
+  {
+    title: "RED LION",
+    sub: "Access & Visualization",
+    items: [
+      "Graphite HMIs",
+      "Data Stations",
+      "Protocol Conversion",
+      "Visual Management",
+      "Productivity Monitoring",
+    ],
+  },
+];
+
+const NOVUS_FAMILIES = [
+  {
+    title: "Data Loggers",
+    sub: "IoT Ready",
+    desc:
+      "FieldLogger, LogBox Connect, and cloud-connected recorders for secure data acquisition.",
+  },
+  {
+    title: "Smart Controllers",
+    sub: "Modular PID",
+    desc:
+      "N1200, N20K48 modular controllers with Bluetooth configuration and adaptive tuning.",
+  },
+  {
+    title: "Wireless Sensing",
+    sub: "Remote Monitoring",
+    desc:
+      "RHT Air and AirGate solutions for wireless temperature, humidity, and pressure monitoring.",
+  },
+  {
+    title: "IoT Gateways",
+    sub: "Connectivity",
+    desc:
+      "AirGate Modbus, DigiRail Connect ensuring seamless integration with cloud & SCADA.",
+  },
+  {
+    title: "BMS & HVAC",
+    sub: "Facility Automation",
+    desc:
+      "Dedicated controllers for building management, thermostats, and environmental control.",
+  },
+  {
+    title: "Energy Meters",
+    sub: "Efficiency",
+    desc:
+      "DigiRail Power series for monitoring electrical consumption and power quality analysis.",
+  },
+  {
+    title: "Process Indicators",
+    sub: "Displays",
+    desc:
+      "Universal indicators (N1500, N1540) for clear visualization of process variables.",
+  },
+  {
+    title: "Signal Converters",
+    sub: "Isolators",
+    desc:
+      "High-precision isolators and converters for reliable signal conditioning in industrial panels.",
+  },
+];
+
 export default function IndustrialAutomationPage() {
   return (
     <>
@@ -92,6 +305,358 @@ export default function IndustrialAutomationPage() {
       <FaqPageJsonLd items={faqItems} />
       <AutomationHero />
       <AutomationSubServices />
+
+      {/* ══ ISA-95 ARCHITECTURE ═══════════════════════════════ */}
+      <section className="bg-white py-20 lg:py-24">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6">
+          <div className="flex items-center gap-2.5 mb-4">
+            <span className="w-5 h-px bg-[#e7212b]" />
+            <span className="text-[#e7212b] text-[10px] font-semibold tracking-[3.5px] uppercase">
+              ISA-95 Standard Architecture
+            </span>
+          </div>
+          <h2 className="text-3xl sm:text-[2.4rem] font-bold text-[#0B0D26] leading-[1.15] mb-3 max-w-3xl">
+            Complete Integrated Ecosystem: From{" "}
+            <em className="not-italic text-[#e7212b]">Field Devices</em> to{" "}
+            <em className="not-italic text-[#e7212b]">Enterprise Analytics</em>
+          </h2>
+          <p className="text-gray-500 text-[15px] leading-relaxed mb-10 max-w-3xl">
+            Our automation stack follows the ISA-95 Purdue Model — integrating
+            every layer from physical process to enterprise intelligence.
+          </p>
+
+          <div className="space-y-3">
+            {ISA95_LAYERS.map((layer, idx) => (
+              <div
+                key={layer.label}
+                className="rounded-2xl border border-[#e8eaf0] bg-gradient-to-r from-white to-[#f8f9fa] overflow-hidden"
+              >
+                <div className="grid grid-cols-1 md:grid-cols-[280px_1fr]">
+                  <div className="bg-[#0B0D26] p-5 flex items-center justify-between">
+                    <div>
+                      <p className="text-white text-[10px] font-semibold tracking-[2.5px] uppercase opacity-60">
+                        Level {5 - idx}
+                      </p>
+                      <p className="text-white font-bold text-[14px] mt-1 leading-tight">
+                        {layer.label}
+                      </p>
+                    </div>
+                    <span className="text-[#e7212b] text-[10px] font-bold tracking-[2px]">
+                      {layer.code}
+                    </span>
+                  </div>
+                  <div className="p-4 flex flex-wrap gap-2">
+                    {layer.items.map((item) => (
+                      <div
+                        key={item.name}
+                        className="rounded-lg border border-[#e8eaf0] bg-white px-3.5 py-2.5 hover:border-[#e7212b]/40 transition-colors"
+                      >
+                        <p className="text-[#0B0D26] text-[13px] font-bold leading-tight">
+                          {item.name}
+                        </p>
+                        <p className="text-gray-500 text-[10.5px] mt-0.5">
+                          {item.sub}
+                        </p>
+                      </div>
+                    ))}
+                  </div>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* ══ INTEGRATED BMS SOLUTIONS ═════════════════════════ */}
+      <section className="bg-[#f4f5f8] py-20 lg:py-24">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6">
+          <div className="flex items-center gap-2.5 mb-4">
+            <span className="w-5 h-px bg-[#e7212b]" />
+            <span className="text-[#e7212b] text-[10px] font-semibold tracking-[3.5px] uppercase">
+              Elevate Your Performance
+            </span>
+          </div>
+          <h2 className="text-3xl sm:text-[2.4rem] font-bold text-[#0B0D26] leading-[1.15] mb-3">
+            Integrated{" "}
+            <em className="not-italic text-[#e7212b]">BMS Solutions</em>
+          </h2>
+          <p className="text-gray-500 text-[15px] leading-relaxed mb-10 max-w-3xl">
+            Building management system integration combining Mitsubishi Electric
+            with NOVUS Automation — next-gen 64-bit SCADA, wireless climate
+            control, and IoT-enabled field sensing.
+          </p>
+
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
+            {/* Mitsubishi column */}
+            <div className="rounded-2xl bg-white border border-[#e8eaf0] p-7">
+              <div className="flex items-center gap-2 mb-5">
+                <span className="text-[#0B0D26] text-[15px] font-bold tracking-[1.5px]">
+                  MITSUBISHI ELECTRIC
+                </span>
+                <span className="text-[10px] font-semibold text-[#e7212b] tracking-wider uppercase">
+                  System Integration &amp; BMS
+                </span>
+              </div>
+              <ul className="space-y-3">
+                {[
+                  {
+                    t: "GENESIS64 BMS",
+                    d: "Next-Gen 64-bit Advanced SCADA & Building Automation",
+                  },
+                  {
+                    t: "Energy Functions",
+                    d: "Comprehensive Energy Monitoring & Optimization Suite",
+                  },
+                  {
+                    t: "MELSEC PLC Series",
+                    d: "High-speed logic processing for critical infrastructure",
+                  },
+                  {
+                    t: "FREQROL VFD",
+                    d: "Smart Motor Control for HVAC Efficiency",
+                  },
+                ].map((s) => (
+                  <li
+                    key={s.t}
+                    className="rounded-lg bg-[#f8f9fa] border border-[#e8eaf0] p-3"
+                  >
+                    <p className="text-[#0B0D26] text-[13.5px] font-bold">
+                      {s.t}
+                    </p>
+                    <p className="text-gray-500 text-[12px] mt-0.5">{s.d}</p>
+                  </li>
+                ))}
+              </ul>
+            </div>
+
+            {/* NOVUS column */}
+            <div className="rounded-2xl bg-white border border-[#e8eaf0] p-7">
+              <div className="flex items-center gap-2 mb-5">
+                <span className="text-[#0B0D26] text-[15px] font-bold tracking-[1.5px]">
+                  NOVUS AUTOMATION
+                </span>
+                <span className="text-[10px] font-semibold text-[#e7212b] tracking-wider uppercase">
+                  Wireless &amp; Climate Solutions
+                </span>
+              </div>
+              <div className="grid grid-cols-2 gap-3">
+                {[
+                  { t: "Climate Control", d: "Wireless T/RH Reg." },
+                  { t: "Wireless Tech", d: "Long-range AirGate" },
+                  { t: "Data Loggers", d: "Cloud Connected" },
+                  { t: "Field Sensors", d: "Temp/Hum/Pressure" },
+                  { t: "Remote I/O", d: "Distributed Control" },
+                  { t: "PID Controllers", d: "Precision Loops" },
+                ].map((s) => (
+                  <div
+                    key={s.t}
+                    className="rounded-lg bg-[#f8f9fa] border border-[#e8eaf0] p-3"
+                  >
+                    <p className="text-[#0B0D26] text-[13px] font-bold">
+                      {s.t}
+                    </p>
+                    <p className="text-gray-500 text-[11.5px] mt-0.5">{s.d}</p>
+                  </div>
+                ))}
+              </div>
+            </div>
+          </div>
+
+          {/* Highlights */}
+          <div className="mt-10 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
+            {BMS_HIGHLIGHTS.map((h) => (
+              <div
+                key={h.title}
+                className="rounded-xl bg-white border border-[#e8eaf0] p-5"
+              >
+                <p className="text-[#0B0D26] text-[14px] font-bold mb-1.5">
+                  {h.title}
+                </p>
+                <p className="text-gray-500 text-[12.5px] leading-relaxed">
+                  {h.body}
+                </p>
+              </div>
+            ))}
+          </div>
+
+          <div className="mt-8 flex flex-wrap items-center gap-2">
+            <span className="text-[10px] font-semibold text-[#e7212b] tracking-[2px] uppercase mr-2">
+              Key Applications:
+            </span>
+            {[
+              "Smart Buildings",
+              "Energy Centers",
+              "Remote Monitoring",
+              "Wireless HVAC",
+              "Infrastructure",
+            ].map((a) => (
+              <span
+                key={a}
+                className="rounded-full bg-white border border-[#e8eaf0] px-3 py-1 text-[11.5px] text-gray-600 font-medium"
+              >
+                {a}
+              </span>
+            ))}
+          </div>
+        </div>
+      </section>
+      {/* ══ iFIX SCADA SECTION ═══════════════════════════════ */}
+      <section className="bg-[#0B0D26] py-20 lg:py-24">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6">
+          <div className="flex items-center gap-2.5 mb-4">
+            <span className="w-5 h-px bg-[#e7212b]" />
+            <span className="text-[#e7212b] text-[10px] font-semibold tracking-[3.5px] uppercase">
+              Vendor Experience · iFIX by GE Digital
+            </span>
+          </div>
+          <h2 className="text-3xl sm:text-[2.4rem] font-bold text-white leading-[1.15] mb-3">
+            <em className="not-italic text-[#e7212b]">iFIX SCADA</em> —
+            Industry-Leading HMI/SCADA
+          </h2>
+          <p className="text-white/55 text-[15px] leading-relaxed mb-10 max-w-3xl">
+            High performance automation for intelligent industrial operations —
+            used across water/wastewater, power generation, oil &amp; gas, and
+            manufacturing.
+          </p>
+
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-5">
+            {IFIX_MODULES.map((m) => (
+              <div
+                key={m.title}
+                className="rounded-2xl border border-white/10 bg-white/[0.03] p-6 flex flex-col"
+              >
+                <p className="text-[#e7212b] text-[10px] font-bold tracking-[2.5px] mb-3">
+                  {m.label}
+                </p>
+                <h3 className="text-white text-[18px] font-bold leading-snug mb-3">
+                  {m.title}
+                </h3>
+                <p className="text-white/55 text-[13.5px] leading-relaxed mb-4 flex-1">
+                  {m.body}
+                </p>
+                <div className="pt-4 border-t border-white/10">
+                  <p className="text-[#e7212b] text-[10px] font-bold tracking-wide uppercase mb-1">
+                    Performance
+                  </p>
+                  <p className="text-white/65 text-[12.5px] leading-relaxed">
+                    {m.perf}
+                  </p>
+                </div>
+              </div>
+            ))}
+          </div>
+
+          <div className="mt-8 flex flex-wrap items-center justify-center gap-2">
+            <span className="text-[10px] font-semibold text-[#e7212b] tracking-[2px] uppercase mr-2">
+              Key Verticals:
+            </span>
+            {[
+              "Water/Wastewater",
+              "Power Generation",
+              "Oil & Gas",
+              "Manufacturing",
+            ].map((a) => (
+              <span
+                key={a}
+                className="rounded-full bg-white/5 border border-white/10 px-3 py-1 text-white/70 text-[11.5px] font-medium"
+              >
+                {a}
+              </span>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* ══ HMS NETWORKS SECTION ════════════════════════════ */}
+      <section className="bg-white py-20 lg:py-24">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6">
+          <div className="flex items-center gap-2.5 mb-4">
+            <span className="w-5 h-px bg-[#e7212b]" />
+            <span className="text-[#e7212b] text-[10px] font-semibold tracking-[3.5px] uppercase">
+              Authorized Partner · HMS Networks Sweden
+            </span>
+          </div>
+          <h2 className="text-3xl sm:text-[2.4rem] font-bold text-[#0B0D26] leading-[1.15] mb-3">
+            Industrial Communication —{" "}
+            <em className="not-italic text-[#e7212b]">Hardware Meets Software</em>
+          </h2>
+          <p className="text-gray-500 text-[15px] leading-relaxed mb-10 max-w-3xl">
+            Six product families covering every industrial communication need —
+            from device connectivity to remote maintenance, building automation,
+            and functional safety.
+          </p>
+
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
+            {HMS_FAMILIES.map((f) => (
+              <div
+                key={f.title}
+                className="rounded-xl border border-[#e8eaf0] bg-white p-5 hover:border-[#e7212b]/25 transition-colors"
+              >
+                <p className="text-[10px] font-semibold text-[#e7212b] tracking-[2px] uppercase mb-1">
+                  {f.sub}
+                </p>
+                <h3 className="text-[#0B0D26] text-[16px] font-bold leading-tight mb-3">
+                  {f.title}
+                </h3>
+                <ul className="space-y-1.5">
+                  {f.items.map((i) => (
+                    <li
+                      key={i}
+                      className="flex items-start gap-1.5 text-[12.5px] text-gray-600"
+                    >
+                      <span className="w-1 h-1 rounded-full bg-[#e7212b] shrink-0 mt-1.5" />
+                      {i}
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* ══ NOVUS AUTOMATION SECTION ═════════════════════════ */}
+      <section className="bg-[#f4f5f8] py-20 lg:py-24">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6">
+          <div className="flex items-center gap-2.5 mb-4">
+            <span className="w-5 h-px bg-[#e7212b]" />
+            <span className="text-[#e7212b] text-[10px] font-semibold tracking-[3.5px] uppercase">
+              Authorized Partner · NOVUS Automation Brazil
+            </span>
+          </div>
+          <h2 className="text-3xl sm:text-[2.4rem] font-bold text-[#0B0D26] leading-[1.15] mb-3">
+            Innovative Automation —{" "}
+            <em className="not-italic text-[#e7212b]">
+              We Measure, We Control, We Record
+            </em>
+          </h2>
+          <p className="text-gray-500 text-[15px] leading-relaxed mb-10 max-w-3xl">
+            Eight product families — from IoT-ready data loggers to BMS, PID
+            controllers, and wireless sensing — for modern industrial and
+            building applications.
+          </p>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
+            {NOVUS_FAMILIES.map((f) => (
+              <div
+                key={f.title}
+                className="rounded-xl border border-[#e8eaf0] bg-white p-5 hover:border-[#e7212b]/25 transition-colors"
+              >
+                <p className="text-[10px] font-semibold text-[#e7212b] tracking-[2px] uppercase mb-1">
+                  {f.sub}
+                </p>
+                <h3 className="text-[#0B0D26] text-[15px] font-bold leading-tight mb-2">
+                  {f.title}
+                </h3>
+                <p className="text-gray-500 text-[12.5px] leading-relaxed">
+                  {f.desc}
+                </p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
       {/* ══ FAQ ════════════════════════════════════════════ */}
       <section className="bg-[#f4f5f8] py-20 lg:py-24">
         <div className="max-w-7xl mx-auto px-4 sm:px-6">

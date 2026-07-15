@@ -130,7 +130,7 @@ export default function FlowHero() {
           className="mt-16 grid grid-cols-2 sm:grid-cols-4 gap-4"
         >
           {[
-            { num: "15+",    label: "Years of Experience" },
+            { num: "18+", label: "Years of Experience" },
             { num: "API",    label: "MPMS Compliant" },
             { num: "OIML",   label: "Certified Standards" },
             { num: "100%",   label: "Custody Accuracy" },

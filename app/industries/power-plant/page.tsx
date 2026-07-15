@@ -19,14 +19,14 @@ export const metadata: Metadata = {
   openGraph: {
     title: "Power Plant Industry Solutions | Texas Technical Services",
     description:
-      "Comprehensive OEM solutions for power generation — CEMS, flow meters, analyzers, and automation systems backed by 15+ years of industrial expertise.",
+      "Comprehensive OEM solutions for power generation — CEMS, flow meters, analyzers, and automation systems backed by 18+ years of industrial expertise.",
     url: "/industries/power-plant/",
   },
   twitter: {
     card: "summary_large_image",
     title: "Power Plant Industry Solutions | Texas Technical Services",
     description:
-      "Comprehensive OEM solutions for power generation — CEMS, flow meters, analyzers, and automation systems backed by 15+ years of industrial expertise.",
+      "Comprehensive OEM solutions for power generation — CEMS, flow meters, analyzers, and automation systems backed by 18+ years of industrial expertise.",
   },
 };
 
@@ -203,7 +203,7 @@ export default function PowerPlantPage() {
               {[
                 { num: "11", label: "Products" },
                 { num: "5+", label: "OEM Brands" },
-                { num: "15+", label: "Years" },
+                { num: "18+", label: "Years" },
               ].map((s) => (
                 <div
                   key={s.label}

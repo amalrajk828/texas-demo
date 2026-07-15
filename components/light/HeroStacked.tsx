@@ -13,7 +13,7 @@ const SLIDES = [
   { type: "image" as const, src: "/homevideos/INSPECTION-AND-TESTING1.jpg",  alt: "Inspection & Testing",      eyebrow: "Inspection & Testing",         heading: "NDT, Inspection & Certification Services",         sub: "Comprehensive non-destructive testing and certification with international accreditation.",         cta: "Know More",        href: "/service/inspection-testing/" },
 ] as const;
 
-const STATS = [{ num: "15+", label: "Years" }, { num: "200+", label: "Clients" }, { num: "8", label: "Industries" }, { num: "2", label: "Countries" }];
+const STATS = [{ num: "18+", label: "Years" }, { num: "200+", label: "Clients" }, { num: "8", label: "Industries" }, { num: "2", label: "Countries" }];
 const DURATION = 7000;
 const EASE = [0.22, 1, 0.36, 1] as [number, number, number, number];
 const textV: Variants = { enter: { opacity: 0, y: 32 }, center: { opacity: 1, y: 0, transition: { duration: 0.7, ease: EASE, delay: 0.1 } }, exit: { opacity: 0, y: -20, transition: { duration: 0.3 } } };

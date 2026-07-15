@@ -128,7 +128,7 @@ export default function HeroCircle() {
           <motion.div key={`badge-${current}`} initial={{ opacity: 0, scale: 0.8 }} animate={{ opacity: 1, scale: 1 }} transition={{ delay: 0.4 }}
             className="absolute bottom-16 right-8 rounded-2xl px-5 py-4 text-center"
             style={{ background: "var(--color-brand-red)", boxShadow: "0 8px 24px color-mix(in srgb, var(--color-brand-red) 40%, transparent)" }}>
-            <p className="text-white text-[1.4rem] font-black leading-none">15+</p>
+            <p className="text-white text-[1.4rem] font-black leading-none">18+</p>
             <p className="text-white/70 text-[11px] font-semibold mt-1">Years of Excellence</p>
           </motion.div>
         </div>

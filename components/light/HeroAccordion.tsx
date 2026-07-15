@@ -81,7 +81,7 @@ export default function HeroAccordion() {
                 </Link>
               </div>
               <div className="mt-10 flex gap-4 items-center">
-                {[["15+", "Years"], ["200+", "Clients"], ["8", "Industries"]].map(([n, l]) => (
+                {[["18+", "Years"], ["200+", "Clients"], ["8", "Industries"]].map(([n, l]) => (
                   <div key={l}>
                     <p className="text-[1.4rem] font-black leading-none" style={{ color: "var(--color-brand-red)" }}>{n}</p>
                     <p className="text-[10px] uppercase tracking-wide font-semibold mt-0.5" style={{ color: "var(--g-muted)" }}>{l}</p>

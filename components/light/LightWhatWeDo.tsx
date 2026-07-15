@@ -155,7 +155,7 @@ export default function LightWhatWeDo() {
             <FadeUp delay={0.14}>
               <div className="grid grid-cols-2 gap-3 mb-9">
                 {[
-                  { num: "15+",  label: "Years" },
+                  { num: "18+", label: "Years" },
                   { num: "200+", label: "Clients" },
                   { num: "8",    label: "Industries" },
                   { num: "100%", label: "ISO Quality" },

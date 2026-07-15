@@ -77,7 +77,7 @@ const TRUST_BADGES = [
 ];
 
 const STATS = [
-  { num: "15+",  label: "Years" },
+  { num: "18+", label: "Years" },
   { num: "200+", label: "Clients" },
   { num: "8",    label: "Industries" },
   { num: "400+", label: "Projects" },

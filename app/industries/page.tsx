@@ -23,7 +23,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "Industries We Serve | Texas Technical Services",
     description:
-      "Comprehensive OEM solutions for oil & gas, refinery, power plant, LNG, petrochemicals, water treatment, cement, and metal & steel — backed by 15+ years of precision engineering.",
+      "Comprehensive OEM solutions for oil & gas, refinery, power plant, LNG, petrochemicals, water treatment, cement, and metal & steel — backed by 18+ years of precision engineering.",
     url: "/industries/",
   },
   twitter: {
@@ -114,7 +114,7 @@ const industries = [
 ];
 
 const stats = [
-  { num: "15+", label: "Years" },
+  { num: "18+", label: "Years" },
   { num: "8", label: "Industries" },
   { num: "200+", label: "Clients" },
 ];

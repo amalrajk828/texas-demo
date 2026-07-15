@@ -103,7 +103,7 @@ export default function ServiceGroupHero() {
           className="mt-16 grid grid-cols-2 sm:grid-cols-4 gap-4"
         >
           {[
-            { num: "15+",  label: "Years of Excellence" },
+            { num: "18+", label: "Years of Excellence" },
             { num: "200+", label: "Clients Served" },
             { num: "70+",  label: "Services Offered" },
             { num: "8",    label: "Industries Covered" },
