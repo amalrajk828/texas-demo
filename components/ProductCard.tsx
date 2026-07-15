@@ -158,7 +158,9 @@ export default function ProductCard({
             {/* Thin orange underline (3px, 40px wide) */}
             <div className="w-10 h-[3px] bg-[#F5821F] mt-2 mb-4" />
             <p className="text-[#555770] text-[15px] leading-[1.7]">
-              {product.description}
+              {product.description && product.description.length > 200
+                ? `${product.description.slice(0, 200).trimEnd()}…`
+                : product.description}
             </p>
             {product.variants && (
               <div className="flex flex-wrap gap-2 mt-3">

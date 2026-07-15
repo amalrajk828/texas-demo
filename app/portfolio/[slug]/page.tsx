@@ -282,11 +282,16 @@ export default async function ProductPage({ params }: Props) {
                   <p className="text-gray-700 text-base italic leading-relaxed">{product.intro}</p>
                 </blockquote>
               )}
-              {product.paragraphs && product.paragraphs.map((p: any, i: any) => (
+              {((product.paragraphs && product.paragraphs.length > 0
+                ? product.paragraphs
+                : product.description
+                  ? [product.description]
+                  : []
+              ).map((p: string, i: number) => (
                 <p key={i} className="text-gray-500 text-[14px] sm:text-[15px] leading-relaxed mb-4 last:mb-0">
                   {p}
                 </p>
-              ))}
+              )))}
               {/* Quick-access action for simple products */}
               {!product.subBlocks && (product.detailHref || product.downloadHref || product.externalLink || product.downloadLink || product.detailHrefs) && (
                 <div className="flex flex-wrap items-center gap-4 mt-8 pt-6 border-t border-[#f0f0f0]">
@@ -380,7 +385,7 @@ export default async function ProductPage({ params }: Props) {
       {/* ══ SUB-BLOCKS — e.g. OMNI + Flow-X ══════════════════════ */}
       {product.subBlocks && product.subBlocks.length > 0 && (
         <div>
-          {product.subBlocks.map((block: any, i: any) => (
+          {product.subBlocks.map((block: SubBlock, i: number) => (
             <SubBlockSection key={block.id} block={block} index={i} />
           ))}
         </div>

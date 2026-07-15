@@ -461,7 +461,7 @@ export type Product = {
   paragraphs?: string[];
   bulletSections?: { heading: string; items: string[] }[];
   gallery?: { src: string; alt: string }[];
-  subBlocks?: any[];
+  subBlocks?: SubBlock[];
   youtubeUrl?: string;
   models?: string[];
   downloadHref?: string;
