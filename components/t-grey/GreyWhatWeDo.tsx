@@ -73,7 +73,7 @@ export default function GreyWhatWeDo() {
                   <div className="w-8 h-[2px] rounded-full mb-4" style={{ background: "var(--g-border)" }} />
                   <p className="text-[16px] leading-[1.9] flex-1 font-medium" style={{ color: "var(--g-muted)" }}>{svc.desc}</p>
                   <div className="mt-7 pt-5 border-t" style={{ borderColor: "rgba(0,0,0,0.07)" }}>
-                    <Link href="/service/" className="inline-flex items-center gap-1.5 text-[14px] font-bold hover:gap-3 transition-all duration-200" style={{ color: "var(--color-brand-red)" }}>
+                    <Link href="/services/" className="inline-flex items-center gap-1.5 text-[14px] font-bold hover:gap-3 transition-all duration-200" style={{ color: "var(--color-brand-red)" }}>
                       Learn more <ArrowRight className="w-4 h-4" />
                     </Link>
                   </div>
@@ -86,11 +86,11 @@ export default function GreyWhatWeDo() {
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-14 lg:gap-20 items-center">
           <FadeUp className="relative pb-10 lg:pb-0">
             <div className="relative rounded-2xl overflow-hidden aspect-[16/11] shadow-xl" style={{ border: "1px solid var(--g-border)" }}>
-              <Image src="/our-team/Oil-Gas.jpg" alt="Oil & Gas" fill sizes="(max-width: 1024px) 100vw, 50vw" className="object-cover" quality={90} />
+              <Image src="/our-team/Oil-Gas.jpg" alt="Texas Technical Services — oil and gas industrial automation and flow measurement solutions" fill sizes="(max-width: 1024px) 100vw, 50vw" className="object-cover" quality={90} />
               <div className="absolute bottom-0 inset-x-0 h-20" style={{ background: "linear-gradient(to top, rgba(0,0,0,0.3), transparent)" }} />
             </div>
             <div className="absolute bottom-0 right-0 lg:-right-6 w-[46%] rounded-2xl overflow-hidden aspect-[4/3] shadow-2xl" style={{ border: "3px solid var(--g-section-a)" }}>
-              <Image src="/our-team/whatwedo.jpg" alt="What we do" fill sizes="30vw" className="object-cover" quality={90} />
+              <Image src="/our-team/whatwedo.jpg" alt="Texas Technical Services — precision flow measurement and industrial automation company" fill sizes="30vw" className="object-cover" quality={90} />
             </div>
             <div className="absolute -top-4 -left-4 rounded-xl px-4 py-3 shadow-lg" style={{ background: "var(--color-brand-red)", boxShadow: "0 8px 24px color-mix(in srgb, var(--color-brand-red) 40%, transparent)" }}>
               <p className="text-white text-[10px] font-bold tracking-[2px] uppercase leading-none">ISO 9001:2015</p>
@@ -105,7 +105,7 @@ export default function GreyWhatWeDo() {
             </FadeUp>
             <FadeUp delay={0.14}>
               <div className="grid grid-cols-2 gap-3 mb-9">
-                {[{ num: "15+", label: "Years" }, { num: "200+", label: "Clients" }, { num: "8", label: "Industries" }, { num: "100%", label: "ISO Quality" }].map(s => (
+                {[{ num: "18+", label: "Years" }, { num: "200+", label: "Clients" }, { num: "8", label: "Industries" }, { num: "100%", label: "ISO Quality" }].map(s => (
                   <div key={s.label} className="rounded-xl px-5 py-4" style={{ background: "var(--g-stat-bg)", border: "1px solid var(--g-border)" }}>
                     <p className="text-[1.7rem] font-black leading-none" style={{ color: "var(--color-brand-red)" }}>{s.num}</p>
                     <p className="text-[13px] mt-1.5 font-semibold" style={{ color: "var(--g-muted)" }}>{s.label}</p>
@@ -121,7 +121,7 @@ export default function GreyWhatWeDo() {
                   onMouseLeave={e => (e.currentTarget.style.background = "var(--color-brand-red)")}>
                   Contact Us <ArrowRight className="w-4 h-4" />
                 </Link>
-                <Link href="/service/" className="inline-flex items-center gap-2 font-semibold px-7 py-4 rounded-xl text-[15px] border transition-all"
+                <Link href="/services/" className="inline-flex items-center gap-2 font-semibold px-7 py-4 rounded-xl text-[15px] border transition-all"
                   style={{ color: "var(--g-heading)", borderColor: "var(--g-border)", background: "var(--g-card-bg)" }}>
                   Our Services <ChevronRight className="w-4 h-4" />
                 </Link>

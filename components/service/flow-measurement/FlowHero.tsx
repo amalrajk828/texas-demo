@@ -45,7 +45,7 @@ export default function FlowHero() {
         >
           <Link href="/" className="hover:text-white/60 transition-colors">Home</Link>
           <span>/</span>
-          <Link href="/service/" className="hover:text-white/60 transition-colors">Services</Link>
+          <Link href="/services/" className="hover:text-white/60 transition-colors">Services</Link>
           <span>/</span>
           <span className="text-white/60">Flow Measurement</span>
         </motion.div>
@@ -87,11 +87,15 @@ export default function FlowHero() {
             transition={{ duration: 0.55, delay: 0.18, ease: [0.22, 1, 0.36, 1] }}
             className="text-white/50 text-base sm:text-[17px] leading-relaxed mb-8 max-w-2xl"
           >
-            We provide metering control system upgrades, maintenance, and validation services for
-            custody metering systems. Our experienced team ensures that your metering systems operate
-            efficiently and accurately, meeting industry standards and compliance requirements.
-            Additionally, we offer specialized consultancy services to optimize your custody metering
-            processes and enhance productivity.
+            We provide flow measurement services in Ahmadi, Kuwait and across the GCC — metering
+            control system upgrades, maintenance, and validation for custody metering systems. Our
+            experienced team ensures your metering systems operate efficiently and accurately, meeting
+            API, AGA, ISO, and OIML standards. We also offer{" "}
+            <Link href="/plc-scada-systems-integration/" className="text-[#e7212b] hover:underline">
+              SCADA flow meter integration
+            </Link>{" "}
+            for real-time monitoring and control of your metering systems, and specialized
+            consultancy to optimize your custody metering processes.
           </motion.p>
 
           {/* CTAs */}
@@ -109,7 +113,7 @@ export default function FlowHero() {
               <ArrowRight className="w-4 h-4" />
             </a>
             <Link
-              href="/service/"
+              href="/services/"
               className="inline-flex items-center gap-2 border border-white/15 hover:border-white/35 text-white/60 hover:text-white px-7 py-3.5 rounded-lg transition-all duration-200 text-[14px]"
             >
               ← All Services
@@ -126,7 +130,7 @@ export default function FlowHero() {
           className="mt-16 grid grid-cols-2 sm:grid-cols-4 gap-4"
         >
           {[
-            { num: "15+",    label: "Years of Experience" },
+            { num: "18+", label: "Years of Experience" },
             { num: "API",    label: "MPMS Compliant" },
             { num: "OIML",   label: "Certified Standards" },
             { num: "100%",   label: "Custody Accuracy" },

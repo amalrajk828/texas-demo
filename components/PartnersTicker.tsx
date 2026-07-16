@@ -3,14 +3,25 @@
 import Image from "next/image";
 
 const PARTNERS = [
-  { src: "/homecompanies/SICK-1.jpg",         alt: "SICK Sensor Intelligence"  },
-  { src: "/homecompanies/Mist.jpeg",           alt: "Mitsubishi Electric"        },
-  { src: "/homecompanies/PyroTech.jpg",        alt: "Pyrotech Workspace"         },
-  { src: "/homecompanies/FaureHerman.png",     alt: "Faure Herman Ultraflux"     },
-  { src: "/homecompanies/Omni.png",            alt: "Omni Flow Computers"        },
-  { src: "/homecompanies/bis.svg",             alt: "BIS"                        },
-  { src: "/homecompanies/Meter-Engineer.jpeg", alt: "Meter Engineers"            },
-  { src: "/homecompanies/KEP.jpeg",            alt: "KEP"                        },
+  { src: "/about/mitsubishi-electric.png", alt: "Mitsubishi Electric" },
+  { src: "/about/endress-hauser.jpg",      alt: "Endress+Hauser" },
+  { src: "/about/sick.jpg",                alt: "SICK Sensor Intelligence" },
+  { src: "/about/meter-engineers.jpg",     alt: "Meter Engineers" },
+  { src: "/about/faure-herman.jpg",        alt: "Faure Herman" },
+  { src: "/about/omni.png",                alt: "OMNI Flow Computers" },
+  { src: "/about/kem-kuppers.png",         alt: "KEM Küppers" },
+  { src: "/about/tek-trol.jpg",            alt: "Tek-Trol" },
+  { src: "/about/rockwin.jpg",             alt: "Rockwin" },
+  { src: "/about/kurz-instruments.jpg",    alt: "Kurz Instruments" },
+  { src: "/about/hms-networks.jpg",        alt: "HMS Networks" },
+  { src: "/about/pyrotech.jpg",            alt: "Pyrotech Workspace" },
+  { src: "/about/autocontrol.jpg",         alt: "Autocontrol" },
+  { src: "/about/euromag.jpg",             alt: "Euromag International" },
+  { src: "/about/texaflow.svg",            alt: "Texaflow" },
+  { src: "/about/novus-automation.jpg",    alt: "NOVUS Automation" },
+  { src: "/about/bis.png",                 alt: "BIS (Balaji Industrial Services)" },
+  { src: "/about/space-ai.jpg",            alt: "Space AI" },
+  { src: "/about/pws-floors.jpg",          alt: "PWS Floor Solutions" },
 ];
 
 function Track() {
@@ -24,10 +35,11 @@ function Track() {
           <Image
             src={p.src}
             alt={p.alt}
-            width={160}
-            height={56}
+            width={220}
+            height={80}
             quality={100}
-            className="object-contain max-h-12 w-auto opacity-90 hover:opacity-100 hover:scale-105 transition-all duration-300"
+            style={{ mixBlendMode: "multiply" }}
+            className="object-contain h-16 w-auto opacity-90 hover:opacity-100 hover:scale-105 transition-all duration-300"
           />
         </div>
       ))}

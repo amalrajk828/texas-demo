@@ -4,17 +4,30 @@ import Link from "next/link";
 import { ChevronRight } from "lucide-react";
 import ProductCard from "@/components/ProductCard";
 import { getProductsByPath } from "@/lib/products";
+import { BreadcrumbJsonLd } from "@/components/schema/BreadcrumbJsonLd";
 
 export const metadata: Metadata = {
   title: "Dust Analyzers - Texas Technical Services",
   description:
     "SICK dust analyzers for continuous monitoring of dust concentration and opacity in stack emissions from power plants, waste incineration, and industrial facilities.",
-  alternates: { canonical: "https://texastechserv.com/products/analyzers/dust-analyzers/" },
+  alternates: { canonical: "/products/analyzers/dust-analyzers/" },
+  keywords: [
+    "dust analyzers Kuwait",
+    "SICK DUSTHUNTER",
+    "stack emissions monitoring",
+    "dust concentration measurement",
+  ],
   openGraph: {
     title: "Dust Analyzers - Texas Technical Services",
     description:
       "SICK dust analyzers for dust concentration and opacity monitoring in stack emissions.",
-    url: "https://texastechserv.com/products/analyzers/dust-analyzers/",
+    url: "/products/analyzers/dust-analyzers/",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Dust Analyzers - Texas Technical Services",
+    description:
+      "SICK dust analyzers for dust concentration and opacity monitoring in stack emissions.",
   },
 };
 
@@ -22,6 +35,7 @@ export default function DustAnalyzersPage() {
   const dustAnalyzerProducts = getProductsByPath("/products/analyzers/dust-analyzers/");
   return (
     <div className="min-h-screen bg-white font-sans antialiased selection:bg-[#e7212b] selection:text-white">
+      <BreadcrumbJsonLd items={[{ name: "Home", href: "/" }, { name: "Products", href: "/products/" }, { name: "Analyzers", href: "/products/analyzers/" }, { name: "Dust Analyzers", href: "/products/analyzers/dust-analyzers/" }]} />
       {/* ── Hero Banner ─────────────────────────────────────── */}
       <section className="relative bg-[#0B0D26] overflow-hidden border-b-4 border-[#e7212b]">
         <div
@@ -34,7 +48,7 @@ export default function DustAnalyzersPage() {
         <div
           className="absolute bottom-0 left-1/2 -translate-x-1/2 w-[600px] h-40 pointer-events-none"
           style={{
-            background: "radial-gradient(ellipse, rgba(231,33,43,0.06) 0%, transparent 70%)",
+            background: "radial-gradient(ellipse, rgba(245,130,31,0.06) 0%, transparent 70%)",
           }}
         />
 
@@ -85,8 +99,8 @@ export default function DustAnalyzersPage() {
 
       {/* ── Products List Section ─────────────────────────────── */}
       <section className="bg-[#F8F9FA] py-14 border-t border-[#E8E8F0] border-b border-[#E8E8F0]">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6">
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5">
+        <div className="max-w-[1100px] mx-auto px-10 pb-[80px]">
+          <div className="flex flex-col">
             {dustAnalyzerProducts.map((prod, index) => (
               <React.Fragment key={prod.slug}>
                 <ProductCard
@@ -94,7 +108,9 @@ export default function DustAnalyzersPage() {
                   category="Dust Analyzers"
                   imageFit="contain"
                 />
-                
+                {index < dustAnalyzerProducts.length - 1 && (
+                  <div className="border-t border-[#E8E8F0] my-[10px]" />
+                )}
               </React.Fragment>
             ))}
           </div>
@@ -117,7 +133,7 @@ export default function DustAnalyzersPage() {
             </div>
             <Link
               href="/contact"
-              className="shrink-0 inline-flex items-center gap-2 bg-[#e7212b] hover:bg-[#aa0b1b] text-white font-bold px-6 py-3.5 rounded-[6px] shadow-lg hover:shadow-[#e7212b]/20 transition-all duration-200"
+              className="shrink-0 inline-flex items-center gap-2 bg-[#e7212b] hover:bg-[#e07214] text-white font-bold px-6 py-3.5 rounded-[6px] shadow-lg hover:shadow-[#e7212b]/20 transition-all duration-200"
             >
               Contact Us &rarr;
             </Link>

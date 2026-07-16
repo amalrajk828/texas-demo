@@ -5,6 +5,7 @@ import { motion, useInView } from "framer-motion";
 import { useRef } from "react";
 import { ArrowRight, Gauge, FlaskConical, Cpu } from "lucide-react";
 import { ThemePrimaryLink } from "@/components/ThemeButton";
+import { SITE_URL } from "@/lib/site";
 
 const SERVICES = [
   { Icon: Gauge,       title: "Flow Measurement & Control System Solutions", desc: "Comprehensive custody metering, flow computers, metering skids, and control system upgrades for liquid, gas, and water applications." },
@@ -105,7 +106,7 @@ export default function WhatWeDo() {
 
                   <div className="mt-6 pt-5 border-t border-white/[0.07]">
                     <Link
-                      href="/service/"
+                      href="/services/"
                       className="inline-flex items-center gap-1.5 text-[14px] font-semibold tracking-wide hover:gap-2.5 transition-all duration-200"
                       style={{ color: "var(--color-brand-red)" }}
                     >
@@ -177,10 +178,10 @@ export default function WhatWeDo() {
             <FadeUp delay={0.16}>
               <div className="grid grid-cols-2 gap-4 mb-10">
                 {[
-                  { num: "15+",  label: "Years of Excellence" },
+                  { num: "18+",  label: "Years of Excellence" },
                   { num: "200+", label: "Clients Served" },
-                  { num: "8",    label: "Industries Covered" },
-                  { num: "100%", label: "ISO Certified Quality" },
+                  { num: "16+",  label: "Approved Vendors" },
+                  { num: "24/7", label: "Technical Support" },
                 ].map((stat) => (
                   <div key={stat.label} className="rounded-xl px-5 py-4 border border-gray-100" style={{ background: "var(--color-brand-gray, #f4f5f8)" }}>
                     <p className="text-[1.6rem] font-bold leading-none" style={{ color: "var(--color-brand-red)" }}>{stat.num}</p>
@@ -192,11 +193,11 @@ export default function WhatWeDo() {
 
             <FadeUp delay={0.22}>
               <div className="flex flex-wrap gap-3">
-                <ThemePrimaryLink href="https://texastechserv.com/contacts/" external>
+                <ThemePrimaryLink href={`${SITE_URL}/contacts/`} external>
                   Contact Us <ArrowRight className="w-4 h-4" />
                 </ThemePrimaryLink>
                 <Link
-                  href="/service/"
+                  href="/services/"
                   className="inline-flex items-center gap-2 border border-gray-200 hover:border-gray-400 bg-white text-gray-600 hover:text-gray-900 text-[14px] font-medium px-7 py-3.5 rounded-lg transition-all duration-200"
                 >
                   Our Services →

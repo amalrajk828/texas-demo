@@ -1,6 +1,7 @@
 import Link from "next/link";
 import Image from "next/image";
-import { Mail, Phone, MapPin } from "lucide-react";
+import { Mail, Phone, MapPin, LayoutGrid } from "lucide-react";
+import { SITE_EMAIL } from "@/lib/site";
 
 const services = [
   { label: "Flow Measurement Solutions", href: "/service/flow-measurement-solutions/" },
@@ -27,9 +28,9 @@ const blogLinks = [
 ];
 
 const socials = [
-  { label: "LinkedIn",  href: "https://linkedin.com",  path: "M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6zM2 9h4v12H2z M4 6a2 2 0 1 0 0-4 2 2 0 0 0 0 4z" },
-  { label: "Facebook",  href: "https://facebook.com",  path: "M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z" },
-  { label: "Instagram", href: "https://instagram.com", path: "M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z M17.5 6.5h.01 M7.5 2h9A5.5 5.5 0 0 1 22 7.5v9A5.5 5.5 0 0 1 16.5 22h-9A5.5 5.5 0 0 1 2 16.5v-9A5.5 5.5 0 0 1 7.5 2z" },
+  { label: "LinkedIn",  href: "https://www.linkedin.com/company/texas-technical-service-company",  path: "M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6zM2 9h4v12H2z M4 6a2 2 0 1 0 0-4 2 2 0 0 0 0 4z" },
+  { label: "Facebook",  href: "https://www.facebook.com/texastechserv",  path: "M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z" },
+  { label: "Instagram", href: "https://www.instagram.com/texas_technical_services", path: "M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z M17.5 6.5h.01 M7.5 2h9A5.5 5.5 0 0 1 22 7.5v9A5.5 5.5 0 0 1 16.5 22h-9A5.5 5.5 0 0 1 2 16.5v-9A5.5 5.5 0 0 1 7.5 2z" },
 ];
 
 export default function ThemedFooter() {
@@ -70,10 +71,10 @@ export default function ThemedFooter() {
               ISO 9001:2015 certified company established in 2008. Flow measurement,
               automation &amp; inspection for oil &amp; gas and industrial sectors.
             </p>
-            <a href="mailto:sales@texastechserv.com"
+            <a href={`mailto:${SITE_EMAIL}`}
               className="flex items-center gap-2 text-white/50 text-sm hover:text-white transition-colors mb-4">
               <Mail className="w-3.5 h-3.5 shrink-0" />
-              sales@texastechserv.com
+              {SITE_EMAIL}
             </a>
             <div className="flex gap-2">
               {socials.map(({ href, label, path }) => (
@@ -85,6 +86,13 @@ export default function ThemedFooter() {
                 </a>
               ))}
             </div>
+              <Link
+                href="/social-media/"
+                className="text-white/30 text-[11px] hover:text-white transition-colors flex items-center gap-1.5 mt-3"
+              >
+                <LayoutGrid className="w-3 h-3" />
+                View all platforms
+              </Link>
           </div>
 
           {/* Locations */}
@@ -93,7 +101,7 @@ export default function ThemedFooter() {
             <div className="space-y-5">
               {[
                 { city: "Kuwait", address: "Munira Tower Office No. 30, 9th Floor – Building No.6702, Block 7 – Makkah Street Fahaheel, Kuwait", phones: ["+965 97243755", "+965 66347267"] },
-                { city: "Dubai",  address: "Amna Naseer Building, Al Marar Area 20th Street #529 Plot #302 Office #201-19, Deira, Dubai", phones: ["+971 569553747"] },
+                { city: "Dubai",  address: "Amna Naseer Building, Al Marar Area 20th Street #529 Plot #302 Office #201-19, Deira, Dubai", phones: ["+971 569553747", "+971 567793973"] },
               ].map((office) => (
                 <div key={office.city}>
                   <p className="text-white text-sm font-medium mb-1.5 flex items-center gap-1.5">

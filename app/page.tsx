@@ -1,5 +1,8 @@
 import type { Metadata } from "next";
+import Script from "next/script";
 import ThemeWrapper from "@/components/ThemeWrapper";
+import { SITE_URL } from "@/lib/site";
+import { BreadcrumbJsonLd } from "@/components/schema/BreadcrumbJsonLd";
 import HeroSlider from "@/components/HeroSlider";
 import PartnersTicker from "@/components/PartnersTicker";
 import TickerBanner from "@/components/TickerBanner";
@@ -11,15 +14,34 @@ import GreyAbout from "@/components/t-grey/GreyAbout";
 import GreyCta from "@/components/t-grey/GreyCta";
 
 export const metadata: Metadata = {
-  title: "Texas Technical Services | Flow Measurement & Industrial Automation",
+  title: "Industrial Automation, PLC SCADA & Flow Measurement",
   description:
-    "Texas specializes in flow measurement, control systems, inspection, and industrial automation solutions for oil & gas, refinery, petrochemical, and power plant sectors.",
-  alternates: { canonical: "https://texastechserv.com/" },
+    "Texas Technical Services is a leading industrial automation company in Kuwait and the UAE — specializing in PLC SCADA integration, flow measurement services in Ahmadi, inspection & testing, and automation engineering services in Fahaheel for oil & gas, refinery, and petrochemical sectors across the GCC.",
+  alternates: { canonical: "/" },
   openGraph: {
-    title: "Texas Technical Services Company - Innovative Industrial Solutions",
-    description: "In quality, we believe.",
-    url: "https://texastechserv.com/",
+    title: "Texas Technical Services — Industrial Automation Company in Kuwait & GCC",
+    description:
+      "Leading industrial automation company in Kuwait and UAE — PLC SCADA integration, flow measurement, inspection, and automation engineering services in Fahaheel and across Dubai, Bahrain, and Saudi Arabia.",
+    url: "/",
   },
+  twitter: {
+    card: "summary_large_image",
+    title: "Texas Technical Services — Industrial Automation Company in Kuwait & GCC",
+    description:
+      "Leading industrial automation company in Kuwait and UAE — PLC SCADA integration, flow measurement, inspection, and automation engineering across the GCC.",
+  },
+  keywords: [
+    "industrial automation companies near me",
+    "vision industrial automation services & products",
+    "industrial automation companies in Kuwait",
+    "industrial automation companies in Dubai",
+    "automation companies in Dubai",
+    "industrial automation companies in UAE",
+    "list of industrial automation companies in UAE",
+    "automation and engineering services Fahaheel",
+    "mechatronics Bahrain",
+    "automation control service LLC",
+  ],
 };
 
 // Dark theme — deep charcoal sections, white text, red bold accents, light grey card surfaces.
@@ -83,6 +105,24 @@ const LIGHT_GREY_VARS: Record<string, string> = {
 export default function HomePage() {
   return (
     <ThemeWrapper vars={VARS}>
+      <BreadcrumbJsonLd items={[{ name: "Home", href: "/" }]} />
+      <Script
+        id="website-schema"
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "WebSite",
+            name: "Texas Technical Services",
+            url: SITE_URL,
+            potentialAction: {
+              "@type": "SearchAction",
+              target: `${SITE_URL}/portfolio/?q={search_term_string}`,
+              "query-input": "required name=search_term_string",
+            },
+          }),
+        }}
+      />
       <main>
         <HeroSlider />
         <PartnersTicker />

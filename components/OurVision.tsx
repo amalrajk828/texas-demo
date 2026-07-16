@@ -4,7 +4,7 @@ import { motion, useInView, useSpring, useTransform, useMotionValue } from "fram
 
 const STATS = [
   { value: 400, suffix: "+", label: "Projects Completed", desc: "Across oil & gas, refinery & beyond" },
-  { value: 10,  suffix: "+", label: "Global Partners",    desc: "Trusted technology alliances worldwide" },
+  { value: 16,  suffix: "+", label: "Approved Vendors",   desc: "Trusted technology alliances worldwide" },
   { value: 18,  suffix: "",  label: "Years of Excellence", desc: "Delivering precision since 2008" },
 ];
 

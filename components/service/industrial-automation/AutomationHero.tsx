@@ -45,7 +45,7 @@ export default function AutomationHero() {
         >
           <Link href="/" className="hover:text-white/60 transition-colors">Home</Link>
           <span>/</span>
-          <Link href="/service/" className="hover:text-white/60 transition-colors">Services</Link>
+          <Link href="/services/" className="hover:text-white/60 transition-colors">Services</Link>
           <span>/</span>
           <span className="text-white/60">Industrial Automation</span>
         </motion.div>
@@ -87,10 +87,12 @@ export default function AutomationHero() {
             transition={{ duration: 0.55, delay: 0.18, ease: [0.22, 1, 0.36, 1] }}
             className="text-white/50 text-base sm:text-[16px] leading-relaxed mb-8 max-w-2xl"
           >
-            We provide total industrial automation solutions and system integration using various
-            brands of PLCs, SCADA, and HMIs. We develop customized software solutions and reporting
-            software, and perform upgrades of legacy systems and SCADA software — delivering
-            end-to-end automation across oil &amp; gas, power, and industrial sectors.
+            As a leading PLC and SCADA system integrator in Kuwait and the GCC, we provide
+            total industrial automation &amp; control systems using various brands of PLCs, SCADA,
+            and HMIs. We specialize in industrial automation control system design, control and
+            automation engineering, and plant and process automation — delivering automation in
+            manufacturing industry, power plant automation, and oil &amp; gas process control across
+            Kuwait, UAE, Dubai, and Saudi Arabia.
           </motion.p>
 
           {/* CTAs */}
@@ -108,7 +110,7 @@ export default function AutomationHero() {
               <ArrowRight className="w-4 h-4" />
             </a>
             <Link
-              href="/service/"
+              href="/services/"
               className="inline-flex items-center gap-2 border border-white/15 hover:border-white/35 text-white/60 hover:text-white px-7 py-3.5 rounded-lg transition-all duration-200 text-[14px]"
             >
               ← All Services

@@ -4,17 +4,30 @@ import Link from "next/link";
 import { ChevronRight } from "lucide-react";
 import ProductCard from "@/components/ProductCard";
 import { getProductsByPath } from "@/lib/products";
+import { BreadcrumbJsonLd } from "@/components/schema/BreadcrumbJsonLd";
 
 export const metadata: Metadata = {
   title: "Gas Analyzers - Texas Technical Services",
   description:
     "SICK in-situ and extractive gas analyzers for real-time gas analysis directly within industrial processes — GM32 and GM35 for emissions monitoring and process control.",
-  alternates: { canonical: "https://texastechserv.com/products/analyzers/gas-analyzers/" },
+  alternates: { canonical: "/products/analyzers/gas-analyzers/" },
+  keywords: [
+    "SICK gas analyzers Kuwait",
+    "GM32 in-situ gas analyzer",
+    "GM35 gas analyzer",
+    "SO2 NO NO2 NH3 measurement",
+  ],
   openGraph: {
     title: "Gas Analyzers - Texas Technical Services",
     description:
       "SICK in-situ and extractive gas analyzers for real-time process gas analysis.",
-    url: "https://texastechserv.com/products/analyzers/gas-analyzers/",
+    url: "/products/analyzers/gas-analyzers/",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Gas Analyzers - Texas Technical Services",
+    description:
+      "SICK in-situ and extractive gas analyzers for real-time process gas analysis.",
   },
 };
 
@@ -22,6 +35,7 @@ export default function GasAnalyzersPage() {
   const gasAnalyzerProducts = getProductsByPath("/products/analyzers/gas-analyzers/");
   return (
     <div className="min-h-screen bg-white font-sans antialiased selection:bg-[#e7212b] selection:text-white">
+      <BreadcrumbJsonLd items={[{ name: "Home", href: "/" }, { name: "Products", href: "/products/" }, { name: "Analyzers", href: "/products/analyzers/" }, { name: "Gas Analyzers", href: "/products/analyzers/gas-analyzers/" }]} />
       {/* ── Hero Banner ─────────────────────────────────────── */}
       <section className="relative bg-[#0B0D26] overflow-hidden border-b-4 border-[#e7212b]">
         <div
@@ -135,7 +149,7 @@ export default function GasAnalyzersPage() {
               </p>
             </div>
             <Link
-              href="/contact"
+              href="/contacts/"
               className="shrink-0 inline-flex items-center gap-2 bg-[#e7212b] hover:bg-[#aa0b1b] text-white font-bold px-6 py-3.5 rounded-[6px] shadow-lg hover:shadow-[#e7212b]/20 transition-all duration-200"
             >
               Contact Us &rarr;

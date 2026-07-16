@@ -1,6 +1,7 @@
 import React from "react";
 import type { Metadata } from "next";
 import Link from "next/link";
+import { BreadcrumbJsonLd } from "@/components/schema/BreadcrumbJsonLd";
 import { ChevronRight } from "lucide-react";
 import ProductCard from "@/components/ProductCard";
 import { getProductsByPath } from "@/lib/products";
@@ -8,18 +9,34 @@ import { getProductsByPath } from "@/lib/products";
 export const metadata: Metadata = {
   title: "GOT (Graphic Operator Panels) - Texas Technical Services",
   description: "Mitsubishi Electric GOT2000 Series graphic operation terminals for industrial automation systems.",
-  alternates: { canonical: "https://texastechserv.com/products/got/" },
+  alternates: { canonical: "/products/got/" },
+  keywords: [
+    "Mitsubishi GOT HMI",
+    "GOT2000 graphic operator panel",
+    "HMI touchscreen Kuwait",
+    "industrial HMI solutions",
+  ],
   openGraph: {
     title: "GOT (Graphic Operator Panels) - Texas Technical Services",
     description: "Mitsubishi Electric GOT2000 Series graphic operation terminals for industrial automation systems.",
-    url: "https://texastechserv.com/products/got/",
+    url: "/products/got/",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "GOT (Graphic Operator Panels) - Texas Technical Services",
+    description: "Mitsubishi Electric GOT2000 Series graphic operation terminals for industrial automation systems.",
   },
 };
 
 export default function GotPage() {
   const gotProducts = getProductsByPath("/products/got/");
   return (
-    <div className="min-h-screen bg-white font-sans antialiased selection:bg-[#e7212b] selection:text-white">
+<div className="min-h-screen bg-white font-sans antialiased selection:bg-[#e7212b] selection:text-white">
+      <BreadcrumbJsonLd items={[
+        { name: "Home", href: "/" },
+        { name: "Products", href: "/products/" },
+        { name: "GOT", href: "/products/got/" },
+      ]} />
       {/* ── Hero Banner ─────────────────────────────────────── */}
       <section className="relative bg-[#0B0D26] overflow-hidden border-b-4 border-[#e7212b]">
         {/* Grid texture */}
@@ -103,7 +120,7 @@ export default function GotPage() {
               </p>
             </div>
             <Link
-              href="/contact"
+              href="/contacts/"
               className="shrink-0 inline-flex items-center gap-2 bg-[#e7212b] hover:bg-[#aa0b1b] text-white font-bold px-6 py-3.5 rounded-[6px] shadow-lg hover:shadow-[#e7212b]/20 transition-all duration-200"
             >
               Contact Us &rarr;

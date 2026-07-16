@@ -15,6 +15,8 @@ import {
   Rocket,
   Package,
   Users,
+  GraduationCap,
+  PenTool,
 } from "lucide-react";
 
 /* ─── Fade-up helper ─────────────────────────────────────────── */
@@ -82,7 +84,7 @@ const SUB_SERVICES = [
     body: "We offer flow meters preventive and corrective maintenance services, performance and failure analysis and provide suitable solutions to restore and enhance the reliability of your helical flow meter assets.",
     imageSrc: "/images/services/helical-repair.png",
     imagePlaceholder: "/images/services/helical-repair.png",
-    href: "/service/repair-upgrades-helical-flow-meters/",
+    href: "/service/repair-upgrades-for-helical-flow-meters/",
   },
   {
     Icon: ClipboardCheck,
@@ -90,7 +92,7 @@ const SUB_SERVICES = [
     body: "We offer comprehensive audits to ensure compliance with industry regulations and standards, minimizing risks and ensuring precise measurements within your custody metering skid system. Our team of expert consultants provides actionable guidance for process optimization.",
     imageSrc: "/images/services/audits.png",
     imagePlaceholder: "/images/services/audits.png",
-    href: "/service/audits-specialized-consultancy/",
+    href: "/service/audits-and-specialized-consultancy/",
   },
   {
     Icon: BarChart3,
@@ -98,7 +100,7 @@ const SUB_SERVICES = [
     body: "Our team of skilled experts employs advanced techniques and calculations to assess and minimize uncertainties, giving you confidence in the reliability of your measurement data. Whether you need validation services for new installations or existing systems, we deliver thorough, documented results.",
     imageSrc: "/images/services/validation.jpg",
     imagePlaceholder: "/images/services/validation.jpg",
-    href: "/service/validation-uncertainty-calculations/",
+    href: "/service/validation-and-uncertainty-calculations/",
   },
   {
     Icon: Rocket,
@@ -106,7 +108,7 @@ const SUB_SERVICES = [
     body: "Elevate your industrial processes with our Commissioning and After Sales Support services. At TTS, we specialize in ensuring the seamless integration and performance of critical equipment, including flow meters, metering skids, flow computers, and control systems.",
     imageSrc: "/images/services/commissioning.png",
     imagePlaceholder: "/images/services/commissioning.png",
-    href: "/service/commissioning-after-sales-support/",
+    href: "/service/commissioning-and-after-sales-support/",
   },
   {
     Icon: Package,
@@ -123,6 +125,22 @@ const SUB_SERVICES = [
     imageSrc: "/images/services/metering-experts.jpg",
     imagePlaceholder: "/images/services/metering-experts.jpg",
     href: "/service/metering-expert-services/",
+  },
+  {
+    Icon: GraduationCap,
+    title: "Advanced Training",
+    body: "On demand training courses at OEM premises, videoconferencing, or customer sites — covering metering installation, commissioning, and operation.",
+    imageSrc: "/images/services/TRAINING.jpg",
+    imagePlaceholder: "/images/services/TRAINING.jpg",
+    href: "/service/advanced-training/",
+  },
+  {
+    Icon: PenTool,
+    title: "New Installation Design and Commissioning",
+    body: "As authorized OEM Representative, we assist in specification, design, sizing and operation of future metering systems.",
+    imageSrc: "/images/services/20220524_110650-scaled.jpg",
+    imagePlaceholder: "/images/services/20220524_110650-scaled.jpg",
+    href: "/service/new-installation-design-and-commissioning/",
   },
 ];
 

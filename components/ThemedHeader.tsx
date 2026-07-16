@@ -3,8 +3,9 @@ import { useState, useEffect, useRef } from "react";
 import Link from "next/link";
 import Image from "next/image";
 import { usePathname } from "next/navigation";
-import { ChevronDown, Menu, X, LayoutGrid } from "lucide-react";
+import { ChevronDown, ChevronRight, Menu, X, LayoutGrid } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
+import { SITE_EMAIL } from "@/lib/site";
 
 type NavItem = {
   label: string;
@@ -16,12 +17,12 @@ const NAV: NavItem[] = [
   { label: "Home", href: "/" },
   { label: "About Us", href: "/about-us/" },
   {
-    label: "Services", href: "/service/",
+    label: "Services", href: "/services/",
     children: [
       { label: "Flow Measurement & Control System Solutions", href: "/service/flow-measurement-solutions/" },
       { label: "Inspection & Testing", href: "/service/inspection-testing/" },
       { label: "Industrial Process Automation Solutions", href: "/service/industrial-automation/" },
-      { label: "View all services →", href: "/service/", highlight: true },
+      { label: "View all services →", href: "/services/", highlight: true },
     ],
   },
   {
@@ -58,10 +59,10 @@ const NAV: NavItem[] = [
 ];
 
 const SOCIALS = [
-  { label: "LinkedIn",    href: "https://linkedin.com",  path: "M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6zM2 9h4v12H2z M4 6a2 2 0 1 0 0-4 2 2 0 0 0 0 4z" },
-  { label: "Facebook",    href: "https://facebook.com",  path: "M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z" },
-  { label: "Instagram",   href: "https://instagram.com", path: "M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z M17.5 6.5h.01 M7.5 2h9A5.5 5.5 0 0 1 22 7.5v9A5.5 5.5 0 0 1 16.5 22h-9A5.5 5.5 0 0 1 2 16.5v-9A5.5 5.5 0 0 1 7.5 2z" },
-  { label: "Twitter / X", href: "https://twitter.com",  path: "M4 4 L20 20 M20 4 L4 20" },
+  { label: "LinkedIn",    href: "https://www.linkedin.com/company/texas-technical-service-company",  path: "M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6zM2 9h4v12H2z M4 6a2 2 0 1 0 0-4 2 2 0 0 0 0 4z" },
+  { label: "Facebook",    href: "https://www.facebook.com/texastechserv",  path: "M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z" },
+  { label: "Instagram",   href: "https://www.instagram.com/texas_technical_services", path: "M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z M17.5 6.5h.01 M7.5 2h9A5.5 5.5 0 0 1 22 7.5v9A5.5 5.5 0 0 1 16.5 22h-9A5.5 5.5 0 0 1 2 16.5v-9A5.5 5.5 0 0 1 7.5 2z" },
+  { label: "Twitter / X", href: "https://x.com/texastechserv",  path: "M4 4 L20 20 M20 4 L4 20" },
 ];
 
 export default function ThemedHeader() {
@@ -237,6 +238,18 @@ export default function ThemedHeader() {
                 </button>
               </div>
               <div className="px-3 py-4 space-y-1">
+                <Link
+                  href="/social-media/"
+                  onClick={() => setSocialOpen(false)}
+                  className="flex items-center gap-3.5 px-3 py-3 rounded-xl text-white/70 hover:text-white hover:bg-white/5 transition-colors group mb-1"
+                >
+                  <span className="w-8 h-8 rounded-full border border-white/10 flex items-center justify-center shrink-0">
+                    <LayoutGrid className="w-3.5 h-3.5" />
+                  </span>
+                  <span className="text-[13px] font-medium">All Platforms</span>
+                  <ChevronRight className="w-3.5 h-3.5 ml-auto text-white/30 group-hover:text-white/60" />
+                </Link>
+                <div className="border-t border-white/10 my-2" />
                 {SOCIALS.map(({ label, href, path }) => (
                   <a key={label} href={href} target="_blank" rel="noopener noreferrer"
                     className="flex items-center gap-3.5 px-3 py-3 rounded-xl text-white/50 hover:text-white hover:bg-white/5 transition-colors group">
@@ -252,7 +265,7 @@ export default function ThemedHeader() {
               <div className="border-t border-white/10 mx-3 my-1" />
               <div className="px-5 py-4 space-y-2">
                 <a href="tel:+96566347267" className="block text-white/40 text-[12px] hover:text-white transition-colors">+965 66347267</a>
-                <a href="mailto:sales@texastechserv.com" className="block text-white/40 text-[12px] hover:text-white transition-colors">sales@texastechserv.com</a>
+                <a href={`mailto:${SITE_EMAIL}`} className="block text-white/40 text-[12px] hover:text-white transition-colors">{SITE_EMAIL}</a>
               </div>
             </motion.div>
           )}

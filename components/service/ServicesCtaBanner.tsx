@@ -3,6 +3,7 @@ import Link from "next/link";
 import { motion, useInView } from "framer-motion";
 import { useRef } from "react";
 import { ArrowRight, Mail, Phone } from "lucide-react";
+import { SITE_EMAIL } from "@/lib/site";
 
 function FadeUp({
   children,
@@ -82,7 +83,7 @@ export default function ServicesCtaBanner() {
                   <ArrowRight className="w-4 h-4" />
                 </Link>
                 <Link
-                  href="/service/"
+                  href="/services/"
                   className="inline-flex items-center justify-center gap-2 border border-white/15 hover:border-white/35 text-white/60 hover:text-white px-8 py-3.5 rounded-lg transition-all duration-200 text-[14px]"
                 >
                   Back to Services
@@ -95,7 +96,7 @@ export default function ServicesCtaBanner() {
           <FadeUp delay={0.18} className="flex flex-col gap-4 min-w-[280px]">
 
             <a
-              href="mailto:sales@texastechserv.com"
+              href={`mailto:${SITE_EMAIL}`}
               className="group flex items-center gap-4 bg-white/[0.04] border border-white/[0.08] hover:border-[#e7212b]/35 hover:bg-white/[0.07] rounded-xl px-6 py-4 transition-all duration-200"
             >
               <div className="w-10 h-10 rounded-xl bg-[#e7212b]/10 border border-[#e7212b]/20 flex items-center justify-center shrink-0 group-hover:bg-[#e7212b]/20 transition-colors duration-200">
@@ -103,7 +104,7 @@ export default function ServicesCtaBanner() {
               </div>
               <div>
                 <p className="text-white/30 text-[11px] tracking-[1.5px] uppercase mb-0.5">Email Us</p>
-                <p className="text-white text-[14px] font-medium">sales@texastechserv.com</p>
+                <p className="text-white text-[14px] font-medium">{SITE_EMAIL}</p>
               </div>
             </a>
 
@@ -130,6 +131,7 @@ export default function ServicesCtaBanner() {
               <div>
                 <p className="text-white/30 text-[11px] tracking-[1.5px] uppercase mb-0.5">Dubai Office</p>
                 <p className="text-white text-[14px] font-medium">+971 569553747</p>
+                      <p className="text-white text-[14px] font-medium">+971 567793973</p>
               </div>
             </a>
 

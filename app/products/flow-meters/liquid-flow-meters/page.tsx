@@ -1,6 +1,7 @@
 import React from "react";
 import type { Metadata } from "next";
 import Link from "next/link";
+import { BreadcrumbJsonLd } from "@/components/schema/BreadcrumbJsonLd";
 import { ChevronRight } from "lucide-react";
 import ProductCard from "@/components/ProductCard";
 import { getProductsByPath } from "@/lib/products";
@@ -9,12 +10,24 @@ export const metadata: Metadata = {
   title: "Liquid Flow Meters - Texas Technical Services",
   description:
     "Wide range of liquid flow meters from Faure Herman, Ultraflux, and SICK — custody and non-custody solutions including helical turbine, ultrasonic, and portable flowmeters.",
-  alternates: { canonical: "https://texastechserv.com/products/flow-meters/liquid-flow-meters/" },
+  alternates: { canonical: "/products/flow-meters/liquid-flow-meters/" },
+  keywords: [
+    "liquid flow meters Kuwait",
+    "Faure Herman helical turbine",
+    "Ultraflux ultrasonic flowmeter",
+    "custody transfer liquid metering",
+  ],
   openGraph: {
     title: "Liquid Flow Meters - Texas Technical Services",
     description:
       "Wide range of liquid flow meters from Faure Herman, Ultraflux, and SICK — custody and non-custody solutions.",
-    url: "https://texastechserv.com/products/flow-meters/liquid-flow-meters/",
+    url: "/products/flow-meters/liquid-flow-meters/",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Liquid Flow Meters - Texas Technical Services",
+    description:
+      "Wide range of liquid flow meters from Faure Herman, Ultraflux, and SICK — custody and non-custody solutions.",
   },
 };
 
@@ -23,7 +36,13 @@ export default function LiquidFlowMetersPage() {
     "/products/flow-meters/liquid-flow-meters/"
   );
   return (
-    <div className="min-h-screen bg-white font-sans antialiased selection:bg-[#e7212b] selection:text-white">
+<div className="min-h-screen bg-white font-sans antialiased selection:bg-[#e7212b] selection:text-white">
+      <BreadcrumbJsonLd items={[
+        { name: "Home", href: "/" },
+        { name: "Products", href: "/products/" },
+        { name: "Flow Meters", href: "/products/flow-meters/" },
+        { name: "Liquid Flow Meters", href: "/products/flow-meters/liquid-flow-meters/" },
+      ]} />
       {/* ── Hero Banner ─────────────────────────────────────── */}
       <section className="relative bg-[#0B0D26] overflow-hidden border-b-4 border-[#e7212b]">
         {/* Grid texture */}
@@ -119,7 +138,7 @@ export default function LiquidFlowMetersPage() {
               </p>
             </div>
             <Link
-              href="/contact"
+              href="/contacts/"
               className="shrink-0 inline-flex items-center gap-2 bg-[#e7212b] hover:bg-[#aa0b1b] text-white font-bold px-6 py-3.5 rounded-[6px] shadow-lg hover:shadow-[#e7212b]/20 transition-all duration-200"
             >
               Contact Us &rarr;

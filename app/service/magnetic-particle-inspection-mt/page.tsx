@@ -1,17 +1,19 @@
 import type { Metadata } from "next";
 import MagneticParticleHero from "@/components/service/magnetic-particle-inspection-mt/MagneticParticleHero";
 import MagneticParticleContent from "@/components/service/magnetic-particle-inspection-mt/MagneticParticleContent";
+import { BreadcrumbJsonLd } from "@/components/schema/BreadcrumbJsonLd";
+import { ServiceJsonLd } from "@/components/schema/ServiceJsonLd";
 
 export const metadata: Metadata = {
   title: "Magnetic Particle Inspection (MT)",
   description:
     "Magnetic Particle Testing (MPT/MPI) for surface and near-surface defect detection in ferromagnetic materials — iron, steel, nickel, and cobalt. Wet fluorescent and colour contrast methods to ASME V, ISO 17638, ASTM E709 in Kuwait and Dubai.",
-  alternates: { canonical: "https://texastechserv.com/service/magnetic-particle-inspection-mt/" },
+  alternates: { canonical: "/service/magnetic-particle-inspection-mt/" },
   openGraph: {
     title: "Magnetic Particle Inspection (MT) | Texas Technical Services",
     description: "MPI/MPT for surface and near-surface defect detection in ferromagnetic materials. ASME V, ISO 17638. Kuwait & Dubai.",
-    url: "https://texastechserv.com/service/magnetic-particle-inspection-mt/",
-    images: [{ url: "https://texastechserv.com/og-magnetic-particle.jpg", width: 1200, height: 630, alt: "Magnetic Particle Inspection — Texas Technical Services" }],
+    url: "/service/magnetic-particle-inspection-mt/",
+    images: [{ url: "/og-magnetic-particle.jpg", width: 1200, height: 630, alt: "Magnetic Particle Inspection — Texas Technical Services" }],
   },
   twitter: { card: "summary_large_image", title: "Magnetic Particle Inspection (MT) | Texas Technical Services", description: "MPI for ferromagnetic materials. ASME V, ISO 17638. Kuwait & Dubai." },
   keywords: ["magnetic particle inspection Kuwait", "MPI Kuwait", "MPT Kuwait", "MT NDT Kuwait", "weld MPI Kuwait", "ferromagnetic inspection Kuwait", "ASME V MPI Kuwait", "Texas Technical Services MPI"],
@@ -20,6 +22,18 @@ export const metadata: Metadata = {
 export default function MagneticParticlePage() {
   return (
     <>
+      <BreadcrumbJsonLd items={[
+  { name: "Home", href: "/" },
+  { name: "Services", href: "/services/" },
+  { name: "Magnetic Particle Inspection (MT)", href: "/service/magnetic-particle-inspection-mt/" },
+]} />
+<ServiceJsonLd
+  name="Magnetic Particle Inspection (MT)"
+  description="Magnetic Particle Testing (MPT/MPI) for surface and near-surface defect detection in ferromagnetic materials — iron, steel, nickel, and cobalt. Wet fluorescent and colour contrast methods to ASME V, ISO 17638, ASTM E709 in Kuwait and Dubai."
+  url="/service/magnetic-particle-inspection-mt/"
+  serviceType="Non-Destructive Testing"
+  areaServed={["Kuwait", "United Arab Emirates", "Saudi Arabia", "Bahrain", "Qatar", "Oman"]}
+/>
       <MagneticParticleHero />
       <MagneticParticleContent />
       {/* Contact section — to be added */}
