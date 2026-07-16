@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import Image from "next/image";
 import ProductCard from "@/components/ProductCard";
+import { BreadcrumbJsonLd } from "@/components/schema/BreadcrumbJsonLd";
 import { 
   BookOpen, 
   Calendar, 
@@ -24,6 +25,21 @@ export const metadata: Metadata = {
     description: "Access expert technical guides and reference articles on Custody Transfer Metering, SCADA systems, and CEMS compliance for heavy industries.",
     url: "https://texastechserv.com/blog/",
     type: "website",
+    images: [
+      {
+        url: "https://texastechserv.com/og-default.png",
+        width: 1200,
+        height: 630,
+        alt: "Texas Technical Services Knowledge Hub",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    site: "@texastechserv",
+    title: "Industrial Engineering Knowledge Hub | Texas Technical Services",
+    description: "Access expert technical guides and reference articles on Custody Transfer Metering, SCADA systems, and CEMS compliance for heavy industries.",
+    images: ["https://texastechserv.com/og-default.png"],
   },
 };
 
@@ -74,6 +90,7 @@ const blogPosts: BlogPost[] = Object.entries(blogArticles).map(([slug, article])
 export default function BlogIndexPage() {
   return (
     <div className="min-h-screen bg-white font-sans antialiased text-[#333333]">
+      <BreadcrumbJsonLd items={[{ name: "Home", href: "/" }, { name: "Blog", href: "/blog/" }]} />
       
       {/* ═══ HERO SECTION ═══════════════════════════════════════════ */}
       <section className="relative bg-[#0B0D26] overflow-hidden pt-32 pb-16 lg:pb-24 border-b border-white/10">

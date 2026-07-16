@@ -4,6 +4,9 @@ import Link from "next/link";
 import Image from "next/image";
 import { ChevronRight, Calendar, Clock, ArrowLeft } from "lucide-react";
 import { blogArticles } from "@/lib/blogArticles";
+import { BreadcrumbJsonLd } from "@/components/schema/BreadcrumbJsonLd";
+import { BlogPostingJsonLd } from "@/components/schema/BlogPostingJsonLd";
+import { FaqPageJsonLd } from "@/components/schema/FaqPageJsonLd";
 
 type PageProps = {
   params: Promise<{
@@ -39,6 +42,7 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
     },
     twitter: {
       card: "summary_large_image",
+      site: "@texastechserv",
       title: article.seoTitle,
       description: article.metaDescription,
       images: [article.image],
@@ -50,8 +54,22 @@ export default async function BlogArticlePage({ params }: PageProps) {
   const { slug } = await params;
   const article = blogArticles[slug];
   if (!article) notFound();
+
+  const faqItems: { q: string; a: string }[] = [];
+  const faqMatch = article.content.match(/<h2>Frequently Asked Questions[\s\S]*$/i);
+  if (faqMatch) {
+    const qaPattern = /<p><strong>Q:\s*(.*?)<\/strong><br\s*\/?>\s*<strong>A:<\/strong>\s*(.*?)<\/p>/gi;
+    let m;
+    while ((m = qaPattern.exec(faqMatch[0])) !== null) {
+      faqItems.push({ q: m[1].trim(), a: m[2].trim() });
+    }
+  }
+
   return (
     <div className="min-h-screen bg-white text-[#333]">
+      <BreadcrumbJsonLd items={[{ name: "Home", href: "/" }, { name: "Blog", href: "/blog/" }, { name: article.category, href: `/blog/${slug}/` }]} />
+      <BlogPostingJsonLd headline={article.title} description={article.description} image={article.image} url={`/blog/${slug}/`} />
+      {faqItems.length > 0 && <FaqPageJsonLd items={faqItems} />}
       {/* Hero */}
       <section className="relative bg-[#0B0D26] overflow-hidden pt-32 pb-16 border-b border-white/10">
         <div className="absolute inset-0 pointer-events-none" style={{ backgroundImage: "repeating-linear-gradient(0deg,transparent,transparent 39px,rgba(255,255,255,0.02) 40px),repeating-linear-gradient(90deg,transparent,transparent 39px,rgba(255,255,255,0.02) 40px)" }} />

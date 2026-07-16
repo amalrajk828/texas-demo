@@ -52,6 +52,10 @@ export const metadata: Metadata = {
     ],
   },
   robots: { index: true, follow: true },
+  twitter: {
+    card: "summary_large_image",
+    site: "@texastechserv",
+  },
 };
 
 const GTM = "GTM-NK9KQVKJ";
