@@ -36,7 +36,7 @@ export default function LiquidFlowMetersPage() {
     "/products/flow-meters/liquid-flow-meters/"
   );
   return (
-<div className="min-h-screen bg-white font-sans antialiased selection:bg-[#e7212b] selection:text-white">
+<div className="min-h-screen bg-[#0B0D26] font-sans antialiased selection:bg-[#e7212b] selection:text-white">
       <BreadcrumbJsonLd items={[
         { name: "Home", href: "/" },
         { name: "Products", href: "/products/" },
@@ -91,13 +91,13 @@ export default function LiquidFlowMetersPage() {
       </section>
 
       {/* ── Intro Section ────────────────────────────────────── */}
-      <section className="bg-white py-12">
+      <section className="bg-[#0B0D26] py-12">
         <div className="max-w-[700px] mx-auto px-4 sm:px-6 text-center">
-          <h2 className="text-[#1A1A2E] text-[28px] font-bold">
+          <h2 className="text-white text-[28px] font-bold">
             Liquid Flow Meters
           </h2>
           <div className="w-[60px] h-[3px] bg-[#e7212b] mx-auto mt-3 mb-4" />
-          <p className="text-[#555770] text-base leading-relaxed">
+          <p className="text-white/60 text-base leading-relaxed">
             We take pride in being a premier provider of a wide range of liquid flow meters, including both
             non-custody and custody solutions from renowned brands like Faure Herman and Ultraflux. Our commitment
             to delivering accurate and reliable flow measurement solutions sets us apart as a trusted partner for
@@ -107,32 +107,31 @@ export default function LiquidFlowMetersPage() {
       </section>
 
       {/* ── Products List Section ─────────────────────────────── */}
-      <section className="bg-[#F8F9FA] py-14 border-t border-[#E8E8F0] border-b border-[#E8E8F0]">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6">
+      <section className="bg-[#0B0D26] py-14 relative">
+        <div className="absolute inset-0 pointer-events-none" style={{ background: "radial-gradient(ellipse at 50% 100%, rgba(231,33,43,0.08) 0%, transparent 60%)" }} />
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 relative z-10">
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5">
-            {liquidFlowMeterProducts.map((prod, index) => (
-              <React.Fragment key={prod.slug}>
-                <ProductCard
-                  product={prod}
-                  category="Liquid Flow Meters"
-                  imageFit="contain"
-                />
-                
-              </React.Fragment>
+            {liquidFlowMeterProducts.map((prod) => (
+              <ProductCard
+                key={prod.slug}
+                product={prod}
+                category="Liquid Flow Meters"
+                imageFit="contain"
+              />
             ))}
           </div>
         </div>
       </section>
 
       {/* ── CTA Banner ───────────────────────────────────────── */}
-      <section className="relative bg-[#1A1A2E] border-t-4 border-[#e7212b] py-16">
+      <section className="relative bg-[#0B0D26] border-t-4 border-[#e7212b] py-16">
         <div className="max-w-7xl mx-auto px-4 sm:px-6">
           <div className="flex flex-col sm:flex-row items-center justify-between gap-6">
             <div>
               <h3 className="text-white font-bold text-[22px] mb-1">
                 Looking for the right liquid flow meter?
               </h3>
-              <p className="text-[#A0A8C0] text-sm">
+              <p className="text-white/60 text-sm">
                 Our flow measurement specialists can help you select, size, and configure the right custody or
                 non-custody liquid flow meter for your application.
               </p>

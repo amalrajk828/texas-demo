@@ -34,7 +34,7 @@ export const metadata: Metadata = {
 export default function GasAnalyzersPage() {
   const gasAnalyzerProducts = getProductsByPath("/products/analyzers/gas-analyzers/");
   return (
-    <div className="min-h-screen bg-white font-sans antialiased selection:bg-[#e7212b] selection:text-white">
+    <div className="min-h-screen bg-[#0B0D26] font-sans antialiased selection:bg-[#e7212b] selection:text-white">
       <BreadcrumbJsonLd items={[{ name: "Home", href: "/" }, { name: "Products", href: "/products/" }, { name: "Analyzers", href: "/products/analyzers/" }, { name: "Gas Analyzers", href: "/products/analyzers/gas-analyzers/" }]} />
       {/* ── Hero Banner ─────────────────────────────────────── */}
       <section className="relative bg-[#0B0D26] overflow-hidden border-b-4 border-[#e7212b]">
@@ -81,23 +81,23 @@ export default function GasAnalyzersPage() {
       </section>
 
       {/* ── Intro Section ────────────────────────────────────── */}
-      <section className="bg-white py-12">
+      <section className="bg-[#0B0D26] py-12">
         <div className="max-w-[700px] mx-auto px-4 sm:px-6 text-center">
-          <h2 className="text-[#1A1A2E] text-[28px] font-bold">
+          <h2 className="text-white text-[28px] font-bold">
             Gas Analysis Solutions
           </h2>
           <div className="w-[60px] h-[3px] bg-[#e7212b] mx-auto mt-3 mb-4" />
-          <p className="text-[#555770] text-base leading-relaxed">
+          <p className="text-white/60 text-base leading-relaxed">
             Real-time gas analysis directly within the process. Reliable measurement
             technology that allows the devices to be mounted directly at the measurement
             site: In-situ gas analyzers take measurements directly within the process
             under system conditions. These analyzers are primarily characterized by their
             very minimal maintenance requirements and extremely short response times.
           </p>
-          <p className="text-[#555770] text-base leading-relaxed mt-4">
+          <p className="text-white/60 text-base leading-relaxed mt-4">
             In-situ gas analyzers from SICK are available in two different versions:
           </p>
-          <ul className="text-[#555770] text-base leading-relaxed mt-3 text-left max-w-xl mx-auto space-y-2">
+          <ul className="text-white/60 text-base leading-relaxed mt-3 text-left max-w-xl mx-auto space-y-2">
             <li className="flex gap-2">
               <span className="text-[#e7212b] font-bold shrink-0">•</span>
               <span>
@@ -117,32 +117,31 @@ export default function GasAnalyzersPage() {
       </section>
 
       {/* ── Products List Section ─────────────────────────────── */}
-      <section className="bg-[#F8F9FA] py-14 border-t border-[#E8E8F0] border-b border-[#E8E8F0]">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6">
+      <section className="bg-[#0B0D26] py-14 relative">
+        <div className="absolute inset-0 pointer-events-none" style={{ background: "radial-gradient(ellipse at 50% 100%, rgba(231,33,43,0.08) 0%, transparent 60%)" }} />
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 relative z-10">
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5">
-            {gasAnalyzerProducts.map((prod, index) => (
-              <React.Fragment key={prod.slug}>
-                <ProductCard
-                  product={prod}
-                  category="Gas Analyzers"
-                  imageFit="contain"
-                />
-                
-              </React.Fragment>
+            {gasAnalyzerProducts.map((prod) => (
+              <ProductCard
+                key={prod.slug}
+                product={prod}
+                category="Gas Analyzers"
+                imageFit="contain"
+              />
             ))}
           </div>
         </div>
       </section>
 
       {/* ── CTA Banner ───────────────────────────────────────── */}
-      <section className="relative bg-[#1A1A2E] border-t-4 border-[#e7212b] py-16">
+      <section className="relative bg-[#0B0D26] border-t-4 border-[#e7212b] py-16">
         <div className="max-w-7xl mx-auto px-4 sm:px-6">
           <div className="flex flex-col sm:flex-row items-center justify-between gap-6">
             <div>
               <h3 className="text-white font-bold text-[22px] mb-1">
                 Need a gas analyzer for your process?
               </h3>
-              <p className="text-[#A0A8C0] text-sm">
+              <p className="text-white/60 text-sm">
                 Our gas analysis specialists can help you select the right in-situ or
                 extractive gas analyzer for your process monitoring and emissions compliance
                 requirements.

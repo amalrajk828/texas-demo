@@ -72,8 +72,13 @@ export default function ProductCard({
       <div className="absolute -top-12 -right-12 w-36 h-36 rounded-full opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none z-20"
         style={{ background: "radial-gradient(circle, rgba(231,33,43,0.16) 0%, transparent 70%)" }}
       />
+      <Link
+        href={finalHref}
+        className="absolute inset-0 z-10"
+        aria-label={product.name}
+      />
       {/* Image Container */}
-      <div className={`relative h-44 overflow-hidden shrink-0 ${imageFit === "contain" ? "bg-white border-b border-[#e8eaf0] p-4" : "bg-[#0B0D26]"}`}>
+      <div className={`relative h-44 overflow-hidden shrink-0 ${imageFit === "contain" ? "bg-white/[0.06] border-b border-white/10 p-4" : "bg-[#0B0D26]"}`}>
         {!imgError && displayImage ? (
           <Image
             src={displayImage}
@@ -85,7 +90,7 @@ export default function ProductCard({
           />
         ) : (
           <div className="w-full h-full bg-gradient-to-br from-[#1a1d35] to-[#0d1024] flex flex-col items-center justify-center p-4">
-            <span className="text-[#A0A8C0] text-[12px] font-semibold text-center">{product.name}</span>
+            <span className="text-white/50 text-[12px] font-semibold text-center">{product.name}</span>
           </div>
         )}
         <div className="absolute inset-0 bg-gradient-to-t from-black/50 via-transparent to-transparent pointer-events-none" />

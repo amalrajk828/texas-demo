@@ -34,7 +34,7 @@ export const metadata: Metadata = {
 export default function CemsPage() {
   const cemsProducts = getProductsByPath("/products/analyzers/cems/");
   return (
-    <div className="min-h-screen bg-white font-sans antialiased selection:bg-[#e7212b] selection:text-white">
+    <div className="min-h-screen bg-[#0B0D26] font-sans antialiased selection:bg-[#e7212b] selection:text-white">
       <BreadcrumbJsonLd items={[{ name: "Home", href: "/" }, { name: "Products", href: "/products/" }, { name: "Analyzers", href: "/products/analyzers/" }, { name: "CEMS", href: "/products/analyzers/cems/" }]} />
       {/* ── Hero Banner ─────────────────────────────────────── */}
       <section className="relative bg-[#0B0D26] overflow-hidden border-b-4 border-[#e7212b]">
@@ -48,7 +48,7 @@ export default function CemsPage() {
         <div
           className="absolute bottom-0 left-1/2 -translate-x-1/2 w-[600px] h-40 pointer-events-none"
           style={{
-            background: "radial-gradient(ellipse, rgba(245,130,31,0.06) 0%, transparent 70%)",
+            background: "radial-gradient(ellipse, rgba(231,33,43,0.06) 0%, transparent 70%)",
           }}
         />
 
@@ -81,13 +81,13 @@ export default function CemsPage() {
       </section>
 
       {/* ── Intro Section ────────────────────────────────────── */}
-      <section className="bg-white py-12">
+      <section className="bg-[#0B0D26] py-12">
         <div className="max-w-[700px] mx-auto px-4 sm:px-6 text-center">
-          <h2 className="text-[#1A1A2E] text-[28px] font-bold">
+          <h2 className="text-white text-[28px] font-bold">
             Continuous Emissions Monitoring
           </h2>
           <div className="w-[60px] h-[3px] bg-[#e7212b] mx-auto mt-3 mb-4" />
-          <p className="text-[#555770] text-base leading-relaxed">
+          <p className="text-white/60 text-base leading-relaxed">
             Continuous emissions monitoring of all pollutant components in exhaust gases.
             Environmental regulations stipulate that certain pollutants in the exhaust gas of
             waste incineration plants, as well as the reference parameters, must be monitored
@@ -98,42 +98,39 @@ export default function CemsPage() {
       </section>
 
       {/* ── Products List Section ─────────────────────────────── */}
-      <section className="bg-[#F8F9FA] py-14 border-t border-[#E8E8F0] border-b border-[#E8E8F0]">
-        <div className="max-w-[1100px] mx-auto px-10 pb-[80px]">
-          <div className="flex flex-col">
-            {cemsProducts.map((prod, index) => (
-              <React.Fragment key={prod.slug}>
-                <ProductCard
-                  product={prod}
-                  category="CEMS"
-                  imageFit="contain"
-                />
-                {index < cemsProducts.length - 1 && (
-                  <div className="border-t border-[#E8E8F0] my-[10px]" />
-                )}
-              </React.Fragment>
+      <section className="bg-[#0B0D26] py-14 relative">
+        <div className="absolute inset-0 pointer-events-none" style={{ background: "radial-gradient(ellipse at 50% 100%, rgba(231,33,43,0.08) 0%, transparent 60%)" }} />
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 relative z-10">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5">
+            {cemsProducts.map((prod) => (
+              <ProductCard
+                key={prod.slug}
+                product={prod}
+                category="CEMS"
+                imageFit="contain"
+              />
             ))}
           </div>
         </div>
       </section>
 
       {/* ── CTA Banner ───────────────────────────────────────── */}
-      <section className="relative bg-[#1A1A2E] border-t-4 border-[#e7212b] py-16">
+      <section className="relative bg-[#0B0D26] border-t-4 border-[#e7212b] py-16">
         <div className="max-w-7xl mx-auto px-4 sm:px-6">
           <div className="flex flex-col sm:flex-row items-center justify-between gap-6">
             <div>
               <h3 className="text-white font-bold text-[22px] mb-1">
                 Need a CEMS solution for your facility?
               </h3>
-              <p className="text-[#A0A8C0] text-sm">
+              <p className="text-white/60 text-sm">
                 Our emissions monitoring specialists can help you select and configure the
                 right continuous emissions monitoring system for your regulatory compliance
                 requirements.
               </p>
             </div>
             <Link
-              href="/contact"
-              className="shrink-0 inline-flex items-center gap-2 bg-[#e7212b] hover:bg-[#e07214] text-white font-bold px-6 py-3.5 rounded-[6px] shadow-lg hover:shadow-[#e7212b]/20 transition-all duration-200"
+              href="/contacts/"
+              className="shrink-0 inline-flex items-center gap-2 bg-[#e7212b] hover:bg-[#aa0b1b] text-white font-bold px-6 py-3.5 rounded-[6px] shadow-lg hover:shadow-[#e7212b]/20 transition-all duration-200"
             >
               Contact Us &rarr;
             </Link>
