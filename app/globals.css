@@ -9,7 +9,7 @@
   --color-background: var(--background);
   --color-foreground: var(--foreground);
   --font-sans: var(--font-body);
-  --font-mono: var(--font-geist-mono);
+  --font-mono: var(--font-mono);
   --font-heading: var(--font-display);
   --color-sidebar-ring: var(--sidebar-ring);
   --color-sidebar-border: var(--sidebar-border);
@@ -61,18 +61,8 @@
   --font-body: var(--font-inter), "Inter", sans-serif;
 
   /* Background patterns */
-  --background-grid-dark: repeating-linear-gradient(
-      0deg,
-      transparent,
-      transparent 39px,
-      rgba(255, 255, 255, 0.03) 40px
-    ),
-    repeating-linear-gradient(
-      90deg,
-      transparent,
-      transparent 39px,
-      rgba(255, 255, 255, 0.03) 40px
-    );
+  --background-grid-dark: linear-gradient(to right, rgba(255, 255, 255, 0.15) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(255, 255, 255, 0.15) 1px, transparent 1px);
 }
 
 :root {
@@ -149,7 +139,6 @@
     @apply border-border outline-ring/50;
   }
   html {
-    scroll-behavior: smooth;
     font-size: 17px;
   }
   body {
@@ -159,7 +148,7 @@
     -webkit-font-smoothing: antialiased;
   }
   [data-scroll-behavior="smooth"] {
-    scroll-behavior: smooth;
+    /* Lenis handles smooth scroll */
   }
   h1, h2, h3, h4 {
     font-family: var(--font-display);
@@ -217,6 +206,64 @@ a, button, [role="button"], label, select,
 :focus-visible { outline: 2px solid #e7212b; outline-offset: 2px; border-radius: 4px; }
 
 /* Scrollbar */
-::-webkit-scrollbar { width: 6px; }
-::-webkit-scrollbar-thumb { background: #e7212b40; border-radius: 3px; }
-::-webkit-scrollbar-thumb:hover { background: #e7212b80; }
+::-webkit-scrollbar { width: 12px; }
+::-webkit-scrollbar-track { background: #0A0C11; }
+::-webkit-scrollbar-thumb { background: #E53935; border-radius: 6px; border: 3px solid #0A0C11; }
+::-webkit-scrollbar-thumb:hover { background: #B71C1C; }
+
+/* --- Blueprint & Technical Instrumentation Panels --- */
+.blueprint-grid {
+  position: relative;
+  background-color: #0b0d26;
+}
+.blueprint-grid::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  background-image: 
+    linear-gradient(rgba(255, 255, 255, 0.035) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255, 255, 255, 0.035) 1px, transparent 1px),
+    linear-gradient(rgba(255, 255, 255, 0.01) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255, 255, 255, 0.01) 1px, transparent 1px);
+  background-size: 80px 80px, 80px 80px, 16px 16px, 16px 16px;
+  background-position: center center;
+  opacity: 0.85;
+}
+.blueprint-dot-grid {
+  background-image: radial-gradient(rgba(255, 255, 255, 0.06) 1px, transparent 1px);
+  background-size: 16px 16px;
+}
+
+/* LED Indicator animations */
+@keyframes ledPulse {
+  0% {
+    transform: scale(1);
+    box-shadow: 0 0 2px currentColor;
+    opacity: 0.8;
+  }
+  50% {
+    transform: scale(1.4);
+    box-shadow: 0 0 10px currentColor;
+    opacity: 1;
+  }
+  100% {
+    transform: scale(1);
+    box-shadow: 0 0 2px currentColor;
+    opacity: 0.8;
+  }
+}
+.led-glow {
+  box-shadow: 0 0 6px currentColor;
+  opacity: 0.9;
+}
+.group:hover .led-glow-target {
+  animation: ledPulse 0.4s cubic-bezier(0.16, 1, 0.3, 1) 1;
+}
+
+/* Monospace alignment for readout numbers */
+.font-instrument-readout {
+  font-family: var(--font-mono), monospace;
+  font-variant-numeric: tabular-nums;
+  letter-spacing: -0.02em;
+}

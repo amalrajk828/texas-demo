@@ -37,7 +37,7 @@ function Track() {
             width={160}
             height={56}
             quality={100}
-            className="object-contain max-h-12 w-auto opacity-85 hover:opacity-100 hover:scale-105 transition-all duration-300"
+            className="object-contain max-h-12 w-auto opacity-90 hover:opacity-100 hover:scale-105 transition-all duration-300"
           />
         </div>
       ))}
@@ -47,12 +47,15 @@ function Track() {
 
 export default function PartnersTicker() {
   return (
-    <section className="bg-white border-b border-gray-100 py-6 overflow-hidden select-none">
-      <p className="text-center text-[10px] font-semibold tracking-[3.5px] uppercase text-gray-300 mb-5">
-        Trusted Partners &amp; Brands
+    <section
+      className="relative py-7 overflow-hidden select-none border-y"
+      style={{ background: "#FFFFFF", borderColor: "rgba(0,0,0,0.05)" }}
+    >
+      <p className="text-center text-[10px] font-bold tracking-[4px] uppercase mb-5" style={{ color: "rgba(0,0,0,0.40)" }}>
+        Trusted Technology Partners
       </p>
 
-      {/* Two identical tracks side-by-side — when track 1 scrolls fully left, track 2 is already in view, creating a seamless loop */}
+      {/* Two identical tracks — seamless marquee loop */}
       <div
         className="partners-wrapper flex w-full"
         style={{ willChange: "transform" }}
@@ -61,9 +64,10 @@ export default function PartnersTicker() {
         <Track />
       </div>
 
+      {/* Fade edges with CSS mask for reliability */}
       <style>{`
         .partners-wrapper {
-          animation: marquee 30s linear infinite;
+          animation: marquee 22s linear infinite;
         }
         .partners-wrapper:hover {
           animation-play-state: paused;
@@ -72,27 +76,9 @@ export default function PartnersTicker() {
           0%   { transform: translate3d(0, 0, 0); }
           100% { transform: translate3d(-50%, 0, 0); }
         }
-        /* Fade edges for a polished look */
-        section:has(.partners-wrapper)::before,
-        section:has(.partners-wrapper)::after {
-          content: "";
-          position: absolute;
-          top: 0;
-          bottom: 0;
-          width: 80px;
-          z-index: 2;
-          pointer-events: none;
-        }
         section:has(.partners-wrapper) {
-          position: relative;
-        }
-        section:has(.partners-wrapper)::before {
-          left: 0;
-          background: linear-gradient(to right, white 30%, transparent);
-        }
-        section:has(.partners-wrapper)::after {
-          right: 0;
-          background: linear-gradient(to left, white 30%, transparent);
+          -webkit-mask-image: linear-gradient(to right, transparent 0%, black 6%, black 94%, transparent 100%);
+          mask-image: linear-gradient(to right, transparent 0%, black 6%, black 94%, transparent 100%);
         }
       `}</style>
     </section>

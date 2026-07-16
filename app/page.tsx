@@ -44,48 +44,61 @@ export const metadata: Metadata = {
   ],
 };
 
-// Grey light theme — oil & gas industry standard.
-// White cards, grey section backgrounds, grey borders, red accents only.
-// Dark charcoal header/footer. No dark-mode, purely light.
+// Dark theme — deep charcoal sections, white text, red bold accents, light grey card surfaces.
 const VARS: Record<string, string> = {
-  "--color-brand-red":       "#C62828",
-  "--color-brand-red-dark":  "#8E0000",
-  "--color-brand-red-light": "#FFEBEE",
+  "--color-brand-red":       "#E53935",
+  "--color-brand-red-dark":  "#B71C1C",
+  "--color-brand-red-light": "#FFCDD2",
 
-  // Header nav bg (DarkHeader reads --color-brand-navy)
-  "--color-brand-navy":     "#1F2937",
-  "--color-brand-navy-mid": "#374151",
-  "--color-brand-gray":     "#F3F4F6",
+  // Header nav
+  "--color-brand-navy":     "#0F1117",
+  "--color-brand-navy-mid": "#181C26",
+  "--color-brand-gray":     "#1E2330",
 
-  // Footer reads --color-footer-*
-  "--color-footer-bg":    "#1F2937",
+  // Footer
+  "--color-footer-bg":    "#0A0C11",
   "--color-footer-text":  "#FFFFFF",
-  "--color-footer-muted": "rgba(209,213,219,0.65)",
+  "--color-footer-muted": "rgba(156,163,175,0.70)",
 
-  // Hero (HeroSlider reads these)
-  "--color-bg-hero-from":     "#1F2937",
-  "--color-bg-hero-to":       "#374151",
-  "--color-bg-hero-mask":     "rgba(20,25,35,0.72)",
-  "--color-bg-hero-mask-mid": "rgba(40,50,65,0.45)",
+  // Hero — deep dark with red accent mask
+  "--color-bg-hero-from":     "#0F1117",
+  "--color-bg-hero-to":       "#1A1F2E",
+  "--color-bg-hero-mask":     "rgba(8,10,18,0.78)",
+  "--color-bg-hero-mask-mid": "rgba(20,25,40,0.50)",
   "--color-text-hero":        "#FFFFFF",
 
-  // Legacy vars used by PartnersTicker, TickerBanner, HeroSlider
-  "--color-surface":       "#FFFFFF",
-  "--color-section-alt":   "#F3F4F6",
-  "--color-border":        "rgba(0,0,0,0.08)",
-  "--color-border-accent": "rgba(198,40,40,0.15)",
-  "--color-text-primary":  "#111827",
-  "--color-text-muted":    "#4B5563",
+  // Legacy tokens (PartnersTicker, TickerBanner, HeroSlider)
+  "--color-surface":       "#181C26",
+  "--color-section-alt":   "#0F1117",
+  "--color-border":        "rgba(255,255,255,0.08)",
+  "--color-border-accent": "rgba(229,57,53,0.25)",
+  "--color-text-primary":  "#F9FAFB",
+  "--color-text-muted":    "#9CA3AF",
+};
 
-  // Kit D (t-grey) tokens — all section/card colours
+// Kit D (t-grey) tokens — dark variant
+const DARK_GREY_VARS: Record<string, string> = {
+  "--g-section-a":   "#141820",
+  "--g-section-b":   "#0F1117",
+  "--g-heading":     "#F9FAFB",
+  "--g-muted":       "#9CA3AF",
+  "--g-border":      "rgba(255,255,255,0.08)",
+  "--g-card-bg":     "#1E2330",
+  "--g-card-border": "rgba(255,255,255,0.09)",
+  "--g-card-shadow": "0 4px 24px rgba(0,0,0,0.40)",
+  "--g-stat-bg":     "#252B3B",
+};
+
+// Kit D (t-grey) tokens — light variant
+const LIGHT_GREY_VARS: Record<string, string> = {
   "--g-section-a":   "#FFFFFF",
-  "--g-section-b":   "#F3F4F6",
+  "--g-section-b":   "#F9FAFB",
   "--g-heading":     "#111827",
   "--g-muted":       "#4B5563",
-  "--g-border":      "rgba(0,0,0,0.09)",
-  "--g-card-bg":     "#FFFFFF",
-  "--g-card-border": "rgba(0,0,0,0.09)",
-  "--g-card-shadow": "0 2px 16px rgba(0,0,0,0.06)",
+  "--g-border":      "rgba(0,0,0,0.06)",
+  "--g-card-bg":     "linear-gradient(135deg, #ffffff 0%, #fafafa 60%, #fff1f2 100%)",
+  "--g-card-border": "rgba(0,0,0,0.08)",
+  "--g-card-shadow": "0 4px 20px rgba(0,0,0,0.06)",
   "--g-stat-bg":     "#F3F4F6",
 };
 
@@ -114,13 +127,32 @@ export default function HomePage() {
         <HeroSlider />
         <PartnersTicker />
         <TickerBanner />
-        <GreyWhatWeDo />
-        <GreyServices />
-        <GreyVision />
-        <GreyTeam />
-        <GreyAbout />
-        <GreyCta />
+
+        {/* Alternate White and Dark themes for the sections */}
+        <ThemeWrapper vars={LIGHT_GREY_VARS}>
+          <GreyWhatWeDo />
+        </ThemeWrapper>
+
+        <ThemeWrapper vars={DARK_GREY_VARS}>
+          <GreyServices />
+        </ThemeWrapper>
+
+        <ThemeWrapper vars={LIGHT_GREY_VARS}>
+          <GreyVision />
+        </ThemeWrapper>
+
+        <ThemeWrapper vars={DARK_GREY_VARS}>
+          <GreyTeam />
+        </ThemeWrapper>
+
+        <ThemeWrapper vars={LIGHT_GREY_VARS}>
+          <GreyAbout />
+        </ThemeWrapper>
+
+        <ThemeWrapper vars={DARK_GREY_VARS}>
+          <GreyCta />
+        </ThemeWrapper>
       </main>
-      </ThemeWrapper>
+    </ThemeWrapper>
   );
 }

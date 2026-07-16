@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import ProductCard from "@/components/ProductCard";
 import Image from "next/image";
 import { FlaskConical, ArrowRight, ChevronRight } from "lucide-react";
 import { BreadcrumbJsonLd } from "@/components/schema/BreadcrumbJsonLd";
@@ -265,55 +266,13 @@ export default function PetrochemicalsPage() {
 
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5">
             {products.map((prod, i) => (
-              <div
+              <ProductCard
                 key={prod.slug}
-                className={`fade-up d${(i % 3) + 1} group bg-white border border-[#e8eaf0] hover:border-[#e7212b]/60 rounded-2xl overflow-hidden transition-all duration-300 hover:shadow-xl flex flex-col`}
-                style={{ "--tw-shadow-color": "rgba(231,33,43,0.10)" } as React.CSSProperties}
-              >
-                {/* Image */}
-                <div className="relative h-44 overflow-hidden bg-[#0B0D26] shrink-0">
-                  <Image
-                    src={prod.image}
-                    alt={`${prod.name} — ${prod.brand}`}
-                    fill
-                    className="object-cover transition-transform duration-700 ease-out group-hover:scale-[1.07]"
-                    sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
-                  />
-                  <div className="absolute inset-0 bg-gradient-to-t from-black/50 via-transparent to-transparent" />
-                  <div className="absolute top-3 left-3">
-                    <span
-                      className={`inline-flex items-center text-[9px] font-medium tracking-[1.5px] uppercase px-2.5 py-1 rounded-full border backdrop-blur-sm ${
-                        categoryColors[prod.category] ?? "bg-white/10 text-white/60 border-white/15"
-                      }`}
-                    >
-                      {prod.category}
-                    </span>
-                  </div>
-                </div>
-
-                {/* Body */}
-                <div className="p-5 flex flex-col flex-1">
-                  <p className="text-[10px] text-gray-400 mb-1.5 tracking-wide">{prod.brand}</p>
-                  <h3 className="text-[14px] font-medium text-[#0B0D26] group-hover:text-[#e7212b] transition-colors duration-200 leading-snug mb-2">
-                    {prod.name}
-                  </h3>
-                  <p className="text-gray-500 text-[12px] leading-relaxed line-clamp-3 mb-4 flex-1">
-                    {prod.desc}
-                  </p>
-
-                  <div className="flex items-center justify-between mt-auto pt-3 border-t border-[#f0f0f0]">
-                    <Link
-                      href={`/portfolio/${prod.slug}/`}
-                      className="inline-flex items-center gap-1.5 text-[#e7212b] text-[11px] font-medium group-hover:gap-2.5 transition-all duration-200"
-                    >
-                      Read More <ArrowRight className="w-3 h-3" />
-                    </Link>
-                    <span className="w-4 h-px bg-[#e7212b]/20 group-hover:w-10 transition-all duration-300" />
-                  </div>
-                </div>
-
-                <div className="h-[3px] bg-[#e7212b] scale-x-0 group-hover:scale-x-100 transition-transform duration-300 origin-left" />
-              </div>
+                product={prod}
+                badgeClassName={categoryColors[prod.category]}
+                className={`d${(i % 3) + 1}`}
+                theme="industry"
+              />
             ))}
           </div>
         </div>

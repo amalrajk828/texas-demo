@@ -50,20 +50,28 @@ const socials = [
 
 export default function Footer() {
   return (
-    <footer className="bg-brand-navy">
+    <footer style={{ background: "#0A0C11" }}>
 
-      {/* CTA strip */}
-      <div className="bg-brand-red">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 py-8 flex flex-col sm:flex-row items-center justify-between gap-4">
+      {/* CTA strip — gradient red */}
+      <div
+        className="relative overflow-hidden"
+        style={{ background: "linear-gradient(135deg, #B71C1C 0%, #E53935 50%, #C62828 100%)" }}
+      >
+        <div className="absolute inset-0 opacity-[0.07]" style={{ backgroundImage: "url(\"data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)'/%3E%3C/svg%3E\")", backgroundSize: "200px" }} />
+        <div className="relative max-w-7xl mx-auto px-4 sm:px-6 py-10 flex flex-col sm:flex-row items-center justify-between gap-5">
           <div>
-            <p className="text-white font-medium text-lg">Have a project in mind?</p>
-            <p className="text-white/75 text-sm mt-0.5">Talk to our team about your requirements.</p>
+            <p className="text-white font-bold text-xl sm:text-2xl">
+              Have a project in mind?
+            </p>
+            <p className="text-white/75 text-[15px] mt-1 font-medium">
+              Talk to our team about your requirements.
+            </p>
           </div>
           <Link
             href="/contacts/"
-            className="shrink-0 bg-white text-brand-red font-medium text-sm px-6 py-2.5 rounded-lg hover:bg-white/90 transition-colors"
+            className="shrink-0 inline-flex items-center gap-2 bg-white text-[#E53935] font-bold text-[15px] px-8 py-3.5 rounded-xl hover:bg-white/90 transition-all hover:-translate-y-0.5 shadow-lg shadow-black/20"
           >
-            Get in Touch →
+            Get in Touch <ArrowRight className="w-4 h-4" />
           </Link>
         </div>
       </div>
@@ -72,16 +80,20 @@ export default function Footer() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 py-14">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-10">
 
-          {/* Brand */}
+          {/* ── Brand Column ──────────────── */}
           <div>
-            <Link href="/" className="flex flex-col items-center gap-3 mb-6 w-fit">
-              <Image src="/logo.svg" alt="Texas Technical Services" width={100} height={100} />
+            <Link href="/" className="flex flex-col items-center gap-3 mb-7 w-fit">
+              <Image src="/logo.svg" alt="Texas Technical Services" width={90} height={90} />
               <div className="text-center">
-                <p className="text-white font-semibold tracking-[6px] text-[18px] leading-none">TEXAS</p>
-                <p className="text-white/50 text-[10px] tracking-[3px] leading-none mt-1 font-medium">TECHNICAL SERVICES</p>
+                <p className="text-white font-black tracking-[7px] text-[20px] leading-none">
+                  TEXAS
+                </p>
+                <p className="text-[#E53935] text-[11px] tracking-[3px] leading-none mt-1.5 font-semibold">
+                  TECHNICAL SERVICES
+                </p>
               </div>
             </Link>
-            <p className="text-white/40 text-sm leading-relaxed mb-4">
+            <p className="text-white/45 text-[14px] leading-[1.8] mb-5 font-medium">
               ISO 9001:2015 certified company established in 2008. Flow measurement,
               automation &amp; inspection for oil &amp; gas and industrial sectors.
             </p>
@@ -100,9 +112,9 @@ export default function Footer() {
                   target="_blank"
                   rel="noopener noreferrer"
                   aria-label={label}
-                  className="w-8 h-8 rounded-full border border-white/10 flex items-center justify-center text-white/40 hover:text-white hover:border-white/30 transition-colors"
+                  className="w-9 h-9 rounded-full border border-white/10 flex items-center justify-center text-white/40 hover:text-white hover:border-[#E53935]/40 hover:bg-[#E53935]/10 transition-all"
                 >
-                  <svg viewBox="0 0 24 24" className="w-3.5 h-3.5" fill="none" stroke="currentColor" strokeWidth={2} strokeLinecap="round" strokeLinejoin="round">
+                  <svg viewBox="0 0 24 24" className="w-4 h-4" fill="none" stroke="currentColor" strokeWidth={2} strokeLinecap="round" strokeLinejoin="round">
                     <path d={path} />
                   </svg>
                 </a>
@@ -117,12 +129,13 @@ export default function Footer() {
               </Link>
           </div>
 
-          {/* Locations */}
+          {/* ── Locations Column ───────────── */}
           <div>
-            <h3 className="text-white/40 text-[9px] font-medium tracking-[2px] uppercase mb-5">
+            <h3 className="flex items-center gap-2 text-white/70 text-[12px] font-bold tracking-[2.5px] uppercase mb-6">
+              <span className="w-[2px] h-4 rounded-full bg-[#E53935]" />
               Our Locations
             </h3>
-            <div className="space-y-5">
+            <div className="space-y-6">
               {[
                 {
                   city: "Kuwait",
@@ -138,15 +151,17 @@ export default function Footer() {
                 },
               ].map((office) => (
                 <div key={office.city}>
-                  <p className="text-white text-sm font-medium mb-1.5 flex items-center gap-1.5">
-                    <MapPin className="w-3 h-3 text-brand-red" /> {office.city}
+                  <p className="text-white text-[15px] font-bold mb-2 flex items-center gap-2">
+                    <MapPin className="w-3.5 h-3.5 text-[#E53935]" /> {office.city}
                   </p>
-                  <p className="text-white/35 text-[11px] leading-relaxed mb-1.5">{office.address}</p>
+                  <p className="text-white/35 text-[13px] leading-relaxed mb-2 font-medium">
+                    {office.address}
+                  </p>
                   {office.phones.map((p) => (
                     <a
                       key={p}
                       href={`tel:${p.replace(/\s/g, "")}`}
-                      className="flex items-center gap-1.5 text-white/35 text-[11px] hover:text-brand-red transition-colors"
+                      className="flex items-center gap-2 text-white/40 text-[13px] font-medium hover:text-[#E53935] transition-colors"
                     >
                       <Phone className="w-3 h-3" /> {p}
                     </a>
@@ -156,17 +171,18 @@ export default function Footer() {
             </div>
           </div>
 
-          {/* Services */}
+          {/* ── Services Column ────────────── */}
           <div>
-            <h3 className="text-white/40 text-[9px] font-medium tracking-[2px] uppercase mb-5">
+            <h3 className="flex items-center gap-2 text-white/70 text-[12px] font-bold tracking-[2.5px] uppercase mb-6">
+              <span className="w-[2px] h-4 rounded-full bg-[#E53935]" />
               Services
             </h3>
-            <ul className="space-y-2">
+            <ul className="space-y-2.5">
               {services.map((s) => (
                 <li key={s.href}>
                   <Link
                     href={s.href}
-                    className="text-white/40 text-[12px] hover:text-white transition-colors"
+                    className="text-white/45 text-[14px] font-medium hover:text-white transition-colors"
                   >
                     {s.label}
                   </Link>
@@ -175,19 +191,20 @@ export default function Footer() {
             </ul>
           </div>
 
-          {/* Industries */}
+          {/* ── Industries Column ──────────── */}
           <div>
-            <h3 className="text-white/40 text-[9px] font-medium tracking-[2px] uppercase mb-5">
+            <h3 className="flex items-center gap-2 text-white/70 text-[12px] font-bold tracking-[2.5px] uppercase mb-6">
+              <span className="w-[2px] h-4 rounded-full bg-[#E53935]" />
               Industries
             </h3>
-            <ul className="space-y-2">
+            <ul className="space-y-2.5">
               {industries.map((i) => (
                 <li key={i.href}>
                   <Link
                     href={i.href}
-                    className="text-white/40 text-[12px] hover:text-white transition-colors flex items-center gap-1.5 group"
+                    className="text-white/45 text-[14px] font-medium hover:text-white transition-colors flex items-center gap-2 group"
                   >
-                    <span className="w-1 h-1 rounded-full bg-brand-red/40 group-hover:bg-brand-red transition-colors shrink-0" />
+                    <span className="w-1.5 h-1.5 rounded-full bg-[#E53935]/30 group-hover:bg-[#E53935] transition-colors shrink-0" />
                     {i.label}
                   </Link>
                 </li>
@@ -218,10 +235,10 @@ export default function Footer() {
       </div>
 
       {/* Bottom bar */}
-      <div className="border-t border-white/6">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 py-4 flex flex-col sm:flex-row items-center justify-between gap-2">
-          <p className="text-white/20 text-[11px]">
-            TEXAS TECHNICAL SERVICE COMPANY W.L.L. © 2026. All Rights Reserved.
+      <div className="border-t" style={{ borderColor: "rgba(255,255,255,0.06)" }}>
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 py-5 flex flex-col sm:flex-row items-center justify-between gap-3">
+          <p className="text-white/25 text-[12px] font-medium">
+            TEXAS TECHNICAL SERVICE COMPANY W.L.L. © {new Date().getFullYear()}. All Rights Reserved.
           </p>
           <div className="flex items-center gap-4">
             <span className="text-white/20 text-[10px] hidden sm:inline">Serving the Middle East — industrial automation companies near me, Kuwait, UAE, Dubai, Bahrain &amp; Saudi Arabia</span>

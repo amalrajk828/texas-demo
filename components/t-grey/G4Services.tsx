@@ -42,8 +42,8 @@ export default function G4Services() {
         <div className="grid grid-cols-1 md:grid-cols-3 gap-5">
           {SERVICES.map((svc, i) => (
             <FadeUp key={svc.title} delay={0.1 + i * 0.1}>
-              <motion.div whileHover={{ y: -6, transition: { duration: 0.22 } }}
-                className="group relative flex flex-col h-full rounded-2xl overflow-hidden"
+              <motion.div whileHover={{ y: -8, scale: 1.02, transition: { duration: 0.3, ease: "easeOut" } }}
+                className="group relative flex flex-col h-full rounded-2xl overflow-hidden cursor-pointer"
                 style={{ background: "var(--g-card-bg)", border: "1px solid var(--g-card-border)", boxShadow: "var(--g-card-shadow)" }}
                 onMouseEnter={e => (e.currentTarget.style.boxShadow = `0 16px 48px rgba(0,0,0,0.09), 0 0 0 1.5px var(--color-brand-red)`)}
                 onMouseLeave={e => (e.currentTarget.style.boxShadow = "var(--g-card-shadow)")}

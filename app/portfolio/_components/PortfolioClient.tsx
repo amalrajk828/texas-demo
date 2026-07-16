@@ -47,9 +47,9 @@ export default function PortfolioClient() {
   ].filter((cat) => groupedProducts[cat] && groupedProducts[cat].length > 0);
 
   return (
-    <div className="min-h-screen bg-white font-sans antialiased selection:bg-[#F5821F] selection:text-white">
+    <div className="min-h-screen bg-white font-sans antialiased selection:bg-[#e7212b] selection:text-white">
       {/* ── Hero Banner ─────────────────────────────────────── */}
-      <section className="relative bg-[#0B0D26] overflow-hidden border-b-4 border-[#F5821F]">
+      <section className="relative bg-[#0B0D26] overflow-hidden border-b-4 border-[#e7212b]">
         <div
           className="absolute inset-0 pointer-events-none opacity-30"
           style={{
@@ -75,8 +75,8 @@ export default function PortfolioClient() {
           </nav>
 
           <div className="flex items-center gap-2 mb-4">
-            <span className="w-5 h-px bg-[#F5821F]" />
-            <span className="text-[#F5821F] text-[10px] font-medium tracking-[2.5px] uppercase">
+            <span className="w-5 h-px bg-[#e7212b]" />
+            <span className="text-[#e7212b] text-[10px] font-medium tracking-[2.5px] uppercase">
               Texas Technical Services · Product Showcase
             </span>
           </div>
@@ -102,8 +102,8 @@ export default function PortfolioClient() {
                   onClick={() => setSelectedCategory(cat)}
                   className={`px-5 py-2 text-sm font-semibold rounded-[30px] border transition-all duration-200 cursor-pointer ${
                     isActive
-                      ? "bg-[#F5821F] border-[#F5821F] text-white shadow-md shadow-[#F5821F]/10"
-                      : "bg-white border-[#E8E8F0] text-[#1A1A2E] hover:border-[#F5821F] hover:text-[#F5821F]"
+                      ? "bg-[#e7212b] border-[#e7212b] text-white shadow-md shadow-[#e7212b]/10"
+                      : "bg-white border-[#E8E8F0] text-[#1A1A2E] hover:border-[#e7212b] hover:text-[#e7212b]"
                   }`}
                 >
                   {cat}
@@ -121,11 +121,11 @@ export default function PortfolioClient() {
             {orderedCategories.map((category) => (
               <div key={category} className="flex flex-col gap-6">
                 {/* Visual Category Header */}
-                <div className="bg-[#FFF8F3] border-l-4 border-[#F5821F] py-3 px-6 flex items-center gap-4 shadow-sm rounded-[4px]">
+                <div className="bg-[#FFF8F3] border-l-4 border-[#e7212b] py-3 px-6 flex items-center gap-4 shadow-sm rounded-[4px]">
                   <h2 className="text-[#1A1A2E] font-bold text-base font-sans leading-none uppercase tracking-wider">
                     {category}
                   </h2>
-                  <div className="h-px bg-[#F5821F]/20 flex-1" />
+                  <div className="h-px bg-[#e7212b]/20 flex-1" />
                 </div>
 
                 {/* 3-Column Grid */}
@@ -149,7 +149,7 @@ function PortfolioCard({ product }: { product: Product }) {
   return (
     <Link
       href={`/portfolio/${product.slug}/`}
-      className="group relative bg-white border border-[#E8E8F0] hover:border-[#F5821F]/30 rounded-[12px] p-5 shadow-[0_2px_12px_rgba(0,0,0,0.04)] hover:shadow-[0_8px_24px_rgba(245,130,31,0.08)] transition-all duration-300 ease-in-out hover:-translate-y-1 flex flex-col justify-between"
+      className="group relative bg-white border border-[#E8E8F0] hover:border-[#e7212b]/30 rounded-[12px] p-5 shadow-[0_2px_12px_rgba(0,0,0,0.04)] hover:shadow-[0_8px_24px_rgba(245,130,31,0.08)] transition-all duration-300 ease-in-out hover:-translate-y-1 flex flex-col justify-between"
     >
       <div className="flex flex-col gap-4">
         {/* Image Container Area */}
@@ -172,16 +172,16 @@ function PortfolioCard({ product }: { product: Product }) {
 
         {/* Content Area */}
         <div>
-          <span className="text-[#F5821F] text-[10px] font-bold tracking-wider uppercase">
+          <span className="text-[#e7212b] text-[10px] font-bold tracking-wider uppercase">
             {product.category}
           </span>
-          <h3 className="text-[#1A1A2E] text-[16px] font-bold leading-snug mt-1 group-hover:text-[#F5821F] transition-colors duration-200">
+          <h3 className="text-[#1A1A2E] text-[16px] font-bold leading-snug mt-1 group-hover:text-[#e7212b] transition-colors duration-200">
             {product.name}
           </h3>
         </div>
       </div>
 
-      <span className="text-[#F5821F] font-semibold text-[13px] group-hover:underline inline-flex items-center gap-1 mt-4">
+      <span className="text-[#e7212b] font-semibold text-[13px] group-hover:underline inline-flex items-center gap-1 mt-4">
         View Details &rarr;
       </span>
     </Link>

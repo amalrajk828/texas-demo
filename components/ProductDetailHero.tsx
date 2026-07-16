@@ -31,7 +31,7 @@ export default function ProductDetailHero({
   const subtitle = product.description.split(".")[0] + ".";
 
   return (
-    <section className="relative bg-[#0B0D26] overflow-hidden border-b-4 border-[#F5821F] py-12 md:py-16">
+    <section className="relative bg-[#0B0D26] overflow-hidden border-b-4 border-[#e7212b] py-12 md:py-16">
       {/* Grid texture */}
       <div
         className="absolute inset-0 pointer-events-none opacity-30"
@@ -40,11 +40,11 @@ export default function ProductDetailHero({
             "repeating-linear-gradient(0deg,transparent,transparent 39px,rgba(255,255,255,0.02) 40px),repeating-linear-gradient(90deg,transparent,transparent 39px,rgba(255,255,255,0.02) 40px)",
         }}
       />
-      {/* Orange radial glow */}
+      {/* Red radial glow */}
       <div
         className="absolute bottom-0 left-1/2 -translate-x-1/2 w-[600px] h-40 pointer-events-none"
         style={{
-          background: "radial-gradient(ellipse, rgba(245,130,31,0.06) 0%, transparent 70%)",
+          background: "radial-gradient(ellipse, rgba(231,33,43,0.06) 0%, transparent 70%)",
         }}
       />
 
@@ -66,11 +66,11 @@ export default function ProductDetailHero({
         <div className="grid grid-cols-1 min-[769px]:grid-cols-2 gap-10 items-center">
           {/* Left Text Column */}
           <div className="flex flex-col items-start">
-            <span className="text-[#F5821F] text-[11px] font-bold tracking-wider uppercase mb-2">
+            <span className="text-[#e7212b] text-[11px] font-bold tracking-wider uppercase mb-2">
               {product.tag}
             </span>
             {seriesBadge && (
-              <span className="inline-block bg-[#F5821F] text-white text-[12px] font-semibold px-[10px] py-[3px] rounded-[4px] mb-3 select-none">
+              <span className="inline-block bg-[#e7212b] text-white text-[12px] font-semibold px-[10px] py-[3px] rounded-[4px] mb-3 select-none">
                 {seriesBadge}
               </span>
             )}
@@ -87,7 +87,7 @@ export default function ProductDetailHero({
                 href={product.externalLink}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex items-center justify-center border-2 border-[#F5821F] text-[#F5821F] hover:bg-[#F5821F] hover:text-white font-semibold rounded-[6px] px-[28px] py-[12px] transition-colors duration-200 text-sm"
+                className="inline-flex items-center justify-center border-2 border-[#e7212b] text-[#e7212b] hover:bg-[#e7212b] hover:text-white font-semibold rounded-[6px] px-[28px] py-[12px] transition-colors duration-200 text-sm"
               >
                 For More Detail
               </a>
@@ -96,7 +96,7 @@ export default function ProductDetailHero({
                   href={product.downloadLink}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="inline-flex items-center justify-center bg-[#F5821F] text-white hover:bg-[#e07214] font-semibold rounded-[6px] px-[28px] py-[12px] transition-colors duration-200 text-sm shadow-md shadow-[#F5821F]/10"
+                  className="inline-flex items-center justify-center bg-[#e7212b] text-white hover:bg-[#aa0b1b] font-semibold rounded-[6px] px-[28px] py-[12px] transition-colors duration-200 text-sm shadow-md shadow-[#e7212b]/10"
                 >
                   Download Datasheet
                 </a>
@@ -118,13 +118,13 @@ export default function ProductDetailHero({
               }}>
                 <div style={{
                   width: "48px", height: "48px",
-                  background: "#F5821F22", borderRadius: "50%",
+                  background: "#e7212b22", borderRadius: "50%",
                   display: "flex", alignItems: "center", justifyContent: "center"
                 }}>
                   <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
-                    <rect x="3" y="3" width="18" height="18" rx="2" stroke="#F5821F" strokeWidth="1.5"/>
-                    <circle cx="8.5" cy="8.5" r="1.5" fill="#F5821F"/>
-                    <path d="M21 15L16 10L5 21" stroke="#F5821F" strokeWidth="1.5" strokeLinecap="round"/>
+                    <rect x="3" y="3" width="18" height="18" rx="2" stroke="#e7212b" strokeWidth="1.5"/>
+                    <circle cx="8.5" cy="8.5" r="1.5" fill="#e7212b"/>
+                    <path d="M21 15L16 10L5 21" stroke="#e7212b" strokeWidth="1.5" strokeLinecap="round"/>
                   </svg>
                 </div>
                 <span style={{ color: "#A0A8C0", fontSize: "12px", textAlign: "center", lineHeight: "1.4" }}>

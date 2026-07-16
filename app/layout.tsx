@@ -1,9 +1,10 @@
 import type { Metadata } from "next";
-import { Plus_Jakarta_Sans, Inter } from "next/font/google";
+import { Plus_Jakarta_Sans, Inter, JetBrains_Mono } from "next/font/google";
 import Script from "next/script";
 import ScrollObserver from "@/components/ScrollObserver";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
+import SmoothScroll from "@/components/SmoothScroll";
 import { SITE_URL } from "@/lib/site";
 import "./globals.css";
 
@@ -18,6 +19,13 @@ const inter = Inter({
   subsets: ["latin"],
   weight: ["400", "500"],
   variable: "--font-inter",
+  display: "swap",
+});
+
+const jetbrainsMono = JetBrains_Mono({
+  subsets: ["latin"],
+  weight: ["400", "500", "600"],
+  variable: "--font-mono",
   display: "swap",
 });
 
@@ -50,7 +58,7 @@ const GTM = "GTM-NK9KQVKJ";
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
-    <html lang="en" data-scroll-behavior="smooth" className={`${plusJakarta.variable} ${inter.variable}`}>
+    <html lang="en" data-scroll-behavior="smooth" className={`${plusJakarta.variable} ${inter.variable} ${jetbrainsMono.variable}`}>
       <head>
         <Script
           id="gtm"
@@ -115,9 +123,11 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
           />
         </noscript>
         <ScrollObserver />
-        <Header />
-        {children}
-        <Footer />
+        <SmoothScroll>
+          <Header />
+          {children}
+          <Footer />
+        </SmoothScroll>
       </body>
     </html>
   );

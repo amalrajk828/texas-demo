@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import ProductCard from "@/components/ProductCard";
 import Image from "next/image";
 import { Building2, ArrowRight, ChevronRight } from "lucide-react";
 import { BreadcrumbJsonLd } from "@/components/schema/BreadcrumbJsonLd";
