@@ -14,13 +14,13 @@ export default function ControlRoomStandardsSection() {
       <div className="max-w-6xl mx-auto px-4 sm:px-6">
         <div className="flex flex-col md:flex-row items-center justify-between gap-8">
           <div>
-            <p className="text-[#F5821F] text-[10px] font-semibold tracking-[3px] uppercase mb-2">
+            <p className="text-[#e7212b] text-[11px] font-semibold tracking-[3px] uppercase mb-2">
               International Quality Standards
             </p>
             <h3 className="text-white text-xl sm:text-2xl font-bold leading-tight">
               Globally Certified — Built to the World&apos;s Strictest Standards
             </h3>
-            <p className="text-white/55 text-[13px] mt-2">
+            <p className="text-white/60 text-[14px] mt-2">
               Compliance with BIFMA, SEFA, and ASTM standards
             </p>
           </div>
@@ -28,7 +28,7 @@ export default function ControlRoomStandardsSection() {
             {STANDARDS.map((s) => (
               <div
                 key={s.name + s.desc}
-                className="rounded-lg border border-white/10 bg-white/[0.04] px-4 py-3 text-center min-w-[100px]"
+                className="rounded-lg border border-white/[0.12] bg-white/[0.06] px-4 py-3 text-center min-w-[100px]"
               >
                 <p className="text-white text-[12px] font-bold leading-tight">
                   {s.name}

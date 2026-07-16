@@ -65,9 +65,13 @@ export default function ProductCard({
 
   return (
     <div
-      className={`group bg-white border border-[#e8eaf0] hover:border-[#e7212b]/60 rounded-2xl overflow-hidden transition-all duration-300 hover:shadow-xl flex flex-col fade-up ${className}`}
+      className={`group bg-white/[0.10] backdrop-blur-xl border border-white/[0.12] hover:border-[#e7212b]/40 rounded-2xl overflow-hidden transition-all duration-500 shadow-[0_4px_32px_rgba(0,0,0,0.35)] hover:shadow-[0_8px_40px_rgba(231,33,43,0.12)] flex flex-col fade-up ${className}`}
       style={{ "--tw-shadow-color": "rgba(231,33,43,0.10)" } as React.CSSProperties}
     >
+      <div className="absolute top-0 left-0 right-0 h-[2px] z-20 bg-gradient-to-r from-transparent via-[#e7212b] to-transparent opacity-50 group-hover:opacity-100 transition-opacity duration-300" />
+      <div className="absolute -top-12 -right-12 w-36 h-36 rounded-full opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none z-20"
+        style={{ background: "radial-gradient(circle, rgba(231,33,43,0.16) 0%, transparent 70%)" }}
+      />
       {/* Image Container */}
       <div className={`relative h-44 overflow-hidden shrink-0 ${imageFit === "contain" ? "bg-white border-b border-[#e8eaf0] p-4" : "bg-[#0B0D26]"}`}>
         {!imgError && displayImage ? (
@@ -109,15 +113,15 @@ export default function ProductCard({
 
       {/* Body */}
       <div className="p-5 flex flex-col flex-1">
-        <p className="text-[10px] text-gray-400 mb-1.5 tracking-wide">{displayBrand}</p>
-        <h3 className="text-[14px] font-medium text-[#0B0D26] group-hover:text-[#e7212b] transition-colors duration-200 leading-snug mb-2">
+        <p className="text-[11px] text-white/60 mb-1.5 tracking-wide">{displayBrand}</p>
+        <h3 className="text-[15px] font-medium text-white group-hover:text-[#e7212b] transition-colors duration-200 leading-snug mb-2">
           <Link href={finalHref}>{product.name}</Link>
         </h3>
-        <p className="text-gray-500 text-[12px] leading-relaxed line-clamp-3 mb-4 flex-1">
+        <p className="text-white/70 text-[13px] leading-relaxed line-clamp-3 mb-4 flex-1">
           {displayDesc}
         </p>
 
-        <div className="flex items-center justify-between mt-auto pt-3 border-t border-[#f0f0f0] text-[11.5px] text-gray-400">
+        <div className="flex items-center justify-between mt-auto pt-3 border-t border-white/20 text-[12px] text-white/50">
           {product.date || product.readTime ? (
             <div className="flex items-center gap-2.5">
               {product.date && (
@@ -140,7 +144,7 @@ export default function ProductCard({
 
           <Link
             href={finalHref}
-            className="inline-flex items-center gap-1.5 text-[#e7212b] text-[11px] font-medium group-hover:gap-2.5 transition-all duration-200 shrink-0"
+            className="inline-flex items-center gap-1.5 text-[#e7212b] text-[12px] font-medium group-hover:gap-2.5 transition-all duration-200 shrink-0"
           >
             {readMoreText} <ArrowRight className="w-3.5 h-3.5" />
           </Link>

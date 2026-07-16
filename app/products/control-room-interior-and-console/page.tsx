@@ -40,7 +40,7 @@ export const metadata: Metadata = {
 export default function ControlRoomPage() {
   const products = getProductsByPath("/products/control-room-interior-and-console/");
   return (
-    <div className="min-h-screen bg-white font-sans antialiased selection:bg-[#e7212b] selection:text-white">
+    <div className="min-h-screen bg-[#0B0D26] font-sans antialiased selection:bg-[#e7212b] selection:text-white">
       <BreadcrumbJsonLd items={[
         { name: "Home", href: "/" },
         { name: "Products", href: "/products/" },
@@ -63,7 +63,7 @@ export default function ControlRoomPage() {
       />
       <ControlRoomErgonomicSection />
 
-      <section className="bg-white py-12">
+      <section className="bg-[#0B0D26] py-12">
         <div className="max-w-4xl mx-auto px-4 sm:px-6">
           <YouTubeEmbed url="https://youtu.be/t90rfWiViw8" />
         </div>
@@ -77,17 +77,17 @@ export default function ControlRoomPage() {
       <ControlRoomServicesSection />
       <ControlRoomStandardsSection />
 
-      <section className="bg-white py-12 border-t border-[#E8E8F0]">
+      <section className="bg-[#0B0D26] py-12 border-t border-white/10">
         <div className="max-w-5xl mx-auto px-4 sm:px-6">
-          <div className="rounded-2xl border border-[#E8E8F0] bg-gradient-to-br from-[#F8F9FA] to-white p-8 flex flex-col sm:flex-row items-center justify-between gap-6">
+          <div className="rounded-2xl border border-white/[0.12] bg-white/[0.06] backdrop-blur-sm p-8 flex flex-col sm:flex-row items-center justify-between gap-6">
             <div>
               <span className="text-[#e7212b] text-[10px] font-semibold tracking-[3px] uppercase">
                 Complete the Package
               </span>
-              <h3 className="mt-2 text-[#1A1A2E] text-xl font-bold">
+              <h3 className="mt-2 text-white text-xl font-bold">
                 Pair Your Console with PWS Raised Access Flooring
               </h3>
-              <p className="text-[#555770] text-[14px] mt-2 max-w-xl">
+              <p className="text-white/60 text-[14px] mt-2 max-w-xl">
                 India&apos;s most trusted raised access floor — high-density calcium
                 sulphate panels purpose-built for control rooms, with vibration
                 control, cable management, and GREENGUARD Gold certification.

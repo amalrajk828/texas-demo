@@ -36,7 +36,7 @@ export const metadata: Metadata = {
 export default function CustodyMeteringSolutionsPage() {
   const products = getProductsByPath("/products/custody-metering-solutions/");
   return (
-    <div className="min-h-screen bg-white font-sans antialiased selection:bg-[#e7212b] selection:text-white">
+    <div className="min-h-screen bg-[#0B0D26] font-sans antialiased selection:bg-[#e7212b] selection:text-white">
       <BreadcrumbJsonLd items={[
         { name: "Home", href: "/" },
         { name: "Products", href: "/products/" },
