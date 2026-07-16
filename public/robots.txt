@@ -1,4 +1,6 @@
 User-agent: *
 Allow: /
+Disallow: /component-demo/
+Disallow: /_next/
 
 Sitemap: https://texastechserv.com/sitemap.xml

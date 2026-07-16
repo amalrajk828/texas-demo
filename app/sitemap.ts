@@ -1,5 +1,6 @@
 import type { MetadataRoute } from "next";
 import { getAllProductSlugs } from "@/lib/products";
+import { blogArticles } from "@/lib/blogArticles";
 import { SITE_URL } from "@/lib/site";
 
 const BASE = SITE_URL;
@@ -178,6 +179,9 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { url: `${BASE}/portfolio_group/products/plc/`, lastModified: now, changeFrequency: "monthly", priority: 0.6 },
     { url: `${BASE}/portfolio_group/products/sensors/`, lastModified: now, changeFrequency: "monthly", priority: 0.6 },
     { url: `${BASE}/portfolio_group/products/sensors/page/2/`, lastModified: now, changeFrequency: "monthly", priority: 0.5 },
+
+    // Blog
+    { url: `${BASE}/blog/`, lastModified: now, changeFrequency: "monthly", priority: 0.7 },
   ];
 
   // Dynamic product/portfolio routes
@@ -188,5 +192,13 @@ export default function sitemap(): MetadataRoute.Sitemap {
     priority: 0.6,
   }));
 
-  return [...staticRoutes, ...productRoutes];
+  // Dynamic blog article routes
+  const blogRoutes: MetadataRoute.Sitemap = Object.keys(blogArticles).map((slug) => ({
+    url: `${BASE}/blog/${slug}/`,
+    lastModified: now,
+    changeFrequency: "monthly" as const,
+    priority: 0.6,
+  }));
+
+  return [...staticRoutes, ...productRoutes, ...blogRoutes];
 }
