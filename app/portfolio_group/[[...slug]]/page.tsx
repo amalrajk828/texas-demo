@@ -104,7 +104,7 @@ export default async function PortfolioGroupPage({
           titleSuffix="Categories"
           description="Browse our product portfolio by industry, product category, or application area."
         />
-        <section className="relative bg-[#0B0D26] overflow-hidden pb-24">
+        <section className="relative bg-[#0f2e2e] overflow-hidden pb-24">
           <div className="relative max-w-7xl mx-auto px-4 sm:px-6">
             <PortfolioGroupCategoryGrid links={allLinks} />
           </div>
@@ -137,7 +137,7 @@ export default async function PortfolioGroupPage({
       />
 
       {pageItems.length > 0 ? (
-        <section className="bg-[#f4f5f8] py-20">
+        <section className="bg-[#0f2e2e] py-20">
           <div className="max-w-7xl mx-auto px-4 sm:px-6">
             <PortfolioGroupProductGrid products={pageItems} />
             <PortfolioGroupPagination
@@ -149,13 +149,13 @@ export default async function PortfolioGroupPage({
           </div>
         </section>
       ) : (
-        <section className="bg-[#f4f5f8] py-20">
+        <section className="bg-[#0f2e2e] py-20">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 text-center">
-            <div className="bg-white border border-[#e8eaf0] rounded-2xl p-12">
-              <h3 className="text-[18px] font-bold text-[#0B0D26] mb-2">
+            <div className="bg-white/[0.12] backdrop-blur-xl border border-white/[0.15] rounded-2xl p-12">
+              <h3 className="text-[18px] font-bold text-white mb-2">
                 No portfolio items found
               </h3>
-              <p className="text-gray-500 text-[14px]">
+              <p className="text-white/70 text-[14px]">
                 There are no items in this category yet.
               </p>
               <Link
