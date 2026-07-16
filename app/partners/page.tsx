@@ -30,17 +30,17 @@ export const metadata: Metadata = {
 
 const PARTNERS = [
   {
-    logo: "/about/mitsubishi-electric.svg",
+    logo: "/about/mitsubishi-electric.png",
     name: "Mitsubishi Electric",
     country: "JPN",
     relationship: "System Integrator & Distributor",
     product: "Automation Solutions",
     description:
-      "Authorized system integrator & distributor for the complete Mitsubishi automation portfolio — MELSEC PLCs, GOT HMIs, AC servos, ICONICS SCADA, and MELFA industrial robots.",
+      "Authorized system integrator & distributor for the complete Mitsubishi automation portfolio — MELSEC PLCs, GOT HMIs, AC servos, and ICONICS SCADA.",
     href: "/mitsubishi-electric-factory-automation/",
   },
   {
-    logo: "/about/endress-hauser.svg",
+    logo: "/about/endress-hauser.jpg",
     name: "Endress+Hauser",
     country: "SUI",
     relationship: "Distributor & Service",
@@ -50,7 +50,7 @@ const PARTNERS = [
     href: "/products/analyzers/cems/",
   },
   {
-    logo: "/about/sick.svg",
+    logo: "/about/sick.jpg",
     name: "SICK AG",
     country: "GER",
     relationship: "Distributor",
@@ -60,7 +60,7 @@ const PARTNERS = [
     href: "/products/sensors/",
   },
   {
-    logo: "/about/meter-engineers.svg",
+    logo: "/about/meter-engineers.jpg",
     name: "Meter Engineers",
     country: "USA",
     relationship: "Distributor",
@@ -70,7 +70,7 @@ const PARTNERS = [
     href: "/service/flow-meter-calibration/",
   },
   {
-    logo: "/about/faure-herman.svg",
+    logo: "/about/faure-herman.jpg",
     name: "Faure Herman",
     country: "FRA",
     relationship: "Distributor",
@@ -90,7 +90,7 @@ const PARTNERS = [
     href: "/products/custody-metering-solutions/",
   },
   {
-    logo: "/about/kem-kuppers.svg",
+    logo: "/about/kem-kuppers.png",
     name: "KEM Küppers",
     country: "GER",
     relationship: "Distributor",
@@ -100,7 +100,7 @@ const PARTNERS = [
     href: "/products/flow-meters/",
   },
   {
-    logo: "/about/tek-trol.svg",
+    logo: "/about/tek-trol.jpg",
     name: "Tek-Trol",
     country: "USA",
     relationship: "Distributor",
@@ -110,7 +110,7 @@ const PARTNERS = [
     href: "/products/flow-meters/",
   },
   {
-    logo: "/about/rockwin.svg",
+    logo: "/about/rockwin.jpg",
     name: "Rockwin Flowmeter India",
     country: "IND",
     relationship: "Distribution & Service",
@@ -120,7 +120,7 @@ const PARTNERS = [
     href: "/products/custody-metering-solutions/",
   },
   {
-    logo: "/about/kurz-instruments.svg",
+    logo: "/about/kurz-instruments.jpg",
     name: "Kurz Instruments",
     country: "USA",
     relationship: "Distributor",
@@ -130,7 +130,7 @@ const PARTNERS = [
     href: "/products/analyzers/gas-analyzers/",
   },
   {
-    logo: "/about/hms-networks.svg",
+    logo: "/about/hms-networks.jpg",
     name: "HMS Networks",
     country: "SWE",
     relationship: "Distributor",
@@ -140,7 +140,7 @@ const PARTNERS = [
     href: "/service/industrial-automation/",
   },
   {
-    logo: "/about/pyrotech.svg",
+    logo: "/about/pyrotech.jpg",
     name: "Pyrotech Workspace",
     country: "IND",
     relationship: "Distributor & Integrator",
@@ -150,7 +150,7 @@ const PARTNERS = [
     href: "/products/control-room-interior-and-console/",
   },
   {
-    logo: "/about/autocontrol.svg",
+    logo: "/about/autocontrol.jpg",
     name: "Autocontrol",
     country: "IND",
     relationship: "Distributor",
@@ -160,7 +160,7 @@ const PARTNERS = [
     href: "/service/industrial-automation/",
   },
   {
-    logo: "/about/euromag.svg",
+    logo: "/about/euromag.jpg",
     name: "Euromag International",
     country: "ITA",
     relationship: "Distributor",
@@ -180,7 +180,7 @@ const PARTNERS = [
     href: "/solutions/texaflow/",
   },
   {
-    logo: "/about/novus-automation.svg",
+    logo: "/about/novus-automation.jpg",
     name: "NOVUS Automation",
     country: "BRA",
     relationship: "Distributor",
@@ -193,7 +193,7 @@ const PARTNERS = [
 
 const STRATEGIC_TECHNOLOGY = [
   {
-    logo: "/about/space-ai.svg",
+    logo: "/about/space-ai.jpg",
     name: "Space AI",
     country: "UAE",
     relationship: "Strategic Partner",
@@ -203,7 +203,7 @@ const STRATEGIC_TECHNOLOGY = [
     href: "/solutions/space-ai/",
   },
   {
-    logo: "/about/pws-floor.svg",
+    logo: "/about/pws-floors.jpg",
     name: "PWS Floor Solutions",
     country: "IND",
     relationship: "Authorized Dealer",
@@ -323,36 +323,37 @@ export default function PartnersPage() {
               <Link
                 key={p.name}
                 href={p.href}
-                className="group relative flex flex-col gap-4 rounded-xl border border-gray-100 bg-white p-6 transition-all duration-300 hover:border-[#e7212b]/30 hover:shadow-xl hover:shadow-[#e7212b]/5 hover:-translate-y-1"
+                className="group relative flex flex-col gap-5 rounded-xl border border-gray-100 bg-white p-7 transition-all duration-300 hover:border-[#e7212b]/30 hover:shadow-xl hover:shadow-[#e7212b]/5 hover:-translate-y-1"
               >
-                <div className="flex items-start justify-between gap-3">
-                  <div className="relative h-12 w-36 shrink-0">
+                <div className="flex flex-col gap-3">
+                  <div className="relative h-20 w-full">
                     <Image
                       src={p.logo}
                       alt={p.name}
                       fill
                       className="object-contain object-left"
-                      sizes="144px"
+                      sizes="(max-width: 640px) 50vw, 33vw"
+                      style={{ mixBlendMode: "multiply" }}
                     />
                   </div>
-                  <div className="flex flex-col items-end gap-1.5 shrink-0">
-                    <span className="text-[9px] font-bold tracking-[1.5px] text-[#e7212b] bg-[#e7212b]/8 px-2 py-0.5 rounded">
+                  <div className="flex flex-wrap items-center gap-2">
+                    <span className="text-[10px] font-bold tracking-[1.5px] text-[#e7212b] bg-[#e7212b]/8 px-2.5 py-1 rounded">
                       {p.country}
                     </span>
-                    <span className="text-[9px] font-medium tracking-[1px] uppercase text-gray-400 text-right leading-tight max-w-[120px]">
+                    <span className="text-[10px] font-medium tracking-[1px] uppercase text-gray-500 leading-tight">
                       {p.relationship}
                     </span>
                   </div>
                 </div>
                 <div>
-                  <h3 className="text-[#181D4E] text-[16px] font-bold leading-snug">
+                  <h3 className="text-[#181D4E] text-[18px] font-bold leading-snug">
                     {p.name}
                   </h3>
-                  <p className="text-[11px] font-semibold tracking-wide text-[#e7212b] uppercase mt-1">
+                  <p className="text-[12px] font-semibold tracking-wide text-[#e7212b] uppercase mt-1.5">
                     {p.product}
                   </p>
                 </div>
-                <p className="text-gray-500 text-[13px] leading-relaxed">
+                <p className="text-gray-600 text-[14.5px] leading-[1.7]">
                   {p.description}
                 </p>
                 <span className="mt-auto inline-flex items-center gap-1.5 text-[12px] font-semibold text-[#e7212b] group-hover:gap-2.5 transition-all">
@@ -388,21 +389,22 @@ export default function PartnersPage() {
                 href={p.href}
                 className="group relative flex flex-col gap-4 rounded-xl border-2 border-[#e7212b]/20 bg-white p-7 transition-all duration-300 hover:border-[#e7212b]/50 hover:shadow-2xl hover:shadow-[#e7212b]/10 hover:-translate-y-1"
               >
-                <div className="flex items-start justify-between gap-3">
-                  <div className="relative h-14 w-40 shrink-0">
+                <div className="flex flex-col gap-3">
+                  <div className="relative h-24 w-full">
                     <Image
                       src={p.logo}
                       alt={p.name}
                       fill
                       className="object-contain object-left"
-                      sizes="160px"
+                      sizes="(max-width: 640px) 50vw, 33vw"
+                      style={{ mixBlendMode: "multiply" }}
                     />
                   </div>
-                  <div className="flex flex-col items-end gap-1.5 shrink-0">
-                    <span className="text-[9px] font-bold tracking-[1.5px] text-white bg-[#e7212b] px-2 py-0.5 rounded">
+                  <div className="flex flex-wrap items-center gap-2">
+                    <span className="text-[10px] font-bold tracking-[1.5px] text-white bg-[#e7212b] px-2.5 py-1 rounded">
                       {p.country}
                     </span>
-                    <span className="text-[9px] font-medium tracking-[1px] uppercase text-[#181D4E] text-right leading-tight max-w-[120px]">
+                    <span className="text-[10px] font-medium tracking-[1px] uppercase text-[#181D4E] leading-tight">
                       {p.relationship}
                     </span>
                   </div>

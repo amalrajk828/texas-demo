@@ -45,31 +45,31 @@ export const metadata: Metadata = {
 
 const partners = [
   {
-    logo: "/about/mitsubishi-electric.svg",
+    logo: "/about/mitsubishi-electric.png",
     name: "Mitsubishi Electric",
     description:
       "Authorized system integrator & distributor for the complete Mitsubishi automation portfolio — MELSEC PLCs, GOT HMIs, AC servos, and ICONICS SCADA.",
   },
   {
-    logo: "/about/faure-herman.svg",
+    logo: "/about/faure-herman.jpg",
     name: "Faure Herman",
     description:
       "Faure Herman supplies high quality helical turbine flowmeters and ultrasonic flowmeters for oil and gas, aviation and other industries. Since 1925.",
   },
   {
-    logo: "/about/endress-hauser.svg",
+    logo: "/about/endress-hauser.jpg",
     name: "Endress+Hauser",
     description:
       "Global leader in process instrumentation — ultrasonic gas meters, CEMS, gas analyzers, and dust/opacity measurement with QAL1 & MCERTS certifications.",
   },
   {
-    logo: "/about/sick.svg",
+    logo: "/about/sick.jpg",
     name: "SICK",
     description:
       "SICK is one of the world's leading producers of sensors and sensor solutions for industrial automation applications. Since 1946.",
   },
   {
-    logo: "/about/meter-engineers.svg",
+    logo: "/about/meter-engineers.jpg",
     name: "Meter Engineers",
     description:
       "USA-based meter proving and calibration specialist — bidirectional & unidirectional sphere provers, piston provers, and mobile prover systems for fiscal metering.",
@@ -81,49 +81,49 @@ const partners = [
       "OMNI is a leading brand in oil and gas flow computers, renowned for reliability. Their expertise ensures tailored solutions for complex needs.",
   },
   {
-    logo: "/about/kem-kuppers.svg",
+    logo: "/about/kem-kuppers.png",
     name: "KEM Küppers",
     description:
       "German precision flow measurement — TRICOR Coriolis, helical, gear, turbine, and chemical injection meters for custody transfer and process control.",
   },
   {
-    logo: "/about/tek-trol.svg",
+    logo: "/about/tek-trol.jpg",
     name: "Tek-Trol",
     description:
       "Comprehensive process instrumentation & control solutions — pressure, temperature, level, vortex, Coriolis, magnetic flow, and steam quality meters.",
   },
   {
-    logo: "/about/rockwin.svg",
+    logo: "/about/rockwin.jpg",
     name: "Rockwin",
     description:
       "Engineered flow metering skid systems — custody transfer skids, truck loading skids, LPG bottling skids, and ASME-code fabricated metering solutions.",
   },
   {
-    logo: "/about/kurz-instruments.svg",
+    logo: "/about/kurz-instruments.jpg",
     name: "Kurz Instruments",
     description:
       "USA manufacturer of thermal mass flow meters for precise gas flow measurement in demanding industrial applications.",
   },
   {
-    logo: "/about/hms-networks.svg",
+    logo: "/about/hms-networks.jpg",
     name: "HMS Networks",
     description:
       "Industrial communication & IIoT solutions — Anybus gateways, Ewon remote access, Intesis building automation, IXXAT CAN/safety, and Red Lion networking.",
   },
   {
-    logo: "/about/pyrotech.svg",
+    logo: "/about/pyrotech.jpg",
     name: "Pyrotech Workspace",
     description:
       "Pioneer in delivering turnkey Control Room Solutions and Ergonomic Command Centre Consoles, complemented by PWS access flooring systems.",
   },
   {
-    logo: "/about/autocontrol.svg",
+    logo: "/about/autocontrol.jpg",
     name: "Autocontrol",
     description:
       "Indian instrumentation and valves specialist — process measurement and control solutions for industrial process industries.",
   },
   {
-    logo: "/about/euromag.svg",
+    logo: "/about/euromag.jpg",
     name: "Euromag International",
     description:
       "Electromagnetic flow meters for conductive liquids — robust and accurate measurement for water, wastewater, and process industries.",
@@ -135,13 +135,13 @@ const partners = [
       "Our proprietary custody metering integrated control system — advanced fiscal metering & SCADA solution for terminals, refineries, and pipeline stations.",
   },
   {
-    logo: "/about/novus-automation.svg",
+    logo: "/about/novus-automation.jpg",
     name: "NOVUS Automation",
     description:
       "Brazilian automation specialist — data loggers, smart PID controllers, wireless sensing, IoT gateways, and BMS solutions for modern facilities.",
   },
   {
-    logo: "/about/bis.svg",
+    logo: "/about/bis.png",
     name: "BIS",
     description:
       "Balaji Industrial Services, Established in 1978, A leading Service Provider in SCADA, PLC and other specialized process industries Automation Solutions.",
@@ -329,25 +329,25 @@ export default function AboutPage() {
               16+ approved global vendors delivering world-class flow measurement, automation, and instrumentation solutions across Kuwait, UAE, and the GCC.
             </p>
           </div>
-          <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-x-6 gap-y-10">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-x-8 gap-y-12">
             {partners.map((p) => (
               <div
                 key={p.name}
-                className="flex flex-col items-center text-center gap-4"
+                className="flex flex-col items-center text-center gap-3 rounded-xl border border-gray-100 bg-white p-5 transition-all duration-300 hover:border-[#e7212b]/30 hover:shadow-lg hover:-translate-y-0.5"
               >
-                <div className="relative h-14 w-32">
+                <div className="relative h-20 w-full">
                   <Image
                     src={p.logo}
                     alt={p.name}
                     fill
                     className="object-contain"
-                    sizes="128px"
+                    sizes="(max-width: 640px) 50vw, 33vw"
                   />
                 </div>
-                <h4 className="font-semibold text-[#181D4E] text-sm">
+                <h4 className="font-bold text-[#181D4E] text-[17px] leading-tight">
                   {p.name}
                 </h4>
-                <p className="text-[12px] text-gray-500 leading-relaxed">
+                <p className="text-[14px] text-gray-600 leading-[1.7]">
                   {p.description}
                 </p>
               </div>
