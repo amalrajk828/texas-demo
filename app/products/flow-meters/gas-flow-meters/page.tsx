@@ -120,6 +120,7 @@ export default function GasFlowMetersPage() {
                 product={prod}
                 category="Gas Flow Meters"
                 imageFit="contain"
+                dark
               />
             ))}
           </div>

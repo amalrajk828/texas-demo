@@ -117,6 +117,7 @@ export default function LiquidFlowMetersPage() {
                 product={prod}
                 category="Liquid Flow Meters"
                 imageFit="contain"
+                dark
               />
             ))}
           </div>

@@ -108,6 +108,7 @@ export default function CemsPage() {
                 product={prod}
                 category="CEMS"
                 imageFit="contain"
+                dark
               />
             ))}
           </div>

@@ -115,6 +115,7 @@ export default function FlareMetersPage() {
                 product={prod}
                 category="Flare Flow Meters"
                 imageFit="contain"
+                dark
               />
             ))}
           </div>

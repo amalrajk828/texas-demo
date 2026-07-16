@@ -108,6 +108,7 @@ export default function DustAnalyzersPage() {
                 product={prod}
                 category="Dust Analyzers"
                 imageFit="contain"
+                dark
               />
             ))}
           </div>

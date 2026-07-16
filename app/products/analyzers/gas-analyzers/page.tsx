@@ -127,6 +127,7 @@ export default function GasAnalyzersPage() {
                 product={prod}
                 category="Gas Analyzers"
                 imageFit="contain"
+                dark
               />
             ))}
           </div>

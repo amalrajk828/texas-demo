@@ -33,6 +33,7 @@ export default function ProductPageProductsList({
               product={product}
               category={category}
               imageFit={imageFit}
+              dark
               href={resolveCardHref ? resolveCardHref(product.slug) : undefined}
             />
           ))}
