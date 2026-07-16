@@ -1,6 +1,6 @@
 import Link from "next/link";
 import Image from "next/image";
-import { Mail, Phone, MapPin, LayoutGrid } from "lucide-react";
+import { Mail, Phone, MapPin, LayoutGrid, ArrowRight } from "lucide-react";
 import { SITE_EMAIL } from "@/lib/site";
 
 const services = [

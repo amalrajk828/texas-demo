@@ -5,9 +5,26 @@ import { useState, useEffect, useRef } from "react";
 import Link from "next/link";
 import Image from "next/image";
 import { usePathname } from "next/navigation";
-import { ChevronDown, ChevronRight, Menu, X, LayoutGrid } from "lucide-react";
+import {
+  ChevronDown, Menu, ArrowRight, X,
+  Gauge, FlaskConical, Cpu,
+  Droplet, Factory, Flame, Snowflake, Zap, Droplets, Building2, Hammer,
+  BarChart3, Radio, Monitor, Tablet, Activity, Settings, Wrench, Target,
+} from "lucide-react";
+import type { LucideIcon } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
-import { SITE_EMAIL } from "@/lib/site";
+import {
+  Sheet, SheetTrigger, SheetContent, SheetTitle,
+} from "@/components/ui/sheet";
+
+/* ── Types ────────────────────────────────────────────────────────── */
+type NavChild = {
+  label: string;
+  href: string;
+  icon?: LucideIcon;
+  desc?: string;
+  highlight?: boolean;
+};
 
 type NavItem = {
   label: string;
@@ -21,12 +38,12 @@ const NAV: NavItem[] = [
   { label: "About Us", href: "/about-us/" },
   {
     label: "Services",
-    href: "/services/",
+    href: "/service/",
     children: [
-      { label: "Flow Measurement & Control System Solutions", href: "/service/flow-measurement-solutions/" },
-      { label: "Inspection & Testing", href: "/service/inspection-testing/" },
-      { label: "Industrial Process Automation Solutions", href: "/service/industrial-automation/" },
-      { label: "View all services →", href: "/services/", highlight: true },
+      { label: "Flow Measurement & Control", href: "/service/flow-measurement-solutions/", icon: Gauge,        desc: "Custody metering, flow computers, and control system upgrades" },
+      { label: "Inspection & Testing",       href: "/service/inspection-testing/",          icon: FlaskConical, desc: "NDT, mechanical testing, and ISO-certified inspection services" },
+      { label: "Industrial Automation",      href: "/service/industrial-automation/",        icon: Cpu,          desc: "PLC, SCADA, HMI, and VFD integration for industrial plants" },
+      { label: "View all services →",        href: "/service/",                              highlight: true },
     ],
   },
   {
@@ -48,58 +65,29 @@ const NAV: NavItem[] = [
     label: "Products",
     href: "/products/",
     children: [
-      { label: "Flow Meters", href: "/products/flow-meters/" },
-      { label: "Analyzers", href: "/products/analyzers/" },
-      { label: "Industrial Automation", href: "/products/industrial-automation/" },
-      { label: "Sensors", href: "/products/sensors/" },
-      { label: "PLC Systems", href: "/products/plc/" },
-      { label: "ICONICS SCADA", href: "/products/iconics/" },
-      { label: "GOT HMI Panels", href: "/products/got/" },
-      { label: "VFD / Frequency Inverters", href: "/products/frequency-inverter-vfd/" },
-      { label: "AC Servos", href: "/products/acservos/" },
-      { label: "Custody Metering Solutions", href: "/products/custody-metering-solutions/" },
-      { label: "Field Instruments", href: "/products/field-instruments/" },
-      { label: "Control Room Consoles", href: "/products/control-room-interior-and-console/" },
-      { label: "Access Flooring", href: "/products/access-flooring/" },
-      { label: "View all products →", href: "/products/", highlight: true },
+      { label: "Flow Meters",                href: "/products/flow-meters/",               icon: Gauge    },
+      { label: "Analyzers",                  href: "/products/analyzers/",                 icon: BarChart3 },
+      { label: "Industrial Automation",      href: "/products/industrial-automation/",     icon: Cpu      },
+      { label: "Sensors",                    href: "/products/sensors/",                   icon: Radio    },
+      { label: "PLC Systems",               href: "/products/plc/",                        icon: Settings },
+      { label: "ICONICS SCADA",             href: "/products/iconics/",                    icon: Monitor  },
+      { label: "GOT HMI Panels",            href: "/products/got/",                        icon: Tablet   },
+      { label: "VFD / Frequency Inverters", href: "/products/frequency-inverter-vfd/",     icon: Activity },
+      { label: "AC Servos",                 href: "/products/acservos/",                    icon: Wrench   },
+      { label: "Custody Metering",          href: "/products/custody-metering-solutions/",  icon: Target   },
+      { label: "Field Instruments",         href: "/products/field-instruments/",            icon: Settings },
+      { label: "View all products →",       href: "/products/",                              highlight: true },
     ],
   },
-  {
-    label: "Solutions",
-    href: "/partners/",
-    children: [
-      { label: "Global Network", href: "/partners/" },
-      { label: "Texaflow — Custody Metering", href: "/solutions/texaflow/" },
-      { label: "Space AI — Industrial AI", href: "/solutions/space-ai/" },
-      { label: "Mitsubishi Electric", href: "/mitsubishi-electric-factory-automation/" },
-      { label: "PLC & SCADA Integration", href: "/plc-scada-systems-integration/" },
-    ],
-  },
+  { label: "Blog", href: "/blog/" },
   { label: "Clients", href: "/clients/" },
 ];
 
-const SOCIALS = [
-  {
-    label: "LinkedIn",
-    href: "https://www.linkedin.com/company/texas-technical-service-company",
-    path: "M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6zM2 9h4v12H2z M4 6a2 2 0 1 0 0-4 2 2 0 0 0 0 4z",
-  },
-  {
-    label: "Facebook",
-    href: "https://www.facebook.com/texastechserv",
-    path: "M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z",
-  },
-  {
-    label: "Instagram",
-    href: "https://www.instagram.com/texas_technical_services",
-    path: "M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z M17.5 6.5h.01 M7.5 2h9A5.5 5.5 0 0 1 22 7.5v9A5.5 5.5 0 0 1 16.5 22h-9A5.5 5.5 0 0 1 2 16.5v-9A5.5 5.5 0 0 1 7.5 2z",
-  },
-  {
-    label: "Twitter / X",
-    href: "https://x.com/texastechserv",
-    path: "M4 4 L20 20 M20 4 L4 20",
-  },
-];
+/* ── Dropdown layout helpers ──────────────────────────────────────── */
+function getDropdownCols(label: string)  { return label === "Products" ? "grid-cols-3" : label === "Industries" ? "grid-cols-2" : "grid-cols-1"; }
+function getDropdownWidth(label: string) { return label === "Products" ? "w-[640px]"   : label === "Industries" ? "w-[480px]"    : "w-[520px]"; }
+function showDesc(label: string)         { return label === "Services"; }
+function getDropdownPos(label: string)   { return label === "Products" ? "right-0" : "left-1/2 -translate-x-1/2"; }
 
 /* ── Component ────────────────────────────────────────────────────── */
 export default function Header() {
@@ -438,75 +426,7 @@ export default function Header() {
           </div>
         </div>
 
-        {/* Social slide-in panel — desktop only */}
-        <AnimatePresence>
-          {socialOpen && (
-            <motion.div
-              initial={{ x: 280 }}
-              animate={{ x: 0 }}
-              exit={{ x: 280 }}
-              transition={{ type: "spring", stiffness: 320, damping: 32 }}
-              className="hidden lg:block fixed top-0 right-0 h-screen w-64 bg-brand-navy-mid border-l border-white/10 shadow-2xl shadow-black/50 z-60 overflow-y-auto"
-            >
-              {/* Header */}
-              <div className="flex items-center justify-between px-5 py-5 border-b border-white/10">
-                <span className="text-white/50 text-[10px] font-medium tracking-[2px] uppercase">Connect</span>
-                <button
-                  onClick={() => setSocialOpen(false)}
-                  className="w-7 h-7 rounded-full border border-white/15 flex items-center justify-center text-white/40 hover:text-white hover:border-white/30 transition-colors"
-                  aria-label="Close"
-                >
-                  <X className="w-3.5 h-3.5" />
-                </button>
-              </div>
-
-              {/* Social links */}
-              <div className="px-3 py-4 space-y-1">
-                <Link
-                  href="/social-media/"
-                  onClick={() => setSocialOpen(false)}
-                  className="flex items-center gap-3.5 px-3 py-3 rounded-xl text-white/70 hover:text-white hover:bg-white/5 transition-colors group mb-1"
-                >
-                  <span className="w-8 h-8 rounded-full border border-white/10 group-hover:border-brand-red/40 flex items-center justify-center transition-colors shrink-0">
-                    <LayoutGrid className="w-3.5 h-3.5" />
-                  </span>
-                  <span className="text-[13px] font-medium">All Platforms</span>
-                  <ChevronRight className="w-3.5 h-3.5 ml-auto text-white/30 group-hover:text-white/60" />
-                </Link>
-                <div className="border-t border-white/10 my-2" />
-                {SOCIALS.map(({ label, href, path }) => (
-                  <a
-                    key={label}
-                    href={href}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="flex items-center gap-3.5 px-3 py-3 rounded-xl text-white/50 hover:text-white hover:bg-white/5 transition-colors group"
-                  >
-                    <span className="w-8 h-8 rounded-full border border-white/10 group-hover:border-brand-red/40 flex items-center justify-center transition-colors shrink-0">
-                      <svg viewBox="0 0 24 24" className="w-3.5 h-3.5" fill="none" stroke="currentColor" strokeWidth={2} strokeLinecap="round" strokeLinejoin="round">
-                        <path d={path} />
-                      </svg>
-                    </span>
-                    <span className="text-[13px] font-medium">{label}</span>
-                  </a>
-                ))}
-              </div>
-
-              {/* Divider + contact info */}
-              <div className="border-t border-white/10 mx-3 my-1" />
-              <div className="px-5 py-4 space-y-2">
-                <a href="tel:+96566347267" className="block text-white/40 text-[12px] hover:text-brand-red transition-colors">
-                  +965 66347267
-                </a>
-                <a href={`mailto:${SITE_EMAIL}`} className="block text-white/40 text-[12px] hover:text-brand-red transition-colors">
-                  {SITE_EMAIL}
-                </a>
-              </div>
-            </motion.div>
-          )}
-        </AnimatePresence>
-
-        {/* Mobile menu */}
+        {/* Bottom accent line — visible on scroll */}
         <div
           className="absolute bottom-0 inset-x-0 h-px transition-opacity duration-300"
           style={{
