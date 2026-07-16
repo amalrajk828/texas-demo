@@ -166,7 +166,7 @@ function SubServiceCard({
     >
       <Link
         href={item.href}
-        className="group relative rounded-2xl border border-[#e8eaf0] bg-white overflow-hidden flex flex-col hover:border-[#e7212b]/25 hover:shadow-xl hover:shadow-[#e7212b]/6 transition-all duration-300 h-full"
+        className="group relative rounded-2xl border border-white/40 bg-white/25 backdrop-blur-xl overflow-hidden flex flex-col hover:border-[#e7212b]/25 hover:shadow-2xl hover:shadow-[#e7212b]/8 transition-all duration-300 h-full"
       >
         {/* Image */}
         <div className="relative aspect-[16/9] bg-[#0B0D26] overflow-hidden">
@@ -192,7 +192,7 @@ function SubServiceCard({
 
           {/* Icon + number row */}
           <div className="flex items-center justify-between mb-4">
-            <div className="w-10 h-10 rounded-xl bg-[#e7212b]/8 border border-[#e7212b]/15 flex items-center justify-center group-hover:bg-[#e7212b]/15 group-hover:border-[#e7212b]/30 transition-all duration-300">
+            <div className="w-10 h-10 rounded-xl bg-[#e7212b]/8 border border-[#e7212b]/15 backdrop-blur-sm flex items-center justify-center group-hover:bg-[#e7212b]/15 group-hover:border-[#e7212b]/30 transition-all duration-300">
               <item.Icon className="w-4.5 h-4.5 text-[#e7212b]" strokeWidth={1.8} />
             </div>
             <span className="text-[10px] font-bold text-[#e7212b]/25 tracking-[2.5px]">
@@ -204,17 +204,17 @@ function SubServiceCard({
           <div className="w-8 h-[2px] bg-[#e7212b] rounded-full mb-3 group-hover:w-12 transition-all duration-300" />
 
           {/* Title */}
-          <h3 className="text-[16px] font-bold text-[#0B0D26] leading-snug mb-3">
+          <h3 className="text-[16px] font-bold text-white leading-snug mb-3">
             {item.title}
           </h3>
 
           {/* Body */}
-          <p className="text-gray-500 text-[13.5px] leading-[1.75] flex-1">
+          <p className="text-white/80 text-[13.5px] leading-[1.75] flex-1">
             {item.body}
           </p>
 
           {/* Arrow */}
-          <div className="mt-5 pt-4 border-t border-[#e8eaf0] flex items-center gap-1.5 text-[#e7212b] text-[13px] font-semibold">
+          <div className="mt-5 pt-4 border-t border-white/40 flex items-center gap-1.5 text-[#e7212b] text-[13px] font-semibold">
             <span>Learn more</span>
             <ArrowRight className="w-3.5 h-3.5 group-hover:translate-x-1 transition-transform duration-200" />
           </div>
@@ -228,7 +228,7 @@ function SubServiceCard({
 /* ─── Main export ────────────────────────────────────────────── */
 export default function FlowSubServices() {
   return (
-    <section className="relative bg-[#f4f5f8] py-24 lg:py-32 overflow-hidden">
+    <section className="relative bg-[#0B0D26] py-24 lg:py-32 overflow-hidden">
 
       {/* Subtle top border glow */}
       <div
@@ -250,7 +250,7 @@ export default function FlowSubServices() {
             </span>
           </div>
           <div className="flex flex-col sm:flex-row sm:items-end justify-between gap-4">
-            <h2 className="text-3xl sm:text-[2.4rem] font-bold text-[#0B0D26] leading-[1.15]">
+            <h2 className="text-3xl sm:text-[2.4rem] font-bold text-white leading-[1.15]">
               Our Flow Measurement Services
             </h2>
             <Link
