@@ -81,7 +81,7 @@ export default function ControlRoomPage() {
         <div className="max-w-5xl mx-auto px-4 sm:px-6">
           <div className="rounded-2xl border border-[#E8E8F0] bg-gradient-to-br from-[#F8F9FA] to-white p-8 flex flex-col sm:flex-row items-center justify-between gap-6">
             <div>
-              <span className="text-[#F5821F] text-[10px] font-semibold tracking-[3px] uppercase">
+              <span className="text-[#e7212b] text-[10px] font-semibold tracking-[3px] uppercase">
                 Complete the Package
               </span>
               <h3 className="mt-2 text-[#1A1A2E] text-xl font-bold">

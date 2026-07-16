@@ -64,7 +64,7 @@ export default function ProductCard({
   const finalBadgeClass = badgeClassName || defaultBadgeClass;
 
   return (
-    <div className="product-card group relative bg-white border border-[#E8E8F0] border-l-4 border-l-transparent hover:border-l-[#F5821F] rounded-[12px] p-5 min-[480px]:p-[28px] shadow-[0_2px_12px_rgba(0,0,0,0.08)] transition-all duration-300 ease-in-out hover:-translate-y-1">
+    <div className="product-card group relative bg-white border border-[#E8E8F0] border-l-4 border-l-transparent hover:border-l-[#e7212b] rounded-[12px] p-5 min-[480px]:p-[28px] shadow-[0_2px_12px_rgba(0,0,0,0.08)] transition-all duration-300 ease-in-out hover:-translate-y-1">
       {/* Absolute overlay link for card clickability */}
       <Link
         href={href ?? `/portfolio/${product.slug}`}
@@ -114,7 +114,7 @@ export default function ProductCard({
                 style={{
                   width: "48px",
                   height: "48px",
-                  background: "#F5821F22",
+                  background: "#e7212b22",
                   borderRadius: "50%",
                   display: "flex",
                   alignItems: "center",
@@ -128,13 +128,13 @@ export default function ProductCard({
                     width="18"
                     height="18"
                     rx="2"
-                    stroke="#F5821F"
+                    stroke="#e7212b"
                     strokeWidth="1.5"
                   />
-                  <circle cx="8.5" cy="8.5" r="1.5" fill="#F5821F" />
+                  <circle cx="8.5" cy="8.5" r="1.5" fill="#e7212b" />
                   <path
                     d="M21 15L16 10L5 21"
-                    stroke="#F5821F"
+                    stroke="#e7212b"
                     strokeWidth="1.5"
                     strokeLinecap="round"
                   />
@@ -157,14 +157,14 @@ export default function ProductCard({
         {/* Content Area */}
         <div className="flex flex-col h-full justify-between">
           <div>
-            <span className="text-[#F5821F] text-[11px] font-bold tracking-wider uppercase">
+            <span className="text-[#e7212b] text-[11px] font-bold tracking-wider uppercase">
               {displayTag}
             </span>
             <h3 className="text-[#1A1A2E] text-[20px] font-bold leading-tight mt-1">
               {product.name}
             </h3>
             {/* Thin orange underline (3px, 40px wide) */}
-            <div className="w-10 h-[3px] bg-[#F5821F] mt-2 mb-4" />
+            <div className="w-10 h-[3px] bg-[#e7212b] mt-2 mb-4" />
             <p className="text-[#555770] text-[15px] leading-[1.7]">
               {product.description && product.description.length > 200
                 ? `${product.description.slice(0, 200).trimEnd()}…`
@@ -175,7 +175,7 @@ export default function ProductCard({
                 {product.variants.map((v) => (
                   <span
                     key={v}
-                    className="border border-[#F5821F] text-[#F5821F] rounded-[20px] px-2.5 py-0.5 text-[12px] font-semibold select-none"
+                    className="border border-[#e7212b] text-[#e7212b] rounded-[20px] px-2.5 py-0.5 text-[12px] font-semibold select-none"
                   >
                     {v}
                   </span>
