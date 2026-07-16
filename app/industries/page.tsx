@@ -185,16 +185,26 @@ export default function IndustriesPage() {
       </section>
 
       {/* INDUSTRY CARDS */}
-      <section className="bg-[#f4f5f8] py-20 lg:py-24">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6">
+      <section className="bg-[#0B0D26] relative overflow-hidden py-20 lg:py-24">
+        <div
+          className="absolute inset-0 pointer-events-none"
+          style={{
+            backgroundImage:
+              "repeating-linear-gradient(0deg,transparent,transparent 39px,rgba(255,255,255,0.05) 40px),repeating-linear-gradient(90deg,transparent,transparent 39px,rgba(255,255,255,0.05) 40px)",
+          }}
+        />
+        <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[600px] h-[400px] pointer-events-none"
+          style={{ background: "radial-gradient(circle, rgba(231,33,43,0.08) 0%, transparent 70%)" }}
+        />
+        <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6">
           <div className="flex items-center justify-between mb-10">
             <div className="flex items-center gap-3">
-              <span className="w-8 h-px bg-[#e7212b]/40" />
+              <span className="w-8 h-px bg-[#e7212b]" />
               <span className="text-[#e7212b] text-[9px] font-medium tracking-[2.5px] uppercase">
                 Our Coverage
               </span>
             </div>
-            <span className="text-gray-400 text-[12px]">8 Industries</span>
+            <span className="text-white/50 text-[12px]">8 Industries</span>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
