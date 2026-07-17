@@ -169,6 +169,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { url: `${BASE}/portfolio_group/products/control-room-interior-and-console/`, lastModified: now, changeFrequency: "monthly", priority: 0.6 },
     { url: `${BASE}/portfolio_group/products/custody-metering-solutions/`, lastModified: now, changeFrequency: "monthly", priority: 0.7 },
     { url: `${BASE}/portfolio_group/products/field-instruments/`, lastModified: now, changeFrequency: "monthly", priority: 0.6 },
+    { url: `${BASE}/portfolio_group/products/flow-meters/`, lastModified: now, changeFrequency: "monthly", priority: 0.7 },
     { url: `${BASE}/portfolio_group/products/flare-meters/`, lastModified: now, changeFrequency: "monthly", priority: 0.6 },
     { url: `${BASE}/portfolio_group/products/gas-flow-meters/`, lastModified: now, changeFrequency: "monthly", priority: 0.6 },
     { url: `${BASE}/portfolio_group/products/got/`, lastModified: now, changeFrequency: "monthly", priority: 0.6 },
