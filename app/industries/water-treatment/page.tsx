@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Droplets } from "lucide-react";
+import { Droplets, Droplet, Shield, CheckCircle } from "lucide-react";
 import { BreadcrumbJsonLd } from "@/components/schema/BreadcrumbJsonLd";
 import IndustryHero from "@/components/industries/IndustryHero";
 import IndustryProductsGrid from "@/components/industries/IndustryProductsGrid";
@@ -128,9 +128,14 @@ export default function WaterTreatmentPage() {
         description="Advanced OEM solutions for municipal and industrial water treatment — delivering precise monitoring, quality control, and operational efficiency through flow meters, CEMS, dust analyzers, and process automation systems."
         tags={["Municipal", "Industrial", "Precise Monitoring", "Quality Control", "CEMS"]}
         stats={[
-          { num: "9",   label: "Products" },
-          { num: "3+",  label: "OEM Brands" },
+          { num: "9", label: "Products" },
+          { num: "3+", label: "OEM Brands" },
           { num: "18+", label: "Years" },
+        ]}
+        highlights={[
+          { icon: Droplet, text: "Precise Flow Control" },
+          { icon: Shield, text: "Quality Monitoring" },
+          { icon: CheckCircle, text: "Municipal & Industrial" },
         ]}
       />
       <IndustryProductsGrid

@@ -10,6 +10,7 @@ import {
   Building2,
   Layers,
   ChevronRight,
+  Globe,
 } from "lucide-react";
 import { BreadcrumbJsonLd } from "@/components/schema/BreadcrumbJsonLd";
 import IndustryCtaBanner from "@/components/industries/IndustryCtaBanner";
@@ -119,13 +120,19 @@ const stats = [
   { num: "200+", label: "Clients" },
 ];
 
+const highlights = [
+  { icon: Building2, text: "OEM Partnerships" },
+  { icon: Globe, text: "Global Reach" },
+  { icon: Layers, text: "End-to-End Solutions" },
+];
+
 export default function IndustriesPage() {
   return (
     <>
       <BreadcrumbJsonLd items={[{ name: "Home", href: "/" }, { name: "Industries", href: "/industries/" }]} />
 
       {/* HERO */}
-      <section className="bg-[#0B0D26] relative overflow-hidden">
+      <section className="bg-[#0B0D26] relative overflow-hidden min-h-[480px] flex flex-col justify-end">
         <div
           className="absolute inset-0 pointer-events-none"
           style={{
@@ -141,45 +148,58 @@ export default function IndustriesPage() {
           }}
         />
 
-        <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 py-16 lg:py-24">
-          <nav className="flex items-center gap-1.5 mb-8 text-[11px] text-white/30">
-            <Link href="/" className="hover:text-white/60 transition-colors">
+        <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 pt-24 pb-8 w-full">
+          <nav className="flex items-center gap-1.5 mb-6 text-[11px] text-white/35 flex-wrap">
+            <Link href="/" className="hover:text-white/70 transition-colors">
               Home
             </Link>
-            <ChevronRight className="w-3 h-3" />
-            <span className="text-white/55">Industries</span>
+            <ChevronRight className="w-3 h-3 shrink-0" />
+            <span className="text-white/60">Industries</span>
           </nav>
 
-          <div className="flex flex-col lg:flex-row lg:items-end gap-10 lg:gap-16">
-            <div className="flex-1 max-w-2xl">
+          <div className="flex items-start gap-8 lg:gap-10 mb-8">
+            <div className="min-w-0">
               <div className="flex items-center gap-2 mb-5">
                 <span className="w-5 h-px bg-[#e7212b]" />
                 <span className="text-[#e7212b] text-[10px] font-medium tracking-[2.5px] uppercase">
                   ISO 9001:2015 Certified · Est. 2008
                 </span>
               </div>
-              <h1 className="text-4xl sm:text-5xl lg:text-[3.5rem] font-medium text-white leading-[1.15] mb-5">
+
+              <h1 className="text-3xl sm:text-4xl lg:text-[2.75rem] font-medium text-white leading-[1.15] mb-5">
                 Industries
                 <br />
                 <em className="not-italic text-[#e7212b]">We Serve</em>
               </h1>
-              <p className="text-white/55 text-base sm:text-lg leading-relaxed">
+
+              <p className="text-white/60 text-base sm:text-lg leading-relaxed max-w-xl">
                 Precision OEM solutions across the world&apos;s most demanding
                 industrial sectors — from oil &amp; gas to water treatment.
               </p>
             </div>
 
-            <div className="flex flex-row lg:flex-col gap-3 shrink-0">
-              {stats.map((s) => (
+            <div className="hidden lg:flex flex-col gap-3 shrink-0 w-[240px] ml-auto">
+              {highlights.map((h) => (
                 <div
-                  key={s.label}
-                  className="bg-white/[0.04] border border-white/[0.08] hover:border-[#e7212b]/30 rounded-xl px-5 py-4 text-center min-w-[88px] transition-colors duration-200"
+                  key={h.text}
+                  className="flex items-center gap-3 bg-white/[0.08] border border-white/[0.12] backdrop-blur-sm rounded-xl px-4 py-3"
                 >
-                  <p className="text-2xl font-medium text-[#e7212b]">{s.num}</p>
-                  <p className="text-[10px] text-white/30 mt-1 tracking-wide">{s.label}</p>
+                  <h.icon className="w-5 h-5 text-[#e7212b] shrink-0" strokeWidth={1.5} />
+                  <span className="text-white/70 text-[13px] leading-snug">{h.text}</span>
                 </div>
               ))}
             </div>
+          </div>
+        </div>
+
+        <div className="relative z-10 bg-white/[0.06] backdrop-blur-xl border-t border-white/[0.10]">
+          <div className="max-w-7xl mx-auto grid grid-cols-3 divide-x divide-white/[0.08]">
+            {stats.map((s) => (
+              <div key={s.label} className="px-6 py-5 text-center">
+                <p className="text-2xl font-medium text-[#e7212b]">{s.num}</p>
+                <p className="text-[11px] text-white/40 tracking-wide mt-1">{s.label}</p>
+              </div>
+            ))}
           </div>
         </div>
       </section>

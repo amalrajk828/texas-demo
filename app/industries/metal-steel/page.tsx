@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Layers } from "lucide-react";
+import { Layers, Shield, CheckCircle, Gauge } from "lucide-react";
 import { BreadcrumbJsonLd } from "@/components/schema/BreadcrumbJsonLd";
 import IndustryHero from "@/components/industries/IndustryHero";
 import IndustryProductsGrid from "@/components/industries/IndustryProductsGrid";
@@ -86,9 +86,14 @@ export default function MetalSteelPage() {
         description="Cutting-edge OEM solutions engineered for the metal and steel industry — delivering CEMS, dust monitoring, and gas analysis to enhance efficiency, quality control, and emissions compliance across the production chain."
         tags={["Emissions Monitoring", "Dust Control", "Process Gases", "CEMS", "Quality Control"]}
         stats={[
-          { num: "4",   label: "Products" },
-          { num: "1+",  label: "OEM Brand" },
+          { num: "4", label: "Products" },
+          { num: "1+", label: "OEM Brand" },
           { num: "18+", label: "Years" },
+        ]}
+        highlights={[
+          { icon: Gauge, text: "Dust Control" },
+          { icon: Shield, text: "Process Gas Analysis" },
+          { icon: CheckCircle, text: "Quality Assurance" },
         ]}
       />
       <IndustryProductsGrid

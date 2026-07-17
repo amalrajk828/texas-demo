@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Zap } from "lucide-react";
+import { Zap, Activity, Shield, TrendingUp } from "lucide-react";
 import { BreadcrumbJsonLd } from "@/components/schema/BreadcrumbJsonLd";
 import IndustryHero from "@/components/industries/IndustryHero";
 import IndustryProductsGrid from "@/components/industries/IndustryProductsGrid";
@@ -147,6 +147,11 @@ export default function PowerPlantPage() {
           { num: "11", label: "Products" },
           { num: "5+", label: "OEM Brands" },
           { num: "18+", label: "Years" },
+        ]}
+        highlights={[
+          { icon: Activity, text: "Fuel Metering" },
+          { icon: Shield, text: "EPA Compliance" },
+          { icon: TrendingUp, text: "Grid Integration" },
         ]}
       />
       <IndustryProductsGrid

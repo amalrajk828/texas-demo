@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Factory } from "lucide-react";
+import { Factory, Gauge, Shield, Thermometer } from "lucide-react";
 import { BreadcrumbJsonLd } from "@/components/schema/BreadcrumbJsonLd";
 import IndustryHero from "@/components/industries/IndustryHero";
 import IndustryProductsGrid from "@/components/industries/IndustryProductsGrid";
@@ -169,6 +169,11 @@ export default function RefineryPage() {
           { num: "13", label: "Products" },
           { num: "5+", label: "OEM Brands" },
           { num: "18+", label: "Years" },
+        ]}
+        highlights={[
+          { icon: Gauge, text: "Fiscal Metering" },
+          { icon: Shield, text: "Emissions Monitoring" },
+          { icon: Thermometer, text: "Process Control" },
         ]}
       />
       <IndustryProductsGrid

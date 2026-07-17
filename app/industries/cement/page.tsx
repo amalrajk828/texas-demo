@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Building2 } from "lucide-react";
+import { Building2, Flame, Shield, CheckCircle } from "lucide-react";
 import { BreadcrumbJsonLd } from "@/components/schema/BreadcrumbJsonLd";
 import IndustryHero from "@/components/industries/IndustryHero";
 import IndustryProductsGrid from "@/components/industries/IndustryProductsGrid";
@@ -77,9 +77,14 @@ export default function CementPage() {
         description="Advanced OEM analyzer and CEMS solutions for cement manufacturing — optimising emissions monitoring, quality control, and operational excellence from raw mill to kiln and clinker cooler."
         tags={["Emissions Monitoring", "Kiln Control", "Quality Control", "CEMS", "BAT Compliance"]}
         stats={[
-          { num: "3",   label: "Products" },
-          { num: "1+",  label: "OEM Brand" },
+          { num: "3", label: "Products" },
+          { num: "1+", label: "OEM Brand" },
           { num: "18+", label: "Years" },
+        ]}
+        highlights={[
+          { icon: Flame, text: "Kiln Control" },
+          { icon: Shield, text: "BAT Compliance" },
+          { icon: CheckCircle, text: "Emissions Monitoring" },
         ]}
       />
       <IndustryProductsGrid

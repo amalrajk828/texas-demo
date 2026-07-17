@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Flame } from "lucide-react";
+import { Flame, Gauge, Shield, Timer } from "lucide-react";
 import { BreadcrumbJsonLd } from "@/components/schema/BreadcrumbJsonLd";
 import IndustryHero from "@/components/industries/IndustryHero";
 import IndustryProductsGrid from "@/components/industries/IndustryProductsGrid";
@@ -173,6 +173,11 @@ export default function OilGasPage() {
           { num: "13", label: "Products" },
           { num: "5+", label: "OEM Brands" },
           { num: "18+", label: "Years" },
+        ]}
+        highlights={[
+          { icon: Gauge, text: "Custody Transfer Metering" },
+          { icon: Shield, text: "CEMS Compliance" },
+          { icon: Timer, text: "Upstream-to-Downstream" },
         ]}
       />
       <IndustryProductsGrid

@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { FlaskConical } from "lucide-react";
+import { FlaskConical, Atom, Shield, TrendingUp } from "lucide-react";
 import { BreadcrumbJsonLd } from "@/components/schema/BreadcrumbJsonLd";
 import IndustryHero from "@/components/industries/IndustryHero";
 import IndustryProductsGrid from "@/components/industries/IndustryProductsGrid";
@@ -168,6 +168,11 @@ export default function PetrochemicalsPage() {
           { num: "13", label: "Products" },
           { num: "5+", label: "OEM Brands" },
           { num: "18+", label: "Years" },
+        ]}
+        highlights={[
+          { icon: Atom, text: "Process Automation" },
+          { icon: Shield, text: "CEMS Compliance" },
+          { icon: TrendingUp, text: "Flow Solutions" },
         ]}
       />
       <IndustryProductsGrid

@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Snowflake } from "lucide-react";
+import { Snowflake, Thermometer, Shield, Clock } from "lucide-react";
 import { BreadcrumbJsonLd } from "@/components/schema/BreadcrumbJsonLd";
 import IndustryHero from "@/components/industries/IndustryHero";
 import IndustryProductsGrid from "@/components/industries/IndustryProductsGrid";
@@ -151,6 +151,11 @@ export default function LngPage() {
           { num: "11", label: "Products" },
           { num: "5+", label: "OEM Brands" },
           { num: "18+", label: "Years" },
+        ]}
+        highlights={[
+          { icon: Thermometer, text: "Cryogenic Metering" },
+          { icon: Shield, text: "BOG Measurement" },
+          { icon: Clock, text: "Safety Systems" },
         ]}
       />
       <IndustryProductsGrid
