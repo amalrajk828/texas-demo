@@ -59,6 +59,14 @@ export default function FlowMetersPage() {
         eyebrow="Flow Measurement"
         title="Flow Meters"
         subtitle="Liquid, Gas & Flare Flow Measurement Solutions"
+        featured
+        backgroundImage="/ultrasonic_gas_flow_meter.jpg"
+        imagePosition="center top"
+        stats={[
+          { num: "3", label: "Technologies" },
+          { num: "6+", label: "OEM Brands" },
+          { num: "18+", label: "Years" },
+        ]}
       />
       <ProductPageIntro
         title="Flow Measurement Solutions"

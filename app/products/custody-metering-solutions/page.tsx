@@ -47,6 +47,14 @@ export default function CustodyMeteringSolutionsPage() {
         eyebrow="SICK · OMNI · Custody Transfer"
         title="Custody Metering Solutions"
         subtitle="Flow Metering Skids, Flow Computers & Control Systems"
+        featured
+        backgroundImage="/flow_metering_skid.jpg"
+        imagePosition="center 40%"
+        stats={[
+          { num: "±0.1%", label: "Accuracy" },
+          { num: "100%", label: "Compliance" },
+          { num: "24/7", label: "Reliability" },
+        ]}
       />
       <ProductPageIntro
         title="Custody Metering Solutions"

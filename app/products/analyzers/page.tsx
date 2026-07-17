@@ -57,6 +57,14 @@ export default function AnalyzersPage() {
         eyebrow="SICK · Gas Analysis"
         title="Analyzers"
         subtitle="Emissions Monitoring, Dust & Gas Analysis Solutions"
+        featured
+        backgroundImage="/extractive_gas_analyzer.jpg"
+        imagePosition="center 30%"
+        stats={[
+          { num: "7", label: "Categories" },
+          { num: "3", label: "OEM Brands" },
+          { num: "18+", label: "Years" },
+        ]}
       />
       <ProductPageIntro
         title="Analytical Instrumentation"

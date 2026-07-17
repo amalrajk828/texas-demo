@@ -51,6 +51,8 @@ export default function ControlRoomPage() {
         eyebrow="Control Room Interior & Console"
         title="Control Room Interior & Console"
         subtitle="Ergonomic control room furniture and console systems for critical operations — from Pyrotech Workspace Solutions."
+        featured
+        backgroundImage="/Dynamic-XE_Banner-Image-scaled.jpg"
         stats={[
           { num: "18+", label: "Years Experience" },
           { num: "60,000+", label: "Installations" },

@@ -43,6 +43,14 @@ export default function FieldInstrumentsPage() {
         eyebrow="SICK · Field Instruments"
         title="Field Instruments"
         subtitle="Pressure, temperature, level, and flow field instruments for industrial processes — engineered for precision and reliability."
+        featured
+        backgroundImage="/images/field_instruments/temperature_sensors/1.png"
+        imagePosition="center center"
+        stats={[
+          { num: "5", label: "Variables" },
+          { num: "SICK", label: "OEM Brand" },
+          { num: "18+", label: "Years" },
+        ]}
       />
       <ProductPageIntro
         title="SICK Field Instruments Range"

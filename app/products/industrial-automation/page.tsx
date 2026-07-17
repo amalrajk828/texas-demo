@@ -42,6 +42,14 @@ export default function IndustrialAutomationPage() {
         eyebrow="Industrial Automation"
         title="Industrial Automation"
         subtitle="End-to-end automation solutions for process plants and manufacturing facilities — from PLCs and control panels to industrial networks and command centres."
+        featured
+        backgroundImage="/refinery.jpg"
+        imagePosition="center center"
+        stats={[
+          { num: "5+", label: "Solution Areas" },
+          { num: "6+", label: "OEM Brands" },
+          { num: "18+", label: "Years" },
+        ]}
       />
       <ProductPageIntro
         title="Comprehensive Industrial Automation Portfolio"
