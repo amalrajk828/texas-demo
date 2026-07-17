@@ -19,7 +19,7 @@ export const PARTNERS: Partner[] = [
     product: "Automation Solutions",
     description:
       "Authorized system integrator & distributor for the complete Mitsubishi automation portfolio — MELSEC PLCs, GOT HMIs, AC servos, and ICONICS SCADA.",
-    href: "/mitsubishi-electric-factory-automation/",
+    href: "/solutions/mitsubishi-electric/",
   },
   {
     slug: "endress-hauser",
@@ -209,7 +209,7 @@ export const STRATEGIC_PARTNERS: Partner[] = [
     product: "Raised Access Flooring",
     description:
       "India's most trusted raised access floor manufacturer — high-density calcium sulphate panels for data centers, control rooms, NOCs, and clean rooms with GREENGUARD Gold certification.",
-    href: "/products/access-flooring/",
+    href: "/solutions/pws-floor-solutions/",
   },
 ];
 

@@ -1,4 +1,5 @@
-import type { Metadata } from "next";
+"use client";
+
 import Link from "next/link";
 import {
   ArrowRight,
@@ -13,42 +14,6 @@ import {
   Cable,
   CheckCircle2,
 } from "lucide-react";
-import { BreadcrumbJsonLd } from "@/components/schema/BreadcrumbJsonLd";
-import { ServiceJsonLd } from "@/components/schema/ServiceJsonLd";
-import { FaqPageJsonLd } from "@/components/schema/FaqPageJsonLd";
-
-export const metadata: Metadata = {
-  title: "PWS Floor Solutions — Raised Access Flooring Systems | TTS",
-  description:
-    "PWS Floor Solutions is India's most trusted raised access floor manufacturer — high-density calcium sulphate panels for data centers, control rooms, NOCs, labs, and clean rooms. GREENGUARD Gold, RoHS, EN 12825, CISCA certified.",
-  alternates: { canonical: "/products/access-flooring/" },
-  openGraph: {
-    title: "PWS Floor Solutions — Raised Access Flooring",
-    description:
-      "Premium raised access flooring systems for data centers, control rooms, and clean rooms. 15+ years experience, 250+ projects, 1M+ sq.ft. installed.",
-    url: "/products/access-flooring/",
-  },
-  twitter: {
-    card: "summary_large_image",
-    title: "PWS Floor Solutions | Texas Technical Services",
-    description:
-      "Raised access flooring systems — high load capacity, vibration control, anti-static, fire resistant, and GREENGUARD Gold certified.",
-  },
-  keywords: [
-    "raised access flooring Kuwait",
-    "data center flooring GCC",
-    "control room flooring system",
-    "anti-static flooring industrial",
-    "PWS floor solutions Kuwait",
-    "calcium sulphate raised floor",
-    "EN 12825 access floor",
-    "CISCA raised flooring",
-    "server room flooring Kuwait",
-    "NOC flooring GCC",
-    "clean room flooring",
-    "GREENGUARD flooring",
-  ],
-};
 
 const categories = [
   {
@@ -120,32 +85,9 @@ const faqItems = [
   },
 ];
 
-export default function AccessFlooringPage() {
+export default function PwsFloorSolutions() {
   return (
     <>
-      <BreadcrumbJsonLd
-        items={[
-          { name: "Home", href: "/" },
-          { name: "Products", href: "/products/" },
-          { name: "Access Flooring", href: "/products/access-flooring/" },
-        ]}
-      />
-      <ServiceJsonLd
-        name="PWS Floor Solutions — Raised Access Flooring"
-        description="Premium raised access flooring systems for data centers, control rooms, NOCs, labs, and clean rooms. Calcium sulphate panels, anti-static, fire resistant, GREENGUARD Gold certified. Authorized dealer in Kuwait and the GCC."
-        url="/products/access-flooring/"
-        serviceType="Raised Access Flooring"
-        areaServed={[
-          "Kuwait",
-          "United Arab Emirates",
-          "Saudi Arabia",
-          "Bahrain",
-          "Qatar",
-          "Oman",
-        ]}
-      />
-      <FaqPageJsonLd items={faqItems} />
-
       {/* ══ HERO ════════════════════════════════════════════ */}
       <section className="relative bg-[#0B0D26] overflow-hidden pt-32 pb-20 lg:pb-28">
         <div
@@ -176,11 +118,11 @@ export default function AccessFlooringPage() {
               Home
             </Link>
             <ChevronRight className="w-3 h-3 shrink-0" />
-            <Link href="/products/" className="hover:text-white/70 transition-colors">
-              Products
+            <Link href="/solutions/" className="hover:text-white/70 transition-colors">
+              Solutions
             </Link>
             <ChevronRight className="w-3 h-3 shrink-0" />
-            <span className="text-white/60">Access Flooring</span>
+            <span className="text-white/60">PWS Floor Solutions</span>
           </nav>
 
           <div className="max-w-3xl">

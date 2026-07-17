@@ -1,44 +1,7 @@
-import type { Metadata } from "next";
+"use client";
+
 import Link from "next/link";
 import { ArrowRight, ChevronRight, Cpu, Monitor, Zap, Server } from "lucide-react";
-import { BreadcrumbJsonLd } from "@/components/schema/BreadcrumbJsonLd";
-import { ServiceJsonLd } from "@/components/schema/ServiceJsonLd";
-import { ProductJsonLd } from "@/components/schema/ProductJsonLd";
-import { FaqPageJsonLd } from "@/components/schema/FaqPageJsonLd";
-
-export const metadata: Metadata = {
-  title: "Mitsubishi Electric Factory Automation Solutions | Authorized Integrator",
-  description:
-    "Texas Technical Services is a Mitsubishi system integrator in Kuwait, UAE, and Dubai — offering Mitsubishi electric factory automation, PLC Mitsubishi electric, HMI, servo drives, and Iconics SCADA Mitsubishi integration for oil & gas and industrial sectors across the GCC.",
-  alternates: {
-    canonical: "/mitsubishi-electric-factory-automation/",
-  },
-  openGraph: {
-    title: "Mitsubishi Electric Factory Automation Solutions | Texas Technical Services",
-    description:
-      "Authorized Mitsubishi electric factory automation integrator — PLC Mitsubishi electric, HMI, AC servo systems, frequency inverters, and Iconics SCADA Mitsubishi solutions for industrial automation across Kuwait and the GCC.",
-    url: "/mitsubishi-electric-factory-automation/",
-  },
-  twitter: {
-    card: "summary_large_image",
-    title: "Mitsubishi Electric Factory Automation | Texas Technical Services",
-    description:
-      "Mitsubishi PLC, HMI, servo, VFD, and Iconics SCADA integration — Texas Technical Services, Kuwait & GCC.",
-  },
-  keywords: [
-    "Mitsubishi electric factory automation Kuwait",
-    "Mitsubishi electric factory automation UAE",
-    "Mitsubishi system integrator Dubai",
-    "Mitsubishi electric factory automation",
-    "Mitsubishi factory automation",
-    "Mitsubishi electric industrial automation",
-    "Mitsubishi system integrator",
-    "Mitsubishi automation products",
-    "PLC Mitsubishi electric",
-    "Iconics SCADA Mitsubishi",
-    "Mitsubishi PLC Kuwait",
-  ],
-};
 
 const solutions = [
   {
@@ -103,25 +66,9 @@ const faqItems = [
   },
 ];
 
-export default function MitsubishiPage() {
+export default function MitsubishiContent() {
   return (
     <>
-      <BreadcrumbJsonLd items={[{ name: "Home", href: "/" }, { name: "Mitsubishi Electric Factory Automation", href: "/mitsubishi-electric-factory-automation/" }]} />
-      <ServiceJsonLd
-        name="Mitsubishi Electric Factory Automation Solutions"
-        description="Authorized Mitsubishi Electric system integrator in Kuwait and the GCC — PLC, servo drives, VFDs, SCADA, HMI, and CNC solutions for industrial automation across oil & gas, manufacturing, and process industries."
-        url="/mitsubishi-electric-factory-automation/"
-        serviceType="Industrial Automation"
-        areaServed={["Kuwait", "United Arab Emirates", "Saudi Arabia", "Bahrain", "Qatar", "Oman"]}
-      />
-      <ProductJsonLd
-        name="Mitsubishi Electric Factory Automation"
-        description="Complete Mitsubishi Electric automation portfolio — PLC (MELSEC iQ-R/F/L/Q series), servo drives (MR-J5), VFDs (FR-E800/F800), SCADA (ICONICS), HMI (GOT2000), and CNC solutions — as an authorized system integrator in Kuwait and the GCC."
-        url="/mitsubishi-electric-factory-automation/"
-        brand="Mitsubishi Electric"
-        category="Industrial Automation"
-      />
-      <FaqPageJsonLd items={faqItems} />
       {/* ══ HERO ════════════════════════════════════════════ */}
       <section className="relative bg-[#0B0D26] overflow-hidden pt-32 pb-20 lg:pb-28">
         <div
@@ -150,7 +97,7 @@ export default function MitsubishiPage() {
           <nav className="flex items-center gap-1.5 mb-8 text-[11px] text-white/35 flex-wrap">
             <Link href="/" className="hover:text-white/70 transition-colors">Home</Link>
             <ChevronRight className="w-3 h-3 shrink-0" />
-            <Link href="/products/" className="hover:text-white/70 transition-colors">Products</Link>
+            <Link href="/solutions/" className="hover:text-white/70 transition-colors">Solutions</Link>
             <ChevronRight className="w-3 h-3 shrink-0" />
             <span className="text-white/60">Mitsubishi Electric</span>
           </nav>
@@ -321,7 +268,7 @@ export default function MitsubishiPage() {
                 </div>
 
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
-                  {capabilities.map((cap, i) => (
+                  {capabilities.map((cap) => (
                     <div key={cap} className="flex items-start gap-2.5">
                       <span className="w-1.5 h-1.5 rounded-full bg-[#e7212b] shrink-0 mt-1.5" />
                       <span className="text-white/55 text-[13px] leading-snug">{cap}</span>

@@ -32,14 +32,15 @@ export default function sitemap(): MetadataRoute.Sitemap {
     // Landing pages
     { url: `${BASE}/industrial-automation-services-dubai/`, lastModified: now, changeFrequency: "monthly", priority: 0.7 },
     { url: `${BASE}/industrial-automation-services-kuwait/`, lastModified: now, changeFrequency: "monthly", priority: 0.7 },
-    { url: `${BASE}/mitsubishi-electric-factory-automation/`, lastModified: now, changeFrequency: "monthly", priority: 0.7 },
     { url: `${BASE}/plc-scada-systems-integration/`, lastModified: now, changeFrequency: "monthly", priority: 0.7 },
 
     // Global network & proprietary solutions
     { url: `${BASE}/partners/`, lastModified: now, changeFrequency: "monthly", priority: 0.7 },
+    { url: `${BASE}/solutions/`, lastModified: now, changeFrequency: "monthly", priority: 0.8 },
     { url: `${BASE}/solutions/texaflow/`, lastModified: now, changeFrequency: "monthly", priority: 0.7 },
     { url: `${BASE}/solutions/space-ai/`, lastModified: now, changeFrequency: "monthly", priority: 0.7 },
-    { url: `${BASE}/products/access-flooring/`, lastModified: now, changeFrequency: "monthly", priority: 0.6 },
+    { url: `${BASE}/solutions/mitsubishi-electric/`, lastModified: now, changeFrequency: "monthly", priority: 0.7 },
+    { url: `${BASE}/solutions/pws-floor-solutions/`, lastModified: now, changeFrequency: "monthly", priority: 0.6 },
 
     // Product category pages
     { url: `${BASE}/products/flow-meters/`, lastModified: now, changeFrequency: "monthly", priority: 0.7 },

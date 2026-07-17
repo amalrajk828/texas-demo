@@ -7,6 +7,7 @@ const services = [
   { label: "Flow Measurement Solutions", href: "/service/flow-measurement-solutions/" },
   { label: "Industrial Automation", href: "/service/industrial-automation/" },
   { label: "Inspection & Testing", href: "/service/inspection-testing/" },
+  { label: "PLC & SCADA Integration", href: "/plc-scada-systems-integration/" },
   { label: "Flow Meter Calibration", href: "/service/flow-meter-calibration/" },
   { label: "Plant Automation", href: "/service/plant-automation/" },
 ];
@@ -26,8 +27,8 @@ const solutions = [
   { label: "Global Network", href: "/partners/" },
   { label: "Texaflow Custody Metering", href: "/solutions/texaflow/" },
   { label: "Space AI Industrial AI", href: "/solutions/space-ai/" },
-  { label: "Mitsubishi Electric", href: "/mitsubishi-electric-factory-automation/" },
-  { label: "PLC & SCADA Integration", href: "/plc-scada-systems-integration/" },
+  { label: "Mitsubishi Electric", href: "/solutions/mitsubishi-electric/" },
+  { label: "PWS Floor Solutions", href: "/solutions/pws-floor-solutions/" },
 ];
 
 const socials = [
