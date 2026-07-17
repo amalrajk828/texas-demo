@@ -39,12 +39,12 @@ const NAV: NavItem[] = [
   { label: "About Us", href: "/about-us/" },
   {
     label: "Services",
-    href: "/service/",
+    href: "/services/",
     children: [
       { label: "Flow Measurement & Control", href: "/service/flow-measurement-solutions/", icon: Gauge,        desc: "Custody metering, flow computers, and control system upgrades" },
       { label: "Inspection & Testing",       href: "/service/inspection-testing/",          icon: FlaskConical, desc: "NDT, mechanical testing, and ISO-certified inspection services" },
       { label: "Industrial Automation",      href: "/service/industrial-automation/",        icon: Cpu,          desc: "PLC, SCADA, HMI, and VFD integration for industrial plants" },
-      { label: "View all services →",        href: "/service/",                              highlight: true },
+      { label: "View all services →",        href: "/services/",                              highlight: true },
     ],
   },
   {
@@ -158,7 +158,7 @@ const getMenuData = (label: string) => {
 
 const getMenuViewAll = (label: string) => {
   if (label === "Products") return { label: "View all products →", link: "/products/" };
-  if (label === "Services") return { label: "View all services →", link: "/service/" };
+  if (label === "Services") return { label: "View all services →", link: "/services/" };
   if (label === "Industries") return { label: "View all industries →", link: "/industries/" };
   return undefined;
 };
