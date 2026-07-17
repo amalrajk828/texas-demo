@@ -122,9 +122,9 @@ export default function Footer() {
             </div>
               <Link
                 href="/social-media/"
-                className="text-white/30 text-[11px] hover:text-white transition-colors flex items-center gap-1.5 mt-3"
+                className="text-white/50 text-[13px] font-medium hover:text-white transition-colors flex items-center gap-2 mt-3"
               >
-                <LayoutGrid className="w-3 h-3" />
+                <LayoutGrid className="w-4 h-4" />
                 View all platforms
               </Link>
           </div>
@@ -214,17 +214,18 @@ export default function Footer() {
 
           {/* Solutions */}
           <div>
-            <h3 className="text-white/40 text-[9px] font-medium tracking-[2px] uppercase mb-5">
+            <h3 className="flex items-center gap-2 text-white/70 text-[12px] font-bold tracking-[2.5px] uppercase mb-6">
+              <span className="w-[2px] h-4 rounded-full bg-[#E53935]" />
               Solutions
             </h3>
-            <ul className="space-y-2">
+            <ul className="space-y-2.5">
               {solutions.map((s) => (
                 <li key={s.href}>
                   <Link
                     href={s.href}
-                    className="text-white/40 text-[12px] hover:text-white transition-colors flex items-center gap-1.5 group"
+                    className="text-white/45 text-[14px] font-medium hover:text-white transition-colors flex items-center gap-2 group"
                   >
-                    <span className="w-1 h-1 rounded-full bg-brand-red/40 group-hover:bg-brand-red transition-colors shrink-0" />
+                    <span className="w-1.5 h-1.5 rounded-full bg-[#E53935]/30 group-hover:bg-[#E53935] transition-colors shrink-0" />
                     {s.label}
                   </Link>
                 </li>

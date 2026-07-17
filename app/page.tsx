@@ -8,6 +8,7 @@ import PartnersTicker from "@/components/PartnersTicker";
 import TickerBanner from "@/components/TickerBanner";
 import GreyWhatWeDo from "@/components/t-grey/GreyWhatWeDo";
 import GreyServices from "@/components/t-grey/GreyServices";
+import GreySolutions from "@/components/t-grey/GreySolutions";
 import GreyVision from "@/components/t-grey/GreyVision";
 import GreyTeam from "@/components/t-grey/GreyTeam";
 import GreyAbout from "@/components/t-grey/GreyAbout";
@@ -138,18 +139,22 @@ export default function HomePage() {
         </ThemeWrapper>
 
         <ThemeWrapper vars={LIGHT_GREY_VARS}>
+          <GreySolutions />
+        </ThemeWrapper>
+
+        <ThemeWrapper vars={DARK_GREY_VARS}>
           <GreyVision />
         </ThemeWrapper>
 
-        <ThemeWrapper vars={DARK_GREY_VARS}>
+        <ThemeWrapper vars={LIGHT_GREY_VARS}>
           <GreyTeam />
         </ThemeWrapper>
 
-        <ThemeWrapper vars={LIGHT_GREY_VARS}>
+        <ThemeWrapper vars={DARK_GREY_VARS}>
           <GreyAbout />
         </ThemeWrapper>
 
-        <ThemeWrapper vars={DARK_GREY_VARS}>
+        <ThemeWrapper vars={LIGHT_GREY_VARS}>
           <GreyCta />
         </ThemeWrapper>
       </main>
