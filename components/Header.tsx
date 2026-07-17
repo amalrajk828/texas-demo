@@ -10,7 +10,7 @@ import {
   Gauge, FlaskConical, Cpu,
   Droplet, Factory, Flame, Snowflake, Zap, Droplets, Building2, Hammer,
   BarChart3, Radio, Monitor, Tablet, Activity, Settings, Wrench, Target,
-  Wifi,
+  Wifi, LayoutGrid,
 } from "lucide-react";
 import type { LucideIcon } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
@@ -34,6 +34,12 @@ type NavItem = {
 };
 
 /* ── Navigation Data ──────────────────────────────────────────────── */
+const SOCIALS = [
+  { label: "LinkedIn", href: "https://www.linkedin.com/company/texas-technical-service-company", path: "M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6zM2 9h4v12H2z M4 6a2 2 0 1 0 0-4 2 2 0 0 0 0 4z" },
+  { label: "Facebook", href: "https://www.facebook.com/texastechserv", path: "M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z" },
+  { label: "Instagram", href: "https://www.instagram.com/texas_technical_services", path: "M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z M17.5 6.5h.01 M7.5 2h9A5.5 5.5 0 0 1 22 7.5v9A5.5 5.5 0 0 1 16.5 22h-9A5.5 5.5 0 0 1 2 16.5v-9A5.5 5.5 0 0 1 7.5 2z" },
+];
+
 const NAV: NavItem[] = [
   { label: "Home", href: "/" },
   { label: "About Us", href: "/about-us/" },
@@ -375,6 +381,7 @@ export default function Header() {
   const [mobileOpen, setMobileOpen]   = useState(false);
   const [scrolled, setScrolled]       = useState(false);
   const [mobileExpanded, setMobileExpanded] = useState<string | null>(null);
+  const [socialOpen, setSocialOpen]         = useState(false);
   const ref = useRef<HTMLDivElement>(null);
   const timeoutRef = useRef<NodeJS.Timeout | null>(null);
 
@@ -415,12 +422,16 @@ export default function Header() {
   useEffect(() => {
     setMobileOpen(false);
     setOpen(null);
+    setSocialOpen(false);
   }, [pathname]);
 
   /* Click outside */
   useEffect(() => {
     const handler = (e: MouseEvent) => {
-      if (ref.current && !ref.current.contains(e.target as Node)) setOpen(null);
+      if (ref.current && !ref.current.contains(e.target as Node)) {
+        setOpen(null);
+        setSocialOpen(false);
+      }
     };
     document.addEventListener("mousedown", handler);
     return () => document.removeEventListener("mousedown", handler);
@@ -551,6 +562,58 @@ export default function Header() {
               >
                 Contact Us
               </Link>
+
+              {/* Social media dropdown — desktop */}
+              <div className="hidden lg:block relative">
+                <button
+                  onClick={() => setSocialOpen(!socialOpen)}
+                  className="w-10 h-10 rounded-lg border border-white/15 flex items-center justify-center text-white/50 hover:text-white hover:border-white/30 transition-colors"
+                  aria-label="Social media"
+                >
+                  <LayoutGrid className="w-4 h-4" />
+                </button>
+
+                {socialOpen && (
+                  <div className="absolute top-full right-0 mt-2 w-56 bg-[#0B0D26] border border-white/10 rounded-xl shadow-2xl shadow-black/50 overflow-hidden z-50">
+                    <div className="px-4 py-2.5 border-b border-white/10">
+                      <span className="text-white/40 text-[10px] font-medium tracking-[2px] uppercase">
+                        Connect
+                      </span>
+                    </div>
+                    <div className="p-2">
+                      {SOCIALS.map((s) => (
+                        <a
+                          key={s.label}
+                          href={s.href}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="flex items-center gap-3 px-3 py-2.5 rounded-lg text-white/55 hover:text-white hover:bg-white/5 transition-colors"
+                        >
+                          <span className="w-7 h-7 rounded-full border border-white/10 flex items-center justify-center shrink-0">
+                            <svg viewBox="0 0 24 24" className="w-3 h-3" fill="none" stroke="currentColor" strokeWidth={2} strokeLinecap="round" strokeLinejoin="round">
+                              <path d={s.path} />
+                            </svg>
+                          </span>
+                          <span className="text-[13px] font-medium">{s.label}</span>
+                          <svg className="w-3 h-3 ml-auto text-white/25" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={2} strokeLinecap="round" strokeLinejoin="round">
+                            <path d="M9 18l6-6-6-6" />
+                          </svg>
+                        </a>
+                      ))}
+                    </div>
+                    <div className="border-t border-white/10 p-2">
+                      <Link
+                        href="/social-media/"
+                        onClick={() => setSocialOpen(false)}
+                        className="flex items-center justify-center gap-1.5 px-3 py-2.5 rounded-lg text-[13px] font-semibold text-[#E53935] hover:bg-white/5 transition-colors"
+                      >
+                        View all platforms
+                        <ArrowRight className="w-3.5 h-3.5" />
+                      </Link>
+                    </div>
+                  </div>
+                )}
+              </div>
 
               {/* ── Mobile Menu (shadcn Sheet) ─────────────────── */}
               <Sheet open={mobileOpen} onOpenChange={(v) => setMobileOpen(v as boolean)}>
