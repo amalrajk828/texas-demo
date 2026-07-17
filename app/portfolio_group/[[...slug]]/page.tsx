@@ -13,6 +13,7 @@ import {
   getFilter,
   getPageNumber,
   buildBaseSlug,
+  industryMatches,
   type CategoryLink,
 } from "@/lib/portfolio-group";
 import PortfolioGroupHero from "@/components/portfolio_group/PortfolioGroupHero";
@@ -53,9 +54,7 @@ export default async function PortfolioGroupPage({
     const industryLinks: CategoryLink[] = Object.entries(INDUSTRY_TITLES).map(
       ([key, title]) => {
         const count = products.filter((p) =>
-          (p.industries ?? []).some((ind) =>
-            key.split("-").some((part) => ind.toLowerCase().includes(part)),
-          ),
+          (p.industries ?? []).some((ind) => industryMatches(ind, key)),
         ).length;
         return {
           href: `/portfolio_group/industries/${key}/`,
