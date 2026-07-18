@@ -19,7 +19,7 @@ import {
 } from "lucide-react";
 
 export const metadata: Metadata = {
-  title: "Products",
+  title: "Flow Meters, Analyzers, PLCs & Industrial Automation Products",
   description:
     "Explore Texas Technical Services' full product range — flow meters, analyzers, sensors, PLCs, ICONICS SCADA, HMI panels, VFDs, AC servos, custody metering, and industrial automation solutions.",
   alternates: { canonical: "/products/" },
@@ -222,7 +222,7 @@ export default function ProductsPage() {
             </span>
           </div>
           <h1 className="text-4xl sm:text-5xl font-medium text-white leading-tight mb-4">
-            Products
+            Flow Meters, PLCs & Automation Products
           </h1>
           <p className="text-white/45 text-base max-w-xl">
             Flow measurement, industrial automation, and process instrumentation solutions from world-class

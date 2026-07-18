@@ -13,7 +13,7 @@ export function OrganizationJsonLd({
   url?: string;
   logo?: string;
   sameAs?: string[];
-  telephone?: string;
+  telephone?: string | string[];
   email?: string;
   address?: {
     streetAddress: string;

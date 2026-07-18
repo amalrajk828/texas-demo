@@ -1,5 +1,14 @@
 import { SITE_URL } from "@/lib/site";
 
+const CITIES = new Set([
+  "Dubai",
+  "Abu Dhabi",
+  "Sharjah",
+  "Ahmadi",
+  "Fahaheel",
+  "Deira",
+]);
+
 export function ServiceJsonLd({
   name,
   description,
@@ -29,7 +38,7 @@ export function ServiceJsonLd({
   if (serviceType) jsonLd.serviceType = serviceType;
   if (areaServed) {
     jsonLd.areaServed = areaServed.map((a) => ({
-      "@type": "Country",
+      "@type": CITIES.has(a) ? "City" : "Country",
       name: a,
     }));
   }

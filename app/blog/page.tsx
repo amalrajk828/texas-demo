@@ -18,7 +18,7 @@ export const metadata: Metadata = {
   title: "Industrial Engineering Knowledge Hub | Texas Technical Services",
   description: "Access expert technical guides and reference articles on Custody Transfer Metering, SCADA systems, and CEMS compliance for heavy industries.",
   alternates: {
-    canonical: "https://texastechserv.com/blog/",
+    canonical: "/blog/",
   },
   openGraph: {
     title: "Industrial Engineering Knowledge Hub | Texas Technical Services",

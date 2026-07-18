@@ -4,6 +4,7 @@ import Link from "next/link";
 import { Gauge, ClipboardCheck, Cpu } from "lucide-react";
 import { BreadcrumbJsonLd } from "@/components/schema/BreadcrumbJsonLd";
 import { ReviewJsonLd, AggregateRatingJsonLd } from "@/components/schema/ReviewJsonLd";
+import { OrganizationJsonLd } from "@/components/schema/OrganizationJsonLd";
 
 export const metadata: Metadata = {
   title: "About Us | Industrial Automation Company in Kuwait & GCC",
@@ -214,6 +215,22 @@ export default function AboutPage() {
         ]}
       />
       <AggregateRatingJsonLd ratingValue={4.8} reviewCount={49} />
+      <OrganizationJsonLd
+        logo="/logo.svg"
+        telephone={["+965 97243755", "+965 66347267", "+971 569553747", "+971 567793973"]}
+        email="sales@texastechserv.com"
+        sameAs={[
+          "https://www.linkedin.com/company/texas-technical-service-company",
+          "https://www.facebook.com/texastechserv",
+          "https://www.instagram.com/texas_technical_services",
+          "https://x.com/texastechserv",
+        ]}
+        address={{
+          streetAddress: "Munira Tower Office No. 30, 9th Floor – Building No.6702, Block 7 – Makkah Street",
+          addressLocality: "Fahaheel",
+          addressCountry: "KW",
+        }}
+      />
 
       {/* ═══ COMMITMENT ═══════════════════════════════════════════ */}
       <section className="py-16 lg:py-24 bg-[#F8F8F8]">
