@@ -155,7 +155,7 @@ export default function MitsubishiContent() {
                 className="bg-white/[0.03] border border-white/[0.07] rounded-xl px-5 py-4 text-center"
               >
                 <p className="text-2xl font-bold text-[#e7212b] leading-none">{stat.num}</p>
-                <p className="text-[12px] text-white/30 mt-1.5 tracking-wide">{stat.label}</p>
+                <p className="text-[13px] text-white/30 mt-1.5 tracking-wide">{stat.label}</p>
               </div>
             ))}
           </div>
@@ -201,7 +201,7 @@ export default function MitsubishiContent() {
                 href={sol.href}
                 className="group relative rounded-2xl border border-[#e8eaf0] bg-white overflow-hidden flex flex-col hover:border-[#e7212b]/25 hover:shadow-xl hover:shadow-[#e7212b]/6 transition-all duration-300"
               >
-                <div className="flex flex-col flex-1 p-6">
+                <div className="flex flex-col flex-1 p-7">
                   <div className="flex items-center justify-between mb-4">
                     <div className="w-10 h-10 rounded-xl bg-[#e7212b]/8 border border-[#e7212b]/15 flex items-center justify-center group-hover:bg-[#e7212b]/15 group-hover:border-[#e7212b]/30 transition-all duration-300">
                       <sol.Icon className="w-4.5 h-4.5 text-[#e7212b]" strokeWidth={1.8} />
@@ -211,13 +211,13 @@ export default function MitsubishiContent() {
                     </span>
                   </div>
                   <div className="w-8 h-[2px] bg-[#e7212b] rounded-full mb-3 group-hover:w-12 transition-all duration-300" />
-                  <h3 className="text-[17px] font-bold text-[#0B0D26] leading-snug mb-3">
+                  <h3 className="text-lg font-bold text-[#0B0D26] leading-snug mb-3">
                     {sol.title}
                   </h3>
-                  <p className="text-gray-500 text-[13.5px] leading-[1.75] flex-1">
+                  <p className="text-gray-500 text-[15px] leading-[1.75] flex-1">
                     {sol.body}
                   </p>
-                  <div className="mt-5 pt-4 border-t border-[#e8eaf0] flex items-center gap-1.5 text-[#e7212b] text-[13px] font-semibold">
+                  <div className="mt-5 pt-4 border-t border-[#e8eaf0] flex items-center gap-1.5 text-[#e7212b] text-[14px] font-semibold">
                     <span>Learn more</span>
                     <ArrowRight className="w-3.5 h-3.5 group-hover:translate-x-1 transition-transform duration-200" />
                   </div>
@@ -260,18 +260,18 @@ export default function MitsubishiContent() {
                   <h3 className="text-white font-bold text-[22px] leading-snug mb-3">
                     Our Mitsubishi Ecosystem Expertise
                   </h3>
-                  <p className="text-white/40 text-[14px] leading-[1.8]">
+                  <p className="text-white/40 text-[15px] leading-[1.8]">
                     From Mitsubishi electric factory automation PLCs to Iconics SCADA
                     integration — our team delivers complete Mitsubishi electric industrial
                     automation solutions for clients across Kuwait and the GCC.
                   </p>
                 </div>
 
-                <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
+                <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                   {capabilities.map((cap) => (
                     <div key={cap} className="flex items-start gap-2.5">
                       <span className="w-1.5 h-1.5 rounded-full bg-[#e7212b] shrink-0 mt-1.5" />
-                      <span className="text-white/55 text-[13px] leading-snug">{cap}</span>
+                      <span className="text-white/55 text-[14px] leading-snug">{cap}</span>
                     </div>
                   ))}
                 </div>
@@ -290,10 +290,10 @@ export default function MitsubishiContent() {
               How We Deliver
             </span>
           </div>
-          <h2 className="text-3xl sm:text-[2rem] font-bold text-[#0B0D26] leading-[1.15] mb-4">
+          <h2 className="text-3xl sm:text-[2.5rem] font-bold text-[#0B0D26] leading-[1.15] mb-4">
             Our Engagement Process
           </h2>
-          <p className="text-gray-500 text-[14px] mb-12 max-w-2xl leading-relaxed">
+          <p className="text-gray-500 text-[15px] mb-12 max-w-2xl leading-relaxed">
             From product selection through to commissioning and after-sales support, we follow a
             structured delivery methodology that ensures quality, compliance, and optimal performance
             for every Mitsubishi automation project.
@@ -328,8 +328,8 @@ export default function MitsubishiContent() {
                 <span className="text-[2.5rem] font-bold text-[#e7212b]/10 leading-none">
                   {item.step}
                 </span>
-                <h3 className="text-[15px] font-bold text-[#0B0D26] mt-1 mb-2">{item.title}</h3>
-                <p className="text-gray-500 text-[13px] leading-relaxed">{item.desc}</p>
+                <h3 className="text-lg font-bold text-[#0B0D26] mt-1 mb-2">{item.title}</h3>
+                <p className="text-gray-500 text-[15px] leading-relaxed">{item.desc}</p>
               </div>
             ))}
           </div>
@@ -345,10 +345,10 @@ export default function MitsubishiContent() {
               Industries
             </span>
           </div>
-          <h2 className="text-3xl sm:text-[2rem] font-bold text-[#0B0D26] leading-[1.15] mb-4">
+          <h2 className="text-3xl sm:text-[2.5rem] font-bold text-[#0B0D26] leading-[1.15] mb-4">
             Industries Using Mitsubishi Automation
           </h2>
-          <p className="text-gray-500 text-[14px] mb-10 max-w-2xl leading-relaxed">
+          <p className="text-gray-500 text-[15px] mb-10 max-w-2xl leading-relaxed">
             Mitsubishi Electric factory automation solutions power critical operations across
             diverse industries — from oil and gas pipeline control to high-speed manufacturing
             and packaging lines.
@@ -366,8 +366,8 @@ export default function MitsubishiContent() {
                 key={ind.name}
                 className="rounded-xl bg-white border border-[#e8eaf0] p-5 hover:border-[#e7212b]/20 hover:shadow-md transition-all duration-300"
               >
-                <h3 className="text-[#0B0D26] font-bold text-sm mb-1">{ind.name}</h3>
-                <p className="text-gray-400 text-[12px] leading-snug">{ind.desc}</p>
+                <h3 className="text-[#0B0D26] font-bold text-lg mb-1">{ind.name}</h3>
+                <p className="text-gray-400 text-[14px] leading-snug">{ind.desc}</p>
               </div>
             ))}
           </div>
@@ -394,7 +394,7 @@ export default function MitsubishiContent() {
                 className="group bg-white border border-[#e8eaf0] rounded-2xl overflow-hidden transition-all duration-200 open:border-[#e7212b]/25 open:shadow-lg"
               >
                 <summary className="flex items-center justify-between p-5 lg:p-6 cursor-pointer list-none">
-                  <span className="text-[15px] font-semibold text-[#0B0D26] pr-4 leading-snug">
+                  <span className="text-lg font-semibold text-[#0B0D26] pr-4 leading-snug">
                     {item.q}
                   </span>
                   <span className="w-6 h-6 rounded-full bg-[#e7212b]/10 border border-[#e7212b]/20 flex items-center justify-center shrink-0 group-open:bg-[#e7212b] group-open:border-[#e7212b] transition-all duration-200">
@@ -402,7 +402,7 @@ export default function MitsubishiContent() {
                   </span>
                 </summary>
                 <div className="px-5 lg:px-6 pb-5 lg:pb-6 pt-0">
-                  <p className="text-gray-500 text-[14px] leading-[1.8]">{item.a}</p>
+                  <p className="text-gray-500 text-[16px] leading-[1.8]">{item.a}</p>
                 </div>
               </details>
             ))}

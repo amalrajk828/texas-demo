@@ -137,7 +137,7 @@ export default function PartnersPage() {
             {PARTNERS.map((p) => (
               <Link
                 key={p.name}
-                href={p.slug === "mitsubishi-electric" ? p.href : `/partners/${p.slug}/`}
+                href={p.href.startsWith("/solutions/") ? p.href : `/partners/${p.slug}/`}
                 className="group relative flex flex-col gap-5 rounded-xl border border-gray-100 bg-white p-7 transition-all duration-300 hover:border-[#e7212b]/30 hover:shadow-xl hover:shadow-[#e7212b]/5 hover:-translate-y-1"
               >
                 <div className="flex flex-col gap-3">
@@ -201,7 +201,7 @@ export default function PartnersPage() {
             {STRATEGIC_PARTNERS.map((p) => (
               <Link
                 key={p.name}
-                href={`/partners/${p.slug}/`}
+                href={p.href.startsWith("/solutions/") ? p.href : `/partners/${p.slug}/`}
                 className="group relative flex flex-col gap-4 rounded-xl border-2 border-[#e7212b]/20 bg-white p-7 transition-all duration-300 hover:border-[#e7212b]/50 hover:shadow-2xl hover:shadow-[#e7212b]/10 hover:-translate-y-1"
               >
                 <div className="flex flex-col gap-3">

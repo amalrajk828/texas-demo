@@ -13,7 +13,7 @@ function Track() {
           className="shrink-0 flex items-center justify-center mx-10 sm:mx-14"
         >
           <Link
-            href={p.slug === "mitsubishi-electric" ? p.href : `/partners/${p.slug}/`}
+            href={p.href.startsWith("/solutions/") ? p.href : `/partners/${p.slug}/`}
             className="block"
             aria-label={p.name}
           >
