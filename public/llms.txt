@@ -1,0 +1,59 @@
+# Texas Technical Services
+
+> Industrial automation, flow measurement, PLC SCADA integration, and inspection & testing company headquartered in Fahaheel, Kuwait with operations in Dubai, UAE. Serving oil & gas, refinery, petrochemical, power plant, LNG, water treatment, cement, and metal/steel industries across the GCC since 2008.
+
+Texas Technical Services (TTS) provides engineering, commissioning, calibration, and maintenance services for custody transfer metering systems, process control automation, non-destructive testing (NDT), mechanical testing, and industrial plant automation. The company is an authorized channel partner for Mitsubishi Electric Factory Automation and distributes flow meters, analyzers, PLCs, VFDs, sensors, and field instruments from leading manufacturers.
+
+## Services
+
+- [Flow Measurement Solutions](https://texastechserv.com/service/flow-measurement-solutions/): Custody transfer metering, flow computer configuration, calibration, validation, and metering system upgrades compliant with API MPMS, AGA, ISO, and OIML standards.
+- [Industrial Automation](https://texastechserv.com/service/industrial-automation/): PLC SCADA systems integration, DCS, process control, and plant-wide automation engineering for oil & gas and petrochemical facilities.
+- [Inspection & Testing](https://texastechserv.com/service/inspection-testing/): Comprehensive NDT, mechanical testing, and specialized inspection services for pipelines, pressure vessels, storage tanks, and structural steel.
+- [Non-Destructive Testing (NDT)](https://texastechserv.com/service/non-destructive-testing-ndt/): Ultrasonic, radiographic, magnetic particle, liquid penetrant, eddy current, phased array, TOFD, and visual inspection services.
+- [Mechanical Testing](https://texastechserv.com/service/mechanical-testing/): Tensile, bend, impact, hardness, fracture, macro/micro, pullout, and air permeability testing for materials and welds.
+- [Plant Automation](https://texastechserv.com/service/plant-automation/): Electrical and instrumentation works, new installation design, commissioning, and after-sales support.
+- [Metering Expert Services](https://texastechserv.com/service/metering-expert-services/): Specialized consultancy for fiscal metering systems, custody transfer audits, uncertainty calculations, and compliance audits.
+- [Constructions](https://texastechserv.com/service/constructions/): Steel fabrication, structural erection, handrail fabrication, and suspended access equipment installation.
+
+## Industries
+
+- [Oil & Gas](https://texastechserv.com/industries/oil-gas/): Upstream production, midstream pipelines, and downstream processing automation and metering.
+- [Refinery](https://texastechserv.com/industries/refinery/): Process control, custody transfer, and plant automation for refinery operations.
+- [Petrochemicals](https://texastechserv.com/industries/petrochemicals/): Automation, metering, and inspection for petrochemical production facilities.
+- [Power Plant](https://texastechserv.com/industries/power-plant/): Instrumentation, control systems, and testing for power generation facilities.
+- [LNG](https://texastechserv.com/industries/lng/): Custody transfer measurement and automation for liquefied natural gas terminals and transport.
+- [Water Treatment](https://texastechserv.com/industries/water-treatment/): Flow measurement and process control for water and wastewater treatment plants.
+- [Cement](https://texastechserv.com/industries/cement/): Instrumentation, automation, and inspection for cement manufacturing.
+- [Metal & Steel](https://texastechserv.com/industries/metal-steel/): Process control and testing services for metal and steel production.
+
+## Products
+
+- [Flow Meters](https://texastechserv.com/products/flow-meters/): Coriolis, ultrasonic, turbine, vortex, and electromagnetic flow meters for liquid, gas, and flare applications.
+- [Analyzers](https://texastechserv.com/products/analyzers/): Gas analyzers, dust analyzers, and continuous emission monitoring systems (CEMS).
+- [PLC & Automation](https://texastechserv.com/products/industrial-automation/): Mitsubishi Electric PLCs, PACs, HMIs, VFDs, AC servo drives, and SCADA software.
+- [Custody Metering Solutions](https://texastechserv.com/products/custody-metering-solutions/): Complete custody transfer metering skids and systems for fiscal measurement applications.
+- [Field Instruments](https://texastechserv.com/products/field-instruments/): Pressure, temperature, level, and flow transmitters for process industries.
+- [Sensors](https://texastechserv.com/products/sensors/): Industrial sensors for position, proximity, vision, and process monitoring applications.
+
+## Solutions
+
+- [TexaFlow](https://texastechserv.com/solutions/texaflow/): Proprietary flow measurement and metering management platform.
+- [Space AI](https://texastechserv.com/solutions/space-ai/): AI-powered industrial monitoring and predictive maintenance solutions.
+- [Mitsubishi Electric](https://texastechserv.com/solutions/mitsubishi-electric/): Authorized Mitsubishi Electric Factory Automation solutions and integration.
+
+## Blog
+
+- [Custody Transfer Metering Guide](https://texastechserv.com/blog/custody-transfer-metering-guide/): Complete guide to custody transfer standards, accuracy, and metering skid components.
+- [SCADA System Upgrade Guide](https://texastechserv.com/blog/scada-system-upgrade-guide/): Planning and executing SCADA system upgrades for industrial facilities.
+- [CEMS Guide](https://texastechserv.com/blog/cems-continuous-emissions-monitoring-guide/): Continuous emission monitoring systems — components, calibration, and compliance.
+- [Liquid vs Gas Flow Meters](https://texastechserv.com/blog/liquid-vs-gas-flow-meters/): Comparison of flow meter technologies for liquid and gas applications.
+- [PLC vs PAC for Oil & Gas](https://texastechserv.com/blog/plc-vs-pac-oil-gas-automation/): Comparing PLC and PAC architectures for process automation.
+- [NDT Methods Complete Guide](https://texastechserv.com/blog/ndt-methods-complete-guide/): Overview of all non-destructive testing methods and their industrial applications.
+- [Phased Array Ultrasonic Testing](https://texastechserv.com/blog/phased-array-ultrasonic-testing-guide/): PAUT principles, advantages, and applications in weld and corrosion inspection.
+- [VFD Industrial Applications](https://texastechserv.com/blog/vfd-frequency-inverter-industrial-applications/): Variable frequency drive selection, application, and energy savings in industry.
+
+## Optional
+
+- [About Texas Technical Services](https://texastechserv.com/about-us/): Company history, team, and operational overview.
+- [Partners](https://texastechserv.com/partners/): Global technology partners and principal representations.
+- [Contact](https://texastechserv.com/contacts/): Office locations in Fahaheel (Kuwait) and Dubai (UAE), phone numbers, and email.
