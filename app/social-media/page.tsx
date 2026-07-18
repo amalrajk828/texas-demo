@@ -2,7 +2,20 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { ChevronRight, ArrowRight, ExternalLink } from "lucide-react";
 import { BreadcrumbJsonLd } from "@/components/schema/BreadcrumbJsonLd";
+import { OrganizationJsonLd } from "@/components/schema/OrganizationJsonLd";
 import { SITE_EMAIL } from "@/lib/site";
+
+const SOCIAL_URLS = [
+  "https://www.linkedin.com/company/texas-technical-service-company",
+  "https://www.facebook.com/texastechserv",
+  "https://www.instagram.com/texas_technical_services",
+  "https://x.com/texastechserv",
+  "https://medium.com/@texastechserv",
+  "https://www.quora.com/profile/Texas-Technical-Service-Company-W-L-L",
+  "https://wellfound.com/company/texas-technical-service-company-w-l-l",
+  "https://thegulfdirectory.com/businesses/texas-technical-service-company-wll",
+  "https://angloinfo.com/kuwait-city/directory/work/services/texas-technical-service-company-wll-6a3f737560dbd",
+];
 
 export const metadata: Metadata = {
   title: "Social Media Platforms | Connect With Us",
@@ -14,12 +27,14 @@ export const metadata: Metadata = {
     description:
       "Follow Texas Technical Service Company on LinkedIn, Facebook, Instagram, X, and industry directories for automation and flow measurement expertise.",
     url: "/social-media/",
+    images: [{ url: "/og-default.png", width: 1200, height: 630 }],
   },
   twitter: {
     card: "summary_large_image",
     title: "Social Media Platforms | Texas Technical Services",
     description:
       "Connect with Texas Technical Service Company on LinkedIn, Facebook, Instagram, X, and more.",
+    images: ["/og-default.png"],
   },
   keywords: [
     "Texas Technical Services social media",
@@ -131,6 +146,18 @@ export default function SocialMediaPage() {
   return (
     <>
       <BreadcrumbJsonLd items={[{ name: "Home", href: "/" }, { name: "Social Media", href: "/social-media/" }]} />
+      <OrganizationJsonLd
+        name="Texas Technical Service Company W.L.L."
+        url="https://texastechserv.com"
+        sameAs={SOCIAL_URLS}
+        telephone="+96566347267"
+        email="sales@texastechserv.com"
+        address={{
+          streetAddress: "Fahaheel",
+          addressLocality: "Kuwait City",
+          addressCountry: "KW",
+        }}
+      />
 
       {/* ══ HERO ══════════════════════════════════════════════ */}
       <section className="bg-[#0B0D26] relative overflow-hidden">

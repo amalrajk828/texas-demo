@@ -3,27 +3,35 @@ import Image from "next/image";
 import Link from "next/link";
 import { ChevronRight } from "lucide-react";
 import { BreadcrumbJsonLd } from "@/components/schema/BreadcrumbJsonLd";
+import { ServiceJsonLd } from "@/components/schema/ServiceJsonLd";
 import { PARTNERS, STRATEGIC_PARTNERS } from "@/lib/partners";
 
 export const metadata: Metadata = {
-  title: "Global Network | 16+ Authorized Partners & Vendors",
+  title: "Global Network | 15+ Authorized Partners & Vendors",
   description:
-    "Texas Technical Services Co. is the authorized partner and distributor for 16+ world-class OEMs in Kuwait, UAE, and the GCC — covering flow measurement, industrial automation, analyzers, sensors, and SCADA.",
+    "Texas Technical Services Co. is the authorized partner and distributor for 15+ world-class OEMs in Kuwait, UAE, and the GCC — covering flow measurement, industrial automation, analyzers, sensors, and SCADA.",
   alternates: { canonical: "/partners/" },
   openGraph: {
     title: "Global Network | Texas Technical Services",
     description:
-      "16+ authorized partnerships and dealerships — Mitsubishi Electric, Endress+Hauser, SICK, Faure Herman, KEM Küppers, HMS Networks, NOVUS, OMNI, and more.",
+      "15+ authorized partnerships and dealerships — Endress+Hauser, SICK, Faure Herman, KEM Küppers, HMS Networks, NOVUS, OMNI, and more.",
     url: "/partners/",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Global Network | Texas Technical Services",
+    description:
+      "15+ authorized partnerships — Endress+Hauser, SICK, Faure Herman, KEM Küppers, HMS Networks, NOVUS, OMNI, and more OEMs across Kuwait and the GCC.",
   },
   keywords: [
     "authorized partners Kuwait",
     "industrial OEM distributor Kuwait",
-    "Mitsubishi Electric distributor Kuwait",
     "Endress Hauser distributor Kuwait",
     "Faure Herman distributor Kuwait",
     "KEM Kuppers distributor",
     "HMS Networks Kuwait",
+    "SICK sensors Kuwait",
+    "OMNI flow computer Kuwait",
     "global network industrial automation",
     "Texas Technical Services partners",
   ],
@@ -37,6 +45,13 @@ export default function PartnersPage() {
           { name: "Home", href: "/" },
           { name: "Global Network", href: "/partners/" },
         ]}
+      />
+      <ServiceJsonLd
+        name="Global Network — Authorized Partnerships & Distribution"
+        description="Texas Technical Services is the authorized partner and distributor for 15+ world-class OEMs across Kuwait, UAE, and the GCC — covering flow measurement, industrial automation, analyzers, sensors, and SCADA."
+        url="/partners/"
+        serviceType="OEM Partnership & Distribution"
+        areaServed={["Kuwait", "United Arab Emirates", "Saudi Arabia", "Bahrain", "Qatar", "Oman"]}
       />
 
       {/* ── HERO ─────────────────────────────────────────────── */}
@@ -129,7 +144,7 @@ export default function PartnersPage() {
             </h2>
             <p className="mt-3 text-gray-500 text-[14px] max-w-2xl mx-auto">
               From precision flow meters to industrial AI — we connect the
-              world&apos;s leading OEMs to your operations.
+              world&apos;s leading OEMs to your operations across Kuwait and the GCC.
             </p>
           </div>
 

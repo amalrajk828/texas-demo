@@ -1,5 +1,6 @@
 import type { MetadataRoute } from "next";
 import { getAllProductSlugs } from "@/lib/products";
+import { getAllPartnerSlugs } from "@/lib/partners";
 import { blogArticles } from "@/lib/blogArticles";
 import { SITE_URL } from "@/lib/site";
 
@@ -202,5 +203,13 @@ export default function sitemap(): MetadataRoute.Sitemap {
     priority: 0.6,
   }));
 
-  return [...staticRoutes, ...productRoutes, ...blogRoutes];
+  // Dynamic partner detail routes
+  const partnerRoutes: MetadataRoute.Sitemap = getAllPartnerSlugs().map((slug) => ({
+    url: `${BASE}/partners/${slug}/`,
+    lastModified: now,
+    changeFrequency: "monthly" as const,
+    priority: 0.6,
+  }));
+
+  return [...staticRoutes, ...productRoutes, ...blogRoutes, ...partnerRoutes];
 }

@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { BreadcrumbJsonLd } from "@/components/schema/BreadcrumbJsonLd";
 import { ServiceJsonLd } from "@/components/schema/ServiceJsonLd";
+import { ProductJsonLd } from "@/components/schema/ProductJsonLd";
 import { FaqPageJsonLd } from "@/components/schema/FaqPageJsonLd";
 import SpaceAiContent from "@/components/solutions/SpaceAiContent";
 
@@ -75,6 +76,13 @@ export default function SpaceAIPage() {
         url="/solutions/space-ai/"
         serviceType="Industrial Artificial Intelligence"
         areaServed={["Kuwait", "United Arab Emirates", "Saudi Arabia", "Bahrain", "Qatar", "Oman"]}
+      />
+      <ProductJsonLd
+        name="Space AI — Industrial AI Platform"
+        description="Next-generation AI and machine learning platform for industry — predictive maintenance, process optimization with virtual metrology, and smart monitoring with ESG & carbon tracking."
+        url="/solutions/space-ai/"
+        brand="Space AI"
+        category="Industrial AI & Machine Learning"
       />
       <FaqPageJsonLd items={faqItems} />
       <SpaceAiContent />

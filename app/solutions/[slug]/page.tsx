@@ -9,7 +9,7 @@ import PwsFloorSolutions from "@/components/solutions/PwsFloorSolutions";
 
 const SLUGS = ["mitsubishi-electric", "pws-floor-solutions"];
 
-const META: Record<string, { title: string; description: string; canonical: string; ogTitle: string; ogDesc: string; serviceName: string; serviceDesc: string; productDesc: string; faqItems: { q: string; a: string }[] }> = {
+const META: Record<string, { title: string; description: string; canonical: string; ogTitle: string; ogDesc: string; twitterTitle: string; twitterDesc: string; keywords: string[]; serviceName: string; serviceDesc: string; productDesc: string; faqItems: { q: string; a: string }[] }> = {
   "mitsubishi-electric": {
     title: "Mitsubishi Electric Factory Automation Solutions | Authorized Integrator",
     description:
@@ -17,6 +17,18 @@ const META: Record<string, { title: string; description: string; canonical: stri
     canonical: "/solutions/mitsubishi-electric/",
     ogTitle: "Mitsubishi Electric Factory Automation Solutions | Texas Technical Services",
     ogDesc: "Authorized Mitsubishi electric factory automation integrator — PLC, HMI, AC servo systems, frequency inverters, and Iconics SCADA solutions for industrial automation across Kuwait and the GCC.",
+    twitterTitle: "Mitsubishi Electric Factory Automation | TTS Kuwait",
+    twitterDesc: "Authorized Mitsubishi system integrator — MELSEC PLCs, GOT HMIs, MR-J servo drives, FREQROL VFDs, and ICONICS SCADA for industrial automation across Kuwait and the GCC.",
+    keywords: [
+      "Mitsubishi Electric Kuwait",
+      "Mitsubishi PLC programming Kuwait",
+      "Mitsubishi HMI GOT Kuwait",
+      "Mitsubishi servo drives Kuwait",
+      "Mitsubishi VFD FREQROL Kuwait",
+      "Iconics SCADA Mitsubishi",
+      "factory automation Kuwait",
+      "Mitsubishi system integrator GCC",
+    ],
     serviceName: "Mitsubishi Electric Factory Automation Solutions",
     serviceDesc: "Authorized Mitsubishi Electric system integrator in Kuwait and the GCC — PLC, servo drives, VFDs, SCADA, HMI, and CNC solutions for industrial automation across oil & gas, manufacturing, and process industries.",
     productDesc: "Complete Mitsubishi Electric automation portfolio — PLC (MELSEC iQ-R/F/L/Q series), servo drives (MR-J5), VFDs (FR-E800/F800), SCADA (ICONICS), HMI (GOT2000), and CNC solutions — as an authorized system integrator in Kuwait and the GCC.",
@@ -46,6 +58,17 @@ const META: Record<string, { title: string; description: string; canonical: stri
     canonical: "/solutions/pws-floor-solutions/",
     ogTitle: "PWS Floor Solutions — Raised Access Flooring",
     ogDesc: "Premium raised access flooring systems for data centers, control rooms, and clean rooms. 15+ years experience, 250+ projects, 1M+ sq.ft. installed.",
+    twitterTitle: "PWS Floor Solutions — Raised Access Flooring | TTS",
+    twitterDesc: "Premium raised access flooring for data centers, control rooms, NOCs, and clean rooms. GREENGUARD Gold, EN 12825 certified. Authorized dealer in Kuwait and the GCC.",
+    keywords: [
+      "raised access flooring Kuwait",
+      "PWS Floor Solutions Kuwait",
+      "data center flooring Kuwait",
+      "control room raised floor GCC",
+      "calcium sulphate floor panels",
+      "GREENGUARD Gold flooring",
+      "raised floor data center",
+    ],
     serviceName: "PWS Floor Solutions — Raised Access Flooring",
     serviceDesc: "Premium raised access flooring systems for data centers, control rooms, NOCs, labs, and clean rooms. Calcium sulphate panels, anti-static, fire resistant, GREENGUARD Gold certified. Authorized dealer in Kuwait and the GCC.",
     productDesc: "PWS Floor Solutions raised access flooring — high-density calcium sulphate panels with steel or aluminum encapsulation for data centers, control rooms, NOCs, and clean rooms. GREENGUARD Gold, EN 12825, CISCA certified.",
@@ -84,6 +107,8 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
     description: meta.description,
     alternates: { canonical: meta.canonical },
     openGraph: { title: meta.ogTitle, description: meta.ogDesc, url: meta.canonical },
+    twitter: { card: "summary_large_image", title: meta.twitterTitle, description: meta.twitterDesc },
+    keywords: meta.keywords,
   };
 }
 
@@ -115,6 +140,15 @@ export default async function SolutionDetailPage({ params }: { params: Promise<{
           url={meta.canonical}
           brand="Mitsubishi Electric"
           category="Industrial Automation"
+        />
+      )}
+      {slug === "pws-floor-solutions" && (
+        <ProductJsonLd
+          name="PWS Floor Solutions Raised Access Flooring"
+          description={meta.productDesc}
+          url={meta.canonical}
+          brand="PWS Floor Solutions"
+          category="Raised Access Flooring"
         />
       )}
       <FaqPageJsonLd items={meta.faqItems} />

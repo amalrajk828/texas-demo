@@ -3,6 +3,7 @@ import { notFound } from "next/navigation";
 import { SITE_URL } from "@/lib/site";
 import { getAllPartnerSlugs, getPartnerBySlug } from "@/lib/partners";
 import { BreadcrumbJsonLd } from "@/components/schema/BreadcrumbJsonLd";
+import { ServiceJsonLd } from "@/components/schema/ServiceJsonLd";
 import PartnerHero from "@/components/partners/PartnerHero";
 import PartnerContent from "@/components/partners/PartnerContent";
 
@@ -24,6 +25,19 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
       description: partner.description,
       url: `/partners/${partner.slug}/`,
     },
+    twitter: {
+      card: "summary_large_image",
+      title: `${partner.name} — ${partner.product} | TTS`,
+      description: partner.description,
+    },
+    keywords: [
+      `${partner.name} Kuwait`,
+      `${partner.name} distributor`,
+      `${partner.product} Kuwait`,
+      `${partner.relationship} Kuwait`,
+      `${partner.name} GCC`,
+      "Texas Technical Services partner",
+    ],
   };
 }
 
@@ -40,6 +54,13 @@ export default async function PartnerDetailPage({ params }: { params: Promise<{ 
           { name: "Global Network", href: "/partners/" },
           { name: partner.name, href: `/partners/${partner.slug}/` },
         ]}
+      />
+      <ServiceJsonLd
+        name={`${partner.name} — ${partner.product}`}
+        description={partner.description}
+        url={`/partners/${partner.slug}/`}
+        serviceType={partner.relationship}
+        areaServed={["Kuwait", "United Arab Emirates", "Saudi Arabia", "Bahrain", "Qatar", "Oman"]}
       />
 
       <PartnerHero

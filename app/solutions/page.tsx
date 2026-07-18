@@ -15,6 +15,21 @@ export const metadata: Metadata = {
       "Proprietary platforms and strategic partnerships — Texaflow, Space AI, Mitsubishi Electric, PWS Floor Solutions.",
     url: "/solutions/",
   },
+  twitter: {
+    card: "summary_large_image",
+    title: "Solutions | Texas Technical Services",
+    description:
+      "Proprietary platforms and strategic partnerships — Texaflow custody metering, Space AI industrial AI, Mitsubishi Electric automation, PWS raised access flooring.",
+  },
+  keywords: [
+    "industrial solutions Kuwait",
+    "Texaflow custody metering",
+    "Space AI industrial AI",
+    "Mitsubishi Electric automation Kuwait",
+    "PWS raised access flooring",
+    "proprietary industrial solutions GCC",
+    "strategic technology partnerships",
+  ],
 };
 
 const SOLUTIONS = [
