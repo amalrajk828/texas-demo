@@ -8,9 +8,11 @@ interface PartnerContentProps {
   product: string;
   description: string;
   href: string;
+  features?: string[];
+  applications?: string[];
 }
 
-export default function PartnerContent({ name, logo, product, description, href }: PartnerContentProps) {
+export default function PartnerContent({ name, logo, product, description, href, features, applications }: PartnerContentProps) {
   return (
     <section className="bg-white py-16 lg:py-20">
       <div className="max-w-7xl mx-auto px-4 sm:px-6">
@@ -30,13 +32,13 @@ export default function PartnerContent({ name, logo, product, description, href 
 
           {/* Right — Description + CTAs */}
           <div>
-            <p className="text-[11px] font-bold tracking-[3px] uppercase text-[#e7212b] mb-3">
+            <p className="text-[13px] font-bold tracking-[3px] uppercase text-[#e7212b] mb-3">
               {product}
             </p>
             <h2 className="text-[clamp(1.5rem,3vw,2rem)] font-bold text-[#181D4E] leading-snug mb-6">
               About {name}
             </h2>
-            <p className="text-gray-500 text-[14.5px] leading-[1.8] mb-8">
+            <p className="text-gray-500 text-[16px] leading-[1.8] mb-8">
               {description}
             </p>
 
@@ -44,14 +46,14 @@ export default function PartnerContent({ name, logo, product, description, href 
             <div className="flex flex-wrap gap-4">
               <Link
                 href={href}
-                className="inline-flex items-center gap-2 bg-[#e7212b] hover:bg-[#c01020] text-white text-[14px] font-medium px-7 py-3.5 rounded-xl transition-colors tracking-wide shadow-lg shadow-[#e7212b]/20"
+                className="inline-flex items-center gap-2 bg-[#e7212b] hover:bg-[#c01020] text-white text-[15px] font-medium px-7 py-3.5 rounded-xl transition-colors tracking-wide shadow-lg shadow-[#e7212b]/20"
               >
                 Explore products
                 <ArrowRight className="w-4 h-4" />
               </Link>
               <Link
                 href="/partners/"
-                className="inline-flex items-center gap-2 border border-gray-200 hover:border-[#e7212b]/30 text-gray-600 hover:text-[#e7212b] text-[14px] font-medium px-7 py-3.5 rounded-xl transition-colors"
+                className="inline-flex items-center gap-2 border border-gray-200 hover:border-[#e7212b]/30 text-gray-600 hover:text-[#e7212b] text-[15px] font-medium px-7 py-3.5 rounded-xl transition-colors"
               >
                 <ChevronRight className="w-4 h-4 rotate-180" />
                 All partners
@@ -59,6 +61,57 @@ export default function PartnerContent({ name, logo, product, description, href 
             </div>
           </div>
         </div>
+
+        {/* Features & Applications — only shown when data is provided */}
+        {(features && features.length > 0) || (applications && applications.length > 0) ? (
+          <div className="mt-16 grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-16">
+            {/* Features */}
+            {features && features.length > 0 && (
+              <div>
+                <div className="flex items-center gap-2.5 mb-4">
+                  <span className="w-5 h-px bg-[#e7212b]" />
+                  <span className="text-[#e7212b] text-[11px] font-semibold tracking-[3px] uppercase">
+                    Key Features
+                  </span>
+                </div>
+                <h3 className="text-lg font-bold text-[#181D4E] leading-snug mb-5">
+                  {name} Product Range
+                </h3>
+                <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
+                  {features.map((feature) => (
+                    <div key={feature} className="flex items-start gap-2.5">
+                      <span className="w-1.5 h-1.5 rounded-full bg-[#e7212b] shrink-0 mt-2" />
+                      <span className="text-gray-600 text-[15px] leading-snug">{feature}</span>
+                    </div>
+                  ))}
+                </div>
+              </div>
+            )}
+
+            {/* Applications */}
+            {applications && applications.length > 0 && (
+              <div>
+                <div className="flex items-center gap-2.5 mb-4">
+                  <span className="w-5 h-px bg-[#e7212b]" />
+                  <span className="text-[#e7212b] text-[11px] font-semibold tracking-[3px] uppercase">
+                    Applications
+                  </span>
+                </div>
+                <h3 className="text-lg font-bold text-[#181D4E] leading-snug mb-5">
+                  Industries We Serve
+                </h3>
+                <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
+                  {applications.map((app) => (
+                    <div key={app} className="flex items-start gap-2.5">
+                      <span className="w-1.5 h-1.5 rounded-full bg-[#e7212b] shrink-0 mt-2" />
+                      <span className="text-gray-600 text-[15px] leading-snug">{app}</span>
+                    </div>
+                  ))}
+                </div>
+              </div>
+            )}
+          </div>
+        ) : null}
       </div>
     </section>
   );

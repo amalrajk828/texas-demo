@@ -125,7 +125,7 @@ export default function PartnersPage() {
               Worldwide Partnerships
             </span>
             <h2 className="mt-3 text-3xl lg:text-4xl font-bold text-[#181D4E]">
-              Our 16+ Authorized Partners
+              Our 15+ Authorized Partners
             </h2>
             <p className="mt-3 text-gray-500 text-[14px] max-w-2xl mx-auto">
               From precision flow meters to industrial AI — we connect the
@@ -192,8 +192,8 @@ export default function PartnersPage() {
               Our Proprietary &amp; Strategic Technology Solutions
             </h2>
             <p className="mt-3 text-gray-500 text-[14px] max-w-2xl mx-auto">
-              Beyond distribution — our own branded solutions and strategic
-              partnerships in AI and access flooring.
+              Beyond distribution — our own proprietary solutions and strategic
+              partnerships in custody metering, AI, and access flooring.
             </p>
           </div>
 

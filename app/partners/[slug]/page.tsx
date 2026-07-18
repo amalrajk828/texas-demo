@@ -56,6 +56,8 @@ export default async function PartnerDetailPage({ params }: { params: Promise<{ 
         product={partner.product}
         description={partner.description}
         href={partner.href}
+        features={partner.features}
+        applications={partner.applications}
       />
     </div>
   );

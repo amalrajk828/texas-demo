@@ -74,12 +74,12 @@ export default function PartnerHero({ name, logo, country, relationship, product
 
             {/* Badges */}
             <div className="flex flex-wrap gap-3">
-              <span className="inline-flex items-center gap-1.5 rounded-lg border border-white/10 bg-white/[0.03] px-4 py-2 text-[12px] font-medium text-white/70">
+              <span className="inline-flex items-center gap-1.5 rounded-lg border border-white/10 bg-white/[0.03] px-4 py-2 text-[13px] font-medium text-white/70">
                 <span className="text-[10px] font-bold tracking-[1.5px] text-[#e7212b]">
                   {country}
                 </span>
               </span>
-              <span className="inline-flex items-center rounded-lg border border-white/10 bg-white/[0.03] px-4 py-2 text-[12px] font-medium text-white/70">
+              <span className="inline-flex items-center rounded-lg border border-white/10 bg-white/[0.03] px-4 py-2 text-[13px] font-medium text-white/70">
                 {relationship}
               </span>
             </div>
