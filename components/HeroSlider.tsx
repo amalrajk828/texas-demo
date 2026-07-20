@@ -20,21 +20,21 @@ const SLIDES = [
     light: false,
     ctas: [
       { label: "About Us", href: "/about-us/", primary: true },
-      { label: "Our Services", href: "/service/", primary: false },
+      { label: "Our Services", href: "/services/", primary: false },
     ],
   },
   {
     type: "video" as const,
     src: "/homevideos/Automated-1-2.mp4",
-    alt: "Industrial Process Automation Solutions — PLC SCADA automation systems by TTS",
+    alt: "Industrial Process Automation — PLC SCADA automation systems by leading automation company TTS",
     eyebrow: "Industrial Automation",
     heading: ["Industrial Process", "Automation", "Solutions"],
-    sub: "Empowering industries through automation. PLC and SCADA-based systems, control integration, and commissioning for oil & gas, manufacturing, and power generation.",
+    sub: "Empowering industries through industrial automation. PLC SCADA systems, control integration, and commissioning for oil & gas, manufacturing, and power generation.",
     tag: "Automation",
     light: false,
     ctas: [
       { label: "Know More", href: "/service/industrial-automation/", primary: true },
-      { label: "Our Services", href: "/service/", primary: false },
+      { label: "Our Services", href: "/services/", primary: false },
     ],
   },
   {
@@ -62,7 +62,7 @@ const SLIDES = [
     light: false,
     ctas: [
       { label: "Know More", href: "/service/inspection-testing/", primary: true },
-      { label: "Our Services", href: "/service/", primary: false },
+      { label: "Our Services", href: "/services/", primary: false },
     ],
   },
 ] as const;
@@ -70,10 +70,10 @@ const SLIDES = [
 const DURATION = 7000;
 
 const STATS = [
-  { num: "15+", label: "Years" },
+  { num: "18+", label: "Years" },
   { num: "8",   label: "Industries" },
   { num: "200+", label: "Clients" },
-  { num: "2",   label: "Countries" },
+  { num: "16+", label: "Vendors" },
 ];
 
 const EASE = [0.22, 1, 0.36, 1] as [number, number, number, number];

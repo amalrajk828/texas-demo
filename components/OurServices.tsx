@@ -111,7 +111,7 @@ export default function OurServices() {
         {/* Bottom CTA */}
         <FadeUp delay={0.45} className="text-center mt-14">
           <Link
-            href="/service/"
+            href="/services/"
             className="inline-flex items-center gap-2 border border-white/15 hover:border-white/40 text-white/60 hover:text-white px-7 py-3.5 rounded-lg transition-all duration-200 text-[14px] font-medium backdrop-blur-sm"
           >
             View all services

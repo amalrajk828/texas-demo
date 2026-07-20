@@ -45,7 +45,7 @@ export default function InspectionHero() {
         >
           <Link href="/" className="hover:text-white/60 transition-colors">Home</Link>
           <span>/</span>
-          <Link href="/service/" className="hover:text-white/60 transition-colors">Services</Link>
+          <Link href="/services/" className="hover:text-white/60 transition-colors">Services</Link>
           <span>/</span>
           <span className="text-white/60">Inspection &amp; Testing</span>
         </motion.div>
@@ -90,7 +90,12 @@ export default function InspectionHero() {
               in the industry, mainly as a Third Party Inspection &amp; Testing Company. Since it was
               founded, TTS has participated in supporting our clients in ensuring quality and safety of
               their products — committed to providing objective, independent assessments of product
-              compliance and conformity.
+              compliance and conformity. We also provide{" "}
+              <Link href="/plc-scada-systems-integration/" className="text-[#e7212b] hover:underline">
+                industrial automation testing
+              </Link>{" "}
+              for automated control systems, ensuring your PLC and SCADA assets meet operational
+              and safety standards.
             </p>
             <p className="text-white/40 text-[15px] leading-relaxed max-w-2xl">
               TTS is led by strong management, technical expertise, engineers and well-trained
@@ -114,7 +119,7 @@ export default function InspectionHero() {
               <ArrowRight className="w-4 h-4" />
             </a>
             <Link
-              href="/service/"
+              href="/services/"
               className="inline-flex items-center gap-2 border border-white/15 hover:border-white/35 text-white/60 hover:text-white px-7 py-3.5 rounded-lg transition-all duration-200 text-[14px]"
             >
               ← All Services

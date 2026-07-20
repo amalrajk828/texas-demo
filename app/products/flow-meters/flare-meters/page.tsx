@@ -1,6 +1,7 @@
 import React from "react";
 import type { Metadata } from "next";
 import Link from "next/link";
+import { BreadcrumbJsonLd } from "@/components/schema/BreadcrumbJsonLd";
 import { ChevronRight } from "lucide-react";
 import ProductCard from "@/components/ProductCard";
 import { getProductsByPath } from "@/lib/products";
@@ -9,19 +10,37 @@ export const metadata: Metadata = {
   title: "Flare Meters - Texas Technical Services",
   description:
     "SICK ultrasonic flare gas and steam flow meters — FLOWSIC100 Flare and FLOWSIC100-Flare-XT for reliable, low-maintenance measurement on refinery and petrochemical flare stacks.",
-  alternates: { canonical: "https://texastechserv.com/products/flow-meters/flare-meters/" },
+  alternates: { canonical: "/products/flow-meters/flare-meters/" },
+  keywords: [
+    "flare gas flow meters",
+    "SICK FLOWSIC100 Flare",
+    "flare stack measurement",
+    "steam flow meters refinery",
+  ],
   openGraph: {
     title: "Flare Meters - Texas Technical Services",
     description:
       "SICK ultrasonic flare gas and steam flow meters — FLOWSIC100 Flare and FLOWSIC100-Flare-XT for reliable, low-maintenance measurement on flare stacks.",
-    url: "https://texastechserv.com/products/flow-meters/flare-meters/",
+    url: "/products/flow-meters/flare-meters/",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Flare Meters - Texas Technical Services",
+    description:
+      "SICK ultrasonic flare gas and steam flow meters — FLOWSIC100 Flare and FLOWSIC100-Flare-XT for reliable, low-maintenance measurement on flare stacks.",
   },
 };
 
 export default function FlareMetersPage() {
   const flareMeterProducts = getProductsByPath("/products/flow-meters/flare-meters/");
   return (
-    <div className="min-h-screen bg-white font-sans antialiased selection:bg-[#e7212b] selection:text-white">
+<div className="min-h-screen bg-white font-sans antialiased selection:bg-[#e7212b] selection:text-white">
+      <BreadcrumbJsonLd items={[
+        { name: "Home", href: "/" },
+        { name: "Products", href: "/products/" },
+        { name: "Flow Meters", href: "/products/flow-meters/" },
+        { name: "Flare Meters", href: "/products/flow-meters/flare-meters/" },
+      ]} />
       {/* ── Hero Banner ─────────────────────────────────────── */}
       <section className="relative bg-[#0B0D26] overflow-hidden border-b-4 border-[#e7212b]">
         {/* Grid texture */}
@@ -117,7 +136,7 @@ export default function FlareMetersPage() {
               </p>
             </div>
             <Link
-              href="/contact"
+              href="/contacts/"
               className="shrink-0 inline-flex items-center gap-2 bg-[#e7212b] hover:bg-[#aa0b1b] text-white font-bold px-6 py-3.5 rounded-[6px] shadow-lg hover:shadow-[#e7212b]/20 transition-all duration-200"
             >
               Contact Us &rarr;

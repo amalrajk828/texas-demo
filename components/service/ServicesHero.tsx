@@ -109,7 +109,7 @@ export default function ServicesHero() {
                 <ArrowRight className="w-4 h-4" />
               </Link>
               <a
-                href="#flow-measurement"
+                href="#all-services"
                 className="inline-flex items-center gap-2 border border-white/15 hover:border-white/35 text-white/60 hover:text-white px-7 py-3.5 rounded-lg transition-all duration-200 text-[14px]"
               >
                 Explore Services
@@ -150,7 +150,7 @@ export default function ServicesHero() {
           className="mt-16 grid grid-cols-2 sm:grid-cols-4 gap-4"
         >
           {[
-            { num: "15+",  label: "Years of Excellence" },
+            { num: "18+", label: "Years of Excellence" },
             { num: "200+", label: "Clients Served" },
             { num: "4",    label: "Core Service Areas" },
             { num: "8",    label: "Industries Covered" },

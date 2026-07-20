@@ -13,17 +13,25 @@ import {
   ArrowRight,
   ChevronRight,
 } from "lucide-react";
+import { BreadcrumbJsonLd } from "@/components/schema/BreadcrumbJsonLd";
+import IndustryCtaBanner from "@/components/industries/IndustryCtaBanner";
 
 export const metadata: Metadata = {
   title: "Industries We Serve | Texas Technical Services",
   description:
     "Texas Technical Services delivers flow measurement, industrial automation, and inspection solutions across oil & gas, refinery, power plant, LNG, petrochemicals, water treatment, cement, and metal & steel.",
-  alternates: { canonical: "https://texastechserv.com/industries/" },
+  alternates: { canonical: "/industries/" },
   openGraph: {
     title: "Industries We Serve | Texas Technical Services",
     description:
-      "Comprehensive OEM solutions for oil & gas, refinery, power plant, LNG, and more — backed by 15+ years of precision engineering.",
-    url: "https://texastechserv.com/industries/",
+      "Comprehensive OEM solutions for oil & gas, refinery, power plant, LNG, petrochemicals, water treatment, cement, and metal & steel — backed by 18+ years of precision engineering.",
+    url: "/industries/",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Industries We Serve | Texas Technical Services",
+    description:
+      "Comprehensive OEM solutions for oil & gas, refinery, power plant, LNG, petrochemicals, water treatment, cement, and metal & steel.",
   },
 };
 
@@ -103,6 +111,8 @@ const stats = [
 export default function IndustriesPage() {
   return (
     <>
+      <BreadcrumbJsonLd items={[{ name: "Home", href: "/" }, { name: "Industries", href: "/industries/" }]} />
+
       {/* ══ HERO ══════════════════════════════════════════════ */}
       <section className="bg-[#0B0D26] relative overflow-hidden pt-[108px] lg:pt-[116px]">
         {/* Grid texture */}
@@ -292,31 +302,12 @@ export default function IndustriesPage() {
         </div>
       </section>
 
-      {/* ══ CTA BANNER ════════════════════════════════════════ */}
-      <section className="bg-[#0B0D26] py-20">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 text-center">
-          <div className="flex items-center justify-center gap-3 mb-4">
-            <span className="w-8 h-px bg-[#e7212b]/40" />
-            <span className="text-[#e7212b] text-[9px] font-medium tracking-[2.5px] uppercase">
-              Get in touch
-            </span>
-            <span className="w-8 h-px bg-[#e7212b]/40" />
-          </div>
-          <h2 className="text-3xl sm:text-4xl font-medium text-white mb-3">
-            Have a project in mind?
-          </h2>
-          <p className="text-white/50 text-base mb-8 max-w-md mx-auto">
-            Talk to our team about your requirements. Kuwait and Dubai offices
-            ready to help.
-          </p>
-          <Link
-            href="/contacts/"
-            className="inline-flex items-center gap-2 bg-[#e7212b] hover:bg-[#aa0b1b] text-white font-medium px-8 py-3.5 rounded-lg transition-colors duration-200"
-          >
-            Contact Us <ArrowRight className="w-4 h-4" />
-          </Link>
-        </div>
-      </section>
+      {/* CTA */}
+      <IndustryCtaBanner
+        heading="Have a project in mind?"
+        subtext="Talk to our team about your requirements. Kuwait and Dubai offices ready to help."
+        showAllIndustriesLink={false}
+      />
     </>
   );
 }

@@ -19,7 +19,7 @@ export default function VisualInspectionHero() {
       <div className="relative max-w-7xl mx-auto px-4 sm:px-6">
         <motion.div initial={{ opacity: 0, y: 10 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.5, ease: [0.22, 1, 0.36, 1] }} className="flex items-center gap-2 mb-8 text-[11px] text-white/30 tracking-wide">
           <Link href="/" className="hover:text-white/60 transition-colors">Home</Link><span>/</span>
-          <Link href="/service/" className="hover:text-white/60 transition-colors">Services</Link><span>/</span>
+          <Link href="/services/" className="hover:text-white/60 transition-colors">Services</Link><span>/</span>
           <Link href="/service/inspection-testing/" className="hover:text-white/60 transition-colors">Inspection &amp; Testing</Link><span>/</span>
           <Link href="/service/non-destructive-testing-ndt/" className="hover:text-white/60 transition-colors">NDT</Link><span>/</span>
           <span className="text-white/50">Visual Inspection (VI)</span>

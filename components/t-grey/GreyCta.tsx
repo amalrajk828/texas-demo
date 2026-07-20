@@ -24,7 +24,7 @@ export default function GreyCta() {
             }}>
             Contact Us <ArrowRight className="w-4 h-4" />
           </Link>
-          <Link href="/service/"
+          <Link href="/services/"
             className="inline-flex items-center gap-2 font-semibold text-[15px] px-8 py-4 rounded-xl border hover:-translate-y-0.5 transition-all"
             style={{ color: "var(--g-heading)", borderColor: "var(--g-border)", background: "var(--g-card-bg)" }}>
             Our Services

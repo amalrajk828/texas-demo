@@ -2,18 +2,39 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import Image from "next/image";
 import { ChevronRight, ExternalLink, ArrowRight } from "lucide-react";
+import ClientsMarquee from "@/components/clients/ClientsMarquee";
+import TestimonialsSection from "@/components/clients/TestimonialsSection";
+import { BreadcrumbJsonLd } from "@/components/schema/BreadcrumbJsonLd";
 
 export const metadata: Metadata = {
   title: "Our Clients | Texas Technical Services",
   description:
     "Texas Technical Services proudly serves 49+ clients across Kuwait and Dubai — from national oil companies and government bodies to international engineering groups.",
-  alternates: { canonical: "https://texastechserv.com/clients/" },
+  alternates: { canonical: "/clients/" },
   openGraph: {
     title: "Our Clients | Texas Technical Services",
     description:
       "49+ clients across oil & gas, power, water, and industrial sectors — trusted by Kuwait Oil Company, KNPC, KIPIC, Chevron, Siemens, Honeywell and many more.",
-    url: "https://texastechserv.com/clients/",
+    url: "/clients/",
   },
+  twitter: {
+    card: "summary_large_image",
+    title: "Our Clients | Texas Technical Services",
+    description:
+      "49+ clients across oil & gas, power, water, and industrial sectors — trusted by KOC, KNPC, Chevron, Siemens, Honeywell and more.",
+  },
+  keywords: [
+    "oil and gas clients Kuwait",
+    "industrial clients Kuwait",
+    "flow metering clients",
+    "automation clients Kuwait",
+    "KOC approved contractor",
+    "KNPC approved vendor",
+    "Chevron supplier Kuwait",
+    "Texas Technical Services clients",
+    "industrial service provider Kuwait",
+    "energy sector clients GCC",
+  ],
 };
 
 type Client = {
@@ -78,13 +99,23 @@ const clients: Client[] = [
 const stats = [
   { num: `${clients.length}+`, label: "Clients" },
   { num: "8",                  label: "Industries" },
-  { num: "15+",                label: "Years" },
+  { num: "18+", label: "Years" },
   { num: "2",                  label: "Countries" },
 ];
+
+const featuredClients = clients.filter(c =>
+  ["Kuwait Oil Company (KOC)", "Kuwait National Petroleum Company (KNPC)", "Kuwait Integrated Petroleum Industries Company (KIPIC)",
+   "Chevron", "SIEMENS", "Honeywell", "Saipem", "SGS",
+   "Kuwait Cement Company", "Heavy Engineering Industries & Shipbuilding Co. (HEISCO)",
+   "NBTC Group", "KCC Engineering & Contracting Company (KCCEC)",
+   "Alkhorayef Group", "Impresa Pizzarotti & C. S.p.A.", "Parsons Corporation", "SSH"
+  ].includes(c.name)
+);
 
 export default function ClientsPage() {
   return (
     <>
+      <BreadcrumbJsonLd items={[{ name: "Home", href: "/" }, { name: "Clients", href: "/clients/" }]} />
       {/* ══ HERO ══════════════════════════════════════════════════ */}
       <section className="bg-[#0B0D26] relative overflow-hidden pt-[108px] lg:pt-[116px]">
         {/* Grid texture */}
@@ -149,15 +180,17 @@ export default function ClientsPage() {
       </section>
 
       {/* ══ CLIENT GRID ═══════════════════════════════════════════ */}
-      <section className="bg-[#f4f5f8] py-20 lg:py-24">
+      <section className="bg-white py-20 lg:py-24 overflow-hidden">
         <div className="max-w-7xl mx-auto px-4 sm:px-6">
+
+          <ClientsMarquee clients={featuredClients} />
 
           {/* Section label */}
           <div className="flex items-center justify-between mb-10">
             <div className="flex items-center gap-3">
               <span className="w-8 h-px bg-[#e7212b]/40" />
-              <span className="text-[#e7212b] text-[9px] font-medium tracking-[2.5px] uppercase">
-                Our Clients
+              <span className="text-[#e7212b] text-xs font-semibold tracking-[2px] uppercase">
+                All Clients
               </span>
             </div>
             <span className="text-gray-400 text-[12px]">{clients.length} companies</span>
@@ -167,7 +200,7 @@ export default function ClientsPage() {
           <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 xl:grid-cols-5 gap-4">
             {clients.map((client) => {
               const cardClass =
-                "group relative bg-white border border-[#e8eaf0] hover:border-[#e7212b]/50 rounded-2xl p-5 flex flex-col items-center gap-4 transition-all duration-200 hover:shadow-lg cursor-pointer";
+                "group relative bg-gray-100 border border-gray-200 hover:border-[#e7212b]/50 rounded-2xl p-5 flex flex-col items-center gap-4 transition-all duration-200 hover:shadow-lg cursor-pointer";
 
               const inner = (
                 <>
@@ -183,9 +216,10 @@ export default function ClientsPage() {
                       fill
                       className="object-contain"
                       sizes="(max-width: 640px) 45vw, (max-width: 1024px) 30vw, (max-width: 1280px) 25vw, 20vw"
+                      style={{ filter: "drop-shadow(0 0 3px rgba(0,0,0,0.45))" }}
                     />
                   </div>
-                  <p className="text-[11px] text-gray-500 text-center leading-snug group-hover:text-[#e7212b] transition-colors duration-200 font-medium">
+                  <p className="text-xs text-gray-500 text-center leading-snug group-hover:text-[#e7212b] transition-colors duration-200 font-medium">
                     {client.name}
                   </p>
                   <div className="absolute bottom-0 left-0 right-0 h-[2px] bg-[#e7212b] scale-x-0 group-hover:scale-x-100 transition-transform duration-300 origin-left rounded-b-2xl" />
@@ -239,6 +273,8 @@ export default function ClientsPage() {
           </div>
         </div>
       </section>
+
+      <TestimonialsSection />
 
       {/* ══ CTA BANNER ════════════════════════════════════════════ */}
       <section className="bg-[#0B0D26] py-20">

@@ -2,7 +2,7 @@ import Link from "next/link";
 import { ArrowRight } from "lucide-react";
 
 const stats = [
-  { num: "15+", label: "Years" },
+  { num: "18+", label: "Years" },
   { num: "8", label: "Industries" },
   { num: "200+", label: "Clients" },
 ];
@@ -55,7 +55,7 @@ export default function HeroSection() {
                 <ArrowRight className="w-4 h-4" />
               </Link>
               <Link
-                href="/service/"
+                href="/services/"
                 className="inline-flex items-center gap-2 border border-white/20 hover:border-white/40 text-white/70 hover:text-white px-6 py-3 rounded-lg transition-colors duration-200"
               >
                 Our Services →

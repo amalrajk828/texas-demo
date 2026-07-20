@@ -6,6 +6,8 @@ import { ChevronRight, Check, ArrowRight, ExternalLink, Download } from "lucide-
 import { products, getProductBySlug, getProduct, getAllProductSlugs, type BulletSection, type SubBlock } from "@/lib/products";
 import ProductInquiryForm from "@/components/ProductInquiryForm";
 import RelatedProducts from "@/components/RelatedProducts";
+import { ProductJsonLd } from "@/components/schema/ProductJsonLd";
+import { SITE_URL } from "@/lib/site";
 
 type Props = { params: Promise<{ slug: string }> };
 
@@ -20,11 +22,17 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   return {
     title: `${product.name} | Texas Technical Services`,
     description: product.paragraphs?.[0] ?? `${product.name} — ${product.brand}`,
-    alternates: { canonical: `https://texastechserv.com/portfolio/${slug}/` },
+    keywords: [product.name, product.brand, product.category, "industrial automation"],
+    alternates: { canonical: `/portfolio/${slug}/` },
     openGraph: {
       title: `${product.name} | Texas Technical Services`,
       description: product.paragraphs?.[0] ?? `${product.name} — ${product.brand}`,
-      url: `https://texastechserv.com/portfolio/${slug}/`,
+      url: `/portfolio/${slug}/`,
+    },
+    twitter: {
+      card: "summary_large_image",
+      title: `${product.name} | Texas Technical Services`,
+      description: product.paragraphs?.[0] ?? `${product.name} — ${product.brand}`,
     },
   };
 }
@@ -175,6 +183,14 @@ export default async function ProductPage({ params }: Props) {
 
   return (
     <>
+      <ProductJsonLd
+        name={product.name}
+        description={product.paragraphs?.[0] ?? `${product.name} — ${product.brand}`}
+        url={`/portfolio/${product.slug}/`}
+        brand={product.brand}
+        category={product.category}
+        image={product.heroImage}
+      />
       {/* ══ HERO ══════════════════════════════════════════════════ */}
       <section className="relative overflow-hidden min-h-[400px] flex items-end">
         <div className="absolute inset-0">
@@ -266,11 +282,16 @@ export default async function ProductPage({ params }: Props) {
                   <p className="text-gray-700 text-base italic leading-relaxed">{product.intro}</p>
                 </blockquote>
               )}
-              {product.paragraphs && product.paragraphs.map((p: any, i: any) => (
+              {((product.paragraphs && product.paragraphs.length > 0
+                ? product.paragraphs
+                : product.description
+                  ? [product.description]
+                  : []
+              ).map((p: string, i: number) => (
                 <p key={i} className="text-gray-500 text-[14px] sm:text-[15px] leading-relaxed mb-4 last:mb-0">
                   {p}
                 </p>
-              ))}
+              )))}
               {/* Quick-access action for simple products */}
               {!product.subBlocks && (product.detailHref || product.downloadHref || product.externalLink || product.downloadLink || product.detailHrefs) && (
                 <div className="flex flex-wrap items-center gap-4 mt-8 pt-6 border-t border-[#f0f0f0]">
@@ -286,7 +307,7 @@ export default async function ProductPage({ params }: Props) {
                   )}
                   {(product.detailHref || product.externalLink) && (
                     <a
-                      href={product.detailHref || product.externalLink || `https://texastechserv.com/portfolio/${product.slug}/`}
+                      href={product.detailHref || product.externalLink || `${SITE_URL}/portfolio/${product.slug}/`}
                       {...((product.detailHref || product.externalLink) !== "#" ? { target: "_blank", rel: "noopener noreferrer" } : {})}
                       className="inline-flex items-center gap-1.5 text-[#e7212b] hover:text-[#aa0b1b] font-medium text-[13px] transition-colors"
                     >
@@ -364,7 +385,7 @@ export default async function ProductPage({ params }: Props) {
       {/* ══ SUB-BLOCKS — e.g. OMNI + Flow-X ══════════════════════ */}
       {product.subBlocks && product.subBlocks.length > 0 && (
         <div>
-          {product.subBlocks.map((block: any, i: any) => (
+          {product.subBlocks.map((block: SubBlock, i: number) => (
             <SubBlockSection key={block.id} block={block} index={i} />
           ))}
         </div>

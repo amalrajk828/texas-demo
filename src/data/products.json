@@ -1,0 +1,105 @@
+[
+  {
+    "id": "1001",
+    "name": "TTS-Coriolis Mass Flow Meter (Series 500)",
+    "price": 2499.00,
+    "rating": 4.8,
+    "reviewsCount": 14,
+    "image": "https://images.unsplash.com/photo-1616401784845-180882ba9ba8?auto=format&fit=crop&w=800&q=80",
+    "gallery": [
+      "https://images.unsplash.com/photo-1616401784845-180882ba9ba8?auto=format&fit=crop&w=800&q=80",
+      "https://images.unsplash.com/photo-1581092160607-ee22621dd758?auto=format&fit=crop&w=800&q=80",
+      "https://images.unsplash.com/photo-1504307651254-35680f356dfd?auto=format&fit=crop&w=800&q=80"
+    ],
+    "description": "The TTS-Coriolis Series 500 represents the pinnacle of liquid and gas measurement instrumentation. Delivering direct mass flow, density, and temperature readings with an outstanding base accuracy of ±0.05%, this meter is designed to meet the strict standards required for custody transfer, chemical blending, and process monitoring across high-value liquid applications.",
+    "features": [
+      "Direct mass flow, density, and temperature measurement",
+      "Accuracy up to ±0.05% for liquids and ±0.35% for gases",
+      "No moving parts resulting in zero physical wear-and-tear",
+      "HART, Modbus, and EtherNet/IP protocol communication",
+      "NEMA 4X / IP67 robust enclosure for harsh environments"
+    ],
+    "reviews": [
+      {
+        "id": "r1",
+        "author": "Dr. Jean-Pierre",
+        "text": "Highly accurate and very reliable for our chemical batching systems. The digital interface setup via Modbus was extremely smooth.",
+        "rating": 5,
+        "date": "June 10, 2026"
+      },
+      {
+        "id": "r2",
+        "author": "Alan K.",
+        "text": "Excellent meter, though calibration verification took a bit of learning for our team. Support was helpful.",
+        "rating": 4,
+        "date": "June 28, 2026"
+      }
+    ]
+  },
+  {
+    "id": "1002",
+    "name": "ErgoControl Industrial Console System (V-Type)",
+    "price": 8950.00,
+    "rating": 4.9,
+    "reviewsCount": 8,
+    "image": "https://images.unsplash.com/photo-1590069261209-f8e9b8642343?auto=format&fit=crop&w=800&q=80",
+    "gallery": [
+      "https://images.unsplash.com/photo-1590069261209-f8e9b8642343?auto=format&fit=crop&w=800&q=80",
+      "https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=800&q=80",
+      "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&w=800&q=80"
+    ],
+    "description": "The ErgoControl V-Type Console is engineered to optimize operator productivity, fatigue recovery, and situational awareness in 24/7 mission-critical operations. Featuring a motorized sit-to-stand lifting mechanism, integrated dynamic cable routing, and customizable multi-monitor mounting options, it delivers an ergonomic work environment tailored to control rooms.",
+    "features": [
+      "Motorized height adjustment range (650mm to 1250mm)",
+      "V-Type configuration ideal for collaborative multi-operator setups",
+      "Integrated smart power distribution and passive air circulation vents",
+      "Premium, chemical-resistant HPL desktop finish with soft polyurethane edges",
+      "Full compliance with ISO 11064 ergonomic standards"
+    ],
+    "reviews": [
+      {
+        "id": "r3",
+        "author": "Marcus Aurelius Group",
+        "text": "We outfitted our main power plant operations center with 12 of these. The sit-stand function has dramatically improved operator alertness.",
+        "rating": 5,
+        "date": "May 14, 2026"
+      }
+    ]
+  },
+  {
+    "id": "1003",
+    "name": "Mitsubishi FR-E800 Variable Frequency Drive",
+    "price": 645.00,
+    "rating": 4.7,
+    "reviewsCount": 21,
+    "image": "https://images.unsplash.com/photo-1581092160562-40aa08e78837?auto=format&fit=crop&w=800&q=80",
+    "gallery": [
+      "https://images.unsplash.com/photo-1581092160562-40aa08e78837?auto=format&fit=crop&w=800&q=80",
+      "https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?auto=format&fit=crop&w=800&q=80"
+    ],
+    "description": "The Mitsubishi FR-E800 series VFD offers exceptional motor control and energy-saving performance. Built for smart factories, it integrates advanced predictive maintenance functions and dual-port Ethernet capabilities. It provides vector control, auto-tuning, and robust safety protocols (SIL2/SIL3) out of the box, making it highly versatile for pumps, fans, conveyors, and generic industrial machinery.",
+    "features": [
+      "Dual-port Ethernet communication (CC-Link IE TSN, Modbus TCP, EtherNet/IP)",
+      "Corrosive gas detection and environmental warning alerts",
+      "Sensorless vector control and advanced auto-tuning algorithms",
+      "Safety Torque Off (STO) SIL3 compliance",
+      "Compact size with side-by-side mounting capability"
+    ],
+    "reviews": [
+      {
+        "id": "r4",
+        "author": "Steve L.",
+        "text": "Solid VFD, compact and easy to mount. The built-in AI maintenance diagnosis actually saved us from a fan failure last week.",
+        "rating": 5,
+        "date": "July 01, 2026"
+      },
+      {
+        "id": "r5",
+        "author": "G. Reynolds",
+        "text": "Good performance. The configuration software is a bit complex for beginners, but extremely powerful.",
+        "rating": 4,
+        "date": "July 05, 2026"
+      }
+    ]
+  }
+]

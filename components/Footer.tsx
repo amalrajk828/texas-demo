@@ -1,13 +1,13 @@
 import Link from "next/link";
 import Image from "next/image";
-import { Mail, Phone, MapPin, ArrowRight } from "lucide-react";
+import { Mail, Phone, MapPin, LayoutGrid, ArrowRight } from "lucide-react";
+import { SITE_EMAIL } from "@/lib/site";
 
 const services = [
   { label: "Flow Measurement Solutions", href: "/service/flow-measurement-solutions/" },
   { label: "Industrial Automation", href: "/service/industrial-automation/" },
   { label: "Inspection & Testing", href: "/service/inspection-testing/" },
   { label: "Flow Meter Calibration", href: "/service/flow-meter-calibration/" },
-  { label: "CEMS Solutions", href: "/service/cems-solutions/" },
   { label: "Plant Automation", href: "/service/plant-automation/" },
 ];
 
@@ -22,20 +22,28 @@ const industries = [
   { label: "Metal & Steel", href: "/industries/metal-steel/" },
 ];
 
+const solutions = [
+  { label: "Global Network", href: "/partners/" },
+  { label: "Texaflow Custody Metering", href: "/solutions/texaflow/" },
+  { label: "Space AI Industrial AI", href: "/solutions/space-ai/" },
+  { label: "Mitsubishi Electric", href: "/mitsubishi-electric-factory-automation/" },
+  { label: "PLC & SCADA Integration", href: "/plc-scada-systems-integration/" },
+];
+
 const socials = [
   {
     label: "LinkedIn",
-    href: "https://linkedin.com",
+    href: "https://www.linkedin.com/company/texas-technical-service-company",
     path: "M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6zM2 9h4v12H2z M4 6a2 2 0 1 0 0-4 2 2 0 0 0 0 4z",
   },
   {
     label: "Facebook",
-    href: "https://facebook.com",
+    href: "https://www.facebook.com/texastechserv",
     path: "M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z",
   },
   {
     label: "Instagram",
-    href: "https://instagram.com",
+    href: "https://www.instagram.com/texas_technical_services",
     path: "M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z M17.5 6.5h.01 M7.5 2h9A5.5 5.5 0 0 1 22 7.5v9A5.5 5.5 0 0 1 16.5 22h-9A5.5 5.5 0 0 1 2 16.5v-9A5.5 5.5 0 0 1 7.5 2z",
   },
 ];
@@ -69,8 +77,8 @@ export default function Footer() {
       </div>
 
       {/* Main footer */}
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 py-16">
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-12 lg:gap-10">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 py-14">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-10">
 
           {/* ── Brand Column ──────────────── */}
           <div>
@@ -90,13 +98,13 @@ export default function Footer() {
               automation &amp; inspection for oil &amp; gas and industrial sectors.
             </p>
             <a
-              href="mailto:sales@texastechserv.com"
-              className="flex items-center gap-2.5 text-white/55 text-[14px] font-medium hover:text-[#E53935] transition-colors mb-5"
+              href={`mailto:${SITE_EMAIL}`}
+              className="flex items-center gap-2 text-white/50 text-sm hover:text-brand-red transition-colors mb-4"
             >
-              <Mail className="w-4 h-4 shrink-0" />
-              sales@texastechserv.com
+              <Mail className="w-3.5 h-3.5 shrink-0" />
+              {SITE_EMAIL}
             </a>
-            <div className="flex gap-2.5">
+            <div className="flex flex-wrap gap-2">
               {socials.map(({ href, label, path }) => (
                 <a
                   key={label}
@@ -112,6 +120,13 @@ export default function Footer() {
                 </a>
               ))}
             </div>
+              <Link
+                href="/social-media/"
+                className="text-white/30 text-[11px] hover:text-white transition-colors flex items-center gap-1.5 mt-3"
+              >
+                <LayoutGrid className="w-3 h-3" />
+                View all platforms
+              </Link>
           </div>
 
           {/* ── Locations Column ───────────── */}
@@ -132,7 +147,7 @@ export default function Footer() {
                   city: "Dubai",
                   address:
                     "Amna Naseer Building, Al Marar Area 20th Street #529 Plot #302 Office #201-19, Deira, Dubai",
-                  phones: ["+971 569553747"],
+                  phones: ["+971 569553747", "+971 567793973"],
                 },
               ].map((office) => (
                 <div key={office.city}>
@@ -196,6 +211,26 @@ export default function Footer() {
               ))}
             </ul>
           </div>
+
+          {/* Solutions */}
+          <div>
+            <h3 className="text-white/40 text-[9px] font-medium tracking-[2px] uppercase mb-5">
+              Solutions
+            </h3>
+            <ul className="space-y-2">
+              {solutions.map((s) => (
+                <li key={s.href}>
+                  <Link
+                    href={s.href}
+                    className="text-white/40 text-[12px] hover:text-white transition-colors flex items-center gap-1.5 group"
+                  >
+                    <span className="w-1 h-1 rounded-full bg-brand-red/40 group-hover:bg-brand-red transition-colors shrink-0" />
+                    {s.label}
+                  </Link>
+                </li>
+              ))}
+            </ul>
+          </div>
         </div>
       </div>
 
@@ -205,11 +240,9 @@ export default function Footer() {
           <p className="text-white/25 text-[12px] font-medium">
             TEXAS TECHNICAL SERVICE COMPANY W.L.L. © {new Date().getFullYear()}. All Rights Reserved.
           </p>
-          <div className="flex items-center gap-5">
-            <span className="text-[#E53935] text-[12px] font-bold tracking-wide">ISO 9001:2015 Certified</span>
-            <Link href="/privacy-policy/" className="text-white/25 text-[12px] font-medium hover:text-white/50 transition-colors">
-              Privacy Policy
-            </Link>
+          <div className="flex items-center gap-4">
+            <span className="text-white/20 text-[10px] hidden sm:inline">Serving the Middle East — industrial automation companies near me, Kuwait, UAE, Dubai, Bahrain &amp; Saudi Arabia</span>
+            <span className="text-brand-red text-[11px] font-medium">ISO 9001:2015 Certified</span>
           </div>
         </div>
       </div>

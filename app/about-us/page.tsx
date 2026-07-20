@@ -2,42 +2,146 @@ import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
 import { Gauge, ClipboardCheck, Cpu } from "lucide-react";
+import { BreadcrumbJsonLd } from "@/components/schema/BreadcrumbJsonLd";
+import { ReviewJsonLd, AggregateRatingJsonLd } from "@/components/schema/ReviewJsonLd";
 
 export const metadata: Metadata = {
-  title: "About Us",
+  title: "About Us | Industrial Automation Company in Kuwait & GCC",
   description:
-    "Texas Technical Services Co. (TTS) — Pioneers in Industrial Solutions. Committed to health, safety, environment and quality since 2008.",
-  alternates: { canonical: "https://texastechserv.com/about-us/" },
-  openGraph: { url: "https://texastechserv.com/about-us/" },
+    "Texas Technical Services Co. (TTS) is a leading industrial automation company in Kuwait, UAE, and Dubai — specializing in PLC SCADA integration, flow measurement, and inspection & testing for oil & gas and industrial sectors across the GCC since 2008.",
+  alternates: { canonical: "/about-us/" },
+  openGraph: {
+    title: "About Us | Industrial Automation Company in Kuwait & GCC",
+    description:
+      "Leading industrial automation company in Kuwait, UAE, and Dubai — PLC SCADA, flow measurement, inspection & testing since 2008.",
+    url: "/about-us/",
+  },
+  keywords: [
+    "industrial automation companies in Kuwait",
+    "automation companies in Dubai",
+    "industrial automation companies in UAE",
+    "automation companies in Saudi Arabia",
+    "flow measurement companies Kuwait",
+    "PLC SCADA system integrator Kuwait",
+    "inspection and testing companies Kuwait",
+    "oil and gas service company Fahaheel",
+    "industrial engineering services GCC",
+    "Texas Technical Services Co",
+    "Mitsubishi electric authorized integrator Kuwait",
+    "industrial automation companies in GCC",
+    "custody transfer metering Kuwait",
+    "Endress Hauser distributor Kuwait",
+    "KEM Kuppers distributor Kuwait",
+    "Faure Herman helical flow meter Kuwait",
+    "authorized partnerships Kuwait",
+  ],
+  twitter: {
+    card: "summary_large_image",
+    title: "About Us | Industrial Automation Company in Kuwait & GCC",
+    description:
+      "Leading industrial automation company in Kuwait, UAE, and Dubai — PLC SCADA, flow measurement, inspection & testing since 2008.",
+  },
 };
 
 const partners = [
   {
-    logo: "/about/sick.svg",
-    name: "Sick",
+    logo: "/about/mitsubishi-electric.png",
+    name: "Mitsubishi Electric",
     description:
-      "SICK is one of the world's leading producers of sensors and sensor solutions for industrial automation applications. Since 1946.",
+      "Authorized system integrator & distributor for the complete Mitsubishi automation portfolio — MELSEC PLCs, GOT HMIs, AC servos, and ICONICS SCADA.",
   },
   {
-    logo: "/about/faure-herman.svg",
+    logo: "/about/faure-herman.jpg",
     name: "Faure Herman",
     description:
       "Faure Herman supplies high quality helical turbine flowmeters and ultrasonic flowmeters for oil and gas, aviation and other industries. Since 1925.",
   },
   {
+    logo: "/about/endress-hauser.jpg",
+    name: "Endress+Hauser",
+    description:
+      "Global leader in process instrumentation — ultrasonic gas meters, CEMS, gas analyzers, and dust/opacity measurement with QAL1 & MCERTS certifications.",
+  },
+  {
+    logo: "/about/sick.jpg",
+    name: "SICK",
+    description:
+      "SICK is one of the world's leading producers of sensors and sensor solutions for industrial automation applications. Since 1946.",
+  },
+  {
+    logo: "/about/meter-engineers.jpg",
+    name: "Meter Engineers",
+    description:
+      "USA-based meter proving and calibration specialist — bidirectional & unidirectional sphere provers, piston provers, and mobile prover systems for fiscal metering.",
+  },
+  {
     logo: "/about/omni.png",
-    name: "Omni",
+    name: "OMNI Flow Computer",
     description:
       "OMNI is a leading brand in oil and gas flow computers, renowned for reliability. Their expertise ensures tailored solutions for complex needs.",
   },
   {
-    logo: "/about/pyrotech.svg",
-    name: "Pyrotech",
+    logo: "/about/kem-kuppers.png",
+    name: "KEM Küppers",
     description:
-      "Pyrotech Workspace Solutions is a pioneer in delivering turnkey Control Room Solutions and Ergonomic Command Centre Console.",
+      "German precision flow measurement — TRICOR Coriolis, helical, gear, turbine, and chemical injection meters for custody transfer and process control.",
   },
   {
-    logo: "/about/bis.svg",
+    logo: "/about/tek-trol.jpg",
+    name: "Tek-Trol",
+    description:
+      "Comprehensive process instrumentation & control solutions — pressure, temperature, level, vortex, Coriolis, magnetic flow, and steam quality meters.",
+  },
+  {
+    logo: "/about/rockwin.jpg",
+    name: "Rockwin",
+    description:
+      "Engineered flow metering skid systems — custody transfer skids, truck loading skids, LPG bottling skids, and ASME-code fabricated metering solutions.",
+  },
+  {
+    logo: "/about/kurz-instruments.jpg",
+    name: "Kurz Instruments",
+    description:
+      "USA manufacturer of thermal mass flow meters for precise gas flow measurement in demanding industrial applications.",
+  },
+  {
+    logo: "/about/hms-networks.jpg",
+    name: "HMS Networks",
+    description:
+      "Industrial communication & IIoT solutions — Anybus gateways, Ewon remote access, Intesis building automation, IXXAT CAN/safety, and Red Lion networking.",
+  },
+  {
+    logo: "/about/pyrotech.jpg",
+    name: "Pyrotech Workspace",
+    description:
+      "Pioneer in delivering turnkey Control Room Solutions and Ergonomic Command Centre Consoles, complemented by PWS access flooring systems.",
+  },
+  {
+    logo: "/about/autocontrol.jpg",
+    name: "Autocontrol",
+    description:
+      "Indian instrumentation and valves specialist — process measurement and control solutions for industrial process industries.",
+  },
+  {
+    logo: "/about/euromag.jpg",
+    name: "Euromag International",
+    description:
+      "Electromagnetic flow meters for conductive liquids — robust and accurate measurement for water, wastewater, and process industries.",
+  },
+  {
+    logo: "/about/texaflow.svg",
+    name: "Texaflow",
+    description:
+      "Our proprietary custody metering integrated control system — advanced fiscal metering & SCADA solution for terminals, refineries, and pipeline stations.",
+  },
+  {
+    logo: "/about/novus-automation.jpg",
+    name: "NOVUS Automation",
+    description:
+      "Brazilian automation specialist — data loggers, smart PID controllers, wireless sensing, IoT gateways, and BMS solutions for modern facilities.",
+  },
+  {
+    logo: "/about/bis.png",
     name: "BIS",
     description:
       "Balaji Industrial Services, Established in 1978, A leading Service Provider in SCADA, PLC and other specialized process industries Automation Solutions.",
@@ -101,6 +205,15 @@ const certifications = [
 export default function AboutPage() {
   return (
     <div className="relative overflow-hidden" style={{ background: "linear-gradient(135deg, #f5f7fa 0%, #e2e7ee 45%, #c9d2dc 100%)" }}>
+      <BreadcrumbJsonLd items={[{ name: "Home", href: "/" }, { name: "About Us", href: "/about-us/" }]} />
+      <ReviewJsonLd
+        items={[
+          { author: "Peter John", reviewBody: testimonials[0].text, ratingValue: 5 },
+          { author: "Kevin Rogers", reviewBody: testimonials[1].text, ratingValue: 5 },
+          { author: "Jason Bright", reviewBody: testimonials[2].text, ratingValue: 5 },
+        ]}
+      />
+      <AggregateRatingJsonLd ratingValue={4.8} reviewCount={49} />
       {/* Background depth blobs for frosted glass refraction */}
       <div
         className="absolute top-[-2%] left-[-5%] w-[650px] h-[650px] rounded-full pointer-events-none blur-[90px] opacity-90"
@@ -171,45 +284,46 @@ export default function AboutPage() {
             {/* Right — commitment text */}
             <div className="lg:pl-4">
               <span className="text-[11px] font-bold tracking-[0.28em] uppercase text-[#181D4E]">
-                OUR COMMITMENT
+                COMPANY OVERVIEW
               </span>
-              <h2 className="mt-3 text-[2rem] lg:text-[2.5rem] font-bold text-[#181D4E] leading-tight">
-                Full Commitment to
+              <h1 className="mt-3 text-[2rem] lg:text-[2.5rem] font-bold text-[#181D4E] leading-tight">
+                In Quality
                 <br />
-                Your Schedule
-              </h2>
+                We Believe
+              </h1>
               <div className="mt-6 space-y-4 text-[15px] text-gray-600 leading-[1.75]">
                 <p>
-                  Texas Technical Services Co. (TTS) is committed to health and
-                  safety, the environment and quality is delivered by adopting an
-                  integrated approach to our management systems, and complying
-                  with all relevant legislation, regulations and other legal and
-                  industry requirements.
+                  Established in 2008, Texas Technical Service specializes in
+                  flow measurement, metering supervisory systems, and industrial
+                  automation. We provide tailored solutions supported by skilled
+                  professionals worldwide.
                 </p>
                 <p>
-                  This provides a framework for integration of the ISO
-                  14001:2015, ISO 45001:2018 and ISO 9001:2015 standards and is
-                  externally certificated by a UASL accredited certification
-                  body.
+                  Committed to high-quality products and services, we focus on
+                  exceeding expectations and building lasting partnerships
+                  through trust and reliability. Our integrated management
+                  system is certified to ISO 9001:2015, ISO 14001:2015, and
+                  ISO 45001:2018 by a UASL accredited certification body.
                 </p>
                 <p>
-                  We are committed to providing comprehensive end-to-end
-                  metering solutions through our strategic partnerships with
-                  reputable OEMs.
+                  We deliver comprehensive end-to-end solutions through our
+                  strategic partnerships with 16+ approved global vendors —
+                  covering flow meters, analyzers, sensors, SCADA, BMS, and
+                  proprietary custody metering systems.
                 </p>
               </div>
               <div className="mt-8 flex flex-wrap gap-4">
                 <Link
-                  href="/service/"
+                  href="/partners/"
                   className="bg-[#e7212b] hover:bg-[#c01020] text-white font-semibold text-sm px-8 py-3 transition-colors rounded-xl"
                 >
-                  Our Services
+                  Our Global Network
                 </Link>
                 <Link
-                  href="/products/"
-                  className="bg-[#e7212b] hover:bg-[#c01020] text-white font-semibold text-sm px-8 py-3 transition-colors rounded-xl"
+                  href="/service/"
+                  className="bg-[#181D4E] hover:bg-[#0B0D26] text-white font-semibold text-sm px-8 py-3 transition-colors rounded-xl"
                 >
-                  Our Products
+                  Our Services
                 </Link>
               </div>
             </div>
@@ -223,32 +337,94 @@ export default function AboutPage() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6">
           <div className="text-center mb-14">
             <span className="text-[11px] font-bold tracking-[0.28em] uppercase text-[#e7212b]">
-              Together We Thrive
+              Authorized Partnerships &amp; Dealerships
             </span>
             <h2 className="mt-3 text-3xl lg:text-4xl font-bold text-[#181D4E]">
               Our Partners, Our Strength.
             </h2>
+            <p className="mt-3 text-gray-500 text-[14px] max-w-2xl mx-auto">
+              16+ approved global vendors delivering world-class flow measurement, automation, and instrumentation solutions across Kuwait, UAE, and the GCC.
+            </p>
           </div>
-          <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-10">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-x-8 gap-y-12">
             {partners.map((p) => (
               <div
                 key={p.name}
-                className="flex flex-col items-center text-center gap-4"
+                className="flex flex-col items-center text-center gap-3 rounded-2xl bg-white border border-[#e8eaf0] p-6 shadow-[0_4px_12px_rgba(0,0,0,0.06)] transition-all duration-300 hover:border-[#e7212b]/30 hover:shadow-xl hover:-translate-y-1"
               >
-                <div className="relative h-14 w-28">
+                <div className="relative h-20 w-full flex items-center justify-center">
                   <Image
                     src={p.logo}
                     alt={p.name}
                     fill
                     className="object-contain"
-                    sizes="112px"
+                    sizes="(max-width: 640px) 50vw, 33vw"
                   />
                 </div>
-                <h4 className="font-semibold text-[#181D4E] text-sm">
+                <h4 className="font-bold text-[#181D4E] text-[17px] leading-tight mt-1">
                   {p.name}
                 </h4>
-                <p className="text-[12px] text-gray-500 leading-relaxed">
+                <p className="text-[14px] text-gray-600 leading-[1.7]">
                   {p.description}
+                </p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* ═══ MISSION ══════════════════════════════════════════════ */}
+      <section className="relative z-20 overflow-hidden py-14 lg:py-20 bg-[#0B0D26] border-t border-white/5">
+        {/* Controlled subtle ambient glow in top-left corner */}
+        <div
+          className="absolute -top-12 -left-12 w-[320px] h-[320px] rounded-full pointer-events-none blur-[50px] opacity-50"
+          style={{ background: "radial-gradient(circle, rgba(255,255,255,0.09) 0%, rgba(255,255,255,0.01) 50%, transparent 70%)" }}
+        />
+
+        <div className="relative z-10 max-w-5xl mx-auto px-4 sm:px-6">
+          <div className="text-center mb-10">
+            <span className="text-[11px] font-bold tracking-[0.28em] uppercase text-[#e7212b]">
+              OUR MISSION
+            </span>
+            <h2 className="mt-3 text-3xl lg:text-4xl font-bold text-white">
+              Driving Efficiency &amp; Sustainable Growth
+            </h2>
+          </div>
+          <blockquote className="text-center text-gray-300 text-[18px] lg:text-[20px] leading-[1.7] italic font-light max-w-4xl mx-auto">
+            &ldquo;We deliver innovative solutions that exceed customer
+            expectations, empowering industries through expertise in flow
+            measurement, control systems, and automation, driving efficiency
+            and sustainable growth.&rdquo;
+          </blockquote>
+          <div className="mt-10 grid grid-cols-2 sm:grid-cols-4 gap-4 max-w-3xl mx-auto">
+            {[
+              { num: "18+", label: "Years Experience" },
+              { num: "16+", label: "Global Vendors" },
+              { num: "ISO", label: "Certified" },
+              { num: "24/7", label: "Tech Support" },
+            ].map((s) => (
+              <div
+                key={s.label}
+                className="relative rounded-xl border border-white/12 px-5 py-4 text-center overflow-hidden transition-all duration-300"
+                style={{
+                  background: "rgba(255, 255, 255, 0.07)",
+                  backdropFilter: "blur(18px)",
+                  WebkitBackdropFilter: "blur(18px)",
+                  boxShadow: "0 8px 24px rgba(0, 0, 0, 0.25)",
+                }}
+              >
+                {/* Faint top-edge highlight */}
+                <div
+                  className="absolute inset-0 pointer-events-none"
+                  style={{
+                    background: "linear-gradient(180deg, rgba(255, 255, 255, 0.08) 0%, transparent 50%)",
+                  }}
+                />
+                <p className="relative z-10 text-[1.8rem] font-black text-[#e7212b] leading-none">
+                  {s.num}
+                </p>
+                <p className="relative z-10 text-[11px] text-gray-400 mt-2 font-semibold tracking-[1.5px] uppercase">
+                  {s.label}
                 </p>
               </div>
             ))}

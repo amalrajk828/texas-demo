@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import { BreadcrumbJsonLd } from "@/components/schema/BreadcrumbJsonLd";
 import {
   Gauge,
   Activity,
@@ -21,13 +22,31 @@ export const metadata: Metadata = {
   title: "Products",
   description:
     "Explore Texas Technical Services' full product range — flow meters, analyzers, sensors, PLCs, ICONICS SCADA, HMI panels, VFDs, AC servos, custody metering, and industrial automation solutions.",
-  alternates: { canonical: "https://texastechserv.com/products/" },
+  alternates: { canonical: "/products/" },
   openGraph: {
     title: "Products | Texas Technical Services",
     description:
-      "Flow meters, analyzers, sensors, PLCs, ICONICS SCADA, HMI panels, VFDs, and more.",
-    url: "https://texastechserv.com/products/",
+      "Explore Texas Technical Services' full product range — flow meters, analyzers, sensors, PLCs, ICONICS SCADA, HMI panels, VFDs, AC servos, custody metering skids, and industrial automation solutions from leading OEMs.",
+    url: "/products/",
   },
+  twitter: {
+    card: "summary_large_image",
+    title: "Products | Texas Technical Services",
+    description:
+      "Flow meters, analyzers, sensors, PLCs, ICONICS SCADA, HMI panels, VFDs, AC servos, and custody metering solutions from leading OEMs.",
+  },
+  keywords: [
+    "flow meters Kuwait",
+    "industrial analyzers Kuwait",
+    "PLC and SCADA products",
+    "VFD and AC servo drives Kuwait",
+    "HMI panels Kuwait",
+    "ICONICS SCADA Kuwait",
+    "custody transfer metering skid",
+    "industrial sensors and instrumentation",
+    "process automation products GCC",
+    "Mitsubishi electric products Kuwait",
+  ],
 };
 
 type ProductCategory = {
@@ -166,6 +185,10 @@ function ProductCard({ item, index }: { item: ProductCategory; index: number }) 
 export default function ProductsPage() {
   return (
     <>
+      <BreadcrumbJsonLd items={[
+        { name: "Home", href: "/" },
+        { name: "Products", href: "/products/" },
+      ]} />
       {/* ── Hero Banner ─────────────────────────────────────── */}
       <section className="relative bg-[#0B0D26] overflow-hidden pt-[108px] lg:pt-[116px]">
         {/* Grid texture */}

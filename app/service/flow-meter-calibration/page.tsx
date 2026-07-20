@@ -1,22 +1,24 @@
 import type { Metadata } from "next";
 import CalibrationHero from "@/components/service/flow-meter-calibration/CalibrationHero";
 import CalibrationContent from "@/components/service/flow-meter-calibration/CalibrationContent";
+import { BreadcrumbJsonLd } from "@/components/schema/BreadcrumbJsonLd";
+import { ServiceJsonLd } from "@/components/schema/ServiceJsonLd";
 
 export const metadata: Metadata = {
   title: "Flow Meter Calibration",
   description:
     "Faure Herman ILAC/COFRAC ISO 17025 accredited flow meter calibration services — initial & periodic verification to OIML R117 class 0.3 and API MPMS, as found calibration, real target fluid calibration, and 2-week emergency service for custody transfer flowmeters in Kuwait and Dubai.",
   alternates: {
-    canonical: "https://texastechserv.com/service/flow-meter-calibration/",
+    canonical: "/service/flow-meter-calibration/",
   },
   openGraph: {
     title: "Flow Meter Calibration | Texas Technical Services",
     description:
       "ILAC/COFRAC ISO 17025 accredited flow meter calibration — OIML R117, API MPMS, MID compliance, as found calibration, real fluid calibration, and 2-week emergency service.",
-    url: "https://texastechserv.com/service/flow-meter-calibration/",
+    url: "/service/flow-meter-calibration/",
     images: [
       {
-        url: "https://texastechserv.com/og-flow-meter-calibration.jpg",
+        url: "/og-flow-meter-calibration.jpg",
         width: 1200,
         height: 630,
         alt: "Flow Meter Calibration — Texas Technical Services",
@@ -45,6 +47,18 @@ export const metadata: Metadata = {
 export default function FlowMeterCalibrationPage() {
   return (
     <>
+      <BreadcrumbJsonLd items={[
+  { name: "Home", href: "/" },
+  { name: "Services", href: "/services/" },
+  { name: "Flow Meter Calibration", href: "/service/flow-meter-calibration/" },
+]} />
+<ServiceJsonLd
+  name="Flow Meter Calibration"
+  description="Faure Herman ILAC/COFRAC ISO 17025 accredited flow meter calibration services — initial & periodic verification to OIML R117 class 0.3 and API MPMS, as found calibration, real target fluid calibration, and 2-week emergency service for custody transfer flowmeters in Kuwait and Dubai."
+  url="/service/flow-meter-calibration/"
+  serviceType="Flow Measurement"
+  areaServed={["Kuwait", "United Arab Emirates", "Saudi Arabia", "Bahrain", "Qatar", "Oman"]}
+/>
       <CalibrationHero />
       <CalibrationContent />
       {/* Contact section — to be added */}

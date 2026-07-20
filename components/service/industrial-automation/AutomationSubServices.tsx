@@ -104,7 +104,9 @@ function SubServiceCard({
 
 /* ── Capabilities strip ── */
 const CAPABILITIES = [
-  "Multi-brand PLC programming (Siemens, Allen-Bradley, Schneider, Mitsubishi)",
+  "Multi-brand industrial automation control system — PLC, SCADA, HMI",
+  "Control and automation engineering for manufacturing industry",
+  "Plant and process automation for power plants & industrial facilities",
   "SCADA development, integration & legacy migration",
   "HMI panel design, engineering & programming",
   "Variable frequency drives (VFD) & AC servo systems",
@@ -154,7 +156,7 @@ export default function AutomationSubServices() {
             <div className="relative rounded-2xl overflow-hidden aspect-[21/7] shadow-2xl shadow-black/20">
               <Image
                 src="/images/services/automation_full.jpg"
-                alt="Industrial Process Automation"
+                alt="Industrial automation control system — PLC SCADA integration by Texas Technical Services Kuwait"
                 fill
                 sizes="100vw"
                 className="object-cover"

@@ -83,12 +83,6 @@ const NAV: NavItem[] = [
   { label: "Clients", href: "/clients/" },
 ];
 
-/* ── Dropdown layout helpers ──────────────────────────────────────── */
-function getDropdownCols(label: string)  { return label === "Products" ? "grid-cols-3" : label === "Industries" ? "grid-cols-2" : "grid-cols-1"; }
-function getDropdownWidth(label: string) { return label === "Products" ? "w-[640px]"   : label === "Industries" ? "w-[480px]"    : "w-[520px]"; }
-function showDesc(label: string)         { return label === "Services"; }
-function getDropdownPos(label: string)   { return label === "Products" ? "right-0" : "left-1/2 -translate-x-1/2"; }
-
 /* ── Dropdown Data Mapping & MegaMenu ────────────────────────────── */
 const iconMap: Record<string, LucideIcon> = {
   gauge: Gauge,
@@ -214,11 +208,11 @@ function DropdownPanel({ isOpen, onClose, onMouseEnter, onMouseLeave, children }
       initial={{ opacity: 0, y: -8, scale: 0.98, x: 0 }}
       animate={{ opacity: 1, y: 0, scale: 1, x: shiftX }}
       exit={{ opacity: 0, y: -8, scale: 0.98, x: shiftX }}
-      transition={{ duration: 0.18, ease: "easeOut" }}
+      transition={{ duration: 0.22, ease: "easeOut" }}
       onMouseEnter={onMouseEnter}
       onMouseLeave={onMouseLeave}
-      className="absolute top-full left-0 mt-3.5 flex flex-col z-50 rounded-2xl border border-white/15 shadow-2xl shadow-black/60 backdrop-blur-2xl overflow-hidden"
-      style={{ background: "rgba(15, 15, 18, 0.88)", backdropFilter: "blur(28px)", WebkitBackdropFilter: "blur(28px)" }}
+      className="absolute top-full left-0 mt-3 flex flex-col z-50 rounded-2xl border border-white/10 overflow-hidden shadow-2xl shadow-black/45"
+      style={{ backgroundColor: "#0b1c2e" }}
     >
       {/* Top red accent border */}
       <div
@@ -254,7 +248,9 @@ interface NestedDropdownProps {
 
 function NestedDropdown({ menuLabel, data, viewAll, isOpen, onClose, pathname, onMouseEnter, onMouseLeave }: NestedDropdownProps) {
   const [activeParentIndex, setActiveParentIndex] = useState<number | null>(null);
-  const flyoutLeft = menuLabel === "Products" || menuLabel === "Industries";
+
+  const activeParent = activeParentIndex !== null ? data[activeParentIndex] : null;
+  const hasSubmenu = activeParent && activeParent.children && activeParent.children.length > 0;
 
   return (
     <DropdownPanel
@@ -264,85 +260,102 @@ function NestedDropdown({ menuLabel, data, viewAll, isOpen, onClose, pathname, o
       onMouseLeave={onMouseLeave}
     >
       <div 
-        className="flex flex-col w-[260px] p-2 overflow-visible"
+        className="flex flex-col max-w-[min(90vw,900px)] overflow-visible"
         onMouseLeave={() => setActiveParentIndex(null)}
       >
-        <div className="flex flex-col gap-0.5 overflow-visible">
-          {data.map((item, index) => {
-            const isHovered = activeParentIndex === index;
-            const isCurrentActive = pathname === item.link || pathname.startsWith(item.link);
-            const itemHasChildren = item.children && item.children.length > 0;
+        <div className="flex overflow-visible">
+          {/* Main Categories Panel */}
+          <div className="w-[300px] px-6 py-1.5 flex flex-col gap-0.5 shrink-0 overflow-visible">
+            {data.map((item, index) => {
+              const isHovered = activeParentIndex === index;
+              const isCurrentActive = pathname === item.link || pathname.startsWith(item.link);
+              const itemHasChildren = item.children && item.children.length > 0;
 
-            return (
-              <div
-                key={index}
-                className="relative overflow-visible"
-                onMouseEnter={() => setActiveParentIndex(index)}
-                onMouseLeave={() => setActiveParentIndex(null)}
-              >
-                <Link
-                  href={item.link}
-                  onClick={(e) => {
-                    if (itemHasChildren) {
-                      e.preventDefault();
-                    } else {
-                      onClose();
-                    }
-                  }}
-                  className={`flex items-center justify-between px-4 py-1.5 rounded-xl cursor-pointer transition-all duration-200 text-[13px] font-medium font-sans tracking-wide leading-tight ${
-                    isHovered || isCurrentActive
-                      ? "bg-[#E53935]/12 text-white border border-[#E53935]/20"
-                      : "text-white/60 hover:text-white hover:bg-white/[0.03] border border-transparent"
+              return (
+                <div
+                  key={index}
+                  onMouseEnter={() => setActiveParentIndex(index)}
+                  className={`flex items-center justify-between px-6 py-2 rounded-xl cursor-pointer transition-all duration-200 group ${
+                    isHovered ? "bg-white/[0.06] text-white" : "text-white/60 hover:text-white hover:bg-white/[0.03]"
                   }`}
                 >
-                  <span>{item.label}</span>
+                  <Link
+                    href={item.link}
+                    onClick={(e) => {
+                      if (itemHasChildren) {
+                        e.preventDefault();
+                      } else {
+                        onClose();
+                      }
+                    }}
+                    className="text-[13px] font-medium tracking-wide flex-1 relative font-sans text-left leading-[1.2]"
+                  >
+                    <span className="relative pb-0.5">
+                      {item.label}
+                      {(isHovered || isCurrentActive) && (
+                        <motion.span
+                          layoutId={`sidebar-underline-${menuLabel}`}
+                          className="absolute bottom-0 left-0 right-0 h-[1.5px] bg-[#E53935] rounded-full"
+                          transition={{ type: "spring", stiffness: 350, damping: 30 }}
+                        />
+                      )}
+                    </span>
+                  </Link>
+
                   {itemHasChildren && (
                     <ChevronRight
                       className="w-3.5 h-3.5 text-white/30 group-hover:text-white group-hover:translate-x-0.5 transition-all"
                     />
                   )}
-                </Link>
+                </div>
+              );
+            })}
+          </div>
 
-                {/* Level 2 Submenu Panel (Flyout) */}
-                {itemHasChildren && isHovered && (
-                  <div
-                    className={`absolute top-0 w-[240px] p-2 backdrop-blur-2xl border border-white/15 rounded-xl shadow-2xl flex flex-col gap-0.5 z-50 animate-fade-in ${
-                      flyoutLeft ? "right-[calc(100%+8px)]" : "left-[calc(100%+8px)]"
-                    }`}
-                    style={{ background: "rgba(15, 15, 18, 0.90)", backdropFilter: "blur(28px)", WebkitBackdropFilter: "blur(28px)" }}
-                  >
-                    {item.children?.map((subItem, subIndex) => {
-                      const isSubActive = pathname === subItem.link || pathname.startsWith(subItem.link);
-
-                      return (
-                        <Link
-                          key={subIndex}
-                          href={subItem.link}
-                          onClick={onClose}
-                          className={`px-4 py-1 rounded-lg text-[13px] font-medium font-sans tracking-wide transition-all duration-200 leading-tight ${
-                            isSubActive
-                              ? "bg-[#E53935]/12 text-white border border-[#E53935]/20"
-                              : "text-white/50 hover:text-white hover:bg-white/[0.04] border border-transparent"
-                          }`}
-                        >
-                          {subItem.label}
-                        </Link>
-                      );
-                    })}
-                  </div>
-                )}
+          {/* Submenu Panel */}
+          {hasSubmenu && activeParent && (
+            <div className="w-[300px] px-6 py-1.5 bg-black/20 flex flex-col gap-0.5 border-l border-white/10 animate-slide-right shrink-0 overflow-visible">
+              <div className="px-6 mb-1">
+                <span className="text-[10px] uppercase font-bold tracking-[0.15em] text-[#E53935] block">
+                  Specifications
+                </span>
               </div>
-            );
-          })}
+
+              {activeParent.children?.map((subItem, index) => {
+                const isSubActive = pathname === subItem.link || pathname.startsWith(subItem.link);
+
+                return (
+                  <Link
+                    key={index}
+                    href={subItem.link}
+                    onClick={onClose}
+                    className={`flex items-center justify-between px-6 py-2 rounded-lg text-[13px] font-medium font-sans tracking-wide transition-all duration-200 leading-[1.2] ${
+                      isSubActive
+                        ? "bg-white/10 text-white"
+                        : "text-white/50 hover:text-white hover:bg-white/[0.04]"
+                    }`}
+                  >
+                    <span className="relative">
+                      {subItem.label}
+                      {isSubActive && (
+                        <span className="absolute bottom-[-1px] left-0 right-0 h-[1.5px] bg-[#E53935] rounded-full" />
+                      )}
+                    </span>
+                    <ArrowRight className="w-3.5 h-3.5 opacity-0 group-hover:opacity-100 transition-opacity text-white/40" />
+                  </Link>
+                );
+              })}
+            </div>
+          )}
         </div>
 
         {/* View All Footer */}
         {viewAll && (
-          <div className="border-t border-white/10 mt-1 pt-1.5 px-2 flex items-center shrink-0 z-10">
+          <div className="border-t border-white/10 px-6 py-2.5 bg-[#0b1c2e] flex items-center shrink-0 z-10">
             <Link
               href={viewAll.link}
               onClick={onClose}
-              className="inline-flex items-center gap-1.5 text-[12px] font-bold text-[#E53935] hover:text-[#B71C1C] transition-colors"
+              className="inline-flex items-center gap-1.5 text-[13px] font-bold text-[#E53935] hover:text-[#B71C1C] transition-colors"
             >
               <span>{viewAll.label}</span>
               <ArrowRight className="w-3.5 h-3.5" />
@@ -353,6 +366,29 @@ function NestedDropdown({ menuLabel, data, viewAll, isOpen, onClose, pathname, o
     </DropdownPanel>
   );
 }
+
+const getDropdownPos = (label: string) => {
+  if (label === "Products") return "left-1/2 -translate-x-1/2";
+  if (label === "Services") return "left-0";
+  if (label === "Industries") return "right-0";
+  return "left-0";
+};
+
+const getDropdownWidth = (label: string) => {
+  if (label === "Products") return "w-[680px]";
+  if (label === "Services") return "w-[360px]";
+  if (label === "Industries") return "w-[540px]";
+  return "w-[360px]";
+};
+
+const getDropdownCols = (label: string) => {
+  if (label === "Products") return "grid-cols-2";
+  if (label === "Services") return "grid-cols-1";
+  if (label === "Industries") return "grid-cols-2";
+  return "grid-cols-1";
+};
+
+const showDesc = (label: string) => label === "Services";
 
 /* ── Component ────────────────────────────────────────────────────── */
 export default function Header() {
@@ -380,6 +416,20 @@ export default function Header() {
       setOpen(null);
     }, 180);
   };
+
+  useEffect(() => {
+    return () => {
+      if (closeTimeoutRef.current) clearTimeout(closeTimeoutRef.current);
+    };
+  }, []);
+
+  useEffect(() => {
+    const handleKeyDown = (e: KeyboardEvent) => {
+      if (e.key === "Escape") setOpen(null);
+    };
+    document.addEventListener("keydown", handleKeyDown);
+    return () => document.removeEventListener("keydown", handleKeyDown);
+  }, []);
 
   /* Scroll listener */
   useEffect(() => {
@@ -707,7 +757,7 @@ export default function Header() {
                           <Link
                             href={item.href}
                             onClick={() => setMobileOpen(false)}
-                            className={`flex-1 block px-4 py-3 text-[15px] font-semibold rounded-lg ${
+                            className={`flex-1 block px-4 py-3 text-[14px] font-medium font-sans tracking-wide rounded-lg ${
                               isActive(item.href)
                                 ? "text-white bg-white/5 border-l-2 border-[#E53935] pl-5"
                                 : "text-white/60 hover:text-white"
@@ -730,37 +780,69 @@ export default function Header() {
                             </button>
                           )}
                         </div>
-                        {item.children && mobileExpanded === item.label && (
+                        {item.label === "Products" && mobileExpanded === item.label ? (
                           <div className="ml-4 border-l pl-3 pb-2 space-y-0.5" style={{ borderColor: "rgba(255,255,255,0.08)" }}>
-                            {item.children.map((child) => {
-                              const childActive =
-                                !child.highlight &&
-                                (pathname === child.href ||
-                                  pathname.startsWith(child.href.replace(/\/$/, "") + "/"));
+                            {productsMenu.map((child) => {
+                              const childActive = pathname === child.link;
                               return (
                                 <Link
-                                  key={child.href}
-                                  href={child.href}
+                                  key={child.link}
+                                  href={child.link}
                                   onClick={() => setMobileOpen(false)}
-                                  className={`flex items-center gap-2 px-3 py-2 text-[13px] rounded-lg transition-colors ${
-                                    child.highlight
-                                      ? "text-[#E53935] font-semibold"
-                                      : childActive
-                                      ? "text-white font-medium bg-white/5"
+                                  className={`flex items-center gap-2.5 px-3 py-2 text-[13px] font-medium font-sans tracking-wide rounded-lg transition-colors ${
+                                    childActive
+                                      ? "text-white bg-white/5"
                                       : "text-white/40 hover:text-white/70"
                                   }`}
                                 >
                                   {childActive && (
                                     <span className="w-1.5 h-1.5 rounded-full bg-[#E53935] shrink-0" />
                                   )}
-                                  {child.icon && !child.highlight && (
-                                    <child.icon className="w-3.5 h-3.5 shrink-0 opacity-50" strokeWidth={1.6} />
-                                  )}
                                   {child.label}
                                 </Link>
                               );
                             })}
+                            <Link
+                              href="/products/"
+                              onClick={() => setMobileOpen(false)}
+                              className="inline-flex items-center gap-1.5 px-3 py-2 text-[13px] font-bold text-[#E53935] hover:text-[#B71C1C] transition-colors"
+                            >
+                              View all products <ArrowRight className="w-3.5 h-3.5" />
+                            </Link>
                           </div>
+                        ) : (
+                          item.children && mobileExpanded === item.label && (
+                            <div className="ml-4 border-l pl-3 pb-2 space-y-0.5" style={{ borderColor: "rgba(255,255,255,0.08)" }}>
+                              {item.children.map((child) => {
+                                const childActive =
+                                  !child.highlight &&
+                                  (pathname === child.href ||
+                                    pathname.startsWith(child.href.replace(/\/$/, "") + "/"));
+                                return (
+                                  <Link
+                                    key={child.href}
+                                    href={child.href}
+                                    onClick={() => setMobileOpen(false)}
+                                    className={`flex items-center gap-2 px-3 py-2 text-[13px] font-medium font-sans tracking-wide rounded-lg transition-colors ${
+                                      child.highlight
+                                        ? "text-[#E53935] font-medium"
+                                        : childActive
+                                        ? "text-white bg-white/5"
+                                        : "text-white/40 hover:text-white/70"
+                                    }`}
+                                  >
+                                    {childActive && (
+                                      <span className="w-1.5 h-1.5 rounded-full bg-[#E53935] shrink-0" />
+                                    )}
+                                    {child.icon && !child.highlight && (
+                                      <child.icon className="w-3.5 h-3.5 shrink-0 opacity-50" strokeWidth={1.6} />
+                                    )}
+                                    {child.label}
+                                  </Link>
+                                );
+                              })}
+                            </div>
+                          )
                         )}
                       </div>
                     ))}
@@ -771,7 +853,7 @@ export default function Header() {
                     <Link
                       href="/contacts/"
                       onClick={() => setMobileOpen(false)}
-                      className="block text-center bg-[#E53935] hover:bg-[#B71C1C] text-white text-[14px] font-bold px-4 py-3.5 rounded-xl transition-colors"
+                      className="block text-center bg-[#E53935] hover:bg-[#B71C1C] text-white text-[14px] font-medium font-sans tracking-wide px-4 py-3.5 rounded-xl transition-colors"
                     >
                       Contact Us
                     </Link>

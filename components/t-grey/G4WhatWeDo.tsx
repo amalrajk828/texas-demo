@@ -77,7 +77,7 @@ export default function G4WhatWeDo() {
                     <div className="flex-1">
                       <h3 className="text-[1.7rem] lg:text-[2rem] font-black leading-snug mb-3" style={{ color: "var(--g-heading)" }}>{svc.title}</h3>
                       <p className="text-[16px] leading-[1.85] mb-5" style={{ color: "var(--g-muted)" }}>{svc.desc}</p>
-                      <Link href="/service/" className="inline-flex items-center gap-1.5 text-[14px] font-bold opacity-0 group-hover:opacity-100 transition-all duration-200"
+                      <Link href="/services/" className="inline-flex items-center gap-1.5 text-[14px] font-bold opacity-0 group-hover:opacity-100 transition-all duration-200"
                         style={{ color: "var(--color-brand-red)" }}>
                         Learn more <ArrowRight className="w-3.5 h-3.5" />
                       </Link>
@@ -90,7 +90,7 @@ export default function G4WhatWeDo() {
             {/* Stats */}
             <FadeUp delay={0.4}>
               <div className="mt-6 pt-8 border-t grid grid-cols-3 gap-6" style={{ borderColor: "var(--g-border)" }}>
-                {[{ num: "15+", label: "Years" }, { num: "200+", label: "Clients" }, { num: "8", label: "Industries" }].map(s => (
+                {[{ num: "18+", label: "Years" }, { num: "200+", label: "Clients" }, { num: "8", label: "Industries" }].map(s => (
                   <div key={s.label}>
                     <p className="text-[2rem] font-black leading-none" style={{ color: "var(--color-brand-red)" }}>{s.num}</p>
                     <p className="text-[12px] font-semibold uppercase tracking-wide mt-1" style={{ color: "var(--g-muted)" }}>{s.label}</p>

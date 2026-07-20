@@ -1,6 +1,7 @@
 import React from "react";
 import type { Metadata } from "next";
 import Link from "next/link";
+import { BreadcrumbJsonLd } from "@/components/schema/BreadcrumbJsonLd";
 import { ChevronRight } from "lucide-react";
 import ProductCard from "@/components/ProductCard";
 import { getProductsByPath } from "@/lib/products";
@@ -9,12 +10,24 @@ export const metadata: Metadata = {
   title: "Gas Flow Meters - Texas Technical Services",
   description:
     "Ultrasonic gas flow meters from SICK — FLOWSIC600-XT, FLOWSIC600, FLOWSIC500, FLOWSIC600 DRU, and FLOWSIC30 for custody transfer and process gas measurement applications.",
-  alternates: { canonical: "https://texastechserv.com/products/flow-meters/gas-flow-meters/" },
+  alternates: { canonical: "/products/flow-meters/gas-flow-meters/" },
+  keywords: [
+    "gas flow meters Kuwait",
+    "SICK FLOWSIC600 ultrasonic",
+    "custody transfer gas metering",
+    "natural gas flow measurement",
+  ],
   openGraph: {
     title: "Gas Flow Meters - Texas Technical Services",
     description:
       "Ultrasonic gas flow meters from SICK — custody transfer and process gas flow measurement solutions.",
-    url: "https://texastechserv.com/products/flow-meters/gas-flow-meters/",
+    url: "/products/flow-meters/gas-flow-meters/",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Gas Flow Meters - Texas Technical Services",
+    description:
+      "Ultrasonic gas flow meters from SICK — custody transfer and process gas flow measurement solutions.",
   },
 };
 
@@ -23,7 +36,13 @@ export default function GasFlowMetersPage() {
     "/products/flow-meters/gas-flow-meters/"
   );
   return (
-    <div className="min-h-screen bg-white font-sans antialiased selection:bg-[#e7212b] selection:text-white">
+<div className="min-h-screen bg-white font-sans antialiased selection:bg-[#e7212b] selection:text-white">
+      <BreadcrumbJsonLd items={[
+        { name: "Home", href: "/" },
+        { name: "Products", href: "/products/" },
+        { name: "Flow Meters", href: "/products/flow-meters/" },
+        { name: "Gas Flow Meters", href: "/products/flow-meters/gas-flow-meters/" },
+      ]} />
       {/* ── Hero Banner ─────────────────────────────────────── */}
       <section className="relative bg-[#0B0D26] overflow-hidden border-b-4 border-[#e7212b]">
         {/* Grid texture */}
@@ -122,7 +141,7 @@ export default function GasFlowMetersPage() {
               </p>
             </div>
             <Link
-              href="/contact"
+              href="/contacts/"
               className="shrink-0 inline-flex items-center gap-2 bg-[#e7212b] hover:bg-[#aa0b1b] text-white font-bold px-6 py-3.5 rounded-[6px] shadow-lg hover:shadow-[#e7212b]/20 transition-all duration-200"
             >
               Contact Us &rarr;
