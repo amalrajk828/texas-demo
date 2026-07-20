@@ -100,12 +100,13 @@ export default function ThemedHeader() {
     <>
       <header
         ref={ref}
-        className={`fixed top-0 inset-x-0 z-50 transition-all duration-300 ${navBg}`}
+        className="fixed top-0 inset-x-0 z-50 transition-all duration-300"
         style={{
-          background: scrolled
-            ? "color-mix(in srgb, var(--color-brand-navy) 90%, transparent)"
-            : "var(--color-brand-navy)",
-          borderBottom: scrolled ? "1px solid color-mix(in srgb, var(--color-brand-red) 15%, transparent)" : "none",
+          background: "rgba(15, 15, 18, 0.55)",
+          backdropFilter: "blur(18px)",
+          WebkitBackdropFilter: "blur(18px)",
+          borderBottom: "1px solid rgba(255, 255, 255, 0.10)",
+          boxShadow: "0 8px 24px rgba(0, 0, 0, 0.30)",
         }}
       >
         <div className="max-w-7xl mx-auto px-4 sm:px-6">

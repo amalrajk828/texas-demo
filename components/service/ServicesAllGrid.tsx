@@ -91,26 +91,74 @@ function ServiceCard({ service, index }: { service: ServiceItem; index: number }
   const ref = useRef<HTMLDivElement>(null);
   const inView = useInView(ref, { once: true, margin: "-40px" });
   return (
-    <motion.div ref={ref} initial={{ opacity: 0, y: 28 }} animate={inView ? { opacity: 1, y: 0 } : {}} transition={{ duration: 0.5, ease: [0.22, 1, 0.36, 1], delay: 0.03 + (index % 3) * 0.06 }} whileHover={{ y: -4, transition: { duration: 0.22 } }} className="h-full">
-      <Link href={service.href} className="group relative rounded-2xl border border-[#e8eaf0] bg-white overflow-hidden flex flex-col hover:border-[#e7212b]/25 hover:shadow-xl hover:shadow-[#e7212b]/6 transition-all duration-300 h-full">
-        <div className="relative aspect-[16/10] bg-[#0B0D26] overflow-hidden flex items-center justify-center">
+    <motion.div
+      ref={ref}
+      initial={{ opacity: 0, y: 28 }}
+      animate={inView ? { opacity: 1, y: 0 } : {}}
+      transition={{ duration: 0.5, ease: [0.22, 1, 0.36, 1], delay: 0.03 + (index % 3) * 0.06 }}
+      whileHover={{ y: -4, transition: { duration: 0.22 } }}
+      className="h-full"
+    >
+      <Link
+        href={service.href}
+        className="group relative rounded-2xl border border-white/60 bg-transparent overflow-hidden flex flex-col hover:border-white/95 transition-all duration-300 h-full"
+        style={{
+          boxShadow: "0 12px 32px rgba(0, 0, 0, 0.12)",
+        }}
+      >
+        {/* Image header portion — kept 100% untouched */}
+        <div className="relative aspect-[16/10] bg-[#0B0D26] overflow-hidden flex items-center justify-center shrink-0">
           {service.image ? (
-            <Image src={service.image} alt={service.title} fill sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw" className="object-cover group-hover:scale-105 transition-transform duration-500" />
+            <Image
+              src={service.image}
+              alt={service.title}
+              fill
+              sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+              className="object-cover group-hover:scale-105 transition-transform duration-500"
+            />
           ) : (
             <span className="text-[72px] font-black text-white/10 group-hover:text-[#e7212b]/20 group-hover:scale-110 transition-all duration-500 select-none">
               {service.placeholderNumber || "01"}
             </span>
           )}
           <div className="absolute top-0 left-0 right-0 h-[2px] bg-gradient-to-r from-transparent via-[#e7212b] to-transparent opacity-0 group-hover:opacity-70 transition-opacity duration-300" />
-          <div className="absolute top-3 left-3">
-            <span className="text-[10px] font-semibold text-white/70 bg-[#0B0D26]/75 backdrop-blur-sm border border-white/10 px-2.5 py-1 rounded-full tracking-[1.5px] uppercase">{service.category}</span>
+          <div className="absolute top-3 left-3 z-10">
+            <span className="text-[10px] font-semibold text-white/90 bg-[#0B0D26]/80 backdrop-blur-md border border-white/10 px-2.5 py-1 rounded-full tracking-[1.5px] uppercase">
+              {service.category}
+            </span>
           </div>
         </div>
-        <div className="flex flex-col flex-1 p-5">
-          <div className="w-7 h-[2px] bg-[#e7212b] rounded-full mb-3 group-hover:w-10 transition-all duration-300" />
-          <h3 className="text-[15px] font-bold text-[#0B0D26] leading-snug mb-2">{service.title}</h3>
-          <p className="text-gray-500 text-[13px] leading-[1.7] flex-1">{service.body}</p>
-          <div className="mt-4 pt-3 border-t border-[#e8eaf0] text-[#e7212b] text-[12px] font-semibold flex items-center gap-1">
+
+        {/* Text portion below image — Pronounced Light Glassmorphic Style */}
+        <div
+          className="relative flex flex-col flex-1 p-5 overflow-hidden rounded-b-2xl"
+          style={{
+            background: "rgba(255, 255, 255, 0.20)",
+            backdropFilter: "blur(28px)",
+            WebkitBackdropFilter: "blur(28px)",
+            borderTop: "1px solid rgba(255, 255, 255, 0.60)",
+            boxShadow: "inset 0 1px 1px rgba(255, 255, 255, 0.8)",
+          }}
+        >
+          {/* Distinct diagonal light streak sheen overlay */}
+          <div
+            className="absolute inset-0 pointer-events-none"
+            style={{
+              background: "linear-gradient(135deg, rgba(255, 255, 255, 0.35) 0%, rgba(255, 255, 255, 0.05) 50%, transparent 100%)",
+            }}
+          />
+
+          {/* Top specular edge highlight */}
+          <div className="absolute top-0 inset-x-0 h-[1px] bg-gradient-to-r from-transparent via-white to-transparent pointer-events-none" />
+
+          <div className="relative z-10 w-7 h-[2px] bg-[#e7212b] rounded-full mb-3 group-hover:w-10 transition-all duration-300" />
+          <h3 className="relative z-10 text-[15px] font-bold text-[#0B0D26] leading-snug mb-2 drop-shadow-[0_1px_2px_rgba(255,255,255,0.7)]">
+            {service.title}
+          </h3>
+          <p className="relative z-10 text-[#2D3748] text-[13px] font-medium leading-[1.7] flex-1">
+            {service.body}
+          </p>
+          <div className="relative z-10 mt-4 pt-3 border-t border-black/[0.06] text-[#e7212b] text-[12px] font-bold flex items-center gap-1">
             Read more
             <ArrowRight className="w-3 h-3 group-hover:translate-x-1 transition-transform duration-200" />
           </div>
@@ -122,16 +170,13 @@ function ServiceCard({ service, index }: { service: ServiceItem; index: number }
 
 export default function ServicesAllGrid({ initialPage = 1 }: { initialPage?: number }) {
   const [page, setPage] = useState(initialPage);
-  const [prevInitialPage, setPrevInitialPage] = useState(initialPage);
   const [searchQuery, setSearchQuery] = useState("");
   const router = useRouter();
 
-  // Sync page with initialPage synchronously during render (handles browser back/forward
-  // and direct URL navigation without the async delay of useEffect).
-  if (prevInitialPage !== initialPage) {
-    setPrevInitialPage(initialPage);
+  // Sync page with initialPage after mount / props change to avoid render side-effects
+  useEffect(() => {
     setPage(initialPage);
-  }
+  }, [initialPage]);
 
   const filteredServices = useMemo(() => ALL_SERVICES.filter((svc) => {
     const query = searchQuery.toLowerCase().trim();
@@ -147,8 +192,6 @@ export default function ServicesAllGrid({ initialPage = 1 }: { initialPage?: num
   const start = (page - 1) * PER_PAGE;
   const currentServices = filteredServices.slice(start, start + PER_PAGE);
 
-  // Page reset is handled directly in the search input's onChange and X button's onClick
-
   const goTo = (p: number) => {
     setPage(p);
     if (p === 1) {
@@ -160,8 +203,25 @@ export default function ServicesAllGrid({ initialPage = 1 }: { initialPage?: num
   };
 
   return (
-    <section className="relative bg-[#f4f5f8] py-20 overflow-hidden">
-      <div className="relative max-w-7xl mx-auto px-4 sm:px-6">
+    <section
+      className="relative py-20 overflow-hidden"
+      style={{ background: "linear-gradient(135deg, #f5f7fa 0%, #e2e7ee 45%, #c9d2dc 100%)" }}
+    >
+      {/* Background depth blobs for frosted glass refraction */}
+      <div
+        className="absolute top-[-5%] left-[-5%] w-[650px] h-[650px] rounded-full pointer-events-none blur-[90px] opacity-90"
+        style={{ background: "radial-gradient(circle, rgba(255,255,255,0.95) 0%, rgba(235,240,248,0.55) 45%, transparent 70%)" }}
+      />
+      <div
+        className="absolute top-[35%] right-[-5%] w-[600px] h-[600px] rounded-full pointer-events-none blur-[100px] opacity-75"
+        style={{ background: "radial-gradient(circle, rgba(165,180,200,0.55) 0%, rgba(140,158,180,0.25) 50%, transparent 70%)" }}
+      />
+      <div
+        className="absolute bottom-[-5%] left-[-8%] w-[650px] h-[650px] rounded-full pointer-events-none blur-[90px] opacity-80"
+        style={{ background: "radial-gradient(circle, rgba(255,255,255,0.9) 0%, rgba(230,238,248,0.45) 50%, transparent 70%)" }}
+      />
+
+      <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6">
         
         {/* Search Bar */}
         <div className="relative max-w-md mx-auto mb-12">
@@ -175,7 +235,7 @@ export default function ServicesAllGrid({ initialPage = 1 }: { initialPage?: num
                 setPage(1);
               }}
               placeholder="Search services..."
-              className="w-full pl-12 pr-10 py-3 bg-white border border-[#e8eaf0] rounded-xl text-[14px] text-[#0B0D26] placeholder-gray-400 focus:outline-none focus:border-[#e7212b]/40 focus:ring-1 focus:ring-[#e7212b]/20 transition-all duration-200"
+              className="w-full pl-12 pr-10 py-3 bg-white/40 backdrop-blur-md border border-white/60 rounded-xl text-[14px] text-[#0B0D26] placeholder-gray-500 focus:outline-none focus:border-[#e7212b]/40 focus:ring-1 focus:ring-[#e7212b]/20 transition-all duration-200 shadow-sm"
             />
             {searchQuery && (
               <button
@@ -193,8 +253,8 @@ export default function ServicesAllGrid({ initialPage = 1 }: { initialPage?: num
 
         {/* Empty State vs Grid */}
         {filteredServices.length === 0 ? (
-          <div className="text-center py-16 bg-white border border-[#e8eaf0] rounded-2xl p-8 mb-14">
-            <Search className="w-10 h-10 text-gray-300 mx-auto mb-4" />
+          <div className="text-center py-16 bg-white/40 backdrop-blur-md border border-white/60 rounded-2xl p-8 mb-14 shadow-sm">
+            <Search className="w-10 h-10 text-gray-400 mx-auto mb-4" />
             <h3 className="text-[16px] font-bold text-[#0B0D26] mb-1">No services found</h3>
             <p className="text-[13px] text-gray-500">
               We couldn't find any services matching &ldquo;{searchQuery}&rdquo;.
@@ -212,19 +272,19 @@ export default function ServicesAllGrid({ initialPage = 1 }: { initialPage?: num
         {filteredServices.length > 0 && (
           <>
             <div className="flex items-center justify-center gap-2 flex-wrap">
-              <button onClick={() => goTo(Math.max(1, page - 1))} disabled={page === 1} className="w-9 h-9 rounded-lg border border-[#e8eaf0] bg-white flex items-center justify-center text-[#0B0D26] hover:border-[#e7212b]/40 hover:text-[#e7212b] disabled:opacity-30 disabled:cursor-not-allowed transition-all duration-200">
+              <button onClick={() => goTo(Math.max(1, page - 1))} disabled={page === 1} className="w-9 h-9 rounded-lg border border-white/60 bg-white/40 backdrop-blur-md flex items-center justify-center text-[#0B0D26] hover:border-[#e7212b]/40 hover:text-[#e7212b] disabled:opacity-30 disabled:cursor-not-allowed transition-all duration-200 shadow-sm">
                 <ChevronLeft className="w-4 h-4" />
               </button>
               {Array.from({ length: totalPages }, (_, i) => i + 1).map((p) => (
-                <button key={p} onClick={() => goTo(p)} className={`w-9 h-9 rounded-lg border text-[13px] font-semibold transition-all duration-200 ${p === page ? "bg-[#e7212b] border-[#e7212b] text-white shadow-lg shadow-[#e7212b]/20" : "bg-white border-[#e8eaf0] text-[#0B0D26] hover:border-[#e7212b]/40 hover:text-[#e7212b]"}`}>
+                <button key={p} onClick={() => goTo(p)} className={`w-9 h-9 rounded-lg border text-[13px] font-semibold transition-all duration-200 ${p === page ? "bg-[#e7212b] border-[#e7212b] text-white shadow-lg shadow-[#e7212b]/20" : "bg-white/40 backdrop-blur-md border-white/60 text-[#0B0D26] hover:border-[#e7212b]/40 hover:text-[#e7212b] shadow-sm"}`}>
                   {p}
                 </button>
               ))}
-              <button onClick={() => goTo(Math.min(totalPages, page + 1))} disabled={page === totalPages} className="w-9 h-9 rounded-lg border border-[#e8eaf0] bg-white flex items-center justify-center text-[#0B0D26] hover:border-[#e7212b]/40 hover:text-[#e7212b] disabled:opacity-30 disabled:cursor-not-allowed transition-all duration-200">
+              <button onClick={() => goTo(Math.min(totalPages, page + 1))} disabled={page === totalPages} className="w-9 h-9 rounded-lg border border-white/60 bg-white/40 backdrop-blur-md flex items-center justify-center text-[#0B0D26] hover:border-[#e7212b]/40 hover:text-[#e7212b] disabled:opacity-30 disabled:cursor-not-allowed transition-all duration-200 shadow-sm">
                 <ChevronRight className="w-4 h-4" />
               </button>
             </div>
-            <p className="text-center text-[12px] text-gray-400 mt-4">Page {page} of {totalPages}</p>
+            <p className="text-center text-[12px] text-gray-500 mt-4">Page {page} of {totalPages}</p>
           </>
         )}
       </div>

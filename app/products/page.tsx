@@ -167,7 +167,7 @@ export default function ProductsPage() {
   return (
     <>
       {/* ── Hero Banner ─────────────────────────────────────── */}
-      <section className="relative bg-[#0B0D26] overflow-hidden">
+      <section className="relative bg-[#0B0D26] overflow-hidden pt-[108px] lg:pt-[116px]">
         {/* Grid texture */}
         <div
           className="absolute inset-0 pointer-events-none"
@@ -184,7 +184,7 @@ export default function ProductsPage() {
           }}
         />
 
-        <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 py-16 lg:py-20">
+        <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 pb-16 lg:pb-20 pt-4">
           {/* Breadcrumb */}
           <nav className="flex items-center gap-1.5 text-[11px] text-white/30 mb-6">
             <Link href="/" className="hover:text-white transition-colors">Home</Link>
