@@ -1,0 +1,17 @@
+{
+  "name": "texas-video",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "npx --yes hyperframes@0.7.64 preview",
+    "check": "npx --yes hyperframes@0.7.64 check",
+    "render": "npx --yes hyperframes@0.7.64 render",
+    "publish": "npx --yes hyperframes@0.7.64 publish"
+  },
+  "dependencies": {
+    "gtts": "^0.2.1",
+    "say": "^0.16.0",
+    "tts.js": "^0.1.0",
+    "yauzl": "^3.4.0"
+  }
+}
