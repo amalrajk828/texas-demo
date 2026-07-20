@@ -3,10 +3,14 @@
   "private": true,
   "type": "module",
   "scripts": {
-    "dev": "npx --yes hyperframes@0.7.64 preview",
-    "check": "npx --yes hyperframes@0.7.64 check",
-    "render": "npx --yes hyperframes@0.7.64 render",
-    "publish": "npx --yes hyperframes@0.7.64 publish"
+    "dev:services": "cd services-video && npx --yes hyperframes@0.7.64 preview",
+    "dev:industries": "cd industries-video && npx --yes hyperframes@0.7.64 preview",
+    "check:services": "cd services-video && npx --yes hyperframes@0.7.64 check",
+    "check:industries": "cd industries-video && npx --yes hyperframes@0.7.64 check",
+    "render:services": "cd services-video && npx --yes hyperframes@0.7.64 render",
+    "render:industries": "cd industries-video && npx --yes hyperframes@0.7.64 render",
+    "publish:services": "cd services-video && npx --yes hyperframes@0.7.64 publish",
+    "publish:industries": "cd industries-video && npx --yes hyperframes@0.7.64 publish"
   },
   "dependencies": {
     "gtts": "^0.2.1",

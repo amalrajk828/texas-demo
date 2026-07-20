@@ -1,0 +1,776 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=1920, height=1080" />
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.14.2/dist/gsap.min.js"></script>
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap');
+
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      html, body {
+        margin: 0;
+        width: 1920px;
+        height: 1080px;
+        overflow: hidden;
+        background: #0B0D26;
+        font-family: 'Plus Jakarta Sans', sans-serif;
+      }
+
+      .clip {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+      }
+
+      :root {
+        --brand-red: #e7212b;
+        --brand-dark: #0B0D26;
+      }
+
+      .intro {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        background: linear-gradient(135deg, #0B0D26 0%, #1a1d3d 100%);
+      }
+
+      .intro-logo {
+        width: 220px;
+        height: auto;
+        margin-bottom: 35px;
+        filter: brightness(0) invert(1);
+      }
+
+      .intro-tagline {
+        font-size: 56px;
+        font-weight: 700;
+        color: #ffffff;
+        text-align: center;
+        max-width: 1200px;
+        line-height: 1.2;
+      }
+
+      .intro-tagline span {
+        color: var(--brand-red);
+      }
+
+      .intro-subtitle {
+        font-size: 28px;
+        color: rgba(255,255,255,0.7);
+        margin-top: 24px;
+        text-align: center;
+      }
+
+      .company-overview {
+        background: linear-gradient(135deg, #0B0D26 0%, #1a1d3d 100%);
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 80px;
+        padding: 100px 120px;
+      }
+
+      .overview-left {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+      }
+
+      .overview-badge {
+        display: inline-flex;
+        align-items: center;
+        gap: 10px;
+        background: rgba(231, 33, 43, 0.15);
+        border: 1px solid rgba(231, 33, 43, 0.3);
+        border-radius: 30px;
+        padding: 10px 24px;
+        font-size: 20px;
+        font-weight: 600;
+        color: var(--brand-red);
+        text-transform: uppercase;
+        letter-spacing: 2px;
+        margin-bottom: 30px;
+        width: fit-content;
+      }
+
+      .overview-title {
+        font-size: 54px;
+        font-weight: 800;
+        color: #ffffff;
+        line-height: 1.15;
+        margin-bottom: 24px;
+      }
+
+      .overview-title span {
+        color: var(--brand-red);
+      }
+
+      .overview-desc {
+        font-size: 26px;
+        color: rgba(255,255,255,0.7);
+        line-height: 1.7;
+        margin-bottom: 35px;
+      }
+
+      .overview-right {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: auto auto auto;
+        gap: 24px;
+      }
+
+      .stat-card {
+        background: rgba(255,255,255,0.05);
+        border: 1px solid rgba(255,255,255,0.1);
+        border-radius: 16px;
+        padding: 32px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+      }
+
+      .stat-number {
+        font-size: 60px;
+        font-weight: 800;
+        color: var(--brand-red);
+        line-height: 1;
+        margin-bottom: 10px;
+      }
+
+      .stat-label {
+        font-size: 20px;
+        font-weight: 600;
+        color: rgba(255,255,255,0.7);
+        text-transform: uppercase;
+        letter-spacing: 1px;
+      }
+
+      .iso-badges {
+        grid-column: 1 / -1;
+        display: flex;
+        gap: 20px;
+        justify-content: center;
+        align-items: flex-start;
+        margin-top: 10px;
+        width: fit-content;
+        justify-self: center;
+      }
+
+      .iso-badge {
+        background: rgba(255,255,255,0.08);
+        border: 1px solid rgba(255,255,255,0.15);
+        border-radius: 12px;
+        padding: 14px 20px;
+        font-size: 18px;
+        font-weight: 600;
+        color: rgba(255,255,255,0.8);
+        text-align: center;
+        line-height: 1.3;
+        width: 140px;
+        flex: none;
+      }
+
+      .iso-badge strong {
+        display: block;
+        color: #ffffff;
+        font-size: 20px;
+        margin-bottom: 4px;
+      }
+
+      .industries-grid-section {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        background: linear-gradient(135deg, #0B0D26 0%, #1a1d3d 100%);
+        text-align: center;
+        padding: 80px 120px;
+      }
+
+      .industries-grid-label {
+        font-size: 20px;
+        font-weight: 600;
+        color: var(--brand-red);
+        text-transform: uppercase;
+        letter-spacing: 3px;
+        margin-bottom: 20px;
+      }
+
+      .industries-grid-title {
+        font-size: 52px;
+        font-weight: 800;
+        color: #ffffff;
+        margin-bottom: 60px;
+      }
+
+      .industries-icons-grid {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 30px;
+        width: 100%;
+        max-width: 1600px;
+      }
+
+      .industry-icon-item {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 16px;
+        padding: 30px 20px;
+        background: rgba(255,255,255,0.03);
+        border: 1px solid rgba(255,255,255,0.08);
+        border-radius: 16px;
+      }
+
+      .industry-icon-circle {
+        width: 70px;
+        height: 70px;
+        background: rgba(231, 33, 43, 0.15);
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+
+      .industry-icon-circle svg {
+        width: 36px;
+        height: 36px;
+        fill: var(--brand-red);
+      }
+
+      .industry-icon-name {
+        font-size: 20px;
+        font-weight: 700;
+        color: #ffffff;
+        text-align: center;
+      }
+
+      .section-header {
+        position: absolute;
+        top: 60px;
+        left: 80px;
+        z-index: 10;
+      }
+
+      .section-category {
+        font-size: 20px;
+        font-weight: 600;
+        color: var(--brand-red);
+        text-transform: uppercase;
+        letter-spacing: 3px;
+        margin-bottom: 12px;
+      }
+
+      .section-title {
+        font-size: 50px;
+        font-weight: 800;
+        color: #ffffff;
+        line-height: 1.1;
+      }
+
+      .industry-detail {
+        background: linear-gradient(135deg, #0B0D26 0%, #1a1d3d 100%);
+      }
+
+      .industry-two-col {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 60px;
+        padding: 80px;
+        height: 100%;
+      }
+
+      .industry-content {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+      }
+
+      .industry-tags {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 12px;
+        margin-top: 24px;
+        margin-bottom: 30px;
+      }
+
+      .industry-tag {
+        background: rgba(231, 33, 43, 0.15);
+        border: 1px solid rgba(231, 33, 43, 0.3);
+        border-radius: 20px;
+        padding: 8px 20px;
+        font-size: 16px;
+        font-weight: 600;
+        color: var(--brand-red);
+      }
+
+      .industry-desc {
+        font-size: 24px;
+        color: rgba(255,255,255,0.7);
+        line-height: 1.7;
+      }
+
+      .industry-image {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        border-radius: 16px;
+      }
+
+      .outro {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        background: linear-gradient(135deg, #0B0D26 0%, #1a1d3d 100%);
+        text-align: center;
+      }
+
+      .outro-logo {
+        width: 180px;
+        height: auto;
+        margin-bottom: 40px;
+        filter: brightness(0) invert(1);
+      }
+
+      .outro-cta {
+        font-size: 64px;
+        font-weight: 800;
+        color: #ffffff;
+        margin-bottom: 30px;
+      }
+
+      .outro-cta span {
+        color: var(--brand-red);
+      }
+
+      .outro-contact {
+        font-size: 30px;
+        color: rgba(255,255,255,0.8);
+        margin-bottom: 12px;
+      }
+
+      .outro-website {
+        font-size: 34px;
+        font-weight: 600;
+        color: var(--brand-red);
+        margin-top: 30px;
+      }
+
+      .outro-locations {
+        font-size: 24px;
+        color: rgba(255,255,255,0.6);
+        margin-top: 20px;
+      }
+
+      .progress-bar {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        height: 4px;
+        background: var(--brand-red);
+        width: 0%;
+      }
+    </style>
+  </head>
+  <body>
+    <audio id="audio-track" src="assets/audio/full-mix-175s-final.mp3" muted></audio>
+    <div
+      id="root"
+      data-composition-id="main"
+      data-start="0"
+      data-duration="175"
+      data-width="1920"
+      data-height="1080"
+    >
+      <!-- INTRO (0-11s) -->
+      <div id="intro" class="clip intro" data-start="0" data-duration="11" data-track-index="1">
+        <img src="../shared/images/logo.svg" alt="Texas Technical Services" class="intro-logo" />
+        <h1 class="intro-tagline">Industries <span>We Serve</span></h1>
+        <p class="intro-subtitle">Precision OEM Solutions Across 8 Industrial Sectors</p>
+        <div class="progress-bar" id="intro-progress"></div>
+      </div>
+
+      <!-- COMPANY OVERVIEW (11-33s) -->
+      <div id="company-overview" class="clip company-overview" data-start="11" data-duration="22" data-track-index="1">
+        <div class="overview-left">
+          <div class="overview-badge">Since 2008</div>
+          <h2 class="overview-title">Trusted Partner for<br/><span>Industrial Solutions</span></h2>
+          <p class="overview-desc">With strategic partnerships across leading OEMs, we deliver comprehensive solutions in flow measurement, inspection and testing, and industrial automation across the world's most demanding industrial sectors.</p>
+        </div>
+        <div class="overview-right">
+          <div class="stat-card">
+            <div class="stat-number">18+</div>
+            <div class="stat-label">Years Experience</div>
+          </div>
+          <div class="stat-card">
+            <div class="stat-number">8</div>
+            <div class="stat-label">Industries</div>
+          </div>
+          <div class="stat-card">
+            <div class="stat-number">200+</div>
+            <div class="stat-label">Clients Served</div>
+          </div>
+          <div class="stat-card">
+            <div class="stat-number">5+</div>
+            <div class="stat-label">OEM Partners</div>
+          </div>
+          <div class="iso-badges">
+            <div class="iso-badge"><strong>ISO 9001</strong>Quality</div>
+            <div class="iso-badge"><strong>ISO 14001</strong>Environment</div>
+            <div class="iso-badge"><strong>ISO 45001</strong>Safety</div>
+          </div>
+        </div>
+        <div class="progress-bar" id="overview-progress"></div>
+      </div>
+
+      <!-- INDUSTRIES GRID (33-43s) -->
+      <div id="industries-grid" class="clip industries-grid-section" data-start="33" data-duration="10" data-track-index="1">
+        <p class="industries-grid-label">Our Coverage</p>
+        <h2 class="industries-grid-title">8 Industries, One Partner</h2>
+        <div class="industries-icons-grid">
+          <div class="industry-icon-item" id="grid-oil">
+            <div class="industry-icon-circle">
+              <svg viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/></svg>
+            </div>
+            <h3 class="industry-icon-name">Oil & Gas</h3>
+          </div>
+          <div class="industry-icon-item" id="grid-refinery">
+            <div class="industry-icon-circle">
+              <svg viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/></svg>
+            </div>
+            <h3 class="industry-icon-name">Refinery</h3>
+          </div>
+          <div class="industry-icon-item" id="grid-petro">
+            <div class="industry-icon-circle">
+              <svg viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/></svg>
+            </div>
+            <h3 class="industry-icon-name">Petrochemicals</h3>
+          </div>
+          <div class="industry-icon-item" id="grid-lng">
+            <div class="industry-icon-circle">
+              <svg viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/></svg>
+            </div>
+            <h3 class="industry-icon-name">LNG</h3>
+          </div>
+          <div class="industry-icon-item" id="grid-power">
+            <div class="industry-icon-circle">
+              <svg viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/></svg>
+            </div>
+            <h3 class="industry-icon-name">Power Plant</h3>
+          </div>
+          <div class="industry-icon-item" id="grid-water">
+            <div class="industry-icon-circle">
+              <svg viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/></svg>
+            </div>
+            <h3 class="industry-icon-name">Water Treatment</h3>
+          </div>
+          <div class="industry-icon-item" id="grid-cement">
+            <div class="industry-icon-circle">
+              <svg viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/></svg>
+            </div>
+            <h3 class="industry-icon-name">Cement</h3>
+          </div>
+          <div class="industry-icon-item" id="grid-metal">
+            <div class="industry-icon-circle">
+              <svg viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/></svg>
+            </div>
+            <h3 class="industry-icon-name">Metal & Steel</h3>
+          </div>
+        </div>
+        <div class="progress-bar" id="grid-progress"></div>
+      </div>
+
+      <!-- OIL & GAS (43-62s) -->
+      <div id="oil-gas" class="clip industry-detail" data-start="43" data-duration="19" data-track-index="1">
+        <div class="industry-two-col">
+          <div class="industry-content">
+            <div class="section-header" style="position: static; margin-bottom: 30px;">
+              <p class="section-category">Industry Spotlight</p>
+              <h2 class="section-title">Oil & Gas</h2>
+            </div>
+            <div class="industry-tags">
+              <span class="industry-tag">Upstream</span>
+              <span class="industry-tag">Midstream</span>
+              <span class="industry-tag">Downstream</span>
+            </div>
+            <p class="industry-desc">Comprehensive solutions tailored to the unique needs of the oil and gas industries. From advanced flow metering solutions to precision flow meters, flow computers, and analyzers — our industrial automation empowers these sectors to optimize operations and ensure accurate data analysis.</p>
+          </div>
+          <img src="assets/images/oil_and_gas.jpg" alt="Oil & Gas Industry" class="industry-image" />
+        </div>
+        <div class="progress-bar" id="oil-progress"></div>
+      </div>
+
+      <!-- REFINERY (62-77s) -->
+      <div id="refinery" class="clip industry-detail" data-start="62" data-duration="15" data-track-index="1">
+        <div class="industry-two-col">
+          <div class="industry-content">
+            <div class="section-header" style="position: static; margin-bottom: 30px;">
+              <p class="section-category">Industry Spotlight</p>
+              <h2 class="section-title">Refinery</h2>
+            </div>
+            <div class="industry-tags">
+              <span class="industry-tag">Process Control</span>
+              <span class="industry-tag">CEMS</span>
+            </div>
+            <p class="industry-desc">Cutting-edge offerings for the demanding world of refinery operations — including precision flow meters, flow computers, CEMS and analyzers — providing the refinery industry with essential industrial automation solutions.</p>
+          </div>
+          <img src="assets/images/refinery.jpg" alt="Refinery Industry" class="industry-image" />
+        </div>
+        <div class="progress-bar" id="ref-progress"></div>
+      </div>
+
+      <!-- PETROCHEMICALS (77-92s) -->
+      <div id="petrochemicals" class="clip industry-detail" data-start="77" data-duration="15" data-track-index="1">
+        <div class="industry-two-col">
+          <div class="industry-content">
+            <div class="section-header" style="position: static; margin-bottom: 30px;">
+              <p class="section-category">Industry Spotlight</p>
+              <h2 class="section-title">Petrochemicals</h2>
+            </div>
+            <div class="industry-tags">
+              <span class="industry-tag">Process Automation</span>
+              <span class="industry-tag">Flow Solutions</span>
+            </div>
+            <p class="industry-desc">State-of-the-art flow metering solutions, precise flow meters, flow computers, and analyzers catering to the ever-evolving needs of the petrochemical industry's complex production environments.</p>
+          </div>
+          <img src="assets/images/petrochemical.png" alt="Petrochemicals Industry" class="industry-image" />
+        </div>
+        <div class="progress-bar" id="petro-progress"></div>
+      </div>
+
+      <!-- LNG (92-106s) -->
+      <div id="lng" class="clip industry-detail" data-start="92" data-duration="14" data-track-index="1">
+        <div class="industry-two-col">
+          <div class="industry-content">
+            <div class="section-header" style="position: static; margin-bottom: 30px;">
+              <p class="section-category">Industry Spotlight</p>
+              <h2 class="section-title">LNG</h2>
+            </div>
+            <div class="industry-tags">
+              <span class="industry-tag">Custody Transfer</span>
+              <span class="industry-tag">Metering</span>
+              <span class="industry-tag">Safety</span>
+            </div>
+            <p class="industry-desc">Products designed to enhance LNG plant operations, providing cutting-edge flow metering solutions, precision flow meters, flow computers, and analyzers that ensure precise measurement, efficiency, and safety in liquefied natural gas processes.</p>
+          </div>
+          <img src="assets/images/lng.jpg" alt="LNG Industry" class="industry-image" />
+        </div>
+        <div class="progress-bar" id="lng-progress"></div>
+      </div>
+
+      <!-- POWER PLANT (106-122s) -->
+      <div id="power-plant" class="clip industry-detail" data-start="106" data-duration="16" data-track-index="1">
+        <div class="industry-two-col">
+          <div class="industry-content">
+            <div class="section-header" style="position: static; margin-bottom: 30px;">
+              <p class="section-category">Industry Spotlight</p>
+              <h2 class="section-title">Power Plant</h2>
+            </div>
+            <div class="industry-tags">
+              <span class="industry-tag">Generation</span>
+              <span class="industry-tag">Emissions</span>
+              <span class="industry-tag">Grid</span>
+            </div>
+            <p class="industry-desc">OEM products tailored for power plants, including CEMS, flow meters, flow computers, analyzers, and industrial process automation systems — comprehensive solutions to optimize performance and emissions monitoring.</p>
+          </div>
+          <img src="assets/images/power_plant.jpg" alt="Power Plant Industry" class="industry-image" />
+        </div>
+        <div class="progress-bar" id="power-progress"></div>
+      </div>
+
+      <!-- WATER TREATMENT (122-137s) -->
+      <div id="water-treatment" class="clip industry-detail" data-start="122" data-duration="15" data-track-index="1">
+        <div class="industry-two-col">
+          <div class="industry-content">
+            <div class="section-header" style="position: static; margin-bottom: 30px;">
+              <p class="section-category">Industry Spotlight</p>
+              <h2 class="section-title">Water Treatment</h2>
+            </div>
+            <div class="industry-tags">
+              <span class="industry-tag">Municipal</span>
+              <span class="industry-tag">Industrial</span>
+            </div>
+            <p class="industry-desc">Products designed for water treatment applications, including CEMS, analyzers, and industrial process automation systems, delivering advanced solutions to ensure precise monitoring, quality control, and operational efficiency.</p>
+          </div>
+          <img src="assets/images/water_treatment.jpg" alt="Water Treatment Industry" class="industry-image" />
+        </div>
+        <div class="progress-bar" id="water-progress"></div>
+      </div>
+
+      <!-- CEMENT (137-150s) -->
+      <div id="cement" class="clip industry-detail" data-start="137" data-duration="13" data-track-index="1">
+        <div class="industry-two-col">
+          <div class="industry-content">
+            <div class="section-header" style="position: static; margin-bottom: 30px;">
+              <p class="section-category">Industry Spotlight</p>
+              <h2 class="section-title">Cement</h2>
+            </div>
+            <div class="industry-tags">
+              <span class="industry-tag">Production</span>
+              <span class="industry-tag">Quality</span>
+              <span class="industry-tag">CEMS</span>
+            </div>
+            <p class="industry-desc">OEM products tailored for the cement industry, encompassing CEMS, analyzers, and industrial process automation systems — offering advanced solutions to optimize emissions monitoring, quality control, and operational excellence.</p>
+          </div>
+          <img src="assets/images/cement_industry.jpg" alt="Cement Industry" class="industry-image" />
+        </div>
+        <div class="progress-bar" id="cement-progress"></div>
+      </div>
+
+      <!-- METAL & STEEL (150-164s) -->
+      <div id="metal-steel" class="clip industry-detail" data-start="150" data-duration="14" data-track-index="1">
+        <div class="industry-two-col">
+          <div class="industry-content">
+            <div class="section-header" style="position: static; margin-bottom: 30px;">
+              <p class="section-category">Industry Spotlight</p>
+              <h2 class="section-title">Metal & Steel</h2>
+            </div>
+            <div class="industry-tags">
+              <span class="industry-tag">Monitoring</span>
+              <span class="industry-tag">Safety</span>
+              <span class="industry-tag">Efficiency</span>
+            </div>
+            <p class="industry-desc">OEM products engineered for the metal and steel industry, featuring CEMS, analyzers, and industrial process automation systems — providing cutting-edge solutions to enhance efficiency, quality control, and emissions monitoring.</p>
+          </div>
+          <img src="assets/images/metal_and_steel.jpg" alt="Metal & Steel Industry" class="industry-image" />
+        </div>
+        <div class="progress-bar" id="metal-progress"></div>
+      </div>
+
+      <!-- OUTRO + CONTACT (164-175s) -->
+      <div id="outro" class="clip outro" data-start="164" data-duration="11" data-track-index="1">
+        <img src="../shared/images/logo.svg" alt="Texas Technical Services" class="outro-logo" />
+        <h2 class="outro-cta">Let's Build the <span>Future Together</span></h2>
+        <p class="outro-contact">Kuwait: +965 97243755 | +965 66347267</p>
+        <p class="outro-contact">UAE: +971 569553747 | +971 567793973</p>
+        <p class="outro-website">www.texastechserv.com</p>
+        <p class="outro-locations">Kuwait • Dubai • Saudi Arabia • Bahrain • Qatar • Oman</p>
+        <div class="progress-bar" id="outro-progress"></div>
+      </div>
+    </div>
+
+    <script>
+      window.__timelines = window.__timelines || {};
+      const tl = gsap.timeline({ paused: true });
+
+      // INTRO (0-11s)
+      tl.fromTo("#intro", {opacity: 0}, {opacity: 1, duration: 1}, 0);
+      tl.from("#intro .intro-logo", { opacity: 0, scale: 0.5, duration: 0.8, ease: "back.out(1.7)" }, 0.5);
+      tl.from("#intro .intro-tagline", { opacity: 0, y: 50, duration: 0.8 }, 0.8);
+      tl.from("#intro .intro-subtitle", { opacity: 0, y: 30, duration: 0.6 }, 1.1);
+      tl.to("#intro-progress", { width: "100%", duration: 11, ease: "none" }, 0);
+      tl.to("#intro", {opacity: 0, duration: 1}, 10);
+
+      // COMPANY OVERVIEW (11-33s)
+      tl.fromTo("#company-overview", {opacity: 0}, {opacity: 1, duration: 1}, 11);
+      tl.from("#company-overview .overview-badge", { opacity: 0, y: -20, duration: 0.6 }, 11.5);
+      tl.from("#company-overview .overview-title", { opacity: 0, y: 30, duration: 0.7 }, 11.8);
+      tl.from("#company-overview .overview-desc", { opacity: 0, y: 30, duration: 0.6 }, 12.2);
+      tl.from("#company-overview .stat-card", { opacity: 0, scale: 0.8, duration: 0.5, stagger: 0.2 }, 13);
+      tl.from("#company-overview .iso-badges", { opacity: 0, y: 20, duration: 0.6 }, 14);
+      tl.to("#overview-progress", { width: "100%", duration: 22, ease: "none" }, 11);
+      tl.to("#company-overview", {opacity: 0, duration: 1}, 32);
+
+      // INDUSTRIES GRID (33-43s)
+      tl.fromTo("#industries-grid", {opacity: 0}, {opacity: 1, duration: 1}, 33);
+      tl.from("#industries-grid .industries-grid-label", { opacity: 0, y: -20, duration: 0.6 }, 33.5);
+      tl.from("#industries-grid .industries-grid-title", { opacity: 0, y: 30, duration: 0.6 }, 33.8);
+      tl.from("#industries-grid .industry-icon-item", { opacity: 0, y: 40, duration: 0.5, stagger: 0.12 }, 34.2);
+      tl.to("#grid-progress", { width: "100%", duration: 10, ease: "none" }, 33);
+      tl.to("#industries-grid", {opacity: 0, duration: 1}, 42);
+
+      // OIL & GAS (43-62s)
+      tl.fromTo("#oil-gas", {opacity: 0}, {opacity: 1, duration: 1}, 43);
+      tl.from("#oil-gas .section-header", { opacity: 0, x: -50, duration: 0.7 }, 43.5);
+      tl.from("#oil-gas .industry-tags", { opacity: 0, y: 20, duration: 0.6 }, 43.8);
+      tl.from("#oil-gas .industry-desc", { opacity: 0, y: 30, duration: 0.6 }, 44.2);
+      tl.from("#oil-gas .industry-image", { opacity: 0, scale: 0.95, duration: 0.7 }, 43.6);
+      tl.to("#oil-progress", { width: "100%", duration: 19, ease: "none" }, 43);
+      tl.to("#oil-gas", {opacity: 0, duration: 1}, 61);
+
+      // REFINERY (62-77s)
+      tl.fromTo("#refinery", {opacity: 0}, {opacity: 1, duration: 1}, 62);
+      tl.from("#refinery .section-header", { opacity: 0, x: -50, duration: 0.7 }, 62.5);
+      tl.from("#refinery .industry-tags", { opacity: 0, y: 20, duration: 0.6 }, 62.8);
+      tl.from("#refinery .industry-desc", { opacity: 0, y: 30, duration: 0.6 }, 63.2);
+      tl.from("#refinery .industry-image", { opacity: 0, scale: 0.95, duration: 0.7 }, 62.6);
+      tl.to("#ref-progress", { width: "100%", duration: 15, ease: "none" }, 62);
+      tl.to("#refinery", {opacity: 0, duration: 1}, 76);
+
+      // PETROCHEMICALS (77-92s)
+      tl.fromTo("#petrochemicals", {opacity: 0}, {opacity: 1, duration: 1}, 77);
+      tl.from("#petrochemicals .section-header", { opacity: 0, x: -50, duration: 0.7 }, 77.5);
+      tl.from("#petrochemicals .industry-tags", { opacity: 0, y: 20, duration: 0.6 }, 77.8);
+      tl.from("#petrochemicals .industry-desc", { opacity: 0, y: 30, duration: 0.6 }, 78.2);
+      tl.from("#petrochemicals .industry-image", { opacity: 0, scale: 0.95, duration: 0.7 }, 77.6);
+      tl.to("#petro-progress", { width: "100%", duration: 15, ease: "none" }, 77);
+      tl.to("#petrochemicals", {opacity: 0, duration: 1}, 91);
+
+      // LNG (92-106s)
+      tl.fromTo("#lng", {opacity: 0}, {opacity: 1, duration: 1}, 92);
+      tl.from("#lng .section-header", { opacity: 0, x: -50, duration: 0.7 }, 92.5);
+      tl.from("#lng .industry-tags", { opacity: 0, y: 20, duration: 0.6 }, 92.8);
+      tl.from("#lng .industry-desc", { opacity: 0, y: 30, duration: 0.6 }, 93.2);
+      tl.from("#lng .industry-image", { opacity: 0, scale: 0.95, duration: 0.7 }, 92.6);
+      tl.to("#lng-progress", { width: "100%", duration: 14, ease: "none" }, 92);
+      tl.to("#lng", {opacity: 0, duration: 1}, 105);
+
+      // POWER PLANT (106-122s)
+      tl.fromTo("#power-plant", {opacity: 0}, {opacity: 1, duration: 1}, 106);
+      tl.from("#power-plant .section-header", { opacity: 0, x: -50, duration: 0.7 }, 106.5);
+      tl.from("#power-plant .industry-tags", { opacity: 0, y: 20, duration: 0.6 }, 106.8);
+      tl.from("#power-plant .industry-desc", { opacity: 0, y: 30, duration: 0.6 }, 107.2);
+      tl.from("#power-plant .industry-image", { opacity: 0, scale: 0.95, duration: 0.7 }, 106.6);
+      tl.to("#power-progress", { width: "100%", duration: 16, ease: "none" }, 106);
+      tl.to("#power-plant", {opacity: 0, duration: 1}, 121);
+
+      // WATER TREATMENT (122-137s)
+      tl.fromTo("#water-treatment", {opacity: 0}, {opacity: 1, duration: 1}, 122);
+      tl.from("#water-treatment .section-header", { opacity: 0, x: -50, duration: 0.7 }, 122.5);
+      tl.from("#water-treatment .industry-tags", { opacity: 0, y: 20, duration: 0.6 }, 122.8);
+      tl.from("#water-treatment .industry-desc", { opacity: 0, y: 30, duration: 0.6 }, 123.2);
+      tl.from("#water-treatment .industry-image", { opacity: 0, scale: 0.95, duration: 0.7 }, 122.6);
+      tl.to("#water-progress", { width: "100%", duration: 15, ease: "none" }, 122);
+      tl.to("#water-treatment", {opacity: 0, duration: 1}, 136);
+
+      // CEMENT (137-150s)
+      tl.fromTo("#cement", {opacity: 0}, {opacity: 1, duration: 1}, 137);
+      tl.from("#cement .section-header", { opacity: 0, x: -50, duration: 0.7 }, 137.5);
+      tl.from("#cement .industry-tags", { opacity: 0, y: 20, duration: 0.6 }, 137.8);
+      tl.from("#cement .industry-desc", { opacity: 0, y: 30, duration: 0.6 }, 138.2);
+      tl.from("#cement .industry-image", { opacity: 0, scale: 0.95, duration: 0.7 }, 137.6);
+      tl.to("#cement-progress", { width: "100%", duration: 13, ease: "none" }, 137);
+      tl.to("#cement", {opacity: 0, duration: 1}, 149);
+
+      // METAL & STEEL (150-164s)
+      tl.fromTo("#metal-steel", {opacity: 0}, {opacity: 1, duration: 1}, 150);
+      tl.from("#metal-steel .section-header", { opacity: 0, x: -50, duration: 0.7 }, 150.5);
+      tl.from("#metal-steel .industry-tags", { opacity: 0, y: 20, duration: 0.6 }, 150.8);
+      tl.from("#metal-steel .industry-desc", { opacity: 0, y: 30, duration: 0.6 }, 151.2);
+      tl.from("#metal-steel .industry-image", { opacity: 0, scale: 0.95, duration: 0.7 }, 150.6);
+      tl.to("#metal-progress", { width: "100%", duration: 14, ease: "none" }, 150);
+      tl.to("#metal-steel", {opacity: 0, duration: 1}, 163);
+
+      // OUTRO + CONTACT (164-175s)
+      tl.fromTo("#outro", {opacity: 0}, {opacity: 1, duration: 1}, 164);
+      tl.from("#outro .outro-logo", { opacity: 0, scale: 0.5, duration: 0.8, ease: "back.out(1.7)" }, 164.5);
+      tl.from("#outro .outro-cta", { opacity: 0, y: 50, duration: 0.7 }, 164.8);
+      tl.from("#outro .outro-contact", { opacity: 0, y: 30, duration: 0.5, stagger: 0.15 }, 165.2);
+      tl.from("#outro .outro-website", { opacity: 0, y: 30, duration: 0.5 }, 165.8);
+      tl.from("#outro .outro-locations", { opacity: 0, y: 30, duration: 0.5 }, 166.2);
+      tl.to("#outro-progress", { width: "100%", duration: 11, ease: "none" }, 164);
+
+      window.__timelines["main"] = tl;
+    </script>
+  </body>
+</html>
