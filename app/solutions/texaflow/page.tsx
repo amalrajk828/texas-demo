@@ -6,7 +6,7 @@ import { FaqPageJsonLd } from "@/components/schema/FaqPageJsonLd";
 import TexaflowContent from "@/components/solutions/TexaflowContent";
 
 export const metadata: Metadata = {
-  title: "Texaflow — Custody Metering Integrated Control System | TTS Kuwait",
+  title: "Texaflow — Custody Metering Integrated Control System Kuwait",
   description:
     "Texaflow is our proprietary custody metering integrated control system — advanced fiscal metering & SCADA solution for oil & gas terminals, refineries, pipeline metering stations, loading facilities, power plants, and airports.",
   alternates: { canonical: "/solutions/texaflow/" },
@@ -18,7 +18,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Texaflow | Texas Technical Services",
+    title: "Texaflow",
     description:
       "Proprietary custody metering integrated control system for fiscal metering & SCADA — Kuwait, UAE, GCC.",
   },

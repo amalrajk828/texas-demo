@@ -94,7 +94,7 @@ export default function ServicesConstruction() {
             <div className="relative rounded-2xl overflow-hidden aspect-[16/11] bg-[#12163A] shadow-2xl shadow-black/40 border border-white/[0.06]">
               <Image
                 src="/images/services/construction.jpg"
-                alt="SKYLIGHT GANTRY construction project"
+                alt="SKYLIGHT GANTRY structural fabrication project — Texas Technical Services Kuwait"
                 fill
                 sizes="(max-width: 1024px) 100vw, 50vw"
                 className="object-cover"
@@ -109,7 +109,7 @@ export default function ServicesConstruction() {
             <div className="absolute bottom-0 right-0 lg:-right-6 w-[42%] rounded-2xl overflow-hidden aspect-[4/3] bg-[#12163A] shadow-2xl shadow-black/50 border-[3px] border-[#0B0D26]">
               <Image
                 src="/images/services/construction-detail.jpg"
-                alt="Construction detail"
+                alt="Construction detail of industrial structural steelwork — TTS Kuwait"
                 fill
                 sizes="25vw"
                 className="object-cover"

@@ -7,7 +7,7 @@ import ProductCard from "@/components/ProductCard";
 import { getProductsByPath } from "@/lib/products";
 
 export const metadata: Metadata = {
-  title: "Liquid Flow Meters - Texas Technical Services",
+  title: "Liquid Flow Meters",
   description:
     "Wide range of liquid flow meters from Faure Herman, Ultraflux, and SICK — custody and non-custody solutions including helical turbine, ultrasonic, and portable flowmeters.",
   alternates: { canonical: "/products/flow-meters/liquid-flow-meters/" },
@@ -18,14 +18,14 @@ export const metadata: Metadata = {
     "custody transfer liquid metering",
   ],
   openGraph: {
-    title: "Liquid Flow Meters - Texas Technical Services",
+    title: "Liquid Flow Meters",
     description:
       "Wide range of liquid flow meters from Faure Herman, Ultraflux, and SICK — custody and non-custody solutions.",
     url: "/products/flow-meters/liquid-flow-meters/",
   },
   twitter: {
     card: "summary_large_image",
-    title: "Liquid Flow Meters - Texas Technical Services",
+    title: "Liquid Flow Meters",
     description:
       "Wide range of liquid flow meters from Faure Herman, Ultraflux, and SICK — custody and non-custody solutions.",
   },

@@ -14,14 +14,14 @@ export const metadata: Metadata = {
     canonical: "/services_group/services/industrial-automation/",
   },
   openGraph: {
-    title: "Industrial Automation, PLC SCADA & Process Control | Texas Technical Services",
+    title: "Industrial Automation, PLC SCADA & Process Control",
     description:
       "Industrial automation & control systems, control and automation engineering, and plant and process automation — PLC and SCADA system integrators in Kuwait, UAE, and Saudi Arabia serving manufacturing, power plant, and oil & gas sectors.",
     url: "/services_group/services/industrial-automation/",
   },
   twitter: {
     card: "summary_large_image",
-    title: "Industrial Automation, PLC SCADA & Process Control | Texas Technical Services",
+    title: "Industrial Automation, PLC SCADA & Process Control",
     description:
       "Industrial automation & control systems, control and automation engineering, plant and process automation, and automation in power plant — serving Kuwait, UAE, Dubai, and Saudi Arabia.",
   },

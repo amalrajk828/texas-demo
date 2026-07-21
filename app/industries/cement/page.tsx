@@ -7,7 +7,7 @@ import IndustryCtaBanner from "@/components/industries/IndustryCtaBanner";
 import type { CategoryColors, IndustryProduct } from "@/components/industries/types";
 
 export const metadata: Metadata = {
-  title: "Cement Industry Solutions | Texas Technical Services",
+  title: "Cement Industry Solutions",
   description:
     "Texas Technical Services delivers CEMS, gas analyzers, and extractive gas analyzers for the cement industry — optimising emissions monitoring, quality control, and operational excellence.",
   alternates: { canonical: "/industries/cement/" },
@@ -19,14 +19,14 @@ export const metadata: Metadata = {
     "industrial automation cement manufacturing",
   ],
   openGraph: {
-    title: "Cement Industry Solutions | Texas Technical Services",
+    title: "Cement Industry Solutions",
     description:
       "Advanced OEM analyzer and CEMS solutions for cement manufacturing — backed by 18+ years of industrial expertise.",
     url: "/industries/cement/",
   },
   twitter: {
     card: "summary_large_image",
-    title: "Cement Industry Solutions | Texas Technical Services",
+    title: "Cement Industry Solutions",
     description:
       "Advanced OEM analyzer and CEMS solutions for cement manufacturing — backed by 18+ years of industrial expertise.",
   },

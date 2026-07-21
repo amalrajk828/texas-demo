@@ -12,7 +12,7 @@ import FlowMetersFhLabSection from "@/components/products/FlowMetersFhLabSection
 import { getProductsByPath } from "@/lib/products";
 
 export const metadata: Metadata = {
-  title: "Flow Meters - Texas Technical Services",
+  title: "Flow Meters",
   description:
     "Precision flow measurement instruments for liquids, gases, and flare applications from SICK, Faure Herman, KEM Küppers, Endress+Hauser, Tek-Trol, and more — custody transfer and process monitoring solutions.",
   alternates: { canonical: "/products/flow-meters/" },
@@ -32,14 +32,14 @@ export const metadata: Metadata = {
     "thermal mass flow meter",
   ],
   openGraph: {
-    title: "Flow Meters - Texas Technical Services",
+    title: "Flow Meters",
     description:
       "Comprehensive flow technologies & applications — Coriolis, ultrasonic, turbine, electromagnetic, V-Cone, PD, thermal mass, and flare gas meters from 5 world-class OEMs.",
     url: "/products/flow-meters/",
   },
   twitter: {
     card: "summary_large_image",
-    title: "Flow Meters - Texas Technical Services",
+    title: "Flow Meters",
     description:
       "Comprehensive flow technologies & applications from 5 world-class OEMs — custody transfer and process measurement.",
   },

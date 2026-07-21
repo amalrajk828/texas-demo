@@ -12,7 +12,7 @@ export const metadata: Metadata = {
     canonical: "/services_group/services/inspection-testing/mechanical-testing/",
   },
   openGraph: {
-    title: "Mechanical Testing Services | Texas Technical Services",
+    title: "Mechanical Testing Services",
     description:
       "Tensile, hardness, impact, bend, fracture toughness, and macro/micro testing for metals, plastics, ceramics, and composites. Kuwait & Dubai.",
     url: "/services_group/services/inspection-testing/mechanical-testing/",
@@ -20,7 +20,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Mechanical Testing Services | Texas Technical Services",
+    title: "Mechanical Testing Services",
     description: "Tensile, hardness, impact, bend, fracture, and macro/micro testing. Kuwait & Dubai.",
   },
   keywords: [

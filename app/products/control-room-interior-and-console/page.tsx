@@ -12,7 +12,7 @@ import YouTubeEmbed from "@/components/YouTubeEmbed";
 import { getProductsByPath } from "@/lib/products";
 
 export const metadata: Metadata = {
-  title: "Control Room Interior & Console - Texas Technical Services",
+  title: "Control Room Interior & Console",
   description: "Pyrotech Workspace Solutions delivers turnkey Control Room Solutions and Ergonomic Command Centre Consoles designed for sustainable, safe and contemporary workspaces. ISO 11064 compliant.",
   alternates: { canonical: "/products/control-room-interior-and-console/" },
   keywords: [
@@ -26,13 +26,13 @@ export const metadata: Metadata = {
     "control room interior design",
   ],
   openGraph: {
-    title: "Control Room Interior & Console - Texas Technical Services",
+    title: "Control Room Interior & Console",
     description: "Pyrotech Workspace Solutions delivers turnkey Control Room Solutions and Ergonomic Command Centre Consoles designed for sustainable, safe and contemporary workspaces.",
     url: "/products/control-room-interior-and-console/",
   },
   twitter: {
     card: "summary_large_image",
-    title: "Control Room Interior & Console - Texas Technical Services",
+    title: "Control Room Interior & Console",
     description: "Pyrotech Workspace Solutions delivers turnkey Control Room Solutions and Ergonomic Command Centre Consoles designed for sustainable, safe and contemporary workspaces.",
   },
 };

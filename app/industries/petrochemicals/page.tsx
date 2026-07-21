@@ -7,7 +7,7 @@ import IndustryCtaBanner from "@/components/industries/IndustryCtaBanner";
 import type { CategoryColors, IndustryProduct } from "@/components/industries/types";
 
 export const metadata: Metadata = {
-  title: "Petrochemicals Industry Solutions | Texas Technical Services",
+  title: "Petrochemicals Industry Solutions",
   description:
     "Texas Technical Services delivers state-of-the-art flow metering, CEMS, analyzers, and industrial automation solutions for the petrochemical industry.",
   alternates: { canonical: "/industries/petrochemicals/" },
@@ -19,14 +19,14 @@ export const metadata: Metadata = {
     "flow computer petrochemical industry",
   ],
   openGraph: {
-    title: "Petrochemicals Industry Solutions | Texas Technical Services",
+    title: "Petrochemicals Industry Solutions",
     description:
       "From flow meters and flow computers to gas analyzers and CEMS — precision OEM solutions for the petrochemical industry.",
     url: "/industries/petrochemicals/",
   },
   twitter: {
     card: "summary_large_image",
-    title: "Petrochemicals Industry Solutions | Texas Technical Services",
+    title: "Petrochemicals Industry Solutions",
     description:
       "From flow meters and flow computers to gas analyzers and CEMS — precision OEM solutions for the petrochemical industry.",
   },

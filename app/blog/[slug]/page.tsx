@@ -93,7 +93,7 @@ export default async function BlogArticlePage({ params }: PageProps) {
       <BreadcrumbJsonLd items={[{ name: "Home", href: "/" }, { name: "Blog", href: "/blog/" }, { name: article.category, href: `/blog/${slug}/` }]} />
       <BlogPostingJsonLd headline={article.title} description={article.description} image={article.image} url={`/blog/${slug}/`} datePublished={article.date} dateModified={article.date} wordCount={wordCount} />
       {faqItems.length > 0 && <FaqPageJsonLd items={faqItems} />}
-      <SpeakableJsonLd headline={article.title} body={firstParagraph} />
+      <SpeakableJsonLd headline={article.title} />
       {/* Hero */}
       <section className="relative bg-[#0B0D26] overflow-hidden pt-32 pb-16 border-b border-white/10">
         <div className="absolute inset-0 pointer-events-none" style={{ backgroundImage: "repeating-linear-gradient(0deg,transparent,transparent 39px,rgba(255,255,255,0.02) 40px),repeating-linear-gradient(90deg,transparent,transparent 39px,rgba(255,255,255,0.02) 40px)" }} />

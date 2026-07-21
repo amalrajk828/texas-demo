@@ -6,7 +6,7 @@ import { FaqPageJsonLd } from "@/components/schema/FaqPageJsonLd";
 import SpaceAiContent from "@/components/solutions/SpaceAiContent";
 
 export const metadata: Metadata = {
-  title: "Space AI — Industrial AI & Machine Learning Solutions | TTS",
+  title: "Space AI — Industrial AI & Machine Learning Solutions",
   description:
     "Space AI delivers next-generation AI and machine learning for industry — predictive maintenance, process optimization with virtual metrology & digital twin, and smart monitoring with ESG & carbon tracking. Reduce unplanned downtime by up to 50%.",
   alternates: { canonical: "/solutions/space-ai/" },
@@ -18,7 +18,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Space AI | Texas Technical Services",
+    title: "Space AI",
     description:
       "Next-generation AI for industry — reduce downtime 50%, increase yield, enable autonomous optimization. Kuwait & GCC.",
   },

@@ -15,9 +15,9 @@ const META: Record<string, { title: string; description: string; canonical: stri
     description:
       "Texas Technical Services is a Mitsubishi system integrator in Kuwait, UAE, and Dubai — offering Mitsubishi electric factory automation, PLC, HMI, servo drives, and Iconics SCADA integration for oil & gas and industrial sectors across the GCC.",
     canonical: "/solutions/mitsubishi-electric/",
-    ogTitle: "Mitsubishi Electric Factory Automation Solutions | Texas Technical Services",
+    ogTitle: "Mitsubishi Electric Factory Automation Solutions",
     ogDesc: "Authorized Mitsubishi electric factory automation integrator — PLC, HMI, AC servo systems, frequency inverters, and Iconics SCADA solutions for industrial automation across Kuwait and the GCC.",
-    twitterTitle: "Mitsubishi Electric Factory Automation | TTS Kuwait",
+    twitterTitle: "Mitsubishi Electric Factory Automation Kuwait",
     twitterDesc: "Authorized Mitsubishi system integrator — MELSEC PLCs, GOT HMIs, MR-J servo drives, FREQROL VFDs, and ICONICS SCADA for industrial automation across Kuwait and the GCC.",
     keywords: [
       "Mitsubishi Electric Kuwait",
@@ -52,13 +52,13 @@ const META: Record<string, { title: string; description: string; canonical: stri
     ],
   },
   "pws-floor-solutions": {
-    title: "PWS Floor Solutions — Raised Access Flooring Systems | TTS",
+    title: "PWS Floor Solutions — Raised Access Flooring Systems",
     description:
       "PWS Floor Solutions is India's most trusted raised access floor manufacturer — high-density calcium sulphate panels for data centers, control rooms, NOCs, labs, and clean rooms. GREENGUARD Gold, RoHS, EN 12825, CISCA certified.",
     canonical: "/solutions/pws-floor-solutions/",
     ogTitle: "PWS Floor Solutions — Raised Access Flooring",
     ogDesc: "Premium raised access flooring systems for data centers, control rooms, and clean rooms. 15+ years experience, 250+ projects, 1M+ sq.ft. installed.",
-    twitterTitle: "PWS Floor Solutions — Raised Access Flooring | TTS",
+    twitterTitle: "PWS Floor Solutions — Raised Access Flooring",
     twitterDesc: "Premium raised access flooring for data centers, control rooms, NOCs, and clean rooms. GREENGUARD Gold, EN 12825 certified. Authorized dealer in Kuwait and the GCC.",
     keywords: [
       "raised access flooring Kuwait",

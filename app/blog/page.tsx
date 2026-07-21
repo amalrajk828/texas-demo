@@ -70,28 +70,30 @@ interface BlogPost {
   };
 }
 
-const blogPosts: BlogPost[] = Object.entries(blogArticles).map(([slug, article]) => {
-  let icon = "Activity";
-  if (article.category === "Flow Measurement") {
-    icon = "Gauge";
-  } else if (article.category === "Industrial Automation") {
-    icon = "Cpu";
-  }
+const blogPosts: BlogPost[] = Object.entries(blogArticles)
+  .map(([slug, article]) => {
+    let icon = "Activity";
+    if (article.category === "Flow Measurement") {
+      icon = "Gauge";
+    } else if (article.category === "Industrial Automation") {
+      icon = "Cpu";
+    }
 
-  return {
-    slug,
-    title: article.title,
-    description: article.description,
-    date: article.date,
-    readTime: article.readTime,
-    category: article.category,
-    pillar: article.pillar,
-    icon,
-    image: article.image,
-    imageAlt: article.imageAlt,
-    imageCredit: article.imageCredit,
-  };
-});
+    return {
+      slug,
+      title: article.title,
+      description: article.description,
+      date: article.date,
+      readTime: article.readTime,
+      category: article.category,
+      pillar: article.pillar,
+      icon,
+      image: article.image,
+      imageAlt: article.imageAlt,
+      imageCredit: article.imageCredit,
+    };
+  })
+  .sort((a, b) => new Date(b.date).getTime() - new Date(a.date).getTime());
 
 
 export default function BlogIndexPage() {

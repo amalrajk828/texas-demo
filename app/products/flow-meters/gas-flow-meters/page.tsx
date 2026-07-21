@@ -7,7 +7,7 @@ import ProductCard from "@/components/ProductCard";
 import { getProductsByPath } from "@/lib/products";
 
 export const metadata: Metadata = {
-  title: "Gas Flow Meters - Texas Technical Services",
+  title: "Gas Flow Meters",
   description:
     "Ultrasonic gas flow meters from SICK — FLOWSIC600-XT, FLOWSIC600, FLOWSIC500, FLOWSIC600 DRU, and FLOWSIC30 for custody transfer and process gas measurement applications.",
   alternates: { canonical: "/products/flow-meters/gas-flow-meters/" },
@@ -18,14 +18,14 @@ export const metadata: Metadata = {
     "natural gas flow measurement",
   ],
   openGraph: {
-    title: "Gas Flow Meters - Texas Technical Services",
+    title: "Gas Flow Meters",
     description:
       "Ultrasonic gas flow meters from SICK — custody transfer and process gas flow measurement solutions.",
     url: "/products/flow-meters/gas-flow-meters/",
   },
   twitter: {
     card: "summary_large_image",
-    title: "Gas Flow Meters - Texas Technical Services",
+    title: "Gas Flow Meters",
     description:
       "Ultrasonic gas flow meters from SICK — custody transfer and process gas flow measurement solutions.",
   },

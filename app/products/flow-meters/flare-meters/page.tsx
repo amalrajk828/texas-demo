@@ -7,7 +7,7 @@ import ProductCard from "@/components/ProductCard";
 import { getProductsByPath } from "@/lib/products";
 
 export const metadata: Metadata = {
-  title: "Flare Meters - Texas Technical Services",
+  title: "Flare Meters",
   description:
     "SICK ultrasonic flare gas and steam flow meters — FLOWSIC100 Flare and FLOWSIC100-Flare-XT for reliable, low-maintenance measurement on refinery and petrochemical flare stacks.",
   alternates: { canonical: "/products/flow-meters/flare-meters/" },
@@ -18,14 +18,14 @@ export const metadata: Metadata = {
     "steam flow meters refinery",
   ],
   openGraph: {
-    title: "Flare Meters - Texas Technical Services",
+    title: "Flare Meters",
     description:
       "SICK ultrasonic flare gas and steam flow meters — FLOWSIC100 Flare and FLOWSIC100-Flare-XT for reliable, low-maintenance measurement on flare stacks.",
     url: "/products/flow-meters/flare-meters/",
   },
   twitter: {
     card: "summary_large_image",
-    title: "Flare Meters - Texas Technical Services",
+    title: "Flare Meters",
     description:
       "SICK ultrasonic flare gas and steam flow meters — FLOWSIC100 Flare and FLOWSIC100-Flare-XT for reliable, low-maintenance measurement on flare stacks.",
   },

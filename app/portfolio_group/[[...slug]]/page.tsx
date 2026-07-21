@@ -29,7 +29,7 @@ export async function generateMetadata({
   const { slug } = await params;
   if (!slug || slug.length === 0) {
     return {
-      title: "Portfolio Categories | Texas Technical Services",
+      title: "Portfolio Categories",
       description:
         "Browse our portfolio by industry, product category, or application area.",
     };

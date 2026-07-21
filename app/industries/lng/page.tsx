@@ -7,7 +7,7 @@ import IndustryCtaBanner from "@/components/industries/IndustryCtaBanner";
 import type { CategoryColors, IndustryProduct } from "@/components/industries/types";
 
 export const metadata: Metadata = {
-  title: "LNG Industry Solutions | Texas Technical Services",
+  title: "LNG Industry Solutions",
   description:
     "Texas Technical Services delivers precision flow metering, CEMS, analyzers, and industrial automation solutions for LNG plant operations — ensuring accurate measurement, efficiency, and safety.",
   alternates: { canonical: "/industries/lng/" },
@@ -19,14 +19,14 @@ export const metadata: Metadata = {
     "industrial automation LNG plants",
   ],
   openGraph: {
-    title: "LNG Industry Solutions | Texas Technical Services",
+    title: "LNG Industry Solutions",
     description:
       "Cutting-edge flow metering, flow computers, and analyzers for LNG custody transfer and plant operations — backed by 18+ years of precision engineering.",
     url: "/industries/lng/",
   },
   twitter: {
     card: "summary_large_image",
-    title: "LNG Industry Solutions | Texas Technical Services",
+    title: "LNG Industry Solutions",
     description:
       "Cutting-edge flow metering, flow computers, and analyzers for LNG custody transfer and plant operations — backed by 18+ years of precision engineering.",
   },

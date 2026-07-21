@@ -15,13 +15,13 @@ export const metadata: Metadata = {
     canonical: "/services_group/services/inspection-testing/page/4/",
   },
   openGraph: {
-    title: "Inspection & Testing Services — Page 4 | Texas Technical Services",
+    title: "Inspection & Testing Services — Page 4",
     description: "NDT and Mechanical Testing category overview — comprehensive inspection solutions in Kuwait and the GCC.",
     url: "/services_group/services/inspection-testing/page/4/",
   },
   twitter: {
     card: "summary_large_image",
-    title: "Inspection & Testing Services — Page 4 | Texas Technical Services",
+    title: "Inspection & Testing Services — Page 4",
     description: "NDT and Mechanical Testing — comprehensive inspection solutions in Kuwait and the GCC.",
   },
 };

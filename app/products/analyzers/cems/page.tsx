@@ -7,7 +7,7 @@ import { getProductsByPath } from "@/lib/products";
 import { BreadcrumbJsonLd } from "@/components/schema/BreadcrumbJsonLd";
 
 export const metadata: Metadata = {
-  title: "CEMS - Texas Technical Services",
+  title: "CEMS",
   description:
     "Continuous emissions monitoring systems (CEMS) from SICK for compliance monitoring of all pollutant components in exhaust gases from waste incineration, power plants, and industrial facilities.",
   alternates: { canonical: "/products/analyzers/cems/" },
@@ -18,14 +18,14 @@ export const metadata: Metadata = {
     "flue gas monitoring systems",
   ],
   openGraph: {
-    title: "CEMS - Texas Technical Services",
+    title: "CEMS",
     description:
       "Continuous emissions monitoring systems (CEMS) from SICK for emissions compliance.",
     url: "/products/analyzers/cems/",
   },
   twitter: {
     card: "summary_large_image",
-    title: "CEMS - Texas Technical Services",
+    title: "CEMS",
     description:
       "Continuous emissions monitoring systems (CEMS) from SICK for emissions compliance.",
   },

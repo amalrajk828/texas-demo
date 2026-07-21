@@ -46,7 +46,7 @@ const SLIDES = [
     tag: "Metering",
     light: false,
     ctas: [
-      { label: "Know More", href: "/service/flow-measurement/", primary: true },
+      { label: "Know More", href: "/service/flow-measurement-solutions/", primary: true },
       { label: "Our Products", href: "/products/", primary: false },
     ],
   },

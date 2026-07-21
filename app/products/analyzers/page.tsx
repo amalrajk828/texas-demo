@@ -9,7 +9,7 @@ import AnalyzersEhSection from "@/components/products/AnalyzersEhSection";
 import { getProductsByPath } from "@/lib/products";
 
 export const metadata: Metadata = {
-  title: "Analyzers - Gas Analysis, CEMS & Process Analyzers | Texas Technical Services",
+  title: "Analyzers - Gas Analysis, CEMS & Process Analyzers",
   description:
     "SICK, Endress+Hauser, and Kurz Instruments analyzers — gas chromatographs, CEMS, gas analyzers, laser TDLAS analyzers, water analyzers, environmental monitoring, and steam quality analyzers. QAL1 & MCERTS certified.",
   alternates: { canonical: "/products/analyzers/" },
@@ -30,14 +30,14 @@ export const metadata: Metadata = {
     "DUSTHUNTER",
   ],
   openGraph: {
-    title: "Analyzers - Gas Analysis, CEMS & Process | Texas Technical Services",
+    title: "Analyzers - Gas Analysis, CEMS & Process",
     description:
       "7 categories of analyzers from SICK, Endress+Hauser, and Kurz — including gas chromatographs, CEMS, laser TDLAS, water analyzers, and environmental monitoring.",
     url: "/products/analyzers/",
   },
   twitter: {
     card: "summary_large_image",
-    title: "Analyzers - Texas Technical Services",
+    title: "Analyzers",
     description:
       "Gas chromatographs, CEMS, laser gas analyzers, online process analyzers, water analyzers, and environmental monitoring.",
   },

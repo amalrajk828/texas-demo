@@ -7,19 +7,19 @@ import IndustryCtaBanner from "@/components/industries/IndustryCtaBanner";
 import type { CategoryColors, IndustryProduct } from "@/components/industries/types";
 
 export const metadata: Metadata = {
-  title: "Oil & Gas Industry Solutions | Texas Technical Services",
+  title: "Oil & Gas Industry Solutions",
   description:
     "Texas Technical Services delivers precision flow metering, CEMS, analyzers, and industrial automation solutions for the oil & gas industry — upstream, midstream, and downstream.",
   alternates: { canonical: "/industries/oil-gas/" },
   openGraph: {
-    title: "Oil & Gas Industry Solutions | Texas Technical Services",
+    title: "Oil & Gas Industry Solutions",
     description:
       "Complete OEM flow metering, CEMS, gas analyzers, and industrial automation solutions for the oil & gas sector — upstream, midstream, and downstream — backed by 18+ years in Kuwait and the GCC.",
     url: "/industries/oil-gas/",
   },
   twitter: {
     card: "summary_large_image",
-    title: "Oil & Gas Industry Solutions | Texas Technical Services",
+    title: "Oil & Gas Industry Solutions",
     description:
       "Flow metering, CEMS, analyzers, and automation solutions for upstream, midstream, and downstream oil & gas — serving Kuwait and the GCC since 2008.",
   },

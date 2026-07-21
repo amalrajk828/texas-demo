@@ -7,7 +7,7 @@ import IndustryCtaBanner from "@/components/industries/IndustryCtaBanner";
 import type { CategoryColors, IndustryProduct } from "@/components/industries/types";
 
 export const metadata: Metadata = {
-  title: "Power Plant Industry Solutions | Texas Technical Services",
+  title: "Power Plant Industry Solutions",
   description:
     "Texas Technical Services delivers CEMS, flow meters, flow computers, analyzers, and industrial process automation systems for power plants — optimising performance, emissions monitoring, and operational efficiency.",
   alternates: { canonical: "/industries/power-plant/" },
@@ -19,14 +19,14 @@ export const metadata: Metadata = {
     "flow computer power plant Kuwait",
   ],
   openGraph: {
-    title: "Power Plant Industry Solutions | Texas Technical Services",
+    title: "Power Plant Industry Solutions",
     description:
       "Comprehensive OEM solutions for power generation — CEMS, flow meters, analyzers, and automation systems backed by 18+ years of industrial expertise.",
     url: "/industries/power-plant/",
   },
   twitter: {
     card: "summary_large_image",
-    title: "Power Plant Industry Solutions | Texas Technical Services",
+    title: "Power Plant Industry Solutions",
     description:
       "Comprehensive OEM solutions for power generation — CEMS, flow meters, analyzers, and automation systems backed by 18+ years of industrial expertise.",
   },

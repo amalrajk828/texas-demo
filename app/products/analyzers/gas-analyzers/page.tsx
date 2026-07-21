@@ -7,7 +7,7 @@ import { getProductsByPath } from "@/lib/products";
 import { BreadcrumbJsonLd } from "@/components/schema/BreadcrumbJsonLd";
 
 export const metadata: Metadata = {
-  title: "Gas Analyzers - Texas Technical Services",
+  title: "Gas Analyzers",
   description:
     "SICK in-situ and extractive gas analyzers for real-time gas analysis directly within industrial processes — GM32 and GM35 for emissions monitoring and process control.",
   alternates: { canonical: "/products/analyzers/gas-analyzers/" },
@@ -18,14 +18,14 @@ export const metadata: Metadata = {
     "SO2 NO NO2 NH3 measurement",
   ],
   openGraph: {
-    title: "Gas Analyzers - Texas Technical Services",
+    title: "Gas Analyzers",
     description:
       "SICK in-situ and extractive gas analyzers for real-time process gas analysis.",
     url: "/products/analyzers/gas-analyzers/",
   },
   twitter: {
     card: "summary_large_image",
-    title: "Gas Analyzers - Texas Technical Services",
+    title: "Gas Analyzers",
     description:
       "SICK in-situ and extractive gas analyzers for real-time process gas analysis.",
   },

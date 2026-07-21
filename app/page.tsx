@@ -2,7 +2,6 @@ import type { Metadata } from "next";
 import Script from "next/script";
 import ThemeWrapper from "@/components/ThemeWrapper";
 import { SITE_URL } from "@/lib/site";
-import { BreadcrumbJsonLd } from "@/components/schema/BreadcrumbJsonLd";
 import HeroSlider from "@/components/HeroSlider";
 import PartnersTicker from "@/components/PartnersTicker";
 import TickerBanner from "@/components/TickerBanner";
@@ -106,7 +105,7 @@ const LIGHT_GREY_VARS: Record<string, string> = {
 export default function HomePage() {
   return (
     <ThemeWrapper vars={VARS}>
-      <BreadcrumbJsonLd items={[{ name: "Home", href: "/" }]} />
+
       <Script
         id="website-schema"
         type="application/ld+json"

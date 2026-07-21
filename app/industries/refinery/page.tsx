@@ -7,7 +7,7 @@ import IndustryCtaBanner from "@/components/industries/IndustryCtaBanner";
 import type { CategoryColors, IndustryProduct } from "@/components/industries/types";
 
 export const metadata: Metadata = {
-  title: "Refinery Industry Solutions | Texas Technical Services",
+  title: "Refinery Industry Solutions",
   description:
     "Texas Technical Services provides cutting-edge flow metering, CEMS, analyzers, and industrial automation solutions tailored for the demanding world of refinery operations.",
   alternates: { canonical: "/industries/refinery/" },
@@ -20,14 +20,14 @@ export const metadata: Metadata = {
     "emissions monitoring refinery GCC",
   ],
   openGraph: {
-    title: "Refinery Industry Solutions | Texas Technical Services",
+    title: "Refinery Industry Solutions",
     description:
       "Precision flow meters, flow computers, CEMS and analyzers for refinery process control — backed by 18+ years of industrial expertise.",
     url: "/industries/refinery/",
   },
   twitter: {
     card: "summary_large_image",
-    title: "Refinery Industry Solutions | Texas Technical Services",
+    title: "Refinery Industry Solutions",
     description:
       "Precision flow meters, flow computers, CEMS and analyzers for refinery process control — backed by 18+ years of industrial expertise.",
   },

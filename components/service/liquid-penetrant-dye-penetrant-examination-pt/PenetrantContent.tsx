@@ -41,7 +41,7 @@ export default function PenetrantContent() {
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-14 lg:gap-20 items-center">
           <FadeUp delay={0} className="relative">
             <div className="relative rounded-2xl overflow-hidden aspect-[16/11] bg-[#0B0D26] shadow-2xl shadow-black/15">
-              <Image src="/images/services/PT.jpg" alt="Liquid dye penetrant testing" fill sizes="(max-width: 1024px) 100vw, 50vw" className="object-cover" />
+              <Image src="/images/services/PT.jpg" alt="Red dye penetrant testing on machined steel component — Texas Technical Services" fill sizes="(max-width: 1024px) 100vw, 50vw" className="object-cover" />
               <div className="absolute bottom-0 left-0 right-0 h-16 bg-gradient-to-t from-[#0B0D26]/40 to-transparent" />
             </div>
             <div className="absolute -bottom-5 -right-4 lg:-right-6 bg-gradient-to-br from-[#e7212b] to-[#aa0b1b] rounded-xl px-5 py-3.5 shadow-lg shadow-[#e7212b]/30">

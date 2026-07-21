@@ -1,9 +1,7 @@
 export function SpeakableJsonLd({
   headline,
-  body,
 }: {
   headline: string;
-  body: string;
 }) {
   const jsonLd = {
     "@context": "https://schema.org",

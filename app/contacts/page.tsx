@@ -4,12 +4,12 @@ import { ContactPageJsonLd } from "@/components/schema/ContactPageJsonLd";
 import ContactPageClient from "@/components/ContactPage";
 
 export const metadata: Metadata = {
-  title: "Contact Us | Texas Technical Services — Kuwait & Dubai",
+  title: "Contact Us — Kuwait & Dubai",
   description:
     "Get in touch with Texas Technical Services. Contact our offices in Kuwait (+965 66347267) and Dubai (+971 569553747, +971 567793973) for flow measurement, industrial automation, and inspection services across the GCC.",
   alternates: { canonical: "/contacts/" },
   openGraph: {
-    title: "Contact Us | Texas Technical Services",
+    title: "Contact Us",
     description:
       "Reach out to Texas Technical Services in Kuwait and Dubai. Flow measurement, industrial automation, and inspection solutions for the GCC.",
     url: "/contacts/",
@@ -17,7 +17,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Contact Us | Texas Technical Services",
+    title: "Contact Us",
     description:
       "Contact Texas Technical Services in Kuwait and Dubai for industrial solutions across the GCC.",
     images: ["/og-default.png"],

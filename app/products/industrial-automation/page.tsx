@@ -7,7 +7,7 @@ import ProductPageCtaBanner from "@/components/products/ProductPageCtaBanner";
 import { getProductsByPath } from "@/lib/products";
 
 export const metadata: Metadata = {
-  title: "Industrial Automation - Texas Technical Services",
+  title: "Industrial Automation",
   description: "End-to-end industrial automation solutions including PLC & I/O modules, control panels, industrial workstations, controllers, converters, Ethernet switches, and command centre consoles.",
   alternates: { canonical: "/products/industrial-automation/" },
   keywords: [
@@ -17,13 +17,13 @@ export const metadata: Metadata = {
     "Ethernet switches industrial",
   ],
   openGraph: {
-    title: "Industrial Automation - Texas Technical Services",
+    title: "Industrial Automation",
     description: "End-to-end industrial automation solutions including PLC & I/O modules, control panels, industrial workstations, controllers, converters, Ethernet switches, and command centre consoles.",
     url: "/products/industrial-automation/",
   },
   twitter: {
     card: "summary_large_image",
-    title: "Industrial Automation - Texas Technical Services",
+    title: "Industrial Automation",
     description: "End-to-end industrial automation solutions including PLC & I/O modules, control panels, industrial workstations, controllers, converters, Ethernet switches, and command centre consoles.",
   },
 };

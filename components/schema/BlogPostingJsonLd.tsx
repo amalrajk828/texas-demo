@@ -35,6 +35,10 @@ export function BlogPostingJsonLd({
       "@type": "Organization",
       name: "Texas Technical Services",
       url: SITE_URL,
+      logo: {
+        "@type": "ImageObject",
+        url: `${SITE_URL}/og-default.png`,
+      },
     },
     mainEntityOfPage: {
       "@type": "WebPage",

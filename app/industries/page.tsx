@@ -17,19 +17,19 @@ import IndustryCtaBanner from "@/components/industries/IndustryCtaBanner";
 import IndustryFeatureCard from "@/components/industries/IndustryFeatureCard";
 
 export const metadata: Metadata = {
-  title: "Industries We Serve | Texas Technical Services",
+  title: "Industries We Serve",
   description:
     "Texas Technical Services delivers flow measurement, industrial automation, and inspection solutions across oil & gas, refinery, power plant, LNG, petrochemicals, water treatment, cement, and metal & steel.",
   alternates: { canonical: "/industries/" },
   openGraph: {
-    title: "Industries We Serve | Texas Technical Services",
+    title: "Industries We Serve",
     description:
       "Comprehensive OEM solutions for oil & gas, refinery, power plant, LNG, petrochemicals, water treatment, cement, and metal & steel — backed by 18+ years of precision engineering.",
     url: "/industries/",
   },
   twitter: {
     card: "summary_large_image",
-    title: "Industries We Serve | Texas Technical Services",
+    title: "Industries We Serve",
     description:
       "Flow measurement, automation, and inspection solutions for oil & gas, refinery, power, LNG, petrochemicals, water, cement, and steel industries across the GCC.",
   },

@@ -7,7 +7,7 @@ import ProductCard from "@/components/ProductCard";
 import { getProductsByPath } from "@/lib/products";
 
 export const metadata: Metadata = {
-  title: "Frequency Inverters (VFD) - Texas Technical Services",
+  title: "Frequency Inverters (VFD)",
   description: "Mitsubishi Electric FR Series frequency inverters for precise motor speed control across industrial applications.",
   alternates: { canonical: "/products/frequency-inverter-vfd/" },
   keywords: [
@@ -17,13 +17,13 @@ export const metadata: Metadata = {
     "motor speed control solutions",
   ],
   openGraph: {
-    title: "Frequency Inverters (VFD) - Texas Technical Services",
+    title: "Frequency Inverters (VFD)",
     description: "Mitsubishi Electric FR Series frequency inverters for precise motor speed control across industrial applications.",
     url: "/products/frequency-inverter-vfd/",
   },
   twitter: {
     card: "summary_large_image",
-    title: "Frequency Inverters (VFD) - Texas Technical Services",
+    title: "Frequency Inverters (VFD)",
     description: "Mitsubishi Electric FR Series frequency inverters for precise motor speed control across industrial applications.",
   },
 };

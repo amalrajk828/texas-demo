@@ -20,18 +20,18 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const product = getProduct(slug);
   if (!product) return {};
   return {
-    title: `${product.name} | Texas Technical Services`,
+    title: `${product.name}`,
     description: product.paragraphs?.[0] ?? `${product.name} — ${product.brand}`,
     keywords: [product.name, product.brand, product.category, "industrial automation"],
     alternates: { canonical: `/portfolio/${slug}/` },
     openGraph: {
-      title: `${product.name} | Texas Technical Services`,
+      title: `${product.name}`,
       description: product.paragraphs?.[0] ?? `${product.name} — ${product.brand}`,
       url: `/portfolio/${slug}/`,
     },
     twitter: {
       card: "summary_large_image",
-      title: `${product.name} | Texas Technical Services`,
+      title: `${product.name}`,
       description: product.paragraphs?.[0] ?? `${product.name} — ${product.brand}`,
     },
   };

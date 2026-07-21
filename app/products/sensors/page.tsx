@@ -7,7 +7,7 @@ import ProductCard from "@/components/ProductCard";
 import { getProductsByPath } from "@/lib/products";
 
 export const metadata: Metadata = {
-  title: "Sensors - Texas Technical Services",
+  title: "Sensors",
   description: "Texas Technical Services offers a wide range of sensors for precise data acquisition, enhancing the efficiency and control of industrial processes.",
   alternates: { canonical: "/products/sensors/" },
   keywords: [
@@ -18,13 +18,13 @@ export const metadata: Metadata = {
     "industrial automation sensors",
   ],
   openGraph: {
-    title: "Sensors - Texas Technical Services",
+    title: "Sensors",
     description: "Texas Technical Services offers a wide range of sensors for precise data acquisition, enhancing the efficiency and control of industrial processes.",
     url: "/products/sensors/",
   },
   twitter: {
     card: "summary_large_image",
-    title: "Sensors - Texas Technical Services",
+    title: "Sensors",
     description: "Texas Technical Services offers a wide range of sensors for precise data acquisition, enhancing the efficiency and control of industrial processes.",
   },
 };

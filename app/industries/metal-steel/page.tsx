@@ -7,7 +7,7 @@ import IndustryCtaBanner from "@/components/industries/IndustryCtaBanner";
 import type { CategoryColors, IndustryProduct } from "@/components/industries/types";
 
 export const metadata: Metadata = {
-  title: "Metal & Steel Industry Solutions | Texas Technical Services",
+  title: "Metal & Steel Industry Solutions",
   description:
     "Texas Technical Services delivers CEMS, dust analyzers, gas analyzers, and extractive gas analyzers for the metal and steel industry — enhancing efficiency, quality control, and emissions monitoring.",
   alternates: { canonical: "/industries/metal-steel/" },
@@ -19,14 +19,14 @@ export const metadata: Metadata = {
     "industrial automation steel manufacturing",
   ],
   openGraph: {
-    title: "Metal & Steel Industry Solutions | Texas Technical Services",
+    title: "Metal & Steel Industry Solutions",
     description:
       "Cutting-edge OEM analyzer and CEMS solutions for metal and steel production — backed by 18+ years of industrial expertise.",
     url: "/industries/metal-steel/",
   },
   twitter: {
     card: "summary_large_image",
-    title: "Metal & Steel Industry Solutions | Texas Technical Services",
+    title: "Metal & Steel Industry Solutions",
     description:
       "Cutting-edge OEM analyzer and CEMS solutions for metal and steel production — backed by 18+ years of industrial expertise.",
   },

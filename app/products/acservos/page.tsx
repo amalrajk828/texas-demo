@@ -7,7 +7,7 @@ import ProductCard from "@/components/ProductCard";
 import { getProductsByPath } from "@/lib/products";
 
 export const metadata: Metadata = {
-  title: "AC Servos - Texas Technical Services",
+  title: "AC Servos",
   description: "Mitsubishi Electric MELSERVO AC servo drives and motors for precise motion control in industrial automation.",
   alternates: { canonical: "/products/acservos/" },
   keywords: [
@@ -17,13 +17,13 @@ export const metadata: Metadata = {
     "motion control solutions Kuwait",
   ],
   openGraph: {
-    title: "AC Servos - Texas Technical Services",
+    title: "AC Servos",
     description: "Mitsubishi Electric MELSERVO AC servo drives and motors for precise motion control in industrial automation.",
     url: "/products/acservos/",
   },
   twitter: {
     card: "summary_large_image",
-    title: "AC Servos - Texas Technical Services",
+    title: "AC Servos",
     description: "Mitsubishi Electric MELSERVO AC servo drives and motors for precise motion control in industrial automation.",
   },
 };

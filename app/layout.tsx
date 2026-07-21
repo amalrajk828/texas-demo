@@ -82,6 +82,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
               description:
                 "Industrial automation, PLC SCADA integration, flow measurement, and inspection & testing company serving Kuwait, UAE, Dubai, and the GCC.",
               url: `${SITE_URL}/`,
+              image: `${SITE_URL}/og-default.png`,
               telephone: ["+965 97243755", "+965 66347267", "+971 569553747", "+971 567793973"],
               foundingDate: "2008",
               areaServed: ["Kuwait", "United Arab Emirates", "Saudi Arabia", "Bahrain", "Qatar", "Oman"],

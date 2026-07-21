@@ -7,7 +7,7 @@ import ProductCard from "@/components/ProductCard";
 import { getProductsByPath } from "@/lib/products";
 
 export const metadata: Metadata = {
-  title: "GOT (Graphic Operator Panels) - Texas Technical Services",
+  title: "GOT (Graphic Operator Panels)",
   description: "Mitsubishi Electric GOT2000 Series graphic operation terminals for industrial automation systems.",
   alternates: { canonical: "/products/got/" },
   keywords: [
@@ -17,13 +17,13 @@ export const metadata: Metadata = {
     "industrial HMI solutions",
   ],
   openGraph: {
-    title: "GOT (Graphic Operator Panels) - Texas Technical Services",
+    title: "GOT (Graphic Operator Panels)",
     description: "Mitsubishi Electric GOT2000 Series graphic operation terminals for industrial automation systems.",
     url: "/products/got/",
   },
   twitter: {
     card: "summary_large_image",
-    title: "GOT (Graphic Operator Panels) - Texas Technical Services",
+    title: "GOT (Graphic Operator Panels)",
     description: "Mitsubishi Electric GOT2000 Series graphic operation terminals for industrial automation systems.",
   },
 };

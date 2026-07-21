@@ -16,7 +16,7 @@ export async function generateMetadata({ params }: { params: Promise<{ page: str
   const pageNum = Number(page);
   if (isNaN(pageNum) || pageNum < 2 || pageNum > TOTAL_PAGES) return {};
   return {
-    title: `Main Services — Page ${pageNum} | Texas Technical Services`,
+    title: `Main Services — Page ${pageNum}`,
     description: `Page ${pageNum} of our complete range of industrial services — flow measurement, inspection & testing, process automation, and construction solutions.`,
     alternates: { canonical: `/services_group/services/page/${pageNum}/` },
   };

@@ -7,7 +7,7 @@ import ProductPageCtaBanner from "@/components/products/ProductPageCtaBanner";
 import { getProductsByPath } from "@/lib/products";
 
 export const metadata: Metadata = {
-  title: "Custody Metering Solutions - Texas Technical Services",
+  title: "Custody Metering Solutions",
   description:
     "Custody metering solutions for oil and gas — flow metering skids, flow computers, and flow metering control systems for accurate, auditable custody transfer measurement.",
   alternates: {
@@ -20,14 +20,14 @@ export const metadata: Metadata = {
     "custody transfer measurement",
   ],
   openGraph: {
-    title: "Custody Metering Solutions - Texas Technical Services",
+    title: "Custody Metering Solutions",
     description:
       "Custody metering solutions for oil and gas — flow metering skids, flow computers, and flow metering control systems for accurate, auditable custody transfer measurement.",
     url: "/products/custody-metering-solutions/",
   },
   twitter: {
     card: "summary_large_image",
-    title: "Custody Metering Solutions - Texas Technical Services",
+    title: "Custody Metering Solutions",
     description:
       "Custody metering solutions for oil and gas — flow metering skids, flow computers, and flow metering control systems for accurate, auditable custody transfer measurement.",
   },

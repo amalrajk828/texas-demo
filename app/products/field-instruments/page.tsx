@@ -7,7 +7,7 @@ import ProductPageCtaBanner from "@/components/products/ProductPageCtaBanner";
 import { getProductsByPath } from "@/lib/products";
 
 export const metadata: Metadata = {
-  title: "Field Instruments - Texas Technical Services",
+  title: "Field Instruments",
   description: "Pressure, temperature, level, and flow field instruments for industrial processes. SICK provides top-notch solutions for contact temperature measurement, level sensing, pressure measurement, condition monitoring, and flow metering.",
   alternates: { canonical: "/products/field-instruments/" },
   keywords: [
@@ -18,13 +18,13 @@ export const metadata: Metadata = {
     "industrial field instrumentation",
   ],
   openGraph: {
-    title: "Field Instruments - Texas Technical Services",
+    title: "Field Instruments",
     description: "Pressure, temperature, level, and flow field instruments for industrial processes. SICK provides top-notch solutions for contact temperature measurement, level sensing, pressure measurement, condition monitoring, and flow metering.",
     url: "/products/field-instruments/",
   },
   twitter: {
     card: "summary_large_image",
-    title: "Field Instruments - Texas Technical Services",
+    title: "Field Instruments",
     description: "Pressure, temperature, level, and flow field instruments for industrial processes. SICK provides top-notch solutions for contact temperature measurement, level sensing, pressure measurement, condition monitoring, and flow metering.",
   },
 };

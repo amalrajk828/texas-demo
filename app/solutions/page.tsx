@@ -5,19 +5,19 @@ import { ChevronRight, Scale, Brain, Cpu, Layers } from "lucide-react";
 import { BreadcrumbJsonLd } from "@/components/schema/BreadcrumbJsonLd";
 
 export const metadata: Metadata = {
-  title: "Solutions — Proprietary Platforms & Strategic Partnerships | TTS",
+  title: "Solutions — Proprietary Platforms & Strategic Partnerships",
   description:
     "Texas Technical Services delivers end-to-end industrial solutions through proprietary platforms (Texaflow custody metering) and strategic partnerships (Space AI, Mitsubishi Electric, PWS Floor Solutions) across Kuwait, UAE, and the GCC.",
   alternates: { canonical: "/solutions/" },
   openGraph: {
-    title: "Solutions | Texas Technical Services",
+    title: "Solutions",
     description:
       "Proprietary platforms and strategic partnerships — Texaflow, Space AI, Mitsubishi Electric, PWS Floor Solutions.",
     url: "/solutions/",
   },
   twitter: {
     card: "summary_large_image",
-    title: "Solutions | Texas Technical Services",
+    title: "Solutions",
     description:
       "Proprietary platforms and strategic partnerships — Texaflow custody metering, Space AI industrial AI, Mitsubishi Electric automation, PWS raised access flooring.",
   },
