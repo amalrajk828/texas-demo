@@ -8,20 +8,21 @@ import Link from "next/link";
 import { FaqPageJsonLd } from "@/components/schema/FaqPageJsonLd";
 import { serviceFaqData } from "@/lib/serviceFaqData";
 import { ChevronRight } from "lucide-react";
+import ServiceDefinition from "@/components/service/ServiceDefinition";
 
 export const metadata: Metadata = {
-  title: "Heat Treatment Services | Texas Technical Services",
+  title: "Heat Treatment Services — Structural Steel & Offshore PWHT",
   description:
-    "Heat treatment services including Post Weld Heat Treatment (PWHT), stress relief, and annealing using electrical resistance and high-velocity fuel-fired burner systems to ASME VIII, AWS D1.1, ASME B31.3 standards in Kuwait and Dubai.",
+    "Heat treatment services including PWHT, stress relief, and annealing to ASME VIII, AWS D1.1, and ASME B31.3 standards in Kuwait and Dubai.",
   alternates: { canonical: "/service/heat-treatment-services-2/" },
   openGraph: {
-    title: "Heat Treatment Services | Texas Technical Services",
-    description: "PWHT, stress relief, and annealing with electrical and fuel-fired heating. ASME VIII, AWS D1.1. Kuwait & Dubai.",
+    title: "Heat Treatment Services — Structural Steel & Offshore PWHT",
+    description: "Specialized PWHT for structural steel and offshore platforms. ASME VIII, AWS D1.1. Kuwait & Dubai.",
     url: "/service/heat-treatment-services-2/",
-    images: [{ url: "/og-heat-treatment.jpg", width: 1200, height: 630, alt: "Heat Treatment Services — Texas Technical Services" }],
+    images: [{ url: "/og-heat-treatment.jpg", width: 1200, height: 630, alt: "Heat Treatment Services — Structural Steel & Offshore PWHT — Texas Technical Services" }],
   },
-  twitter: { card: "summary_large_image", title: "Heat Treatment Services | Texas Technical Services", description: "PWHT and heat treatment. ASME VIII, AWS D1.1. Kuwait & Dubai." },
-  keywords: ["heat treatment Kuwait", "PWHT Kuwait", "post weld heat treatment Kuwait", "stress relief Kuwait", "electrical resistance heating Kuwait", "heat treatment services Kuwait", "Texas Technical Services heat treatment"],
+  twitter: { card: "summary_large_image", title: "Heat Treatment Services — Structural Steel & Offshore PWHT", description: "PWHT and heat treatment for structural steel and offshore. ASME VIII, AWS D1.1. Kuwait & Dubai." },
+  keywords: ["structural steel PWHT Kuwait", "offshore PWHT Kuwait", "heat treatment services Kuwait", "post weld heat treatment Kuwait", "stress relief Kuwait", "heavy fabrication heat treatment Kuwait", "Texas Technical Services heat treatment"],
 };
 
 export default function HeatTreatmentPage2() {
@@ -30,16 +31,24 @@ export default function HeatTreatmentPage2() {
       <BreadcrumbJsonLd items={[
   { name: "Home", href: "/" },
   { name: "Services", href: "/services/" },
-  { name: "Heat Treatment Services", href: "/service/heat-treatment-services-2/" },
+  { name: "Heat Treatment Services — Structural Steel & Offshore PWHT", href: "/service/heat-treatment-services-2/" },
 ]} />
 <ServiceJsonLd
-  name="Heat Treatment Services"
-  description="Heat treatment services including Post Weld Heat Treatment (PWHT), stress relief, and annealing using electrical resistance and high-velocity fuel-fired burner systems to ASME VIII, AWS D1.1, ASME B31.3 standards in Kuwait and Dubai."
+  name="Heat Treatment Services — Structural Steel & Offshore PWHT"
+  description="Specialized PWHT and heat treatment for structural steel, offshore platforms, and heavy fabrications — stress relief and annealing to ASME VIII, AWS D1.1 standards in Kuwait and Dubai."
   url="/service/heat-treatment-services-2/"
   serviceType="Mechanical Testing"
   areaServed={["Kuwait", "United Arab Emirates", "Saudi Arabia", "Bahrain", "Qatar", "Oman"]}
 />
+      <ServiceDefinition definition="Heat treatment services for structural steel and offshore assets include Post Weld Heat Treatment (PWHT), stress relief, and annealing. TTS provides certified heat treatment services to ASME VIII and AWS D1.1 standards for heavy fabrications across Kuwait and the GCC." />
       <HeatTreatmentHero />
+      <section className="bg-white py-12 lg:py-16">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6">
+          <p className="text-gray-600 text-[15px] leading-[1.8] max-w-4xl">
+            We deliver on-site and shop-based PWHT for structural steel and offshore modules, including pipe racks, jacket structures, and pressure equipment requiring controlled heat treatment to industry codes.
+          </p>
+        </div>
+      </section>
       <HeatTreatmentContent />
 
       {/* ══ RELATED SERVICES ═══════════════════════════════ */}

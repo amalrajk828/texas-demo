@@ -8,19 +8,20 @@ import Link from "next/link";
 import { FaqPageJsonLd } from "@/components/schema/FaqPageJsonLd";
 import { serviceFaqData } from "@/lib/serviceFaqData";
 import { ChevronRight } from "lucide-react";
+import ServiceDefinition from "@/components/service/ServiceDefinition";
 
 export const metadata: Metadata = {
-  title: "Electrical & Instrumentation Works | Texas Technical Services",
+  title: "Electrical & Instrumentation Works",
   description:
     "Installation, maintenance, and optimization of electrical systems and instrumentation equipment for industrial facilities — from design to commissioning.",
   alternates: { canonical: "/service/electrical-instrumentation-works/" },
   openGraph: {
-    title: "Electrical & Instrumentation Works | Texas Technical Services",
+    title: "Electrical & Instrumentation Works",
     description: "Installation, maintenance, and optimization of electrical systems and instrumentation equipment.",
     url: "/service/electrical-instrumentation-works/",
     images: [{ url: "/og-default.png", width: 1200, height: 630, alt: "Electrical & Instrumentation Works — Texas Technical Services" }],
   },
-  twitter: { card: "summary_large_image", title: "Electrical & Instrumentation Works | Texas Technical Services", description: "Installation, maintenance, and optimization of electrical systems and instrumentation equipment for industrial facilities — from design to commissioning." },
+  twitter: { card: "summary_large_image", title: "Electrical & Instrumentation Works", description: "Installation, maintenance, and optimization of electrical systems and instrumentation equipment for industrial facilities — from design to commissioning." },
   keywords: ["Electrical & Instrumentation Works Kuwait", "Electrical & Instrumentation Works Dubai", "Texas Technical Services Electrical Works", "industrial electrical systems Kuwait", "instrumentation installation Kuwait", "electrical maintenance Kuwait"],
 };
 
@@ -39,6 +40,7 @@ export default function ElectricalWorksPage() {
   serviceType="Electrical & Instrumentation"
   areaServed={["Kuwait", "United Arab Emirates", "Saudi Arabia", "Bahrain", "Qatar", "Oman"]}
 />
+      <ServiceDefinition definition="Electrical and instrumentation works encompass the installation, maintenance, and optimization of electrical systems and instrumentation equipment for industrial facilities. TTS provides comprehensive electrical and I&C services from design to commissioning across Kuwait and the GCC." />
       <ElectricalWorksHero />
       <ElectricalWorksContent />
 

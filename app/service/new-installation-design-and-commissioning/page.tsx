@@ -8,19 +8,20 @@ import Link from "next/link";
 import { FaqPageJsonLd } from "@/components/schema/FaqPageJsonLd";
 import { serviceFaqData } from "@/lib/serviceFaqData";
 import { ChevronRight } from "lucide-react";
+import ServiceDefinition from "@/components/service/ServiceDefinition";
 
 export const metadata: Metadata = {
-  title: "New Installation Design and Commissioning | Texas Technical Services",
+  title: "New Installation Design and Commissioning",
   description:
-    "As authorized OEM Representative, we assist in specification, design, sizing and operation of future metering systems — general arrangement, P&ID, electrical SLD, cable schedule, instrument index.",
+    "Authorized OEM support for metering system design, sizing, and commissioning — general arrangement, P&ID, electrical SLD, and cable schedule.",
   alternates: { canonical: "/service/new-installation-design-and-commissioning/" },
   openGraph: {
-    title: "New Installation Design and Commissioning | Texas Technical Services",
+    title: "New Installation Design and Commissioning",
     description: "Authorized OEM Representative — specification, design, sizing and operation of future metering systems.",
     url: "/service/new-installation-design-and-commissioning/",
     images: [{ url: "/og-default.png", width: 1200, height: 630, alt: "New Installation Design and Commissioning — Texas Technical Services" }],
   },
-  twitter: { card: "summary_large_image", title: "New Installation Design and Commissioning | Texas Technical Services", description: "As authorized OEM Representative, we assist in specification, design, sizing and operation of future metering systems — general arrangement, P&ID, electrical SLD, cable schedule, instrument index." },
+  twitter: { card: "summary_large_image", title: "New Installation Design and Commissioning", description: "As authorized OEM Representative, we assist in specification, design, sizing and operation of future metering systems — general arrangement, P&ID, electrical SLD, cable schedule, instrument index." },
   keywords: ["New Installation Design Kuwait", "New Installation Design Dubai", "Texas Technical Services Installation Design", "metering system design Kuwait", "commissioning services Kuwait", "OEM installation Kuwait"],
 };
 
@@ -39,6 +40,7 @@ export default function NewInstallationPage() {
   serviceType="Installation & Commissioning"
   areaServed={["Kuwait", "United Arab Emirates", "Saudi Arabia", "Bahrain", "Qatar", "Oman"]}
 />
+      <ServiceDefinition definition="New installation design and commissioning covers specification, design, sizing, and operation of future metering systems including general arrangement, P&ID, electrical SLD, and cable schedules. As authorised OEM Representative, TTS delivers complete metering system solutions across Kuwait and the GCC." />
       <NewInstallationHero />
       <NewInstallationContent />
 

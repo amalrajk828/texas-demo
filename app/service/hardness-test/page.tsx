@@ -8,19 +8,20 @@ import Link from "next/link";
 import { FaqPageJsonLd } from "@/components/schema/FaqPageJsonLd";
 import { serviceFaqData } from "@/lib/serviceFaqData";
 import { ChevronRight } from "lucide-react";
+import ServiceDefinition from "@/components/service/ServiceDefinition";
 
 export const metadata: Metadata = {
-  title: "Hardness Test | Texas Technical Services",
+  title: "Hardness Test",
   description:
-    "Rockwell, Brinell, and Vickers hardness testing for metals, plastics, and ceramics — measuring material resistance to permanent deformation to ASTM E18, E10, E92, ISO 6508, 6506, 6507 standards in Kuwait and Dubai.",
+    "Rockwell, Brinell, and Vickers hardness testing for metals, plastics, and ceramics to ASTM E18, E10, E92, and ISO 6508/6506/6507 in Kuwait and Dubai.",
   alternates: { canonical: "/service/hardness-test/" },
   openGraph: {
-    title: "Hardness Test | Texas Technical Services",
+    title: "Hardness Test",
     description: "Rockwell, Brinell, Vickers hardness testing to ASTM and ISO standards. Metals, plastics, ceramics. Kuwait & Dubai.",
     url: "/service/hardness-test/",
     images: [{ url: "/og-hardness-test.jpg", width: 1200, height: 630, alt: "Hardness Test — Texas Technical Services" }],
   },
-  twitter: { card: "summary_large_image", title: "Hardness Test | Texas Technical Services", description: "Rockwell, Brinell, Vickers hardness testing. ASTM & ISO standards. Kuwait & Dubai." },
+  twitter: { card: "summary_large_image", title: "Hardness Test", description: "Rockwell, Brinell, Vickers hardness testing. ASTM & ISO standards. Kuwait & Dubai." },
   keywords: ["hardness test Kuwait", "Rockwell hardness test Kuwait", "Brinell hardness test Kuwait", "Vickers hardness test Kuwait", "hardness testing metals Kuwait", "weld hardness survey Kuwait", "Texas Technical Services hardness test"],
 };
 
@@ -39,6 +40,7 @@ export default function HardnessTestPage() {
   serviceType="Mechanical Testing"
   areaServed={["Kuwait", "United Arab Emirates", "Saudi Arabia", "Bahrain", "Qatar", "Oman"]}
 />
+      <ServiceDefinition definition="Hardness testing measures a material's resistance to permanent indentation using Rockwell, Brinell, or Vickers methods. TTS provides certified hardness testing services for metals, plastics, and ceramics — including weld hardness surveys, heat-affected zone testing, and material verification to ASTM and ISO standards in Kuwait and Dubai." />
       <HardnessHero />
       <HardnessContent />
 

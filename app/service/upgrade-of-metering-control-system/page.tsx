@@ -9,16 +9,17 @@ import Link from "next/link";
 import { FaqPageJsonLd } from "@/components/schema/FaqPageJsonLd";
 import { serviceFaqData } from "@/lib/serviceFaqData";
 import { ChevronRight } from "lucide-react";
+import ServiceDefinition from "@/components/service/ServiceDefinition";
 
 export const metadata: Metadata = {
   title: "Upgrade of Metering Control System",
   description:
-    "Texas Technical Services (TTS) specializes in Metering Control System upgradation — comprehensive assessment, tailored upgrade plans, SCADA & PLC enhancements, Flow Computer integration, and seamless data management for custody transfer operations in Kuwait and Dubai.",
+    "Metering control system upgrades — assessment, SCADA/PLC enhancements, flow computer integration, and data management for custody transfer in Kuwait and Dubai.",
   alternates: {
     canonical: "/service/upgrade-of-metering-control-system/",
   },
   openGraph: {
-    title: "Upgrade of Metering Control System | Texas Technical Services",
+    title: "Upgrade of Metering Control System",
     description:
       "Cost-effective metering control system upgrades — SCADA, PLC, Flow Computer & HMI integration, comprehensive system assessment, and minimal disruption delivery. Authorised OEM representative.",
     url: "/service/upgrade-of-metering-control-system/",
@@ -33,7 +34,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Upgrade of Metering Control System | Texas Technical Services",
+    title: "Upgrade of Metering Control System",
     description:
       "Metering control system upgrades — SCADA, PLC, Flow Computer, HMI integration. Cost-effective, minimal disruption, authorised OEM representative in Kuwait & Dubai.",
   },
@@ -65,6 +66,7 @@ export default function UpgradeMeteringPage() {
   serviceType="Flow Measurement"
   areaServed={["Kuwait", "United Arab Emirates", "Saudi Arabia", "Bahrain", "Qatar", "Oman"]}
 />
+      <ServiceDefinition definition="Metering control system upgrades include comprehensive assessment, tailored upgrade plans, SCADA and PLC enhancements, flow computer integration, and seamless data management. TTS specializes in cost-effective metering system modernization for custody transfer operations across Kuwait and the GCC." />
       <UpgradeHero />
       <UpgradeServices />
       <UpgradeWhyUs />

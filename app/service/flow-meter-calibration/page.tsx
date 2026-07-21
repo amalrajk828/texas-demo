@@ -7,17 +7,20 @@ import { serviceCrossLinks } from "@/lib/serviceCrossLinks";
 import Link from "next/link";
 import { FaqPageJsonLd } from "@/components/schema/FaqPageJsonLd";
 import { serviceFaqData } from "@/lib/serviceFaqData";
-import { ChevronRight } from "lucide-react";
+import { ChevronRight, ArrowRight } from "lucide-react";
+import { HowToJsonLd } from "@/components/schema/HowToJsonLd";
+import ServiceProcessSteps from "@/components/ServiceProcessSteps";
+import ServiceDefinition from "@/components/service/ServiceDefinition";
 
 export const metadata: Metadata = {
-  title: "Flow Meter Calibration | Texas Technical Services",
+  title: "Flow Meter Calibration",
   description:
-    "Faure Herman ILAC/COFRAC ISO 17025 accredited flow meter calibration services — initial & periodic verification to OIML R117 class 0.3 and API MPMS, as found calibration, real target fluid calibration, and 2-week emergency service for custody transfer flowmeters in Kuwait and Dubai.",
+    "ILAC/COFRAC ISO 17025 flow meter calibration — OIML R117, API MPMS, as-found calibration, real fluid calibration, and emergency service in Kuwait and Dubai.",
   alternates: {
     canonical: "/service/flow-meter-calibration/",
   },
   openGraph: {
-    title: "Flow Meter Calibration | Texas Technical Services",
+    title: "Flow Meter Calibration",
     description:
       "ILAC/COFRAC ISO 17025 accredited flow meter calibration — OIML R117, API MPMS, MID compliance, as found calibration, real fluid calibration, and 2-week emergency service.",
     url: "/service/flow-meter-calibration/",
@@ -32,7 +35,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Flow Meter Calibration | Texas Technical Services",
+    title: "Flow Meter Calibration",
     description:
       "ILAC/COFRAC ISO 17025 accredited calibration — OIML R117, API MPMS, MID compliance. Emergency 2-week service available. Kuwait & Dubai.",
   },
@@ -64,8 +67,30 @@ export default function FlowMeterCalibrationPage() {
   serviceType="Flow Measurement"
   areaServed={["Kuwait", "United Arab Emirates", "Saudi Arabia", "Bahrain", "Qatar", "Oman"]}
 />
+      <ServiceDefinition definition="Flow meter calibration provides ILAC and COFRAC ISO 17025 accredited initial and periodic verification services for custody transfer flowmeters. TTS delivers OIML R117 class 0.3 compliant calibration with real fluid calibration and 2-week emergency service across Kuwait and the GCC." />
       <CalibrationHero />
       <CalibrationContent />
+
+      <HowToJsonLd
+        name="Our Flow Meter Calibration Process"
+        description="A step-by-step process for ISO 17025 accredited flow meter calibration, from setup through certification."
+        steps={[
+          { name: "Calibration Setup", text: "Connect the flow meter to a reference standard or prover loop and establish stable flow conditions." },
+          { name: "Zero and Span Verification", text: "Verify the meter reads zero with no flow, then check full-scale accuracy against the reference standard." },
+          { name: "Multi-Point Calibration", text: "Test at multiple flow rates across the meter range to verify linearity and repeatability." },
+          { name: "Documentation and Certification", text: "Generate calibration certificates with as-found and as-left data, uncertainty calculations, and traceability records." },
+        ]}
+      />
+
+      <ServiceProcessSteps
+        title="How We Calibrate Your Flow Meters"
+        steps={[
+          { name: "Calibration Setup", description: "We connect your flow meter to a reference standard or prover loop and establish stable flow conditions to prepare for accurate calibration." },
+          { name: "Zero and Span Verification", description: "We verify the meter reads zero with no flow, then check full-scale accuracy against the reference standard to establish baseline performance." },
+          { name: "Multi-Point Calibration", description: "We test at multiple flow rates across the meter's full range to verify linearity and repeatability under varying conditions." },
+          { name: "Documentation and Certification", description: "We generate calibration certificates with as-found and as-left data, uncertainty calculations, and traceability records for compliance." },
+        ]}
+      />
 
       {/* ══ RELATED SERVICES ═══════════════════════════════ */}
       {serviceCrossLinks["flow-meter-calibration"] && serviceCrossLinks["flow-meter-calibration"].length > 0 && (
@@ -106,6 +131,15 @@ export default function FlowMeterCalibrationPage() {
       {/* Contact section — to be added */}
     
       <FaqPageJsonLd items={serviceFaqData["flow-meter-calibration"]} />
+
+      {/* ══ RELATED COMPARISON ═══════════════════════════════ */}
+      <div className="max-w-5xl mx-auto px-4 sm:px-6 py-8">
+        <Link href="/blog/in-situ-vs-extractive-cems-comparison/" className="inline-flex items-center gap-2 text-[#e7212b] font-semibold text-sm hover:underline">
+          Read our comparison: In-Situ vs Extractive CEMS: Technology Comparison for Emissions Monitoring
+          <ArrowRight className="w-4 h-4" />
+        </Link>
+      </div>
+
       {/* ══ FAQ ════════════════════════════════════════════ */}
       <section className="bg-[#f4f5f8] py-20 lg:py-24">
         <div className="max-w-7xl mx-auto px-4 sm:px-6">

@@ -9,7 +9,7 @@ export function SpeakableJsonLd({
     name: headline,
     speakable: {
       "@type": "SpeakableSpecification",
-      cssSelector: [".blog-content h1", ".blog-content p:first-of-type"],
+      cssSelector: [".article-title", ".blog-content p:first-of-type"],
     },
   };
   return (

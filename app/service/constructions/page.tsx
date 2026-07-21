@@ -7,16 +7,17 @@ import { FaqPageJsonLd } from "@/components/schema/FaqPageJsonLd";
 import { ChevronRight } from "lucide-react";
 import { serviceCrossLinks } from "@/lib/serviceCrossLinks";
 import Link from "next/link";
+import ServiceDefinition from "@/components/service/ServiceDefinition";
 
 export const metadata: Metadata = {
-  title: "Industrial Construction & Project Delivery | Texas Technical Services",
+  title: "Industrial Construction & Project Delivery",
   description:
-    "Texas Technical Services provides industrial construction and project delivery services in Kuwait and across the GCC — structural steel fabrication, gantry fabrication, piping, electrical works, and EPC project execution for oil and gas plants.",
+    "Industrial construction and EPC project delivery across the GCC — structural steel, gantry, piping, and electrical works for oil and gas plants.",
   alternates: {
     canonical: "/service/constructions/",
   },
   openGraph: {
-    title: "Industrial Construction & Project Delivery | Texas Technical Services",
+    title: "Industrial Construction & Project Delivery",
     description:
       "Structural steel fabrication, gantry fabrication, piping, electrical works, and EPC project execution for oil and gas plants in Kuwait and the GCC.",
     url: "/service/constructions/",
@@ -24,7 +25,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Industrial Construction & Project Delivery | Texas Technical Services",
+    title: "Industrial Construction & Project Delivery",
     description:
       "Structural steel fabrication, gantry fabrication, piping, electrical works, and EPC project execution across Kuwait and the GCC.",
   },
@@ -73,6 +74,7 @@ export default function ConstructionPage() {
         areaServed={["Kuwait", "United Arab Emirates", "Saudi Arabia", "Bahrain", "Qatar", "Oman"]}
       />
       <FaqPageJsonLd items={faqItems} />
+      <ServiceDefinition definition="Industrial construction and project delivery services encompass structural steel fabrication, gantry fabrication, piping, electrical works, and EPC project execution. TTS provides comprehensive construction solutions for oil and gas plants across Kuwait and the wider GCC region." />
       <ConstructionHero />
       <ConstructionSubServices />
       <section className="bg-[#f4f5f8] py-20 lg:py-24">

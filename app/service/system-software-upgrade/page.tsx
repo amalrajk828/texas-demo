@@ -8,19 +8,20 @@ import Link from "next/link";
 import { FaqPageJsonLd } from "@/components/schema/FaqPageJsonLd";
 import { serviceFaqData } from "@/lib/serviceFaqData";
 import { ChevronRight } from "lucide-react";
+import ServiceDefinition from "@/components/service/ServiceDefinition";
 
 export const metadata: Metadata = {
   title: "Control System Integration and Upgradation",
   description:
-    "PLC and SCADA-based automation and system integration — multi-brand PLC programming, SCADA development, HMI design, legacy system upgrades, and MIS reporting for industrial operations in Kuwait and Dubai.",
+    "PLC and SCADA automation integration — multi-brand PLC programming, SCADA development, HMI design, legacy upgrades, and MIS reporting in Kuwait and Dubai.",
   alternates: { canonical: "/service/system-software-upgrade/" },
   openGraph: {
-    title: "Control System Integration & Upgradation | Texas Technical Services",
+    title: "Control System Integration & Upgradation",
     description: "PLC and SCADA automation, system integration, and legacy upgrades. Siemens, Allen-Bradley, Schneider. Kuwait & Dubai.",
     url: "/service/system-software-upgrade/",
     images: [{ url: "/og-default.png", width: 1200, height: 630, alt: "Control System Integration — Texas Technical Services" }],
   },
-  twitter: { card: "summary_large_image", title: "Control System Integration & Upgradation | Texas Technical Services", description: "PLC, SCADA, and control system integration. Kuwait & Dubai." },
+  twitter: { card: "summary_large_image", title: "Control System Integration & Upgradation", description: "PLC, SCADA, and control system integration. Kuwait & Dubai." },
   keywords: ["PLC integration Kuwait", "SCADA Kuwait", "control system upgrade Kuwait", "automation integration Kuwait", "Siemens PLC Kuwait", "Allen-Bradley Kuwait", "SCADA system Kuwait", "Texas Technical Services PLC"],
 };
 
@@ -39,6 +40,7 @@ export default function ControlSystemPage() {
   serviceType="Industrial Automation"
   areaServed={["Kuwait", "United Arab Emirates", "Saudi Arabia", "Bahrain", "Qatar", "Oman"]}
 />
+      <ServiceDefinition definition="Control system integration and upgradation provides PLC and SCADA-based automation including multi-brand PLC programming, SCADA development, HMI design, and legacy system upgrades. TTS delivers comprehensive control system solutions for industrial operations across Kuwait and Dubai." />
       <ControlSystemHero />
       <ControlSystemContent />
 

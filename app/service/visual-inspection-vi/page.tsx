@@ -8,19 +8,20 @@ import Link from "next/link";
 import { FaqPageJsonLd } from "@/components/schema/FaqPageJsonLd";
 import { serviceFaqData } from "@/lib/serviceFaqData";
 import { ChevronRight } from "lucide-react";
+import ServiceDefinition from "@/components/service/ServiceDefinition";
 
 export const metadata: Metadata = {
   title: "Visual Inspection (VI)",
   description:
-    "Visual inspection NDT services examining surface and external characteristics of components and materials — detecting cracks, corrosion, surface irregularities, and dimensional discrepancies. The first and essential step in any NDT programme. Kuwait and Dubai.",
+    "Visual inspection NDT for surface characteristics — detecting cracks, corrosion, and dimensional issues. The first step in any NDT programme. Kuwait and Dubai.",
   alternates: { canonical: "/service/visual-inspection-vi/" },
   openGraph: {
-    title: "Visual Inspection (VI) | Texas Technical Services",
+    title: "Visual Inspection (VI)",
     description: "Visual inspection NDT for surface defect detection — cracks, corrosion, irregularities, dimensional checks. Kuwait & Dubai.",
     url: "/service/visual-inspection-vi/",
     images: [{ url: "/og-default.png", width: 1200, height: 630, alt: "Visual Inspection — Texas Technical Services" }],
   },
-  twitter: { card: "summary_large_image", title: "Visual Inspection (VI) | Texas Technical Services", description: "Surface and external visual inspection NDT. Kuwait & Dubai." },
+  twitter: { card: "summary_large_image", title: "Visual Inspection (VI)", description: "Surface and external visual inspection NDT. Kuwait & Dubai." },
   keywords: ["visual inspection Kuwait", "NDT visual inspection Kuwait", "weld visual examination Kuwait", "surface inspection Kuwait", "VI NDT Kuwait", "remote visual inspection Kuwait", "Texas Technical Services visual inspection"],
 };
 
@@ -39,6 +40,7 @@ export default function VisualInspectionPage() {
   serviceType="Non-Destructive Testing"
   areaServed={["Kuwait", "United Arab Emirates", "Saudi Arabia", "Bahrain", "Qatar", "Oman"]}
 />
+      <ServiceDefinition definition="Visual Inspection (VI) is the fundamental non-destructive testing method examining surface and external characteristics of components to detect cracks, corrosion, and dimensional discrepancies. TTS provides certified visual inspection services as the essential first step in any NDT programme across Kuwait and the GCC." />
       <VisualInspectionHero />
       <VisualInspectionContent />
 

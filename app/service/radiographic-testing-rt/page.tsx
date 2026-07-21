@@ -8,19 +8,20 @@ import Link from "next/link";
 import { FaqPageJsonLd } from "@/components/schema/FaqPageJsonLd";
 import { serviceFaqData } from "@/lib/serviceFaqData";
 import { ChevronRight } from "lucide-react";
+import ServiceDefinition from "@/components/service/ServiceDefinition";
 
 export const metadata: Metadata = {
-  title: "Radiographic Testing (RT) | Texas Technical Services",
+  title: "Radiographic Testing (RT)",
   description:
-    "Radiographic Testing using X-rays and gamma rays to examine the internal structure of materials and detect flaws — weld RT, castings inspection, and digital radiography to ASME V, API 1104, EN ISO 17636 standards in Kuwait and Dubai.",
+    "Radiographic Testing using X-rays and gamma rays for weld, casting, and internal flaw detection to ASME V, API 1104, and EN ISO 17636 in Kuwait and Dubai.",
   alternates: { canonical: "/service/radiographic-testing-rt/" },
   openGraph: {
-    title: "Radiographic Testing (RT) | Texas Technical Services",
+    title: "Radiographic Testing (RT)",
     description: "X-ray and gamma ray radiographic testing for internal defect detection. ASME V, API 1104, ISO 17636. Kuwait & Dubai.",
     url: "/service/radiographic-testing-rt/",
     images: [{ url: "/og-default.png", width: 1200, height: 630, alt: "Radiographic Testing — Texas Technical Services" }],
   },
-  twitter: { card: "summary_large_image", title: "Radiographic Testing (RT) | Texas Technical Services", description: "X-ray and gamma radiography. ASME V, API 1104, ISO 17636. Kuwait & Dubai." },
+  twitter: { card: "summary_large_image", title: "Radiographic Testing (RT)", description: "X-ray and gamma radiography. ASME V, API 1104, ISO 17636. Kuwait & Dubai." },
   keywords: ["radiographic testing Kuwait", "RT NDT Kuwait", "X-ray testing Kuwait", "gamma ray testing Kuwait", "weld radiography Kuwait", "digital radiography Kuwait", "ASME V RT Kuwait", "Texas Technical Services radiography"],
 };
 
@@ -39,6 +40,7 @@ export default function RadiographicTestingPage() {
   serviceType="Non-Destructive Testing"
   areaServed={["Kuwait", "United Arab Emirates", "Saudi Arabia", "Bahrain", "Qatar", "Oman"]}
 />
+      <ServiceDefinition definition="Radiographic Testing (RT) uses X-rays and gamma rays to examine internal material structure and detect flaws in welds, castings, and forgings. TTS provides conventional and digital radiography services to ASME V, API 1104, and EN ISO 17636 standards across Kuwait and the GCC." />
       <RadiographicHero />
       <RadiographicContent />
 

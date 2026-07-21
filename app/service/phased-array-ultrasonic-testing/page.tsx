@@ -8,19 +8,20 @@ import Link from "next/link";
 import { FaqPageJsonLd } from "@/components/schema/FaqPageJsonLd";
 import { serviceFaqData } from "@/lib/serviceFaqData";
 import { ChevronRight } from "lucide-react";
+import ServiceDefinition from "@/components/service/ServiceDefinition";
 
 export const metadata: Metadata = {
-  title: "Phased Array Ultrasonic Testing (PAUT) | Texas Technical Services",
+  title: "Phased Array Ultrasonic Testing (PAUT)",
   description:
-    "Phased Array Ultrasonic Testing (PAUT) for detecting cracks, voids, pits, and corrosion defects, measuring material and coating thickness, and inspecting welds to ASME V, API 1104, EN ISO 13588 standards in Kuwait and Dubai.",
+    "Phased Array Ultrasonic Testing for crack detection, thickness measurement, and weld inspection to ASME V, API 1104, and EN ISO 13588 in Kuwait and Dubai.",
   alternates: { canonical: "/service/phased-array-ultrasonic-testing/" },
   openGraph: {
-    title: "Phased Array Ultrasonic Testing (PAUT) | Texas Technical Services",
+    title: "Phased Array Ultrasonic Testing (PAUT)",
     description: "PAUT for defect detection, thickness measurement, and weld inspection. ASME V, API 1104, EN ISO 13588. Kuwait & Dubai.",
     url: "/service/phased-array-ultrasonic-testing/",
     images: [{ url: "/og-default.png", width: 1200, height: 630, alt: "Phased Array Ultrasonic Testing — Texas Technical Services" }],
   },
-  twitter: { card: "summary_large_image", title: "Phased Array Ultrasonic Testing (PAUT) | Texas Technical Services", description: "PAUT defect detection and weld inspection. ASME V, API 1104. Kuwait & Dubai." },
+  twitter: { card: "summary_large_image", title: "Phased Array Ultrasonic Testing (PAUT)", description: "PAUT defect detection and weld inspection. ASME V, API 1104. Kuwait & Dubai." },
   keywords: ["phased array ultrasonic testing Kuwait", "PAUT Kuwait", "PAUT NDT Kuwait", "weld PAUT Kuwait", "phased array inspection Kuwait", "ASME V PAUT Kuwait", "Texas Technical Services PAUT"],
 };
 
@@ -39,6 +40,7 @@ export default function PhasedArrayPage() {
   serviceType="Non-Destructive Testing"
   areaServed={["Kuwait", "United Arab Emirates", "Saudi Arabia", "Bahrain", "Qatar", "Oman"]}
 />
+      <ServiceDefinition definition="Phased Array Ultrasonic Testing (PAUT) uses multi-element probes for advanced defect detection, thickness measurement, and weld inspection with enhanced resolution and coverage. TTS provides PAUT services to ASME V, API 1104, and EN ISO 13588 standards for critical applications across Kuwait and the GCC." />
       <PhasedArrayHero />
       <PhasedArrayContent />
 

@@ -5,19 +5,21 @@ import InspectionSubServices from "@/components/service/inspection-testing/Inspe
 import { BreadcrumbJsonLd } from "@/components/schema/BreadcrumbJsonLd";
 import { ServiceJsonLd } from "@/components/schema/ServiceJsonLd";
 import { FaqPageJsonLd } from "@/components/schema/FaqPageJsonLd";
+import { ItemListJsonLd } from "@/components/schema/ItemListJsonLd";
 import { ChevronRight } from "lucide-react";
 import { serviceCrossLinks } from "@/lib/serviceCrossLinks";
 import Link from "next/link";
+import ServiceDefinition from "@/components/service/ServiceDefinition";
 
 export const metadata: Metadata = {
-  title: "Inspection & Testing Services | Texas Technical Services",
+  title: "Inspection & Testing Services",
   description:
-    "Texas Technical Services Co. (TTS) is a leading industrial inspection and testing company in Kuwait — offering NDT (UT, MT, PT, RT, VI), mechanical testing, specialized phased array ultrasonic inspection, and QA consultancy services compliant with ISO 9001:2015, ISO 14001:2015, and ISO 45001:2018 across Kuwait and the GCC.",
+    "Industrial inspection and testing in Kuwait — NDT, mechanical testing, and QA consultancy compliant with ISO 9001, ISO 14001, and ISO 45001 across the GCC.",
   alternates: {
     canonical: "/service/inspection-testing/",
   },
   openGraph: {
-    title: "Inspection & Testing Services | Texas Technical Services",
+    title: "Inspection & Testing Services",
     description:
       "Industrial inspection and testing company in Kuwait — NDT, mechanical testing, phased array UT, QA consultancy, and ISO-certified quality management across the GCC.",
     url: "/service/inspection-testing/",
@@ -25,7 +27,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Inspection & Testing Services | Texas Technical Services",
+    title: "Inspection & Testing Services",
     description:
       "Industrial inspection and testing company in Kuwait — NDT, mechanical testing, phased array UT, ISO 9001/14001/45001 certified.",
   },
@@ -78,6 +80,7 @@ export default function InspectionTestingPage() {
         areaServed={["Kuwait", "United Arab Emirates", "Saudi Arabia", "Bahrain", "Qatar", "Oman"]}
       />
       <FaqPageJsonLd items={faqItems} />
+      <ServiceDefinition definition="Inspection and testing services provide comprehensive NDT including UT, MT, PT, RT, VI, mechanical testing, phased array ultrasonic inspection, and QA consultancy. TTS is an ISO 9001, ISO 14001, and ISO 45001 certified industrial inspection and testing company across Kuwait and the GCC." />
       <InspectionHero />
       <InspectionOverview />
       <InspectionSubServices />
@@ -153,6 +156,16 @@ export default function InspectionTestingPage() {
           </div>
         </section>
       )}
+      <ItemListJsonLd
+        name="Inspection and Testing Services"
+        items={[
+          { name: "Non-Destructive Testing (NDT)", url: "/service/non-destructive-testing-ndt/", description: "Comprehensive NDT methods including UT, RT, MT, PT, ECT, PAUT, TOFD, and visual inspection." },
+          { name: "Mechanical Testing", url: "/service/mechanical-testing/", description: "Tensile, bend, impact, hardness, fracture, and macro/micro testing for materials and welds." },
+          { name: "Specialized Inspection Services", url: "/service/specialized-inspection-service/", description: "Corrosion control, metallurgical analysis, and specialized engineering inspection." },
+          { name: "Lifting Equipment Inspection", url: "/service/lifting-equipment-inspection/", description: "LOLER and ASME compliance inspection for cranes, hoists, and lifting accessories." },
+          { name: "Exterior Windows, Doors and Curtain Wall Testing", url: "/service/exterior-windows-doors-curtain-wall-testing/", description: "Air permeability, water penetration, and structural performance testing for building envelopes." },
+        ]}
+      />
     </>
   );
 }

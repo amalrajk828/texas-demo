@@ -8,19 +8,20 @@ import Link from "next/link";
 import { FaqPageJsonLd } from "@/components/schema/FaqPageJsonLd";
 import { serviceFaqData } from "@/lib/serviceFaqData";
 import { ChevronRight } from "lucide-react";
+import ServiceDefinition from "@/components/service/ServiceDefinition";
 
 export const metadata: Metadata = {
-  title: "Air Permeability Test | Texas Technical Services",
+  title: "Air Permeability Test",
   description:
-    "Air permeability testing for exterior windows, doors, and curtain walls to measure air infiltration and locate leakage paths — per ASTM E783, ASTM E283, EN 12207 standards in Kuwait and Dubai.",
+    "Air permeability testing for windows, doors, and curtain walls — ASTM E783, ASTM E283, and EN 12207 compliant in Kuwait and Dubai.",
   alternates: { canonical: "/service/air-permeability-test/" },
   openGraph: {
-    title: "Air Permeability Test | Texas Technical Services",
+    title: "Air Permeability Test",
     description: "Air infiltration testing for windows, doors, and curtain walls. ASTM E783, EN 12207. Kuwait & Dubai.",
     url: "/service/air-permeability-test/",
     images: [{ url: "/og-default.png", width: 1200, height: 630, alt: "Air Permeability Test — Texas Technical Services" }],
   },
-  twitter: { card: "summary_large_image", title: "Air Permeability Test | Texas Technical Services", description: "Air infiltration testing for facades. ASTM E783. Kuwait & Dubai." },
+  twitter: { card: "summary_large_image", title: "Air Permeability Test", description: "Air infiltration testing for facades. ASTM E783. Kuwait & Dubai." },
   keywords: ["air permeability test Kuwait", "air leakage test Kuwait", "curtain wall air test Kuwait", "ASTM E783 Kuwait", "window air infiltration Kuwait", "building envelope air test Kuwait", "Texas Technical Services air test"],
 };
 
@@ -39,6 +40,7 @@ export default function AirPermeabilityPage() {
   serviceType="Specialized Inspection"
   areaServed={["Kuwait", "United Arab Emirates", "Saudi Arabia", "Bahrain", "Qatar", "Oman"]}
 />
+      <ServiceDefinition definition="Air permeability testing measures air infiltration and locates leakage paths through exterior windows, doors, and curtain wall systems. TTS provides certified air permeability testing services per ASTM E783, ASTM E283, and EN 12207 standards for building envelope assessment in Kuwait and Dubai." />
       <AirPermeabilityHero />
       <AirPermeabilityContent />
 

@@ -8,16 +8,17 @@ import Link from "next/link";
 import { FaqPageJsonLd } from "@/components/schema/FaqPageJsonLd";
 import { serviceFaqData } from "@/lib/serviceFaqData";
 import { ChevronRight } from "lucide-react";
+import ServiceDefinition from "@/components/service/ServiceDefinition";
 
 export const metadata: Metadata = {
-  title: "Commissioning and After Sales Support | Texas Technical Services",
+  title: "Commissioning and After Sales Support",
   description:
-    "Expert commissioning and 24/7 after-sales support for flow meters, metering control systems, metering skids, analyzers, and CEMS — ensuring seamless integration and peak performance in Kuwait and Dubai.",
+    "Commissioning and 24/7 after-sales support for flow meters, metering systems, analyzers, and CEMS in Kuwait and Dubai.",
   alternates: {
     canonical: "/service/commissioning-and-after-sales-support/",
   },
   openGraph: {
-    title: "Commissioning and After Sales Support | Texas Technical Services",
+    title: "Commissioning and After Sales Support",
     description:
       "Expert commissioning of flow meters, metering control systems, analyzers, and CEMS with 24/7 after-sales support and maintenance. Kuwait & Dubai.",
     url: "/service/commissioning-and-after-sales-support/",
@@ -32,7 +33,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Commissioning and After Sales Support | Texas Technical Services",
+    title: "Commissioning and After Sales Support",
     description:
       "Flow meter, CEMS, and metering skid commissioning with 24/7 after-sales support. Kuwait & Dubai.",
   },
@@ -63,6 +64,7 @@ export default function CommissioningAfterSalesPage() {
   serviceType="Commissioning"
   areaServed={["Kuwait", "United Arab Emirates", "Saudi Arabia", "Bahrain", "Qatar", "Oman"]}
 />
+      <ServiceDefinition definition="Commissioning and after-sales support ensures seamless integration and peak performance of flow meters, metering control systems, analyzers, and CEMS. TTS provides expert commissioning with 24/7 after-sales support and maintenance for industrial instrumentation across Kuwait and Dubai." />
       <CommissioningHero />
       <CommissioningContent />
 

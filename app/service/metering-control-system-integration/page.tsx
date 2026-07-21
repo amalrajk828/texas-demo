@@ -9,16 +9,17 @@ import Link from "next/link";
 import { FaqPageJsonLd } from "@/components/schema/FaqPageJsonLd";
 import { serviceFaqData } from "@/lib/serviceFaqData";
 import { ChevronRight } from "lucide-react";
+import ServiceDefinition from "@/components/service/ServiceDefinition";
 
 export const metadata: Metadata = {
-  title: "Metering Control System Integration | Texas Technical Services",
+  title: "Metering Control System Integration",
   description:
-    "Texas Technical Services (TTS) specializes in Custody Transfer Flow Metering Control System Development and Integration — SCADA, PLC, HMI, server configuration, and full system integration for precise, compliant custody transfer operations.",
+    "Custody transfer metering control system development and integration — SCADA, PLC, HMI, and server configuration for compliant operations.",
   alternates: {
     canonical: "/service/metering-control-system-integration/",
   },
   openGraph: {
-    title: "Metering Control System Integration | Texas Technical Services",
+    title: "Metering Control System Integration",
     description:
       "Custody transfer flow metering control system development, SCADA & PLC integration, HMI configuration, and IT/OT cybersecurity — authorised OEM representative.",
     url: "/service/metering-control-system-integration/",
@@ -33,7 +34,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Metering Control System Integration | Texas Technical Services",
+    title: "Metering Control System Integration",
     description:
       "Custody transfer flow metering control system development, SCADA, PLC, HMI integration — authorised OEM representative in Kuwait & Dubai.",
   },
@@ -64,6 +65,7 @@ export default function McsiPage() {
   serviceType="Flow Measurement"
   areaServed={["Kuwait", "United Arab Emirates", "Saudi Arabia", "Bahrain", "Qatar", "Oman"]}
 />
+      <ServiceDefinition definition="Metering control system integration provides custody transfer flow metering control system development including SCADA, PLC, HMI, server configuration, and full system integration. TTS delivers compliant metering solutions as an authorised OEM representative across Kuwait and Dubai." />
       <McsiHero />
       <McsiServices />
       <McsiWhyUs />

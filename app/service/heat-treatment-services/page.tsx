@@ -8,19 +8,20 @@ import Link from "next/link";
 import { FaqPageJsonLd } from "@/components/schema/FaqPageJsonLd";
 import { serviceFaqData } from "@/lib/serviceFaqData";
 import { ChevronRight } from "lucide-react";
+import ServiceDefinition from "@/components/service/ServiceDefinition";
 
 export const metadata: Metadata = {
-  title: "Heat Treatment Services | Texas Technical Services",
+  title: "Heat Treatment Services",
   description:
-    "Heat treatment services including Post Weld Heat Treatment (PWHT), stress relief, and annealing using electrical resistance and high-velocity fuel-fired burner systems to ASME VIII, AWS D1.1, ASME B31.3 standards in Kuwait and Dubai.",
+    "Heat treatment services including PWHT, stress relief, and annealing to ASME VIII, AWS D1.1, and ASME B31.3 standards in Kuwait and Dubai.",
   alternates: { canonical: "/service/heat-treatment-services/" },
   openGraph: {
-    title: "Heat Treatment Services | Texas Technical Services",
+    title: "Heat Treatment Services",
     description: "PWHT, stress relief, and annealing with electrical and fuel-fired heating. ASME VIII, AWS D1.1. Kuwait & Dubai.",
     url: "/service/heat-treatment-services/",
     images: [{ url: "/og-heat-treatment.jpg", width: 1200, height: 630, alt: "Heat Treatment Services — Texas Technical Services" }],
   },
-  twitter: { card: "summary_large_image", title: "Heat Treatment Services | Texas Technical Services", description: "PWHT and heat treatment. ASME VIII, AWS D1.1. Kuwait & Dubai." },
+  twitter: { card: "summary_large_image", title: "Heat Treatment Services", description: "PWHT and heat treatment. ASME VIII, AWS D1.1. Kuwait & Dubai." },
   keywords: ["heat treatment Kuwait", "PWHT Kuwait", "post weld heat treatment Kuwait", "stress relief Kuwait", "electrical resistance heating Kuwait", "heat treatment services Kuwait", "Texas Technical Services heat treatment"],
 };
 
@@ -39,6 +40,7 @@ export default function HeatTreatmentPage() {
   serviceType="Mechanical Testing"
   areaServed={["Kuwait", "United Arab Emirates", "Saudi Arabia", "Bahrain", "Qatar", "Oman"]}
 />
+      <ServiceDefinition definition="Heat treatment services include Post Weld Heat Treatment (PWHT), stress relief, and annealing using electrical resistance and high-velocity fuel-fired burner systems. TTS provides certified heat treatment services to ASME VIII, AWS D1.1, and ASME B31.3 standards for industrial applications across Kuwait and the GCC." />
       <HeatTreatmentHero />
       <HeatTreatmentContent />
 

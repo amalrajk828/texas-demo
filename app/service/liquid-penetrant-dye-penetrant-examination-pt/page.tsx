@@ -8,19 +8,20 @@ import Link from "next/link";
 import { FaqPageJsonLd } from "@/components/schema/FaqPageJsonLd";
 import { serviceFaqData } from "@/lib/serviceFaqData";
 import { ChevronRight } from "lucide-react";
+import ServiceDefinition from "@/components/service/ServiceDefinition";
 
 export const metadata: Metadata = {
-  title: "Liquid Penetrant / Dye Penetrant Examination (PT) | Texas Technical Services",
+  title: "Liquid Penetrant / Dye Penetrant Examination (PT)",
   description:
-    "Liquid Penetrant Testing (LPT/LPI/DPT) using capillary forces to detect surface-breaking cracks, laps, and porosity in metals, ceramics, and plastics — fluorescent and colour contrast methods to ASTM E165, ISO 3452 standards in Kuwait and Dubai.",
+    "Liquid Penetrant Testing for surface cracks in metals, ceramics, and plastics — fluorescent and colour contrast to ASTM E165 and ISO 3452 in Kuwait and Dubai.",
   alternates: { canonical: "/service/liquid-penetrant-dye-penetrant-examination-pt/" },
   openGraph: {
-    title: "Liquid Penetrant / Dye Penetrant Examination (PT) | Texas Technical Services",
+    title: "Liquid Penetrant / Dye Penetrant Examination (PT)",
     description: "Fluorescent and colour contrast penetrant testing for surface defect detection. ASTM E165, ISO 3452. Kuwait & Dubai.",
     url: "/service/liquid-penetrant-dye-penetrant-examination-pt/",
     images: [{ url: "/og-penetrant-test.jpg", width: 1200, height: 630, alt: "Dye Penetrant Testing — Texas Technical Services" }],
   },
-  twitter: { card: "summary_large_image", title: "Liquid Penetrant / Dye Penetrant (PT) | Texas Technical Services", description: "Fluorescent and colour contrast PT. ASTM E165, ISO 3452. Kuwait & Dubai." },
+  twitter: { card: "summary_large_image", title: "Liquid Penetrant / Dye Penetrant (PT)", description: "Fluorescent and colour contrast PT. ASTM E165, ISO 3452. Kuwait & Dubai." },
   keywords: ["dye penetrant test Kuwait", "liquid penetrant testing Kuwait", "PT NDT Kuwait", "fluorescent penetrant Kuwait", "surface crack detection Kuwait", "LPI Kuwait", "ASTM E165 Kuwait", "Texas Technical Services penetrant test"],
 };
 
@@ -39,6 +40,7 @@ export default function PenetrantTestPage() {
   serviceType="Non-Destructive Testing"
   areaServed={["Kuwait", "United Arab Emirates", "Saudi Arabia", "Bahrain", "Qatar", "Oman"]}
 />
+      <ServiceDefinition definition="Liquid Penetrant Testing (PT) uses capillary forces to detect surface-breaking cracks, laps, and porosity in metals, ceramics, and plastics. TTS provides fluorescent and colour contrast penetrant examination services to ASTM E165 and ISO 3452 standards across Kuwait and Dubai." />
       <PenetrantHero />
       <PenetrantContent />
 

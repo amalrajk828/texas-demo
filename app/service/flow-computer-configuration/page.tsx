@@ -8,16 +8,19 @@ import Link from "next/link";
 import { FaqPageJsonLd } from "@/components/schema/FaqPageJsonLd";
 import { serviceFaqData } from "@/lib/serviceFaqData";
 import { ChevronRight } from "lucide-react";
+import { HowToJsonLd } from "@/components/schema/HowToJsonLd";
+import ServiceProcessSteps from "@/components/ServiceProcessSteps";
+import ServiceDefinition from "@/components/service/ServiceDefinition";
 
 export const metadata: Metadata = {
-  title: "Flow Computer Configuration | Texas Technical Services",
+  title: "Flow Computer Configuration",
   description:
-    "Texas Technical Services (TTS) provides expert flow computer configuration services in compliance with API MPMS, AGA, ISO, NTEP & OIML standards — custom programming, multi-stream setup, SCADA integration, commissioning, and on-site validation for custody transfer applications in Kuwait and Dubai.",
+    "Flow computer configuration for custody transfer — custom programming, multi-stream setup, SCADA integration, and on-site validation in Kuwait and Dubai.",
   alternates: {
     canonical: "/service/flow-computer-configuration/",
   },
   openGraph: {
-    title: "Flow Computer Configuration | Texas Technical Services",
+    title: "Flow Computer Configuration",
     description:
       "Custom flow computer configuration compliant with API MPMS, AGA, ISO, NTEP & OIML — liquid & gas custody transfer, SCADA integration, commissioning support. Authorised OEM representative.",
     url: "/service/flow-computer-configuration/",
@@ -32,7 +35,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Flow Computer Configuration | Texas Technical Services",
+    title: "Flow Computer Configuration",
     description:
       "Flow computer configuration to API MPMS, AGA, ISO, NTEP & OIML standards — custody transfer, SCADA integration, commissioning in Kuwait & Dubai.",
   },
@@ -64,8 +67,30 @@ export default function FlowComputerConfigurationPage() {
   serviceType="Flow Measurement"
   areaServed={["Kuwait", "United Arab Emirates", "Saudi Arabia", "Bahrain", "Qatar", "Oman"]}
 />
+      <ServiceDefinition definition="Flow computer configuration provides custom programming, multi-stream setup, SCADA integration, commissioning, and on-site validation for custody transfer applications. TTS delivers expert flow computer services compliant with API MPMS, AGA, ISO, NTEP, and OIML standards in Kuwait and Dubai." />
       <FlowComputerHero />
       <FlowComputerContent />
+
+      <HowToJsonLd
+        name="Our Flow Computer Configuration Process"
+        description="A step-by-step process for configuring flow computers to API MPMS, AGA, and OIML standards."
+        steps={[
+          { name: "Define Meter Parameters", text: "Input meter type, pipe diameter, fluid properties, and operating conditions into the flow computer." },
+          { name: "Input Calculation Standards", text: "Configure API MPMS Chapter 21, AGA reports, or OIML R117 calculation algorithms and constants." },
+          { name: "Verify Alarm and Audit Settings", text: "Set up alarm thresholds, event logging, and audit trail configurations for fiscal measurement compliance." },
+          { name: "Validate Against Known Values", text: "Test the flow computer configuration against known reference values to confirm calculation accuracy." },
+        ]}
+      />
+
+      <ServiceProcessSteps
+        title="How We Configure Your Flow Computers"
+        steps={[
+          { name: "Define Meter Parameters", description: "We input your meter type, pipe diameter, fluid properties, and operating conditions into the flow computer to establish the measurement baseline." },
+          { name: "Input Calculation Standards", description: "We configure the appropriate API MPMS Chapter 21, AGA reports, or OIML R117 calculation algorithms and constants for your application." },
+          { name: "Verify Alarm and Audit Settings", description: "We set up alarm thresholds, event logging, and audit trail configurations to ensure full fiscal measurement compliance." },
+          { name: "Validate Against Known Values", description: "We test the flow computer configuration against known reference values to confirm calculation accuracy before deployment." },
+        ]}
+      />
 
       {/* ══ RELATED SERVICES ═══════════════════════════════ */}
       {serviceCrossLinks["flow-computer-configuration"] && serviceCrossLinks["flow-computer-configuration"].length > 0 && (

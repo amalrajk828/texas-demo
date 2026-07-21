@@ -8,19 +8,20 @@ import Link from "next/link";
 import { FaqPageJsonLd } from "@/components/schema/FaqPageJsonLd";
 import { serviceFaqData } from "@/lib/serviceFaqData";
 import { ChevronRight } from "lucide-react";
+import ServiceDefinition from "@/components/service/ServiceDefinition";
 
 export const metadata: Metadata = {
   title: "Hose Test — Curtain Wall & Facade Water Check",
   description:
-    "Hose test quality assurance water checking for installed curtain walls, exterior windows, and doors — field leakage identification and diagnostic reporting to AAMA 501.2, ASTM E1105 in Kuwait and Dubai.",
+    "Hose test water checks for installed curtain walls, windows, and doors — field leakage identification to AAMA 501.2 and ASTM E1105 in Kuwait and Dubai.",
   alternates: { canonical: "/service/hose-test/" },
   openGraph: {
-    title: "Hose Test — Curtain Wall Water Check | Texas Technical Services",
+    title: "Hose Test — Curtain Wall Water Check",
     description: "Field hose test for curtain walls, windows, and doors. AAMA 501.2, ASTM E1105. Kuwait & Dubai.",
     url: "/service/hose-test/",
     images: [{ url: "/og-hose-test.jpg", width: 1200, height: 630, alt: "Hose Test — Texas Technical Services" }],
   },
-  twitter: { card: "summary_large_image", title: "Hose Test — Curtain Wall Water Check | Texas Technical Services", description: "Field water check for facades and windows. AAMA 501.2. Kuwait & Dubai." },
+  twitter: { card: "summary_large_image", title: "Hose Test — Curtain Wall Water Check", description: "Field water check for facades and windows. AAMA 501.2. Kuwait & Dubai." },
   keywords: ["hose test Kuwait", "curtain wall hose test Kuwait", "facade water test Kuwait", "window hose test Kuwait", "AAMA 501.2 Kuwait", "building leakage test Kuwait", "Texas Technical Services hose test"],
 };
 
@@ -39,6 +40,7 @@ export default function HoseTestPage() {
   serviceType="Specialized Inspection"
   areaServed={["Kuwait", "United Arab Emirates", "Saudi Arabia", "Bahrain", "Qatar", "Oman"]}
 />
+      <ServiceDefinition definition="Hose testing provides quality assurance water checking for installed curtain walls, exterior windows, and doors to identify field leakage and diagnostic reporting. TTS delivers hose test services to AAMA 501.2 and ASTM E1105 standards for building envelope assessment in Kuwait and Dubai." />
       <HoseTestHero />
       <HoseTestContent />
 

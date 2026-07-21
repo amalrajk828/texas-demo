@@ -8,16 +8,18 @@ import Link from "next/link";
 import { FaqPageJsonLd } from "@/components/schema/FaqPageJsonLd";
 import { serviceFaqData } from "@/lib/serviceFaqData";
 import { ChevronRight } from "lucide-react";
+import { ItemListJsonLd } from "@/components/schema/ItemListJsonLd";
+import ServiceDefinition from "@/components/service/ServiceDefinition";
 
 export const metadata: Metadata = {
-  title: "Mechanical Testing Services | Texas Technical Services",
+  title: "Mechanical Testing Services",
   description:
-    "Comprehensive mechanical testing services for metals, plastics, ceramics, and composites — tensile testing, hardness testing, impact testing, bend testing, fracture toughness, and macro/micro examination in Kuwait and Dubai.",
+    "Mechanical testing for metals, plastics, ceramics, and composites — tensile, hardness, impact, bend, fracture, and macro/micro testing in Kuwait and Dubai.",
   alternates: {
     canonical: "/service/mechanical-testing/",
   },
   openGraph: {
-    title: "Mechanical Testing Services | Texas Technical Services",
+    title: "Mechanical Testing Services",
     description:
       "Tensile, hardness, impact, bend, fracture toughness, and macro/micro testing for metals, plastics, ceramics, and composites. Kuwait & Dubai.",
     url: "/service/mechanical-testing/",
@@ -25,7 +27,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Mechanical Testing Services | Texas Technical Services",
+    title: "Mechanical Testing Services",
     description: "Tensile, hardness, impact, bend, fracture, and macro/micro testing. Kuwait & Dubai.",
   },
   keywords: [
@@ -55,6 +57,7 @@ export default function MechanicalTestingPage() {
   serviceType="Mechanical Testing"
   areaServed={["Kuwait", "United Arab Emirates", "Saudi Arabia", "Bahrain", "Qatar", "Oman"]}
 />
+      <ServiceDefinition definition="Mechanical testing services evaluate the physical properties of metals, plastics, ceramics, and composites through tensile, hardness, impact, bend, fracture toughness, and macro/micro examination. TTS provides comprehensive mechanical testing solutions for industrial applications across Kuwait and Dubai." />
       <MechanicalHero />
       <MechanicalSubServices />
 
@@ -132,6 +135,18 @@ export default function MechanicalTestingPage() {
           </div>
         </div>
       </section>
+      <ItemListJsonLd
+        name="Mechanical Testing Methods"
+        items={[
+          { name: "Tensile Test", url: "/service/tensile-test/", description: "Measures material strength and ductility under axial loading." },
+          { name: "Bend Test", url: "/service/bend-test/", description: "Evaluates weld ductility and soundness by bending specimens." },
+          { name: "Impact Test", url: "/service/impact-test/", description: "Determines material toughness and fracture resistance at various temperatures." },
+          { name: "Hardness Test", url: "/service/hardness-test/", description: "Measures resistance to indentation using Rockwell, Brinell, or Vickers methods." },
+          { name: "Fracture Test", url: "/service/fracture-test/", description: "Evaluates fracture toughness and crack propagation resistance." },
+          { name: "Macro and Micro Test", url: "/service/macro-and-micro-test/", description: "Metallographic examination of weld cross-sections for internal structure analysis." },
+          { name: "Pullout Test", url: "/service/pullout-test/", description: "Tests anchor bolt and fastener holding strength in concrete substrates." },
+        ]}
+      />
 </>
   );
 }

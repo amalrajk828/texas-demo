@@ -8,20 +8,21 @@ import Link from "next/link";
 import { FaqPageJsonLd } from "@/components/schema/FaqPageJsonLd";
 import { serviceFaqData } from "@/lib/serviceFaqData";
 import { ChevronRight } from "lucide-react";
+import ServiceDefinition from "@/components/service/ServiceDefinition";
 
 export const metadata: Metadata = {
-  title: "Hose Test — Curtain Wall & Facade Water Check",
+  title: "Hose Test — Existing Building Leak Diagnostics",
   description:
-    "Hose test quality assurance water checking for installed curtain walls, exterior windows, and doors — field leakage identification and diagnostic reporting to AAMA 501.2, ASTM E1105 in Kuwait and Dubai.",
+    "Hose test water checks for installed curtain walls, windows, and doors — field leakage identification to AAMA 501.2 and ASTM E1105 in Kuwait and Dubai.",
   alternates: { canonical: "/service/hose-test-2/" },
   openGraph: {
-    title: "Hose Test — Curtain Wall Water Check | Texas Technical Services",
-    description: "Field hose test for curtain walls, windows, and doors. AAMA 501.2, ASTM E1105. Kuwait & Dubai.",
+    title: "Hose Test — Existing Building Leak Diagnostics",
+    description: "Field hose testing for existing buildings to diagnose active leaks. AAMA 501.2, ASTM E1105. Kuwait & Dubai.",
     url: "/service/hose-test-2/",
-    images: [{ url: "/og-hose-test.jpg", width: 1200, height: 630, alt: "Hose Test — Texas Technical Services" }],
+    images: [{ url: "/og-hose-test.jpg", width: 1200, height: 630, alt: "Hose Test — Existing Building Leak Diagnostics — Texas Technical Services" }],
   },
-  twitter: { card: "summary_large_image", title: "Hose Test — Curtain Wall Water Check | Texas Technical Services", description: "Field water check for facades and windows. AAMA 501.2. Kuwait & Dubai." },
-  keywords: ["hose test Kuwait", "curtain wall hose test Kuwait", "facade water test Kuwait", "window hose test Kuwait", "AAMA 501.2 Kuwait", "building leakage test Kuwait", "Texas Technical Services hose test"],
+  twitter: { card: "summary_large_image", title: "Hose Test — Existing Building Leak Diagnostics", description: "Hose test leak diagnostics for existing buildings. AAMA 501.2. Kuwait & Dubai." },
+  keywords: ["existing building leak diagnostics Kuwait", "hose test leak detection Kuwait", "curtain wall hose test Kuwait", "window leak diagnostics Kuwait", "AAMA 501.2 Kuwait", "water intrusion test Kuwait", "Texas Technical Services hose test"],
 };
 
 export default function HoseTestPage2() {
@@ -30,16 +31,24 @@ export default function HoseTestPage2() {
       <BreadcrumbJsonLd items={[
   { name: "Home", href: "/" },
   { name: "Services", href: "/services/" },
-  { name: "Hose Test — Curtain Wall & Facade Water Check", href: "/service/hose-test-2/" },
+  { name: "Hose Test — Existing Building Leak Diagnostics", href: "/service/hose-test-2/" },
 ]} />
 <ServiceJsonLd
-  name="Hose Test — Curtain Wall & Facade Water Check"
-  description="Hose test quality assurance water checking for installed curtain walls, exterior windows, and doors — field leakage identification and diagnostic reporting to AAMA 501.2, ASTM E1105 in Kuwait and Dubai."
+  name="Hose Test — Existing Building Leak Diagnostics"
+  description="Field hose testing for existing buildings to diagnose active leaks in curtain walls, windows, and doors — water intrusion detection to AAMA 501.2, ASTM E1105 standards in Kuwait and Dubai."
   url="/service/hose-test-2/"
   serviceType="Specialized Inspection"
   areaServed={["Kuwait", "United Arab Emirates", "Saudi Arabia", "Bahrain", "Qatar", "Oman"]}
 />
+      <ServiceDefinition definition="Hose testing for existing buildings identifies active water intrusion through curtain walls, exterior windows, and doors. TTS delivers diagnostic hose test services to AAMA 501.2 and ASTM E1105 standards for leak detection and remediation planning in Kuwait and Dubai." />
       <HoseTestHero />
+      <section className="bg-white py-12 lg:py-16">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6">
+          <p className="text-gray-600 text-[15px] leading-[1.8] max-w-4xl">
+            Our hose testing service targets operational buildings where leaks have already been reported, using controlled spray patterns to isolate failure points and guide targeted remediation.
+          </p>
+        </div>
+      </section>
       <HoseTestContent />
 
       {/* ══ RELATED SERVICES ═══════════════════════════════ */}

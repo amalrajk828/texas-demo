@@ -7,20 +7,21 @@ import { serviceCrossLinks } from "@/lib/serviceCrossLinks";
 import Link from "next/link";
 import { FaqPageJsonLd } from "@/components/schema/FaqPageJsonLd";
 import { serviceFaqData } from "@/lib/serviceFaqData";
-import { ChevronRight } from "lucide-react";
+import { ChevronRight, ArrowRight } from "lucide-react";
+import ServiceDefinition from "@/components/service/ServiceDefinition";
 
 export const metadata: Metadata = {
   title: "Ultrasonic Testing (UT)",
   description:
-    "Ultrasonic Testing using high-frequency sound waves to inspect the internal structure of materials and detect defects — conventional UT, TOFD, and wall thickness measurement to ASME V, API 1104, EN ISO 11666 standards in Kuwait and Dubai.",
+    "Ultrasonic Testing for internal flaw detection and thickness — conventional UT, TOFD, and wall thickness to ASME V, API 1104, and ISO 11666 in Kuwait and Dubai.",
   alternates: { canonical: "/service/ultrasonic-testing-ut/" },
   openGraph: {
-    title: "Ultrasonic Testing (UT) | Texas Technical Services",
+    title: "Ultrasonic Testing (UT)",
     description: "Conventional UT, TOFD, and thickness measurement for welds, forgings, and castings. ASME V, API 1104. Kuwait & Dubai.",
     url: "/service/ultrasonic-testing-ut/",
     images: [{ url: "/og-default.png", width: 1200, height: 630, alt: "Ultrasonic Testing — Texas Technical Services" }],
   },
-  twitter: { card: "summary_large_image", title: "Ultrasonic Testing (UT) | Texas Technical Services", description: "Conventional UT, TOFD, thickness measurement. ASME V, API 1104. Kuwait & Dubai." },
+  twitter: { card: "summary_large_image", title: "Ultrasonic Testing (UT)", description: "Conventional UT, TOFD, thickness measurement. ASME V, API 1104. Kuwait & Dubai." },
   keywords: ["ultrasonic testing Kuwait", "UT NDT Kuwait", "TOFD testing Kuwait", "weld ultrasonic testing Kuwait", "thickness measurement Kuwait", "UT inspection Kuwait", "ASME V UT Kuwait", "Texas Technical Services ultrasonic testing"],
 };
 
@@ -39,6 +40,7 @@ export default function UltrasonicTestingPage() {
   serviceType="Non-Destructive Testing"
   areaServed={["Kuwait", "United Arab Emirates", "Saudi Arabia", "Bahrain", "Qatar", "Oman"]}
 />
+      <ServiceDefinition definition="Ultrasonic Testing (UT) is a non-destructive testing method that uses high-frequency sound waves to detect internal defects and measure wall thickness in metals and materials. TTS provides conventional UT, TOFD, and thickness measurement services with certified Level II and Level III personnel across Kuwait and the GCC." />
       <UltrasonicHero />
       <UltrasonicContent />
 
@@ -78,6 +80,14 @@ export default function UltrasonicTestingPage() {
           </div>
         </section>
       )}
+      {/* ══ RELATED COMPARISON ═══════════════════════════════ */}
+      <div className="max-w-5xl mx-auto px-4 sm:px-6 py-8">
+        <Link href="/blog/ut-vs-rt-ndt-comparison/" className="inline-flex items-center gap-2 text-[#e7212b] font-semibold text-sm hover:underline">
+          Read our comparison: UT vs RT: Which NDT Method Is Right for Your Application?
+          <ArrowRight className="w-4 h-4" />
+        </Link>
+      </div>
+
       {/* Contact section — to be added */}
     
       <FaqPageJsonLd items={serviceFaqData["ultrasonic-testing-ut"]} />

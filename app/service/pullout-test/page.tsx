@@ -8,19 +8,20 @@ import Link from "next/link";
 import { FaqPageJsonLd } from "@/components/schema/FaqPageJsonLd";
 import { serviceFaqData } from "@/lib/serviceFaqData";
 import { ChevronRight } from "lucide-react";
+import ServiceDefinition from "@/components/service/ServiceDefinition";
 
 export const metadata: Metadata = {
-  title: "Pullout Test for Bolts & Anchors | Texas Technical Services",
+  title: "Pullout Test for Bolts & Anchors",
   description:
-    "Pullout testing to determine bond strength and integrity between bolts and concrete or masonry substrates — structural anchor verification, cast-in insert testing to ASTM C900, EN 12504-3, ACI 318 in Kuwait and Dubai.",
+    "Pullout testing for anchor bolt bond strength in concrete and masonry — structural verification to ASTM C900, EN 12504-3, and ACI 318 in Kuwait and Dubai.",
   alternates: { canonical: "/service/pullout-test/" },
   openGraph: {
-    title: "Pullout Test for Bolts & Anchors | Texas Technical Services",
+    title: "Pullout Test for Bolts & Anchors",
     description: "Anchor bolt pullout testing for concrete and masonry bond strength. ASTM C900, EN 12504-3. Kuwait & Dubai.",
     url: "/service/pullout-test/",
     images: [{ url: "/og-default.png", width: 1200, height: 630, alt: "Pullout Test — Texas Technical Services" }],
   },
-  twitter: { card: "summary_large_image", title: "Pullout Test | Texas Technical Services", description: "Anchor bolt pullout testing. ASTM C900, ACI 318. Kuwait & Dubai." },
+  twitter: { card: "summary_large_image", title: "Pullout Test", description: "Anchor bolt pullout testing. ASTM C900, ACI 318. Kuwait & Dubai." },
   keywords: ["pullout test Kuwait", "anchor bolt test Kuwait", "bolt pullout test Kuwait", "concrete anchor testing Kuwait", "bond strength test Kuwait", "Texas Technical Services pullout test"],
 };
 
@@ -39,6 +40,7 @@ export default function PulloutTestPage() {
   serviceType="Specialized Inspection"
   areaServed={["Kuwait", "United Arab Emirates", "Saudi Arabia", "Bahrain", "Qatar", "Oman"]}
 />
+      <ServiceDefinition definition="Pullout testing determines bond strength and integrity between bolts and concrete or masonry substrates for structural anchor verification. TTS provides certified pullout testing services for cast-in inserts to ASTM C900, EN 12504-3, and ACI 318 standards in Kuwait and Dubai." />
       <PulloutHero />
       <PulloutContent />
 

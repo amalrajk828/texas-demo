@@ -7,20 +7,21 @@ import { serviceCrossLinks } from "@/lib/serviceCrossLinks";
 import Link from "next/link";
 import { FaqPageJsonLd } from "@/components/schema/FaqPageJsonLd";
 import { serviceFaqData } from "@/lib/serviceFaqData";
-import { ChevronRight } from "lucide-react";
+import { ChevronRight, ArrowRight } from "lucide-react";
+import ServiceDefinition from "@/components/service/ServiceDefinition";
 
 export const metadata: Metadata = {
-  title: "Magnetic Particle Inspection (MT) | Texas Technical Services",
+  title: "Magnetic Particle Inspection (MT)",
   description:
-    "Magnetic Particle Testing (MPT/MPI) for surface and near-surface defect detection in ferromagnetic materials — iron, steel, nickel, and cobalt. Wet fluorescent and colour contrast methods to ASME V, ISO 17638, ASTM E709 in Kuwait and Dubai.",
+    "Magnetic Particle Testing for surface and near-surface defects in ferromagnetic materials to ASME V, ISO 17638, and ASTM E709 in Kuwait and Dubai.",
   alternates: { canonical: "/service/magnetic-particle-inspection-mt/" },
   openGraph: {
-    title: "Magnetic Particle Inspection (MT) | Texas Technical Services",
+    title: "Magnetic Particle Inspection (MT)",
     description: "MPI/MPT for surface and near-surface defect detection in ferromagnetic materials. ASME V, ISO 17638. Kuwait & Dubai.",
     url: "/service/magnetic-particle-inspection-mt/",
     images: [{ url: "/og-magnetic-particle.jpg", width: 1200, height: 630, alt: "Magnetic Particle Inspection — Texas Technical Services" }],
   },
-  twitter: { card: "summary_large_image", title: "Magnetic Particle Inspection (MT) | Texas Technical Services", description: "MPI for ferromagnetic materials. ASME V, ISO 17638. Kuwait & Dubai." },
+  twitter: { card: "summary_large_image", title: "Magnetic Particle Inspection (MT)", description: "MPI for ferromagnetic materials. ASME V, ISO 17638. Kuwait & Dubai." },
   keywords: ["magnetic particle inspection Kuwait", "MPI Kuwait", "MPT Kuwait", "MT NDT Kuwait", "weld MPI Kuwait", "ferromagnetic inspection Kuwait", "ASME V MPI Kuwait", "Texas Technical Services MPI"],
 };
 
@@ -39,6 +40,7 @@ export default function MagneticParticlePage() {
   serviceType="Non-Destructive Testing"
   areaServed={["Kuwait", "United Arab Emirates", "Saudi Arabia", "Bahrain", "Qatar", "Oman"]}
 />
+      <ServiceDefinition definition="Magnetic Particle Inspection (MT) detects surface and near-surface defects in ferromagnetic materials including iron, steel, nickel, and cobalt alloys. TTS provides wet fluorescent and colour contrast MPI services to ASME V, ISO 17638, and ASTM E709 standards across Kuwait and Dubai." />
       <MagneticParticleHero />
       <MagneticParticleContent />
 
@@ -78,6 +80,14 @@ export default function MagneticParticlePage() {
           </div>
         </section>
       )}
+      {/* ══ RELATED COMPARISON ═══════════════════════════════ */}
+      <div className="max-w-5xl mx-auto px-4 sm:px-6 py-8">
+        <Link href="/blog/mt-vs-pt-ndt-comparison/" className="inline-flex items-center gap-2 text-[#e7212b] font-semibold text-sm hover:underline">
+          Read our comparison: Magnetic Particle vs Liquid Penetrant Testing: Surface NDT Comparison
+          <ArrowRight className="w-4 h-4" />
+        </Link>
+      </div>
+
       {/* Contact section — to be added */}
     
       <FaqPageJsonLd items={serviceFaqData["magnetic-particle-inspection-mt"]} />

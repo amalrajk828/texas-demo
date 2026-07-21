@@ -8,20 +8,21 @@ import Link from "next/link";
 import { FaqPageJsonLd } from "@/components/schema/FaqPageJsonLd";
 import { serviceFaqData } from "@/lib/serviceFaqData";
 import { ChevronRight } from "lucide-react";
+import ServiceDefinition from "@/components/service/ServiceDefinition";
 
 export const metadata: Metadata = {
-  title: "Air Permeability Test | Texas Technical Services",
+  title: "Air Permeability Test — On-Site Installed Envelope Testing",
   description:
-    "Air permeability testing for exterior windows, doors, and curtain walls to measure air infiltration and locate leakage paths — per ASTM E783, ASTM E283, EN 12207 standards in Kuwait and Dubai.",
+    "Air permeability testing for windows, doors, and curtain walls — ASTM E783, ASTM E283, and EN 12207 compliant in Kuwait and Dubai.",
   alternates: { canonical: "/service/air-permeability-test-2/" },
   openGraph: {
-    title: "Air Permeability Test | Texas Technical Services",
-    description: "Air infiltration testing for windows, doors, and curtain walls. ASTM E783, EN 12207. Kuwait & Dubai.",
+    title: "Air Permeability Test — On-Site Installed Envelope Testing",
+    description: "Field air permeability testing for installed windows, doors, and curtain walls. ASTM E783, EN 12207. Kuwait & Dubai.",
     url: "/service/air-permeability-test-2/",
-    images: [{ url: "/og-default.png", width: 1200, height: 630, alt: "Air Permeability Test — Texas Technical Services" }],
+    images: [{ url: "/og-default.png", width: 1200, height: 630, alt: "Air Permeability Test — On-Site Installed Envelope Testing — Texas Technical Services" }],
   },
-  twitter: { card: "summary_large_image", title: "Air Permeability Test | Texas Technical Services", description: "Air infiltration testing for facades. ASTM E783. Kuwait & Dubai." },
-  keywords: ["air permeability test Kuwait", "air leakage test Kuwait", "curtain wall air test Kuwait", "ASTM E783 Kuwait", "window air infiltration Kuwait", "building envelope air test Kuwait", "Texas Technical Services air test"],
+  twitter: { card: "summary_large_image", title: "Air Permeability Test — On-Site Installed Envelope Testing", description: "Field air permeability testing for installed facades. ASTM E783. Kuwait & Dubai." },
+  keywords: ["field air permeability test Kuwait", "on-site air leakage test Kuwait", "installed curtain wall air test Kuwait", "ASTM E783 Kuwait", "building envelope air test Kuwait", "window air infiltration Kuwait", "Texas Technical Services air test"],
 };
 
 export default function AirPermeabilityPage2() {
@@ -30,16 +31,24 @@ export default function AirPermeabilityPage2() {
       <BreadcrumbJsonLd items={[
   { name: "Home", href: "/" },
   { name: "Services", href: "/services/" },
-  { name: "Air Permeability Test", href: "/service/air-permeability-test-2/" },
+  { name: "Air Permeability Test — On-Site Installed Envelope Testing", href: "/service/air-permeability-test-2/" },
 ]} />
 <ServiceJsonLd
-  name="Air Permeability Test"
-  description="Air permeability testing for exterior windows, doors, and curtain walls to measure air infiltration and locate leakage paths — per ASTM E783, ASTM E283, EN 12207 standards in Kuwait and Dubai."
+  name="Air Permeability Test — On-Site Installed Envelope Testing"
+  description="Field air permeability testing for installed windows, doors, and curtain walls to measure infiltration and locate leakage paths — ASTM E783, EN 12207 standards in Kuwait and Dubai."
   url="/service/air-permeability-test-2/"
   serviceType="Specialized Inspection"
   areaServed={["Kuwait", "United Arab Emirates", "Saudi Arabia", "Bahrain", "Qatar", "Oman"]}
 />
+      <ServiceDefinition definition="On-site air permeability testing measures infiltration and locates leakage paths through installed windows, doors, and curtain wall systems. TTS provides certified field testing services per ASTM E783 and EN 12207 standards for building envelope assessment in Kuwait and Dubai." />
       <AirPermeabilityHero />
+      <section className="bg-white py-12 lg:py-16">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6">
+          <p className="text-gray-600 text-[15px] leading-[1.8] max-w-4xl">
+            Our field crews perform air permeability testing directly on installed building envelopes, helping identify leakage paths and verify air-barrier performance in completed windows, doors, and curtain wall assemblies.
+          </p>
+        </div>
+      </section>
       <AirPermeabilityContent />
 
       {/* ══ RELATED SERVICES ═══════════════════════════════ */}

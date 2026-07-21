@@ -8,19 +8,20 @@ import Link from "next/link";
 import { FaqPageJsonLd } from "@/components/schema/FaqPageJsonLd";
 import { serviceFaqData } from "@/lib/serviceFaqData";
 import { ChevronRight } from "lucide-react";
+import ServiceDefinition from "@/components/service/ServiceDefinition";
 
 export const metadata: Metadata = {
-  title: "Structural Steel Erection | Texas Technical Services",
+  title: "Structural Steel Erection",
   description:
     "Pre-fabricated steel component assembly creating skeletal frameworks for buildings, bridges, and large industrial structures — precise, safe, and on schedule.",
   alternates: { canonical: "/service/structural-steel-erection/" },
   openGraph: {
-    title: "Structural Steel Erection | Texas Technical Services",
+    title: "Structural Steel Erection",
     description: "Pre-fabricated steel component assembly for buildings, bridges, and industrial structures.",
     url: "/service/structural-steel-erection/",
     images: [{ url: "/og-default.png", width: 1200, height: 630, alt: "Structural Steel Erection — Texas Technical Services" }],
   },
-  twitter: { card: "summary_large_image", title: "Structural Steel Erection | Texas Technical Services", description: "Pre-fabricated steel component assembly creating skeletal frameworks for buildings, bridges, and large industrial structures — precise, safe, and on schedule." },
+  twitter: { card: "summary_large_image", title: "Structural Steel Erection", description: "Pre-fabricated steel component assembly creating skeletal frameworks for buildings, bridges, and large industrial structures — precise, safe, and on schedule." },
   keywords: ["Structural Steel Erection Kuwait", "Structural Steel Erection Dubai", "Texas Structural Steel Erection", "industrial steel erection Kuwait", "steel framework assembly Kuwait", "building steel structure Kuwait"],
 };
 
@@ -39,6 +40,7 @@ export default function SteelErectionPage() {
   serviceType="Steel Erection"
   areaServed={["Kuwait", "United Arab Emirates", "Saudi Arabia", "Bahrain", "Qatar", "Oman"]}
 />
+      <ServiceDefinition definition="Structural steel erection involves the pre-fabricated steel component assembly creating skeletal frameworks for buildings, bridges, and large industrial structures. TTS provides precise, safe, and on-schedule steel erection services across Kuwait and the GCC." />
       <SteelErectionHero />
       <SteelErectionContent />
 

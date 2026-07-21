@@ -8,19 +8,20 @@ import Link from "next/link";
 import { FaqPageJsonLd } from "@/components/schema/FaqPageJsonLd";
 import { serviceFaqData } from "@/lib/serviceFaqData";
 import { ChevronRight } from "lucide-react";
+import ServiceDefinition from "@/components/service/ServiceDefinition";
 
 export const metadata: Metadata = {
-  title: "Specialized Inspection Service | Texas Technical Services",
+  title: "Specialized Inspection Service",
   description:
-    "Advanced specialized inspection services including Phased Array Ultrasonic Testing (PAUT), Eddy Current Testing, TOFD, Magnetic Flux Leakage, Videoscope, Gamma Ray Pipe Crawler, Corrosion Control, Metallurgical Services, Heat Treatment, and more — Kuwait and Dubai.",
+    "Advanced specialized inspection services — PAUT, ECT, TOFD, MFL, videoscope, gamma ray crawler, corrosion control, and metallurgy in Kuwait and Dubai.",
   alternates: { canonical: "/service/specialized-inspection-service/" },
   openGraph: {
-    title: "Specialized Inspection Service | Texas Technical Services",
+    title: "Specialized Inspection Service",
     description: "PAUT, ECT, TOFD, MFL, Videoscope, Corrosion Control, PMI, Heat Treatment, and Lifting Equipment Inspection. Kuwait & Dubai.",
     url: "/service/specialized-inspection-service/",
     images: [{ url: "/og-default.png", width: 1200, height: 630, alt: "Specialized Inspection Service — Texas Technical Services" }],
   },
-  twitter: { card: "summary_large_image", title: "Specialized Inspection Service | Texas Technical Services", description: "PAUT, ECT, TOFD, MFL and 15 specialist services. Kuwait & Dubai." },
+  twitter: { card: "summary_large_image", title: "Specialized Inspection Service", description: "PAUT, ECT, TOFD, MFL and 15 specialist services. Kuwait & Dubai." },
   keywords: ["specialized inspection Kuwait", "PAUT Kuwait", "phased array ultrasonic testing Kuwait", "eddy current testing Kuwait", "TOFD Kuwait", "magnetic flux leakage Kuwait", "corrosion control Kuwait", "PMI Kuwait", "heat treatment Kuwait", "lifting inspection Kuwait", "Texas Technical Services inspection"],
 };
 
@@ -39,6 +40,7 @@ export default function SpecializedInspectionPage() {
   serviceType="Specialized Inspection"
   areaServed={["Kuwait", "United Arab Emirates", "Saudi Arabia", "Bahrain", "Qatar", "Oman"]}
 />
+      <ServiceDefinition definition="Specialized inspection services include PAUT, Eddy Current Testing, TOFD, Magnetic Flux Leakage, Videoscope, Gamma Ray Pipe Crawler, Corrosion Control, Metallurgical Services, and Heat Treatment. TTS delivers advanced specialized inspection solutions across Kuwait and the GCC." />
       <SpecializedHero />
       <SpecializedSubServices />
 

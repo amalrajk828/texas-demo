@@ -8,19 +8,20 @@ import Link from "next/link";
 import { FaqPageJsonLd } from "@/components/schema/FaqPageJsonLd";
 import { serviceFaqData } from "@/lib/serviceFaqData";
 import { ChevronRight } from "lucide-react";
+import ServiceDefinition from "@/components/service/ServiceDefinition";
 
 export const metadata: Metadata = {
   title: "Time of Flight Diffraction (TOFD)",
   description:
-    "Time of Flight Diffraction (TOFD) for accurate weld crack detection and depth sizing using diffracted ultrasonic waves — pressure vessel and pipeline inspection to ASME V, EN ISO 10863, BS 7706 standards in Kuwait and Dubai.",
+    "Time of Flight Diffraction for weld crack detection and depth sizing — vessel and pipeline inspection to ASME V, EN ISO 10863, and BS 7706 in Kuwait and Dubai.",
   alternates: { canonical: "/service/time-of-flight-diffraction/" },
   openGraph: {
-    title: "Time of Flight Diffraction (TOFD) | Texas Technical Services",
+    title: "Time of Flight Diffraction (TOFD)",
     description: "TOFD weld inspection and crack depth sizing. ASME V, EN ISO 10863. Kuwait & Dubai.",
     url: "/service/time-of-flight-diffraction/",
     images: [{ url: "/og-default.png", width: 1200, height: 630, alt: "Time of Flight Diffraction — Texas Technical Services" }],
   },
-  twitter: { card: "summary_large_image", title: "Time of Flight Diffraction (TOFD) | Texas Technical Services", description: "TOFD weld inspection and crack sizing. ASME V. Kuwait & Dubai." },
+  twitter: { card: "summary_large_image", title: "Time of Flight Diffraction (TOFD)", description: "TOFD weld inspection and crack sizing. ASME V. Kuwait & Dubai." },
   keywords: ["TOFD Kuwait", "time of flight diffraction Kuwait", "weld TOFD Kuwait", "crack sizing NDT Kuwait", "TOFD inspection Kuwait", "ASME V TOFD Kuwait", "Texas Technical Services TOFD"],
 };
 
@@ -39,6 +40,7 @@ export default function TOFDPage() {
   serviceType="Non-Destructive Testing"
   areaServed={["Kuwait", "United Arab Emirates", "Saudi Arabia", "Bahrain", "Qatar", "Oman"]}
 />
+      <ServiceDefinition definition="Time of Flight Diffraction (TOFD) is an advanced ultrasonic technique using diffracted waves for accurate crack detection and depth sizing in welds. TTS provides TOFD inspection services for pressure vessels and pipelines to ASME V, EN ISO 10863, and BS 7706 standards in Kuwait and Dubai." />
       <TOFDHero />
       <TOFDContent />
 

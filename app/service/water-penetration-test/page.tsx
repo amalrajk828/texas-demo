@@ -8,19 +8,20 @@ import Link from "next/link";
 import { FaqPageJsonLd } from "@/components/schema/FaqPageJsonLd";
 import { serviceFaqData } from "@/lib/serviceFaqData";
 import { ChevronRight } from "lucide-react";
+import ServiceDefinition from "@/components/service/ServiceDefinition";
 
 export const metadata: Metadata = {
   title: "Water Penetration Test",
   description:
-    "Water penetration testing for windows, doors, and curtain wall systems to identify leakage and assess building envelope integrity — static pressure testing to ASTM E1105, AAMA 502, BS 6375 standards in Kuwait and Dubai.",
+    "Water penetration testing for windows, doors, and curtain walls — static pressure testing to ASTM E1105, AAMA 502, and BS 6375 in Kuwait and Dubai.",
   alternates: { canonical: "/service/water-penetration-test/" },
   openGraph: {
-    title: "Water Penetration Test | Texas Technical Services",
+    title: "Water Penetration Test",
     description: "Water penetration testing for windows, doors, and curtain walls. ASTM E1105, AAMA 502. Kuwait & Dubai.",
     url: "/service/water-penetration-test/",
     images: [{ url: "/og-default.png", width: 1200, height: 630, alt: "Water Penetration Test — Texas Technical Services" }],
   },
-  twitter: { card: "summary_large_image", title: "Water Penetration Test | Texas Technical Services", description: "Window and curtain wall water penetration testing. ASTM E1105. Kuwait & Dubai." },
+  twitter: { card: "summary_large_image", title: "Water Penetration Test", description: "Window and curtain wall water penetration testing. ASTM E1105. Kuwait & Dubai." },
   keywords: ["water penetration test Kuwait", "curtain wall testing Kuwait", "window water test Kuwait", "building envelope testing Kuwait", "ASTM E1105 Kuwait", "Texas Technical Services water test"],
 };
 
@@ -39,6 +40,7 @@ export default function WaterPenetrationPage() {
   serviceType="Specialized Inspection"
   areaServed={["Kuwait", "United Arab Emirates", "Saudi Arabia", "Bahrain", "Qatar", "Oman"]}
 />
+      <ServiceDefinition definition="Water penetration testing identifies leakage and assesses building envelope integrity for windows, doors, and curtain wall systems using static pressure methods. TTS provides certified water penetration testing to ASTM E1105, AAMA 502, and BS 6375 standards in Kuwait and Dubai." />
       <WaterPenetrationHero />
       <WaterPenetrationContent />
 

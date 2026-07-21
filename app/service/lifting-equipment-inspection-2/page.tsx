@@ -8,20 +8,21 @@ import Link from "next/link";
 import { FaqPageJsonLd } from "@/components/schema/FaqPageJsonLd";
 import { serviceFaqData } from "@/lib/serviceFaqData";
 import { ChevronRight } from "lucide-react";
+import ServiceDefinition from "@/components/service/ServiceDefinition";
 
 export const metadata: Metadata = {
-  title: "Lifting Equipment Inspection | Texas Technical Services",
+  title: "Lifting Equipment Inspection — Overhead Cranes, Hoists & Elevators",
   description:
-    "Lifting equipment inspection services for cranes, hoists, forklifts, and elevators — systematic examination by certified competent persons with written reports per LOLER 1998, ASME B30, BS EN 13001 in Kuwait and Dubai.",
+    "Lifting equipment inspection for cranes, hoists, forklifts, and elevators — certified examinations to LOLER, ASME B30, and BS EN 13001 in Kuwait and Dubai.",
   alternates: { canonical: "/service/lifting-equipment-inspection-2/" },
   openGraph: {
-    title: "Lifting Equipment Inspection | Texas Technical Services",
-    description: "Certified inspection of cranes, hoists, and forklifts. LOLER, ASME B30. Kuwait & Dubai.",
+    title: "Lifting Equipment Inspection — Overhead Cranes, Hoists & Elevators",
+    description: "Inspection of permanent lifting systems including overhead cranes, hoists, and elevators. LOLER, ASME B30. Kuwait & Dubai.",
     url: "/service/lifting-equipment-inspection-2/",
-    images: [{ url: "/og-lifting-inspection.jpg", width: 1200, height: 630, alt: "Lifting Equipment Inspection — Texas Technical Services" }],
+    images: [{ url: "/og-lifting-inspection.jpg", width: 1200, height: 630, alt: "Lifting Equipment Inspection — Overhead Cranes, Hoists & Elevators — Texas Technical Services" }],
   },
-  twitter: { card: "summary_large_image", title: "Lifting Equipment Inspection | Texas Technical Services", description: "Crane and hoist inspection. LOLER, ASME B30. Kuwait & Dubai." },
-  keywords: ["lifting equipment inspection Kuwait", "crane inspection Kuwait", "hoist inspection Kuwait", "LOLER inspection Kuwait", "forklift inspection Kuwait", "lifting gear inspection Kuwait", "Texas Technical Services lifting inspection"],
+  twitter: { card: "summary_large_image", title: "Lifting Equipment Inspection — Overhead Cranes, Hoists & Elevators", description: "Overhead crane, hoist, and elevator inspection. LOLER, ASME B30. Kuwait & Dubai." },
+  keywords: ["overhead crane inspection Kuwait", "hoist inspection Kuwait", "elevator inspection Kuwait", "LOLER inspection Kuwait", "permanent lifting system inspection Kuwait", "crane inspection Kuwait", "Texas Technical Services lifting inspection"],
 };
 
 export default function LiftingInspectionPage2() {
@@ -30,16 +31,24 @@ export default function LiftingInspectionPage2() {
       <BreadcrumbJsonLd items={[
   { name: "Home", href: "/" },
   { name: "Services", href: "/services/" },
-  { name: "Lifting Equipment Inspection", href: "/service/lifting-equipment-inspection-2/" },
+  { name: "Lifting Equipment Inspection — Overhead Cranes, Hoists & Elevators", href: "/service/lifting-equipment-inspection-2/" },
 ]} />
 <ServiceJsonLd
-  name="Lifting Equipment Inspection"
-  description="Lifting equipment inspection services for cranes, hoists, forklifts, and elevators — systematic examination by certified competent persons with written reports per LOLER 1998, ASME B30, BS EN 13001 in Kuwait and Dubai."
+  name="Lifting Equipment Inspection — Overhead Cranes, Hoists & Elevators"
+  description="Inspection of permanent lifting systems including overhead cranes, hoists, and elevators by certified competent persons — LOLER 1998, ASME B30, BS EN 13001 standards in Kuwait and Dubai."
   url="/service/lifting-equipment-inspection-2/"
   serviceType="Specialized Inspection"
   areaServed={["Kuwait", "United Arab Emirates", "Saudi Arabia", "Bahrain", "Qatar", "Oman"]}
 />
+      <ServiceDefinition definition="Permanent lifting equipment inspection covers overhead cranes, hoists, and elevators by certified competent persons with written reports. TTS delivers inspection services for fixed lifting systems compliant with LOLER 1998, ASME B30, and BS EN 13001 standards across Kuwait and the GCC." />
       <LiftingInspectionHero />
+      <section className="bg-white py-12 lg:py-16">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6">
+          <p className="text-gray-600 text-[15px] leading-[1.8] max-w-4xl">
+            We focus on fixed installations such as overhead traveling cranes, monorails, chain hoists, and passenger or material elevators, delivering statutory inspection reports and compliance documentation.
+          </p>
+        </div>
+      </section>
       <LiftingInspectionContent />
 
       {/* ══ RELATED SERVICES ═══════════════════════════════ */}

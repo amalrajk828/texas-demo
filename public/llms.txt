@@ -6,14 +6,81 @@ Texas Technical Services (TTS) provides engineering, commissioning, calibration,
 
 ## Services
 
+### Flow Measurement & Metering
 - [Flow Measurement Solutions](https://texastechserv.com/service/flow-measurement-solutions/): Custody transfer metering, flow computer configuration, calibration, validation, and metering system upgrades compliant with API MPMS, AGA, ISO, and OIML standards.
-- [Industrial Automation](https://texastechserv.com/service/industrial-automation/): PLC SCADA systems integration, DCS, process control, and plant-wide automation engineering for oil & gas and petrochemical facilities.
-- [Inspection & Testing](https://texastechserv.com/service/inspection-testing/): Comprehensive NDT, mechanical testing, and specialized inspection services for pipelines, pressure vessels, storage tanks, and structural steel.
-- [Non-Destructive Testing (NDT)](https://texastechserv.com/service/non-destructive-testing-ndt/): Ultrasonic, radiographic, magnetic particle, liquid penetrant, eddy current, phased array, TOFD, and visual inspection services.
-- [Mechanical Testing](https://texastechserv.com/service/mechanical-testing/): Tensile, bend, impact, hardness, fracture, macro/micro, pullout, and air permeability testing for materials and welds.
-- [Plant Automation](https://texastechserv.com/service/plant-automation/): Electrical and instrumentation works, new installation design, commissioning, and after-sales support.
+- [Flow Computer Configuration](https://texastechserv.com/service/flow-computer-configuration/): Programming and configuring custody transfer flow computers for accurate measurement and audit compliance.
+- [Flow Meter Calibration](https://texastechserv.com/service/flow-meter-calibration/): Laboratory and on-site calibration services for flow meters used in custody transfer and process applications.
+- [Metering Control System Integration](https://texastechserv.com/service/metering-control-system-integration/): Design, integration, and commissioning of complete metering control systems and skids.
 - [Metering Expert Services](https://texastechserv.com/service/metering-expert-services/): Specialized consultancy for fiscal metering systems, custody transfer audits, uncertainty calculations, and compliance audits.
+- [New Installation Design and Commissioning](https://texastechserv.com/service/new-installation-design-and-commissioning/): Engineering design, fabrication oversight, and commissioning of new metering installations.
+- [Repair Upgrades for Helical Flow Meters](https://texastechserv.com/service/repair-upgrades-for-helical-flow-meters/): Maintenance, repair, and upgrade services for helical turbine flow meters.
+- [System Software Upgrade](https://texastechserv.com/service/system-software-upgrade/): Upgrading metering and automation system software to improve performance, security, and compliance.
+- [Upgrade of Metering Control System](https://texastechserv.com/service/upgrade-of-metering-control-system/): Modernization of legacy metering control systems with minimal operational disruption.
+- [Validation and Uncertainty Calculations](https://texastechserv.com/service/validation-and-uncertainty-calculations/): Measurement uncertainty budgeting and validation reporting per GUM and industry standards.
+
+### Industrial Automation & Plant Services
+- [Industrial Automation](https://texastechserv.com/service/industrial-automation/): PLC SCADA systems integration, DCS, process control, and plant-wide automation engineering for oil & gas and petrochemical facilities.
+- [Plant Automation](https://texastechserv.com/service/plant-automation/): Electrical and instrumentation works, new installation design, commissioning, and after-sales support.
+- [Electrical Instrumentation Works](https://texastechserv.com/service/electrical-instrumentation-works/): Installation, termination, loop checking, and commissioning of electrical and instrumentation systems.
+- [High and Low Voltage Cable Steel Structure Supports](https://texastechserv.com/service/high-and-low-voltage-cable-steel-structure-supports/): Fabrication and installation of cable support structures and steel frameworks for power distribution.
+
+### Non-Destructive Testing (NDT)
+- [Non-Destructive Testing (NDT)](https://texastechserv.com/service/non-destructive-testing-ndt/): Ultrasonic, radiographic, magnetic particle, liquid penetrant, eddy current, phased array, TOFD, and visual inspection services.
+- [Ultrasonic Testing (UT)](https://texastechserv.com/service/ultrasonic-testing-ut/): Conventional ultrasonic inspection for weld, vessel, and piping thickness measurements.
+- [Radiographic Testing (RT)](https://texastechserv.com/service/radiographic-testing-rt/): X-ray and gamma radiography for internal defect detection in welds and castings.
+- [Magnetic Particle Inspection (MT)](https://texastechserv.com/service/magnetic-particle-inspection-mt/): Surface and near-surface crack detection using magnetic particle techniques.
+- [Liquid Penetrant / Dye Penetrant Examination (PT)](https://texastechserv.com/service/liquid-penetrant-dye-penetrant-examination-pt/): Surface defect detection for non-ferrous components and welds.
+- [Eddy Current Testing](https://texastechserv.com/service/eddy-current-testing/): Tube inspection and surface crack detection using eddy current techniques.
+- [Phased Array Ultrasonic Testing](https://texastechserv.com/service/phased-array-ultrasonic-testing/): Advanced PAUT for detailed weld imaging and corrosion mapping.
+- [Time of Flight Diffraction](https://texastechserv.com/service/time-of-flight-diffraction/): TOFD ultrasonic inspection for accurate flaw sizing in welds and pressure equipment.
+- [Magnetic Flux Leakage](https://texastechserv.com/service/magnetic-flux-leakage/): Pipeline and storage tank floor inspection using MFL technology.
+- [Videoscope](https://texastechserv.com/service/videoscope/): Remote visual inspection using borescope and videoscope equipment.
+- [Visual Inspection (VI)](https://texastechserv.com/service/visual-inspection-vi/): Certified visual inspection of welds, components, and structures to codes and standards.
+- [Gamma Ray Pipe Crawler Inspection Systems](https://texastechserv.com/service/gamma-ray-pipe-crawler-inspection-systems/): Automated gamma ray crawler systems for pipeline weld inspection.
+
+### Mechanical & Metallurgical Testing
+- [Mechanical Testing](https://texastechserv.com/service/mechanical-testing/): Tensile, bend, impact, hardness, fracture, macro/micro, pullout, and air permeability testing for materials and welds.
+- [Tensile Test](https://texastechserv.com/service/tensile-test/): Determination of tensile strength, yield strength, and elongation of metallic materials.
+- [Bend Test](https://texastechserv.com/service/bend-test/): Ductility and weld integrity assessment through guided bend testing.
+- [Impact Test](https://texastechserv.com/service/impact-test/): Charpy and Izod impact testing for toughness evaluation at ambient and sub-zero temperatures.
+- [Hardness Test](https://texastechserv.com/service/hardness-test/): Brinell, Rockwell, Vickers, and portable hardness testing for materials and welds.
+- [Fracture Test](https://texastechserv.com/service/fracture-test/): Fracture toughness and crack propagation testing for critical components.
+- [Macro and Micro Test](https://texastechserv.com/service/macro-and-micro-test/): Macroscopic and microscopic examination of weld profiles and material microstructure.
+- [Pullout Test](https://texastechserv.com/service/pullout-test/): Anchor, rebar, and fastener pullout strength testing for structural applications.
+- [Air Permeability Test](https://texastechserv.com/service/air-permeability-test/): Measurement of air permeability for building envelope and material samples.
+- [Air Permeability Test 2](https://texastechserv.com/service/air-permeability-test-2/): Additional air permeability testing services for specialized applications and standards.
+- [Metallurgical Services](https://texastechserv.com/service/metallurgical-services/): Metallography, failure analysis, and material characterization for industrial components.
+- [Metallurgical Services 2](https://texastechserv.com/service/metallurgical-services-2/): Advanced metallurgical analysis, corrosion investigation, and material qualification.
+- [Heat Treatment Services](https://texastechserv.com/service/heat-treatment-services/): Post-weld heat treatment (PWHT), stress relieving, and normalizing services.
+- [Heat Treatment Services 2](https://texastechserv.com/service/heat-treatment-services-2/): Specialized heat treatment processes for complex geometries and critical equipment.
+- [Corrosion Control Services](https://texastechserv.com/service/corrosion-control-services-2/): Corrosion assessment, mitigation planning, and protective coating services.
+
+### Inspection & Specialized Services
+- [Inspection & Testing](https://texastechserv.com/service/inspection-testing/): Comprehensive NDT, mechanical testing, and specialized inspection services for pipelines, pressure vessels, storage tanks, and structural steel.
+- [Specialized Inspection Service](https://texastechserv.com/service/specialized-inspection-service/): Customized inspection programs for specific assets, turnarounds, and compliance needs.
+- [Lifting Equipment Inspection](https://texastechserv.com/service/lifting-equipment-inspection/): Inspection and certification of cranes, hoists, slings, and lifting accessories.
+- [Lifting Equipment Inspection 2](https://texastechserv.com/service/lifting-equipment-inspection-2/): Additional lifting equipment examination services including LOLER and ASME compliance.
+- [Exterior Windows Doors Curtain Wall Testing](https://texastechserv.com/service/exterior-windows-doors-curtain-wall-testing/): Air, water, and structural performance testing for building envelope systems.
+- [Water Penetration Test](https://texastechserv.com/service/water-penetration-test/): Water leakage and penetration resistance testing for facades and building components.
+- [Water Penetration Test 2](https://texastechserv.com/service/water-penetration-test-2/): Additional water penetration testing under varying pressures and standards.
+- [Hose Test](https://texastechserv.com/service/hose-test/): Hose stream and water spray testing for fire-rated assemblies and windows.
+- [Hose Test 2](https://texastechserv.com/service/hose-test-2/): Supplementary hose testing services for specialized fire resistance evaluations.
+
+### Construction & Fabrication
 - [Constructions](https://texastechserv.com/service/constructions/): Steel fabrication, structural erection, handrail fabrication, and suspended access equipment installation.
+- [Steel Fabrication](https://texastechserv.com/service/steel-fabrication/): Custom steel fabrication for industrial structures, platforms, and supports.
+- [Structural Steel Erection](https://texastechserv.com/service/structural-steel-erection/): Supply, fabrication, and erection of structural steel for industrial projects.
+- [Hand Rail Fabrication](https://texastechserv.com/service/hand-rail-fabrication/): Design and fabrication of safety handrails, guardrails, and access platforms.
+- [Supply and Installation of Suspended Access Equipments](https://texastechserv.com/service/supply-and-installation-of-suspended-access-equipments/): Gondolas, swing stages, and suspended platform systems for building maintenance.
+- [Torque Tightening / Bolt Tensioning](https://texastechserv.com/service/torque-tightening-bolt-tensioning/): Controlled bolt tightening and tensioning services for flanges and critical joints.
+- [Torque Tightening / Bolt Tensioning 2](https://texastechserv.com/service/torque-tightening-bolt-tensioning-2/): Additional hydraulic bolt tensioning and torque services for heavy industrial applications.
+
+### Commissioning, Training & Support
+- [Commissioning and After Sales Support](https://texastechserv.com/service/commissioning-and-after-sales-support/): Post-installation commissioning, startup support, and ongoing maintenance services.
+- [Commissioning and Start Up Support](https://texastechserv.com/service/commissioning-and-start-up-support/): Field commissioning and startup assistance for automation and metering systems.
+- [Advanced Training](https://texastechserv.com/service/advanced-training/): Technical training programs for flow measurement, NDT, automation, and inspection personnel.
+- [Audits and Specialized Consultancy](https://texastechserv.com/service/audits-and-specialized-consultancy/): Technical audits, compliance reviews, and specialized engineering consultancy.
+- [Genuine Spare Parts](https://texastechserv.com/service/genuine-spare-parts/): Supply of original spare parts for flow meters, analyzers, PLCs, VFDs, and field instruments.
 
 ## Industries
 
@@ -29,7 +96,13 @@ Texas Technical Services (TTS) provides engineering, commissioning, calibration,
 ## Products
 
 - [Flow Meters](https://texastechserv.com/products/flow-meters/): Coriolis, ultrasonic, turbine, vortex, and electromagnetic flow meters for liquid, gas, and flare applications.
+  - [Flare Meters](https://texastechserv.com/products/flow-meters/flare-meters/): Flow measurement solutions for flare gas, vent gas, and environmental compliance applications.
+  - [Gas Flow Meters](https://texastechserv.com/products/flow-meters/gas-flow-meters/): Ultrasonic, turbine, vortex, and differential pressure gas flow meters for custody transfer and process measurement.
+  - [Liquid Flow Meters](https://texastechserv.com/products/flow-meters/liquid-flow-meters/): Coriolis, turbine, positive displacement, and ultrasonic liquid flow meters for hydrocarbons and process fluids.
 - [Analyzers](https://texastechserv.com/products/analyzers/): Gas analyzers, dust analyzers, and continuous emission monitoring systems (CEMS).
+  - [CEMS](https://texastechserv.com/products/analyzers/cems/): Continuous Emissions Monitoring Systems for regulatory compliance and environmental reporting.
+  - [Dust Analyzers](https://texastechserv.com/products/analyzers/dust-analyzers/): Particulate and dust monitoring analyzers for cement, steel, and power plant emissions.
+  - [Gas Analyzers](https://texastechserv.com/products/analyzers/gas-analyzers/): Process and safety gas analyzers for refineries, petrochemical plants, and LNG facilities.
 - [PLC & Automation](https://texastechserv.com/products/industrial-automation/): Mitsubishi Electric PLCs, PACs, HMIs, VFDs, AC servo drives, and SCADA software.
 - [Custody Metering Solutions](https://texastechserv.com/products/custody-metering-solutions/): Complete custody transfer metering skids and systems for fiscal measurement applications.
 - [Field Instruments](https://texastechserv.com/products/field-instruments/): Pressure, temperature, level, and flow transmitters for process industries.

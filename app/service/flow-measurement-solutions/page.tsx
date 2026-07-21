@@ -4,19 +4,20 @@ import FlowSubServices from "@/components/service/flow-measurement/FlowSubServic
 import { BreadcrumbJsonLd } from "@/components/schema/BreadcrumbJsonLd";
 import { ServiceJsonLd } from "@/components/schema/ServiceJsonLd";
 import { FaqPageJsonLd } from "@/components/schema/FaqPageJsonLd";
-import { ChevronRight } from "lucide-react";
+import { ChevronRight, ArrowRight } from "lucide-react";
 import { serviceCrossLinks } from "@/lib/serviceCrossLinks";
 import Link from "next/link";
+import ServiceDefinition from "@/components/service/ServiceDefinition";
 
 export const metadata: Metadata = {
-  title: "Flow Measurement & Control System Solutions | Texas Technical Services",
+  title: "Flow Measurement & Control System Solutions",
   description:
-    "Texas Technical Services provides flow measurement services in Ahmadi, Kuwait and across the GCC — metering control system upgrades, maintenance, validation, flow computer configuration, calibration, and specialized consultancy for custody metering systems compliant with API MPMS, AGA, ISO, OIML standards.",
+    "Flow measurement solutions across the GCC — metering system upgrades, validation, flow computer configuration, and custody metering consultancy.",
   alternates: {
     canonical: "/service/flow-measurement-solutions/",
   },
   openGraph: {
-    title: "Flow Measurement & Control System Solutions | Texas Technical Services",
+    title: "Flow Measurement & Control System Solutions",
     description:
       "Flow measurement services in Ahmadi, Kuwait — expert custody transfer metering, system integration, upgrades, flow computer configuration, calibration, and validation across the GCC.",
     url: "/service/flow-measurement-solutions/",
@@ -24,7 +25,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Flow Measurement & Control System Solutions | Texas Technical Services",
+    title: "Flow Measurement & Control System Solutions",
     description:
       "Flow measurement services in Ahmadi Kuwait — custody metering upgrades, calibration, validation, flow computer configuration across Kuwait and the GCC.",
   },
@@ -77,8 +78,17 @@ export default function FlowMeasurementPage() {
         areaServed={["Kuwait", "United Arab Emirates", "Saudi Arabia", "Bahrain", "Qatar", "Oman"]}
       />
       <FaqPageJsonLd items={faqItems} />
+      <ServiceDefinition definition="Flow measurement solutions encompass the design, installation, calibration, and maintenance of flow metering systems for custody transfer and process applications. TTS delivers metering control system upgrades, flow computer configuration, and calibration services compliant with API MPMS, AGA, ISO, and OIML standards across the GCC." />
       <FlowHero />
       <FlowSubServices />
+      {/* ══ RELATED COMPARISON ═══════════════════════════════ */}
+      <div className="max-w-5xl mx-auto px-4 sm:px-6 py-8">
+        <Link href="/blog/coriolis-vs-ultrasonic-flow-comparison/" className="inline-flex items-center gap-2 text-[#e7212b] font-semibold text-sm hover:underline">
+          Read our comparison: Coriolis vs Ultrasonic Flow Meters: Accuracy and Application Guide
+          <ArrowRight className="w-4 h-4" />
+        </Link>
+      </div>
+
       {/* ══ FAQ ════════════════════════════════════════════ */}
       <section className="bg-[#f4f5f8] py-20 lg:py-24">
         <div className="max-w-7xl mx-auto px-4 sm:px-6">

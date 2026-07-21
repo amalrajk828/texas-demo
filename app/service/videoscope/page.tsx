@@ -8,19 +8,20 @@ import Link from "next/link";
 import { FaqPageJsonLd } from "@/components/schema/FaqPageJsonLd";
 import { serviceFaqData } from "@/lib/serviceFaqData";
 import { ChevronRight } from "lucide-react";
+import ServiceDefinition from "@/components/service/ServiceDefinition";
 
 export const metadata: Metadata = {
   title: "Videoscope Remote Visual Inspection",
   description:
-    "Videoscope remote visual inspection for confined and inaccessible areas — internal pipe, vessel, turbine, and engine inspection with HD image and video recording capability in Kuwait and Dubai.",
+    "Videoscope remote visual inspection for internal pipes, vessels, turbines, and engines — HD imaging and video recording for confined spaces in Kuwait and Dubai.",
   alternates: { canonical: "/service/videoscope/" },
   openGraph: {
-    title: "Videoscope Remote Visual Inspection | Texas Technical Services",
+    title: "Videoscope Remote Visual Inspection",
     description: "Remote visual inspection for confined spaces — pipes, vessels, turbines. HD recording. Kuwait & Dubai.",
     url: "/service/videoscope/",
     images: [{ url: "/og-default.png", width: 1200, height: 630, alt: "Videoscope Inspection — Texas Technical Services" }],
   },
-  twitter: { card: "summary_large_image", title: "Videoscope Remote Visual Inspection | Texas Technical Services", description: "Remote visual inspection for confined spaces. Kuwait & Dubai." },
+  twitter: { card: "summary_large_image", title: "Videoscope Remote Visual Inspection", description: "Remote visual inspection for confined spaces. Kuwait & Dubai." },
   keywords: ["videoscope inspection Kuwait", "remote visual inspection Kuwait", "borescope inspection Kuwait", "internal pipe inspection Kuwait", "confined space inspection Kuwait", "Texas Technical Services videoscope"],
 };
 
@@ -39,6 +40,7 @@ export default function VideoscopePage() {
   serviceType="Inspection Services"
   areaServed={["Kuwait", "United Arab Emirates", "Saudi Arabia", "Bahrain", "Qatar", "Oman"]}
 />
+      <ServiceDefinition definition="Videoscope remote visual inspection provides internal inspection of pipes, vessels, turbines, and engines in confined and inaccessible areas with HD image and video recording. TTS delivers advanced videoscope inspection services across Kuwait and the GCC." />
       <VideoscopeHero />
       <VideoscopeContent />
 

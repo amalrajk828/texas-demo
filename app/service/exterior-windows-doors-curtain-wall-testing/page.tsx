@@ -9,19 +9,20 @@ import { serviceCrossLinks } from "@/lib/serviceCrossLinks";
 import { FaqPageJsonLd } from "@/components/schema/FaqPageJsonLd";
 import { serviceFaqData } from "@/lib/serviceFaqData";
 import { ChevronRight } from "lucide-react";
+import ServiceDefinition from "@/components/service/ServiceDefinition";
 
 export const metadata: Metadata = {
-  title: "Exterior Windows, Doors & Curtain Wall Testing | Texas Technical Services",
+  title: "Exterior Windows, Doors & Curtain Wall Testing",
   description:
-    "Performance testing of exterior windows, doors, and curtain walls — water penetration testing (ASTM E1105), air permeability testing (ASTM E783), and structural performance testing in Kuwait and the GCC.",
+    "Performance testing of exterior windows, doors, and curtain walls — water penetration, air permeability, and structural testing in Kuwait and the GCC.",
   alternates: { canonical: "/service/exterior-windows-doors-curtain-wall-testing/" },
   openGraph: {
-    title: "Exterior Windows, Doors & Curtain Wall Testing | Texas Technical Services",
+    title: "Exterior Windows, Doors & Curtain Wall Testing",
     description: "Water penetration, air permeability, and structural testing of exterior windows, doors, and curtain walls in Kuwait and the GCC.",
     url: "/service/exterior-windows-doors-curtain-wall-testing/",
     images: [{ url: "/og-default.png", width: 1200, height: 630, alt: "Exterior Windows, Doors & Curtain Wall Testing" }],
   },
-  twitter: { card: "summary_large_image", title: "Exterior Windows, Doors & Curtain Wall Testing | Texas Technical Services", description: "Water penetration, air permeability, and structural testing. Kuwait & GCC." },
+  twitter: { card: "summary_large_image", title: "Exterior Windows, Doors & Curtain Wall Testing", description: "Water penetration, air permeability, and structural testing. Kuwait & GCC." },
   keywords: ["curtain wall testing Kuwait", "window testing Kuwait", "door testing Kuwait", "water penetration test ASTM E1105", "air permeability test ASTM E783", "exterior window testing", "curtain wall performance test", "Texas Technical Services"],
 };
 
@@ -79,6 +80,7 @@ export default function ExteriorWindowsPage() {
         </div>
         <div className="absolute bottom-0 left-0 right-0 h-16 bg-gradient-to-t from-[#f4f5f8] to-transparent" />
       </section>
+      <ServiceDefinition definition="Exterior windows, doors, and curtain wall testing evaluates performance through water penetration, air permeability, and structural performance testing. TTS provides comprehensive facade testing services to ASTM E1105, ASTM E783, and AAMA standards across Kuwait and the GCC." />
       <ExteriorTestingContent />
       <section className="bg-[#f4f5f8] py-24 lg:py-32">
         <div className="max-w-7xl mx-auto px-4 sm:px-6">

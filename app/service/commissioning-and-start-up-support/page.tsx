@@ -8,19 +8,22 @@ import Link from "next/link";
 import { FaqPageJsonLd } from "@/components/schema/FaqPageJsonLd";
 import { serviceFaqData } from "@/lib/serviceFaqData";
 import { ChevronRight } from "lucide-react";
+import { HowToJsonLd } from "@/components/schema/HowToJsonLd";
+import ServiceProcessSteps from "@/components/ServiceProcessSteps";
+import ServiceDefinition from "@/components/service/ServiceDefinition";
 
 export const metadata: Metadata = {
-  title: "Commissioning and Start-up Support | Texas Technical Services",
+  title: "Commissioning and Start-up Support",
   description:
-    "Industrial process automation commissioning and start-up support — validation and fine-tuning of PLCs, DCS, SCADA, sensors, and safety systems from pre-commissioning through hot start-up and post-commissioning handover in Kuwait and Dubai.",
+    "Industrial automation commissioning and start-up support for PLCs, DCS, SCADA, and safety systems from pre-commissioning to handover in Kuwait and Dubai.",
   alternates: { canonical: "/service/commissioning-and-start-up-support/" },
   openGraph: {
-    title: "Commissioning and Start-up Support | Texas Technical Services",
+    title: "Commissioning and Start-up Support",
     description: "Automation commissioning, start-up, and maintenance for oil & gas, chemical, and manufacturing. Kuwait & Dubai.",
     url: "/service/commissioning-and-start-up-support/",
     images: [{ url: "/og-default.png", width: 1200, height: 630, alt: "Commissioning and Start-up Support — Texas Technical Services" }],
   },
-  twitter: { card: "summary_large_image", title: "Commissioning and Start-up Support | Texas Technical Services", description: "Automation commissioning and start-up. Kuwait & Dubai." },
+  twitter: { card: "summary_large_image", title: "Commissioning and Start-up Support", description: "Automation commissioning and start-up. Kuwait & Dubai." },
   keywords: ["commissioning Kuwait", "automation commissioning Kuwait", "start-up support Kuwait", "PLC commissioning Kuwait", "SCADA commissioning Kuwait", "industrial commissioning Kuwait", "Texas Technical Services commissioning"],
 };
 
@@ -39,8 +42,32 @@ export default function CommissioningPage() {
   serviceType="Commissioning"
   areaServed={["Kuwait", "United Arab Emirates", "Saudi Arabia", "Bahrain", "Qatar", "Oman"]}
 />
+      <ServiceDefinition definition="Commissioning and start-up support provides validation and fine-tuning of PLCs, DCS, SCADA, sensors, and safety systems from pre-commissioning through hot start-up. TTS delivers industrial process automation commissioning services for oil and gas, chemical, and manufacturing facilities in Kuwait and Dubai." />
       <CommissioningHero />
       <CommissioningContent />
+
+      <HowToJsonLd
+        name="Our Commissioning & Start-up Process"
+        description="A step-by-step process for industrial commissioning and start-up support, from factory acceptance testing through operational handover."
+        steps={[
+          { name: "Factory Acceptance Testing (FAT)", text: "Verify equipment and systems meet design specifications at the manufacturer facility before shipping." },
+          { name: "Site Acceptance Testing (SAT)", text: "Confirm installed systems perform correctly on-site under actual operating conditions." },
+          { name: "Instrument Loop Checking", text: "Test each instrument signal loop from sensor to control system to verify correct wiring, calibration, and configuration." },
+          { name: "Integrated System Testing", text: "Validate that all subsystems work together correctly under simulated process conditions." },
+          { name: "Handover and Documentation", text: "Compile as-built drawings, test records, operator manuals, and maintenance schedules for operational handover." },
+        ]}
+      />
+
+      <ServiceProcessSteps
+        title="How We Commission & Start Up Your Systems"
+        steps={[
+          { name: "Factory Acceptance Testing (FAT)", description: "We verify that all equipment and systems meet design specifications at the manufacturer's facility before shipping, ensuring everything is ready for deployment on-site." },
+          { name: "Site Acceptance Testing (SAT)", description: "We confirm that installed systems perform correctly on-site under actual operating conditions, validating real-world functionality." },
+          { name: "Instrument Loop Checking", description: "We test each instrument signal loop from sensor to control system to verify correct wiring, calibration, and configuration across the entire loop." },
+          { name: "Integrated System Testing", description: "We validate that all subsystems work together correctly under simulated process conditions, ensuring seamless integration." },
+          { name: "Handover and Documentation", description: "We compile as-built drawings, test records, operator manuals, and maintenance schedules for a complete operational handover." },
+        ]}
+      />
 
       {/* ══ RELATED SERVICES ═══════════════════════════════ */}
       {serviceCrossLinks["commissioning-and-start-up-support"] && serviceCrossLinks["commissioning-and-start-up-support"].length > 0 && (

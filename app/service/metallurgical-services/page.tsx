@@ -8,19 +8,20 @@ import Link from "next/link";
 import { FaqPageJsonLd } from "@/components/schema/FaqPageJsonLd";
 import { serviceFaqData } from "@/lib/serviceFaqData";
 import { ChevronRight } from "lucide-react";
+import ServiceDefinition from "@/components/service/ServiceDefinition";
 
 export const metadata: Metadata = {
   title: "Metallurgical Services — Positive Material Identification (PMI)",
   description:
-    "Metallurgical services including Positive Material Identification (PMI) using XRF and OES to verify chemical composition of metals and alloys against standards — material traceability for oil & gas and petrochemical in Kuwait and Dubai.",
+    "Metallurgical services including PMI using XRF and OES to verify metal and alloy composition — traceability for oil & gas and petrochemical in Kuwait and Dubai.",
   alternates: { canonical: "/service/metallurgical-services/" },
   openGraph: {
-    title: "Metallurgical Services (PMI) | Texas Technical Services",
+    title: "Metallurgical Services (PMI)",
     description: "XRF and OES Positive Material Identification for alloy verification and material traceability. API 578. Kuwait & Dubai.",
     url: "/service/metallurgical-services/",
     images: [{ url: "/og-metallurgical-services.jpg", width: 1200, height: 630, alt: "Metallurgical Services PMI — Texas Technical Services" }],
   },
-  twitter: { card: "summary_large_image", title: "Metallurgical Services (PMI) | Texas Technical Services", description: "PMI alloy verification and material traceability. API 578. Kuwait & Dubai." },
+  twitter: { card: "summary_large_image", title: "Metallurgical Services (PMI)", description: "PMI alloy verification and material traceability. API 578. Kuwait & Dubai." },
   keywords: ["PMI Kuwait", "positive material identification Kuwait", "metallurgical services Kuwait", "XRF analysis Kuwait", "alloy verification Kuwait", "material traceability Kuwait", "Texas Technical Services PMI"],
 };
 
@@ -39,6 +40,7 @@ export default function MetallurgicalPage() {
   serviceType="Mechanical Testing"
   areaServed={["Kuwait", "United Arab Emirates", "Saudi Arabia", "Bahrain", "Qatar", "Oman"]}
 />
+      <ServiceDefinition definition="Metallurgical services include Positive Material Identification (PMI) using XRF and OES to verify chemical composition of metals and alloys against specification requirements. TTS provides material traceability solutions for oil and gas and petrochemical industries across Kuwait and the GCC." />
       <MetallurgicalHero />
       <MetallurgicalContent />
 

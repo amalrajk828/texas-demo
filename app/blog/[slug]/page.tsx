@@ -4,6 +4,7 @@ import Link from "next/link";
 import Image from "next/image";
 import { ChevronRight, Calendar, Clock, ArrowLeft } from "lucide-react";
 import { blogArticles } from "@/lib/blogArticles";
+import { SITE_URL } from "@/lib/site";
 import { BreadcrumbJsonLd } from "@/components/schema/BreadcrumbJsonLd";
 import { BlogPostingJsonLd } from "@/components/schema/BlogPostingJsonLd";
 import { FaqPageJsonLd } from "@/components/schema/FaqPageJsonLd";
@@ -45,7 +46,7 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
       authors: ["Texas Technical Services"],
       images: [
         {
-          url: article.image,
+          url: article.image.startsWith("http") ? article.image : `${SITE_URL}${article.image}`,
           width: 1200,
           height: 630,
           alt: article.imageAlt,
@@ -57,7 +58,7 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
       site: "@texastechserv",
       title: article.seoTitle,
       description: article.metaDescription,
-      images: [article.image],
+      images: [article.image.startsWith("http") ? article.image : `${SITE_URL}${article.image}`],
     }
   };
 }
@@ -110,7 +111,7 @@ export default async function BlogArticlePage({ params }: PageProps) {
             <span className="w-5 h-px bg-[#e7212b]" />
             <span className="text-[#e7212b] text-[12px] font-semibold tracking-[3px] uppercase">{article.category}</span>
           </div>
-          <h1 className="text-2xl sm:text-3xl lg:text-[2.2rem] font-bold text-white leading-tight mb-5">{article.title}</h1>
+          <h1 className="article-title text-2xl sm:text-3xl lg:text-[2.2rem] font-bold text-white leading-tight mb-5">{article.title}</h1>
           <div className="flex items-center gap-4 text-[14px] text-white/40">
             <span className="flex items-center gap-1.5"><Calendar className="w-3.5 h-3.5" />{article.date}</span>
             <span className="w-1 h-1 rounded-full bg-white/20" />

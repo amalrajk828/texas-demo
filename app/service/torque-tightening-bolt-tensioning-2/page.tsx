@@ -8,20 +8,21 @@ import Link from "next/link";
 import { FaqPageJsonLd } from "@/components/schema/FaqPageJsonLd";
 import { serviceFaqData } from "@/lib/serviceFaqData";
 import { ChevronRight } from "lucide-react";
+import ServiceDefinition from "@/components/service/ServiceDefinition";
 
 export const metadata: Metadata = {
-  title: "Torque Tightening & Bolt Tensioning",
+  title: "Torque Tightening & Bolt Tensioning — Hydraulic Tensioning for High-Load Flanges",
   description:
-    "Torque tightening and bolt tensioning services using calibrated hydraulic tools and torque sensors — bolted flange connections, pressure vessel fasteners, and structural bolting to ASME PCC-1, EN 1591, API 6A in Kuwait and Dubai.",
+    "Torque tightening and bolt tensioning with hydraulic tools — flange, vessel, and structural bolting to ASME PCC-1, EN 1591, and API 6A in Kuwait and Dubai.",
   alternates: { canonical: "/service/torque-tightening-bolt-tensioning-2/" },
   openGraph: {
-    title: "Torque Tightening & Bolt Tensioning | Texas Technical Services",
-    description: "Hydraulic torque and bolt tensioning for flanges and pressure vessels. ASME PCC-1, API 6A. Kuwait & Dubai.",
+    title: "Torque Tightening & Bolt Tensioning — Hydraulic Tensioning for High-Load Flanges",
+    description: "Hydraulic bolt tensioning for high-load flanges and pressure vessels. ASME PCC-1, API 6A. Kuwait & Dubai.",
     url: "/service/torque-tightening-bolt-tensioning-2/",
-    images: [{ url: "/og-default.png", width: 1200, height: 630, alt: "Torque Tightening & Bolt Tensioning — Texas Technical Services" }],
+    images: [{ url: "/og-default.png", width: 1200, height: 630, alt: "Torque Tightening & Bolt Tensioning — Hydraulic Tensioning for High-Load Flanges — Texas Technical Services" }],
   },
-  twitter: { card: "summary_large_image", title: "Torque Tightening & Bolt Tensioning | Texas Technical Services", description: "Hydraulic bolt tensioning and torque services. ASME PCC-1. Kuwait & Dubai." },
-  keywords: ["torque tightening Kuwait", "bolt tensioning Kuwait", "hydraulic torque Kuwait", "flange management Kuwait", "bolt preload Kuwait", "ASME PCC-1 Kuwait", "Texas Technical Services torque"],
+  twitter: { card: "summary_large_image", title: "Torque Tightening & Bolt Tensioning — Hydraulic Tensioning for High-Load Flanges", description: "Hydraulic bolt tensioning for high-load flanges. ASME PCC-1. Kuwait & Dubai." },
+  keywords: ["hydraulic bolt tensioning Kuwait", "high-load flange tensioning Kuwait", "bolt tensioning services Kuwait", "flange bolt tensioning Kuwait", "pressure vessel bolting Kuwait", "ASME PCC-1 Kuwait", "Texas Technical Services torque"],
 };
 
 export default function TorquePage2() {
@@ -30,16 +31,24 @@ export default function TorquePage2() {
       <BreadcrumbJsonLd items={[
   { name: "Home", href: "/" },
   { name: "Services", href: "/services/" },
-  { name: "Torque Tightening & Bolt Tensioning", href: "/service/torque-tightening-bolt-tensioning-2/" },
+  { name: "Torque Tightening & Bolt Tensioning — Hydraulic Tensioning for High-Load Flanges", href: "/service/torque-tightening-bolt-tensioning-2/" },
 ]} />
 <ServiceJsonLd
-  name="Torque Tightening & Bolt Tensioning"
-  description="Torque tightening and bolt tensioning services using calibrated hydraulic tools and torque sensors — bolted flange connections, pressure vessel fasteners, and structural bolting to ASME PCC-1, EN 1591, API 6A in Kuwait and Dubai."
+  name="Torque Tightening & Bolt Tensioning — Hydraulic Tensioning for High-Load Flanges"
+  description="Hydraulic bolt tensioning for high-load flanges, pressure vessels, and critical bolted connections — calibrated tooling to ASME PCC-1, EN 1591, API 6A standards in Kuwait and Dubai."
   url="/service/torque-tightening-bolt-tensioning-2/"
   serviceType="Specialized Inspection"
   areaServed={["Kuwait", "United Arab Emirates", "Saudi Arabia", "Bahrain", "Qatar", "Oman"]}
 />
+      <ServiceDefinition definition="Hydraulic bolt tensioning services apply calibrated multi-bolt load to high-load flanges, pressure vessel fasteners, and critical bolted connections. TTS provides certified bolt tensioning to ASME PCC-1, EN 1591, and API 6A standards in Kuwait and Dubai." />
       <TorqueHero />
+      <section className="bg-white py-12 lg:py-16">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6">
+          <p className="text-gray-600 text-[15px] leading-[1.8] max-w-4xl">
+            We specialize in hydraulic bolt tensioning for high-load flanges and critical joints, applying simultaneous multi-bolt load to achieve uniform preload in pressure-boundary and structural connections.
+          </p>
+        </div>
+      </section>
       <TorqueContent />
 
       {/* ══ RELATED SERVICES ═══════════════════════════════ */}

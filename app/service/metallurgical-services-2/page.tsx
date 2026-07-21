@@ -8,20 +8,21 @@ import Link from "next/link";
 import { FaqPageJsonLd } from "@/components/schema/FaqPageJsonLd";
 import { serviceFaqData } from "@/lib/serviceFaqData";
 import { ChevronRight } from "lucide-react";
+import ServiceDefinition from "@/components/service/ServiceDefinition";
 
 export const metadata: Metadata = {
-  title: "Metallurgical Services — Positive Material Identification (PMI)",
+  title: "Metallurgical Services — OES Lab-Grade PMI & Full Chemistry",
   description:
-    "Metallurgical services including Positive Material Identification (PMI) using XRF and OES to verify chemical composition of metals and alloys against standards — material traceability for oil & gas and petrochemical in Kuwait and Dubai.",
+    "Metallurgical services including PMI using XRF and OES to verify metal and alloy composition — traceability for oil & gas and petrochemical in Kuwait and Dubai.",
   alternates: { canonical: "/service/metallurgical-services-2/" },
   openGraph: {
-    title: "Metallurgical Services (PMI) | Texas Technical Services",
-    description: "XRF and OES Positive Material Identification for alloy verification and material traceability. API 578. Kuwait & Dubai.",
+    title: "Metallurgical Services — OES Lab-Grade PMI & Full Chemistry",
+    description: "OES lab-grade PMI delivering full chemical analysis and alloy verification. API 578. Kuwait & Dubai.",
     url: "/service/metallurgical-services-2/",
-    images: [{ url: "/og-metallurgical-services.jpg", width: 1200, height: 630, alt: "Metallurgical Services PMI — Texas Technical Services" }],
+    images: [{ url: "/og-metallurgical-services.jpg", width: 1200, height: 630, alt: "Metallurgical Services — OES Lab-Grade PMI & Full Chemistry — Texas Technical Services" }],
   },
-  twitter: { card: "summary_large_image", title: "Metallurgical Services (PMI) | Texas Technical Services", description: "PMI alloy verification and material traceability. API 578. Kuwait & Dubai." },
-  keywords: ["PMI Kuwait", "positive material identification Kuwait", "metallurgical services Kuwait", "XRF analysis Kuwait", "alloy verification Kuwait", "material traceability Kuwait", "Texas Technical Services PMI"],
+  twitter: { card: "summary_large_image", title: "Metallurgical Services — OES Lab-Grade PMI & Full Chemistry", description: "OES lab-grade PMI with full chemistry analysis. API 578. Kuwait & Dubai." },
+  keywords: ["OES PMI Kuwait", "lab-grade PMI Kuwait", "full chemistry analysis Kuwait", "positive material identification Kuwait", "alloy verification Kuwait", "material traceability Kuwait", "Texas Technical Services PMI"],
 };
 
 export default function MetallurgicalPage2() {
@@ -30,16 +31,24 @@ export default function MetallurgicalPage2() {
       <BreadcrumbJsonLd items={[
   { name: "Home", href: "/" },
   { name: "Services", href: "/services/" },
-  { name: "Metallurgical Services — Positive Material Identification (PMI)", href: "/service/metallurgical-services-2/" },
+  { name: "Metallurgical Services — OES Lab-Grade PMI & Full Chemistry", href: "/service/metallurgical-services-2/" },
 ]} />
 <ServiceJsonLd
-  name="Metallurgical Services — Positive Material Identification (PMI)"
-  description="Metallurgical services including Positive Material Identification (PMI) using XRF and OES to verify chemical composition of metals and alloys against standards — material traceability for oil & gas and petrochemical in Kuwait and Dubai."
+  name="Metallurgical Services — OES Lab-Grade PMI & Full Chemistry"
+  description="OES lab-grade Positive Material Identification delivering full chemical analysis and alloy verification for metals — traceability for oil, gas, and petrochemical in Kuwait and Dubai."
   url="/service/metallurgical-services-2/"
   serviceType="Mechanical Testing"
   areaServed={["Kuwait", "United Arab Emirates", "Saudi Arabia", "Bahrain", "Qatar", "Oman"]}
 />
+      <ServiceDefinition definition="Metallurgical services include OES lab-grade Positive Material Identification delivering full chemical analysis of metals and alloys against specification requirements. TTS provides material traceability and alloy verification for oil, gas, and petrochemical industries across Kuwait and the GCC." />
       <MetallurgicalHero />
+      <section className="bg-white py-12 lg:py-16">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6">
+          <p className="text-gray-600 text-[15px] leading-[1.8] max-w-4xl">
+            Our metallurgical services use Optical Emission Spectroscopy (OES) to provide lab-grade full chemistry analysis, confirming material grades and traceability for critical oil, gas, and petrochemical applications.
+          </p>
+        </div>
+      </section>
       <MetallurgicalContent />
 
       {/* ══ RELATED SERVICES ═══════════════════════════════ */}

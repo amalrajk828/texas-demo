@@ -8,19 +8,20 @@ import Link from "next/link";
 import { FaqPageJsonLd } from "@/components/schema/FaqPageJsonLd";
 import { serviceFaqData } from "@/lib/serviceFaqData";
 import { ChevronRight } from "lucide-react";
+import ServiceDefinition from "@/components/service/ServiceDefinition";
 
 export const metadata: Metadata = {
-  title: "Tensile Test | Texas Technical Services",
+  title: "Tensile Test",
   description:
-    "Fundamental tensile testing to determine tensile strength, yield strength, and ductility of metals, plastics, ceramics, and composites — conducted to ASTM E8, ISO 6892, and BS EN standards in Kuwait and Dubai.",
+    "Tensile testing for metals, plastics, ceramics, and composites — tensile strength, yield, and ductility to ASTM E8, ISO 6892, and BS EN in Kuwait and Dubai.",
   alternates: { canonical: "/service/tensile-test/" },
   openGraph: {
-    title: "Tensile Test | Texas Technical Services",
+    title: "Tensile Test",
     description: "Tensile strength, yield strength, and ductility testing to ASTM E8, ISO 6892 standards. Metals, plastics, ceramics, composites. Kuwait & Dubai.",
     url: "/service/tensile-test/",
     images: [{ url: "/og-default.png", width: 1200, height: 630, alt: "Tensile Test — Texas Technical Services" }],
   },
-  twitter: { card: "summary_large_image", title: "Tensile Test | Texas Technical Services", description: "Tensile strength, yield strength, ductility testing. ASTM E8, ISO 6892. Kuwait & Dubai." },
+  twitter: { card: "summary_large_image", title: "Tensile Test", description: "Tensile strength, yield strength, ductility testing. ASTM E8, ISO 6892. Kuwait & Dubai." },
   keywords: ["tensile test Kuwait", "tensile strength testing Kuwait", "yield strength test Kuwait", "tensile testing metals Kuwait", "ASTM E8 tensile test Kuwait", "ISO 6892 tensile test Kuwait", "Texas Technical Services tensile test"],
 };
 
@@ -39,6 +40,7 @@ export default function TensileTestPage() {
   serviceType="Mechanical Testing"
   areaServed={["Kuwait", "United Arab Emirates", "Saudi Arabia", "Bahrain", "Qatar", "Oman"]}
 />
+      <ServiceDefinition definition="Tensile testing determines tensile strength, yield strength, and ductility of metals, plastics, ceramics, and composites through fundamental mechanical testing. TTS provides certified tensile testing services to ASTM E8, ISO 6892, and BS EN standards in Kuwait and Dubai." />
       <TensileHero />
       <TensileContent />
 

@@ -8,16 +8,19 @@ import Link from "next/link";
 import { FaqPageJsonLd } from "@/components/schema/FaqPageJsonLd";
 import { serviceFaqData } from "@/lib/serviceFaqData";
 import { ChevronRight } from "lucide-react";
+import { HowToJsonLd } from "@/components/schema/HowToJsonLd";
+import ServiceProcessSteps from "@/components/ServiceProcessSteps";
+import ServiceDefinition from "@/components/service/ServiceDefinition";
 
 export const metadata: Metadata = {
   title: "Validation and Uncertainty Calculations",
   description:
-    "GUM-compliant measurement uncertainty calculations and comprehensive validation services for custody metering skids, flow computers, and metering systems. API MPMS Chapter 21, ISO, OIML compliant — Kuwait and Dubai.",
+    "GUM-compliant uncertainty calculations and validation for custody metering skids, flow computers, and systems to API MPMS, ISO, and OIML in Kuwait and Dubai.",
   alternates: {
     canonical: "/service/validation-and-uncertainty-calculations/",
   },
   openGraph: {
-    title: "Validation and Uncertainty Calculations | Texas Technical Services",
+    title: "Validation and Uncertainty Calculations",
     description:
       "Advanced GUM-methodology uncertainty calculations and custody metering system validation — API MPMS, ISO, OIML compliant. Kuwait & Dubai.",
     url: "/service/validation-and-uncertainty-calculations/",
@@ -32,7 +35,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Validation and Uncertainty Calculations | Texas Technical Services",
+    title: "Validation and Uncertainty Calculations",
     description:
       "GUM-compliant uncertainty calculations and custody metering validation. API MPMS Chapter 21, ISO, OIML. Kuwait & Dubai.",
   },
@@ -63,8 +66,30 @@ export default function ValidationUncertaintyPage() {
   serviceType="Flow Measurement"
   areaServed={["Kuwait", "United Arab Emirates", "Saudi Arabia", "Bahrain", "Qatar", "Oman"]}
 />
+      <ServiceDefinition definition="Validation and uncertainty calculations provide GUM-compliant measurement uncertainty analysis and comprehensive validation for custody metering skids, flow computers, and metering systems. TTS delivers API MPMS Chapter 21, ISO, and OIML compliant services in Kuwait and Dubai." />
       <ValidationHero />
       <ValidationContent />
+
+      <HowToJsonLd
+        name="Our Validation & Uncertainty Calculation Process"
+        description="A GUM-compliant step-by-step process for measurement uncertainty calculations and system validation."
+        steps={[
+          { name: "Identify Uncertainty Sources", text: "List all contributing sources of measurement uncertainty including flow meter, temperature, pressure, and density instruments." },
+          { name: "Calculate Standard Uncertainty", text: "Quantify each uncertainty component using Type A (statistical) or Type B (manufacturer specs, calibration data) methods." },
+          { name: "Combine Uncertainties", text: "Combine individual uncertainty components using the root-sum-of-squares method per GUM methodology." },
+          { name: "Report Expanded Uncertainty", text: "Multiply combined standard uncertainty by coverage factor (typically k=2 for 95% confidence) and document results." },
+        ]}
+      />
+
+      <ServiceProcessSteps
+        title="How We Calculate Uncertainty & Validate Systems"
+        steps={[
+          { name: "Identify Uncertainty Sources", description: "We systematically list all contributing sources of measurement uncertainty, including flow meters, temperature sensors, pressure transmitters, and density instruments." },
+          { name: "Calculate Standard Uncertainty", description: "We quantify each uncertainty component using Type A (statistical analysis) or Type B (manufacturer specifications, calibration data) methods." },
+          { name: "Combine Uncertainties", description: "We combine individual uncertainty components using the root-sum-of-squares method in accordance with GUM methodology." },
+          { name: "Report Expanded Uncertainty", description: "We multiply the combined standard uncertainty by the coverage factor (typically k=2 for 95% confidence) and deliver comprehensive documented results." },
+        ]}
+      />
 
       {/* ══ RELATED SERVICES ═══════════════════════════════ */}
       {serviceCrossLinks["validation-and-uncertainty-calculations"] && serviceCrossLinks["validation-and-uncertainty-calculations"].length > 0 && (

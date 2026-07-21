@@ -8,16 +8,17 @@ import Link from "next/link";
 import { FaqPageJsonLd } from "@/components/schema/FaqPageJsonLd";
 import { serviceFaqData } from "@/lib/serviceFaqData";
 import { ChevronRight } from "lucide-react";
+import ServiceDefinition from "@/components/service/ServiceDefinition";
 
 export const metadata: Metadata = {
-  title: "Repair & Upgrades for Helical Flow Meters | Texas Technical Services",
+  title: "Repair & Upgrades for Helical Flow Meters",
   description:
-    "Authorised Faure Herman OEM Representative providing preventive and corrective maintenance, performance analysis, failure investigation, and repair services for helical flow meters in Kuwait and Dubai.",
+    "Authorized Faure Herman OEM maintenance, performance analysis, failure investigation, and repair for helical flow meters in Kuwait and Dubai.",
   alternates: {
     canonical: "/service/repair-upgrades-for-helical-flow-meters/",
   },
   openGraph: {
-    title: "Repair & Upgrades for Helical Flow Meters | Texas Technical Services",
+    title: "Repair & Upgrades for Helical Flow Meters",
     description:
       "Expert preventive and corrective maintenance, performance analysis, and repair for Faure Herman helical flow meters. Authorised OEM Representative — Kuwait & Dubai.",
     url: "/service/repair-upgrades-for-helical-flow-meters/",
@@ -32,7 +33,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Repair & Upgrades for Helical Flow Meters | Texas Technical Services",
+    title: "Repair & Upgrades for Helical Flow Meters",
     description:
       "Faure Herman authorised OEM maintenance and repair for helical flow meters — preventive, corrective, and failure analysis. Kuwait & Dubai.",
   },
@@ -63,6 +64,7 @@ export default function RepairUpgradesHelicalPage() {
   serviceType="Flow Measurement"
   areaServed={["Kuwait", "United Arab Emirates", "Saudi Arabia", "Bahrain", "Qatar", "Oman"]}
 />
+      <ServiceDefinition definition="Repair and upgrades for helical flow meters provide preventive and corrective maintenance, performance analysis, failure investigation, and OEM repair services. As authorised Faure Herman Representative, TTS delivers expert helical flow meter maintenance and repair across Kuwait and the GCC." />
       <HelicalHero />
       <HelicalContent />
 

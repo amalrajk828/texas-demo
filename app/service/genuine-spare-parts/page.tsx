@@ -8,16 +8,17 @@ import Link from "next/link";
 import { FaqPageJsonLd } from "@/components/schema/FaqPageJsonLd";
 import { serviceFaqData } from "@/lib/serviceFaqData";
 import { ChevronRight } from "lucide-react";
+import ServiceDefinition from "@/components/service/ServiceDefinition";
 
 export const metadata: Metadata = {
-  title: "Genuine Spare Parts | Texas Technical Services",
+  title: "Genuine Spare Parts",
   description:
-    "Genuine OEM spare parts for Faure Herman helical flow meters and associated metering equipment — authentic, traceable, and quality-certified. Authorised Faure Herman OEM Representative in Kuwait and Dubai.",
+    "Genuine OEM spare parts for Faure Herman helical flow meters — authentic, traceable, and quality-certified in Kuwait and Dubai.",
   alternates: {
     canonical: "/service/genuine-spare-parts/",
   },
   openGraph: {
-    title: "Genuine Spare Parts | Texas Technical Services",
+    title: "Genuine Spare Parts",
     description:
       "Genuine Faure Herman OEM spare parts for helical flow meters — authentic, traceable, quality-certified. Authorised representative in Kuwait & Dubai.",
     url: "/service/genuine-spare-parts/",
@@ -32,7 +33,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Genuine Spare Parts | Texas Technical Services",
+    title: "Genuine Spare Parts",
     description:
       "Genuine Faure Herman OEM spare parts for helical flow meters. Authorised representative — Kuwait & Dubai.",
   },
@@ -63,6 +64,7 @@ export default function GenuineSpareParts() {
   serviceType="Commissioning"
   areaServed={["Kuwait", "United Arab Emirates", "Saudi Arabia", "Bahrain", "Qatar", "Oman"]}
 />
+      <ServiceDefinition definition="Genuine OEM spare parts for Faure Herman helical flow meters and associated metering equipment — authentic, traceable, and quality-certified components. As authorised Faure Herman OEM Representative, TTS supplies genuine parts ensuring optimal meter performance across Kuwait and the GCC." />
       <SparePartsHero />
       <SparePartsContent />
 

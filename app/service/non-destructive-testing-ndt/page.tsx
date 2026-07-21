@@ -8,19 +8,21 @@ import Link from "next/link";
 import { FaqPageJsonLd } from "@/components/schema/FaqPageJsonLd";
 import { serviceFaqData } from "@/lib/serviceFaqData";
 import { ChevronRight } from "lucide-react";
+import { ItemListJsonLd } from "@/components/schema/ItemListJsonLd";
+import ServiceDefinition from "@/components/service/ServiceDefinition";
 
 export const metadata: Metadata = {
-  title: "Non Destructive Testing (NDT) | Texas Technical Services",
+  title: "Non Destructive Testing (NDT)",
   description:
-    "Full range of NDT inspection services with qualified technicians and modern equipment — Visual Inspection (VI), Liquid/Dye Penetrant (PT), Magnetic Particle (MT), Radiographic Testing (RT), and Ultrasonic Testing (UT) in Kuwait and Dubai.",
+    "Full-range NDT inspection services — VI, PT, MT, RT, and UT with qualified technicians and modern equipment in Kuwait and Dubai.",
   alternates: { canonical: "/service/non-destructive-testing-ndt/" },
   openGraph: {
-    title: "Non Destructive Testing (NDT) | Texas Technical Services",
+    title: "Non Destructive Testing (NDT)",
     description: "VI, PT, MT, RT, and UT non-destructive testing services with qualified technicians. Kuwait & Dubai.",
     url: "/service/non-destructive-testing-ndt/",
     images: [{ url: "/og-default.png", width: 1200, height: 630, alt: "Non Destructive Testing — Texas Technical Services" }],
   },
-  twitter: { card: "summary_large_image", title: "Non Destructive Testing (NDT) | Texas Technical Services", description: "VI, PT, MT, RT, UT NDT services. Qualified technicians. Kuwait & Dubai." },
+  twitter: { card: "summary_large_image", title: "Non Destructive Testing (NDT)", description: "VI, PT, MT, RT, UT NDT services. Qualified technicians. Kuwait & Dubai." },
   keywords: ["NDT Kuwait", "non destructive testing Kuwait", "ultrasonic testing Kuwait", "radiographic testing Kuwait", "magnetic particle inspection Kuwait", "dye penetrant testing Kuwait", "visual inspection Kuwait", "Texas Technical Services NDT"],
 };
 
@@ -39,6 +41,7 @@ export default function NDTPage() {
   serviceType="Non-Destructive Testing"
   areaServed={["Kuwait", "United Arab Emirates", "Saudi Arabia", "Bahrain", "Qatar", "Oman"]}
 />
+      <ServiceDefinition definition="Non-Destructive Testing (NDT) provides a full range of inspection services including Visual Inspection, Liquid Penetrant, Magnetic Particle, Radiographic Testing, and Ultrasonic Testing. TTS delivers comprehensive NDT services with qualified technicians and modern equipment across Kuwait and Dubai." />
       <NDTHero />
       <NDTSubServices />
 
@@ -116,6 +119,19 @@ export default function NDTPage() {
           </div>
         </div>
       </section>
+      <ItemListJsonLd
+        name="NDT Methods"
+        items={[
+          { name: "Visual Inspection (VI)", url: "/service/visual-inspection-vi/", description: "Surface examination using naked eye or magnifying aids to detect visible defects." },
+          { name: "Liquid Penetrant Testing (PT)", url: "/service/liquid-penetrant-dye-penetrant-examination-pt/", description: "Surface crack detection using capillary action of liquid penetrants." },
+          { name: "Magnetic Particle Inspection (MT)", url: "/service/magnetic-particle-inspection-mt/", description: "Surface and near-surface defect detection in ferromagnetic materials." },
+          { name: "Radiographic Testing (RT)", url: "/service/radiographic-testing-rt/", description: "Internal defect detection using X-rays or gamma rays." },
+          { name: "Ultrasonic Testing (UT)", url: "/service/ultrasonic-testing-ut/", description: "Internal defect detection and thickness measurement using high-frequency sound waves." },
+          { name: "Eddy Current Testing (ECT)", url: "/service/eddy-current-testing/", description: "Surface and near-surface defect detection using electromagnetic induction." },
+          { name: "Phased Array Ultrasonic Testing (PAUT)", url: "/service/phased-array-ultrasonic-testing/", description: "Advanced ultrasonic testing with multi-element probes for improved defect characterization." },
+          { name: "Time of Flight Diffraction (TOFD)", url: "/service/time-of-flight-diffraction/", description: "Precise defect sizing using diffraction signals from crack tips." },
+        ]}
+      />
 </>
   );
 }

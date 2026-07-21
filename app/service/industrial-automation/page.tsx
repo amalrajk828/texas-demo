@@ -4,19 +4,20 @@ import AutomationSubServices from "@/components/service/industrial-automation/Au
 import { BreadcrumbJsonLd } from "@/components/schema/BreadcrumbJsonLd";
 import { ServiceJsonLd } from "@/components/schema/ServiceJsonLd";
 import { FaqPageJsonLd } from "@/components/schema/FaqPageJsonLd";
-import { ChevronRight } from "lucide-react";
+import { ChevronRight, ArrowRight } from "lucide-react";
 import { serviceCrossLinks } from "@/lib/serviceCrossLinks";
 import Link from "next/link";
+import ServiceDefinition from "@/components/service/ServiceDefinition";
 
 export const metadata: Metadata = {
-  title: "Industrial Automation, PLC SCADA & Process Control Solutions | Texas Technical Services",
+  title: "Industrial Automation, PLC SCADA & Process Control Solutions",
   description:
-    "Texas Technical Services Co. (TTS) is a leading industrial automation company in Kuwait, UAE, and Saudi Arabia — providing industrial automation & control systems, control and automation engineering, PLC and SCADA system integrator services, process control automation solutions, plant automation, automation in manufacturing industry, and control systems and automation for oil & gas, power, and industrial sectors across the GCC.",
+    "Industrial automation and control systems across Kuwait, UAE, and Saudi Arabia — PLC, SCADA, DCS integration for oil & gas, power, and manufacturing.",
   alternates: {
     canonical: "/service/industrial-automation/",
   },
   openGraph: {
-    title: "Industrial Automation, PLC SCADA & Process Control | Texas Technical Services",
+    title: "Industrial Automation, PLC SCADA & Process Control",
     description:
       "Industrial automation & control systems, control and automation engineering, and plant and process automation — PLC and SCADA system integrators in Kuwait, UAE, and Saudi Arabia serving manufacturing, power plant, and oil & gas sectors.",
     url: "/service/industrial-automation/",
@@ -24,7 +25,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Industrial Automation, PLC SCADA & Process Control | Texas Technical Services",
+    title: "Industrial Automation, PLC SCADA & Process Control",
     description:
       "Industrial automation & control systems, control and automation engineering, plant and process automation, and automation in power plant — serving Kuwait, UAE, Dubai, and Saudi Arabia.",
   },
@@ -306,6 +307,7 @@ export default function IndustrialAutomationPage() {
         areaServed={["Kuwait", "United Arab Emirates", "Saudi Arabia", "Bahrain", "Qatar", "Oman"]}
       />
       <FaqPageJsonLd items={faqItems} />
+      <ServiceDefinition definition="Industrial automation encompasses PLC and SCADA system integration, process control engineering, and control systems for oil and gas, power, and industrial sectors. TTS is a leading automation company providing comprehensive control and automation engineering services across Kuwait, UAE, and Saudi Arabia." />
       <AutomationHero />
       <AutomationSubServices />
 
@@ -659,6 +661,14 @@ export default function IndustrialAutomationPage() {
           </div>
         </div>
       </section>
+
+      {/* ══ RELATED COMPARISON ═══════════════════════════════ */}
+      <div className="max-w-5xl mx-auto px-4 sm:px-6 py-8">
+        <Link href="/blog/plc-vs-dcs-automation-comparison/" className="inline-flex items-center gap-2 text-[#e7212b] font-semibold text-sm hover:underline">
+          Read our comparison: PLC vs DCS: Choosing the Right Industrial Automation Platform
+          <ArrowRight className="w-4 h-4" />
+        </Link>
+      </div>
 
       {/* ══ FAQ ════════════════════════════════════════════ */}
       <section className="bg-[#f4f5f8] py-20 lg:py-24">

@@ -8,19 +8,20 @@ import Link from "next/link";
 import { FaqPageJsonLd } from "@/components/schema/FaqPageJsonLd";
 import { serviceFaqData } from "@/lib/serviceFaqData";
 import { ChevronRight } from "lucide-react";
+import ServiceDefinition from "@/components/service/ServiceDefinition";
 
 export const metadata: Metadata = {
-  title: "Gamma Ray Pipe Crawler Inspection Systems | Texas Technical Services",
+  title: "Gamma Ray Pipe Crawler Inspection Systems",
   description:
-    "Gamma ray and X-ray pipe crawler inspection — battery-powered remote-controlled mobile radiographic machine producing SWSI radiographs of circumferential pipeline welds to ASME V, API 1104 standards in Kuwait and Dubai.",
+    "Gamma ray and X-ray pipe crawler inspection for pipeline welds — battery-powered remote-controlled radiography to ASME V and API 1104 in Kuwait and Dubai.",
   alternates: { canonical: "/service/gamma-ray-pipe-crawler-inspection-systems/" },
   openGraph: {
-    title: "Gamma Ray Pipe Crawler Inspection | Texas Technical Services",
+    title: "Gamma Ray Pipe Crawler Inspection",
     description: "Remote-controlled radiographic pipe crawler for circumferential weld SWSI inspection. ASME V, API 1104. Kuwait & Dubai.",
     url: "/service/gamma-ray-pipe-crawler-inspection-systems/",
     images: [{ url: "/og-default.png", width: 1200, height: 630, alt: "Gamma Ray Pipe Crawler — Texas Technical Services" }],
   },
-  twitter: { card: "summary_large_image", title: "Gamma Ray Pipe Crawler Inspection | Texas Technical Services", description: "Pipeline circumferential weld radiography. ASME V, API 1104. Kuwait & Dubai." },
+  twitter: { card: "summary_large_image", title: "Gamma Ray Pipe Crawler Inspection", description: "Pipeline circumferential weld radiography. ASME V, API 1104. Kuwait & Dubai." },
   keywords: ["gamma ray pipe crawler Kuwait", "pipeline radiography Kuwait", "pipe crawler inspection Kuwait", "SWSI radiography Kuwait", "circumferential weld inspection Kuwait", "Texas Technical Services pipe crawler"],
 };
 
@@ -39,6 +40,7 @@ export default function GammaRayPage() {
   serviceType="Non-Destructive Testing"
   areaServed={["Kuwait", "United Arab Emirates", "Saudi Arabia", "Bahrain", "Qatar", "Oman"]}
 />
+      <ServiceDefinition definition="Gamma Ray Pipe Crawler Inspection Systems use battery-powered remote-controlled mobile radiographic machines to produce single-wall single-image radiographs of circumferential pipeline welds. TTS deploys advanced pipe crawler technology for efficient pipeline weld inspection to ASME V and API 1104 standards in Kuwait and the GCC." />
       <GammaRayHero />
       <GammaRayContent />
 

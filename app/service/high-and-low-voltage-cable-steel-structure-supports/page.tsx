@@ -8,19 +8,20 @@ import Link from "next/link";
 import { FaqPageJsonLd } from "@/components/schema/FaqPageJsonLd";
 import { serviceFaqData } from "@/lib/serviceFaqData";
 import { ChevronRight } from "lucide-react";
+import ServiceDefinition from "@/components/service/ServiceDefinition";
 
 export const metadata: Metadata = {
-  title: "High and Low Voltage Cable Steel Structure Supports | Texas Technical Services",
+  title: "High and Low Voltage Cable Steel Structure Supports",
   description:
-    "Design, fabrication, and erection of high and low voltage cable support structures, pathways, and steel structural supports for industrial electrical infrastructure.",
+    "Design and fabrication of high and low voltage cable support structures and steel supports for industrial electrical infrastructure in Kuwait and Dubai.",
   alternates: { canonical: "/service/high-and-low-voltage-cable-steel-structure-supports/" },
   openGraph: {
-    title: "Cable Steel Structure Supports | Texas Technical Services",
+    title: "Cable Steel Structure Supports",
     description: "Design, fabrication, and erection of cable support structures, pathways, and steel structural supports.",
     url: "/service/high-and-low-voltage-cable-steel-structure-supports/",
     images: [{ url: "/og-cable-supports.jpg", width: 1200, height: 630, alt: "Cable Steel Structure Supports — Texas Technical Services" }],
   },
-  twitter: { card: "summary_large_image", title: "High and Low Voltage Cable Steel Structure Supports | Texas Technical Services", description: "Design, fabrication, and erection of high and low voltage cable support structures, pathways, and steel structural supports for industrial electrical infrastructure." },
+  twitter: { card: "summary_large_image", title: "High and Low Voltage Cable Steel Structure Supports", description: "Design, fabrication, and erection of high and low voltage cable support structures, pathways, and steel structural supports for industrial electrical infrastructure." },
   keywords: ["Cable Steel Structure Supports Kuwait", "Cable Steel Structure Supports Dubai", "Texas Technical Services Cable Supports", "industrial cable supports Kuwait", "voltage cable structure Kuwait", "steel cable pathway Kuwait"],
 };
 
@@ -39,6 +40,7 @@ export default function CableSupportsPage() {
   serviceType="Steel Structure Supports"
   areaServed={["Kuwait", "United Arab Emirates", "Saudi Arabia", "Bahrain", "Qatar", "Oman"]}
 />
+      <ServiceDefinition definition="High and low voltage cable steel structure supports involve the design, fabrication, and erection of cable support structures, pathways, and steel structural supports for industrial electrical infrastructure. TTS delivers complete cable support solutions for facilities across Kuwait and the GCC." />
       <CableSupportsHero />
       <CableSupportsContent />
 
