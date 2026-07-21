@@ -5,7 +5,7 @@ import { BreadcrumbJsonLd } from "@/components/schema/BreadcrumbJsonLd";
 import { ServiceJsonLd } from "@/components/schema/ServiceJsonLd";
 
 export const metadata: Metadata = {
-  title: "Magnetic Flux Leakage (MFL)",
+  title: "Magnetic Flux Leakage (MFL) | Texas Technical Services",
   description:
     "Magnetic Flux Leakage (MFL) NDT for detecting corrosion and pitting in steel pipelines and storage tanks — pipeline in-line inspection and tank floor scanning to API 653, API 1163, ASTM E570 standards in Kuwait and Dubai.",
   alternates: { canonical: "/service/magnetic-flux-leakage/" },

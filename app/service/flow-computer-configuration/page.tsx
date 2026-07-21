@@ -5,7 +5,7 @@ import { BreadcrumbJsonLd } from "@/components/schema/BreadcrumbJsonLd";
 import { ServiceJsonLd } from "@/components/schema/ServiceJsonLd";
 
 export const metadata: Metadata = {
-  title: "Flow Computer Configuration",
+  title: "Flow Computer Configuration | Texas Technical Services",
   description:
     "Texas Technical Services (TTS) provides expert flow computer configuration services in compliance with API MPMS, AGA, ISO, NTEP & OIML standards — custom programming, multi-stream setup, SCADA integration, commissioning, and on-site validation for custody transfer applications in Kuwait and Dubai.",
   alternates: {
@@ -18,7 +18,7 @@ export const metadata: Metadata = {
     url: "/service/flow-computer-configuration/",
     images: [
       {
-        url: "/og-flow-computer-configuration.jpg",
+        url: "/og-default.png",
         width: 1200,
         height: 630,
         alt: "Flow Computer Configuration — Texas Technical Services",

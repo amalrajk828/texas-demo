@@ -5,7 +5,7 @@ import { BreadcrumbJsonLd } from "@/components/schema/BreadcrumbJsonLd";
 import { ServiceJsonLd } from "@/components/schema/ServiceJsonLd";
 
 export const metadata: Metadata = {
-  title: "Process Plant Automation",
+  title: "Process Plant Automation | Texas Technical Services",
   description:
     "Process plant automation solutions that streamline industrial processes — customised automation systems for efficiency, remote monitoring, safety compliance, and ongoing support. Siemens, Allen-Bradley, Schneider, DCS. Kuwait and Dubai.",
   alternates: { canonical: "/service/plant-automation/" },
@@ -13,7 +13,7 @@ export const metadata: Metadata = {
     title: "Process Plant Automation | Texas Technical Services",
     description: "Top-tier plant automation solutions — process optimisation, remote monitoring, and safety. Kuwait & Dubai.",
     url: "/service/plant-automation/",
-    images: [{ url: "/og-plant-automation.jpg", width: 1200, height: 630, alt: "Process Plant Automation — Texas Technical Services" }],
+    images: [{ url: "/og-default.png", width: 1200, height: 630, alt: "Process Plant Automation — Texas Technical Services" }],
   },
   twitter: { card: "summary_large_image", title: "Process Plant Automation | Texas Technical Services", description: "Customised plant automation for efficiency and safety. Kuwait & Dubai." },
   keywords: ["plant automation Kuwait", "process automation Kuwait", "industrial automation Kuwait", "SCADA Kuwait", "DCS Kuwait", "automation systems Kuwait", "Texas Technical Services automation"],

@@ -34,6 +34,15 @@ export default function SteelErectionContent() {
             Structural Steel Erection Capabilities
           </h2>
         </FadeUp>
+        <FadeUp delay={0.06} className="mb-12">
+          <div className="max-w-3xl">
+            <div className="flex items-center gap-2.5 mb-4"><span className="w-5 h-px bg-[#e7212b]" /><span className="text-[#e7212b] text-[10px] font-semibold tracking-[3.5px] uppercase">What We Do</span></div>
+            <h2 className="text-3xl sm:text-[2.2rem] font-bold text-[#0B0D26] leading-[1.15] mb-5">Structural Steel Erection and On-Site Assembly</h2>
+            <p className="text-gray-500 text-[15px] leading-[1.85] mb-4">Structural steel erection requires careful planning, skilled labour, and rigorous safety management. TTS provides experienced steel erection crews supported by lift planning engineers, rigging specialists, and site safety supervisors — delivering structural steel frameworks for industrial buildings, platforms, pipe racks, and equipment support structures.</p>
+            <p className="text-gray-500 text-[15px] leading-[1.85] mb-4">Our erection methods include crane-assisted lifting, scaffolding-supported manual positioning, and temporary works design for complex lifts. All bolting is performed to ASTM A325 and A490 specifications with calibrated torque equipment, and alignment verification is conducted to project tolerances. Our site teams follow comprehensive method statements and risk assessments, ensuring safe and efficient erection campaigns across Kuwait and the GCC.</p>
+            <p className="text-gray-500 text-[15px] leading-[1.85] mb-8">TTS coordinates erection activities with other trades and disciplines — managing interface risks, sequencing dependencies, and schedule constraints. Our project supervisors maintain real-time progress tracking and quality records, providing clients with visibility throughout the erection programme and ensuring structural steelwork is completed safely, on time, and to specification.</p>
+          </div>
+        </FadeUp>
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 mb-16">
           {CARDS.map((card, i) => (
             <FadeUp key={card.title} delay={0.08 * i}>

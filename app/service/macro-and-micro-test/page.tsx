@@ -5,7 +5,7 @@ import { BreadcrumbJsonLd } from "@/components/schema/BreadcrumbJsonLd";
 import { ServiceJsonLd } from "@/components/schema/ServiceJsonLd";
 
 export const metadata: Metadata = {
-  title: "Macro and Micro Test",
+  title: "Macro and Micro Test | Texas Technical Services",
   description:
     "Macro and micro mechanical testing for material characterisation at different length scales — weld macro examination, metallographic grain structure analysis, inclusion assessment, and microstructural characterisation to ASTM and ISO standards in Kuwait and Dubai.",
   alternates: { canonical: "/service/macro-and-micro-test/" },

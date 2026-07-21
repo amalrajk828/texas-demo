@@ -13,7 +13,7 @@ export const metadata: Metadata = {
     title: "Control System Integration & Upgradation | Texas Technical Services",
     description: "PLC and SCADA automation, system integration, and legacy upgrades. Siemens, Allen-Bradley, Schneider. Kuwait & Dubai.",
     url: "/service/system-software-upgrade/",
-    images: [{ url: "/og-control-system.jpg", width: 1200, height: 630, alt: "Control System Integration — Texas Technical Services" }],
+    images: [{ url: "/og-default.png", width: 1200, height: 630, alt: "Control System Integration — Texas Technical Services" }],
   },
   twitter: { card: "summary_large_image", title: "Control System Integration & Upgradation | Texas Technical Services", description: "PLC, SCADA, and control system integration. Kuwait & Dubai." },
   keywords: ["PLC integration Kuwait", "SCADA Kuwait", "control system upgrade Kuwait", "automation integration Kuwait", "Siemens PLC Kuwait", "Allen-Bradley Kuwait", "SCADA system Kuwait", "Texas Technical Services PLC"],

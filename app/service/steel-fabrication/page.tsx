@@ -13,7 +13,7 @@ export const metadata: Metadata = {
     title: "Steel Fabrication | Texas Technical Services",
     description: "Cutting, bending, welding, and assembling — skids, pipework, and structural components.",
     url: "/service/steel-fabrication/",
-    images: [{ url: "/og-steel-fabrication.jpg", width: 1200, height: 630, alt: "Steel Fabrication — Texas Technical Services" }],
+    images: [{ url: "/og-default.png", width: 1200, height: 630, alt: "Steel Fabrication — Texas Technical Services" }],
   },
   twitter: { card: "summary_large_image", title: "Steel Fabrication | Texas Technical Services", description: "Transforming raw steel into finished structures through cutting, bending, welding, and assembling — skids, pipework, and structural components for industrial applications." },
   keywords: ["Steel Fabrication Kuwait", "Steel Fabrication Dubai", "Texas Technical Services Steel Fabrication", "industrial steel fabrication Kuwait", "steel skids Kuwait", "structural steel components Kuwait"],

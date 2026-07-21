@@ -18,6 +18,7 @@ export const metadata: Metadata = {
     description:
       "Structural steel fabrication, gantry fabrication, piping, electrical works, and EPC project execution for oil and gas plants in Kuwait and the GCC.",
     url: "/service/constructions/",
+    images: [{ url: "/og-default.png", width: 1200, height: 630, alt: "Industrial Construction & Project Delivery — Texas Technical Services" }],
   },
   twitter: {
     card: "summary_large_image",

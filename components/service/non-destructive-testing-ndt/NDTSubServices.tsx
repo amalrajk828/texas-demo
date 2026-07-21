@@ -42,7 +42,7 @@ const NDT_METHODS = [
   {
     Icon: Waves,
     title: "Ultrasonic Testing (UT)",
-    body: "Ultrasonic Testing uses high-frequency sound waves to inspect the internal structure of materials and detect defects and flaws. Particularly effective for inspecting welds, forgings, castings, and manufactured components in metals and non-metallic materials.",
+    body: "Ultrasonic Testing uses high-frequency sound waves to inspect the internal structure of materials and detect defects and flaws. Particularly effective for inspecting welds, forgings, castings, and manufactured components in metals and non-metallic materials — providing precise depth and location data for fitness-for-service assessments.",
     href: "/service/ultrasonic-testing-ut/",
   },
 ];

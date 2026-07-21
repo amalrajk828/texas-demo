@@ -5,7 +5,7 @@ import { BreadcrumbJsonLd } from "@/components/schema/BreadcrumbJsonLd";
 import { ServiceJsonLd } from "@/components/schema/ServiceJsonLd";
 
 export const metadata: Metadata = {
-  title: "Hardness Test",
+  title: "Hardness Test | Texas Technical Services",
   description:
     "Rockwell, Brinell, and Vickers hardness testing for metals, plastics, and ceramics — measuring material resistance to permanent deformation to ASTM E18, E10, E92, ISO 6508, 6506, 6507 standards in Kuwait and Dubai.",
   alternates: { canonical: "/service/hardness-test/" },

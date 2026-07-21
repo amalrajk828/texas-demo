@@ -5,7 +5,7 @@ import { BreadcrumbJsonLd } from "@/components/schema/BreadcrumbJsonLd";
 import { ServiceJsonLd } from "@/components/schema/ServiceJsonLd";
 
 export const metadata: Metadata = {
-  title: "Repair & Upgrades for Helical Flow Meters",
+  title: "Repair & Upgrades for Helical Flow Meters | Texas Technical Services",
   description:
     "Authorised Faure Herman OEM Representative providing preventive and corrective maintenance, performance analysis, failure investigation, and repair services for helical flow meters in Kuwait and Dubai.",
   alternates: {
@@ -18,7 +18,7 @@ export const metadata: Metadata = {
     url: "/service/repair-upgrades-for-helical-flow-meters/",
     images: [
       {
-        url: "/og-helical-flow-meter-repair.jpg",
+        url: "/og-default.png",
         width: 1200,
         height: 630,
         alt: "Repair & Upgrades for Helical Flow Meters — Texas Technical Services",

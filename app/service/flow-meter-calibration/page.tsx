@@ -5,7 +5,7 @@ import { BreadcrumbJsonLd } from "@/components/schema/BreadcrumbJsonLd";
 import { ServiceJsonLd } from "@/components/schema/ServiceJsonLd";
 
 export const metadata: Metadata = {
-  title: "Flow Meter Calibration",
+  title: "Flow Meter Calibration | Texas Technical Services",
   description:
     "Faure Herman ILAC/COFRAC ISO 17025 accredited flow meter calibration services — initial & periodic verification to OIML R117 class 0.3 and API MPMS, as found calibration, real target fluid calibration, and 2-week emergency service for custody transfer flowmeters in Kuwait and Dubai.",
   alternates: {
@@ -18,7 +18,7 @@ export const metadata: Metadata = {
     url: "/service/flow-meter-calibration/",
     images: [
       {
-        url: "/og-flow-meter-calibration.jpg",
+        url: "/og-default.png",
         width: 1200,
         height: 630,
         alt: "Flow Meter Calibration — Texas Technical Services",

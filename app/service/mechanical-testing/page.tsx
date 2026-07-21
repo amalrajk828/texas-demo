@@ -5,7 +5,7 @@ import { BreadcrumbJsonLd } from "@/components/schema/BreadcrumbJsonLd";
 import { ServiceJsonLd } from "@/components/schema/ServiceJsonLd";
 
 export const metadata: Metadata = {
-  title: "Mechanical Testing Services",
+  title: "Mechanical Testing Services | Texas Technical Services",
   description:
     "Comprehensive mechanical testing services for metals, plastics, ceramics, and composites — tensile testing, hardness testing, impact testing, bend testing, fracture toughness, and macro/micro examination in Kuwait and Dubai.",
   alternates: {

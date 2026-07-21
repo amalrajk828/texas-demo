@@ -7,7 +7,7 @@ import { FaqPageJsonLd } from "@/components/schema/FaqPageJsonLd";
 import { ChevronRight } from "lucide-react";
 
 export const metadata: Metadata = {
-  title: "Industrial Automation, PLC SCADA & Process Control Solutions",
+  title: "Industrial Automation, PLC SCADA & Process Control Solutions | Texas Technical Services",
   description:
     "Texas Technical Services Co. (TTS) is a leading industrial automation company in Kuwait, UAE, and Saudi Arabia — providing industrial automation & control systems, control and automation engineering, PLC and SCADA system integrator services, process control automation solutions, plant automation, automation in manufacturing industry, and control systems and automation for oil & gas, power, and industrial sectors across the GCC.",
   alternates: {
@@ -18,6 +18,7 @@ export const metadata: Metadata = {
     description:
       "Industrial automation & control systems, control and automation engineering, and plant and process automation — PLC and SCADA system integrators in Kuwait, UAE, and Saudi Arabia serving manufacturing, power plant, and oil & gas sectors.",
     url: "/service/industrial-automation/",
+    images: [{ url: "/og-default.png", width: 1200, height: 630, alt: "Industrial Automation, PLC SCADA & Process Control — Texas Technical Services" }],
   },
   twitter: {
     card: "summary_large_image",

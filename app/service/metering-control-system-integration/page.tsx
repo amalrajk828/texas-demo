@@ -6,7 +6,7 @@ import { BreadcrumbJsonLd } from "@/components/schema/BreadcrumbJsonLd";
 import { ServiceJsonLd } from "@/components/schema/ServiceJsonLd";
 
 export const metadata: Metadata = {
-  title: "Metering Control System Integration",
+  title: "Metering Control System Integration | Texas Technical Services",
   description:
     "Texas Technical Services (TTS) specializes in Custody Transfer Flow Metering Control System Development and Integration — SCADA, PLC, HMI, server configuration, and full system integration for precise, compliant custody transfer operations.",
   alternates: {
@@ -19,7 +19,7 @@ export const metadata: Metadata = {
     url: "/service/metering-control-system-integration/",
     images: [
       {
-        url: "/og-metering-control-system-integration.jpg",
+        url: "/og-default.png",
         width: 1200,
         height: 630,
         alt: "Metering Control System Integration — Texas Technical Services",

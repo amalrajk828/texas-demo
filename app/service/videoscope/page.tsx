@@ -13,7 +13,7 @@ export const metadata: Metadata = {
     title: "Videoscope Remote Visual Inspection | Texas Technical Services",
     description: "Remote visual inspection for confined spaces — pipes, vessels, turbines. HD recording. Kuwait & Dubai.",
     url: "/service/videoscope/",
-    images: [{ url: "/og-videoscope.jpg", width: 1200, height: 630, alt: "Videoscope Inspection — Texas Technical Services" }],
+    images: [{ url: "/og-default.png", width: 1200, height: 630, alt: "Videoscope Inspection — Texas Technical Services" }],
   },
   twitter: { card: "summary_large_image", title: "Videoscope Remote Visual Inspection | Texas Technical Services", description: "Remote visual inspection for confined spaces. Kuwait & Dubai." },
   keywords: ["videoscope inspection Kuwait", "remote visual inspection Kuwait", "borescope inspection Kuwait", "internal pipe inspection Kuwait", "confined space inspection Kuwait", "Texas Technical Services videoscope"],

@@ -5,7 +5,7 @@ import { BreadcrumbJsonLd } from "@/components/schema/BreadcrumbJsonLd";
 import { ServiceJsonLd } from "@/components/schema/ServiceJsonLd";
 
 export const metadata: Metadata = {
-  title: "Impact Test",
+  title: "Impact Test | Texas Technical Services",
   description:
     "Charpy and Izod impact testing to measure material resistance to sudden shock loading — including low-temperature impact testing and ductile-to-brittle transition assessment to ASTM E23, ISO 148 standards in Kuwait and Dubai.",
   alternates: { canonical: "/service/impact-test/" },

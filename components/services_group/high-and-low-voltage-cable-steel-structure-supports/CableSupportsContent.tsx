@@ -34,6 +34,15 @@ export default function CableSupportsContent() {
             Cable Support Structure Capabilities
           </h2>
         </FadeUp>
+        <FadeUp delay={0.06} className="mb-12">
+          <div className="max-w-3xl">
+            <div className="flex items-center gap-2.5 mb-4"><span className="w-5 h-px bg-[#e7212b]" /><span className="text-[#e7212b] text-[10px] font-semibold tracking-[3.5px] uppercase">What We Do</span></div>
+            <h2 className="text-3xl sm:text-[2.2rem] font-bold text-[#0B0D26] leading-[1.15] mb-5">Cable Tray, Ladder, and Support Structure Installation</h2>
+            <p className="text-gray-500 text-[15px] leading-[1.85] mb-4">Cable support systems are the backbone of electrical distribution in industrial and commercial facilities. TTS designs, supplies, and installs cable tray, cable ladder, perforated tray, and solid-bottom trough systems for power cables, control cables, and fibre optic routes — engineered to support the cable weights, bend radii, and environmental conditions of your project.</p>
+            <p className="text-gray-500 text-[15px] leading-[1.85] mb-4">Our installation teams ensure proper support spacing, seismic bracing, thermal expansion provisions, and fire barrier penetrations in accordance with IEC 61537, NEC Article 392, and project specifications. We also provide heat tracing installation for freeze protection and process temperature maintenance, with complete electrical testing and certification of all installed cable support infrastructure.</p>
+            <p className="text-gray-500 text-[15px] leading-[1.85] mb-8">TTS delivers turnkey cable support solutions from design and material supply through installation and commissioning. Our teams work across industrial plants, commercial buildings, and infrastructure projects — ensuring cable routes are correctly supported, segregated, and labelled for long-term reliability and ease of maintenance throughout the facility lifecycle.</p>
+          </div>
+        </FadeUp>
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 mb-16">
           {CARDS.map((card, i) => (
             <FadeUp key={card.title} delay={0.08 * i}>

@@ -18,7 +18,7 @@ export const metadata: Metadata = {
     url: "/service/validation-and-uncertainty-calculations/",
     images: [
       {
-        url: "/og-validation-uncertainty.jpg",
+        url: "/og-default.png",
         width: 1200,
         height: 630,
         alt: "Validation and Uncertainty Calculations — Texas Technical Services",

@@ -5,7 +5,7 @@ import { BreadcrumbJsonLd } from "@/components/schema/BreadcrumbJsonLd";
 import { ServiceJsonLd } from "@/components/schema/ServiceJsonLd";
 
 export const metadata: Metadata = {
-  title: "Commissioning and Start-up Support",
+  title: "Commissioning and Start-up Support | Texas Technical Services",
   description:
     "Industrial process automation commissioning and start-up support — validation and fine-tuning of PLCs, DCS, SCADA, sensors, and safety systems from pre-commissioning through hot start-up and post-commissioning handover in Kuwait and Dubai.",
   alternates: { canonical: "/service/commissioning-and-start-up-support/" },
@@ -13,7 +13,7 @@ export const metadata: Metadata = {
     title: "Commissioning and Start-up Support | Texas Technical Services",
     description: "Automation commissioning, start-up, and maintenance for oil & gas, chemical, and manufacturing. Kuwait & Dubai.",
     url: "/service/commissioning-and-start-up-support/",
-    images: [{ url: "/og-commissioning.jpg", width: 1200, height: 630, alt: "Commissioning and Start-up Support — Texas Technical Services" }],
+    images: [{ url: "/og-default.png", width: 1200, height: 630, alt: "Commissioning and Start-up Support — Texas Technical Services" }],
   },
   twitter: { card: "summary_large_image", title: "Commissioning and Start-up Support | Texas Technical Services", description: "Automation commissioning and start-up. Kuwait & Dubai." },
   keywords: ["commissioning Kuwait", "automation commissioning Kuwait", "start-up support Kuwait", "PLC commissioning Kuwait", "SCADA commissioning Kuwait", "industrial commissioning Kuwait", "Texas Technical Services commissioning"],

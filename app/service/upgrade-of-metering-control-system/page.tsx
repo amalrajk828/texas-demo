@@ -19,7 +19,7 @@ export const metadata: Metadata = {
     url: "/service/upgrade-of-metering-control-system/",
     images: [
       {
-        url: "/og-upgrade-metering-control-system.jpg",
+        url: "/og-default.png",
         width: 1200,
         height: 630,
         alt: "Upgrade of Metering Control System — Texas Technical Services",

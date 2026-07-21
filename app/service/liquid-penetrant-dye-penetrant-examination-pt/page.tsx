@@ -5,7 +5,7 @@ import { BreadcrumbJsonLd } from "@/components/schema/BreadcrumbJsonLd";
 import { ServiceJsonLd } from "@/components/schema/ServiceJsonLd";
 
 export const metadata: Metadata = {
-  title: "Liquid Penetrant / Dye Penetrant Examination (PT)",
+  title: "Liquid Penetrant / Dye Penetrant Examination (PT) | Texas Technical Services",
   description:
     "Liquid Penetrant Testing (LPT/LPI/DPT) using capillary forces to detect surface-breaking cracks, laps, and porosity in metals, ceramics, and plastics — fluorescent and colour contrast methods to ASTM E165, ISO 3452 standards in Kuwait and Dubai.",
   alternates: { canonical: "/service/liquid-penetrant-dye-penetrant-examination-pt/" },

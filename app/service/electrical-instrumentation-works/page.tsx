@@ -13,7 +13,7 @@ export const metadata: Metadata = {
     title: "Electrical & Instrumentation Works | Texas Technical Services",
     description: "Installation, maintenance, and optimization of electrical systems and instrumentation equipment.",
     url: "/service/electrical-instrumentation-works/",
-    images: [{ url: "/og-electrical-works.jpg", width: 1200, height: 630, alt: "Electrical & Instrumentation Works — Texas Technical Services" }],
+    images: [{ url: "/og-default.png", width: 1200, height: 630, alt: "Electrical & Instrumentation Works — Texas Technical Services" }],
   },
   twitter: { card: "summary_large_image", title: "Electrical & Instrumentation Works | Texas Technical Services", description: "Installation, maintenance, and optimization of electrical systems and instrumentation equipment for industrial facilities — from design to commissioning." },
   keywords: ["Electrical & Instrumentation Works Kuwait", "Electrical & Instrumentation Works Dubai", "Texas Technical Services Electrical Works", "industrial electrical systems Kuwait", "instrumentation installation Kuwait", "electrical maintenance Kuwait"],

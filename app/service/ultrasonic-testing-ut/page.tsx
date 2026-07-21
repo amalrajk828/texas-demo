@@ -13,7 +13,7 @@ export const metadata: Metadata = {
     title: "Ultrasonic Testing (UT) | Texas Technical Services",
     description: "Conventional UT, TOFD, and thickness measurement for welds, forgings, and castings. ASME V, API 1104. Kuwait & Dubai.",
     url: "/service/ultrasonic-testing-ut/",
-    images: [{ url: "/og-ultrasonic-testing.jpg", width: 1200, height: 630, alt: "Ultrasonic Testing — Texas Technical Services" }],
+    images: [{ url: "/og-default.png", width: 1200, height: 630, alt: "Ultrasonic Testing — Texas Technical Services" }],
   },
   twitter: { card: "summary_large_image", title: "Ultrasonic Testing (UT) | Texas Technical Services", description: "Conventional UT, TOFD, thickness measurement. ASME V, API 1104. Kuwait & Dubai." },
   keywords: ["ultrasonic testing Kuwait", "UT NDT Kuwait", "TOFD testing Kuwait", "weld ultrasonic testing Kuwait", "thickness measurement Kuwait", "UT inspection Kuwait", "ASME V UT Kuwait", "Texas Technical Services ultrasonic testing"],

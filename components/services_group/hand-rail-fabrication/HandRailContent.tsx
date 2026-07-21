@@ -34,6 +34,15 @@ export default function HandRailContent() {
             Hand Rail Fabrication Capabilities
           </h2>
         </FadeUp>
+        <FadeUp delay={0.06} className="mb-12">
+          <div className="max-w-3xl">
+            <div className="flex items-center gap-2.5 mb-4"><span className="w-5 h-px bg-[#e7212b]" /><span className="text-[#e7212b] text-[10px] font-semibold tracking-[3.5px] uppercase">What We Do</span></div>
+            <h2 className="text-3xl sm:text-[2.2rem] font-bold text-[#0B0D26] leading-[1.15] mb-5">Custom Handrail Fabrication for Safety and Accessibility</h2>
+            <p className="text-gray-500 text-[15px] leading-[1.85] mb-4">Handrails and guardrails are critical safety elements for industrial platforms, stairways, walkways, mezzanines, and loading areas. TTS fabricates handrail systems in mild steel, stainless steel, and aluminium — designed to meet the structural loading requirements and safety regulations applicable to your facility and jurisdiction.</p>
+            <p className="text-gray-500 text-[15px] leading-[1.85] mb-4">Our fabrication workshop produces standard straight sections, curved configurations, and bespoke architectural designs with a range of finish options including hot-dip galvanising, powder coating, and industrial paint systems. All handrails are manufactured to relevant safety standards including OSHA 1910.23, BS 6180, and local building codes — with installation services available for complete turnkey delivery across Kuwait and the GCC.</p>
+            <p className="text-gray-500 text-[15px] leading-[1.85] mb-8">From initial site survey and design consultation through fabrication, surface treatment, and installation, TTS manages the complete handrail project. Our teams work closely with structural engineers, architects, and main contractors to ensure handrail systems integrate seamlessly with the overall building design while meeting all safety and accessibility requirements.</p>
+          </div>
+        </FadeUp>
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 mb-16">
           {CARDS.map((card, i) => (
             <FadeUp key={card.title} delay={0.08 * i}>

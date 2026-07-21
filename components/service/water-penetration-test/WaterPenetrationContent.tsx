@@ -34,6 +34,15 @@ export default function WaterPenetrationContent() {
             Water Penetration Testing Capabilities
           </h2>
         </FadeUp>
+        <FadeUp delay={0.06} className="mb-12">
+          <div className="max-w-3xl">
+            <div className="flex items-center gap-2.5 mb-4"><span className="w-5 h-px bg-[#e7212b]" /><span className="text-[#e7212b] text-[10px] font-semibold tracking-[3.5px] uppercase">What We Do</span></div>
+            <h2 className="text-3xl sm:text-[2.2rem] font-bold text-[#0B0D26] leading-[1.15] mb-5">Static and Dynamic Water Penetration Testing for Exterior Walls</h2>
+            <p className="text-gray-500 text-[15px] leading-[1.85] mb-4">Water penetration testing evaluates the ability of installed curtain wall systems, windows, and doors to resist water ingress under simulated rain conditions with applied air pressure. The test applies uniform water spray to the exterior face while maintaining a specified positive pressure differential — identifying leakage paths through joints, gaskets, glazing seals, and drainage systems.</p>
+            <p className="text-gray-500 text-[15px] leading-[1.85] mb-8">TTS conducts water penetration testing to ASTM E1105, AAMA 501.1, and BS 8200 — using calibrated spray racks, pressure control systems, and systematic observation procedures. Our reports provide detailed leakage mapping with location references, severity classifications, and remedial recommendations — supporting quality assurance during construction and dispute resolution at handover.</p>
+            <p className="text-gray-500 text-[15px] leading-[1.85] mb-8">Testing can be performed at various stages — from mock-up validation during design through to field verification of installed systems. Our technicians work systematically across all facade zones, documenting results in real time and providing immediate feedback to construction teams for rapid corrective action where leakage is identified.</p>
+          </div>
+        </FadeUp>
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 mb-16">
           {CARDS.map((card, i) => (
             <FadeUp key={card.title} delay={0.08 * i}>

@@ -5,7 +5,7 @@ import { BreadcrumbJsonLd } from "@/components/schema/BreadcrumbJsonLd";
 import { ServiceJsonLd } from "@/components/schema/ServiceJsonLd";
 
 export const metadata: Metadata = {
-  title: "Metering Expert Services",
+  title: "Metering Expert Services | Texas Technical Services",
   description:
     "Specialist metering engineering services for on-site assignments, project support, training, and technical secondment — deep custody transfer expertise available in Kuwait, Dubai, and the wider region.",
   alternates: {
@@ -18,7 +18,7 @@ export const metadata: Metadata = {
     url: "/service/metering-expert-services/",
     images: [
       {
-        url: "/og-metering-expert-services.jpg",
+        url: "/og-default.png",
         width: 1200,
         height: 630,
         alt: "Metering Expert Services — Texas Technical Services",

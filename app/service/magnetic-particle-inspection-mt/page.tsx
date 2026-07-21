@@ -5,7 +5,7 @@ import { BreadcrumbJsonLd } from "@/components/schema/BreadcrumbJsonLd";
 import { ServiceJsonLd } from "@/components/schema/ServiceJsonLd";
 
 export const metadata: Metadata = {
-  title: "Magnetic Particle Inspection (MT)",
+  title: "Magnetic Particle Inspection (MT) | Texas Technical Services",
   description:
     "Magnetic Particle Testing (MPT/MPI) for surface and near-surface defect detection in ferromagnetic materials — iron, steel, nickel, and cobalt. Wet fluorescent and colour contrast methods to ASME V, ISO 17638, ASTM E709 in Kuwait and Dubai.",
   alternates: { canonical: "/service/magnetic-particle-inspection-mt/" },

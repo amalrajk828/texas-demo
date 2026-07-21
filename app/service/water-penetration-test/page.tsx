@@ -13,7 +13,7 @@ export const metadata: Metadata = {
     title: "Water Penetration Test | Texas Technical Services",
     description: "Water penetration testing for windows, doors, and curtain walls. ASTM E1105, AAMA 502. Kuwait & Dubai.",
     url: "/service/water-penetration-test/",
-    images: [{ url: "/og-water-penetration.jpg", width: 1200, height: 630, alt: "Water Penetration Test — Texas Technical Services" }],
+    images: [{ url: "/og-default.png", width: 1200, height: 630, alt: "Water Penetration Test — Texas Technical Services" }],
   },
   twitter: { card: "summary_large_image", title: "Water Penetration Test | Texas Technical Services", description: "Window and curtain wall water penetration testing. ASTM E1105. Kuwait & Dubai." },
   keywords: ["water penetration test Kuwait", "curtain wall testing Kuwait", "window water test Kuwait", "building envelope testing Kuwait", "ASTM E1105 Kuwait", "Texas Technical Services water test"],

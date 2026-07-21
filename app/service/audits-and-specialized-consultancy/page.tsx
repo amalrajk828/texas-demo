@@ -5,7 +5,7 @@ import { BreadcrumbJsonLd } from "@/components/schema/BreadcrumbJsonLd";
 import { ServiceJsonLd } from "@/components/schema/ServiceJsonLd";
 
 export const metadata: Metadata = {
-  title: "Audits and Specialized Consultancy",
+  title: "Audits and Specialized Consultancy | Texas Technical Services",
   description:
     "Comprehensive custody metering skid audits, compliance assessments, process optimization, and specialized consultancy services — ensuring accuracy, regulatory conformity, and operational excellence in Kuwait and Dubai.",
   alternates: {
@@ -18,7 +18,7 @@ export const metadata: Metadata = {
     url: "/service/audits-and-specialized-consultancy/",
     images: [
       {
-        url: "/og-audits-consultancy.jpg",
+        url: "/og-default.png",
         width: 1200,
         height: 630,
         alt: "Audits and Specialized Consultancy — Texas Technical Services",

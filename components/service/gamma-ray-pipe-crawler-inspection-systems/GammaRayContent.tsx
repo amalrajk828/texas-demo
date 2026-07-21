@@ -34,6 +34,15 @@ export default function GammaRayContent() {
             Pipe Crawler Radiography Capabilities
           </h2>
         </FadeUp>
+        <FadeUp delay={0.06} className="mb-12">
+          <div className="max-w-3xl">
+            <div className="flex items-center gap-2.5 mb-4"><span className="w-5 h-px bg-[#e7212b]" /><span className="text-[#e7212b] text-[10px] font-semibold tracking-[3.5px] uppercase">What We Do</span></div>
+            <h2 className="text-3xl sm:text-[2.2rem] font-bold text-[#0B0D26] leading-[1.15] mb-5">Internal Radiographic Pipeline Inspection via Gamma Ray Crawler</h2>
+            <p className="text-gray-500 text-[15px] leading-[1.85] mb-4">Gamma ray pipe crawlers provide internal radiographic examination of circumferential welds in pipeline construction — without requiring external access to the weld zone. The crawler positions a radioactive source (typically Ir-192 or Se-75) inside the pipe, directly opposite the weld to be inspected, and exposes radiographic film or digital detector plates mounted on the external surface.</p>
+            <p className="text-gray-500 text-[15px] leading-[1.85] mb-8">This method is particularly valuable for pipeline sections where conventional external radiography is impractical — such as buried crossings, insulated lines, or congested plant areas. TTS operates gamma ray crawler systems for pipeline construction quality assurance and in-service inspection, producing permanent radiographic records that comply with ASME V, API 1104, and ISO 17636-2 standards.</p>
+            <p className="text-gray-500 text-[15px] leading-[1.85] mb-8">Our crawler systems accommodate various pipe diameters and wall thicknesses, with digital radiography options available for immediate image review and faster reporting. TTS manages all radiation safety requirements including source handling, exclusion zone management, and regulatory notifications — ensuring compliant and efficient inspection campaigns on your pipeline projects.</p>
+          </div>
+        </FadeUp>
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 mb-16">
           {CARDS.map((card, i) => (
             <FadeUp key={card.title} delay={0.08 * i}>

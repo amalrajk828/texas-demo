@@ -34,6 +34,15 @@ export default function VideoscopeContent() {
             Videoscope Inspection Applications
           </h2>
         </FadeUp>
+        <FadeUp delay={0.06} className="mb-12">
+          <div className="max-w-3xl">
+            <div className="flex items-center gap-2.5 mb-4"><span className="w-5 h-px bg-[#e7212b]" /><span className="text-[#e7212b] text-[10px] font-semibold tracking-[3.5px] uppercase">What We Do</span></div>
+            <h2 className="text-3xl sm:text-[2.2rem] font-bold text-[#0B0D26] leading-[1.15] mb-5">Borescope and Videoscope Inspection for Internal Access</h2>
+            <p className="text-gray-500 text-[15px] leading-[1.85] mb-4">Video probe inspection enables visual examination of internal surfaces in areas that are inaccessible to direct observation — including boilers, pressure vessels, heat exchangers, turbines, and complex piping systems. High-resolution video endoscopes with articulated tips provide 360-degree manoeuvrability, allowing operators to navigate around bends, through nozzles, and past internal obstructions.</p>
+            <p className="text-gray-500 text-[15px] leading-[1.85] mb-8">TTS deploys industrial videoscopes with diameters from 2.4mm to 8mm and working lengths up to 30 metres — equipped with LED illumination, still image capture, and HD video recording. Our certified inspection technicians produce detailed inspection reports with annotated images and defect mapping, supporting integrity assessments and maintenance planning for your critical assets.</p>
+            <p className="text-gray-500 text-[15px] leading-[1.85] mb-8">Video probe inspections are particularly valuable for pre-operation acceptance, scheduled maintenance outages, and condition monitoring programmes. Our technicians are trained in defect recognition and can provide real-time assessment during inspection — identifying areas of concern that may require further NDT evaluation or maintenance action.</p>
+          </div>
+        </FadeUp>
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 mb-16">
           {CARDS.map((card, i) => (
             <FadeUp key={card.title} delay={0.08 * i}>

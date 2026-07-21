@@ -8,7 +8,7 @@ import { FaqPageJsonLd } from "@/components/schema/FaqPageJsonLd";
 import { ChevronRight } from "lucide-react";
 
 export const metadata: Metadata = {
-  title: "Inspection & Testing Services",
+  title: "Inspection & Testing Services | Texas Technical Services",
   description:
     "Texas Technical Services Co. (TTS) is a leading industrial inspection and testing company in Kuwait — offering NDT (UT, MT, PT, RT, VI), mechanical testing, specialized phased array ultrasonic inspection, and QA consultancy services compliant with ISO 9001:2015, ISO 14001:2015, and ISO 45001:2018 across Kuwait and the GCC.",
   alternates: {
@@ -19,6 +19,7 @@ export const metadata: Metadata = {
     description:
       "Industrial inspection and testing company in Kuwait — NDT, mechanical testing, phased array UT, QA consultancy, and ISO-certified quality management across the GCC.",
     url: "/service/inspection-testing/",
+    images: [{ url: "/og-default.png", width: 1200, height: 630, alt: "Inspection & Testing Services — Texas Technical Services" }],
   },
   twitter: {
     card: "summary_large_image",

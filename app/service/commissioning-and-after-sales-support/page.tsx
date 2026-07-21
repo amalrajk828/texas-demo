@@ -5,7 +5,7 @@ import { BreadcrumbJsonLd } from "@/components/schema/BreadcrumbJsonLd";
 import { ServiceJsonLd } from "@/components/schema/ServiceJsonLd";
 
 export const metadata: Metadata = {
-  title: "Commissioning and After Sales Support",
+  title: "Commissioning and After Sales Support | Texas Technical Services",
   description:
     "Expert commissioning and 24/7 after-sales support for flow meters, metering control systems, metering skids, analyzers, and CEMS — ensuring seamless integration and peak performance in Kuwait and Dubai.",
   alternates: {
@@ -18,7 +18,7 @@ export const metadata: Metadata = {
     url: "/service/commissioning-and-after-sales-support/",
     images: [
       {
-        url: "/og-commissioning-support.jpg",
+        url: "/og-default.png",
         width: 1200,
         height: 630,
         alt: "Commissioning and After Sales Support — Texas Technical Services",

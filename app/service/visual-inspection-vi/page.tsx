@@ -13,7 +13,7 @@ export const metadata: Metadata = {
     title: "Visual Inspection (VI) | Texas Technical Services",
     description: "Visual inspection NDT for surface defect detection — cracks, corrosion, irregularities, dimensional checks. Kuwait & Dubai.",
     url: "/service/visual-inspection-vi/",
-    images: [{ url: "/og-visual-inspection.jpg", width: 1200, height: 630, alt: "Visual Inspection — Texas Technical Services" }],
+    images: [{ url: "/og-default.png", width: 1200, height: 630, alt: "Visual Inspection — Texas Technical Services" }],
   },
   twitter: { card: "summary_large_image", title: "Visual Inspection (VI) | Texas Technical Services", description: "Surface and external visual inspection NDT. Kuwait & Dubai." },
   keywords: ["visual inspection Kuwait", "NDT visual inspection Kuwait", "weld visual examination Kuwait", "surface inspection Kuwait", "VI NDT Kuwait", "remote visual inspection Kuwait", "Texas Technical Services visual inspection"],

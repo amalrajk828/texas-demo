@@ -5,7 +5,7 @@ import { BreadcrumbJsonLd } from "@/components/schema/BreadcrumbJsonLd";
 import { ServiceJsonLd } from "@/components/schema/ServiceJsonLd";
 
 export const metadata: Metadata = {
-  title: "Genuine Spare Parts",
+  title: "Genuine Spare Parts | Texas Technical Services",
   description:
     "Genuine OEM spare parts for Faure Herman helical flow meters and associated metering equipment — authentic, traceable, and quality-certified. Authorised Faure Herman OEM Representative in Kuwait and Dubai.",
   alternates: {
@@ -18,7 +18,7 @@ export const metadata: Metadata = {
     url: "/service/genuine-spare-parts/",
     images: [
       {
-        url: "/og-genuine-spare-parts.jpg",
+        url: "/og-default.png",
         width: 1200,
         height: 630,
         alt: "Genuine Spare Parts — Texas Technical Services",

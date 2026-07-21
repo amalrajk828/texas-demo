@@ -13,7 +13,7 @@ export const metadata: Metadata = {
     title: "Time of Flight Diffraction (TOFD) | Texas Technical Services",
     description: "TOFD weld inspection and crack depth sizing. ASME V, EN ISO 10863. Kuwait & Dubai.",
     url: "/service/time-of-flight-diffraction/",
-    images: [{ url: "/og-tofd.jpg", width: 1200, height: 630, alt: "Time of Flight Diffraction — Texas Technical Services" }],
+    images: [{ url: "/og-default.png", width: 1200, height: 630, alt: "Time of Flight Diffraction — Texas Technical Services" }],
   },
   twitter: { card: "summary_large_image", title: "Time of Flight Diffraction (TOFD) | Texas Technical Services", description: "TOFD weld inspection and crack sizing. ASME V. Kuwait & Dubai." },
   keywords: ["TOFD Kuwait", "time of flight diffraction Kuwait", "weld TOFD Kuwait", "crack sizing NDT Kuwait", "TOFD inspection Kuwait", "ASME V TOFD Kuwait", "Texas Technical Services TOFD"],

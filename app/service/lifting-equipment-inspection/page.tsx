@@ -5,7 +5,7 @@ import { BreadcrumbJsonLd } from "@/components/schema/BreadcrumbJsonLd";
 import { ServiceJsonLd } from "@/components/schema/ServiceJsonLd";
 
 export const metadata: Metadata = {
-  title: "Lifting Equipment Inspection",
+  title: "Lifting Equipment Inspection | Texas Technical Services",
   description:
     "Lifting equipment inspection services for cranes, hoists, forklifts, and elevators — systematic examination by certified competent persons with written reports per LOLER 1998, ASME B30, BS EN 13001 in Kuwait and Dubai.",
   alternates: { canonical: "/service/lifting-equipment-inspection/" },

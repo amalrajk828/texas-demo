@@ -7,7 +7,7 @@ import { FaqPageJsonLd } from "@/components/schema/FaqPageJsonLd";
 import { ChevronRight } from "lucide-react";
 
 export const metadata: Metadata = {
-  title: "Flow Measurement & Control System Solutions",
+  title: "Flow Measurement & Control System Solutions | Texas Technical Services",
   description:
     "Texas Technical Services provides flow measurement services in Ahmadi, Kuwait and across the GCC — metering control system upgrades, maintenance, validation, flow computer configuration, calibration, and specialized consultancy for custody metering systems compliant with API MPMS, AGA, ISO, OIML standards.",
   alternates: {
@@ -18,6 +18,7 @@ export const metadata: Metadata = {
     description:
       "Flow measurement services in Ahmadi, Kuwait — expert custody transfer metering, system integration, upgrades, flow computer configuration, calibration, and validation across the GCC.",
     url: "/service/flow-measurement-solutions/",
+    images: [{ url: "/og-default.png", width: 1200, height: 630, alt: "Flow Measurement & Control System Solutions — Texas Technical Services" }],
   },
   twitter: {
     card: "summary_large_image",
