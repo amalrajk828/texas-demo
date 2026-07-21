@@ -174,7 +174,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { url: `${BASE}/portfolio_group/products/acservos/`, lastModified: thisMonth, changeFrequency: "monthly", priority: 0.6 },
     { url: `${BASE}/portfolio_group/products/analyzers/`, lastModified: thisMonth, changeFrequency: "monthly", priority: 0.7 },
     { url: `${BASE}/portfolio_group/products/analyzers/cems/`, lastModified: thisMonth, changeFrequency: "monthly", priority: 0.6 },
-    { url: `${BASE}/portfolio_group/products/analyzers/dust-analyzer/`, lastModified: thisMonth, changeFrequency: "monthly", priority: 0.6 },
+    { url: `${BASE}/portfolio_group/products/analyzers/dust-analyzers/`, lastModified: thisMonth, changeFrequency: "monthly", priority: 0.6 },
     { url: `${BASE}/portfolio_group/products/analyzers/gas-analyzers/`, lastModified: thisMonth, changeFrequency: "monthly", priority: 0.6 },
     { url: `${BASE}/portfolio_group/products/control-room-interior-and-console/`, lastModified: thisMonth, changeFrequency: "monthly", priority: 0.6 },
     { url: `${BASE}/portfolio_group/products/custody-metering-solutions/`, lastModified: thisMonth, changeFrequency: "monthly", priority: 0.7 },
@@ -204,12 +204,16 @@ export default function sitemap(): MetadataRoute.Sitemap {
   }));
 
   // Dynamic blog article routes — use article date for lastModified
-  const blogRoutes: MetadataRoute.Sitemap = Object.entries(blogArticles).map(([slug, article]) => ({
-    url: `${BASE}/blog/${slug}/`,
-    lastModified: article.date || thisMonth,
-    changeFrequency: "monthly" as const,
-    priority: 0.6,
-  }));
+  const blogRoutes: MetadataRoute.Sitemap = Object.entries(blogArticles).map(([slug, article]) => {
+    const parsed = new Date(article.date);
+    const lastMod = !isNaN(parsed.getTime()) ? parsed.toISOString() : thisMonth;
+    return {
+      url: `${BASE}/blog/${slug}/`,
+      lastModified: lastMod,
+      changeFrequency: "monthly" as const,
+      priority: 0.6,
+    };
+  });
 
   // Dynamic partner detail routes
   const partnerRoutes: MetadataRoute.Sitemap = getAllPartnerSlugs().map((slug) => ({
