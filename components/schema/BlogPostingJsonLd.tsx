@@ -5,11 +5,17 @@ export function BlogPostingJsonLd({
   description,
   image,
   url,
+  datePublished,
+  dateModified,
+  wordCount,
 }: {
   headline: string;
   description: string;
   image: string;
   url: string;
+  datePublished?: string;
+  dateModified?: string;
+  wordCount?: number;
 }) {
   const jsonLd = {
     "@context": "https://schema.org",
@@ -18,6 +24,13 @@ export function BlogPostingJsonLd({
     description,
     image: image.startsWith("http") ? image : `${SITE_URL}${image}`,
     url: `${SITE_URL}${url}`,
+    datePublished,
+    dateModified: dateModified || datePublished,
+    author: {
+      "@type": "Organization",
+      name: "Texas Technical Services",
+      url: SITE_URL,
+    },
     publisher: {
       "@type": "Organization",
       name: "Texas Technical Services",
@@ -27,6 +40,7 @@ export function BlogPostingJsonLd({
       "@type": "WebPage",
       "@id": `${SITE_URL}${url}`,
     },
+    ...(wordCount ? { wordCount } : {}),
   };
   return (
     <script

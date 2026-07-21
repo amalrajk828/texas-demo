@@ -17,8 +17,15 @@ import {
 export const metadata: Metadata = {
   title: "Industrial Engineering Knowledge Hub | Texas Technical Services",
   description: "Access expert technical guides and reference articles on Custody Transfer Metering, SCADA systems, and CEMS compliance for heavy industries.",
+  keywords: "industrial engineering blog, flow measurement, SCADA, CEMS, NDT, automation, Kuwait, UAE, oil and gas",
   alternates: {
     canonical: "/blog/",
+  },
+  robots: {
+    index: true,
+    follow: true,
+    "max-snippet": -1,
+    "max-image-preview": "large",
   },
   openGraph: {
     title: "Industrial Engineering Knowledge Hub | Texas Technical Services",
@@ -119,7 +126,7 @@ export default function BlogIndexPage() {
 
         <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6">
           {/* Breadcrumb */}
-          <nav className="flex items-center gap-1.5 text-[11px] text-white/50 mb-6">
+          <nav className="flex items-center gap-2 text-[13px] text-white/50 mb-8">
             <Link href="/" className="hover:text-white transition-colors">
               Home
             </Link>
@@ -129,7 +136,7 @@ export default function BlogIndexPage() {
 
           <div className="flex items-center gap-2 mb-4">
             <span className="w-5 h-px bg-[#e7212b]" />
-            <span className="text-[#e7212b] text-[10px] font-semibold tracking-[3px] uppercase">
+            <span className="text-[#e7212b] text-[11px] font-semibold tracking-[3px] uppercase">
               TECHNICAL RESOURCE HUB
             </span>
           </div>

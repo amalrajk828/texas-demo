@@ -14,6 +14,7 @@ export interface BlogArticle {
   readTime: string;
   pillar: string;
   description: string;
+  keywords?: string;
   content: string; // HTML string containing rich technical guide markup
 }
 
@@ -26,6 +27,7 @@ export const blogArticles: Record<string, BlogArticle> = {
     readTime: "10 Min Read",
     pillar: "Pillar 1: Flow Measurement & Custody Metering",
     description: "Learn the critical principles of custody transfer metering, including API and AGA compliance, flow meter selection, and calibration for the Oil & Gas industry.",
+    keywords: "custody transfer metering, API MPMS, flow measurement standards",
     image: "/flow_metering_skid.jpg",
     imageAlt: "An industrial custody transfer flow metering skid with piping, valves, and measuring instruments.",
 content: `
@@ -66,16 +68,16 @@ content: `
       </ul>
 
       <div class="overflow-x-auto my-8 not-prose">
-        <table class="min-w-full divide-y divide-gray-200 border border-gray-150 text-[13.5px]">
+        <table class="min-w-full divide-y divide-gray-200 border border-gray-150">
           <thead class="bg-slate-50">
             <tr>
-              <th scope="col" class="px-4 py-3 text-left text-xs font-semibold text-slate-900 uppercase tracking-wider border-b border-gray-150">Parameter</th>
-              <th scope="col" class="px-4 py-3 text-left text-xs font-semibold text-slate-900 uppercase tracking-wider border-b border-gray-150">Coriolis Meter</th>
-              <th scope="col" class="px-4 py-3 text-left text-xs font-semibold text-slate-900 uppercase tracking-wider border-b border-gray-150">Ultrasonic Meter</th>
-              <th scope="col" class="px-4 py-3 text-left text-xs font-semibold text-slate-900 uppercase tracking-wider border-b border-gray-150">Turbine Meter</th>
+              <th scope="col" class="px-4 py-3 text-left font-semibold text-slate-900 uppercase tracking-wider border-b border-gray-150">Parameter</th>
+              <th scope="col" class="px-4 py-3 text-left font-semibold text-slate-900 uppercase tracking-wider border-b border-gray-150">Coriolis Meter</th>
+              <th scope="col" class="px-4 py-3 text-left font-semibold text-slate-900 uppercase tracking-wider border-b border-gray-150">Ultrasonic Meter</th>
+              <th scope="col" class="px-4 py-3 text-left font-semibold text-slate-900 uppercase tracking-wider border-b border-gray-150">Turbine Meter</th>
             </tr>
           </thead>
-          <tbody class="bg-white divide-y divide-gray-150 text-[13px]">
+          <tbody class="bg-white divide-y divide-gray-150">
             <tr>
               <td class="px-4 py-3 font-semibold text-slate-900 bg-slate-50/40">Measurement Mode</td>
               <td class="px-4 py-3 text-gray-600">Direct Mass Flow</td>
@@ -221,6 +223,7 @@ content: `
     readTime: "8 Min Read",
     pillar: "Pillar 2: Industrial Process Automation",
     description: "Learn when to upgrade your legacy SCADA system. Explore the 5 critical signs of obsolescence, cybersecurity requirements under IEC 62443, and migration best practices.",
+    keywords: "SCADA upgrade, legacy system modernization, control architecture",
     image: "/images/control_room_interior_and_console/dynamic_m/1.jpg",
     imageAlt: "A modern industrial control room with multiple SCADA computer monitors displaying real-time process data grids.",
 content: `
@@ -229,8 +232,8 @@ content: `
       </p>
 
       <div class="my-6 rounded-lg bg-slate-50 border border-slate-200 p-5 not-prose">
-        <h4 class="text-[13.5px] font-bold text-slate-900 mb-2">💡 Key Takeaways</h4>
-        <ul class="text-[13px] text-slate-600 space-y-2 list-disc pl-4">
+        <h4 class="font-bold text-slate-900 mb-2">💡 Key Takeaways</h4>
+        <ul class="text-slate-600 space-y-2 list-disc pl-4">
           <li><strong>Downtime Prevention:</strong> Upgrading legacy control hardware eliminates the risk of single-point-of-failure card breakdowns.</li>
           <li><strong>Cyber Hardening:</strong> Implementing IEC 62443 zones and conduits secures industrial assets against modern network threats.</li>
           <li><strong>Data Accessibility:</strong> Modern SCADA architectures utilize open protocols like OPC UA to feed enterprise historians and analytic systems.</li>
@@ -281,15 +284,15 @@ content: `
       </p>
 
       <div class="overflow-x-auto my-8 not-prose">
-        <table class="min-w-full divide-y divide-gray-200 border border-gray-150 text-[13.5px]">
+        <table class="min-w-full divide-y divide-gray-200 border border-gray-150">
           <thead class="bg-slate-50">
             <tr>
-              <th scope="col" class="px-4 py-3 text-left text-xs font-semibold text-slate-900 uppercase tracking-wider border-b border-gray-150">Architecture Feature</th>
-              <th scope="col" class="px-4 py-3 text-left text-xs font-semibold text-slate-900 uppercase tracking-wider border-b border-gray-150">Legacy SCADA Systems</th>
-              <th scope="col" class="px-4 py-3 text-left text-xs font-semibold text-slate-900 uppercase tracking-wider border-b border-gray-150">Modern SCADA Architectures</th>
+              <th scope="col" class="px-4 py-3 text-left font-semibold text-slate-900 uppercase tracking-wider border-b border-gray-150">Architecture Feature</th>
+              <th scope="col" class="px-4 py-3 text-left font-semibold text-slate-900 uppercase tracking-wider border-b border-gray-150">Legacy SCADA Systems</th>
+              <th scope="col" class="px-4 py-3 text-left font-semibold text-slate-900 uppercase tracking-wider border-b border-gray-150">Modern SCADA Architectures</th>
             </tr>
           </thead>
-          <tbody class="bg-white divide-y divide-gray-150 text-[13px]">
+          <tbody class="bg-white divide-y divide-gray-150">
             <tr>
               <td class="px-4 py-3 font-semibold text-slate-900 bg-slate-50/40">Security</td>
               <td class="px-4 py-3 text-gray-600">Perimeter security only; lacks endpoint encryption and user authorization controls.</td>
@@ -365,6 +368,7 @@ content: `
     readTime: "8 Min Read",
     pillar: "Pillar 3: Analyzers & Inspection",
     description: "Continuous Emissions Monitoring Systems (CEMS) compliance guide for industrial plants — covering extractive, in-situ, calibration gas, and EPA regulations.",
+    keywords: "CEMS, emissions monitoring, environmental compliance",
     image: "/cems.png",
     imageAlt: "A Continuous Emissions Monitoring System (CEMS) cabinet with analysis modules and digital readouts.",
 content: `
@@ -373,8 +377,8 @@ content: `
       </p>
 
       <div class="my-6 rounded-lg bg-slate-50 border border-slate-200 p-5 not-prose">
-        <h4 class="text-[13.5px] font-bold text-slate-900 mb-2">💡 Quick Summary (TL;DR)</h4>
-        <p class="text-[13px] text-slate-600">
+        <h4 class="font-bold text-slate-900 mb-2">💡 Quick Summary (TL;DR)</h4>
+        <p class="text-slate-600">
           Continuous emissions monitoring systems (CEMS) are mandatory integrated instrumentation packages used to track and report gaseous pollutants in real time. Compliance requires choosing between extractive and in-situ technologies, implementing automated sample conditioning, and validating systems under EPA 40 CFR Part 60 and EN 14181 QA/QC guidelines.
         </p>
       </div>
@@ -393,15 +397,15 @@ content: `
       </p>
 
       <div class="overflow-x-auto my-8 not-prose">
-        <table class="min-w-full divide-y divide-gray-200 border border-gray-150 text-[13.5px]">
+        <table class="min-w-full divide-y divide-gray-200 border border-gray-150">
           <thead class="bg-slate-50">
             <tr>
-              <th scope="col" class="px-4 py-3 text-left text-xs font-semibold text-slate-900 uppercase tracking-wider border-b border-gray-150">Feature</th>
-              <th scope="col" class="px-4 py-3 text-left text-xs font-semibold text-slate-900 uppercase tracking-wider border-b border-gray-150">Extractive CEMS</th>
-              <th scope="col" class="px-4 py-3 text-left text-xs font-semibold text-slate-900 uppercase tracking-wider border-b border-gray-150">In-Situ CEMS</th>
+              <th scope="col" class="px-4 py-3 text-left font-semibold text-slate-900 uppercase tracking-wider border-b border-gray-150">Feature</th>
+              <th scope="col" class="px-4 py-3 text-left font-semibold text-slate-900 uppercase tracking-wider border-b border-gray-150">Extractive CEMS</th>
+              <th scope="col" class="px-4 py-3 text-left font-semibold text-slate-900 uppercase tracking-wider border-b border-gray-150">In-Situ CEMS</th>
             </tr>
           </thead>
-          <tbody class="bg-white divide-y divide-gray-150 text-[13px]">
+          <tbody class="bg-white divide-y divide-gray-150">
             <tr>
               <td class="px-4 py-3 font-semibold text-slate-900 bg-slate-50/40">Measurement Location</td>
               <td class="px-4 py-3 text-gray-600">Remote analyzer shelter (ground level)</td>
@@ -485,6 +489,7 @@ content: `
     readTime: "9 Min Read",
     pillar: "Pillar 1: Flow Measurement & Custody Metering",
     description: "Learn how to select the right flow meter for liquid and gas systems in petrochemical plants. Compare Coriolis, ultrasonic, and turbine meters.",
+    keywords: "liquid flow meters, gas flow meters, flow meter selection",
     image: "/images/services/flow-measurement.jpg",
     imageAlt: "A multi-path ultrasonic flow meter installed on an industrial gas pipeline.",
 content: `
@@ -542,16 +547,16 @@ content: `
 
       <h2>Key Selection Criteria</h2>
       <div class="overflow-x-auto my-8 not-prose">
-        <table class="min-w-full divide-y divide-gray-200 border border-gray-150 text-[13.5px]">
+        <table class="min-w-full divide-y divide-gray-200 border border-gray-150">
           <thead class="bg-slate-50">
             <tr>
-              <th scope="col" class="px-4 py-3 text-left text-xs font-semibold text-slate-900 uppercase tracking-wider border-b border-gray-150">Meter Type</th>
-              <th scope="col" class="px-4 py-3 text-left text-xs font-semibold text-slate-900 uppercase tracking-wider border-b border-gray-150">Accuracy Class</th>
-              <th scope="col" class="px-4 py-3 text-left text-xs font-semibold text-slate-900 uppercase tracking-wider border-b border-gray-150">Typical Application</th>
-              <th scope="col" class="px-4 py-3 text-left text-xs font-semibold text-slate-900 uppercase tracking-wider border-b border-gray-150">Applicable Standard</th>
+              <th scope="col" class="px-4 py-3 text-left font-semibold text-slate-900 uppercase tracking-wider border-b border-gray-150">Meter Type</th>
+              <th scope="col" class="px-4 py-3 text-left font-semibold text-slate-900 uppercase tracking-wider border-b border-gray-150">Accuracy Class</th>
+              <th scope="col" class="px-4 py-3 text-left font-semibold text-slate-900 uppercase tracking-wider border-b border-gray-150">Typical Application</th>
+              <th scope="col" class="px-4 py-3 text-left font-semibold text-slate-900 uppercase tracking-wider border-b border-gray-150">Applicable Standard</th>
             </tr>
           </thead>
-          <tbody class="bg-white divide-y divide-gray-150 text-[13px]">
+          <tbody class="bg-white divide-y divide-gray-150">
             <tr>
               <td class="px-4 py-3 font-semibold text-slate-900">Coriolis Mass Meter</td>
               <td class="px-4 py-3 text-gray-600">&plusmn;0.05% to &plusmn;0.10% (Liquid)</td>
@@ -627,6 +632,7 @@ content: `
     readTime: "10 Min Read",
     pillar: "Pillar 1: Flow Measurement & Custody Metering",
     description: "Learn how to validate and maintain custody metering skids. Read about FAT/SAT scope, loop calibrations, and GUM uncertainty calculation procedures.",
+    keywords: "custody metering skid, ISO 9001, metering validation",
     image: "/images/services/METERING-1.png",
     imageAlt: "Technicians validating calibration parameters on a large custody transfer oil metering run.",
 content: `
@@ -661,15 +667,15 @@ content: `
       </p>
 
       <div class="overflow-x-auto my-8 not-prose">
-        <table class="min-w-full divide-y divide-gray-200 border border-gray-150 text-[13.5px]">
+        <table class="min-w-full divide-y divide-gray-200 border border-gray-150">
           <thead class="bg-slate-50">
             <tr>
-              <th scope="col" class="px-4 py-3 text-left text-xs font-semibold text-slate-900 uppercase tracking-wider border-b border-gray-150">Verification Task</th>
-              <th scope="col" class="px-4 py-3 text-left text-xs font-semibold text-slate-900 uppercase tracking-wider border-b border-gray-150">FAT Scope</th>
-              <th scope="col" class="px-4 py-3 text-left text-xs font-semibold text-slate-900 uppercase tracking-wider border-b border-gray-150">SAT Scope</th>
+              <th scope="col" class="px-4 py-3 text-left font-semibold text-slate-900 uppercase tracking-wider border-b border-gray-150">Verification Task</th>
+              <th scope="col" class="px-4 py-3 text-left font-semibold text-slate-900 uppercase tracking-wider border-b border-gray-150">FAT Scope</th>
+              <th scope="col" class="px-4 py-3 text-left font-semibold text-slate-900 uppercase tracking-wider border-b border-gray-150">SAT Scope</th>
             </tr>
           </thead>
-          <tbody class="bg-white divide-y divide-gray-150 text-[13px]">
+          <tbody class="bg-white divide-y divide-gray-150">
             <tr>
               <td class="px-4 py-3 font-semibold text-slate-900 bg-slate-50/40">Calibration Verification</td>
               <td class="px-4 py-3 text-gray-600">Reference signal injection (simulated)</td>
@@ -750,6 +756,7 @@ content: `
     readTime: "8 Min Read",
     pillar: "Pillar 2: Industrial Process Automation",
     description: "Learn key requirements for custody transfer flow computer configuration, API MPMS Chapter 21 compliance, and calculation algorithm checks.",
+    keywords: "flow computer, API MPMS 21, flow computation",
     image: "/flow_computer.png",
     imageAlt: "An electronic flow computer module with a digital LCD screen mounted in an automation cabinet.",
 content: `
@@ -792,16 +799,16 @@ content: `
 
       <h2>Key Flow Computer Architectures</h2>
       <div class="overflow-x-auto my-8 not-prose">
-        <table class="min-w-full divide-y divide-gray-200 border border-gray-150 text-[13.5px]">
+        <table class="min-w-full divide-y divide-gray-200 border border-gray-150">
           <thead class="bg-slate-50">
             <tr>
-              <th scope="col" class="px-4 py-3 text-left text-xs font-semibold text-slate-900 uppercase tracking-wider border-b border-gray-150">Brand &amp; Model</th>
-              <th scope="col" class="px-4 py-3 text-left text-xs font-semibold text-slate-900 uppercase tracking-wider border-b border-gray-150">Supported Algorithms</th>
-              <th scope="col" class="px-4 py-3 text-left text-xs font-semibold text-slate-900 uppercase tracking-wider border-b border-gray-150">Key Interfaces</th>
-              <th scope="col" class="px-4 py-3 text-left text-xs font-semibold text-slate-900 uppercase tracking-wider border-b border-gray-150">Compliance Standards</th>
+              <th scope="col" class="px-4 py-3 text-left font-semibold text-slate-900 uppercase tracking-wider border-b border-gray-150">Brand &amp; Model</th>
+              <th scope="col" class="px-4 py-3 text-left font-semibold text-slate-900 uppercase tracking-wider border-b border-gray-150">Supported Algorithms</th>
+              <th scope="col" class="px-4 py-3 text-left font-semibold text-slate-900 uppercase tracking-wider border-b border-gray-150">Key Interfaces</th>
+              <th scope="col" class="px-4 py-3 text-left font-semibold text-slate-900 uppercase tracking-wider border-b border-gray-150">Compliance Standards</th>
             </tr>
           </thead>
-          <tbody class="bg-white divide-y divide-gray-150 text-[13px]">
+          <tbody class="bg-white divide-y divide-gray-150">
             <tr>
               <td class="px-4 py-3 font-semibold text-slate-900">Omni Flow Computers (6000/7000)</td>
               <td class="px-4 py-3 text-gray-600">AGA-3, AGA-7, AGA-8, AGA-9, API MPMS Ch. 11/12</td>
@@ -873,6 +880,7 @@ content: `
     readTime: "9 Min Read",
     pillar: "Pillar 2: Industrial Process Automation",
     description: "Learn how to execute a legacy metering control system upgrade. Read about parallel running, cutover strategies, and flow computer modernization.",
+    keywords: "metering control upgrade, legacy system migration, control automation",
     image: "/omni_flow_computer.png",
     imageAlt: "An upgraded Omni flow computer system panel with process variables displayed on the interface screen.",
 content: `
@@ -917,15 +925,15 @@ content: `
 
       <h2>Key Legacy vs. Modern Metering Differences</h2>
       <div class="overflow-x-auto my-8 not-prose">
-        <table class="min-w-full divide-y divide-gray-200 border border-gray-150 text-[13.5px]">
+        <table class="min-w-full divide-y divide-gray-200 border border-gray-150">
           <thead class="bg-slate-50">
             <tr>
-              <th scope="col" class="px-4 py-3 text-left text-xs font-semibold text-slate-900 uppercase tracking-wider border-b border-gray-150">Control Component</th>
-              <th scope="col" class="px-4 py-3 text-left text-xs font-semibold text-slate-900 uppercase tracking-wider border-b border-gray-150">Legacy Metering Architecture</th>
-              <th scope="col" class="px-4 py-3 text-left text-xs font-semibold text-slate-900 uppercase tracking-wider border-b border-gray-150">Modern Metering Architecture</th>
+              <th scope="col" class="px-4 py-3 text-left font-semibold text-slate-900 uppercase tracking-wider border-b border-gray-150">Control Component</th>
+              <th scope="col" class="px-4 py-3 text-left font-semibold text-slate-900 uppercase tracking-wider border-b border-gray-150">Legacy Metering Architecture</th>
+              <th scope="col" class="px-4 py-3 text-left font-semibold text-slate-900 uppercase tracking-wider border-b border-gray-150">Modern Metering Architecture</th>
             </tr>
           </thead>
-          <tbody class="bg-white divide-y divide-gray-150 text-[13px]">
+          <tbody class="bg-white divide-y divide-gray-150">
             <tr>
               <td class="px-4 py-3 font-semibold text-slate-900">Flow Computers</td>
               <td class="px-4 py-3 text-gray-600">Discontinued single-loop systems, restricted calculation speed, local text interfaces.</td>
@@ -991,6 +999,7 @@ content: `
     readTime: "9 Min Read",
     pillar: "Pillar 1: Flow Measurement & Custody Metering",
     description: "Learn how flare meter calibration ensures EPA and ISO 14001 compliance. Compare ultrasonic insertion and thermal mass flow meters.",
+    keywords: "flare meter calibration, environmental compliance, flare gas measurement",
     image: "/flare_meter.png",
     imageAlt: "A specialized ultrasonic flare gas flow meter sensor assembly installed on a heavy industrial stack header.",
 content: `
@@ -1041,16 +1050,16 @@ content: `
 
       <h2>Key Flare Meter Specifications</h2>
       <div class="overflow-x-auto my-8 not-prose">
-        <table class="min-w-full divide-y divide-gray-200 border border-gray-150 text-[13.5px]">
+        <table class="min-w-full divide-y divide-gray-200 border border-gray-150">
           <thead class="bg-slate-50">
             <tr>
-              <th scope="col" class="px-4 py-3 text-left text-xs font-semibold text-slate-900 uppercase tracking-wider border-b border-gray-150">Meter Type</th>
-              <th scope="col" class="px-4 py-3 text-left text-xs font-semibold text-slate-900 uppercase tracking-wider border-b border-gray-150">Typical Accuracy</th>
-              <th scope="col" class="px-4 py-3 text-left text-xs font-semibold text-slate-900 uppercase tracking-wider border-b border-gray-150">Calibration Method</th>
-              <th scope="col" class="px-4 py-3 text-left text-xs font-semibold text-slate-900 uppercase tracking-wider border-b border-gray-150">Rangeability</th>
+              <th scope="col" class="px-4 py-3 text-left font-semibold text-slate-900 uppercase tracking-wider border-b border-gray-150">Meter Type</th>
+              <th scope="col" class="px-4 py-3 text-left font-semibold text-slate-900 uppercase tracking-wider border-b border-gray-150">Typical Accuracy</th>
+              <th scope="col" class="px-4 py-3 text-left font-semibold text-slate-900 uppercase tracking-wider border-b border-gray-150">Calibration Method</th>
+              <th scope="col" class="px-4 py-3 text-left font-semibold text-slate-900 uppercase tracking-wider border-b border-gray-150">Rangeability</th>
             </tr>
           </thead>
-          <tbody class="bg-white divide-y divide-gray-150 text-[13px]">
+          <tbody class="bg-white divide-y divide-gray-150">
             <tr>
               <td class="px-4 py-3 font-semibold text-slate-900">Ultrasonic Insertion</td>
               <td class="px-4 py-3 text-gray-600">&plusmn;1.0% to &plusmn;5.0% of reading</td>
@@ -1124,6 +1133,7 @@ content: `
     readTime: "9 Min Read",
     pillar: "Pillar 1: Flow Measurement & Custody Metering",
     description: "Learn preventive and corrective maintenance guidelines for helical flow meters. Read about rotor assembly wear, viscosity corrections, and rebuild steps.",
+    keywords: "helical flow meter, preventive maintenance, flow meter upkeep",
     image: "/helical_turbine_meter.png",
     imageAlt: "A precision helical turbine flow meter showing the internal rotor blades during inspection.",
 content: `
@@ -1145,15 +1155,15 @@ content: `
       </p>
 
       <div class="overflow-x-auto my-8 not-prose">
-        <table class="min-w-full divide-y divide-gray-200 border border-gray-150 text-[13.5px]">
+        <table class="min-w-full divide-y divide-gray-200 border border-gray-150">
           <thead class="bg-slate-50">
             <tr>
-              <th scope="col" class="px-4 py-3 text-left text-xs font-semibold text-slate-900 uppercase tracking-wider border-b border-gray-150">Maintenance Interval</th>
-              <th scope="col" class="px-4 py-3 text-left text-xs font-semibold text-slate-900 uppercase tracking-wider border-b border-gray-150">Verification Task</th>
-              <th scope="col" class="px-4 py-3 text-left text-xs font-semibold text-slate-900 uppercase tracking-wider border-b border-gray-150">Expected Outcome</th>
+              <th scope="col" class="px-4 py-3 text-left font-semibold text-slate-900 uppercase tracking-wider border-b border-gray-150">Maintenance Interval</th>
+              <th scope="col" class="px-4 py-3 text-left font-semibold text-slate-900 uppercase tracking-wider border-b border-gray-150">Verification Task</th>
+              <th scope="col" class="px-4 py-3 text-left font-semibold text-slate-900 uppercase tracking-wider border-b border-gray-150">Expected Outcome</th>
             </tr>
           </thead>
-          <tbody class="bg-white divide-y divide-gray-150 text-[13px]">
+          <tbody class="bg-white divide-y divide-gray-150">
             <tr>
               <td class="px-4 py-3 font-semibold text-slate-900 bg-slate-50/40">Weekly</td>
               <td class="px-4 py-3 text-gray-600">Visual inspection, pressure drop logging, leak checks</td>
@@ -1258,6 +1268,7 @@ content: `
     readTime: "9 Min Read",
     pillar: "Pillar 1: Flow Measurement & Custody Metering",
     description: "Learn how to calculate measurement uncertainty in custody transfer. Study GUM uncertainty budgets, Type A/B errors, and API compliance.",
+    keywords: "measurement uncertainty, GUM methodology, custody transfer accuracy",
     image: "/images/services/Banc-Calibr.jpg",
     imageAlt: "A metrologist configuring high-accuracy reference instrumentation on a calibration test bench.",
 content: `
@@ -1319,16 +1330,16 @@ content: `
 
       <h2>Typical Uncertainty Contributions</h2>
       <div class="overflow-x-auto my-8 not-prose">
-        <table class="min-w-full divide-y divide-gray-200 border border-gray-150 text-[13.5px]">
+        <table class="min-w-full divide-y divide-gray-200 border border-gray-150">
           <thead class="bg-slate-50">
             <tr>
-              <th scope="col" class="px-4 py-3 text-left text-xs font-semibold text-slate-900 uppercase tracking-wider border-b border-gray-150">Uncertainty Source</th>
-              <th scope="col" class="px-4 py-3 text-left text-xs font-semibold text-slate-900 uppercase tracking-wider border-b border-gray-150">Typical Standard Uncertainty</th>
-              <th scope="col" class="px-4 py-3 text-left text-xs font-semibold text-slate-900 uppercase tracking-wider border-b border-gray-150">Evaluation Method</th>
-              <th scope="col" class="px-4 py-3 text-left text-xs font-semibold text-slate-900 uppercase tracking-wider border-b border-gray-150">Impact on Net Volume</th>
+              <th scope="col" class="px-4 py-3 text-left font-semibold text-slate-900 uppercase tracking-wider border-b border-gray-150">Uncertainty Source</th>
+              <th scope="col" class="px-4 py-3 text-left font-semibold text-slate-900 uppercase tracking-wider border-b border-gray-150">Typical Standard Uncertainty</th>
+              <th scope="col" class="px-4 py-3 text-left font-semibold text-slate-900 uppercase tracking-wider border-b border-gray-150">Evaluation Method</th>
+              <th scope="col" class="px-4 py-3 text-left font-semibold text-slate-900 uppercase tracking-wider border-b border-gray-150">Impact on Net Volume</th>
             </tr>
           </thead>
-          <tbody class="bg-white divide-y divide-gray-150 text-[13px]">
+          <tbody class="bg-white divide-y divide-gray-150">
             <tr>
               <td class="px-4 py-3 font-semibold text-slate-900">Flow Meter Calibration</td>
               <td class="px-4 py-3 text-gray-600">&plusmn;0.05% to &plusmn;0.12%</td>
@@ -1395,6 +1406,7 @@ content: `
     readTime: "9 Min Read",
     pillar: "Pillar 1: Flow Measurement & Custody Metering",
     description: "Prepare for custody metering audits. Review API metering checklists, audit trails, and documentation requirements for operations.",
+    keywords: "custody metering audit, oil and gas, metering compliance",
     image: "/images/services/metering-experts.jpg",
     imageAlt: "Metering system auditors reviewing calibration reports and validation logs next to an oil metering skid.",
 content: `
@@ -1435,15 +1447,15 @@ content: `
       </p>
 
       <div class="overflow-x-auto my-8 not-prose">
-        <table class="min-w-full divide-y divide-gray-200 border border-gray-150 text-[13.5px]">
+        <table class="min-w-full divide-y divide-gray-200 border border-gray-150">
           <thead class="bg-slate-50">
             <tr>
-              <th scope="col" class="px-4 py-3 text-left text-xs font-semibold text-slate-900 uppercase tracking-wider border-b border-gray-150">Document Type</th>
-              <th scope="col" class="px-4 py-3 text-left text-xs font-semibold text-slate-900 uppercase tracking-wider border-b border-gray-150">Required Verification Details</th>
-              <th scope="col" class="px-4 py-3 text-left text-xs font-semibold text-slate-900 uppercase tracking-wider border-b border-gray-150">Compliance Target</th>
+              <th scope="col" class="px-4 py-3 text-left font-semibold text-slate-900 uppercase tracking-wider border-b border-gray-150">Document Type</th>
+              <th scope="col" class="px-4 py-3 text-left font-semibold text-slate-900 uppercase tracking-wider border-b border-gray-150">Required Verification Details</th>
+              <th scope="col" class="px-4 py-3 text-left font-semibold text-slate-900 uppercase tracking-wider border-b border-gray-150">Compliance Target</th>
             </tr>
           </thead>
-          <tbody class="bg-white divide-y divide-gray-150 text-[13px]">
+          <tbody class="bg-white divide-y divide-gray-150">
             <tr>
               <td class="px-4 py-3 font-semibold text-slate-900">Calibration Certificates</td>
               <td class="px-4 py-3 text-gray-600">Transmitter As-Found and As-Left data, lab certification numbers</td>
@@ -1522,6 +1534,7 @@ content: `
     readTime: "10 Min Read",
     pillar: "Pillar 1: Flow Measurement & Custody Metering",
     description: "Explore unique technical challenges of LNG custody transfer. Compare cryogenic Coriolis meters, energy calculation methods, and GIIGNL guidelines.",
+    keywords: "LNG custody transfer, cryogenic measurement, LNG metering",
     image: "/lng.jpg",
     imageAlt: "A large liquefied natural gas (LNG) carrier ship docked alongside a terminal with loading arms.",
 content: `
@@ -1551,16 +1564,16 @@ content: `
       </ul>
 
       <div class="overflow-x-auto my-8 not-prose">
-        <table class="min-w-full divide-y divide-gray-200 border border-gray-150 text-[13.5px]">
+        <table class="min-w-full divide-y divide-gray-200 border border-gray-150">
           <thead class="bg-slate-50">
             <tr>
-              <th scope="col" class="px-4 py-3 text-left text-xs font-semibold text-slate-900 uppercase tracking-wider border-b border-gray-150">Technology</th>
-              <th scope="col" class="px-4 py-3 text-left text-xs font-semibold text-slate-900 uppercase tracking-wider border-b border-gray-150">Cryogenic Suitability</th>
-              <th scope="col" class="px-4 py-3 text-left text-xs font-semibold text-slate-900 uppercase tracking-wider border-b border-gray-150">Measurement Principle</th>
-              <th scope="col" class="px-4 py-3 text-left text-xs font-semibold text-slate-900 uppercase tracking-wider border-b border-gray-150">Primary Limitation</th>
+              <th scope="col" class="px-4 py-3 text-left font-semibold text-slate-900 uppercase tracking-wider border-b border-gray-150">Technology</th>
+              <th scope="col" class="px-4 py-3 text-left font-semibold text-slate-900 uppercase tracking-wider border-b border-gray-150">Cryogenic Suitability</th>
+              <th scope="col" class="px-4 py-3 text-left font-semibold text-slate-900 uppercase tracking-wider border-b border-gray-150">Measurement Principle</th>
+              <th scope="col" class="px-4 py-3 text-left font-semibold text-slate-900 uppercase tracking-wider border-b border-gray-150">Primary Limitation</th>
             </tr>
           </thead>
-          <tbody class="bg-white divide-y divide-gray-150 text-[13px]">
+          <tbody class="bg-white divide-y divide-gray-150">
             <tr>
               <td class="px-4 py-3 font-semibold text-slate-900">Coriolis Mass Meter</td>
               <td class="px-4 py-3 text-gray-600">Excellent (Direct Mass)</td>
@@ -1648,6 +1661,7 @@ content: `
     readTime: "8 Min Read",
     pillar: "Pillar 2: Industrial Process Automation",
     description: "Compare PLC and PAC architectures for oil & gas industrial automation — performance, scalability, cybersecurity, and total cost of ownership.",
+    keywords: "PLC vs PAC, oil and gas automation, controller selection",
     image: "/images/plc/MELSEC-iQ-R-Series.png",
     imageAlt: "A modular MELSEC iQ-R series programmable logic controller (PLC) rack with input-output modules.",
 content: `
@@ -1656,8 +1670,8 @@ content: `
       </p>
 
       <div class="my-6 rounded-lg bg-slate-50 border border-slate-200 p-5 not-prose">
-        <h4 class="text-[13.5px] font-bold text-slate-900 mb-2">💡 Key Takeaways</h4>
-        <ul class="text-[13px] text-slate-600 space-y-2 list-disc pl-4">
+        <h4 class="font-bold text-slate-900 mb-2">💡 Key Takeaways</h4>
+        <ul class="text-slate-600 space-y-2 list-disc pl-4">
           <li><strong>PLC Focus:</strong> PLCs provide exceptional reliability and rapid scan times for localized, discrete machinery control.</li>
           <li><strong>PAC Focus:</strong> PACs deliver high memory density, multi-tasking processors, and dynamic network interfaces for plant-wide architectures.</li>
           <li><strong>Standards Alignment:</strong> Both platforms execute programs in compliance with the IEC 61131-3 standardization framework.</li>
@@ -1678,16 +1692,16 @@ content: `
       </p>
 
       <div class="overflow-x-auto my-8 not-prose">
-        <table class="min-w-full divide-y divide-gray-200 border border-gray-150 text-[13.5px]">
+        <table class="min-w-full divide-y divide-gray-200 border border-gray-150">
           <thead class="bg-slate-50">
             <tr>
-              <th scope="col" class="px-4 py-3 text-left text-xs font-semibold text-slate-900 uppercase tracking-wider border-b border-gray-150">Parameter</th>
-              <th scope="col" class="px-4 py-3 text-left text-xs font-semibold text-slate-900 uppercase tracking-wider border-b border-gray-150">Programmable Logic Controller (PLC)</th>
-              <th scope="col" class="px-4 py-3 text-left text-xs font-semibold text-slate-900 uppercase tracking-wider border-b border-gray-150">Programmable Automation Controller (PAC)</th>
-              <th scope="col" class="px-4 py-3 text-left text-xs font-semibold text-slate-900 uppercase tracking-wider border-b border-gray-150">Distributed Control System (DCS)</th>
+              <th scope="col" class="px-4 py-3 text-left font-semibold text-slate-900 uppercase tracking-wider border-b border-gray-150">Parameter</th>
+              <th scope="col" class="px-4 py-3 text-left font-semibold text-slate-900 uppercase tracking-wider border-b border-gray-150">Programmable Logic Controller (PLC)</th>
+              <th scope="col" class="px-4 py-3 text-left font-semibold text-slate-900 uppercase tracking-wider border-b border-gray-150">Programmable Automation Controller (PAC)</th>
+              <th scope="col" class="px-4 py-3 text-left font-semibold text-slate-900 uppercase tracking-wider border-b border-gray-150">Distributed Control System (DCS)</th>
             </tr>
           </thead>
-          <tbody class="bg-white divide-y divide-gray-150 text-[13px]">
+          <tbody class="bg-white divide-y divide-gray-150">
             <tr>
               <td class="px-4 py-3 font-semibold text-slate-900 bg-slate-50/40">CPU Architecture</td>
               <td class="px-4 py-3 text-gray-600">Single processor, sequential cyclic execution</td>
@@ -1775,6 +1789,7 @@ content: `
     readTime: "9 Min Read",
     pillar: "Pillar 2: Industrial Process Automation",
     description: "Learn how ICONICS SCADA software and Mitsubishi GOT graphic operator panels integrate for real-time process monitoring in oil & gas and power plants.",
+    keywords: "ICONICS SCADA, GOT HMI, industrial monitoring",
     image: "/images/got/GOT2000-Series.png",
     imageAlt: "A Mitsubishi GOT2000 HMI touch panel displaying process flow diagrams in an automation control loop.",
 content: `
@@ -1783,8 +1798,8 @@ content: `
       </p>
 
       <div class="my-6 rounded-lg bg-slate-50 border border-slate-200 p-5 not-prose">
-        <h4 class="text-[13.5px] font-bold text-slate-900 mb-2">💡 Key Takeaways</h4>
-        <ul class="text-[13px] text-slate-600 space-y-2 list-disc pl-4">
+        <h4 class="font-bold text-slate-900 mb-2">💡 Key Takeaways</h4>
+        <ul class="text-slate-600 space-y-2 list-disc pl-4">
           <li><strong>Unified View:</strong> Integrating ICONICS SCADA and local HMIs creates a single data source from the edge to the control room.</li>
           <li><strong>Open Standards:</strong> OPC UA communication ensures secure, cross-platform data mapping with zero driver conflicts.</li>
           <li><strong>Alarm Safety:</strong> Compliance with ANSI/ISA-18.2 standards prevents alarm floods during plant upsets.</li>
@@ -1818,16 +1833,16 @@ content: `
       </p>
 
       <div class="overflow-x-auto my-8 not-prose">
-        <table class="min-w-full divide-y divide-gray-200 border border-gray-150 text-[13.5px]">
+        <table class="min-w-full divide-y divide-gray-200 border border-gray-150">
           <thead class="bg-slate-50">
             <tr>
-              <th scope="col" class="px-4 py-3 text-left text-xs font-semibold text-slate-900 uppercase tracking-wider border-b border-gray-150">HMI Model Series</th>
-              <th scope="col" class="px-4 py-3 text-left text-xs font-semibold text-slate-900 uppercase tracking-wider border-b border-gray-150">Display Sizes</th>
-              <th scope="col" class="px-4 py-3 text-left text-xs font-semibold text-slate-900 uppercase tracking-wider border-b border-gray-150">Key Interfaces</th>
-              <th scope="col" class="px-4 py-3 text-left text-xs font-semibold text-slate-900 uppercase tracking-wider border-b border-gray-150">Ideal Application</th>
+              <th scope="col" class="px-4 py-3 text-left font-semibold text-slate-900 uppercase tracking-wider border-b border-gray-150">HMI Model Series</th>
+              <th scope="col" class="px-4 py-3 text-left font-semibold text-slate-900 uppercase tracking-wider border-b border-gray-150">Display Sizes</th>
+              <th scope="col" class="px-4 py-3 text-left font-semibold text-slate-900 uppercase tracking-wider border-b border-gray-150">Key Interfaces</th>
+              <th scope="col" class="px-4 py-3 text-left font-semibold text-slate-900 uppercase tracking-wider border-b border-gray-150">Ideal Application</th>
             </tr>
           </thead>
-          <tbody class="bg-white divide-y divide-gray-150 text-[13px]">
+          <tbody class="bg-white divide-y divide-gray-150">
             <tr>
               <td class="px-4 py-3 font-semibold text-slate-900">GOT2000 GT27 Series</td>
               <td class="px-4 py-3 text-gray-600">5.7" to 15" screens</td>
@@ -1901,6 +1916,7 @@ content: `
     readTime: "8 Min Read",
     pillar: "Pillar 2: Industrial Process Automation",
     description: "Technical guide to selecting and applying variable frequency drives (VFDs) in industrial automation — motor control, energy savings, and integration with PLC/SCADA.",
+    keywords: "VFD applications, frequency inverter, motor control",
     image: "/images/frequency-inverters/FR-A800.webp",
     imageAlt: "A heavy-duty Mitsubishi FR-A800 variable frequency drive (VFD) inverter unit mounted on a panel.",
 content: `
@@ -1909,8 +1925,8 @@ content: `
       </p>
 
       <div class="my-6 rounded-lg bg-slate-50 border border-slate-200 p-5 not-prose">
-        <h4 class="text-[13.5px] font-bold text-slate-900 mb-2">💡 Key Takeaways</h4>
-        <ul class="text-[13px] text-slate-600 space-y-2 list-disc pl-4">
+        <h4 class="font-bold text-slate-900 mb-2">💡 Key Takeaways</h4>
+        <ul class="text-slate-600 space-y-2 list-disc pl-4">
           <li><strong>Energy Efficiency:</strong> Implementing VFDs reduces motor power consumption cubicly in centrifugal applications.</li>
           <li><strong>Mechanical Protection:</strong> Soft starting profiles eliminate electrical inrush currents and mechanical wear.</li>
           <li><strong>Harmonic Control:</strong> Proper drive selection must satisfy IEEE 519 standards to prevent electrical noise.</li>
@@ -1950,16 +1966,16 @@ content: `
       </p>
 
       <div class="overflow-x-auto my-8 not-prose">
-        <table class="min-w-full divide-y divide-gray-200 border border-gray-150 text-[13.5px]">
+        <table class="min-w-full divide-y divide-gray-200 border border-gray-150">
           <thead class="bg-slate-50">
             <tr>
-              <th scope="col" class="px-4 py-3 text-left text-xs font-semibold text-slate-900 uppercase tracking-wider border-b border-gray-150">Application Category</th>
-              <th scope="col" class="px-4 py-3 text-left text-xs font-semibold text-slate-900 uppercase tracking-wider border-b border-gray-150">Typical Power Range</th>
-              <th scope="col" class="px-4 py-3 text-left text-xs font-semibold text-slate-900 uppercase tracking-wider border-b border-gray-150">Recommended Control Mode</th>
-              <th scope="col" class="px-4 py-3 text-left text-xs font-semibold text-slate-900 uppercase tracking-wider border-b border-gray-150">Key Advantage</th>
+              <th scope="col" class="px-4 py-3 text-left font-semibold text-slate-900 uppercase tracking-wider border-b border-gray-150">Application Category</th>
+              <th scope="col" class="px-4 py-3 text-left font-semibold text-slate-900 uppercase tracking-wider border-b border-gray-150">Typical Power Range</th>
+              <th scope="col" class="px-4 py-3 text-left font-semibold text-slate-900 uppercase tracking-wider border-b border-gray-150">Recommended Control Mode</th>
+              <th scope="col" class="px-4 py-3 text-left font-semibold text-slate-900 uppercase tracking-wider border-b border-gray-150">Key Advantage</th>
             </tr>
           </thead>
-          <tbody class="bg-white divide-y divide-gray-150 text-[13px]">
+          <tbody class="bg-white divide-y divide-gray-150">
             <tr>
               <td class="px-4 py-3 font-semibold text-slate-900 bg-slate-50/40">Centrifugal Pumps &amp; Fans</td>
               <td class="px-4 py-3 text-gray-600">0.75 kW to 500 kW</td>
@@ -2034,6 +2050,7 @@ content: `
     readTime: "9 Min Read",
     pillar: "Pillar 2: Industrial Process Automation",
     description: "A practical guide to industrial cybersecurity for SCADA and PLC systems — covering IEC 62443 zone-and-conduit architecture, threat assessment, and hardening measures.",
+    keywords: "industrial cybersecurity, IEC 62443, SCADA security",
     image: "/images/control_room_interior_and_console/xlat_cyber/1.jpg",
     imageAlt: "Network server racks with fiber optic patch cords blinking inside an industrial automation cybersecurity center.",
 content: `
@@ -2042,8 +2059,8 @@ content: `
       </p>
 
       <div class="my-6 rounded-lg bg-slate-50 border border-slate-200 p-5 not-prose">
-        <h4 class="text-[13.5px] font-bold text-slate-900 mb-2">💡 Key Takeaways</h4>
-        <ul class="text-[13px] text-slate-600 space-y-2 list-disc pl-4">
+        <h4 class="font-bold text-slate-900 mb-2">💡 Key Takeaways</h4>
+        <ul class="text-slate-600 space-y-2 list-disc pl-4">
           <li><strong>OT Security Priority:</strong> Availability and physical safety are the primary objectives of OT security, differing from IT data confidentiality.</li>
           <li><strong>Defense in Depth:</strong> Implementing zone-and-conduit network architectures prevents malicious lateral movement across control levels.</li>
           <li><strong>Compliance Framework:</strong> Adherence to the ISA/IEC 62443 standard provides a robust, certifiable security system for industrial assets.</li>
@@ -2064,15 +2081,15 @@ content: `
       </p>
 
       <div class="overflow-x-auto my-8 not-prose">
-        <table class="min-w-full divide-y divide-gray-200 border border-gray-150 text-[13.5px]">
+        <table class="min-w-full divide-y divide-gray-200 border border-gray-150">
           <thead class="bg-slate-50">
             <tr>
-              <th scope="col" class="px-4 py-3 text-left text-xs font-semibold text-slate-900 uppercase tracking-wider border-b border-gray-150">Parameter</th>
-              <th scope="col" class="px-4 py-3 text-left text-xs font-semibold text-slate-900 uppercase tracking-wider border-b border-gray-150">IT Cybersecurity Networks</th>
-              <th scope="col" class="px-4 py-3 text-left text-xs font-semibold text-slate-900 uppercase tracking-wider border-b border-gray-150">OT SCADA/PLC Networks</th>
+              <th scope="col" class="px-4 py-3 text-left font-semibold text-slate-900 uppercase tracking-wider border-b border-gray-150">Parameter</th>
+              <th scope="col" class="px-4 py-3 text-left font-semibold text-slate-900 uppercase tracking-wider border-b border-gray-150">IT Cybersecurity Networks</th>
+              <th scope="col" class="px-4 py-3 text-left font-semibold text-slate-900 uppercase tracking-wider border-b border-gray-150">OT SCADA/PLC Networks</th>
             </tr>
           </thead>
-          <tbody class="bg-white divide-y divide-gray-150 text-[13px]">
+          <tbody class="bg-white divide-y divide-gray-150">
             <tr>
               <td class="px-4 py-3 font-semibold text-slate-900 bg-slate-50/40">Primary Objective</td>
               <td class="px-4 py-3 text-gray-600">Data Confidentiality (protection against leaks)</td>
@@ -2175,6 +2192,7 @@ content: `
     readTime: "8 Min Read",
     pillar: "Pillar 2: Industrial Process Automation",
     description: "Technical guide to AC servo motor and drive selection for high-precision industrial manufacturing — covering torque, speed, feedback, and PLC integration.",
+    keywords: "AC servo systems, manufacturing automation, precision control",
     image: "/images/acservos/MR-JE-Servo-Amplifier.webp",
     imageAlt: "A high-precision Mitsubishi MR-JE servo amplifier drive unit designed for accurate motion control.",
 content: `
@@ -2183,8 +2201,8 @@ content: `
       </p>
 
       <div class="my-6 rounded-lg bg-slate-50 border border-slate-200 p-5 not-prose">
-        <h4 class="text-[13.5px] font-bold text-slate-900 mb-2">💡 Key Takeaways</h4>
-        <ul class="text-[13px] text-slate-600 space-y-2 list-disc pl-4">
+        <h4 class="font-bold text-slate-900 mb-2">💡 Key Takeaways</h4>
+        <ul class="text-slate-600 space-y-2 list-disc pl-4">
           <li><strong>Position Precision:</strong> High-resolution encoder feedback enables sub-millimeter positioning accuracy.</li>
           <li><strong>Dynamic Tuning:</strong> Auto-tuning functions match motor responses to changing mechanical loads.</li>
           <li><strong>Standards Compliance:</strong> Motor and drive architectures satisfy safety standards in accordance with IEC 61800.</li>
@@ -2197,16 +2215,16 @@ content: `
       </p>
 
       <div class="overflow-x-auto my-8 not-prose">
-        <table class="min-w-full divide-y divide-gray-200 border border-gray-150 text-[13.5px]">
+        <table class="min-w-full divide-y divide-gray-200 border border-gray-150">
           <thead class="bg-slate-50">
             <tr>
-              <th scope="col" class="px-4 py-3 text-left text-xs font-semibold text-slate-900 uppercase tracking-wider border-b border-gray-150">Feature</th>
-              <th scope="col" class="px-4 py-3 text-left text-xs font-semibold text-slate-900 uppercase tracking-wider border-b border-gray-150">AC Servo System</th>
-              <th scope="col" class="px-4 py-3 text-left text-xs font-semibold text-slate-900 uppercase tracking-wider border-b border-gray-150">Stepper Motor System</th>
-              <th scope="col" class="px-4 py-3 text-left text-xs font-semibold text-slate-900 uppercase tracking-wider border-b border-gray-150">Variable Frequency Drive (VFD)</th>
+              <th scope="col" class="px-4 py-3 text-left font-semibold text-slate-900 uppercase tracking-wider border-b border-gray-150">Feature</th>
+              <th scope="col" class="px-4 py-3 text-left font-semibold text-slate-900 uppercase tracking-wider border-b border-gray-150">AC Servo System</th>
+              <th scope="col" class="px-4 py-3 text-left font-semibold text-slate-900 uppercase tracking-wider border-b border-gray-150">Stepper Motor System</th>
+              <th scope="col" class="px-4 py-3 text-left font-semibold text-slate-900 uppercase tracking-wider border-b border-gray-150">Variable Frequency Drive (VFD)</th>
             </tr>
           </thead>
-          <tbody class="bg-white divide-y divide-gray-150 text-[13px]">
+          <tbody class="bg-white divide-y divide-gray-150">
             <tr>
               <td class="px-4 py-3 font-semibold text-slate-900 bg-slate-50/40">Control Loop</td>
               <td class="px-4 py-3 text-gray-600">Closed-loop (Encoder feedback)</td>
@@ -2303,6 +2321,7 @@ content: `
     readTime: "9 Min Read",
     pillar: "Pillar 2: Industrial Process Automation",
     description: "How to select pressure, temperature, and flow field instruments for extreme industrial environments — covering SIL ratings, process connections, and material selection.",
+    keywords: "field instruments, pressure temperature level, instrument selection",
     image: "/images/field_instruments/pressure_sensors/1.png",
     imageAlt: "An explosion-proof industrial pressure transmitter sensor with a digital local display screen.",
 content: `
@@ -2311,8 +2330,8 @@ content: `
       </p>
 
       <div class="my-6 rounded-lg bg-slate-50 border border-slate-200 p-5 not-prose">
-        <h4 class="text-[13.5px] font-bold text-slate-900 mb-2">💡 Key Takeaways</h4>
-        <ul class="text-[13px] text-slate-600 space-y-2 list-disc pl-4">
+        <h4 class="font-bold text-slate-900 mb-2">💡 Key Takeaways</h4>
+        <ul class="text-slate-600 space-y-2 list-disc pl-4">
           <li><strong>Hazardous Compliance:</strong> Instruments in explosive zones must satisfy ATEX/IECEx certifications.</li>
           <li><strong>Functional Safety:</strong> Safety instrumented loops demand SIL 2 or SIL 3 certified transmitters.</li>
           <li><strong>Diagnostic Protocol:</strong> Deploying HART-enabled instruments allows remote diagnostic tracking in accordance with NAMUR NE 43.</li>
@@ -2341,15 +2360,15 @@ content: `
       </p>
 
       <div class="overflow-x-auto my-8 not-prose">
-        <table class="min-w-full divide-y divide-gray-200 border border-gray-150 text-[13.5px]">
+        <table class="min-w-full divide-y divide-gray-200 border border-gray-150">
           <thead class="bg-slate-50">
             <tr>
-              <th scope="col" class="px-4 py-3 text-left text-xs font-semibold text-slate-900 uppercase tracking-wider border-b border-gray-150">Selection Parameter</th>
-              <th scope="col" class="px-4 py-3 text-left text-xs font-semibold text-slate-900 uppercase tracking-wider border-b border-gray-150">Engineering Consideration</th>
-              <th scope="col" class="px-4 py-3 text-left text-xs font-semibold text-slate-900 uppercase tracking-wider border-b border-gray-150">Applicable Standard</th>
+              <th scope="col" class="px-4 py-3 text-left font-semibold text-slate-900 uppercase tracking-wider border-b border-gray-150">Selection Parameter</th>
+              <th scope="col" class="px-4 py-3 text-left font-semibold text-slate-900 uppercase tracking-wider border-b border-gray-150">Engineering Consideration</th>
+              <th scope="col" class="px-4 py-3 text-left font-semibold text-slate-900 uppercase tracking-wider border-b border-gray-150">Applicable Standard</th>
             </tr>
           </thead>
-          <tbody class="bg-white divide-y divide-gray-150 text-[13px]">
+          <tbody class="bg-white divide-y divide-gray-150">
             <tr>
               <td class="px-4 py-3 font-semibold text-slate-900 bg-slate-50/40">Process Conditions</td>
               <td class="px-4 py-3 text-gray-600">Torque, pressure, temperature limits, process connection flanges</td>
@@ -2448,6 +2467,7 @@ content: `
     readTime: "8 Min Read",
     pillar: "Pillar 2: Industrial Process Automation",
     description: "Practical guide to industrial control room design — covering ergonomic console layout, HMI screen design, alarm management, and ISO 11064 compliance.",
+    keywords: "control room design, ergonomics, HMI optimization",
     image: "/images/control_room_interior_and_console/xlat/2.jpg",
     imageAlt: "Ergonomically designed console desks in a 24/7 petrochemical plant operations room.",
 content: `
@@ -2456,8 +2476,8 @@ content: `
       </p>
 
       <div class="my-6 rounded-lg bg-slate-50 border border-slate-200 p-5 not-prose">
-        <h4 class="text-[13.5px] font-bold text-slate-900 mb-2">💡 Key Takeaways</h4>
-        <ul class="text-[13px] text-slate-600 space-y-2 list-disc pl-4">
+        <h4 class="font-bold text-slate-900 mb-2">💡 Key Takeaways</h4>
+        <ul class="text-slate-600 space-y-2 list-disc pl-4">
           <li><strong>Ergonomic Layout:</strong> Designing space based on ISO 11064 principles optimizes viewing angles and minimizes physical strain.</li>
           <li><strong>HMI Standards:</strong> Following ANSI/ISA-101 design guidelines improves situation awareness through high-contrast displays.</li>
           <li><strong>Alarm Controls:</strong> Implementing ANSI/ISA-18.2 standards manages and rationalizes alarms to prevent operator overload.</li>
@@ -2494,15 +2514,15 @@ content: `
       </p>
 
       <div class="overflow-x-auto my-8 not-prose">
-        <table class="min-w-full divide-y divide-gray-200 border border-gray-150 text-[13.5px]">
+        <table class="min-w-full divide-y divide-gray-200 border border-gray-150">
           <thead class="bg-slate-50">
             <tr>
-              <th scope="col" class="px-4 py-3 text-left text-xs font-semibold text-slate-900 uppercase tracking-wider border-b border-gray-150">HMI Level</th>
-              <th scope="col" class="px-4 py-3 text-left text-xs font-semibold text-slate-900 uppercase tracking-wider border-b border-gray-150">HMI Display Purpose</th>
-              <th scope="col" class="px-4 py-3 text-left text-xs font-semibold text-slate-900 uppercase tracking-wider border-b border-gray-150">Typical Display Elements</th>
+              <th scope="col" class="px-4 py-3 text-left font-semibold text-slate-900 uppercase tracking-wider border-b border-gray-150">HMI Level</th>
+              <th scope="col" class="px-4 py-3 text-left font-semibold text-slate-900 uppercase tracking-wider border-b border-gray-150">HMI Display Purpose</th>
+              <th scope="col" class="px-4 py-3 text-left font-semibold text-slate-900 uppercase tracking-wider border-b border-gray-150">Typical Display Elements</th>
             </tr>
           </thead>
-          <tbody class="bg-white divide-y divide-gray-150 text-[13px]">
+          <tbody class="bg-white divide-y divide-gray-150">
             <tr>
               <td class="px-4 py-3 font-semibold text-slate-900 bg-slate-50/40">Level 1</td>
               <td class="px-4 py-3 text-gray-600">Overview display (Plant-wide status)</td>
@@ -2570,6 +2590,7 @@ content: `
     readTime: "8 Min Read",
     pillar: "Pillar 2: Industrial Process Automation",
     description: "Comprehensive guide to industrial sensors for process control — proximity, level, temperature, pressure, and flow sensors with selection criteria and standards.",
+    keywords: "industrial sensors, sensor types, process monitoring",
     image: "/images/sensors/Photoelectric Sensors.png",
     imageAlt: "Industrial photoelectric distance sensors mounted on a manufacturing conveyor line.",
 content: `
@@ -2578,8 +2599,8 @@ content: `
       </p>
 
       <div class="my-6 rounded-lg bg-slate-50 border border-slate-200 p-5 not-prose">
-        <h4 class="text-[13.5px] font-bold text-slate-900 mb-2">💡 Key Takeaways</h4>
-        <ul class="text-[13px] text-slate-600 space-y-2 list-disc pl-4">
+        <h4 class="font-bold text-slate-900 mb-2">💡 Key Takeaways</h4>
+        <ul class="text-slate-600 space-y-2 list-disc pl-4">
           <li><strong>Proximity Sensing:</strong> Non-contact sensors detect target presence without mechanical contact, reducing wear.</li>
           <li><strong>Digital Integration:</strong> Deploying IO-Link enabled sensors supports bi-directional diagnostics and configuration changes.</li>
           <li><strong>Rugged Enclosures:</strong> Sensor selections for extreme environments must satisfy IP67 or IP68 ingress protection ratings.</li>
@@ -2592,15 +2613,15 @@ content: `
       </p>
 
       <div class="overflow-x-auto my-8 not-prose">
-        <table class="min-w-full divide-y divide-gray-200 border border-gray-150 text-[13.5px]">
+        <table class="min-w-full divide-y divide-gray-200 border border-gray-150">
           <thead class="bg-slate-50">
             <tr>
-              <th scope="col" class="px-4 py-3 text-left text-xs font-semibold text-slate-900 uppercase tracking-wider border-b border-gray-150">Sensor Type</th>
-              <th scope="col" class="px-4 py-3 text-left text-xs font-semibold text-slate-900 uppercase tracking-wider border-b border-gray-150">Measurement Target</th>
-              <th scope="col" class="px-4 py-3 text-left text-xs font-semibold text-slate-900 uppercase tracking-wider border-b border-gray-150">Standard Output Format</th>
+              <th scope="col" class="px-4 py-3 text-left font-semibold text-slate-900 uppercase tracking-wider border-b border-gray-150">Sensor Type</th>
+              <th scope="col" class="px-4 py-3 text-left font-semibold text-slate-900 uppercase tracking-wider border-b border-gray-150">Measurement Target</th>
+              <th scope="col" class="px-4 py-3 text-left font-semibold text-slate-900 uppercase tracking-wider border-b border-gray-150">Standard Output Format</th>
             </tr>
           </thead>
-          <tbody class="bg-white divide-y divide-gray-150 text-[13px]">
+          <tbody class="bg-white divide-y divide-gray-150">
             <tr>
               <td class="px-4 py-3 font-semibold text-slate-900 bg-slate-50/40">Proximity Sensors</td>
               <td class="px-4 py-3 text-gray-600">Non-contact object detection, valve limit verification</td>
@@ -2694,6 +2715,7 @@ content: `
     readTime: "9 Min Read",
     pillar: "Pillar 2: Industrial Process Automation",
     description: "A step-by-step guide to commissioning industrial automation systems — from factory acceptance testing through site commissioning, loop testing, and operational handover.",
+    keywords: "automation commissioning, FAT, plant handover",
     image: "/images/services/automation.jpg",
     imageAlt: "Commissioning engineers inspecting wiring terminations and loops inside an automation control panel.",
 content: `
@@ -2702,8 +2724,8 @@ content: `
       </p>
 
       <div class="my-6 rounded-lg bg-slate-50 border border-slate-200 p-5 not-prose">
-        <h4 class="text-[13.5px] font-bold text-slate-900 mb-2">💡 Key Takeaways</h4>
-        <ul class="text-[13px] text-slate-600 space-y-2 list-disc pl-4">
+        <h4 class="font-bold text-slate-900 mb-2">💡 Key Takeaways</h4>
+        <ul class="text-slate-600 space-y-2 list-disc pl-4">
           <li><strong>Integrated Phasing:</strong> Commissioning moves sequentially from factory loop simulations through site loop testing to active process start-up.</li>
           <li><strong>Checkout Methods:</strong> I/O wiring mapping and checkout are performed against verified ISA-5.1 P&amp;ID layout schematics.</li>
           <li><strong>Safety Verification:</strong> Emergency interlocks and safety shutdowns undergo validation in compliance with IEC 61511 rules.</li>
@@ -2745,15 +2767,15 @@ content: `
       </p>
 
       <div class="overflow-x-auto my-8 not-prose">
-        <table class="min-w-full divide-y divide-gray-200 border border-gray-150 text-[13.5px]">
+        <table class="min-w-full divide-y divide-gray-200 border border-gray-150">
           <thead class="bg-slate-50">
             <tr>
-              <th scope="col" class="px-4 py-3 text-left text-xs font-semibold text-slate-900 uppercase tracking-wider border-b border-gray-150">Verification Phase</th>
-              <th scope="col" class="px-4 py-3 text-left text-xs font-semibold text-slate-900 uppercase tracking-wider border-b border-gray-150">Key Testing Scope</th>
-              <th scope="col" class="px-4 py-3 text-left text-xs font-semibold text-slate-900 uppercase tracking-wider border-b border-gray-150">Target Environment</th>
+              <th scope="col" class="px-4 py-3 text-left font-semibold text-slate-900 uppercase tracking-wider border-b border-gray-150">Verification Phase</th>
+              <th scope="col" class="px-4 py-3 text-left font-semibold text-slate-900 uppercase tracking-wider border-b border-gray-150">Key Testing Scope</th>
+              <th scope="col" class="px-4 py-3 text-left font-semibold text-slate-900 uppercase tracking-wider border-b border-gray-150">Target Environment</th>
             </tr>
           </thead>
-          <tbody class="bg-white divide-y divide-gray-150 text-[13px]">
+          <tbody class="bg-white divide-y divide-gray-150">
             <tr>
               <td class="px-4 py-3 font-semibold text-slate-900 bg-slate-50/40">Factory Acceptance (FAT)</td>
               <td class="px-4 py-3 text-gray-600">PLC code simulation, HMI screen mapping, network configuration checks</td>
@@ -2821,6 +2843,7 @@ content: `
     readTime: "10 Min Read",
     pillar: "Pillar 3: Analyzers & Inspection",
     description: "Comprehensive guide to NDT methods — Visual Inspection, Ultrasonic Testing, Magnetic Particle, Radiographic Testing, and Penetrant Testing with standards references.",
+    keywords: "NDT methods, non-destructive testing, inspection techniques",
     image: "/images/services/ndt.jpg",
     imageAlt: "A non-destructive testing (NDT) technician preparing a weld seam on a steel pipeline for inspection.",
 content: `
@@ -2829,8 +2852,8 @@ content: `
       </p>
 
       <div class="my-6 rounded-lg bg-slate-50 border border-slate-200 p-5 not-prose">
-        <h4 class="text-[13.5px] font-bold text-slate-900 mb-2">💡 Key Takeaways</h4>
-        <ul class="text-[13px] text-slate-600 space-y-2 list-disc pl-4">
+        <h4 class="font-bold text-slate-900 mb-2">💡 Key Takeaways</h4>
+        <ul class="text-slate-600 space-y-2 list-disc pl-4">
           <li><strong>Technique Selection:</strong> NDT methods range from visual inspections to advanced volumetric ultrasonic and radiographic scans.</li>
           <li><strong>Certification Focus:</strong> Operators must be certified under recognized standards, such as ISO 9712 and ASNT SNT-TC-1A guidelines.</li>
           <li><strong>Compliance Framework:</strong> Testing procedures are governed by ASME Section V, AWS D1.1, and ISO codes.</li>
@@ -2873,15 +2896,15 @@ content: `
       </p>
 
       <div class="overflow-x-auto my-8 not-prose">
-        <table class="min-w-full divide-y divide-gray-200 border border-gray-150 text-[13.5px]">
+        <table class="min-w-full divide-y divide-gray-200 border border-gray-150">
           <thead class="bg-slate-50">
             <tr>
-              <th scope="col" class="px-4 py-3 text-left text-xs font-semibold text-slate-900 uppercase tracking-wider border-b border-gray-150">Inspection Technique</th>
-              <th scope="col" class="px-4 py-3 text-left text-xs font-semibold text-slate-900 uppercase tracking-wider border-b border-gray-150">Defect Target</th>
-              <th scope="col" class="px-4 py-3 text-left text-xs font-semibold text-slate-900 uppercase tracking-wider border-b border-gray-150">Material Limitations</th>
+              <th scope="col" class="px-4 py-3 text-left font-semibold text-slate-900 uppercase tracking-wider border-b border-gray-150">Inspection Technique</th>
+              <th scope="col" class="px-4 py-3 text-left font-semibold text-slate-900 uppercase tracking-wider border-b border-gray-150">Defect Target</th>
+              <th scope="col" class="px-4 py-3 text-left font-semibold text-slate-900 uppercase tracking-wider border-b border-gray-150">Material Limitations</th>
             </tr>
           </thead>
-          <tbody class="bg-white divide-y divide-gray-150 text-[13px]">
+          <tbody class="bg-white divide-y divide-gray-150">
             <tr>
               <td class="px-4 py-3 font-semibold text-slate-900 bg-slate-50/40">Visual Inspection (VI)</td>
               <td class="px-4 py-3 text-gray-600">Surface misalignment, weld undercut, corrosion</td>
@@ -2944,6 +2967,7 @@ content: `
     readTime: "9 Min Read",
     pillar: "Pillar 3: Analyzers & Inspection",
     description: "Technical guide to Phased Array Ultrasonic Testing (PAUT) — how it works, advantages over conventional UT, and applications in weld and corrosion inspection.",
+    keywords: "phased array UT, PAUT, weld inspection",
     image: "/images/services/phased-array.jpg",
     imageAlt: "An inspector scanning a structural steel weld using a phased array ultrasonic testing (PAUT) probe.",
 content: `
@@ -2952,8 +2976,8 @@ content: `
       </p>
 
       <div class="my-6 rounded-lg bg-slate-50 border border-slate-200 p-5 not-prose">
-        <h4 class="text-[13.5px] font-bold text-slate-900 mb-2">💡 Key Takeaways</h4>
-        <ul class="text-[13px] text-slate-600 space-y-2 list-disc pl-4">
+        <h4 class="font-bold text-slate-900 mb-2">💡 Key Takeaways</h4>
+        <ul class="text-slate-600 space-y-2 list-disc pl-4">
           <li><strong>Beam Steering:</strong> Multi-element probes sweep acoustic waves through different angles electronically, increasing scanning speeds.</li>
           <li><strong>Safety Priority:</strong> Using PAUT eliminates the radiation hazards and exclusion zones associated with radiography.</li>
           <li><strong>Standards Compliance:</strong> Testing procedures satisfy ASME Section V Article 4 and EN ISO 13588 codes.</li>
@@ -2974,16 +2998,16 @@ content: `
       </p>
 
       <div class="overflow-x-auto my-8 not-prose">
-        <table class="min-w-full divide-y divide-gray-200 border border-gray-150 text-[13.5px]">
+        <table class="min-w-full divide-y divide-gray-200 border border-gray-150">
           <thead class="bg-slate-50">
             <tr>
-              <th scope="col" class="px-4 py-3 text-left text-xs font-semibold text-slate-900 uppercase tracking-wider border-b border-gray-150">Feature</th>
-              <th scope="col" class="px-4 py-3 text-left text-xs font-semibold text-slate-900 uppercase tracking-wider border-b border-gray-150">Conventional UT</th>
-              <th scope="col" class="px-4 py-3 text-left text-xs font-semibold text-slate-900 uppercase tracking-wider border-b border-gray-150">Phased Array UT (PAUT)</th>
-              <th scope="col" class="px-4 py-3 text-left text-xs font-semibold text-slate-900 uppercase tracking-wider border-b border-gray-150">Radiography (RT)</th>
+              <th scope="col" class="px-4 py-3 text-left font-semibold text-slate-900 uppercase tracking-wider border-b border-gray-150">Feature</th>
+              <th scope="col" class="px-4 py-3 text-left font-semibold text-slate-900 uppercase tracking-wider border-b border-gray-150">Conventional UT</th>
+              <th scope="col" class="px-4 py-3 text-left font-semibold text-slate-900 uppercase tracking-wider border-b border-gray-150">Phased Array UT (PAUT)</th>
+              <th scope="col" class="px-4 py-3 text-left font-semibold text-slate-900 uppercase tracking-wider border-b border-gray-150">Radiography (RT)</th>
             </tr>
           </thead>
-          <tbody class="bg-white divide-y divide-gray-150 text-[13px]">
+          <tbody class="bg-white divide-y divide-gray-150">
             <tr>
               <td class="px-4 py-3 font-semibold text-slate-900 bg-slate-50/40">Beam Profile</td>
               <td class="px-4 py-3 text-gray-600">Fixed angle and focus point</td>
@@ -3071,6 +3095,7 @@ content: `
     readTime: "8 Min Read",
     pillar: "Pillar 3: Analyzers & Inspection",
     description: "Learn how TOFD ultrasonic inspection works, when to use it, and how it compares to PAUT and radiography for weld and pressure vessel inspection.",
+    keywords: "TOFD, time of flight diffraction, weld inspection",
     image: "/images/services/time-of-flight-diffraction-tofd-ultrasonic-testing.jpg",
     imageAlt: "A dual-probe TOFD scanner positioned on a welded plate for advanced internal defect detection.",
 content: `
@@ -3079,8 +3104,8 @@ content: `
       </p>
 
       <div class="my-6 rounded-lg bg-slate-50 border border-slate-200 p-5 not-prose">
-        <h4 class="text-[13.5px] font-bold text-slate-900 mb-2">💡 Key Takeaways</h4>
-        <ul class="text-[13px] text-slate-600 space-y-2 list-disc pl-4">
+        <h4 class="font-bold text-slate-900 mb-2">💡 Key Takeaways</h4>
+        <ul class="text-slate-600 space-y-2 list-disc pl-4">
           <li><strong>Tip Diffraction:</strong> TOFD uses low-amplitude sound waves scattered from crack tips to calculate defect heights, independent of beam amplitude.</li>
           <li><strong>Volumetric Speed:</strong> Single-pass scans examine the entire weld volume, improving inspection productivity.</li>
           <li><strong>Standards Compliance:</strong> Testing procedures satisfy ASME Section V Article 4 and EN ISO 10863 codes.</li>
@@ -3101,16 +3126,16 @@ content: `
       </p>
 
       <div class="overflow-x-auto my-8 not-prose">
-        <table class="min-w-full divide-y divide-gray-200 border border-gray-150 text-[13.5px]">
+        <table class="min-w-full divide-y divide-gray-200 border border-gray-150">
           <thead class="bg-slate-50">
             <tr>
-              <th scope="col" class="px-4 py-3 text-left text-xs font-semibold text-slate-900 uppercase tracking-wider border-b border-gray-150">Parameter</th>
-              <th scope="col" class="px-4 py-3 text-left text-xs font-semibold text-slate-900 uppercase tracking-wider border-b border-gray-150">Conventional UT</th>
-              <th scope="col" class="px-4 py-3 text-left text-xs font-semibold text-slate-900 uppercase tracking-wider border-b border-gray-150">Phased Array UT (PAUT)</th>
-              <th scope="col" class="px-4 py-3 text-left text-xs font-semibold text-slate-900 uppercase tracking-wider border-b border-gray-150">Time of Flight Diffraction (TOFD)</th>
+              <th scope="col" class="px-4 py-3 text-left font-semibold text-slate-900 uppercase tracking-wider border-b border-gray-150">Parameter</th>
+              <th scope="col" class="px-4 py-3 text-left font-semibold text-slate-900 uppercase tracking-wider border-b border-gray-150">Conventional UT</th>
+              <th scope="col" class="px-4 py-3 text-left font-semibold text-slate-900 uppercase tracking-wider border-b border-gray-150">Phased Array UT (PAUT)</th>
+              <th scope="col" class="px-4 py-3 text-left font-semibold text-slate-900 uppercase tracking-wider border-b border-gray-150">Time of Flight Diffraction (TOFD)</th>
             </tr>
           </thead>
-          <tbody class="bg-white divide-y divide-gray-150 text-[13px]">
+          <tbody class="bg-white divide-y divide-gray-150">
             <tr>
               <td class="px-4 py-3 font-semibold text-slate-900 bg-slate-50/40">flaw Detection</td>
               <td class="px-4 py-3 text-gray-600">Limited by probe angles, orientation sensitive</td>
@@ -3192,6 +3217,7 @@ content: `
     readTime: "8 Min Read",
     pillar: "Pillar 3: Analyzers & Inspection",
     description: "Comprehensive guide to Magnetic Particle Inspection (MPI) — wet fluorescent, dry powder techniques, yoke magnetization, and weld inspection standards.",
+    keywords: "magnetic particle inspection, MPI, surface defect detection",
     image: "/images/services/Magnetic-Particle-Inspection.jpg",
     imageAlt: "Technicians applying magnetic dust to reveal surface cracks on a metal component under an electromagnetic yoke.",
 content: `
@@ -3200,8 +3226,8 @@ content: `
       </p>
 
       <div class="my-6 rounded-lg bg-slate-50 border border-slate-200 p-5 not-prose">
-        <h4 class="text-[13.5px] font-bold text-slate-900 mb-2">💡 Key Takeaways</h4>
-        <ul class="text-[13px] text-slate-600 space-y-2 list-disc pl-4">
+        <h4 class="font-bold text-slate-900 mb-2">💡 Key Takeaways</h4>
+        <ul class="text-slate-600 space-y-2 list-disc pl-4">
           <li><strong>Leakage Principle:</strong> Cracks in magnetized parts create localized magnetic leakage fields that attract indicator particles.</li>
           <li><strong>High Contrast:</strong> Using wet fluorescent particles under UV light provides high defect detection sensitivity.</li>
           <li><strong>Code Adherence:</strong> Testing procedures are performed in compliance with ASME Section V Article 7 and ASTM E709 codes.</li>
@@ -3222,16 +3248,16 @@ content: `
       </p>
 
       <div class="overflow-x-auto my-8 not-prose">
-        <table class="min-w-full divide-y divide-gray-200 border border-gray-150 text-[13.5px]">
+        <table class="min-w-full divide-y divide-gray-200 border border-gray-150">
           <thead class="bg-slate-50">
             <tr>
-              <th scope="col" class="px-4 py-3 text-left text-xs font-semibold text-slate-900 uppercase tracking-wider border-b border-gray-150">Technique Type</th>
-              <th scope="col" class="px-4 py-3 text-left text-xs font-semibold text-slate-900 uppercase tracking-wider border-b border-gray-150">Carrier Medium</th>
-              <th scope="col" class="px-4 py-3 text-left text-xs font-semibold text-slate-900 uppercase tracking-wider border-b border-gray-150">Sensitivity Level</th>
-              <th scope="col" class="px-4 py-3 text-left text-xs font-semibold text-slate-900 uppercase tracking-wider border-b border-gray-150">Lighting Conditions</th>
+              <th scope="col" class="px-4 py-3 text-left font-semibold text-slate-900 uppercase tracking-wider border-b border-gray-150">Technique Type</th>
+              <th scope="col" class="px-4 py-3 text-left font-semibold text-slate-900 uppercase tracking-wider border-b border-gray-150">Carrier Medium</th>
+              <th scope="col" class="px-4 py-3 text-left font-semibold text-slate-900 uppercase tracking-wider border-b border-gray-150">Sensitivity Level</th>
+              <th scope="col" class="px-4 py-3 text-left font-semibold text-slate-900 uppercase tracking-wider border-b border-gray-150">Lighting Conditions</th>
             </tr>
           </thead>
-          <tbody class="bg-white divide-y divide-gray-150 text-[13px]">
+          <tbody class="bg-white divide-y divide-gray-150">
             <tr>
               <td class="px-4 py-3 font-semibold text-slate-900 bg-slate-50/40">Wet Fluorescent MPI</td>
               <td class="px-4 py-3 text-gray-600">Fluorescent particles in oil or water carrier</td>
@@ -3317,6 +3343,7 @@ content: `
     readTime: "9 Min Read",
     pillar: "Pillar 3: Analyzers & Inspection",
     description: "An authoritative guide to radiographic testing in industrial inspection. Compare X-ray vs gamma ray, film vs digital radiography, and safety requirements.",
+    keywords: "radiographic testing, RT inspection, X-ray gamma ray",
     image: "/images/services/rgt.webp",
     imageAlt: "An industrial radiographic x-ray crawler system positioned inside a large diameter pipeline section.",
 content: `
@@ -3325,8 +3352,8 @@ content: `
       </p>
 
       <div class="my-6 rounded-lg bg-slate-50 border border-slate-200 p-5 not-prose">
-        <h4 class="text-[13.5px] font-bold text-slate-900 mb-2">💡 Key Takeaways</h4>
-        <ul class="text-[13px] text-slate-600 space-y-2 list-disc pl-4">
+        <h4 class="font-bold text-slate-900 mb-2">💡 Key Takeaways</h4>
+        <ul class="text-slate-600 space-y-2 list-disc pl-4">
           <li><strong>Energy Selection:</strong> X-ray machines offer adjustable voltages for thin sections, whereas gamma ray isotopes provide portability for heavy sections.</li>
           <li><strong>Digital Migration:</strong> Transitioning from film to Computed Radiography (CR) or Digital Detector Arrays (DDA) eliminates chemical processing.</li>
           <li><strong>Radiation Safety:</strong> RT operations demand strict exclusion zones and compliance with international IAEA safety guidelines.</li>
@@ -3347,15 +3374,15 @@ content: `
       </p>
 
       <div class="overflow-x-auto my-8 not-prose">
-        <table class="min-w-full divide-y divide-gray-200 border border-gray-150 text-[13.5px]">
+        <table class="min-w-full divide-y divide-gray-200 border border-gray-150">
           <thead class="bg-slate-50">
             <tr>
-              <th scope="col" class="px-4 py-3 text-left text-xs font-semibold text-slate-900 uppercase tracking-wider border-b border-gray-150">Feature</th>
-              <th scope="col" class="px-4 py-3 text-left text-xs font-semibold text-slate-900 uppercase tracking-wider border-b border-gray-150">X-Ray RT Systems</th>
-              <th scope="col" class="px-4 py-3 text-left text-xs font-semibold text-slate-900 uppercase tracking-wider border-b border-gray-150">Gamma Ray RT (Isotopes)</th>
+              <th scope="col" class="px-4 py-3 text-left font-semibold text-slate-900 uppercase tracking-wider border-b border-gray-150">Feature</th>
+              <th scope="col" class="px-4 py-3 text-left font-semibold text-slate-900 uppercase tracking-wider border-b border-gray-150">X-Ray RT Systems</th>
+              <th scope="col" class="px-4 py-3 text-left font-semibold text-slate-900 uppercase tracking-wider border-b border-gray-150">Gamma Ray RT (Isotopes)</th>
             </tr>
           </thead>
-          <tbody class="bg-white divide-y divide-gray-150 text-[13px]">
+          <tbody class="bg-white divide-y divide-gray-150">
             <tr>
               <td class="px-4 py-3 font-semibold text-slate-900 bg-slate-50/40">Radiation Source</td>
               <td class="px-4 py-3 text-gray-600">Electrical high-voltage vacuum tube</td>
@@ -3386,16 +3413,16 @@ content: `
       </p>
 
       <div class="overflow-x-auto my-8 not-prose">
-        <table class="min-w-full divide-y divide-gray-200 border border-gray-150 text-[13.5px]">
+        <table class="min-w-full divide-y divide-gray-200 border border-gray-150">
           <thead class="bg-slate-50">
             <tr>
-              <th scope="col" class="px-4 py-3 text-left text-xs font-semibold text-slate-900 uppercase tracking-wider border-b border-gray-150">Feature</th>
-              <th scope="col" class="px-4 py-3 text-left text-xs font-semibold text-slate-900 uppercase tracking-wider border-b border-gray-150">Traditional Radiographic Film</th>
-              <th scope="col" class="px-4 py-3 text-left text-xs font-semibold text-slate-900 uppercase tracking-wider border-b border-gray-150">Computed Radiography (CR)</th>
-              <th scope="col" class="px-4 py-3 text-left text-xs font-semibold text-slate-900 uppercase tracking-wider border-b border-gray-150">Digital Detector Arrays (DDA)</th>
+              <th scope="col" class="px-4 py-3 text-left font-semibold text-slate-900 uppercase tracking-wider border-b border-gray-150">Feature</th>
+              <th scope="col" class="px-4 py-3 text-left font-semibold text-slate-900 uppercase tracking-wider border-b border-gray-150">Traditional Radiographic Film</th>
+              <th scope="col" class="px-4 py-3 text-left font-semibold text-slate-900 uppercase tracking-wider border-b border-gray-150">Computed Radiography (CR)</th>
+              <th scope="col" class="px-4 py-3 text-left font-semibold text-slate-900 uppercase tracking-wider border-b border-gray-150">Digital Detector Arrays (DDA)</th>
             </tr>
           </thead>
-          <tbody class="bg-white divide-y divide-gray-150 text-[13px]">
+          <tbody class="bg-white divide-y divide-gray-150">
             <tr>
               <td class="px-4 py-3 font-semibold text-slate-900 bg-slate-50/40">Processing Method</td>
               <td class="px-4 py-3 text-gray-600">Chemical darkroom development</td>
@@ -3474,6 +3501,7 @@ content: `
     readTime: "8 Min Read",
     pillar: "Pillar 3: Analyzers & Inspection",
     description: "Learn how Eddy Current Testing (ECT) works, probe types, heat exchanger tube inspections, and surface crack detection with ASTM and ASME standards.",
+    keywords: "eddy current testing, tube inspection, surface inspection",
     image: "/images/services/Eddy-Current-Testing.jpg",
     imageAlt: "An ECT probe being inserted into a condenser tube sheet to detect wall loss and cracks.",
 content: `
@@ -3482,8 +3510,8 @@ content: `
       </p>
 
       <div class="my-6 rounded-lg bg-slate-50 border border-slate-200 p-5 not-prose">
-        <h4 class="text-[13.5px] font-bold text-slate-900 mb-2">💡 Key Takeaways</h4>
-        <ul class="text-[13px] text-slate-600 space-y-2 list-disc pl-4">
+        <h4 class="font-bold text-slate-900 mb-2">💡 Key Takeaways</h4>
+        <ul class="text-slate-600 space-y-2 list-disc pl-4">
           <li><strong>Electromagnetic Induction:</strong> ECT utilizes alternating magnetic fields to induce currents, detecting anomalies by tracking coil impedance shifts.</li>
           <li><strong>High-Speed Tube Scans:</strong> Bobbin probes scan the entire length of heat exchanger tubes rapidly, detecting internal and external wall loss.</li>
           <li><strong>Conductivity Limit:</strong> The testing technique is restricted to conductive materials, requiring alternative NDT methods for plastics.</li>
@@ -3504,15 +3532,15 @@ content: `
       </p>
 
       <div class="overflow-x-auto my-8 not-prose">
-        <table class="min-w-full divide-y divide-gray-200 border border-gray-150 text-[13.5px]">
+        <table class="min-w-full divide-y divide-gray-200 border border-gray-150">
           <thead class="bg-slate-50">
             <tr>
-              <th scope="col" class="px-4 py-3 text-left text-xs font-semibold text-slate-900 uppercase tracking-wider border-b border-gray-150">Probe Configuration</th>
-              <th scope="col" class="px-4 py-3 text-left text-xs font-semibold text-slate-900 uppercase tracking-wider border-b border-gray-150">Coil Layout</th>
-              <th scope="col" class="px-4 py-3 text-left text-xs font-semibold text-slate-900 uppercase tracking-wider border-b border-gray-150">Primary Application</th>
+              <th scope="col" class="px-4 py-3 text-left font-semibold text-slate-900 uppercase tracking-wider border-b border-gray-150">Probe Configuration</th>
+              <th scope="col" class="px-4 py-3 text-left font-semibold text-slate-900 uppercase tracking-wider border-b border-gray-150">Coil Layout</th>
+              <th scope="col" class="px-4 py-3 text-left font-semibold text-slate-900 uppercase tracking-wider border-b border-gray-150">Primary Application</th>
             </tr>
           </thead>
-          <tbody class="bg-white divide-y divide-gray-150 text-[13px]">
+          <tbody class="bg-white divide-y divide-gray-150">
             <tr>
               <td class="px-4 py-3 font-semibold text-slate-900 bg-slate-50/40">Bobbin Probe</td>
               <td class="px-4 py-3 text-gray-600">Circumferential coils wrapped around probe body</td>
@@ -3594,6 +3622,7 @@ content: `
     readTime: "9 Min Read",
     pillar: "Pillar 3: Analyzers & Inspection",
     description: "Comprehensive guide to mechanical testing of materials — tensile, hardness, impact, bend, and fracture toughness testing.",
+    keywords: "mechanical testing, material testing, engineering properties",
     image: "/images/services/mechanical-testing.jpg",
     imageAlt: "A computerized universal tensile testing machine pulling a metal specimen to measure yield strength.",
 content: `
@@ -3602,8 +3631,8 @@ content: `
       </p>
 
       <div class="my-6 rounded-lg bg-slate-50 border border-slate-200 p-5 not-prose">
-        <h4 class="text-[13.5px] font-bold text-slate-900 mb-2">💡 Key Takeaways</h4>
-        <ul class="text-[13px] text-slate-600 space-y-2 list-disc pl-4">
+        <h4 class="font-bold text-slate-900 mb-2">💡 Key Takeaways</h4>
+        <ul class="text-slate-600 space-y-2 list-disc pl-4">
           <li><strong>Tensile Focus:</strong> Stretching specimens under tension determines yield points, UTS, and elongation limits.</li>
           <li><strong>Hardness Scales:</strong> Brinell, Rockwell, and Vickers methods measure surface resistance to indentation.</li>
           <li><strong>Toughness Focus:</strong> Charpy impact testing quantifies energy absorption to identify brittle failure risks.</li>
@@ -3632,16 +3661,16 @@ content: `
       </p>
 
       <div class="overflow-x-auto my-8 not-prose">
-        <table class="min-w-full divide-y divide-gray-200 border border-gray-150 text-[13.5px]">
+        <table class="min-w-full divide-y divide-gray-200 border border-gray-150">
           <thead class="bg-slate-50">
             <tr>
-              <th scope="col" class="px-4 py-3 text-left text-xs font-semibold text-slate-900 uppercase tracking-wider border-b border-gray-150">Hardness Scale</th>
-              <th scope="col" class="px-4 py-3 text-left text-xs font-semibold text-slate-900 uppercase tracking-wider border-b border-gray-150">Indenter Geometry</th>
-              <th scope="col" class="px-4 py-3 text-left text-xs font-semibold text-slate-900 uppercase tracking-wider border-b border-gray-150">Measurement Basis</th>
-              <th scope="col" class="px-4 py-3 text-left text-xs font-semibold text-slate-900 uppercase tracking-wider border-b border-gray-150">Standard Codes</th>
+              <th scope="col" class="px-4 py-3 text-left font-semibold text-slate-900 uppercase tracking-wider border-b border-gray-150">Hardness Scale</th>
+              <th scope="col" class="px-4 py-3 text-left font-semibold text-slate-900 uppercase tracking-wider border-b border-gray-150">Indenter Geometry</th>
+              <th scope="col" class="px-4 py-3 text-left font-semibold text-slate-900 uppercase tracking-wider border-b border-gray-150">Measurement Basis</th>
+              <th scope="col" class="px-4 py-3 text-left font-semibold text-slate-900 uppercase tracking-wider border-b border-gray-150">Standard Codes</th>
             </tr>
           </thead>
-          <tbody class="bg-white divide-y divide-gray-150 text-[13px]">
+          <tbody class="bg-white divide-y divide-gray-150">
             <tr>
               <td class="px-4 py-3 font-semibold text-slate-900 bg-slate-50/40">Rockwell (HRC/HRB)</td>
               <td class="px-4 py-3 text-gray-600">120&deg; diamond cone or steel ball</td>
@@ -3715,6 +3744,7 @@ content: `
     readTime: "9 Min Read",
     pillar: "Pillar 3: Analyzers & Inspection",
     description: "Understand weld inspection standards — ASME, AWS, and API requirements for welding engineers, QA/QC managers, and inspectors.",
+    keywords: "weld inspection, ASME AWS standards, weld quality",
     image: "/images/services/inspection-testing.jpg",
     imageAlt: "A quality inspector checking weld profile parameters on structural piping using a weld gauge.",
 content: `
@@ -3723,8 +3753,8 @@ content: `
       </p>
 
       <div class="my-6 rounded-lg bg-slate-50 border border-slate-200 p-5 not-prose">
-        <h4 class="text-[13.5px] font-bold text-slate-900 mb-2">💡 Key Takeaways</h4>
-        <ul class="text-[13px] text-slate-600 space-y-2 list-disc pl-4">
+        <h4 class="font-bold text-slate-900 mb-2">💡 Key Takeaways</h4>
+        <ul class="text-slate-600 space-y-2 list-disc pl-4">
           <li><strong>Pressure Vessel Codes:</strong> ASME Sections V and IX govern welder qualification and NDT procedures for boilers and vessels.</li>
           <li><strong>Structural Steel Code:</strong> AWS D1.1 sets fabrication and inspection criteria for buildings and civil steel structures.</li>
           <li><strong>Pipeline Standard:</strong> API 1104 governs welding procedures and NDT acceptance limits for cross-country piping runs.</li>
@@ -3757,15 +3787,15 @@ content: `
       </p>
 
       <div class="overflow-x-auto my-8 not-prose">
-        <table class="min-w-full divide-y divide-gray-200 border border-gray-150 text-[13.5px]">
+        <table class="min-w-full divide-y divide-gray-200 border border-gray-150">
           <thead class="bg-slate-50">
             <tr>
-              <th scope="col" class="px-4 py-3 text-left text-xs font-semibold text-slate-900 uppercase tracking-wider border-b border-gray-150">Standard</th>
-              <th scope="col" class="px-4 py-3 text-left text-xs font-semibold text-slate-900 uppercase tracking-wider border-b border-gray-150">Scope &amp; Application</th>
-              <th scope="col" class="px-4 py-3 text-left text-xs font-semibold text-slate-900 uppercase tracking-wider border-b border-gray-150">Common NDT Methods</th>
+              <th scope="col" class="px-4 py-3 text-left font-semibold text-slate-900 uppercase tracking-wider border-b border-gray-150">Standard</th>
+              <th scope="col" class="px-4 py-3 text-left font-semibold text-slate-900 uppercase tracking-wider border-b border-gray-150">Scope &amp; Application</th>
+              <th scope="col" class="px-4 py-3 text-left font-semibold text-slate-900 uppercase tracking-wider border-b border-gray-150">Common NDT Methods</th>
             </tr>
           </thead>
-          <tbody class="bg-white divide-y divide-gray-150 text-[13px]">
+          <tbody class="bg-white divide-y divide-gray-150">
             <tr>
               <td class="px-4 py-3 font-semibold text-slate-900 bg-slate-50/40">ASME Section IX</td>
               <td class="px-4 py-3 text-gray-600">Qualification of welders and procedures for pressure vessels</td>
@@ -3834,6 +3864,7 @@ content: `
     readTime: "8 Min Read",
     pillar: "Pillar 3: Analyzers & Inspection",
     description: "Understand MFL testing for storage tanks and pipelines. Compare MFL vs UT for corrosion detection and learn about API 653 inspections.",
+    keywords: "MFL testing, pipeline inspection, storage tank inspection",
     image: "/images/services/Magnetic-Flux-Leakage.jpg",
     imageAlt: "A magnetic flux leakage (MFL) tool scanning the floor plates of a bulk liquid storage tank.",
 content: `
@@ -3842,8 +3873,8 @@ content: `
       </p>
 
       <div class="my-6 rounded-lg bg-slate-50 border border-slate-200 p-5 not-prose">
-        <h4 class="text-[13.5px] font-bold text-slate-900 mb-2">💡 Key Takeaways</h4>
-        <ul class="text-[13px] text-slate-600 space-y-2 list-disc pl-4">
+        <h4 class="font-bold text-slate-900 mb-2">💡 Key Takeaways</h4>
+        <ul class="text-slate-600 space-y-2 list-disc pl-4">
           <li><strong>Leakage Tracking:</strong> Corrosion thinning forces magnetic flux lines to leak from steel walls, triggering sensor signals.</li>
           <li><strong>Storage Tank Scanning:</strong> MFL floor scanners verify tank plates, satisfying API 653 inspection standards.</li>
           <li><strong>Pipeline In-Line Scans:</strong> Smart MFL pigs inspect pipeline interiors without requiring trench excavation.</li>
@@ -3874,15 +3905,15 @@ content: `
       </p>
 
       <div class="overflow-x-auto my-8 not-prose">
-        <table class="min-w-full divide-y divide-gray-200 border border-gray-150 text-[13.5px]">
+        <table class="min-w-full divide-y divide-gray-200 border border-gray-150">
           <thead class="bg-slate-50">
             <tr>
-              <th scope="col" class="px-4 py-3 text-left text-xs font-semibold text-slate-900 uppercase tracking-wider border-b border-gray-150">Inspection Feature</th>
-              <th scope="col" class="px-4 py-3 text-left text-xs font-semibold text-slate-900 uppercase tracking-wider border-b border-gray-150">Magnetic Flux Leakage (MFL)</th>
-              <th scope="col" class="px-4 py-3 text-left text-xs font-semibold text-slate-900 uppercase tracking-wider border-b border-gray-150">Ultrasonic Testing (UT)</th>
+              <th scope="col" class="px-4 py-3 text-left font-semibold text-slate-900 uppercase tracking-wider border-b border-gray-150">Inspection Feature</th>
+              <th scope="col" class="px-4 py-3 text-left font-semibold text-slate-900 uppercase tracking-wider border-b border-gray-150">Magnetic Flux Leakage (MFL)</th>
+              <th scope="col" class="px-4 py-3 text-left font-semibold text-slate-900 uppercase tracking-wider border-b border-gray-150">Ultrasonic Testing (UT)</th>
             </tr>
           </thead>
-          <tbody class="bg-white divide-y divide-gray-150 text-[13px]">
+          <tbody class="bg-white divide-y divide-gray-150">
             <tr>
               <td class="px-4 py-3 font-semibold text-slate-900 bg-slate-50/40">Inspection Speed</td>
               <td class="px-4 py-3 text-gray-600">Very High (Motorized scanning)</td>
@@ -3945,6 +3976,7 @@ content: `
     readTime: "8 Min Read",
     pillar: "Pillar 3: Analyzers & Inspection",
     description: "Learn why Positive Material Identification (PMI) is required for safety. Compare XRF vs OES and see how API 578 dictates alloy verification.",
+    keywords: "PMI, material identification, positive material verification",
     image: "/images/services/Macro-and-Micro-Test.jpg",
     imageAlt: "Metallurgists examining structural microstructures in a quality control laboratory.",
 content: `
@@ -3953,8 +3985,8 @@ content: `
       </p>
 
       <div class="my-6 rounded-lg bg-slate-50 border border-slate-200 p-5 not-prose">
-        <h4 class="text-[13.5px] font-bold text-slate-900 mb-2">💡 Key Takeaways</h4>
-        <ul class="text-[13px] text-slate-600 space-y-2 list-disc pl-4">
+        <h4 class="font-bold text-slate-900 mb-2">💡 Key Takeaways</h4>
+        <ul class="text-slate-600 space-y-2 list-disc pl-4">
           <li><strong>Technological Options:</strong> XRF handheld guns analyze heavy alloying elements, while OES units verify carbon concentrations.</li>
           <li><strong>Mandatory Audits:</strong> API 578 guidelines outline material verification program requirements in oil and gas environments.</li>
           <li><strong>Quality Control:</strong> Executing PMI verifies that installed components match certified Mill Test Reports (MTRs).</li>
@@ -3972,15 +4004,15 @@ content: `
       </p>
 
       <div class="overflow-x-auto my-8 not-prose">
-        <table class="min-w-full divide-y divide-gray-200 border border-gray-150 text-[13.5px]">
+        <table class="min-w-full divide-y divide-gray-200 border border-gray-150">
           <thead class="bg-slate-50">
             <tr>
-              <th scope="col" class="px-4 py-3 text-left text-xs font-semibold text-slate-900 uppercase tracking-wider border-b border-gray-150">Feature</th>
-              <th scope="col" class="px-4 py-3 text-left text-xs font-semibold text-slate-900 uppercase tracking-wider border-b border-gray-150">X-Ray Fluorescence (XRF)</th>
-              <th scope="col" class="px-4 py-3 text-left text-xs font-semibold text-slate-900 uppercase tracking-wider border-b border-gray-150">Optical Emission Spectrometry (OES)</th>
+              <th scope="col" class="px-4 py-3 text-left font-semibold text-slate-900 uppercase tracking-wider border-b border-gray-150">Feature</th>
+              <th scope="col" class="px-4 py-3 text-left font-semibold text-slate-900 uppercase tracking-wider border-b border-gray-150">X-Ray Fluorescence (XRF)</th>
+              <th scope="col" class="px-4 py-3 text-left font-semibold text-slate-900 uppercase tracking-wider border-b border-gray-150">Optical Emission Spectrometry (OES)</th>
             </tr>
           </thead>
-          <tbody class="bg-white divide-y divide-gray-150 text-[13px]">
+          <tbody class="bg-white divide-y divide-gray-150">
             <tr>
               <td class="px-4 py-3 font-semibold text-slate-900 bg-slate-50/40">Measurement Method</td>
               <td class="px-4 py-3 text-gray-600">X-ray excitation (atomic energy emission)</td>
@@ -4054,6 +4086,7 @@ content: `
     readTime: "8 Min Read",
     pillar: "Pillar 3: Analyzers & Inspection",
     description: "Dust analyzer selection and emission compliance guide for cement and steel plants — comparing transmissometry, forward scatter, and backward scatter systems.",
+    keywords: "dust analyzer, cement plant, particulate monitoring",
     image: "/dust_analyzer.png",
     imageAlt: "A laser-based stack dust analyzer transceiver unit mounted on an industrial exhaust stack duct.",
 content: `
@@ -4062,8 +4095,8 @@ content: `
       </p>
 
       <div class="my-6 rounded-lg bg-slate-50 border border-slate-200 p-5 not-prose">
-        <h4 class="text-[13.5px] font-bold text-slate-900 mb-2">💡 Key Takeaways</h4>
-        <ul class="text-[13px] text-slate-600 space-y-2 list-disc pl-4">
+        <h4 class="font-bold text-slate-900 mb-2">💡 Key Takeaways</h4>
+        <ul class="text-slate-600 space-y-2 list-disc pl-4">
           <li><strong>Technological Selection:</strong> Transmissometers monitor high dust loading, while forward and backward scatter systems resolve low dust concentrations.</li>
           <li><strong>Sensor Protection:</strong> Air purge systems blow clean air across stack lenses to prevent dust accumulation.</li>
           <li><strong>Regulatory Standards:</strong> Automated dust monitors must satisfy EN 15267 performance certifications and EN 13284 calibrations.</li>
@@ -4101,15 +4134,15 @@ content: `
       </p>
 
       <div class="overflow-x-auto my-8 not-prose">
-        <table class="min-w-full divide-y divide-gray-200 border border-gray-150 text-[13.5px]">
+        <table class="min-w-full divide-y divide-gray-200 border border-gray-150">
           <thead class="bg-slate-50">
             <tr>
-              <th scope="col" class="px-4 py-3 text-left text-xs font-semibold text-slate-900 uppercase tracking-wider border-b border-gray-150">Technology</th>
-              <th scope="col" class="px-4 py-3 text-left text-xs font-semibold text-slate-900 uppercase tracking-wider border-b border-gray-150">Measurement Range</th>
-              <th scope="col" class="px-4 py-3 text-left text-xs font-semibold text-slate-900 uppercase tracking-wider border-b border-gray-150">Physical Mounting Layout</th>
+              <th scope="col" class="px-4 py-3 text-left font-semibold text-slate-900 uppercase tracking-wider border-b border-gray-150">Technology</th>
+              <th scope="col" class="px-4 py-3 text-left font-semibold text-slate-900 uppercase tracking-wider border-b border-gray-150">Measurement Range</th>
+              <th scope="col" class="px-4 py-3 text-left font-semibold text-slate-900 uppercase tracking-wider border-b border-gray-150">Physical Mounting Layout</th>
             </tr>
           </thead>
-          <tbody class="bg-white divide-y divide-gray-150 text-[13px]">
+          <tbody class="bg-white divide-y divide-gray-150">
             <tr>
               <td class="px-4 py-3 font-semibold text-slate-900 bg-slate-50/40">Transmissometry (Opacity)</td>
               <td class="px-4 py-3 text-gray-600">5 to 1000 mg/m³ (Standard to high dust loading)</td>
@@ -4172,6 +4205,7 @@ content: `
     readTime: "9 Min Read",
     pillar: "Pillar 3: Analyzers & Inspection",
     description: "Process gas analyzer selection, safety, and control guide for petrochemical refineries — covering H2S, O2, gas chromatographs, and analyzer shelters.",
+    keywords: "gas analyzers, petrochemical, refinery analytics",
     image: "/gas_analyzer.png",
     imageAlt: "An extractive multi-gas analyzer system installed inside an instrumentation enclosure.",
 content: `
@@ -4180,8 +4214,8 @@ content: `
       </p>
 
       <div class="my-6 rounded-lg bg-slate-50 border border-slate-200 p-5 not-prose">
-        <h4 class="text-[13.5px] font-bold text-slate-900 mb-2">💡 Key Takeaways</h4>
-        <ul class="text-[13px] text-slate-600 space-y-2 list-disc pl-4">
+        <h4 class="font-bold text-slate-900 mb-2">💡 Key Takeaways</h4>
+        <ul class="text-slate-600 space-y-2 list-disc pl-4">
           <li><strong>Technological Variety:</strong> Systems include H2S sensors, paramagnetic O2 analyzers, and process gas chromatographs.</li>
           <li><strong>Conditioning Priority:</strong> Sample conditioning designs must maintain temperature levels to prevent heavy hydrocarbon condensation.</li>
           <li><strong>Hazardous Suitability:</strong> Refinery analyzers require ATEX/IECEx certifications for Zone 1 or Zone 2 locations.</li>
@@ -4194,15 +4228,15 @@ content: `
       </p>
 
       <div class="overflow-x-auto my-8 not-prose">
-        <table class="min-w-full divide-y divide-gray-200 border border-gray-150 text-[13.5px]">
+        <table class="min-w-full divide-y divide-gray-200 border border-gray-150">
           <thead class="bg-slate-50">
             <tr>
-              <th scope="col" class="px-4 py-3 text-left text-xs font-semibold text-slate-900 uppercase tracking-wider border-b border-gray-150">Analyzer Technology</th>
-              <th scope="col" class="px-4 py-3 text-left text-xs font-semibold text-slate-900 uppercase tracking-wider border-b border-gray-150">Process Application</th>
-              <th scope="col" class="px-4 py-3 text-left text-xs font-semibold text-slate-900 uppercase tracking-wider border-b border-gray-150">Applicable Standard</th>
+              <th scope="col" class="px-4 py-3 text-left font-semibold text-slate-900 uppercase tracking-wider border-b border-gray-150">Analyzer Technology</th>
+              <th scope="col" class="px-4 py-3 text-left font-semibold text-slate-900 uppercase tracking-wider border-b border-gray-150">Process Application</th>
+              <th scope="col" class="px-4 py-3 text-left font-semibold text-slate-900 uppercase tracking-wider border-b border-gray-150">Applicable Standard</th>
             </tr>
           </thead>
-          <tbody class="bg-white divide-y divide-gray-150 text-[13px]">
+          <tbody class="bg-white divide-y divide-gray-150">
             <tr>
               <td class="px-4 py-3 font-semibold text-slate-900 bg-slate-50/40">H2S Analyzer</td>
               <td class="px-4 py-3 text-gray-600">Amine unit efficiency monitoring, fuel gas sulfur tracking</td>
@@ -4280,6 +4314,7 @@ content: `
     readTime: "8 Min Read",
     pillar: "Pillar 3: Analyzers & Inspection",
     description: "Technical comparison of in-situ vs extractive CEMS — covering sample transport, cold wet, hot wet, dilution extractive, and cross-stack lasers.",
+    keywords: "in-situ CEMS, extractive CEMS, emissions monitoring",
     image: "/extractive_gas_analyzer.jpg",
     imageAlt: "An extractive gas analysis system displaying concentration curves on a laboratory monitor.",
 content: `
@@ -4288,8 +4323,8 @@ content: `
       </p>
 
       <div class="my-6 rounded-lg bg-slate-50 border border-slate-200 p-5 not-prose">
-        <h4 class="text-[13.5px] font-bold text-slate-900 mb-2">💡 Key Takeaways</h4>
-        <ul class="text-[13px] text-slate-600 space-y-2 list-disc pl-4">
+        <h4 class="font-bold text-slate-900 mb-2">💡 Key Takeaways</h4>
+        <ul class="text-slate-600 space-y-2 list-disc pl-4">
           <li><strong>In-Situ Layout:</strong> Measures gas directly inside the stack using optical beams, eliminating sample lines and conditioning chillers.</li>
           <li><strong>Extractive Layout:</strong> Pulls gas to a ground-level shelter, allowing multi-analyzer configurations in clean, climate-controlled spaces.</li>
           <li><strong>Standards Alignment:</strong> Both designs meet EPA 40 CFR Part 60 and European EN 15267 compliance certification requirements.</li>
@@ -4310,15 +4345,15 @@ content: `
       </p>
 
       <div class="overflow-x-auto my-8 not-prose">
-        <table class="min-w-full divide-y divide-gray-200 border border-gray-150 text-[13.5px]">
+        <table class="min-w-full divide-y divide-gray-200 border border-gray-150">
           <thead class="bg-slate-50">
             <tr>
-              <th scope="col" class="px-4 py-3 text-left text-xs font-semibold text-slate-900 uppercase tracking-wider border-b border-gray-150">Comparison Factor</th>
-              <th scope="col" class="px-4 py-3 text-left text-xs font-semibold text-slate-900 uppercase tracking-wider border-b border-gray-150">In-Situ CEMS</th>
-              <th scope="col" class="px-4 py-3 text-left text-xs font-semibold text-slate-900 uppercase tracking-wider border-b border-gray-150">Extractive CEMS</th>
+              <th scope="col" class="px-4 py-3 text-left font-semibold text-slate-900 uppercase tracking-wider border-b border-gray-150">Comparison Factor</th>
+              <th scope="col" class="px-4 py-3 text-left font-semibold text-slate-900 uppercase tracking-wider border-b border-gray-150">In-Situ CEMS</th>
+              <th scope="col" class="px-4 py-3 text-left font-semibold text-slate-900 uppercase tracking-wider border-b border-gray-150">Extractive CEMS</th>
             </tr>
           </thead>
-          <tbody class="bg-white divide-y divide-gray-150 text-[13px]">
+          <tbody class="bg-white divide-y divide-gray-150">
             <tr>
               <td class="px-4 py-3 font-semibold text-slate-900 bg-slate-50/40">Measurement Location</td>
               <td class="px-4 py-3 text-gray-600">Inside the stack or duct</td>
@@ -4432,6 +4467,7 @@ content: `
     readTime: "9 Min Read",
     pillar: "Pillar 1: Flow Measurement & Custody Metering",
     description: "Technical breakdown of custody metering solutions — including flow computers, metering skid components, and overall system architecture design.",
+    keywords: "custody metering solutions, metering system architecture, flow measurement",
     image: "/flow_metering_skid.jpg",
     imageAlt: "A complete custody transfer flow metering skid with liquid turbine meters and a proving run.",
 content: `
@@ -4440,8 +4476,8 @@ content: `
       </p>
 
       <div class="my-6 rounded-lg bg-slate-50 border border-slate-200 p-5 not-prose">
-        <h4 class="text-[13.5px] font-bold text-slate-900 mb-2">💡 Key Takeaways</h4>
-        <ul class="text-[13px] text-slate-600 space-y-2 list-disc pl-4">
+        <h4 class="font-bold text-slate-900 mb-2">💡 Key Takeaways</h4>
+        <ul class="text-slate-600 space-y-2 list-disc pl-4">
           <li><strong>Integrated Design:</strong> Skids combine physical flow meters with automated flow computers to ensure dynamic correction.</li>
           <li><strong>Calibration Proving:</strong> Integrating inline pipe prover valves allows real-time meter factor verifications.</li>
           <li><strong>Fiscal Reliability:</strong> System layouts satisfy API MPMS accuracy tolerances, reducing commercial exposure.</li>
@@ -4459,15 +4495,15 @@ content: `
       </p>
 
       <div class="overflow-x-auto my-8 not-prose">
-        <table class="min-w-full divide-y divide-gray-200 border border-gray-150 text-[13.5px]">
+        <table class="min-w-full divide-y divide-gray-200 border border-gray-150">
           <thead class="bg-slate-50">
             <tr>
-              <th scope="col" class="px-4 py-3 text-left text-xs font-semibold text-slate-900 uppercase tracking-wider border-b border-gray-150">Skid Component</th>
-              <th scope="col" class="px-4 py-3 text-left text-xs font-semibold text-slate-900 uppercase tracking-wider border-b border-gray-150">Engineering Function</th>
-              <th scope="col" class="px-4 py-3 text-left text-xs font-semibold text-slate-900 uppercase tracking-wider border-b border-gray-150">Applicable Standard</th>
+              <th scope="col" class="px-4 py-3 text-left font-semibold text-slate-900 uppercase tracking-wider border-b border-gray-150">Skid Component</th>
+              <th scope="col" class="px-4 py-3 text-left font-semibold text-slate-900 uppercase tracking-wider border-b border-gray-150">Engineering Function</th>
+              <th scope="col" class="px-4 py-3 text-left font-semibold text-slate-900 uppercase tracking-wider border-b border-gray-150">Applicable Standard</th>
             </tr>
           </thead>
-          <tbody class="bg-white divide-y divide-gray-150 text-[13px]">
+          <tbody class="bg-white divide-y divide-gray-150">
             <tr>
               <td class="px-4 py-3 font-semibold text-slate-900 bg-slate-50/40">Primary Flow Meter</td>
               <td class="px-4 py-3 text-gray-600">Measures raw fluid mass or velocity using Coriolis or ultrasonic waves</td>
@@ -4535,6 +4571,7 @@ content: `
     readTime: "8 Min Read",
     pillar: "Pillar 3: Analyzers & Inspection",
     description: "Technical application and integration guide for SICK analyzers in the oil & gas industry — covering gas analyzers, CEMS, and process optimization.",
+    keywords: "SICK analyzers, oil gas, process integration",
     image: "/images/cems/1.jpg",
     imageAlt: "A shelter housing integrated SICK process gas analyzers in an oil and gas refining plant.",
 content: `
@@ -4543,8 +4580,8 @@ content: `
       </p>
 
       <div class="my-6 rounded-lg bg-slate-50 border border-slate-200 p-5 not-prose">
-        <h4 class="text-[13.5px] font-bold text-slate-900 mb-2">💡 Key Takeaways</h4>
-        <ul class="text-[13px] text-slate-600 space-y-2 list-disc pl-4">
+        <h4 class="font-bold text-slate-900 mb-2">💡 Key Takeaways</h4>
+        <ul class="text-slate-600 space-y-2 list-disc pl-4">
           <li><strong>Spectroscopic Precision:</strong> SICK analyzers utilize FTIR, NDIR, and TDLAS methods to measure trace gas fractions.</li>
           <li><strong>Flow Metrology:</strong> Ultrasonic gas flow meters (FLOWSIC series) deliver stable custody-grade flow profiles.</li>
           <li><strong>Compliance Standards:</strong> Analyzer configurations satisfy EN 15267, EN 14181, and ATEX safety directives.</li>
@@ -4562,15 +4599,15 @@ content: `
       </p>
 
       <div class="overflow-x-auto my-8 not-prose">
-        <table class="min-w-full divide-y divide-gray-200 border border-gray-150 text-[13.5px]">
+        <table class="min-w-full divide-y divide-gray-200 border border-gray-150">
           <thead class="bg-slate-50">
             <tr>
-              <th scope="col" class="px-4 py-3 text-left text-xs font-semibold text-slate-900 uppercase tracking-wider border-b border-gray-150">Analyzer Model</th>
-              <th scope="col" class="px-4 py-3 text-left text-xs font-semibold text-slate-900 uppercase tracking-wider border-b border-gray-150">Measurement Parameters</th>
-              <th scope="col" class="px-4 py-3 text-left text-xs font-semibold text-slate-900 uppercase tracking-wider border-b border-gray-150">Process Application</th>
+              <th scope="col" class="px-4 py-3 text-left font-semibold text-slate-900 uppercase tracking-wider border-b border-gray-150">Analyzer Model</th>
+              <th scope="col" class="px-4 py-3 text-left font-semibold text-slate-900 uppercase tracking-wider border-b border-gray-150">Measurement Parameters</th>
+              <th scope="col" class="px-4 py-3 text-left font-semibold text-slate-900 uppercase tracking-wider border-b border-gray-150">Process Application</th>
             </tr>
           </thead>
-          <tbody class="bg-white divide-y divide-gray-150 text-[13px]">
+          <tbody class="bg-white divide-y divide-gray-150">
             <tr>
               <td class="px-4 py-3 font-semibold text-slate-900 bg-slate-50/40">SICK FLOWSIC600</td>
               <td class="px-4 py-3 text-gray-600">Natural gas velocity, temperature, pressure, path transit times</td>
@@ -4633,6 +4670,7 @@ content: `
     readTime: "8 Min Read",
     pillar: "Pillar 3: Analyzers & Inspection",
     description: "How to select and manage calibration gas mixtures for Continuous Emissions Monitoring Systems (CEMS) compliance and QA/QC audits.",
+    keywords: "calibration gas, CEMS standards, emissions compliance",
     image: "/images/cems/mcs100ft/1.png",
     imageAlt: "High-pressure calibration gas cylinders connected to a CEMS gas conditioning panel.",
 content: `
@@ -4641,8 +4679,8 @@ content: `
       </p>
 
       <div class="my-6 rounded-lg bg-slate-50 border border-slate-200 p-5 not-prose">
-        <h4 class="text-[13.5px] font-bold text-slate-900 mb-2">💡 Key Takeaways</h4>
-        <ul class="text-[13px] text-slate-600 space-y-2 list-disc pl-4">
+        <h4 class="font-bold text-slate-900 mb-2">💡 Key Takeaways</h4>
+        <ul class="text-slate-600 space-y-2 list-disc pl-4">
           <li><strong>Traceability Level:</strong> Regulatory compliance demands EPA Protocol Gases certified within narrow concentration tolerances.</li>
           <li><strong>Material Selection:</strong> Corrosive span gases require stainless steel regulators and PTFE tubing to prevent absorption.</li>
           <li><strong>Quality Checks:</strong> Calibration gas cylinders must be tracked for shelf life and pressure limits to prevent audit failures.</li>
@@ -4660,15 +4698,15 @@ content: `
       </p>
 
       <div class="overflow-x-auto my-8 not-prose">
-        <table class="min-w-full divide-y divide-gray-200 border border-gray-150 text-[13.5px]">
+        <table class="min-w-full divide-y divide-gray-200 border border-gray-150">
           <thead class="bg-slate-50">
             <tr>
-              <th scope="col" class="px-4 py-3 text-left text-xs font-semibold text-slate-900 uppercase tracking-wider border-b border-gray-150">Gas Grade</th>
-              <th scope="col" class="px-4 py-3 text-left text-xs font-semibold text-slate-900 uppercase tracking-wider border-b border-gray-150">Concentration Tolerance</th>
-              <th scope="col" class="px-4 py-3 text-left text-xs font-semibold text-slate-900 uppercase tracking-wider border-b border-gray-150">Regulatory Application</th>
+              <th scope="col" class="px-4 py-3 text-left font-semibold text-slate-900 uppercase tracking-wider border-b border-gray-150">Gas Grade</th>
+              <th scope="col" class="px-4 py-3 text-left font-semibold text-slate-900 uppercase tracking-wider border-b border-gray-150">Concentration Tolerance</th>
+              <th scope="col" class="px-4 py-3 text-left font-semibold text-slate-900 uppercase tracking-wider border-b border-gray-150">Regulatory Application</th>
             </tr>
           </thead>
-          <tbody class="bg-white divide-y divide-gray-150 text-[13px]">
+          <tbody class="bg-white divide-y divide-gray-150">
             <tr>
               <td class="px-4 py-3 font-semibold text-slate-900 bg-slate-50/40">EPA Protocol Gas</td>
               <td class="px-4 py-3 text-gray-600">&plusmn;1% to &plusmn;2% (Strict NIST traceability validation)</td>
@@ -4744,6 +4782,7 @@ content: `
     readTime: "8 Min Read",
     pillar: "Pillar 3: Analyzers & Inspection",
     description: "Preventive and corrective maintenance guide for flue gas analyzers — covering sensor drift, sample chilling, filter replacement, and troubleshooting.",
+    keywords: "flue gas analyzer, maintenance, calibration",
     image: "/images/gas_analyzers/gm32/1.jpg",
     imageAlt: "A process technician calibrating an in-situ gas analyzer transceiver on a hot duct flange.",
 content: `
@@ -4752,8 +4791,8 @@ content: `
       </p>
 
       <div class="my-6 rounded-lg bg-slate-50 border border-slate-200 p-5 not-prose">
-        <h4 class="text-[13.5px] font-bold text-slate-900 mb-2">💡 Key Takeaways</h4>
-        <ul class="text-[13px] text-slate-600 space-y-2 list-disc pl-4">
+        <h4 class="font-bold text-slate-900 mb-2">💡 Key Takeaways</h4>
+        <ul class="text-slate-600 space-y-2 list-disc pl-4">
           <li><strong>Condensate Control:</strong> Keeping sample conditioning chillers at +4&deg;C prevents liquid water from damaging analyzer sensors.</li>
           <li><strong>Filter Management:</strong> Regular replacement of particulate filters prevents sample transport restrictions and pump wear.</li>
           <li><strong>Drift Verifications:</strong> Executing weekly zero/span verifications flags cell degradation before audits occur.</li>
@@ -4771,15 +4810,15 @@ content: `
       </p>
 
       <div class="overflow-x-auto my-8 not-prose">
-        <table class="min-w-full divide-y divide-gray-200 border border-gray-150 text-[13.5px]">
+        <table class="min-w-full divide-y divide-gray-200 border border-gray-150">
           <thead class="bg-slate-50">
             <tr>
-              <th scope="col" class="px-4 py-3 text-left text-xs font-semibold text-slate-900 uppercase tracking-wider border-b border-gray-150">Maintenance Interval</th>
-              <th scope="col" class="px-4 py-3 text-left text-xs font-semibold text-slate-900 uppercase tracking-wider border-b border-gray-150">Required Task</th>
-              <th scope="col" class="px-4 py-3 text-left text-xs font-semibold text-slate-900 uppercase tracking-wider border-b border-gray-150">Target Component</th>
+              <th scope="col" class="px-4 py-3 text-left font-semibold text-slate-900 uppercase tracking-wider border-b border-gray-150">Maintenance Interval</th>
+              <th scope="col" class="px-4 py-3 text-left font-semibold text-slate-900 uppercase tracking-wider border-b border-gray-150">Required Task</th>
+              <th scope="col" class="px-4 py-3 text-left font-semibold text-slate-900 uppercase tracking-wider border-b border-gray-150">Target Component</th>
             </tr>
           </thead>
-          <tbody class="bg-white divide-y divide-gray-150 text-[13px]">
+          <tbody class="bg-white divide-y divide-gray-150">
             <tr>
               <td class="px-4 py-3 font-semibold text-slate-900 bg-slate-50/40">Daily</td>
               <td class="px-4 py-3 text-gray-600">Verify chiller temperature (+4&deg;C) and check sample flow rates</td>
@@ -4858,6 +4897,7 @@ content: `
     readTime: "8 Min Read",
     pillar: "Pillar 1: Flow Measurement & Custody Metering",
     description: "How process gas chromatographs (PGC) verify composition and calculate heating value (GCV) for natural gas custody transfer.",
+    keywords: "gas chromatograph, custody transfer, natural gas analysis",
     image: "/images/cems/mcs200hw/2.png",
     imageAlt: "An industrial process gas chromatograph system executing natural gas composition analyses.",
 content: `
@@ -4866,8 +4906,8 @@ content: `
       </p>
 
       <div class="my-6 rounded-lg bg-slate-50 border border-slate-200 p-5 not-prose">
-        <h4 class="text-[13.5px] font-bold text-slate-900 mb-2">💡 Key Takeaways</h4>
-        <ul class="text-[13px] text-slate-600 space-y-2 list-disc pl-4">
+        <h4 class="font-bold text-slate-900 mb-2">💡 Key Takeaways</h4>
+        <ul class="text-slate-600 space-y-2 list-disc pl-4">
           <li><strong>Energy Billing:</strong> Chromatographs measure gas fractions to calculate Gross Calorific Value (GCV) dynamically.</li>
           <li><strong>Column Backflushing:</strong> Reversing carrier gas flows expels heavy hydrocarbons (C6+), protecting column coatings.</li>
           <li><strong>Compliance Standards:</strong> System validations satisfy ISO 10723 and GPA 2261 metrology requirements.</li>
@@ -4885,15 +4925,15 @@ content: `
       </p>
 
       <div class="overflow-x-auto my-8 not-prose">
-        <table class="min-w-full divide-y divide-gray-200 border border-gray-150 text-[13.5px]">
+        <table class="min-w-full divide-y divide-gray-200 border border-gray-150">
           <thead class="bg-slate-50">
             <tr>
-              <th scope="col" class="px-4 py-3 text-left text-xs font-semibold text-slate-900 uppercase tracking-wider border-b border-gray-150">Gas Component</th>
-              <th scope="col" class="px-4 py-3 text-left text-xs font-semibold text-slate-900 uppercase tracking-wider border-b border-gray-150">Typical Fraction</th>
-              <th scope="col" class="px-4 py-3 text-left text-xs font-semibold text-slate-900 uppercase tracking-wider border-b border-gray-150">Billing Energy Impact</th>
+              <th scope="col" class="px-4 py-3 text-left font-semibold text-slate-900 uppercase tracking-wider border-b border-gray-150">Gas Component</th>
+              <th scope="col" class="px-4 py-3 text-left font-semibold text-slate-900 uppercase tracking-wider border-b border-gray-150">Typical Fraction</th>
+              <th scope="col" class="px-4 py-3 text-left font-semibold text-slate-900 uppercase tracking-wider border-b border-gray-150">Billing Energy Impact</th>
             </tr>
           </thead>
-          <tbody class="bg-white divide-y divide-gray-150 text-[13px]">
+          <tbody class="bg-white divide-y divide-gray-150">
             <tr>
               <td class="px-4 py-3 font-semibold text-slate-900 bg-slate-50/40">Methane (C1)</td>
               <td class="px-4 py-3 text-gray-600">85% to 95%</td>
@@ -4961,6 +5001,7 @@ content: `
     readTime: "9 Min Read",
     pillar: "Pillar 3: Analyzers & Inspection",
     description: "Comprehensive guide to power plant environmental monitoring — covering CEMS integration, dust analyzers, water quality, and EPA compliance.",
+    keywords: "power plant CEMS, environmental monitoring, emissions",
     image: "/power_plant.jpg",
     imageAlt: "Cooling towers and emissions stacks of a modern coal-fired thermal power generation station.",
 content: `
@@ -4969,8 +5010,8 @@ content: `
       </p>
 
       <div class="my-6 rounded-lg bg-slate-50 border border-slate-200 p-5 not-prose">
-        <h4 class="text-[13.5px] font-bold text-slate-900 mb-2">💡 Key Takeaways</h4>
-        <ul class="text-[13px] text-slate-600 space-y-2 list-disc pl-4">
+        <h4 class="font-bold text-slate-900 mb-2">💡 Key Takeaways</h4>
+        <ul class="text-slate-600 space-y-2 list-disc pl-4">
           <li><strong>Stack Tracking:</strong> CEMS systems monitor gaseous pollutants (SO2, NOx, CO) in stack flue gases.</li>
           <li><strong>Particulate Control:</strong> Opacity monitors detect filter bag failures in electrostatic precipitators.</li>
           <li><strong>System Validation:</strong> Emissions data acquisition must satisfy EPA 40 CFR Part 60/75 and EN 14181 standards.</li>
@@ -4988,15 +5029,15 @@ content: `
       </p>
 
       <div class="overflow-x-auto my-8 not-prose">
-        <table class="min-w-full divide-y divide-gray-200 border border-gray-150 text-[13.5px]">
+        <table class="min-w-full divide-y divide-gray-200 border border-gray-150">
           <thead class="bg-slate-50">
             <tr>
-              <th scope="col" class="px-4 py-3 text-left text-xs font-semibold text-slate-900 uppercase tracking-wider border-b border-gray-150">Monitoring System</th>
-              <th scope="col" class="px-4 py-3 text-left text-xs font-semibold text-slate-900 uppercase tracking-wider border-b border-gray-150">Key Parameters Measured</th>
-              <th scope="col" class="px-4 py-3 text-left text-xs font-semibold text-slate-900 uppercase tracking-wider border-b border-gray-150">Operational Application</th>
+              <th scope="col" class="px-4 py-3 text-left font-semibold text-slate-900 uppercase tracking-wider border-b border-gray-150">Monitoring System</th>
+              <th scope="col" class="px-4 py-3 text-left font-semibold text-slate-900 uppercase tracking-wider border-b border-gray-150">Key Parameters Measured</th>
+              <th scope="col" class="px-4 py-3 text-left font-semibold text-slate-900 uppercase tracking-wider border-b border-gray-150">Operational Application</th>
             </tr>
           </thead>
-          <tbody class="bg-white divide-y divide-gray-150 text-[13px]">
+          <tbody class="bg-white divide-y divide-gray-150">
             <tr>
               <td class="px-4 py-3 font-semibold text-slate-900 bg-slate-50/40">Stack CEMS</td>
               <td class="px-4 py-3 text-gray-600">SO2, NOx, CO, CO2, O2 concentrations</td>
@@ -5064,6 +5105,7 @@ content: `
     readTime: "9 Min Read",
     pillar: "Pillar 1: Flow Measurement & Custody Metering",
     description: "Comprehensive guide to flow measurement in upstream oil and gas — covering wellhead allocation metering, multiphase meters, and pipeline entry systems.",
+    keywords: "upstream flow measurement, wellhead metering, oil and gas production",
     image: "/oil_and_gas.jpg",
     imageAlt: "An offshore oil and gas production platform wellhead manifold configuration in deep water.",
 content: `
@@ -5072,8 +5114,8 @@ content: `
       </p>
 
       <div class="my-6 rounded-lg bg-slate-50 border border-slate-200 p-5 not-prose">
-        <h4 class="text-[13.5px] font-bold text-slate-900 mb-2">💡 Key Takeaways</h4>
-        <ul class="text-[13px] text-slate-600 space-y-2 list-disc pl-4">
+        <h4 class="font-bold text-slate-900 mb-2">💡 Key Takeaways</h4>
+        <ul class="text-slate-600 space-y-2 list-disc pl-4">
           <li><strong>Allocation Focus:</strong> Wellhead allocation measurement determines production shares using API MPMS Chapter 20 standards.</li>
           <li><strong>Multiphase Metering:</strong> MPFMs analyze gas, oil, and water phases simultaneously, eliminating separator footprint requirements.</li>
           <li><strong>Custody Handover:</strong> High-precision Coriolis and ultrasonic meters at pipeline entry points protect commercial transactional values.</li>
@@ -5127,15 +5169,15 @@ content: `
       </p>
 
       <div class="overflow-x-auto my-8 not-prose">
-        <table class="min-w-full divide-y divide-gray-200 border border-gray-150 text-[13.5px]">
+        <table class="min-w-full divide-y divide-gray-200 border border-gray-150">
           <thead class="bg-slate-50">
             <tr>
-              <th scope="col" class="px-4 py-3 text-left text-xs font-semibold text-slate-900 uppercase tracking-wider border-b border-gray-150">Production Stage</th>
-              <th scope="col" class="px-4 py-3 text-left text-xs font-semibold text-slate-900 uppercase tracking-wider border-b border-gray-150">Applicable Meter Type</th>
-              <th scope="col" class="px-4 py-3 text-left text-xs font-semibold text-slate-900 uppercase tracking-wider border-b border-gray-150">Primary Metrological Purpose</th>
+              <th scope="col" class="px-4 py-3 text-left font-semibold text-slate-900 uppercase tracking-wider border-b border-gray-150">Production Stage</th>
+              <th scope="col" class="px-4 py-3 text-left font-semibold text-slate-900 uppercase tracking-wider border-b border-gray-150">Applicable Meter Type</th>
+              <th scope="col" class="px-4 py-3 text-left font-semibold text-slate-900 uppercase tracking-wider border-b border-gray-150">Primary Metrological Purpose</th>
             </tr>
           </thead>
-          <tbody class="bg-white divide-y divide-gray-150 text-[13px]">
+          <tbody class="bg-white divide-y divide-gray-150">
             <tr>
               <td class="px-4 py-3 font-semibold text-slate-900 bg-slate-50/40">Wellhead Flowline</td>
               <td class="px-4 py-3 text-gray-600">Multiphase Flow Meter (MPFM), Venturi, Cone meters</td>
@@ -5209,6 +5251,7 @@ content: `
     readTime: "9 Min Read",
     pillar: "Pillar 1: Flow Measurement & Custody Metering",
     description: "Comprehensive guide to custody transfer in pipeline operations — covering meter station design, proving frequency, ticketing, and dispute prevention.",
+    keywords: "custody transfer pipeline, pipeline metering, transfer operations",
     image: "/refinery.jpg",
     imageAlt: "An aerial view of an oil refinery pipeline junction and distillation columns at sunset.",
 content: `
@@ -5217,8 +5260,8 @@ content: `
       </p>
 
       <div class="my-6 rounded-lg bg-slate-50 border border-slate-200 p-5 not-prose">
-        <h4 class="text-[13.5px] font-bold text-slate-900 mb-2">💡 Key Takeaways</h4>
-        <ul class="text-[13px] text-slate-600 space-y-2 list-disc pl-4">
+        <h4 class="font-bold text-slate-900 mb-2">💡 Key Takeaways</h4>
+        <ul class="text-slate-600 space-y-2 list-disc pl-4">
           <li><strong>Standards Strictness:</strong> Custody transfer stations operate under rigid API MPMS and AGA-7 frameworks to limit uncertainties.</li>
           <li><strong>Proving Calibration:</strong> Inline displacement or master meter proving loops dynamically adjust meter calibration factors.</li>
           <li><strong>Data Security:</strong> Automation tiers secure measurement tickets and events to protect financial logs.</li>
@@ -5252,15 +5295,15 @@ content: `
       </p>
 
       <div class="overflow-x-auto my-8 not-prose">
-        <table class="min-w-full divide-y divide-gray-200 border border-gray-150 text-[13.5px]">
+        <table class="min-w-full divide-y divide-gray-200 border border-gray-150">
           <thead class="bg-slate-50">
             <tr>
-              <th scope="col" class="px-4 py-3 text-left text-xs font-semibold text-slate-900 uppercase tracking-wider border-b border-gray-150">Fluid Type</th>
-              <th scope="col" class="px-4 py-3 text-left text-xs font-semibold text-slate-900 uppercase tracking-wider border-b border-gray-150">Typical Proving Frequency</th>
-              <th scope="col" class="px-4 py-3 text-left text-xs font-semibold text-slate-900 uppercase tracking-wider border-b border-gray-150">Metrological Focus Area</th>
+              <th scope="col" class="px-4 py-3 text-left font-semibold text-slate-900 uppercase tracking-wider border-b border-gray-150">Fluid Type</th>
+              <th scope="col" class="px-4 py-3 text-left font-semibold text-slate-900 uppercase tracking-wider border-b border-gray-150">Typical Proving Frequency</th>
+              <th scope="col" class="px-4 py-3 text-left font-semibold text-slate-900 uppercase tracking-wider border-b border-gray-150">Metrological Focus Area</th>
             </tr>
           </thead>
-          <tbody class="bg-white divide-y divide-gray-150 text-[13px]">
+          <tbody class="bg-white divide-y divide-gray-150">
             <tr>
               <td class="px-4 py-3 font-semibold text-slate-900 bg-slate-50/40">Crude Oil (High Viscosity)</td>
               <td class="px-4 py-3 text-gray-600">Monthly, or upon significant viscosity changes</td>
@@ -5289,7 +5332,7 @@ content: `
       <p>
         Disputes arise when upstream and downstream meters do not balance. To resolve differences, operators implement a structured dispute-prevention strategy:
       </p>
-      <ol class="list-decimal pl-5 text-[13px] text-gray-600 space-y-2">
+      <ol class="list-decimal pl-5 text-gray-600 space-y-2">
         <li>
           <strong>Automated Diagnostics Validation:</strong> Continuously monitor internal diagnostics (like ultrasonic speed-of-sound metrics) to identify meter drift before it causes transactional errors.
         </li>
@@ -5337,6 +5380,7 @@ content: `
     readTime: "9 Min Read",
     pillar: "Pillar 3: Analyzers & Inspection",
     description: "Comprehensive guide to NDT in oil and gas refineries — covering failure modes, Risk-Based Inspection (RBI), turnaround planning, and API standards.",
+    keywords: "NDT oil gas, refinery inspection, asset integrity",
     image: "/images/services/Non-Destructive-Testing-NDT.jpg.webp",
     imageAlt: "A qualified NDT inspector conducting ultrasonic testing on a refinery pressure vessel weld.",
 content: `
@@ -5345,8 +5389,8 @@ content: `
       </p>
 
       <div class="my-6 rounded-lg bg-slate-50 border border-slate-200 p-5 not-prose">
-        <h4 class="text-[13.5px] font-bold text-slate-900 mb-2">💡 Key Takeaways</h4>
-        <ul class="text-[13px] text-slate-600 space-y-2 list-disc pl-4">
+        <h4 class="font-bold text-slate-900 mb-2">💡 Key Takeaways</h4>
+        <ul class="text-slate-600 space-y-2 list-disc pl-4">
           <li><strong>Asset Protection:</strong> NDT methods locate internal defects, wall thinning, and cracking in vessels and process piping.</li>
           <li><strong>Prioritized Resources:</strong> Risk-Based Inspection (RBI) aligns inspection intervals based on the likelihood and consequences of mechanical failure.</li>
           <li><strong>Regulatory Standards:</strong> Inspection procedures satisfy API 510, API 570, and API 653 code compliance requirements.</li>
@@ -5364,15 +5408,15 @@ content: `
       </p>
 
       <div class="overflow-x-auto my-8 not-prose">
-        <table class="min-w-full divide-y divide-gray-200 border border-gray-150 text-[13.5px]">
+        <table class="min-w-full divide-y divide-gray-200 border border-gray-150">
           <thead class="bg-slate-50">
             <tr>
-              <th scope="col" class="px-4 py-3 text-left text-xs font-semibold text-slate-900 uppercase tracking-wider border-b border-gray-150">Refinery Failure Mode</th>
-              <th scope="col" class="px-4 py-3 text-left text-xs font-semibold text-slate-900 uppercase tracking-wider border-b border-gray-150">Primary NDT Method</th>
-              <th scope="col" class="px-4 py-3 text-left text-xs font-semibold text-slate-900 uppercase tracking-wider border-b border-gray-150">Typical Inspection Component</th>
+              <th scope="col" class="px-4 py-3 text-left font-semibold text-slate-900 uppercase tracking-wider border-b border-gray-150">Refinery Failure Mode</th>
+              <th scope="col" class="px-4 py-3 text-left font-semibold text-slate-900 uppercase tracking-wider border-b border-gray-150">Primary NDT Method</th>
+              <th scope="col" class="px-4 py-3 text-left font-semibold text-slate-900 uppercase tracking-wider border-b border-gray-150">Typical Inspection Component</th>
             </tr>
           </thead>
-          <tbody class="bg-white divide-y divide-gray-150 text-[13px]">
+          <tbody class="bg-white divide-y divide-gray-150">
             <tr>
               <td class="px-4 py-3 font-semibold text-slate-900 bg-slate-50/40">Corrosion Under Insulation (CUI)</td>
               <td class="px-4 py-3 text-gray-600">Pulsed Eddy Current (PEC) / Guided Wave Ultrasonic Testing (GWUT)</td>
@@ -5448,6 +5492,7 @@ content: `
     readTime: "9 Min Read",
     pillar: "Pillar 2: Industrial Process Automation",
     description: "Comprehensive guide to SCADA integration on offshore platforms — covering communication protocols, RTUs, and IEC 62443 security.",
+    keywords: "SCADA offshore, oil gas platforms, remote monitoring",
     image: "/images/control_room_interior_and_console/xlat_cyber/2.jpg",
     imageAlt: "SCADA server racks with status indicators flashing inside an offshore platform controls enclosure.",
 content: `
@@ -5456,8 +5501,8 @@ content: `
       </p>
 
       <div class="my-6 rounded-lg bg-slate-50 border border-slate-200 p-5 not-prose">
-        <h4 class="text-[13.5px] font-bold text-slate-900 mb-2">💡 Key Takeaways</h4>
-        <ul class="text-[13px] text-slate-600 space-y-2 list-disc pl-4">
+        <h4 class="font-bold text-slate-900 mb-2">💡 Key Takeaways</h4>
+        <ul class="text-slate-600 space-y-2 list-disc pl-4">
           <li><strong>Remote Connectivity:</strong> System links rely on satellite and microwave networks, requiring telemetry-optimized protocols.</li>
           <li><strong>Platform Safety:</strong> Process control interfaces directly with Emergency Shutdown (ESD) systems under safety interlock rules.</li>
           <li><strong>Cyber Hardening:</strong> Integrating systems requires strict zone isolation in compliance with IEC 62443 security standards.</li>
@@ -5494,15 +5539,15 @@ content: `
       </p>
 
       <div class="overflow-x-auto my-8 not-prose">
-        <table class="min-w-full divide-y divide-gray-200 border border-gray-150 text-[13.5px]">
+        <table class="min-w-full divide-y divide-gray-200 border border-gray-150">
           <thead class="bg-slate-50">
             <tr>
-              <th scope="col" class="px-4 py-3 text-left text-xs font-semibold text-slate-900 uppercase tracking-wider border-b border-gray-150">Communication Protocol</th>
-              <th scope="col" class="px-4 py-3 text-left text-xs font-semibold text-slate-900 uppercase tracking-wider border-b border-gray-150">Offshore Application Focus</th>
-              <th scope="col" class="px-4 py-3 text-left text-xs font-semibold text-slate-900 uppercase tracking-wider border-b border-gray-150">Redundancy Mechanism</th>
+              <th scope="col" class="px-4 py-3 text-left font-semibold text-slate-900 uppercase tracking-wider border-b border-gray-150">Communication Protocol</th>
+              <th scope="col" class="px-4 py-3 text-left font-semibold text-slate-900 uppercase tracking-wider border-b border-gray-150">Offshore Application Focus</th>
+              <th scope="col" class="px-4 py-3 text-left font-semibold text-slate-900 uppercase tracking-wider border-b border-gray-150">Redundancy Mechanism</th>
             </tr>
           </thead>
-          <tbody class="bg-white divide-y divide-gray-150 text-[13px]">
+          <tbody class="bg-white divide-y divide-gray-150">
             <tr>
               <td class="px-4 py-3 font-semibold text-slate-900 bg-slate-50/40">OPC UA</td>
               <td class="px-4 py-3 text-gray-600">High-speed data transfer between platform PLCs, metering flow computers, and HMI servers</td>
@@ -5576,6 +5621,7 @@ content: `
     readTime: "9 Min Read",
     pillar: "Pillar 3: Analyzers & Inspection",
     description: "Comprehensive guide to corrosion control in oil and gas — covering cathodic protection, coatings, chemical inhibitors, and monitoring technologies.",
+    keywords: "corrosion control, oil gas infrastructure, corrosion prevention",
     image: "/images/services/corrosion-control-services-2.jpg",
     imageAlt: "Inspectors evaluating anti-corrosive coating thickness on high-pressure gas piping lines.",
 content: `
@@ -5584,8 +5630,8 @@ content: `
       </p>
 
       <div class="my-6 rounded-lg bg-slate-50 border border-slate-200 p-5 not-prose">
-        <h4 class="text-[13.5px] font-bold text-slate-900 mb-2">💡 Key Takeaways</h4>
-        <ul class="text-[13px] text-slate-600 space-y-2 list-disc pl-4">
+        <h4 class="font-bold text-slate-900 mb-2">💡 Key Takeaways</h4>
+        <ul class="text-slate-600 space-y-2 list-disc pl-4">
           <li><strong>Double Protection:</strong> Combining high-performance external coatings with active cathodic protection creates a redundant corrosion barrier.</li>
           <li><strong>Real-Time Monitoring:</strong> Electrical resistance (ER) probes and linear polarization (LPR) sensors provide early warning of corrosive process changes.</li>
           <li><strong>Standards Alignment:</strong> Implementation follows NACE SP0169, NACE SP0188, and ISO 15589 metrological guidelines.</li>
@@ -5606,15 +5652,15 @@ content: `
       </p>
 
       <div class="overflow-x-auto my-8 not-prose">
-        <table class="min-w-full divide-y divide-gray-200 border border-gray-150 text-[13.5px]">
+        <table class="min-w-full divide-y divide-gray-200 border border-gray-150">
           <thead class="bg-slate-50">
             <tr>
-              <th scope="col" class="px-4 py-3 text-left text-xs font-semibold text-slate-900 uppercase tracking-wider border-b border-gray-150">Cathodic Protection Type</th>
-              <th scope="col" class="px-4 py-3 text-left text-xs font-semibold text-slate-900 uppercase tracking-wider border-b border-gray-150">Operating Mechanism</th>
-              <th scope="col" class="px-4 py-3 text-left text-xs font-semibold text-slate-900 uppercase tracking-wider border-b border-gray-150">Primary Asset Application</th>
+              <th scope="col" class="px-4 py-3 text-left font-semibold text-slate-900 uppercase tracking-wider border-b border-gray-150">Cathodic Protection Type</th>
+              <th scope="col" class="px-4 py-3 text-left font-semibold text-slate-900 uppercase tracking-wider border-b border-gray-150">Operating Mechanism</th>
+              <th scope="col" class="px-4 py-3 text-left font-semibold text-slate-900 uppercase tracking-wider border-b border-gray-150">Primary Asset Application</th>
             </tr>
           </thead>
-          <tbody class="bg-white divide-y divide-gray-150 text-[13px]">
+          <tbody class="bg-white divide-y divide-gray-150">
             <tr>
               <td class="px-4 py-3 font-semibold text-slate-900 bg-slate-50/40">Sacrificial Anode (Galvanic)</td>
               <td class="px-4 py-3 text-gray-600">Uses highly electronegative metals (magnesium, zinc, aluminum) that corrode preferentially, protecting the host steel.</td>
@@ -5691,6 +5737,7 @@ content: `
     readTime: "9 Min Read",
     pillar: "Pillar 2: Industrial Process Automation",
     description: "Comprehensive guide to Safety Instrumented Systems (SIS) in oil and gas — covering IEC 61511 compliance, SIL determination, SIS architecture, and proof testing.",
+    keywords: "safety instrumented systems, IEC 61511, oil gas safety",
     image: "/images/industrial_automation/industrial_control_panels/1.jpg",
     imageAlt: "A safety-instrumented system (SIS) safety PLC cabinet with dual-redundant power supplies.",
 content: `
@@ -5699,8 +5746,8 @@ content: `
       </p>
 
       <div class="my-6 rounded-lg bg-slate-50 border border-slate-200 p-5 not-prose">
-        <h4 class="text-[13.5px] font-bold text-slate-900 mb-2">💡 Key Takeaways</h4>
-        <ul class="text-[13px] text-slate-600 space-y-2 list-disc pl-4">
+        <h4 class="font-bold text-slate-900 mb-2">💡 Key Takeaways</h4>
+        <ul class="text-slate-600 space-y-2 list-disc pl-4">
           <li><strong>Functional Safety:</strong> Compliance requires strict adherence to IEC 61511 and IEC 61508 safety standards.</li>
           <li><strong>Determining Targets:</strong> Target Safety Integrity Levels (SIL) are calculated using LOPA and HAZOP studies.</li>
           <li><strong>Architectural Choice:</strong> Voting architectures (such as 1oo2 or 2oo3) balance process safety and nuisance trip prevention.</li>
@@ -5718,14 +5765,14 @@ content: `
       </p>
 
       <div class="overflow-x-auto my-8 not-prose">
-        <table class="min-w-full divide-y divide-gray-200 border border-gray-150 text-[13.5px]">
+        <table class="min-w-full divide-y divide-gray-200 border border-gray-150">
           <thead class="bg-slate-50">
             <tr>
-              <th scope="col" class="px-4 py-3 text-left text-xs font-semibold text-slate-900 uppercase tracking-wider border-b border-gray-150">Lifecycle Phase</th>
-              <th scope="col" class="px-4 py-3 text-left text-xs font-semibold text-slate-900 uppercase tracking-wider border-b border-gray-150">Engineering Activity</th>
+              <th scope="col" class="px-4 py-3 text-left font-semibold text-slate-900 uppercase tracking-wider border-b border-gray-150">Lifecycle Phase</th>
+              <th scope="col" class="px-4 py-3 text-left font-semibold text-slate-900 uppercase tracking-wider border-b border-gray-150">Engineering Activity</th>
             </tr>
           </thead>
-          <tbody class="bg-white divide-y divide-gray-150 text-[13px]">
+          <tbody class="bg-white divide-y divide-gray-150">
             <tr>
               <td class="px-4 py-3 font-semibold text-slate-900 bg-slate-50/40">Analysis Phase</td>
               <td class="px-4 py-3 text-gray-600">Conduct HAZOP and LOPA studies to identify hazards and determine required SIL targets.</td>
@@ -5808,6 +5855,7 @@ content: `
     readTime: "8 Min Read",
     pillar: "Pillar 3: Analyzers & Inspection",
     description: "PWHT and stress relieving guide for oil and gas fabrication — covering ASME codes, heating rates, soak times, and post-PWHT hardness testing.",
+    keywords: "heat treatment, PWHT, oil gas fabrication",
     image: "/images/services/Heat-Treatment-Services.jpeg",
     imageAlt: "Electrical resistance heating pads wrapped around a pipe weld joint for pre-heating.",
 content: `
@@ -5816,8 +5864,8 @@ content: `
       </p>
 
       <div class="my-6 rounded-lg bg-slate-50 border border-slate-200 p-5 not-prose">
-        <h4 class="text-[13.5px] font-bold text-slate-900 mb-2">💡 Key Takeaways</h4>
-        <ul class="text-[13px] text-slate-600 space-y-2 list-disc pl-4">
+        <h4 class="font-bold text-slate-900 mb-2">💡 Key Takeaways</h4>
+        <ul class="text-slate-600 space-y-2 list-disc pl-4">
           <li><strong>Stress Relief:</strong> Welding introduces massive localized thermal stresses; PWHT redistributes these stresses to restore ductility.</li>
           <li><strong>Code Mandates:</strong> ASME Section VIII and B31.3 specify PWHT triggers based on material chemistry and nominal wall thickness.</li>
           <li><strong>Hardness Verifications:</strong> Post-PWHT hardness testing verifies that heat-affected zone (HAZ) properties meet sour service limits.</li>
@@ -5835,14 +5883,14 @@ content: `
       </p>
 
       <div class="overflow-x-auto my-8 not-prose">
-        <table class="min-w-full divide-y divide-gray-200 border border-gray-150 text-[13.5px]">
+        <table class="min-w-full divide-y divide-gray-200 border border-gray-150">
           <thead class="bg-slate-50">
             <tr>
-              <th scope="col" class="px-4 py-3 text-left text-xs font-semibold text-slate-900 uppercase tracking-wider border-b border-gray-150">Design Code</th>
-              <th scope="col" class="px-4 py-3 text-left text-xs font-semibold text-slate-900 uppercase tracking-wider border-b border-gray-150">Weld Configuration &amp; Thickness Trigger</th>
+              <th scope="col" class="px-4 py-3 text-left font-semibold text-slate-900 uppercase tracking-wider border-b border-gray-150">Design Code</th>
+              <th scope="col" class="px-4 py-3 text-left font-semibold text-slate-900 uppercase tracking-wider border-b border-gray-150">Weld Configuration &amp; Thickness Trigger</th>
             </tr>
           </thead>
-          <tbody class="bg-white divide-y divide-gray-150 text-[13px]">
+          <tbody class="bg-white divide-y divide-gray-150">
             <tr>
               <td class="px-4 py-3 font-semibold text-slate-900 bg-slate-50/40">ASME Section VIII Div.1</td>
               <td class="px-4 py-3 text-gray-600">Mandated for carbon steel vessels exceeding thickness thresholds defined by Table UCS-56.</td>
@@ -5863,7 +5911,7 @@ content: `
       <p>
         To prevent thermal gradients and localized distortion, heat treatment processes must follow strict procedures:
       </p>
-      <ol class="list-decimal pl-5 text-[13px] text-gray-600 space-y-2">
+      <ol class="list-decimal pl-5 text-gray-600 space-y-2">
         <li>
           <strong>Thermocouple Attachment and Insulation Setup:</strong> Thermocouples are attached to the weld area and heat-affected zone to track temperatures. Insulation blankets are placed to prevent rapid heat loss.
         </li>
@@ -5921,6 +5969,7 @@ content: `
     readTime: "8 Min Read",
     pillar: "Pillar 3: Analyzers & Inspection",
     description: "LOLER and ASME B30 guidelines for lifting equipment safety in oil and gas — covering inspection categories, load testing intervals, and non-conformances.",
+    keywords: "lifting equipment safety, oil gas, regulatory compliance",
     image: "/images/services/lifting_eq_inspection.jpg",
     imageAlt: "A crane hook and steel cable slings undergoing magnetic particle inspection for stress cracking.",
 content: `
@@ -5929,8 +5978,8 @@ content: `
       </p>
 
       <div class="my-6 rounded-lg bg-slate-50 border border-slate-200 p-5 not-prose">
-        <h4 class="text-[13.5px] font-bold text-slate-900 mb-2">💡 Key Takeaways</h4>
-        <ul class="text-[13px] text-slate-600 space-y-2 list-disc pl-4">
+        <h4 class="font-bold text-slate-900 mb-2">💡 Key Takeaways</h4>
+        <ul class="text-slate-600 space-y-2 list-disc pl-4">
           <li><strong>High Hazards:</strong> Heavy lifts over live process piping present severe risks, making rigging inspections critical.</li>
           <li><strong>LOLER Compliance:</strong> Operations require thorough examinations by competent inspectors to locate defects.</li>
           <li><strong>Proof Validation:</strong> Load testing certifies that components safely support the Safe Working Load (SWL).</li>
@@ -5948,15 +5997,15 @@ content: `
       </p>
 
       <div class="overflow-x-auto my-8 not-prose">
-        <table class="min-w-full divide-y divide-gray-200 border border-gray-150 text-[13.5px]">
+        <table class="min-w-full divide-y divide-gray-200 border border-gray-150">
           <thead class="bg-slate-50">
             <tr>
-              <th scope="col" class="px-4 py-3 text-left text-xs font-semibold text-slate-900 uppercase tracking-wider border-b border-gray-150">Equipment Category</th>
-              <th scope="col" class="px-4 py-3 text-left text-xs font-semibold text-slate-900 uppercase tracking-wider border-b border-gray-150">Target Components</th>
-              <th scope="col" class="px-4 py-3 text-left text-xs font-semibold text-slate-900 uppercase tracking-wider border-b border-gray-150">Typical Inspection Checklist</th>
+              <th scope="col" class="px-4 py-3 text-left font-semibold text-slate-900 uppercase tracking-wider border-b border-gray-150">Equipment Category</th>
+              <th scope="col" class="px-4 py-3 text-left font-semibold text-slate-900 uppercase tracking-wider border-b border-gray-150">Target Components</th>
+              <th scope="col" class="px-4 py-3 text-left font-semibold text-slate-900 uppercase tracking-wider border-b border-gray-150">Typical Inspection Checklist</th>
             </tr>
           </thead>
-          <tbody class="bg-white divide-y divide-gray-150 text-[13px]">
+          <tbody class="bg-white divide-y divide-gray-150">
             <tr>
               <td class="px-4 py-3 font-semibold text-slate-900 bg-slate-50/40">Lifting Appliances</td>
               <td class="px-4 py-3 text-gray-600">Offshore cranes, pedestal winches, overhead gantries, hoist units</td>
@@ -6035,6 +6084,7 @@ content: `
     readTime: "8 Min Read",
     pillar: "Pillar 3: Analyzers & Inspection",
     description: "Hydrostatic pressure testing guide for pipelines — covering test pressure calculations, fill & vent procedures, safety precautions, and documentation.",
+    keywords: "hydrotest, pressure testing, pipeline integrity",
     image: "/images/services/HOSE-TEST.jpg",
     imageAlt: "A high-pressure hydrostatic test pump assembly connected to a pipeline section for pressure testing.",
 content: `
@@ -6043,8 +6093,8 @@ content: `
       </p>
 
       <div class="my-6 rounded-lg bg-slate-50 border border-slate-200 p-5 not-prose">
-        <h4 class="text-[13.5px] font-bold text-slate-900 mb-2">💡 Key Takeaways</h4>
-        <ul class="text-[13px] text-slate-600 space-y-2 list-disc pl-4">
+        <h4 class="font-bold text-slate-900 mb-2">💡 Key Takeaways</h4>
+        <ul class="text-slate-600 space-y-2 list-disc pl-4">
           <li><strong>Integrity Proof:</strong> Hydrotesting exposes welding defects, structural cracking, and material flaws before commissioning.</li>
           <li><strong>Pressure Metrics:</strong> Test pressures are calculated based on code requirements, typically ranging from 1.25 to 1.5 times the design limit.</li>
           <li><strong>Safety Rules:</strong> Testing zones require safety exclusion areas to protect personnel from high-pressure releases.</li>
@@ -6062,14 +6112,14 @@ content: `
       </p>
 
       <div class="overflow-x-auto my-8 not-prose">
-        <table class="min-w-full divide-y divide-gray-200 border border-gray-150 text-[13.5px]">
+        <table class="min-w-full divide-y divide-gray-200 border border-gray-150">
           <thead class="bg-slate-50">
             <tr>
-              <th scope="col" class="px-4 py-3 text-left text-xs font-semibold text-slate-900 uppercase tracking-wider border-b border-gray-150">Applicable Standard</th>
-              <th scope="col" class="px-4 py-3 text-left text-xs font-semibold text-slate-900 uppercase tracking-wider border-b border-gray-150">Typical Hydrotest Pressure Factor Range</th>
+              <th scope="col" class="px-4 py-3 text-left font-semibold text-slate-900 uppercase tracking-wider border-b border-gray-150">Applicable Standard</th>
+              <th scope="col" class="px-4 py-3 text-left font-semibold text-slate-900 uppercase tracking-wider border-b border-gray-150">Typical Hydrotest Pressure Factor Range</th>
             </tr>
           </thead>
-          <tbody class="bg-white divide-y divide-gray-150 text-[13px]">
+          <tbody class="bg-white divide-y divide-gray-150">
             <tr>
               <td class="px-4 py-3 font-semibold text-slate-900 bg-slate-50/40">ASME B31.3 (Process Piping)</td>
               <td class="px-4 py-3 text-gray-600">Typically 1.5 times the design pressure, adjusted for temperature limits.</td>
@@ -6090,7 +6140,7 @@ content: `
       <p>
         Executing a pipeline hydrotest requires a structured sequence:
       </p>
-      <ol class="list-decimal pl-5 text-[13px] text-gray-600 space-y-2">
+      <ol class="list-decimal pl-5 text-gray-600 space-y-2">
         <li>
           <strong>Fill and Vent Phase:</strong> Water is pumped into the pipeline while venting air pockets at high points to ensure the line is completely filled.
         </li>
@@ -6148,6 +6198,7 @@ content: `
     readTime: "9 Min Read",
     pillar: "Pillar 3: Analyzers & Inspection",
     description: "Mill test certificate and EN 10204 compliance guide for oil and gas materials — covering NACE MR0175, ASTM standards, and PMI verification.",
+    keywords: "material certification, NACE ASTM API, material compliance",
     image: "/images/services/Macro-and-Micro-Test.jpg",
     imageAlt: "A QA/QC manager examining alloy microstructure in a metallurgical laboratory.",
 content: `
@@ -6156,8 +6207,8 @@ content: `
       </p>
 
       <div class="my-6 rounded-lg bg-slate-50 border border-slate-200 p-5 not-prose">
-        <h4 class="text-[13.5px] font-bold text-slate-900 mb-2">💡 Key Takeaways</h4>
-        <ul class="text-[13px] text-slate-600 space-y-2 list-disc pl-4">
+        <h4 class="font-bold text-slate-900 mb-2">💡 Key Takeaways</h4>
+        <ul class="text-slate-600 space-y-2 list-disc pl-4">
           <li><strong>Traceability Level:</strong> Material validation relies on EN 10204 Type 3.1 and Type 3.2 mill certificates to verify quality.</li>
           <li><strong>Sour Service Limits:</strong> Materials operating in H2S environments must comply with NACE MR0175/ISO 15156 hardness limits.</li>
           <li><strong>Double Checking:</strong> Positive Material Identification (PMI) checks verify chemical compositions on-site.</li>
@@ -6175,15 +6226,15 @@ content: `
       </p>
 
       <div class="overflow-x-auto my-8 not-prose">
-        <table class="min-w-full divide-y divide-gray-200 border border-gray-150 text-[13.5px]">
+        <table class="min-w-full divide-y divide-gray-200 border border-gray-150">
           <thead class="bg-slate-50">
             <tr>
-              <th scope="col" class="px-4 py-3 text-left text-xs font-semibold text-slate-900 uppercase tracking-wider border-b border-gray-150">MTR Type</th>
-              <th scope="col" class="px-4 py-3 text-left text-xs font-semibold text-slate-900 uppercase tracking-wider border-b border-gray-150">Verification Mechanism</th>
-              <th scope="col" class="px-4 py-3 text-left text-xs font-semibold text-slate-900 uppercase tracking-wider border-b border-gray-150">Typical Project Application</th>
+              <th scope="col" class="px-4 py-3 text-left font-semibold text-slate-900 uppercase tracking-wider border-b border-gray-150">MTR Type</th>
+              <th scope="col" class="px-4 py-3 text-left font-semibold text-slate-900 uppercase tracking-wider border-b border-gray-150">Verification Mechanism</th>
+              <th scope="col" class="px-4 py-3 text-left font-semibold text-slate-900 uppercase tracking-wider border-b border-gray-150">Typical Project Application</th>
             </tr>
           </thead>
-          <tbody class="bg-white divide-y divide-gray-150 text-[13px]">
+          <tbody class="bg-white divide-y divide-gray-150">
             <tr>
               <td class="px-4 py-3 font-semibold text-slate-900 bg-slate-50/40">EN 10204 Type 2.1</td>
               <td class="px-4 py-3 text-gray-600">Declaration of compliance by the manufacturer without test results.</td>
@@ -6259,6 +6310,7 @@ content: `
     readTime: "9 Min Read",
     pillar: "Pillar 1: Flow Measurement & Custody Metering",
     description: "Flow meter selection guide for power plants — covering steam flow meters, feedwater measurement, fuel gas metering, and ASME PTC 19.5 compliance.",
+    keywords: "power plant flow measurement, steam metering, power generation",
     image: "/images/services/flow-measurement.jpg",
     imageAlt: "An ultrasonic liquid flow meter with clamp-on transducers measuring boiler feed water flow.",
 content: `
@@ -6267,8 +6319,8 @@ content: `
       </p>
 
       <div class="my-6 rounded-lg bg-slate-50 border border-slate-200 p-5 not-prose">
-        <h4 class="text-[13.5px] font-bold text-slate-900 mb-2">💡 Key Takeaways</h4>
-        <ul class="text-[13px] text-slate-600 space-y-2 list-disc pl-4">
+        <h4 class="font-bold text-slate-900 mb-2">💡 Key Takeaways</h4>
+        <ul class="text-slate-600 space-y-2 list-disc pl-4">
           <li><strong>Thermal Control:</strong> Steam metering requires high-pressure, superheated designs complying with ASME PTC 19.5.</li>
           <li><strong>Efficiency Indicator:</strong> Feedwater flow rates directly determine boiler thermal efficiency and boiler feed pump controls.</li>
           <li><strong>Fuel Tracking:</strong> Gas and fuel oil flows are monitored using custody-grade meters for combustion adjustments.</li>
@@ -6286,15 +6338,15 @@ content: `
       </p>
 
       <div class="overflow-x-auto my-8 not-prose">
-        <table class="min-w-full divide-y divide-gray-200 border border-gray-150 text-[13.5px]">
+        <table class="min-w-full divide-y divide-gray-200 border border-gray-150">
           <thead class="bg-slate-50">
             <tr>
-              <th scope="col" class="px-4 py-3 text-left text-xs font-semibold text-slate-900 uppercase tracking-wider border-b border-gray-150">Steam Meter Type</th>
-              <th scope="col" class="px-4 py-3 text-left text-xs font-semibold text-slate-900 uppercase tracking-wider border-b border-gray-150">Operating Principle</th>
-              <th scope="col" class="px-4 py-3 text-left text-xs font-semibold text-slate-900 uppercase tracking-wider border-b border-gray-150">Primary Power Application</th>
+              <th scope="col" class="px-4 py-3 text-left font-semibold text-slate-900 uppercase tracking-wider border-b border-gray-150">Steam Meter Type</th>
+              <th scope="col" class="px-4 py-3 text-left font-semibold text-slate-900 uppercase tracking-wider border-b border-gray-150">Operating Principle</th>
+              <th scope="col" class="px-4 py-3 text-left font-semibold text-slate-900 uppercase tracking-wider border-b border-gray-150">Primary Power Application</th>
             </tr>
           </thead>
-          <tbody class="bg-white divide-y divide-gray-150 text-[13px]">
+          <tbody class="bg-white divide-y divide-gray-150">
             <tr>
               <td class="px-4 py-3 font-semibold text-slate-900 bg-slate-50/40">Vortex Flow Meter</td>
               <td class="px-4 py-3 text-gray-600">Measures shedding frequency of vortices generated by a bluff body in the steam stream.</td>
@@ -6362,6 +6414,7 @@ content: `
     readTime: "9 Min Read",
     pillar: "Pillar 3: Analyzers & Inspection",
     description: "Compliance and technology selection guide for power plant CEMS — covering coal vs gas configurations, EPA Part 75, RATA testing, and ISO 14001.",
+    keywords: "CEMS coal gas, power plant emissions, EPA compliance",
     image: "/cems.png",
     imageAlt: "A power plant stack continuous emissions monitoring system (CEMS) analytical rack.",
 content: `
@@ -6370,8 +6423,8 @@ content: `
       </p>
 
       <div class="my-6 rounded-lg bg-slate-50 border border-slate-200 p-5 not-prose">
-        <h4 class="text-[13.5px] font-bold text-slate-900 mb-2">💡 Key Takeaways</h4>
-        <ul class="text-[13px] text-slate-600 space-y-2 list-disc pl-4">
+        <h4 class="font-bold text-slate-900 mb-2">💡 Key Takeaways</h4>
+        <ul class="text-slate-600 space-y-2 list-disc pl-4">
           <li><strong>Fuel Specificity:</strong> Coal units require multi-pollutant (SO2, NOx, Hg) and dust CEMS, while gas-fired plants focus on NOx and CO.</li>
           <li><strong>Audit Milestones:</strong> Relative Accuracy Test Audits (RATA) are executed annually using reference method testing to verify compliance.</li>
           <li><strong>Environmental Standards:</strong> Automated emissions tracking supports active ISO 14001:2015 certification audits.</li>
@@ -6389,15 +6442,15 @@ content: `
       </p>
 
       <div class="overflow-x-auto my-8 not-prose">
-        <table class="min-w-full divide-y divide-gray-200 border border-gray-150 text-[13.5px]">
+        <table class="min-w-full divide-y divide-gray-200 border border-gray-150">
           <thead class="bg-slate-50">
             <tr>
-              <th scope="col" class="px-4 py-3 text-left text-xs font-semibold text-slate-900 uppercase tracking-wider border-b border-gray-150">Fuel Type</th>
-              <th scope="col" class="px-4 py-3 text-left text-xs font-semibold text-slate-900 uppercase tracking-wider border-b border-gray-150">Primary Target Pollutants</th>
-              <th scope="col" class="px-4 py-3 text-left text-xs font-semibold text-slate-900 uppercase tracking-wider border-b border-gray-150">Typical CEMS Technology Layout</th>
+              <th scope="col" class="px-4 py-3 text-left font-semibold text-slate-900 uppercase tracking-wider border-b border-gray-150">Fuel Type</th>
+              <th scope="col" class="px-4 py-3 text-left font-semibold text-slate-900 uppercase tracking-wider border-b border-gray-150">Primary Target Pollutants</th>
+              <th scope="col" class="px-4 py-3 text-left font-semibold text-slate-900 uppercase tracking-wider border-b border-gray-150">Typical CEMS Technology Layout</th>
             </tr>
           </thead>
-          <tbody class="bg-white divide-y divide-gray-150 text-[13px]">
+          <tbody class="bg-white divide-y divide-gray-150">
             <tr>
               <td class="px-4 py-3 font-semibold text-slate-900 bg-slate-50/40">Coal-Fired Utility Boiler</td>
               <td class="px-4 py-3 text-gray-600">SO2, NOx, CO, CO2, Hg (Mercury), Particulate Matter (Dust)</td>
@@ -6416,7 +6469,7 @@ content: `
       <p>
         To verify that CEMS readings are representative of stack emissions, systems undergo annual Relative Accuracy Test Audits (RATA). The RATA process consists of several critical steps:
       </p>
-      <ol class="list-decimal pl-5 text-[13px] text-gray-600 space-y-2">
+      <ol class="list-decimal pl-5 text-gray-600 space-y-2">
         <li>
           <strong>Test Plan Submittal and Agency Notification:</strong> The facility submits a test protocol and notifies the environmental agency of the audit schedule.
         </li>
@@ -6477,6 +6530,7 @@ content: `
     readTime: "8 Min Read",
     pillar: "Pillar 2: Industrial Process Automation",
     description: "Automation architecture guide for power plants — comparing PLCs and DCS, redundancy requirements, and integration with metering and CEMS.",
+    keywords: "PLC SCADA, power plant automation, process control",
     image: "/images/control_room_interior_and_console/dynamic_m/2.jpg",
     imageAlt: "A power station control room console featuring human-machine interface (HMI) screens.",
 content: `
@@ -6485,8 +6539,8 @@ content: `
       </p>
 
       <div class="my-6 rounded-lg bg-slate-50 border border-slate-200 p-5 not-prose">
-        <h4 class="text-[13.5px] font-bold text-slate-900 mb-2">💡 Key Takeaways</h4>
-        <ul class="text-[13px] text-slate-600 space-y-2 list-disc pl-4">
+        <h4 class="font-bold text-slate-900 mb-2">💡 Key Takeaways</h4>
+        <ul class="text-slate-600 space-y-2 list-disc pl-4">
           <li><strong>Integrated Control:</strong> Modern plants utilize PLCs for package control and integrate them into a central Distributed Control System (DCS).</li>
           <li><strong>Hardware Redundancy:</strong> Critical control loops require hot-standby CPU configurations and redundant network pathways.</li>
           <li><strong>Standards Compliance:</strong> Logic code development must follow IEC 61131-3, and networks must be secured to IEC 62443.</li>
@@ -6504,15 +6558,15 @@ content: `
       </p>
 
       <div class="overflow-x-auto my-8 not-prose">
-        <table class="min-w-full divide-y divide-gray-200 border border-gray-150 text-[13.5px]">
+        <table class="min-w-full divide-y divide-gray-200 border border-gray-150">
           <thead class="bg-slate-50">
             <tr>
-              <th scope="col" class="px-4 py-3 text-left text-xs font-semibold text-slate-900 uppercase tracking-wider border-b border-gray-150">Automation Platform</th>
-              <th scope="col" class="px-4 py-3 text-left text-xs font-semibold text-slate-900 uppercase tracking-wider border-b border-gray-150">Control Application Area</th>
-              <th scope="col" class="px-4 py-3 text-left text-xs font-semibold text-slate-900 uppercase tracking-wider border-b border-gray-150">Typical Hardware Architecture</th>
+              <th scope="col" class="px-4 py-3 text-left font-semibold text-slate-900 uppercase tracking-wider border-b border-gray-150">Automation Platform</th>
+              <th scope="col" class="px-4 py-3 text-left font-semibold text-slate-900 uppercase tracking-wider border-b border-gray-150">Control Application Area</th>
+              <th scope="col" class="px-4 py-3 text-left font-semibold text-slate-900 uppercase tracking-wider border-b border-gray-150">Typical Hardware Architecture</th>
             </tr>
           </thead>
-          <tbody class="bg-white divide-y divide-gray-150 text-[13px]">
+          <tbody class="bg-white divide-y divide-gray-150">
             <tr>
               <td class="px-4 py-3 font-semibold text-slate-900 bg-slate-50/40">Programmable Logic Controller (PLC)</td>
               <td class="px-4 py-3 text-gray-600">Discrete package systems, burner safety blocks, water treatment skids, generator controls</td>
@@ -6575,6 +6629,7 @@ content: `
     readTime: "9 Min Read",
     pillar: "Pillar 3: Analyzers & Inspection",
     description: "ASME and NBIC compliance guide for power plant boiler NDT — covering tube thinning, creep damage, outage planning, and testing methods.",
+    keywords: "NDT power plant, boiler inspection, ASME code",
     image: "/images/services/ndt.jpg",
     imageAlt: "An inspector scanning boiler waterwall tubes inside a power generation boiler during shutdown.",
 content: `
@@ -6583,8 +6638,8 @@ content: `
       </p>
 
       <div class="my-6 rounded-lg bg-slate-50 border border-slate-200 p-5 not-prose">
-        <h4 class="text-[13.5px] font-bold text-slate-900 mb-2">💡 Key Takeaways</h4>
-        <ul class="text-[13px] text-slate-600 space-y-2 list-disc pl-4">
+        <h4 class="font-bold text-slate-900 mb-2">💡 Key Takeaways</h4>
+        <ul class="text-slate-600 space-y-2 list-disc pl-4">
           <li><strong>Tube Inspection:</strong> Electromagnetic testing (ECT) and ultrasonic thickness (UT) identify localized wall thinning.</li>
           <li><strong>Thermal Stress:</strong> Heavy-wall headers and steam drums are checked for creep cracking and fatigue anomalies.</li>
           <li><strong>Regulatory Codes:</strong> Inspection tasks follow ASME Section I, ASME Section V, and NBIC Part 2 guidelines.</li>
@@ -6618,15 +6673,15 @@ content: `
       </p>
 
       <div class="overflow-x-auto my-8 not-prose">
-        <table class="min-w-full divide-y divide-gray-200 border border-gray-150 text-[13.5px]">
+        <table class="min-w-full divide-y divide-gray-200 border border-gray-150">
           <thead class="bg-slate-50">
             <tr>
-              <th scope="col" class="px-4 py-3 text-left text-xs font-semibold text-slate-900 uppercase tracking-wider border-b border-gray-150">Boiler Component</th>
-              <th scope="col" class="px-4 py-3 text-left text-xs font-semibold text-slate-900 uppercase tracking-wider border-b border-gray-150">Primary NDT Method</th>
-              <th scope="col" class="px-4 py-3 text-left text-xs font-semibold text-slate-900 uppercase tracking-wider border-b border-gray-150">Primary Metrological Purpose</th>
+              <th scope="col" class="px-4 py-3 text-left font-semibold text-slate-900 uppercase tracking-wider border-b border-gray-150">Boiler Component</th>
+              <th scope="col" class="px-4 py-3 text-left font-semibold text-slate-900 uppercase tracking-wider border-b border-gray-150">Primary NDT Method</th>
+              <th scope="col" class="px-4 py-3 text-left font-semibold text-slate-900 uppercase tracking-wider border-b border-gray-150">Primary Metrological Purpose</th>
             </tr>
           </thead>
-          <tbody class="bg-white divide-y divide-gray-150 text-[13px]">
+          <tbody class="bg-white divide-y divide-gray-150">
             <tr>
               <td class="px-4 py-3 font-semibold text-slate-900 bg-slate-50/40">Superheater &amp; Reheater Tubes</td>
               <td class="px-4 py-3 text-gray-600">Electromagnetic Testing (ECT) / Internal Rotary Inspection System (IRIS) / UT</td>
@@ -6694,6 +6749,7 @@ content: `
     readTime: "8 Min Read",
     pillar: "Pillar 2: Industrial Process Automation",
     description: "Variable Frequency Drive (VFD) guide for power plants — covering ID/FD fan control, boiler feed pump speed regulation, and harmonic mitigation.",
+    keywords: "VFD power plant, fan pump control, energy efficiency",
     image: "/images/frequency-inverters/FR-A800.webp",
     imageAlt: "A heavy-capacity variable frequency drive cabinet controlling a large boiler draft fan motor.",
 content: `
@@ -6702,8 +6758,8 @@ content: `
       </p>
 
       <div class="my-6 rounded-lg bg-slate-50 border border-slate-200 p-5 not-prose">
-        <h4 class="text-[13.5px] font-bold text-slate-900 mb-2">💡 Key Takeaways</h4>
-        <ul class="text-[13px] text-slate-600 space-y-2 list-disc pl-4">
+        <h4 class="font-bold text-slate-900 mb-2">💡 Key Takeaways</h4>
+        <ul class="text-slate-600 space-y-2 list-disc pl-4">
           <li><strong>Process Efficiency:</strong> Speed-control loops replace throttling valves, lowering auxiliary electrical load requirements.</li>
           <li><strong>Soft Starting:</strong> VFDs eliminate high inrush currents, protecting motors and power distribution grids.</li>
           <li><strong>Harmonic Controls:</strong> Mitigating electrical noise requires passive or active front-end filters in compliance with IEEE 519.</li>
@@ -6724,14 +6780,14 @@ content: `
       </p>
 
       <div class="overflow-x-auto my-8 not-prose">
-        <table class="min-w-full divide-y divide-gray-200 border border-gray-150 text-[13.5px]">
+        <table class="min-w-full divide-y divide-gray-200 border border-gray-150">
           <thead class="bg-slate-50">
             <tr>
-              <th scope="col" class="px-4 py-3 text-left text-xs font-semibold text-slate-900 uppercase tracking-wider border-b border-gray-150">Auxiliary Application</th>
-              <th scope="col" class="px-4 py-3 text-left text-xs font-semibold text-slate-900 uppercase tracking-wider border-b border-gray-150">Primary Operational Benefit</th>
+              <th scope="col" class="px-4 py-3 text-left font-semibold text-slate-900 uppercase tracking-wider border-b border-gray-150">Auxiliary Application</th>
+              <th scope="col" class="px-4 py-3 text-left font-semibold text-slate-900 uppercase tracking-wider border-b border-gray-150">Primary Operational Benefit</th>
             </tr>
           </thead>
-          <tbody class="bg-white divide-y divide-gray-150 text-[13px]">
+          <tbody class="bg-white divide-y divide-gray-150">
             <tr>
               <td class="px-4 py-3 font-semibold text-slate-900 bg-slate-50/40">Induced/Forced Draft Fans</td>
               <td class="px-4 py-3 text-gray-600">Replaces mechanical inlet guide vanes, optimizing furnace pressure control loops.</td>
@@ -6801,6 +6857,7 @@ content: `
     readTime: "8 Min Read",
     pillar: "Pillar 1: Flow Measurement & Custody Metering",
     description: "Guide to selecting turbine flow meters for steam measurement in power plants — covering applications, limitations, and vortex/DP alternatives.",
+    keywords: "turbine flow meters, steam measurement, power generation flow",
     image: "/helical_turbine_meter.png",
     imageAlt: "A heavy-duty gas turbine flow meter used for steam and process fluid volume monitoring.",
 content: `
@@ -6809,8 +6866,8 @@ content: `
       </p>
 
       <div class="my-6 rounded-lg bg-slate-50 border border-slate-200 p-5 not-prose">
-        <h4 class="text-[13.5px] font-bold text-slate-900 mb-2">💡 Key Takeaways</h4>
-        <ul class="text-[13px] text-slate-600 space-y-2 list-disc pl-4">
+        <h4 class="font-bold text-slate-900 mb-2">💡 Key Takeaways</h4>
+        <ul class="text-slate-600 space-y-2 list-disc pl-4">
           <li><strong>Operation:</strong> Turbine flow meters convert velocity into volumetric values using a rotor set within the steam stream.</li>
           <li><strong>Limits:</strong> Steam applications introduce high mechanical stresses, making rotor bearing wear a key maintenance factor.</li>
           <li><strong>Alternatives:</strong> Vortex shedding and differential pressure (DP) flow meters are common for superheated steam loops.</li>
@@ -6828,15 +6885,15 @@ content: `
       </p>
 
       <div class="overflow-x-auto my-8 not-prose">
-        <table class="min-w-full divide-y divide-gray-200 border border-gray-150 text-[13.5px]">
+        <table class="min-w-full divide-y divide-gray-200 border border-gray-150">
           <thead class="bg-slate-50">
             <tr>
-              <th scope="col" class="px-4 py-3 text-left text-xs font-semibold text-slate-900 uppercase tracking-wider border-b border-gray-150">Steam State / Application</th>
-              <th scope="col" class="px-4 py-3 text-left text-xs font-semibold text-slate-900 uppercase tracking-wider border-b border-gray-150">Suitable / Limitation Status</th>
-              <th scope="col" class="px-4 py-3 text-left text-xs font-semibold text-slate-900 uppercase tracking-wider border-b border-gray-150">Technical Explanation</th>
+              <th scope="col" class="px-4 py-3 text-left font-semibold text-slate-900 uppercase tracking-wider border-b border-gray-150">Steam State / Application</th>
+              <th scope="col" class="px-4 py-3 text-left font-semibold text-slate-900 uppercase tracking-wider border-b border-gray-150">Suitable / Limitation Status</th>
+              <th scope="col" class="px-4 py-3 text-left font-semibold text-slate-900 uppercase tracking-wider border-b border-gray-150">Technical Explanation</th>
             </tr>
           </thead>
-          <tbody class="bg-white divide-y divide-gray-150 text-[13px]">
+          <tbody class="bg-white divide-y divide-gray-150">
             <tr>
               <td class="px-4 py-3 font-semibold text-slate-900 bg-slate-50/40">Dry Saturated Steam</td>
               <td class="px-4 py-3 text-emerald-600 font-semibold">Suitable</td>
@@ -6904,6 +6961,7 @@ content: `
     readTime: "9 Min Read",
     pillar: "Pillar 2: Industrial Process Automation",
     description: "Design and maintenance guide for power plant electrical instrumentation — covering protection relays, CT/PT accuracy, and IEC 61850 compliance.",
+    keywords: "electrical instrumentation, power plant design, maintenance",
     image: "/images/services/electrical-inst.png",
     imageAlt: "An electrician installing terminal blocks inside a power plant instrumentation junction cabinet.",
 content: `
@@ -6912,8 +6970,8 @@ content: `
       </p>
 
       <div class="my-6 rounded-lg bg-slate-50 border border-slate-200 p-5 not-prose">
-        <h4 class="text-[13.5px] font-bold text-slate-900 mb-2">💡 Key Takeaways</h4>
-        <ul class="text-[13px] text-slate-600 space-y-2 list-disc pl-4">
+        <h4 class="font-bold text-slate-900 mb-2">💡 Key Takeaways</h4>
+        <ul class="text-slate-600 space-y-2 list-disc pl-4">
           <li><strong>Protection Relays:</strong> Microprocessor relays monitor circuits and trip switchgear to isolate electrical faults.</li>
           <li><strong>Grid Integration:</strong> Smart instrumentation utilizes the IEC 61850 protocol to coordinate switchgear and DCS actions.</li>
           <li><strong>Testing Cycles:</strong> Relays, CTs, and PTs require periodic insulation resistance and calibration checks.</li>
@@ -6926,15 +6984,15 @@ content: `
       </p>
 
       <div class="overflow-x-auto my-8 not-prose">
-        <table class="min-w-full divide-y divide-gray-200 border border-gray-150 text-[13.5px]">
+        <table class="min-w-full divide-y divide-gray-200 border border-gray-150">
           <thead class="bg-slate-50">
             <tr>
-              <th scope="col" class="px-4 py-3 text-left text-xs font-semibold text-slate-900 uppercase tracking-wider border-b border-gray-150">Instrumentation Subsystem</th>
-              <th scope="col" class="px-4 py-3 text-left text-xs font-semibold text-slate-900 uppercase tracking-wider border-b border-gray-150">Primary Component Focus</th>
-              <th scope="col" class="px-4 py-3 text-left text-xs font-semibold text-slate-900 uppercase tracking-wider border-b border-gray-150">Primary Metrological / Safety Purpose</th>
+              <th scope="col" class="px-4 py-3 text-left font-semibold text-slate-900 uppercase tracking-wider border-b border-gray-150">Instrumentation Subsystem</th>
+              <th scope="col" class="px-4 py-3 text-left font-semibold text-slate-900 uppercase tracking-wider border-b border-gray-150">Primary Component Focus</th>
+              <th scope="col" class="px-4 py-3 text-left font-semibold text-slate-900 uppercase tracking-wider border-b border-gray-150">Primary Metrological / Safety Purpose</th>
             </tr>
           </thead>
-          <tbody class="bg-white divide-y divide-gray-150 text-[13px]">
+          <tbody class="bg-white divide-y divide-gray-150">
             <tr>
               <td class="px-4 py-3 font-semibold text-slate-900 bg-slate-50/40">Protective Relaying</td>
               <td class="px-4 py-3 text-gray-600">Generator protection relays, transformer differential relays, feeder protection units</td>
@@ -7007,6 +7065,7 @@ content: `
     readTime: "8 Min Read",
     pillar: "Pillar 2: Industrial Process Automation",
     description: "Boiler and power plant control room design guide — covering ISO 11064 ergonomics, HMI layouts, operator workload, and environmental factors.",
+    keywords: "power plant control room, ISO 11064, operator efficiency",
     image: "/images/control_room_interior_and_console/xlat/1.jpg",
     imageAlt: "A modern control room layout with curved screens displaying electrical grid load balances.",
 content: `
@@ -7015,8 +7074,8 @@ content: `
       </p>
 
       <div class="my-6 rounded-lg bg-slate-50 border border-slate-200 p-5 not-prose">
-        <h4 class="text-[13.5px] font-bold text-slate-900 mb-2">💡 Key Takeaways</h4>
-        <ul class="text-[13px] text-slate-600 space-y-2 list-disc pl-4">
+        <h4 class="font-bold text-slate-900 mb-2">💡 Key Takeaways</h4>
+        <ul class="text-slate-600 space-y-2 list-disc pl-4">
           <li><strong>Ergonomic Layouts:</strong> Operator desk consoles, sightlines, and display angles are optimized to minimize physical strain.</li>
           <li><strong>Standards Compliance:</strong> Implementation of control centers must follow the layout guidelines of ISO 11064.</li>
           <li><strong>Stress Management:</strong> Alarm rationalization programs reduce cognitive load, preventing operator overload during process upsets.</li>
@@ -7034,14 +7093,14 @@ content: `
       </p>
 
       <div class="overflow-x-auto my-8 not-prose">
-        <table class="min-w-full divide-y divide-gray-200 border border-gray-150 text-[13.5px]">
+        <table class="min-w-full divide-y divide-gray-200 border border-gray-150">
           <thead class="bg-slate-50">
             <tr>
-              <th scope="col" class="px-4 py-3 text-left text-xs font-semibold text-slate-900 uppercase tracking-wider border-b border-gray-150">ISO 11064 Part / Principle</th>
-              <th scope="col" class="px-4 py-3 text-left text-xs font-semibold text-slate-900 uppercase tracking-wider border-b border-gray-150">Control Room Application Details</th>
+              <th scope="col" class="px-4 py-3 text-left font-semibold text-slate-900 uppercase tracking-wider border-b border-gray-150">ISO 11064 Part / Principle</th>
+              <th scope="col" class="px-4 py-3 text-left font-semibold text-slate-900 uppercase tracking-wider border-b border-gray-150">Control Room Application Details</th>
             </tr>
           </thead>
-          <tbody class="bg-white divide-y divide-gray-150 text-[13px]">
+          <tbody class="bg-white divide-y divide-gray-150">
             <tr>
               <td class="px-4 py-3 font-semibold text-slate-900 bg-slate-50/40">Part 1: Principles for design</td>
               <td class="px-4 py-3 text-gray-600">Establishes a human-centered design approach, analyzing operator tasks to shape the physical room layout.</td>
@@ -7110,6 +7169,7 @@ content: `
     readTime: "9 Min Read",
     pillar: "Pillar 3: Analyzers & Inspection",
     description: "Regulatory and technology compliance guide for thermal power plants — covering SO2, NOx, dust analyzers, FGD/SCR integration, and EPA standards.",
+    keywords: "thermal power emissions, SO2 NOx monitoring, EPA",
     image: "/power_plant.jpg",
     imageAlt: "Cooling towers emitting steam alongside a flue gas stack at a thermal power plant.",
 content: `
@@ -7118,8 +7178,8 @@ content: `
       </p>
 
       <div class="my-6 rounded-lg bg-slate-50 border border-slate-200 p-5 not-prose">
-        <h4 class="text-[13.5px] font-bold text-slate-900 mb-2">💡 Key Takeaways</h4>
-        <ul class="text-[13px] text-slate-600 space-y-2 list-disc pl-4">
+        <h4 class="font-bold text-slate-900 mb-2">💡 Key Takeaways</h4>
+        <ul class="text-slate-600 space-y-2 list-disc pl-4">
           <li><strong>Regulatory Standards:</strong> Operations comply with EPA 40 CFR Part 60 and EN 15267 metrological performance standards.</li>
           <li><strong>Integrated Control:</strong> Gaseous measurements provide feed-forward control inputs for SCR/SNCR and FGD abatement systems.</li>
           <li><strong>High Availability:</strong> Continuous data logging and automated calibration checks prevent reporting gaps.</li>
@@ -7137,15 +7197,15 @@ content: `
       </p>
 
       <div class="overflow-x-auto my-8 not-prose">
-        <table class="min-w-full divide-y divide-gray-200 border border-gray-150 text-[13.5px]">
+        <table class="min-w-full divide-y divide-gray-200 border border-gray-150">
           <thead class="bg-slate-50">
             <tr>
-              <th scope="col" class="px-4 py-3 text-left text-xs font-semibold text-slate-950 uppercase tracking-wider border-b border-gray-150">Target Pollutant</th>
-              <th scope="col" class="px-4 py-3 text-left text-xs font-semibold text-slate-900 uppercase tracking-wider border-b border-gray-150">Primary Monitoring Technology</th>
-              <th scope="col" class="px-4 py-3 text-left text-xs font-semibold text-slate-900 uppercase tracking-wider border-b border-gray-150">Reference Compliance Standard</th>
+              <th scope="col" class="px-4 py-3 text-left font-semibold text-slate-950 uppercase tracking-wider border-b border-gray-150">Target Pollutant</th>
+              <th scope="col" class="px-4 py-3 text-left font-semibold text-slate-900 uppercase tracking-wider border-b border-gray-150">Primary Monitoring Technology</th>
+              <th scope="col" class="px-4 py-3 text-left font-semibold text-slate-900 uppercase tracking-wider border-b border-gray-150">Reference Compliance Standard</th>
             </tr>
           </thead>
-          <tbody class="bg-white divide-y divide-gray-150 text-[13px]">
+          <tbody class="bg-white divide-y divide-gray-150">
             <tr>
               <td class="px-4 py-3 font-semibold text-slate-900 bg-slate-50/40">Sulfur Dioxide (SO2)</td>
               <td class="px-4 py-3 text-gray-600">Non-Dispersive Infrared (NDIR) / Ultraviolet Absorption (UV)</td>
@@ -7208,6 +7268,7 @@ content: `
     readTime: "9 Min Read",
     pillar: "Pillar 2: Industrial Process Automation",
     description: "Sensor selection and implementation guide for power plant predictive maintenance — covering vibration monitoring, thermal imaging, and ISO 10816 standards.",
+    keywords: "predictive maintenance, power plant sensors, analytics",
     image: "/images/services/inspection-testing.jpg",
     imageAlt: "An engineer using a portable vibration analyzer on a large high-pressure turbine housing.",
 content: `
@@ -7216,8 +7277,8 @@ content: `
       </p>
 
       <div class="my-6 rounded-lg bg-slate-50 border border-slate-200 p-5 not-prose">
-        <h4 class="text-[13.5px] font-bold text-slate-900 mb-2">💡 Key Takeaways</h4>
-        <ul class="text-[13px] text-slate-600 space-y-2 list-disc pl-4">
+        <h4 class="font-bold text-slate-900 mb-2">💡 Key Takeaways</h4>
+        <ul class="text-slate-600 space-y-2 list-disc pl-4">
           <li><strong>Risk Prevention:</strong> Real-time vibration sensors track bearing health, warning operators of imbalance or misalignment.</li>
           <li><strong>Standards Alignment:</strong> Vibration analysis thresholds and diagnostic signals follow ISO 10816 and ISO 13374 parameters.</li>
           <li><strong>Analytics Integration:</strong> Combining sensor histories with database analytics enables optimized outage planning.</li>
@@ -7230,15 +7291,15 @@ content: `
       </p>
 
       <div class="overflow-x-auto my-8 not-prose">
-        <table class="min-w-full divide-y divide-gray-200 border border-gray-150 text-[13.5px]">
+        <table class="min-w-full divide-y divide-gray-200 border border-gray-150">
           <thead class="bg-slate-50">
             <tr>
-              <th scope="col" class="px-4 py-3 text-left text-xs font-semibold text-slate-900 uppercase tracking-wider border-b border-gray-150">Maintenance Strategy</th>
-              <th scope="col" class="px-4 py-3 text-left text-xs font-semibold text-slate-900 uppercase tracking-wider border-b border-gray-150">Operational Approach</th>
-              <th scope="col" class="px-4 py-3 text-left text-xs font-semibold text-slate-900 uppercase tracking-wider border-b border-gray-150">Primary Disadvantage / Risk</th>
+              <th scope="col" class="px-4 py-3 text-left font-semibold text-slate-900 uppercase tracking-wider border-b border-gray-150">Maintenance Strategy</th>
+              <th scope="col" class="px-4 py-3 text-left font-semibold text-slate-900 uppercase tracking-wider border-b border-gray-150">Operational Approach</th>
+              <th scope="col" class="px-4 py-3 text-left font-semibold text-slate-900 uppercase tracking-wider border-b border-gray-150">Primary Disadvantage / Risk</th>
             </tr>
           </thead>
-          <tbody class="bg-white divide-y divide-gray-150 text-[13px]">
+          <tbody class="bg-white divide-y divide-gray-150">
             <tr>
               <td class="px-4 py-3 font-semibold text-slate-900 bg-slate-50/40">Reactive Maintenance</td>
               <td class="px-4 py-3 text-gray-600">Run to failure; repair equipment only after it breaks down.</td>
@@ -7287,7 +7348,7 @@ content: `
       <p>
         Launching a PdM program requires a structured approach:
       </p>
-      <ol class="list-decimal pl-5 text-[13px] text-gray-600 space-y-2">
+      <ol class="list-decimal pl-5 text-gray-600 space-y-2">
         <li>
           <strong>Criticality Analysis:</strong> Identify and rank power plant assets to target high-consequence machinery.
         </li>
@@ -7335,6 +7396,7 @@ content: `
     readTime: "9 Min Read",
     pillar: "Pillar 1: Flow Measurement & Custody Metering",
     description: "Cryogenic flow meter selection guide for LNG terminals — comparing Coriolis and ultrasonic meters, material selection, and density calculations.",
+    keywords: "LNG terminal flow, cryogenic metering, LNG measurement",
     image: "/lng.jpg",
     imageAlt: "A cryogenic Liquefied Natural Gas (LNG) carrier ship docked at an import/export terminal.",
 content: `
@@ -7343,8 +7405,8 @@ content: `
       </p>
 
       <div class="my-6 rounded-lg bg-slate-50 border border-slate-200 p-5 not-prose">
-        <h4 class="text-[13.5px] font-bold text-slate-900 mb-2">💡 Key Takeaways</h4>
-        <ul class="text-[13px] text-slate-600 space-y-2 list-disc pl-4">
+        <h4 class="font-bold text-slate-900 mb-2">💡 Key Takeaways</h4>
+        <ul class="text-slate-600 space-y-2 list-disc pl-4">
           <li><strong>Extreme Conditions:</strong> Operating temperatures below -160&deg;C introduce material embrittlement risks, requiring specialized alloys.</li>
           <li><strong>Coriolis Precision:</strong> Coriolis meters track mass flow directly, eliminating the need to compensate for density variations.</li>
           <li><strong>Standards Compliance:</strong> Auditing and calculations follow ISO 8943, GIIGNL, and API MPMS Chapter 14 guidelines.</li>
@@ -7367,15 +7429,15 @@ content: `
       </p>
 
       <div class="overflow-x-auto my-8 not-prose">
-        <table class="min-w-full divide-y divide-gray-200 border border-gray-150 text-[13.5px]">
+        <table class="min-w-full divide-y divide-gray-200 border border-gray-150">
           <thead class="bg-slate-50">
             <tr>
-              <th scope="col" class="px-4 py-3 text-left text-xs font-semibold text-slate-900 uppercase tracking-wider border-b border-gray-150">Metering Feature</th>
-              <th scope="col" class="px-4 py-3 text-left text-xs font-semibold text-slate-900 uppercase tracking-wider border-b border-gray-150">Coriolis Mass Flow Meter</th>
-              <th scope="col" class="px-4 py-3 text-left text-xs font-semibold text-slate-900 uppercase tracking-wider border-b border-gray-150">Transit-Time Ultrasonic Meter</th>
+              <th scope="col" class="px-4 py-3 text-left font-semibold text-slate-900 uppercase tracking-wider border-b border-gray-150">Metering Feature</th>
+              <th scope="col" class="px-4 py-3 text-left font-semibold text-slate-900 uppercase tracking-wider border-b border-gray-150">Coriolis Mass Flow Meter</th>
+              <th scope="col" class="px-4 py-3 text-left font-semibold text-slate-900 uppercase tracking-wider border-b border-gray-150">Transit-Time Ultrasonic Meter</th>
             </tr>
           </thead>
-          <tbody class="bg-white divide-y divide-gray-150 text-[13px]">
+          <tbody class="bg-white divide-y divide-gray-150">
             <tr>
               <td class="px-4 py-3 font-semibold text-slate-900 bg-slate-50/40">Measurement Variable</td>
               <td class="px-4 py-3 text-gray-600">Direct mass flow, density, and temperature</td>
@@ -7443,6 +7505,7 @@ content: `
     readTime: "9 Min Read",
     pillar: "Pillar 1: Flow Measurement & Custody Metering",
     description: "Guide to LNG custody transfer ship-to-shore measurement — covering tank gauging, vapor return calculations, GIIGNL protocols, and certificate preparation.",
+    keywords: "LNG ship-to-shore, custody transfer protocol, LNG loading",
     image: "/lng.jpg",
     imageAlt: "An LNG tanker terminal loading area showing cryogenic piping manifolds and custody transfer skids.",
 content: `
@@ -7451,8 +7514,8 @@ content: `
       </p>
 
       <div class="my-6 rounded-lg bg-slate-50 border border-slate-200 p-5 not-prose">
-        <h4 class="text-[13.5px] font-bold text-slate-900 mb-2">💡 Key Takeaways</h4>
-        <ul class="text-[13px] text-slate-600 space-y-2 list-disc pl-4">
+        <h4 class="font-bold text-slate-900 mb-2">💡 Key Takeaways</h4>
+        <ul class="text-slate-600 space-y-2 list-disc pl-4">
           <li><strong>Energy Billing:</strong> Billing is based on total energy content (MMBtu) transferred, not simple volumetric flow.</li>
           <li><strong>Mass Auditing:</strong> Cargo volume calculations use high-accuracy ship tank radar gauges and temperature grids.</li>
           <li><strong>Vapor Accounting:</strong> Displaced vapor returned to the ship is measured and subtracted from the net liquid transfer value.</li>
@@ -7463,7 +7526,7 @@ content: `
       <p>
         A typical ship-to-shore transfer involves a sequence of custody milestones:
       </p>
-      <ol class="list-decimal pl-5 text-[13px] text-gray-600 space-y-2">
+      <ol class="list-decimal pl-5 text-gray-600 space-y-2">
         <li>
           <strong>Pre-Transfer Custody Survey:</strong> Inspectors gauge ship tanks to log initial liquid levels, liquid temperatures, and vapor space pressures.
         </li>
@@ -7487,15 +7550,15 @@ content: `
       </p>
 
       <div class="overflow-x-auto my-8 not-prose">
-        <table class="min-w-full divide-y divide-gray-200 border border-gray-150 text-[13.5px]">
+        <table class="min-w-full divide-y divide-gray-200 border border-gray-150">
           <thead class="bg-slate-50">
             <tr>
-              <th scope="col" class="px-4 py-3 text-left text-xs font-semibold text-slate-900 uppercase tracking-wider border-b border-gray-150">Measurement Input</th>
-              <th scope="col" class="px-4 py-3 text-left text-xs font-semibold text-slate-900 uppercase tracking-wider border-b border-gray-150">Instrumentation Technology</th>
-              <th scope="col" class="px-4 py-3 text-left text-xs font-semibold text-slate-900 uppercase tracking-wider border-b border-gray-150">Metrological Correction Role</th>
+              <th scope="col" class="px-4 py-3 text-left font-semibold text-slate-900 uppercase tracking-wider border-b border-gray-150">Measurement Input</th>
+              <th scope="col" class="px-4 py-3 text-left font-semibold text-slate-900 uppercase tracking-wider border-b border-gray-150">Instrumentation Technology</th>
+              <th scope="col" class="px-4 py-3 text-left font-semibold text-slate-900 uppercase tracking-wider border-b border-gray-150">Metrological Correction Role</th>
             </tr>
           </thead>
-          <tbody class="bg-white divide-y divide-gray-150 text-[13px]">
+          <tbody class="bg-white divide-y divide-gray-150">
             <tr>
               <td class="px-4 py-3 font-semibold text-slate-900 bg-slate-50/40">Liquid Level</td>
               <td class="px-4 py-3 text-gray-600">Non-contact Radar Gauges / Float Gauges</td>
@@ -7574,6 +7637,7 @@ content: `
     readTime: "8 Min Read",
     pillar: "Pillar 3: Analyzers & Inspection",
     description: "CEMS and environmental compliance guide for LNG facilities — covering combustion turbines, flare gas monitoring, LDAR, and EPA Part 60 standards.",
+    keywords: "CEMS LNG, environmental monitoring, LNG compliance",
     image: "/cems.png",
     imageAlt: "A CEMS analyzer cabinet designed for monitoring stack emissions at an LNG liquefaction facility.",
 content: `
@@ -7582,8 +7646,8 @@ content: `
       </p>
 
       <div class="my-6 rounded-lg bg-slate-50 border border-slate-200 p-5 not-prose">
-        <h4 class="text-[13.5px] font-bold text-slate-900 mb-2">💡 Key Takeaways</h4>
-        <ul class="text-[13px] text-slate-600 space-y-2 list-disc pl-4">
+        <h4 class="font-bold text-slate-900 mb-2">💡 Key Takeaways</h4>
+        <ul class="text-slate-600 space-y-2 list-disc pl-4">
           <li><strong>Turbine Tracking:</strong> CEMS monitors NOx, CO, and diluent O2 in refrigeration compressor gas turbine exhausts.</li>
           <li><strong>Fugitive Detection:</strong> Leak Detection and Repair (LDAR) programs target fugitive methane leaks from valves and seals.</li>
           <li><strong>Standard Compliance:</strong> Systems satisfy EPA 40 CFR Part 60 and ISO 14001:2015 environmental standards.</li>
@@ -7596,15 +7660,15 @@ content: `
       </p>
 
       <div class="overflow-x-auto my-8 not-prose">
-        <table class="min-w-full divide-y divide-gray-200 border border-gray-150 text-[13.5px]">
+        <table class="min-w-full divide-y divide-gray-200 border border-gray-150">
           <thead class="bg-slate-50">
             <tr>
-              <th scope="col" class="px-4 py-3 text-left text-xs font-semibold text-slate-900 uppercase tracking-wider border-b border-gray-150">Facility Source</th>
-              <th scope="col" class="px-4 py-3 text-left text-xs font-semibold text-slate-900 uppercase tracking-wider border-b border-gray-150">Target Pollutants</th>
-              <th scope="col" class="px-4 py-3 text-left text-xs font-semibold text-slate-900 uppercase tracking-wider border-b border-gray-150">Primary Monitoring System</th>
+              <th scope="col" class="px-4 py-3 text-left font-semibold text-slate-900 uppercase tracking-wider border-b border-gray-150">Facility Source</th>
+              <th scope="col" class="px-4 py-3 text-left font-semibold text-slate-900 uppercase tracking-wider border-b border-gray-150">Target Pollutants</th>
+              <th scope="col" class="px-4 py-3 text-left font-semibold text-slate-900 uppercase tracking-wider border-b border-gray-150">Primary Monitoring System</th>
             </tr>
           </thead>
-          <tbody class="bg-white divide-y divide-gray-150 text-[13px]">
+          <tbody class="bg-white divide-y divide-gray-150">
             <tr>
               <td class="px-4 py-3 font-semibold text-slate-900 bg-slate-50/40">Refrigeration Gas Turbines</td>
               <td class="px-4 py-3 text-gray-600">NOx, CO, O2 (Diluent)</td>
@@ -7672,6 +7736,7 @@ content: `
     readTime: "9 Min Read",
     pillar: "Pillar 3: Analyzers & Inspection",
     description: "ASME and API 620 compliance guide for NDT on LNG storage tanks — covering 9% nickel steel inspection, acoustic emission testing, and weld testing.",
+    keywords: "NDT LNG tanks, cryogenic inspection, storage tank integrity",
     image: "/images/services/ndt.jpg",
     imageAlt: "Technicians performing ultrasonic weld inspections on a cryogenic LNG storage tank wall.",
 content: `
@@ -7680,8 +7745,8 @@ content: `
       </p>
 
       <div class="my-6 rounded-lg bg-slate-50 border border-slate-200 p-5 not-prose">
-        <h4 class="text-[13.5px] font-bold text-slate-900 mb-2">💡 Key Takeaways</h4>
-        <ul class="text-[13px] text-slate-600 space-y-2 list-disc pl-4">
+        <h4 class="font-bold text-slate-900 mb-2">💡 Key Takeaways</h4>
+        <ul class="text-slate-600 space-y-2 list-disc pl-4">
           <li><strong>Material Focus:</strong> Cryogenic inner tanks are built from 9% nickel steel to maintain low-temperature toughness.</li>
           <li><strong>Volumetric Testing:</strong> Phased Array Ultrasonic Testing (PAUT) and Radiographic Testing (RT) verify weld joint integrity.</li>
           <li><strong>Standards Compliance:</strong> Inspection procedures satisfy API 620 and API 625 design code requirements.</li>
@@ -7704,15 +7769,15 @@ content: `
       </p>
 
       <div class="overflow-x-auto my-8 not-prose">
-        <table class="min-w-full divide-y divide-gray-200 border border-gray-150 text-[13.5px]">
+        <table class="min-w-full divide-y divide-gray-200 border border-gray-150">
           <thead class="bg-slate-50">
             <tr>
-              <th scope="col" class="px-4 py-3 text-left text-xs font-semibold text-slate-900 uppercase tracking-wider border-b border-gray-150">NDT Method</th>
-              <th scope="col" class="px-4 py-3 text-left text-xs font-semibold text-slate-900 uppercase tracking-wider border-b border-gray-150">Target Tank Application</th>
-              <th scope="col" class="px-4 py-3 text-left text-xs font-semibold text-slate-900 uppercase tracking-wider border-b border-gray-150">Primary Metrological Purpose</th>
+              <th scope="col" class="px-4 py-3 text-left font-semibold text-slate-900 uppercase tracking-wider border-b border-gray-150">NDT Method</th>
+              <th scope="col" class="px-4 py-3 text-left font-semibold text-slate-900 uppercase tracking-wider border-b border-gray-150">Target Tank Application</th>
+              <th scope="col" class="px-4 py-3 text-left font-semibold text-slate-900 uppercase tracking-wider border-b border-gray-150">Primary Metrological Purpose</th>
             </tr>
           </thead>
-          <tbody class="bg-white divide-y divide-gray-150 text-[13px]">
+          <tbody class="bg-white divide-y divide-gray-150">
             <tr>
               <td class="px-4 py-3 font-semibold text-slate-900 bg-slate-50/40">Phased Array Ultrasonic (PAUT)</td>
               <td class="px-4 py-3 text-gray-600">Inner container plate seam welds (vertical and horizontal welds)</td>
@@ -7780,6 +7845,7 @@ content: `
     readTime: "9 Min Read",
     pillar: "Pillar 2: Industrial Process Automation",
     description: "Functional safety and SIS design guide for LNG plants — covering ESD systems, F&G detection, HIPPS, and IEC 61511 lifecycle compliance.",
+    keywords: "safety systems, LNG plants, IEC 61511 SIS",
     image: "/images/control_room_interior_and_console/xlat_cyber/1.jpg",
     imageAlt: "High-integrity safety instrumented systems and ESD panel indicators inside an LNG control room.",
 content: `
@@ -7788,8 +7854,8 @@ content: `
       </p>
 
       <div class="my-6 rounded-lg bg-slate-50 border border-slate-200 p-5 not-prose">
-        <h4 class="text-[13.5px] font-bold text-slate-900 mb-2">💡 Key Takeaways</h4>
-        <ul class="text-[13px] text-slate-600 space-y-2 list-disc pl-4">
+        <h4 class="font-bold text-slate-900 mb-2">💡 Key Takeaways</h4>
+        <ul class="text-slate-600 space-y-2 list-disc pl-4">
           <li><strong>Risk Mitigation:</strong> SIS design focuses on Emergency Shutdown (ESD) systems and High Integrity Pressure Protection (HIPPS).</li>
           <li><strong>Gas Detection:</strong> Fire and Gas (F&amp;G) networks utilize optical flame scanners and open-path infrared gas detectors.</li>
           <li><strong>Standards Alignment:</strong> SIF loops are designed and maintained in compliance with IEC 61511 and NFPA 59A codes.</li>
@@ -7807,15 +7873,15 @@ content: `
       </p>
 
       <div class="overflow-x-auto my-8 not-prose">
-        <table class="min-w-full divide-y divide-gray-200 border border-gray-150 text-[13.5px]">
+        <table class="min-w-full divide-y divide-gray-200 border border-gray-150">
           <thead class="bg-slate-50">
             <tr>
-              <th scope="col" class="px-4 py-3 text-left text-xs font-semibold text-slate-900 uppercase tracking-wider border-b border-gray-150">Safety Instrumented Function</th>
-              <th scope="col" class="px-4 py-3 text-left text-xs font-semibold text-slate-900 uppercase tracking-wider border-b border-gray-150">Target Hazard Mitigation</th>
-              <th scope="col" class="px-4 py-3 text-left text-xs font-semibold text-slate-900 uppercase tracking-wider border-b border-gray-150">System Configuration Purpose</th>
+              <th scope="col" class="px-4 py-3 text-left font-semibold text-slate-900 uppercase tracking-wider border-b border-gray-150">Safety Instrumented Function</th>
+              <th scope="col" class="px-4 py-3 text-left font-semibold text-slate-900 uppercase tracking-wider border-b border-gray-150">Target Hazard Mitigation</th>
+              <th scope="col" class="px-4 py-3 text-left font-semibold text-slate-900 uppercase tracking-wider border-b border-gray-150">System Configuration Purpose</th>
             </tr>
           </thead>
-          <tbody class="bg-white divide-y divide-gray-150 text-[13px]">
+          <tbody class="bg-white divide-y divide-gray-150">
             <tr>
               <td class="px-4 py-3 font-semibold text-slate-900 bg-slate-50/40">Emergency Shutdown (ESD)</td>
               <td class="px-4 py-3 text-gray-600">Major process leaks, pipeline ruptures, thermal events</td>
@@ -7893,6 +7959,7 @@ content: `
     readTime: "8 Min Read",
     pillar: "Pillar 2: Industrial Process Automation",
     description: "Flow control and automation guide for LNG vaporizers — comparing ORV, SCV, and AAV systems, loop design, and turndown management.",
+    keywords: "LNG vaporizer, flow control, cryogenic instrumentation",
     image: "/images/services/flow-measurement.jpg",
     imageAlt: "An ultrasonic flow meter tracking boil-off gas rates on cryogenic vaporizer piping.",
 content: `
@@ -7901,8 +7968,8 @@ content: `
       </p>
 
       <div class="my-6 rounded-lg bg-slate-50 border border-slate-200 p-5 not-prose">
-        <h4 class="text-[13.5px] font-bold text-slate-900 mb-2">💡 Key Takeaways</h4>
-        <ul class="text-[13px] text-slate-600 space-y-2 list-disc pl-4">
+        <h4 class="font-bold text-slate-900 mb-2">💡 Key Takeaways</h4>
+        <ul class="text-slate-600 space-y-2 list-disc pl-4">
           <li><strong>Temperature Limits:</strong> Automated loops control flow rates based on seawater intake temperature and bath thermal limits.</li>
           <li><strong>Response Speed:</strong> SCV burners adjust firing rates dynamically to manage sudden swings in send-out gas demand.</li>
           <li><strong>Preventing Icing:</strong> Low seawater flow rates trigger automatic shutdowns to prevent water freeze-up on heat exchanger panels.</li>
@@ -7915,15 +7982,15 @@ content: `
       </p>
 
       <div class="overflow-x-auto my-8 not-prose">
-        <table class="min-w-full divide-y divide-gray-200 border border-gray-150 text-[13.5px]">
+        <table class="min-w-full divide-y divide-gray-200 border border-gray-150">
           <thead class="bg-slate-50">
             <tr>
-              <th scope="col" class="px-4 py-3 text-left text-xs font-semibold text-slate-900 uppercase tracking-wider border-b border-gray-150">Vaporizer Technology</th>
-              <th scope="col" class="px-4 py-3 text-left text-xs font-semibold text-slate-900 uppercase tracking-wider border-b border-gray-150">Heat Transfer Medium</th>
-              <th scope="col" class="px-4 py-3 text-left text-xs font-semibold text-slate-900 uppercase tracking-wider border-b border-gray-150">Primary Control Focus</th>
+              <th scope="col" class="px-4 py-3 text-left font-semibold text-slate-900 uppercase tracking-wider border-b border-gray-150">Vaporizer Technology</th>
+              <th scope="col" class="px-4 py-3 text-left font-semibold text-slate-900 uppercase tracking-wider border-b border-gray-150">Heat Transfer Medium</th>
+              <th scope="col" class="px-4 py-3 text-left font-semibold text-slate-900 uppercase tracking-wider border-b border-gray-150">Primary Control Focus</th>
             </tr>
           </thead>
-          <tbody class="bg-white divide-y divide-gray-150 text-[13px]">
+          <tbody class="bg-white divide-y divide-gray-150">
             <tr>
               <td class="px-4 py-3 font-semibold text-slate-900 bg-slate-50/40">Open Rack Vaporizer (ORV)</td>
               <td class="px-4 py-3 text-gray-600">Flowing seawater (gravity-fed down outer panels)</td>
@@ -7991,6 +8058,7 @@ content: `
     readTime: "8 Min Read",
     pillar: "Pillar 1: Flow Measurement & Custody Metering",
     description: "Guide to Boil-Off Gas (BOG) flow measurement in LNG terminals — covering BOG recovery compressors, flare gas metering, and meter selection.",
+    keywords: "boil-off gas measurement, LNG terminals, BOG monitoring",
     image: "/images/services/DigitalOilAndGas-1 (1).webp",
     imageAlt: "An industrial gas metering run processing boil-off gas (BOG) in an LNG storage facility.",
 content: `
@@ -7999,8 +8067,8 @@ content: `
       </p>
 
       <div class="my-6 rounded-lg bg-slate-50 border border-slate-200 p-5 not-prose">
-        <h4 class="text-[13.5px] font-bold text-slate-900 mb-2">💡 Key Takeaways</h4>
-        <ul class="text-[13px] text-slate-600 space-y-2 list-disc pl-4">
+        <h4 class="font-bold text-slate-900 mb-2">💡 Key Takeaways</h4>
+        <ul class="text-slate-600 space-y-2 list-disc pl-4">
           <li><strong>Causes of BOG:</strong> Heat ingress through insulation causes continuous vaporization of stored liquid natural gas.</li>
           <li><strong>Metering Selection:</strong> BOG loops utilize ultrasonic or thermal mass flow meters to handle low pressure and temperature variations.</li>
           <li><strong>Flare Tracking:</strong> Flare gas meters monitor BOG volumes during process upsets, tracking environmental releases.</li>
@@ -8018,15 +8086,15 @@ content: `
       </p>
 
       <div class="overflow-x-auto my-8 not-prose">
-        <table class="min-w-full divide-y divide-gray-200 border border-gray-150 text-[13.5px]">
+        <table class="min-w-full divide-y divide-gray-200 border border-gray-150">
           <thead class="bg-slate-50">
             <tr>
-              <th scope="col" class="px-4 py-3 text-left text-xs font-semibold text-slate-900 uppercase tracking-wider border-b border-gray-150">BOG Process Location</th>
-              <th scope="col" class="px-4 py-3 text-left text-xs font-semibold text-slate-900 uppercase tracking-wider border-b border-gray-150">Recommended Flow Meter</th>
-              <th scope="col" class="px-4 py-3 text-left text-xs font-semibold text-slate-900 uppercase tracking-wider border-b border-gray-150">Primary Metrological Purpose</th>
+              <th scope="col" class="px-4 py-3 text-left font-semibold text-slate-900 uppercase tracking-wider border-b border-gray-150">BOG Process Location</th>
+              <th scope="col" class="px-4 py-3 text-left font-semibold text-slate-900 uppercase tracking-wider border-b border-gray-150">Recommended Flow Meter</th>
+              <th scope="col" class="px-4 py-3 text-left font-semibold text-slate-900 uppercase tracking-wider border-b border-gray-150">Primary Metrological Purpose</th>
             </tr>
           </thead>
-          <tbody class="bg-white divide-y divide-gray-150 text-[13px]">
+          <tbody class="bg-white divide-y divide-gray-150">
             <tr>
               <td class="px-4 py-3 font-semibold text-slate-900 bg-slate-50/40">Storage Tank Vapor Header</td>
               <td class="px-4 py-3 text-gray-600">Multi-path Ultrasonic Flow Meter (Cryogenic design)</td>
@@ -8089,6 +8157,7 @@ content: `
     readTime: "8 Min Read",
     pillar: "Pillar 1: Flow Measurement & Custody Metering",
     description: "Cryogenic design guide for LNG truck loading metering skids — covering Coriolis selection, batch controllers, safety interlocks, and NFPA 59A.",
+    keywords: "LNG truck loading, metering skid, LNG distribution",
     image: "/flow_metering_skid.jpg",
     imageAlt: "A specialized skid system with Coriolis flow meters designed for fiscal LNG truck loading.",
 content: `
@@ -8097,8 +8166,8 @@ content: `
       </p>
 
       <div class="my-6 rounded-lg bg-slate-50 border border-slate-200 p-5 not-prose">
-        <h4 class="text-[13.5px] font-bold text-slate-900 mb-2">💡 Key Takeaways</h4>
-        <ul class="text-[13px] text-slate-600 space-y-2 list-disc pl-4">
+        <h4 class="font-bold text-slate-900 mb-2">💡 Key Takeaways</h4>
+        <ul class="text-slate-600 space-y-2 list-disc pl-4">
           <li><strong>Mass Billing:</strong> Coriolis mass flow meters provide the high accuracy required for commercial batch transfers.</li>
           <li><strong>Safety Logic:</strong> Interlocks monitor earth connections, ESD paths, and overfill limits to secure operations.</li>
           <li><strong>Standard Compliance:</strong> Mechanical layouts and spacing requirements comply with NFPA 59A design codes.</li>
@@ -8111,14 +8180,14 @@ content: `
       </p>
 
       <div class="overflow-x-auto my-8 not-prose">
-        <table class="min-w-full divide-y divide-gray-200 border border-gray-150 text-[13.5px]">
+        <table class="min-w-full divide-y divide-gray-200 border border-gray-150">
           <thead class="bg-slate-50">
             <tr>
-              <th scope="col" class="px-4 py-3 text-left text-xs font-semibold text-slate-900 uppercase tracking-wider border-b border-gray-150">Skid Component</th>
-              <th scope="col" class="px-4 py-3 text-left text-xs font-semibold text-slate-900 uppercase tracking-wider border-b border-gray-150">Primary Cryogenic Role</th>
+              <th scope="col" class="px-4 py-3 text-left font-semibold text-slate-900 uppercase tracking-wider border-b border-gray-150">Skid Component</th>
+              <th scope="col" class="px-4 py-3 text-left font-semibold text-slate-900 uppercase tracking-wider border-b border-gray-150">Primary Cryogenic Role</th>
             </tr>
           </thead>
-          <tbody class="bg-white divide-y divide-gray-150 text-[13px]">
+          <tbody class="bg-white divide-y divide-gray-150">
             <tr>
               <td class="px-4 py-3 font-semibold text-slate-900 bg-slate-50/40">Coriolis Mass Flow Meter</td>
               <td class="px-4 py-3 text-gray-600">Measures liquid LNG mass and temperature directly, providing volume-independent batch totals.</td>
@@ -8187,6 +8256,7 @@ content: `
     readTime: "9 Min Read",
     pillar: "Pillar 2: Industrial Process Automation",
     description: "Automation integration guide for LNG plants — covering multi-vendor PLC strategies, SCADA databases, safety interfaces, and IEC 61511.",
+    keywords: "LNG plant automation, PLC SCADA, cryogenic control",
     image: "/images/control_room_interior_and_console/dynamic_xe/2.jpg",
     imageAlt: "Dual-redundant PLC automation panels controlling gas purification loops at an LNG plant.",
 content: `
@@ -8195,8 +8265,8 @@ content: `
       </p>
 
       <div class="my-6 rounded-lg bg-slate-50 border border-slate-200 p-5 not-prose">
-        <h4 class="text-[13.5px] font-bold text-slate-950 mb-2">💡 Key Takeaways</h4>
-        <ul class="text-[13px] text-slate-600 space-y-2 list-disc pl-4">
+        <h4 class="font-bold text-slate-950 mb-2">💡 Key Takeaways</h4>
+        <ul class="text-slate-600 space-y-2 list-disc pl-4">
           <li><strong>Complex Interfaces:</strong> Integrating multi-vendor PLCs requires standardized communication protocols like OPC UA.</li>
           <li><strong>Safety Isolation:</strong> Emergency shutdown (ESD) interlocks must operate independently of process control loops.</li>
           <li><strong>Commissioning Audits:</strong> Logic validation requires checking cause-and-effect matrices during loop checks.</li>
@@ -8214,14 +8284,14 @@ content: `
       </p>
 
       <div class="overflow-x-auto my-8 not-prose">
-        <table class="min-w-full divide-y divide-gray-200 border border-gray-150 text-[13.5px]">
+        <table class="min-w-full divide-y divide-gray-200 border border-gray-150">
           <thead class="bg-slate-50">
             <tr>
-              <th scope="col" class="px-4 py-3 text-left text-xs font-semibold text-slate-900 uppercase tracking-wider border-b border-gray-150">Integration Challenge</th>
-              <th scope="col" class="px-4 py-3 text-left text-xs font-semibold text-slate-900 uppercase tracking-wider border-b border-gray-150">Technical Integration Solution</th>
+              <th scope="col" class="px-4 py-3 text-left font-semibold text-slate-900 uppercase tracking-wider border-b border-gray-150">Integration Challenge</th>
+              <th scope="col" class="px-4 py-3 text-left font-semibold text-slate-900 uppercase tracking-wider border-b border-gray-150">Technical Integration Solution</th>
             </tr>
           </thead>
-          <tbody class="bg-white divide-y divide-gray-150 text-[13px]">
+          <tbody class="bg-white divide-y divide-gray-150">
             <tr>
               <td class="px-4 py-3 font-semibold text-slate-900 bg-slate-50/40">Multi-Vendor PLC Protocols</td>
               <td class="px-4 py-3 text-gray-600">Deploying OPC UA and Modbus TCP gateways to standardize data registers across packages.</td>
@@ -8286,6 +8356,7 @@ content: `
     readTime: "9 Min Read",
     pillar: "Pillar 3: Analyzers & Inspection",
     description: "Leak detection and Fire & Gas (F&G) system guide for LNG facilities — covering open-path detectors, cryogenic spill monitoring, and voting logic.",
+    keywords: "leak detection, LNG facilities, safety monitoring",
     image: "/images/services/Non-Destructive-Testing-NDT.jpg.webp",
     imageAlt: "An NDT technician checking cryogenic piping connections for structural leaks using ultrasonic probes.",
 content: `
@@ -8294,8 +8365,8 @@ content: `
       </p>
 
       <div class="my-6 rounded-lg bg-slate-50 border border-slate-200 p-5 not-prose">
-        <h4 class="text-[13.5px] font-bold text-slate-900 mb-2">💡 Key Takeaways</h4>
-        <ul class="text-[13px] text-slate-600 space-y-2 list-disc pl-4">
+        <h4 class="font-bold text-slate-900 mb-2">💡 Key Takeaways</h4>
+        <ul class="text-slate-600 space-y-2 list-disc pl-4">
           <li><strong>Combustion Hazards:</strong> Point and open-path infrared gas detectors identify gas releases early.</li>
           <li><strong>Spill Detection:</strong> Low-temperature thermocouple grids identify cold spots from liquid leaks.</li>
           <li><strong>Safety Rules:</strong> Fire and Gas (F&amp;G) networks utilize voting logic to reduce false alarms.</li>
@@ -8308,15 +8379,15 @@ content: `
       </p>
 
       <div class="overflow-x-auto my-8 not-prose">
-        <table class="min-w-full divide-y divide-gray-200 border border-gray-150 text-[13.5px]">
+        <table class="min-w-full divide-y divide-gray-200 border border-gray-150">
           <thead class="bg-slate-50">
             <tr>
-              <th scope="col" class="px-4 py-3 text-left text-xs font-semibold text-slate-900 uppercase tracking-wider border-b border-gray-150">Detection Technology</th>
-              <th scope="col" class="px-4 py-3 text-left text-xs font-semibold text-slate-900 uppercase tracking-wider border-b border-gray-150">Operating Principle</th>
-              <th scope="col" class="px-4 py-3 text-left text-xs font-semibold text-slate-900 uppercase tracking-wider border-b border-gray-150">Primary Facility Application</th>
+              <th scope="col" class="px-4 py-3 text-left font-semibold text-slate-900 uppercase tracking-wider border-b border-gray-150">Detection Technology</th>
+              <th scope="col" class="px-4 py-3 text-left font-semibold text-slate-900 uppercase tracking-wider border-b border-gray-150">Operating Principle</th>
+              <th scope="col" class="px-4 py-3 text-left font-semibold text-slate-900 uppercase tracking-wider border-b border-gray-150">Primary Facility Application</th>
             </tr>
           </thead>
-          <tbody class="bg-white divide-y divide-gray-150 text-[13px]">
+          <tbody class="bg-white divide-y divide-gray-150">
             <tr>
               <td class="px-4 py-3 font-semibold text-slate-900 bg-slate-50/40">Open-Path IR Gas Detector</td>
               <td class="px-4 py-3 text-gray-600">Measures light absorption of infrared beams projected over long distances.</td>
@@ -8389,6 +8460,7 @@ content: `
     readTime: "9 Min Read",
     pillar: "Pillar 1: Flow Measurement & Custody Metering",
     description: "Guide to flow meter selection in water treatment plants — covering electromagnetic flow meters, open channel measurement, and partially-full pipes.",
+    keywords: "water treatment flow measurement, municipal water, flow meters",
     image: "/water_treatment.jpg",
     imageAlt: "Large circular clarification and sedimentation tanks in a wastewater treatment facility.",
 content: `
@@ -8397,8 +8469,8 @@ content: `
       </p>
 
       <div class="my-6 rounded-lg bg-slate-50 border border-slate-200 p-5 not-prose">
-        <h4 class="text-[13.5px] font-bold text-slate-900 mb-2">💡 Key Takeaways</h4>
-        <ul class="text-[13px] text-slate-600 space-y-2 list-disc pl-4">
+        <h4 class="font-bold text-slate-900 mb-2">💡 Key Takeaways</h4>
+        <ul class="text-slate-600 space-y-2 list-disc pl-4">
           <li><strong>Magmeter Standard:</strong> Electromagnetic flow meters are the water industry standard due to zero pressure drop and high reliability.</li>
           <li><strong>Open Channel:</strong> Wastewater intake and discharge structures utilize flumes and weirs coupled with level sensors.</li>
           <li><strong>Standards Compliance:</strong> Flow calibrations and performance criteria follow ISO 6817 and ISO 4064 metrological codes.</li>
@@ -8421,15 +8493,15 @@ content: `
       </p>
 
       <div class="overflow-x-auto my-8 not-prose">
-        <table class="min-w-full divide-y divide-gray-200 border border-gray-150 text-[13.5px]">
+        <table class="min-w-full divide-y divide-gray-200 border border-gray-150">
           <thead class="bg-slate-50">
             <tr>
-              <th scope="col" class="px-4 py-3 text-left text-xs font-semibold text-slate-900 uppercase tracking-wider border-b border-gray-150">Device Type</th>
-              <th scope="col" class="px-4 py-3 text-left text-xs font-semibold text-slate-900 uppercase tracking-wider border-b border-gray-150">Measurement Principle</th>
-              <th scope="col" class="px-4 py-3 text-left text-xs font-semibold text-slate-900 uppercase tracking-wider border-b border-gray-150">Typical Utility Application</th>
+              <th scope="col" class="px-4 py-3 text-left font-semibold text-slate-900 uppercase tracking-wider border-b border-gray-150">Device Type</th>
+              <th scope="col" class="px-4 py-3 text-left font-semibold text-slate-900 uppercase tracking-wider border-b border-gray-150">Measurement Principle</th>
+              <th scope="col" class="px-4 py-3 text-left font-semibold text-slate-900 uppercase tracking-wider border-b border-gray-150">Typical Utility Application</th>
             </tr>
           </thead>
-          <tbody class="bg-white divide-y divide-gray-150 text-[13px]">
+          <tbody class="bg-white divide-y divide-gray-150">
             <tr>
               <td class="px-4 py-3 font-semibold text-slate-900 bg-slate-50/40">Parshall Flume</td>
               <td class="px-4 py-3 text-gray-600">Standardized throat restriction converts channel level to volumetric flow rate.</td>
@@ -8492,6 +8564,7 @@ content: `
     readTime: "8 Min Read",
     pillar: "Pillar 2: Industrial Process Automation",
     description: "Centralized SCADA and PLC automation guide for water utilities — covering lift station monitoring, alarm systems, and IEC 62443 compliance.",
+    keywords: "SCADA automation, water wastewater treatment, process control",
     image: "/images/control_room_interior_and_console/dynamic_m/3.jpg",
     imageAlt: "SCADA systems displaying pump and aeration basin status in a water reclamation control center.",
 content: `
@@ -8500,8 +8573,8 @@ content: `
       </p>
 
       <div class="my-6 rounded-lg bg-slate-50 border border-slate-200 p-5 not-prose">
-        <h4 class="text-[13.5px] font-bold text-slate-900 mb-2">💡 Key Takeaways</h4>
-        <ul class="text-[13px] text-slate-600 space-y-2 list-disc pl-4">
+        <h4 class="font-bold text-slate-900 mb-2">💡 Key Takeaways</h4>
+        <ul class="text-slate-600 space-y-2 list-disc pl-4">
           <li><strong>Remote Control:</strong> SCADA systems connect remote lift stations and booster pumps to a central control room.</li>
           <li><strong>Alarm Logic:</strong> Automated alarm management flags operational issues, contacting staff to prevent overflows.</li>
           <li><strong>Cybersecurity:</strong> Securing municipal networks requires segmenting networks in compliance with IEC 62443 codes.</li>
@@ -8519,14 +8592,14 @@ content: `
       </p>
 
       <div class="overflow-x-auto my-8 not-prose">
-        <table class="min-w-full divide-y divide-gray-200 border border-gray-150 text-[13.5px]">
+        <table class="min-w-full divide-y divide-gray-200 border border-gray-150">
           <thead class="bg-slate-50">
             <tr>
-              <th scope="col" class="px-4 py-3 text-left text-xs font-semibold text-slate-900 uppercase tracking-wider border-b border-gray-150">SCADA Function</th>
-              <th scope="col" class="px-4 py-3 text-left text-xs font-semibold text-slate-900 uppercase tracking-wider border-b border-gray-150">Utility Benefit</th>
+              <th scope="col" class="px-4 py-3 text-left font-semibold text-slate-900 uppercase tracking-wider border-b border-gray-150">SCADA Function</th>
+              <th scope="col" class="px-4 py-3 text-left font-semibold text-slate-900 uppercase tracking-wider border-b border-gray-150">Utility Benefit</th>
             </tr>
           </thead>
-          <tbody class="bg-white divide-y divide-gray-150 text-[13px]">
+          <tbody class="bg-white divide-y divide-gray-150">
             <tr>
               <td class="px-4 py-3 font-semibold text-slate-900 bg-slate-50/40">Real-Time Monitoring</td>
               <td class="px-4 py-3 text-gray-600">Visualizes pump parameters, chemical tank levels, and system pressures.</td>
@@ -8591,6 +8664,7 @@ content: `
     readTime: "8 Min Read",
     pillar: "Pillar 1: Flow Measurement & Custody Metering",
     description: "Guide to chemical dosing flow meters and instrumentation — covering Coriolis low-flow meters, paced dosing, and calibration practices.",
+    keywords: "chemical dosing control, flow meters, water treatment instrumentation",
     image: "/images/field_instruments/flow_sensor/1.png",
     imageAlt: "A high-precision chemical dosing flow sensor mounted on a water treatment process line.",
 content: `
@@ -8599,8 +8673,8 @@ content: `
       </p>
 
       <div class="my-6 rounded-lg bg-slate-50 border border-slate-200 p-5 not-prose">
-        <h4 class="text-[13.5px] font-bold text-slate-900 mb-2">💡 Key Takeaways</h4>
-        <ul class="text-[13px] text-slate-600 space-y-2 list-disc pl-4">
+        <h4 class="font-bold text-slate-900 mb-2">💡 Key Takeaways</h4>
+        <ul class="text-slate-600 space-y-2 list-disc pl-4">
           <li><strong>Dosing Precision:</strong> Accurate dosing prevents chemical overfeed, reducing utility operating costs.</li>
           <li><strong>Low Flow Metering:</strong> Coriolis mass flow meters are selected for chemical feed due to direct mass tracking.</li>
           <li><strong>Paced Control:</strong> Automated systems adjust dosing pump stroke rates based on main influent flow trends.</li>
@@ -8618,15 +8692,15 @@ content: `
       </p>
 
       <div class="overflow-x-auto my-8 not-prose">
-        <table class="min-w-full divide-y divide-gray-200 border border-gray-150 text-[13.5px]">
+        <table class="min-w-full divide-y divide-gray-200 border border-gray-150">
           <thead class="bg-slate-50">
             <tr>
-              <th scope="col" class="px-4 py-3 text-left text-xs font-semibold text-slate-900 uppercase tracking-wider border-b border-gray-150">Meter Technology</th>
-              <th scope="col" class="px-4 py-3 text-left text-xs font-semibold text-slate-900 uppercase tracking-wider border-b border-gray-150">Dosing Application Area</th>
-              <th scope="col" class="px-4 py-3 text-left text-xs font-semibold text-slate-900 uppercase tracking-wider border-b border-gray-150">Primary Metrological Benefit</th>
+              <th scope="col" class="px-4 py-3 text-left font-semibold text-slate-900 uppercase tracking-wider border-b border-gray-150">Meter Technology</th>
+              <th scope="col" class="px-4 py-3 text-left font-semibold text-slate-900 uppercase tracking-wider border-b border-gray-150">Dosing Application Area</th>
+              <th scope="col" class="px-4 py-3 text-left font-semibold text-slate-900 uppercase tracking-wider border-b border-gray-150">Primary Metrological Benefit</th>
             </tr>
           </thead>
-          <tbody class="bg-white divide-y divide-gray-150 text-[13px]">
+          <tbody class="bg-white divide-y divide-gray-150">
             <tr>
               <td class="px-4 py-3 font-semibold text-slate-900 bg-slate-50/40">Coriolis Mass Flow Meter</td>
               <td class="px-4 py-3 text-gray-600">High-concentration acid feeds, lime slurry dosing, polymer additions.</td>
@@ -8694,6 +8768,7 @@ content: `
     readTime: "9 Min Read",
     pillar: "Pillar 3: Analyzers & Inspection",
     description: "Guide to water quality analyzers — covering online turbidity meters, chlorine residual analyzers, pH analyzers, and calibration frequencies.",
+    keywords: "water quality analyzers, pH turbidity, water monitoring",
     image: "/images/services/inspection-testing.jpg",
     imageAlt: "An analytical technician testing water samples for pH, turbidity, and chemical content.",
 content: `
@@ -8702,8 +8777,8 @@ content: `
       </p>
 
       <div class="my-6 rounded-lg bg-slate-50 border border-slate-200 p-5 not-prose">
-        <h4 class="text-[13.5px] font-bold text-slate-900 mb-2">💡 Key Takeaways</h4>
-        <ul class="text-[13px] text-slate-600 space-y-2 list-disc pl-4">
+        <h4 class="font-bold text-slate-900 mb-2">💡 Key Takeaways</h4>
+        <ul class="text-slate-600 space-y-2 list-disc pl-4">
           <li><strong>Clarity Tracking:</strong> Online turbidity meters monitor filtration effectiveness, logging clarity in NTUs.</li>
           <li><strong>Disinfection:</strong> Chlorine residual analyzers monitor free and total chlorine to ensure complete disinfection.</li>
           <li><strong>Standards Compliance:</strong> Measuring methods and systems comply with ISO 7027-1 and EPA Method 180.1 codes.</li>
@@ -8726,15 +8801,15 @@ content: `
       </p>
 
       <div class="overflow-x-auto my-8 not-prose">
-        <table class="min-w-full divide-y divide-gray-200 border border-gray-150 text-[13.5px]">
+        <table class="min-w-full divide-y divide-gray-200 border border-gray-150">
           <thead class="bg-slate-50">
             <tr>
-              <th scope="col" class="px-4 py-3 text-left text-xs font-semibold text-slate-900 uppercase tracking-wider border-b border-gray-150">Turbidity Standard Method</th>
-              <th scope="col" class="px-4 py-3 text-left text-xs font-semibold text-slate-900 uppercase tracking-wider border-b border-gray-150">Analytical Detection Principle</th>
-              <th scope="col" class="px-4 py-3 text-left text-xs font-semibold text-slate-900 uppercase tracking-wider border-b border-gray-150">Primary Water Application</th>
+              <th scope="col" class="px-4 py-3 text-left font-semibold text-slate-900 uppercase tracking-wider border-b border-gray-150">Turbidity Standard Method</th>
+              <th scope="col" class="px-4 py-3 text-left font-semibold text-slate-900 uppercase tracking-wider border-b border-gray-150">Analytical Detection Principle</th>
+              <th scope="col" class="px-4 py-3 text-left font-semibold text-slate-900 uppercase tracking-wider border-b border-gray-150">Primary Water Application</th>
             </tr>
           </thead>
-          <tbody class="bg-white divide-y divide-gray-150 text-[13px]">
+          <tbody class="bg-white divide-y divide-gray-150">
             <tr>
               <td class="px-4 py-3 font-semibold text-slate-900 bg-slate-50/40">EPA Method 180.1</td>
               <td class="px-4 py-3 text-gray-600">Uses tungsten lamp source to measure 90-degree scattered light.</td>
@@ -8797,6 +8872,7 @@ content: `
     readTime: "8 Min Read",
     pillar: "Pillar 2: Industrial Process Automation",
     description: "Guide to variable frequency drives (VFD) in water pump control — covering Affinity laws, sizing, harmonic mitigation, and IEEE 519 compliance.",
+    keywords: "VFD water pump, energy savings, water treatment",
     image: "/images/frequency-inverters/FR-A800.webp",
     imageAlt: "Mitsubishi variable frequency drives (VFD) controlling water distribution pump motors.",
 content: `
@@ -8805,8 +8881,8 @@ content: `
       </p>
 
       <div class="my-6 rounded-lg bg-slate-50 border border-slate-200 p-5 not-prose">
-        <h4 class="text-[13.5px] font-bold text-slate-900 mb-2">💡 Key Takeaways</h4>
-        <ul class="text-[13px] text-slate-600 space-y-2 list-disc pl-4">
+        <h4 class="font-bold text-slate-900 mb-2">💡 Key Takeaways</h4>
+        <ul class="text-slate-600 space-y-2 list-disc pl-4">
           <li><strong>Energy Savings:</strong> Centrifugal pump power consumption is proportional to the speed cubed, meaning speed reductions yield savings.</li>
           <li><strong>Soft Ramping:</strong> VFD speed control eliminates water hammer risks by ramping speeds up and down slowly.</li>
           <li><strong>Harmonic Limits:</strong> High-power drives require harmonic filters to meet IEEE 519 electrical standards.</li>
@@ -8824,15 +8900,15 @@ content: `
       </p>
 
       <div class="overflow-x-auto my-8 not-prose">
-        <table class="min-w-full divide-y divide-gray-200 border border-gray-150 text-[13.5px]">
+        <table class="min-w-full divide-y divide-gray-200 border border-gray-150">
           <thead class="bg-slate-50">
             <tr>
-              <th scope="col" class="px-4 py-3 text-left text-xs font-semibold text-slate-900 uppercase tracking-wider border-b border-gray-150">Pumping Configuration</th>
-              <th scope="col" class="px-4 py-3 text-left text-xs font-semibold text-slate-900 uppercase tracking-wider border-b border-gray-150">VFD Control Strategy</th>
-              <th scope="col" class="px-4 py-3 text-left text-xs font-semibold text-slate-900 uppercase tracking-wider border-b border-gray-150">Primary Operational Benefit</th>
+              <th scope="col" class="px-4 py-3 text-left font-semibold text-slate-900 uppercase tracking-wider border-b border-gray-150">Pumping Configuration</th>
+              <th scope="col" class="px-4 py-3 text-left font-semibold text-slate-900 uppercase tracking-wider border-b border-gray-150">VFD Control Strategy</th>
+              <th scope="col" class="px-4 py-3 text-left font-semibold text-slate-900 uppercase tracking-wider border-b border-gray-150">Primary Operational Benefit</th>
             </tr>
           </thead>
-          <tbody class="bg-white divide-y divide-gray-150 text-[13px]">
+          <tbody class="bg-white divide-y divide-gray-150">
             <tr>
               <td class="px-4 py-3 font-semibold text-slate-900 bg-slate-50/40">High-Service Booster Pumps</td>
               <td class="px-4 py-3 text-gray-600">Discharge header pressure feedback trims motor speed.</td>
@@ -8895,6 +8971,7 @@ content: `
     readTime: "8 Min Read",
     pillar: "Pillar 3: Analyzers & Inspection",
     description: "ASME and NDT inspection guide for water treatment infrastructure — covering pipe wall thickness, corrosion checks, and pressure vessel testing.",
+    keywords: "NDT water treatment, pipe vessel inspection, infrastructure",
     image: "/images/services/ndt.jpg",
     imageAlt: "An inspector conducting NDT ultrasonic tests on high-pressure water mains and tanks.",
 content: `
@@ -8903,8 +8980,8 @@ content: `
       </p>
 
       <div class="my-6 rounded-lg bg-slate-50 border border-slate-200 p-5 not-prose">
-        <h4 class="text-[13.5px] font-bold text-slate-900 mb-2">💡 Key Takeaways</h4>
-        <ul class="text-[13px] text-slate-600 space-y-2 list-disc pl-4">
+        <h4 class="font-bold text-slate-900 mb-2">💡 Key Takeaways</h4>
+        <ul class="text-slate-600 space-y-2 list-disc pl-4">
           <li><strong>Wall Thinning:</strong> Ultrasonic thickness gauging locates internal pipe corrosion and erosion issues.</li>
           <li><strong>Weld Integrity:</strong> Visual and magnetic particle testing check storage tank and vessel welds for stress cracks.</li>
           <li><strong>Inspection Guidelines:</strong> Assessments conform to ASME Section V and API 653 code standards.</li>
@@ -8922,15 +8999,15 @@ content: `
       </p>
 
       <div class="overflow-x-auto my-8 not-prose">
-        <table class="min-w-full divide-y divide-gray-200 border border-gray-150 text-[13.5px]">
+        <table class="min-w-full divide-y divide-gray-200 border border-gray-150">
           <thead class="bg-slate-50">
             <tr>
-              <th scope="col" class="px-4 py-3 text-left text-xs font-semibold text-slate-900 uppercase tracking-wider border-b border-gray-150">NDT Method</th>
-              <th scope="col" class="px-4 py-3 text-left text-xs font-semibold text-slate-900 uppercase tracking-wider border-b border-gray-150">Target Plant Infrastructure</th>
-              <th scope="col" class="px-4 py-3 text-left text-xs font-semibold text-slate-900 uppercase tracking-wider border-b border-gray-150">Primary Metrological Purpose</th>
+              <th scope="col" class="px-4 py-3 text-left font-semibold text-slate-900 uppercase tracking-wider border-b border-gray-150">NDT Method</th>
+              <th scope="col" class="px-4 py-3 text-left font-semibold text-slate-900 uppercase tracking-wider border-b border-gray-150">Target Plant Infrastructure</th>
+              <th scope="col" class="px-4 py-3 text-left font-semibold text-slate-900 uppercase tracking-wider border-b border-gray-150">Primary Metrological Purpose</th>
             </tr>
           </thead>
-          <tbody class="bg-white divide-y divide-gray-150 text-[13px]">
+          <tbody class="bg-white divide-y divide-gray-150">
             <tr>
               <td class="px-4 py-3 font-semibold text-slate-900 bg-slate-50/40">Ultrasonic Thickness (UT)</td>
               <td class="px-4 py-3 text-gray-600">High-service discharge piping, aeration basin supply manifolds.</td>
@@ -8993,6 +9070,7 @@ content: `
     readTime: "8 Min Read",
     pillar: "Pillar 1: Flow Measurement & Custody Metering",
     description: "Ultrasonic flow meter selection guide for water distribution — comparing clamp-on vs inline sensors, DMA setups, and ISO 4064 standards.",
+    keywords: "ultrasonic flow meters, water distribution, municipal metering",
     image: "/clamp_on_meter.png",
     imageAlt: "A clamp-on transit-time ultrasonic liquid flow meter installed on a municipal water main.",
 content: `
@@ -9001,8 +9079,8 @@ content: `
       </p>
 
       <div class="my-6 rounded-lg bg-slate-50 border border-slate-200 p-5 not-prose">
-        <h4 class="text-[13.5px] font-bold text-slate-900 mb-2">💡 Key Takeaways</h4>
-        <ul class="text-[13px] text-slate-600 space-y-2 list-disc pl-4">
+        <h4 class="font-bold text-slate-900 mb-2">💡 Key Takeaways</h4>
+        <ul class="text-slate-600 space-y-2 list-disc pl-4">
           <li><strong>Clamp-On Advantage:</strong> Clamp-on sensors mount onto the pipe exterior, avoiding excavation and service shutdowns.</li>
           <li><strong>Leakage Tracking:</strong> Installing meters at District Metered Area (DMA) inlets allows utilities to isolate leaks.</li>
           <li><strong>Standard Compliance:</strong> Meter testing and calibration follow ISO 4064 and OIML R49 metrological guidelines.</li>
@@ -9020,15 +9098,15 @@ content: `
       </p>
 
       <div class="overflow-x-auto my-8 not-prose">
-        <table class="min-w-full divide-y divide-gray-200 border border-gray-150 text-[13.5px]">
+        <table class="min-w-full divide-y divide-gray-200 border border-gray-150">
           <thead class="bg-slate-50">
             <tr>
-              <th scope="col" class="px-4 py-3 text-left text-xs font-semibold text-slate-900 uppercase tracking-wider border-b border-gray-150">Metering Feature</th>
-              <th scope="col" class="px-4 py-3 text-left text-xs font-semibold text-slate-900 uppercase tracking-wider border-b border-gray-150">Clamp-On Ultrasonic Meter</th>
-              <th scope="col" class="px-4 py-3 text-left text-xs font-semibold text-slate-900 uppercase tracking-wider border-b border-gray-150">Inline Ultrasonic Meter</th>
+              <th scope="col" class="px-4 py-3 text-left font-semibold text-slate-900 uppercase tracking-wider border-b border-gray-150">Metering Feature</th>
+              <th scope="col" class="px-4 py-3 text-left font-semibold text-slate-900 uppercase tracking-wider border-b border-gray-150">Clamp-On Ultrasonic Meter</th>
+              <th scope="col" class="px-4 py-3 text-left font-semibold text-slate-900 uppercase tracking-wider border-b border-gray-150">Inline Ultrasonic Meter</th>
             </tr>
           </thead>
-          <tbody class="bg-white divide-y divide-gray-150 text-[13px]">
+          <tbody class="bg-white divide-y divide-gray-150">
             <tr>
               <td class="px-4 py-3 font-semibold text-slate-900 bg-slate-50/40">Installation Impact</td>
               <td class="px-4 py-3 text-gray-600">Zero pipe cutting, mounts on exterior shell.</td>
@@ -9096,6 +9174,7 @@ content: `
     readTime: "8 Min Read",
     pillar: "Pillar 2: Industrial Process Automation",
     description: "Guide to SCADA and telemetry for water utilities — comparing cellular and radio options, alarm systems, and IEC 62443 security.",
+    keywords: "remote monitoring, SCADA, water utilities automation",
     image: "/images/control_room_interior_and_console/xlat/3.jpg",
     imageAlt: "Operators monitoring pump stations and reservoir levels via SCADA screens in a utility room.",
 content: `
@@ -9104,8 +9183,8 @@ content: `
       </p>
 
       <div class="my-6 rounded-lg bg-slate-50 border border-slate-200 p-5 not-prose">
-        <h4 class="text-[13.5px] font-bold text-slate-900 mb-2">💡 Key Takeaways</h4>
-        <ul class="text-[13px] text-slate-600 space-y-2 list-disc pl-4">
+        <h4 class="font-bold text-slate-900 mb-2">💡 Key Takeaways</h4>
+        <ul class="text-slate-600 space-y-2 list-disc pl-4">
           <li><strong>Distributed Tracking:</strong> SCADA networks monitor remote tanks and pumps, coordinating system pressures.</li>
           <li><strong>Telemetry Layout:</strong> Communication links utilize cellular, radio, or satellite pathways depending on location.</li>
           <li><strong>Utility Security:</strong> Remote network designs follow IEC 62443 cybersecurity guidelines to secure access.</li>
@@ -9123,15 +9202,15 @@ content: `
       </p>
 
       <div class="overflow-x-auto my-8 not-prose">
-        <table class="min-w-full divide-y divide-gray-200 border border-gray-150 text-[13.5px]">
+        <table class="min-w-full divide-y divide-gray-200 border border-gray-150">
           <thead class="bg-slate-50">
             <tr>
-              <th scope="col" class="px-4 py-3 text-left text-xs font-semibold text-slate-900 uppercase tracking-wider border-b border-gray-150">Telemetry Pathway</th>
-              <th scope="col" class="px-4 py-3 text-left text-xs font-semibold text-slate-900 uppercase tracking-wider border-b border-gray-150">Communication Configuration</th>
-              <th scope="col" class="px-4 py-3 text-left text-xs font-semibold text-slate-900 uppercase tracking-wider border-b border-gray-150">Primary Utility Application</th>
+              <th scope="col" class="px-4 py-3 text-left font-semibold text-slate-900 uppercase tracking-wider border-b border-gray-150">Telemetry Pathway</th>
+              <th scope="col" class="px-4 py-3 text-left font-semibold text-slate-900 uppercase tracking-wider border-b border-gray-150">Communication Configuration</th>
+              <th scope="col" class="px-4 py-3 text-left font-semibold text-slate-900 uppercase tracking-wider border-b border-gray-150">Primary Utility Application</th>
             </tr>
           </thead>
-          <tbody class="bg-white divide-y divide-gray-150 text-[13px]">
+          <tbody class="bg-white divide-y divide-gray-150">
             <tr>
               <td class="px-4 py-3 font-semibold text-slate-900 bg-slate-50/40">Cellular Telemetry (LTE-M / 5G)</td>
               <td class="px-4 py-3 text-gray-600">Uses commercial cellular networks to transmit data packets.</td>
@@ -9194,6 +9273,7 @@ content: `
     readTime: "9 Min Read",
     pillar: "Pillar 1: Flow Measurement & Custody Metering",
     description: "Instrumentation and material selection guide for desalination plants — covering RO membrane monitoring, high pressure meters, and salinity sensors.",
+    keywords: "desalination instrumentation, flow pressure measurement, desalination",
     image: "/water_treatment.jpg",
     imageAlt: "Reverse osmosis filter racks and pressure gauges in a sea water desalination plant.",
 content: `
@@ -9202,8 +9282,8 @@ content: `
       </p>
 
       <div class="my-6 rounded-lg bg-slate-50 border border-slate-200 p-5 not-prose">
-        <h4 class="text-[13.5px] font-bold text-slate-900 mb-2">💡 Key Takeaways</h4>
-        <ul class="text-[13px] text-slate-600 space-y-2 list-disc pl-4">
+        <h4 class="font-bold text-slate-900 mb-2">💡 Key Takeaways</h4>
+        <ul class="text-slate-600 space-y-2 list-disc pl-4">
           <li><strong>Material Focus:</strong> Seawater piping and sensors require corrosion-resistant alloys like super duplex stainless steel.</li>
           <li><strong>RO Optimization:</strong> Differential pressure and salinity sensors monitor reverse osmosis membrane conditions.</li>
           <li><strong>Energy Efficiency:</strong> Precise flow tracking secures the operation of high-pressure pumps and energy recovery devices.</li>
@@ -9221,15 +9301,15 @@ content: `
       </p>
 
       <div class="overflow-x-auto my-8 not-prose">
-        <table class="min-w-full divide-y divide-gray-200 border border-gray-150 text-[13.5px]">
+        <table class="min-w-full divide-y divide-gray-200 border border-gray-150">
           <thead class="bg-slate-50">
             <tr>
-              <th scope="col" class="px-4 py-3 text-left text-xs font-semibold text-slate-900 uppercase tracking-wider border-b border-gray-150">Flow Meter Type</th>
-              <th scope="col" class="px-4 py-3 text-left text-xs font-semibold text-slate-900 uppercase tracking-wider border-b border-gray-150">Materials of Construction</th>
-              <th scope="col" class="px-4 py-3 text-left text-xs font-semibold text-slate-900 uppercase tracking-wider border-b border-gray-150">Typical Desalination Application</th>
+              <th scope="col" class="px-4 py-3 text-left font-semibold text-slate-900 uppercase tracking-wider border-b border-gray-150">Flow Meter Type</th>
+              <th scope="col" class="px-4 py-3 text-left font-semibold text-slate-900 uppercase tracking-wider border-b border-gray-150">Materials of Construction</th>
+              <th scope="col" class="px-4 py-3 text-left font-semibold text-slate-900 uppercase tracking-wider border-b border-gray-150">Typical Desalination Application</th>
             </tr>
           </thead>
-          <tbody class="bg-white divide-y divide-gray-150 text-[13px]">
+          <tbody class="bg-white divide-y divide-gray-150">
             <tr>
               <td class="px-4 py-3 font-semibold text-slate-900 bg-slate-50/40">Electromagnetic Meter</td>
               <td class="px-4 py-3 text-gray-600">Super Duplex body, PVDF or Ebonite liner, Platinum electrodes.</td>
@@ -9296,6 +9376,7 @@ content: `
     readTime: "8 Min Read",
     pillar: "Pillar 3: Analyzers & Inspection",
     description: "Guide to corrosion monitoring in water treatment — covering coupons, ER probes, Langelier Saturation Index (LSI), and NACE SP0169.",
+    keywords: "corrosion monitoring, water treatment, corrosion prevention",
     image: "/images/services/Magnetic-Flux-Leakage.jpg",
     imageAlt: "An inspector using magnetic flux leakage (MFL) to check structural steel tank bottoms for corrosion.",
 content: `
@@ -9304,8 +9385,8 @@ content: `
       </p>
 
       <div class="my-6 rounded-lg bg-slate-50 border border-slate-200 p-5 not-prose">
-        <h4 class="text-[13.5px] font-bold text-slate-900 mb-2">💡 Key Takeaways</h4>
-        <ul class="text-[13px] text-slate-600 space-y-2 list-disc pl-4">
+        <h4 class="font-bold text-slate-900 mb-2">💡 Key Takeaways</h4>
+        <ul class="text-slate-600 space-y-2 list-disc pl-4">
           <li><strong>Monitoring Methods:</strong> Physical coupons and online ER probes track real-time corrosion rates.</li>
           <li><strong>Corrosion Index:</strong> The Langelier Saturation Index (LSI) calculates scale-forming vs. corrosive water tendencies.</li>
           <li><strong>Tank Protection:</strong> Cathodic protection designs prevent corrosion on metal storage tank interiors.</li>
@@ -9323,15 +9404,15 @@ content: `
       </p>
 
       <div class="overflow-x-auto my-8 not-prose">
-        <table class="min-w-full divide-y divide-gray-200 border border-gray-150 text-[13.5px]">
+        <table class="min-w-full divide-y divide-gray-200 border border-gray-150">
           <thead class="bg-slate-50">
             <tr>
-              <th scope="col" class="px-4 py-3 text-left text-xs font-semibold text-slate-900 uppercase tracking-wider border-b border-gray-150">Monitoring Method</th>
-              <th scope="col" class="px-4 py-3 text-left text-xs font-semibold text-slate-900 uppercase tracking-wider border-b border-gray-150">Operating Principle</th>
-              <th scope="col" class="px-4 py-3 text-left text-xs font-semibold text-slate-900 uppercase tracking-wider border-b border-gray-150">Primary Utility Benefit</th>
+              <th scope="col" class="px-4 py-3 text-left font-semibold text-slate-900 uppercase tracking-wider border-b border-gray-150">Monitoring Method</th>
+              <th scope="col" class="px-4 py-3 text-left font-semibold text-slate-900 uppercase tracking-wider border-b border-gray-150">Operating Principle</th>
+              <th scope="col" class="px-4 py-3 text-left font-semibold text-slate-900 uppercase tracking-wider border-b border-gray-150">Primary Utility Benefit</th>
             </tr>
           </thead>
-          <tbody class="bg-white divide-y divide-gray-150 text-[13px]">
+          <tbody class="bg-white divide-y divide-gray-150">
             <tr>
               <td class="px-4 py-3 font-semibold text-slate-900 bg-slate-50/40">Corrosion Coupons</td>
               <td class="px-4 py-3 text-gray-600">Metal plates are exposed to flow, then weighed to calculate average metal loss.</td>
@@ -9393,6 +9474,7 @@ content: `
     readTime: "9 Min Read",
     pillar: "Pillar 3: Analyzers & Inspection",
     description: "Compliance guide for cement plant emissions monitoring — covering kiln CEMS, continuous dust analyzers, baghouse leaks, and EN 15267 compliance.",
+    keywords: "cement plant emissions, CEMS, dust monitoring",
     image: "/cement_industry.jpg",
     imageAlt: "Emissions stack and rotary kiln assembly of a dry-process cement manufacturing plant.",
 content: `
@@ -9401,8 +9483,8 @@ content: `
       </p>
 
       <div class="my-6 rounded-lg bg-slate-50 border border-slate-200 p-5 not-prose">
-        <h4 class="text-[13.5px] font-bold text-slate-900 mb-2">💡 Key Takeaways</h4>
-        <ul class="text-[13px] text-slate-600 space-y-2 list-disc pl-4">
+        <h4 class="font-bold text-slate-900 mb-2">💡 Key Takeaways</h4>
+        <ul class="text-slate-600 space-y-2 list-disc pl-4">
           <li><strong>Regulatory Compliance:</strong> Industrial emissions monitoring equipment must be certified under the EN 15267 standard to verify measurement stability.</li>
           <li><strong>CEMS Integration:</strong> A complete cement kiln CEMS measures NOx, SO2, CO, and oxygen to optimize combustion and report emissions.</li>
           <li><strong>Particulate Management:</strong> Continuous dust monitors detect filter degradation, supporting bag filter monitoring to prevent particulate releases.</li>
@@ -9419,15 +9501,15 @@ content: `
       </p>
 
       <div class="overflow-x-auto my-8 not-prose">
-        <table class="min-w-full divide-y divide-gray-200 border border-gray-150 text-[13.5px]">
+        <table class="min-w-full divide-y divide-gray-200 border border-gray-150">
           <thead class="bg-slate-50">
             <tr>
-              <th scope="col" class="px-4 py-3 text-left text-xs font-semibold text-slate-900 uppercase tracking-wider border-b border-gray-150">Process Source</th>
-              <th scope="col" class="px-4 py-3 text-left text-xs font-semibold text-slate-900 uppercase tracking-wider border-b border-gray-150">Primary Target Pollutants</th>
-              <th scope="col" class="px-4 py-3 text-left text-xs font-semibold text-slate-900 uppercase tracking-wider border-b border-gray-150">Monitoring Configuration &amp; Technology</th>
+              <th scope="col" class="px-4 py-3 text-left font-semibold text-slate-900 uppercase tracking-wider border-b border-gray-150">Process Source</th>
+              <th scope="col" class="px-4 py-3 text-left font-semibold text-slate-900 uppercase tracking-wider border-b border-gray-150">Primary Target Pollutants</th>
+              <th scope="col" class="px-4 py-3 text-left font-semibold text-slate-900 uppercase tracking-wider border-b border-gray-150">Monitoring Configuration &amp; Technology</th>
             </tr>
           </thead>
-          <tbody class="bg-white divide-y divide-gray-150 text-[13px]">
+          <tbody class="bg-white divide-y divide-gray-150">
             <tr>
               <td class="px-4 py-3 font-semibold text-slate-900 bg-slate-50/40">Rotary Kiln &amp; Preheater Stack</td>
               <td class="px-4 py-3 text-gray-600">NOx from calcination, SO2 kiln emissions, CO, CO2, HCl, HF</td>
@@ -9512,6 +9594,7 @@ content: `
     readTime: "9 Min Read",
     pillar: "Pillar 1: Flow Measurement & Custody Metering",
     description: "Flow meter selection guide for cement plants — covering kiln combustion air, process gas flow, cement slurry metering, and material wear resistance.",
+    keywords: "cement plant flow measurement, air flow, slurry metering",
     image: "/images/services/flow-measurement.jpg",
     imageAlt: "An industrial flow meter tracking air flow rates on large baghouse dust collectors in a cement mill.",
 content: `
@@ -9520,8 +9603,8 @@ content: `
       </p>
 
       <div class="my-6 rounded-lg bg-slate-50 border border-slate-200 p-5 not-prose">
-        <h4 class="text-[13.5px] font-bold text-slate-900 mb-2">💡 Key Takeaways</h4>
-        <ul class="text-[13px] text-slate-600 space-y-2 list-disc pl-4">
+        <h4 class="font-bold text-slate-900 mb-2">💡 Key Takeaways</h4>
+        <ul class="text-slate-600 space-y-2 list-disc pl-4">
           <li><strong>Kiln Combustion:</strong> Accurate kiln air flow measurement is critical to maintain optimal fuel-to-oxygen ratios.</li>
           <li><strong>Slurry Transport:</strong> Electromagnetic flow meters with specialized polyurethane linings are selected for raw slurry lines.</li>
           <li><strong>Gas Flow:</strong> Process gas flow cement plant applications rely on purged averaging Pitot tubes and thermal mass meters.</li>
@@ -9543,15 +9626,15 @@ content: `
       </p>
 
       <div class="overflow-x-auto my-8 not-prose">
-        <table class="min-w-full divide-y divide-gray-200 border border-gray-150 text-[13.5px]">
+        <table class="min-w-full divide-y divide-gray-200 border border-gray-150">
           <thead class="bg-slate-50">
             <tr>
-              <th scope="col" class="px-4 py-3 text-left text-xs font-semibold text-slate-900 uppercase tracking-wider border-b border-gray-150">Piping Application</th>
-              <th scope="col" class="px-4 py-3 text-left text-xs font-semibold text-slate-900 uppercase tracking-wider border-b border-gray-150">Recommended Flow Meter</th>
-              <th scope="col" class="px-4 py-3 text-left text-xs font-semibold text-slate-900 uppercase tracking-wider border-b border-gray-150">Primary Operational Benefit</th>
+              <th scope="col" class="px-4 py-3 text-left font-semibold text-slate-900 uppercase tracking-wider border-b border-gray-150">Piping Application</th>
+              <th scope="col" class="px-4 py-3 text-left font-semibold text-slate-900 uppercase tracking-wider border-b border-gray-150">Recommended Flow Meter</th>
+              <th scope="col" class="px-4 py-3 text-left font-semibold text-slate-900 uppercase tracking-wider border-b border-gray-150">Primary Operational Benefit</th>
             </tr>
           </thead>
-          <tbody class="bg-white divide-y divide-gray-150 text-[13px]">
+          <tbody class="bg-white divide-y divide-gray-150">
             <tr>
               <td class="px-4 py-3 font-semibold text-slate-900 bg-slate-50/40">Primary Combustion Air</td>
               <td class="px-4 py-3 text-gray-600">Thermal mass flow meter</td>
@@ -9627,6 +9710,7 @@ content: `
     readTime: "8 Min Read",
     pillar: "Pillar 2: Industrial Process Automation",
     description: "Kiln control automation guide for cement plants — covering preheater loops, alternative fuel feed controls, and PLC configurations.",
+    keywords: "PLC automation, cement kiln control, process optimization",
     image: "/images/plc/MELSEC-iQ-R-Series.png",
     imageAlt: "PLC systems controlling raw material feed and burner temperatures in a cement rotary kiln.",
 content: `
@@ -9635,8 +9719,8 @@ content: `
       </p>
 
       <div class="my-6 rounded-lg bg-slate-50 border border-slate-200 p-5 not-prose">
-        <h4 class="text-[13.5px] font-bold text-slate-900 mb-2">💡 Key Takeaways</h4>
-        <ul class="text-[13px] text-slate-600 space-y-2 list-disc pl-4">
+        <h4 class="font-bold text-slate-900 mb-2">💡 Key Takeaways</h4>
+        <ul class="text-slate-600 space-y-2 list-disc pl-4">
           <li><strong>Temperature Control:</strong> Kiln temperature control automation manages combustion fuel rates to maintain clinkerization zones.</li>
           <li><strong>Draft Management:</strong> Preheater control loops adjust induced draft fans to optimize heat recovery and material drying.</li>
           <li><strong>Fuel Flexibility:</strong> Automated fuel control cement kiln loops manage primary fuels and alternative fuel streams based on kiln heat demands.</li>
@@ -9658,15 +9742,15 @@ content: `
       </p>
 
       <div class="overflow-x-auto my-8 not-prose">
-        <table class="min-w-full divide-y divide-gray-200 border border-gray-150 text-[13.5px]">
+        <table class="min-w-full divide-y divide-gray-200 border border-gray-150">
           <thead class="bg-slate-50">
             <tr>
-              <th scope="col" class="px-4 py-3 text-left text-xs font-semibold text-slate-900 uppercase tracking-wider border-b border-gray-150">Control Loop</th>
-              <th scope="col" class="px-4 py-3 text-left text-xs font-semibold text-slate-900 uppercase tracking-wider border-b border-gray-150">Primary Sensed Parameter</th>
-              <th scope="col" class="px-4 py-3 text-left text-xs font-semibold text-slate-900 uppercase tracking-wider border-b border-gray-150">Automation Purpose &amp; Action</th>
+              <th scope="col" class="px-4 py-3 text-left font-semibold text-slate-900 uppercase tracking-wider border-b border-gray-150">Control Loop</th>
+              <th scope="col" class="px-4 py-3 text-left font-semibold text-slate-900 uppercase tracking-wider border-b border-gray-150">Primary Sensed Parameter</th>
+              <th scope="col" class="px-4 py-3 text-left font-semibold text-slate-900 uppercase tracking-wider border-b border-gray-150">Automation Purpose &amp; Action</th>
             </tr>
           </thead>
-          <tbody class="bg-white divide-y divide-gray-150 text-[13px]">
+          <tbody class="bg-white divide-y divide-gray-150">
             <tr>
               <td class="px-4 py-3 font-semibold text-slate-900 bg-slate-50/40">Burning Zone Temperature</td>
               <td class="px-4 py-3 text-gray-600">Kiln temperature (optical pyrometer)</td>
@@ -9740,6 +9824,7 @@ content: `
     readTime: "8 Min Read",
     pillar: "Pillar 3: Analyzers & Inspection",
     description: "ASME and ASTM A435 compliance guide for NDT in steel manufacturing — covering rolled steel products, weld testing, laminations, and inclusions.",
+    keywords: "NDT steel manufacturing, weld inspection, material testing",
     image: "/metal_and_steel.jpg",
     imageAlt: "An industrial furnace processing structural steel sheets in a manufacturing plant.",
 content: `
@@ -9748,8 +9833,8 @@ content: `
       </p>
 
       <div class="my-6 rounded-lg bg-slate-50 border border-slate-200 p-5 not-prose">
-        <h4 class="text-[13.5px] font-bold text-slate-900 mb-2">💡 Key Takeaways</h4>
-        <ul class="text-[13px] text-slate-600 space-y-2 list-disc pl-4">
+        <h4 class="font-bold text-slate-900 mb-2">💡 Key Takeaways</h4>
+        <ul class="text-slate-600 space-y-2 list-disc pl-4">
           <li><strong>Quality Assurance:</strong> Weld testing and plate scanning follow ASME Section V and AWS D1.1 guidelines.</li>
           <li><strong>Plate Integrity:</strong> Ultrasonic testing plate arrays detect internal defects like laminations and trapped slag.</li>
           <li><strong>Weld Safety:</strong> Magnetic particle weld inspection is selected to detect surface-breaking cracks in structural fillet welds.</li>
@@ -9771,15 +9856,15 @@ content: `
       </p>
 
       <div class="overflow-x-auto my-8 not-prose">
-        <table class="min-w-full divide-y divide-gray-200 border border-gray-150 text-[13.5px]">
+        <table class="min-w-full divide-y divide-gray-200 border border-gray-150">
           <thead class="bg-slate-50">
             <tr>
-              <th scope="col" class="px-4 py-3 text-left text-xs font-semibold text-slate-900 uppercase tracking-wider border-b border-gray-150">NDT Method</th>
-              <th scope="col" class="px-4 py-3 text-left text-xs font-semibold text-slate-900 uppercase tracking-wider border-b border-gray-150">Target Component</th>
-              <th scope="col" class="px-4 py-3 text-left text-xs font-semibold text-slate-900 uppercase tracking-wider border-b border-gray-150">Primary Defect Detected &amp; Standard</th>
+              <th scope="col" class="px-4 py-3 text-left font-semibold text-slate-900 uppercase tracking-wider border-b border-gray-150">NDT Method</th>
+              <th scope="col" class="px-4 py-3 text-left font-semibold text-slate-900 uppercase tracking-wider border-b border-gray-150">Target Component</th>
+              <th scope="col" class="px-4 py-3 text-left font-semibold text-slate-900 uppercase tracking-wider border-b border-gray-150">Primary Defect Detected &amp; Standard</th>
             </tr>
           </thead>
-          <tbody class="bg-white divide-y divide-gray-150 text-[13px]">
+          <tbody class="bg-white divide-y divide-gray-150">
             <tr>
               <td class="px-4 py-3 font-semibold text-slate-900 bg-slate-50/40">Ultrasonic Testing (UT)</td>
               <td class="px-4 py-3 text-gray-600">Flat steel plates, structural profiles, forgings</td>
@@ -9853,6 +9938,7 @@ content: `
     readTime: "8 Min Read",
     pillar: "Pillar 3: Analyzers & Inspection",
     description: "Mechanical testing compliance guide for steel fabrication — covering tensile tests, bend tests, PQR qualification, and ASME IX requirements.",
+    keywords: "steel fabrication QC, mechanical testing, quality control",
     image: "/images/services/Structural-Steel-Work.webp",
     imageAlt: "Quality inspectors examining weld seams on structural steel beams in a fabrication shop.",
 content: `
@@ -9861,8 +9947,8 @@ content: `
       </p>
 
       <div class="my-6 rounded-lg bg-slate-50 border border-slate-200 p-5 not-prose">
-        <h4 class="text-[13.5px] font-bold text-slate-900 mb-2">💡 Key Takeaways</h4>
-        <ul class="text-[13px] text-slate-600 space-y-2 list-disc pl-4">
+        <h4 class="font-bold text-slate-900 mb-2">💡 Key Takeaways</h4>
+        <ul class="text-slate-600 space-y-2 list-disc pl-4">
           <li><strong>Procedure Validation:</strong> Mechanical testing is required to qualify welding procedure specifications (WPS) and compile Procedure Qualification Records (PQRs).</li>
           <li><strong>Destructive Testing:</strong> Tensile and bend testing evaluates joint ductility and ultimate tensile strength.</li>
           <li><strong>Hardness Checks:</strong> Hardness surveys across the heat-affected zone verify that welding thermal cycles do not embrittle the metal.</li>
@@ -9881,15 +9967,15 @@ content: `
       </p>
 
       <div class="overflow-x-auto my-8 not-prose">
-        <table class="min-w-full divide-y divide-gray-200 border border-gray-150 text-[13.5px]">
+        <table class="min-w-full divide-y divide-gray-200 border border-gray-150">
           <thead class="bg-slate-50">
             <tr>
-              <th scope="col" class="px-4 py-3 text-left text-xs font-semibold text-slate-900 uppercase tracking-wider border-b border-gray-150">Mechanical Test Type</th>
-              <th scope="col" class="px-4 py-3 text-left text-xs font-semibold text-slate-900 uppercase tracking-wider border-b border-gray-150">Specimen Preparation &amp; Code</th>
-              <th scope="col" class="px-4 py-3 text-left text-xs font-semibold text-slate-900 uppercase tracking-wider border-b border-gray-150">Primary Metrological Purpose</th>
+              <th scope="col" class="px-4 py-3 text-left font-semibold text-slate-900 uppercase tracking-wider border-b border-gray-150">Mechanical Test Type</th>
+              <th scope="col" class="px-4 py-3 text-left font-semibold text-slate-900 uppercase tracking-wider border-b border-gray-150">Specimen Preparation &amp; Code</th>
+              <th scope="col" class="px-4 py-3 text-left font-semibold text-slate-900 uppercase tracking-wider border-b border-gray-150">Primary Metrological Purpose</th>
             </tr>
           </thead>
-          <tbody class="bg-white divide-y divide-gray-150 text-[13px]">
+          <tbody class="bg-white divide-y divide-gray-150">
             <tr>
               <td class="px-4 py-3 font-semibold text-slate-900 bg-slate-50/40">Transverse Tension Test</td>
               <td class="px-4 py-3 text-gray-600">Reduced-section coupon cut perpendicular to weld, following ASTM E8.</td>
@@ -9965,6 +10051,7 @@ content: `
     readTime: "8 Min Read",
     pillar: "Pillar 2: Industrial Process Automation",
     description: "Guide to variable frequency drives (VFD) in cement plants — covering raw/cement mills, kiln fans, medium-voltage drives, and IEEE 519.",
+    keywords: "VFD drives, cement plant, fan mill control",
     image: "/images/frequency-inverters/FR-A800.webp",
     imageAlt: "High-capacity variable speed drive units controlling cement kiln exhaust fan motors.",
 content: `
@@ -9973,8 +10060,8 @@ content: `
       </p>
 
       <div class="my-6 rounded-lg bg-slate-50 border border-slate-200 p-5 not-prose">
-        <h4 class="text-[13.5px] font-bold text-slate-900 mb-2">💡 Key Takeaways</h4>
-        <ul class="text-[13px] text-slate-600 space-y-2 list-disc pl-4">
+        <h4 class="font-bold text-slate-900 mb-2">💡 Key Takeaways</h4>
+        <ul class="text-slate-600 space-y-2 list-disc pl-4">
           <li><strong>Combustion Drafts:</strong> An ID fan speed control manages kiln draft air flow dynamically, reducing fan power draw.</li>
           <li><strong>Grinding Mills:</strong> A variable frequency drive cement mill provides soft-starting torque to protect heavy gears.</li>
           <li><strong>Power Quality:</strong> Medium-voltage VFD systems require harmonic filters to comply with IEEE 519 grid limits.</li>
@@ -9993,15 +10080,15 @@ content: `
       </p>
 
       <div class="overflow-x-auto my-8 not-prose">
-        <table class="min-w-full divide-y divide-gray-200 border border-gray-150 text-[13.5px]">
+        <table class="min-w-full divide-y divide-gray-200 border border-gray-150">
           <thead class="bg-slate-50">
             <tr>
-              <th scope="col" class="px-4 py-3 text-left text-xs font-semibold text-slate-900 uppercase tracking-wider border-b border-gray-150">Process Application</th>
-              <th scope="col" class="px-4 py-3 text-left text-xs font-semibold text-slate-900 uppercase tracking-wider border-b border-gray-150">VFD Drive Configuration</th>
-              <th scope="col" class="px-4 py-3 text-left text-xs font-semibold text-slate-900 uppercase tracking-wider border-b border-gray-150">Primary Metrological &amp; Mechanical Benefit</th>
+              <th scope="col" class="px-4 py-3 text-left font-semibold text-slate-900 uppercase tracking-wider border-b border-gray-150">Process Application</th>
+              <th scope="col" class="px-4 py-3 text-left font-semibold text-slate-900 uppercase tracking-wider border-b border-gray-150">VFD Drive Configuration</th>
+              <th scope="col" class="px-4 py-3 text-left font-semibold text-slate-900 uppercase tracking-wider border-b border-gray-150">Primary Metrological &amp; Mechanical Benefit</th>
             </tr>
           </thead>
-          <tbody class="bg-white divide-y divide-gray-150 text-[13px]">
+          <tbody class="bg-white divide-y divide-gray-150">
             <tr>
               <td class="px-4 py-3 font-semibold text-slate-900 bg-slate-50/40">Raw Mill &amp; Cement Mill Grinding</td>
               <td class="px-4 py-3 text-gray-600">Medium-voltage high-torque VFD</td>
@@ -10079,6 +10166,7 @@ content: `
     readTime: "9 Min Read",
     pillar: "Pillar 3: Analyzers & Inspection",
     description: "Structural steel NDT inspection guide — covering weld testing, magnetic particle testing, ultrasonic testing, and AWS D1.1 compliance.",
+    keywords: "structural steel inspection, NDT methods, steel standards",
     image: "/images/services/ndt.jpg",
     imageAlt: "An NDT inspector scanning structural steel columns using an ultrasonic testing device.",
 content: `
@@ -10087,8 +10175,8 @@ content: `
       </p>
 
       <div class="my-6 rounded-lg bg-slate-50 border border-slate-200 p-5 not-prose">
-        <h4 class="text-[13.5px] font-bold text-slate-900 mb-2">💡 Key Takeaways</h4>
-        <ul class="text-[13px] text-slate-600 space-y-2 list-disc pl-4">
+        <h4 class="font-bold text-slate-900 mb-2">💡 Key Takeaways</h4>
+        <ul class="text-slate-600 space-y-2 list-disc pl-4">
           <li><strong>Weld Integrity:</strong> Volumetric ultrasonic testing (UT) welds checks groove welds for internal defects.</li>
           <li><strong>Surface Diagnostics:</strong> Visual inspection (VT) and magnetic particle testing (MT) are selected to identify surface weld flaws.</li>
           <li><strong>Joint Security:</strong> Bolted connection inspection programs verify high-strength bolt tensions using calibrated torque wrenches.</li>
@@ -10107,15 +10195,15 @@ content: `
       </p>
 
       <div class="overflow-x-auto my-8 not-prose">
-        <table class="min-w-full divide-y divide-gray-200 border border-gray-150 text-[13.5px]">
+        <table class="min-w-full divide-y divide-gray-200 border border-gray-150">
           <thead class="bg-slate-50">
             <tr>
-              <th scope="col" class="px-4 py-3 text-left text-xs font-semibold text-slate-900 uppercase tracking-wider border-b border-gray-150">NDT Method</th>
-              <th scope="col" class="px-4 py-3 text-left text-xs font-semibold text-slate-900 uppercase tracking-wider border-b border-gray-150">Weld Application</th>
-              <th scope="col" class="px-4 py-3 text-left text-xs font-semibold text-slate-900 uppercase tracking-wider border-b border-gray-150">Target Defect Type Detected</th>
+              <th scope="col" class="px-4 py-3 text-left font-semibold text-slate-900 uppercase tracking-wider border-b border-gray-150">NDT Method</th>
+              <th scope="col" class="px-4 py-3 text-left font-semibold text-slate-900 uppercase tracking-wider border-b border-gray-150">Weld Application</th>
+              <th scope="col" class="px-4 py-3 text-left font-semibold text-slate-900 uppercase tracking-wider border-b border-gray-150">Target Defect Type Detected</th>
             </tr>
           </thead>
-          <tbody class="bg-white divide-y divide-gray-150 text-[13px]">
+          <tbody class="bg-white divide-y divide-gray-150">
             <tr>
               <td class="px-4 py-3 font-semibold text-slate-900 bg-slate-50/40">Visual Inspection (VT)</td>
               <td class="px-4 py-3 text-gray-600">All weld joints prior to surface or volumetric scans.</td>
@@ -10188,6 +10276,7 @@ content: `
     readTime: "8 Min Read",
     pillar: "Pillar 3: Analyzers & Inspection",
     description: "Guide to heat treatment in steel fabrication — comparing PWHT, annealing, and normalizing under ASME VIII and AWS D1.1 codes.",
+    keywords: "heat treatment steel, PWHT annealing, fabrication processes",
     image: "/images/services/Heat-Treatment-Services.jpeg",
     imageAlt: "Preheating structural steel beams using induction coils before post-weld heat treatment.",
 content: `
@@ -10196,8 +10285,8 @@ content: `
       </p>
 
       <div class="my-6 rounded-lg bg-slate-50 border border-slate-200 p-5 not-prose">
-        <h4 class="text-[13.5px] font-bold text-slate-900 mb-2">💡 Key Takeaways</h4>
-        <ul class="text-[13px] text-slate-600 space-y-2 list-disc pl-4">
+        <h4 class="font-bold text-slate-900 mb-2">💡 Key Takeaways</h4>
+        <ul class="text-slate-600 space-y-2 list-disc pl-4">
           <li><strong>Stress Relaxation:</strong> PWHT steel fabrication processes relieve internal stresses introduced by weld contraction.</li>
           <li><strong>Ductility Restoration:</strong> Annealing processes soften hard carbon steels, restoring ductility for machining or cold forming.</li>
           <li><strong>Grain Refinement:</strong> Normalizing cycles refine metal grain structures, improving low-temperature toughness.</li>
@@ -10216,15 +10305,15 @@ content: `
       </p>
 
       <div class="overflow-x-auto my-8 not-prose">
-        <table class="min-w-full divide-y divide-gray-200 border border-gray-150 text-[13.5px]">
+        <table class="min-w-full divide-y divide-gray-200 border border-gray-150">
           <thead class="bg-slate-50">
             <tr>
-              <th scope="col" class="px-4 py-3 text-left text-xs font-semibold text-slate-900 uppercase tracking-wider border-b border-gray-150">Thermal Process</th>
-              <th scope="col" class="px-4 py-3 text-left text-xs font-semibold text-slate-900 uppercase tracking-wider border-b border-gray-150">Controlled Thermal Cycle</th>
-              <th scope="col" class="px-4 py-3 text-left text-xs font-semibold text-slate-900 uppercase tracking-wider border-b border-gray-150">Primary Purpose &amp; Application</th>
+              <th scope="col" class="px-4 py-3 text-left font-semibold text-slate-900 uppercase tracking-wider border-b border-gray-150">Thermal Process</th>
+              <th scope="col" class="px-4 py-3 text-left font-semibold text-slate-900 uppercase tracking-wider border-b border-gray-150">Controlled Thermal Cycle</th>
+              <th scope="col" class="px-4 py-3 text-left font-semibold text-slate-900 uppercase tracking-wider border-b border-gray-150">Primary Purpose &amp; Application</th>
             </tr>
           </thead>
-          <tbody class="bg-white divide-y divide-gray-150 text-[13px]">
+          <tbody class="bg-white divide-y divide-gray-150">
             <tr>
               <td class="px-4 py-3 font-semibold text-slate-900 bg-slate-50/40">PWHT</td>
               <td class="px-4 py-3 text-gray-600">Heated below critical transformation point, held, and cooled slowly under insulation.</td>
@@ -10290,6 +10379,7 @@ content: `
     readTime: "8 Min Read",
     pillar: "Pillar 3: Analyzers & Inspection",
     description: "Particulate emissions monitoring guide for metal processing — covering baghouse checks, opacity monitors, and EN 15267 compliance.",
+    keywords: "dust control, metal processing, environmental monitoring",
     image: "/dust_analyzer.png",
     imageAlt: "A stack dust analyzer sensor checking particulate levels in a steel mill exhaust stack.",
 content: `
@@ -10298,8 +10388,8 @@ content: `
       </p>
 
       <div class="my-6 rounded-lg bg-slate-50 border border-slate-200 p-5 not-prose">
-        <h4 class="text-[13.5px] font-bold text-slate-900 mb-2">💡 Key Takeaways</h4>
-        <ul class="text-[13px] text-slate-600 space-y-2 list-disc pl-4">
+        <h4 class="font-bold text-slate-900 mb-2">💡 Key Takeaways</h4>
+        <ul class="text-slate-600 space-y-2 list-disc pl-4">
           <li><strong>Smelting Vents:</strong> Baghouses capture heavy metal dusts from primary furnace hoods.</li>
           <li><strong>Leak Detection:</strong> Continuous dust monitors detect broken filters in stack ducts, preventing particulate leaks.</li>
           <li><strong>Compliance Codes:</strong> Systems satisfy EN 15267 and ISO 14001:2015 monitoring standards.</li>
@@ -10317,15 +10407,15 @@ content: `
       </p>
 
       <div class="overflow-x-auto my-8 not-prose">
-        <table class="min-w-full divide-y divide-gray-200 border border-gray-150 text-[13.5px]">
+        <table class="min-w-full divide-y divide-gray-200 border border-gray-150">
           <thead class="bg-slate-50">
             <tr>
-              <th scope="col" class="px-4 py-3 text-left text-xs font-semibold text-slate-900 uppercase tracking-wider border-b border-gray-150">Monitoring Technology</th>
-              <th scope="col" class="px-4 py-3 text-left text-xs font-semibold text-slate-900 uppercase tracking-wider border-b border-gray-150">Target Process Application</th>
-              <th scope="col" class="px-4 py-3 text-left text-xs font-semibold text-slate-900 uppercase tracking-wider border-b border-gray-150">Primary Metrological Advantage</th>
+              <th scope="col" class="px-4 py-3 text-left font-semibold text-slate-900 uppercase tracking-wider border-b border-gray-150">Monitoring Technology</th>
+              <th scope="col" class="px-4 py-3 text-left font-semibold text-slate-900 uppercase tracking-wider border-b border-gray-150">Target Process Application</th>
+              <th scope="col" class="px-4 py-3 text-left font-semibold text-slate-900 uppercase tracking-wider border-b border-gray-150">Primary Metrological Advantage</th>
             </tr>
           </thead>
-          <tbody class="bg-white divide-y divide-gray-150 text-[13px]">
+          <tbody class="bg-white divide-y divide-gray-150">
             <tr>
               <td class="px-4 py-3 font-semibold text-slate-900 bg-slate-50/40">Scattered Light Photometer</td>
               <td class="px-4 py-3 text-gray-600">EAF stacks, clinker cooler exhaust stacks</td>
@@ -10388,6 +10478,7 @@ content: `
     readTime: "9 Min Read",
     pillar: "Pillar 2: Industrial Process Automation",
     description: "Sensor selection guide for steel plant process control — covering high-temp pyrometers, thermocouples, radar level sensors, and position encoders.",
+    keywords: "industrial sensors, steel plant, process monitoring",
     image: "/images/sensors/Photoelectric Sensors.png",
     imageAlt: "Heavy-duty industrial proximity and distance sensors installed on a steel rolling mill table.",
 content: `
@@ -10396,8 +10487,8 @@ content: `
       </p>
 
       <div class="my-6 rounded-lg bg-slate-50 border border-slate-200 p-5 not-prose">
-        <h4 class="text-[13.5px] font-bold text-slate-900 mb-2">💡 Key Takeaways</h4>
-        <ul class="text-[13px] text-slate-600 space-y-2 list-disc pl-4">
+        <h4 class="font-bold text-slate-900 mb-2">💡 Key Takeaways</h4>
+        <ul class="text-slate-600 space-y-2 list-disc pl-4">
           <li><strong>High Temperature:</strong> Non-contact infrared pyrometer systems track steel temperatures during casting.</li>
           <li><strong>Level Tracking:</strong> Radar level sensors track molten metal heights inside charging ladles.</li>
           <li><strong>Mill Controls:</strong> Pressure sensors rolling mill teams install monitor hydraulic roll gap forces to maintain steel thickness.</li>
@@ -10411,15 +10502,15 @@ content: `
       </p>
 
       <div class="overflow-x-auto my-8 not-prose">
-        <table class="min-w-full divide-y divide-gray-200 border border-gray-150 text-[13.5px]">
+        <table class="min-w-full divide-y divide-gray-200 border border-gray-150">
           <thead class="bg-slate-50">
             <tr>
-              <th scope="col" class="px-4 py-3 text-left text-xs font-semibold text-slate-900 uppercase tracking-wider border-b border-gray-150">Sensor Class</th>
-              <th scope="col" class="px-4 py-3 text-left text-xs font-semibold text-slate-900 uppercase tracking-wider border-b border-gray-150">Mill Application</th>
-              <th scope="col" class="px-4 py-3 text-left text-xs font-semibold text-slate-900 uppercase tracking-wider border-b border-gray-150">Process Stage</th>
+              <th scope="col" class="px-4 py-3 text-left font-semibold text-slate-900 uppercase tracking-wider border-b border-gray-150">Sensor Class</th>
+              <th scope="col" class="px-4 py-3 text-left font-semibold text-slate-900 uppercase tracking-wider border-b border-gray-150">Mill Application</th>
+              <th scope="col" class="px-4 py-3 text-left font-semibold text-slate-900 uppercase tracking-wider border-b border-gray-150">Process Stage</th>
             </tr>
           </thead>
-          <tbody class="bg-white divide-y divide-gray-150 text-[13px]">
+          <tbody class="bg-white divide-y divide-gray-150">
             <tr>
               <td class="px-4 py-3 font-semibold text-slate-900 bg-slate-50/40">Infrared Pyrometer</td>
               <td class="px-4 py-3 text-gray-600">Measures slab temperature profile before rolling stand entry.</td>
@@ -10492,6 +10583,7 @@ content: `
     readTime: "9 Min Read",
     pillar: "Pillar 1: Flow Measurement & Custody Metering",
     description: "Technical guide to custody transfer metering skid design — covering piping configurations, prover loops, flow computers, and API MPMS compliance.",
+    keywords: "custody transfer metering skid, metering components, flow measurement",
     image: "/flow_metering_skid.jpg",
     imageAlt: "A liquid hydrocarbon custody transfer metering skid with turbine flow meters and a prover.",
 content: `
@@ -10500,8 +10592,8 @@ content: `
       </p>
 
       <div class="my-6 rounded-lg bg-slate-50 border border-slate-200 p-5 not-prose">
-        <h4 class="text-[13.5px] font-bold text-slate-900 mb-2">💡 Key Takeaways</h4>
-        <ul class="text-[13px] text-slate-600 space-y-2 list-disc pl-4">
+        <h4 class="font-bold text-slate-900 mb-2">💡 Key Takeaways</h4>
+        <ul class="text-slate-600 space-y-2 list-disc pl-4">
           <li><strong>Skid Integration:</strong> Skids combine inline meters, block-and-bleed valves, and strainers onto a steel framework.</li>
           <li><strong>Piping Design:</strong> Upstream piping configurations utilize flow conditioners to eliminate swirl and profile anomalies.</li>
           <li><strong>Proving Capabilities:</strong> Integrated prover loops enable inline verification under active pressure and temperature profiles.</li>
@@ -10515,15 +10607,15 @@ content: `
       </p>
 
       <div class="overflow-x-auto my-8 not-prose">
-        <table class="min-w-full divide-y divide-gray-200 border border-gray-150 text-[13.5px]">
+        <table class="min-w-full divide-y divide-gray-200 border border-gray-150">
           <thead class="bg-slate-50">
             <tr>
-              <th scope="col" class="px-4 py-3 text-left text-xs font-semibold text-slate-900 uppercase tracking-wider border-b border-gray-150">Skid Component</th>
-              <th scope="col" class="px-4 py-3 text-left text-xs font-semibold text-slate-900 uppercase tracking-wider border-b border-gray-150">Design Specification</th>
-              <th scope="col" class="px-4 py-3 text-left text-xs font-semibold text-slate-900 uppercase tracking-wider border-b border-gray-150">Operational Function</th>
+              <th scope="col" class="px-4 py-3 text-left font-semibold text-slate-900 uppercase tracking-wider border-b border-gray-150">Skid Component</th>
+              <th scope="col" class="px-4 py-3 text-left font-semibold text-slate-900 uppercase tracking-wider border-b border-gray-150">Design Specification</th>
+              <th scope="col" class="px-4 py-3 text-left font-semibold text-slate-900 uppercase tracking-wider border-b border-gray-150">Operational Function</th>
             </tr>
           </thead>
-          <tbody class="bg-white divide-y divide-gray-150 text-[13px]">
+          <tbody class="bg-white divide-y divide-gray-150">
             <tr>
               <td class="px-4 py-3 font-semibold text-slate-900 bg-slate-50/40">Flow Meter Run</td>
               <td class="px-4 py-3 text-gray-600">Dual or multi-run layout with isolation valves.</td>
@@ -10623,6 +10715,7 @@ content: `
     readTime: "8 Min Read",
     pillar: "Pillar 1: Flow Measurement & Custody Metering",
     description: "Technical overview of Faure Herman helical turbine flow meters — covering operating principles, custody transfer performance, and API MPMS 5.",
+    keywords: "Faure Herman flow meters, helical turbine, custody transfer",
     image: "/helical_turbine_meter.png",
     imageAlt: "A Faure Herman helical turbine flow meter installed in an oil pipeline run.",
 content: `
@@ -10631,8 +10724,8 @@ content: `
       </p>
 
       <div class="my-6 rounded-lg bg-slate-50 border border-slate-200 p-5 not-prose">
-        <h4 class="text-[13.5px] font-bold text-slate-900 mb-2">💡 Key Takeaways</h4>
-        <ul class="text-[13px] text-slate-600 space-y-2 list-disc pl-4">
+        <h4 class="font-bold text-slate-900 mb-2">💡 Key Takeaways</h4>
+        <ul class="text-slate-600 space-y-2 list-disc pl-4">
           <li><strong>Rotor Design:</strong> Helical rotors rotate in proportion to fluid velocity, minimizing pressure drops.</li>
           <li><strong>Viscosity Performance:</strong> Helical meters offer viscosity insensitivity, maintaining calibration under varying crude oil grades.</li>
           <li><strong>Bidirectional Flow:</strong> High-performance designs support bidirectional measurement for pipeline loading and unloading.</li>
@@ -10654,15 +10747,15 @@ content: `
       </p>
 
       <div class="overflow-x-auto my-8 not-prose">
-        <table class="min-w-full divide-y divide-gray-200 border border-gray-150 text-[13.5px]">
+        <table class="min-w-full divide-y divide-gray-200 border border-gray-150">
           <thead class="bg-slate-50">
             <tr>
-              <th scope="col" class="px-4 py-3 text-left text-xs font-semibold text-slate-900 uppercase tracking-wider border-b border-gray-150">Process Application</th>
-              <th scope="col" class="px-4 py-3 text-left text-xs font-semibold text-slate-900 uppercase tracking-wider border-b border-gray-150">Helical Meter Advantage</th>
-              <th scope="col" class="px-4 py-3 text-left text-xs font-semibold text-slate-900 uppercase tracking-wider border-b border-gray-150">Operational Impact</th>
+              <th scope="col" class="px-4 py-3 text-left font-semibold text-slate-900 uppercase tracking-wider border-b border-gray-150">Process Application</th>
+              <th scope="col" class="px-4 py-3 text-left font-semibold text-slate-900 uppercase tracking-wider border-b border-gray-150">Helical Meter Advantage</th>
+              <th scope="col" class="px-4 py-3 text-left font-semibold text-slate-900 uppercase tracking-wider border-b border-gray-150">Operational Impact</th>
             </tr>
           </thead>
-          <tbody class="bg-white divide-y divide-gray-150 text-[13px]">
+          <tbody class="bg-white divide-y divide-gray-150">
             <tr>
               <td class="px-4 py-3 font-semibold text-slate-900 bg-slate-50/40">Crude Oil Pipeline Metering</td>
               <td class="px-4 py-3 text-gray-600">Maintains calibration across varying crude viscosity grades.</td>
@@ -10736,6 +10829,7 @@ content: `
     readTime: "9 Min Read",
     pillar: "Pillar 1: Flow Measurement & Custody Metering",
     description: "Liquid flow meter selection guide for crude oil and refined products — comparing Coriolis, turbine, and PD meters under API MPMS 5.",
+    keywords: "liquid flow meters, crude oil metering, refined products",
     image: "/ultrasonic_liquid_flow_meter.png",
     imageAlt: "A multi-path ultrasonic liquid flow meter designed for crude oil custody transfer.",
 content: `
@@ -10744,8 +10838,8 @@ content: `
       </p>
 
       <div class="my-6 rounded-lg bg-slate-50 border border-slate-200 p-5 not-prose">
-        <h4 class="text-[13.5px] font-bold text-slate-900 mb-2">💡 Key Takeaways</h4>
-        <ul class="text-[13px] text-slate-600 space-y-2 list-disc pl-4">
+        <h4 class="font-bold text-slate-900 mb-2">💡 Key Takeaways</h4>
+        <ul class="text-slate-600 space-y-2 list-disc pl-4">
           <li><strong>Viscosity Effects:</strong> Viscosity variation shifts meter factors in turbine meters, requiring Coriolis or positive displacement designs.</li>
           <li><strong>Direct Mass:</strong> Coriolis meters provide direct mass and density measurements, ignoring fluid parameter changes.</li>
           <li><strong>Mechanical Precision:</strong> Positive displacement meters offer high repeatability in high-viscosity crude oil service.</li>
@@ -10764,15 +10858,15 @@ content: `
       </p>
 
       <div class="overflow-x-auto my-8 not-prose">
-        <table class="min-w-full divide-y divide-gray-200 border border-gray-150 text-[13.5px]">
+        <table class="min-w-full divide-y divide-gray-200 border border-gray-150">
           <thead class="bg-slate-50">
             <tr>
-              <th scope="col" class="px-4 py-3 text-left text-xs font-semibold text-slate-900 uppercase tracking-wider border-b border-gray-150">Flow Meter Class</th>
-              <th scope="col" class="px-4 py-3 text-left text-xs font-semibold text-slate-900 uppercase tracking-wider border-b border-gray-150">Viscosity Performance</th>
-              <th scope="col" class="px-4 py-3 text-left text-xs font-semibold text-slate-900 uppercase tracking-wider border-b border-gray-150">Primary Metrological Advantage</th>
+              <th scope="col" class="px-4 py-3 text-left font-semibold text-slate-900 uppercase tracking-wider border-b border-gray-150">Flow Meter Class</th>
+              <th scope="col" class="px-4 py-3 text-left font-semibold text-slate-900 uppercase tracking-wider border-b border-gray-150">Viscosity Performance</th>
+              <th scope="col" class="px-4 py-3 text-left font-semibold text-slate-900 uppercase tracking-wider border-b border-gray-150">Primary Metrological Advantage</th>
             </tr>
           </thead>
-          <tbody class="bg-white divide-y divide-gray-150 text-[13px]">
+          <tbody class="bg-white divide-y divide-gray-150">
             <tr>
               <td class="px-4 py-3 font-semibold text-slate-900 bg-slate-50/40">Coriolis Mass Meter</td>
               <td class="px-4 py-3 text-gray-600">Excellent; immune to viscosity and density variations.</td>
@@ -10835,6 +10929,7 @@ content: `
     readTime: "9 Min Read",
     pillar: "Pillar 1: Flow Measurement & Custody Metering",
     description: "Gas flow meter selection guide — covering ultrasonic (AGA-9), orifice (AGA-3), turbine (AGA-7) standards, and custody transfer criteria.",
+    keywords: "gas flow meters, AGA standards, gas measurement",
     image: "/custody_transfer_gas_flow_meter.png",
     imageAlt: "A high-capacity custody transfer ultrasonic gas flow meter installed on a pipeline.",
 content: `
@@ -10843,8 +10938,8 @@ content: `
       </p>
 
       <div class="my-6 rounded-lg bg-slate-50 border border-slate-200 p-5 not-prose">
-        <h4 class="text-[13.5px] font-bold text-slate-900 mb-2">💡 Key Takeaways</h4>
-        <ul class="text-[13px] text-slate-600 space-y-2 list-disc pl-4">
+        <h4 class="font-bold text-slate-900 mb-2">💡 Key Takeaways</h4>
+        <ul class="text-slate-600 space-y-2 list-disc pl-4">
           <li><strong>Multipath Accuracy:</strong> An ultrasonic gas meter AGA-9 system utilizes transit-time arrays to measure velocities in large pipelines.</li>
           <li><strong>Traditional Precision:</strong> Orifice plates remain common, utilizing pressure differences under the orifice meter AGA-3 standard.</li>
           <li><strong>Mechanical Flow:</strong> Turbine meters measure volumes mechanically, complying with the AGA-7 standard for gas flow.</li>
@@ -10858,15 +10953,15 @@ content: `
       </p>
 
       <div class="overflow-x-auto my-8 not-prose">
-        <table class="min-w-full divide-y divide-gray-200 border border-gray-150 text-[13.5px]">
+        <table class="min-w-full divide-y divide-gray-200 border border-gray-150">
           <thead class="bg-slate-50">
             <tr>
-              <th scope="col" class="px-4 py-3 text-left text-xs font-semibold text-slate-900 uppercase tracking-wider border-b border-gray-150">AGA Standard</th>
-              <th scope="col" class="px-4 py-3 text-left text-xs font-semibold text-slate-900 uppercase tracking-wider border-b border-gray-150">Metering Technology</th>
-              <th scope="col" class="px-4 py-3 text-left text-xs font-semibold text-slate-900 uppercase tracking-wider border-b border-gray-150">Primary Engineering Scope</th>
+              <th scope="col" class="px-4 py-3 text-left font-semibold text-slate-900 uppercase tracking-wider border-b border-gray-150">AGA Standard</th>
+              <th scope="col" class="px-4 py-3 text-left font-semibold text-slate-900 uppercase tracking-wider border-b border-gray-150">Metering Technology</th>
+              <th scope="col" class="px-4 py-3 text-left font-semibold text-slate-900 uppercase tracking-wider border-b border-gray-150">Primary Engineering Scope</th>
             </tr>
           </thead>
-          <tbody class="bg-white divide-y divide-gray-150 text-[13px]">
+          <tbody class="bg-white divide-y divide-gray-150">
             <tr>
               <td class="px-4 py-3 font-semibold text-slate-900 bg-slate-50/40">AGA Report No. 3</td>
               <td class="px-4 py-3 text-gray-600">Orifice Plate Meters</td>
@@ -10939,6 +11034,7 @@ content: `
     readTime: "8 Min Read",
     pillar: "Pillar 1: Flow Measurement & Custody Metering",
     description: "Guide to flare gas flow meters — covering ultrasonic systems, low-flow capabilities, header installations, and EPA 40 CFR 60 compliance.",
+    keywords: "flare gas flow meters, environmental compliance, flare monitoring",
     image: "/flare_meter.png",
     imageAlt: "An ultrasonic flare gas meter sensor assembly mounted on a flare header stack.",
 content: `
@@ -10947,8 +11043,8 @@ content: `
       </p>
 
       <div class="my-6 rounded-lg bg-slate-50 border border-slate-200 p-5 not-prose">
-        <h4 class="text-[13.5px] font-bold text-slate-900 mb-2">💡 Key Takeaways</h4>
-        <ul class="text-[13px] text-slate-600 space-y-2 list-disc pl-4">
+        <h4 class="font-bold text-slate-900 mb-2">💡 Key Takeaways</h4>
+        <ul class="text-slate-600 space-y-2 list-disc pl-4">
           <li><strong>Regulatory Reporting:</strong> Stack monitoring systems satisfy EPA 40 CFR Part 60 rules for greenhouse gas emission reporting.</li>
           <li><strong>Ultrasonic Advantage:</strong> An ultrasonic flare gas meter uses transit-time arrays to track velocities from leaks to relief events.</li>
           <li><strong>Low-Flow Sensitivity:</strong> Systems utilize a low flow gas meter flare configuration to identify valve leaks early.</li>
@@ -10967,15 +11063,15 @@ content: `
       </p>
 
       <div class="overflow-x-auto my-8 not-prose">
-        <table class="min-w-full divide-y divide-gray-200 border border-gray-150 text-[13.5px]">
+        <table class="min-w-full divide-y divide-gray-200 border border-gray-150">
           <thead class="bg-slate-50">
             <tr>
-              <th scope="col" class="px-4 py-3 text-left text-xs font-semibold text-slate-900 uppercase tracking-wider border-b border-gray-150">Flow Meter Type</th>
-              <th scope="col" class="px-4 py-3 text-left text-xs font-semibold text-slate-900 uppercase tracking-wider border-b border-gray-150">Standard/Configuration</th>
-              <th scope="col" class="px-4 py-3 text-left text-xs font-semibold text-slate-900 uppercase tracking-wider border-b border-gray-150">Primary Metrological Advantage</th>
+              <th scope="col" class="px-4 py-3 text-left font-semibold text-slate-900 uppercase tracking-wider border-b border-gray-150">Flow Meter Type</th>
+              <th scope="col" class="px-4 py-3 text-left font-semibold text-slate-900 uppercase tracking-wider border-b border-gray-150">Standard/Configuration</th>
+              <th scope="col" class="px-4 py-3 text-left font-semibold text-slate-900 uppercase tracking-wider border-b border-gray-150">Primary Metrological Advantage</th>
             </tr>
           </thead>
-          <tbody class="bg-white divide-y divide-gray-150 text-[13px]">
+          <tbody class="bg-white divide-y divide-gray-150">
             <tr>
               <td class="px-4 py-3 font-semibold text-slate-900 bg-slate-50/40">Ultrasonic Flare Meter</td>
               <td class="px-4 py-3 text-gray-600">Cross-stack spool piece in compliance with AGA-9 principles.</td>
@@ -11044,6 +11140,7 @@ content: `
     readTime: "8 Min Read",
     pillar: "Pillar 1: Flow Measurement & Custody Metering",
     description: "Configuration guide for Omni flow computers in custody transfer — covering calculation standards, audit trails, and API MPMS Ch.21 compliance.",
+    keywords: "Omni flow computers, custody transfer, flow computation",
     image: "/omni_flow_computer.png",
     imageAlt: "An Omni 6000 flow computer system panel processing custody transfer calculations.",
 content: `
@@ -11052,8 +11149,8 @@ content: `
       </p>
 
       <div class="my-6 rounded-lg bg-slate-50 border border-slate-200 p-5 not-prose">
-        <h4 class="text-[13.5px] font-bold text-slate-900 mb-2">💡 Key Takeaways</h4>
-        <ul class="text-[13px] text-slate-600 space-y-2 list-disc pl-4">
+        <h4 class="font-bold text-slate-900 mb-2">💡 Key Takeaways</h4>
+        <ul class="text-slate-600 space-y-2 list-disc pl-4">
           <li><strong>Metrological Computations:</strong> Systems calculate corrected volume, mass, and energy parameters in real-time.</li>
           <li><strong>Configuration Audit:</strong> A configuration audit trail tracks firmware edits, parameter shifts, and calibration cycles.</li>
           <li><strong>Standards Compliance:</strong> Flow calculations follow API MPMS guidelines and AGA standards.</li>
@@ -11072,15 +11169,15 @@ content: `
       </p>
 
       <div class="overflow-x-auto my-8 not-prose">
-        <table class="min-w-full divide-y divide-gray-200 border border-gray-150 text-[13.5px]">
+        <table class="min-w-full divide-y divide-gray-200 border border-gray-150">
           <thead class="bg-slate-50">
             <tr>
-              <th scope="col" class="px-4 py-3 text-left text-xs font-semibold text-slate-900 uppercase tracking-wider border-b border-gray-150">Configuration Parameter</th>
-              <th scope="col" class="px-4 py-3 text-left text-xs font-semibold text-slate-900 uppercase tracking-wider border-b border-gray-150">Target Meter/Process Interface</th>
-              <th scope="col" class="px-4 py-3 text-left text-xs font-semibold text-slate-900 uppercase tracking-wider border-b border-gray-150">Metrological &amp; Security Purpose</th>
+              <th scope="col" class="px-4 py-3 text-left font-semibold text-slate-900 uppercase tracking-wider border-b border-gray-150">Configuration Parameter</th>
+              <th scope="col" class="px-4 py-3 text-left font-semibold text-slate-900 uppercase tracking-wider border-b border-gray-150">Target Meter/Process Interface</th>
+              <th scope="col" class="px-4 py-3 text-left font-semibold text-slate-900 uppercase tracking-wider border-b border-gray-150">Metrological &amp; Security Purpose</th>
             </tr>
           </thead>
-          <tbody class="bg-white divide-y divide-gray-150 text-[13px]">
+          <tbody class="bg-white divide-y divide-gray-150">
             <tr>
               <td class="px-4 py-3 font-semibold text-slate-900 bg-slate-50/40">Meter K-Factor</td>
               <td class="px-4 py-3 text-gray-600">Rotor pulse output or frequency signal from turbine flow meters.</td>
@@ -11151,6 +11248,7 @@ content: `
     readTime: "9 Min Read",
     pillar: "Pillar 1: Flow Measurement & Custody Metering",
     description: "Coriolis vs turbine flow meters head-to-head comparison — covering measurement principles, bearing wear, multi-variable outputs, and API MPMS 5.",
+    keywords: "Coriolis vs turbine, flow meter comparison, meter selection",
     image: "/helical_turbine_meter.png",
     imageAlt: "A side-by-side comparison setup of a Coriolis mass flow meter and a turbine flow meter.",
 content: `
@@ -11159,8 +11257,8 @@ content: `
       </p>
 
       <div class="my-6 rounded-lg bg-slate-50 border border-slate-200 p-5 not-prose">
-        <h4 class="text-[13.5px] font-bold text-slate-900 mb-2">💡 Key Takeaways</h4>
-        <ul class="text-[13px] text-slate-600 space-y-2 list-disc pl-4">
+        <h4 class="font-bold text-slate-900 mb-2">💡 Key Takeaways</h4>
+        <ul class="text-slate-600 space-y-2 list-disc pl-4">
           <li><strong>Direct Mass:</strong> Coriolis meter advantages include direct mass measurement, which is unaffected by density or viscosity variations.</li>
           <li><strong>Mechanical Simplicity:</strong> Turbine meters offer a cost-effective volumetric measurement solution for clean, low-viscosity fluids.</li>
           <li><strong>Maintenance Differences:</strong> Turbine meter maintenance schedules must account for bearing wear due to moving parts.</li>
@@ -11182,15 +11280,15 @@ content: `
       </p>
 
       <div class="overflow-x-auto my-8 not-prose">
-        <table class="min-w-full divide-y divide-gray-200 border border-gray-150 text-[13.5px]">
+        <table class="min-w-full divide-y divide-gray-200 border border-gray-150">
           <thead class="bg-slate-50">
             <tr>
-              <th scope="col" class="px-4 py-3 text-left text-xs font-semibold text-slate-900 uppercase tracking-wider border-b border-gray-150">Comparison Factor</th>
-              <th scope="col" class="px-4 py-3 text-left text-xs font-semibold text-slate-900 uppercase tracking-wider border-b border-gray-150">Coriolis Mass Flow Meter</th>
-              <th scope="col" class="px-4 py-3 text-left text-xs font-semibold text-slate-900 uppercase tracking-wider border-b border-gray-150">Turbine Volumetric Flow Meter</th>
+              <th scope="col" class="px-4 py-3 text-left font-semibold text-slate-900 uppercase tracking-wider border-b border-gray-150">Comparison Factor</th>
+              <th scope="col" class="px-4 py-3 text-left font-semibold text-slate-900 uppercase tracking-wider border-b border-gray-150">Coriolis Mass Flow Meter</th>
+              <th scope="col" class="px-4 py-3 text-left font-semibold text-slate-900 uppercase tracking-wider border-b border-gray-150">Turbine Volumetric Flow Meter</th>
             </tr>
           </thead>
-          <tbody class="bg-white divide-y divide-gray-150 text-[13px]">
+          <tbody class="bg-white divide-y divide-gray-150">
             <tr>
               <td class="px-4 py-3 font-semibold text-slate-900 bg-slate-50/40">Measurement Variable</td>
               <td class="px-4 py-3 text-gray-600">Direct mass flow, density, and temperature.</td>
@@ -11289,6 +11387,7 @@ content: `
     readTime: "8 Min Read",
     pillar: "Pillar 1: Flow Measurement & Custody Metering",
     description: "Installation guide for ultrasonic liquid flow meters — covering straight-run requirements, multi-path arrays, and API MPMS Ch.5.8 compliance.",
+    keywords: "ultrasonic liquid flow meters, installation guide, performance",
     image: "/clamp_on_meter.png",
     imageAlt: "Transducer alignment on an ultrasonic clamp-on liquid flow meter pipe installation.",
 content: `
@@ -11297,8 +11396,8 @@ content: `
       </p>
 
       <div class="my-6 rounded-lg bg-slate-50 border border-slate-200 p-5 not-prose">
-        <h4 class="text-[13.5px] font-bold text-slate-900 mb-2">💡 Key Takeaways</h4>
-        <ul class="text-[13px] text-slate-600 space-y-2 list-disc pl-4">
+        <h4 class="font-bold text-slate-900 mb-2">💡 Key Takeaways</h4>
+        <ul class="text-slate-600 space-y-2 list-disc pl-4">
           <li><strong>Acoustic Principle:</strong> A transit-time liquid meter measures velocity by comparing sound pulse travel times.</li>
           <li><strong>Upstream Piping:</strong> Piping layout designs must satisfy ultrasonic meter straight run requirements to prevent swirl.</li>
           <li><strong>Sensor Geometry:</strong> Multi-path configuration designs utilize multiple acoustic paths to scan the velocity profile.</li>
@@ -11317,15 +11416,15 @@ content: `
       </p>
 
       <div class="overflow-x-auto my-8 not-prose">
-        <table class="min-w-full divide-y divide-gray-200 border border-gray-150 text-[13.5px]">
+        <table class="min-w-full divide-y divide-gray-200 border border-gray-150">
           <thead class="bg-slate-50">
             <tr>
-              <th scope="col" class="px-4 py-3 text-left text-xs font-semibold text-slate-900 uppercase tracking-wider border-b border-gray-150">Installation Requirement</th>
-              <th scope="col" class="px-4 py-3 text-left text-xs font-semibold text-slate-900 uppercase tracking-wider border-b border-gray-150">Engineering Target / Standard</th>
-              <th scope="col" class="px-4 py-3 text-left text-xs font-semibold text-slate-900 uppercase tracking-wider border-b border-gray-150">Operational Verification Purpose</th>
+              <th scope="col" class="px-4 py-3 text-left font-semibold text-slate-900 uppercase tracking-wider border-b border-gray-150">Installation Requirement</th>
+              <th scope="col" class="px-4 py-3 text-left font-semibold text-slate-900 uppercase tracking-wider border-b border-gray-150">Engineering Target / Standard</th>
+              <th scope="col" class="px-4 py-3 text-left font-semibold text-slate-900 uppercase tracking-wider border-b border-gray-150">Operational Verification Purpose</th>
             </tr>
           </thead>
-          <tbody class="bg-white divide-y divide-gray-150 text-[13px]">
+          <tbody class="bg-white divide-y divide-gray-150">
             <tr>
               <td class="px-4 py-3 font-semibold text-slate-900 bg-slate-50/40">Straight Pipe Runs</td>
               <td class="px-4 py-3 text-gray-600">Per API MPMS Ch.5.8 and manufacturer guidance.</td>
@@ -11393,6 +11492,7 @@ content: `
     readTime: "9 Min Read",
     pillar: "Pillar 1: Flow Measurement & Custody Metering",
     description: "Comparison guide for meter proving systems — comparing pipe provers and small volume provers (SVP) under API MPMS Chapter 4.",
+    keywords: "meter proving, pipe prover, small volume prover",
     image: "/images/services/METERING-1.png",
     imageAlt: "A bi-directional pipe prover system validating flow meter factors on-site.",
 content: `
@@ -11401,8 +11501,8 @@ content: `
       </p>
 
       <div class="my-6 rounded-lg bg-slate-50 border border-slate-200 p-5 not-prose">
-        <h4 class="text-[13.5px] font-bold text-slate-900 mb-2">💡 Key Takeaways</h4>
-        <ul class="text-[13px] text-slate-600 space-y-2 list-disc pl-4">
+        <h4 class="font-bold text-slate-900 mb-2">💡 Key Takeaways</h4>
+        <ul class="text-slate-600 space-y-2 list-disc pl-4">
           <li><strong>In-Situ Calibration:</strong> Online proving calibrates flow meters under active process pressures, temperatures, and viscosities.</li>
           <li><strong>Displacement Methods:</strong> Pipe provers utilize an elastomer displacer sphere and mechanical detector switches to define a known volume.</li>
           <li><strong>Compact Design:</strong> Small volume provers utilize a piston displacer and high-resolution pulse interpolation to reduce skid size.</li>
@@ -11431,15 +11531,15 @@ content: `
       </p>
 
       <div class="overflow-x-auto my-8 not-prose">
-        <table class="min-w-full divide-y divide-gray-200 border border-gray-150 text-[13.5px]">
+        <table class="min-w-full divide-y divide-gray-200 border border-gray-150">
           <thead class="bg-slate-50">
             <tr>
-              <th scope="col" class="px-4 py-3 text-left text-xs font-semibold text-slate-900 uppercase tracking-wider border-b border-gray-150">Comparison Factor</th>
-              <th scope="col" class="px-4 py-3 text-left text-xs font-semibold text-slate-900 uppercase tracking-wider border-b border-gray-150">Pipe Prover System</th>
-              <th scope="col" class="px-4 py-3 text-left text-xs font-semibold text-slate-900 uppercase tracking-wider border-b border-gray-150">Small Volume Prover (SVP)</th>
+              <th scope="col" class="px-4 py-3 text-left font-semibold text-slate-900 uppercase tracking-wider border-b border-gray-150">Comparison Factor</th>
+              <th scope="col" class="px-4 py-3 text-left font-semibold text-slate-900 uppercase tracking-wider border-b border-gray-150">Pipe Prover System</th>
+              <th scope="col" class="px-4 py-3 text-left font-semibold text-slate-900 uppercase tracking-wider border-b border-gray-150">Small Volume Prover (SVP)</th>
             </tr>
           </thead>
-          <tbody class="bg-white divide-y divide-gray-150 text-[13px]">
+          <tbody class="bg-white divide-y divide-gray-150">
             <tr>
               <td class="px-4 py-3 font-semibold text-slate-900 bg-slate-50/40">Displacer Type</td>
               <td class="px-4 py-3 text-gray-600">Inflatable elastomer sphere.</td>
@@ -11520,6 +11620,7 @@ content: `
     readTime: "9 Min Read",
     pillar: "Pillar 4: Commissioning & After-Sales Support",
     description: "Factory acceptance test (FAT) guide for metering skids — covering hydrostatic checks, loop tests, functional checks, and ISO 9001:2015 compliance.",
+    keywords: "metering skid FAT, factory acceptance testing, pre-delivery testing",
     image: "/images/flow_metering_skid/1.png",
     imageAlt: "Factory acceptance testing (FAT) of a completed custody metering skid in a workshop.",
 content: `
@@ -11528,8 +11629,8 @@ content: `
       </p>
 
       <div class="my-6 rounded-lg bg-slate-50 border border-slate-200 p-5 not-prose">
-        <h4 class="text-[13.5px] font-bold text-slate-900 mb-2">💡 Key Takeaways</h4>
-        <ul class="text-[13px] text-slate-600 space-y-2 list-disc pl-4">
+        <h4 class="font-bold text-slate-900 mb-2">💡 Key Takeaways</h4>
+        <ul class="text-slate-600 space-y-2 list-disc pl-4">
           <li><strong>Risk Reduction:</strong> FAT identifies weld defects, cabling errors, and programming bugs before field delivery.</li>
           <li><strong>Piping Integrity:</strong> Hydrostatic pressure checks verify that there are zero leaks across the skid header.</li>
           <li><strong>Signal Verification:</strong> Instrument loop checks confirm that transmitters communicate correctly with the flow computer.</li>
@@ -11542,7 +11643,7 @@ content: `
         Executing an FAT program is a quality checkpoint during skid manufacturing. If a skid is shipped directly to the field without shop testing, errors in piping, wiring, or programming must be resolved onsite. Field repairs are expensive and can delay plant commissioning. By running the skid through an FAT program in the fabrication shop, technicians can resolve issues, reducing commissioning risks. The testing process follows a numbered testing sequence:
       </p>
 
-      <ol class="list-decimal pl-6 my-6 text-[13.5px] text-gray-700 space-y-2">
+      <ol class="list-decimal pl-6 my-6 text-gray-700 space-y-2">
         <li>Mechanical inspection and dimensions verification against structural drawings.</li>
         <li>Hydrostatic pressure testing of piping headers to confirm pressure integrity.</li>
         <li>Pneumatic pressure testing of control valves and air supply lines.</li>
@@ -11561,15 +11662,15 @@ content: `
       </p>
 
       <div class="overflow-x-auto my-8 not-prose">
-        <table class="min-w-full divide-y divide-gray-200 border border-gray-150 text-[13.5px]">
+        <table class="min-w-full divide-y divide-gray-200 border border-gray-150">
           <thead class="bg-slate-50">
             <tr>
-              <th scope="col" class="px-4 py-3 text-left text-xs font-semibold text-slate-900 uppercase tracking-wider border-b border-gray-150">Verification Category</th>
-              <th scope="col" class="px-4 py-3 text-left text-xs font-semibold text-slate-900 uppercase tracking-wider border-b border-gray-150">Target Skid Component</th>
-              <th scope="col" class="px-4 py-3 text-left text-xs font-semibold text-slate-900 uppercase tracking-wider border-b border-gray-150">Primary Inspection &amp; Testing Check</th>
+              <th scope="col" class="px-4 py-3 text-left font-semibold text-slate-900 uppercase tracking-wider border-b border-gray-150">Verification Category</th>
+              <th scope="col" class="px-4 py-3 text-left font-semibold text-slate-900 uppercase tracking-wider border-b border-gray-150">Target Skid Component</th>
+              <th scope="col" class="px-4 py-3 text-left font-semibold text-slate-900 uppercase tracking-wider border-b border-gray-150">Primary Inspection &amp; Testing Check</th>
             </tr>
           </thead>
-          <tbody class="bg-white divide-y divide-gray-150 text-[13px]">
+          <tbody class="bg-white divide-y divide-gray-150">
             <tr>
               <td class="px-4 py-3 font-semibold text-slate-900 bg-slate-50/40">Mechanical &amp; NDT</td>
               <td class="px-4 py-3 text-gray-600">Piping, structural skid frame, and flange joints.</td>
