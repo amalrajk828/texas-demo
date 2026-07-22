@@ -41,6 +41,6 @@ yarn-error.log*
 next-env.d.ts
 
 # video generation - shared
-texas-video/node_modules/
-texas-video/*/renders/
-texas-video/*/assets/audio/
+texas-video/
+
+seo/
