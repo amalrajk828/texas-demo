@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import Image from "next/image";
 import {
   Flame,
   Factory,
@@ -9,11 +10,11 @@ import {
   Snowflake,
   Building2,
   Layers,
+  ArrowRight,
   ChevronRight,
 } from "lucide-react";
 import { BreadcrumbJsonLd } from "@/components/schema/BreadcrumbJsonLd";
 import IndustryCtaBanner from "@/components/industries/IndustryCtaBanner";
-import IndustryFeatureCard from "@/components/industries/IndustryFeatureCard";
 
 export const metadata: Metadata = {
   title: "Industries We Serve | Texas Technical Services",
@@ -30,20 +31,8 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "Industries We Serve | Texas Technical Services",
     description:
-      "Flow measurement, automation, and inspection solutions for oil & gas, refinery, power, LNG, petrochemicals, water, cement, and steel industries across the GCC.",
+      "Comprehensive OEM solutions for oil & gas, refinery, power plant, LNG, petrochemicals, water treatment, cement, and metal & steel.",
   },
-  keywords: [
-    "oil and gas industry solutions Kuwait",
-    "refinery automation and metering",
-    "power plant instrumentation Kuwait",
-    "LNG metering solutions GCC",
-    "petrochemical automation solutions",
-    "water treatment flow measurement",
-    "cement industry automation",
-    "metal and steel inspection services",
-    "industrial automation for oil and gas",
-    "flow measurement for refineries",
-  ],
 };
 
 const industries = [
@@ -114,7 +103,7 @@ const industries = [
 ];
 
 const stats = [
-  { num: "18+", label: "Years" },
+  { num: "15+", label: "Years" },
   { num: "8", label: "Industries" },
   { num: "200+", label: "Clients" },
 ];
@@ -124,8 +113,9 @@ export default function IndustriesPage() {
     <>
       <BreadcrumbJsonLd items={[{ name: "Home", href: "/" }, { name: "Industries", href: "/industries/" }]} />
 
-      {/* HERO */}
-      <section className="bg-[#0B0D26] relative overflow-hidden">
+      {/* ══ HERO ══════════════════════════════════════════════ */}
+      <section className="bg-[#0B0D26] relative overflow-hidden pt-[108px] lg:pt-[116px]">
+        {/* Grid texture */}
         <div
           className="absolute inset-0 pointer-events-none"
           style={{
@@ -133,6 +123,7 @@ export default function IndustriesPage() {
               "repeating-linear-gradient(0deg,transparent,transparent 39px,rgba(255,255,255,0.03) 40px),repeating-linear-gradient(90deg,transparent,transparent 39px,rgba(255,255,255,0.03) 40px)",
           }}
         />
+        {/* Red glow — top right */}
         <div
           className="absolute top-0 right-0 w-[520px] h-[520px] pointer-events-none"
           style={{
@@ -141,7 +132,8 @@ export default function IndustriesPage() {
           }}
         />
 
-        <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 py-16 lg:py-24">
+        <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 pb-16 lg:pb-24 pt-4">
+          {/* Breadcrumb */}
           <nav className="flex items-center gap-1.5 mb-8 text-[11px] text-white/30">
             <Link href="/" className="hover:text-white/60 transition-colors">
               Home
@@ -151,6 +143,7 @@ export default function IndustriesPage() {
           </nav>
 
           <div className="flex flex-col lg:flex-row lg:items-end gap-10 lg:gap-16">
+            {/* Left — headline */}
             <div className="flex-1 max-w-2xl">
               <div className="flex items-center gap-2 mb-5">
                 <span className="w-5 h-px bg-[#e7212b]" />
@@ -169,6 +162,7 @@ export default function IndustriesPage() {
               </p>
             </div>
 
+            {/* Right — stats */}
             <div className="flex flex-row lg:flex-col gap-3 shrink-0">
               {stats.map((s) => (
                 <div
@@ -184,9 +178,28 @@ export default function IndustriesPage() {
         </div>
       </section>
 
-      {/* INDUSTRY CARDS */}
-      <section className="bg-[#f4f5f8] py-20 lg:py-24">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6">
+      {/* ══ INDUSTRY CARDS ════════════════════════════════════ */}
+      <section
+        className="relative py-20 lg:py-24 overflow-hidden"
+        style={{ background: "linear-gradient(135deg, #f5f7fa 0%, #e2e7ee 45%, #c9d2dc 100%)" }}
+      >
+        {/* Background depth blobs for frosted glass refraction */}
+        <div
+          className="absolute top-[-5%] left-[-5%] w-[650px] h-[650px] rounded-full pointer-events-none blur-[90px] opacity-90"
+          style={{ background: "radial-gradient(circle, rgba(255,255,255,0.95) 0%, rgba(235,240,248,0.55) 45%, transparent 70%)" }}
+        />
+        <div
+          className="absolute top-[35%] right-[-5%] w-[600px] h-[600px] rounded-full pointer-events-none blur-[100px] opacity-75"
+          style={{ background: "radial-gradient(circle, rgba(165,180,200,0.55) 0%, rgba(140,158,180,0.25) 50%, transparent 70%)" }}
+        />
+        <div
+          className="absolute bottom-[-5%] left-[-8%] w-[650px] h-[650px] rounded-full pointer-events-none blur-[90px] opacity-80"
+          style={{ background: "radial-gradient(circle, rgba(255,255,255,0.9) 0%, rgba(230,238,248,0.45) 50%, transparent 70%)" }}
+        />
+
+        <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6">
+
+          {/* Section label row */}
           <div className="flex items-center justify-between mb-10">
             <div className="flex items-center gap-3">
               <span className="w-8 h-px bg-[#e7212b]/40" />
@@ -194,21 +207,96 @@ export default function IndustriesPage() {
                 Our Coverage
               </span>
             </div>
-            <span className="text-gray-400 text-[12px]">8 Industries</span>
+            <span className="text-[#4B5563] text-[12px] font-semibold">8 Industries</span>
           </div>
 
+          {/* Grid */}
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
             {industries.map((ind, i) => (
-              <IndustryFeatureCard
+              <Link
                 key={ind.slug}
-                name={ind.name}
-                slug={ind.slug}
-                Icon={ind.Icon}
-                image={ind.image}
-                sub={ind.sub}
-                desc={ind.desc}
-                animationDelay={i}
-              />
+                href={`/industries/${ind.slug}/`}
+                className={`fade-up d${i + 1} group flex flex-col rounded-2xl overflow-hidden bg-transparent border border-white/60 hover:border-white/95 transition-all duration-300 hover:-translate-y-1 h-full`}
+                style={{
+                  boxShadow: "0 12px 32px rgba(0, 0, 0, 0.10)",
+                }}
+              >
+                {/* ── Image area ── */}
+                <div className="relative aspect-[16/10] w-full shrink-0 overflow-hidden bg-[#0B0D26]">
+                  <Image
+                    src={ind.image}
+                    alt={`${ind.name} industry solutions — Texas Technical Services`}
+                    fill
+                    className="object-cover object-center transition-transform duration-700 ease-out group-hover:scale-[1.06]"
+                    sizes="(max-width: 768px) 100vw, (max-width: 1280px) 50vw, 640px"
+                  />
+
+                  {/* Gradient: bottom-heavy for text readability */}
+                  <div className="absolute inset-0 bg-gradient-to-t from-[#0B0D26]/85 via-[#0B0D26]/20 to-transparent" />
+
+                  {/* Industry pill — top left */}
+                  <div className="absolute top-4 left-4 z-10">
+                    <span className="inline-flex items-center gap-1.5 text-[9px] text-white/75 tracking-[2px] uppercase bg-black/40 backdrop-blur-sm px-2.5 py-1 rounded-full border border-white/[0.12]">
+                      <span className="w-1 h-1 rounded-full bg-[#e7212b]" />
+                      Industry
+                    </span>
+                  </div>
+
+                  {/* Icon box — top right */}
+                  <div className="absolute top-4 right-4 z-10 w-9 h-9 bg-[#e7212b] rounded-lg flex items-center justify-center shadow-lg transition-transform duration-300 group-hover:scale-110">
+                    <ind.Icon className="w-4 h-4 text-white" strokeWidth={1.5} />
+                  </div>
+
+                  {/* Industry name overlay — bottom */}
+                  <div className="absolute bottom-0 left-0 right-0 z-10 px-5 pb-4 pt-10">
+                    <h2 className="text-white font-medium text-xl leading-tight group-hover:text-[#e7212b] transition-colors duration-200">
+                      {ind.name}
+                    </h2>
+                    <p className="text-white/45 text-[11px] mt-0.5 tracking-wide">
+                      {ind.sub}
+                    </p>
+                  </div>
+                </div>
+
+                {/* ── Content area — Light Glassmorphic Style ── */}
+                <div
+                  className="relative flex flex-col flex-1 px-5 pt-4 pb-5 overflow-hidden rounded-b-2xl"
+                  style={{
+                    background: "rgba(255, 255, 255, 0.20)",
+                    backdropFilter: "blur(28px)",
+                    WebkitBackdropFilter: "blur(28px)",
+                    borderTop: "1px solid rgba(255, 255, 255, 0.60)",
+                    boxShadow: "inset 0 1px 1px rgba(255, 255, 255, 0.8)",
+                  }}
+                >
+                  {/* Distinct diagonal light streak sheen overlay */}
+                  <div
+                    className="absolute inset-0 pointer-events-none"
+                    style={{
+                      background: "linear-gradient(135deg, rgba(255, 255, 255, 0.35) 0%, rgba(255, 255, 255, 0.05) 50%, transparent 100%)",
+                    }}
+                  />
+
+                  {/* Top specular edge highlight */}
+                  <div className="absolute top-0 inset-x-0 h-[1px] bg-gradient-to-r from-transparent via-white to-transparent pointer-events-none" />
+
+                  <p className="relative z-10 text-[#2D3748] text-[13px] font-medium leading-relaxed line-clamp-3 mb-4">
+                    {ind.desc}
+                  </p>
+
+                  <div className="relative z-10 flex items-center justify-between">
+                    <span className="inline-flex items-center gap-1.5 text-[#e7212b] text-[12px] font-bold group-hover:gap-2.5 transition-all duration-200">
+                      Read More
+                      <ArrowRight className="w-3.5 h-3.5" />
+                    </span>
+                    {/* Expanding red line accent */}
+                    <span className="block h-px w-6 bg-[#e7212b]/40 group-hover:w-14 transition-all duration-300 ease-out" />
+                  </div>
+                </div>
+
+                {/* Red bottom border reveal on hover */}
+                <div className="h-[3px] bg-[#e7212b] scale-x-0 group-hover:scale-x-100 transition-transform duration-300 origin-left" />
+              </Link>
             ))}
           </div>
         </div>

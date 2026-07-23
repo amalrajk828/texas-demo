@@ -146,9 +146,6 @@ export default function ProductCard({
           </Link>
         </div>
       </div>
-
-      {/* Red reveal bar */}
-      <div className="h-[3px] bg-[#e7212b] scale-x-0 group-hover:scale-x-100 transition-transform duration-300 origin-left" />
     </div>
   );
 }

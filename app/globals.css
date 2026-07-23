@@ -214,7 +214,6 @@ a, button, [role="button"], label, select,
 /* --- Blueprint & Technical Instrumentation Panels --- */
 .blueprint-grid {
   position: relative;
-  background-color: #0b0d26;
 }
 .blueprint-grid::before {
   content: "";
@@ -266,4 +265,17 @@ a, button, [role="button"], label, select,
   font-family: var(--font-mono), monospace;
   font-variant-numeric: tabular-nums;
   letter-spacing: -0.02em;
+}
+
+/* Neumorphic Dark Cards */
+.neumorphic-card-dark {
+  background-color: #0a0a0a;
+  border-radius: 2rem;
+  box-shadow: 12px 12px 28px #000000, -12px -12px 28px #151515;
+  transition: transform 0.3s cubic-bezier(0.25, 0.8, 0.25, 1), box-shadow 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+  border: 1px solid rgba(255, 255, 255, 0.015);
+}
+.neumorphic-card-dark:hover {
+  transform: translateY(-5px);
+  box-shadow: 16px 16px 36px #000000, -16px -16px 36px #1b1b1b;
 }

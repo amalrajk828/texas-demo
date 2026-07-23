@@ -5,6 +5,7 @@ import Lenis from "lenis";
 
 export default function SmoothScroll({ children }: { children: React.ReactNode }) {
   useEffect(() => {
+    console.log("Lenis initialized");
     const lenis = new Lenis({
       duration: 1.2,
       easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)), // standard ease-out exponential
@@ -15,6 +16,10 @@ export default function SmoothScroll({ children }: { children: React.ReactNode }
       touchMultiplier: 2,
     });
 
+    if (typeof window !== "undefined") {
+      (window as any).lenis = lenis;
+    }
+
     function raf(time: number) {
       lenis.raf(time);
       requestAnimationFrame(raf);
@@ -23,6 +28,10 @@ export default function SmoothScroll({ children }: { children: React.ReactNode }
     requestAnimationFrame(raf);
 
     return () => {
+      console.log("Lenis destroyed");
+      if (typeof window !== "undefined") {
+        (window as any).lenis = null;
+      }
       lenis.destroy();
     };
   }, []);

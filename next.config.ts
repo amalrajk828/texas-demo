@@ -1,6 +1,7 @@
 import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
+  outputFileTracingRoot: __dirname,
   trailingSlash: true,
   transpilePackages: ["lucide-react"],
   experimental: {

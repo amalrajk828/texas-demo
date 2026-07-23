@@ -6,11 +6,10 @@ import Link from "next/link";
 import Image from "next/image";
 import { usePathname } from "next/navigation";
 import {
-  ChevronDown, ChevronRight, Menu, ArrowRight, X,
+  ChevronDown, Menu, ArrowRight, X, ChevronRight, Wifi,
   Gauge, FlaskConical, Cpu,
   Droplet, Factory, Flame, Snowflake, Zap, Droplets, Building2, Hammer,
   BarChart3, Radio, Monitor, Tablet, Activity, Settings, Wrench, Target,
-  Wifi,
 } from "lucide-react";
 import type { LucideIcon } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
@@ -368,31 +367,59 @@ function NestedDropdown({ menuLabel, data, viewAll, isOpen, onClose, pathname, o
   );
 }
 
+const getDropdownPos = (label: string) => {
+  if (label === "Products") return "left-1/2 -translate-x-1/2";
+  if (label === "Services") return "left-0";
+  if (label === "Industries") return "right-0";
+  return "left-0";
+};
+
+const getDropdownWidth = (label: string) => {
+  if (label === "Products") return "w-[680px]";
+  if (label === "Services") return "w-[360px]";
+  if (label === "Industries") return "w-[540px]";
+  return "w-[360px]";
+};
+
+const getDropdownCols = (label: string) => {
+  if (label === "Products") return "grid-cols-2";
+  if (label === "Services") return "grid-cols-1";
+  if (label === "Industries") return "grid-cols-2";
+  return "grid-cols-1";
+};
+
+const showDesc = (label: string) => label === "Services";
+
 /* ── Component ────────────────────────────────────────────────────── */
 export default function Header() {
   const pathname = usePathname();
+  const isHome = pathname === "/";
+  const isAboutUs = pathname.startsWith("/about-us");
   const [open, setOpen]               = useState<string | null>(null);
   const [mobileOpen, setMobileOpen]   = useState(false);
   const [scrolled, setScrolled]       = useState(false);
   const [mobileExpanded, setMobileExpanded] = useState<string | null>(null);
   const ref = useRef<HTMLDivElement>(null);
-  const timeoutRef = useRef<NodeJS.Timeout | null>(null);
+  const closeTimeoutRef = useRef<NodeJS.Timeout | null>(null);
 
   const handleMouseEnter = (label: string) => {
-    if (timeoutRef.current) clearTimeout(timeoutRef.current);
+    if (closeTimeoutRef.current) {
+      clearTimeout(closeTimeoutRef.current);
+      closeTimeoutRef.current = null;
+    }
     setOpen(label);
   };
 
   const handleMouseLeave = () => {
-    if (timeoutRef.current) clearTimeout(timeoutRef.current);
-    timeoutRef.current = setTimeout(() => {
+    if (closeTimeoutRef.current) clearTimeout(closeTimeoutRef.current);
+    closeTimeoutRef.current = setTimeout(() => {
       setOpen(null);
-    }, 200);
+    }, 180);
   };
 
   useEffect(() => {
     return () => {
-      if (timeoutRef.current) clearTimeout(timeoutRef.current);
+      if (closeTimeoutRef.current) clearTimeout(closeTimeoutRef.current);
     };
   }, []);
 
@@ -406,9 +433,68 @@ export default function Header() {
 
   /* Scroll listener */
   useEffect(() => {
-    const onScroll = () => setScrolled(window.scrollY > 10);
-    window.addEventListener("scroll", onScroll, { passive: true });
-    return () => window.removeEventListener("scroll", onScroll);
+    console.log("Header scroll effect mounted");
+    let lenisInstance: any = typeof window !== "undefined" ? (window as any).lenis : null;
+    let unsubLenis: (() => void) | null = null;
+    let checkInterval: NodeJS.Timeout | null = null;
+
+    const onScroll = (e?: any) => {
+      const scrollY = e && typeof e.scroll === "number" ? e.scroll : window.scrollY;
+      const nextScrolled = scrollY > 10;
+      setScrolled(prev => {
+        if (prev !== nextScrolled) {
+          console.log("scrolled ->", nextScrolled);
+        }
+        return nextScrolled;
+      });
+    };
+
+    const setupLenisListener = (lenis: any) => {
+      lenisInstance = lenis;
+      window.removeEventListener("scroll", onScroll);
+      lenis.on("scroll", onScroll);
+      unsubLenis = () => {
+        lenis.off("scroll", onScroll);
+      };
+      // Force initial run
+      onScroll({ scroll: lenis.scroll });
+    };
+
+    if (lenisInstance) {
+      console.log("Header scroll: found window.lenis immediately");
+      setupLenisListener(lenisInstance);
+    } else if (typeof window !== "undefined") {
+      console.log("Header scroll: lenis not found immediately. Falling back to native listener and starting polling...");
+      window.addEventListener("scroll", onScroll, { passive: true });
+      onScroll();
+
+      // Check if Lenis is initialized shortly after mount
+      checkInterval = setInterval(() => {
+        if ((window as any).lenis) {
+          console.log("Header scroll: lenis found via polling");
+          setupLenisListener((window as any).lenis);
+          if (checkInterval) clearInterval(checkInterval);
+        }
+      }, 50);
+
+      // Clear interval after 2 seconds to avoid running it forever if Lenis is not used
+      setTimeout(() => {
+        if (checkInterval) {
+          console.log("Header scroll: stopped polling for lenis");
+          clearInterval(checkInterval);
+        }
+      }, 2000);
+    }
+
+    return () => {
+      console.log("Header scroll effect unmounted");
+      if (checkInterval) clearInterval(checkInterval);
+      if (unsubLenis) {
+        unsubLenis();
+      } else if (typeof window !== "undefined") {
+        window.removeEventListener("scroll", onScroll);
+      }
+    };
   }, []);
 
   /* Close everything on route change */
@@ -433,27 +519,29 @@ export default function Header() {
     <>
       <header
         ref={ref}
-        className={`fixed top-0 inset-x-0 z-50 transition-all duration-300 ${
-          scrolled
-            ? "bg-[#0F1117]/92 backdrop-blur-xl shadow-2xl shadow-black/40"
-            : "bg-[#0F1117]"
-        }`}
+        className="fixed top-4 left-1/2 -translate-x-1/2 z-[100] w-[calc(100%-2rem)] max-w-7xl transition-all duration-300 rounded-2xl border border-white/[0.10]"
+        style={{
+          background: "rgba(15, 15, 18, 0.55)",
+          backdropFilter: "blur(18px)",
+          WebkitBackdropFilter: "blur(18px)",
+          boxShadow: scrolled
+            ? "0 12px 32px rgba(0, 0, 0, 0.40), inset 0 1px 1px rgba(255, 255, 255, 0.08)"
+            : "0 8px 24px rgba(0, 0, 0, 0.30), inset 0 1px 1px rgba(255, 255, 255, 0.05)",
+        }}
       >
-        {/* Red accent line — appears on scroll */}
-        <div
-          className="absolute top-0 inset-x-0 h-[2px] transition-opacity duration-300"
-          style={{
-            background: "linear-gradient(90deg, transparent 10%, #E53935 50%, transparent 90%)",
-            opacity: scrolled ? 1 : 0,
-          }}
-        />
+        {/* Inner background clip for sheen overlays only */}
+        <div className="absolute inset-0 rounded-2xl overflow-hidden pointer-events-none">
+          {/* Subtle top specular highlight sheen */}
+          <div className="absolute top-0 inset-x-0 h-10 bg-gradient-to-b from-white/[0.05] to-transparent pointer-events-none rounded-t-2xl" />
+          <div className="absolute top-0 inset-x-0 h-[1px] bg-gradient-to-r from-transparent via-white/20 to-transparent pointer-events-none" />
+        </div>
 
-        <div className="max-w-7xl mx-auto px-4 sm:px-6">
-          <div className="flex items-center h-[88px] gap-10">
+        <div className="w-full px-4 sm:px-6">
+          <div className="flex items-center h-[76px] gap-10">
 
             {/* ── Logo ─────────────────────────────────────────── */}
             <Link href="/" className="flex items-center gap-4 shrink-0">
-              <Image src="/logo.svg" alt="Texas Technical Services" width={62} height={62} priority />
+              <Image src="/logo.svg" alt="Texas Technical Services" width={52} height={52} priority />
               <div className="hidden sm:flex flex-col gap-0.5">
                 <span className="text-white font-black tracking-[6px] text-[18px] leading-none">
                   TEXAS
@@ -470,11 +558,11 @@ export default function Header() {
             {/* ── Desktop Nav ──────────────────────────────────── */}
             <nav className="hidden lg:flex items-center gap-0.5 flex-1 justify-center">
               {NAV.map((item) => (
-                <div
-                  key={item.label}
+                <div 
+                  key={item.label} 
                   className="relative"
-                  onMouseEnter={item.children ? () => handleMouseEnter(item.label) : undefined}
-                  onMouseLeave={item.children ? handleMouseLeave : undefined}
+                  onMouseEnter={() => handleMouseEnter(item.label)}
+                  onMouseLeave={handleMouseLeave}
                 >
                   {item.children ? (
                     <>
@@ -484,7 +572,7 @@ export default function Header() {
                         onBlur={item.children ? handleMouseLeave : undefined}
                         aria-expanded={open === item.label ? "true" : "false"}
                         aria-haspopup="true"
-                        className={`flex items-center gap-1.5 px-4 py-2.5 text-[14px] font-medium font-sans tracking-wide rounded-lg transition-colors relative ${
+                        className={`whitespace-nowrap flex items-center gap-1.5 px-4 py-2.5 text-[14px] font-medium font-sans tracking-wide rounded-lg transition-colors relative ${
                           isActive(item.href) ? "text-white" : "text-white/60 hover:text-white"
                         }`}
                       >
@@ -504,18 +592,90 @@ export default function Header() {
                         )}
                       </button>
 
+                      {/* ── Dark Glassmorphic Dropdown Panel ──────────────── */}
                       <AnimatePresence>
                         {open === item.label && (
-                          <NestedDropdown
-                            menuLabel={item.label}
-                            data={getMenuData(item.label)}
-                            viewAll={getMenuViewAll(item.label)}
-                            isOpen={open === item.label}
-                            onClose={() => setOpen(null)}
-                            pathname={pathname}
+                          <motion.div
+                            key={`dd-${item.label}`}
+                            initial={{ opacity: 0, y: -8, scale: 0.96 }}
+                            animate={{ opacity: 1, y: 0, scale: 1 }}
+                            exit={{ opacity: 0, y: -8, scale: 0.96 }}
+                            transition={{ duration: 0.18, ease: [0.22, 1, 0.36, 1] }}
                             onMouseEnter={() => handleMouseEnter(item.label)}
                             onMouseLeave={handleMouseLeave}
-                          />
+                            className={`absolute top-full ${getDropdownPos(item.label)} mt-3 ${getDropdownWidth(item.label)} rounded-2xl shadow-2xl shadow-black/60 overflow-hidden border border-white/15 z-[110] backdrop-blur-2xl`}
+                            style={{ background: "rgba(15, 15, 18, 0.88)", backdropFilter: "blur(28px)", WebkitBackdropFilter: "blur(28px)" }}
+                          >
+                            {/* Dark scrim overlay to mute background textures */}
+                            <div className="absolute inset-0 bg-black/20 pointer-events-none" />
+
+                            {/* Gradient accent at top */}
+                            <div
+                              className="relative z-10 h-[2px]"
+                              style={{ background: "linear-gradient(90deg, #E53935, #FF7043, #E53935)" }}
+                            />
+
+                            {/* Items grid */}
+                            <div className={`relative z-10 p-3.5 grid ${getDropdownCols(item.label)} gap-1`}>
+                              {item.children!
+                                .filter((c) => !c.highlight)
+                                .map((child) => {
+                                  const childActive =
+                                    pathname === child.href ||
+                                    pathname.startsWith(child.href.replace(/\/$/, "") + "/");
+                                  const Icon = child.icon;
+
+                                  return (
+                                    <Link
+                                      key={child.href}
+                                      href={child.href}
+                                      onClick={() => setOpen(null)}
+                                      className={`flex items-start gap-3 px-3.5 py-3 rounded-xl transition-all duration-200 group border ${
+                                        childActive
+                                          ? "bg-[#E53935]/20 text-white border-[#E53935]/40"
+                                          : "text-white/90 hover:text-white hover:bg-white/[0.09] border-transparent"
+                                      }`}
+                                    >
+                                      {Icon && (
+                                        <span
+                                          className={`flex items-center justify-center w-9 h-9 rounded-lg shrink-0 mt-0.5 transition-colors ${
+                                            childActive
+                                              ? "bg-[#E53935]/25 text-[#ff5252]"
+                                              : "bg-white/10 text-white/80 group-hover:bg-[#E53935]/20 group-hover:text-white"
+                                          }`}
+                                        >
+                                          <Icon className="w-4.5 h-4.5" strokeWidth={1.8} />
+                                        </span>
+                                      )}
+                                      <div className="min-w-0">
+                                        <p className="text-[14px] font-semibold leading-tight text-white drop-shadow-[0_1px_2px_rgba(0,0,0,0.5)]">
+                                          {child.label}
+                                        </p>
+                                        {showDesc(item.label) && child.desc && (
+                                          <p className="text-[12px] text-white/70 mt-1 leading-relaxed">
+                                            {child.desc}
+                                          </p>
+                                        )}
+                                      </div>
+                                    </Link>
+                                  );
+                                })}
+                            </div>
+
+                            {/* "View all" footer */}
+                            {item.children!.find((c) => c.highlight) && (
+                              <div className="relative z-10 border-t border-white/15 px-5 py-3.5 bg-black/40">
+                                <Link
+                                  href={item.children!.find((c) => c.highlight)!.href}
+                                  onClick={() => setOpen(null)}
+                                  className="inline-flex items-center gap-1.5 text-[13px] font-bold text-[#FF5252] hover:text-white transition-colors"
+                                >
+                                  {item.children!.find((c) => c.highlight)!.label}
+                                  <ArrowRight className="w-3.5 h-3.5" />
+                                </Link>
+                              </div>
+                            )}
+                          </motion.div>
                         )}
                       </AnimatePresence>
                     </>
@@ -523,7 +683,7 @@ export default function Header() {
                     /* Simple link (Home, About, Clients) */
                     <Link
                       href={item.href}
-                      className={`relative px-4 py-2.5 text-[14px] font-medium font-sans tracking-wide rounded-lg transition-colors block ${
+                      className={`whitespace-nowrap relative px-4 py-2.5 text-[14px] font-medium font-sans tracking-wide rounded-lg transition-colors block ${
                         isActive(item.href) ? "text-white" : "text-white/60 hover:text-white"
                       }`}
                     >
@@ -547,7 +707,7 @@ export default function Header() {
               {/* Contact — desktop */}
               <Link
                 href="/contacts/"
-                className="hidden lg:inline-flex items-center gap-2 bg-[#E53935] hover:bg-[#B71C1C] text-white text-[14px] font-medium font-sans px-7 py-3 rounded-xl transition-colors tracking-wide shadow-lg shadow-[#E53935]/20"
+                className="whitespace-nowrap hidden lg:inline-flex items-center gap-2 bg-[#E53935] hover:bg-[#B71C1C] text-white text-[14px] font-medium font-sans px-7 py-3 rounded-xl transition-colors tracking-wide shadow-lg shadow-[#E53935]/20"
               >
                 Contact Us
               </Link>
@@ -706,16 +866,24 @@ export default function Header() {
 
         {/* Bottom accent line — visible on scroll */}
         <div
-          className="absolute bottom-0 inset-x-0 h-px transition-opacity duration-300"
+          className="absolute bottom-0 inset-x-0 h-px transition-opacity duration-300 rounded-b-2xl overflow-hidden"
           style={{
             background: "linear-gradient(90deg, transparent, rgba(229,57,53,0.25), transparent)",
             opacity: scrolled ? 1 : 0,
           }}
         />
+
+        <style>{`
+          @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(-4px) scale(0.98); }
+            to { opacity: 1; transform: translateY(0) scale(1); }
+          }
+          .animate-fade-in {
+            animation: fadeIn 0.15s ease-out forwards;
+          }
+        `}</style>
       </header>
 
-      {/* Spacer — matches header height */}
-      <div className="h-[88px]" aria-hidden="true" />
     </>
   );
 }
