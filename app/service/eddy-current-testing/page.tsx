@@ -11,17 +11,17 @@ import { ChevronRight } from "lucide-react";
 import ServiceDefinition from "@/components/service/ServiceDefinition";
 
 export const metadata: Metadata = {
-  title: "Eddy Current Testing (ECT)",
+  title: "Eddy Current Testing (ECT) — Tube & Surface Inspection",
   description:
     "Eddy Current Testing for tube and surface flaw detection — heat exchanger inspection and conductivity measurement to ASTM E426 and ASME V in Kuwait and Dubai.",
   alternates: { canonical: "/service/eddy-current-testing/" },
   openGraph: {
-    title: "Eddy Current Testing (ECT)",
+    title: "Eddy Current Testing (ECT) — Tube & Surface Inspection",
     description: "ECT for heat exchanger tubes, surface cracks, and conductivity measurement. ASME V, ASTM E426. Kuwait & Dubai.",
     url: "/service/eddy-current-testing/",
     images: [{ url: "/og-default.png", width: 1200, height: 630, alt: "Eddy Current Testing — Texas Technical Services" }],
   },
-  twitter: { card: "summary_large_image", title: "Eddy Current Testing (ECT)", description: "ECT tube and surface inspection. ASME V, ASTM E426. Kuwait & Dubai." },
+  twitter: { card: "summary_large_image", title: "Eddy Current Testing (ECT) — Tube & Surface Inspection", description: "ECT tube and surface inspection. ASME V, ASTM E426. Kuwait & Dubai." },
   keywords: ["eddy current testing Kuwait", "ECT NDT Kuwait", "heat exchanger tube inspection Kuwait", "eddy current inspection Kuwait", "ASME V ECT Kuwait", "Texas Technical Services eddy current"],
 };
 

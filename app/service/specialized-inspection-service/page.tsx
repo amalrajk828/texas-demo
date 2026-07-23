@@ -11,17 +11,17 @@ import { ChevronRight } from "lucide-react";
 import ServiceDefinition from "@/components/service/ServiceDefinition";
 
 export const metadata: Metadata = {
-  title: "Specialized Inspection Service",
+  title: "Specialized Inspection — Custom Programs & Turnarounds",
   description:
     "Advanced specialized inspection services — PAUT, ECT, TOFD, MFL, videoscope, gamma ray crawler, corrosion control, and metallurgy in Kuwait and Dubai.",
   alternates: { canonical: "/service/specialized-inspection-service/" },
   openGraph: {
-    title: "Specialized Inspection Service",
+    title: "Specialized Inspection — Custom Programs & Turnarounds",
     description: "PAUT, ECT, TOFD, MFL, Videoscope, Corrosion Control, PMI, Heat Treatment, and Lifting Equipment Inspection. Kuwait & Dubai.",
     url: "/service/specialized-inspection-service/",
     images: [{ url: "/og-default.png", width: 1200, height: 630, alt: "Specialized Inspection Service — Texas Technical Services" }],
   },
-  twitter: { card: "summary_large_image", title: "Specialized Inspection Service", description: "PAUT, ECT, TOFD, MFL and 15 specialist services. Kuwait & Dubai." },
+  twitter: { card: "summary_large_image", title: "Specialized Inspection — Custom Programs & Turnarounds", description: "PAUT, ECT, TOFD, MFL and 15 specialist services. Kuwait & Dubai." },
   keywords: ["specialized inspection Kuwait", "PAUT Kuwait", "phased array ultrasonic testing Kuwait", "eddy current testing Kuwait", "TOFD Kuwait", "magnetic flux leakage Kuwait", "corrosion control Kuwait", "PMI Kuwait", "heat treatment Kuwait", "lifting inspection Kuwait", "Texas Technical Services inspection"],
 };
 

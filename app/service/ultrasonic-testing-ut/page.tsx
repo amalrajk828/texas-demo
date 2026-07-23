@@ -11,17 +11,17 @@ import { ChevronRight, ArrowRight } from "lucide-react";
 import ServiceDefinition from "@/components/service/ServiceDefinition";
 
 export const metadata: Metadata = {
-  title: "Ultrasonic Testing (UT)",
+  title: "Ultrasonic Testing (UT) — Weld & Thickness Inspection",
   description:
     "Ultrasonic Testing for internal flaw detection and thickness — conventional UT, TOFD, and wall thickness to ASME V, API 1104, and ISO 11666 in Kuwait and Dubai.",
   alternates: { canonical: "/service/ultrasonic-testing-ut/" },
   openGraph: {
-    title: "Ultrasonic Testing (UT)",
+    title: "Ultrasonic Testing (UT) — Weld & Thickness Inspection",
     description: "Conventional UT, TOFD, and thickness measurement for welds, forgings, and castings. ASME V, API 1104. Kuwait & Dubai.",
     url: "/service/ultrasonic-testing-ut/",
     images: [{ url: "/og-default.png", width: 1200, height: 630, alt: "Ultrasonic Testing — Texas Technical Services" }],
   },
-  twitter: { card: "summary_large_image", title: "Ultrasonic Testing (UT)", description: "Conventional UT, TOFD, thickness measurement. ASME V, API 1104. Kuwait & Dubai." },
+  twitter: { card: "summary_large_image", title: "Ultrasonic Testing (UT) — Weld & Thickness Inspection", description: "Conventional UT, TOFD, thickness measurement. ASME V, API 1104. Kuwait & Dubai." },
   keywords: ["ultrasonic testing Kuwait", "UT NDT Kuwait", "TOFD testing Kuwait", "weld ultrasonic testing Kuwait", "thickness measurement Kuwait", "UT inspection Kuwait", "ASME V UT Kuwait", "Texas Technical Services ultrasonic testing"],
 };
 

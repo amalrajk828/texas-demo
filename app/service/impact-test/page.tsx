@@ -11,17 +11,17 @@ import { ChevronRight } from "lucide-react";
 import ServiceDefinition from "@/components/service/ServiceDefinition";
 
 export const metadata: Metadata = {
-  title: "Impact Test",
+  title: "Impact Testing — Charpy & Izod Standards",
   description:
     "Charpy and Izod impact testing for material toughness and ductile-to-brittle transition assessment to ASTM E23 and ISO 148 standards in Kuwait and Dubai.",
   alternates: { canonical: "/service/impact-test/" },
   openGraph: {
-    title: "Impact Test",
+    title: "Impact Testing — Charpy & Izod Standards",
     description: "Charpy and Izod impact testing — shock resistance, low-temperature, and ductile-to-brittle transition. ASTM E23, ISO 148. Kuwait & Dubai.",
     url: "/service/impact-test/",
     images: [{ url: "/og-impact-test.jpg", width: 1200, height: 630, alt: "Impact Test — Texas Technical Services" }],
   },
-  twitter: { card: "summary_large_image", title: "Impact Test", description: "Charpy and Izod impact testing. Low-temperature testing available. Kuwait & Dubai." },
+  twitter: { card: "summary_large_image", title: "Impact Testing — Charpy & Izod Standards", description: "Charpy and Izod impact testing. Low-temperature testing available. Kuwait & Dubai." },
   keywords: ["impact test Kuwait", "Charpy impact test Kuwait", "Izod impact test Kuwait", "low temperature impact test Kuwait", "fracture toughness impact Kuwait", "ASTM E23 impact test Kuwait", "Texas Technical Services impact test"],
 };
 

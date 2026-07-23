@@ -12,14 +12,14 @@ import Link from "next/link";
 import ServiceDefinition from "@/components/service/ServiceDefinition";
 
 export const metadata: Metadata = {
-  title: "Inspection & Testing Services",
+  title: "Inspection & Testing — NDT, Mechanical & Specialized",
   description:
     "Industrial inspection and testing in Kuwait — NDT, mechanical testing, and QA consultancy compliant with ISO 9001, ISO 14001, and ISO 45001 across the GCC.",
   alternates: {
     canonical: "/service/inspection-testing/",
   },
   openGraph: {
-    title: "Inspection & Testing Services",
+    title: "Inspection & Testing — NDT, Mechanical & Specialized",
     description:
       "Industrial inspection and testing company in Kuwait — NDT, mechanical testing, phased array UT, QA consultancy, and ISO-certified quality management across the GCC.",
     url: "/service/inspection-testing/",
@@ -27,7 +27,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Inspection & Testing Services",
+    title: "Inspection & Testing — NDT, Mechanical & Specialized",
     description:
       "Industrial inspection and testing company in Kuwait — NDT, mechanical testing, phased array UT, ISO 9001/14001/45001 certified.",
   },

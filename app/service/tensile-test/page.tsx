@@ -11,17 +11,17 @@ import { ChevronRight } from "lucide-react";
 import ServiceDefinition from "@/components/service/ServiceDefinition";
 
 export const metadata: Metadata = {
-  title: "Tensile Test",
+  title: "Tensile Testing — ASTM E8, ISO 6892",
   description:
     "Tensile testing for metals, plastics, ceramics, and composites — tensile strength, yield, and ductility to ASTM E8, ISO 6892, and BS EN in Kuwait and Dubai.",
   alternates: { canonical: "/service/tensile-test/" },
   openGraph: {
-    title: "Tensile Test",
+    title: "Tensile Testing — ASTM E8, ISO 6892",
     description: "Tensile strength, yield strength, and ductility testing to ASTM E8, ISO 6892 standards. Metals, plastics, ceramics, composites. Kuwait & Dubai.",
     url: "/service/tensile-test/",
     images: [{ url: "/og-default.png", width: 1200, height: 630, alt: "Tensile Test — Texas Technical Services" }],
   },
-  twitter: { card: "summary_large_image", title: "Tensile Test", description: "Tensile strength, yield strength, ductility testing. ASTM E8, ISO 6892. Kuwait & Dubai." },
+  twitter: { card: "summary_large_image", title: "Tensile Testing — ASTM E8, ISO 6892", description: "Tensile strength, yield strength, ductility testing. ASTM E8, ISO 6892. Kuwait & Dubai." },
   keywords: ["tensile test Kuwait", "tensile strength testing Kuwait", "yield strength test Kuwait", "tensile testing metals Kuwait", "ASTM E8 tensile test Kuwait", "ISO 6892 tensile test Kuwait", "Texas Technical Services tensile test"],
 };
 

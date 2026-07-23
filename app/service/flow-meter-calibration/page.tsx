@@ -13,14 +13,14 @@ import ServiceProcessSteps from "@/components/ServiceProcessSteps";
 import ServiceDefinition from "@/components/service/ServiceDefinition";
 
 export const metadata: Metadata = {
-  title: "Flow Meter Calibration",
+  title: "Flow Meter Calibration — Lab & On-Site Services",
   description:
     "ILAC/COFRAC ISO 17025 flow meter calibration — OIML R117, API MPMS, as-found calibration, real fluid calibration, and emergency service in Kuwait and Dubai.",
   alternates: {
     canonical: "/service/flow-meter-calibration/",
   },
   openGraph: {
-    title: "Flow Meter Calibration",
+    title: "Flow Meter Calibration — Lab & On-Site Services",
     description:
       "ILAC/COFRAC ISO 17025 accredited flow meter calibration — OIML R117, API MPMS, MID compliance, as found calibration, real fluid calibration, and 2-week emergency service.",
     url: "/service/flow-meter-calibration/",
@@ -35,7 +35,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Flow Meter Calibration",
+    title: "Flow Meter Calibration — Lab & On-Site Services",
     description:
       "ILAC/COFRAC ISO 17025 accredited calibration — OIML R117, API MPMS, MID compliance. Emergency 2-week service available. Kuwait & Dubai.",
   },

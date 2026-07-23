@@ -11,17 +11,17 @@ import { ChevronRight } from "lucide-react";
 import ServiceDefinition from "@/components/service/ServiceDefinition";
 
 export const metadata: Metadata = {
-  title: "Water Penetration Test",
+  title: "Water Penetration Testing — Facade & Building",
   description:
     "Water penetration testing for windows, doors, and curtain walls — static pressure testing to ASTM E1105, AAMA 502, and BS 6375 in Kuwait and Dubai.",
   alternates: { canonical: "/service/water-penetration-test/" },
   openGraph: {
-    title: "Water Penetration Test",
+    title: "Water Penetration Testing — Facade & Building",
     description: "Water penetration testing for windows, doors, and curtain walls. ASTM E1105, AAMA 502. Kuwait & Dubai.",
     url: "/service/water-penetration-test/",
     images: [{ url: "/og-default.png", width: 1200, height: 630, alt: "Water Penetration Test — Texas Technical Services" }],
   },
-  twitter: { card: "summary_large_image", title: "Water Penetration Test", description: "Window and curtain wall water penetration testing. ASTM E1105. Kuwait & Dubai." },
+  twitter: { card: "summary_large_image", title: "Water Penetration Testing — Facade & Building", description: "Window and curtain wall water penetration testing. ASTM E1105. Kuwait & Dubai." },
   keywords: ["water penetration test Kuwait", "curtain wall testing Kuwait", "window water test Kuwait", "building envelope testing Kuwait", "ASTM E1105 Kuwait", "Texas Technical Services water test"],
 };
 

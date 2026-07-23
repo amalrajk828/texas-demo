@@ -11,17 +11,17 @@ import { ChevronRight } from "lucide-react";
 import ServiceDefinition from "@/components/service/ServiceDefinition";
 
 export const metadata: Metadata = {
-  title: "Radiographic Testing (RT)",
+  title: "Radiographic Testing (RT) — X-Ray & Gamma Inspection",
   description:
     "Radiographic Testing using X-rays and gamma rays for weld, casting, and internal flaw detection to ASME V, API 1104, and EN ISO 17636 in Kuwait and Dubai.",
   alternates: { canonical: "/service/radiographic-testing-rt/" },
   openGraph: {
-    title: "Radiographic Testing (RT)",
+    title: "Radiographic Testing (RT) — X-Ray & Gamma Inspection",
     description: "X-ray and gamma ray radiographic testing for internal defect detection. ASME V, API 1104, ISO 17636. Kuwait & Dubai.",
     url: "/service/radiographic-testing-rt/",
     images: [{ url: "/og-default.png", width: 1200, height: 630, alt: "Radiographic Testing — Texas Technical Services" }],
   },
-  twitter: { card: "summary_large_image", title: "Radiographic Testing (RT)", description: "X-ray and gamma radiography. ASME V, API 1104, ISO 17636. Kuwait & Dubai." },
+  twitter: { card: "summary_large_image", title: "Radiographic Testing (RT) — X-Ray & Gamma Inspection", description: "X-ray and gamma radiography. ASME V, API 1104, ISO 17636. Kuwait & Dubai." },
   keywords: ["radiographic testing Kuwait", "RT NDT Kuwait", "X-ray testing Kuwait", "gamma ray testing Kuwait", "weld radiography Kuwait", "digital radiography Kuwait", "ASME V RT Kuwait", "Texas Technical Services radiography"],
 };
 

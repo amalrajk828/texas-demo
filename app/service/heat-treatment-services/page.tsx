@@ -11,17 +11,17 @@ import { ChevronRight } from "lucide-react";
 import ServiceDefinition from "@/components/service/ServiceDefinition";
 
 export const metadata: Metadata = {
-  title: "Heat Treatment Services",
+  title: "Heat Treatment — PWHT, Stress Relief, Annealing",
   description:
     "Heat treatment services including PWHT, stress relief, and annealing to ASME VIII, AWS D1.1, and ASME B31.3 standards in Kuwait and Dubai.",
   alternates: { canonical: "/service/heat-treatment-services/" },
   openGraph: {
-    title: "Heat Treatment Services",
+    title: "Heat Treatment — PWHT, Stress Relief, Annealing",
     description: "PWHT, stress relief, and annealing with electrical and fuel-fired heating. ASME VIII, AWS D1.1. Kuwait & Dubai.",
     url: "/service/heat-treatment-services/",
     images: [{ url: "/og-heat-treatment.jpg", width: 1200, height: 630, alt: "Heat Treatment Services — Texas Technical Services" }],
   },
-  twitter: { card: "summary_large_image", title: "Heat Treatment Services", description: "PWHT and heat treatment. ASME VIII, AWS D1.1. Kuwait & Dubai." },
+  twitter: { card: "summary_large_image", title: "Heat Treatment — PWHT, Stress Relief, Annealing", description: "PWHT and heat treatment. ASME VIII, AWS D1.1. Kuwait & Dubai." },
   keywords: ["heat treatment Kuwait", "PWHT Kuwait", "post weld heat treatment Kuwait", "stress relief Kuwait", "electrical resistance heating Kuwait", "heat treatment services Kuwait", "Texas Technical Services heat treatment"],
 };
 

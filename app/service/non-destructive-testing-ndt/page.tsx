@@ -12,17 +12,17 @@ import { ItemListJsonLd } from "@/components/schema/ItemListJsonLd";
 import ServiceDefinition from "@/components/service/ServiceDefinition";
 
 export const metadata: Metadata = {
-  title: "Non Destructive Testing (NDT)",
+  title: "Non-Destructive Testing (NDT) — UT, RT, MT, PT, ET",
   description:
     "Full-range NDT inspection services — VI, PT, MT, RT, and UT with qualified technicians and modern equipment in Kuwait and Dubai.",
   alternates: { canonical: "/service/non-destructive-testing-ndt/" },
   openGraph: {
-    title: "Non Destructive Testing (NDT)",
+    title: "Non-Destructive Testing (NDT) — UT, RT, MT, PT, ET",
     description: "VI, PT, MT, RT, and UT non-destructive testing services with qualified technicians. Kuwait & Dubai.",
     url: "/service/non-destructive-testing-ndt/",
     images: [{ url: "/og-default.png", width: 1200, height: 630, alt: "Non Destructive Testing — Texas Technical Services" }],
   },
-  twitter: { card: "summary_large_image", title: "Non Destructive Testing (NDT)", description: "VI, PT, MT, RT, UT NDT services. Qualified technicians. Kuwait & Dubai." },
+  twitter: { card: "summary_large_image", title: "Non-Destructive Testing (NDT) — UT, RT, MT, PT, ET", description: "VI, PT, MT, RT, UT NDT services. Qualified technicians. Kuwait & Dubai." },
   keywords: ["NDT Kuwait", "non destructive testing Kuwait", "ultrasonic testing Kuwait", "radiographic testing Kuwait", "magnetic particle inspection Kuwait", "dye penetrant testing Kuwait", "visual inspection Kuwait", "Texas Technical Services NDT"],
 };
 

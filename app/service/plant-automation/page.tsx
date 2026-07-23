@@ -11,17 +11,17 @@ import { ChevronRight } from "lucide-react";
 import ServiceDefinition from "@/components/service/ServiceDefinition";
 
 export const metadata: Metadata = {
-  title: "Process Plant Automation",
+  title: "Process Plant Automation — Electrical & Instrumentation",
   description:
     "Process plant automation solutions for efficiency, remote monitoring, and safety compliance — Siemens, Allen-Bradley, Schneider, and DCS. Kuwait and Dubai.",
   alternates: { canonical: "/service/plant-automation/" },
   openGraph: {
-    title: "Process Plant Automation",
+    title: "Process Plant Automation — Electrical & Instrumentation",
     description: "Top-tier plant automation solutions — process optimisation, remote monitoring, and safety. Kuwait & Dubai.",
     url: "/service/plant-automation/",
     images: [{ url: "/og-default.png", width: 1200, height: 630, alt: "Process Plant Automation — Texas Technical Services" }],
   },
-  twitter: { card: "summary_large_image", title: "Process Plant Automation", description: "Customised plant automation for efficiency and safety. Kuwait & Dubai." },
+  twitter: { card: "summary_large_image", title: "Process Plant Automation — Electrical & Instrumentation", description: "Customised plant automation for efficiency and safety. Kuwait & Dubai." },
   keywords: ["plant automation Kuwait", "process automation Kuwait", "industrial automation Kuwait", "SCADA Kuwait", "DCS Kuwait", "automation systems Kuwait", "Texas Technical Services automation"],
 };
 

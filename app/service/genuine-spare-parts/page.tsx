@@ -11,14 +11,14 @@ import { ChevronRight } from "lucide-react";
 import ServiceDefinition from "@/components/service/ServiceDefinition";
 
 export const metadata: Metadata = {
-  title: "Genuine Spare Parts",
+  title: "Genuine Spare Parts — Flow Meters, PLCs, Analyzers",
   description:
     "Genuine OEM spare parts for Faure Herman helical flow meters — authentic, traceable, and quality-certified in Kuwait and Dubai.",
   alternates: {
     canonical: "/service/genuine-spare-parts/",
   },
   openGraph: {
-    title: "Genuine Spare Parts",
+    title: "Genuine Spare Parts — Flow Meters, PLCs, Analyzers",
     description:
       "Genuine Faure Herman OEM spare parts for helical flow meters — authentic, traceable, quality-certified. Authorised representative in Kuwait & Dubai.",
     url: "/service/genuine-spare-parts/",
@@ -33,7 +33,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Genuine Spare Parts",
+    title: "Genuine Spare Parts — Flow Meters, PLCs, Analyzers",
     description:
       "Genuine Faure Herman OEM spare parts for helical flow meters. Authorised representative — Kuwait & Dubai.",
   },

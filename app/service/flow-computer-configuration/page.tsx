@@ -13,14 +13,14 @@ import ServiceProcessSteps from "@/components/ServiceProcessSteps";
 import ServiceDefinition from "@/components/service/ServiceDefinition";
 
 export const metadata: Metadata = {
-  title: "Flow Computer Configuration",
+  title: "Flow Computer Configuration — Custody Transfer API",
   description:
     "Flow computer configuration for custody transfer — custom programming, multi-stream setup, SCADA integration, and on-site validation in Kuwait and Dubai.",
   alternates: {
     canonical: "/service/flow-computer-configuration/",
   },
   openGraph: {
-    title: "Flow Computer Configuration",
+    title: "Flow Computer Configuration — Custody Transfer API",
     description:
       "Custom flow computer configuration compliant with API MPMS, AGA, ISO, NTEP & OIML — liquid & gas custody transfer, SCADA integration, commissioning support. Authorised OEM representative.",
     url: "/service/flow-computer-configuration/",
@@ -35,7 +35,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Flow Computer Configuration",
+    title: "Flow Computer Configuration — Custody Transfer API",
     description:
       "Flow computer configuration to API MPMS, AGA, ISO, NTEP & OIML standards — custody transfer, SCADA integration, commissioning in Kuwait & Dubai.",
   },

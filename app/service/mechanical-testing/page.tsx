@@ -12,14 +12,14 @@ import { ItemListJsonLd } from "@/components/schema/ItemListJsonLd";
 import ServiceDefinition from "@/components/service/ServiceDefinition";
 
 export const metadata: Metadata = {
-  title: "Mechanical Testing Services",
+  title: "Mechanical Testing — Tensile, Hardness, Impact, Bend",
   description:
     "Mechanical testing for metals, plastics, ceramics, and composites — tensile, hardness, impact, bend, fracture, and macro/micro testing in Kuwait and Dubai.",
   alternates: {
     canonical: "/service/mechanical-testing/",
   },
   openGraph: {
-    title: "Mechanical Testing Services",
+    title: "Mechanical Testing — Tensile, Hardness, Impact, Bend",
     description:
       "Tensile, hardness, impact, bend, fracture toughness, and macro/micro testing for metals, plastics, ceramics, and composites. Kuwait & Dubai.",
     url: "/service/mechanical-testing/",
@@ -27,7 +27,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Mechanical Testing Services",
+    title: "Mechanical Testing — Tensile, Hardness, Impact, Bend",
     description: "Tensile, hardness, impact, bend, fracture, and macro/micro testing. Kuwait & Dubai.",
   },
   keywords: [

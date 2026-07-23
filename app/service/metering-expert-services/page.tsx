@@ -11,14 +11,14 @@ import { ChevronRight } from "lucide-react";
 import ServiceDefinition from "@/components/service/ServiceDefinition";
 
 export const metadata: Metadata = {
-  title: "Metering Expert Services",
+  title: "Metering Expert Services — Fiscal Audits & Compliance",
   description:
     "Specialist metering engineering services for on-site assignments, project support, training, and technical secondment in Kuwait, Dubai, and the wider region.",
   alternates: {
     canonical: "/service/metering-expert-services/",
   },
   openGraph: {
-    title: "Metering Expert Services",
+    title: "Metering Expert Services — Fiscal Audits & Compliance",
     description:
       "Specialist metering engineers for on-site assignments, project support, and knowledge transfer. Custody transfer expertise in Kuwait & Dubai.",
     url: "/service/metering-expert-services/",
@@ -33,7 +33,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Metering Expert Services",
+    title: "Metering Expert Services — Fiscal Audits & Compliance",
     description:
       "Specialist custody transfer metering engineers for on-site assignments and project support. Kuwait & Dubai.",
   },

@@ -11,17 +11,17 @@ import { ChevronRight } from "lucide-react";
 import ServiceDefinition from "@/components/service/ServiceDefinition";
 
 export const metadata: Metadata = {
-  title: "Bend Test",
+  title: "Bend Testing — Ductility & Weld Integrity",
   description:
     "Guided bend testing for weld procedure qualification — face, root, and side bend to ASTM A370, E290, and ISO 7438 in Kuwait and Dubai.",
   alternates: { canonical: "/service/bend-test/" },
   openGraph: {
-    title: "Bend Test",
+    title: "Bend Testing — Ductility & Weld Integrity",
     description: "Guided bend testing, weld bend qualification, and flexural testing. Ductility and soundness assessment. ASTM A370, ISO 7438. Kuwait & Dubai.",
     url: "/service/bend-test/",
     images: [{ url: "/og-default.png", width: 1200, height: 630, alt: "Bend Test — Texas Technical Services" }],
   },
-  twitter: { card: "summary_large_image", title: "Bend Test", description: "Guided bend, weld qualification bend, and flexural testing. ASTM & ISO standards. Kuwait & Dubai." },
+  twitter: { card: "summary_large_image", title: "Bend Testing — Ductility & Weld Integrity", description: "Guided bend, weld qualification bend, and flexural testing. ASTM & ISO standards. Kuwait & Dubai." },
   keywords: ["bend test Kuwait", "guided bend test Kuwait", "weld bend test Kuwait", "flexural test Kuwait", "ductility test Kuwait", "ASTM A370 bend test Kuwait", "ISO 7438 bend test Kuwait", "Texas Technical Services bend test"],
 };
 

@@ -11,17 +11,17 @@ import { ChevronRight } from "lucide-react";
 import ServiceDefinition from "@/components/service/ServiceDefinition";
 
 export const metadata: Metadata = {
-  title: "Magnetic Flux Leakage (MFL)",
+  title: "Magnetic Flux Leakage (MFL) — Pipeline & Tank Inspection",
   description:
     "Magnetic Flux Leakage NDT for corrosion and pitting in pipelines and tanks — inline and floor scanning to API 653, API 1163, and ASTM E570 in Kuwait and Dubai.",
   alternates: { canonical: "/service/magnetic-flux-leakage/" },
   openGraph: {
-    title: "Magnetic Flux Leakage (MFL)",
+    title: "Magnetic Flux Leakage (MFL) — Pipeline & Tank Inspection",
     description: "MFL for pipeline and storage tank corrosion detection. API 653, API 1163. Kuwait & Dubai.",
     url: "/service/magnetic-flux-leakage/",
     images: [{ url: "/og-magnetic-flux-leakage.jpg", width: 1200, height: 630, alt: "Magnetic Flux Leakage — Texas Technical Services" }],
   },
-  twitter: { card: "summary_large_image", title: "Magnetic Flux Leakage (MFL)", description: "MFL pipeline and tank corrosion inspection. API 653. Kuwait & Dubai." },
+  twitter: { card: "summary_large_image", title: "Magnetic Flux Leakage (MFL) — Pipeline & Tank Inspection", description: "MFL pipeline and tank corrosion inspection. API 653. Kuwait & Dubai." },
   keywords: ["magnetic flux leakage Kuwait", "MFL NDT Kuwait", "pipeline MFL Kuwait", "tank floor inspection Kuwait", "corrosion detection Kuwait", "MFL inspection Kuwait", "Texas Technical Services MFL"],
 };
 

@@ -11,17 +11,17 @@ import { ChevronRight } from "lucide-react";
 import ServiceDefinition from "@/components/service/ServiceDefinition";
 
 export const metadata: Metadata = {
-  title: "Pullout Test for Bolts & Anchors",
+  title: "Pullout Testing — Anchor, Rebar & Fastener Strength",
   description:
     "Pullout testing for anchor bolt bond strength in concrete and masonry — structural verification to ASTM C900, EN 12504-3, and ACI 318 in Kuwait and Dubai.",
   alternates: { canonical: "/service/pullout-test/" },
   openGraph: {
-    title: "Pullout Test for Bolts & Anchors",
+    title: "Pullout Testing — Anchor, Rebar & Fastener Strength",
     description: "Anchor bolt pullout testing for concrete and masonry bond strength. ASTM C900, EN 12504-3. Kuwait & Dubai.",
     url: "/service/pullout-test/",
     images: [{ url: "/og-default.png", width: 1200, height: 630, alt: "Pullout Test — Texas Technical Services" }],
   },
-  twitter: { card: "summary_large_image", title: "Pullout Test", description: "Anchor bolt pullout testing. ASTM C900, ACI 318. Kuwait & Dubai." },
+  twitter: { card: "summary_large_image", title: "Pullout Testing — Anchor, Rebar & Fastener Strength", description: "Anchor bolt pullout testing. ASTM C900, ACI 318. Kuwait & Dubai." },
   keywords: ["pullout test Kuwait", "anchor bolt test Kuwait", "bolt pullout test Kuwait", "concrete anchor testing Kuwait", "bond strength test Kuwait", "Texas Technical Services pullout test"],
 };
 

@@ -11,17 +11,17 @@ import { ChevronRight } from "lucide-react";
 import ServiceDefinition from "@/components/service/ServiceDefinition";
 
 export const metadata: Metadata = {
-  title: "Air Permeability Test",
+  title: "Air Permeability Testing — Building Envelope",
   description:
     "Air permeability testing for windows, doors, and curtain walls — ASTM E783, ASTM E283, and EN 12207 compliant in Kuwait and Dubai.",
   alternates: { canonical: "/service/air-permeability-test/" },
   openGraph: {
-    title: "Air Permeability Test",
+    title: "Air Permeability Testing — Building Envelope",
     description: "Air infiltration testing for windows, doors, and curtain walls. ASTM E783, EN 12207. Kuwait & Dubai.",
     url: "/service/air-permeability-test/",
     images: [{ url: "/og-default.png", width: 1200, height: 630, alt: "Air Permeability Test — Texas Technical Services" }],
   },
-  twitter: { card: "summary_large_image", title: "Air Permeability Test", description: "Air infiltration testing for facades. ASTM E783. Kuwait & Dubai." },
+  twitter: { card: "summary_large_image", title: "Air Permeability Testing — Building Envelope", description: "Air infiltration testing for facades. ASTM E783. Kuwait & Dubai." },
   keywords: ["air permeability test Kuwait", "air leakage test Kuwait", "curtain wall air test Kuwait", "ASTM E783 Kuwait", "window air infiltration Kuwait", "building envelope air test Kuwait", "Texas Technical Services air test"],
 };
 
