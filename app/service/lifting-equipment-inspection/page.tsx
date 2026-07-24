@@ -18,7 +18,7 @@ export const metadata: Metadata = {
     title: "Lifting Equipment Inspection — Cranes, Hoists & Slings",
     description: "Certified inspection of cranes, hoists, and forklifts. LOLER, ASME B30. Kuwait & Dubai.",
     url: "/service/lifting-equipment-inspection/",
-    images: [{ url: "/og-lifting-inspection.jpg", width: 1200, height: 630, alt: "Lifting Equipment Inspection — Texas Technical Services" }],
+    images: [{ url: "/og-default.png", width: 1200, height: 630, alt: "Lifting Equipment Inspection — Texas Technical Services" }],
   },
   twitter: { card: "summary_large_image", title: "Lifting Equipment Inspection — Cranes, Hoists & Slings", description: "Crane and hoist inspection. LOLER, ASME B30. Kuwait & Dubai." },
   keywords: ["lifting equipment inspection Kuwait", "crane inspection Kuwait", "hoist inspection Kuwait", "LOLER inspection Kuwait", "forklift inspection Kuwait", "lifting gear inspection Kuwait", "Texas Technical Services lifting inspection"],

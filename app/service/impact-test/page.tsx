@@ -18,7 +18,7 @@ export const metadata: Metadata = {
     title: "Impact Testing — Charpy & Izod Standards",
     description: "Charpy and Izod impact testing — shock resistance, low-temperature, and ductile-to-brittle transition. ASTM E23, ISO 148. Kuwait & Dubai.",
     url: "/service/impact-test/",
-    images: [{ url: "/og-impact-test.jpg", width: 1200, height: 630, alt: "Impact Test — Texas Technical Services" }],
+    images: [{ url: "/og-default.png", width: 1200, height: 630, alt: "Impact Test — Texas Technical Services" }],
   },
   twitter: { card: "summary_large_image", title: "Impact Testing — Charpy & Izod Standards", description: "Charpy and Izod impact testing. Low-temperature testing available. Kuwait & Dubai." },
   keywords: ["impact test Kuwait", "Charpy impact test Kuwait", "Izod impact test Kuwait", "low temperature impact test Kuwait", "fracture toughness impact Kuwait", "ASTM E23 impact test Kuwait", "Texas Technical Services impact test"],

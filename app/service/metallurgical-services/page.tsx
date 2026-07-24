@@ -18,7 +18,7 @@ export const metadata: Metadata = {
     title: "Metallurgical Services (PMI)",
     description: "XRF and OES Positive Material Identification for alloy verification and material traceability. API 578. Kuwait & Dubai.",
     url: "/service/metallurgical-services/",
-    images: [{ url: "/og-metallurgical-services.jpg", width: 1200, height: 630, alt: "Metallurgical Services PMI — Texas Technical Services" }],
+    images: [{ url: "/og-default.png", width: 1200, height: 630, alt: "Metallurgical Services PMI — Texas Technical Services" }],
   },
   twitter: { card: "summary_large_image", title: "Metallurgical Services (PMI)", description: "PMI alloy verification and material traceability. API 578. Kuwait & Dubai." },
   keywords: ["PMI Kuwait", "positive material identification Kuwait", "metallurgical services Kuwait", "XRF analysis Kuwait", "alloy verification Kuwait", "material traceability Kuwait", "Texas Technical Services PMI"],

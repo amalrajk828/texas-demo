@@ -22,7 +22,7 @@ export const metadata: Metadata = {
     description:
       "Tensile, hardness, impact, bend, fracture toughness, and macro/micro testing for metals, plastics, ceramics, and composites. Kuwait & Dubai.",
     url: "/service/mechanical-testing/",
-    images: [{ url: "/og-mechanical-testing.jpg", width: 1200, height: 630, alt: "Mechanical Testing — Texas Technical Services" }],
+    images: [{ url: "/og-default.png", width: 1200, height: 630, alt: "Mechanical Testing — Texas Technical Services" }],
   },
   twitter: {
     card: "summary_large_image",

@@ -18,7 +18,7 @@ export const metadata: Metadata = {
     title: "Hose Test — Curtain Wall Water Check",
     description: "Field hose test for curtain walls, windows, and doors. AAMA 501.2, ASTM E1105. Kuwait & Dubai.",
     url: "/service/hose-test/",
-    images: [{ url: "/og-hose-test.jpg", width: 1200, height: 630, alt: "Hose Test — Texas Technical Services" }],
+    images: [{ url: "/og-default.png", width: 1200, height: 630, alt: "Hose Test — Texas Technical Services" }],
   },
   twitter: { card: "summary_large_image", title: "Hose Test — Curtain Wall Water Check", description: "Field water check for facades and windows. AAMA 501.2. Kuwait & Dubai." },
   keywords: ["hose test Kuwait", "curtain wall hose test Kuwait", "facade water test Kuwait", "window hose test Kuwait", "AAMA 501.2 Kuwait", "building leakage test Kuwait", "Texas Technical Services hose test"],

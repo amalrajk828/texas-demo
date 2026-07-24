@@ -18,7 +18,7 @@ export const metadata: Metadata = {
     title: "Macro & Micro Testing — Weld Profile Examination",
     description: "Weld macro examination, metallographic analysis, grain size, and microstructural characterisation. ASTM E112, E45, ISO 643. Kuwait & Dubai.",
     url: "/service/macro-and-micro-test/",
-    images: [{ url: "/og-macro-micro-test.jpg", width: 1200, height: 630, alt: "Macro and Micro Test — Texas Technical Services" }],
+    images: [{ url: "/og-default.png", width: 1200, height: 630, alt: "Macro and Micro Test — Texas Technical Services" }],
   },
   twitter: { card: "summary_large_image", title: "Macro & Micro Testing — Weld Profile Examination", description: "Weld macro, metallographic micro examination, grain size, phase analysis. Kuwait & Dubai." },
   keywords: ["macro test Kuwait", "micro test Kuwait", "metallographic testing Kuwait", "weld macro examination Kuwait", "grain size analysis Kuwait", "microstructural analysis Kuwait", "metallography Kuwait", "Texas Technical Services macro micro test"],

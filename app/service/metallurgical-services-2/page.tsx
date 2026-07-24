@@ -18,7 +18,7 @@ export const metadata: Metadata = {
     title: "Metallurgical Services — OES Lab-Grade PMI & Full Chemistry",
     description: "OES lab-grade PMI delivering full chemical analysis and alloy verification. API 578. Kuwait & Dubai.",
     url: "/service/metallurgical-services-2/",
-    images: [{ url: "/og-metallurgical-services.jpg", width: 1200, height: 630, alt: "Metallurgical Services — OES Lab-Grade PMI & Full Chemistry — Texas Technical Services" }],
+    images: [{ url: "/og-default.png", width: 1200, height: 630, alt: "Metallurgical Services — OES Lab-Grade PMI & Full Chemistry — Texas Technical Services" }],
   },
   twitter: { card: "summary_large_image", title: "Metallurgical Services — OES Lab-Grade PMI & Full Chemistry", description: "OES lab-grade PMI with full chemistry analysis. API 578. Kuwait & Dubai." },
   keywords: ["OES PMI Kuwait", "lab-grade PMI Kuwait", "full chemistry analysis Kuwait", "positive material identification Kuwait", "alloy verification Kuwait", "material traceability Kuwait", "Texas Technical Services PMI"],

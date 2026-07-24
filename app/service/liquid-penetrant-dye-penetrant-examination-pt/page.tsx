@@ -18,7 +18,7 @@ export const metadata: Metadata = {
     title: "Liquid Penetrant / Dye Penetrant Examination (PT)",
     description: "Fluorescent and colour contrast penetrant testing for surface defect detection. ASTM E165, ISO 3452. Kuwait & Dubai.",
     url: "/service/liquid-penetrant-dye-penetrant-examination-pt/",
-    images: [{ url: "/og-penetrant-test.jpg", width: 1200, height: 630, alt: "Dye Penetrant Testing — Texas Technical Services" }],
+    images: [{ url: "/og-default.png", width: 1200, height: 630, alt: "Dye Penetrant Testing — Texas Technical Services" }],
   },
   twitter: { card: "summary_large_image", title: "Liquid Penetrant / Dye Penetrant (PT)", description: "Fluorescent and colour contrast PT. ASTM E165, ISO 3452. Kuwait & Dubai." },
   keywords: ["dye penetrant test Kuwait", "liquid penetrant testing Kuwait", "PT NDT Kuwait", "fluorescent penetrant Kuwait", "surface crack detection Kuwait", "LPI Kuwait", "ASTM E165 Kuwait", "Texas Technical Services penetrant test"],

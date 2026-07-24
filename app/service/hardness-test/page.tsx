@@ -18,7 +18,7 @@ export const metadata: Metadata = {
     title: "Hardness Testing — Brinell, Rockwell, Vickers",
     description: "Rockwell, Brinell, Vickers hardness testing to ASTM and ISO standards. Metals, plastics, ceramics. Kuwait & Dubai.",
     url: "/service/hardness-test/",
-    images: [{ url: "/og-hardness-test.jpg", width: 1200, height: 630, alt: "Hardness Test — Texas Technical Services" }],
+    images: [{ url: "/og-default.png", width: 1200, height: 630, alt: "Hardness Test — Texas Technical Services" }],
   },
   twitter: { card: "summary_large_image", title: "Hardness Testing — Brinell, Rockwell, Vickers", description: "Rockwell, Brinell, Vickers hardness testing. ASTM & ISO standards. Kuwait & Dubai." },
   keywords: ["hardness test Kuwait", "Rockwell hardness test Kuwait", "Brinell hardness test Kuwait", "Vickers hardness test Kuwait", "hardness testing metals Kuwait", "weld hardness survey Kuwait", "Texas Technical Services hardness test"],
