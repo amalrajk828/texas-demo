@@ -24,6 +24,7 @@ export const metadata: Metadata = {
     title: "Inspection & Testing Services — Page 4",
     description: "NDT and Mechanical Testing — comprehensive inspection solutions in Kuwait and the GCC.",
   },
+  keywords: ["industrial inspection Kuwait", "mechanical testing", "NDT services GCC", "quality assurance testing"],
 };
 
 const faqItems = [

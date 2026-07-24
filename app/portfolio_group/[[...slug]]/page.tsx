@@ -32,6 +32,17 @@ export async function generateMetadata({
       title: "Portfolio Categories",
       description:
         "Browse our portfolio by industry, product category, or application area.",
+      openGraph: {
+        title: "Portfolio Categories",
+        description: "Browse our portfolio by industry, product category, or application area.",
+        url: "/portfolio_group/",
+      },
+      twitter: {
+        card: "summary_large_image",
+        title: "Portfolio Categories",
+        description: "Browse our portfolio by industry, product category, or application area.",
+      },
+      keywords: ["industrial products Kuwait", "portfolio categories", "product catalog"],
     };
   }
   const result = getFilter(slug);
@@ -40,6 +51,17 @@ export async function generateMetadata({
     title: result.title,
     description: `Portfolio items in ${result.breadcrumb} — browse our range of industrial products and solutions.`,
     alternates: { canonical: `/portfolio_group/${slug.join("/")}/` },
+    openGraph: {
+      title: result.title,
+      description: `Portfolio items in ${result.breadcrumb} — browse our range of industrial products and solutions.`,
+      url: `/portfolio_group/${slug.join("/")}/`,
+    },
+    twitter: {
+      card: "summary_large_image",
+      title: result.title,
+      description: `Portfolio items in ${result.breadcrumb} — browse our range of industrial products and solutions.`,
+    },
+    keywords: ["industrial products Kuwait", "portfolio", result.title],
   };
 }
 

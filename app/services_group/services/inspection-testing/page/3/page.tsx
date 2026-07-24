@@ -24,6 +24,7 @@ export const metadata: Metadata = {
     title: "Inspection & Testing Services — Page 3",
     description: "UT, RT, MT, PT, VI — full NDT services in Kuwait and Dubai.",
   },
+  keywords: ["NDT Kuwait", "ultrasonic testing", "radiographic testing", "magnetic particle inspection", "visual inspection"],
 };
 
 const faqItems = [

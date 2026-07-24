@@ -24,6 +24,7 @@ export const metadata: Metadata = {
     title: "Inspection & Testing Services — Page 2",
     description: "TOFD, Eddy Current, Phased Array UT, and mechanical testing in Kuwait and Dubai.",
   },
+  keywords: ["inspection testing Kuwait", "NDT services", "TOFD", "eddy current testing", "mechanical testing"],
 };
 
 const faqItems = [

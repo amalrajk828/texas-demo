@@ -19,6 +19,17 @@ export async function generateMetadata({ params }: { params: Promise<{ page: str
     title: `Main Services — Page ${pageNum}`,
     description: `Page ${pageNum} of our complete range of industrial services — flow measurement, inspection & testing, process automation, and construction solutions.`,
     alternates: { canonical: `/services_group/services/page/${pageNum}/` },
+    openGraph: {
+      title: `Main Services — Page ${pageNum}`,
+      description: `Page ${pageNum} of our complete range of industrial services — flow measurement, inspection & testing, process automation, and construction solutions.`,
+      url: `/services_group/services/page/${pageNum}/`,
+    },
+    twitter: {
+      card: "summary_large_image",
+      title: `Main Services — Page ${pageNum}`,
+      description: `Page ${pageNum} of our complete range of industrial services — flow measurement, inspection & testing, process automation, and construction solutions.`,
+    },
+    keywords: ["industrial services Kuwait", "flow measurement", "inspection testing", "process automation"],
   };
 }
 
