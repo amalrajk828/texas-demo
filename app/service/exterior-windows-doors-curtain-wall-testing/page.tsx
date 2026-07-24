@@ -9,7 +9,6 @@ import { serviceCrossLinks } from "@/lib/serviceCrossLinks";
 import { FaqPageJsonLd } from "@/components/schema/FaqPageJsonLd";
 import { serviceFaqData } from "@/lib/serviceFaqData";
 import { ChevronRight } from "lucide-react";
-import ServiceDefinition from "@/components/service/ServiceDefinition";
 
 export const metadata: Metadata = {
   title: "Exterior Windows, Doors & Curtain Wall Testing",
@@ -80,7 +79,6 @@ export default function ExteriorWindowsPage() {
         </div>
         <div className="absolute bottom-0 left-0 right-0 h-16 bg-gradient-to-t from-[#f4f5f8] to-transparent" />
       </section>
-      <ServiceDefinition definition="Exterior windows, doors, and curtain wall testing evaluates performance through water penetration, air permeability, and structural performance testing. TTS provides comprehensive facade testing services to ASTM E1105, ASTM E783, and AAMA standards across Kuwait and the GCC." />
       <ExteriorTestingContent />
       <section className="bg-[#f4f5f8] py-24 lg:py-32">
         <div className="max-w-7xl mx-auto px-4 sm:px-6">

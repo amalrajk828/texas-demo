@@ -8,7 +8,6 @@ import Link from "next/link";
 import { FaqPageJsonLd } from "@/components/schema/FaqPageJsonLd";
 import { serviceFaqData } from "@/lib/serviceFaqData";
 import { ChevronRight } from "lucide-react";
-import ServiceDefinition from "@/components/service/ServiceDefinition";
 
 export const metadata: Metadata = {
   title: "Lifting Equipment Inspection — Cranes, Hoists & Slings",
@@ -40,7 +39,6 @@ export default function LiftingInspectionPage() {
   serviceType="Specialized Inspection"
   areaServed={["Kuwait", "United Arab Emirates", "Saudi Arabia", "Bahrain", "Qatar", "Oman"]}
 />
-      <ServiceDefinition definition="Lifting equipment inspection services provide systematic examination of cranes, hoists, forklifts, and elevators by certified competent persons with written reports. TTS delivers inspection services compliant with LOLER 1998, ASME B30, and BS EN 13001 standards across Kuwait and the GCC." />
       <LiftingInspectionHero />
       <LiftingInspectionContent />
 

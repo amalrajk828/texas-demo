@@ -8,7 +8,6 @@ import Link from "next/link";
 import { FaqPageJsonLd } from "@/components/schema/FaqPageJsonLd";
 import { serviceFaqData } from "@/lib/serviceFaqData";
 import { ChevronRight } from "lucide-react";
-import ServiceDefinition from "@/components/service/ServiceDefinition";
 
 export const metadata: Metadata = {
   title: "Fracture Toughness Testing — KIc, CTOD, J-Integral",
@@ -40,7 +39,6 @@ export default function FractureTestPage() {
   serviceType="Mechanical Testing"
   areaServed={["Kuwait", "United Arab Emirates", "Saudi Arabia", "Bahrain", "Qatar", "Oman"]}
 />
-      <ServiceDefinition definition="Fracture toughness testing measures a material's resistance to pre-existing flaw propagation using KIc, CTOD, and J-integral methods. TTS provides fracture testing services supporting fitness-for-service assessments and structural integrity qualification to ASTM E399, E1820, and BS 7448 standards in Kuwait and Dubai." />
       <FractureHero />
       <FractureContent />
 

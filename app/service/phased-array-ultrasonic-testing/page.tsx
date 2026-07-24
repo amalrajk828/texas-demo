@@ -8,7 +8,6 @@ import Link from "next/link";
 import { FaqPageJsonLd } from "@/components/schema/FaqPageJsonLd";
 import { serviceFaqData } from "@/lib/serviceFaqData";
 import { ChevronRight } from "lucide-react";
-import ServiceDefinition from "@/components/service/ServiceDefinition";
 
 export const metadata: Metadata = {
   title: "Phased Array Ultrasonic Testing (PAUT)",
@@ -40,7 +39,6 @@ export default function PhasedArrayPage() {
   serviceType="Non-Destructive Testing"
   areaServed={["Kuwait", "United Arab Emirates", "Saudi Arabia", "Bahrain", "Qatar", "Oman"]}
 />
-      <ServiceDefinition definition="Phased Array Ultrasonic Testing (PAUT) uses multi-element probes for advanced defect detection, thickness measurement, and weld inspection with enhanced resolution and coverage. TTS provides PAUT services to ASME V, API 1104, and EN ISO 13588 standards for critical applications across Kuwait and the GCC." />
       <PhasedArrayHero />
       <PhasedArrayContent />
 

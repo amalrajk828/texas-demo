@@ -8,7 +8,6 @@ import Link from "next/link";
 import { FaqPageJsonLd } from "@/components/schema/FaqPageJsonLd";
 import { serviceFaqData } from "@/lib/serviceFaqData";
 import { ChevronRight } from "lucide-react";
-import ServiceDefinition from "@/components/service/ServiceDefinition";
 
 export const metadata: Metadata = {
   title: "Control System Integration and Upgradation",
@@ -40,7 +39,6 @@ export default function ControlSystemPage() {
   serviceType="Industrial Automation"
   areaServed={["Kuwait", "United Arab Emirates", "Saudi Arabia", "Bahrain", "Qatar", "Oman"]}
 />
-      <ServiceDefinition definition="Control system integration and upgradation provides PLC and SCADA-based automation including multi-brand PLC programming, SCADA development, HMI design, and legacy system upgrades. TTS delivers comprehensive control system solutions for industrial operations across Kuwait and Dubai." />
       <ControlSystemHero />
       <ControlSystemContent />
 

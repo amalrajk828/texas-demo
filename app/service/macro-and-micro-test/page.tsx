@@ -8,7 +8,6 @@ import Link from "next/link";
 import { FaqPageJsonLd } from "@/components/schema/FaqPageJsonLd";
 import { serviceFaqData } from "@/lib/serviceFaqData";
 import { ChevronRight } from "lucide-react";
-import ServiceDefinition from "@/components/service/ServiceDefinition";
 
 export const metadata: Metadata = {
   title: "Macro & Micro Testing — Weld Profile Examination",
@@ -40,7 +39,6 @@ export default function MacroAndMicroTestPage() {
   serviceType="Mechanical Testing"
   areaServed={["Kuwait", "United Arab Emirates", "Saudi Arabia", "Bahrain", "Qatar", "Oman"]}
 />
-      <ServiceDefinition definition="Macro and micro testing provides material characterisation at different length scales including weld macro examination, metallographic grain structure analysis, and inclusion assessment. TTS delivers microstructural characterisation services to ASTM and ISO standards for industries in Kuwait and Dubai." />
       <MacroMicroHero />
       <MacroMicroContent />
 

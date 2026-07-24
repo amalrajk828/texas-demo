@@ -8,7 +8,6 @@ import Link from "next/link";
 import { FaqPageJsonLd } from "@/components/schema/FaqPageJsonLd";
 import { serviceFaqData } from "@/lib/serviceFaqData";
 import { ChevronRight } from "lucide-react";
-import ServiceDefinition from "@/components/service/ServiceDefinition";
 
 export const metadata: Metadata = {
   title: "Air Permeability Testing — Building Envelope",
@@ -40,7 +39,6 @@ export default function AirPermeabilityPage() {
   serviceType="Specialized Inspection"
   areaServed={["Kuwait", "United Arab Emirates", "Saudi Arabia", "Bahrain", "Qatar", "Oman"]}
 />
-      <ServiceDefinition definition="Air permeability testing measures air infiltration and locates leakage paths through exterior windows, doors, and curtain wall systems. TTS provides certified air permeability testing services per ASTM E783, ASTM E283, and EN 12207 standards for building envelope assessment in Kuwait and Dubai." />
       <AirPermeabilityHero />
       <AirPermeabilityContent />
 

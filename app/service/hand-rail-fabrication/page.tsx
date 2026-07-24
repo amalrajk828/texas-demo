@@ -8,7 +8,6 @@ import Link from "next/link";
 import { FaqPageJsonLd } from "@/components/schema/FaqPageJsonLd";
 import { serviceFaqData } from "@/lib/serviceFaqData";
 import { ChevronRight } from "lucide-react";
-import ServiceDefinition from "@/components/service/ServiceDefinition";
 
 export const metadata: Metadata = {
   title: "Hand Rail Fabrication — Safety Guardrails & Platforms",
@@ -40,7 +39,6 @@ export default function HandRailPage() {
   serviceType="Fabrication"
   areaServed={["Kuwait", "United Arab Emirates", "Saudi Arabia", "Bahrain", "Qatar", "Oman"]}
 />
-      <ServiceDefinition definition="Hand rail fabrication involves the skilled creation of safety handrails and support structures using steel, aluminum, and durable materials compliant with safety regulations. TTS provides custom hand rail fabrication services for industrial and commercial applications across Kuwait and Dubai." />
       <HandRailHero />
       <HandRailContent />
 

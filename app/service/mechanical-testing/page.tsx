@@ -9,7 +9,6 @@ import { FaqPageJsonLd } from "@/components/schema/FaqPageJsonLd";
 import { serviceFaqData } from "@/lib/serviceFaqData";
 import { ChevronRight } from "lucide-react";
 import { ItemListJsonLd } from "@/components/schema/ItemListJsonLd";
-import ServiceDefinition from "@/components/service/ServiceDefinition";
 
 export const metadata: Metadata = {
   title: "Mechanical Testing — Tensile, Hardness, Impact, Bend",
@@ -57,7 +56,6 @@ export default function MechanicalTestingPage() {
   serviceType="Mechanical Testing"
   areaServed={["Kuwait", "United Arab Emirates", "Saudi Arabia", "Bahrain", "Qatar", "Oman"]}
 />
-      <ServiceDefinition definition="Mechanical testing services evaluate the physical properties of metals, plastics, ceramics, and composites through tensile, hardness, impact, bend, fracture toughness, and macro/micro examination. TTS provides comprehensive mechanical testing solutions for industrial applications across Kuwait and Dubai." />
       <MechanicalHero />
       <MechanicalSubServices />
 

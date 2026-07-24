@@ -8,7 +8,6 @@ import Link from "next/link";
 import { FaqPageJsonLd } from "@/components/schema/FaqPageJsonLd";
 import { serviceFaqData } from "@/lib/serviceFaqData";
 import { ChevronRight, ArrowRight } from "lucide-react";
-import ServiceDefinition from "@/components/service/ServiceDefinition";
 
 export const metadata: Metadata = {
   title: "Magnetic Particle Inspection (MT) — Surface Crack Detection",
@@ -40,7 +39,6 @@ export default function MagneticParticlePage() {
   serviceType="Non-Destructive Testing"
   areaServed={["Kuwait", "United Arab Emirates", "Saudi Arabia", "Bahrain", "Qatar", "Oman"]}
 />
-      <ServiceDefinition definition="Magnetic Particle Inspection (MT) detects surface and near-surface defects in ferromagnetic materials including iron, steel, nickel, and cobalt alloys. TTS provides wet fluorescent and colour contrast MPI services to ASME V, ISO 17638, and ASTM E709 standards across Kuwait and Dubai." />
       <MagneticParticleHero />
       <MagneticParticleContent />
 

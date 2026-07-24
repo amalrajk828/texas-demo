@@ -8,7 +8,6 @@ import Link from "next/link";
 import { FaqPageJsonLd } from "@/components/schema/FaqPageJsonLd";
 import { serviceFaqData } from "@/lib/serviceFaqData";
 import { ChevronRight } from "lucide-react";
-import ServiceDefinition from "@/components/service/ServiceDefinition";
 
 export const metadata: Metadata = {
   title: "Supply and Installation of Suspended Access Equipment",
@@ -40,7 +39,6 @@ export default function SuspendedAccessPage() {
   serviceType="Suspended Access Equipment"
   areaServed={["Kuwait", "United Arab Emirates", "Saudi Arabia", "Bahrain", "Qatar", "Oman"]}
 />
-      <ServiceDefinition definition="Supply and installation of suspended access equipment covers telescopic roof machines, twin track roof machines, powered cradles, recess cradles, monorails, and davit systems. TTS provides complete building maintenance and facade access equipment solutions across Kuwait and the GCC." />
       <SuspendedAccessHero />
       <SuspendedAccessContent />
 

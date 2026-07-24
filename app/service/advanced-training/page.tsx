@@ -7,7 +7,6 @@ import { FaqPageJsonLd } from "@/components/schema/FaqPageJsonLd";
 import { serviceFaqData } from "@/lib/serviceFaqData";
 import { serviceCrossLinks } from "@/lib/serviceCrossLinks";
 import { ChevronRight } from "lucide-react";
-import ServiceDefinition from "@/components/service/ServiceDefinition";
 import Link from "next/link";
 
 export const metadata: Metadata = {
@@ -40,7 +39,6 @@ export default function AdvancedTrainingPage() {
   serviceType="Training"
   areaServed={["Kuwait", "United Arab Emirates", "Saudi Arabia", "Bahrain", "Qatar", "Oman"]}
 />
-      <ServiceDefinition definition="Advanced Training delivers on-demand courses at OEM premises, via videoconferencing, or at customer sites covering metering installation, commissioning, and operation. TTS provides expert-led training programmes for industrial professionals in Kuwait, Dubai, and the wider GCC region." />
       <AdvancedTrainingHero />
       <AdvancedTrainingContent />
     

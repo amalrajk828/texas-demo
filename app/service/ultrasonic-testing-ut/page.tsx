@@ -8,7 +8,6 @@ import Link from "next/link";
 import { FaqPageJsonLd } from "@/components/schema/FaqPageJsonLd";
 import { serviceFaqData } from "@/lib/serviceFaqData";
 import { ChevronRight, ArrowRight } from "lucide-react";
-import ServiceDefinition from "@/components/service/ServiceDefinition";
 
 export const metadata: Metadata = {
   title: "Ultrasonic Testing (UT) — Weld & Thickness Inspection",
@@ -40,7 +39,6 @@ export default function UltrasonicTestingPage() {
   serviceType="Non-Destructive Testing"
   areaServed={["Kuwait", "United Arab Emirates", "Saudi Arabia", "Bahrain", "Qatar", "Oman"]}
 />
-      <ServiceDefinition definition="Ultrasonic Testing (UT) is a non-destructive testing method that uses high-frequency sound waves to detect internal defects and measure wall thickness in metals and materials. TTS provides conventional UT, TOFD, and thickness measurement services with certified Level II and Level III personnel across Kuwait and the GCC." />
       <UltrasonicHero />
       <UltrasonicContent />
 

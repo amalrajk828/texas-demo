@@ -8,7 +8,6 @@ import Link from "next/link";
 import { FaqPageJsonLd } from "@/components/schema/FaqPageJsonLd";
 import { serviceFaqData } from "@/lib/serviceFaqData";
 import { ChevronRight } from "lucide-react";
-import ServiceDefinition from "@/components/service/ServiceDefinition";
 
 export const metadata: Metadata = {
   title: "Eddy Current Testing (ECT) — Tube & Surface Inspection",
@@ -40,7 +39,6 @@ export default function EddyCurrentPage() {
   serviceType="Non-Destructive Testing"
   areaServed={["Kuwait", "United Arab Emirates", "Saudi Arabia", "Bahrain", "Qatar", "Oman"]}
 />
-      <ServiceDefinition definition="Eddy Current Testing (ECT) detects flaws in tubes and material surfaces using electromagnetic induction for heat exchanger tube inspection and surface crack detection. TTS provides ECT services including conductivity measurement to ASTM E426 and ASME V standards in Kuwait and Dubai." />
       <EddyCurrentHero />
       <EddyCurrentContent />
 

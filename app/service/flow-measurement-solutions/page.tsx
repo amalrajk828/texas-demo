@@ -7,7 +7,6 @@ import { FaqPageJsonLd } from "@/components/schema/FaqPageJsonLd";
 import { ChevronRight, ArrowRight } from "lucide-react";
 import { serviceCrossLinks } from "@/lib/serviceCrossLinks";
 import Link from "next/link";
-import ServiceDefinition from "@/components/service/ServiceDefinition";
 
 export const metadata: Metadata = {
   title: "Flow Measurement & Control System Solutions",
@@ -78,7 +77,6 @@ export default function FlowMeasurementPage() {
         areaServed={["Kuwait", "United Arab Emirates", "Saudi Arabia", "Bahrain", "Qatar", "Oman"]}
       />
       <FaqPageJsonLd items={faqItems} />
-      <ServiceDefinition definition="Flow measurement solutions encompass the design, installation, calibration, and maintenance of flow metering systems for custody transfer and process applications. TTS delivers metering control system upgrades, flow computer configuration, and calibration services compliant with API MPMS, AGA, ISO, and OIML standards across the GCC." />
       <FlowHero />
       <FlowSubServices />
       {/* ══ RELATED COMPARISON ═══════════════════════════════ */}

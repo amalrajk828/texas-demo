@@ -8,7 +8,6 @@ import Link from "next/link";
 import { FaqPageJsonLd } from "@/components/schema/FaqPageJsonLd";
 import { serviceFaqData } from "@/lib/serviceFaqData";
 import { ChevronRight } from "lucide-react";
-import ServiceDefinition from "@/components/service/ServiceDefinition";
 
 export const metadata: Metadata = {
   title: "Tensile Testing — ASTM E8, ISO 6892",
@@ -40,7 +39,6 @@ export default function TensileTestPage() {
   serviceType="Mechanical Testing"
   areaServed={["Kuwait", "United Arab Emirates", "Saudi Arabia", "Bahrain", "Qatar", "Oman"]}
 />
-      <ServiceDefinition definition="Tensile testing determines tensile strength, yield strength, and ductility of metals, plastics, ceramics, and composites through fundamental mechanical testing. TTS provides certified tensile testing services to ASTM E8, ISO 6892, and BS EN standards in Kuwait and Dubai." />
       <TensileHero />
       <TensileContent />
 

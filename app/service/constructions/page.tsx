@@ -7,7 +7,6 @@ import { FaqPageJsonLd } from "@/components/schema/FaqPageJsonLd";
 import { ChevronRight } from "lucide-react";
 import { serviceCrossLinks } from "@/lib/serviceCrossLinks";
 import Link from "next/link";
-import ServiceDefinition from "@/components/service/ServiceDefinition";
 
 export const metadata: Metadata = {
   title: "Industrial Construction & Project Delivery",
@@ -74,7 +73,6 @@ export default function ConstructionPage() {
         areaServed={["Kuwait", "United Arab Emirates", "Saudi Arabia", "Bahrain", "Qatar", "Oman"]}
       />
       <FaqPageJsonLd items={faqItems} />
-      <ServiceDefinition definition="Industrial construction and project delivery services encompass structural steel fabrication, gantry fabrication, piping, electrical works, and EPC project execution. TTS provides comprehensive construction solutions for oil and gas plants across Kuwait and the wider GCC region." />
       <ConstructionHero />
       <ConstructionSubServices />
       <section className="bg-[#f4f5f8] py-20 lg:py-24">

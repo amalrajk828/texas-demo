@@ -10,7 +10,6 @@ import { serviceFaqData } from "@/lib/serviceFaqData";
 import { ChevronRight } from "lucide-react";
 import { HowToJsonLd } from "@/components/schema/HowToJsonLd";
 import ServiceProcessSteps from "@/components/ServiceProcessSteps";
-import ServiceDefinition from "@/components/service/ServiceDefinition";
 
 export const metadata: Metadata = {
   title: "Commissioning and Start-up Support",
@@ -42,7 +41,6 @@ export default function CommissioningPage() {
   serviceType="Commissioning"
   areaServed={["Kuwait", "United Arab Emirates", "Saudi Arabia", "Bahrain", "Qatar", "Oman"]}
 />
-      <ServiceDefinition definition="Commissioning and start-up support provides validation and fine-tuning of PLCs, DCS, SCADA, sensors, and safety systems from pre-commissioning through hot start-up. TTS delivers industrial process automation commissioning services for oil and gas, chemical, and manufacturing facilities in Kuwait and Dubai." />
       <CommissioningHero />
       <CommissioningContent />
 

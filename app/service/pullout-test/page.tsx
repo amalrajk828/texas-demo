@@ -8,7 +8,6 @@ import Link from "next/link";
 import { FaqPageJsonLd } from "@/components/schema/FaqPageJsonLd";
 import { serviceFaqData } from "@/lib/serviceFaqData";
 import { ChevronRight } from "lucide-react";
-import ServiceDefinition from "@/components/service/ServiceDefinition";
 
 export const metadata: Metadata = {
   title: "Pullout Testing — Anchor, Rebar & Fastener Strength",
@@ -40,7 +39,6 @@ export default function PulloutTestPage() {
   serviceType="Specialized Inspection"
   areaServed={["Kuwait", "United Arab Emirates", "Saudi Arabia", "Bahrain", "Qatar", "Oman"]}
 />
-      <ServiceDefinition definition="Pullout testing determines bond strength and integrity between bolts and concrete or masonry substrates for structural anchor verification. TTS provides certified pullout testing services for cast-in inserts to ASTM C900, EN 12504-3, and ACI 318 standards in Kuwait and Dubai." />
       <PulloutHero />
       <PulloutContent />
 

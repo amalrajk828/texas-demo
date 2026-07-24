@@ -8,7 +8,6 @@ import Link from "next/link";
 import { FaqPageJsonLd } from "@/components/schema/FaqPageJsonLd";
 import { serviceFaqData } from "@/lib/serviceFaqData";
 import { ChevronRight } from "lucide-react";
-import ServiceDefinition from "@/components/service/ServiceDefinition";
 
 export const metadata: Metadata = {
   title: "Impact Testing — Charpy & Izod Standards",
@@ -40,7 +39,6 @@ export default function ImpactTestPage() {
   serviceType="Mechanical Testing"
   areaServed={["Kuwait", "United Arab Emirates", "Saudi Arabia", "Bahrain", "Qatar", "Oman"]}
 />
-      <ServiceDefinition definition="Impact testing evaluates a material's resistance to sudden shock loading using Charpy or Izod methods at various temperatures. TTS provides certified impact testing services including low-temperature testing and ductile-to-brittle transition assessment to ASTM E23 and ISO 148 standards for industries across Kuwait and Dubai." />
       <ImpactHero />
       <ImpactContent />
 

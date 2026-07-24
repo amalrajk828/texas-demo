@@ -8,7 +8,6 @@ import Link from "next/link";
 import { FaqPageJsonLd } from "@/components/schema/FaqPageJsonLd";
 import { serviceFaqData } from "@/lib/serviceFaqData";
 import { ChevronRight } from "lucide-react";
-import ServiceDefinition from "@/components/service/ServiceDefinition";
 
 export const metadata: Metadata = {
   title: "Gamma Ray Pipe Crawler Inspection Systems",
@@ -40,7 +39,6 @@ export default function GammaRayPage() {
   serviceType="Non-Destructive Testing"
   areaServed={["Kuwait", "United Arab Emirates", "Saudi Arabia", "Bahrain", "Qatar", "Oman"]}
 />
-      <ServiceDefinition definition="Gamma Ray Pipe Crawler Inspection Systems use battery-powered remote-controlled mobile radiographic machines to produce single-wall single-image radiographs of circumferential pipeline welds. TTS deploys advanced pipe crawler technology for efficient pipeline weld inspection to ASME V and API 1104 standards in Kuwait and the GCC." />
       <GammaRayHero />
       <GammaRayContent />
 

@@ -8,7 +8,6 @@ import Link from "next/link";
 import { FaqPageJsonLd } from "@/components/schema/FaqPageJsonLd";
 import { serviceFaqData } from "@/lib/serviceFaqData";
 import { ChevronRight } from "lucide-react";
-import ServiceDefinition from "@/components/service/ServiceDefinition";
 
 export const metadata: Metadata = {
   title: "Electrical & Instrumentation Works",
@@ -40,7 +39,6 @@ export default function ElectricalWorksPage() {
   serviceType="Electrical & Instrumentation"
   areaServed={["Kuwait", "United Arab Emirates", "Saudi Arabia", "Bahrain", "Qatar", "Oman"]}
 />
-      <ServiceDefinition definition="Electrical and instrumentation works encompass the installation, maintenance, and optimization of electrical systems and instrumentation equipment for industrial facilities. TTS provides comprehensive electrical and I&C services from design to commissioning across Kuwait and the GCC." />
       <ElectricalWorksHero />
       <ElectricalWorksContent />
 

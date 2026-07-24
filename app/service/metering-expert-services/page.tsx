@@ -8,7 +8,6 @@ import Link from "next/link";
 import { FaqPageJsonLd } from "@/components/schema/FaqPageJsonLd";
 import { serviceFaqData } from "@/lib/serviceFaqData";
 import { ChevronRight } from "lucide-react";
-import ServiceDefinition from "@/components/service/ServiceDefinition";
 
 export const metadata: Metadata = {
   title: "Metering Expert Services — Fiscal Audits & Compliance",
@@ -64,7 +63,6 @@ export default function MeteringExpertServicesPage() {
   serviceType="Flow Measurement"
   areaServed={["Kuwait", "United Arab Emirates", "Saudi Arabia", "Bahrain", "Qatar", "Oman"]}
 />
-      <ServiceDefinition definition="Metering expert services provide specialist engineering support for on-site assignments, project supervision, training, and technical secondment. TTS offers deep custody transfer metering expertise available for short and long-term engagements in Kuwait, Dubai, and the wider region." />
       <ExpertServicesHero />
       <ExpertServicesContent />
 

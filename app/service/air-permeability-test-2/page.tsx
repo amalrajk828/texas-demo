@@ -8,7 +8,6 @@ import Link from "next/link";
 import { FaqPageJsonLd } from "@/components/schema/FaqPageJsonLd";
 import { serviceFaqData } from "@/lib/serviceFaqData";
 import { ChevronRight } from "lucide-react";
-import ServiceDefinition from "@/components/service/ServiceDefinition";
 
 export const metadata: Metadata = {
   title: "Air Permeability Test — On-Site Installed Envelope Testing",
@@ -40,7 +39,6 @@ export default function AirPermeabilityPage2() {
   serviceType="Specialized Inspection"
   areaServed={["Kuwait", "United Arab Emirates", "Saudi Arabia", "Bahrain", "Qatar", "Oman"]}
 />
-      <ServiceDefinition definition="On-site air permeability testing measures infiltration and locates leakage paths through installed windows, doors, and curtain wall systems. TTS provides certified field testing services per ASTM E783 and EN 12207 standards for building envelope assessment in Kuwait and Dubai." />
       <AirPermeabilityHero />
       <section className="bg-white py-12 lg:py-16">
         <div className="max-w-7xl mx-auto px-4 sm:px-6">

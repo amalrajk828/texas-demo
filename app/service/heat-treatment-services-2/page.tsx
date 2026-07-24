@@ -8,7 +8,6 @@ import Link from "next/link";
 import { FaqPageJsonLd } from "@/components/schema/FaqPageJsonLd";
 import { serviceFaqData } from "@/lib/serviceFaqData";
 import { ChevronRight } from "lucide-react";
-import ServiceDefinition from "@/components/service/ServiceDefinition";
 
 export const metadata: Metadata = {
   title: "Heat Treatment Services — Structural Steel & Offshore PWHT",
@@ -40,7 +39,6 @@ export default function HeatTreatmentPage2() {
   serviceType="Mechanical Testing"
   areaServed={["Kuwait", "United Arab Emirates", "Saudi Arabia", "Bahrain", "Qatar", "Oman"]}
 />
-      <ServiceDefinition definition="Heat treatment services for structural steel and offshore assets include Post Weld Heat Treatment (PWHT), stress relief, and annealing. TTS provides certified heat treatment services to ASME VIII and AWS D1.1 standards for heavy fabrications across Kuwait and the GCC." />
       <HeatTreatmentHero />
       <section className="bg-white py-12 lg:py-16">
         <div className="max-w-7xl mx-auto px-4 sm:px-6">

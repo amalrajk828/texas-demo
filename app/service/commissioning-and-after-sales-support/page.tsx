@@ -8,7 +8,6 @@ import Link from "next/link";
 import { FaqPageJsonLd } from "@/components/schema/FaqPageJsonLd";
 import { serviceFaqData } from "@/lib/serviceFaqData";
 import { ChevronRight } from "lucide-react";
-import ServiceDefinition from "@/components/service/ServiceDefinition";
 
 export const metadata: Metadata = {
   title: "Commissioning and After Sales Support",
@@ -64,7 +63,6 @@ export default function CommissioningAfterSalesPage() {
   serviceType="Commissioning"
   areaServed={["Kuwait", "United Arab Emirates", "Saudi Arabia", "Bahrain", "Qatar", "Oman"]}
 />
-      <ServiceDefinition definition="Commissioning and after-sales support ensures seamless integration and peak performance of flow meters, metering control systems, analyzers, and CEMS. TTS provides expert commissioning with 24/7 after-sales support and maintenance for industrial instrumentation across Kuwait and Dubai." />
       <CommissioningHero />
       <CommissioningContent />
 

@@ -9,7 +9,6 @@ import Link from "next/link";
 import { FaqPageJsonLd } from "@/components/schema/FaqPageJsonLd";
 import { serviceFaqData } from "@/lib/serviceFaqData";
 import { ChevronRight } from "lucide-react";
-import ServiceDefinition from "@/components/service/ServiceDefinition";
 
 export const metadata: Metadata = {
   title: "Metering Control System Integration",
@@ -65,7 +64,6 @@ export default function McsiPage() {
   serviceType="Flow Measurement"
   areaServed={["Kuwait", "United Arab Emirates", "Saudi Arabia", "Bahrain", "Qatar", "Oman"]}
 />
-      <ServiceDefinition definition="Metering control system integration provides custody transfer flow metering control system development including SCADA, PLC, HMI, server configuration, and full system integration. TTS delivers compliant metering solutions as an authorised OEM representative across Kuwait and Dubai." />
       <McsiHero />
       <McsiServices />
       <McsiWhyUs />

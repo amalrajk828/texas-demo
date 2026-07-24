@@ -8,7 +8,6 @@ import Link from "next/link";
 import { FaqPageJsonLd } from "@/components/schema/FaqPageJsonLd";
 import { serviceFaqData } from "@/lib/serviceFaqData";
 import { ChevronRight } from "lucide-react";
-import ServiceDefinition from "@/components/service/ServiceDefinition";
 
 export const metadata: Metadata = {
   title: "Water Penetration Testing — Facade & Building",
@@ -40,7 +39,6 @@ export default function WaterPenetrationPage() {
   serviceType="Specialized Inspection"
   areaServed={["Kuwait", "United Arab Emirates", "Saudi Arabia", "Bahrain", "Qatar", "Oman"]}
 />
-      <ServiceDefinition definition="Water penetration testing identifies leakage and assesses building envelope integrity for windows, doors, and curtain wall systems using static pressure methods. TTS provides certified water penetration testing to ASTM E1105, AAMA 502, and BS 6375 standards in Kuwait and Dubai." />
       <WaterPenetrationHero />
       <WaterPenetrationContent />
 

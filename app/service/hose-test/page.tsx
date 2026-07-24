@@ -8,7 +8,6 @@ import Link from "next/link";
 import { FaqPageJsonLd } from "@/components/schema/FaqPageJsonLd";
 import { serviceFaqData } from "@/lib/serviceFaqData";
 import { ChevronRight } from "lucide-react";
-import ServiceDefinition from "@/components/service/ServiceDefinition";
 
 export const metadata: Metadata = {
   title: "Hose Test — Curtain Wall & Facade Water Check",
@@ -40,7 +39,6 @@ export default function HoseTestPage() {
   serviceType="Specialized Inspection"
   areaServed={["Kuwait", "United Arab Emirates", "Saudi Arabia", "Bahrain", "Qatar", "Oman"]}
 />
-      <ServiceDefinition definition="Hose testing provides quality assurance water checking for installed curtain walls, exterior windows, and doors to identify field leakage and diagnostic reporting. TTS delivers hose test services to AAMA 501.2 and ASTM E1105 standards for building envelope assessment in Kuwait and Dubai." />
       <HoseTestHero />
       <HoseTestContent />
 

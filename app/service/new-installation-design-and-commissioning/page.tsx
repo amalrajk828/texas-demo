@@ -8,7 +8,6 @@ import Link from "next/link";
 import { FaqPageJsonLd } from "@/components/schema/FaqPageJsonLd";
 import { serviceFaqData } from "@/lib/serviceFaqData";
 import { ChevronRight } from "lucide-react";
-import ServiceDefinition from "@/components/service/ServiceDefinition";
 
 export const metadata: Metadata = {
   title: "New Installation Design and Commissioning",
@@ -40,7 +39,6 @@ export default function NewInstallationPage() {
   serviceType="Installation & Commissioning"
   areaServed={["Kuwait", "United Arab Emirates", "Saudi Arabia", "Bahrain", "Qatar", "Oman"]}
 />
-      <ServiceDefinition definition="New installation design and commissioning covers specification, design, sizing, and operation of future metering systems including general arrangement, P&ID, electrical SLD, and cable schedules. As authorised OEM Representative, TTS delivers complete metering system solutions across Kuwait and the GCC." />
       <NewInstallationHero />
       <NewInstallationContent />
 

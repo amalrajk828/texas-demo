@@ -8,7 +8,6 @@ import Link from "next/link";
 import { FaqPageJsonLd } from "@/components/schema/FaqPageJsonLd";
 import { serviceFaqData } from "@/lib/serviceFaqData";
 import { ChevronRight } from "lucide-react";
-import ServiceDefinition from "@/components/service/ServiceDefinition";
 
 export const metadata: Metadata = {
   title: "Genuine Spare Parts — Flow Meters, PLCs, Analyzers",
@@ -64,7 +63,6 @@ export default function GenuineSpareParts() {
   serviceType="Commissioning"
   areaServed={["Kuwait", "United Arab Emirates", "Saudi Arabia", "Bahrain", "Qatar", "Oman"]}
 />
-      <ServiceDefinition definition="Genuine OEM spare parts for Faure Herman helical flow meters and associated metering equipment — authentic, traceable, and quality-certified components. As authorised Faure Herman OEM Representative, TTS supplies genuine parts ensuring optimal meter performance across Kuwait and the GCC." />
       <SparePartsHero />
       <SparePartsContent />
 

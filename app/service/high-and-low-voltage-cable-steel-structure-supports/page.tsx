@@ -8,7 +8,6 @@ import Link from "next/link";
 import { FaqPageJsonLd } from "@/components/schema/FaqPageJsonLd";
 import { serviceFaqData } from "@/lib/serviceFaqData";
 import { ChevronRight } from "lucide-react";
-import ServiceDefinition from "@/components/service/ServiceDefinition";
 
 export const metadata: Metadata = {
   title: "High and Low Voltage Cable Steel Structure Supports",
@@ -40,7 +39,6 @@ export default function CableSupportsPage() {
   serviceType="Steel Structure Supports"
   areaServed={["Kuwait", "United Arab Emirates", "Saudi Arabia", "Bahrain", "Qatar", "Oman"]}
 />
-      <ServiceDefinition definition="High and low voltage cable steel structure supports involve the design, fabrication, and erection of cable support structures, pathways, and steel structural supports for industrial electrical infrastructure. TTS delivers complete cable support solutions for facilities across Kuwait and the GCC." />
       <CableSupportsHero />
       <CableSupportsContent />
 

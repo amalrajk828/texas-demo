@@ -8,7 +8,6 @@ import Link from "next/link";
 import { FaqPageJsonLd } from "@/components/schema/FaqPageJsonLd";
 import { serviceFaqData } from "@/lib/serviceFaqData";
 import { ChevronRight } from "lucide-react";
-import ServiceDefinition from "@/components/service/ServiceDefinition";
 
 export const metadata: Metadata = {
   title: "Torque Tightening & Bolt Tensioning",
@@ -40,7 +39,6 @@ export default function TorquePage() {
   serviceType="Specialized Inspection"
   areaServed={["Kuwait", "United Arab Emirates", "Saudi Arabia", "Bahrain", "Qatar", "Oman"]}
 />
-      <ServiceDefinition definition="Torque tightening and bolt tensioning services use calibrated hydraulic tools and torque sensors for bolted flange connections, pressure vessel fasteners, and structural bolting. TTS provides certified services to ASME PCC-1, EN 1591, and API 6A standards in Kuwait and Dubai." />
       <TorqueHero />
       <TorqueContent />
 

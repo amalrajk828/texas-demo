@@ -8,7 +8,6 @@ import Link from "next/link";
 import { FaqPageJsonLd } from "@/components/schema/FaqPageJsonLd";
 import { serviceFaqData } from "@/lib/serviceFaqData";
 import { ChevronRight } from "lucide-react";
-import ServiceDefinition from "@/components/service/ServiceDefinition";
 
 export const metadata: Metadata = {
   title: "Videoscope Remote Visual Inspection",
@@ -40,7 +39,6 @@ export default function VideoscopePage() {
   serviceType="Inspection Services"
   areaServed={["Kuwait", "United Arab Emirates", "Saudi Arabia", "Bahrain", "Qatar", "Oman"]}
 />
-      <ServiceDefinition definition="Videoscope remote visual inspection provides internal inspection of pipes, vessels, turbines, and engines in confined and inaccessible areas with HD image and video recording. TTS delivers advanced videoscope inspection services across Kuwait and the GCC." />
       <VideoscopeHero />
       <VideoscopeContent />
 

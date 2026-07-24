@@ -8,7 +8,6 @@ import Link from "next/link";
 import { FaqPageJsonLd } from "@/components/schema/FaqPageJsonLd";
 import { serviceFaqData } from "@/lib/serviceFaqData";
 import { ChevronRight } from "lucide-react";
-import ServiceDefinition from "@/components/service/ServiceDefinition";
 
 export const metadata: Metadata = {
   title: "Metallurgical Services — Positive Material Identification (PMI)",
@@ -40,7 +39,6 @@ export default function MetallurgicalPage() {
   serviceType="Mechanical Testing"
   areaServed={["Kuwait", "United Arab Emirates", "Saudi Arabia", "Bahrain", "Qatar", "Oman"]}
 />
-      <ServiceDefinition definition="Metallurgical services include Positive Material Identification (PMI) using XRF and OES to verify chemical composition of metals and alloys against specification requirements. TTS provides material traceability solutions for oil and gas and petrochemical industries across Kuwait and the GCC." />
       <MetallurgicalHero />
       <MetallurgicalContent />
 

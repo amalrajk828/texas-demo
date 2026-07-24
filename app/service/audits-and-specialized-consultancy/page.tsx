@@ -8,7 +8,6 @@ import Link from "next/link";
 import { FaqPageJsonLd } from "@/components/schema/FaqPageJsonLd";
 import { serviceFaqData } from "@/lib/serviceFaqData";
 import { ChevronRight } from "lucide-react";
-import ServiceDefinition from "@/components/service/ServiceDefinition";
 
 export const metadata: Metadata = {
   title: "Audits and Specialized Consultancy",
@@ -64,7 +63,6 @@ export default function AuditsSpecializedConsultancyPage() {
   serviceType="Flow Measurement"
   areaServed={["Kuwait", "United Arab Emirates", "Saudi Arabia", "Bahrain", "Qatar", "Oman"]}
 />
-      <ServiceDefinition definition="Audits and specialized consultancy provide custody metering skid audits, compliance assessments, process optimization, and expert consultancy services. TTS delivers metering audit and consultancy solutions compliant with API, AGA, ISO, and OIML standards across Kuwait and Dubai." />
       <AuditsHero />
       <AuditsContent />
 

@@ -8,7 +8,6 @@ import Link from "next/link";
 import { FaqPageJsonLd } from "@/components/schema/FaqPageJsonLd";
 import { serviceFaqData } from "@/lib/serviceFaqData";
 import { ChevronRight } from "lucide-react";
-import ServiceDefinition from "@/components/service/ServiceDefinition";
 
 export const metadata: Metadata = {
   title: "Torque Tightening & Bolt Tensioning — Hydraulic Tensioning for High-Load Flanges",
@@ -40,7 +39,6 @@ export default function TorquePage2() {
   serviceType="Specialized Inspection"
   areaServed={["Kuwait", "United Arab Emirates", "Saudi Arabia", "Bahrain", "Qatar", "Oman"]}
 />
-      <ServiceDefinition definition="Hydraulic bolt tensioning services apply calibrated multi-bolt load to high-load flanges, pressure vessel fasteners, and critical bolted connections. TTS provides certified bolt tensioning to ASME PCC-1, EN 1591, and API 6A standards in Kuwait and Dubai." />
       <TorqueHero />
       <section className="bg-white py-12 lg:py-16">
         <div className="max-w-7xl mx-auto px-4 sm:px-6">

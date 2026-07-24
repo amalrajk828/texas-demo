@@ -8,7 +8,6 @@ import Link from "next/link";
 import { FaqPageJsonLd } from "@/components/schema/FaqPageJsonLd";
 import { serviceFaqData } from "@/lib/serviceFaqData";
 import { ChevronRight } from "lucide-react";
-import ServiceDefinition from "@/components/service/ServiceDefinition";
 
 export const metadata: Metadata = {
   title: "Hose Test — Existing Building Leak Diagnostics",
@@ -40,7 +39,6 @@ export default function HoseTestPage2() {
   serviceType="Specialized Inspection"
   areaServed={["Kuwait", "United Arab Emirates", "Saudi Arabia", "Bahrain", "Qatar", "Oman"]}
 />
-      <ServiceDefinition definition="Hose testing for existing buildings identifies active water intrusion through curtain walls, exterior windows, and doors. TTS delivers diagnostic hose test services to AAMA 501.2 and ASTM E1105 standards for leak detection and remediation planning in Kuwait and Dubai." />
       <HoseTestHero />
       <section className="bg-white py-12 lg:py-16">
         <div className="max-w-7xl mx-auto px-4 sm:px-6">

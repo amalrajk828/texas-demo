@@ -8,7 +8,6 @@ import Link from "next/link";
 import { FaqPageJsonLd } from "@/components/schema/FaqPageJsonLd";
 import { serviceFaqData } from "@/lib/serviceFaqData";
 import { ChevronRight } from "lucide-react";
-import ServiceDefinition from "@/components/service/ServiceDefinition";
 
 export const metadata: Metadata = {
   title: "Process Plant Automation — Electrical & Instrumentation",
@@ -40,7 +39,6 @@ export default function PlantAutomationPage() {
   serviceType="Industrial Automation"
   areaServed={["Kuwait", "United Arab Emirates", "Saudi Arabia", "Bahrain", "Qatar", "Oman"]}
 />
-      <ServiceDefinition definition="Process plant automation solutions streamline industrial operations through customised automation systems for efficiency, remote monitoring, safety compliance, and ongoing support. TTS delivers Siemens, Allen-Bradley, and Schneider-based plant automation systems across Kuwait and Dubai." />
       <PlantAutomationHero />
       <PlantAutomationContent />
 

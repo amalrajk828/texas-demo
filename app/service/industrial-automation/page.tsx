@@ -7,7 +7,6 @@ import { FaqPageJsonLd } from "@/components/schema/FaqPageJsonLd";
 import { ChevronRight, ArrowRight } from "lucide-react";
 import { serviceCrossLinks } from "@/lib/serviceCrossLinks";
 import Link from "next/link";
-import ServiceDefinition from "@/components/service/ServiceDefinition";
 
 export const metadata: Metadata = {
   title: "Industrial Automation, PLC SCADA & Process Control Solutions",
@@ -307,7 +306,6 @@ export default function IndustrialAutomationPage() {
         areaServed={["Kuwait", "United Arab Emirates", "Saudi Arabia", "Bahrain", "Qatar", "Oman"]}
       />
       <FaqPageJsonLd items={faqItems} />
-      <ServiceDefinition definition="Industrial automation encompasses PLC and SCADA system integration, process control engineering, and control systems for oil and gas, power, and industrial sectors. TTS is a leading automation company providing comprehensive control and automation engineering services across Kuwait, UAE, and Saudi Arabia." />
       <AutomationHero />
       <AutomationSubServices />
 

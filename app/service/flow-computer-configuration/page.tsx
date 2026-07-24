@@ -10,7 +10,6 @@ import { serviceFaqData } from "@/lib/serviceFaqData";
 import { ChevronRight } from "lucide-react";
 import { HowToJsonLd } from "@/components/schema/HowToJsonLd";
 import ServiceProcessSteps from "@/components/ServiceProcessSteps";
-import ServiceDefinition from "@/components/service/ServiceDefinition";
 
 export const metadata: Metadata = {
   title: "Flow Computer Configuration — Custody Transfer API",
@@ -67,7 +66,6 @@ export default function FlowComputerConfigurationPage() {
   serviceType="Flow Measurement"
   areaServed={["Kuwait", "United Arab Emirates", "Saudi Arabia", "Bahrain", "Qatar", "Oman"]}
 />
-      <ServiceDefinition definition="Flow computer configuration provides custom programming, multi-stream setup, SCADA integration, commissioning, and on-site validation for custody transfer applications. TTS delivers expert flow computer services compliant with API MPMS, AGA, ISO, NTEP, and OIML standards in Kuwait and Dubai." />
       <FlowComputerHero />
       <FlowComputerContent />
 

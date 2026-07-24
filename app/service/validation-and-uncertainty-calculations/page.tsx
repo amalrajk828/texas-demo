@@ -10,7 +10,6 @@ import { serviceFaqData } from "@/lib/serviceFaqData";
 import { ChevronRight } from "lucide-react";
 import { HowToJsonLd } from "@/components/schema/HowToJsonLd";
 import ServiceProcessSteps from "@/components/ServiceProcessSteps";
-import ServiceDefinition from "@/components/service/ServiceDefinition";
 
 export const metadata: Metadata = {
   title: "Validation and Uncertainty Calculations",
@@ -66,7 +65,6 @@ export default function ValidationUncertaintyPage() {
   serviceType="Flow Measurement"
   areaServed={["Kuwait", "United Arab Emirates", "Saudi Arabia", "Bahrain", "Qatar", "Oman"]}
 />
-      <ServiceDefinition definition="Validation and uncertainty calculations provide GUM-compliant measurement uncertainty analysis and comprehensive validation for custody metering skids, flow computers, and metering systems. TTS delivers API MPMS Chapter 21, ISO, and OIML compliant services in Kuwait and Dubai." />
       <ValidationHero />
       <ValidationContent />
 

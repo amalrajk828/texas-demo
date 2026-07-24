@@ -8,7 +8,6 @@ import Link from "next/link";
 import { FaqPageJsonLd } from "@/components/schema/FaqPageJsonLd";
 import { serviceFaqData } from "@/lib/serviceFaqData";
 import { ChevronRight } from "lucide-react";
-import ServiceDefinition from "@/components/service/ServiceDefinition";
 
 export const metadata: Metadata = {
   title: "TOFD Ultrasonic Inspection — Weld Flaw Sizing",
@@ -40,7 +39,6 @@ export default function TOFDPage() {
   serviceType="Non-Destructive Testing"
   areaServed={["Kuwait", "United Arab Emirates", "Saudi Arabia", "Bahrain", "Qatar", "Oman"]}
 />
-      <ServiceDefinition definition="Time of Flight Diffraction (TOFD) is an advanced ultrasonic technique using diffracted waves for accurate crack detection and depth sizing in welds. TTS provides TOFD inspection services for pressure vessels and pipelines to ASME V, EN ISO 10863, and BS 7706 standards in Kuwait and Dubai." />
       <TOFDHero />
       <TOFDContent />
 

@@ -8,7 +8,6 @@ import Link from "next/link";
 import { FaqPageJsonLd } from "@/components/schema/FaqPageJsonLd";
 import { serviceFaqData } from "@/lib/serviceFaqData";
 import { ChevronRight } from "lucide-react";
-import ServiceDefinition from "@/components/service/ServiceDefinition";
 
 export const metadata: Metadata = {
   title: "Hardness Testing — Brinell, Rockwell, Vickers",
@@ -40,7 +39,6 @@ export default function HardnessTestPage() {
   serviceType="Mechanical Testing"
   areaServed={["Kuwait", "United Arab Emirates", "Saudi Arabia", "Bahrain", "Qatar", "Oman"]}
 />
-      <ServiceDefinition definition="Hardness testing measures a material's resistance to permanent indentation using Rockwell, Brinell, or Vickers methods. TTS provides certified hardness testing services for metals, plastics, and ceramics — including weld hardness surveys, heat-affected zone testing, and material verification to ASTM and ISO standards in Kuwait and Dubai." />
       <HardnessHero />
       <HardnessContent />
 

@@ -8,7 +8,6 @@ import Link from "next/link";
 import { FaqPageJsonLd } from "@/components/schema/FaqPageJsonLd";
 import { serviceFaqData } from "@/lib/serviceFaqData";
 import { ChevronRight } from "lucide-react";
-import ServiceDefinition from "@/components/service/ServiceDefinition";
 
 export const metadata: Metadata = {
   title: "Bend Testing — Ductility & Weld Integrity",
@@ -40,7 +39,6 @@ export default function BendTestPage() {
   serviceType="Mechanical Testing"
   areaServed={["Kuwait", "United Arab Emirates", "Saudi Arabia", "Bahrain", "Qatar", "Oman"]}
 />
-      <ServiceDefinition definition="Bend testing evaluates material ductility and soundness through guided bend tests, weld procedure qualification, and flexural testing including face, root, and side bends. TTS provides certified bend testing services to ASTM A370, E290, and ISO 7438 standards in Kuwait and Dubai." />
       <BendHero />
       <BendContent />
 

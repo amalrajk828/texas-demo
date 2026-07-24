@@ -8,7 +8,6 @@ import Link from "next/link";
 import { FaqPageJsonLd } from "@/components/schema/FaqPageJsonLd";
 import { serviceFaqData } from "@/lib/serviceFaqData";
 import { ChevronRight } from "lucide-react";
-import ServiceDefinition from "@/components/service/ServiceDefinition";
 
 export const metadata: Metadata = {
   title: "Structural Steel Erection — Supply & Installation",
@@ -40,7 +39,6 @@ export default function SteelErectionPage() {
   serviceType="Steel Erection"
   areaServed={["Kuwait", "United Arab Emirates", "Saudi Arabia", "Bahrain", "Qatar", "Oman"]}
 />
-      <ServiceDefinition definition="Structural steel erection involves the pre-fabricated steel component assembly creating skeletal frameworks for buildings, bridges, and large industrial structures. TTS provides precise, safe, and on-schedule steel erection services across Kuwait and the GCC." />
       <SteelErectionHero />
       <SteelErectionContent />
 

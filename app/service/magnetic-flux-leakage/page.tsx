@@ -8,7 +8,6 @@ import Link from "next/link";
 import { FaqPageJsonLd } from "@/components/schema/FaqPageJsonLd";
 import { serviceFaqData } from "@/lib/serviceFaqData";
 import { ChevronRight } from "lucide-react";
-import ServiceDefinition from "@/components/service/ServiceDefinition";
 
 export const metadata: Metadata = {
   title: "Magnetic Flux Leakage (MFL) — Pipeline & Tank Inspection",
@@ -40,7 +39,6 @@ export default function MFLPage() {
   serviceType="Non-Destructive Testing"
   areaServed={["Kuwait", "United Arab Emirates", "Saudi Arabia", "Bahrain", "Qatar", "Oman"]}
 />
-      <ServiceDefinition definition="Magnetic Flux Leakage (MFL) NDT detects corrosion and pitting in steel pipelines and storage tanks through pipeline in-line inspection and tank floor scanning. TTS provides MFL inspection services to API 653, API 1163, and ASTM E570 standards across Kuwait and the GCC." />
       <MFLHero />
       <MFLContent />
 

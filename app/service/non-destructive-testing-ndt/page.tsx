@@ -9,7 +9,6 @@ import { FaqPageJsonLd } from "@/components/schema/FaqPageJsonLd";
 import { serviceFaqData } from "@/lib/serviceFaqData";
 import { ChevronRight } from "lucide-react";
 import { ItemListJsonLd } from "@/components/schema/ItemListJsonLd";
-import ServiceDefinition from "@/components/service/ServiceDefinition";
 
 export const metadata: Metadata = {
   title: "Non-Destructive Testing (NDT) — UT, RT, MT, PT, ET",
@@ -41,7 +40,6 @@ export default function NDTPage() {
   serviceType="Non-Destructive Testing"
   areaServed={["Kuwait", "United Arab Emirates", "Saudi Arabia", "Bahrain", "Qatar", "Oman"]}
 />
-      <ServiceDefinition definition="Non-Destructive Testing (NDT) provides a full range of inspection services including Visual Inspection, Liquid Penetrant, Magnetic Particle, Radiographic Testing, and Ultrasonic Testing. TTS delivers comprehensive NDT services with qualified technicians and modern equipment across Kuwait and Dubai." />
       <NDTHero />
       <NDTSubServices />
 

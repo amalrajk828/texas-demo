@@ -8,7 +8,6 @@ import Link from "next/link";
 import { FaqPageJsonLd } from "@/components/schema/FaqPageJsonLd";
 import { serviceFaqData } from "@/lib/serviceFaqData";
 import { ChevronRight } from "lucide-react";
-import ServiceDefinition from "@/components/service/ServiceDefinition";
 
 export const metadata: Metadata = {
   title: "Corrosion Control — Assessment, Mitigation & Coatings",
@@ -40,7 +39,6 @@ export default function CorrosionControlPage() {
   serviceType="Mechanical Testing"
   areaServed={["Kuwait", "United Arab Emirates", "Saudi Arabia", "Bahrain", "Qatar", "Oman"]}
 />
-      <ServiceDefinition definition="Corrosion control services include protective coatings, cathodic protection, corrosion assessment, and management plans for oil and gas, marine, construction, and manufacturing industries. TTS provides comprehensive corrosion management solutions across Kuwait and Dubai." />
       <CorrosionControlHero />
       <CorrosionControlContent />
 

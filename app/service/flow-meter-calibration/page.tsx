@@ -10,7 +10,6 @@ import { serviceFaqData } from "@/lib/serviceFaqData";
 import { ChevronRight, ArrowRight } from "lucide-react";
 import { HowToJsonLd } from "@/components/schema/HowToJsonLd";
 import ServiceProcessSteps from "@/components/ServiceProcessSteps";
-import ServiceDefinition from "@/components/service/ServiceDefinition";
 
 export const metadata: Metadata = {
   title: "Flow Meter Calibration — Lab & On-Site Services",
@@ -67,7 +66,6 @@ export default function FlowMeterCalibrationPage() {
   serviceType="Flow Measurement"
   areaServed={["Kuwait", "United Arab Emirates", "Saudi Arabia", "Bahrain", "Qatar", "Oman"]}
 />
-      <ServiceDefinition definition="Flow meter calibration provides ILAC and COFRAC ISO 17025 accredited initial and periodic verification services for custody transfer flowmeters. TTS delivers OIML R117 class 0.3 compliant calibration with real fluid calibration and 2-week emergency service across Kuwait and the GCC." />
       <CalibrationHero />
       <CalibrationContent />
 

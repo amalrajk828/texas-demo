@@ -9,7 +9,6 @@ import Link from "next/link";
 import { FaqPageJsonLd } from "@/components/schema/FaqPageJsonLd";
 import { serviceFaqData } from "@/lib/serviceFaqData";
 import { ChevronRight } from "lucide-react";
-import ServiceDefinition from "@/components/service/ServiceDefinition";
 
 export const metadata: Metadata = {
   title: "Upgrade of Metering Control System",
@@ -66,7 +65,6 @@ export default function UpgradeMeteringPage() {
   serviceType="Flow Measurement"
   areaServed={["Kuwait", "United Arab Emirates", "Saudi Arabia", "Bahrain", "Qatar", "Oman"]}
 />
-      <ServiceDefinition definition="Metering control system upgrades include comprehensive assessment, tailored upgrade plans, SCADA and PLC enhancements, flow computer integration, and seamless data management. TTS specializes in cost-effective metering system modernization for custody transfer operations across Kuwait and the GCC." />
       <UpgradeHero />
       <UpgradeServices />
       <UpgradeWhyUs />

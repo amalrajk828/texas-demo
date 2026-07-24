@@ -9,7 +9,6 @@ import { ItemListJsonLd } from "@/components/schema/ItemListJsonLd";
 import { ChevronRight } from "lucide-react";
 import { serviceCrossLinks } from "@/lib/serviceCrossLinks";
 import Link from "next/link";
-import ServiceDefinition from "@/components/service/ServiceDefinition";
 
 export const metadata: Metadata = {
   title: "Inspection & Testing — NDT, Mechanical & Specialized",
@@ -80,7 +79,6 @@ export default function InspectionTestingPage() {
         areaServed={["Kuwait", "United Arab Emirates", "Saudi Arabia", "Bahrain", "Qatar", "Oman"]}
       />
       <FaqPageJsonLd items={faqItems} />
-      <ServiceDefinition definition="Inspection and testing services provide comprehensive NDT including UT, MT, PT, RT, VI, mechanical testing, phased array ultrasonic inspection, and QA consultancy. TTS is an ISO 9001, ISO 14001, and ISO 45001 certified industrial inspection and testing company across Kuwait and the GCC." />
       <InspectionHero />
       <InspectionOverview />
       <InspectionSubServices />

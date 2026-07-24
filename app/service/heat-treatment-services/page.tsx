@@ -8,7 +8,6 @@ import Link from "next/link";
 import { FaqPageJsonLd } from "@/components/schema/FaqPageJsonLd";
 import { serviceFaqData } from "@/lib/serviceFaqData";
 import { ChevronRight } from "lucide-react";
-import ServiceDefinition from "@/components/service/ServiceDefinition";
 
 export const metadata: Metadata = {
   title: "Heat Treatment — PWHT, Stress Relief, Annealing",
@@ -40,7 +39,6 @@ export default function HeatTreatmentPage() {
   serviceType="Mechanical Testing"
   areaServed={["Kuwait", "United Arab Emirates", "Saudi Arabia", "Bahrain", "Qatar", "Oman"]}
 />
-      <ServiceDefinition definition="Heat treatment services include Post Weld Heat Treatment (PWHT), stress relief, and annealing using electrical resistance and high-velocity fuel-fired burner systems. TTS provides certified heat treatment services to ASME VIII, AWS D1.1, and ASME B31.3 standards for industrial applications across Kuwait and the GCC." />
       <HeatTreatmentHero />
       <HeatTreatmentContent />
 

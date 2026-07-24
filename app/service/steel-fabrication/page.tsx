@@ -8,7 +8,6 @@ import Link from "next/link";
 import { FaqPageJsonLd } from "@/components/schema/FaqPageJsonLd";
 import { serviceFaqData } from "@/lib/serviceFaqData";
 import { ChevronRight } from "lucide-react";
-import ServiceDefinition from "@/components/service/ServiceDefinition";
 
 export const metadata: Metadata = {
   title: "Steel Fabrication — Industrial Structures & Platforms",
@@ -40,7 +39,6 @@ export default function SteelFabricationPage() {
   serviceType="Fabrication"
   areaServed={["Kuwait", "United Arab Emirates", "Saudi Arabia", "Bahrain", "Qatar", "Oman"]}
 />
-      <ServiceDefinition definition="Steel fabrication transforms raw steel into finished structures through cutting, bending, welding, and assembling into skids, pipework, and structural components. TTS provides industrial steel fabrication services for applications across Kuwait and Dubai." />
       <SteelFabricationHero />
       <SteelFabricationContent />
 

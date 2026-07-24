@@ -8,7 +8,6 @@ import Link from "next/link";
 import { FaqPageJsonLd } from "@/components/schema/FaqPageJsonLd";
 import { serviceFaqData } from "@/lib/serviceFaqData";
 import { ChevronRight } from "lucide-react";
-import ServiceDefinition from "@/components/service/ServiceDefinition";
 
 export const metadata: Metadata = {
   title: "Lifting Equipment Inspection — Overhead Cranes, Hoists & Elevators",
@@ -40,7 +39,6 @@ export default function LiftingInspectionPage2() {
   serviceType="Specialized Inspection"
   areaServed={["Kuwait", "United Arab Emirates", "Saudi Arabia", "Bahrain", "Qatar", "Oman"]}
 />
-      <ServiceDefinition definition="Permanent lifting equipment inspection covers overhead cranes, hoists, and elevators by certified competent persons with written reports. TTS delivers inspection services for fixed lifting systems compliant with LOLER 1998, ASME B30, and BS EN 13001 standards across Kuwait and the GCC." />
       <LiftingInspectionHero />
       <section className="bg-white py-12 lg:py-16">
         <div className="max-w-7xl mx-auto px-4 sm:px-6">

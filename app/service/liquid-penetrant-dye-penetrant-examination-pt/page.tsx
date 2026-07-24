@@ -8,7 +8,6 @@ import Link from "next/link";
 import { FaqPageJsonLd } from "@/components/schema/FaqPageJsonLd";
 import { serviceFaqData } from "@/lib/serviceFaqData";
 import { ChevronRight } from "lucide-react";
-import ServiceDefinition from "@/components/service/ServiceDefinition";
 
 export const metadata: Metadata = {
   title: "Liquid Penetrant / Dye Penetrant Examination (PT)",
@@ -40,7 +39,6 @@ export default function PenetrantTestPage() {
   serviceType="Non-Destructive Testing"
   areaServed={["Kuwait", "United Arab Emirates", "Saudi Arabia", "Bahrain", "Qatar", "Oman"]}
 />
-      <ServiceDefinition definition="Liquid Penetrant Testing (PT) uses capillary forces to detect surface-breaking cracks, laps, and porosity in metals, ceramics, and plastics. TTS provides fluorescent and colour contrast penetrant examination services to ASTM E165 and ISO 3452 standards across Kuwait and Dubai." />
       <PenetrantHero />
       <PenetrantContent />
 

@@ -8,7 +8,6 @@ import Link from "next/link";
 import { FaqPageJsonLd } from "@/components/schema/FaqPageJsonLd";
 import { serviceFaqData } from "@/lib/serviceFaqData";
 import { ChevronRight } from "lucide-react";
-import ServiceDefinition from "@/components/service/ServiceDefinition";
 
 export const metadata: Metadata = {
   title: "Visual Inspection (VI) — Certified Weld & Structure",
@@ -40,7 +39,6 @@ export default function VisualInspectionPage() {
   serviceType="Non-Destructive Testing"
   areaServed={["Kuwait", "United Arab Emirates", "Saudi Arabia", "Bahrain", "Qatar", "Oman"]}
 />
-      <ServiceDefinition definition="Visual Inspection (VI) is the fundamental non-destructive testing method examining surface and external characteristics of components to detect cracks, corrosion, and dimensional discrepancies. TTS provides certified visual inspection services as the essential first step in any NDT programme across Kuwait and the GCC." />
       <VisualInspectionHero />
       <VisualInspectionContent />
 

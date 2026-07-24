@@ -8,7 +8,6 @@ import Link from "next/link";
 import { FaqPageJsonLd } from "@/components/schema/FaqPageJsonLd";
 import { serviceFaqData } from "@/lib/serviceFaqData";
 import { ChevronRight } from "lucide-react";
-import ServiceDefinition from "@/components/service/ServiceDefinition";
 
 export const metadata: Metadata = {
   title: "Radiographic Testing (RT) — X-Ray & Gamma Inspection",
@@ -40,7 +39,6 @@ export default function RadiographicTestingPage() {
   serviceType="Non-Destructive Testing"
   areaServed={["Kuwait", "United Arab Emirates", "Saudi Arabia", "Bahrain", "Qatar", "Oman"]}
 />
-      <ServiceDefinition definition="Radiographic Testing (RT) uses X-rays and gamma rays to examine internal material structure and detect flaws in welds, castings, and forgings. TTS provides conventional and digital radiography services to ASME V, API 1104, and EN ISO 17636 standards across Kuwait and the GCC." />
       <RadiographicHero />
       <RadiographicContent />
 
