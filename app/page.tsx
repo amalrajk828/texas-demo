@@ -31,16 +31,11 @@ export const metadata: Metadata = {
       "Leading industrial automation company in Kuwait and UAE — PLC SCADA integration, flow measurement, inspection, and automation engineering across the GCC.",
   },
   keywords: [
-    "industrial automation companies near me",
-    "vision industrial automation services & products",
     "industrial automation companies in Kuwait",
     "industrial automation companies in Dubai",
     "automation companies in Dubai",
     "industrial automation companies in UAE",
-    "list of industrial automation companies in UAE",
     "automation and engineering services Fahaheel",
-    "mechatronics Bahrain",
-    "automation control service LLC",
   ],
 };
 
