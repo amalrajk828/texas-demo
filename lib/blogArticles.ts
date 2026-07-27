@@ -12440,7 +12440,7 @@ content: `
   "metering-inspection-automation-core-services": {
     title: "Metering, Inspection, Automation: The Core Services of Texas Technical Service Company",
     seoTitle: "Metering, Inspection, Automation: Core Services of TTS | Texas Technical Services",
-    metaDescription: "Explore the three core service divisions of Texas Technical Services: flow measurement & control, inspection & testing, and industrial process automation for Middle East industries.",
+    metaDescription: "Explore the three core service divisions of Texas Technical Services: flow measurement, inspection & testing, and industrial process automation for the Middle East.",
     category: "Industrial Automation",
     date: "July 3, 2026",
     readTime: "3 Min Read",
@@ -12493,7 +12493,7 @@ content: `
 
       <h2>Partner With TTS</h2>
       <p>
-        At TTS, we don't just supply industrial products &mdash; we provide comprehensive, end-to-end solutions through strategic partnerships with reputable OEMs. Whether you need to validate a custody metering system, inspect critical infrastructure, or automate a manufacturing process, our team is equipped to deliver.
+        At TTS, we don't just supply industrial products &mdash; we provide comprehensive, end-to-end solutions through strategic partnerships with reputable OEMs. Whether you need to validate a custody metering system, inspect critical infrastructure, or automate a manufacturing process, our team is equipped to deliver. Learn more about our <a href="/service/flow-measurement-solutions/">flow measurement solutions</a> and <a href="/service/inspection-testing/">inspection and testing services</a>.
       </p>
 
       <h2>Frequently Asked Questions (FAQ)</h2>
@@ -12517,7 +12517,7 @@ content: `
   "scada-plc-upgrade-without-downtime": {
     title: "A Plant Manager's Guide to Upgrading Legacy SCADA & PLC Systems Without Operational Downtime",
     seoTitle: "Upgrading Legacy SCADA & PLC Systems Without Downtime | TTS Guide",
-    metaDescription: "Learn how strategic SCADA and PLC system upgrades minimize risk and maximize efficiency. A plant manager's guide to modernizing industrial automation without shutting down production.",
+    metaDescription: "A plant manager's guide to upgrading legacy SCADA and PLC systems without downtime — parallel running, phased cutover, and commissioning strategies.",
     category: "Industrial Automation",
     date: "July 25, 2026",
     readTime: "3 Min Read",
@@ -12557,7 +12557,7 @@ content: `
 
       <h2>Partner With Texas Technical Services (TTS)</h2>
       <p>
-        At Texas Technical Services Co. (TTS), we don't just supply industrial hardware &mdash; we design, integrate, and support end-to-end automation and control solutions tailored to your operational demands. Whether you need to upgrade aging PLCs, modernize your SCADA architecture, or perform critical equipment validation without disrupting active production, our team of expert engineers is equipped to deliver safely, efficiently, and on schedule.
+        At Texas Technical Services Co. (TTS), we don't just supply industrial hardware &mdash; we design, integrate, and support end-to-end automation and control solutions tailored to your operational demands. Whether you need to upgrade aging PLCs, modernize your SCADA architecture, or perform critical equipment validation without disrupting active production, our team of expert engineers is equipped to deliver safely, efficiently, and on schedule. Learn more about our <a href="/plc-scada-systems-integration/">PLC and SCADA integration</a> and <a href="/service/industrial-automation/">industrial automation</a> services.
       </p>
 
       <h2>Frequently Asked Questions (FAQ)</h2>
@@ -12581,7 +12581,7 @@ content: `
   "hidden-costs-legacy-flow-measurement": {
     title: "The Hidden Costs of Legacy Flow Measurement Systems in Oil & Gas",
     seoTitle: "Hidden Costs of Legacy Flow Measurement Systems in Oil & Gas | TTS",
-    metaDescription: "How fractional measurement errors silently erode plant profitability. Learn about the hidden costs of legacy flow measurement and what modern metering technology can do.",
+    metaDescription: "How fractional measurement errors silently erode plant profitability — and what modern metering technology can do to stop revenue leakage.",
     category: "Flow Measurement",
     date: "July 23, 2026",
     readTime: "3 Min Read",
@@ -12636,7 +12636,7 @@ content: `
 
       <h2>Partner With TTS</h2>
       <p>
-        At TTS, we don't just supply industrial products &mdash; we provide comprehensive, end-to-end solutions through strategic partnerships with reputable OEMs. Whether you need to validate a custody metering system, inspect critical infrastructure, or automate a manufacturing process, our team is equipped to deliver.
+        At TTS, we don't just supply industrial products &mdash; we provide comprehensive, end-to-end solutions through strategic partnerships with reputable OEMs. Whether you need to validate a custody metering system, inspect critical infrastructure, or automate a manufacturing process, our team is equipped to deliver. Explore our <a href="/service/flow-meter-calibration/">flow meter calibration</a> and <a href="/products/flow-meters/">flow meter solutions</a>.
       </p>
 
       <h2>Frequently Asked Questions (FAQ)</h2>
@@ -12660,12 +12660,12 @@ content: `
   "zero-error-fiscal-transfer-custody-metering": {
     title: "Zero-Error Fiscal Transfer: A Deep Dive into TTS Custody Metering Solutions",
     seoTitle: "Zero-Error Fiscal Transfer: TTS Custody Metering Solutions | Texas Technical Services",
-    metaDescription: "When high-value liquids and gases change hands, accuracy is everything. Discover how Texas Technical Services delivers precision-engineered, fully compliant custody transfer systems.",
+    metaDescription: "Precision-engineered custody transfer systems — turnkey skids, OMNI flow computers, API/AGA compliance, and validation services from TTS.",
     category: "Flow Measurement",
     date: "July 22, 2026",
     readTime: "3 Min Read",
     pillar: "Pillar 1: Flow Measurement & Custody Metering",
-    description: "When high-value liquids and gases change hands, accuracy is everything. Discover how Texas Technical Services delivers precision-engineered, fully compliant custody transfer systems.",
+    description: "Precision-engineered custody transfer systems — turnkey skids, OMNI flow computers, API/AGA compliance, and validation services from TTS.",
     keywords: "custody transfer metering, FLOWSKID, OMNI flow computer, API AGA compliance, custody metering skid, fiscal transfer",
     image: "/flow_metering_skid.jpg",
     imageAlt: "An industrial custody transfer flow metering skid with piping, valves, and measuring instruments.",
@@ -12719,7 +12719,7 @@ content: `
 
       <h2>Partner With TTS</h2>
       <p>
-        At TTS, we don't just supply industrial products &mdash; we provide comprehensive, end-to-end solutions through strategic partnerships with reputable OEMs. Whether you need to validate a custody metering system, inspect critical infrastructure, or automate a manufacturing process, our team is equipped to deliver.
+        At TTS, we don't just supply industrial products &mdash; we provide comprehensive, end-to-end solutions through strategic partnerships with reputable OEMs. Whether you need to validate a custody metering system, inspect critical infrastructure, or automate a manufacturing process, our team is equipped to deliver. See our <a href="/service/flow-measurement-solutions/">custody transfer metering</a> and <a href="/products/flow-meters/custody-transfer-flow-meters/">custody transfer flow meters</a>.
       </p>
 
       <h2>Frequently Asked Questions (FAQ)</h2>
@@ -12743,7 +12743,7 @@ content: `
   "tts-product-portfolio-deep-dive": {
     title: "Driving Industrial Efficiency: A Deep Dive into Texas Technical Services' Product Portfolio",
     seoTitle: "TTS Product Portfolio: Custody Metering, Analyzers, Automation | Texas Technical Services",
-    metaDescription: "From precision custody transfer metering to cutting-edge industrial automation, discover how TTS equips modern heavy industries for success across the Middle East.",
+    metaDescription: "Deep dive into TTS products — flow meters, CEMS, gas analyzers, PLCs, VFDs, and control room consoles for heavy industries across the Middle East.",
     category: "Industrial Automation",
     date: "July 21, 2026",
     readTime: "4 Min Read",
@@ -12812,7 +12812,7 @@ content: `
 
       <h2>Partner With TTS</h2>
       <p>
-        At TTS, we don't just supply industrial products &mdash; we provide comprehensive, end-to-end solutions through strategic partnerships with reputable OEMs. Whether you need to validate a custody metering system, inspect critical infrastructure, or automate a manufacturing process, our team is equipped to deliver.
+        At TTS, we don't just supply industrial products &mdash; we provide comprehensive, end-to-end solutions through strategic partnerships with reputable OEMs. Whether you need to validate a custody metering system, inspect critical infrastructure, or automate a manufacturing process, our team is equipped to deliver. Discover our <a href="/products/flow-meters/">flow meters</a> and <a href="/products/analyzers/">process analyzers</a>.
       </p>
 
       <h2>Frequently Asked Questions (FAQ)</h2>
@@ -12884,7 +12884,7 @@ content: `
 
       <h2>Ready to Secure Your High-Altitude Access?</h2>
       <p>
-        If your commercial building or industrial facility requires state-of-the-art Building Maintenance Units, facade access systems, or skylight gantries, you need a partner who understands the high stakes of modern architectural maintenance. Texas Technical Services blends premium engineering with unmatched workmanship to secure your infrastructure.
+        If your commercial building or industrial facility requires state-of-the-art Building Maintenance Units, facade access systems, or skylight gantries, you need a partner who understands the high stakes of modern architectural maintenance. Texas Technical Services blends premium engineering with unmatched workmanship to secure your infrastructure. Explore our <a href="/service/constructions/">construction solutions</a> and <a href="/service/inspection-testing/">inspection and testing</a> services.
       </p>
 
       <h2>Frequently Asked Questions (FAQ)</h2>
@@ -12964,7 +12964,7 @@ content: `
 
       <h2>Ready to Automate Your Operations?</h2>
       <p>
-        If your facility is looking to upgrade legacy systems, integrate advanced SCADA, or optimize production through expert PLC programming, you need a partner equipped for the future of industry. Texas Technical Services blends premium technology with unmatched expertise to transform your operational efficiency.
+        If your facility is looking to upgrade legacy systems, integrate advanced SCADA, or optimize production through expert PLC programming, you need a partner equipped for the future of industry. Texas Technical Services blends premium technology with unmatched expertise to transform your operational efficiency. See our <a href="/plc-scada-systems-integration/">PLC and SCADA integration</a> and <a href="/service/industrial-automation/">industrial automation</a> capabilities.
       </p>
 
       <h2>Frequently Asked Questions (FAQ)</h2>
@@ -12988,7 +12988,7 @@ content: `
   "comprehensive-inspection-testing-industrial-assets": {
     title: "Safeguarding Your Industrial Assets: The Critical Role of Comprehensive Inspection & Testing",
     seoTitle: "Industrial Inspection & Testing: NDT, Functional Testing, Certification | TTS",
-    metaDescription: "Why proactive testing and compliance certifications are the backbone of modern industrial operations. Learn about NDT, equipment inspection, and certification services.",
+    metaDescription: "Comprehensive guide to NDT methods, functional testing, ISO certification, and proactive maintenance for industrial assets in Kuwait and the UAE.",
     category: "Inspection & Testing",
     date: "July 7, 2026",
     readTime: "3 Min Read",
@@ -13040,7 +13040,7 @@ content: `
 
       <h2>Ready to Secure Your Industrial Assets?</h2>
       <p>
-        If your facility requires comprehensive equipment inspections, non-destructive testing (NDT), or rigorous certification to meet the latest industry standards, you need a partner who understands the high stakes of the region's energy and manufacturing sectors. <strong>Texas Technical Services</strong> blends advanced testing technology with expert insights to safeguard your infrastructure and minimize downtime.
+        If your facility requires comprehensive equipment inspections, non-destructive testing (NDT), or rigorous certification to meet the latest industry standards, you need a partner who understands the high stakes of the region's energy and manufacturing sectors. <strong>Texas Technical Services</strong> blends advanced testing technology with expert insights to safeguard your infrastructure and minimize downtime. Learn more about our <a href="/service/inspection-testing/">inspection and testing services</a> and <a href="/service/inspection-testing/non-destructive-testing-ndt/">non-destructive testing</a> solutions.
       </p>
 
       <h2>Frequently Asked Questions (FAQ)</h2>
@@ -13064,7 +13064,7 @@ content: `
   "custody-metering-upgrade-strategic-necessity": {
     title: "The Precision Mandate: Why Upgrading Your Custody Metering System is a Strategic Necessity",
     seoTitle: "Why Upgrade Your Custody Metering System | Strategic Necessity | TTS",
-    metaDescription: "In high-stakes industries like Oil & Gas, every drop counts. Learn why upgrading your custody metering system is a strategic necessity, not just a maintenance task.",
+    metaDescription: "The financial impact of measurement inaccuracy and why upgrading custody metering is a strategic investment in revenue protection and compliance.",
     category: "Flow Measurement",
     date: "July 6, 2026",
     readTime: "4 Min Read",
@@ -13135,7 +13135,7 @@ content: `
 
       <h2>Ready to Optimize Your Flow?</h2>
       <p>
-        If your facility is due for a system upgrade or requires rigorous validation to meet the latest industry standards, you need a partner who understands the high stakes of the region's energy and industrial sectors. Texas Technical Services specializes in blending premium technology with unmatched workmanship to secure your assets.
+        If your facility is due for a system upgrade or requires rigorous validation to meet the latest industry standards, you need a partner who understands the high stakes of the region's energy and industrial sectors. Texas Technical Services specializes in blending premium technology with unmatched workmanship to secure your assets. Explore our <a href="/service/flow-measurement-solutions/">flow measurement solutions</a> and <a href="/service/flow-computer-configuration/">flow computer configuration</a> services.
       </p>
 
       <h2>Frequently Asked Questions (FAQ)</h2>

@@ -8,6 +8,8 @@ export function BlogPostingJsonLd({
   datePublished,
   dateModified,
   wordCount,
+  category,
+  keywords,
 }: {
   headline: string;
   description: string;
@@ -16,6 +18,8 @@ export function BlogPostingJsonLd({
   datePublished?: string;
   dateModified?: string;
   wordCount?: number;
+  category?: string;
+  keywords?: string;
 }) {
   const jsonLd = {
     "@context": "https://schema.org",
@@ -45,6 +49,8 @@ export function BlogPostingJsonLd({
       "@id": `${SITE_URL}${url}`,
     },
     ...(wordCount ? { wordCount } : {}),
+    ...(category ? { articleSection: category } : {}),
+    ...(keywords ? { keywords } : {}),
   };
   return (
     <script

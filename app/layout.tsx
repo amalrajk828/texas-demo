@@ -90,6 +90,11 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
                 "Industrial automation, PLC SCADA integration, flow measurement, and inspection & testing company serving Kuwait, UAE, Dubai, and the GCC.",
               url: `${SITE_URL}/`,
               image: `${SITE_URL}/og-default.png`,
+              logo: {
+                "@type": "ImageObject",
+                url: `${SITE_URL}/logo.svg`,
+              },
+              email: "sales@texastechserv.com",
               telephone: ["+965 97243755", "+965 66347267", "+971 569553747", "+971 567793973"],
               foundingDate: "2008",
               areaServed: ["Kuwait", "United Arab Emirates", "Saudi Arabia", "Bahrain", "Qatar", "Oman"],
@@ -105,6 +110,18 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
                   streetAddress: "Amna Naseer Building, Al Marar Area 20th Street #529 Plot #302 Office #201-19, Deira",
                   addressLocality: "Dubai",
                   addressCountry: "AE",
+                },
+              ],
+              geo: [
+                {
+                  "@type": "GeoCoordinates",
+                  latitude: 29.1137,
+                  longitude: 48.1295,
+                },
+                {
+                  "@type": "GeoCoordinates",
+                  latitude: 25.2882,
+                  longitude: 55.3247,
                 },
               ],
               sameAs: [
