@@ -29,6 +29,7 @@ const solutions = [
   { label: "Space AI Industrial AI", href: "/solutions/space-ai/" },
   { label: "Mitsubishi Electric", href: "/solutions/mitsubishi-electric/" },
   { label: "PWS Floor Solutions", href: "/solutions/pws-floor-solutions/" },
+  { label: "Certifications", href: "/certifications/" },
 ];
 
 const socials = [
