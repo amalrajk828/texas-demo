@@ -65,7 +65,7 @@ export const metadata: Metadata = {
   },
 };
 
-const GTM = "GTM-NK9KQVKJ";
+const GTM = "GTM-W776KVLW";
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
