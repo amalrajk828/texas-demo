@@ -99,7 +99,7 @@ export default function GotPage() {
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5">
             {gotProducts.map((prod, index) => (
               <React.Fragment key={prod.slug}>
-                <ProductCard product={prod} category="got" />
+                <ProductCard product={prod} category="got" priority={index < 3} />
                 
               </React.Fragment>
             ))}

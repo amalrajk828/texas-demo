@@ -48,6 +48,12 @@ export const metadata: Metadata = {
     "flow meter calibration Dubai",
     "MID calibration compliance Kuwait",
     "Texas Technical Services calibration",
+    "Coriolis meter calibration Kuwait",
+    "micro motion flow meter calibration",
+    "Endress Hauser calibration GCC",
+    "ultrasonic flow meter calibration",
+    "thermal mass flow meter calibration",
+    "mass flow meter calibration Dubai",
   ],
 };
 

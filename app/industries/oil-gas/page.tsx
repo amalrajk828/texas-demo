@@ -36,6 +36,10 @@ export const metadata: Metadata = {
     "flow computers for oil and gas",
     "custody transfer metering oil and gas",
     "oil and gas instrumentation Kuwait",
+    "production optimization oil gas GCC",
+    "oil and gas support services Kuwait",
+    "innovative solutions oil gas",
+    "Coriolis meter oil and gas",
   ],
 };
 

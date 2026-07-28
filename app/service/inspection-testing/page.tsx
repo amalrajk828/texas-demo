@@ -41,6 +41,9 @@ export const metadata: Metadata = {
     "ISO 9001 inspection company Kuwait",
     "Texas Technical Services inspection",
     "QA consultancy Kuwait",
+    "3rd party inspection GCC",
+    "quality inspection service Dubai",
+    "3rd party inspection company Kuwait",
   ],
 };
 

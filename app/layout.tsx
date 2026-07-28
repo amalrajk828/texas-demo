@@ -5,6 +5,7 @@ import ScrollObserver from "@/components/ScrollObserver";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import SmoothScroll from "@/components/SmoothScroll";
+import { OrganizationJsonLd } from "@/components/schema/OrganizationJsonLd";
 import { SITE_URL } from "@/lib/site";
 import "./globals.css";
 
@@ -141,6 +142,15 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
               ],
             }),
           }}
+        />
+        <OrganizationJsonLd
+          sameAs={[
+            "https://www.linkedin.com/company/texas-technical-service-company",
+            "https://www.facebook.com/texastechserv",
+            "https://www.instagram.com/texas_technical_services",
+            "https://www.youtube.com/@TEXASTECHNICALSERVICES",
+            "https://x.com/texastechserv",
+          ]}
         />
       </head>
       <body>

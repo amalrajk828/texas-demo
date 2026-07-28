@@ -43,6 +43,8 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { url: `${BASE}/industrial-automation-services-dubai/`, lastModified: thisWeek, changeFrequency: "monthly", priority: 0.7 },
     { url: `${BASE}/industrial-automation-services-kuwait/`, lastModified: thisWeek, changeFrequency: "monthly", priority: 0.7 },
     { url: `${BASE}/plc-scada-systems-integration/`, lastModified: thisWeek, changeFrequency: "monthly", priority: 0.7 },
+    { url: `${BASE}/flow-meter-calibration-services-kuwait/`, lastModified: thisWeek, changeFrequency: "monthly", priority: 0.7 },
+    { url: `${BASE}/predictive-maintenance-condition-monitoring-gcc/`, lastModified: thisWeek, changeFrequency: "monthly", priority: 0.7 },
 
     // Global network & proprietary solutions
     { url: `${BASE}/partners/`, lastModified: thisMonth, changeFrequency: "monthly", priority: 0.7 },

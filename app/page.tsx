@@ -36,6 +36,14 @@ export const metadata: Metadata = {
     "automation companies in Dubai",
     "industrial automation companies in UAE",
     "automation and engineering services Fahaheel",
+    "metering skids Kuwait",
+    "flow meter calibration Dubai",
+    "Allen Bradley system integrators GCC",
+    "NDT inspection Kuwait",
+    "predictive maintenance GCC",
+    "gas detection system Kuwait",
+    "Coriolis flow meter calibration",
+    "condition monitoring Kuwait",
   ],
 };
 
@@ -110,11 +118,6 @@ export default function HomePage() {
             "@type": "WebSite",
             name: "Texas Technical Services",
             url: SITE_URL,
-            potentialAction: {
-              "@type": "SearchAction",
-              target: `${SITE_URL}/portfolio/?q={search_term_string}`,
-              "query-input": "required name=search_term_string",
-            },
           }),
         }}
       />

@@ -13154,6 +13154,973 @@ content: `
       <p><strong>Q: What are the regulatory consequences of failing a custody metering audit?</strong><br />
       <strong>A:</strong> Failing a custody metering audit can result in regulatory penalties, disputed contracts between buyers and sellers, loss of operating licenses, and severe financial discrepancies. Beyond direct fines, inaccurate metering damages commercial relationships and undermines trust in fiscal transactions. Proactive validation and upgrades prevent these consequences.</p>
     `
+  },
+
+  "coriolis-flow-meter-calibration-guide": {
+    title: "Coriolis Flow Meter Calibration: Complete Guide to Standards and Accuracy",
+    seoTitle: "Coriolis Flow Meter Calibration Guide — Standards, Process & GCC Services",
+    metaDescription: "Complete guide to Coriolis flow meter calibration — ISO 17025, OIML R117, API MPMS standards, and calibration services in Kuwait.",
+    category: "Flow Measurement",
+    date: "July 28, 2026",
+    readTime: "12 Min Read",
+    pillar: "Pillar 1: Flow Measurement & Custody Metering",
+    description: "Learn how Coriolis flow meter calibration works, the international standards that govern it, and why choosing an accredited calibration provider matters for custody transfer accuracy.",
+    keywords: "Coriolis flow meter calibration, Coriolis meter calibration, micro motion flow meter calibration, flow meter calibration Kuwait, ISO 17025 calibration",
+    image: "/flow_metering_skid.jpg",
+    imageAlt: "A Coriolis flow meter being calibrated in an accredited laboratory with reference standards.",
+    content: `
+      <p>
+        <strong>Coriolis flow meter calibration</strong> is a critical process that ensures the accuracy and reliability of mass flow measurement in industrial applications. Coriolis meters are widely used in custody transfer, process control, and batching applications across oil &amp; gas, petrochemical, and power generation industries. Because Coriolis meters measure mass flow directly — independent of fluid properties like density, viscosity, and temperature — they are considered the gold standard for fiscal measurement and process optimization.
+      </p>
+      <p>
+        However, like all precision instruments, Coriolis flow meters require regular calibration to maintain their specified accuracy. Over time, factors such as mechanical wear, coating buildup, and electronic drift can affect meter performance. In custody transfer applications, even a small measurement error can translate into significant financial discrepancies, making calibration a critical investment rather than an optional expense.
+      </p>
+
+      <h2>How Coriolis Flow Meters Work</h2>
+      <p>
+        A Coriolis flow meter operates on the principle of the Coriolis effect — the same force that causes large-scale weather patterns to curve on the rotating Earth. Inside the meter, fluid flows through one or more vibrating tubes. As fluid moves through these vibrating tubes, it induces a phase shift in the vibration pattern. This phase shift is directly proportional to the mass flow rate of the fluid.
+      </p>
+      <p>
+        Key advantages of Coriolis technology include:
+      </p>
+      <ul>
+        <li><strong>Direct mass flow measurement</strong> — no need for density or temperature compensation</li>
+        <li><strong>High accuracy</strong> — typically ±0.1% of reading for custody transfer applications</li>
+        <li><strong>Multi-parameter measurement</strong> — mass flow, density, temperature, and concentration in a single device</li>
+        <li><strong>No moving parts</strong> — minimal maintenance requirements compared to mechanical meters</li>
+        <li><strong>Wide turndown ratio</strong> — accurate across a broad range of flow rates</li>
+      </ul>
+
+      <h2>International Calibration Standards</h2>
+      <p>
+        Coriolis flow meter calibration must comply with internationally recognized standards to ensure measurement traceability and accuracy. The most important standards governing Coriolis meter calibration include:
+      </p>
+      <p>
+        <strong>ISO 17025:2017</strong> — The international standard for testing and calibration laboratories. Accredited laboratories maintain documented quality management systems, calibrated reference standards, and uncertainty budgets that demonstrate measurement capability. ISO 17025 accreditation is the baseline requirement for any calibration laboratory performing custody transfer meter verification.
+      </p>
+      <p>
+        <strong>OIML R117</strong> — The International Organization of Legal Metrology recommendation for measuring systems for liquids other than water. OIML R117 defines accuracy classes (Class 0.3, 0.5, 1.0, 1.5, 2.0) and specifies maximum permissible errors for custody transfer applications. Coriolis meters used for fiscal measurement must typically achieve OIML Class 0.3 or 0.5.
+      </p>
+      <p>
+        <strong>API MPMS Chapter 21</strong> — The American Petroleum Institute's Manual of Petroleum Measurement Standards, Chapter 21, provides guidelines for flow measurement using electronic flow meters. This chapter covers meter design, installation, operation, calibration, and data management for petroleum custody transfer.
+      </p>
+      <p>
+        <strong>AGA Report No. 11</strong> — The American Gas Association report on measurement of natural gas and related gases using ultrasonic and Coriolis meters. This report provides installation recommendations, performance verification procedures, and calibration requirements specific to natural gas custody transfer.
+      </p>
+      <p>
+        <strong>MID (Measuring Instruments Directive)</strong> — The European directive that regulates measuring instruments used for fiscal purposes. Coriolis meters must be MID-certified to be used for custody transfer within the European Economic Area and many GCC countries that reference European standards.
+      </p>
+
+      <h2>The Calibration Process</h2>
+      <p>
+        A comprehensive Coriolis flow meter calibration typically follows these steps:
+      </p>
+      <p>
+        <strong>1. Pre-Calibration Inspection</strong> — The meter is visually inspected for mechanical damage, corrosion, coating buildup, or loose connections. Electrical connections and wiring are verified. The meter's configuration parameters are documented.
+      </p>
+      <p>
+        <strong>2. Reference Standard Verification</strong> — The calibration reference standard (gravimetric system, pipe prover, or master meter) is verified and its own calibration status confirmed. All reference standards must have traceability to national or international metrological institutes.
+      </p>
+      <p>
+        <strong>3. Zero-Point Verification</strong> — With no flow through the meter, the zero-point stability is checked. A drift in the zero-point reading indicates potential issues with tube vibration, sensor alignment, or internal coating.
+      </p>
+      <p>
+        <strong>4. Multi-Point Calibration</strong> — The meter is tested at multiple flow rates across its operating range (typically 5-6 points from minimum to maximum flow). At each point, the meter's reading is compared to the reference standard. This establishes the meter's linearity and repeatability.
+      </p>
+      <p>
+        <strong>5. Density and Temperature Verification</strong> — For Coriolis meters that also measure density, the density reading is verified against known reference values. Temperature sensor accuracy is confirmed.
+      </p>
+      <p>
+        <strong>6. Documentation and Certification</strong> — Calibration results are documented in a formal certificate that includes as-found data (before adjustment), as-left data (after adjustment), measurement uncertainty, traceability information, and the next recommended calibration date.
+      </p>
+
+      <h2>Micro Motion Coriolis Meter Calibration</h2>
+      <p>
+        <strong>Micro Motion</strong>, manufactured by Emerson, is one of the most widely used Coriolis meter brands in oil &amp; gas custody transfer applications. Micro Motion meters are known for their high accuracy, robust construction, and advanced diagnostics capabilities.
+      </p>
+      <p>
+        Calibrating Micro Motion Coriolis meters requires specialized knowledge of the meter's design, firmware, and configuration parameters. Key considerations include:
+      </p>
+      <ul>
+        <li>Tube drive amplitude and frequency verification</li>
+        <li>Sensor drive gain and balance checks</li>
+        <li>Density calibration against reference fluids</li>
+        <li>Verification of meter-specific diagnostic parameters</li>
+        <li>Compliance with Emerson's recommended calibration procedures</li>
+      </ul>
+
+      <h2>Calibration Frequency and Triggers</h2>
+      <p>
+        The recommended calibration frequency for Coriolis flow meters depends on several factors:
+      </p>
+      <ul>
+        <li><strong>Custody transfer applications</strong> — Annual calibration is typically required by regulatory authorities and fiscal measurement standards</li>
+        <li><strong>Process control applications</strong> — Calibration every 2-3 years may be acceptable, depending on the criticality of the measurement</li>
+        <li><strong>Harsh service conditions</strong> — Meters handling corrosive, erosive, or high-viscosity fluids may require more frequent calibration</li>
+        <li><strong>After maintenance or repair</strong> — Any meter that has been disassembled, repaired, or subjected to mechanical stress should be recalibrated before returning to service</li>
+      </ul>
+
+      <h2>Why Calibration Accuracy Matters in Custody Transfer</h2>
+      <p>
+        In custody transfer applications, flow measurements directly determine financial transactions. Even a small calibration error can result in significant revenue loss or overpayment. Consider this example:
+      </p>
+      <p>
+        A Coriolis meter on a crude oil custody transfer skid measures 100,000 barrels per day at $75/barrel. If the meter has a systematic error of just 0.05% (half the typical accuracy specification), the daily financial discrepancy is $3,750 — or $1.37 million per year. Regular calibration identifies and corrects such errors before they accumulate.
+      </p>
+
+      <h2>TTS Calibration Services in Kuwait and the GCC</h2>
+      <p>
+        Texas Technical Services provides professional Coriolis flow meter calibration services across Kuwait and the GCC region. Our calibration capabilities include:
+      </p>
+      <ul>
+        <li>ISO 17025 accredited laboratory calibration with traceable reference standards</li>
+        <li>On-site calibration using mobile calibration rigs and portable provers</li>
+        <li>As-found and as-left calibration with full uncertainty documentation</li>
+        <li>Multi-brand capability — Micro Motion, Endress+Hauser, KROHNE, and other major OEMs</li>
+        <li>OIML R117, API MPMS, AGA, and MID compliance verification</li>
+        <li>Emergency 2-week turnaround for critical custody transfer applications</li>
+      </ul>
+      <p>
+        Our calibration engineers hold internationally recognized certifications and have extensive experience calibrating Coriolis meters in upstream, midstream, and downstream oil &amp; gas facilities throughout the region.
+      </p>
+
+      <h2>Frequently Asked Questions (FAQ)</h2>
+      <p><strong>Q: How often should a Coriolis flow meter be calibrated?</strong><br />
+      <strong>A:</strong> For custody transfer applications, annual calibration is recommended and often required by regulatory authorities. For process control applications, calibration every 2-3 years may be acceptable. Meters in harsh service conditions or those that have undergone maintenance should be recalibrated more frequently.</p>
+
+      <p><strong>Q: What is the difference between calibration and verification?</strong><br />
+      <strong>A:</strong> Calibration compares the meter's readings against a known reference standard and adjusts the meter to minimize measurement error. Verification (or proving) confirms that the meter is performing within its specified accuracy limits without making adjustments. Both processes are important for maintaining custody transfer accuracy.</p>
+
+      <p><strong>Q: Can Coriolis meters be calibrated on-site?</strong><br />
+      <strong>A:</strong> Yes. On-site calibration is possible using mobile calibration rigs, portable provers, or reference meters. On-site calibration eliminates the need to remove the meter from the process, reducing downtime and maintaining operational continuity. However, laboratory calibration under controlled conditions provides the highest accuracy and traceability.</p>
+
+      <p><strong>Q: What calibration standards apply to Coriolis meters in Kuwait?</strong><br />
+      <strong>A:</strong> Kuwait follows international standards including OIML R117 for legal metrology, API MPMS for petroleum measurement, and AGA Report No. 11 for natural gas measurement. The Kuwait Institute for Scientific Research (KISR) and the Public Authority for Industry (PAI) oversee metrological compliance in the region.</p>
+
+      <p><strong>Q: What is the typical accuracy of a calibrated Coriolis meter?</strong><br />
+      <strong>A:</strong> A properly calibrated Coriolis meter typically achieves ±0.1% of reading for mass flow, ±0.0005 g/cm³ for density, and ±0.5°C for temperature. For custody transfer applications, OIML Class 0.3 (±0.3% of actual flow rate) is commonly required. These accuracy levels are maintained through regular calibration and proper installation practices.</p>
+    `
+  },
+
+  "ultrasonic-flow-meter-guide": {
+    title: "Ultrasonic Flow Meters: Types, Applications, and Selection Guide",
+    seoTitle: "Ultrasonic Flow Meters — Types, Selection & Applications Guide | TTS",
+    metaDescription: "Comprehensive guide to ultrasonic flow meters — clamp-on, insertion, and inline types for oil & gas, power, and industrial applications.",
+    category: "Flow Measurement",
+    date: "June 18, 2026",
+    readTime: "11 Min Read",
+    pillar: "Pillar 1: Flow Measurement & Custody Metering",
+    description: "Understand the different types of ultrasonic flow meters, how they work, and how to select the right technology for your application in oil & gas, power generation, and industrial processes.",
+    keywords: "ultrasonic flow meter, ultrasonic pipe flow meter, clamp on liquid flow meter, ultrasonic natural gas flow meter, high pressure gas flow meter",
+    image: "/ultrasonic_gas_flow_meter.jpg",
+    imageAlt: "An industrial ultrasonic flow meter installed on a pipeline for flow measurement.",
+    content: `
+      <p>
+        <strong>Ultrasonic flow meters</strong> use sound waves to measure the velocity of a fluid flowing through a pipe. Unlike mechanical flow meters with moving parts, ultrasonic meters have no wear components, making them ideal for long-term reliability in demanding industrial applications. Ultrasonic flow meters are widely used in oil &amp; gas, power generation, water treatment, and chemical processing industries for both process monitoring and custody transfer applications.
+      </p>
+      <p>
+        The ultrasonic flow measurement market has grown significantly due to the technology's non-invasive installation options, high accuracy, wide turndown ratio, and ability to handle a broad range of fluid types and pipe sizes. Understanding the different ultrasonic technologies and their applications is essential for selecting the right meter for your specific requirements.
+      </p>
+
+      <h2>How Ultrasonic Flow Meters Work</h2>
+      <p>
+        Ultrasonic flow meters operate on one of two primary measurement principles:
+      </p>
+      <p>
+        <strong>Transit-Time (Time of Flight)</strong> — Two ultrasonic transducers are installed on opposite sides of the pipe. Each transducer alternately transmits and receives ultrasonic signals. The signal traveling with the flow arrives faster than the signal traveling against the flow. The difference in transit time is proportional to the flow velocity. Transit-time meters are best suited for clean liquids and gases with low ultrasonic attenuation.
+      </p>
+      <p>
+        <strong>Doppler Effect</strong> — An ultrasonic signal is transmitted into the fluid. Particles, bubbles, or density variations in the fluid reflect the signal back at a different frequency (the Doppler shift). The frequency shift is proportional to the flow velocity. Doppler meters are ideal for fluids containing suspended solids or entrained gas.
+      </p>
+
+      <h2>Types of Ultrasonic Flow Meters</h2>
+
+      <h3>Clamp-On (Non-Invasive) Ultrasonic Meters</h3>
+      <p>
+        <strong>Clamp-on ultrasonic flow meters</strong> are mounted on the outside of the pipe, requiring no pipe cutting, no process interruption, and no risk of contamination. This makes them particularly valuable for:
+      </p>
+      <ul>
+        <li>Retrofit installations on existing piping systems</li>
+        <li>Applications where process shutdown is costly or impractical</li>
+        <li>Corrosive or high-purity fluids where inline contact is undesirable</li>
+        <li>Temporary measurement campaigns and auditing</li>
+      </ul>
+      <p>
+        Clamp-on meters use transit-time technology and require homogeneous fluids with minimal acoustic noise. Pipe diameter, wall thickness, lining material, and fluid acoustic properties must be considered during selection.
+      </p>
+
+      <h3>Inline Ultrasonic Meters</h3>
+      <p>
+        <strong>Inline ultrasonic flow meters</strong> are installed directly in the pipeline with transducers flush-mounted or recessed into the pipe wall. Inline meters provide the highest accuracy because the transducers are in direct contact with the fluid, eliminating the acoustic coupling challenges of clamp-on designs. They are commonly used for custody transfer and fiscal measurement applications.
+      </p>
+
+      <h3>Insertion Ultrasonic Meters</h3>
+      <p>
+        <strong>Insertion ultrasonic flow meters</strong> are installed through a hot tap or weldolet, positioning the transducer directly in the flow stream. They offer a balance between the accuracy of inline meters and the installation flexibility of clamp-on designs. Insertion meters are ideal for large-diameter pipes where inline installation would be prohibitively expensive.
+      </p>
+
+      <h2>Applications in Oil &amp; Gas</h2>
+      <p>
+        Ultrasonic flow meters serve critical roles across the oil &amp; gas value chain:
+      </p>
+      <ul>
+        <li><strong>Natural gas custody transfer</strong> — Inline ultrasonic meters with multiple chord paths (4, 6, or 8 paths) are the standard for fiscal gas measurement at production facilities, pipeline interconnections, and LNG terminals</li>
+        <li><strong>Crude oil measurement</strong> — Both inline and clamp-on meters are used for allocation metering and process optimization</li>
+        <li><strong>Refinery process monitoring</strong> — Clamp-on meters provide non-invasive flow measurement on process lines without shutting down operations</li>
+        <li><strong>Produced water measurement</strong> — Ultrasonic meters handle the high-salinity, abrasive fluids common in upstream water handling</li>
+        <li><strong>High-pressure gas applications</strong> — Specialized high-pressure ultrasonic meters are designed for HP/HT gas well testing and production measurement</li>
+      </ul>
+
+      <h2>Selection Criteria</h2>
+      <p>
+        Selecting the right ultrasonic flow meter requires evaluating several key factors:
+      </p>
+      <ul>
+        <li><strong>Fluid properties</strong> — Clean vs. dirty, liquid vs. gas, viscosity, density, temperature, and acoustic attenuation characteristics</li>
+        <li><strong>Pipe size and material</strong> — Ultrasonic meters are available for pipe sizes from ½ inch to over 120 inches. Pipe material affects acoustic coupling and signal propagation</li>
+        <li><strong>Accuracy requirements</strong> — Custody transfer applications require ±0.5% or better; process monitoring may accept ±1-2%</li>
+        <li><strong>Installation type</strong> — Clamp-on for non-invasive applications; inline or insertion for higher accuracy requirements</li>
+        <li><strong>Flow range and turndown</strong> — Ensure the meter can accurately measure both minimum and maximum flow rates</li>
+        <li><strong>Pressure rating</strong> — High-pressure gas applications require specialized meter designs rated for the operating pressure</li>
+      </ul>
+
+      <h2>Advantages of Ultrasonic Technology</h2>
+      <ul>
+        <li><strong>No moving parts</strong> — Eliminates mechanical wear and reduces maintenance costs</li>
+        <li><strong>Non-invasive options</strong> — Clamp-on designs eliminate process interruption and contamination risk</li>
+        <li><strong>Wide size range</strong> — Effective for pipe sizes from small bore to large transmission pipelines</li>
+        <li><strong>High accuracy</strong> — Multi-path inline meters achieve ±0.5% or better for custody transfer</li>
+        <li><strong>Low pressure drop</strong> — No obstructions in the flow path reduce energy losses</li>
+        <li><strong>Bidirectional measurement</strong> — Most ultrasonic meters can measure flow in both directions</li>
+      </ul>
+
+      <h2>TTS Ultrasonic Flow Meter Services</h2>
+      <p>
+        Texas Technical Services provides comprehensive ultrasonic flow meter solutions across Kuwait and the GCC:
+      </p>
+      <ul>
+        <li>Ultrasonic meter selection, supply, and installation for custody transfer and process applications</li>
+        <li>Clamp-on meter installation and commissioning for retrofit projects</li>
+        <li>Meter calibration and verification services</li>
+        <li>Flow measurement system design and engineering</li>
+        <li>Technical support and after-sales service</li>
+      </ul>
+
+      <h2>Frequently Asked Questions (FAQ)</h2>
+      <p><strong>Q: What is the difference between clamp-on and inline ultrasonic flow meters?</strong><br />
+      <strong>A:</strong> Clamp-on meters are mounted on the outside of the pipe and do not contact the fluid, making them non-invasive but potentially less accurate. Inline meters are installed directly in the pipeline with transducers in contact with the fluid, providing higher accuracy for custody transfer applications.</p>
+
+      <p><strong>Q: Can ultrasonic meters measure natural gas flow?</strong><br />
+      <strong>A:</strong> Yes. Inline multi-path ultrasonic meters are the industry standard for natural gas custody transfer. They use multiple chord paths to profile the velocity distribution across the pipe cross-section, achieving ±0.5% accuracy or better.</p>
+
+      <p><strong>Q: Are ultrasonic meters suitable for dirty or corrosive fluids?</strong><br />
+      <strong>A:</strong> Doppler-type ultrasonic meters can measure fluids containing suspended solids or entrained gas. For clean but corrosive fluids, clamp-on meters provide a non-contact solution. Inline meters with corrosion-resistant materials (Hastelloy, titanium) are also available for severe service applications.</p>
+
+      <p><strong>Q: What pipe sizes can ultrasonic flow meters handle?</strong><br />
+      <strong>A:</strong> Ultrasonic flow meters are available for pipe sizes ranging from ½ inch to over 120 inches (3 meters). Clamp-on meters are particularly advantageous for large-diameter pipes where inline installation would be prohibitively expensive.</p>
+
+      <p><strong>Q: How does TTS support ultrasonic flow meter projects in the GCC?</strong><br />
+      <strong>A:</strong> TTS provides end-to-end support including meter selection, system design, supply, installation, calibration, and ongoing maintenance. Our engineers have extensive experience with ultrasonic metering systems for oil &amp; gas custody transfer, process monitoring, and fiscal measurement applications across Kuwait and the GCC region.</p>
+    `
+  },
+
+  "factorytalk-mes-guide": {
+    title: "FactoryTalk MES: How Manufacturing Execution Systems Improve Industrial Efficiency",
+    seoTitle: "FactoryTalk MES Guide — Manufacturing Execution Systems for Industry | TTS",
+    metaDescription: "Complete guide to FactoryTalk MES — MES benefits, PLC/SCADA integration, FactoryTalk Analytics, and implementation services in Kuwait.",
+    category: "Industrial Automation",
+    date: "June 4, 2026",
+    readTime: "10 Min Read",
+    pillar: "Pillar 2: Industrial Process Automation",
+    description: "Understand how FactoryTalk MES connects production systems to business systems, enabling real-time visibility, optimized scheduling, and improved operational efficiency.",
+    keywords: "FactoryTalk MES, FactoryTalk analytics, FactoryTalk Asset Centre, FactoryTalk software, MES vendor, Rockwell automation factorytalk",
+    image: "/images/industrial_automation/industrial_control_panels/1.jpg",
+    imageAlt: "An industrial manufacturing execution system dashboard displaying real-time production metrics.",
+    content: `
+      <p>
+        <strong>FactoryTalk MES</strong> is Rockwell Automation's manufacturing execution system (MES) platform that bridges the gap between enterprise-level business systems (ERP, supply chain) and shop-floor control systems (PLC, SCADA, DCS). By connecting these layers, FactoryTalk MES provides real-time visibility into production operations, enabling manufacturers to optimize scheduling, improve quality, reduce waste, and increase Overall Equipment Effectiveness (OEE).
+      </p>
+      <p>
+        In today's competitive industrial landscape, manufacturers need more than just automation — they need intelligence. FactoryTalk MES transforms raw production data into actionable insights, helping operations teams make informed decisions that directly impact productivity and profitability.
+      </p>
+
+      <h2>What is Manufacturing Execution System (MES)?</h2>
+      <p>
+        An MES is a software system that manages and monitors work-in-progress on the factory floor. It tracks raw materials as they move through the production process, from order release to finished goods. The MES provides real-time information about production status, quality metrics, resource utilization, and material movement.
+      </p>
+      <p>
+        Unlike ERP systems that operate at the planning level, MES operates at the execution level — the actual moment of production. This makes MES the critical link between "what we plan to produce" and "what we actually produce."
+      </p>
+
+      <h2>FactoryTalk MES Platform Components</h2>
+      <p>
+        The FactoryTalk MES platform includes several integrated modules:
+      </p>
+      <ul>
+        <li><strong>Production Management</strong> — Work order management, production scheduling, and real-time production tracking. Enables dynamic scheduling based on actual equipment availability and material readiness.</li>
+        <li><strong>Quality Management</strong> — In-process quality checks, SPC (Statistical Process Control), non-conformance tracking, and electronic batch records. Ensures product quality at every production stage.</li>
+        <li><strong>Material Management</strong> — Material tracking, lot traceability, and inventory management. Provides full traceability from raw materials to finished products.</li>
+        <li><strong>Performance Management</strong> — OEE calculation, downtime tracking, and performance dashboards. Identifies bottlenecks and improvement opportunities.</li>
+        <li><strong>Maintenance Management</strong> — Preventive maintenance scheduling, work order management, and spare parts tracking. Reduces unplanned downtime.</li>
+      </ul>
+
+      <h2>FactoryTalk Analytics</h2>
+      <p>
+        <strong>FactoryTalk Analytics</strong> is a suite of data analytics tools that transforms production data into actionable business intelligence. Key capabilities include:
+      </p>
+      <ul>
+        <li><strong>Real-time dashboards</strong> — Visual displays of KPIs, production metrics, and alarm summaries</li>
+        <li><strong>Trend analysis</strong> — Historical data visualization to identify patterns and trends</li>
+        <li><strong>Predictive analytics</strong> — Machine learning algorithms that predict equipment failures before they occur</li>
+        <li><strong>Root cause analysis</strong> — Tools to quickly identify the root causes of quality issues, downtime events, and production losses</li>
+        <li><strong>Mobile access</strong> — Dashboards and alerts accessible from smartphones and tablets for remote monitoring</li>
+      </ul>
+
+      <h2>FactoryTalk Asset Centre</h2>
+      <p>
+        <strong>FactoryTalk Asset Centre</strong> provides centralized management and control of automation assets across the plant. It enables:
+      </p>
+      <ul>
+        <li>Centralized configuration and version control for PLCs, HMIs, and drives</li>
+        <li>Audit trail and change management for regulatory compliance</li>
+        <li>User authentication and access control (integration with Active Directory)</li>
+        <li>Asset documentation and inventory management</li>
+        <li>Automated backup and disaster recovery</li>
+      </ul>
+
+      <h2>Integration with PLC and SCADA Systems</h2>
+      <p>
+        FactoryTalk MES integrates seamlessly with Allen-Bradley PLCs (ControlLogix, CompactLogix) and FactoryTalk SCADA software. This integration enables:
+      </p>
+      <ul>
+        <li>Direct data collection from PLCs without custom programming</li>
+        <li>Bi-directional communication for work order download and production feedback</li>
+        <li>Real-time equipment status and alarm monitoring</li>
+        <li>Unified platform for visualization, data collection, and production management</li>
+      </ul>
+
+      <h2>Benefits for Industrial Operations</h2>
+      <p>
+        Implementing FactoryTalk MES delivers measurable benefits:
+      </p>
+      <ul>
+        <li><strong>Increased OEE</strong> — Typical improvements of 5-15% through reduced downtime, faster changeovers, and optimized scheduling</li>
+        <li><strong>Improved quality</strong> — Real-time quality monitoring reduces scrap rates and rework costs</li>
+        <li><strong>Full traceability</strong> — Complete lot and batch tracking from raw materials to finished goods</li>
+        <li><strong>Regulatory compliance</strong> — Electronic batch records and audit trails simplify FDA, ISO, and other regulatory requirements</li>
+        <li><strong>Data-driven decisions</strong> — Real-time visibility enables faster, more informed operational decisions</li>
+      </ul>
+
+      <h2>TTS FactoryTalk MES Implementation Services</h2>
+      <p>
+        Texas Technical Services provides FactoryTalk MES implementation services across Kuwait and the GCC:
+      </p>
+      <ul>
+        <li>MES requirements analysis and solution design</li>
+        <li>PLC/SCADA integration and data collection configuration</li>
+        <li>Production management, quality, and material tracking module deployment</li>
+        <li>Dashboard and analytics setup with FactoryTalk Analytics</li>
+        <li>Operator training and change management support</li>
+        <li>Ongoing maintenance and optimization services</li>
+      </ul>
+
+      <h2>Frequently Asked Questions (FAQ)</h2>
+      <p><strong>Q: What is the difference between MES and ERP?</strong><br />
+      <strong>A:</strong> ERP (Enterprise Resource Planning) handles business-level planning — purchasing, inventory, finance, and order management. MES operates at the production execution level, managing real-time production operations on the shop floor. MES and ERP are complementary systems that work together to optimize the entire value chain.</p>
+
+      <p><strong>Q: Can FactoryTalk MES integrate with non-Rockwell PLCs?</strong><br />
+      <strong>A:</strong> Yes. While FactoryTalk MES integrates most naturally with Allen-Bradley PLCs, it can connect to other PLC brands through OPC UA, OPC DA, or custom adapters. However, integration with Rockwell Automation platforms provides the smoothest data exchange and configuration experience.</p>
+
+      <p><strong>Q: How long does a typical FactoryTalk MES implementation take?</strong><br />
+      <strong>A:</strong> Implementation timelines vary based on scope, but a typical project takes 3-6 months from requirements analysis to go-live. Complex enterprise-wide deployments may take 6-12 months. TTS follows a phased implementation approach to deliver value incrementally.</p>
+
+      <p><strong>Q: What industries benefit most from FactoryTalk MES?</strong><br />
+      <strong>A:</strong> FactoryTalk MES is widely used in oil &amp; gas, food &amp; beverage, pharmaceutical, automotive, semiconductor, and discrete manufacturing industries. Any production environment that requires traceability, quality management, or production optimization can benefit from MES implementation.</p>
+
+      <p><strong>Q: Can TTS implement FactoryTalk MES for our operations in Kuwait?</strong><br />
+      <strong>A:</strong> Yes. TTS provides complete FactoryTalk MES implementation services in Kuwait and the GCC. Our team includes Rockwell Automation-certified engineers with extensive experience in manufacturing execution system design, integration, and deployment for industrial operations.</p>
+    `
+  },
+
+  "allen-bradley-plc-repair-maintenance": {
+    title: "Allen-Bradley PLC Repair and Maintenance: Complete Service Guide",
+    seoTitle: "Allen-Bradley PLC Repair & Maintenance — Service Guide | TTS Kuwait",
+    metaDescription: "Complete guide to Allen-Bradley PLC repair — ControlLogix, CompactLogix, PanelView troubleshooting, spare parts, and repair services in Kuwait.",
+    category: "Industrial Automation",
+    date: "May 22, 2026",
+    readTime: "10 Min Read",
+    pillar: "Pillar 2: Industrial Process Automation",
+    description: "Learn about common Allen-Bradley PLC failure modes, preventive maintenance best practices, and when to choose repair vs. replacement for your automation systems.",
+    keywords: "Allen Bradley PLC repair, Allen Bradley system integrators, PLC distributors, Allen Bradley tools, Rockwell automation support",
+    image: "/images/industrial_automation/plc_&_io_module/1.jpg",
+    imageAlt: "Allen-Bradley ControlLogix PLC system in an industrial control panel with diagnostic indicators.",
+    content: `
+      <p>
+        <strong>Allen-Bradley PLC repair and maintenance</strong> is essential for maintaining the reliability and uptime of industrial automation systems. Allen-Bradley, manufactured by Rockwell Automation, is one of the most widely used programmable logic controller (PLC) platforms in oil &amp; gas, power generation, manufacturing, and process industries worldwide. From the flagship ControlLogix platform to the compact CompactLogix series and PanelView human-machine interfaces (HMIs), these systems form the backbone of industrial process control.
+      </p>
+      <p>
+        When an Allen-Bradley PLC fails or degrades, the consequences can be severe — unplanned downtime, lost production, safety hazards, and cascading equipment failures. Understanding common failure modes, implementing preventive maintenance, and knowing when to engage professional repair services are critical for maintaining operational continuity.
+      </p>
+
+      <h2>Common Allen-Bradley PLC Failure Modes</h2>
+      <p>
+        Allen-Bradley PLCs are designed for industrial reliability, but several failure modes can affect performance:
+      </p>
+      <ul>
+        <li><strong>Power supply failures</strong> — Voltage fluctuations, power surges, and component aging can cause power supply modules to fail or deliver unstable voltage to the backplane</li>
+        <li><strong>CPU module faults</strong> — Memory corruption, firmware issues, and hardware degradation can cause watchdog timeouts, program faults, and communication errors</li>
+        <li><strong>I/O module failures</strong> — Input/output modules can fail due to electrical surges, wiring faults, or environmental exposure to dust, moisture, and temperature extremes</li>
+        <li><strong>Communication module issues</strong> — Ethernet/IP, DeviceNet, and ControlNet modules can develop faults due to cable damage, electromagnetic interference, or configuration errors</li>
+        <li><strong>HMI/PanelView failures</strong> — Touchscreen degradation, backlight failure, memory corruption, and communication loss with the PLC</li>
+        <li><strong>PowerFlex drive faults</strong> — VFD failures due to capacitor aging, IGBT module failure, fan degradation, and encoder feedback issues</li>
+      </ul>
+
+      <h2>Preventive Maintenance Best Practices</h2>
+      <p>
+        Implementing a structured preventive maintenance program significantly reduces unplanned downtime:
+      </p>
+      <ul>
+        <li><strong>Regular firmware updates</strong> — Keep PLCs, HMIs, and drives updated with the latest firmware for security patches and bug fixes</li>
+        <li><strong>Battery management</strong> — Replace CPU batteries annually to prevent program loss. Monitor battery voltage through the PLC's diagnostic interface</li>
+        <li><strong>Environmental monitoring</strong> — Maintain control panel temperatures below 50°C, ensure proper ventilation, and filter incoming air to prevent dust accumulation</li>
+        <li><strong>Power quality monitoring</strong> — Install surge protection, UPS systems, and voltage regulators to protect against power quality events</li>
+        <li><strong>Communication cable inspection</strong> — Regularly inspect Ethernet, DeviceNet, and ControlNet cables for damage, loose connections, and electromagnetic interference sources</li>
+        <li><strong>Backup and redundancy</strong> — Maintain current backups of all PLC programs, HMI configurations, and drive parameters. Implement redundant CPUs and communication paths for critical applications</li>
+      </ul>
+
+      <h2>Allen-Bradley Product Range</h2>
+      <p>
+        Rockwell Automation's Allen-Bradley product portfolio includes several platforms:
+      </p>
+      <ul>
+        <li><strong>ControlLogix</strong> — High-performance modular PLC for large-scale process control applications. Supports redundant CPUs, extensive I/O capacity, and advanced communication options</li>
+        <li><strong>CompactLogix</strong> — Mid-range PLC for small to medium applications. Compact form factor with integrated I/O and communication capabilities</li>
+        <li><strong>MicroLogix</strong> — Small-scale PLC for simple machine control and OEM applications</li>
+        <li><strong>PanelView</strong> — Touchscreen HMIs for operator interface. PanelView Plus 6 and PanelView 7 series provide advanced visualization and data logging</li>
+        <li><strong>PowerFlex</strong> — Variable frequency drives (VFDs) for motor speed control. PowerFlex 525, 753, and 755 series cover a wide range of power ratings and applications</li>
+        <li><strong>Kinetix</strong> — Servo drives and motors for precision motion control applications</li>
+      </ul>
+
+      <h2>Repair vs. Replacement Decision</h2>
+      <p>
+        When an Allen-Bradley module fails, the decision to repair or replace depends on several factors:
+      </p>
+      <ul>
+        <li><strong>Module age and availability</strong> — Older modules that are discontinued may be difficult to replace. Repair or refurbishment may be the only option</li>
+        <li><strong>Repair cost vs. replacement cost</strong> — If repair cost exceeds 50-60% of replacement cost, replacement is typically more economical</li>
+        <li><strong>Downtime impact</strong> — If spare modules are in stock, replacement is faster. If not, repair with expedited parts sourcing may minimize downtime</li>
+        <li><strong>System compatibility</strong> — Replacing an older module with a newer version may require firmware upgrades, program modifications, or I/O reconfiguration</li>
+        <li><strong>Warranty and support</strong> — New modules come with manufacturer warranty and ongoing support. Repaired modules may have limited warranty coverage</li>
+      </ul>
+
+      <h2>TTS PLC Repair and Maintenance Services</h2>
+      <p>
+        Texas Technical Services provides comprehensive Allen-Bradley PLC repair and maintenance services across Kuwait and the GCC:
+      </p>
+      <ul>
+        <li>On-site PLC, HMI, and drive troubleshooting and repair</li>
+        <li>Module-level repair and component replacement</li>
+        <li>Firmware upgrades and program optimization</li>
+        <li>Preventive maintenance contracts and scheduled inspections</li>
+        <li>Spare parts sourcing and inventory management</li>
+        <li>24/7 emergency support for critical process control systems</li>
+      </ul>
+
+      <h2>Frequently Asked Questions (FAQ)</h2>
+      <p><strong>Q: How do I know if my Allen-Bradley PLC needs repair?</strong><br />
+      <strong>A:</strong> Common signs include: unexpected CPU faults or watchdog timeouts, I/O modules not responding, communication errors on Ethernet/IP or DeviceNet networks, HMI screens freezing or going blank, VFD fault codes that cannot be cleared, and battery low warnings that persist after battery replacement.</p>
+
+      <p><strong>Q: Can TTS repair obsolete Allen-Bradley modules?</strong><br />
+      <strong>A:</strong> Yes. TTS maintains relationships with authorized Rockwell Automation distributors and surplus equipment suppliers to source discontinued modules. For truly obsolete components, we can evaluate migration paths to current-generation platforms while minimizing program changes.</p>
+
+      <p><strong>Q: What is the typical turnaround time for PLC repair?</strong><br />
+      <strong>A:</strong> On-site troubleshooting and repair is typically completed within 24-48 hours. Module-level repair or replacement can be completed in 1-5 business days depending on parts availability. Emergency 24-hour response is available for critical process control applications.</p>
+
+      <p><strong>Q: Does TTS offer preventive maintenance contracts?</strong><br />
+      <strong>A:</strong> Yes. TTS offers structured preventive maintenance contracts that include scheduled inspections, firmware updates, battery replacements, backup verification, and performance trending. Preventive maintenance typically reduces unplanned downtime by 40-60%.</p>
+
+      <p><strong>Q: Can TTS support our Allen-Bradley systems in Kuwait?</strong><br />
+      <strong>A:</strong> Yes. TTS provides full Allen-Bradley PLC repair and maintenance services throughout Kuwait and the GCC. Our engineers are Rockwell Automation certified and carry common spare parts for rapid on-site response.</p>
+    `
+  },
+
+  "industrial-gas-detection-guide": {
+    title: "Industrial Gas Detection Systems: Selection, Installation, and Compliance Guide",
+    seoTitle: "Industrial Gas Detection Systems — Selection & Compliance Guide | TTS",
+    metaDescription: "Complete guide to industrial gas detection — fixed and portable monitors, Honeywell analytics, system design, and compliance in Kuwait.",
+    category: "Industrial Automation",
+    date: "May 14, 2026",
+    readTime: "11 Min Read",
+    pillar: "Pillar 2: Industrial Process Automation",
+    description: "Learn how to select, design, and implement industrial gas detection systems for worker safety and regulatory compliance in oil & gas, refinery, and industrial facilities.",
+    keywords: "gas detection system, Honeywell analytics gas detection, portable multi gas monitor, fixed gas detection system, industrial gas detection systems, gas detection panel",
+    image: "/extractive_gas_analyzer.jpg",
+    imageAlt: "An industrial gas detection system with fixed detectors and control panel in a processing facility.",
+    content: `
+      <p>
+        <strong>Industrial gas detection systems</strong> are critical safety infrastructure that protects workers, facilities, and the environment from the hazards of toxic gases, combustible gases, and oxygen-deficient atmospheres. In oil &amp; gas, refinery, petrochemical, and power generation facilities, gas detection systems provide early warning of hazardous conditions, enabling timely evacuation, process shutdown, and emergency response.
+      </p>
+      <p>
+        The selection, design, and installation of gas detection systems must consider the specific hazards present, the facility layout, regulatory requirements, and the operational characteristics of the process. A well-designed gas detection system is not just a safety investment — it is a regulatory requirement in most jurisdictions and a fundamental component of Process Safety Management (PSM) programs.
+      </p>
+
+      <h2>Types of Gas Detection Systems</h2>
+
+      <h3>Fixed Gas Detection Systems</h3>
+      <p>
+        <strong>Fixed gas detectors</strong> are permanently installed at strategic locations throughout a facility. They continuously monitor the atmosphere and trigger alarms, activate ventilation systems, or initiate emergency shutdowns when gas concentrations exceed preset thresholds. Fixed systems are essential for:
+      </p>
+      <ul>
+        <li>Enclosed or semi-enclosed spaces (pump rooms, compressor buildings, valve nests)</li>
+        <li>Areas near potential release points (flanges, valves, process connections)</li>
+        <li>Perimeter monitoring around hazardous process areas</li>
+        <li>Confined space entry monitoring</li>
+      </ul>
+
+      <h3>Portable Gas Monitors</h3>
+      <p>
+        <strong>Portable multi-gas monitors</strong> are personal protective equipment (PPE) carried by workers entering hazardous areas. These handheld devices typically detect 1-5 gases simultaneously, including combustible gases (LEL), oxygen (O₂), hydrogen sulfide (H₂S), carbon monoxide (CO), and sulfur dioxide (SO₂).
+      </p>
+      <p>
+        Key features of portable gas monitors include:
+      </p>
+      <ul>
+        <li>Real-time gas concentration display with audible, visual, and vibration alarms</li>
+        <li>Data logging for incident investigation and compliance documentation</li>
+        <li>Bump test and calibration reminders</li>
+        <li>Intrinsic safety certification for use in explosive atmospheres</li>
+        <li>Rugged design for industrial environments (IP67/IP68 rating)</li>
+      </ul>
+
+      <h3>Personal Gas Detection Monitors</h3>
+      <p>
+        <strong>Personal gas detection monitors</strong> are wearable devices that provide individual workers with continuous gas hazard awareness. Unlike portable monitors that are carried in hand, personal monitors are clipped to clothing and provide hands-free protection. They are particularly valuable for:
+      </p>
+      <ul>
+        <li>Solo workers in hazardous environments</li>
+        <li>Workers moving between different hazard zones</li>
+        <li>Emergency response teams</li>
+        <li>Confined space entrants and attendants</li>
+      </ul>
+
+      <h2>Honeywell Analytics Gas Detection</h2>
+      <p>
+        <strong>Honeywell Analytics</strong> is a leading manufacturer of gas detection equipment, offering a comprehensive range of fixed, portable, and personal gas monitors. Key Honeywell products include:
+      </p>
+      <ul>
+        <li><strong>BW Solo</strong> — Single-gas personal monitor for worker safety. Available in H₂S, CO, SO₂, and O₂ configurations</li>
+        <li><strong>BW Clip Series</strong> — Maintenance-free personal gas detectors with 2-3 year operational life</li>
+        <li><strong>Midas Gas Detector</strong> — Fixed gas detector with smart sensor technology for toxic and combustible gases</li>
+        <li><strong>Searchpoint Optima Plus</strong> — Infrared combustible gas detector for fixed installation in hazardous areas</li>
+        <li><strong>Gas-Pro</strong> — Portable multi-gas monitor supporting up to 5 simultaneous gas detections</li>
+        <li><strong>Intellidox</strong> — Instrument management system for automated bump testing and calibration</li>
+      </ul>
+
+      <h2>Gas Detection System Design</h2>
+      <p>
+        Effective gas detection system design requires careful consideration of several factors:
+      </p>
+      <ul>
+        <li><strong>Hazard identification</strong> — Identify all potentially hazardous gases, their locations, and expected concentrations</li>
+        <li><strong>Detector placement</strong> — Position detectors based on gas properties (density, diffusion characteristics), ventilation patterns, and potential release sources</li>
+        <li><strong>Alarm setpoints</strong> — Configure alarm levels according to occupational exposure limits (OELs), lower explosive limits (LEL), and regulatory requirements</li>
+        <li><strong>Integration</strong> — Connect gas detection systems to process control systems (PLC/SCADA) for automated emergency response actions</li>
+        <li><strong>Redundancy</strong> — Design critical detection zones with redundant detectors to prevent false alarms and ensure reliability</li>
+      </ul>
+
+      <h2>Compliance Standards</h2>
+      <p>
+        Gas detection systems must comply with various national and international standards:
+      </p>
+      <ul>
+        <li><strong>IEC 60079</strong> — Explosive atmospheres standards for equipment selection and installation in hazardous areas</li>
+        <li><strong>ISA 92.00.01</strong> — Performance requirements for toxic gas detectors</li>
+        <li><strong>ISA 92.00.04</strong> — Performance requirements for combustible gas detectors</li>
+        <li><strong>EN 50402</strong> — Fixed gas detection systems for combustible and toxic gases</li>
+        <li><strong>NFPA 72</strong> — National Fire Alarm and Signaling Code (includes gas detection requirements)</li>
+        <li><strong>OSHA 29 CFR 1910.146</strong> — Permit-required confined space standard (gas monitoring requirements)</li>
+      </ul>
+
+      <h2>TTS Gas Detection Services</h2>
+      <p>
+        Texas Technical Services provides comprehensive gas detection solutions across Kuwait and the GCC:
+      </p>
+      <ul>
+        <li>Gas hazard assessment and detection system design</li>
+        <li>Supply and installation of fixed and portable gas detection equipment</li>
+        <li>System integration with PLC/SCADA for automated emergency response</li>
+        <li>Calibration, bump testing, and maintenance services</li>
+        <li>Operator training on gas detection equipment use and maintenance</li>
+        <li>Compliance auditing and documentation support</li>
+      </ul>
+
+      <h2>Frequently Asked Questions (FAQ)</h2>
+      <p><strong>Q: How many gas detectors do I need for my facility?</strong><br />
+      <strong>A:</strong> The number depends on the facility layout, hazard types, ventilation patterns, and regulatory requirements. A gas hazard assessment performed by qualified engineers determines optimal detector placement. Typically, detectors are positioned near potential release points, in enclosed spaces, and at perimeter locations.</p>
+
+      <p><strong>Q: What is the difference between a fixed and portable gas detector?</strong><br />
+      <strong>A:</strong> Fixed detectors are permanently installed and continuously monitor specific locations. They trigger facility-wide alarms and can activate emergency shutdowns. Portable detectors are personal devices carried by workers, providing individual protection and localized gas concentration readings.</p>
+
+      <p><strong>Q: How often should gas detectors be calibrated?</strong><br />
+      <strong>A:</strong> Most manufacturers recommend calibration every 3-6 months for fixed detectors and monthly bump testing for portable monitors. Calibration frequency may be higher for detectors in harsh environments or those exposed to known interferents.</p>
+
+      <p><strong>Q: Can gas detection systems be integrated with PLC/SCADA?</strong><br />
+      <strong>A:</strong> Yes. Gas detection systems can be connected to PLC and SCADA platforms via analog (4-20mA), digital (HART, Modbus), or network (Ethernet/IP) interfaces. Integration enables automated emergency actions such as ventilation activation, process shutdown, and alarm notification.</p>
+
+      <p><strong>Q: Does TTS supply and install Honeywell gas detection systems?</strong><br />
+      <strong>A:</strong> Yes. TTS is an authorized partner for Honeywell Analytics gas detection products. We supply, install, calibrate, and maintain Honeywell fixed and portable gas detection systems throughout Kuwait and the GCC region.</p>
+    `
+  },
+
+  "vibration-condition-monitoring-predictive-maintenance": {
+    title: "Vibration Monitoring and Condition Monitoring for Predictive Maintenance",
+    seoTitle: "Vibration & Condition Monitoring for Predictive Maintenance | TTS Kuwait",
+    metaDescription: "Guide to vibration and condition monitoring for predictive maintenance — ABB and Rockwell solutions and services in Kuwait.",
+    category: "Industrial Automation",
+    date: "May 25, 2026",
+    readTime: "10 Min Read",
+    pillar: "Pillar 2: Industrial Process Automation",
+    description: "Learn how vibration monitoring and condition monitoring systems predict equipment failures, reduce unplanned downtime, and optimize maintenance strategies for rotating equipment.",
+    keywords: "ABB vibration monitoring, ABB condition monitoring, Rockwell vibration monitoring, Rockwell condition monitoring, predictive maintenance Kuwait, vibration monitoring Dubai",
+    image: "/images/field_instruments/condition_monitoring_sensors/1.png",
+    imageAlt: "A vibration monitoring sensor installed on an industrial rotating equipment with data analysis dashboard.",
+    content: `
+      <p>
+        <strong>Vibration monitoring and condition monitoring</strong> are predictive maintenance technologies that detect early signs of equipment degradation before failures occur. By continuously or periodically measuring vibration patterns in rotating equipment — motors, pumps, compressors, fans, turbines — these systems identify developing faults weeks or months in advance, enabling planned maintenance instead of costly emergency repairs.
+      </p>
+      <p>
+        In oil &amp; gas, power generation, and process industries, rotating equipment represents a significant portion of total maintenance costs. Unplanned failures of critical equipment can cause production losses of $10,000-$100,000+ per hour, making predictive maintenance a high-value investment.
+      </p>
+
+      <h2>How Vibration Monitoring Works</h2>
+      <p>
+        Every rotating machine produces vibration as a natural consequence of its operation. The vibration signature contains information about the machine's mechanical condition. By analyzing vibration patterns, condition monitoring experts can identify specific fault types:
+      </p>
+      <ul>
+        <li><strong>Imbalance</strong> — Uneven mass distribution on the rotor causes vibration at the rotational frequency (1x RPM)</li>
+        <li><strong>Misalignment</strong> — Shaft misalignment between coupled machines produces vibration at 1x and 2x RPM, often with axial vibration components</li>
+        <li><strong>Bearing defects</strong> — Rolling element bearing damage generates characteristic defect frequencies that can be calculated from bearing geometry and rotational speed</li>
+        <li><strong>Gear faults</strong> — Gear mesh damage produces vibration at gear mesh frequency and sidebands</li>
+        <li><strong>Looseness</strong> — Mechanical looseness creates sub-harmonic and harmonic vibration patterns</li>
+        <li><strong>Resonance</strong> — Excitation of natural frequencies causes excessive vibration at specific operating speeds</li>
+        <li><strong>Electrical faults</strong> — Motor electrical issues (rotor bar defects, eccentricity) produce vibration at line frequency harmonics</li>
+      </ul>
+
+      <h2>ABB Vibration Monitoring Solutions</h2>
+      <p>
+        <strong>ABB</strong> offers a comprehensive range of vibration monitoring and condition monitoring solutions:
+      </p>
+      <ul>
+        <li><strong>ABB Ability™ Meridium</strong> — Enterprise asset performance management platform that combines vibration monitoring with reliability analysis, maintenance optimization, and risk assessment</li>
+        <li><strong>ABB Ability™ Smart Sensor</strong> — Wireless vibration sensors that mount directly on motors and pumps, providing real-time condition data without wiring infrastructure</li>
+        <li><strong>ABB Vibration Monitoring System (VMS)</strong> — Permanent protection systems for critical machinery, providing continuous monitoring and automatic shutdown on dangerous vibration levels</li>
+        <li><strong>ABB Machine Condition Monitoring</strong> — Portable data collection and analysis systems for periodic route-based monitoring programs</li>
+      </ul>
+
+      <h2>Rockwell Automation Condition Monitoring</h2>
+      <p>
+        <strong>Rockwell Automation</strong> provides condition monitoring solutions integrated with the FactoryTalk software platform:
+      </p>
+      <ul>
+        <li><strong>Allen-Bradley vibration monitoring modules</strong> — Backplane-mounted vibration analysis modules for ControlLogix and CompactLogix PLCs, providing real-time vibration data directly in the PLC</li>
+        <li><strong>FactoryTalk Analytics</strong> — Data analytics platform that processes vibration data alongside other operational data for comprehensive equipment health assessment</li>
+        <li><strong>Rockwell condition monitoring sensors</strong> — IEPE and 4-20mA vibration sensors designed for industrial environments with integration to Rockwell automation platforms</li>
+        <li><strong>FactoryTalk Asset Centre</strong> — Centralized management of vibration monitoring configurations, firmware versions, and calibration records</li>
+      </ul>
+
+      <h2>Benefits of Predictive Maintenance</h2>
+      <p>
+        Implementing a vibration-based predictive maintenance program delivers measurable benefits:
+      </p>
+      <ul>
+        <li><strong>Reduced unplanned downtime</strong> — Early fault detection prevents catastrophic failures, reducing emergency shutdowns by 40-70%</li>
+        <li><strong>Extended equipment life</strong> — Addressing minor faults before they escalate extends bearing, seal, and coupling life by 2-3x</li>
+        <li><strong>Optimized maintenance scheduling</strong> — Plan repairs during scheduled shutdowns rather than emergency outages</li>
+        <li><strong>Lower spare parts inventory</strong> — Predictive data enables just-in-time parts ordering, reducing inventory carrying costs</li>
+        <li><strong>Improved safety</strong> — Preventing catastrophic equipment failures reduces safety hazards for personnel</li>
+      </ul>
+
+      <h2>Implementation Approach</h2>
+      <p>
+        A successful vibration monitoring program follows these steps:
+      </p>
+      <ul>
+        <li><strong>1. Criticality assessment</strong> — Identify which machines are most critical to production and most likely to fail</li>
+        <li><strong>2. Sensor selection and placement</strong> — Choose appropriate sensors (permanent vs. portable, accelerometer type, frequency range) and optimal mounting locations</li>
+        <li><strong>3. Baseline data collection</strong> — Record vibration signatures for healthy machines to establish baseline reference data</li>
+        <li><strong>4. Alarm configuration</strong> — Set alarm thresholds based on international standards (ISO 10816, ISO 20816) and machine-specific historical data</li>
+        <li><strong>5. Analysis and trending</strong> — Regularly analyze vibration data, identify trends, and generate maintenance work orders for developing faults</li>
+        <li><strong>6. Continuous improvement</strong> — Refine alarm settings, add new machine types, and expand the program based on lessons learned</li>
+      </ul>
+
+      <h2>TTS Condition Monitoring Services</h2>
+      <p>
+        Texas Technical Services provides vibration monitoring and condition monitoring services across Kuwait and the GCC:
+      </p>
+      <ul>
+        <li>Vibration monitoring system design and specification</li>
+        <li>Permanent and portable sensor installation and commissioning</li>
+        <li>Data collection, analysis, and reporting</li>
+        <li>Integration with PLC/SCADA and maintenance management systems</li>
+        <li>Operator and maintenance team training</li>
+        <li>Ongoing condition monitoring program management</li>
+      </ul>
+
+      <h2>Frequently Asked Questions (FAQ)</h2>
+      <p><strong>Q: What types of equipment benefit most from vibration monitoring?</strong><br />
+      <strong>A:</strong> Rotating equipment — motors, pumps, compressors, fans, blowers, turbines, gearboxes, and conveyors — benefits most from vibration monitoring. Critical assets with high repair costs or significant production impact should be prioritized.</p>
+
+      <p><strong>Q: How far in advance can vibration monitoring detect equipment problems?</strong><br />
+      <strong>A:</strong> Depending on the fault type and severity progression, vibration monitoring can detect developing problems 2-12 months before failure. Bearing defects are typically detectable 2-6 months in advance, while misalignment and imbalance can be detected even earlier.</p>
+
+      <p><strong>Q: Can vibration monitoring be integrated with our existing PLC system?</strong><br />
+      <strong>A:</strong> Yes. Vibration data can be integrated with Allen-Bradley, Siemens, Schneider, and other PLC platforms via analog (4-20mA), digital (HART, Modbus), or network (OPC UA, Ethernet/IP) interfaces. This enables automated alarm handling and process protection.</p>
+
+      <p><strong>Q: What is the difference between ABB and Rockwell condition monitoring solutions?</strong><br />
+      <strong>A:</strong> ABB offers dedicated condition monitoring platforms (Meridium, VMS) with specialized vibration analysis capabilities. Rockwell integrates vibration monitoring into the FactoryTalk ecosystem, providing unified data across automation and condition monitoring. Both are effective; the choice depends on your existing automation platform and monitoring requirements.</p>
+
+      <p><strong>Q: Can TTS implement a vibration monitoring program for our facility in Kuwait?</strong><br />
+      <strong>A:</strong> Yes. TTS provides complete vibration monitoring and condition monitoring implementation services in Kuwait and the GCC. Our team includes certified vibration analysts with experience in oil &amp; gas, power generation, and process industry applications.</p>
+    `
+  },
+
+  "vfd-selection-programming-guide": {
+    title: "Variable Frequency Drives (VFDs): Selection, Programming, and Optimization Guide",
+    seoTitle: "VFD Selection & Programming Guide — Allen-Bradley PowerFlex | TTS Kuwait",
+    metaDescription: "Complete guide to variable frequency drives (VFDs) — Allen-Bradley PowerFlex selection, programming, energy savings, and VFD services in Kuwait and the GCC.",
+    category: "Industrial Automation",
+    date: "July 2, 2026",
+    readTime: "11 Min Read",
+    pillar: "Pillar 2: Industrial Process Automation",
+    description: "Learn how to select, program, and optimize variable frequency drives for motor speed control, energy savings, and process optimization in industrial applications.",
+    keywords: "Allen Bradley VFD distributor, PowerFlex drive, PowerFlex 753 AC drive, variable speed drive system, VFD generator, Allen Bradley motor controller",
+    image: "/images/industrial_automation/industrial_control_panels/1.jpg",
+    imageAlt: "Allen-Bradley PowerFlex variable frequency drives installed in an industrial motor control center.",
+    content: `
+      <p>
+        <strong>Variable frequency drives (VFDs)</strong> are electronic motor controllers that adjust the speed and torque of AC motors by varying the frequency and voltage of the power supplied to the motor. VFDs are one of the most effective energy-saving technologies in industrial applications, capable of reducing motor energy consumption by 30-60% compared to fixed-speed operation.
+      </p>
+      <p>
+        Beyond energy savings, VFDs provide process optimization benefits including soft starting, precise speed control, reduced mechanical stress, and improved process quality. In oil &amp; gas, water treatment, HVAC, and manufacturing applications, VFDs are essential for modern process control.
+      </p>
+
+      <h2>How VFDs Work</h2>
+      <p>
+        A VFD controls motor speed by converting fixed-frequency, fixed-voltage AC power into variable-frequency, variable-voltage AC power. The basic components of a VFD include:
+      </p>
+      <ul>
+        <li><strong>Rectifier</strong> — Converts incoming AC power to DC power</li>
+        <li><strong>DC bus</strong> — Stores and smooths the DC voltage</li>
+        <li><strong>Inverter</strong> — Converts DC power back to AC power at the desired frequency and voltage using IGBT (Insulated Gate Bipolar Transistor) switching</li>
+        <li><strong>Control circuit</strong> — Manages the inverter switching pattern using Pulse Width Modulation (PWM) to produce the desired output waveform</li>
+        <li><strong>Operator interface</strong> — Provides local control, parameter configuration, and status display</li>
+      </ul>
+
+      <h2>Allen-Bradley PowerFlex VFD Range</h2>
+      <p>
+        Rockwell Automation's Allen-Bradley PowerFlex series covers a wide range of applications and power ratings:
+      </p>
+      <ul>
+        <li><strong>PowerFlex 525</strong> — Compact, cost-effective VFD for simple motor control applications. Power range: 0.2-22 kW (0.25-30 HP). Features built-in EtherNet/IP and USB programming port</li>
+        <li><strong>PowerFlex 527</strong> — Designed for OEM machine builders with tight integration to CompactLogix PLCs. Seamless configuration through Studio 5000</li>
+        <li><strong>PowerFlex 753</strong> — Feature-rich VFD for demanding industrial applications. Advanced motor control (vector, servo), safety features (STO, SS1), and extensive I/O capabilities</li>
+        <li><strong>PowerFlex 755</strong> — High-performance VFD for critical applications. Supports induction, permanent magnet, and servo motors. Integrated safety and advanced control algorithms</li>
+        <li><strong>PowerFlex 7000</strong> — Medium-voltage VFD for large motors (2.3-11 kV). Active front end for regenerative applications and power quality management</li>
+      </ul>
+
+      <h2>VFD Selection Criteria</h2>
+      <p>
+        Selecting the right VFD requires evaluating several key factors:
+      </p>
+      <ul>
+        <li><strong>Motor specifications</strong> — Motor voltage, current, power rating, and type (induction, PM, servo)</li>
+        <li><strong>Application requirements</strong> — Torque/speed profile, dynamic response, accuracy, and duty cycle</li>
+        <li><strong>Environmental conditions</strong> — Ambient temperature, humidity, dust, and corrosive atmospheres</li>
+        <li><strong>Power supply quality</strong> — Input voltage tolerance, harmonic distortion limits, and power factor requirements</li>
+        <li><strong>Communication requirements</strong> — Integration with PLC/SCADA systems (EtherNet/IP, Modbus, Profibus)</li>
+        <li><strong>Safety requirements</strong> — Functional safety ratings (SIL, PL) for emergency stop and safe torque off</li>
+        <li><strong>Energy efficiency</strong> — Regenerative capability, active front end, and energy monitoring features</li>
+      </ul>
+
+      <h2>VFD Energy Savings</h2>
+      <p>
+        The energy savings potential of VFDs is most significant for variable-torque applications (fans, pumps, compressors) where power consumption follows the affinity laws:
+      </p>
+      <ul>
+        <li>Power is proportional to the cube of speed: P ∝ n³</li>
+        <li>Reducing speed by 20% reduces power consumption by approximately 50%</li>
+        <li>Reducing speed by 50% reduces power consumption by approximately 87.5%</li>
+      </ul>
+      <p>
+        For a 100 kW pump operating at 80% speed, the power consumption drops from 100 kW to approximately 51 kW — a 49% energy savings. At typical industrial electricity rates, this represents significant annual cost savings with a VFD payback period of 1-3 years.
+      </p>
+
+      <h2>VFD Programming and Configuration</h2>
+      <p>
+        Modern VFDs require careful programming to optimize performance:
+      </p>
+      <ul>
+        <li><strong>Motor parameters</strong> — Enter nameplate data (voltage, current, speed, power factor) for accurate motor modeling</li>
+        <li><strong>Acceleration/deceleration ramps</strong> — Configure ramp times to prevent motor trip on start/stop and avoid process upsets</li>
+        <li><strong>Speed references</strong> — Set up speed reference sources (local, PLC, 4-20mA, network) and scaling</li>
+        <li><strong>Motor control mode</strong> — Select V/Hz, vector, or servo control based on application requirements</li>
+        <li><strong>Protection parameters</strong> — Configure overcurrent, overvoltage, undervoltage, overload, and ground fault protection</li>
+        <li><strong>Communication setup</strong> — Configure EtherNet/IP, Modbus, or Profibus parameters for PLC/SCADA integration</li>
+        <li><strong>Safety functions</strong> — Configure Safe Torque Off (STO), Safe Stop 1 (SS1), and other safety functions per IEC 62061</li>
+      </ul>
+
+      <h2>TTS VFD Services</h2>
+      <p>
+        Texas Technical Services provides comprehensive VFD services across Kuwait and the GCC:
+      </p>
+      <ul>
+        <li>VFD selection, sizing, and specification for industrial applications</li>
+        <li>Supply of Allen-Bradley PowerFlex and other major VFD brands</li>
+        <li>VFD panel design, fabrication, and assembly</li>
+        <li>Programming, commissioning, and optimization</li>
+        <li>Motor-VFD compatibility analysis and motor insulation assessment</li>
+        <li>Harmonic analysis and mitigation (line reactors, active filters)</li>
+        <li>Preventive maintenance and repair services</li>
+      </ul>
+
+      <h2>Frequently Asked Questions (FAQ)</h2>
+      <p><strong>Q: How do I calculate the energy savings from installing a VFD?</strong><br />
+      <strong>A:</strong> For variable-torque applications (fans, pumps), power is proportional to the cube of speed. Use the formula: P₂ = P₁ × (n₂/n₁)³ where P₁ is rated power and n₂/n₁ is the speed ratio. For constant-torque applications, savings are linear with speed reduction. TTS can perform a detailed energy assessment for your specific application.</p>
+
+      <p><strong>Q: Can a VFD be installed on any motor?</strong><br />
+      <strong>A:</strong> Most modern AC induction motors are VFD-compatible, but older motors with low-insulation ratings may require insulation upgrades. VFD-rated motors with reinforced insulation and proper bearings are recommended for applications with long cable runs or high switching frequencies. Permanent magnet motors require VFDs with specific control algorithms.</p>
+
+      <p><strong>Q: What is the typical payback period for a VFD installation?</strong><br />
+      <strong>A:</strong> For variable-torque applications running 4,000+ hours per year, VFD payback is typically 1-3 years. Constant-torque applications may have longer payback periods due to lower energy savings potential. Additional benefits (reduced maintenance, improved process quality, soft starting) further improve the return on investment.</p>
+
+      <p><strong>Q: Can TTS program and commission Allen-Bradley PowerFlex VFDs?</strong><br />
+      <strong>A:</strong> Yes. TTS is an authorized Allen-Bradley system integrator with certified engineers experienced in PowerFlex VFD programming, commissioning, and optimization. We support all PowerFlex models from 525 to 7000 series.</p>
+
+      <p><strong>Q: Do VFDs cause power quality issues?</strong><br />
+      <strong>A:</strong> VFDs can generate harmonic distortion on the power system. The severity depends on VFD topology (6-pulse, 12-pulse, active front end), loading, and system impedance. TTS performs harmonic analysis and recommends mitigation solutions (line reactors, multi-pulse transformers, active filters) to meet IEEE 519 limits.</p>
+    `
+  },
+
+  "metering-skids-design-commissioning": {
+    title: "Metering Skids: Design, Fabrication, and Commissioning for Custody Transfer",
+    seoTitle: "Metering Skids — Design, Fabrication & Commissioning Guide | TTS Kuwait",
+    metaDescription: "Complete guide to metering skids — design, components, fabrication, commissioning, and professional metering skid services in Kuwait.",
+    category: "Flow Measurement",
+    date: "July 15, 2026",
+    readTime: "12 Min Read",
+    pillar: "Pillar 1: Flow Measurement & Custody Metering",
+    description: "Learn about metering skid design, components, fabrication, and commissioning for custody transfer applications in oil & gas, refinery, and petrochemical industries.",
+    keywords: "metering skids, custody transfer metering, flow computer configuration, metering control system integration, Coriolis meter oil and gas",
+    image: "/flow_metering_skid.jpg",
+    imageAlt: "A custody transfer metering skid with flow meters, valves, and control instruments in an oil and gas facility.",
+    content: `
+      <p>
+        <strong>Metering skids</strong> are pre-engineered, skid-mounted flow measurement systems designed to provide accurate and reliable custody transfer measurement of liquids and gases. A metering skid integrates all necessary components — flow meters, valves, strainers, pressure and temperature instruments, flow computers, and control systems — onto a single structural steel frame for streamlined installation and commissioning.
+      </p>
+      <p>
+        In oil &amp; gas custody transfer applications, metering skids serve as the "cash register" of the production and distribution system. Every barrel of crude oil, every cubic foot of natural gas, and every gallon of refined product that passes through a metering skid is measured for fiscal purposes. The accuracy and reliability of the metering skid directly impacts revenue, regulatory compliance, and commercial relationships.
+      </p>
+
+      <h2>Key Components of a Metering Skid</h2>
+      <p>
+        A complete custody transfer metering skid typically includes:
+      </p>
+      <ul>
+        <li><strong>Flow meter</strong> — The primary measurement device. Common types include Coriolis, ultrasonic, turbine, and positive displacement meters. The meter type is selected based on fluid properties, accuracy requirements, and application conditions</li>
+        <li><strong>Pipeline and piping</strong> — ASME B31.3 compliant piping with specified straight-run upstream and downstream of the meter to ensure fully developed flow profiles</li>
+        <li><strong>Isolation valves</strong> — Block valves (ball, gate, or butterfly) for isolating the metering system during maintenance</li>
+        <li><strong>Pressure relief valve</strong> — Overpressure protection for the meter and piping system</li>
+        <li><strong>Strainer/filter</strong> — Removes particulates and debris that could damage the meter or affect measurement accuracy</li>
+        <li><strong>Pressure transmitter</strong> — Measures line pressure for flow compensation and monitoring</li>
+        <li><strong>Temperature sensor</strong> — Measures fluid temperature for density and volume correction calculations</li>
+        <li><strong>Flow computer</strong> — Specialized computing device that calculates corrected flow rates, totals, and quality parameters based on input from all instruments</li>
+        <li><strong>Control panel</strong> — Houses the flow computer, PLC/HMI, power supply, and signal conditioning equipment</li>
+        <li><strong>Prover connection</strong> — Connections for inline or field provers used to verify meter accuracy</li>
+      </ul>
+
+      <h2>Design Considerations</h2>
+      <p>
+        Effective metering skid design requires careful attention to several factors:
+      </p>
+      <ul>
+        <li><strong>Straight-run requirements</strong> — Most flow meters require specific upstream and downstream straight pipe lengths to achieve specified accuracy. Coriolis meters typically require 5D upstream and 2D downstream, while ultrasonic meters may require 10D-20D upstream</li>
+        <li><strong>Flow conditioning</strong> — When straight-run requirements cannot be met, flow conditioners (tube bundles, plate type, or tab-type) can be used to develop a uniform flow profile</li>
+        <li><strong>Vibration isolation</strong> — Metering skids should be isolated from external vibration sources that could affect meter accuracy, particularly for Coriolis and ultrasonic meters</li>
+        <li><strong>Thermal management</strong> — For applications with wide temperature variations, insulation, heat tracing, or temperature-controlled enclosures may be required</li>
+        <li><strong>Corrosion protection</strong> — Material selection must account for fluid corrosivity, environmental conditions, and expected service life</li>
+        <li><strong>Accessibility</strong> — The skid layout must provide adequate access for maintenance, calibration, and proving operations</li>
+      </ul>
+
+      <h2>Flow Computer Configuration</h2>
+      <p>
+        The flow computer is the intellectual center of the metering skid. It performs real-time calculations to convert raw meter signals into corrected flow measurements. Key functions include:
+      </p>
+      <ul>
+        <li><strong>Volume correction</strong> — Converts measured volume to standard conditions (15°C, 101.325 kPa) using temperature and pressure inputs</li>
+        <li><strong>Density calculation</strong> — Calculates fluid density from Coriolis meter inputs or correlation equations</li>
+        <li><strong>Mass-to-volume conversion</strong> — Converts mass flow readings to standard volume for fiscal reporting</li>
+        <li><strong>Batch control</strong> — Manages batch loading operations with automatic start/stop and totalization</li>
+        <li><strong>Alarm management</strong> — Monitors for abnormal conditions (high/low flow, pressure, temperature) and triggers alarms or shutdowns</li>
+        <li><strong>Audit trail</strong> — Records all measurement data, configuration changes, and operator actions for regulatory compliance</li>
+      </ul>
+
+      <h2>Fabrication and Assembly</h2>
+      <p>
+        Metering skid fabrication follows a structured process:
+      </p>
+      <ul>
+        <li><strong>1. Engineering design</strong> — P&amp;ID development, equipment specification, piping design, structural design, and electrical/instrumentation design</li>
+        <li><strong>2. Procurement</strong> — Sourcing of all components (meters, valves, instruments, piping, structural steel, electrical equipment)</li>
+        <li><strong>3. Structural fabrication</strong> — Steel frame fabrication, welding, and surface treatment</li>
+        <li><strong>4. Piping fabrication</strong> — Pipe cutting, bending, welding, and NDE (non-destructive examination)</li>
+        <li><strong>5. Instrument installation</strong> — Mounting and wiring of all instruments, flow computers, and control equipment</li>
+        <li><strong>6. Testing</strong> — Hydrostatic testing, leak testing, and functional testing of all systems</li>
+        <li><strong>7. Painting and preservation</strong> — Surface preparation, painting, and weather protection</li>
+      </ul>
+
+      <h2>Commissioning</h2>
+      <p>
+        Metering skid commissioning is a critical phase that verifies the system performs as designed:
+      </p>
+      <ul>
+        <li><strong>Pre-commissioning checks</strong> — Verify piping integrity, instrument wiring, power supply, and communication connections</li>
+        <li><strong>Loop testing</strong> — Verify each instrument signal path from sensor to flow computer</li>
+        <li><strong>Flow verification</strong> — Run the system at various flow rates to verify meter performance against design specifications</li>
+        <li><strong>Flow computer configuration</strong> — Input all meter, instrument, and process parameters into the flow computer</li>
+        <li><strong>Proving</strong> — Verify meter accuracy against a prover or reference meter under actual operating conditions</li>
+        <li><strong>Documentation</strong> — Compile as-built drawings, test certificates, calibration records, and operating procedures</li>
+      </ul>
+
+      <h2>TTS Metering Skid Services</h2>
+      <p>
+        Texas Technical Services provides end-to-end metering skid solutions across Kuwait and the GCC:
+      </p>
+      <ul>
+        <li>Metering skid conceptual and detailed engineering design</li>
+        <li>Equipment procurement and vendor management</li>
+        <li>Fabrication supervision and quality control</li>
+        <li>Installation, commissioning, and startup support</li>
+        <li>Flow computer configuration and programming</li>
+        <li>Meter proving and calibration services</li>
+        <li>Ongoing maintenance and calibration support</li>
+      </ul>
+
+      <h2>Frequently Asked Questions (FAQ)</h2>
+      <p><strong>Q: What is the typical accuracy of a custody transfer metering skid?</strong><br />
+      <strong>A:</strong> Custody transfer metering skids typically achieve ±0.1-0.5% accuracy depending on the meter technology and application. Coriolis-based skids achieve ±0.1% for mass flow, while ultrasonic-based gas metering skids achieve ±0.5% or better with multi-path configurations.</p>
+
+      <p><strong>Q: How long does it take to design and build a metering skid?</strong><br />
+      <strong>A:</strong> Typical lead times range from 12-20 weeks from engineering design to delivery, depending on equipment availability and complexity. Standard designs for common applications can be delivered in 8-12 weeks. Custom designs for high-pressure or high-temperature applications may require 16-24 weeks.</p>
+
+      <p><strong>Q: What standards govern metering skid design?</strong><br />
+      <strong>A:</strong> Key standards include API MPMS (petroleum measurement), AGA (gas measurement), ASME B31.3 (process piping), ISO 17025 (calibration), OIML R117 (legal metrology), and facility-specific design codes (Shell DEP, Saudi Aramco SAES, etc.).</p>
+
+      <p><strong>Q: Can TTS design metering skids for high-pressure gas applications?</strong><br />
+      <strong>A:</strong> Yes. TTS designs and commissions metering skids for a wide range of pressure ratings, from low-pressure distribution systems to high-pressure HP/HT wellhead applications. Our engineering team is experienced with pressure ratings up to 15,000 psi and temperature ranges from -46°C to +200°C.</p>
+
+      <p><strong>Q: Does TTS provide after-sales support for metering skids?</strong><br />
+      <strong>A:</strong> Yes. TTS provides comprehensive after-sales support including scheduled calibration, meter proving, flow computer maintenance, instrument replacement, and 24/7 emergency technical support for custody transfer metering systems throughout the GCC region.</p>
+    `
   }
 };
 

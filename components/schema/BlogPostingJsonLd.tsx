@@ -1,5 +1,11 @@
 import { SITE_URL } from "@/lib/site";
 
+function toIsoDate(dateStr?: string): string | undefined {
+  if (!dateStr) return undefined;
+  const d = new Date(dateStr);
+  return isNaN(d.getTime()) ? dateStr : d.toISOString().split("T")[0];
+}
+
 export function BlogPostingJsonLd({
   headline,
   description,
@@ -28,8 +34,8 @@ export function BlogPostingJsonLd({
     description,
     image: image.startsWith("http") ? image : `${SITE_URL}${image}`,
     url: `${SITE_URL}${url}`,
-    datePublished,
-    dateModified: dateModified || datePublished,
+    datePublished: toIsoDate(datePublished),
+    dateModified: toIsoDate(dateModified) || toIsoDate(datePublished),
     author: {
       "@type": "Organization",
       name: "Texas Technical Services",

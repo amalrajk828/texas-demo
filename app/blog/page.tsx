@@ -3,6 +3,7 @@ import Link from "next/link";
 import Image from "next/image";
 import ProductCard from "@/components/ProductCard";
 import { BreadcrumbJsonLd } from "@/components/schema/BreadcrumbJsonLd";
+import { ItemListJsonLd } from "@/components/schema/ItemListJsonLd";
 import { 
   BookOpen, 
   Calendar, 
@@ -100,6 +101,14 @@ export default function BlogIndexPage() {
   return (
     <div className="min-h-screen bg-white font-sans antialiased text-[#333333]">
       <BreadcrumbJsonLd items={[{ name: "Home", href: "/" }, { name: "Blog", href: "/blog/" }]} />
+      <ItemListJsonLd
+        name="Texas Technical Services Knowledge Hub"
+        items={blogPosts.map((post) => ({
+          name: post.title,
+          url: `/blog/${post.slug}/`,
+          description: post.description,
+        }))}
+      />
       
       {/* ═══ HERO SECTION ═══════════════════════════════════════════ */}
       <section className="relative bg-[#0B0D26] overflow-hidden pt-32 pb-16 lg:pb-24 border-b border-white/10">
@@ -169,7 +178,7 @@ export default function BlogIndexPage() {
 
           {/* Cards Grid */}
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {blogPosts.map((post) => {
+            {blogPosts.map((post, index) => {
               // We pass custom mapping for fields and custom tags/badge
               const mappedPost = {
                 name: post.title,
@@ -188,6 +197,7 @@ export default function BlogIndexPage() {
                   iconName={post.icon}
                   readMoreText="Read Article"
                   href={`/blog/${post.slug}/`}
+                  priority={index < 3}
                 />
               );
             })}

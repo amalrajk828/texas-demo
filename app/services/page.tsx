@@ -32,6 +32,13 @@ export const metadata: Metadata = {
     "metering and automation Kuwait",
     "engineering services Kuwait",
     "industrial automation companies GCC",
+    "metering skids",
+    "flow meter calibration",
+    "Allen Bradley system integrators",
+    "NDT inspection",
+    "predictive maintenance",
+    "gas detection system",
+    "condition monitoring",
   ],
 };
 
