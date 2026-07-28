@@ -170,7 +170,7 @@ export default function TexaflowPage() {
       <FaqPageJsonLd items={faqItems} />
 
       {/* ══ HERO ════════════════════════════════════════════ */}
-      <section className="relative bg-[#0B0D26] overflow-hidden pt-32 pb-20 lg:pb-28">
+      <section className="relative bg-[#000000] blueprint-grid blueprint-dot-grid overflow-hidden pt-32 pb-20 lg:pb-28">
         <div
           className="absolute inset-0 pointer-events-none"
           style={{
@@ -331,7 +331,7 @@ export default function TexaflowPage() {
       {/* ══ KEY APPLICATIONS DARK STRIP ═════════════════════════ */}
       <section className="py-20 lg:py-24">
         <div className="max-w-7xl mx-auto px-4 sm:px-6">
-          <div className="rounded-2xl bg-[#0B0D26] overflow-hidden relative">
+          <div className="rounded-2xl bg-[#000000] blueprint-grid blueprint-dot-grid overflow-hidden relative">
             <div
               className="absolute inset-0 pointer-events-none"
               style={{
@@ -454,7 +454,7 @@ export default function TexaflowPage() {
       </section>
 
       {/* ══ CTA ═════════════════════════════════════════════════ */}
-      <section className="relative bg-[#0B0D26] border-t-4 border-[#e7212b] py-14">
+      <section className="relative bg-[#000000] blueprint-grid blueprint-dot-grid border-t-4 border-[#e7212b] py-14">
         <div className="max-w-7xl mx-auto px-4 sm:px-6">
           <div className="flex flex-col sm:flex-row items-center justify-between gap-6">
             <div>

@@ -34,22 +34,22 @@ export default function HoseTestContent() {
             Hose Test Capabilities &amp; Applications
           </h2>
         </FadeUp>
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 mb-16">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5 sm:gap-[22px] mb-16">
           {CARDS.map((card, i) => (
             <FadeUp key={card.title} delay={0.08 * i}>
-              <div className="group rounded-2xl border border-[#e8eaf0] bg-white p-6 hover:border-[#e7212b]/25 hover:shadow-xl hover:shadow-[#e7212b]/6 transition-all duration-300 h-full">
-                <div className="w-10 h-10 rounded-xl bg-[#e7212b]/8 border border-[#e7212b]/15 flex items-center justify-center mb-4 group-hover:bg-[#e7212b]/15 transition-all duration-300">
-                  <card.Icon className="w-4.5 h-4.5 text-[#e7212b]" strokeWidth={1.8} />
+              <div className="group rounded-2xl border border-[#e8eaf0] bg-white p-[18px] hover:border-[#e7212b]/25 hover:shadow-xl hover:shadow-[#e7212b]/6 transition-all duration-300 h-full">
+                <div className="w-[38px] h-[38px] rounded-full bg-[#e7212b]/8 border border-[#e7212b]/15 flex items-center justify-center mb-3 group-hover:bg-[#e7212b]/15 transition-all duration-300">
+                  <card.Icon className="w-4 h-4 text-[#e7212b]" strokeWidth={1.8} />
                 </div>
-                <div className="w-8 h-[2px] bg-[#e7212b] rounded-full mb-3 group-hover:w-12 transition-all duration-300" />
-                <h3 className="text-[15px] font-bold text-[#0B0D26] mb-2">{card.title}</h3>
-                <p className="text-gray-500 text-[13px] leading-[1.7]">{card.body}</p>
+                <div className="w-7 h-[2px] bg-[#e7212b] rounded-full mb-2.5 group-hover:w-11 transition-all duration-300" />
+                <h3 className="text-[16px] font-bold text-[#0B0D26] mb-2 leading-snug">{card.title}</h3>
+                <p className="text-gray-500 text-[13px] leading-[1.65] line-clamp-3">{card.body}</p>
               </div>
             </FadeUp>
           ))}
         </div>
         <FadeUp delay={0.1}>
-          <div className="rounded-2xl bg-[#0B0D26] p-8 sm:p-10 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-6">
+          <div className="rounded-2xl bg-[#000000] blueprint-grid blueprint-dot-grid p-8 sm:p-10 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-6">
             <div>
               <p className="text-white/40 text-[10px] tracking-[2px] uppercase mb-2">Standards &amp; Codes</p>
               <p className="text-white font-semibold text-lg">AAMA 501.2 · ASTM E1105 · BS 8200 · EN 12208</p>

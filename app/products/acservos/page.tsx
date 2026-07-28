@@ -35,14 +35,14 @@ export default function AcServosPage() {
   const jetSeriesProducts = acServosData.filter((p) => p.slug.startsWith("melservo-jet-"));
 
   return (
-    <div className="min-h-screen bg-white font-sans antialiased selection:bg-[#F5821F] selection:text-white">
+    <div className="min-h-screen bg-white font-sans antialiased selection:bg-[#e7212b] selection:text-white">
       <BreadcrumbJsonLd items={[
         { name: "Home", href: "/" },
         { name: "Products", href: "/products/" },
         { name: "AC Servos", href: "/products/acservos/" },
       ]} />
       {/* ── Hero Banner ─────────────────────────────────────── */}
-      <section className="relative bg-[#0B0D26] overflow-hidden border-b-4 border-[#F5821F]">
+      <section className="relative bg-[#000000] blueprint-grid blueprint-dot-grid overflow-hidden border-b-4 border-[#e7212b]">
         {/* Grid texture */}
         <div
           className="absolute inset-0 pointer-events-none opacity-30"
@@ -51,15 +51,15 @@ export default function AcServosPage() {
               "repeating-linear-gradient(0deg,transparent,transparent 39px,rgba(255,255,255,0.02) 40px),repeating-linear-gradient(90deg,transparent,transparent 39px,rgba(255,255,255,0.02) 40px)",
           }}
         />
-        {/* Orange radial glow */}
+        {/* Red radial glow */}
         <div
           className="absolute bottom-0 left-1/2 -translate-x-1/2 w-[600px] h-40 pointer-events-none"
           style={{
-            background: "radial-gradient(ellipse, rgba(245,130,31,0.06) 0%, transparent 70%)",
+            background: "radial-gradient(ellipse, rgba(231,33,43,0.06) 0%, transparent 70%)",
           }}
         />
 
-        <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 py-16 lg:py-20">
+        <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 pt-[calc(var(--navbar-height,92px)+1.75rem)] pb-16 lg:pt-[calc(var(--navbar-height,92px)+2.5rem)] lg:pb-20">
           {/* Breadcrumb */}
           <nav className="flex items-center gap-1.5 text-[11px] text-white/50 mb-6">
             <Link href="/" className="hover:text-white transition-colors">Home</Link>
@@ -70,8 +70,8 @@ export default function AcServosPage() {
           </nav>
 
           <div className="flex items-center gap-2 mb-4">
-            <span className="w-5 h-px bg-[#F5821F]" />
-            <span className="text-[#F5821F] text-[10px] font-medium tracking-[2.5px] uppercase">
+            <span className="w-5 h-px bg-[#e7212b]" />
+            <span className="text-[#e7212b] text-[10px] font-medium tracking-[2.5px] uppercase">
               Mitsubishi Electric · Motion Control
             </span>
           </div>
@@ -90,7 +90,7 @@ export default function AcServosPage() {
           <h2 className="text-[#1A1A2E] text-[28px] font-bold">
             AC Servo Drives & Motors
           </h2>
-          <div className="w-[60px] h-[3px] bg-[#F5821F] mx-auto mt-3 mb-4" />
+          <div className="w-[60px] h-[3px] bg-[#e7212b] mx-auto mt-3 mb-4" />
           <p className="text-[#555770] text-base leading-relaxed">
             Mitsubishi Electric&apos;s MELSERVO series delivers precise, high-performance AC servo solutions for OEM machines and industrial automation — from compact cost-effective MR-JE drives for basic positioning to advanced EtherCAT-based MR-JET systems for synchronized multi-axis motion control.
           </p>
@@ -103,11 +103,11 @@ export default function AcServosPage() {
           <div className="flex flex-col">
             
             {/* ── MELSERVO-JE Group ── */}
-            <div className="bg-[#FFF8F3] border-l-4 border-[#F5821F] py-3 px-6 mt-8 mb-4 flex items-center gap-4 shadow-sm rounded-[4px]">
+            <div className="bg-[#FEF2F2] border-l-4 border-[#e7212b] py-3 px-6 mt-8 mb-4 flex items-center gap-4 shadow-sm rounded-[4px]">
               <span className="text-[#1A1A2E] font-bold text-base font-sans leading-none uppercase tracking-wider">
                 MELSERVO-JE Series
               </span>
-              <div className="h-px bg-[#F5821F]/20 flex-1" />
+              <div className="h-px bg-[#e7212b]/20 flex-1" />
             </div>
             
             <div className="flex flex-col gap-6">
@@ -117,11 +117,11 @@ export default function AcServosPage() {
             </div>
 
             {/* ── MELSERVO-JET Group ── */}
-            <div className="bg-[#FFF8F3] border-l-4 border-[#F5821F] py-3 px-6 mt-12 mb-4 flex items-center gap-4 shadow-sm rounded-[4px]">
+            <div className="bg-[#FEF2F2] border-l-4 border-[#e7212b] py-3 px-6 mt-12 mb-4 flex items-center gap-4 shadow-sm rounded-[4px]">
               <span className="text-[#1A1A2E] font-bold text-base font-sans leading-none uppercase tracking-wider">
                 MELSERVO-JET Series
               </span>
-              <div className="h-px bg-[#F5821F]/20 flex-1" />
+              <div className="h-px bg-[#e7212b]/20 flex-1" />
             </div>
 
             <div className="flex flex-col gap-6">
@@ -135,7 +135,7 @@ export default function AcServosPage() {
       </section>
 
       {/* ── CTA Banner ───────────────────────────────────────── */}
-      <section className="relative bg-[#1A1A2E] border-t-4 border-[#F5821F] py-16">
+      <section className="relative bg-[#1A1A2E] border-t-4 border-[#e7212b] py-16">
         <div className="max-w-7xl mx-auto px-4 sm:px-6">
           <div className="flex flex-col sm:flex-row items-center justify-between gap-6">
             <div>
@@ -148,7 +148,7 @@ export default function AcServosPage() {
             </div>
             <Link
               href="/contacts/"
-              className="shrink-0 inline-flex items-center gap-2 bg-[#F5821F] hover:bg-[#e07214] text-white font-bold px-6 py-3.5 rounded-[6px] shadow-lg hover:shadow-[#F5821F]/20 transition-all duration-200"
+              className="shrink-0 inline-flex items-center gap-2 bg-[#e7212b] hover:bg-[#aa0b1b] text-white font-bold px-6 py-3.5 rounded-[6px] shadow-lg hover:shadow-[#e7212b]/20 transition-all duration-200"
             >
               Contact Us &rarr;
             </Link>

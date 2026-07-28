@@ -133,7 +133,7 @@ export default function SocialMediaPage() {
       <BreadcrumbJsonLd items={[{ name: "Home", href: "/" }, { name: "Social Media", href: "/social-media/" }]} />
 
       {/* ══ HERO ══════════════════════════════════════════════ */}
-      <section className="bg-[#0B0D26] relative overflow-hidden">
+      <section className="bg-[#000000] blueprint-grid blueprint-dot-grid relative overflow-hidden">
         {/* Grid texture */}
         <div
           className="absolute inset-0 pointer-events-none"
@@ -234,7 +234,7 @@ export default function SocialMediaPage() {
               >
                 <div className="flex items-start gap-4">
                   {/* Icon */}
-                  <div className="w-12 h-12 rounded-xl bg-[#0B0D26] flex items-center justify-center shrink-0 group-hover:bg-[#e7212b] transition-colors duration-300">
+                  <div className="w-12 h-12 rounded-xl bg-[#000000] blueprint-grid blueprint-dot-grid flex items-center justify-center shrink-0 group-hover:bg-[#e7212b] transition-colors duration-300">
                     <svg viewBox={platform.viewBox || "0 0 24 24"} className="w-5 h-5 text-white" fill="currentColor">
                       <path d={platform.icon} />
                     </svg>
@@ -287,7 +287,7 @@ export default function SocialMediaPage() {
               >
                 <div className="flex items-center gap-3 mb-3">
                   {/* Small icon badge */}
-                  <div className="w-11 h-11 rounded-xl bg-[#0B0D26]/5 flex items-center justify-center shrink-0 group-hover:bg-[#e7212b]/10 transition-colors">
+                  <div className="w-11 h-11 rounded-xl bg-[#000000] blueprint-grid blueprint-dot-grid/5 flex items-center justify-center shrink-0 group-hover:bg-[#e7212b]/10 transition-colors">
                     <svg viewBox={platform.viewBox || "0 0 24 24"} className="w-5 h-5 text-[#0B0D26] group-hover:text-[#e7212b] transition-colors" fill="currentColor">
                       <path d={platform.icon} />
                     </svg>
@@ -351,7 +351,7 @@ export default function SocialMediaPage() {
       </section>
 
       {/* ══ CTA BANNER ══════════════════════════════════════ */}
-      <section className="bg-[#0B0D26] py-20">
+      <section className="bg-[#000000] blueprint-grid blueprint-dot-grid py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 text-center">
           <div className="flex items-center justify-center gap-3 mb-4">
             <span className="w-8 h-px bg-[#e7212b]/40" />

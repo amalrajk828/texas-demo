@@ -5,10 +5,10 @@ import { ArrowRight, HardHat } from "lucide-react";
 
 export default function ConstructionHero() {
   return (
-    <section className="relative bg-[#0B0D26] overflow-hidden pt-32 pb-20 lg:pb-28">
-      <div className="absolute inset-0 pointer-events-none" style={{ backgroundImage: "repeating-linear-gradient(0deg,transparent,transparent 39px,rgba(255,255,255,0.03) 40px),repeating-linear-gradient(90deg,transparent,transparent 39px,rgba(255,255,255,0.03) 40px)" }} />
-      <div className="absolute top-0 right-0 w-[700px] h-[500px] pointer-events-none" style={{ background: "radial-gradient(ellipse at top right, rgba(231,33,43,0.14) 0%, transparent 65%)" }} />
-      <div className="absolute bottom-0 left-0 w-[500px] h-[350px] pointer-events-none" style={{ background: "radial-gradient(ellipse at bottom left, rgba(231,33,43,0.06) 0%, transparent 70%)" }} />
+    <section className="relative bg-[#000000] blueprint-grid blueprint-dot-grid overflow-hidden pt-32 pb-20 lg:pb-28">
+      {/* Hairline top and bottom borders */}
+      <div className="absolute top-0 inset-x-0 h-px bg-white/[0.08] pointer-events-none z-0" />
+      <div className="absolute bottom-0 inset-x-0 h-px bg-white/[0.08] pointer-events-none z-0" />
 
       <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6">
         <motion.div initial={{ opacity: 0, y: 12 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.5, ease: [0.22, 1, 0.36, 1] }} className="flex items-center gap-2 mb-8 text-[12px] text-white/30">

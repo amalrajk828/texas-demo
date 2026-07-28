@@ -53,7 +53,7 @@ export default async function BlogArticlePage({ params }: PageProps) {
   return (
     <div className="min-h-screen bg-white text-[#333]">
       {/* Hero */}
-      <section className="relative bg-[#0B0D26] overflow-hidden pt-32 pb-16 border-b border-white/10">
+      <section className="relative bg-[#000000] blueprint-grid blueprint-dot-grid overflow-hidden pt-32 pb-16 border-b border-white/10">
         <div className="absolute inset-0 pointer-events-none" style={{ backgroundImage: "repeating-linear-gradient(0deg,transparent,transparent 39px,rgba(255,255,255,0.02) 40px),repeating-linear-gradient(90deg,transparent,transparent 39px,rgba(255,255,255,0.02) 40px)" }} />
         <div className="absolute top-0 right-0 w-[600px] h-[400px] pointer-events-none" style={{ background: "radial-gradient(ellipse at top right, rgba(231,33,43,0.12) 0%, transparent 65%)" }} />
         <div className="relative z-10 max-w-4xl mx-auto px-4 sm:px-6">
@@ -130,7 +130,7 @@ export default async function BlogArticlePage({ params }: PageProps) {
       {/* CTA */}
       <section className="bg-gray-50 py-16 border-t border-gray-100">
         <div className="max-w-4xl mx-auto px-4 sm:px-6">
-          <div className="rounded-2xl bg-[#0B0D26] p-8 sm:p-10 text-white relative overflow-hidden">
+          <div className="rounded-2xl bg-[#000000] blueprint-grid blueprint-dot-grid p-8 sm:p-10 text-white relative overflow-hidden">
             <div className="absolute top-0 right-0 w-[400px] h-full pointer-events-none" style={{ background: "radial-gradient(ellipse at right, rgba(231,33,43,0.10) 0%, transparent 70%)" }} />
             <div className="relative z-10 flex flex-col md:flex-row items-center justify-between gap-8">
               <div className="max-w-xl">

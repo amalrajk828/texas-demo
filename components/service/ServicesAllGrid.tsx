@@ -106,8 +106,8 @@ function ServiceCard({ service, index }: { service: ServiceItem; index: number }
           boxShadow: "0 12px 32px rgba(0, 0, 0, 0.12)",
         }}
       >
-        {/* Image header portion — kept 100% untouched */}
-        <div className="relative aspect-[16/10] bg-[#0B0D26] overflow-hidden flex items-center justify-center shrink-0">
+        {/* Image header portion */}
+        <div className="relative h-[155px] w-full bg-[#000000] blueprint-grid blueprint-dot-grid overflow-hidden flex items-center justify-center shrink-0">
           {service.image ? (
             <Image
               src={service.image}
@@ -117,13 +117,13 @@ function ServiceCard({ service, index }: { service: ServiceItem; index: number }
               className="object-cover group-hover:scale-105 transition-transform duration-500"
             />
           ) : (
-            <span className="text-[72px] font-black text-white/10 group-hover:text-[#e7212b]/20 group-hover:scale-110 transition-all duration-500 select-none">
+            <span className="text-[64px] font-black text-white/10 group-hover:text-[#e7212b]/20 group-hover:scale-110 transition-all duration-500 select-none">
               {service.placeholderNumber || "01"}
             </span>
           )}
           <div className="absolute top-0 left-0 right-0 h-[2px] bg-gradient-to-r from-transparent via-[#e7212b] to-transparent opacity-0 group-hover:opacity-70 transition-opacity duration-300" />
           <div className="absolute top-3 left-3 z-10">
-            <span className="text-[10px] font-semibold text-white/90 bg-[#0B0D26]/80 backdrop-blur-md border border-white/10 px-2.5 py-1 rounded-full tracking-[1.5px] uppercase">
+            <span className="text-[10px] font-semibold text-white/90 bg-[#000000] blueprint-grid blueprint-dot-grid/80 backdrop-blur-md border border-white/10 px-2.5 py-1 rounded-full tracking-[1.5px] uppercase">
               {service.category}
             </span>
           </div>
@@ -131,7 +131,7 @@ function ServiceCard({ service, index }: { service: ServiceItem; index: number }
 
         {/* Text portion below image — Pronounced Light Glassmorphic Style */}
         <div
-          className="relative flex flex-col flex-1 p-5 overflow-hidden rounded-b-2xl"
+          className="relative flex flex-col flex-1 p-[18px] overflow-hidden rounded-b-2xl"
           style={{
             background: "rgba(255, 255, 255, 0.20)",
             backdropFilter: "blur(28px)",
@@ -151,16 +151,16 @@ function ServiceCard({ service, index }: { service: ServiceItem; index: number }
           {/* Top specular edge highlight */}
           <div className="absolute top-0 inset-x-0 h-[1px] bg-gradient-to-r from-transparent via-white to-transparent pointer-events-none" />
 
-          <div className="relative z-10 w-7 h-[2px] bg-[#e7212b] rounded-full mb-3 group-hover:w-10 transition-all duration-300" />
-          <h3 className="relative z-10 text-[15px] font-bold text-[#0B0D26] leading-snug mb-2 drop-shadow-[0_1px_2px_rgba(255,255,255,0.7)]">
+          <div className="relative z-10 w-7 h-[2px] bg-[#e7212b] rounded-full mb-2.5 group-hover:w-11 transition-all duration-300" />
+          <h3 className="relative z-10 text-[16px] font-bold text-[#0B0D26] leading-snug mb-2 drop-shadow-[0_1px_2px_rgba(255,255,255,0.7)]">
             {service.title}
           </h3>
-          <p className="relative z-10 text-[#2D3748] text-[13px] font-medium leading-[1.7] flex-1">
+          <p className="relative z-10 text-[#2D3748] text-[13px] font-medium leading-[1.65] flex-1 line-clamp-3">
             {service.body}
           </p>
-          <div className="relative z-10 mt-4 pt-3 border-t border-black/[0.06] text-[#e7212b] text-[12px] font-bold flex items-center gap-1">
+          <div className="relative z-10 mt-3 pt-3 border-t border-black/[0.06] text-[#e7212b] text-[12.5px] font-bold flex items-center gap-1">
             Read more
-            <ArrowRight className="w-3 h-3 group-hover:translate-x-1 transition-transform duration-200" />
+            <ArrowRight className="w-3.5 h-3.5 group-hover:translate-x-1 transition-transform duration-200" />
           </div>
         </div>
       </Link>
@@ -261,7 +261,7 @@ export default function ServicesAllGrid({ initialPage = 1 }: { initialPage?: num
             </p>
           </div>
         ) : (
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 mb-14">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5 sm:gap-[22px] mb-14">
             {currentServices.map((svc, i) => (
               <ServiceCard key={`${svc.title}-${i}`} service={svc} index={i} />
             ))}

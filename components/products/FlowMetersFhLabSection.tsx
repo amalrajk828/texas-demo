@@ -35,7 +35,7 @@ export default function FlowMetersFhLabSection() {
     <section className="bg-[#F8F9FA] py-16 border-t border-b border-[#E8E8F0]">
       <div className="max-w-7xl mx-auto px-4 sm:px-6">
         <div className="text-center mb-10">
-          <span className="text-[#F5821F] text-[10px] font-semibold tracking-[3px] uppercase">
+          <span className="text-[#e7212b] text-[10px] font-semibold tracking-[3px] uppercase">
             Calibration Excellence · Faure Herman
           </span>
           <h2 className="mt-3 text-[#1A1A2E] text-2xl sm:text-3xl font-bold">
@@ -53,7 +53,7 @@ export default function FlowMetersFhLabSection() {
               key={s.label}
               className="rounded-xl border border-[#E8E8F0] bg-white p-5 text-center"
             >
-              <p className="text-[#F5821F] text-2xl font-black leading-none">
+              <p className="text-[#e7212b] text-2xl font-black leading-none">
                 {s.num}
               </p>
               <p className="text-[#1A1A2E] text-[12px] mt-2 font-semibold tracking-wide uppercase">

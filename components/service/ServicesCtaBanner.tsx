@@ -31,7 +31,7 @@ function FadeUp({
 
 export default function ServicesCtaBanner() {
   return (
-    <section className="relative bg-[#0B0D26] py-24 lg:py-28 overflow-hidden">
+    <section className="relative bg-[#000000] blueprint-grid blueprint-dot-grid py-24 lg:py-28 overflow-hidden">
 
       {/* Grid texture */}
       <div

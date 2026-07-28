@@ -5,34 +5,10 @@ import { ArrowRight, FlaskConical } from "lucide-react";
 
 export default function InspectionHero() {
   return (
-    <section className="relative bg-[#0B0D26] overflow-hidden pt-32 pb-20 lg:pb-28">
-
-      {/* Grid texture */}
-      <div
-        className="absolute inset-0 pointer-events-none"
-        style={{
-          backgroundImage:
-            "repeating-linear-gradient(0deg,transparent,transparent 39px,rgba(255,255,255,0.03) 40px),repeating-linear-gradient(90deg,transparent,transparent 39px,rgba(255,255,255,0.03) 40px)",
-        }}
-      />
-
-      {/* Top-right red glow */}
-      <div
-        className="absolute top-0 right-0 w-[700px] h-[500px] pointer-events-none"
-        style={{
-          background:
-            "radial-gradient(ellipse at top right, rgba(231,33,43,0.14) 0%, transparent 65%)",
-        }}
-      />
-
-      {/* Bottom-left glow */}
-      <div
-        className="absolute bottom-0 left-0 w-[500px] h-[350px] pointer-events-none"
-        style={{
-          background:
-            "radial-gradient(ellipse at bottom left, rgba(231,33,43,0.06) 0%, transparent 70%)",
-        }}
-      />
+    <section className="relative bg-[#000000] blueprint-grid blueprint-dot-grid overflow-hidden pt-32 pb-20 lg:pb-28">
+      {/* Hairline top and bottom borders */}
+      <div className="absolute top-0 inset-x-0 h-px bg-white/[0.08] pointer-events-none z-0" />
+      <div className="absolute bottom-0 inset-x-0 h-px bg-white/[0.08] pointer-events-none z-0" />
 
       <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6">
 
@@ -83,74 +59,17 @@ export default function InspectionHero() {
             initial={{ opacity: 0, y: 14 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.55, delay: 0.18, ease: [0.22, 1, 0.36, 1] }}
-            className="space-y-4 mb-8"
+            className="space-y-4"
           >
-            <p className="text-white/50 text-base sm:text-[16px] leading-relaxed max-w-2xl">
-              Texas Technical Services Co. (TTS) is a highly diversified independent service provider
-              in the industry, mainly as a Third Party Inspection &amp; Testing Company. Since it was
-              founded, TTS has participated in supporting our clients in ensuring quality and safety of
-              their products — committed to providing objective, independent assessments of product
-              compliance and conformity. We also provide{" "}
-              <Link href="/plc-scada-systems-integration/" className="text-[#e7212b] hover:underline">
-                industrial automation testing
-              </Link>{" "}
-              for automated control systems, ensuring your PLC and SCADA assets meet operational
-              and safety standards.
+            <p className="text-white/60 text-base sm:text-[16px] leading-relaxed max-w-3xl">
+              Texas Technical Services Co. (TTS) is a highly diversified independent service provider in the industry mainly as a Third Party Inspection &amp; Testing Company. Since it was founded, TTS has participated in supporting our clients in ensuring quality and safety of their products and our inspectors are committed to providing objective, independent assessments of product compliance and conformity, contributing to production and distribution processes that safeguard consumer health and providing businesses that demonstrate good practices with the tools they need to promote their companies and products, thereby building long-lasting trust-based relationships with their clients.
             </p>
-            <p className="text-white/40 text-[15px] leading-relaxed max-w-2xl">
-              TTS is led by strong management, technical expertise, engineers and well-trained
-              technicians on a mission to deliver on-time, top quality, client-focused service — keeping
-              our team in touch with the latest technologies and industry best practices.
+            <p className="text-white/50 text-[15px] leading-relaxed max-w-3xl">
+              TTS led by a strong management, technical expertise, engineers and well trained technicians are on a mission to deliver on-time top quality client focused service. We know that a successful company is the result of intelligent planning, capable leadership and active participation by all company members. TTS in that matter respects the talents and experiences of its employees and give the best training possible to keep them in touch with latest technologies.
             </p>
-          </motion.div>
-
-          {/* CTAs */}
-          <motion.div
-            initial={{ opacity: 0, y: 12 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.5, delay: 0.24, ease: [0.22, 1, 0.36, 1] }}
-            className="flex flex-wrap gap-3"
-          >
-            <a
-              href="#contact"
-              className="inline-flex items-center gap-2 bg-[#e7212b] hover:bg-[#aa0b1b] text-white font-semibold px-7 py-3.5 rounded-lg transition-colors duration-200 text-[14px] shadow-lg shadow-[#e7212b]/20"
-            >
-              Get More Information
-              <ArrowRight className="w-4 h-4" />
-            </a>
-            <Link
-              href="/services/"
-              className="inline-flex items-center gap-2 border border-white/15 hover:border-white/35 text-white/60 hover:text-white px-7 py-3.5 rounded-lg transition-all duration-200 text-[14px]"
-            >
-              ← All Services
-            </Link>
           </motion.div>
 
         </div>
-
-        {/* Stats bar */}
-        <motion.div
-          initial={{ opacity: 0, y: 16 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.55, delay: 0.3, ease: [0.22, 1, 0.36, 1] }}
-          className="mt-16 grid grid-cols-2 sm:grid-cols-4 gap-4"
-        >
-          {[
-            { num: "ISO",   label: "9001 · 14001 · 45001" },
-            { num: "NDT",   label: "Certified Technicians" },
-            { num: "3rd",   label: "Party Independent Body" },
-            { num: "100%",  label: "Client-Focused Service" },
-          ].map((stat) => (
-            <div
-              key={stat.label}
-              className="bg-white/[0.03] border border-white/[0.07] rounded-xl px-5 py-4 text-center"
-            >
-              <p className="text-2xl font-bold text-[#e7212b] leading-none">{stat.num}</p>
-              <p className="text-[12px] text-white/30 mt-1.5 tracking-wide">{stat.label}</p>
-            </div>
-          ))}
-        </motion.div>
-
       </div>
     </section>
   );

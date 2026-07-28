@@ -5,6 +5,7 @@ import { BreadcrumbJsonLd } from "@/components/schema/BreadcrumbJsonLd";
 import { ServiceJsonLd } from "@/components/schema/ServiceJsonLd";
 import { FaqPageJsonLd } from "@/components/schema/FaqPageJsonLd";
 import ServicePageFaqSection from "@/components/services_group/ServicePageFaqSection";
+import LightGradientBackground from "@/components/LightGradientBackground";
 
 export const metadata: Metadata = {
   title: "Industrial Automation, PLC SCADA & Process Control Solutions",
@@ -91,7 +92,9 @@ export default function IndustrialAutomationPage() {
       />
       <FaqPageJsonLd items={faqItems} />
       <AutomationHero />
-      <AutomationSubServices />
+      <LightGradientBackground className="py-20 lg:py-28">
+        <AutomationSubServices />
+      </LightGradientBackground>
       <ServicePageFaqSection faqItems={faqItems} highlightWord="Industrial Automation" />
     </>
   );

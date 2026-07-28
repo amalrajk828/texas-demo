@@ -12,7 +12,7 @@ const SERVICES_NAV = [
 
 export default function ServicesHero() {
   return (
-    <section className="relative bg-[#0B0D26] overflow-hidden pt-32 pb-20 lg:pb-28">
+    <section className="relative bg-[#000000] blueprint-grid blueprint-dot-grid overflow-hidden pt-32 pb-20 lg:pb-28">
 
       {/* Grid texture */}
       <div

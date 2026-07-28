@@ -14,7 +14,7 @@ export default function ControlRoomStandardsSection() {
       <div className="max-w-6xl mx-auto px-4 sm:px-6">
         <div className="flex flex-col md:flex-row items-center justify-between gap-8">
           <div>
-            <p className="text-[#F5821F] text-[10px] font-semibold tracking-[3px] uppercase mb-2">
+            <p className="text-[#e7212b] text-[10px] font-semibold tracking-[3px] uppercase mb-2">
               International Quality Standards
             </p>
             <h3 className="text-white text-xl sm:text-2xl font-bold leading-tight">

@@ -104,7 +104,7 @@ export default async function PortfolioGroupPage({
           titleSuffix="Categories"
           description="Browse our product portfolio by industry, product category, or application area."
         />
-        <section className="relative bg-[#0B0D26] overflow-hidden pb-24">
+        <section className="relative bg-[#000000] blueprint-grid blueprint-dot-grid overflow-hidden pb-24">
           <div className="relative max-w-7xl mx-auto px-4 sm:px-6">
             <PortfolioGroupCategoryGrid links={allLinks} />
           </div>

@@ -16,7 +16,7 @@ export default function PortfolioGroupHero({
   description: string;
 }) {
   return (
-    <section className="relative bg-[#0B0D26] overflow-hidden pt-32 pb-20">
+    <section className="relative bg-[#000000] blueprint-grid blueprint-dot-grid overflow-hidden pt-32 pb-20">
       <div
         className="absolute inset-0 pointer-events-none"
         style={{

@@ -117,7 +117,7 @@ export default function ClientsPage() {
     <>
       <BreadcrumbJsonLd items={[{ name: "Home", href: "/" }, { name: "Clients", href: "/clients/" }]} />
       {/* ══ HERO ══════════════════════════════════════════════════ */}
-      <section className="bg-[#0B0D26] relative overflow-hidden pt-[108px] lg:pt-[116px]">
+      <section className="bg-[#000000] blueprint-grid blueprint-dot-grid relative overflow-hidden pt-[108px] lg:pt-[116px]">
         {/* Grid texture */}
         <div
           className="absolute inset-0 pointer-events-none"
@@ -277,7 +277,7 @@ export default function ClientsPage() {
       <TestimonialsSection />
 
       {/* ══ CTA BANNER ════════════════════════════════════════════ */}
-      <section className="bg-[#0B0D26] py-20">
+      <section className="bg-[#000000] blueprint-grid blueprint-dot-grid py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 text-center">
           <div className="flex items-center justify-center gap-3 mb-4">
             <span className="w-8 h-px bg-[#e7212b]/40" />

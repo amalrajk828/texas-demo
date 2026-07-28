@@ -14,7 +14,7 @@ export default function BigCard({ item }: { item: BigCardItem }) {
     >
       {item.Icon && item.title && (
         <div className="flex items-center gap-2 mb-4">
-          <item.Icon className="w-5 h-5 text-[#F5821F]" strokeWidth={1.8} />
+          <item.Icon className="w-5 h-5 text-[#e7212b]" strokeWidth={1.8} />
           <h3
             className={`text-[18px] font-bold ${
               isDark ? "text-white" : "text-[#1A1A2E]"
@@ -36,7 +36,7 @@ export default function BigCard({ item }: { item: BigCardItem }) {
       {item.subtitle && (
         <p
           className={`text-[11px] font-semibold tracking-wide uppercase mb-4 ${
-            isDark ? "text-white/55" : "text-[#F5821F]"
+            isDark ? "text-white/55" : "text-[#e7212b]"
           }`}
         >
           {item.subtitle}
@@ -58,11 +58,11 @@ export default function BigCard({ item }: { item: BigCardItem }) {
               <li key={isObj ? it.label : it} className="flex items-start gap-2">
                 {IconEl ? (
                   <IconEl
-                    className="w-4 h-4 text-[#F5821F] shrink-0 mt-0.5"
+                    className="w-4 h-4 text-[#e7212b] shrink-0 mt-0.5"
                     strokeWidth={1.8}
                   />
                 ) : (
-                  <span className="w-1.5 h-1.5 rounded-full bg-[#F5821F] shrink-0 mt-2" />
+                  <span className="w-1.5 h-1.5 rounded-full bg-[#e7212b] shrink-0 mt-2" />
                 )}
                 {desc ? (
                   <div>

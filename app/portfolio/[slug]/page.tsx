@@ -202,7 +202,7 @@ export default async function ProductPage({ params }: Props) {
             className="object-cover"
             sizes="100vw"
           />
-          <div className="absolute inset-0 bg-[#0B0D26]/80" />
+          <div className="absolute inset-0 bg-[#000000] blueprint-grid blueprint-dot-grid/80" />
           <div className="absolute inset-0 bg-gradient-to-t from-[#0B0D26] via-[#0B0D26]/50 to-transparent" />
           <div
             className="absolute inset-0 pointer-events-none"
@@ -492,7 +492,7 @@ export default async function ProductPage({ params }: Props) {
       />
 
       {/* ══ CTA BANNER ════════════════════════════════════════════ */}
-      <section className="bg-[#0B0D26] py-20">
+      <section className="bg-[#000000] blueprint-grid blueprint-dot-grid py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 text-center">
           <div className="flex items-center justify-center gap-3 mb-4">
             <span className="w-8 h-px bg-[#e7212b]/40" />

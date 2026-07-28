@@ -28,7 +28,7 @@ export default function IndustryProductCard({
           className="absolute inset-0 z-10"
           aria-label={product.name}
         />
-        <div className={`relative ${imageHeight} overflow-hidden bg-[#0B0D26] shrink-0`}>
+        <div className={`relative ${imageHeight} overflow-hidden bg-[#000000] blueprint-grid blueprint-dot-grid shrink-0`}>
           <Image
             src={product.image}
             alt={`${product.name} — ${product.brand}`}

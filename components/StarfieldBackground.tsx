@@ -1,130 +1,113 @@
 "use client";
 
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useState, useMemo } from "react";
 
-// Helper to generate a string of random box-shadows
-function generateStars(count: number, maxWidth = 2000, maxHeight = 2000) {
-  const shadows = [];
-  for (let i = 0; i < count; i++) {
-    const x = Math.floor(Math.random() * maxWidth);
-    const y = Math.floor(Math.random() * maxHeight);
-    shadows.push(`${x}px ${y}px #FFF`);
-  }
-  return shadows.join(", ");
+interface Star {
+  id: number;
+  cx: number;
+  cy: number;
+  r: number;
+  opacity: number;
+  glow: boolean;
 }
 
 export default function StarfieldBackground() {
-  const [stars1, setStars1] = useState("");
-  const [stars2, setStars2] = useState("");
-  const [stars3, setStars3] = useState("");
+  const [mounted, setMounted] = useState(false);
 
   useEffect(() => {
-    // Generate star coordinates client-side to prevent SSR mismatch
-    setStars1(generateStars(700));
-    setStars2(generateStars(200));
-    setStars3(generateStars(100));
+    setMounted(true);
+  }, []);
+
+  const stars: Star[] = useMemo(() => {
+    const list: Star[] = [];
+    for (let i = 0; i < 120; i++) {
+      const pseudoX = (i * 37 + 13) % 100;
+      const pseudoY = (i * 59 + 29) % 100;
+      const pseudoSize = 0.5 + ((i * 17) % 5) / 10;
+      const pseudoOpacity = 0.2 + ((i * 23) % 61) / 100;
+      const pseudoGlow = i % 4 === 0;
+
+      list.push({
+        id: i,
+        cx: pseudoX,
+        cy: pseudoY,
+        r: pseudoSize,
+        opacity: pseudoOpacity,
+        glow: pseudoGlow,
+      });
+    }
+    return list;
   }, []);
 
   return (
-    <div 
-      className="absolute inset-0 -z-10 overflow-hidden" 
+    <div
+      className="fixed inset-0 pointer-events-none -z-10 overflow-hidden bg-[#0a0a0e]"
       style={{
-        background: "radial-gradient(ellipse at bottom, #1b2735 0%, #090a0f 100%)",
+        backgroundColor: "#0a0a0e",
       }}
     >
-      <style dangerouslySetInnerHTML={{ __html: `
-        @keyframes animStar {
-          from {
-            transform: translateY(0px);
-          }
-          to {
-            transform: translateY(-2000px);
-          }
-        }
-        .animate-star-slow {
-          animation: animStar 150s linear infinite;
-        }
-        .animate-star-mid {
-          animation: animStar 100s linear infinite;
-        }
-        .animate-star-fast {
-          animation: animStar 50s linear infinite;
-        }
-      `}} />
+      {/* Layer 1: Solid Dark Navy-Black Base (#0a0a0e) */}
+      <div className="absolute inset-0 bg-[#0a0a0e] pointer-events-none" />
 
-      {/* Layer 1 - Small stars (1px) */}
-      {stars1 && (
-        <div className="absolute inset-0 pointer-events-none">
-          <div 
-            className="absolute rounded-full animate-star-slow"
-            style={{
-              width: "1px",
-              height: "1px",
-              background: "transparent",
-              boxShadow: stars1,
-            }}
-          />
-          <div 
-            className="absolute rounded-full animate-star-slow"
-            style={{
-              width: "1px",
-              height: "1px",
-              background: "transparent",
-              boxShadow: stars1,
-              top: "2000px",
-            }}
-          />
-        </div>
-      )}
+      {/* Layer 2: Graph-Paper Grid Overlay (40px x 40px, thin 1px lines, rgba(255,255,255,0.035)) */}
+      <div
+        className="absolute inset-0 pointer-events-none opacity-100"
+        style={{
+          backgroundImage: `
+            linear-gradient(to right, rgba(255, 255, 255, 0.035) 1px, transparent 1px),
+            linear-gradient(to bottom, rgba(255, 255, 255, 0.035) 1px, transparent 1px)
+          `,
+          backgroundSize: "40px 40px",
+        }}
+      />
 
-      {/* Layer 2 - Medium stars (2px) */}
-      {stars2 && (
-        <div className="absolute inset-0 pointer-events-none">
-          <div 
-            className="absolute rounded-full animate-star-mid"
-            style={{
-              width: "2px",
-              height: "2px",
-              background: "transparent",
-              boxShadow: stars2,
-            }}
-          />
-          <div 
-            className="absolute rounded-full animate-star-mid"
-            style={{
-              width: "2px",
-              height: "2px",
-              background: "transparent",
-              boxShadow: stars2,
-              top: "2000px",
-            }}
-          />
-        </div>
-      )}
+      {/* Layer 4: Soft Reddish Radial Gradient Glows (rgba(200,30,30,0.08), heavily blurred) */}
+      <div
+        className="absolute top-[-10%] left-[15%] w-[650px] h-[650px] rounded-full pointer-events-none blur-[110px]"
+        style={{
+          background:
+            "radial-gradient(circle, rgba(200, 30, 30, 0.08) 0%, rgba(200, 30, 30, 0.02) 50%, transparent 70%)",
+        }}
+      />
+      <div
+        className="absolute top-[40%] right-[10%] w-[550px] h-[550px] rounded-full pointer-events-none blur-[100px]"
+        style={{
+          background:
+            "radial-gradient(circle, rgba(200, 30, 30, 0.06) 0%, rgba(200, 30, 30, 0.01) 50%, transparent 70%)",
+        }}
+      />
+      <div
+        className="absolute bottom-[-10%] left-[-5%] w-[600px] h-[600px] rounded-full pointer-events-none blur-[120px]"
+        style={{
+          background:
+            "radial-gradient(circle, rgba(200, 30, 30, 0.07) 0%, transparent 70%)",
+        }}
+      />
 
-      {/* Layer 3 - Large stars (3px) */}
-      {stars3 && (
-        <div className="absolute inset-0 pointer-events-none">
-          <div 
-            className="absolute rounded-full animate-star-fast"
-            style={{
-              width: "3px",
-              height: "3px",
-              background: "transparent",
-              boxShadow: stars3,
-            }}
-          />
-          <div 
-            className="absolute rounded-full animate-star-fast"
-            style={{
-              width: "3px",
-              height: "3px",
-              background: "transparent",
-              boxShadow: stars3,
-              top: "2000px",
-            }}
-          />
-        </div>
+      {/* Layer 3: Star Field (120 small dots 1-2px, opacity 0.2-0.8, subtle glow) */}
+      {mounted && (
+        <svg
+          className="absolute inset-0 w-full h-full pointer-events-none"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          {stars.map((star) => (
+            <circle
+              key={star.id}
+              cx={`${star.cx}%`}
+              cy={`${star.cy}%`}
+              r={star.r}
+              fill="#FFFFFF"
+              opacity={star.opacity}
+              style={
+                star.glow
+                  ? {
+                      filter: "drop-shadow(0px 0px 2.5px rgba(255, 255, 255, 0.75))",
+                    }
+                  : undefined
+              }
+            />
+          ))}
+        </svg>
       )}
     </div>
   );

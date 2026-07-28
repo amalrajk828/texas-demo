@@ -32,7 +32,7 @@ export default function ProductCard({
   product,
   category,
   href,
-  imageFit = "cover",
+  imageFit = "contain",
   theme = "red",
   badgeClassName,
   className = "",
@@ -60,23 +60,22 @@ export default function ProductCard({
   // Default badge styling for red theme vs custom badge styling
   const defaultBadgeClass = theme === "industry"
     ? "bg-white/10 text-white/60 border-white/15 px-2.5 py-1 rounded-full border backdrop-blur-sm"
-    : "bg-[#e7212b]/15 text-[#e7212b] border-[#e7212b]/20 px-2.5 py-1 rounded-full border";
+    : "bg-[#e7212b]/15 text-[#e7212b] border-[#e7212b]/20 px-3 py-1 rounded-full border font-bold";
   const finalBadgeClass = badgeClassName || defaultBadgeClass;
 
   return (
     <div
-      className={`group bg-white border border-[#e8eaf0] hover:border-[#e7212b]/60 rounded-2xl overflow-hidden transition-all duration-300 hover:shadow-xl flex flex-col fade-up ${className}`}
-      style={{ "--tw-shadow-color": "rgba(231,33,43,0.10)" } as React.CSSProperties}
+      className={`group bg-white border border-[#e8eaf0] hover:border-[#e7212b]/60 rounded-2xl overflow-hidden transition-all duration-300 hover:shadow-xl hover:shadow-[#e7212b]/10 hover:-translate-y-1 flex flex-col h-full fade-up ${className}`}
     >
       {/* Image Container */}
-      <div className={`relative h-44 overflow-hidden shrink-0 ${imageFit === "contain" ? "bg-white border-b border-[#e8eaf0] p-4" : "bg-[#0B0D26]"}`}>
+      <div className={`relative h-60 sm:h-64 w-full overflow-hidden shrink-0 flex items-center justify-center ${imageFit === "contain" ? "bg-white border-b border-[#e8eaf0] p-4 sm:p-6" : "bg-[#000000] blueprint-grid blueprint-dot-grid"}`}>
         {!imgError && displayImage ? (
           <Image
             src={displayImage}
             alt={`${product.name} — ${displayBrand}`}
             fill
-            className={`transition-transform duration-700 ease-out group-hover:scale-[1.07] ${imageFit === "contain" ? "object-contain p-4" : "object-cover"}`}
-            sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
+            className={`transition-transform duration-700 ease-out group-hover:scale-[1.05] ${imageFit === "contain" ? "object-contain p-4 sm:p-5" : "object-cover"}`}
+            sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 33vw"
             onError={() => setImgError(true)}
           />
         ) : (
@@ -84,7 +83,9 @@ export default function ProductCard({
             <span className="text-[#A0A8C0] text-[12px] font-semibold text-center">{product.name}</span>
           </div>
         )}
-        <div className="absolute inset-0 bg-gradient-to-t from-black/50 via-transparent to-transparent pointer-events-none" />
+        {imageFit === "cover" && (
+          <div className="absolute inset-0 bg-gradient-to-t from-black/50 via-transparent to-transparent pointer-events-none" />
+        )}
 
         {/* Category badge */}
         {targetCategory && (

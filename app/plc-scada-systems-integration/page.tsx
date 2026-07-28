@@ -122,7 +122,7 @@ export default function PlcScadaPage() {
         areaServed={["Kuwait", "Dubai", "United Arab Emirates", "Saudi Arabia", "Bahrain", "Qatar", "Oman"]}
       />
       {/* ══ HERO ════════════════════════════════════════════ */}
-      <section className="relative bg-[#0B0D26] overflow-hidden pt-32 pb-20 lg:pb-28">
+      <section className="relative bg-[#000000] blueprint-grid blueprint-dot-grid overflow-hidden pt-32 pb-20 lg:pb-28">
         <div
           className="absolute inset-0 pointer-events-none"
           style={{
@@ -284,7 +284,7 @@ export default function PlcScadaPage() {
       {/* ══ CAPABILITIES DARK STRIP ═════════════════════════ */}
       <section className="py-24 lg:py-28">
         <div className="max-w-7xl mx-auto px-4 sm:px-6">
-          <div className="rounded-2xl bg-[#0B0D26] overflow-hidden relative">
+          <div className="rounded-2xl bg-[#000000] blueprint-grid blueprint-dot-grid overflow-hidden relative">
             <div
               className="absolute inset-0 pointer-events-none"
               style={{
@@ -464,7 +464,7 @@ export default function PlcScadaPage() {
       </section>
 
       {/* ══ CTA ════════════════════════════════════════════ */}
-      <section className="bg-[#0B0D26] py-20">
+      <section className="bg-[#000000] blueprint-grid blueprint-dot-grid py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 text-center">
           <div className="flex items-center justify-center gap-3 mb-4">
             <span className="w-8 h-px bg-[#e7212b]/40" />

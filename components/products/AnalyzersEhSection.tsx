@@ -61,10 +61,10 @@ const COMPLIANCE: BadgeItem[] = [
 
 export default function AnalyzersEhSection() {
   return (
-    <section className="bg-[#0B0D26] py-16 lg:py-20">
+    <section className="bg-[#000000] blueprint-grid blueprint-dot-grid py-16 lg:py-20">
       <div className="max-w-7xl mx-auto px-4 sm:px-6">
         <div className="text-center mb-12">
-          <span className="text-[#F5821F] text-[10px] font-semibold tracking-[3px] uppercase">
+          <span className="text-[#e7212b] text-[10px] font-semibold tracking-[3px] uppercase">
             Authorized Agent · Endress+Hauser
           </span>
           <h2 className="mt-3 text-white text-2xl sm:text-3xl font-bold">
@@ -118,7 +118,7 @@ function EhCard({ category }: { category: EhCategory }) {
         ))}
       </div>
       <div className="mt-auto pt-4 border-t border-white/10">
-        <p className="text-[10px] font-semibold tracking-[2px] uppercase text-[#F5821F]">
+        <p className="text-[10px] font-semibold tracking-[2px] uppercase text-[#e7212b]">
           Key Benefit
         </p>
         <p className="text-white/65 text-[12.5px] mt-1.5 leading-relaxed">

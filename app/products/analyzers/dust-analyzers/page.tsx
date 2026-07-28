@@ -37,7 +37,7 @@ export default function DustAnalyzersPage() {
     <div className="min-h-screen bg-white font-sans antialiased selection:bg-[#e7212b] selection:text-white">
       <BreadcrumbJsonLd items={[{ name: "Home", href: "/" }, { name: "Products", href: "/products/" }, { name: "Analyzers", href: "/products/analyzers/" }, { name: "Dust Analyzers", href: "/products/analyzers/dust-analyzers/" }]} />
       {/* ── Hero Banner ─────────────────────────────────────── */}
-      <section className="relative bg-[#0B0D26] overflow-hidden border-b-4 border-[#e7212b]">
+      <section className="relative bg-[#000000] blueprint-grid blueprint-dot-grid overflow-hidden border-b-4 border-[#e7212b]">
         <div
           className="absolute inset-0 pointer-events-none opacity-30"
           style={{
@@ -48,11 +48,11 @@ export default function DustAnalyzersPage() {
         <div
           className="absolute bottom-0 left-1/2 -translate-x-1/2 w-[600px] h-40 pointer-events-none"
           style={{
-            background: "radial-gradient(ellipse, rgba(245,130,31,0.06) 0%, transparent 70%)",
+            background: "radial-gradient(ellipse, rgba(231,33,43,0.06) 0%, transparent 70%)",
           }}
         />
 
-        <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 py-16 lg:py-20">
+        <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 pt-[calc(var(--navbar-height,92px)+1.75rem)] pb-16 lg:pt-[calc(var(--navbar-height,92px)+2.5rem)] lg:pb-20">
           <nav className="flex items-center gap-1.5 text-[11px] text-white/50 mb-6 flex-wrap">
             <Link href="/" className="hover:text-white transition-colors">Home</Link>
             <ChevronRight className="w-3 h-3 text-white/30 shrink-0" />
@@ -133,7 +133,7 @@ export default function DustAnalyzersPage() {
             </div>
             <Link
               href="/contact"
-              className="shrink-0 inline-flex items-center gap-2 bg-[#e7212b] hover:bg-[#e07214] text-white font-bold px-6 py-3.5 rounded-[6px] shadow-lg hover:shadow-[#e7212b]/20 transition-all duration-200"
+              className="shrink-0 inline-flex items-center gap-2 bg-[#e7212b] hover:bg-[#aa0b1b] text-white font-bold px-6 py-3.5 rounded-[6px] shadow-lg hover:shadow-[#e7212b]/20 transition-all duration-200"
             >
               Contact Us &rarr;
             </Link>

@@ -95,7 +95,7 @@ export default function ControlRoomPage() {
             </div>
             <Link
               href="/products/access-flooring/"
-              className="shrink-0 inline-flex items-center gap-2 bg-[#1A1A2E] hover:bg-[#0B0D26] text-white font-semibold px-6 py-3.5 rounded-[6px] transition-colors text-[14px]"
+              className="shrink-0 inline-flex items-center gap-2 bg-[#1A1A2E] hover:bg-[#000000] blueprint-grid blueprint-dot-grid text-white font-semibold px-6 py-3.5 rounded-[6px] transition-colors text-[14px]"
             >
               Explore Access Flooring →
             </Link>

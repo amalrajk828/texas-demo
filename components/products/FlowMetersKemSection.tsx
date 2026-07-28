@@ -36,7 +36,7 @@ export default function FlowMetersKemSection() {
     <section className="bg-white py-14 border-t border-[#E8E8F0]">
       <div className="max-w-7xl mx-auto px-4 sm:px-6">
         <div className="text-center mb-10">
-          <span className="text-[#F5821F] text-[10px] font-semibold tracking-[3px] uppercase">
+          <span className="text-[#e7212b] text-[10px] font-semibold tracking-[3px] uppercase">
             Authorized Agent · KEM Küppers Germany
           </span>
           <h2 className="mt-3 text-[#1A1A2E] text-2xl sm:text-3xl font-bold">

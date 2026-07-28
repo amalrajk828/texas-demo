@@ -60,13 +60,15 @@ const TESTS = [
   },
 ];
 
+import LightGradientBackground from "@/components/LightGradientBackground";
+import SubServiceCard from "@/components/service/common/SubServiceCard";
+
 export default function MechanicalSubServices() {
   return (
-    <section className="relative bg-[#f4f5f8] py-24 lg:py-32 overflow-hidden">
-      <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[600px] h-[1px] pointer-events-none" style={{ background: "linear-gradient(90deg, transparent, rgba(231,33,43,0.15) 50%, transparent)" }} />
-      <div className="relative max-w-7xl mx-auto px-4 sm:px-6">
-        <FadeUp delay={0} className="mb-14">
-          <div className="flex items-center gap-2.5 mb-4">
+    <LightGradientBackground className="py-20 lg:py-28">
+      <div className="relative max-w-7xl mx-auto px-4 sm:px-6 z-10">
+        <FadeUp delay={0} className="mb-12">
+          <div className="flex items-center gap-2.5 mb-3">
             <span className="w-5 h-px bg-[#e7212b]" />
             <span className="text-[#e7212b] text-[10px] font-semibold tracking-[3.5px] uppercase">Mechanical Testing</span>
           </div>
@@ -78,45 +80,12 @@ export default function MechanicalSubServices() {
           </div>
         </FadeUp>
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5 sm:gap-[22px]">
           {TESTS.map((item, i) => (
-            <FadeUp key={item.title} delay={0.06 + i * 0.08}>
-              <motion.div whileHover={{ y: -4, transition: { duration: 0.22 } }}>
-                <Link href={item.href} className="group relative rounded-2xl border border-[#e8eaf0] bg-white overflow-hidden flex flex-col hover:border-[#e7212b]/25 hover:shadow-xl hover:shadow-[#e7212b]/6 transition-all duration-300 h-full">
-                  <div className="relative aspect-[16/9] bg-[#0B0D26] overflow-hidden">
-                    <Image
-                      src={item.imageSrc}
-                      alt={item.title}
-                      fill
-                      sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
-                      className="object-cover group-hover:scale-105 transition-transform duration-500"
-                    />
-                    <div className="absolute top-0 left-0 right-0 h-[2px] bg-gradient-to-r from-transparent via-[#e7212b] to-transparent opacity-0 group-hover:opacity-70 transition-opacity duration-300" />
-                    <div className="absolute top-3 left-3">
-                      <span className="text-[10px] font-semibold text-white/60 bg-[#0B0D26]/70 backdrop-blur-sm border border-white/10 px-2.5 py-1 rounded-full tracking-[1.5px] uppercase">Mechanical Testing</span>
-                    </div>
-                  </div>
-                  <div className="flex flex-col flex-1 p-6">
-                    <div className="flex items-center justify-between mb-4">
-                      <div className="w-10 h-10 rounded-xl bg-[#e7212b]/8 border border-[#e7212b]/15 flex items-center justify-center group-hover:bg-[#e7212b]/15 group-hover:border-[#e7212b]/30 transition-all duration-300">
-                        <item.Icon className="w-4.5 h-4.5 text-[#e7212b]" strokeWidth={1.8} />
-                      </div>
-                      <span className="text-[10px] font-bold text-[#e7212b]/25 tracking-[2.5px]">{String(i + 1).padStart(2, "0")}</span>
-                    </div>
-                    <div className="w-8 h-[2px] bg-[#e7212b] rounded-full mb-3 group-hover:w-12 transition-all duration-300" />
-                    <h3 className="text-[17px] font-bold text-[#0B0D26] leading-snug mb-3">{item.title}</h3>
-                    <p className="text-gray-500 text-[13.5px] leading-[1.75] flex-1">{item.body}</p>
-                    <div className="mt-5 pt-4 border-t border-[#e8eaf0] flex items-center gap-1.5 text-[#e7212b] text-[13px] font-semibold">
-                      <span>Learn more</span>
-                      <ArrowRight className="w-3.5 h-3.5 group-hover:translate-x-1 transition-transform duration-200" />
-                    </div>
-                  </div>
-                </Link>
-              </motion.div>
-            </FadeUp>
+            <SubServiceCard key={item.title} item={item} index={i} categoryTag="Mechanical Testing" />
           ))}
         </div>
       </div>
-    </section>
+    </LightGradientBackground>
   );
 }
