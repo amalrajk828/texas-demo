@@ -15,6 +15,12 @@ export const metadata: Metadata = {
     "GENESIS64 HMI",
     "SCADA visualization Kuwait",
     "industrial SCADA solutions",
+    "ICONICS Hyper Historian Kuwait",
+    "building automation SCADA GCC",
+    "Energy AnalytiX Dubai",
+    "factory automation software Kuwait",
+    "real-time industrial monitoring",
+    "ICONICS partner Kuwait",
   ],
   openGraph: {
     title: "ICONICS",

@@ -16,19 +16,21 @@ import GreyCta from "@/components/t-grey/GreyCta";
 export const metadata: Metadata = {
   title: "Industrial Automation, PLC SCADA & Flow Measurement",
   description:
-    "Texas Technical Services is a leading industrial automation company in Kuwait and the UAE — specializing in PLC SCADA integration, flow measurement services in Ahmadi, inspection & testing, and automation engineering services in Fahaheel for oil & gas, refinery, and petrochemical sectors across the GCC.",
+    "Industrial automation company in Kuwait & GCC — PLC SCADA integration, flow measurement, inspection, and engineering services for oil & gas.",
   alternates: { canonical: "/" },
   openGraph: {
     title: "Texas Technical Services — Industrial Automation Company in Kuwait & GCC",
     description:
-      "Leading industrial automation company in Kuwait and UAE — PLC SCADA integration, flow measurement, inspection, and automation engineering services in Fahaheel and across Dubai, Bahrain, and Saudi Arabia.",
+      "Leading industrial automation company in Kuwait and UAE — PLC SCADA integration, flow measurement, inspection, and automation engineering services.",
     url: "/",
+    images: [{ url: "/og-default.png", width: 1200, height: 630 }],
   },
   twitter: {
     card: "summary_large_image",
     title: "Texas Technical Services — Industrial Automation Company in Kuwait & GCC",
     description:
-      "Leading industrial automation company in Kuwait and UAE — PLC SCADA integration, flow measurement, inspection, and automation engineering across the GCC.",
+      "Leading industrial automation company in Kuwait and UAE — PLC SCADA integration, flow measurement, inspection, and automation engineering.",
+    images: ["/og-default.png"],
   },
   keywords: [
     "industrial automation companies in Kuwait",

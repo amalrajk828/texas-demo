@@ -15,6 +15,12 @@ export const metadata: Metadata = {
     "GOT2000 graphic operator panel",
     "HMI touchscreen Kuwait",
     "industrial HMI solutions",
+    "Mitsubishi HMI panel Dubai",
+    "GOT1000 series Kuwait",
+    "operator interface panel GCC",
+    "SCADA HMI integration Kuwait",
+    "industrial display panel",
+    "HMI programming Kuwait",
   ],
   openGraph: {
     title: "GOT (Graphic Operator Panels)",

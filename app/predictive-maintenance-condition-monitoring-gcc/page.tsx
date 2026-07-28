@@ -6,23 +6,25 @@ import { ServiceJsonLd } from "@/components/schema/ServiceJsonLd";
 import { FaqPageJsonLd } from "@/components/schema/FaqPageJsonLd";
 
 export const metadata: Metadata = {
-  title: "Predictive Maintenance & Condition Monitoring Services GCC | Vibration Analysis",
+  title: "Predictive Maintenance & Condition Monitoring GCC",
   description:
     "Predictive maintenance and condition monitoring services across the GCC — vibration analysis, ABB and Rockwell monitoring solutions.",
   alternates: {
     canonical: "/predictive-maintenance-condition-monitoring-gcc/",
   },
   openGraph: {
-    title: "Predictive Maintenance & Condition Monitoring Services GCC | Texas Technical Services",
+    title: "Predictive Maintenance & Condition Monitoring GCC | Texas Technical Services",
     description:
-      "Predictive maintenance and condition monitoring services across the GCC — vibration analysis, ABB and Rockwell solutions. Fahaheel, Kuwait.",
+      "Predictive maintenance and condition monitoring across the GCC — vibration analysis, ABB and Rockwell solutions. Fahaheel, Kuwait.",
     url: "/predictive-maintenance-condition-monitoring-gcc/",
+    images: [{ url: "/og-default.png", width: 1200, height: 630 }],
   },
   twitter: {
     card: "summary_large_image",
-    title: "Predictive Maintenance & Condition Monitoring Services GCC | Texas Technical Services",
+    title: "Predictive Maintenance & Condition Monitoring GCC | Texas Technical Services",
     description:
-      "Predictive maintenance and condition monitoring services in the GCC — vibration analysis and rotating equipment health. Texas Technical Services, Kuwait.",
+      "Predictive maintenance and condition monitoring in the GCC — vibration analysis and rotating equipment health. Texas Technical Services.",
+    images: ["/og-default.png"],
   },
   keywords: [
     "predictive maintenance Kuwait",

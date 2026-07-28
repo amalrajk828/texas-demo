@@ -6,23 +6,25 @@ import { ServiceJsonLd } from "@/components/schema/ServiceJsonLd";
 import { FaqPageJsonLd } from "@/components/schema/FaqPageJsonLd";
 
 export const metadata: Metadata = {
-  title: "Flow Meter Calibration Services Kuwait & GCC | ISO 17025 Accredited",
+  title: "Flow Meter Calibration Kuwait & GCC",
   description:
-    "ISO 17025 accredited flow meter calibration in Kuwait — Coriolis, ultrasonic, turbine, and PD meter calibration to OIML R117 and API MPMS standards.",
+    "ISO 17025 accredited flow meter calibration in Kuwait — Coriolis, ultrasonic, turbine, and PD meter calibration to OIML and API standards.",
   alternates: {
     canonical: "/flow-meter-calibration-services-kuwait/",
   },
   openGraph: {
-    title: "Flow Meter Calibration Services Kuwait & GCC | Texas Technical Services",
+    title: "Flow Meter Calibration Kuwait & GCC | Texas Technical Services",
     description:
-      "ISO 17025 accredited flow meter calibration services in Kuwait — Coriolis, ultrasonic, turbine, and PD meters. OIML R117, API MPMS compliance. Fahaheel, Kuwait.",
+      "ISO 17025 accredited flow meter calibration in Kuwait — Coriolis, ultrasonic, turbine, PD meters. OIML, API compliance. Fahaheel.",
     url: "/flow-meter-calibration-services-kuwait/",
+    images: [{ url: "/og-default.png", width: 1200, height: 630 }],
   },
   twitter: {
     card: "summary_large_image",
-    title: "Flow Meter Calibration Services Kuwait & GCC | Texas Technical Services",
+    title: "Flow Meter Calibration Kuwait & GCC | Texas Technical Services",
     description:
-      "ISO 17025 accredited flow meter calibration in Kuwait and the GCC — OIML R117, API MPMS compliance. Texas Technical Services, Fahaheel.",
+      "ISO 17025 accredited flow meter calibration in Kuwait and the GCC — OIML, API compliance. Texas Technical Services.",
+    images: ["/og-default.png"],
   },
   keywords: [
     "flow meter calibration Kuwait",

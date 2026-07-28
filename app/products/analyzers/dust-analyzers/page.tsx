@@ -16,6 +16,10 @@ export const metadata: Metadata = {
     "SICK DUSTHUNTER",
     "stack emissions monitoring",
     "dust concentration measurement",
+    "dust monitoring Kuwait power plant",
+    "opacity measurement GCC",
+    "particulate emissions analyzer",
+    "industrial dust monitoring Dubai",
   ],
   openGraph: {
     title: "Dust Analyzers",

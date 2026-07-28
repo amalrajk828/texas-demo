@@ -19,6 +19,11 @@ export const metadata: Metadata = {
     "power plant industrial automation",
     "emissions monitoring power generation",
     "flow computer power plant Kuwait",
+    "power plant instrumentation Kuwait",
+    "power generation automation GCC",
+    "boiler combustion monitoring Dubai",
+    "turbine control systems Kuwait",
+    "thermal power plant solutions GCC",
   ],
   openGraph: {
     title: "Power Plant Industry Solutions",

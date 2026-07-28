@@ -16,6 +16,10 @@ export const metadata: Metadata = {
     "SICK FLOWSIC100 Flare",
     "flare stack measurement",
     "steam flow meters refinery",
+    "flare gas measurement Kuwait",
+    "ultrasonic flare meter GCC",
+    "refinery flare monitoring",
+    "flare flow measurement Dubai",
   ],
   openGraph: {
     title: "Flare Meters",

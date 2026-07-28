@@ -16,6 +16,10 @@ export const metadata: Metadata = {
     "SICK FLOWSIC600 ultrasonic",
     "custody transfer gas metering",
     "natural gas flow measurement",
+    "ultrasonic gas meter Kuwait",
+    "natural gas custody transfer GCC",
+    "pipeline gas flow measurement",
+    "gas metering systems Dubai",
   ],
   openGraph: {
     title: "Gas Flow Meters",

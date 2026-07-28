@@ -16,9 +16,19 @@ import {
 } from "lucide-react";
 
 export const metadata: Metadata = {
-  title: "Industrial Engineering Knowledge Hub | Texas Technical Services",
+  title: "Industrial Engineering Knowledge Hub",
   description: "Access expert technical guides and reference articles on Custody Transfer Metering, SCADA systems, and CEMS compliance for heavy industries.",
-  keywords: "industrial engineering blog, flow measurement, SCADA, CEMS, NDT, automation, Kuwait, UAE, oil and gas",
+  keywords: [
+    "industrial engineering blog",
+    "flow measurement",
+    "SCADA",
+    "CEMS",
+    "NDT",
+    "automation",
+    "Kuwait",
+    "UAE",
+    "oil and gas",
+  ],
   alternates: {
     canonical: "/blog/",
   },
@@ -29,13 +39,13 @@ export const metadata: Metadata = {
     "max-image-preview": "large",
   },
   openGraph: {
-    title: "Industrial Engineering Knowledge Hub | Texas Technical Services",
+    title: "Industrial Engineering Knowledge Hub",
     description: "Access expert technical guides and reference articles on Custody Transfer Metering, SCADA systems, and CEMS compliance for heavy industries.",
-    url: "https://texastechserv.com/blog/",
+    url: "/blog/",
     type: "website",
     images: [
       {
-        url: "https://texastechserv.com/og-default.png",
+        url: "/og-default.png",
         width: 1200,
         height: 630,
         alt: "Texas Technical Services Knowledge Hub",
@@ -45,9 +55,9 @@ export const metadata: Metadata = {
   twitter: {
     card: "summary_large_image",
     site: "@texastechserv",
-    title: "Industrial Engineering Knowledge Hub | Texas Technical Services",
+    title: "Industrial Engineering Knowledge Hub",
     description: "Access expert technical guides and reference articles on Custody Transfer Metering, SCADA systems, and CEMS compliance for heavy industries.",
-    images: ["https://texastechserv.com/og-default.png"],
+    images: ["/og-default.png"],
   },
 };
 

@@ -37,7 +37,7 @@ export const metadata: Metadata = {
     template: "%s | Texas Technical Services",
   },
   description:
-    "Texas specializes in flow measurement, control systems, inspection, and industrial automation solutions for oil & gas, refinery, petrochemical, and power plant sectors.",
+    "Flow measurement, control systems, inspection, and industrial automation for oil & gas, refinery, petrochemical, and power plant sectors.",
   openGraph: {
     type: "website",
     locale: "en_US",

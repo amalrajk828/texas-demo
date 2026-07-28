@@ -19,6 +19,11 @@ export const metadata: Metadata = {
     "cement emissions monitoring",
     "extractive gas analyzer cement",
     "industrial automation cement manufacturing",
+    "cement plant instrumentation GCC",
+    "kiln process control Kuwait",
+    "cement production automation Dubai",
+    "raw mill emissions monitoring",
+    "cement plant safety systems GCC",
   ],
   openGraph: {
     title: "Cement Industry Solutions",

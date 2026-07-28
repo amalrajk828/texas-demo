@@ -16,6 +16,10 @@ export const metadata: Metadata = {
     "Faure Herman helical turbine",
     "Ultraflux ultrasonic flowmeter",
     "custody transfer liquid metering",
+    "helical turbine meter Kuwait",
+    "liquid custody transfer GCC",
+    "petroleum flow measurement",
+    "refinery liquid flow meters Dubai",
   ],
   openGraph: {
     title: "Liquid Flow Meters",

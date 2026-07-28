@@ -16,6 +16,10 @@ export const metadata: Metadata = {
     "continuous emissions monitoring",
     "SICK MCS100FT MCS200HW",
     "flue gas monitoring systems",
+    "CEMS Kuwait power plant",
+    "emissions monitoring Kuwait",
+    "power plant CEMS GCC",
+    "stack gas analysis Dubai",
   ],
   openGraph: {
     title: "CEMS",
