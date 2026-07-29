@@ -208,6 +208,7 @@ export default function BlogIndexPage() {
                   readMoreText="Read Article"
                   href={`/blog/${post.slug}/`}
                   priority={index < 3}
+                  badgeClassName="bg-white/80 text-[#e7212b] border-[#e7212b]/20 backdrop-blur-md px-2.5 py-1 rounded-full border text-[9px] font-medium tracking-[1.5px] uppercase"
                 />
               );
             })}
