@@ -5,6 +5,7 @@ import Image from "next/image";
 import { useRef, useState, useEffect, useCallback } from "react";
 import { AnimatePresence, motion, type Variants } from "framer-motion";
 import { ArrowRight, Play } from "lucide-react";
+import Ferrofluid from "@/components/Ferrofluid";
 
 /* ── Slide data ─────────────────────────────────────────────────── */
 const SLIDES = [
@@ -108,6 +109,7 @@ export default function HeroSlider() {
   const [current, setCurrent] = useState(0);
   const [paused, setPaused] = useState(false);
   const [progress, setProgress] = useState(0);
+
   const rafRef = useRef<number | null>(null);
   const startRef = useRef<number | null>(null);
   const mainVideoRef = useRef<HTMLVideoElement | null>(null);
@@ -164,11 +166,31 @@ export default function HeroSlider() {
   return (
     <section
       className="relative w-full overflow-hidden flex flex-col justify-center"
-      style={{ minHeight: "clamp(680px, 100svh, 920px)", background: "var(--color-brand-navy)" }}
+      style={{ minHeight: "110vh", background: "#050505" }}
       onMouseEnter={() => setPaused(true)}
       onMouseLeave={() => setPaused(false)}
       {...swipe}
     >
+      {/* Ferrofluid WebGL background layer */}
+      <div style={{ width: '100%', height: '100%', position: 'absolute', inset: 0, zIndex: 0, pointerEvents: 'none' }}>
+        <Ferrofluid
+          colors={["#ffffff", "#ffffff", "#ffffff"]}
+          speed={0.4}
+          scale={1.6}
+          turbulence={1}
+          fluidity={0.15}
+          rimWidth={0.2}
+          sharpness={2.5}
+          shimmer={1.3}
+          glow={2}
+          flowDirection="down"
+          opacity={0.6}
+          mouseInteraction={true}
+          mouseStrength={0.8}
+          mouseRadius={0.3}
+        />
+      </div>
+
       {/* Noise texture */}
       <div
         className="absolute inset-0 pointer-events-none z-0 opacity-[0.025]"
@@ -176,22 +198,6 @@ export default function HeroSlider() {
           backgroundImage: "url(\"data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)'/%3E%3C/svg%3E\")",
           backgroundSize: "200px 200px",
         }}
-      />
-
-      {/* Grid texture */}
-      <div
-        className="absolute inset-0 pointer-events-none z-0 opacity-40"
-        style={{ background: "var(--background-grid-dark)", backgroundSize: "40px 40px" }}
-      />
-
-      {/* Ambient glow */}
-      <div
-        className="absolute right-0 top-0 w-[60%] h-full pointer-events-none z-0"
-        style={{ background: "radial-gradient(ellipse at 80% 35%, color-mix(in srgb, var(--color-brand-red) 18%, transparent) 0%, transparent 60%)" }}
-      />
-      <div
-        className="absolute left-0 bottom-0 w-[45%] h-[65%] pointer-events-none z-0"
-        style={{ background: "radial-gradient(ellipse at 15% 85%, color-mix(in srgb, var(--color-brand-red) 10%, transparent) 0%, transparent 65%)" }}
       />
 
       {/* Progress bar — top on desktop, bottom on mobile */}
@@ -215,7 +221,7 @@ export default function HeroSlider() {
       </div>
 
       {/* ── Two-column layout ──────────────────────────────── */}
-      <div className="relative z-10 w-full max-w-[1536px] mx-auto px-5 sm:px-10 lg:px-16 grid grid-cols-1 lg:grid-cols-[1fr_560px] xl:grid-cols-[1fr_680px] 2xl:grid-cols-[1fr_780px] gap-8 lg:gap-14 items-center">
+      <div className="relative z-10 w-full max-w-[1536px] mx-auto px-5 sm:px-10 lg:px-16 grid grid-cols-1 lg:grid-cols-[1fr_560px] xl:grid-cols-[1fr_680px] 2xl:grid-cols-[1fr_780px] gap-8 lg:gap-14 items-center pt-[116px] pb-10 lg:pt-[132px] lg:pb-14">
 
         {/* LEFT: Text column */}
         <div className="flex flex-col justify-center pt-16 pb-8 lg:py-0">
@@ -381,7 +387,7 @@ export default function HeroSlider() {
           </AnimatePresence>
 
           {/* Thumbnail filmstrip — taller cards */}
-          <div className="grid grid-cols-4 gap-3">
+          <div className="grid grid-cols-4 gap-3 relative z-10">
             {SLIDES.map((s, i) => (
               <button
                 key={i}
@@ -452,11 +458,6 @@ export default function HeroSlider() {
         ))}
       </div>
 
-      {/* Left edge accent */}
-      <div
-        className="absolute left-0 top-1/4 bottom-1/4 w-[2px] pointer-events-none z-10"
-        style={{ background: "linear-gradient(to bottom, transparent, color-mix(in srgb, var(--color-brand-red) 30%, transparent), transparent)" }}
-      />
     </section>
   );
 }

@@ -1,5 +1,5 @@
 "use client";
-/* Kit D — Grey: stat cards white on light grey, red numbers */
+/* Kit D — Grey: light glassmorphic stat cards on soft light gradient */
 import { useRef, useEffect, useState } from "react";
 import { motion, useInView, useSpring, useTransform, useMotionValue } from "framer-motion";
 
@@ -25,32 +25,49 @@ function StatCard({ value, suffix, label, desc, index, started }: { value: numbe
     <motion.div
       initial={{ opacity: 0, y: 40 }} animate={started ? { opacity: 1, y: 0 } : {}}
       transition={{ duration: 0.9, delay: index * 0.18, ease: [0.16, 1, 0.3, 1] }}
-      className="relative flex flex-col items-center text-center px-8 py-12 rounded-2xl overflow-hidden"
-      style={{ background: "var(--g-card-bg)", border: "1px solid var(--g-card-border)", boxShadow: "var(--g-card-shadow)" }}
+      whileHover={{ y: -6, scale: 1.02 }}
+      className="relative flex flex-col w-full h-full group"
     >
-      <span aria-hidden className="absolute inset-0 flex items-center justify-center text-[clamp(5rem,12vw,9rem)] font-black select-none leading-none pointer-events-none"
-        style={{ color: "color-mix(in srgb, var(--color-brand-red) 5%, transparent)" }}>
-        {count}{suffix}
-      </span>
-      <div className="relative z-10 flex items-end gap-1 leading-none mb-4">
-        <span className="font-black tracking-tight" style={{ fontSize: "clamp(3rem,7vw,5rem)", color: "var(--color-brand-red)" }}>{count}</span>
-        {suffix && <span className="font-black pb-1" style={{ fontSize: "clamp(1.4rem,3.5vw,2.8rem)", color: "var(--color-brand-red)" }}>{suffix}</span>}
+      <div 
+        className="relative flex flex-col items-center text-center px-8 py-12 w-full h-full overflow-hidden rounded-[24px] transition-all duration-300" 
+        style={{ 
+          background: "rgba(255, 255, 255, 0.35)", 
+          backdropFilter: "blur(20px)",
+          WebkitBackdropFilter: "blur(20px)",
+          border: "1px solid rgba(255, 255, 255, 0.65)", 
+          boxShadow: "0 8px 32px rgba(0, 0, 0, 0.08), inset 0 1px 1px rgba(255, 255, 255, 0.8)",
+        }}
+      >
+        {/* Subtle top edge light reflection strip */}
+        <div className="absolute top-0 inset-x-0 h-[1px] bg-gradient-to-r from-transparent via-white/80 to-transparent pointer-events-none" />
+
+        {/* Hover brightening overlay */}
+        <div className="absolute inset-0 bg-white/20 opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none" />
+
+        <span aria-hidden className="absolute inset-0 flex items-center justify-center text-[clamp(5rem,12vw,9rem)] font-black select-none leading-none pointer-events-none"
+          style={{ color: "color-mix(in srgb, var(--color-brand-red) 6%, transparent)" }}>
+          {count}{suffix}
+        </span>
+        <div className="relative z-10 flex items-end gap-1 leading-none mb-4">
+          <span className="font-black tracking-tight" style={{ fontSize: "clamp(3rem,7vw,5rem)", color: "var(--color-brand-red)" }}>{count}</span>
+          {suffix && <span className="font-black pb-1" style={{ fontSize: "clamp(1.4rem,3.5vw,2.8rem)", color: "var(--color-brand-red)" }}>{suffix}</span>}
+        </div>
+        <p className="relative z-10 text-[13px] font-bold tracking-[2.5px] uppercase mb-1 text-[#111827]">{label}</p>
+        <p className="relative z-10 text-[14px] leading-snug max-w-[160px] text-[#4B5563] font-medium">{desc}</p>
+        <div className="relative z-10 mt-5 h-[2px] w-14 rounded-full" style={{ background: "var(--color-brand-red)" }} />
       </div>
-      <p className="relative z-10 text-[13px] font-bold tracking-[2.5px] uppercase mb-1" style={{ color: "var(--g-heading)" }}>{label}</p>
-      <p className="relative z-10 text-[14px] leading-snug max-w-[160px]" style={{ color: "var(--g-muted)" }}>{desc}</p>
-      <div className="relative z-10 mt-5 h-[2px] w-14 rounded-full" style={{ background: "var(--color-brand-red)" }} />
     </motion.div>
   );
 }
+
+import LightGradientBackground from "@/components/LightGradientBackground";
 
 export default function GreyVision() {
   const ref = useRef<HTMLDivElement>(null);
   const inView = useInView(ref, { once: true, margin: "-80px" });
   return (
-    <section className="relative overflow-hidden py-24 lg:py-32" style={{ background: "var(--g-section-a)" }}>
-      <div className="absolute top-0 inset-x-0 h-px" style={{ background: "var(--g-border)" }} />
-      <div className="absolute inset-0 pointer-events-none" style={{ background: "radial-gradient(ellipse 70% 50% at 50% 50%, color-mix(in srgb, var(--color-brand-red) 3%, transparent), transparent)" }} />
-      <div ref={ref} className="relative max-w-7xl mx-auto px-4 sm:px-6">
+    <LightGradientBackground className="py-24 lg:py-32">
+      <div ref={ref} className="relative max-w-7xl mx-auto px-4 sm:px-6 z-10">
         <div className="text-center mb-16">
           <motion.div initial={{ opacity: 0, y: 12 }} animate={inView ? { opacity: 1, y: 0 } : {}} transition={{ duration: 0.6 }} className="inline-flex items-center gap-3 mb-5">
             <span className="w-6 h-px" style={{ background: "var(--color-brand-red)" }} />
@@ -58,7 +75,7 @@ export default function GreyVision() {
             <span className="w-6 h-px" style={{ background: "var(--color-brand-red)" }} />
           </motion.div>
           <motion.h2 initial={{ opacity: 0, y: 24 }} animate={inView ? { opacity: 1, y: 0 } : {}} transition={{ duration: 0.9, delay: 0.1 }}
-            className="text-[clamp(2.2rem,4.5vw,3.4rem)] font-black leading-[1.15] max-w-2xl mx-auto tracking-tight" style={{ color: "var(--g-heading)" }}>
+            className="text-[clamp(2.2rem,4.5vw,3.4rem)] font-black leading-[1.15] max-w-2xl mx-auto tracking-tight text-[#111827]">
             To be a prominent market leader and a{" "}
             <span style={{ color: "var(--color-brand-red)" }}>complete solution provider.</span>
           </motion.h2>
@@ -67,12 +84,12 @@ export default function GreyVision() {
           {STATS.map((s, i) => <StatCard key={s.label} {...s} index={i} started={inView} />)}
         </div>
         <motion.div initial={{ opacity: 0, y: 10 }} animate={inView ? { opacity: 1, y: 0 } : {}} transition={{ duration: 0.8, delay: 0.9 }}
-          className="text-center mt-14 pt-10 border-t" style={{ borderColor: "var(--g-border)" }}>
-          <p className="text-[12px] font-semibold tracking-[2.5px] uppercase" style={{ color: "var(--g-muted)" }}>
+          className="text-center mt-14 pt-10 border-t" style={{ borderColor: "rgba(0,0,0,0.08)" }}>
+          <p className="text-[12px] font-semibold tracking-[2.5px] uppercase text-[#4B5563]">
             ISO 9001:2015 Certified · Established 2008 · Kuwait & Dubai
           </p>
         </motion.div>
       </div>
-    </section>
+    </LightGradientBackground>
   );
 }

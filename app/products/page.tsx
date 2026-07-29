@@ -190,7 +190,7 @@ export default function ProductsPage() {
         { name: "Products", href: "/products/" },
       ]} />
       {/* ── Hero Banner ─────────────────────────────────────── */}
-      <section className="relative bg-[#0B0D26] overflow-hidden">
+      <section className="relative bg-[#000000] blueprint-grid blueprint-dot-grid overflow-hidden pt-[calc(var(--navbar-height,92px)+1rem)] lg:pt-[calc(var(--navbar-height,92px)+1.5rem)]">
         {/* Grid texture */}
         <div
           className="absolute inset-0 pointer-events-none"
@@ -207,7 +207,7 @@ export default function ProductsPage() {
           }}
         />
 
-        <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 py-16 lg:py-20">
+        <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 pb-16 lg:pb-20 pt-4">
           {/* Breadcrumb */}
           <nav className="flex items-center gap-1.5 text-[11px] text-white/30 mb-6">
             <Link href="/" className="hover:text-white transition-colors">Home</Link>
@@ -232,7 +232,7 @@ export default function ProductsPage() {
       </section>
 
       {/* ── Products Grid ────────────────────────────────────── */}
-      <section className="bg-[#0B0D26] py-16 lg:py-20 border-t border-white/[0.05]">
+      <section className="bg-[#000000] blueprint-grid blueprint-dot-grid py-16 lg:py-20 border-t border-white/[0.05]">
         <div className="max-w-7xl mx-auto px-4 sm:px-6">
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5">
             {categories.map((cat, i) => (

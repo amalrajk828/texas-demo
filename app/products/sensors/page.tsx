@@ -39,7 +39,7 @@ export default function SensorsPage() {
         { name: "Industrial Sensors", href: "/products/sensors/" },
       ]} />
       {/* ── Hero Banner ─────────────────────────────────────── */}
-      <section className="relative bg-[#0B0D26] overflow-hidden border-b-4 border-[#e7212b]">
+      <section className="relative bg-[#000000] blueprint-grid blueprint-dot-grid overflow-hidden border-b-4 border-[#e7212b]">
         {/* Grid texture */}
         <div
           className="absolute inset-0 pointer-events-none opacity-30"
@@ -56,7 +56,7 @@ export default function SensorsPage() {
           }}
         />
 
-        <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 py-16 lg:py-20">
+        <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 pt-[calc(var(--navbar-height,92px)+1.75rem)] pb-16 lg:pt-[calc(var(--navbar-height,92px)+2.5rem)] lg:pb-20">
           {/* Breadcrumb */}
           <nav className="flex items-center gap-1.5 text-[11px] text-white/50 mb-6">
             <Link href="/" className="hover:text-white transition-colors">Home</Link>

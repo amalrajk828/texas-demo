@@ -91,9 +91,9 @@ const LIGHT_GREY_VARS: Record<string, string> = {
   "--g-heading":     "#111827",
   "--g-muted":       "#4B5563",
   "--g-border":      "rgba(0,0,0,0.06)",
-  "--g-card-bg":     "linear-gradient(135deg, #ffffff 0%, #fafafa 60%, #fff1f2 100%)",
-  "--g-card-border": "rgba(0,0,0,0.08)",
-  "--g-card-shadow": "0 4px 20px rgba(0,0,0,0.06)",
+  "--g-card-bg":     "#F0F1F3",
+  "--g-card-border": "rgba(0,0,0,0.06)",
+  "--g-card-shadow": "0 4px 20px rgba(0,0,0,0.04)",
   "--g-stat-bg":     "#F3F4F6",
 };
 

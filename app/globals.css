@@ -65,7 +65,12 @@
     linear-gradient(to bottom, rgba(255, 255, 255, 0.15) 1px, transparent 1px);
 }
 
+body, .page-wrapper {
+  background-color: #FFFFFF;
+}
+
 :root {
+  --navbar-height: 92px;
   --background: oklch(1 0 0);
   --foreground: oklch(0.145 0 0);
   --card: oklch(1 0 0);
@@ -214,7 +219,7 @@ a, button, [role="button"], label, select,
 /* --- Blueprint & Technical Instrumentation Panels --- */
 .blueprint-grid {
   position: relative;
-  background-color: #0b0d26;
+  background-color: #000000;
 }
 .blueprint-grid::before {
   content: "";
@@ -231,8 +236,8 @@ a, button, [role="button"], label, select,
   opacity: 0.85;
 }
 .blueprint-dot-grid {
-  background-image: radial-gradient(rgba(255, 255, 255, 0.06) 1px, transparent 1px);
-  background-size: 16px 16px;
+  background-image: radial-gradient(rgba(255, 255, 255, 0.08) 1px, transparent 1px);
+  background-size: 24px 24px;
 }
 
 /* LED Indicator animations */
@@ -404,4 +409,81 @@ a, button, [role="button"], label, select,
 .blog-content pre code {
   background: none;
   padding: 0;
+}
+
+/* Neumorphic Dark Cards */
+.neumorphic-card-dark {
+  background-color: #0a0a0a;
+  border-radius: 2rem;
+  box-shadow: 12px 12px 28px #000000, -12px -12px 28px #151515;
+  transition: transform 0.3s cubic-bezier(0.25, 0.8, 0.25, 1), box-shadow 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+  border: 1px solid rgba(255, 255, 255, 0.015);
+}
+.neumorphic-card-dark:hover {
+  transform: translateY(-5px);
+  box-shadow: 16px 16px 36px #000000, -16px -16px 36px #1b1b1b;
+}
+
+/* Clean White Cards */
+.clean-white-card {
+  background-color: #ffffff;
+  border-radius: 20px;
+  border: 1px solid rgba(0, 0, 0, 0.06);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.06);
+  transition: all 0.2s ease;
+}
+.clean-white-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 28px rgba(0, 0, 0, 0.1);
+}
+
+/* Neumorphic Soft UI Cards */
+.neumorphic-card-soft {
+  background-color: #f0f0f3;
+  border-radius: 24px;
+  box-shadow: 8px 8px 20px rgba(0, 0, 0, 0.08), -8px -8px 20px rgba(255, 255, 255, 0.9);
+  transition: all 0.25s ease;
+  border: none;
+}
+.neumorphic-card-soft:hover {
+  box-shadow: inset 4px 4px 10px rgba(0, 0, 0, 0.06), inset -4px -4px 10px rgba(255, 255, 255, 0.7);
+}
+
+/* Light glass inner item rows (nested inside BMS panels) */
+.neumorphic-item-soft {
+  background: rgba(255, 255, 255, 0.45);
+  backdrop-filter: blur(15px);
+  -webkit-backdrop-filter: blur(15px);
+  border: 1px solid rgba(255, 255, 255, 0.62);
+  border-radius: 14px;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.06);
+  transition: box-shadow 0.3s ease, border-color 0.3s ease, transform 0.3s ease, background 0.3s ease;
+}
+.neumorphic-item-soft:hover {
+  border-color: rgba(231, 33, 43, 0.4);
+  box-shadow:
+    0 4px 16px rgba(0, 0, 0, 0.06),
+    0 0 20px rgba(231, 33, 43, 0.25),
+    0 0 40px rgba(231, 33, 43, 0.1);
+  transform: translateY(-2px);
+  background: rgba(255, 255, 255, 0.58);
+}
+
+/* Scoped Dark Neumorphic Module Cards for iFIX SCADA section */
+.module-card-neumorphic {
+  background-color: #0a0a0a;
+  border-radius: 24px;
+  box-shadow: 15px 15px 30px rgb(0, 0, 0), -15px -15px 30px rgb(35, 35, 35);
+  border: none;
+  transition: all 0.3s ease;
+}
+.module-card-neumorphic:hover {
+  box-shadow: inset 8px 8px 18px rgb(0, 0, 0), inset -8px -8px 18px rgb(35, 35, 35);
+}
+
+/* Inset Neumorphic Icon Badge */
+.module-icon-neumorphic {
+  background-color: #0a0a0a;
+  box-shadow: inset 4px 4px 8px rgb(0, 0, 0), inset -4px -4px 8px rgb(35, 35, 35);
+  border: none;
 }

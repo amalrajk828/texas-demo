@@ -1,6 +1,5 @@
 import type { Metadata } from "next";
 import InspectionHero from "@/components/service/inspection-testing/InspectionHero";
-import InspectionOverview from "@/components/service/inspection-testing/InspectionOverview";
 import InspectionSubServices from "@/components/service/inspection-testing/InspectionSubServices";
 import { BreadcrumbJsonLd } from "@/components/schema/BreadcrumbJsonLd";
 import { ServiceJsonLd } from "@/components/schema/ServiceJsonLd";
@@ -55,7 +54,6 @@ export default function InspectionTestingPage3() {
       />
       <FaqPageJsonLd items={faqItems} />
       <InspectionHero />
-      <InspectionOverview />
       <InspectionSubServices slices={[[22, 27]]} />
       <ServicePageFaqSection faqItems={faqItems} highlightWord="NDT Methods" />
     </>

@@ -63,7 +63,7 @@ export default function FeaturedProducts() {
                 className="group flex flex-col border border-[#e8eaf0] hover:border-[#e7212b]/50 rounded-xl overflow-hidden bg-white transition-all duration-200 hover:shadow-xl hover:-translate-y-0.5"
               >
                 {/* Image placeholder area */}
-                <div className="h-44 bg-[#0B0D26] relative flex items-center justify-center">
+                <div className="h-44 bg-[#000000] blueprint-grid blueprint-dot-grid relative flex items-center justify-center">
                   <div className="text-center">
                     <p className="text-white/20 text-[11px] tracking-[2px] uppercase font-medium">
                       {prod.brand}

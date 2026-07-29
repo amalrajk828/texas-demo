@@ -40,7 +40,7 @@ function FadeUp({ children, delay = 0 }: { children: React.ReactNode; delay?: nu
 
 export default function TestimonialsSection() {
   return (
-    <section className="bg-[#0B0D26] relative overflow-hidden">
+    <section className="bg-[#000000] blueprint-grid blueprint-dot-grid relative overflow-hidden">
       <div className="absolute inset-0 pointer-events-none"
         style={{ backgroundImage: "repeating-linear-gradient(0deg,transparent,transparent 39px,rgba(255,255,255,0.02) 40px),repeating-linear-gradient(90deg,transparent,transparent 39px,rgba(255,255,255,0.02) 40px)" }} />
       <div className="absolute top-0 right-0 w-[520px] h-[520px] pointer-events-none"

@@ -9,7 +9,7 @@ const stats = [
 
 export default function HeroSection() {
   return (
-    <section className="bg-[#0B0D26] relative overflow-hidden">
+    <section className="bg-[#000000] blueprint-grid blueprint-dot-grid relative overflow-hidden">
       <div
         className="absolute inset-0 pointer-events-none"
         style={{

@@ -11,7 +11,7 @@ export default function IndustryCtaBanner({
   showAllIndustriesLink?: boolean;
 }) {
   return (
-    <section className="bg-[#0B0D26] py-20">
+    <section className="bg-[#000000] blueprint-grid blueprint-dot-grid py-20">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 text-center">
         <div className="flex items-center justify-center gap-3 mb-4">
           <span className="w-8 h-px bg-[#e7212b]/40" />

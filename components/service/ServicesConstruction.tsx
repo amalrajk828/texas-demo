@@ -48,7 +48,7 @@ export default function ServicesConstruction() {
   return (
     <section
       id="construction"
-      className="relative bg-[#0B0D26] py-24 lg:py-32 overflow-hidden scroll-mt-28"
+      className="relative bg-[#000000] blueprint-grid blueprint-dot-grid py-24 lg:py-32 overflow-hidden scroll-mt-28"
     >
       {/* Grid texture */}
       <div

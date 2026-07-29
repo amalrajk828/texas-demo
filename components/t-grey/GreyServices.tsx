@@ -4,6 +4,10 @@ import Link from "next/link";
 import { motion, useInView } from "framer-motion";
 import { useRef } from "react";
 import { Gauge, FlaskConical, Cpu, ArrowRight } from "lucide-react";
+import BorderGlow from "@/components/BorderGlow";
+import dynamic from "next/dynamic";
+
+const PixelSnow = dynamic(() => import("@/components/PixelSnow"), { ssr: false });
 
 const SERVICES = [
   { Icon: Gauge,        title: "Flow Measurement & Control System Solutions", body: "Metering control system upgrades, maintenance, and validation for custody metering systems. Ensuring your metering operates accurately to API, AGA, and ISO standards.", href: "/service/flow-measurement-solutions/", tag: "Metering" },
@@ -24,11 +28,39 @@ function FadeUp({ children, delay = 0, className = "" }: { children: React.React
 
 export default function GreyServices() {
   return (
-    <section className="relative py-24 lg:py-32 overflow-hidden" style={{ background: "var(--g-section-b)" }}>
-      <div className="absolute top-0 inset-x-0 h-px" style={{ background: "var(--g-border)" }} />
-      <div className="absolute bottom-0 inset-x-0 h-px" style={{ background: "var(--g-border)" }} />
+    <section className="relative py-24 lg:py-32 overflow-hidden bg-[#000000] blueprint-grid blueprint-dot-grid">
+      {/* PixelSnow Background Layer */}
+      <div style={{ width: '100%', height: '100%', position: 'absolute', inset: 0, zIndex: 0, pointerEvents: 'none' }}>
+        <PixelSnow
+          color="#ffffff"
+          flakeSize={0.01}
+          minFlakeSize={1.25}
+          pixelResolution={150}
+          speed={0.8}
+          density={0.25}
+          direction={125}
+          brightness={0.8}
+          variant="square"
+        />
+      </div>
+      {/* Radial glows to give refractable light details to the glass cards */}
+      <div
+        className="absolute top-0 left-1/4 w-[500px] h-[500px] pointer-events-none opacity-20"
+        style={{
+          background: "radial-gradient(circle, rgba(229,57,53,0.12) 0%, transparent 70%)",
+        }}
+      />
+      <div
+        className="absolute bottom-0 right-1/4 w-[500px] h-[500px] pointer-events-none opacity-25"
+        style={{
+          background: "radial-gradient(circle, rgba(95,90,246,0.1) 0%, transparent 70%)",
+        }}
+      />
 
-      <div className="relative max-w-7xl mx-auto px-4 sm:px-6">
+      <div className="absolute top-0 inset-x-0 h-px bg-white/[0.08]" />
+      <div className="absolute bottom-0 inset-x-0 h-px bg-white/[0.08]" />
+
+      <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6">
         <FadeUp className="flex flex-col lg:flex-row lg:items-end lg:justify-between gap-6 mb-14">
           <div>
             <div className="flex items-center gap-3 mb-4">
@@ -46,37 +78,65 @@ export default function GreyServices() {
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-12">
           {SERVICES.map((svc, i) => (
-            <FadeUp key={svc.title} delay={0.1 + i * 0.1}>
-              <motion.div whileHover={{ y: -8, scale: 1.02, boxShadow: "0 24px 48px rgba(0,0,0,0.12), 0 12px 24px rgba(229,57,53,0.04)", transition: { duration: 0.3, ease: "easeOut" } }}
-                className="group relative rounded-2xl flex flex-col h-full cursor-pointer"
-                style={{
-                  background: "var(--g-card-bg)",
-                  border: "1px solid var(--g-card-border)",
-                  boxShadow: "var(--g-card-shadow)",
-                }}
-              >
-                <div className="absolute top-4 right-4">
-                  <span className="text-[10px] font-bold tracking-[2px] uppercase px-2.5 py-1 rounded-full"
-                    style={{ color: "var(--g-muted)", background: "var(--g-stat-bg)", border: "1px solid var(--g-border)" }}>
-                    {svc.tag}
-                  </span>
-                </div>
-                <div className="p-8 flex flex-col flex-1">
-                  <div className="w-14 h-14 rounded-2xl flex items-center justify-center mb-6"
-                    style={{ background: "var(--g-stat-bg)", border: "1px solid var(--g-border)" }}>
-                    <svc.Icon className="w-6 h-6" strokeWidth={1.6} style={{ color: "var(--g-muted)" }} />
+            <FadeUp key={svc.title} delay={0.1 + i * 0.1} className="w-full h-full">
+              <div className="relative group h-full">
+                {/* Soft ambient edge glow element positioned behind the card */}
+                <div
+                  className={`absolute -inset-[2px] rounded-[20px] pointer-events-none blur-[35px] transition-opacity duration-300 ease-out z-0 ${
+                    i === 1 ? "opacity-30 group-hover:opacity-45" : "opacity-18 group-hover:opacity-30"
+                  }`}
+                  style={{
+                    background: "radial-gradient(circle at 50% 50%, rgba(255, 60, 60, 0.25) 0%, rgba(229, 57, 53, 0.08) 55%, transparent 75%)",
+                  }}
+                />
+
+                {/* Single cohesive Glassmorphic Card Container */}
+                <motion.div 
+                  whileHover={{ 
+                    y: -6, 
+                    scale: 1.015,
+                    transition: { duration: 0.25, ease: "easeOut" } 
+                  }}
+                  className="relative w-full h-full min-h-[350px] p-6 flex flex-col rounded-[20px] cursor-pointer transition-all duration-300 overflow-hidden border border-white/[0.12] group-hover:border-white/[0.22] group-hover:bg-[#0E1117]/75"
+                  style={{
+                    background: "rgba(14, 17, 23, 0.58)",
+                    backdropFilter: "blur(18px)",
+                    WebkitBackdropFilter: "blur(18px)",
+                    boxShadow: "0 20px 40px rgba(0, 0, 0, 0.5)",
+                  }}
+                >
+                  {/* Faint top specular reflection sheen */}
+                  <div className="absolute top-0 inset-x-0 h-24 bg-gradient-to-b from-white/[0.04] to-transparent pointer-events-none rounded-t-[20px]" />
+
+                  {/* Top Row: Category Pill + Number */}
+                  <div className="flex justify-between items-start mb-5 relative z-10">
+                    <span className="text-[10px] font-bold uppercase tracking-[1.5px] text-[#ff4d4d] border border-[#ff4d4d]/20 bg-[#ff4d4d]/5 rounded-full px-2.5 py-0.5 w-fit">
+                      {svc.tag}
+                    </span>
+                    <span className="text-[11px] font-bold tracking-[3px] text-white/30 font-mono">0{i + 1}</span>
                   </div>
-                  <p className="text-[11px] font-bold tracking-[3px] mb-3" style={{ color: "var(--g-muted)" }}>0{i + 1}</p>
-                  <h3 className="text-[23px] font-black leading-snug mb-3 pr-8 tracking-tight" style={{ color: "var(--g-heading)" }}>{svc.title}</h3>
-                  <div className="w-10 h-[2px] rounded-full mb-4" style={{ background: "var(--g-border)" }} />
-                  <p className="text-[16px] leading-[1.9] flex-1 font-medium" style={{ color: "var(--g-muted)" }}>{svc.body}</p>
-                  <div className="mt-7 pt-5 border-t" style={{ borderColor: "rgba(0,0,0,0.07)" }}>
-                    <Link href={svc.href} className="inline-flex items-center gap-1.5 text-[14px] font-bold hover:gap-3 transition-all duration-200" style={{ color: "var(--color-brand-red)" }}>
-                      Learn more <ArrowRight className="w-3.5 h-3.5" />
-                    </Link>
+
+                  {/* Glassy Icon layer */}
+                  <div className="w-10 h-10 rounded-xl flex items-center justify-center mb-4 bg-white/5 border border-white/10 relative z-10 shrink-0">
+                    <svc.Icon className="w-5 h-5 text-white/90" strokeWidth={1.6} />
                   </div>
-                </div>
-              </motion.div>
+
+                  {/* Heading */}
+                  <h3 className="text-[19px] font-black leading-snug text-white mb-2.5 pr-4 tracking-tight relative z-10">
+                    {svc.title}
+                  </h3>
+
+                  {/* Body paragraph */}
+                  <p className="text-white/60 text-xs sm:text-sm leading-relaxed mb-6 flex-1 font-medium relative z-10">
+                    {svc.body}
+                  </p>
+
+                  {/* Learn More link */}
+                  <Link href={svc.href} className="inline-flex items-center gap-1.5 text-xs sm:text-sm font-bold text-[#E53935] hover:gap-2.5 transition-all duration-200 mt-auto relative z-10">
+                    Learn more <ArrowRight className="w-3.5 h-3.5" />
+                  </Link>
+                </motion.div>
+              </div>
             </FadeUp>
           ))}
         </div>

@@ -5,6 +5,8 @@ import { Gauge, ClipboardCheck, Cpu } from "lucide-react";
 import { BreadcrumbJsonLd } from "@/components/schema/BreadcrumbJsonLd";
 import { ReviewJsonLd, AggregateRatingJsonLd } from "@/components/schema/ReviewJsonLd";
 import { OrganizationJsonLd } from "@/components/schema/OrganizationJsonLd";
+import AnimatedSkillBars from "@/components/about/AnimatedSkillBars";
+import FadeSection from "@/components/motion/FadeSection";
 
 export const metadata: Metadata = {
   title: "About Us | Industrial Automation Company in Kuwait & GCC",
@@ -205,7 +207,7 @@ const certifications = [
 
 export default function AboutPage() {
   return (
-    <div className="bg-white">
+    <div className="relative overflow-hidden" style={{ background: "linear-gradient(135deg, #f5f7fa 0%, #e2e7ee 45%, #c9d2dc 100%)" }}>
       <BreadcrumbJsonLd items={[{ name: "Home", href: "/" }, { name: "About Us", href: "/about-us/" }]} />
       <ReviewJsonLd
         items={[
@@ -231,58 +233,77 @@ export default function AboutPage() {
           addressCountry: "KW",
         }}
       />
+      {/* Background depth blobs for frosted glass refraction */}
+      <div
+        className="absolute top-[-2%] left-[-5%] w-[650px] h-[650px] rounded-full pointer-events-none blur-[90px] opacity-90"
+        style={{ background: "radial-gradient(circle, rgba(255,255,255,0.95) 0%, rgba(235,240,248,0.55) 45%, transparent 70%)" }}
+      />
+      <div
+        className="absolute top-[18%] right-[-5%] w-[600px] h-[600px] rounded-full pointer-events-none blur-[100px] opacity-75"
+        style={{ background: "radial-gradient(circle, rgba(165,180,200,0.55) 0%, rgba(140,158,180,0.25) 50%, transparent 70%)" }}
+      />
+      <div
+        className="absolute top-[48%] left-[-8%] w-[650px] h-[650px] rounded-full pointer-events-none blur-[90px] opacity-80"
+        style={{ background: "radial-gradient(circle, rgba(255,255,255,0.9) 0%, rgba(230,238,248,0.45) 50%, transparent 70%)" }}
+      />
+      <div
+        className="absolute top-[70%] right-[-5%] w-[600px] h-[600px] rounded-full pointer-events-none blur-[100px] opacity-70"
+        style={{ background: "radial-gradient(circle, rgba(150,168,190,0.5) 0%, rgba(130,148,172,0.2) 55%, transparent 70%)" }}
+      />
 
       {/* ═══ COMMITMENT ═══════════════════════════════════════════ */}
-      <section className="py-16 lg:py-24 bg-[#F8F8F8]">
+      <section className="relative z-10 bg-transparent pt-[108px] lg:pt-[116px] pb-16 lg:pb-24">
         <div className="max-w-7xl mx-auto px-4 sm:px-6">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-16 items-center">
 
             {/* Left — stacked images with "2008 ESTD" overlay */}
-            <div className="relative">
-              {/* 2008 / ESTD floating above images */}
-              <div
-                className="absolute z-20 top-0 right-0 text-right pointer-events-none select-none"
-                aria-hidden="true"
-              >
-                <p
-                  className="font-extrabold leading-[0.85] text-[#e7212b]"
-                  style={{ fontSize: "clamp(72px, 13vw, 148px)" }}
+            <FadeSection dir="left" delay={0.05}>
+              <div className="relative">
+                {/* 2008 / ESTD floating above images */}
+                <div
+                  className="absolute z-20 top-0 right-0 text-right pointer-events-none select-none"
+                  aria-hidden="true"
                 >
-                  2008
-                </p>
-                <p className="text-[#e7212b] text-xs font-bold tracking-[0.45em] uppercase mt-1 pr-1">
-                  ESTD
-                </p>
-              </div>
+                  <p
+                    className="font-extrabold leading-[0.85] text-[#e7212b]"
+                    style={{ fontSize: "clamp(72px, 13vw, 148px)" }}
+                  >
+                    2008
+                  </p>
+                  <p className="text-[#e7212b] text-xs font-bold tracking-[0.45em] uppercase mt-1 pr-1">
+                    ESTD
+                  </p>
+                </div>
 
-              {/* Images — staggered overlap */}
-              <div className="relative pt-20 sm:pt-24">
-                {/* Top-left: control room image */}
-                <div className="relative w-[78%] aspect-[4/3] shadow-2xl">
-                  <Image
-                    src="/about/control-room.jpg"
-                    alt="Control room monitoring systems"
-                    fill
-                    className="object-cover"
-                    sizes="(max-width: 768px) 80vw, 40vw"
-                    priority
-                  />
-                </div>
-                {/* Bottom-right: technician image */}
-                <div className="relative w-[62%] aspect-[4/3] shadow-2xl ml-auto -mt-16 z-10">
-                  <Image
-                    src="/about/technician.jpg"
-                    alt="Technician at work"
-                    fill
-                    className="object-cover"
-                    sizes="(max-width: 768px) 65vw, 32vw"
-                  />
+                {/* Images — staggered overlap */}
+                <div className="relative pt-20 sm:pt-24">
+                  {/* Top-left: control room image */}
+                  <div className="relative w-[78%] aspect-[4/3] shadow-2xl rounded-2xl overflow-hidden">
+                    <Image
+                      src="/about/control-room.jpg"
+                      alt="Control room monitoring systems"
+                      fill
+                      className="object-cover"
+                      sizes="(max-width: 768px) 80vw, 40vw"
+                      priority
+                    />
+                  </div>
+                  {/* Bottom-right: technician image */}
+                  <div className="relative w-[62%] aspect-[4/3] shadow-2xl ml-auto -mt-16 z-10 rounded-2xl overflow-hidden">
+                    <Image
+                      src="/about/technician.jpg"
+                      alt="Technician at work"
+                      fill
+                      className="object-cover"
+                      sizes="(max-width: 768px) 65vw, 32vw"
+                    />
+                  </div>
                 </div>
               </div>
-            </div>
+            </FadeSection>
 
             {/* Right — commitment text */}
-            <div className="lg:pl-4">
+            <FadeSection dir="right" delay={0.12}>
               <span className="text-[11px] font-bold tracking-[0.28em] uppercase text-[#181D4E]">
                 COMPANY OVERVIEW
               </span>
@@ -315,25 +336,25 @@ export default function AboutPage() {
               <div className="mt-8 flex flex-wrap gap-4">
                 <Link
                   href="/partners/"
-                  className="bg-[#e7212b] hover:bg-[#c01020] text-white font-semibold text-sm px-8 py-3 transition-colors"
+                  className="bg-[#e7212b] hover:bg-[#c01020] text-white font-semibold text-sm px-8 py-3 transition-colors rounded-xl"
                 >
                   Our Global Network
                 </Link>
                 <Link
-                  href="/services/"
-                  className="bg-[#181D4E] hover:bg-[#0B0D26] text-white font-semibold text-sm px-8 py-3 transition-colors"
+                  href="/service/"
+                  className="bg-[#181D4E] hover:bg-[#000000] blueprint-grid blueprint-dot-grid text-white font-semibold text-sm px-8 py-3 transition-colors rounded-xl"
                 >
                   Our Services
                 </Link>
               </div>
-            </div>
+            </FadeSection>
 
           </div>
         </div>
       </section>
 
       {/* ═══ PARTNERS ═════════════════════════════════════════════ */}
-      <section className="py-16 lg:py-20 bg-white">
+      <section className="relative z-10 py-16 lg:py-20 bg-transparent">
         <div className="max-w-7xl mx-auto px-4 sm:px-6">
           <div className="text-center mb-14">
             <span className="text-[11px] font-bold tracking-[0.28em] uppercase text-[#e7212b]">
@@ -350,9 +371,9 @@ export default function AboutPage() {
             {partners.map((p) => (
               <div
                 key={p.name}
-                className="flex flex-col items-center text-center gap-3 rounded-xl border border-gray-100 bg-white p-5 transition-all duration-300 hover:border-[#e7212b]/30 hover:shadow-lg hover:-translate-y-0.5"
+                className="flex flex-col items-center text-center gap-3 rounded-2xl bg-white border border-[#e8eaf0] p-6 shadow-[0_4px_12px_rgba(0,0,0,0.06)] transition-all duration-300 hover:border-[#e7212b]/30 hover:shadow-xl hover:-translate-y-1"
               >
-                <div className="relative h-20 w-full">
+                <div className="relative h-20 w-full flex items-center justify-center">
                   <Image
                     src={p.logo}
                     alt={p.name}
@@ -361,7 +382,7 @@ export default function AboutPage() {
                     sizes="(max-width: 640px) 50vw, 33vw"
                   />
                 </div>
-                <h4 className="font-bold text-[#181D4E] text-[17px] leading-tight">
+                <h4 className="font-bold text-[#181D4E] text-[17px] leading-tight mt-1">
                   {p.name}
                 </h4>
                 <p className="text-[14px] text-gray-600 leading-[1.7]">
@@ -374,8 +395,14 @@ export default function AboutPage() {
       </section>
 
       {/* ═══ MISSION ══════════════════════════════════════════════ */}
-      <section className="py-14 lg:py-20 bg-[#0B0D26] border-t border-white/5">
-        <div className="max-w-5xl mx-auto px-4 sm:px-6">
+      <section className="relative z-20 overflow-hidden py-14 lg:py-20 bg-[#000000] blueprint-grid blueprint-dot-grid border-t border-white/5">
+        {/* Controlled subtle ambient glow in top-left corner */}
+        <div
+          className="absolute -top-12 -left-12 w-[320px] h-[320px] rounded-full pointer-events-none blur-[50px] opacity-50"
+          style={{ background: "radial-gradient(circle, rgba(255,255,255,0.09) 0%, rgba(255,255,255,0.01) 50%, transparent 70%)" }}
+        />
+
+        <div className="relative z-10 max-w-5xl mx-auto px-4 sm:px-6">
           <div className="text-center mb-10">
             <span className="text-[11px] font-bold tracking-[0.28em] uppercase text-[#e7212b]">
               OUR MISSION
@@ -399,12 +426,25 @@ export default function AboutPage() {
             ].map((s) => (
               <div
                 key={s.label}
-                className="rounded-lg border border-white/10 bg-white/[0.03] px-5 py-4 text-center"
+                className="relative rounded-xl border border-white/12 px-5 py-4 text-center overflow-hidden transition-all duration-300"
+                style={{
+                  background: "rgba(255, 255, 255, 0.07)",
+                  backdropFilter: "blur(18px)",
+                  WebkitBackdropFilter: "blur(18px)",
+                  boxShadow: "0 8px 24px rgba(0, 0, 0, 0.25)",
+                }}
               >
-                <p className="text-[1.8rem] font-black text-[#e7212b] leading-none">
+                {/* Faint top-edge highlight */}
+                <div
+                  className="absolute inset-0 pointer-events-none"
+                  style={{
+                    background: "linear-gradient(180deg, rgba(255, 255, 255, 0.08) 0%, transparent 50%)",
+                  }}
+                />
+                <p className="relative z-10 text-[1.8rem] font-black text-[#e7212b] leading-none">
                   {s.num}
                 </p>
-                <p className="text-[11px] text-gray-400 mt-2 font-semibold tracking-[1.5px] uppercase">
+                <p className="relative z-10 text-[11px] text-gray-400 mt-2 font-semibold tracking-[1.5px] uppercase">
                   {s.label}
                 </p>
               </div>
@@ -414,7 +454,7 @@ export default function AboutPage() {
       </section>
 
       {/* ═══ INNOVATIVE SOLUTIONS (dark) ═══════════════════════════ */}
-      <section className="bg-[#0B0D26] py-16 lg:py-20">
+      <section className="relative z-10 blueprint-grid blueprint-dot-grid bg-[#0a0a0a] py-16 lg:py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6">
           {/* Heading row */}
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 mb-14">
@@ -442,11 +482,11 @@ export default function AboutPage() {
           </div>
 
           {/* Service cards */}
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-px bg-white/10">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 md:gap-10">
             {serviceCards.map(({ Icon, title, href }) => (
               <div
                 key={href}
-                className="bg-[#0B0D26] p-10 flex flex-col gap-6 group hover:bg-[#12163A] transition-colors"
+                className="neumorphic-card-dark p-10 flex flex-col gap-6 group"
               >
                 <div className="w-16 h-16 rounded-full border border-[#e7212b]/30 flex items-center justify-center shrink-0">
                   <Icon className="w-7 h-7 text-[#e7212b]" />
@@ -467,12 +507,12 @@ export default function AboutPage() {
       </section>
 
       {/* ═══ HOW WE WORK ══════════════════════════════════════════ */}
-      <section className="py-16 lg:py-24 bg-white">
+      <section className="relative z-10 py-16 lg:py-24 bg-transparent">
         <div className="max-w-7xl mx-auto px-4 sm:px-6">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center">
 
             {/* Left — text + skill bars */}
-            <div>
+            <FadeSection delay={0}>
               <span className="text-[11px] font-bold tracking-[0.28em] uppercase text-[#e7212b]">
                 quality work
               </span>
@@ -488,56 +528,39 @@ export default function AboutPage() {
                 moral imperative and a smart business strategy.
               </p>
 
-              <div className="mt-8 space-y-5">
-                {skills.map((s) => (
-                  <div key={s.label}>
-                    <div className="flex justify-between text-[13px] mb-2">
-                      <span className="text-gray-700 font-medium">
-                        {s.label}
-                      </span>
-                      <span className="text-[#e7212b] font-bold shrink-0 ml-3">
-                        {s.value}%
-                      </span>
-                    </div>
-                    <div className="h-[5px] bg-gray-100 rounded-full overflow-hidden">
-                      <div
-                        className="h-full bg-[#e7212b] rounded-full"
-                        style={{ width: `${s.value}%` }}
-                      />
-                    </div>
-                  </div>
-                ))}
-              </div>
-            </div>
+              <AnimatedSkillBars />
+            </FadeSection>
 
             {/* Right — two images side by side */}
-            <div className="grid grid-cols-2 gap-4">
-              <div className="relative aspect-[2/3]">
-                <Image
-                  src="/about/workshop.jpg"
-                  alt="Workshop operations"
-                  fill
-                  className="object-cover"
-                  sizes="(max-width: 768px) 50vw, 25vw"
-                />
+            <FadeSection dir="right" delay={0.15}>
+              <div className="grid grid-cols-2 gap-4">
+                <div className="relative aspect-[2/3] rounded-2xl overflow-hidden shadow-xl">
+                  <Image
+                    src="/about/workshop.jpg"
+                    alt="Workshop operations"
+                    fill
+                    className="object-cover"
+                    sizes="(max-width: 768px) 50vw, 25vw"
+                  />
+                </div>
+                <div className="relative aspect-[2/3] mt-8 rounded-2xl overflow-hidden shadow-xl">
+                  <Image
+                    src="/about/texas-team.jpeg"
+                    alt="Texas Technical Services operations"
+                    fill
+                    className="object-cover"
+                    sizes="(max-width: 768px) 50vw, 25vw"
+                  />
+                </div>
               </div>
-              <div className="relative aspect-[2/3] mt-8">
-                <Image
-                  src="/about/texas-team.jpeg"
-                  alt="Texas Technical Services operations"
-                  fill
-                  className="object-cover"
-                  sizes="(max-width: 768px) 50vw, 25vw"
-                />
-              </div>
-            </div>
+            </FadeSection>
 
           </div>
         </div>
       </section>
 
       {/* ═══ CERTIFICATIONS ═══════════════════════════════════════ */}
-      <section className="py-12 border-t border-gray-100 bg-white">
+      <section className="relative z-10 py-12 border-t border-black/5 bg-transparent">
         <div className="max-w-5xl mx-auto px-4 sm:px-6">
           <div className="grid grid-cols-2 sm:grid-cols-4 gap-8 items-center">
             {certifications.map((c) => (
@@ -558,7 +581,7 @@ export default function AboutPage() {
       </section>
 
       {/* ═══ TESTIMONIALS (dark) ══════════════════════════════════ */}
-      <section className="bg-[#0B0D26] py-16 lg:py-20">
+      <section className="relative z-10 bg-[#000000] blueprint-grid blueprint-dot-grid py-16 lg:py-20">
         <div className="max-w-6xl mx-auto px-4 sm:px-6">
           <div className="text-center mb-12">
             <span className="text-[11px] font-bold tracking-[0.28em] uppercase text-[#e7212b]">
@@ -573,7 +596,7 @@ export default function AboutPage() {
             {testimonials.map((t) => (
               <div
                 key={t.name}
-                className="bg-white/5 border border-white/10 p-7 flex flex-col gap-5 hover:border-[#e7212b]/30 transition-colors"
+                className="bg-white/5 border border-white/10 p-7 flex flex-col gap-5 hover:border-[#e7212b]/30 transition-colors rounded-2xl"
               >
                 <p className="text-gray-300 italic text-[14px] leading-[1.8] flex-1">
                   &ldquo;{t.text}&rdquo;
