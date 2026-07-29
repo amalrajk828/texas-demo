@@ -15,6 +15,13 @@ export const metadata: Metadata = {
     "FR Series VFD",
     "variable frequency drive Kuwait",
     "motor speed control solutions",
+    "Allen Bradley VFD distributor Kuwait",
+    "PowerFlex 753 AC drive",
+    "PowerFlex 6000T",
+    "PowerFlex VFD GCC",
+    "variable speed drive system",
+    "DC variable speed drive",
+    "Allen Bradley motor controller",
   ],
   openGraph: {
     title: "Frequency Inverters (VFD)",
@@ -99,7 +106,7 @@ export default function VfdPage() {
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5">
             {vfdProducts.map((vfd, index) => (
               <React.Fragment key={vfd.slug}>
-                <ProductCard product={vfd} category="frequency-inverter-vfd" />
+                <ProductCard product={vfd} category="frequency-inverter-vfd" priority={index < 3} />
                 
               </React.Fragment>
             ))}

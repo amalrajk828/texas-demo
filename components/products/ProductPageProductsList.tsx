@@ -27,7 +27,7 @@ export default function ProductPageProductsList({
       />
       <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6">
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5">
-          {products.map((product) => (
+          {products.map((product, index) => (
             <ProductCard
               key={product.slug}
               product={product}
@@ -35,6 +35,7 @@ export default function ProductPageProductsList({
               imageFit={imageFit}
               dark
               href={resolveCardHref ? resolveCardHref(product.slug) : undefined}
+              priority={index < 3}
             />
           ))}
         </div>

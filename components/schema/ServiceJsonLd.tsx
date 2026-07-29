@@ -33,6 +33,7 @@ export function ServiceJsonLd({
     provider: {
       "@type": "Organization",
       name: providerName || "Texas Technical Service Company W.L.L.",
+      url: SITE_URL,
     },
   };
   if (serviceType) jsonLd.serviceType = serviceType;

@@ -16,6 +16,12 @@ export const metadata: Metadata = {
     "GM32 in-situ gas analyzer",
     "GM35 gas analyzer",
     "SO2 NO NO2 NH3 measurement",
+    "Honeywell analytics gas detection",
+    "gas detection system Kuwait",
+    "portable multi gas monitor",
+    "personal gas detection monitors",
+    "hazardous gas detection system",
+    "industrial gas detection systems",
   ],
   openGraph: {
     title: "Gas Analyzers",
@@ -92,13 +98,14 @@ export default function GasAnalyzersPage() {
         <div className="absolute inset-0 pointer-events-none" style={{ background: "radial-gradient(ellipse at 50% 100%, rgba(231,33,43,0.08) 0%, transparent 60%)" }} />
         <div className="max-w-7xl mx-auto px-4 sm:px-6 relative z-10">
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5">
-            {gasAnalyzerProducts.map((prod) => (
+            {gasAnalyzerProducts.map((prod, index) => (
               <ProductCard
                 key={prod.slug}
                 product={prod}
                 category="Gas Analyzers"
                 imageFit="contain"
                 dark
+                priority={index < 3}
               />
             ))}
           </div>

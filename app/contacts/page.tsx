@@ -6,7 +6,7 @@ import ContactPageClient from "@/components/ContactPage";
 export const metadata: Metadata = {
   title: "Contact Us — Kuwait & Dubai",
   description:
-    "Get in touch with Texas Technical Services. Contact our offices in Kuwait (+965 66347267) and Dubai (+971 569553747, +971 567793973) for flow measurement, industrial automation, and inspection services across the GCC.",
+    "Contact Texas Technical Services in Kuwait and Dubai for flow measurement, industrial automation, and inspection services across the GCC.",
   alternates: { canonical: "/contacts/" },
   openGraph: {
     title: "Contact Us",
@@ -50,8 +50,8 @@ export default function ContactPage() {
         email="sales@texastechserv.com"
         addresses={[
           {
-            streetAddress: "Fahaheel",
-            addressLocality: "Kuwait City",
+            streetAddress: "Munira Tower Office No. 30, 9th Floor, Building No.6702, Block 7, Makkah Street",
+            addressLocality: "Fahaheel",
             addressCountry: "KW",
           },
           {

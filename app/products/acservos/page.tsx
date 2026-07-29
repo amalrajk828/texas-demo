@@ -15,6 +15,11 @@ export const metadata: Metadata = {
     "MELSERVO servo motors",
     "MR-J5 servo amplifier",
     "motion control solutions Kuwait",
+    "Kinetix servo motor",
+    "Kinetix 5700 servo drive",
+    "Kinetix 5100",
+    "Allen Bradley 3 phase motor starter",
+    "motor control center manufacturers",
   ],
   openGraph: {
     title: "AC Servos",
@@ -111,8 +116,8 @@ export default function AcServosPage() {
             </div>
             
             <div className="flex flex-col gap-6">
-              {jeSeriesProducts.map((servo) => (
-                <ProductCard key={servo.slug} product={servo} category="acservos" />
+              {jeSeriesProducts.map((servo, index) => (
+                <ProductCard key={servo.slug} product={servo} category="acservos" priority={index < 3} />
               ))}
             </div>
 

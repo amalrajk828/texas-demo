@@ -19,6 +19,11 @@ export const metadata: Metadata = {
     "LNG CEMS monitoring",
     "LNG gas analyzers",
     "industrial automation LNG plants",
+    "LNG terminal instrumentation GCC",
+    "liquefied natural gas metering Dubai",
+    "LNG plant safety systems Kuwait",
+    "cryogenic flow measurement GCC",
+    "LNG regasification automation",
   ],
   openGraph: {
     title: "LNG Industry Solutions",

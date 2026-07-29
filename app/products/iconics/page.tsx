@@ -15,6 +15,12 @@ export const metadata: Metadata = {
     "GENESIS64 HMI",
     "SCADA visualization Kuwait",
     "industrial SCADA solutions",
+    "ICONICS Hyper Historian Kuwait",
+    "building automation SCADA GCC",
+    "Energy AnalytiX Dubai",
+    "factory automation software Kuwait",
+    "real-time industrial monitoring",
+    "ICONICS partner Kuwait",
   ],
   openGraph: {
     title: "ICONICS",
@@ -99,7 +105,7 @@ export default function IconicsPage() {
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5">
             {iconicsProducts.map((prod, index) => (
               <React.Fragment key={prod.slug}>
-                <ProductCard product={prod} category="iconics" />
+                <ProductCard product={prod} category="iconics" priority={index < 3} />
                 
               </React.Fragment>
             ))}

@@ -16,6 +16,10 @@ export const metadata: Metadata = {
     "SICK FLOWSIC600 ultrasonic",
     "custody transfer gas metering",
     "natural gas flow measurement",
+    "ultrasonic gas meter Kuwait",
+    "natural gas custody transfer GCC",
+    "pipeline gas flow measurement",
+    "gas metering systems Dubai",
   ],
   openGraph: {
     title: "Gas Flow Meters",
@@ -82,13 +86,14 @@ export default function GasFlowMetersPage() {
         <div className="absolute inset-0 pointer-events-none" style={{ background: "radial-gradient(ellipse at 50% 100%, rgba(231,33,43,0.08) 0%, transparent 60%)" }} />
         <div className="max-w-7xl mx-auto px-4 sm:px-6 relative z-10">
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5">
-            {gasFlowMeterProducts.map((prod) => (
+            {gasFlowMeterProducts.map((prod, index) => (
               <ProductCard
                 key={prod.slug}
                 product={prod}
                 category="Gas Flow Meters"
                 imageFit="contain"
                 dark
+                priority={index < 3}
               />
             ))}
           </div>

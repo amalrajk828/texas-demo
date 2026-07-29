@@ -22,7 +22,7 @@ export const metadata: Metadata = {
     images: [{ url: "/og-default.png", width: 1200, height: 630, alt: "Non Destructive Testing — Texas Technical Services" }],
   },
   twitter: { card: "summary_large_image", title: "Non-Destructive Testing (NDT) — UT, RT, MT, PT, ET", description: "VI, PT, MT, RT, UT NDT services. Qualified technicians. Kuwait & Dubai." },
-  keywords: ["NDT Kuwait", "non destructive testing Kuwait", "ultrasonic testing Kuwait", "radiographic testing Kuwait", "magnetic particle inspection Kuwait", "dye penetrant testing Kuwait", "visual inspection Kuwait", "Texas Technical Services NDT"],
+  keywords: ["NDT Kuwait", "non destructive testing Kuwait", "ultrasonic testing Kuwait", "radiographic testing Kuwait", "magnetic particle inspection Kuwait", "dye penetrant testing Kuwait", "visual inspection Kuwait", "Texas Technical Services NDT", "3rd party inspection Kuwait", "quality inspection service", "phased array ultrasonic testing GCC"],
 };
 
 export default function NDTPage() {
