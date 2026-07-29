@@ -375,7 +375,7 @@ const getDropdownPos = (label: string) => {
 };
 
 const getDropdownWidth = (label: string) => {
-  if (label === "Products") return "w-[680px]";
+  if (label === "Products") return "w-[660px]";
   if (label === "Services") return "w-[360px]";
   if (label === "Industries") return "w-[540px]";
   return "w-[360px]";
@@ -527,6 +527,7 @@ export default function Header() {
           boxShadow: scrolled
             ? "0 12px 32px rgba(0, 0, 0, 0.40), inset 0 1px 1px rgba(255, 255, 255, 0.08)"
             : "0 8px 24px rgba(0, 0, 0, 0.30), inset 0 1px 1px rgba(255, 255, 255, 0.05)",
+          transition: "box-shadow 0.3s ease, background 0.3s ease, border-color 0.3s ease",
         }}
       >
         {/* Inner background clip for sheen overlays only */}
@@ -616,7 +617,7 @@ export default function Header() {
                             />
 
                             {/* Items grid */}
-                            <div className={`relative z-10 p-3.5 grid ${getDropdownCols(item.label)} gap-1`}>
+                            <div className={`relative z-10 ${item.label === "Products" ? "p-4 gap-x-8 gap-y-1" : "p-3.5 gap-1"} grid ${getDropdownCols(item.label)}`}>
                               {item.children!
                                 .filter((c) => !c.highlight)
                                 .map((child) => {
@@ -630,7 +631,7 @@ export default function Header() {
                                       key={child.href}
                                       href={child.href}
                                       onClick={() => setOpen(null)}
-                                      className={`flex items-start gap-3 px-3.5 py-3 rounded-xl transition-all duration-200 group border ${
+                                      className={`flex items-center gap-2.5 px-2.5 py-1.5 rounded-lg transition-all duration-200 group border ${
                                         childActive
                                           ? "bg-[#E53935]/20 text-white border-[#E53935]/40"
                                           : "text-white/90 hover:text-white hover:bg-white/[0.09] border-transparent"
@@ -638,21 +639,21 @@ export default function Header() {
                                     >
                                       {Icon && (
                                         <span
-                                          className={`flex items-center justify-center w-9 h-9 rounded-lg shrink-0 mt-0.5 transition-colors ${
+                                          className={`flex items-center justify-center w-7 h-7 rounded-md shrink-0 transition-colors ${
                                             childActive
                                               ? "bg-[#E53935]/25 text-[#ff5252]"
                                               : "bg-white/10 text-white/80 group-hover:bg-[#E53935]/20 group-hover:text-white"
                                           }`}
                                         >
-                                          <Icon className="w-4.5 h-4.5" strokeWidth={1.8} />
+                                          <Icon className="w-3.5 h-3.5" strokeWidth={1.8} />
                                         </span>
                                       )}
-                                      <div className="min-w-0">
-                                        <p className="text-[14px] font-semibold leading-tight text-white drop-shadow-[0_1px_2px_rgba(0,0,0,0.5)]">
+                                      <div className="min-w-0 flex-1">
+                                        <p className="text-[13px] font-medium leading-tight text-white drop-shadow-[0_1px_2px_rgba(0,0,0,0.5)]">
                                           {child.label}
                                         </p>
                                         {showDesc(item.label) && child.desc && (
-                                          <p className="text-[12px] text-white/70 mt-1 leading-relaxed">
+                                          <p className="text-[11.5px] text-white/70 mt-0.5 leading-relaxed">
                                             {child.desc}
                                           </p>
                                         )}
@@ -664,11 +665,11 @@ export default function Header() {
 
                             {/* "View all" footer */}
                             {item.children!.find((c) => c.highlight) && (
-                              <div className="relative z-10 border-t border-white/15 px-5 py-3.5 bg-black/40">
+                              <div className="relative z-10 border-t border-white/15 px-4 py-2 bg-black/40">
                                 <Link
                                   href={item.children!.find((c) => c.highlight)!.href}
                                   onClick={() => setOpen(null)}
-                                  className="inline-flex items-center gap-1.5 text-[13px] font-bold text-[#FF5252] hover:text-white transition-colors"
+                                  className="inline-flex items-center gap-1.5 text-[12px] font-bold text-[#FF5252] hover:text-white transition-colors"
                                 >
                                   {item.children!.find((c) => c.highlight)!.label}
                                   <ArrowRight className="w-3.5 h-3.5" />

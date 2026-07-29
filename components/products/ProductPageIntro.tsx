@@ -11,7 +11,7 @@ export default function ProductPageIntro({
         <h2 className="text-[#1A1A2E] text-[28px] font-bold">
           {title}
         </h2>
-        <div className="w-[60px] h-[3px] bg-[#F5821F] mx-auto mt-3 mb-4" />
+        <div className="w-[60px] h-[3px] bg-[#e7212b] mx-auto mt-3 mb-4" />
         <p className="text-[#555770] text-base leading-relaxed">
           {description}
         </p>

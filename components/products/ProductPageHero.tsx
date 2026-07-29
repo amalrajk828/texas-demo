@@ -16,7 +16,7 @@ export default function ProductPageHero({
   stats?: ProductPageStat[];
 }) {
   return (
-    <section className="relative bg-[#0B0D26] overflow-hidden border-b-4 border-[#F5821F]">
+    <section className="relative bg-[#000000] blueprint-grid blueprint-dot-grid overflow-hidden border-b-4 border-[#e7212b]">
       <div
         className="absolute inset-0 pointer-events-none opacity-30"
         style={{
@@ -28,11 +28,11 @@ export default function ProductPageHero({
         className="absolute bottom-0 left-1/2 -translate-x-1/2 w-[600px] h-40 pointer-events-none"
         style={{
           background:
-            "radial-gradient(ellipse, rgba(245,130,31,0.06) 0%, transparent 70%)",
+            "radial-gradient(ellipse, rgba(231,33,43,0.06) 0%, transparent 70%)",
         }}
       />
 
-      <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 py-16 lg:py-20">
+      <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 pt-[calc(var(--navbar-height,92px)+1.75rem)] pb-16 lg:pt-[calc(var(--navbar-height,92px)+2.5rem)] lg:pb-20">
         <nav className="flex items-center gap-1.5 text-[11px] text-white/50 mb-6">
           <Link href="/" className="hover:text-white transition-colors">Home</Link>
           <ChevronRight className="w-3 h-3 text-white/30" />
@@ -42,8 +42,8 @@ export default function ProductPageHero({
         </nav>
 
         <div className="flex items-center gap-2 mb-4">
-          <span className="w-5 h-px bg-[#F5821F]" />
-          <span className="text-[#F5821F] text-[10px] font-medium tracking-[2.5px] uppercase">
+          <span className="w-5 h-px bg-[#e7212b]" />
+          <span className="text-[#e7212b] text-[10px] font-medium tracking-[2.5px] uppercase">
             {eyebrow}
           </span>
         </div>

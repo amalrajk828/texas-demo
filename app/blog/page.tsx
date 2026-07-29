@@ -76,7 +76,7 @@ export default function BlogIndexPage() {
     <div className="min-h-screen bg-white font-sans antialiased text-[#333333]">
       
       {/* ═══ HERO SECTION ═══════════════════════════════════════════ */}
-      <section className="relative bg-[#0B0D26] overflow-hidden pt-32 pb-16 lg:pb-24 border-b border-white/10">
+      <section className="relative bg-[#000000] blueprint-grid blueprint-dot-grid overflow-hidden pt-32 pb-16 lg:pb-24 border-b border-white/10">
         {/* Grid pattern overlay */}
         <div
           className="absolute inset-0 pointer-events-none opacity-30"
@@ -173,7 +173,7 @@ export default function BlogIndexPage() {
       {/* ═══ CALL TO ACTION ═══════════════════════════════════════ */}
       <section className="bg-white py-16 lg:py-20 border-t border-gray-100">
         <div className="max-w-4xl mx-auto px-4 sm:px-6">
-          <div className="rounded-2xl bg-[#0B0D26] border border-white/10 p-8 sm:p-10 text-white relative overflow-hidden">
+          <div className="rounded-2xl bg-[#000000] blueprint-grid blueprint-dot-grid border border-white/10 p-8 sm:p-10 text-white relative overflow-hidden">
             <div
               className="absolute inset-0 opacity-20 pointer-events-none"
               style={{

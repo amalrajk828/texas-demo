@@ -29,7 +29,7 @@ function FadeUp({ children, delay = 0, className = "", dir = "up" }: { children:
 
 export default function GreyTeam() {
   return (
-    <section className="relative py-24 lg:py-32 overflow-hidden bg-[#0A0C11]">
+    <section className="relative py-24 lg:py-32 overflow-hidden bg-[#000000]">
       {/* PixelSnow Background Layer */}
       <div style={{ width: '100%', height: '100%', position: 'absolute', inset: 0, zIndex: 0, pointerEvents: 'none' }}>
         <PixelSnow

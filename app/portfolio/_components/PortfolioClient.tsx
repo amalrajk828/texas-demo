@@ -49,7 +49,7 @@ export default function PortfolioClient() {
   return (
     <div className="min-h-screen bg-white font-sans antialiased selection:bg-[#e7212b] selection:text-white">
       {/* ── Hero Banner ─────────────────────────────────────── */}
-      <section className="relative bg-[#0B0D26] overflow-hidden border-b-4 border-[#e7212b]">
+      <section className="relative bg-[#000000] blueprint-grid blueprint-dot-grid overflow-hidden border-b-4 border-[#e7212b]">
         <div
           className="absolute inset-0 pointer-events-none opacity-30"
           style={{
@@ -61,7 +61,7 @@ export default function PortfolioClient() {
           className="absolute bottom-0 left-1/2 -translate-x-1/2 w-[600px] h-40 pointer-events-none"
           style={{
             background:
-              "radial-gradient(ellipse, rgba(245,130,31,0.06) 0%, transparent 70%)",
+              "radial-gradient(ellipse, rgba(231,33,43,0.06) 0%, transparent 70%)",
           }}
         />
 
@@ -121,7 +121,7 @@ export default function PortfolioClient() {
             {orderedCategories.map((category) => (
               <div key={category} className="flex flex-col gap-6">
                 {/* Visual Category Header */}
-                <div className="bg-[#FFF8F3] border-l-4 border-[#e7212b] py-3 px-6 flex items-center gap-4 shadow-sm rounded-[4px]">
+                <div className="bg-[#FEF2F2] border-l-4 border-[#e7212b] py-3 px-6 flex items-center gap-4 shadow-sm rounded-[4px]">
                   <h2 className="text-[#1A1A2E] font-bold text-base font-sans leading-none uppercase tracking-wider">
                     {category}
                   </h2>
@@ -149,7 +149,7 @@ function PortfolioCard({ product }: { product: Product }) {
   return (
     <Link
       href={`/portfolio/${product.slug}/`}
-      className="group relative bg-white border border-[#E8E8F0] hover:border-[#e7212b]/30 rounded-[12px] p-5 shadow-[0_2px_12px_rgba(0,0,0,0.04)] hover:shadow-[0_8px_24px_rgba(245,130,31,0.08)] transition-all duration-300 ease-in-out hover:-translate-y-1 flex flex-col justify-between"
+      className="group relative bg-white border border-[#E8E8F0] hover:border-[#e7212b]/30 rounded-[12px] p-5 shadow-[0_2px_12px_rgba(0,0,0,0.04)] hover:shadow-[0_8px_24px_rgba(231,33,43,0.08)] transition-all duration-300 ease-in-out hover:-translate-y-1 flex flex-col justify-between"
     >
       <div className="flex flex-col gap-4">
         {/* Image Container Area */}

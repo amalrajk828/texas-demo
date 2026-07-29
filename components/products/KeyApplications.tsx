@@ -13,7 +13,7 @@ export default function KeyApplications({
     <div className={`mt-6 flex flex-wrap items-center justify-center gap-2 ${className}`}>
       <span
         className={`text-[10px] font-semibold tracking-[2px] uppercase ${
-          isDark ? "text-[#F5821F]" : "text-[#F5821F]"
+          isDark ? "text-[#e7212b]" : "text-[#e7212b]"
         } mr-2`}
       >
         Key Applications:

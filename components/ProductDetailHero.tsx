@@ -31,7 +31,7 @@ export default function ProductDetailHero({
   const subtitle = product.description.split(".")[0] + ".";
 
   return (
-    <section className="relative bg-[#0B0D26] overflow-hidden border-b-4 border-[#e7212b] py-12 md:py-16">
+    <section className="relative bg-[#000000] blueprint-grid blueprint-dot-grid overflow-hidden border-b-4 border-[#e7212b] pt-[calc(var(--navbar-height,92px)+1.5rem)] pb-12 md:pt-[calc(var(--navbar-height,92px)+2.25rem)] md:pb-16">
       {/* Grid texture */}
       <div
         className="absolute inset-0 pointer-events-none opacity-30"

@@ -87,7 +87,7 @@ export default function ComponentDemo() {
 
       {/* Floating Notification Toast */}
       {toastMessage && (
-        <div className="fixed bottom-5 right-5 z-[100] flex items-center gap-2 bg-[#0b0d26] text-white text-sm font-semibold py-3 px-5 rounded-xl shadow-2xl border border-white/10 animate-fade-in">
+        <div className="fixed bottom-5 right-5 z-[100] flex items-center gap-2 bg-[#000000] blueprint-grid blueprint-dot-grid text-white text-sm font-semibold py-3 px-5 rounded-xl shadow-2xl border border-white/10 animate-fade-in">
           <div className="w-5 h-5 rounded-full bg-emerald-500 flex items-center justify-center text-white">
             <Check className="w-3 h-3 stroke-[3]" />
           </div>

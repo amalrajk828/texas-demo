@@ -190,7 +190,7 @@ export default function ProductsPage() {
         { name: "Products", href: "/products/" },
       ]} />
       {/* ── Hero Banner ─────────────────────────────────────── */}
-      <section className="relative bg-[#0B0D26] overflow-hidden pt-[108px] lg:pt-[116px]">
+      <section className="relative bg-[#000000] blueprint-grid blueprint-dot-grid overflow-hidden pt-[calc(var(--navbar-height,92px)+1rem)] lg:pt-[calc(var(--navbar-height,92px)+1.5rem)]">
         {/* Grid texture */}
         <div
           className="absolute inset-0 pointer-events-none"
@@ -232,7 +232,7 @@ export default function ProductsPage() {
       </section>
 
       {/* ── Products Grid ────────────────────────────────────── */}
-      <section className="bg-[#0B0D26] py-16 lg:py-20 border-t border-white/[0.05]">
+      <section className="bg-[#000000] blueprint-grid blueprint-dot-grid py-16 lg:py-20 border-t border-white/[0.05]">
         <div className="max-w-7xl mx-auto px-4 sm:px-6">
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5">
             {categories.map((cat, i) => (

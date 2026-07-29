@@ -49,7 +49,7 @@ export default function EddyCurrentContent() {
           ))}
         </div>
         <FadeUp delay={0.1}>
-          <div className="rounded-2xl bg-[#0B0D26] p-8 sm:p-10 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-6">
+          <div className="rounded-2xl bg-[#000000] blueprint-grid blueprint-dot-grid p-8 sm:p-10 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-6">
             <div>
               <p className="text-white/40 text-[10px] tracking-[2px] uppercase mb-2">Standards &amp; Codes</p>
               <p className="text-white font-semibold text-lg">ASME V · ASTM E426 · EN ISO 15548 · API 5CT</p>

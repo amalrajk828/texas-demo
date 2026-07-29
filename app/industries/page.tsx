@@ -114,7 +114,7 @@ export default function IndustriesPage() {
       <BreadcrumbJsonLd items={[{ name: "Home", href: "/" }, { name: "Industries", href: "/industries/" }]} />
 
       {/* ══ HERO ══════════════════════════════════════════════ */}
-      <section className="bg-[#0B0D26] relative overflow-hidden pt-[108px] lg:pt-[116px]">
+      <section className="bg-[#000000] blueprint-grid blueprint-dot-grid relative overflow-hidden pt-[108px] lg:pt-[116px]">
         {/* Grid texture */}
         <div
           className="absolute inset-0 pointer-events-none"
@@ -222,7 +222,7 @@ export default function IndustriesPage() {
                 }}
               >
                 {/* ── Image area ── */}
-                <div className="relative aspect-[16/10] w-full shrink-0 overflow-hidden bg-[#0B0D26]">
+                <div className="relative aspect-[16/10] w-full shrink-0 overflow-hidden bg-[#000000] blueprint-grid blueprint-dot-grid">
                   <Image
                     src={ind.image}
                     alt={`${ind.name} industry solutions — Texas Technical Services`}

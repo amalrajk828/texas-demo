@@ -39,10 +39,10 @@ const ITEMS: IconCardItem[] = [
 
 export default function FlowMetersCustodyTransferSection() {
   return (
-    <section className="bg-[#0B0D26] py-16 lg:py-20">
+    <section className="bg-[#000000] blueprint-grid blueprint-dot-grid py-16 lg:py-20">
       <div className="max-w-7xl mx-auto px-4 sm:px-6">
         <div className="text-center mb-12">
-          <span className="text-[#F5821F] text-[10px] font-semibold tracking-[3px] uppercase">
+          <span className="text-[#e7212b] text-[10px] font-semibold tracking-[3px] uppercase">
             Precision Metering
           </span>
           <h2 className="mt-3 text-white text-2xl sm:text-3xl font-bold">

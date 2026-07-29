@@ -4,6 +4,8 @@ import Link from "next/link";
 import { Gauge, ClipboardCheck, Cpu } from "lucide-react";
 import { BreadcrumbJsonLd } from "@/components/schema/BreadcrumbJsonLd";
 import { ReviewJsonLd, AggregateRatingJsonLd } from "@/components/schema/ReviewJsonLd";
+import AnimatedSkillBars from "@/components/about/AnimatedSkillBars";
+import FadeSection from "@/components/motion/FadeSection";
 
 export const metadata: Metadata = {
   title: "About Us | Industrial Automation Company in Kuwait & GCC",
@@ -238,51 +240,53 @@ export default function AboutPage() {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-16 items-center">
 
             {/* Left — stacked images with "2008 ESTD" overlay */}
-            <div className="relative">
-              {/* 2008 / ESTD floating above images */}
-              <div
-                className="absolute z-20 top-0 right-0 text-right pointer-events-none select-none"
-                aria-hidden="true"
-              >
-                <p
-                  className="font-extrabold leading-[0.85] text-[#e7212b]"
-                  style={{ fontSize: "clamp(72px, 13vw, 148px)" }}
+            <FadeSection dir="left" delay={0.05}>
+              <div className="relative">
+                {/* 2008 / ESTD floating above images */}
+                <div
+                  className="absolute z-20 top-0 right-0 text-right pointer-events-none select-none"
+                  aria-hidden="true"
                 >
-                  2008
-                </p>
-                <p className="text-[#e7212b] text-xs font-bold tracking-[0.45em] uppercase mt-1 pr-1">
-                  ESTD
-                </p>
-              </div>
+                  <p
+                    className="font-extrabold leading-[0.85] text-[#e7212b]"
+                    style={{ fontSize: "clamp(72px, 13vw, 148px)" }}
+                  >
+                    2008
+                  </p>
+                  <p className="text-[#e7212b] text-xs font-bold tracking-[0.45em] uppercase mt-1 pr-1">
+                    ESTD
+                  </p>
+                </div>
 
-              {/* Images — staggered overlap */}
-              <div className="relative pt-20 sm:pt-24">
-                {/* Top-left: control room image */}
-                <div className="relative w-[78%] aspect-[4/3] shadow-2xl rounded-2xl overflow-hidden">
-                  <Image
-                    src="/about/control-room.jpg"
-                    alt="Control room monitoring systems"
-                    fill
-                    className="object-cover"
-                    sizes="(max-width: 768px) 80vw, 40vw"
-                    priority
-                  />
-                </div>
-                {/* Bottom-right: technician image */}
-                <div className="relative w-[62%] aspect-[4/3] shadow-2xl ml-auto -mt-16 z-10 rounded-2xl overflow-hidden">
-                  <Image
-                    src="/about/technician.jpg"
-                    alt="Technician at work"
-                    fill
-                    className="object-cover"
-                    sizes="(max-width: 768px) 65vw, 32vw"
-                  />
+                {/* Images — staggered overlap */}
+                <div className="relative pt-20 sm:pt-24">
+                  {/* Top-left: control room image */}
+                  <div className="relative w-[78%] aspect-[4/3] shadow-2xl rounded-2xl overflow-hidden">
+                    <Image
+                      src="/about/control-room.jpg"
+                      alt="Control room monitoring systems"
+                      fill
+                      className="object-cover"
+                      sizes="(max-width: 768px) 80vw, 40vw"
+                      priority
+                    />
+                  </div>
+                  {/* Bottom-right: technician image */}
+                  <div className="relative w-[62%] aspect-[4/3] shadow-2xl ml-auto -mt-16 z-10 rounded-2xl overflow-hidden">
+                    <Image
+                      src="/about/technician.jpg"
+                      alt="Technician at work"
+                      fill
+                      className="object-cover"
+                      sizes="(max-width: 768px) 65vw, 32vw"
+                    />
+                  </div>
                 </div>
               </div>
-            </div>
+            </FadeSection>
 
             {/* Right — commitment text */}
-            <div className="lg:pl-4">
+            <FadeSection dir="right" delay={0.12}>
               <span className="text-[11px] font-bold tracking-[0.28em] uppercase text-[#181D4E]">
                 COMPANY OVERVIEW
               </span>
@@ -321,12 +325,12 @@ export default function AboutPage() {
                 </Link>
                 <Link
                   href="/service/"
-                  className="bg-[#181D4E] hover:bg-[#0B0D26] text-white font-semibold text-sm px-8 py-3 transition-colors rounded-xl"
+                  className="bg-[#181D4E] hover:bg-[#000000] blueprint-grid blueprint-dot-grid text-white font-semibold text-sm px-8 py-3 transition-colors rounded-xl"
                 >
                   Our Services
                 </Link>
               </div>
-            </div>
+            </FadeSection>
 
           </div>
         </div>
@@ -374,7 +378,7 @@ export default function AboutPage() {
       </section>
 
       {/* ═══ MISSION ══════════════════════════════════════════════ */}
-      <section className="relative z-20 overflow-hidden py-14 lg:py-20 bg-[#0B0D26] border-t border-white/5">
+      <section className="relative z-20 overflow-hidden py-14 lg:py-20 bg-[#000000] blueprint-grid blueprint-dot-grid border-t border-white/5">
         {/* Controlled subtle ambient glow in top-left corner */}
         <div
           className="absolute -top-12 -left-12 w-[320px] h-[320px] rounded-full pointer-events-none blur-[50px] opacity-50"
@@ -491,7 +495,7 @@ export default function AboutPage() {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center">
 
             {/* Left — text + skill bars */}
-            <div>
+            <FadeSection delay={0}>
               <span className="text-[11px] font-bold tracking-[0.28em] uppercase text-[#e7212b]">
                 quality work
               </span>
@@ -507,49 +511,32 @@ export default function AboutPage() {
                 moral imperative and a smart business strategy.
               </p>
 
-              <div className="mt-8 space-y-5">
-                {skills.map((s) => (
-                  <div key={s.label}>
-                    <div className="flex justify-between text-[13px] mb-2">
-                      <span className="text-gray-700 font-medium">
-                        {s.label}
-                      </span>
-                      <span className="text-[#e7212b] font-bold shrink-0 ml-3">
-                        {s.value}%
-                      </span>
-                    </div>
-                    <div className="h-[5px] bg-gray-100/60 rounded-full overflow-hidden">
-                      <div
-                        className="h-full bg-[#e7212b] rounded-full"
-                        style={{ width: `${s.value}%` }}
-                      />
-                    </div>
-                  </div>
-                ))}
-              </div>
-            </div>
+              <AnimatedSkillBars />
+            </FadeSection>
 
             {/* Right — two images side by side */}
-            <div className="grid grid-cols-2 gap-4">
-              <div className="relative aspect-[2/3] rounded-2xl overflow-hidden shadow-xl">
-                <Image
-                  src="/about/workshop.jpg"
-                  alt="Workshop operations"
-                  fill
-                  className="object-cover"
-                  sizes="(max-width: 768px) 50vw, 25vw"
-                />
+            <FadeSection dir="right" delay={0.15}>
+              <div className="grid grid-cols-2 gap-4">
+                <div className="relative aspect-[2/3] rounded-2xl overflow-hidden shadow-xl">
+                  <Image
+                    src="/about/workshop.jpg"
+                    alt="Workshop operations"
+                    fill
+                    className="object-cover"
+                    sizes="(max-width: 768px) 50vw, 25vw"
+                  />
+                </div>
+                <div className="relative aspect-[2/3] mt-8 rounded-2xl overflow-hidden shadow-xl">
+                  <Image
+                    src="/about/texas-team.jpeg"
+                    alt="Texas Technical Services operations"
+                    fill
+                    className="object-cover"
+                    sizes="(max-width: 768px) 50vw, 25vw"
+                  />
+                </div>
               </div>
-              <div className="relative aspect-[2/3] mt-8 rounded-2xl overflow-hidden shadow-xl">
-                <Image
-                  src="/about/texas-team.jpeg"
-                  alt="Texas Technical Services operations"
-                  fill
-                  className="object-cover"
-                  sizes="(max-width: 768px) 50vw, 25vw"
-                />
-              </div>
-            </div>
+            </FadeSection>
 
           </div>
         </div>
@@ -577,7 +564,7 @@ export default function AboutPage() {
       </section>
 
       {/* ═══ TESTIMONIALS (dark) ══════════════════════════════════ */}
-      <section className="relative z-10 bg-[#0B0D26] py-16 lg:py-20">
+      <section className="relative z-10 bg-[#000000] blueprint-grid blueprint-dot-grid py-16 lg:py-20">
         <div className="max-w-6xl mx-auto px-4 sm:px-6">
           <div className="text-center mb-12">
             <span className="text-[11px] font-bold tracking-[0.28em] uppercase text-[#e7212b]">

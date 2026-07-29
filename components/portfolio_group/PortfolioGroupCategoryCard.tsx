@@ -13,7 +13,7 @@ export default function PortfolioGroupCategoryCard({
       href={link.href}
       className="group rounded-2xl border border-white/[0.08] bg-white/[0.06] overflow-hidden flex flex-col hover:border-[#e7212b]/35 hover:shadow-xl hover:shadow-[#e7212b]/10 transition-all duration-300"
     >
-      <div className="relative aspect-[16/10] bg-[#0B0D26] overflow-hidden flex items-center justify-center">
+      <div className="relative aspect-[16/10] bg-[#000000] blueprint-grid blueprint-dot-grid overflow-hidden flex items-center justify-center">
         {link.imageUrl ? (
           <Image
             src={link.imageUrl}
@@ -31,7 +31,7 @@ export default function PortfolioGroupCategoryCard({
         )}
         <div className="absolute top-0 left-0 right-0 h-[2px] bg-gradient-to-r from-transparent via-[#e7212b] to-transparent opacity-0 group-hover:opacity-70 transition-opacity duration-300" />
         <div className="absolute top-3 left-3">
-          <span className="text-[10px] font-semibold text-white/70 bg-[#0B0D26]/75 backdrop-blur-sm border border-white/10 px-2.5 py-1 rounded-full tracking-[1.5px] uppercase">
+          <span className="text-[10px] font-semibold text-white/70 bg-[#000000] blueprint-grid blueprint-dot-grid/75 backdrop-blur-sm border border-white/10 px-2.5 py-1 rounded-full tracking-[1.5px] uppercase">
             {link.count} item{link.count !== 1 ? "s" : ""}
           </span>
         </div>

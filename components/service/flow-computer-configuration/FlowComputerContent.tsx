@@ -87,7 +87,7 @@ export default function FlowComputerContent() {
 
           {/* Image */}
           <FadeUp delay={0} className="relative">
-            <div className="relative rounded-2xl overflow-hidden aspect-[16/11] bg-[#0B0D26] shadow-2xl shadow-black/15">
+            <div className="relative rounded-2xl overflow-hidden aspect-[16/11] bg-[#000000] blueprint-grid blueprint-dot-grid shadow-2xl shadow-black/15">
               <Image
                 src="/images/services/flow-computer.png"
                 alt="Flow computer configuration"
@@ -204,7 +204,7 @@ export default function FlowComputerContent() {
 
           {/* Bottom CTA strip */}
           <FadeUp delay={0.4}>
-            <div className="mt-10 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4 rounded-2xl bg-[#0B0D26] px-8 py-6 relative overflow-hidden">
+            <div className="mt-10 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4 rounded-2xl bg-[#000000] blueprint-grid blueprint-dot-grid px-8 py-6 relative overflow-hidden">
               <div
                 className="absolute right-0 top-0 w-64 h-full pointer-events-none"
                 style={{ background: "radial-gradient(ellipse at right, rgba(231,33,43,0.10) 0%, transparent 70%)" }}

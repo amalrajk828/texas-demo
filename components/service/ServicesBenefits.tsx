@@ -95,7 +95,7 @@ export default function ServicesBenefits() {
 
         {/* ── Bottom ISO strip ── */}
         <FadeUp delay={0.42}>
-          <div className="mt-16 rounded-2xl bg-[#0B0D26] overflow-hidden relative">
+          <div className="mt-16 rounded-2xl bg-[#000000] blueprint-grid blueprint-dot-grid overflow-hidden relative">
             {/* Grid texture */}
             <div
               className="absolute inset-0 pointer-events-none"

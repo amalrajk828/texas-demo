@@ -87,7 +87,7 @@ export default function CalibrationContent() {
 
           {/* Image */}
           <FadeUp delay={0} className="relative">
-            <div className="relative rounded-2xl overflow-hidden aspect-[16/11] bg-[#0B0D26] shadow-2xl shadow-black/15">
+            <div className="relative rounded-2xl overflow-hidden aspect-[16/11] bg-[#000000] blueprint-grid blueprint-dot-grid shadow-2xl shadow-black/15">
               <Image
                 src="/images/services/Banc-Calibr.jpg"
                 alt="Flow meter calibration facility"
@@ -205,7 +205,7 @@ export default function CalibrationContent() {
 
           {/* Emergency service highlight + CTA */}
           <FadeUp delay={0.42}>
-            <div className="mt-8 rounded-2xl bg-[#0B0D26] overflow-hidden relative">
+            <div className="mt-8 rounded-2xl bg-[#000000] blueprint-grid blueprint-dot-grid overflow-hidden relative">
               {/* Grid texture */}
               <div
                 className="absolute inset-0 pointer-events-none"

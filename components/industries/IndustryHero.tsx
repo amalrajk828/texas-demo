@@ -34,7 +34,7 @@ export default function IndustryHero({
           className="object-cover"
           sizes="100vw"
         />
-        <div className="absolute inset-0 bg-[#0B0D26]/70" />
+        <div className="absolute inset-0 bg-[#000000] blueprint-grid blueprint-dot-grid/70" />
         <div className="absolute inset-0 bg-gradient-to-t from-[#0B0D26] via-[#0B0D26]/40 to-transparent" />
         <div
           className="absolute inset-0 pointer-events-none"

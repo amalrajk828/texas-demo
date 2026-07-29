@@ -12,7 +12,7 @@ export default function ProductPageCtaBanner({
   ctaLabel?: string;
 }) {
   return (
-    <section className="relative bg-[#1A1A2E] border-t-4 border-[#F5821F] py-16">
+    <section className="relative bg-[#1A1A2E] border-t-4 border-[#e7212b] py-16">
       <div className="max-w-7xl mx-auto px-4 sm:px-6">
         <div className="flex flex-col sm:flex-row items-center justify-between gap-6">
           <div>
@@ -25,7 +25,7 @@ export default function ProductPageCtaBanner({
           </div>
           <Link
             href={ctaHref}
-            className="shrink-0 inline-flex items-center gap-2 bg-[#F5821F] hover:bg-[#e07214] text-white font-bold px-6 py-3.5 rounded-[6px] shadow-lg hover:shadow-[#F5821F]/20 transition-all duration-200"
+            className="shrink-0 inline-flex items-center gap-2 bg-[#e7212b] hover:bg-[#aa0b1b] text-white font-bold px-6 py-3.5 rounded-[6px] shadow-lg hover:shadow-[#e7212b]/20 transition-all duration-200"
           >
             {ctaLabel}
           </Link>

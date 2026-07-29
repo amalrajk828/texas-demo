@@ -33,7 +33,7 @@ export default function IndustryFeatureCard({
           } as React.CSSProperties
         }
       >
-        <div className="relative h-60 overflow-hidden bg-[#0B0D26]">
+        <div className="relative h-60 overflow-hidden bg-[#000000] blueprint-grid blueprint-dot-grid">
           <Image
             src={image}
             alt={`${name} industry solutions — Texas Technical Services`}

@@ -2,10 +2,11 @@
 /* Kit D — Grey: light grey sections, white cards, dark charcoal text, red accents */
 import Link from "next/link";
 import Image from "next/image";
-import { motion, useInView } from "framer-motion";
-import { useRef } from "react";
+import { motion, useInView, useSpring, useTransform, useMotionValue } from "framer-motion";
+import { useRef, useEffect, useState } from "react";
 import { ArrowRight, ChevronRight, Gauge, FlaskConical, Cpu } from "lucide-react";
 import BorderGlow from "@/components/BorderGlow";
+import LightGradientBackground from "@/components/LightGradientBackground";
 
 const SERVICES = [
   { Icon: Gauge,        num: "01", title: "Flow Measurement & Control", desc: "Comprehensive custody metering, flow computers, metering skids, and control system upgrades for liquid, gas, and water applications." },
@@ -28,25 +29,58 @@ function FadeUp({ children, delay = 0, className = "" }: { children: React.React
   );
 }
 
-export default function GreyWhatWeDo() {
+// Stat definitions: value = numeric target, suffix = trailing string
+const STATS = [
+  { value: 15,  suffix: "+", label: "Years" },
+  { value: 200, suffix: "+", label: "Clients" },
+  { value: 8,   suffix: "",  label: "Industries" },
+  { value: 100, suffix: "%", label: "ISO Quality" },
+];
+
+function useLiquidCounter(target: number, started: boolean, delay: number) {
+  const motionVal = useMotionValue(0);
+  const spring = useSpring(motionVal, { stiffness: 28, damping: 18, mass: 1.2 });
+  const display = useTransform(spring, (v) => Math.round(v));
+  const [count, setCount] = useState(0);
+  useEffect(() => {
+    if (!started) return;
+    const t = setTimeout(() => motionVal.set(target), delay);
+    return () => clearTimeout(t);
+  }, [started, target, delay, motionVal]);
+  useEffect(() => display.on("change", (v) => setCount(v)), [display]);
+  return count;
+}
+
+function StatCard({
+  value, suffix, label, index, started,
+}: { value: number; suffix: string; label: string; index: number; started: boolean }) {
+  const count = useLiquidCounter(value, started, index * 160);
   return (
-    <section className="relative py-24 lg:py-32 overflow-hidden" style={{ background: "linear-gradient(135deg, #f5f7fa 0%, #e2e7ee 45%, #c9d2dc 100%)" }}>
-      {/* Background depth blobs for frosted glass refraction */}
-      <div
-        className="absolute top-[-5%] left-[-5%] w-[600px] h-[600px] rounded-full pointer-events-none blur-[80px] opacity-90"
-        style={{ background: "radial-gradient(circle, rgba(255,255,255,0.9) 0%, rgba(235,240,248,0.5) 45%, transparent 70%)" }}
-      />
-      <div
-        className="absolute top-[20%] left-[28%] w-[550px] h-[550px] rounded-full pointer-events-none blur-[90px] opacity-70"
-        style={{ background: "radial-gradient(circle, rgba(165,180,200,0.5) 0%, rgba(140,158,180,0.2) 50%, transparent 70%)" }}
-      />
-      <div
-        className="absolute bottom-[5%] right-[-5%] w-[600px] h-[600px] rounded-full pointer-events-none blur-[100px] opacity-75"
-        style={{ background: "radial-gradient(circle, rgba(150,168,190,0.45) 0%, rgba(130,148,172,0.15) 55%, transparent 70%)" }}
-      />
+    <div
+      className="relative px-5 py-4 w-full h-full rounded-2xl overflow-hidden transition-all duration-300 group"
+      style={{
+        background: "rgba(255, 255, 255, 0.35)",
+        backdropFilter: "blur(18px)",
+        WebkitBackdropFilter: "blur(18px)",
+        border: "1px solid rgba(255, 255, 255, 0.65)",
+        boxShadow: "0 8px 24px rgba(0, 0, 0, 0.06), inset 0 1px 1px rgba(255, 255, 255, 0.8)",
+      }}
+    >
+      <div className="absolute top-0 inset-x-0 h-[1px] bg-gradient-to-r from-transparent via-white/80 to-transparent pointer-events-none" />
+      <div className="absolute inset-0 bg-white/20 opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none" />
+      <p className="relative z-10 text-[1.7rem] font-black leading-none" style={{ color: "var(--color-brand-red)" }}>
+        {count}{suffix}
+      </p>
+      <p className="relative z-10 text-[13px] mt-1.5 font-semibold text-[#4B5563]">{label}</p>
+    </div>
+  );
+}
 
-      <div className="absolute top-0 inset-x-0 h-px" style={{ background: "rgba(0,0,0,0.06)" }} />
-
+export default function GreyWhatWeDo() {
+  const statRef = useRef<HTMLDivElement>(null);
+  const statInView = useInView(statRef, { once: true, margin: "-60px" });
+  return (
+    <LightGradientBackground className="py-24 lg:py-32">
       <div className="relative max-w-7xl mx-auto px-4 sm:px-6 z-10">
         <div className="flex flex-col lg:flex-row lg:items-end lg:justify-between gap-6 mb-10 sm:mb-12 lg:mb-14">
           <div className="flex flex-col max-w-2xl">
@@ -218,52 +252,34 @@ export default function GreyWhatWeDo() {
               </div>
             </FadeUp>
             <FadeUp delay={0.14}>
-              <div className="grid grid-cols-2 gap-3 mb-9">
-                {[
-                  { num: "15+", label: "Years" },
-                  { num: "200+", label: "Clients" },
-                  { num: "8", label: "Industries" },
-                  { num: "100%", label: "ISO Quality" }
-                ].map(s => (
-                  <div
-                    key={s.label}
-                    className="relative px-5 py-4 w-full h-full rounded-2xl overflow-hidden transition-all duration-300 group"
-                    style={{
-                      background: "rgba(255, 255, 255, 0.35)",
-                      backdropFilter: "blur(18px)",
-                      WebkitBackdropFilter: "blur(18px)",
-                      border: "1px solid rgba(255, 255, 255, 0.65)",
-                      boxShadow: "0 8px 24px rgba(0, 0, 0, 0.06), inset 0 1px 1px rgba(255, 255, 255, 0.8)",
-                    }}
-                  >
-                    {/* Top specular reflection sheen */}
-                    <div className="absolute top-0 inset-x-0 h-[1px] bg-gradient-to-r from-transparent via-white/80 to-transparent pointer-events-none" />
-                    {/* Subtle hover brightening */}
-                    <div className="absolute inset-0 bg-white/20 opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none" />
-
-                    <p className="relative z-10 text-[1.7rem] font-black leading-none" style={{ color: "var(--color-brand-red)" }}>{s.num}</p>
-                    <p className="relative z-10 text-[13px] mt-1.5 font-semibold text-[#4B5563]">{s.label}</p>
-                  </div>
+              {/* Stats with scroll-triggered count-up */}
+              <div ref={statRef} className="grid grid-cols-2 gap-3 mb-9">
+                {STATS.map((s, i) => (
+                  <StatCard key={s.label} {...s} index={i} started={statInView} />
                 ))}
               </div>
             </FadeUp>
             <FadeUp delay={0.2}>
               <div className="flex flex-wrap gap-3">
-                <Link href="/contacts/" className="inline-flex items-center gap-2 text-white font-bold px-7 py-4 rounded-xl text-[15px] hover:-translate-y-0.5 transition-all"
-                  style={{ background: "var(--color-brand-red)", boxShadow: "0 4px 20px color-mix(in srgb, var(--color-brand-red) 35%, transparent)" }}
-                  onMouseEnter={e => (e.currentTarget.style.background = "var(--color-brand-red-dark)")}
-                  onMouseLeave={e => (e.currentTarget.style.background = "var(--color-brand-red)")}>
-                  Contact Us <ArrowRight className="w-4 h-4" />
-                </Link>
-                <Link href="/service/" className="inline-flex items-center gap-2 font-semibold px-7 py-4 rounded-xl text-[15px] border transition-all"
-                  style={{ color: "#111827", borderColor: "rgba(255,255,255,0.65)", background: "rgba(255,255,255,0.35)", backdropFilter: "blur(18px)", WebkitBackdropFilter: "blur(18px)" }}>
-                  Our Services <ChevronRight className="w-4 h-4" />
-                </Link>
+                <motion.div whileHover={{ scale: 1.03 }} whileTap={{ scale: 0.97 }}>
+                  <Link href="/contacts/" className="inline-flex items-center gap-2 text-white font-bold px-7 py-4 rounded-xl text-[15px] transition-colors"
+                    style={{ background: "var(--color-brand-red)", boxShadow: "0 4px 20px color-mix(in srgb, var(--color-brand-red) 35%, transparent)" }}
+                    onMouseEnter={e => (e.currentTarget.style.background = "var(--color-brand-red-dark)")}
+                    onMouseLeave={e => (e.currentTarget.style.background = "var(--color-brand-red)")}>
+                    Contact Us <ArrowRight className="w-4 h-4" />
+                  </Link>
+                </motion.div>
+                <motion.div whileHover={{ scale: 1.03 }} whileTap={{ scale: 0.97 }}>
+                  <Link href="/service/" className="inline-flex items-center gap-2 font-semibold px-7 py-4 rounded-xl text-[15px] border transition-colors"
+                    style={{ color: "#111827", borderColor: "rgba(255,255,255,0.65)", background: "rgba(255,255,255,0.35)", backdropFilter: "blur(18px)", WebkitBackdropFilter: "blur(18px)" }}>
+                    Our Services <ChevronRight className="w-4 h-4" />
+                  </Link>
+                </motion.div>
               </div>
             </FadeUp>
           </div>
         </div>
       </div>
-    </section>
+    </LightGradientBackground>
   );
 }

@@ -23,7 +23,7 @@ const STATS = [
 
 export default function ControlSystemHero() {
   return (
-    <section className="relative bg-[#0B0D26] overflow-hidden pt-28 pb-20 lg:pt-36 lg:pb-28">
+    <section className="relative bg-[#000000] blueprint-grid blueprint-dot-grid overflow-hidden pt-28 pb-20 lg:pt-36 lg:pb-28">
       <div className="absolute inset-0 pointer-events-none" style={{ backgroundImage: "linear-gradient(rgba(255,255,255,0.025) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,0.025) 1px,transparent 1px)", backgroundSize: "60px 60px" }} />
       <div className="absolute top-0 left-0 w-[700px] h-[700px] rounded-full bg-[#e7212b]/5 blur-[120px] -translate-x-1/3 -translate-y-1/3 pointer-events-none" />
       <div className="absolute bottom-0 right-0 w-[500px] h-[500px] rounded-full bg-[#e7212b]/4 blur-[100px] translate-x-1/4 translate-y-1/4 pointer-events-none" />
@@ -71,7 +71,7 @@ export default function ControlSystemHero() {
           <FadeUp delay={0.25}>
             <div className="grid grid-cols-2 sm:grid-cols-4 gap-px bg-white/6 rounded-2xl overflow-hidden border border-white/6">
               {STATS.map((s) => (
-                <div key={s.label} className="bg-[#0B0D26] px-5 py-5 flex flex-col gap-1">
+                <div key={s.label} className="bg-[#000000] blueprint-grid blueprint-dot-grid px-5 py-5 flex flex-col gap-1">
                   <span className="text-white font-bold text-lg leading-tight">{s.value}</span>
                   <span className="text-white/35 text-[11px] tracking-[1px] uppercase">{s.label}</span>
                 </div>
