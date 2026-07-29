@@ -39,6 +39,16 @@ export const metadata: Metadata = {
     "metering system validation",
     "OIML AGA API MPMS compliance",
     "Texas Technical Services flow measurement",
+    "metering skids Kuwait",
+    "mass flow measurement devices GCC",
+    "ultrasonic pipe flow meter Dubai",
+    "insertion thermal mass flow meter",
+    "clamp on liquid flow meter Kuwait",
+    "sanitary magnetic flow meter",
+    "high pressure gas flow meter GCC",
+    "natural gas flow meter Kuwait",
+    "flow meter technology",
+    "Coriolis flow meter calibration Kuwait",
   ],
 };
 

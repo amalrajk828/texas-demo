@@ -19,6 +19,11 @@ export const metadata: Metadata = {
     "water treatment dust analyzers",
     "industrial water treatment automation",
     "water treatment monitoring systems Kuwait",
+    "wastewater treatment instrumentation GCC",
+    "desalination plant automation Dubai",
+    "water quality monitoring Kuwait",
+    "effluent treatment plant control",
+    "water treatment SCADA systems GCC",
   ],
   openGraph: {
     title: "Water Treatment Industry Solutions",

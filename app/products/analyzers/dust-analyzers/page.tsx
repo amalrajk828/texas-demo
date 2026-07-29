@@ -16,6 +16,10 @@ export const metadata: Metadata = {
     "SICK DUSTHUNTER",
     "stack emissions monitoring",
     "dust concentration measurement",
+    "dust monitoring Kuwait power plant",
+    "opacity measurement GCC",
+    "particulate emissions analyzer",
+    "industrial dust monitoring Dubai",
   ],
   openGraph: {
     title: "Dust Analyzers",
@@ -73,13 +77,14 @@ export default function DustAnalyzersPage() {
         <div className="absolute inset-0 pointer-events-none" style={{ background: "radial-gradient(ellipse at 50% 100%, rgba(231,33,43,0.08) 0%, transparent 60%)" }} />
         <div className="max-w-7xl mx-auto px-4 sm:px-6 relative z-10">
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5">
-            {dustAnalyzerProducts.map((prod) => (
+            {dustAnalyzerProducts.map((prod, index) => (
               <ProductCard
                 key={prod.slug}
                 product={prod}
                 category="Dust Analyzers"
                 imageFit="contain"
                 dark
+                priority={index < 3}
               />
             ))}
           </div>

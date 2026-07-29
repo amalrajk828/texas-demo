@@ -19,6 +19,11 @@ export const metadata: Metadata = {
     "steel plant gas analyzers Kuwait",
     "emissions monitoring metal production",
     "industrial automation steel manufacturing",
+    "steel mill instrumentation GCC",
+    "furnace process control Kuwait",
+    "metal fabrication automation Dubai",
+    "rolling mill control systems",
+    "foundry emissions monitoring GCC",
   ],
   openGraph: {
     title: "Metal & Steel Industry Solutions",

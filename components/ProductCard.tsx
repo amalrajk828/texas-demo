@@ -39,6 +39,7 @@ export default function ProductCard({
   className = "",
   iconName,
   readMoreText = "Read More",
+  priority = false,
 }: {
   product: Product;
   category?: string;
@@ -50,6 +51,7 @@ export default function ProductCard({
   className?: string;
   iconName?: string;
   readMoreText?: string;
+  priority?: boolean;
 }) {
   const [imgError, setImgError] = useState(false);
   const targetCategory = product.category || category || "";
@@ -104,6 +106,7 @@ export default function ProductCard({
             src={displayImage}
             alt={`${product.name} — ${displayBrand}`}
             fill
+            priority={priority}
             className={`transition-transform duration-700 ease-out group-hover:scale-[1.07] ${imageFit === "contain" ? "object-contain p-4" : "object-cover"}`}
             sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
             onError={() => setImgError(true)}

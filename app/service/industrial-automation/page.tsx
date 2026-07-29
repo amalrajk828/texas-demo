@@ -55,6 +55,13 @@ export const metadata: Metadata = {
     "plant automation solutions",
     "control system integration Kuwait",
     "CEMS solutions Kuwait",
+    "FactoryTalk MES Kuwait",
+    "FactoryTalk analytics GCC",
+    "FactoryTalk Asset Centre",
+    "Allen Bradley PLC repair Dubai",
+    "Rockwell automation predictive maintenance",
+    "Rockwell Studio 5000 Logix Designer",
+    "Rockwell connected components workbench",
   ],
 };
 

@@ -92,7 +92,7 @@ export default async function BlogArticlePage({ params }: PageProps) {
   return (
     <div className="min-h-screen bg-white text-[#333]">
       <BreadcrumbJsonLd items={[{ name: "Home", href: "/" }, { name: "Blog", href: "/blog/" }, { name: article.category, href: `/blog/${slug}/` }]} />
-      <BlogPostingJsonLd headline={article.title} description={article.description} image={article.image} url={`/blog/${slug}/`} datePublished={article.date} dateModified={article.date} wordCount={wordCount} />
+      <BlogPostingJsonLd headline={article.title} description={article.description} image={article.image} url={`/blog/${slug}/`} datePublished={article.date} dateModified={article.date} wordCount={wordCount} category={article.category} keywords={article.keywords} />
       {faqItems.length > 0 && <FaqPageJsonLd items={faqItems} />}
       <SpeakableJsonLd headline={article.title} />
       {/* Hero */}

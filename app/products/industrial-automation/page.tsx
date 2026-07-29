@@ -15,6 +15,12 @@ export const metadata: Metadata = {
     "PLC I/O modules",
     "industrial control panels",
     "Ethernet switches industrial",
+    "Allen Bradley PanelView 7",
+    "PanelView Plus 6",
+    "FactoryTalk Linx Gateway",
+    "CompactLogix 5000",
+    "Allen Bradley PowerFlex 7000",
+    "Rockwell Studio 5000 Logix Designer",
   ],
   openGraph: {
     title: "Industrial Automation",

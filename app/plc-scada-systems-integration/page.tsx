@@ -43,6 +43,13 @@ export const metadata: Metadata = {
     "SCADA and control systems",
     "control systems and automation",
     "PLC SCADA Kuwait",
+    "Allen Bradley system integrators Kuwait",
+    "PLC distributors Dubai",
+    "Rockwell automation factorytalk GCC",
+    "FactoryTalk software Kuwait",
+    "Studio 5000 Logix",
+    "Rockwell DCS system",
+    "Schneider PLC programming software",
   ],
 };
 

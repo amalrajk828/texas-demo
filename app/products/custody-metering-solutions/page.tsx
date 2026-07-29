@@ -18,6 +18,12 @@ export const metadata: Metadata = {
     "flow metering skids",
     "OMNI flow computers",
     "custody transfer measurement",
+    "fiscal metering Kuwait",
+    "metering skid design GCC",
+    "flow computer integration Dubai",
+    "oil and gas custody transfer",
+    "pipeline metering systems",
+    "custody transfer skid fabrication",
   ],
   openGraph: {
     title: "Custody Metering Solutions",

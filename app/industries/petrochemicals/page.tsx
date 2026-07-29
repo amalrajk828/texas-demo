@@ -19,6 +19,11 @@ export const metadata: Metadata = {
     "petrochemical gas analyzers",
     "industrial automation petrochemicals",
     "flow computer petrochemical industry",
+    "petrochemical plant instrumentation GCC",
+    "process automation petrochemical Dubai",
+    "reactor process control Kuwait",
+    "petrochemical safety systems GCC",
+    "ethylene plant flow measurement",
   ],
   openGraph: {
     title: "Petrochemicals Industry Solutions",

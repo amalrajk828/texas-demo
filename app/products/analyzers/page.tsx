@@ -28,6 +28,10 @@ export const metadata: Metadata = {
     "steam quality analyzer",
     "continuous water analyzer",
     "DUSTHUNTER",
+    "Honeywell gas monitoring system GCC",
+    "gas detection monitor Kuwait",
+    "fixed gas detection system",
+    "gas detection panel",
   ],
   openGraph: {
     title: "Analyzers - Gas Analysis, CEMS & Process",

@@ -20,6 +20,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
   const staticRoutes: MetadataRoute.Sitemap = [
     { url: `${BASE}/`, lastModified: homepage, changeFrequency: "weekly", priority: 1.0 },
     { url: `${BASE}/about-us/`, lastModified: thisMonth, changeFrequency: "monthly", priority: 0.8 },
+    { url: `${BASE}/certifications/`, lastModified: thisMonth, changeFrequency: "yearly", priority: 0.6 },
     { url: `${BASE}/clients/`, lastModified: thisMonth, changeFrequency: "monthly", priority: 0.6 },
     { url: `${BASE}/contacts/`, lastModified: thisMonth, changeFrequency: "monthly", priority: 0.8 },
     { url: `${BASE}/services/`, lastModified: thisWeek, changeFrequency: "monthly", priority: 0.8 },
@@ -42,6 +43,8 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { url: `${BASE}/industrial-automation-services-dubai/`, lastModified: thisWeek, changeFrequency: "monthly", priority: 0.7 },
     { url: `${BASE}/industrial-automation-services-kuwait/`, lastModified: thisWeek, changeFrequency: "monthly", priority: 0.7 },
     { url: `${BASE}/plc-scada-systems-integration/`, lastModified: thisWeek, changeFrequency: "monthly", priority: 0.7 },
+    { url: `${BASE}/flow-meter-calibration-services-kuwait/`, lastModified: thisWeek, changeFrequency: "monthly", priority: 0.7 },
+    { url: `${BASE}/predictive-maintenance-condition-monitoring-gcc/`, lastModified: thisWeek, changeFrequency: "monthly", priority: 0.7 },
 
     // Global network & proprietary solutions
     { url: `${BASE}/partners/`, lastModified: thisMonth, changeFrequency: "monthly", priority: 0.7 },

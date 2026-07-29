@@ -29,6 +29,7 @@ const solutions = [
   { label: "Space AI Industrial AI", href: "/solutions/space-ai/" },
   { label: "Mitsubishi Electric", href: "/solutions/mitsubishi-electric/" },
   { label: "PWS Floor Solutions", href: "/solutions/pws-floor-solutions/" },
+  { label: "Certifications", href: "/certifications/" },
 ];
 
 const socials = [
@@ -232,6 +233,24 @@ export default function Footer() {
                 </li>
               ))}
             </ul>
+          </div>
+        </div>
+      </div>
+
+      {/* Certifications */}
+      <div className="border-t" style={{ borderColor: "rgba(255,255,255,0.06)" }}>
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 py-6">
+          <div className="flex flex-wrap items-center justify-center gap-6 sm:gap-10">
+            {[
+              { src: "/about/cert-iso9001.png", alt: "ISO 9001:2015 Quality Management" },
+              { src: "/about/cert-iso14001.png", alt: "ISO 14001 Environmental Management" },
+              { src: "/about/cert-iso45001.png", alt: "ISO 45001 Occupational Health & Safety" },
+              { src: "/about/cert-uasl.png", alt: "UASL Certification" },
+            ].map((cert) => (
+              <div key={cert.src} className="relative h-12 w-12 sm:h-14 sm:w-14 opacity-50 hover:opacity-100 transition-opacity duration-300">
+                <Image src={cert.src} alt={cert.alt} fill className="object-contain" sizes="56px" />
+              </div>
+            ))}
           </div>
         </div>
       </div>

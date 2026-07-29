@@ -16,6 +16,10 @@ export const metadata: Metadata = {
     "proximity sensors",
     "safety light curtains",
     "industrial automation sensors",
+    "ABB vibration sensor Kuwait",
+    "ABB condition monitoring sensors",
+    "temperature data acquisition system",
+    "level logger",
   ],
   openGraph: {
     title: "Sensors",
@@ -100,7 +104,7 @@ export default function SensorsPage() {
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5">
             {sensors.map((sensor, index) => (
               <React.Fragment key={sensor.slug}>
-                <ProductCard product={sensor} category="sensors" />
+                <ProductCard product={sensor} category="sensors" priority={index < 3} />
                 
               </React.Fragment>
             ))}
