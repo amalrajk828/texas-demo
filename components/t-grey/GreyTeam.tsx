@@ -86,7 +86,7 @@ export default function GreyTeam() {
               </div>
             </FadeUp>
             <FadeUp delay={0.1}>
-              <h2 className="text-[clamp(2.2rem,4.5vw,3.2rem)] font-black leading-[1.08] mb-5 tracking-tight" style={{ color: "var(--g-heading)" }}>
+              <h2 className="text-[clamp(2.2rem,4.5vw,3.2rem)] font-black leading-[1.08] mb-5 tracking-tight" style={{ color: "#F9FAFB" }}>
                 Meet the people{" "}
                 <span style={{ color: "var(--color-brand-red)" }}>behind the scenes</span>
               </h2>

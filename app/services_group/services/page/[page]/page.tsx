@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import ServiceGroupHero from "@/components/services_group/ServiceGroupHero";
 import ServiceGroupGrid from "@/components/services_group/ServiceGroupGrid";
+import { BreadcrumbJsonLd } from "@/components/schema/BreadcrumbJsonLd";
 import { notFound } from "next/navigation";
 
 const TOTAL_PAGES = 6;
@@ -40,6 +41,7 @@ export default async function ServicesGroupPagePage({ params }: { params: Promis
 
   return (
     <>
+      <BreadcrumbJsonLd items={[{ name: "Home", href: "/" }, { name: "Services", href: "/services/" }, { name: "All Services", href: "/services_group/services/" }]} />
       <ServiceGroupHero />
       <ServiceGroupGrid page={pageNum} />
     </>

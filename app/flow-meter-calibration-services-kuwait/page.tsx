@@ -4,6 +4,7 @@ import { ArrowRight, ChevronRight, MapPin, Gauge, ShieldCheck, Award } from "luc
 import { BreadcrumbJsonLd } from "@/components/schema/BreadcrumbJsonLd";
 import { ServiceJsonLd } from "@/components/schema/ServiceJsonLd";
 import { FaqPageJsonLd } from "@/components/schema/FaqPageJsonLd";
+import { SpeakableJsonLd } from "@/components/schema/SpeakableJsonLd";
 
 export const metadata: Metadata = {
   title: "Flow Meter Calibration Kuwait & GCC",
@@ -109,6 +110,7 @@ export default function FlowMeterCalibrationKuwaitPage() {
         areaServed={["Kuwait", "United Arab Emirates", "Saudi Arabia", "Bahrain", "Qatar", "Oman"]}
       />
       <FaqPageJsonLd items={faqItems} />
+      <SpeakableJsonLd headline="Flow Meter Calibration Kuwait & GCC — ISO 17025 Accredited" />
 
       {/* ══ HERO ══════════════════════════════════════════════════ */}
       <section className="relative bg-[#0B0D26] overflow-hidden pt-32 pb-20 lg:pb-28">

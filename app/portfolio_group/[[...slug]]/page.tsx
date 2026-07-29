@@ -20,6 +20,7 @@ import PortfolioGroupHero from "@/components/portfolio_group/PortfolioGroupHero"
 import PortfolioGroupCategoryGrid from "@/components/portfolio_group/PortfolioGroupCategoryGrid";
 import PortfolioGroupProductGrid from "@/components/portfolio_group/PortfolioGroupProductGrid";
 import PortfolioGroupPagination from "@/components/portfolio_group/PortfolioGroupPagination";
+import { BreadcrumbJsonLd } from "@/components/schema/BreadcrumbJsonLd";
 
 export async function generateMetadata({
   params,
@@ -118,6 +119,7 @@ export default async function PortfolioGroupPage({
 
     return (
       <main>
+        <BreadcrumbJsonLd items={[{ name: "Home", href: "/" }, { name: "Portfolio", href: "/portfolio/" }, { name: "Categories", href: "/portfolio_group/" }]} />
         <PortfolioGroupHero
           breadcrumb="Portfolio Group"
           eyebrow="Portfolio"
@@ -148,6 +150,7 @@ export default async function PortfolioGroupPage({
 
   return (
     <main>
+      <BreadcrumbJsonLd items={[{ name: "Home", href: "/" }, { name: "Portfolio", href: "/portfolio/" }, { name: result.breadcrumb, href: `/portfolio_group/${slug.join("/")}/` }]} />
       <PortfolioGroupHero
         breadcrumb="Portfolio Group"
         breadcrumbHref="/portfolio_group/"

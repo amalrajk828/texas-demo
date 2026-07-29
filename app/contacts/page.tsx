@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { BreadcrumbJsonLd } from "@/components/schema/BreadcrumbJsonLd";
 import { ContactPageJsonLd } from "@/components/schema/ContactPageJsonLd";
+import { SpeakableJsonLd } from "@/components/schema/SpeakableJsonLd";
 import ContactPageClient from "@/components/ContactPage";
 
 export const metadata: Metadata = {
@@ -61,6 +62,7 @@ export default function ContactPage() {
           },
         ]}
       />
+      <SpeakableJsonLd headline="Contact Texas Technical Services — Kuwait & Dubai" />
       <ContactPageClient />
     </>
   );

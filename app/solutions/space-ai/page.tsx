@@ -3,6 +3,7 @@ import { BreadcrumbJsonLd } from "@/components/schema/BreadcrumbJsonLd";
 import { ServiceJsonLd } from "@/components/schema/ServiceJsonLd";
 import { ProductJsonLd } from "@/components/schema/ProductJsonLd";
 import { FaqPageJsonLd } from "@/components/schema/FaqPageJsonLd";
+import { SpeakableJsonLd } from "@/components/schema/SpeakableJsonLd";
 import SpaceAiContent from "@/components/solutions/SpaceAiContent";
 
 export const metadata: Metadata = {
@@ -85,6 +86,7 @@ export default function SpaceAIPage() {
         category="Industrial AI & Machine Learning"
       />
       <FaqPageJsonLd items={faqItems} />
+      <SpeakableJsonLd headline="Space AI — Industrial AI & Machine Learning Solutions" />
       <SpaceAiContent />
     </>
   );

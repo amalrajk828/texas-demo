@@ -4,6 +4,7 @@ import { ArrowRight, ChevronRight, Cpu, Monitor, Code, Settings } from "lucide-r
 import { BreadcrumbJsonLd } from "@/components/schema/BreadcrumbJsonLd";
 import { FaqPageJsonLd } from "@/components/schema/FaqPageJsonLd";
 import { ServiceJsonLd } from "@/components/schema/ServiceJsonLd";
+import { SpeakableJsonLd } from "@/components/schema/SpeakableJsonLd";
 
 export const metadata: Metadata = {
   title: "PLC & SCADA Systems Integration | Industrial Automation Solutions",
@@ -121,6 +122,7 @@ export default function PlcScadaPage() {
     <>
       <BreadcrumbJsonLd items={[{ name: "Home", href: "/" }, { name: "PLC & SCADA Systems Integration", href: "/plc-scada-systems-integration/" }]} />
       <FaqPageJsonLd items={faqItems} />
+      <SpeakableJsonLd headline="PLC & SCADA Systems Integration — Industrial Automation Solutions" />
       <ServiceJsonLd
         name="PLC & SCADA Systems Integration"
         description="Expert PLC programming, SCADA system integration, HMI development, and control system upgrades for oil & gas, power, and industrial sectors across Kuwait, UAE, and the GCC."

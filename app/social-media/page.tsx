@@ -271,8 +271,8 @@ export default function SocialMediaPage() {
               >
                 <div className="flex items-start gap-4">
                   {/* Icon */}
-                  <div className="w-12 h-12 rounded-xl bg-[#000000] blueprint-grid blueprint-dot-grid flex items-center justify-center shrink-0 group-hover:bg-[#e7212b] transition-colors duration-300">
-                    <svg viewBox={platform.viewBox || "0 0 24 24"} className="w-5 h-5 text-white" fill="currentColor">
+                  <div className="w-12 h-12 rounded-xl bg-[#000000] blueprint-grid blueprint-dot-grid flex items-center justify-center shrink-0 group-hover:bg-[#e7212b]/10 transition-colors duration-300">
+                    <svg viewBox={platform.viewBox || "0 0 24 24"} className="w-5 h-5 text-white group-hover:text-[#e7212b] transition-colors" fill="currentColor">
                       <path d={platform.icon} />
                     </svg>
                   </div>
@@ -325,7 +325,7 @@ export default function SocialMediaPage() {
                 <div className="flex items-center gap-3 mb-3">
                   {/* Small icon badge */}
                   <div className="w-11 h-11 rounded-xl bg-[#000000] blueprint-grid blueprint-dot-grid/5 flex items-center justify-center shrink-0 group-hover:bg-[#e7212b]/10 transition-colors">
-                    <svg viewBox={platform.viewBox || "0 0 24 24"} className="w-5 h-5 text-[#0B0D26] group-hover:text-[#e7212b] transition-colors" fill="currentColor">
+                    <svg viewBox={platform.viewBox || "0 0 24 24"} className="w-5 h-5 text-white group-hover:text-[#e7212b] transition-colors" fill="currentColor">
                       <path d={platform.icon} />
                     </svg>
                   </div>

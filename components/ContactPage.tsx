@@ -211,10 +211,10 @@ export default function ContactPage() {
                       Working Hours
                     </p>
                     <p className="text-[#181D4E] font-medium">
-                      Sun – Thu: 8:00 AM – 5:00 PM
+                      Sat – Thu: 8:00 AM – 5:00 PM
                     </p>
                     <p className="text-gray-400 text-sm mt-0.5">
-                      Friday &amp; Saturday: Closed
+                      Friday: Closed
                     </p>
                   </div>
                 </div>

@@ -8,6 +8,7 @@ import {
   AggregateRatingJsonLd,
 } from "@/components/schema/ReviewJsonLd";
 import { OrganizationJsonLd } from "@/components/schema/OrganizationJsonLd";
+import { SpeakableJsonLd } from "@/components/schema/SpeakableJsonLd";
 import AnimatedSkillBars from "@/components/about/AnimatedSkillBars";
 import FadeSection from "@/components/motion/FadeSection";
 
@@ -225,6 +226,7 @@ export default function AboutPage() {
           { name: "About Us", href: "/about-us/" },
         ]}
       />
+      <SpeakableJsonLd headline="About Texas Technical Services — Industrial Automation Company in Kuwait & GCC" />
       <ReviewJsonLd
         items={[
           {

@@ -4,6 +4,7 @@ import { ArrowRight, ChevronRight, MapPin, Activity, TrendingUp, ShieldCheck } f
 import { BreadcrumbJsonLd } from "@/components/schema/BreadcrumbJsonLd";
 import { ServiceJsonLd } from "@/components/schema/ServiceJsonLd";
 import { FaqPageJsonLd } from "@/components/schema/FaqPageJsonLd";
+import { SpeakableJsonLd } from "@/components/schema/SpeakableJsonLd";
 
 export const metadata: Metadata = {
   title: "Predictive Maintenance & Condition Monitoring GCC",
@@ -107,6 +108,7 @@ export default function PredictiveMaintenanceGccPage() {
         areaServed={["Kuwait", "United Arab Emirates", "Saudi Arabia", "Bahrain", "Qatar", "Oman"]}
       />
       <FaqPageJsonLd items={faqItems} />
+      <SpeakableJsonLd headline="Predictive Maintenance & Condition Monitoring GCC" />
 
       {/* ══ HERO ══════════════════════════════════════════════════ */}
       <section className="relative bg-[#0B0D26] overflow-hidden pt-32 pb-20 lg:pb-28">

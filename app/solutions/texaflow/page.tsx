@@ -3,6 +3,7 @@ import { BreadcrumbJsonLd } from "@/components/schema/BreadcrumbJsonLd";
 import { ServiceJsonLd } from "@/components/schema/ServiceJsonLd";
 import { ProductJsonLd } from "@/components/schema/ProductJsonLd";
 import { FaqPageJsonLd } from "@/components/schema/FaqPageJsonLd";
+import { SpeakableJsonLd } from "@/components/schema/SpeakableJsonLd";
 import TexaflowContent from "@/components/solutions/TexaflowContent";
 
 export const metadata: Metadata = {
@@ -84,6 +85,7 @@ export default function TexaflowPage() {
         category="Custody Transfer Metering & SCADA"
       />
       <FaqPageJsonLd items={faqItems} />
+      <SpeakableJsonLd headline="Texaflow — Custody Metering Integrated Control System" />
       <TexaflowContent />
     </>
   );

@@ -3,6 +3,7 @@ import Link from "next/link";
 import Image from "next/image";
 import { ChevronRight, Scale, Brain, Cpu, Layers } from "lucide-react";
 import { BreadcrumbJsonLd } from "@/components/schema/BreadcrumbJsonLd";
+import { SpeakableJsonLd } from "@/components/schema/SpeakableJsonLd";
 
 export const metadata: Metadata = {
   title: "Solutions — Proprietary Platforms & Strategic Partnerships",
@@ -80,6 +81,8 @@ export default function SolutionsPage() {
           { name: "Solutions", href: "/solutions/" },
         ]}
       />
+
+      <SpeakableJsonLd headline="Solutions — Proprietary Platforms & Strategic Partnerships" />
 
       {/* ── HERO ─────────────────────────────────────────────── */}
       <section className="relative bg-[#0B0D26] overflow-hidden border-b-4 border-[#e7212b]">

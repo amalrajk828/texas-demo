@@ -13,6 +13,7 @@ import {
   Globe,
 } from "lucide-react";
 import { BreadcrumbJsonLd } from "@/components/schema/BreadcrumbJsonLd";
+import { SpeakableJsonLd } from "@/components/schema/SpeakableJsonLd";
 import IndustryCtaBanner from "@/components/industries/IndustryCtaBanner";
 import IndustryFeatureCard from "@/components/industries/IndustryFeatureCard";
 
@@ -132,6 +133,7 @@ export default function IndustriesPage() {
   return (
     <>
       <BreadcrumbJsonLd items={[{ name: "Home", href: "/" }, { name: "Industries", href: "/industries/" }]} />
+      <SpeakableJsonLd headline="Industries We Serve — Oil & Gas, Refinery, Power Plant & More" />
 
       {/* HERO */}
       <section className="bg-[#0B0D26] relative overflow-hidden min-h-[480px] flex flex-col justify-end">

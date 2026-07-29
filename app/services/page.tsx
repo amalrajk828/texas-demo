@@ -4,6 +4,7 @@ import ServicesAllGrid from "@/components/service/ServicesAllGrid";
 import ServicesCtaBanner from "@/components/service/ServicesCtaBanner";
 import { BreadcrumbJsonLd } from "@/components/schema/BreadcrumbJsonLd";
 import { ServiceJsonLd } from "@/components/schema/ServiceJsonLd";
+import { SpeakableJsonLd } from "@/components/schema/SpeakableJsonLd";
 
 export const metadata: Metadata = {
   title: "Our Services",
@@ -49,6 +50,7 @@ export default function ServicesPage() {
   return (
     <>
       <BreadcrumbJsonLd items={[{ name: "Home", href: "/" }, { name: "Services", href: "/services/" }]} />
+      <SpeakableJsonLd headline="Our Services — PLC SCADA, Flow Measurement & Inspection" />
       <ServiceJsonLd
         name="Flow Measurement & Control System Solutions"
         description="Metering control system upgrades, maintenance, and validation for custody metering systems — precision and compliance."

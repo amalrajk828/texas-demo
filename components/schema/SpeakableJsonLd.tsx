@@ -1,7 +1,9 @@
 export function SpeakableJsonLd({
   headline,
+  cssSelector,
 }: {
   headline: string;
+  cssSelector?: string[];
 }) {
   const jsonLd = {
     "@context": "https://schema.org",
@@ -9,7 +11,7 @@ export function SpeakableJsonLd({
     name: headline,
     speakable: {
       "@type": "SpeakableSpecification",
-      cssSelector: [".article-title", ".blog-content p:first-of-type"],
+      cssSelector: cssSelector || [".article-title", ".blog-content p:first-of-type"],
     },
   };
   return (

@@ -3,6 +3,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { ChevronRight, ArrowRight } from "lucide-react";
 import { BreadcrumbJsonLd } from "@/components/schema/BreadcrumbJsonLd";
+import { SpeakableJsonLd } from "@/components/schema/SpeakableJsonLd";
 
 export const metadata: Metadata = {
   title: "Certifications | ISO 9001, ISO 14001, ISO 45001 | Texas Technical Services",
@@ -72,6 +73,7 @@ export default function CertificationsPage() {
   return (
     <div className="min-h-screen bg-white text-[#333]">
       <BreadcrumbJsonLd items={[{ name: "Home", href: "/" }, { name: "Certifications", href: "/certifications/" }]} />
+      <SpeakableJsonLd headline="Certifications — ISO 9001, ISO 14001, ISO 45001 | Texas Technical Services" />
 
       {/* Hero */}
       <section className="relative bg-[#0B0D26] overflow-hidden pt-32 pb-16 border-b border-white/10">

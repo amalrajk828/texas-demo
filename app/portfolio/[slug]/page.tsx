@@ -7,6 +7,7 @@ import { products, getProductBySlug, getProduct, getAllProductSlugs, type Bullet
 import ProductInquiryForm from "@/components/ProductInquiryForm";
 import RelatedProducts from "@/components/RelatedProducts";
 import { ProductJsonLd } from "@/components/schema/ProductJsonLd";
+import { BreadcrumbJsonLd } from "@/components/schema/BreadcrumbJsonLd";
 import { SITE_URL } from "@/lib/site";
 
 type Props = { params: Promise<{ slug: string }> };
@@ -191,6 +192,7 @@ export default async function ProductPage({ params }: Props) {
         category={product.category}
         image={product.heroImage}
       />
+      <BreadcrumbJsonLd items={[{ name: "Home", href: "/" }, { name: "Products", href: "/products/" }, { name: product.name, href: `/portfolio/${product.slug}/` }]} />
       {/* ══ HERO ══════════════════════════════════════════════════ */}
       <section className="relative overflow-hidden min-h-[400px] flex items-end">
         <div className="absolute inset-0">
