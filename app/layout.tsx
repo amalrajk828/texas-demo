@@ -72,6 +72,8 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
   return (
     <html lang="en" data-scroll-behavior="smooth" className={`${plusJakarta.variable} ${inter.variable} ${jetbrainsMono.variable}`}>
       <head>
+        <meta charSet="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
         <Script
           id="gtm"
           strategy="afterInteractive"
@@ -154,6 +156,12 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         />
       </head>
       <body>
+        <a
+          href="#main-content"
+          className="sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 focus:z-[9999] focus:bg-white focus:px-4 focus:py-2 focus:rounded-lg focus:shadow-lg focus:text-[#e7212b] focus:font-semibold"
+        >
+          Skip to main content
+        </a>
         <noscript>
           <iframe
             src={`https://www.googletagmanager.com/ns.html?id=${GTM}`}
@@ -165,7 +173,9 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         <ScrollObserver />
         <SmoothScroll>
           <Header />
-          {children}
+          <main id="main-content">
+            {children}
+          </main>
           <Footer />
         </SmoothScroll>
       </body>

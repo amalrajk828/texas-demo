@@ -249,12 +249,13 @@ export default function ContactPage() {
                   <div className="grid grid-cols-1 sm:grid-cols-2 gap-5">
                     {/* Full Name */}
                     <div className="flex flex-col">
-                      <label className="text-[13px] font-semibold text-gray-500 mb-1.5">
+                      <label htmlFor="fullName" className="text-[13px] font-semibold text-gray-500 mb-1.5">
                         Full Name *
                       </label>
                       <input
                         type="text"
                         name="fullName"
+                        id="fullName"
                         value={form.fullName}
                         onChange={handleChange}
                         required
@@ -265,12 +266,13 @@ export default function ContactPage() {
 
                     {/* Email */}
                     <div className="flex flex-col">
-                      <label className="text-[13px] font-semibold text-gray-500 mb-1.5">
+                      <label htmlFor="email" className="text-[13px] font-semibold text-gray-500 mb-1.5">
                         Email Address *
                       </label>
                       <input
                         type="email"
                         name="email"
+                        id="email"
                         value={form.email}
                         onChange={handleChange}
                         required
@@ -283,12 +285,13 @@ export default function ContactPage() {
                   <div className="grid grid-cols-1 sm:grid-cols-2 gap-5">
                     {/* Phone */}
                     <div className="flex flex-col">
-                      <label className="text-[13px] font-semibold text-gray-500 mb-1.5">
+                      <label htmlFor="phone" className="text-[13px] font-semibold text-gray-500 mb-1.5">
                         Phone Number
                       </label>
                       <input
                         type="tel"
                         name="phone"
+                        id="phone"
                         value={form.phone}
                         onChange={handleChange}
                         placeholder="+1 (555) 000-0000"
@@ -298,12 +301,13 @@ export default function ContactPage() {
 
                     {/* Subject */}
                     <div className="flex flex-col">
-                      <label className="text-[13px] font-semibold text-gray-500 mb-1.5">
+                      <label htmlFor="subject" className="text-[13px] font-semibold text-gray-500 mb-1.5">
                         Subject
                       </label>
                       <input
                         type="text"
                         name="subject"
+                        id="subject"
                         value={form.subject}
                         onChange={handleChange}
                         placeholder="How can we help?"
@@ -314,11 +318,12 @@ export default function ContactPage() {
 
                   {/* Message */}
                   <div className="flex flex-col">
-                    <label className="text-[13px] font-semibold text-gray-500 mb-1.5">
+                    <label htmlFor="message" className="text-[13px] font-semibold text-gray-500 mb-1.5">
                       Message *
                     </label>
                     <textarea
                       name="message"
+                      id="message"
                       value={form.message}
                       onChange={handleChange}
                       required
