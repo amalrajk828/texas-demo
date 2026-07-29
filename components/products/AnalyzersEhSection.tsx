@@ -61,16 +61,16 @@ const COMPLIANCE: BadgeItem[] = [
 
 export default function AnalyzersEhSection() {
   return (
-    <section className="bg-[#000000] blueprint-grid blueprint-dot-grid py-16 lg:py-20">
+    <section className="bg-[#0B0D26] py-16 lg:py-20">
       <div className="max-w-7xl mx-auto px-4 sm:px-6">
         <div className="text-center mb-12">
-          <span className="text-[#e7212b] text-[10px] font-semibold tracking-[3px] uppercase">
+          <span className="text-[#e7212b] text-[11px] font-semibold tracking-[3px] uppercase">
             Authorized Agent · Endress+Hauser
           </span>
           <h2 className="mt-3 text-white text-2xl sm:text-3xl font-bold">
             Gas Flow Meter, Analyzers &amp; CEMS
           </h2>
-          <p className="text-white/55 text-[14px] mt-3 max-w-2xl mx-auto">
+          <p className="text-white/60 text-[15px] mt-3 max-w-2xl mx-auto">
             Precision measurement for process &amp; environmental compliance —
             with QAL1/MCERTS certified solutions.
           </p>
@@ -99,11 +99,11 @@ function EhCard({ category }: { category: EhCategory }) {
       initial={{ opacity: 0, y: 24 }}
       animate={inView ? { opacity: 1, y: 0 } : {}}
       transition={{ duration: 0.5, ease: [0.22, 1, 0.36, 1] }}
-      className="rounded-xl border border-white/10 bg-white/[0.03] p-6 flex flex-col"
+      className="rounded-xl border border-white/[0.12] bg-white/[0.10] backdrop-blur-xl p-6 flex flex-col shadow-[0_4px_32px_rgba(0,0,0,0.35)]"
     >
       <div className="mb-3">
-        <h3 className="text-white text-[16px] font-bold">{category.title}</h3>
-        <p className="text-white/55 text-[11px] mt-1 font-semibold tracking-wide uppercase">
+        <h3 className="text-white text-[17px] font-bold">{category.title}</h3>
+        <p className="text-white/65 text-[12px] mt-1 font-semibold tracking-wide uppercase">
           {category.sub}
         </p>
       </div>
@@ -111,17 +111,17 @@ function EhCard({ category }: { category: EhCategory }) {
         {category.models.map((m) => (
           <span
             key={m}
-            className="rounded bg-white/5 border border-white/10 px-2 py-1 text-white/80 text-[10.5px] font-mono"
+            className="rounded bg-white/[0.06] border border-white/10 px-2 py-1 text-white/80 text-[11px] font-mono"
           >
             {m}
           </span>
         ))}
       </div>
       <div className="mt-auto pt-4 border-t border-white/10">
-        <p className="text-[10px] font-semibold tracking-[2px] uppercase text-[#e7212b]">
+        <p className="text-[11px] font-semibold tracking-[2px] uppercase text-[#e7212b]">
           Key Benefit
         </p>
-        <p className="text-white/65 text-[12.5px] mt-1.5 leading-relaxed">
+        <p className="text-white/70 text-[13px] mt-1.5 leading-relaxed">
           {category.benefit}
         </p>
       </div>

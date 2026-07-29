@@ -47,7 +47,7 @@ const SLIDES = [
     tag: "Metering",
     light: false,
     ctas: [
-      { label: "Know More", href: "/service/flow-measurement/", primary: true },
+      { label: "Know More", href: "/service/flow-measurement-solutions/", primary: true },
       { label: "Our Products", href: "/products/", primary: false },
     ],
   },
@@ -155,10 +155,7 @@ export default function HeroSlider() {
     if (SLIDES[current].type === "video") { v.currentTime = 0; v.play().catch(() => {}); }
   }, [current]);
 
-  /* Auto-play thumb videos */
-  useEffect(() => {
-    thumbVideoRefs.current.forEach((v) => { if (v) v.play().catch(() => {}); });
-  }, []);
+  /* Thumb videos play on click only — no auto-play to save resources */
 
   const slide = SLIDES[current];
   const isLight = slide.light;

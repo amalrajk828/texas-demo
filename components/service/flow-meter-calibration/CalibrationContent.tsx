@@ -90,7 +90,7 @@ export default function CalibrationContent() {
             <div className="relative rounded-2xl overflow-hidden aspect-[16/11] bg-[#000000] blueprint-grid blueprint-dot-grid shadow-2xl shadow-black/15">
               <Image
                 src="/images/services/Banc-Calibr.jpg"
-                alt="Flow meter calibration facility"
+                alt="ILAC accredited flow meter calibration bench — TTS Kuwait"
                 fill
                 sizes="(max-width: 1024px) 100vw, 50vw"
                 className="object-cover"

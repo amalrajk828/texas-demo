@@ -34,6 +34,15 @@ export default function AdvancedTrainingContent() {
             Advanced Training Programs
           </h2>
         </FadeUp>
+        <FadeUp delay={0.06} className="mb-12">
+          <div className="max-w-3xl">
+            <div className="flex items-center gap-2.5 mb-4"><span className="w-5 h-px bg-[#e7212b]" /><span className="text-[#e7212b] text-[10px] font-semibold tracking-[3.5px] uppercase">What We Do</span></div>
+            <h2 className="text-3xl sm:text-[2.2rem] font-bold text-[#0B0D26] leading-[1.15] mb-5">Tailored Training for Metering and Industrial Operations</h2>
+            <p className="text-gray-500 text-[15px] leading-[1.85] mb-4">Effective training is the foundation of safe, efficient, and compliant industrial operations. TTS delivers specialised training programmes for metering system personnel, covering the principles of flow measurement, custody transfer operations, flow computer configuration, and routine system maintenance. Our courses are designed for operators, technicians, and engineers who require practical, hands-on competency.</p>
+            <p className="text-gray-500 text-[15px] leading-[1.85] mb-4">Training is available at our OEM premises with access to live metering systems, at your facility using your own equipment, or via videoconference for remote teams. Our instructors hold OEM certifications and have direct field experience across oil and gas, petrochemical, and power generation sectors — ensuring training content is technically accurate, practically relevant, and immediately applicable to your operations in Kuwait, the UAE, and the GCC.</p>
+            <p className="text-gray-500 text-[15px] leading-[1.85] mb-8">Each training programme includes pre-course assessment, practical exercises, competency verification, and post-training documentation. We maintain training records and can develop customised curricula aligned with your operational procedures, equipment inventory, and regulatory requirements — supporting workforce development and competency management across your organisation.</p>
+          </div>
+        </FadeUp>
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 mb-16">
           {CARDS.map((card, i) => (
             <FadeUp key={card.title} delay={0.08 * i}>

@@ -2,6 +2,8 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import Image from "next/image";
 import ProductCard from "@/components/ProductCard";
+import { BreadcrumbJsonLd } from "@/components/schema/BreadcrumbJsonLd";
+import { ItemListJsonLd } from "@/components/schema/ItemListJsonLd";
 import { 
   BookOpen, 
   Calendar, 
@@ -14,16 +16,48 @@ import {
 } from "lucide-react";
 
 export const metadata: Metadata = {
-  title: "Industrial Engineering Knowledge Hub | Texas Technical Services",
+  title: "Industrial Engineering Knowledge Hub",
   description: "Access expert technical guides and reference articles on Custody Transfer Metering, SCADA systems, and CEMS compliance for heavy industries.",
+  keywords: [
+    "industrial engineering blog",
+    "flow measurement",
+    "SCADA",
+    "CEMS",
+    "NDT",
+    "automation",
+    "Kuwait",
+    "UAE",
+    "oil and gas",
+  ],
   alternates: {
-    canonical: "https://texastechserv.com/blog/",
+    canonical: "/blog/",
+  },
+  robots: {
+    index: true,
+    follow: true,
+    "max-snippet": -1,
+    "max-image-preview": "large",
   },
   openGraph: {
-    title: "Industrial Engineering Knowledge Hub | Texas Technical Services",
+    title: "Industrial Engineering Knowledge Hub",
     description: "Access expert technical guides and reference articles on Custody Transfer Metering, SCADA systems, and CEMS compliance for heavy industries.",
-    url: "https://texastechserv.com/blog/",
+    url: "/blog/",
     type: "website",
+    images: [
+      {
+        url: "/og-default.png",
+        width: 1200,
+        height: 630,
+        alt: "Texas Technical Services Knowledge Hub",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    site: "@texastechserv",
+    title: "Industrial Engineering Knowledge Hub",
+    description: "Access expert technical guides and reference articles on Custody Transfer Metering, SCADA systems, and CEMS compliance for heavy industries.",
+    images: ["/og-default.png"],
   },
 };
 
@@ -47,33 +81,44 @@ interface BlogPost {
   };
 }
 
-const blogPosts: BlogPost[] = Object.entries(blogArticles).map(([slug, article]) => {
-  let icon = "Activity";
-  if (article.category === "Flow Measurement") {
-    icon = "Gauge";
-  } else if (article.category === "Industrial Automation") {
-    icon = "Cpu";
-  }
+const blogPosts: BlogPost[] = Object.entries(blogArticles)
+  .map(([slug, article]) => {
+    let icon = "Activity";
+    if (article.category === "Flow Measurement") {
+      icon = "Gauge";
+    } else if (article.category === "Industrial Automation") {
+      icon = "Cpu";
+    }
 
-  return {
-    slug,
-    title: article.title,
-    description: article.description,
-    date: article.date,
-    readTime: article.readTime,
-    category: article.category,
-    pillar: article.pillar,
-    icon,
-    image: article.image,
-    imageAlt: article.imageAlt,
-    imageCredit: article.imageCredit,
-  };
-});
+    return {
+      slug,
+      title: article.title,
+      description: article.description,
+      date: article.date,
+      readTime: article.readTime,
+      category: article.category,
+      pillar: article.pillar,
+      icon,
+      image: article.image,
+      imageAlt: article.imageAlt,
+      imageCredit: article.imageCredit,
+    };
+  })
+  .sort((a, b) => new Date(b.date).getTime() - new Date(a.date).getTime());
 
 
 export default function BlogIndexPage() {
   return (
     <div className="min-h-screen bg-white font-sans antialiased text-[#333333]">
+      <BreadcrumbJsonLd items={[{ name: "Home", href: "/" }, { name: "Blog", href: "/blog/" }]} />
+      <ItemListJsonLd
+        name="Texas Technical Services Knowledge Hub"
+        items={blogPosts.map((post) => ({
+          name: post.title,
+          url: `/blog/${post.slug}/`,
+          description: post.description,
+        }))}
+      />
       
       {/* ═══ HERO SECTION ═══════════════════════════════════════════ */}
       <section className="relative bg-[#000000] blueprint-grid blueprint-dot-grid overflow-hidden pt-32 pb-16 lg:pb-24 border-b border-white/10">
@@ -102,7 +147,7 @@ export default function BlogIndexPage() {
 
         <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6">
           {/* Breadcrumb */}
-          <nav className="flex items-center gap-1.5 text-[11px] text-white/50 mb-6">
+          <nav className="flex items-center gap-2 text-[13px] text-white/50 mb-8">
             <Link href="/" className="hover:text-white transition-colors">
               Home
             </Link>
@@ -112,7 +157,7 @@ export default function BlogIndexPage() {
 
           <div className="flex items-center gap-2 mb-4">
             <span className="w-5 h-px bg-[#e7212b]" />
-            <span className="text-[#e7212b] text-[10px] font-semibold tracking-[3px] uppercase">
+            <span className="text-[#e7212b] text-[11px] font-semibold tracking-[3px] uppercase">
               TECHNICAL RESOURCE HUB
             </span>
           </div>
@@ -143,7 +188,7 @@ export default function BlogIndexPage() {
 
           {/* Cards Grid */}
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {blogPosts.map((post) => {
+            {blogPosts.map((post, index) => {
               // We pass custom mapping for fields and custom tags/badge
               const mappedPost = {
                 name: post.title,
@@ -162,6 +207,8 @@ export default function BlogIndexPage() {
                   iconName={post.icon}
                   readMoreText="Read Article"
                   href={`/blog/${post.slug}/`}
+                  priority={index < 3}
+                  badgeClassName="bg-white/80 text-[#e7212b] border-[#e7212b]/20 backdrop-blur-md px-2.5 py-1 rounded-full border text-[9px] font-medium tracking-[1.5px] uppercase"
                 />
               );
             })}

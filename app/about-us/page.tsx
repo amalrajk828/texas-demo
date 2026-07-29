@@ -3,20 +3,26 @@ import Image from "next/image";
 import Link from "next/link";
 import { Gauge, ClipboardCheck, Cpu } from "lucide-react";
 import { BreadcrumbJsonLd } from "@/components/schema/BreadcrumbJsonLd";
-import { ReviewJsonLd, AggregateRatingJsonLd } from "@/components/schema/ReviewJsonLd";
+import {
+  ReviewJsonLd,
+  AggregateRatingJsonLd,
+} from "@/components/schema/ReviewJsonLd";
+import { OrganizationJsonLd } from "@/components/schema/OrganizationJsonLd";
+import { SpeakableJsonLd } from "@/components/schema/SpeakableJsonLd";
 import AnimatedSkillBars from "@/components/about/AnimatedSkillBars";
 import FadeSection from "@/components/motion/FadeSection";
 
 export const metadata: Metadata = {
   title: "About Us | Industrial Automation Company in Kuwait & GCC",
   description:
-    "Texas Technical Services Co. (TTS) is a leading industrial automation company in Kuwait, UAE, and Dubai — specializing in PLC SCADA integration, flow measurement, and inspection & testing for oil & gas and industrial sectors across the GCC since 2008.",
+    "Texas Technical Services — industrial automation company in Kuwait, UAE & GCC since 2008. PLC SCADA, flow measurement, and inspection services.",
   alternates: { canonical: "/about-us/" },
   openGraph: {
     title: "About Us | Industrial Automation Company in Kuwait & GCC",
     description:
-      "Leading industrial automation company in Kuwait, UAE, and Dubai — PLC SCADA, flow measurement, inspection & testing since 2008.",
+      "Industrial automation company in Kuwait, UAE & GCC since 2008 — PLC SCADA, flow measurement, inspection & testing.",
     url: "/about-us/",
+    images: [{ url: "/og-default.png", width: 1200, height: 630 }],
   },
   keywords: [
     "industrial automation companies in Kuwait",
@@ -41,7 +47,8 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "About Us | Industrial Automation Company in Kuwait & GCC",
     description:
-      "Leading industrial automation company in Kuwait, UAE, and Dubai — PLC SCADA, flow measurement, inspection & testing since 2008.",
+      "Industrial automation company in Kuwait, UAE & GCC since 2008 — PLC SCADA, flow measurement, inspection & testing.",
+    images: ["/og-default.png"],
   },
 };
 
@@ -206,39 +213,96 @@ const certifications = [
 
 export default function AboutPage() {
   return (
-    <div className="relative overflow-hidden" style={{ background: "linear-gradient(135deg, #f5f7fa 0%, #e2e7ee 45%, #c9d2dc 100%)" }}>
-      <BreadcrumbJsonLd items={[{ name: "Home", href: "/" }, { name: "About Us", href: "/about-us/" }]} />
+    <div
+      className="relative overflow-hidden"
+      style={{
+        background:
+          "linear-gradient(135deg, #f5f7fa 0%, #e2e7ee 45%, #c9d2dc 100%)",
+      }}
+    >
+      <BreadcrumbJsonLd
+        items={[
+          { name: "Home", href: "/" },
+          { name: "About Us", href: "/about-us/" },
+        ]}
+      />
+      <SpeakableJsonLd headline="About Texas Technical Services — Industrial Automation Company in Kuwait & GCC" />
       <ReviewJsonLd
         items={[
-          { author: "Peter John", reviewBody: testimonials[0].text, ratingValue: 5 },
-          { author: "Kevin Rogers", reviewBody: testimonials[1].text, ratingValue: 5 },
-          { author: "Jason Bright", reviewBody: testimonials[2].text, ratingValue: 5 },
+          {
+            author: "Peter John",
+            reviewBody: testimonials[0].text,
+            ratingValue: 5,
+          },
+          {
+            author: "Kevin Rogers",
+            reviewBody: testimonials[1].text,
+            ratingValue: 5,
+          },
+          {
+            author: "Jason Bright",
+            reviewBody: testimonials[2].text,
+            ratingValue: 5,
+          },
         ]}
       />
       <AggregateRatingJsonLd ratingValue={4.8} reviewCount={49} />
+      <OrganizationJsonLd
+        logo="/logo.svg"
+        telephone={[
+          "+965 97243755",
+          "+965 66347267",
+          "+971 569553747",
+          "+971 567793973",
+        ]}
+        email="sales@texastechserv.com"
+        sameAs={[
+          "https://www.linkedin.com/company/texas-technical-service-company",
+          "https://www.facebook.com/texastechserv",
+          "https://www.instagram.com/texas_technical_services",
+          "https://x.com/texastechserv",
+        ]}
+        address={{
+          streetAddress:
+            "Munira Tower Office No. 30, 9th Floor – Building No.6702, Block 7 – Makkah Street",
+          addressLocality: "Fahaheel",
+          addressCountry: "KW",
+        }}
+      />
       {/* Background depth blobs for frosted glass refraction */}
       <div
         className="absolute top-[-2%] left-[-5%] w-[650px] h-[650px] rounded-full pointer-events-none blur-[90px] opacity-90"
-        style={{ background: "radial-gradient(circle, rgba(255,255,255,0.95) 0%, rgba(235,240,248,0.55) 45%, transparent 70%)" }}
+        style={{
+          background:
+            "radial-gradient(circle, rgba(255,255,255,0.95) 0%, rgba(235,240,248,0.55) 45%, transparent 70%)",
+        }}
       />
       <div
         className="absolute top-[18%] right-[-5%] w-[600px] h-[600px] rounded-full pointer-events-none blur-[100px] opacity-75"
-        style={{ background: "radial-gradient(circle, rgba(165,180,200,0.55) 0%, rgba(140,158,180,0.25) 50%, transparent 70%)" }}
+        style={{
+          background:
+            "radial-gradient(circle, rgba(165,180,200,0.55) 0%, rgba(140,158,180,0.25) 50%, transparent 70%)",
+        }}
       />
       <div
         className="absolute top-[48%] left-[-8%] w-[650px] h-[650px] rounded-full pointer-events-none blur-[90px] opacity-80"
-        style={{ background: "radial-gradient(circle, rgba(255,255,255,0.9) 0%, rgba(230,238,248,0.45) 50%, transparent 70%)" }}
+        style={{
+          background:
+            "radial-gradient(circle, rgba(255,255,255,0.9) 0%, rgba(230,238,248,0.45) 50%, transparent 70%)",
+        }}
       />
       <div
         className="absolute top-[70%] right-[-5%] w-[600px] h-[600px] rounded-full pointer-events-none blur-[100px] opacity-70"
-        style={{ background: "radial-gradient(circle, rgba(150,168,190,0.5) 0%, rgba(130,148,172,0.2) 55%, transparent 70%)" }}
+        style={{
+          background:
+            "radial-gradient(circle, rgba(150,168,190,0.5) 0%, rgba(130,148,172,0.2) 55%, transparent 70%)",
+        }}
       />
 
       {/* ═══ COMMITMENT ═══════════════════════════════════════════ */}
       <section className="relative z-10 bg-transparent pt-[108px] lg:pt-[116px] pb-16 lg:pb-24">
         <div className="max-w-7xl mx-auto px-4 sm:px-6">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-16 items-center">
-
             {/* Left — stacked images with "2008 ESTD" overlay */}
             <FadeSection dir="left" delay={0.05}>
               <div className="relative">
@@ -306,8 +370,8 @@ export default function AboutPage() {
                   Committed to high-quality products and services, we focus on
                   exceeding expectations and building lasting partnerships
                   through trust and reliability. Our integrated management
-                  system is certified to ISO 9001:2015, ISO 14001:2015, and
-                  ISO 45001:2018 by a UASL accredited certification body.
+                  system is certified to ISO 9001:2015, ISO 14001:2015, and ISO
+                  45001:2018 by a UASL accredited certification body.
                 </p>
                 <p>
                   We deliver comprehensive end-to-end solutions through our
@@ -331,7 +395,6 @@ export default function AboutPage() {
                 </Link>
               </div>
             </FadeSection>
-
           </div>
         </div>
       </section>
@@ -347,7 +410,9 @@ export default function AboutPage() {
               Our Partners, Our Strength.
             </h2>
             <p className="mt-3 text-gray-500 text-[14px] max-w-2xl mx-auto">
-              16+ approved global vendors delivering world-class flow measurement, automation, and instrumentation solutions across Kuwait, UAE, and the GCC.
+              16+ approved global vendors delivering world-class flow
+              measurement, automation, and instrumentation solutions across
+              Kuwait, UAE, and the GCC.
             </p>
           </div>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-x-8 gap-y-12">
@@ -382,7 +447,10 @@ export default function AboutPage() {
         {/* Controlled subtle ambient glow in top-left corner */}
         <div
           className="absolute -top-12 -left-12 w-[320px] h-[320px] rounded-full pointer-events-none blur-[50px] opacity-50"
-          style={{ background: "radial-gradient(circle, rgba(255,255,255,0.09) 0%, rgba(255,255,255,0.01) 50%, transparent 70%)" }}
+          style={{
+            background:
+              "radial-gradient(circle, rgba(255,255,255,0.09) 0%, rgba(255,255,255,0.01) 50%, transparent 70%)",
+          }}
         />
 
         <div className="relative z-10 max-w-5xl mx-auto px-4 sm:px-6">
@@ -397,8 +465,8 @@ export default function AboutPage() {
           <blockquote className="text-center text-gray-300 text-[18px] lg:text-[20px] leading-[1.7] italic font-light max-w-4xl mx-auto">
             &ldquo;We deliver innovative solutions that exceed customer
             expectations, empowering industries through expertise in flow
-            measurement, control systems, and automation, driving efficiency
-            and sustainable growth.&rdquo;
+            measurement, control systems, and automation, driving efficiency and
+            sustainable growth.&rdquo;
           </blockquote>
           <div className="mt-10 grid grid-cols-2 sm:grid-cols-4 gap-4 max-w-3xl mx-auto">
             {[
@@ -421,7 +489,8 @@ export default function AboutPage() {
                 <div
                   className="absolute inset-0 pointer-events-none"
                   style={{
-                    background: "linear-gradient(180deg, rgba(255, 255, 255, 0.08) 0%, transparent 50%)",
+                    background:
+                      "linear-gradient(180deg, rgba(255, 255, 255, 0.08) 0%, transparent 50%)",
                   }}
                 />
                 <p className="relative z-10 text-[1.8rem] font-black text-[#e7212b] leading-none">
@@ -493,7 +562,6 @@ export default function AboutPage() {
       <section className="relative z-10 py-16 lg:py-24 bg-transparent">
         <div className="max-w-7xl mx-auto px-4 sm:px-6">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center">
-
             {/* Left — text + skill bars */}
             <FadeSection delay={0}>
               <span className="text-[11px] font-bold tracking-[0.28em] uppercase text-[#e7212b]">
@@ -537,7 +605,6 @@ export default function AboutPage() {
                 </div>
               </div>
             </FadeSection>
-
           </div>
         </div>
       </section>
@@ -595,9 +662,7 @@ export default function AboutPage() {
                     />
                   </div>
                   <div>
-                    <p className="text-white font-semibold text-sm">
-                      {t.name}
-                    </p>
+                    <p className="text-white font-semibold text-sm">{t.name}</p>
                     <p className="text-gray-400 text-xs mt-0.5">{t.role}</p>
                   </div>
                 </div>
@@ -606,7 +671,6 @@ export default function AboutPage() {
           </div>
         </div>
       </section>
-
     </div>
   );
 }

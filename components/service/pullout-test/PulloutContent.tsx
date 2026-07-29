@@ -34,6 +34,15 @@ export default function PulloutContent() {
             Pullout Test Applications
           </h2>
         </FadeUp>
+        <FadeUp delay={0.06} className="mb-12">
+          <div className="max-w-3xl">
+            <div className="flex items-center gap-2.5 mb-4"><span className="w-5 h-px bg-[#e7212b]" /><span className="text-[#e7212b] text-[10px] font-semibold tracking-[3.5px] uppercase">What We Do</span></div>
+            <h2 className="text-3xl sm:text-[2.2rem] font-bold text-[#0B0D26] leading-[1.15] mb-5">Anchor and Bolt Pullout Testing for Structural Verification</h2>
+            <p className="text-gray-500 text-[15px] leading-[1.85] mb-4">Pullout testing is a direct method for verifying the load-bearing capacity of fixed anchors, bolts, and rebar embedded in concrete, masonry, and other substrates. The test applies a controlled tensile load to the anchor until the required proof load is achieved or failure occurs — providing definitive evidence of installation quality and design compliance.</p>
+            <p className="text-gray-500 text-[15px] leading-[1.85] mb-8">TTS performs pullout tests in accordance with ETAG 001, ACI 318, and BS 8539 — covering post-installed mechanical anchors, chemical anchors, and cast-in-place fixings. Our calibrated hydraulic test equipment and certified technicians deliver load verification for structural steel connections, curtain wall brackets, safety-critical fall arrest systems, and heavy equipment foundations.</p>
+            <p className="text-gray-500 text-[15px] leading-[1.85] mb-8">Each pullout test is performed with calibrated equipment traceable to national standards, and results are documented with load-displacement curves, failure modes, and pass/fail determinations against the specified acceptance criteria. We also provide anchor selection advice and installation supervision to ensure fixings achieve their design capacity in the actual site conditions.</p>
+          </div>
+        </FadeUp>
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 mb-16">
           {CARDS.map((card, i) => (
             <FadeUp key={card.title} delay={0.08 * i}>

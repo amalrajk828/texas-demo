@@ -1,4 +1,21 @@
+"use client";
 import Link from "next/link";
+import { motion } from "framer-motion";
+import { ArrowRight, Layers, Shield, Globe, Wrench, Clock } from "lucide-react";
+
+const HIGHLIGHTS = [
+  { icon: Shield, text: "Quality Certified" },
+  { icon: Globe, text: "Global Supply" },
+  { icon: Wrench, text: "Custom Solutions" },
+  { icon: Clock, text: "24/7 Support" },
+];
+
+const STATS = [
+  { num: "65+", label: "Products" },
+  { num: "8", label: "Industries" },
+  { num: "18+", label: "Years" },
+  { num: "200+", label: "Clients" },
+];
 
 export default function PortfolioGroupHero({
   breadcrumb,
@@ -16,48 +33,147 @@ export default function PortfolioGroupHero({
   description: string;
 }) {
   return (
-    <section className="relative bg-[#000000] blueprint-grid blueprint-dot-grid overflow-hidden pt-32 pb-20">
-      <div
-        className="absolute inset-0 pointer-events-none"
-        style={{
-          backgroundImage:
-            "repeating-linear-gradient(0deg,transparent,transparent 39px,rgba(255,255,255,0.03) 40px),repeating-linear-gradient(90deg,transparent,transparent 39px,rgba(255,255,255,0.03) 40px)",
-        }}
-      />
-      <div
-        className="absolute top-0 right-0 w-[700px] h-[500px] pointer-events-none"
-        style={{
-          background:
-            "radial-gradient(ellipse at top right, rgba(231,33,43,0.14) 0%, transparent 65%)",
-        }}
-      />
-      <div className="relative max-w-7xl mx-auto px-4 sm:px-6">
-        <nav className="flex items-center gap-2 mb-8 text-[12px] text-white/30">
-          <Link href="/" className="hover:text-white/60 transition-colors">Home</Link>
-          <span>/</span>
-          {breadcrumbHref ? (
-            <Link href={breadcrumbHref} className="hover:text-white/60 transition-colors">
-              {breadcrumb}
-            </Link>
-          ) : (
-            <span className="text-white/60">{breadcrumb}</span>
-          )}
-        </nav>
-        <div className="max-w-3xl">
-          <div className="flex items-center gap-2.5 mb-5">
-            <span className="w-5 h-px bg-[#e7212b]" />
-            <span className="text-[#e7212b] text-[11px] font-semibold tracking-[3px] uppercase">
-              {eyebrow}
-            </span>
+    <section className="relative bg-[#0B0D26] pt-28 pb-0 overflow-hidden">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6">
+        {/* Two-column layout */}
+        <div className="flex flex-col lg:flex-row lg:items-start lg:gap-12">
+          {/* Left: content */}
+          <div className="flex-1 min-w-0">
+            {/* Breadcrumb */}
+            <motion.nav
+              initial={{ opacity: 0, y: 8 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.4, ease: [0.22, 1, 0.36, 1] }}
+              className="flex items-center gap-2 mb-8 text-[11px] text-white/30"
+            >
+              <Link href="/" className="hover:text-white/60 transition-colors">
+                Home
+              </Link>
+              <span>/</span>
+              {breadcrumbHref ? (
+                <Link
+                  href={breadcrumbHref}
+                  className="hover:text-white/60 transition-colors"
+                >
+                  {breadcrumb}
+                </Link>
+              ) : (
+                <span className="text-white/60">{breadcrumb}</span>
+              )}
+            </motion.nav>
+
+            {/* Pill eyebrow */}
+            <motion.div
+              initial={{ opacity: 0, y: 10 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.4, delay: 0.04, ease: [0.22, 1, 0.36, 1] }}
+              className="flex items-center gap-2 mb-5"
+            >
+              <span className="w-5 h-px bg-[#e7212b]" />
+              <span className="text-[#e7212b] text-[10px] font-semibold tracking-[2.5px] uppercase">
+                {eyebrow}
+              </span>
+            </motion.div>
+
+            {/* Title */}
+            <motion.h1
+              initial={{ opacity: 0, y: 14 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.5, delay: 0.08, ease: [0.22, 1, 0.36, 1] }}
+              className="text-4xl sm:text-5xl lg:text-[3.5rem] font-bold text-white leading-[1.1] mb-5"
+            >
+              {titleHighlight}
+              <em className="not-italic text-[#e7212b]">{titleSuffix}</em>
+            </motion.h1>
+
+            {/* Description */}
+            <motion.p
+              initial={{ opacity: 0, y: 10 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.45, delay: 0.12, ease: [0.22, 1, 0.36, 1] }}
+              className="text-white/50 text-base sm:text-[17px] leading-relaxed mb-3 max-w-xl"
+            >
+              {description}
+            </motion.p>
+
+            {/* Extended description */}
+            <motion.p
+              initial={{ opacity: 0, y: 10 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.45, delay: 0.16, ease: [0.22, 1, 0.36, 1] }}
+              className="text-white/35 text-sm sm:text-[15px] leading-relaxed mb-8 max-w-xl"
+            >
+              From industrial sensors and flow meters to PLCs, automation systems, and
+              control room solutions — we partner with world-class manufacturers to deliver
+              reliable, certified equipment across the Middle East and beyond.
+            </motion.p>
+
+            {/* CTAs */}
+            <motion.div
+              initial={{ opacity: 0, y: 10 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.45, delay: 0.2, ease: [0.22, 1, 0.36, 1] }}
+              className="flex flex-wrap gap-3"
+            >
+              <Link
+                href="/contacts/"
+                className="inline-flex items-center gap-2 bg-[#e7212b] hover:bg-[#aa0b1b] text-white font-semibold px-7 py-3.5 rounded-lg transition-colors duration-200 text-[14px] shadow-lg shadow-[#e7212b]/20"
+              >
+                Get a Quote
+                <ArrowRight className="w-4 h-4" />
+              </Link>
+              <a
+                href="#portfolio-grid"
+                className="inline-flex items-center gap-2 border border-white/15 hover:border-white/35 text-white/55 hover:text-white px-7 py-3.5 rounded-lg transition-all duration-200 text-[14px]"
+              >
+                <Layers className="w-4 h-4" />
+                View All Projects
+              </a>
+            </motion.div>
           </div>
-          <h1 className="text-4xl sm:text-5xl lg:text-[3.4rem] font-bold text-white leading-[1.12] mb-6">
-            {titleHighlight}
-            <em className="not-italic text-[#e7212b]">{titleSuffix}</em>
-          </h1>
-          <p className="text-white/50 text-base sm:text-[17px] leading-relaxed max-w-xl">
-            {description}
-          </p>
+
+          {/* Right: mosaic stats */}
+          <motion.div
+            initial={{ opacity: 0, y: 14 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.5, delay: 0.14, ease: [0.22, 1, 0.36, 1] }}
+            className="hidden lg:block shrink-0 w-[320px] mt-8 lg:mt-16"
+          >
+            <div className="grid grid-cols-2 gap-4">
+              {STATS.map((s) => (
+                <div
+                  key={s.label}
+                  className="bg-white/[0.12] backdrop-blur-xl border border-white/[0.15] rounded-2xl p-6 text-center"
+                >
+                  <p className="text-3xl font-bold text-[#e7212b] leading-none">
+                    {s.num}
+                  </p>
+                  <p className="text-[12px] text-white/50 tracking-wide uppercase mt-2">
+                    {s.label}
+                  </p>
+                </div>
+              ))}
+            </div>
+          </motion.div>
         </div>
+
+        {/* Feature highlight cards — full width */}
+        <motion.div
+          initial={{ opacity: 0, y: 12 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.5, delay: 0.26, ease: [0.22, 1, 0.36, 1] }}
+          className="grid grid-cols-2 sm:grid-cols-4 gap-4 mt-12 pb-12"
+        >
+          {HIGHLIGHTS.map((h) => (
+            <div
+              key={h.text}
+              className="flex items-center gap-3 bg-white/[0.08] border border-white/[0.12] backdrop-blur-sm rounded-xl px-4 py-3"
+            >
+              <h.icon className="w-5 h-5 text-[#e7212b] shrink-0" strokeWidth={1.5} />
+              <span className="text-white/70 text-[13px] leading-snug">{h.text}</span>
+            </div>
+          ))}
+        </motion.div>
       </div>
     </section>
   );

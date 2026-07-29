@@ -90,7 +90,7 @@ export default function FlowComputerContent() {
             <div className="relative rounded-2xl overflow-hidden aspect-[16/11] bg-[#000000] blueprint-grid blueprint-dot-grid shadow-2xl shadow-black/15">
               <Image
                 src="/images/services/flow-computer.png"
-                alt="Flow computer configuration"
+                alt="Flow computer configuration for custody transfer metering — Texas Technical Services"
                 fill
                 sizes="(max-width: 1024px) 100vw, 50vw"
                 className="object-cover"

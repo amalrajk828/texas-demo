@@ -11,14 +11,14 @@ export const metadata: Metadata = {
     canonical: "/services_group/services/inspection-testing/",
   },
   openGraph: {
-    title: "Inspection & Testing Services | Texas Technical Services",
+    title: "Inspection & Testing Services",
     description:
       "Industrial inspection and testing company in Kuwait — NDT, QA consultancy, and ISO-certified quality management across the GCC.",
     url: "/services_group/services/inspection-testing/",
   },
   twitter: {
     card: "summary_large_image",
-    title: "Inspection & Testing Services | Texas Technical Services",
+    title: "Inspection & Testing Services",
     description:
       "Industrial inspection and testing company in Kuwait — NDT, ISO 9001/14001/45001 certified.",
   },

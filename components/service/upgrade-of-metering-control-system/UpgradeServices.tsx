@@ -175,7 +175,7 @@ export default function UpgradeServices() {
           <div className="relative rounded-2xl overflow-hidden aspect-[21/7] bg-[#12163A]">
             <Image
               src="/images/services/metering-upgrade.png"
-              alt="Upgrade of Metering Control System"
+              alt="Upgrade of metering control system for custody transfer — TTS Kuwait"
               fill
               sizes="100vw"
               className="object-cover"

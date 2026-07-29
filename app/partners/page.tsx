@@ -3,216 +3,39 @@ import Image from "next/image";
 import Link from "next/link";
 import { ChevronRight } from "lucide-react";
 import { BreadcrumbJsonLd } from "@/components/schema/BreadcrumbJsonLd";
+import { ServiceJsonLd } from "@/components/schema/ServiceJsonLd";
+import { PARTNERS, STRATEGIC_PARTNERS } from "@/lib/partners";
 
 export const metadata: Metadata = {
-  title: "Global Network | 16+ Authorized Partners & Vendors",
+  title: "Global Network | 15+ Authorized Partners & Vendors",
   description:
-    "Texas Technical Services Co. is the authorized partner and distributor for 16+ world-class OEMs in Kuwait, UAE, and the GCC — covering flow measurement, industrial automation, analyzers, sensors, and SCADA.",
+    "Texas Technical Services Co. is the authorized partner and distributor for 15+ world-class OEMs in Kuwait, UAE, and the GCC — covering flow measurement, industrial automation, analyzers, sensors, and SCADA.",
   alternates: { canonical: "/partners/" },
   openGraph: {
     title: "Global Network | Texas Technical Services",
     description:
-      "16+ authorized partnerships and dealerships — Mitsubishi Electric, Endress+Hauser, SICK, Faure Herman, KEM Küppers, HMS Networks, NOVUS, OMNI, and more.",
+      "15+ authorized partnerships and dealerships — Endress+Hauser, SICK, Faure Herman, KEM Küppers, HMS Networks, NOVUS, OMNI, and more.",
     url: "/partners/",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Global Network | Texas Technical Services",
+    description:
+      "15+ authorized partnerships — Endress+Hauser, SICK, Faure Herman, KEM Küppers, HMS Networks, NOVUS, OMNI, and more OEMs across Kuwait and the GCC.",
   },
   keywords: [
     "authorized partners Kuwait",
     "industrial OEM distributor Kuwait",
-    "Mitsubishi Electric distributor Kuwait",
     "Endress Hauser distributor Kuwait",
     "Faure Herman distributor Kuwait",
     "KEM Kuppers distributor",
     "HMS Networks Kuwait",
+    "SICK sensors Kuwait",
+    "OMNI flow computer Kuwait",
     "global network industrial automation",
     "Texas Technical Services partners",
   ],
 };
-
-const PARTNERS = [
-  {
-    logo: "/about/mitsubishi-electric.png",
-    name: "Mitsubishi Electric",
-    country: "JPN",
-    relationship: "System Integrator & Distributor",
-    product: "Automation Solutions",
-    description:
-      "Authorized system integrator & distributor for the complete Mitsubishi automation portfolio — MELSEC PLCs, GOT HMIs, AC servos, and ICONICS SCADA.",
-    href: "/mitsubishi-electric-factory-automation/",
-  },
-  {
-    logo: "/about/endress-hauser.jpg",
-    name: "Endress+Hauser",
-    country: "SUI",
-    relationship: "Distributor & Service",
-    product: "Process Instrumentation",
-    description:
-      "People for Process Automation — ultrasonic gas meters (FLOWSIC series), CEMS, gas & dust analyzers with QAL1 & MCERTS certified solutions for harsh environments.",
-    href: "/products/analyzers/cems/",
-  },
-  {
-    logo: "/about/sick.jpg",
-    name: "SICK AG",
-    country: "GER",
-    relationship: "Distributor",
-    product: "Sensors",
-    description:
-      "One of the world's leading producers of sensors and sensor solutions for industrial automation — radar, photoelectric, safety, RFID, and encoder technology.",
-    href: "/products/sensors/",
-  },
-  {
-    logo: "/about/meter-engineers.jpg",
-    name: "Meter Engineers",
-    country: "USA",
-    relationship: "Distributor",
-    product: "Provers & Accessories",
-    description:
-      "High-accuracy bidirectional & unidirectional sphere-type provers, small-volume piston provers (MagnaProve), mobile prover systems, and on-site calibration services.",
-    href: "/service/flow-meter-calibration/",
-  },
-  {
-    logo: "/about/faure-herman.jpg",
-    name: "Faure Herman",
-    country: "FRA",
-    relationship: "Distributor",
-    product: "Helical Turbine, Ultrasonic & Clamp-On Flow Meters",
-    description:
-      "100+ years in flow measurement — Heliflu helical turbine series, FH SONIC ultrasonic flow meters, and FH Lab ISO 17025 accredited calibration services.",
-    href: "/products/flow-meters/liquid-flow-meters/",
-  },
-  {
-    logo: "/about/omni.png",
-    name: "OMNI Flow Computer",
-    country: "USA",
-    relationship: "Distributor & Integrator",
-    product: "Flow Computer",
-    description:
-      "Leading brand in oil and gas flow computers with proven reliability for custody transfer, allocation measurement, and complex fiscal metering applications.",
-    href: "/products/custody-metering-solutions/",
-  },
-  {
-    logo: "/about/kem-kuppers.png",
-    name: "KEM Küppers",
-    country: "GER",
-    relationship: "Distributor",
-    product: "Precision Flow Measurement",
-    description:
-      "German precision engineering — TRICOR Coriolis, SRZ helical, ZHM gear, HM F turbine, variable area, and VFF chemical injection flow meters.",
-    href: "/products/flow-meters/",
-  },
-  {
-    logo: "/about/tek-trol.jpg",
-    name: "Tek-Trol",
-    country: "USA",
-    relationship: "Distributor",
-    product: "Process Control Instruments",
-    description:
-      "Comprehensive process instrumentation & control solutions — Tek-Bar pressure/temperature/level transmitters, Tek-Vor vortex, Tek-Cor Coriolis, and MPFM multi-phase flow meters.",
-    href: "/products/flow-meters/",
-  },
-  {
-    logo: "/about/rockwin.jpg",
-    name: "Rockwin Flowmeter India",
-    country: "IND",
-    relationship: "Distribution & Service",
-    product: "Metering Skid & Flow Meters",
-    description:
-      "ISO 9001:2015 certified engineered flow metering skid systems — custody transfer skids, truck loading skids, LPG bottling skids, and ASME-code fabrication.",
-    href: "/products/custody-metering-solutions/",
-  },
-  {
-    logo: "/about/kurz-instruments.jpg",
-    name: "Kurz Instruments",
-    country: "USA",
-    relationship: "Distributor",
-    product: "Thermal Mass Flow Meters",
-    description:
-      "USA manufacturer of thermal mass flow meters for precise direct gas mass flow measurement without compensation — for process gas monitoring and emissions.",
-    href: "/products/analyzers/gas-analyzers/",
-  },
-  {
-    logo: "/about/hms-networks.jpg",
-    name: "HMS Networks",
-    country: "SWE",
-    relationship: "Distributor",
-    product: "Industrial Comms & IIoT",
-    description:
-      "Hardware meets software — Anybus gateways, Ewon remote solutions (Talk2M, Cosy+ VPN), Intesis building automation, IXXAT CAN/safety, and Red Lion networking.",
-    href: "/service/industrial-automation/",
-  },
-  {
-    logo: "/about/pyrotech.jpg",
-    name: "Pyrotech Workspace",
-    country: "IND",
-    relationship: "Distributor & Integrator",
-    product: "Operator Console & Turnkey Control Room",
-    description:
-      "Pioneer in turnkey control room solutions and ergonomic command centre consoles — complemented by PWS access flooring systems and PWS workstations.",
-    href: "/products/control-room-interior-and-console/",
-  },
-  {
-    logo: "/about/autocontrol.jpg",
-    name: "Autocontrol",
-    country: "IND",
-    relationship: "Distributor",
-    product: "Instrumentation & Valves",
-    description:
-      "Indian instrumentation and valves specialist — sensing, measuring, controlling, and automation solutions for process industries.",
-    href: "/service/industrial-automation/",
-  },
-  {
-    logo: "/about/euromag.jpg",
-    name: "Euromag International",
-    country: "ITA",
-    relationship: "Distributor",
-    product: "Electromagnetic Flow Meters",
-    description:
-      "Electromagnetic flow meters for conductive liquids — robust, accurate measurement for water, wastewater, and process industries with long-term stability.",
-    href: "/products/flow-meters/liquid-flow-meters/",
-  },
-  {
-    logo: "/about/texaflow.svg",
-    name: "Texaflow",
-    country: "UAE",
-    relationship: "Proprietary Solution",
-    product: "Integrated Custody Transfer Control System",
-    description:
-      "Our proprietary custody metering integrated control system — advanced fiscal metering & SCADA solution for oil & gas terminals, refineries, and pipeline stations.",
-    href: "/solutions/texaflow/",
-  },
-  {
-    logo: "/about/novus-automation.jpg",
-    name: "NOVUS Automation",
-    country: "BRA",
-    relationship: "Distributor",
-    product: "BMS & Industrial Automation",
-    description:
-      "We Measure, We Control, We Record — data loggers, smart PID controllers, wireless sensing (AirGate), IoT gateways, and BMS/HVAC solutions.",
-    href: "/service/industrial-automation/",
-  },
-];
-
-const STRATEGIC_TECHNOLOGY = [
-  {
-    logo: "/about/space-ai.jpg",
-    name: "Space AI",
-    country: "UAE",
-    relationship: "Strategic Partner",
-    product: "Industrial AI & Machine Learning",
-    description:
-      "Next-generation artificial intelligence for industry — predictive maintenance, process optimization with virtual metrology, smart monitoring with ESG & carbon tracking.",
-    href: "/solutions/space-ai/",
-  },
-  {
-    logo: "/about/pws-floors.jpg",
-    name: "PWS Floor Solutions",
-    country: "IND",
-    relationship: "Authorized Dealer",
-    product: "Raised Access Flooring",
-    description:
-      "India's most trusted raised access floor manufacturer — high-density calcium sulphate panels for data centers, control rooms, NOCs, and clean rooms with GREENGUARD Gold certification.",
-    href: "/products/access-flooring/",
-  },
-];
 
 export default function PartnersPage() {
   return (
@@ -222,6 +45,13 @@ export default function PartnersPage() {
           { name: "Home", href: "/" },
           { name: "Global Network", href: "/partners/" },
         ]}
+      />
+      <ServiceJsonLd
+        name="Global Network — Authorized Partnerships & Distribution"
+        description="Texas Technical Services is the authorized partner and distributor for 15+ world-class OEMs across Kuwait, UAE, and the GCC — covering flow measurement, industrial automation, analyzers, sensors, and SCADA."
+        url="/partners/"
+        serviceType="OEM Partnership & Distribution"
+        areaServed={["Kuwait", "United Arab Emirates", "Saudi Arabia", "Bahrain", "Qatar", "Oman"]}
       />
 
       {/* ── HERO ─────────────────────────────────────────────── */}
@@ -310,11 +140,11 @@ export default function PartnersPage() {
               Worldwide Partnerships
             </span>
             <h2 className="mt-3 text-3xl lg:text-4xl font-bold text-[#181D4E]">
-              Our 16+ Authorized Partners
+              Our 15+ Authorized Partners
             </h2>
             <p className="mt-3 text-gray-500 text-[14px] max-w-2xl mx-auto">
               From precision flow meters to industrial AI — we connect the
-              world&apos;s leading OEMs to your operations.
+              world&apos;s leading OEMs to your operations across Kuwait and the GCC.
             </p>
           </div>
 
@@ -322,7 +152,7 @@ export default function PartnersPage() {
             {PARTNERS.map((p) => (
               <Link
                 key={p.name}
-                href={p.href}
+                href={p.href.startsWith("/solutions/") ? p.href : `/partners/${p.slug}/`}
                 className="group relative flex flex-col gap-5 rounded-xl border border-gray-100 bg-white p-7 transition-all duration-300 hover:border-[#e7212b]/30 hover:shadow-xl hover:shadow-[#e7212b]/5 hover:-translate-y-1"
               >
                 <div className="flex flex-col gap-3">
@@ -377,16 +207,16 @@ export default function PartnersPage() {
               Our Proprietary &amp; Strategic Technology Solutions
             </h2>
             <p className="mt-3 text-gray-500 text-[14px] max-w-2xl mx-auto">
-              Beyond distribution — our own branded solutions and strategic
-              partnerships in AI and access flooring.
+              Beyond distribution — our own proprietary solutions and strategic
+              partnerships in custody metering, AI, and access flooring.
             </p>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-4xl mx-auto">
-            {STRATEGIC_TECHNOLOGY.map((p) => (
+            {STRATEGIC_PARTNERS.map((p) => (
               <Link
                 key={p.name}
-                href={p.href}
+                href={p.href.startsWith("/solutions/") ? p.href : `/partners/${p.slug}/`}
                 className="group relative flex flex-col gap-4 rounded-xl border-2 border-[#e7212b]/20 bg-white p-7 transition-all duration-300 hover:border-[#e7212b]/50 hover:shadow-2xl hover:shadow-[#e7212b]/10 hover:-translate-y-1"
               >
                 <div className="flex flex-col gap-3">

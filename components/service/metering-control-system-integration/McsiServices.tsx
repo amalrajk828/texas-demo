@@ -169,7 +169,7 @@ export default function McsiServices() {
           <div className="relative rounded-2xl overflow-hidden aspect-[21/7] bg-[#12163A]">
             <Image
               src="/images/services/metering-control-integration.png"
-              alt="Metering control system integration"
+              alt="Metering control system integration for oil and gas facility — Texas Technical Services"
               fill
               sizes="100vw"
               className="object-cover"

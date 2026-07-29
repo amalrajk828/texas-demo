@@ -1,23 +1,27 @@
 import type { Metadata } from "next";
 import { BreadcrumbJsonLd } from "@/components/schema/BreadcrumbJsonLd";
+import { ContactPageJsonLd } from "@/components/schema/ContactPageJsonLd";
+import { SpeakableJsonLd } from "@/components/schema/SpeakableJsonLd";
 import ContactPageClient from "@/components/ContactPage";
 
 export const metadata: Metadata = {
-  title: "Contact Us | Texas Technical Services — Kuwait & Dubai",
+  title: "Contact Us — Kuwait & Dubai",
   description:
-    "Get in touch with Texas Technical Services. Contact our offices in Kuwait (+965 66347267) and Dubai (+971 569553747, +971 567793973) for flow measurement, industrial automation, and inspection services across the GCC.",
+    "Contact Texas Technical Services in Kuwait and Dubai for flow measurement, industrial automation, and inspection services across the GCC.",
   alternates: { canonical: "/contacts/" },
   openGraph: {
-    title: "Contact Us | Texas Technical Services",
+    title: "Contact Us",
     description:
       "Reach out to Texas Technical Services in Kuwait and Dubai. Flow measurement, industrial automation, and inspection solutions for the GCC.",
     url: "/contacts/",
+    images: [{ url: "/og-default.png", width: 1200, height: 630 }],
   },
   twitter: {
     card: "summary_large_image",
-    title: "Contact Us | Texas Technical Services",
+    title: "Contact Us",
     description:
       "Contact Texas Technical Services in Kuwait and Dubai for industrial solutions across the GCC.",
+    images: ["/og-default.png"],
   },
   keywords: [
     "contact Texas Technical Services",
@@ -41,6 +45,24 @@ export default function ContactPage() {
           { name: "Contact Us", href: "/contacts/" },
         ]}
       />
+      <ContactPageJsonLd
+        url="/contacts/"
+        telephone={["+96566347267", "+971569553747", "+971567793973"]}
+        email="sales@texastechserv.com"
+        addresses={[
+          {
+            streetAddress: "Munira Tower Office No. 30, 9th Floor, Building No.6702, Block 7, Makkah Street",
+            addressLocality: "Fahaheel",
+            addressCountry: "KW",
+          },
+          {
+            streetAddress: "Deira",
+            addressLocality: "Dubai",
+            addressCountry: "AE",
+          },
+        ]}
+      />
+      <SpeakableJsonLd headline="Contact Texas Technical Services — Kuwait & Dubai" />
       <ContactPageClient />
     </>
   );

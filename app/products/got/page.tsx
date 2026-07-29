@@ -7,7 +7,7 @@ import ProductCard from "@/components/ProductCard";
 import { getProductsByPath } from "@/lib/products";
 
 export const metadata: Metadata = {
-  title: "GOT (Graphic Operator Panels) - Texas Technical Services",
+  title: "GOT (Graphic Operator Panels)",
   description: "Mitsubishi Electric GOT2000 Series graphic operation terminals for industrial automation systems.",
   alternates: { canonical: "/products/got/" },
   keywords: [
@@ -15,15 +15,21 @@ export const metadata: Metadata = {
     "GOT2000 graphic operator panel",
     "HMI touchscreen Kuwait",
     "industrial HMI solutions",
+    "Mitsubishi HMI panel Dubai",
+    "GOT1000 series Kuwait",
+    "operator interface panel GCC",
+    "SCADA HMI integration Kuwait",
+    "industrial display panel",
+    "HMI programming Kuwait",
   ],
   openGraph: {
-    title: "GOT (Graphic Operator Panels) - Texas Technical Services",
+    title: "GOT (Graphic Operator Panels)",
     description: "Mitsubishi Electric GOT2000 Series graphic operation terminals for industrial automation systems.",
     url: "/products/got/",
   },
   twitter: {
     card: "summary_large_image",
-    title: "GOT (Graphic Operator Panels) - Texas Technical Services",
+    title: "GOT (Graphic Operator Panels)",
     description: "Mitsubishi Electric GOT2000 Series graphic operation terminals for industrial automation systems.",
   },
 };
@@ -99,7 +105,7 @@ export default function GotPage() {
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5">
             {gotProducts.map((prod, index) => (
               <React.Fragment key={prod.slug}>
-                <ProductCard product={prod} category="got" />
+                <ProductCard product={prod} category="got" priority={index < 3} />
                 
               </React.Fragment>
             ))}

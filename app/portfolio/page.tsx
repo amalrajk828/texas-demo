@@ -19,14 +19,14 @@ export const metadata: Metadata = {
   ],
   alternates: { canonical: "/portfolio/" },
   openGraph: {
-    title: "Product Portfolio | Texas Technical Services",
+    title: "Product Portfolio",
     description:
       "Explore our complete lineup of industrial automation hardware, software, and sensors.",
     url: "/portfolio/",
   },
   twitter: {
     card: "summary_large_image",
-    title: "Product Portfolio | Texas Technical Services",
+    title: "Product Portfolio",
     description:
       "Explore our complete lineup of industrial automation hardware, software, and sensors.",
   },

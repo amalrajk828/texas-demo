@@ -14,6 +14,7 @@ export interface BlogArticle {
   readTime: string;
   pillar: string;
   description: string;
+  keywords?: string;
   content: string; // HTML string containing rich technical guide markup
 }
 
@@ -22,10 +23,11 @@ export const blogArticles: Record<string, BlogArticle> = {
     seoTitle: "What is Custody Transfer Metering? A Complete Guide to Standards and Accuracy",
     metaDescription: "Explore the technical principles of custody transfer metering. Read about API MPMS chapters, AGA guidelines, skid components, and flow measurement accuracy.",
     category: "Flow Measurement",
-    date: "July 6, 2026",
+    date: "January 20, 2026",
     readTime: "10 Min Read",
     pillar: "Pillar 1: Flow Measurement & Custody Metering",
     description: "Learn the critical principles of custody transfer metering, including API and AGA compliance, flow meter selection, and calibration for the Oil & Gas industry.",
+    keywords: "custody transfer metering, API MPMS, flow measurement standards",
     image: "/flow_metering_skid.jpg",
     imageAlt: "An industrial custody transfer flow metering skid with piping, valves, and measuring instruments.",
 content: `
@@ -66,16 +68,16 @@ content: `
       </ul>
 
       <div class="overflow-x-auto my-8 not-prose">
-        <table class="min-w-full divide-y divide-gray-200 border border-gray-150 text-[13.5px]">
+        <table class="min-w-full divide-y divide-gray-200 border border-gray-150">
           <thead class="bg-slate-50">
             <tr>
-              <th scope="col" class="px-4 py-3 text-left text-xs font-semibold text-slate-900 uppercase tracking-wider border-b border-gray-150">Parameter</th>
-              <th scope="col" class="px-4 py-3 text-left text-xs font-semibold text-slate-900 uppercase tracking-wider border-b border-gray-150">Coriolis Meter</th>
-              <th scope="col" class="px-4 py-3 text-left text-xs font-semibold text-slate-900 uppercase tracking-wider border-b border-gray-150">Ultrasonic Meter</th>
-              <th scope="col" class="px-4 py-3 text-left text-xs font-semibold text-slate-900 uppercase tracking-wider border-b border-gray-150">Turbine Meter</th>
+              <th scope="col" class="px-4 py-3 text-left font-semibold text-slate-900 uppercase tracking-wider border-b border-gray-150">Parameter</th>
+              <th scope="col" class="px-4 py-3 text-left font-semibold text-slate-900 uppercase tracking-wider border-b border-gray-150">Coriolis Meter</th>
+              <th scope="col" class="px-4 py-3 text-left font-semibold text-slate-900 uppercase tracking-wider border-b border-gray-150">Ultrasonic Meter</th>
+              <th scope="col" class="px-4 py-3 text-left font-semibold text-slate-900 uppercase tracking-wider border-b border-gray-150">Turbine Meter</th>
             </tr>
           </thead>
-          <tbody class="bg-white divide-y divide-gray-150 text-[13px]">
+          <tbody class="bg-white divide-y divide-gray-150">
             <tr>
               <td class="px-4 py-3 font-semibold text-slate-900 bg-slate-50/40">Measurement Mode</td>
               <td class="px-4 py-3 text-gray-600">Direct Mass Flow</td>
@@ -221,6 +223,7 @@ content: `
     readTime: "8 Min Read",
     pillar: "Pillar 2: Industrial Process Automation",
     description: "Learn when to upgrade your legacy SCADA system. Explore the 5 critical signs of obsolescence, cybersecurity requirements under IEC 62443, and migration best practices.",
+    keywords: "SCADA upgrade, legacy system modernization, control architecture",
     image: "/images/control_room_interior_and_console/dynamic_m/1.jpg",
     imageAlt: "A modern industrial control room with multiple SCADA computer monitors displaying real-time process data grids.",
 content: `
@@ -229,8 +232,8 @@ content: `
       </p>
 
       <div class="my-6 rounded-lg bg-slate-50 border border-slate-200 p-5 not-prose">
-        <h4 class="text-[13.5px] font-bold text-slate-900 mb-2">💡 Key Takeaways</h4>
-        <ul class="text-[13px] text-slate-600 space-y-2 list-disc pl-4">
+        <h4 class="font-bold text-slate-900 mb-2">💡 Key Takeaways</h4>
+        <ul class="text-slate-600 space-y-2 list-disc pl-4">
           <li><strong>Downtime Prevention:</strong> Upgrading legacy control hardware eliminates the risk of single-point-of-failure card breakdowns.</li>
           <li><strong>Cyber Hardening:</strong> Implementing IEC 62443 zones and conduits secures industrial assets against modern network threats.</li>
           <li><strong>Data Accessibility:</strong> Modern SCADA architectures utilize open protocols like OPC UA to feed enterprise historians and analytic systems.</li>
@@ -281,15 +284,15 @@ content: `
       </p>
 
       <div class="overflow-x-auto my-8 not-prose">
-        <table class="min-w-full divide-y divide-gray-200 border border-gray-150 text-[13.5px]">
+        <table class="min-w-full divide-y divide-gray-200 border border-gray-150">
           <thead class="bg-slate-50">
             <tr>
-              <th scope="col" class="px-4 py-3 text-left text-xs font-semibold text-slate-900 uppercase tracking-wider border-b border-gray-150">Architecture Feature</th>
-              <th scope="col" class="px-4 py-3 text-left text-xs font-semibold text-slate-900 uppercase tracking-wider border-b border-gray-150">Legacy SCADA Systems</th>
-              <th scope="col" class="px-4 py-3 text-left text-xs font-semibold text-slate-900 uppercase tracking-wider border-b border-gray-150">Modern SCADA Architectures</th>
+              <th scope="col" class="px-4 py-3 text-left font-semibold text-slate-900 uppercase tracking-wider border-b border-gray-150">Architecture Feature</th>
+              <th scope="col" class="px-4 py-3 text-left font-semibold text-slate-900 uppercase tracking-wider border-b border-gray-150">Legacy SCADA Systems</th>
+              <th scope="col" class="px-4 py-3 text-left font-semibold text-slate-900 uppercase tracking-wider border-b border-gray-150">Modern SCADA Architectures</th>
             </tr>
           </thead>
-          <tbody class="bg-white divide-y divide-gray-150 text-[13px]">
+          <tbody class="bg-white divide-y divide-gray-150">
             <tr>
               <td class="px-4 py-3 font-semibold text-slate-900 bg-slate-50/40">Security</td>
               <td class="px-4 py-3 text-gray-600">Perimeter security only; lacks endpoint encryption and user authorization controls.</td>
@@ -359,12 +362,13 @@ content: `
   },
   "cems-continuous-emissions-monitoring-guide": {title: "Continuous Emissions Monitoring Systems (CEMS): The Ultimate Compliance Guide",
     seoTitle: "Continuous Emissions Monitoring Systems (CEMS): Compliance Guide",
-    metaDescription: "Continuous Emissions Monitoring Systems (CEMS) compliance guide for industrial plants — covering extractive, in-situ, calibration gas, and EPA regulations.",
+    metaDescription: "Want to excel at continuous emissions monitoring systems (cems)? Our expert guide covers standards, best practices, and real-world strategies.",
     category: "Emissions Compliance",
-    date: "July 6, 2026",
+    date: "April 20, 2026",
     readTime: "8 Min Read",
     pillar: "Pillar 3: Analyzers & Inspection",
     description: "Continuous Emissions Monitoring Systems (CEMS) compliance guide for industrial plants — covering extractive, in-situ, calibration gas, and EPA regulations.",
+    keywords: "CEMS, emissions monitoring, environmental compliance",
     image: "/cems.png",
     imageAlt: "A Continuous Emissions Monitoring System (CEMS) cabinet with analysis modules and digital readouts.",
 content: `
@@ -373,8 +377,8 @@ content: `
       </p>
 
       <div class="my-6 rounded-lg bg-slate-50 border border-slate-200 p-5 not-prose">
-        <h4 class="text-[13.5px] font-bold text-slate-900 mb-2">💡 Quick Summary (TL;DR)</h4>
-        <p class="text-[13px] text-slate-600">
+        <h4 class="font-bold text-slate-900 mb-2">💡 Quick Summary (TL;DR)</h4>
+        <p class="text-slate-600">
           Continuous emissions monitoring systems (CEMS) are mandatory integrated instrumentation packages used to track and report gaseous pollutants in real time. Compliance requires choosing between extractive and in-situ technologies, implementing automated sample conditioning, and validating systems under EPA 40 CFR Part 60 and EN 14181 QA/QC guidelines.
         </p>
       </div>
@@ -393,15 +397,15 @@ content: `
       </p>
 
       <div class="overflow-x-auto my-8 not-prose">
-        <table class="min-w-full divide-y divide-gray-200 border border-gray-150 text-[13.5px]">
+        <table class="min-w-full divide-y divide-gray-200 border border-gray-150">
           <thead class="bg-slate-50">
             <tr>
-              <th scope="col" class="px-4 py-3 text-left text-xs font-semibold text-slate-900 uppercase tracking-wider border-b border-gray-150">Feature</th>
-              <th scope="col" class="px-4 py-3 text-left text-xs font-semibold text-slate-900 uppercase tracking-wider border-b border-gray-150">Extractive CEMS</th>
-              <th scope="col" class="px-4 py-3 text-left text-xs font-semibold text-slate-900 uppercase tracking-wider border-b border-gray-150">In-Situ CEMS</th>
+              <th scope="col" class="px-4 py-3 text-left font-semibold text-slate-900 uppercase tracking-wider border-b border-gray-150">Feature</th>
+              <th scope="col" class="px-4 py-3 text-left font-semibold text-slate-900 uppercase tracking-wider border-b border-gray-150">Extractive CEMS</th>
+              <th scope="col" class="px-4 py-3 text-left font-semibold text-slate-900 uppercase tracking-wider border-b border-gray-150">In-Situ CEMS</th>
             </tr>
           </thead>
-          <tbody class="bg-white divide-y divide-gray-150 text-[13px]">
+          <tbody class="bg-white divide-y divide-gray-150">
             <tr>
               <td class="px-4 py-3 font-semibold text-slate-900 bg-slate-50/40">Measurement Location</td>
               <td class="px-4 py-3 text-gray-600">Remote analyzer shelter (ground level)</td>
@@ -479,12 +483,13 @@ content: `
   },
   "liquid-vs-gas-flow-meters": {title: "Liquid vs. Gas Flow Meters: How to Select the Right Technology",
     seoTitle: "Liquid vs. Gas Flow Meters: How to Select the Right Technology",
-    metaDescription: "Learn how to select the right flow meter for liquid and gas systems in petrochemical plants. Compare Coriolis, ultrasonic, and turbine meters.",
+    metaDescription: "Discover expert insights on liquid vs. gas flow meters. Get actionable strategies and proven best practices for your operations.",
     category: "Flow Measurement",
-    date: "July 6, 2026",
+    date: "February 5, 2026",
     readTime: "9 Min Read",
     pillar: "Pillar 1: Flow Measurement & Custody Metering",
     description: "Learn how to select the right flow meter for liquid and gas systems in petrochemical plants. Compare Coriolis, ultrasonic, and turbine meters.",
+    keywords: "liquid flow meters, gas flow meters, flow meter selection",
     image: "/images/services/flow-measurement.jpg",
     imageAlt: "A multi-path ultrasonic flow meter installed on an industrial gas pipeline.",
 content: `
@@ -542,16 +547,16 @@ content: `
 
       <h2>Key Selection Criteria</h2>
       <div class="overflow-x-auto my-8 not-prose">
-        <table class="min-w-full divide-y divide-gray-200 border border-gray-150 text-[13.5px]">
+        <table class="min-w-full divide-y divide-gray-200 border border-gray-150">
           <thead class="bg-slate-50">
             <tr>
-              <th scope="col" class="px-4 py-3 text-left text-xs font-semibold text-slate-900 uppercase tracking-wider border-b border-gray-150">Meter Type</th>
-              <th scope="col" class="px-4 py-3 text-left text-xs font-semibold text-slate-900 uppercase tracking-wider border-b border-gray-150">Accuracy Class</th>
-              <th scope="col" class="px-4 py-3 text-left text-xs font-semibold text-slate-900 uppercase tracking-wider border-b border-gray-150">Typical Application</th>
-              <th scope="col" class="px-4 py-3 text-left text-xs font-semibold text-slate-900 uppercase tracking-wider border-b border-gray-150">Applicable Standard</th>
+              <th scope="col" class="px-4 py-3 text-left font-semibold text-slate-900 uppercase tracking-wider border-b border-gray-150">Meter Type</th>
+              <th scope="col" class="px-4 py-3 text-left font-semibold text-slate-900 uppercase tracking-wider border-b border-gray-150">Accuracy Class</th>
+              <th scope="col" class="px-4 py-3 text-left font-semibold text-slate-900 uppercase tracking-wider border-b border-gray-150">Typical Application</th>
+              <th scope="col" class="px-4 py-3 text-left font-semibold text-slate-900 uppercase tracking-wider border-b border-gray-150">Applicable Standard</th>
             </tr>
           </thead>
-          <tbody class="bg-white divide-y divide-gray-150 text-[13px]">
+          <tbody class="bg-white divide-y divide-gray-150">
             <tr>
               <td class="px-4 py-3 font-semibold text-slate-900">Coriolis Mass Meter</td>
               <td class="px-4 py-3 text-gray-600">&plusmn;0.05% to &plusmn;0.10% (Liquid)</td>
@@ -623,10 +628,11 @@ content: `
     seoTitle: "How to Validate and Maintain Custody Metering Skids for ISO 9001 Compliance",
     metaDescription: "A complete guide to custody metering skid validation. Learn about FAT and SAT scopes, flow computer checks, and GUM uncertainty calculations for ISO 9001.",
     category: "Flow Measurement",
-    date: "July 6, 2026",
+    date: "February 18, 2026",
     readTime: "10 Min Read",
     pillar: "Pillar 1: Flow Measurement & Custody Metering",
     description: "Learn how to validate and maintain custody metering skids. Read about FAT/SAT scope, loop calibrations, and GUM uncertainty calculation procedures.",
+    keywords: "custody metering skid, ISO 9001, metering validation",
     image: "/images/services/METERING-1.png",
     imageAlt: "Technicians validating calibration parameters on a large custody transfer oil metering run.",
 content: `
@@ -661,15 +667,15 @@ content: `
       </p>
 
       <div class="overflow-x-auto my-8 not-prose">
-        <table class="min-w-full divide-y divide-gray-200 border border-gray-150 text-[13.5px]">
+        <table class="min-w-full divide-y divide-gray-200 border border-gray-150">
           <thead class="bg-slate-50">
             <tr>
-              <th scope="col" class="px-4 py-3 text-left text-xs font-semibold text-slate-900 uppercase tracking-wider border-b border-gray-150">Verification Task</th>
-              <th scope="col" class="px-4 py-3 text-left text-xs font-semibold text-slate-900 uppercase tracking-wider border-b border-gray-150">FAT Scope</th>
-              <th scope="col" class="px-4 py-3 text-left text-xs font-semibold text-slate-900 uppercase tracking-wider border-b border-gray-150">SAT Scope</th>
+              <th scope="col" class="px-4 py-3 text-left font-semibold text-slate-900 uppercase tracking-wider border-b border-gray-150">Verification Task</th>
+              <th scope="col" class="px-4 py-3 text-left font-semibold text-slate-900 uppercase tracking-wider border-b border-gray-150">FAT Scope</th>
+              <th scope="col" class="px-4 py-3 text-left font-semibold text-slate-900 uppercase tracking-wider border-b border-gray-150">SAT Scope</th>
             </tr>
           </thead>
-          <tbody class="bg-white divide-y divide-gray-150 text-[13px]">
+          <tbody class="bg-white divide-y divide-gray-150">
             <tr>
               <td class="px-4 py-3 font-semibold text-slate-900 bg-slate-50/40">Calibration Verification</td>
               <td class="px-4 py-3 text-gray-600">Reference signal injection (simulated)</td>
@@ -744,12 +750,13 @@ content: `
   },
   "flow-computer-configuration": {title: "Flow Computer Configuration: A Technical Guide to API MPMS Chapter 21 Compliance",
     seoTitle: "Flow Computer Configuration: A Technical Guide to API MPMS Chapter 21 Compliance",
-    metaDescription: "Learn key requirements for custody transfer flow computer configuration, API MPMS Chapter 21 compliance, and calculation algorithm checks.",
+    metaDescription: "Want to excel at flow computer configuration? Our expert guide covers standards, best practices, and real-world strategies.",
     category: "Industrial Automation",
-    date: "July 6, 2026",
+    date: "March 3, 2026",
     readTime: "8 Min Read",
     pillar: "Pillar 2: Industrial Process Automation",
     description: "Learn key requirements for custody transfer flow computer configuration, API MPMS Chapter 21 compliance, and calculation algorithm checks.",
+    keywords: "flow computer, API MPMS 21, flow computation",
     image: "/flow_computer.png",
     imageAlt: "An electronic flow computer module with a digital LCD screen mounted in an automation cabinet.",
 content: `
@@ -792,16 +799,16 @@ content: `
 
       <h2>Key Flow Computer Architectures</h2>
       <div class="overflow-x-auto my-8 not-prose">
-        <table class="min-w-full divide-y divide-gray-200 border border-gray-150 text-[13.5px]">
+        <table class="min-w-full divide-y divide-gray-200 border border-gray-150">
           <thead class="bg-slate-50">
             <tr>
-              <th scope="col" class="px-4 py-3 text-left text-xs font-semibold text-slate-900 uppercase tracking-wider border-b border-gray-150">Brand &amp; Model</th>
-              <th scope="col" class="px-4 py-3 text-left text-xs font-semibold text-slate-900 uppercase tracking-wider border-b border-gray-150">Supported Algorithms</th>
-              <th scope="col" class="px-4 py-3 text-left text-xs font-semibold text-slate-900 uppercase tracking-wider border-b border-gray-150">Key Interfaces</th>
-              <th scope="col" class="px-4 py-3 text-left text-xs font-semibold text-slate-900 uppercase tracking-wider border-b border-gray-150">Compliance Standards</th>
+              <th scope="col" class="px-4 py-3 text-left font-semibold text-slate-900 uppercase tracking-wider border-b border-gray-150">Brand &amp; Model</th>
+              <th scope="col" class="px-4 py-3 text-left font-semibold text-slate-900 uppercase tracking-wider border-b border-gray-150">Supported Algorithms</th>
+              <th scope="col" class="px-4 py-3 text-left font-semibold text-slate-900 uppercase tracking-wider border-b border-gray-150">Key Interfaces</th>
+              <th scope="col" class="px-4 py-3 text-left font-semibold text-slate-900 uppercase tracking-wider border-b border-gray-150">Compliance Standards</th>
             </tr>
           </thead>
-          <tbody class="bg-white divide-y divide-gray-150 text-[13px]">
+          <tbody class="bg-white divide-y divide-gray-150">
             <tr>
               <td class="px-4 py-3 font-semibold text-slate-900">Omni Flow Computers (6000/7000)</td>
               <td class="px-4 py-3 text-gray-600">AGA-3, AGA-7, AGA-8, AGA-9, API MPMS Ch. 11/12</td>
@@ -867,12 +874,13 @@ content: `
   },
   "metering-control-system-upgrade": {title: "Upgrading Legacy Metering Control Systems: A Risk-Free Migration Approach",
     seoTitle: "Upgrading Legacy Metering Control Systems: A Risk-Free Migration Approach",
-    metaDescription: "Learn how to execute a legacy metering control system upgrade. Read about parallel running, cutover strategies, and flow computer modernization.",
+    metaDescription: "Discover expert insights on upgrading legacy metering control systems. Get actionable strategies and proven best practices for your operations.",
     category: "Industrial Automation",
-    date: "July 6, 2026",
+    date: "March 15, 2026",
     readTime: "9 Min Read",
     pillar: "Pillar 2: Industrial Process Automation",
     description: "Learn how to execute a legacy metering control system upgrade. Read about parallel running, cutover strategies, and flow computer modernization.",
+    keywords: "metering control upgrade, legacy system migration, control automation",
     image: "/omni_flow_computer.png",
     imageAlt: "An upgraded Omni flow computer system panel with process variables displayed on the interface screen.",
 content: `
@@ -917,15 +925,15 @@ content: `
 
       <h2>Key Legacy vs. Modern Metering Differences</h2>
       <div class="overflow-x-auto my-8 not-prose">
-        <table class="min-w-full divide-y divide-gray-200 border border-gray-150 text-[13.5px]">
+        <table class="min-w-full divide-y divide-gray-200 border border-gray-150">
           <thead class="bg-slate-50">
             <tr>
-              <th scope="col" class="px-4 py-3 text-left text-xs font-semibold text-slate-900 uppercase tracking-wider border-b border-gray-150">Control Component</th>
-              <th scope="col" class="px-4 py-3 text-left text-xs font-semibold text-slate-900 uppercase tracking-wider border-b border-gray-150">Legacy Metering Architecture</th>
-              <th scope="col" class="px-4 py-3 text-left text-xs font-semibold text-slate-900 uppercase tracking-wider border-b border-gray-150">Modern Metering Architecture</th>
+              <th scope="col" class="px-4 py-3 text-left font-semibold text-slate-900 uppercase tracking-wider border-b border-gray-150">Control Component</th>
+              <th scope="col" class="px-4 py-3 text-left font-semibold text-slate-900 uppercase tracking-wider border-b border-gray-150">Legacy Metering Architecture</th>
+              <th scope="col" class="px-4 py-3 text-left font-semibold text-slate-900 uppercase tracking-wider border-b border-gray-150">Modern Metering Architecture</th>
             </tr>
           </thead>
-          <tbody class="bg-white divide-y divide-gray-150 text-[13px]">
+          <tbody class="bg-white divide-y divide-gray-150">
             <tr>
               <td class="px-4 py-3 font-semibold text-slate-900">Flow Computers</td>
               <td class="px-4 py-3 text-gray-600">Discontinued single-loop systems, restricted calculation speed, local text interfaces.</td>
@@ -985,12 +993,13 @@ content: `
   },
   "flare-meter-calibration": {title: "Flare Meter Calibration: Environmental Compliance and Best Practices",
     seoTitle: "Flare Meter Calibration: Environmental Compliance and Best Practices",
-    metaDescription: "Learn how flare meter calibration ensures EPA and ISO 14001 compliance. Compare ultrasonic insertion and thermal mass flow meters.",
+    metaDescription: "Ready to improve your flare meter calibration? Explore expert guidance, compliance standards, and proven techniques.",
     category: "Flow Measurement",
-    date: "July 6, 2026",
+    date: "March 28, 2026",
     readTime: "9 Min Read",
     pillar: "Pillar 1: Flow Measurement & Custody Metering",
     description: "Learn how flare meter calibration ensures EPA and ISO 14001 compliance. Compare ultrasonic insertion and thermal mass flow meters.",
+    keywords: "flare meter calibration, environmental compliance, flare gas measurement",
     image: "/flare_meter.png",
     imageAlt: "A specialized ultrasonic flare gas flow meter sensor assembly installed on a heavy industrial stack header.",
 content: `
@@ -1041,16 +1050,16 @@ content: `
 
       <h2>Key Flare Meter Specifications</h2>
       <div class="overflow-x-auto my-8 not-prose">
-        <table class="min-w-full divide-y divide-gray-200 border border-gray-150 text-[13.5px]">
+        <table class="min-w-full divide-y divide-gray-200 border border-gray-150">
           <thead class="bg-slate-50">
             <tr>
-              <th scope="col" class="px-4 py-3 text-left text-xs font-semibold text-slate-900 uppercase tracking-wider border-b border-gray-150">Meter Type</th>
-              <th scope="col" class="px-4 py-3 text-left text-xs font-semibold text-slate-900 uppercase tracking-wider border-b border-gray-150">Typical Accuracy</th>
-              <th scope="col" class="px-4 py-3 text-left text-xs font-semibold text-slate-900 uppercase tracking-wider border-b border-gray-150">Calibration Method</th>
-              <th scope="col" class="px-4 py-3 text-left text-xs font-semibold text-slate-900 uppercase tracking-wider border-b border-gray-150">Rangeability</th>
+              <th scope="col" class="px-4 py-3 text-left font-semibold text-slate-900 uppercase tracking-wider border-b border-gray-150">Meter Type</th>
+              <th scope="col" class="px-4 py-3 text-left font-semibold text-slate-900 uppercase tracking-wider border-b border-gray-150">Typical Accuracy</th>
+              <th scope="col" class="px-4 py-3 text-left font-semibold text-slate-900 uppercase tracking-wider border-b border-gray-150">Calibration Method</th>
+              <th scope="col" class="px-4 py-3 text-left font-semibold text-slate-900 uppercase tracking-wider border-b border-gray-150">Rangeability</th>
             </tr>
           </thead>
-          <tbody class="bg-white divide-y divide-gray-150 text-[13px]">
+          <tbody class="bg-white divide-y divide-gray-150">
             <tr>
               <td class="px-4 py-3 font-semibold text-slate-900">Ultrasonic Insertion</td>
               <td class="px-4 py-3 text-gray-600">&plusmn;1.0% to &plusmn;5.0% of reading</td>
@@ -1118,12 +1127,13 @@ content: `
   },
   "helical-flow-meter-maintenance": {title: "Helical Flow Meter Maintenance: Preventive and Corrective Best Practices",
     seoTitle: "Helical Flow Meter Maintenance: Preventive and Corrective Best Practices",
-    metaDescription: "Learn preventive and corrective maintenance guidelines for helical flow meters. Read about rotor assembly wear, viscosity corrections, and rebuild steps.",
+    metaDescription: "Get the definitive guide to helical flow meter maintenance. Expert advice, industry standards, and step-by-step strategies.",
     category: "Flow Measurement",
-    date: "July 6, 2026",
+    date: "April 8, 2026",
     readTime: "9 Min Read",
     pillar: "Pillar 1: Flow Measurement & Custody Metering",
     description: "Learn preventive and corrective maintenance guidelines for helical flow meters. Read about rotor assembly wear, viscosity corrections, and rebuild steps.",
+    keywords: "helical flow meter, preventive maintenance, flow meter upkeep",
     image: "/helical_turbine_meter.png",
     imageAlt: "A precision helical turbine flow meter showing the internal rotor blades during inspection.",
 content: `
@@ -1145,15 +1155,15 @@ content: `
       </p>
 
       <div class="overflow-x-auto my-8 not-prose">
-        <table class="min-w-full divide-y divide-gray-200 border border-gray-150 text-[13.5px]">
+        <table class="min-w-full divide-y divide-gray-200 border border-gray-150">
           <thead class="bg-slate-50">
             <tr>
-              <th scope="col" class="px-4 py-3 text-left text-xs font-semibold text-slate-900 uppercase tracking-wider border-b border-gray-150">Maintenance Interval</th>
-              <th scope="col" class="px-4 py-3 text-left text-xs font-semibold text-slate-900 uppercase tracking-wider border-b border-gray-150">Verification Task</th>
-              <th scope="col" class="px-4 py-3 text-left text-xs font-semibold text-slate-900 uppercase tracking-wider border-b border-gray-150">Expected Outcome</th>
+              <th scope="col" class="px-4 py-3 text-left font-semibold text-slate-900 uppercase tracking-wider border-b border-gray-150">Maintenance Interval</th>
+              <th scope="col" class="px-4 py-3 text-left font-semibold text-slate-900 uppercase tracking-wider border-b border-gray-150">Verification Task</th>
+              <th scope="col" class="px-4 py-3 text-left font-semibold text-slate-900 uppercase tracking-wider border-b border-gray-150">Expected Outcome</th>
             </tr>
           </thead>
-          <tbody class="bg-white divide-y divide-gray-150 text-[13px]">
+          <tbody class="bg-white divide-y divide-gray-150">
             <tr>
               <td class="px-4 py-3 font-semibold text-slate-900 bg-slate-50/40">Weekly</td>
               <td class="px-4 py-3 text-gray-600">Visual inspection, pressure drop logging, leak checks</td>
@@ -1254,10 +1264,11 @@ content: `
     seoTitle: "Measurement Uncertainty in Custody Transfer: GUM Methodology Guide",
     metaDescription: "An in-depth guide to measurement uncertainty in custody transfer. Learn about GUM uncertainty budgets, Type A and Type B evaluations, and API standards.",
     category: "Flow Measurement",
-    date: "July 6, 2026",
+    date: "April 20, 2026",
     readTime: "9 Min Read",
     pillar: "Pillar 1: Flow Measurement & Custody Metering",
     description: "Learn how to calculate measurement uncertainty in custody transfer. Study GUM uncertainty budgets, Type A/B errors, and API compliance.",
+    keywords: "measurement uncertainty, GUM methodology, custody transfer accuracy",
     image: "/images/services/Banc-Calibr.jpg",
     imageAlt: "A metrologist configuring high-accuracy reference instrumentation on a calibration test bench.",
 content: `
@@ -1319,16 +1330,16 @@ content: `
 
       <h2>Typical Uncertainty Contributions</h2>
       <div class="overflow-x-auto my-8 not-prose">
-        <table class="min-w-full divide-y divide-gray-200 border border-gray-150 text-[13.5px]">
+        <table class="min-w-full divide-y divide-gray-200 border border-gray-150">
           <thead class="bg-slate-50">
             <tr>
-              <th scope="col" class="px-4 py-3 text-left text-xs font-semibold text-slate-900 uppercase tracking-wider border-b border-gray-150">Uncertainty Source</th>
-              <th scope="col" class="px-4 py-3 text-left text-xs font-semibold text-slate-900 uppercase tracking-wider border-b border-gray-150">Typical Standard Uncertainty</th>
-              <th scope="col" class="px-4 py-3 text-left text-xs font-semibold text-slate-900 uppercase tracking-wider border-b border-gray-150">Evaluation Method</th>
-              <th scope="col" class="px-4 py-3 text-left text-xs font-semibold text-slate-900 uppercase tracking-wider border-b border-gray-150">Impact on Net Volume</th>
+              <th scope="col" class="px-4 py-3 text-left font-semibold text-slate-900 uppercase tracking-wider border-b border-gray-150">Uncertainty Source</th>
+              <th scope="col" class="px-4 py-3 text-left font-semibold text-slate-900 uppercase tracking-wider border-b border-gray-150">Typical Standard Uncertainty</th>
+              <th scope="col" class="px-4 py-3 text-left font-semibold text-slate-900 uppercase tracking-wider border-b border-gray-150">Evaluation Method</th>
+              <th scope="col" class="px-4 py-3 text-left font-semibold text-slate-900 uppercase tracking-wider border-b border-gray-150">Impact on Net Volume</th>
             </tr>
           </thead>
-          <tbody class="bg-white divide-y divide-gray-150 text-[13px]">
+          <tbody class="bg-white divide-y divide-gray-150">
             <tr>
               <td class="px-4 py-3 font-semibold text-slate-900">Flow Meter Calibration</td>
               <td class="px-4 py-3 text-gray-600">&plusmn;0.05% to &plusmn;0.12%</td>
@@ -1391,10 +1402,11 @@ content: `
     seoTitle: "Custody Metering Audits: What Oil & Gas Operators Need to Know",
     metaDescription: "A practical guide to custody metering audits. Learn about audit scopes, API compliance check lists, and required calibration documentation.",
     category: "Flow Measurement",
-    date: "July 6, 2026",
+    date: "May 2, 2026",
     readTime: "9 Min Read",
     pillar: "Pillar 1: Flow Measurement & Custody Metering",
     description: "Prepare for custody metering audits. Review API metering checklists, audit trails, and documentation requirements for operations.",
+    keywords: "custody metering audit, oil and gas, metering compliance",
     image: "/images/services/metering-experts.jpg",
     imageAlt: "Metering system auditors reviewing calibration reports and validation logs next to an oil metering skid.",
 content: `
@@ -1435,15 +1447,15 @@ content: `
       </p>
 
       <div class="overflow-x-auto my-8 not-prose">
-        <table class="min-w-full divide-y divide-gray-200 border border-gray-150 text-[13.5px]">
+        <table class="min-w-full divide-y divide-gray-200 border border-gray-150">
           <thead class="bg-slate-50">
             <tr>
-              <th scope="col" class="px-4 py-3 text-left text-xs font-semibold text-slate-900 uppercase tracking-wider border-b border-gray-150">Document Type</th>
-              <th scope="col" class="px-4 py-3 text-left text-xs font-semibold text-slate-900 uppercase tracking-wider border-b border-gray-150">Required Verification Details</th>
-              <th scope="col" class="px-4 py-3 text-left text-xs font-semibold text-slate-900 uppercase tracking-wider border-b border-gray-150">Compliance Target</th>
+              <th scope="col" class="px-4 py-3 text-left font-semibold text-slate-900 uppercase tracking-wider border-b border-gray-150">Document Type</th>
+              <th scope="col" class="px-4 py-3 text-left font-semibold text-slate-900 uppercase tracking-wider border-b border-gray-150">Required Verification Details</th>
+              <th scope="col" class="px-4 py-3 text-left font-semibold text-slate-900 uppercase tracking-wider border-b border-gray-150">Compliance Target</th>
             </tr>
           </thead>
-          <tbody class="bg-white divide-y divide-gray-150 text-[13px]">
+          <tbody class="bg-white divide-y divide-gray-150">
             <tr>
               <td class="px-4 py-3 font-semibold text-slate-900">Calibration Certificates</td>
               <td class="px-4 py-3 text-gray-600">Transmitter As-Found and As-Left data, lab certification numbers</td>
@@ -1518,10 +1530,11 @@ content: `
     seoTitle: "LNG Custody Transfer: Technical Challenges and Measurement Solutions",
     metaDescription: "Learn how LNG custody transfer measurements overcome cryogenic flow challenges. Compare LNG metering technologies and energy calculations.",
     category: "Flow Measurement",
-    date: "July 6, 2026",
+    date: "May 15, 2026",
     readTime: "10 Min Read",
     pillar: "Pillar 1: Flow Measurement & Custody Metering",
     description: "Explore unique technical challenges of LNG custody transfer. Compare cryogenic Coriolis meters, energy calculation methods, and GIIGNL guidelines.",
+    keywords: "LNG custody transfer, cryogenic measurement, LNG metering",
     image: "/lng.jpg",
     imageAlt: "A large liquefied natural gas (LNG) carrier ship docked alongside a terminal with loading arms.",
 content: `
@@ -1551,16 +1564,16 @@ content: `
       </ul>
 
       <div class="overflow-x-auto my-8 not-prose">
-        <table class="min-w-full divide-y divide-gray-200 border border-gray-150 text-[13.5px]">
+        <table class="min-w-full divide-y divide-gray-200 border border-gray-150">
           <thead class="bg-slate-50">
             <tr>
-              <th scope="col" class="px-4 py-3 text-left text-xs font-semibold text-slate-900 uppercase tracking-wider border-b border-gray-150">Technology</th>
-              <th scope="col" class="px-4 py-3 text-left text-xs font-semibold text-slate-900 uppercase tracking-wider border-b border-gray-150">Cryogenic Suitability</th>
-              <th scope="col" class="px-4 py-3 text-left text-xs font-semibold text-slate-900 uppercase tracking-wider border-b border-gray-150">Measurement Principle</th>
-              <th scope="col" class="px-4 py-3 text-left text-xs font-semibold text-slate-900 uppercase tracking-wider border-b border-gray-150">Primary Limitation</th>
+              <th scope="col" class="px-4 py-3 text-left font-semibold text-slate-900 uppercase tracking-wider border-b border-gray-150">Technology</th>
+              <th scope="col" class="px-4 py-3 text-left font-semibold text-slate-900 uppercase tracking-wider border-b border-gray-150">Cryogenic Suitability</th>
+              <th scope="col" class="px-4 py-3 text-left font-semibold text-slate-900 uppercase tracking-wider border-b border-gray-150">Measurement Principle</th>
+              <th scope="col" class="px-4 py-3 text-left font-semibold text-slate-900 uppercase tracking-wider border-b border-gray-150">Primary Limitation</th>
             </tr>
           </thead>
-          <tbody class="bg-white divide-y divide-gray-150 text-[13px]">
+          <tbody class="bg-white divide-y divide-gray-150">
             <tr>
               <td class="px-4 py-3 font-semibold text-slate-900">Coriolis Mass Meter</td>
               <td class="px-4 py-3 text-gray-600">Excellent (Direct Mass)</td>
@@ -1642,12 +1655,13 @@ content: `
   },
   "plc-vs-pac-oil-gas-automation": {title: "PLC vs. PAC in Oil & Gas: Choosing the Right Automation Platform",
     seoTitle: "PLC vs. PAC in Oil & Gas: Choosing the Right Automation Platform",
-    metaDescription: "Compare PLC and PAC architectures for oil & gas industrial automation — performance, scalability, cybersecurity, and total cost of ownership.",
+    metaDescription: "Ready to improve your plc vs. pac in oil & gas? Explore expert guidance, compliance standards, and proven techniques.",
     category: "Industrial Automation",
-    date: "July 6, 2026",
+    date: "June 15, 2026",
     readTime: "8 Min Read",
     pillar: "Pillar 2: Industrial Process Automation",
     description: "Compare PLC and PAC architectures for oil & gas industrial automation — performance, scalability, cybersecurity, and total cost of ownership.",
+    keywords: "PLC vs PAC, oil and gas automation, controller selection",
     image: "/images/plc/MELSEC-iQ-R-Series.png",
     imageAlt: "A modular MELSEC iQ-R series programmable logic controller (PLC) rack with input-output modules.",
 content: `
@@ -1656,8 +1670,8 @@ content: `
       </p>
 
       <div class="my-6 rounded-lg bg-slate-50 border border-slate-200 p-5 not-prose">
-        <h4 class="text-[13.5px] font-bold text-slate-900 mb-2">💡 Key Takeaways</h4>
-        <ul class="text-[13px] text-slate-600 space-y-2 list-disc pl-4">
+        <h4 class="font-bold text-slate-900 mb-2">💡 Key Takeaways</h4>
+        <ul class="text-slate-600 space-y-2 list-disc pl-4">
           <li><strong>PLC Focus:</strong> PLCs provide exceptional reliability and rapid scan times for localized, discrete machinery control.</li>
           <li><strong>PAC Focus:</strong> PACs deliver high memory density, multi-tasking processors, and dynamic network interfaces for plant-wide architectures.</li>
           <li><strong>Standards Alignment:</strong> Both platforms execute programs in compliance with the IEC 61131-3 standardization framework.</li>
@@ -1678,16 +1692,16 @@ content: `
       </p>
 
       <div class="overflow-x-auto my-8 not-prose">
-        <table class="min-w-full divide-y divide-gray-200 border border-gray-150 text-[13.5px]">
+        <table class="min-w-full divide-y divide-gray-200 border border-gray-150">
           <thead class="bg-slate-50">
             <tr>
-              <th scope="col" class="px-4 py-3 text-left text-xs font-semibold text-slate-900 uppercase tracking-wider border-b border-gray-150">Parameter</th>
-              <th scope="col" class="px-4 py-3 text-left text-xs font-semibold text-slate-900 uppercase tracking-wider border-b border-gray-150">Programmable Logic Controller (PLC)</th>
-              <th scope="col" class="px-4 py-3 text-left text-xs font-semibold text-slate-900 uppercase tracking-wider border-b border-gray-150">Programmable Automation Controller (PAC)</th>
-              <th scope="col" class="px-4 py-3 text-left text-xs font-semibold text-slate-900 uppercase tracking-wider border-b border-gray-150">Distributed Control System (DCS)</th>
+              <th scope="col" class="px-4 py-3 text-left font-semibold text-slate-900 uppercase tracking-wider border-b border-gray-150">Parameter</th>
+              <th scope="col" class="px-4 py-3 text-left font-semibold text-slate-900 uppercase tracking-wider border-b border-gray-150">Programmable Logic Controller (PLC)</th>
+              <th scope="col" class="px-4 py-3 text-left font-semibold text-slate-900 uppercase tracking-wider border-b border-gray-150">Programmable Automation Controller (PAC)</th>
+              <th scope="col" class="px-4 py-3 text-left font-semibold text-slate-900 uppercase tracking-wider border-b border-gray-150">Distributed Control System (DCS)</th>
             </tr>
           </thead>
-          <tbody class="bg-white divide-y divide-gray-150 text-[13px]">
+          <tbody class="bg-white divide-y divide-gray-150">
             <tr>
               <td class="px-4 py-3 font-semibold text-slate-900 bg-slate-50/40">CPU Architecture</td>
               <td class="px-4 py-3 text-gray-600">Single processor, sequential cyclic execution</td>
@@ -1769,12 +1783,13 @@ content: `
   },
   "iconics-scada-got-hmi-integration": {title: "ICONICS SCADA and GOT HMI Integration for Real-Time Industrial Process Monitoring",
     seoTitle: "ICONICS SCADA and GOT HMI Integration for Real-Time Industrial Process Monitoring",
-    metaDescription: "Learn how ICONICS SCADA software and Mitsubishi GOT graphic operator panels integrate for real-time process monitoring in oil & gas and power plants.",
+    metaDescription: "Want to excel at iconics scada and got hmi integration for real-time industrial process monitoring? Our expert guide covers standards, best practices, and ",
     category: "Industrial Automation",
-    date: "July 6, 2026",
+    date: "June 28, 2026",
     readTime: "9 Min Read",
     pillar: "Pillar 2: Industrial Process Automation",
     description: "Learn how ICONICS SCADA software and Mitsubishi GOT graphic operator panels integrate for real-time process monitoring in oil & gas and power plants.",
+    keywords: "ICONICS SCADA, GOT HMI, industrial monitoring",
     image: "/images/got/GOT2000-Series.png",
     imageAlt: "A Mitsubishi GOT2000 HMI touch panel displaying process flow diagrams in an automation control loop.",
 content: `
@@ -1783,8 +1798,8 @@ content: `
       </p>
 
       <div class="my-6 rounded-lg bg-slate-50 border border-slate-200 p-5 not-prose">
-        <h4 class="text-[13.5px] font-bold text-slate-900 mb-2">💡 Key Takeaways</h4>
-        <ul class="text-[13px] text-slate-600 space-y-2 list-disc pl-4">
+        <h4 class="font-bold text-slate-900 mb-2">💡 Key Takeaways</h4>
+        <ul class="text-slate-600 space-y-2 list-disc pl-4">
           <li><strong>Unified View:</strong> Integrating ICONICS SCADA and local HMIs creates a single data source from the edge to the control room.</li>
           <li><strong>Open Standards:</strong> OPC UA communication ensures secure, cross-platform data mapping with zero driver conflicts.</li>
           <li><strong>Alarm Safety:</strong> Compliance with ANSI/ISA-18.2 standards prevents alarm floods during plant upsets.</li>
@@ -1818,16 +1833,16 @@ content: `
       </p>
 
       <div class="overflow-x-auto my-8 not-prose">
-        <table class="min-w-full divide-y divide-gray-200 border border-gray-150 text-[13.5px]">
+        <table class="min-w-full divide-y divide-gray-200 border border-gray-150">
           <thead class="bg-slate-50">
             <tr>
-              <th scope="col" class="px-4 py-3 text-left text-xs font-semibold text-slate-900 uppercase tracking-wider border-b border-gray-150">HMI Model Series</th>
-              <th scope="col" class="px-4 py-3 text-left text-xs font-semibold text-slate-900 uppercase tracking-wider border-b border-gray-150">Display Sizes</th>
-              <th scope="col" class="px-4 py-3 text-left text-xs font-semibold text-slate-900 uppercase tracking-wider border-b border-gray-150">Key Interfaces</th>
-              <th scope="col" class="px-4 py-3 text-left text-xs font-semibold text-slate-900 uppercase tracking-wider border-b border-gray-150">Ideal Application</th>
+              <th scope="col" class="px-4 py-3 text-left font-semibold text-slate-900 uppercase tracking-wider border-b border-gray-150">HMI Model Series</th>
+              <th scope="col" class="px-4 py-3 text-left font-semibold text-slate-900 uppercase tracking-wider border-b border-gray-150">Display Sizes</th>
+              <th scope="col" class="px-4 py-3 text-left font-semibold text-slate-900 uppercase tracking-wider border-b border-gray-150">Key Interfaces</th>
+              <th scope="col" class="px-4 py-3 text-left font-semibold text-slate-900 uppercase tracking-wider border-b border-gray-150">Ideal Application</th>
             </tr>
           </thead>
-          <tbody class="bg-white divide-y divide-gray-150 text-[13px]">
+          <tbody class="bg-white divide-y divide-gray-150">
             <tr>
               <td class="px-4 py-3 font-semibold text-slate-900">GOT2000 GT27 Series</td>
               <td class="px-4 py-3 text-gray-600">5.7" to 15" screens</td>
@@ -1895,12 +1910,13 @@ content: `
   },
   "vfd-frequency-inverter-industrial-applications": {title: "Variable Frequency Drives (VFDs) in Industrial Automation: Selection and Application Guide",
     seoTitle: "Variable Frequency Drives (VFD): Selection Guide for Industrial Applications",
-    metaDescription: "Technical guide to selecting and applying variable frequency drives (VFDs) in industrial automation — motor control, energy savings, and integration with PLC/SCADA.",
+    metaDescription: "Learn how to master variable frequency drives (vfds) in industrial automation with our comprehensive guide. Access standards, tips, and implementation ",
     category: "Industrial Automation",
-    date: "July 6, 2026",
+    date: "July 12, 2026",
     readTime: "8 Min Read",
     pillar: "Pillar 2: Industrial Process Automation",
     description: "Technical guide to selecting and applying variable frequency drives (VFDs) in industrial automation — motor control, energy savings, and integration with PLC/SCADA.",
+    keywords: "VFD applications, frequency inverter, motor control",
     image: "/images/frequency-inverters/FR-A800.webp",
     imageAlt: "A heavy-duty Mitsubishi FR-A800 variable frequency drive (VFD) inverter unit mounted on a panel.",
 content: `
@@ -1909,8 +1925,8 @@ content: `
       </p>
 
       <div class="my-6 rounded-lg bg-slate-50 border border-slate-200 p-5 not-prose">
-        <h4 class="text-[13.5px] font-bold text-slate-900 mb-2">💡 Key Takeaways</h4>
-        <ul class="text-[13px] text-slate-600 space-y-2 list-disc pl-4">
+        <h4 class="font-bold text-slate-900 mb-2">💡 Key Takeaways</h4>
+        <ul class="text-slate-600 space-y-2 list-disc pl-4">
           <li><strong>Energy Efficiency:</strong> Implementing VFDs reduces motor power consumption cubicly in centrifugal applications.</li>
           <li><strong>Mechanical Protection:</strong> Soft starting profiles eliminate electrical inrush currents and mechanical wear.</li>
           <li><strong>Harmonic Control:</strong> Proper drive selection must satisfy IEEE 519 standards to prevent electrical noise.</li>
@@ -1950,16 +1966,16 @@ content: `
       </p>
 
       <div class="overflow-x-auto my-8 not-prose">
-        <table class="min-w-full divide-y divide-gray-200 border border-gray-150 text-[13.5px]">
+        <table class="min-w-full divide-y divide-gray-200 border border-gray-150">
           <thead class="bg-slate-50">
             <tr>
-              <th scope="col" class="px-4 py-3 text-left text-xs font-semibold text-slate-900 uppercase tracking-wider border-b border-gray-150">Application Category</th>
-              <th scope="col" class="px-4 py-3 text-left text-xs font-semibold text-slate-900 uppercase tracking-wider border-b border-gray-150">Typical Power Range</th>
-              <th scope="col" class="px-4 py-3 text-left text-xs font-semibold text-slate-900 uppercase tracking-wider border-b border-gray-150">Recommended Control Mode</th>
-              <th scope="col" class="px-4 py-3 text-left text-xs font-semibold text-slate-900 uppercase tracking-wider border-b border-gray-150">Key Advantage</th>
+              <th scope="col" class="px-4 py-3 text-left font-semibold text-slate-900 uppercase tracking-wider border-b border-gray-150">Application Category</th>
+              <th scope="col" class="px-4 py-3 text-left font-semibold text-slate-900 uppercase tracking-wider border-b border-gray-150">Typical Power Range</th>
+              <th scope="col" class="px-4 py-3 text-left font-semibold text-slate-900 uppercase tracking-wider border-b border-gray-150">Recommended Control Mode</th>
+              <th scope="col" class="px-4 py-3 text-left font-semibold text-slate-900 uppercase tracking-wider border-b border-gray-150">Key Advantage</th>
             </tr>
           </thead>
-          <tbody class="bg-white divide-y divide-gray-150 text-[13px]">
+          <tbody class="bg-white divide-y divide-gray-150">
             <tr>
               <td class="px-4 py-3 font-semibold text-slate-900 bg-slate-50/40">Centrifugal Pumps &amp; Fans</td>
               <td class="px-4 py-3 text-gray-600">0.75 kW to 500 kW</td>
@@ -2028,12 +2044,13 @@ content: `
   },
   "industrial-cybersecurity-scada-iec62443": {title: "Industrial Cybersecurity for SCADA and PLC Systems: An IEC 62443 Guide",
     seoTitle: "Industrial Cybersecurity for SCADA Systems: IEC 62443 Compliance Guide",
-    metaDescription: "A practical guide to industrial cybersecurity for SCADA and PLC systems — covering IEC 62443 zone-and-conduit architecture, threat assessment, and hardening measures.",
+    metaDescription: "Unlock the full potential of industrial cybersecurity for scada and plc systems. Expert insights, standards compliance, and actionable recommendations.",
     category: "Industrial Automation",
-    date: "July 6, 2026",
+    date: "May 17, 2025",
     readTime: "9 Min Read",
     pillar: "Pillar 2: Industrial Process Automation",
     description: "A practical guide to industrial cybersecurity for SCADA and PLC systems — covering IEC 62443 zone-and-conduit architecture, threat assessment, and hardening measures.",
+    keywords: "industrial cybersecurity, IEC 62443, SCADA security",
     image: "/images/control_room_interior_and_console/xlat_cyber/1.jpg",
     imageAlt: "Network server racks with fiber optic patch cords blinking inside an industrial automation cybersecurity center.",
 content: `
@@ -2042,8 +2059,8 @@ content: `
       </p>
 
       <div class="my-6 rounded-lg bg-slate-50 border border-slate-200 p-5 not-prose">
-        <h4 class="text-[13.5px] font-bold text-slate-900 mb-2">💡 Key Takeaways</h4>
-        <ul class="text-[13px] text-slate-600 space-y-2 list-disc pl-4">
+        <h4 class="font-bold text-slate-900 mb-2">💡 Key Takeaways</h4>
+        <ul class="text-slate-600 space-y-2 list-disc pl-4">
           <li><strong>OT Security Priority:</strong> Availability and physical safety are the primary objectives of OT security, differing from IT data confidentiality.</li>
           <li><strong>Defense in Depth:</strong> Implementing zone-and-conduit network architectures prevents malicious lateral movement across control levels.</li>
           <li><strong>Compliance Framework:</strong> Adherence to the ISA/IEC 62443 standard provides a robust, certifiable security system for industrial assets.</li>
@@ -2064,15 +2081,15 @@ content: `
       </p>
 
       <div class="overflow-x-auto my-8 not-prose">
-        <table class="min-w-full divide-y divide-gray-200 border border-gray-150 text-[13.5px]">
+        <table class="min-w-full divide-y divide-gray-200 border border-gray-150">
           <thead class="bg-slate-50">
             <tr>
-              <th scope="col" class="px-4 py-3 text-left text-xs font-semibold text-slate-900 uppercase tracking-wider border-b border-gray-150">Parameter</th>
-              <th scope="col" class="px-4 py-3 text-left text-xs font-semibold text-slate-900 uppercase tracking-wider border-b border-gray-150">IT Cybersecurity Networks</th>
-              <th scope="col" class="px-4 py-3 text-left text-xs font-semibold text-slate-900 uppercase tracking-wider border-b border-gray-150">OT SCADA/PLC Networks</th>
+              <th scope="col" class="px-4 py-3 text-left font-semibold text-slate-900 uppercase tracking-wider border-b border-gray-150">Parameter</th>
+              <th scope="col" class="px-4 py-3 text-left font-semibold text-slate-900 uppercase tracking-wider border-b border-gray-150">IT Cybersecurity Networks</th>
+              <th scope="col" class="px-4 py-3 text-left font-semibold text-slate-900 uppercase tracking-wider border-b border-gray-150">OT SCADA/PLC Networks</th>
             </tr>
           </thead>
-          <tbody class="bg-white divide-y divide-gray-150 text-[13px]">
+          <tbody class="bg-white divide-y divide-gray-150">
             <tr>
               <td class="px-4 py-3 font-semibold text-slate-900 bg-slate-50/40">Primary Objective</td>
               <td class="px-4 py-3 text-gray-600">Data Confidentiality (protection against leaks)</td>
@@ -2169,12 +2186,13 @@ content: `
   },
   "ac-servo-systems-manufacturing-guide": {title: "AC Servo Systems in High-Precision Manufacturing: Selection and Integration Guide",
     seoTitle: "AC Servo Systems for High-Precision Manufacturing: Selection Guide",
-    metaDescription: "Technical guide to AC servo motor and drive selection for high-precision industrial manufacturing — covering torque, speed, feedback, and PLC integration.",
+    metaDescription: "Ready to improve your ac servo systems in high-precision manufacturing? Explore expert guidance, compliance standards, and proven techniques.",
     category: "Industrial Automation",
-    date: "July 6, 2026",
+    date: "July 7, 2026",
     readTime: "8 Min Read",
     pillar: "Pillar 2: Industrial Process Automation",
     description: "Technical guide to AC servo motor and drive selection for high-precision industrial manufacturing — covering torque, speed, feedback, and PLC integration.",
+    keywords: "AC servo systems, manufacturing automation, precision control",
     image: "/images/acservos/MR-JE-Servo-Amplifier.webp",
     imageAlt: "A high-precision Mitsubishi MR-JE servo amplifier drive unit designed for accurate motion control.",
 content: `
@@ -2183,8 +2201,8 @@ content: `
       </p>
 
       <div class="my-6 rounded-lg bg-slate-50 border border-slate-200 p-5 not-prose">
-        <h4 class="text-[13.5px] font-bold text-slate-900 mb-2">💡 Key Takeaways</h4>
-        <ul class="text-[13px] text-slate-600 space-y-2 list-disc pl-4">
+        <h4 class="font-bold text-slate-900 mb-2">💡 Key Takeaways</h4>
+        <ul class="text-slate-600 space-y-2 list-disc pl-4">
           <li><strong>Position Precision:</strong> High-resolution encoder feedback enables sub-millimeter positioning accuracy.</li>
           <li><strong>Dynamic Tuning:</strong> Auto-tuning functions match motor responses to changing mechanical loads.</li>
           <li><strong>Standards Compliance:</strong> Motor and drive architectures satisfy safety standards in accordance with IEC 61800.</li>
@@ -2197,16 +2215,16 @@ content: `
       </p>
 
       <div class="overflow-x-auto my-8 not-prose">
-        <table class="min-w-full divide-y divide-gray-200 border border-gray-150 text-[13.5px]">
+        <table class="min-w-full divide-y divide-gray-200 border border-gray-150">
           <thead class="bg-slate-50">
             <tr>
-              <th scope="col" class="px-4 py-3 text-left text-xs font-semibold text-slate-900 uppercase tracking-wider border-b border-gray-150">Feature</th>
-              <th scope="col" class="px-4 py-3 text-left text-xs font-semibold text-slate-900 uppercase tracking-wider border-b border-gray-150">AC Servo System</th>
-              <th scope="col" class="px-4 py-3 text-left text-xs font-semibold text-slate-900 uppercase tracking-wider border-b border-gray-150">Stepper Motor System</th>
-              <th scope="col" class="px-4 py-3 text-left text-xs font-semibold text-slate-900 uppercase tracking-wider border-b border-gray-150">Variable Frequency Drive (VFD)</th>
+              <th scope="col" class="px-4 py-3 text-left font-semibold text-slate-900 uppercase tracking-wider border-b border-gray-150">Feature</th>
+              <th scope="col" class="px-4 py-3 text-left font-semibold text-slate-900 uppercase tracking-wider border-b border-gray-150">AC Servo System</th>
+              <th scope="col" class="px-4 py-3 text-left font-semibold text-slate-900 uppercase tracking-wider border-b border-gray-150">Stepper Motor System</th>
+              <th scope="col" class="px-4 py-3 text-left font-semibold text-slate-900 uppercase tracking-wider border-b border-gray-150">Variable Frequency Drive (VFD)</th>
             </tr>
           </thead>
-          <tbody class="bg-white divide-y divide-gray-150 text-[13px]">
+          <tbody class="bg-white divide-y divide-gray-150">
             <tr>
               <td class="px-4 py-3 font-semibold text-slate-900 bg-slate-50/40">Control Loop</td>
               <td class="px-4 py-3 text-gray-600">Closed-loop (Encoder feedback)</td>
@@ -2297,12 +2315,13 @@ content: `
   },
   "industrial-field-instruments-selection-guide": {title: "Industrial Field Instruments: Selection Guide for Extreme Environments",
     seoTitle: "Industrial Field Instruments: Selection Guide for Extreme Environments",
-    metaDescription: "How to select pressure, temperature, and flow field instruments for extreme industrial environments — covering SIL ratings, process connections, and material selection.",
+    metaDescription: "Learn how to master industrial field instruments with our comprehensive guide. Access standards, tips, and implementation advice.",
     category: "Field Instruments",
-    date: "July 6, 2026",
+    date: "February 17, 2025",
     readTime: "9 Min Read",
     pillar: "Pillar 2: Industrial Process Automation",
     description: "How to select pressure, temperature, and flow field instruments for extreme industrial environments — covering SIL ratings, process connections, and material selection.",
+    keywords: "field instruments, pressure temperature level, instrument selection",
     image: "/images/field_instruments/pressure_sensors/1.png",
     imageAlt: "An explosion-proof industrial pressure transmitter sensor with a digital local display screen.",
 content: `
@@ -2311,8 +2330,8 @@ content: `
       </p>
 
       <div class="my-6 rounded-lg bg-slate-50 border border-slate-200 p-5 not-prose">
-        <h4 class="text-[13.5px] font-bold text-slate-900 mb-2">💡 Key Takeaways</h4>
-        <ul class="text-[13px] text-slate-600 space-y-2 list-disc pl-4">
+        <h4 class="font-bold text-slate-900 mb-2">💡 Key Takeaways</h4>
+        <ul class="text-slate-600 space-y-2 list-disc pl-4">
           <li><strong>Hazardous Compliance:</strong> Instruments in explosive zones must satisfy ATEX/IECEx certifications.</li>
           <li><strong>Functional Safety:</strong> Safety instrumented loops demand SIL 2 or SIL 3 certified transmitters.</li>
           <li><strong>Diagnostic Protocol:</strong> Deploying HART-enabled instruments allows remote diagnostic tracking in accordance with NAMUR NE 43.</li>
@@ -2341,15 +2360,15 @@ content: `
       </p>
 
       <div class="overflow-x-auto my-8 not-prose">
-        <table class="min-w-full divide-y divide-gray-200 border border-gray-150 text-[13.5px]">
+        <table class="min-w-full divide-y divide-gray-200 border border-gray-150">
           <thead class="bg-slate-50">
             <tr>
-              <th scope="col" class="px-4 py-3 text-left text-xs font-semibold text-slate-900 uppercase tracking-wider border-b border-gray-150">Selection Parameter</th>
-              <th scope="col" class="px-4 py-3 text-left text-xs font-semibold text-slate-900 uppercase tracking-wider border-b border-gray-150">Engineering Consideration</th>
-              <th scope="col" class="px-4 py-3 text-left text-xs font-semibold text-slate-900 uppercase tracking-wider border-b border-gray-150">Applicable Standard</th>
+              <th scope="col" class="px-4 py-3 text-left font-semibold text-slate-900 uppercase tracking-wider border-b border-gray-150">Selection Parameter</th>
+              <th scope="col" class="px-4 py-3 text-left font-semibold text-slate-900 uppercase tracking-wider border-b border-gray-150">Engineering Consideration</th>
+              <th scope="col" class="px-4 py-3 text-left font-semibold text-slate-900 uppercase tracking-wider border-b border-gray-150">Applicable Standard</th>
             </tr>
           </thead>
-          <tbody class="bg-white divide-y divide-gray-150 text-[13px]">
+          <tbody class="bg-white divide-y divide-gray-150">
             <tr>
               <td class="px-4 py-3 font-semibold text-slate-900 bg-slate-50/40">Process Conditions</td>
               <td class="px-4 py-3 text-gray-600">Torque, pressure, temperature limits, process connection flanges</td>
@@ -2442,12 +2461,13 @@ content: `
   },
   "control-room-design-ergonomics-hmi": {title: "Industrial Control Room Design: Ergonomics and HMI Best Practices for 24/7 Operations",
     seoTitle: "Industrial Control Room Design: Ergonomics and HMI Best Practices for 24/7 Operations",
-    metaDescription: "Practical guide to industrial control room design — covering ergonomic console layout, HMI screen design, alarm management, and ISO 11064 compliance.",
+    metaDescription: "Discover expert insights on industrial control room design. Get actionable strategies and proven best practices for your operations.",
     category: "Industrial Automation",
-    date: "July 6, 2026",
+    date: "December 24, 2025",
     readTime: "8 Min Read",
     pillar: "Pillar 2: Industrial Process Automation",
     description: "Practical guide to industrial control room design — covering ergonomic console layout, HMI screen design, alarm management, and ISO 11064 compliance.",
+    keywords: "control room design, ergonomics, HMI optimization",
     image: "/images/control_room_interior_and_console/xlat/2.jpg",
     imageAlt: "Ergonomically designed console desks in a 24/7 petrochemical plant operations room.",
 content: `
@@ -2456,8 +2476,8 @@ content: `
       </p>
 
       <div class="my-6 rounded-lg bg-slate-50 border border-slate-200 p-5 not-prose">
-        <h4 class="text-[13.5px] font-bold text-slate-900 mb-2">💡 Key Takeaways</h4>
-        <ul class="text-[13px] text-slate-600 space-y-2 list-disc pl-4">
+        <h4 class="font-bold text-slate-900 mb-2">💡 Key Takeaways</h4>
+        <ul class="text-slate-600 space-y-2 list-disc pl-4">
           <li><strong>Ergonomic Layout:</strong> Designing space based on ISO 11064 principles optimizes viewing angles and minimizes physical strain.</li>
           <li><strong>HMI Standards:</strong> Following ANSI/ISA-101 design guidelines improves situation awareness through high-contrast displays.</li>
           <li><strong>Alarm Controls:</strong> Implementing ANSI/ISA-18.2 standards manages and rationalizes alarms to prevent operator overload.</li>
@@ -2494,15 +2514,15 @@ content: `
       </p>
 
       <div class="overflow-x-auto my-8 not-prose">
-        <table class="min-w-full divide-y divide-gray-200 border border-gray-150 text-[13.5px]">
+        <table class="min-w-full divide-y divide-gray-200 border border-gray-150">
           <thead class="bg-slate-50">
             <tr>
-              <th scope="col" class="px-4 py-3 text-left text-xs font-semibold text-slate-900 uppercase tracking-wider border-b border-gray-150">HMI Level</th>
-              <th scope="col" class="px-4 py-3 text-left text-xs font-semibold text-slate-900 uppercase tracking-wider border-b border-gray-150">HMI Display Purpose</th>
-              <th scope="col" class="px-4 py-3 text-left text-xs font-semibold text-slate-900 uppercase tracking-wider border-b border-gray-150">Typical Display Elements</th>
+              <th scope="col" class="px-4 py-3 text-left font-semibold text-slate-900 uppercase tracking-wider border-b border-gray-150">HMI Level</th>
+              <th scope="col" class="px-4 py-3 text-left font-semibold text-slate-900 uppercase tracking-wider border-b border-gray-150">HMI Display Purpose</th>
+              <th scope="col" class="px-4 py-3 text-left font-semibold text-slate-900 uppercase tracking-wider border-b border-gray-150">Typical Display Elements</th>
             </tr>
           </thead>
-          <tbody class="bg-white divide-y divide-gray-150 text-[13px]">
+          <tbody class="bg-white divide-y divide-gray-150">
             <tr>
               <td class="px-4 py-3 font-semibold text-slate-900 bg-slate-50/40">Level 1</td>
               <td class="px-4 py-3 text-gray-600">Overview display (Plant-wide status)</td>
@@ -2564,12 +2584,13 @@ content: `
   },
   "industrial-sensors-types-applications": {title: "Industrial Sensors: A Complete Guide to Types, Applications, and Selection",
     seoTitle: "Industrial Sensors: A Complete Guide to Types, Applications, and Selection",
-    metaDescription: "Comprehensive guide to industrial sensors for process control — proximity, level, temperature, pressure, and flow sensors with selection criteria and standards.",
+    metaDescription: "Discover expert insights on industrial sensors. Get actionable strategies and proven best practices for your operations.",
     category: "Sensors",
-    date: "July 6, 2026",
+    date: "February 26, 2025",
     readTime: "8 Min Read",
     pillar: "Pillar 2: Industrial Process Automation",
     description: "Comprehensive guide to industrial sensors for process control — proximity, level, temperature, pressure, and flow sensors with selection criteria and standards.",
+    keywords: "industrial sensors, sensor types, process monitoring",
     image: "/images/sensors/Photoelectric Sensors.png",
     imageAlt: "Industrial photoelectric distance sensors mounted on a manufacturing conveyor line.",
 content: `
@@ -2578,8 +2599,8 @@ content: `
       </p>
 
       <div class="my-6 rounded-lg bg-slate-50 border border-slate-200 p-5 not-prose">
-        <h4 class="text-[13.5px] font-bold text-slate-900 mb-2">💡 Key Takeaways</h4>
-        <ul class="text-[13px] text-slate-600 space-y-2 list-disc pl-4">
+        <h4 class="font-bold text-slate-900 mb-2">💡 Key Takeaways</h4>
+        <ul class="text-slate-600 space-y-2 list-disc pl-4">
           <li><strong>Proximity Sensing:</strong> Non-contact sensors detect target presence without mechanical contact, reducing wear.</li>
           <li><strong>Digital Integration:</strong> Deploying IO-Link enabled sensors supports bi-directional diagnostics and configuration changes.</li>
           <li><strong>Rugged Enclosures:</strong> Sensor selections for extreme environments must satisfy IP67 or IP68 ingress protection ratings.</li>
@@ -2592,15 +2613,15 @@ content: `
       </p>
 
       <div class="overflow-x-auto my-8 not-prose">
-        <table class="min-w-full divide-y divide-gray-200 border border-gray-150 text-[13.5px]">
+        <table class="min-w-full divide-y divide-gray-200 border border-gray-150">
           <thead class="bg-slate-50">
             <tr>
-              <th scope="col" class="px-4 py-3 text-left text-xs font-semibold text-slate-900 uppercase tracking-wider border-b border-gray-150">Sensor Type</th>
-              <th scope="col" class="px-4 py-3 text-left text-xs font-semibold text-slate-900 uppercase tracking-wider border-b border-gray-150">Measurement Target</th>
-              <th scope="col" class="px-4 py-3 text-left text-xs font-semibold text-slate-900 uppercase tracking-wider border-b border-gray-150">Standard Output Format</th>
+              <th scope="col" class="px-4 py-3 text-left font-semibold text-slate-900 uppercase tracking-wider border-b border-gray-150">Sensor Type</th>
+              <th scope="col" class="px-4 py-3 text-left font-semibold text-slate-900 uppercase tracking-wider border-b border-gray-150">Measurement Target</th>
+              <th scope="col" class="px-4 py-3 text-left font-semibold text-slate-900 uppercase tracking-wider border-b border-gray-150">Standard Output Format</th>
             </tr>
           </thead>
-          <tbody class="bg-white divide-y divide-gray-150 text-[13px]">
+          <tbody class="bg-white divide-y divide-gray-150">
             <tr>
               <td class="px-4 py-3 font-semibold text-slate-900 bg-slate-50/40">Proximity Sensors</td>
               <td class="px-4 py-3 text-gray-600">Non-contact object detection, valve limit verification</td>
@@ -2688,12 +2709,13 @@ content: `
   },
   "industrial-automation-commissioning-guide": {title: "Commissioning Industrial Automation Systems: From FAT to Handover",
     seoTitle: "Commissioning Industrial Automation Systems: FAT to Handover Guide",
-    metaDescription: "A step-by-step guide to commissioning industrial automation systems — from factory acceptance testing through site commissioning, loop testing, and operational handover.",
+    metaDescription: "Learn how to master commissioning industrial automation systems with our comprehensive guide. Access standards, tips, and implementation advice.",
     category: "Industrial Automation",
-    date: "July 6, 2026",
+    date: "August 13, 2025",
     readTime: "9 Min Read",
     pillar: "Pillar 2: Industrial Process Automation",
     description: "A step-by-step guide to commissioning industrial automation systems — from factory acceptance testing through site commissioning, loop testing, and operational handover.",
+    keywords: "automation commissioning, FAT, plant handover",
     image: "/images/services/automation.jpg",
     imageAlt: "Commissioning engineers inspecting wiring terminations and loops inside an automation control panel.",
 content: `
@@ -2702,8 +2724,8 @@ content: `
       </p>
 
       <div class="my-6 rounded-lg bg-slate-50 border border-slate-200 p-5 not-prose">
-        <h4 class="text-[13.5px] font-bold text-slate-900 mb-2">💡 Key Takeaways</h4>
-        <ul class="text-[13px] text-slate-600 space-y-2 list-disc pl-4">
+        <h4 class="font-bold text-slate-900 mb-2">💡 Key Takeaways</h4>
+        <ul class="text-slate-600 space-y-2 list-disc pl-4">
           <li><strong>Integrated Phasing:</strong> Commissioning moves sequentially from factory loop simulations through site loop testing to active process start-up.</li>
           <li><strong>Checkout Methods:</strong> I/O wiring mapping and checkout are performed against verified ISA-5.1 P&amp;ID layout schematics.</li>
           <li><strong>Safety Verification:</strong> Emergency interlocks and safety shutdowns undergo validation in compliance with IEC 61511 rules.</li>
@@ -2745,15 +2767,15 @@ content: `
       </p>
 
       <div class="overflow-x-auto my-8 not-prose">
-        <table class="min-w-full divide-y divide-gray-200 border border-gray-150 text-[13.5px]">
+        <table class="min-w-full divide-y divide-gray-200 border border-gray-150">
           <thead class="bg-slate-50">
             <tr>
-              <th scope="col" class="px-4 py-3 text-left text-xs font-semibold text-slate-900 uppercase tracking-wider border-b border-gray-150">Verification Phase</th>
-              <th scope="col" class="px-4 py-3 text-left text-xs font-semibold text-slate-900 uppercase tracking-wider border-b border-gray-150">Key Testing Scope</th>
-              <th scope="col" class="px-4 py-3 text-left text-xs font-semibold text-slate-900 uppercase tracking-wider border-b border-gray-150">Target Environment</th>
+              <th scope="col" class="px-4 py-3 text-left font-semibold text-slate-900 uppercase tracking-wider border-b border-gray-150">Verification Phase</th>
+              <th scope="col" class="px-4 py-3 text-left font-semibold text-slate-900 uppercase tracking-wider border-b border-gray-150">Key Testing Scope</th>
+              <th scope="col" class="px-4 py-3 text-left font-semibold text-slate-900 uppercase tracking-wider border-b border-gray-150">Target Environment</th>
             </tr>
           </thead>
-          <tbody class="bg-white divide-y divide-gray-150 text-[13px]">
+          <tbody class="bg-white divide-y divide-gray-150">
             <tr>
               <td class="px-4 py-3 font-semibold text-slate-900 bg-slate-50/40">Factory Acceptance (FAT)</td>
               <td class="px-4 py-3 text-gray-600">PLC code simulation, HMI screen mapping, network configuration checks</td>
@@ -2815,12 +2837,13 @@ content: `
   },
   "ndt-methods-complete-guide": {title: "Non-Destructive Testing (NDT) Methods: A Complete Technical Guide",
     seoTitle: "Non-Destructive Testing (NDT) Methods: A Complete Technical Guide",
-    metaDescription: "Comprehensive guide to NDT methods — Visual Inspection, Ultrasonic Testing, Magnetic Particle, Radiographic Testing, and Penetrant Testing with standards references.",
+    metaDescription: "Want to excel at non-destructive testing (ndt) methods? Our expert guide covers standards, best practices, and real-world strategies.",
     category: "NDT Inspection",
-    date: "July 6, 2026",
+    date: "January 12, 2025",
     readTime: "10 Min Read",
     pillar: "Pillar 3: Analyzers & Inspection",
     description: "Comprehensive guide to NDT methods — Visual Inspection, Ultrasonic Testing, Magnetic Particle, Radiographic Testing, and Penetrant Testing with standards references.",
+    keywords: "NDT methods, non-destructive testing, inspection techniques",
     image: "/images/services/ndt.jpg",
     imageAlt: "A non-destructive testing (NDT) technician preparing a weld seam on a steel pipeline for inspection.",
 content: `
@@ -2829,8 +2852,8 @@ content: `
       </p>
 
       <div class="my-6 rounded-lg bg-slate-50 border border-slate-200 p-5 not-prose">
-        <h4 class="text-[13.5px] font-bold text-slate-900 mb-2">💡 Key Takeaways</h4>
-        <ul class="text-[13px] text-slate-600 space-y-2 list-disc pl-4">
+        <h4 class="font-bold text-slate-900 mb-2">💡 Key Takeaways</h4>
+        <ul class="text-slate-600 space-y-2 list-disc pl-4">
           <li><strong>Technique Selection:</strong> NDT methods range from visual inspections to advanced volumetric ultrasonic and radiographic scans.</li>
           <li><strong>Certification Focus:</strong> Operators must be certified under recognized standards, such as ISO 9712 and ASNT SNT-TC-1A guidelines.</li>
           <li><strong>Compliance Framework:</strong> Testing procedures are governed by ASME Section V, AWS D1.1, and ISO codes.</li>
@@ -2873,15 +2896,15 @@ content: `
       </p>
 
       <div class="overflow-x-auto my-8 not-prose">
-        <table class="min-w-full divide-y divide-gray-200 border border-gray-150 text-[13.5px]">
+        <table class="min-w-full divide-y divide-gray-200 border border-gray-150">
           <thead class="bg-slate-50">
             <tr>
-              <th scope="col" class="px-4 py-3 text-left text-xs font-semibold text-slate-900 uppercase tracking-wider border-b border-gray-150">Inspection Technique</th>
-              <th scope="col" class="px-4 py-3 text-left text-xs font-semibold text-slate-900 uppercase tracking-wider border-b border-gray-150">Defect Target</th>
-              <th scope="col" class="px-4 py-3 text-left text-xs font-semibold text-slate-900 uppercase tracking-wider border-b border-gray-150">Material Limitations</th>
+              <th scope="col" class="px-4 py-3 text-left font-semibold text-slate-900 uppercase tracking-wider border-b border-gray-150">Inspection Technique</th>
+              <th scope="col" class="px-4 py-3 text-left font-semibold text-slate-900 uppercase tracking-wider border-b border-gray-150">Defect Target</th>
+              <th scope="col" class="px-4 py-3 text-left font-semibold text-slate-900 uppercase tracking-wider border-b border-gray-150">Material Limitations</th>
             </tr>
           </thead>
-          <tbody class="bg-white divide-y divide-gray-150 text-[13px]">
+          <tbody class="bg-white divide-y divide-gray-150">
             <tr>
               <td class="px-4 py-3 font-semibold text-slate-900 bg-slate-50/40">Visual Inspection (VI)</td>
               <td class="px-4 py-3 text-gray-600">Surface misalignment, weld undercut, corrosion</td>
@@ -2938,12 +2961,13 @@ content: `
   },
   "phased-array-ultrasonic-testing-guide": {title: "Phased Array Ultrasonic Testing (PAUT): Technical Guide and Industrial Applications",
     seoTitle: "Phased Array Ultrasonic Testing (PAUT): Technical Guide and Applications",
-    metaDescription: "Technical guide to Phased Array Ultrasonic Testing (PAUT) — how it works, advantages over conventional UT, and applications in weld and corrosion inspection.",
+    metaDescription: "Transform your approach to phased array ultrasonic testing (paut). Access expert strategies, industry standards, and proven results.",
     category: "NDT Inspection",
-    date: "July 6, 2026",
+    date: "February 8, 2025",
     readTime: "9 Min Read",
     pillar: "Pillar 3: Analyzers & Inspection",
     description: "Technical guide to Phased Array Ultrasonic Testing (PAUT) — how it works, advantages over conventional UT, and applications in weld and corrosion inspection.",
+    keywords: "phased array UT, PAUT, weld inspection",
     image: "/images/services/phased-array.jpg",
     imageAlt: "An inspector scanning a structural steel weld using a phased array ultrasonic testing (PAUT) probe.",
 content: `
@@ -2952,8 +2976,8 @@ content: `
       </p>
 
       <div class="my-6 rounded-lg bg-slate-50 border border-slate-200 p-5 not-prose">
-        <h4 class="text-[13.5px] font-bold text-slate-900 mb-2">💡 Key Takeaways</h4>
-        <ul class="text-[13px] text-slate-600 space-y-2 list-disc pl-4">
+        <h4 class="font-bold text-slate-900 mb-2">💡 Key Takeaways</h4>
+        <ul class="text-slate-600 space-y-2 list-disc pl-4">
           <li><strong>Beam Steering:</strong> Multi-element probes sweep acoustic waves through different angles electronically, increasing scanning speeds.</li>
           <li><strong>Safety Priority:</strong> Using PAUT eliminates the radiation hazards and exclusion zones associated with radiography.</li>
           <li><strong>Standards Compliance:</strong> Testing procedures satisfy ASME Section V Article 4 and EN ISO 13588 codes.</li>
@@ -2974,16 +2998,16 @@ content: `
       </p>
 
       <div class="overflow-x-auto my-8 not-prose">
-        <table class="min-w-full divide-y divide-gray-200 border border-gray-150 text-[13.5px]">
+        <table class="min-w-full divide-y divide-gray-200 border border-gray-150">
           <thead class="bg-slate-50">
             <tr>
-              <th scope="col" class="px-4 py-3 text-left text-xs font-semibold text-slate-900 uppercase tracking-wider border-b border-gray-150">Feature</th>
-              <th scope="col" class="px-4 py-3 text-left text-xs font-semibold text-slate-900 uppercase tracking-wider border-b border-gray-150">Conventional UT</th>
-              <th scope="col" class="px-4 py-3 text-left text-xs font-semibold text-slate-900 uppercase tracking-wider border-b border-gray-150">Phased Array UT (PAUT)</th>
-              <th scope="col" class="px-4 py-3 text-left text-xs font-semibold text-slate-900 uppercase tracking-wider border-b border-gray-150">Radiography (RT)</th>
+              <th scope="col" class="px-4 py-3 text-left font-semibold text-slate-900 uppercase tracking-wider border-b border-gray-150">Feature</th>
+              <th scope="col" class="px-4 py-3 text-left font-semibold text-slate-900 uppercase tracking-wider border-b border-gray-150">Conventional UT</th>
+              <th scope="col" class="px-4 py-3 text-left font-semibold text-slate-900 uppercase tracking-wider border-b border-gray-150">Phased Array UT (PAUT)</th>
+              <th scope="col" class="px-4 py-3 text-left font-semibold text-slate-900 uppercase tracking-wider border-b border-gray-150">Radiography (RT)</th>
             </tr>
           </thead>
-          <tbody class="bg-white divide-y divide-gray-150 text-[13px]">
+          <tbody class="bg-white divide-y divide-gray-150">
             <tr>
               <td class="px-4 py-3 font-semibold text-slate-900 bg-slate-50/40">Beam Profile</td>
               <td class="px-4 py-3 text-gray-600">Fixed angle and focus point</td>
@@ -3065,12 +3089,13 @@ content: `
   },
   "tofd-time-of-flight-diffraction-guide": {title: "Time of Flight Diffraction (TOFD): Technical Guide for Weld and Vessel Inspection",
     seoTitle: "Time of Flight Diffraction (TOFD): Weld Inspection Technical Guide",
-    metaDescription: "Learn how TOFD ultrasonic inspection works, when to use it, and how it compares to PAUT and radiography for weld and pressure vessel inspection.",
+    metaDescription: "Unlock the full potential of time of flight diffraction (tofd). Expert insights, standards compliance, and actionable recommendations.",
     category: "NDT Inspection",
-    date: "July 6, 2026",
+    date: "February 22, 2025",
     readTime: "8 Min Read",
     pillar: "Pillar 3: Analyzers & Inspection",
     description: "Learn how TOFD ultrasonic inspection works, when to use it, and how it compares to PAUT and radiography for weld and pressure vessel inspection.",
+    keywords: "TOFD, time of flight diffraction, weld inspection",
     image: "/images/services/time-of-flight-diffraction-tofd-ultrasonic-testing.jpg",
     imageAlt: "A dual-probe TOFD scanner positioned on a welded plate for advanced internal defect detection.",
 content: `
@@ -3079,8 +3104,8 @@ content: `
       </p>
 
       <div class="my-6 rounded-lg bg-slate-50 border border-slate-200 p-5 not-prose">
-        <h4 class="text-[13.5px] font-bold text-slate-900 mb-2">💡 Key Takeaways</h4>
-        <ul class="text-[13px] text-slate-600 space-y-2 list-disc pl-4">
+        <h4 class="font-bold text-slate-900 mb-2">💡 Key Takeaways</h4>
+        <ul class="text-slate-600 space-y-2 list-disc pl-4">
           <li><strong>Tip Diffraction:</strong> TOFD uses low-amplitude sound waves scattered from crack tips to calculate defect heights, independent of beam amplitude.</li>
           <li><strong>Volumetric Speed:</strong> Single-pass scans examine the entire weld volume, improving inspection productivity.</li>
           <li><strong>Standards Compliance:</strong> Testing procedures satisfy ASME Section V Article 4 and EN ISO 10863 codes.</li>
@@ -3101,16 +3126,16 @@ content: `
       </p>
 
       <div class="overflow-x-auto my-8 not-prose">
-        <table class="min-w-full divide-y divide-gray-200 border border-gray-150 text-[13.5px]">
+        <table class="min-w-full divide-y divide-gray-200 border border-gray-150">
           <thead class="bg-slate-50">
             <tr>
-              <th scope="col" class="px-4 py-3 text-left text-xs font-semibold text-slate-900 uppercase tracking-wider border-b border-gray-150">Parameter</th>
-              <th scope="col" class="px-4 py-3 text-left text-xs font-semibold text-slate-900 uppercase tracking-wider border-b border-gray-150">Conventional UT</th>
-              <th scope="col" class="px-4 py-3 text-left text-xs font-semibold text-slate-900 uppercase tracking-wider border-b border-gray-150">Phased Array UT (PAUT)</th>
-              <th scope="col" class="px-4 py-3 text-left text-xs font-semibold text-slate-900 uppercase tracking-wider border-b border-gray-150">Time of Flight Diffraction (TOFD)</th>
+              <th scope="col" class="px-4 py-3 text-left font-semibold text-slate-900 uppercase tracking-wider border-b border-gray-150">Parameter</th>
+              <th scope="col" class="px-4 py-3 text-left font-semibold text-slate-900 uppercase tracking-wider border-b border-gray-150">Conventional UT</th>
+              <th scope="col" class="px-4 py-3 text-left font-semibold text-slate-900 uppercase tracking-wider border-b border-gray-150">Phased Array UT (PAUT)</th>
+              <th scope="col" class="px-4 py-3 text-left font-semibold text-slate-900 uppercase tracking-wider border-b border-gray-150">Time of Flight Diffraction (TOFD)</th>
             </tr>
           </thead>
-          <tbody class="bg-white divide-y divide-gray-150 text-[13px]">
+          <tbody class="bg-white divide-y divide-gray-150">
             <tr>
               <td class="px-4 py-3 font-semibold text-slate-900 bg-slate-50/40">flaw Detection</td>
               <td class="px-4 py-3 text-gray-600">Limited by probe angles, orientation sensitive</td>
@@ -3186,12 +3211,13 @@ content: `
   },
   "magnetic-particle-inspection-guide": {title: "Magnetic Particle Inspection (MPI): Complete Technical and Application Guide",
     seoTitle: "Magnetic Particle Inspection (MPI): Technical and Application Guide",
-    metaDescription: "Comprehensive guide to Magnetic Particle Inspection (MPI) — wet fluorescent, dry powder techniques, yoke magnetization, and weld inspection standards.",
+    metaDescription: "Unlock the full potential of magnetic particle inspection (mpi). Expert insights, standards compliance, and actionable recommendations.",
     category: "NDT Inspection",
-    date: "July 6, 2026",
+    date: "March 5, 2025",
     readTime: "8 Min Read",
     pillar: "Pillar 3: Analyzers & Inspection",
     description: "Comprehensive guide to Magnetic Particle Inspection (MPI) — wet fluorescent, dry powder techniques, yoke magnetization, and weld inspection standards.",
+    keywords: "magnetic particle inspection, MPI, surface defect detection",
     image: "/images/services/Magnetic-Particle-Inspection.jpg",
     imageAlt: "Technicians applying magnetic dust to reveal surface cracks on a metal component under an electromagnetic yoke.",
 content: `
@@ -3200,8 +3226,8 @@ content: `
       </p>
 
       <div class="my-6 rounded-lg bg-slate-50 border border-slate-200 p-5 not-prose">
-        <h4 class="text-[13.5px] font-bold text-slate-900 mb-2">💡 Key Takeaways</h4>
-        <ul class="text-[13px] text-slate-600 space-y-2 list-disc pl-4">
+        <h4 class="font-bold text-slate-900 mb-2">💡 Key Takeaways</h4>
+        <ul class="text-slate-600 space-y-2 list-disc pl-4">
           <li><strong>Leakage Principle:</strong> Cracks in magnetized parts create localized magnetic leakage fields that attract indicator particles.</li>
           <li><strong>High Contrast:</strong> Using wet fluorescent particles under UV light provides high defect detection sensitivity.</li>
           <li><strong>Code Adherence:</strong> Testing procedures are performed in compliance with ASME Section V Article 7 and ASTM E709 codes.</li>
@@ -3222,16 +3248,16 @@ content: `
       </p>
 
       <div class="overflow-x-auto my-8 not-prose">
-        <table class="min-w-full divide-y divide-gray-200 border border-gray-150 text-[13.5px]">
+        <table class="min-w-full divide-y divide-gray-200 border border-gray-150">
           <thead class="bg-slate-50">
             <tr>
-              <th scope="col" class="px-4 py-3 text-left text-xs font-semibold text-slate-900 uppercase tracking-wider border-b border-gray-150">Technique Type</th>
-              <th scope="col" class="px-4 py-3 text-left text-xs font-semibold text-slate-900 uppercase tracking-wider border-b border-gray-150">Carrier Medium</th>
-              <th scope="col" class="px-4 py-3 text-left text-xs font-semibold text-slate-900 uppercase tracking-wider border-b border-gray-150">Sensitivity Level</th>
-              <th scope="col" class="px-4 py-3 text-left text-xs font-semibold text-slate-900 uppercase tracking-wider border-b border-gray-150">Lighting Conditions</th>
+              <th scope="col" class="px-4 py-3 text-left font-semibold text-slate-900 uppercase tracking-wider border-b border-gray-150">Technique Type</th>
+              <th scope="col" class="px-4 py-3 text-left font-semibold text-slate-900 uppercase tracking-wider border-b border-gray-150">Carrier Medium</th>
+              <th scope="col" class="px-4 py-3 text-left font-semibold text-slate-900 uppercase tracking-wider border-b border-gray-150">Sensitivity Level</th>
+              <th scope="col" class="px-4 py-3 text-left font-semibold text-slate-900 uppercase tracking-wider border-b border-gray-150">Lighting Conditions</th>
             </tr>
           </thead>
-          <tbody class="bg-white divide-y divide-gray-150 text-[13px]">
+          <tbody class="bg-white divide-y divide-gray-150">
             <tr>
               <td class="px-4 py-3 font-semibold text-slate-900 bg-slate-50/40">Wet Fluorescent MPI</td>
               <td class="px-4 py-3 text-gray-600">Fluorescent particles in oil or water carrier</td>
@@ -3311,12 +3337,13 @@ content: `
   },
   "radiographic-testing-industrial-inspection": {title: "Radiographic Testing (RT) in Industrial Inspection: X-Ray vs. Gamma Ray",
     seoTitle: "Radiographic Testing in Industrial Inspection: X-Ray vs Gamma Ray",
-    metaDescription: "An authoritative guide to radiographic testing in industrial inspection. Compare X-ray vs gamma ray, film vs digital radiography, and safety requirements.",
+    metaDescription: "Learn how to master radiographic testing (rt) in industrial inspection with our comprehensive guide. Access standards, tips, and implementation advice.",
     category: "NDT Inspection",
-    date: "July 6, 2026",
+    date: "March 18, 2025",
     readTime: "9 Min Read",
     pillar: "Pillar 3: Analyzers & Inspection",
     description: "An authoritative guide to radiographic testing in industrial inspection. Compare X-ray vs gamma ray, film vs digital radiography, and safety requirements.",
+    keywords: "radiographic testing, RT inspection, X-ray gamma ray",
     image: "/images/services/rgt.webp",
     imageAlt: "An industrial radiographic x-ray crawler system positioned inside a large diameter pipeline section.",
 content: `
@@ -3325,8 +3352,8 @@ content: `
       </p>
 
       <div class="my-6 rounded-lg bg-slate-50 border border-slate-200 p-5 not-prose">
-        <h4 class="text-[13.5px] font-bold text-slate-900 mb-2">💡 Key Takeaways</h4>
-        <ul class="text-[13px] text-slate-600 space-y-2 list-disc pl-4">
+        <h4 class="font-bold text-slate-900 mb-2">💡 Key Takeaways</h4>
+        <ul class="text-slate-600 space-y-2 list-disc pl-4">
           <li><strong>Energy Selection:</strong> X-ray machines offer adjustable voltages for thin sections, whereas gamma ray isotopes provide portability for heavy sections.</li>
           <li><strong>Digital Migration:</strong> Transitioning from film to Computed Radiography (CR) or Digital Detector Arrays (DDA) eliminates chemical processing.</li>
           <li><strong>Radiation Safety:</strong> RT operations demand strict exclusion zones and compliance with international IAEA safety guidelines.</li>
@@ -3347,15 +3374,15 @@ content: `
       </p>
 
       <div class="overflow-x-auto my-8 not-prose">
-        <table class="min-w-full divide-y divide-gray-200 border border-gray-150 text-[13.5px]">
+        <table class="min-w-full divide-y divide-gray-200 border border-gray-150">
           <thead class="bg-slate-50">
             <tr>
-              <th scope="col" class="px-4 py-3 text-left text-xs font-semibold text-slate-900 uppercase tracking-wider border-b border-gray-150">Feature</th>
-              <th scope="col" class="px-4 py-3 text-left text-xs font-semibold text-slate-900 uppercase tracking-wider border-b border-gray-150">X-Ray RT Systems</th>
-              <th scope="col" class="px-4 py-3 text-left text-xs font-semibold text-slate-900 uppercase tracking-wider border-b border-gray-150">Gamma Ray RT (Isotopes)</th>
+              <th scope="col" class="px-4 py-3 text-left font-semibold text-slate-900 uppercase tracking-wider border-b border-gray-150">Feature</th>
+              <th scope="col" class="px-4 py-3 text-left font-semibold text-slate-900 uppercase tracking-wider border-b border-gray-150">X-Ray RT Systems</th>
+              <th scope="col" class="px-4 py-3 text-left font-semibold text-slate-900 uppercase tracking-wider border-b border-gray-150">Gamma Ray RT (Isotopes)</th>
             </tr>
           </thead>
-          <tbody class="bg-white divide-y divide-gray-150 text-[13px]">
+          <tbody class="bg-white divide-y divide-gray-150">
             <tr>
               <td class="px-4 py-3 font-semibold text-slate-900 bg-slate-50/40">Radiation Source</td>
               <td class="px-4 py-3 text-gray-600">Electrical high-voltage vacuum tube</td>
@@ -3386,16 +3413,16 @@ content: `
       </p>
 
       <div class="overflow-x-auto my-8 not-prose">
-        <table class="min-w-full divide-y divide-gray-200 border border-gray-150 text-[13.5px]">
+        <table class="min-w-full divide-y divide-gray-200 border border-gray-150">
           <thead class="bg-slate-50">
             <tr>
-              <th scope="col" class="px-4 py-3 text-left text-xs font-semibold text-slate-900 uppercase tracking-wider border-b border-gray-150">Feature</th>
-              <th scope="col" class="px-4 py-3 text-left text-xs font-semibold text-slate-900 uppercase tracking-wider border-b border-gray-150">Traditional Radiographic Film</th>
-              <th scope="col" class="px-4 py-3 text-left text-xs font-semibold text-slate-900 uppercase tracking-wider border-b border-gray-150">Computed Radiography (CR)</th>
-              <th scope="col" class="px-4 py-3 text-left text-xs font-semibold text-slate-900 uppercase tracking-wider border-b border-gray-150">Digital Detector Arrays (DDA)</th>
+              <th scope="col" class="px-4 py-3 text-left font-semibold text-slate-900 uppercase tracking-wider border-b border-gray-150">Feature</th>
+              <th scope="col" class="px-4 py-3 text-left font-semibold text-slate-900 uppercase tracking-wider border-b border-gray-150">Traditional Radiographic Film</th>
+              <th scope="col" class="px-4 py-3 text-left font-semibold text-slate-900 uppercase tracking-wider border-b border-gray-150">Computed Radiography (CR)</th>
+              <th scope="col" class="px-4 py-3 text-left font-semibold text-slate-900 uppercase tracking-wider border-b border-gray-150">Digital Detector Arrays (DDA)</th>
             </tr>
           </thead>
-          <tbody class="bg-white divide-y divide-gray-150 text-[13px]">
+          <tbody class="bg-white divide-y divide-gray-150">
             <tr>
               <td class="px-4 py-3 font-semibold text-slate-900 bg-slate-50/40">Processing Method</td>
               <td class="px-4 py-3 text-gray-600">Chemical darkroom development</td>
@@ -3468,12 +3495,13 @@ content: `
   },
   "eddy-current-testing-tube-inspection": {title: "Eddy Current Testing (ECT): A Technical Guide to Tube and Surface Inspection",
     seoTitle: "Eddy Current Testing (ECT): Tube and Surface Inspection Technical Guide",
-    metaDescription: "Learn how Eddy Current Testing (ECT) works, probe types, heat exchanger tube inspections, and surface crack detection with ASTM and ASME standards.",
+    metaDescription: "Get the definitive guide to eddy current testing (ect). Expert advice, industry standards, and step-by-step strategies.",
     category: "NDT Inspection",
-    date: "July 6, 2026",
+    date: "April 3, 2025",
     readTime: "8 Min Read",
     pillar: "Pillar 3: Analyzers & Inspection",
     description: "Learn how Eddy Current Testing (ECT) works, probe types, heat exchanger tube inspections, and surface crack detection with ASTM and ASME standards.",
+    keywords: "eddy current testing, tube inspection, surface inspection",
     image: "/images/services/Eddy-Current-Testing.jpg",
     imageAlt: "An ECT probe being inserted into a condenser tube sheet to detect wall loss and cracks.",
 content: `
@@ -3482,8 +3510,8 @@ content: `
       </p>
 
       <div class="my-6 rounded-lg bg-slate-50 border border-slate-200 p-5 not-prose">
-        <h4 class="text-[13.5px] font-bold text-slate-900 mb-2">💡 Key Takeaways</h4>
-        <ul class="text-[13px] text-slate-600 space-y-2 list-disc pl-4">
+        <h4 class="font-bold text-slate-900 mb-2">💡 Key Takeaways</h4>
+        <ul class="text-slate-600 space-y-2 list-disc pl-4">
           <li><strong>Electromagnetic Induction:</strong> ECT utilizes alternating magnetic fields to induce currents, detecting anomalies by tracking coil impedance shifts.</li>
           <li><strong>High-Speed Tube Scans:</strong> Bobbin probes scan the entire length of heat exchanger tubes rapidly, detecting internal and external wall loss.</li>
           <li><strong>Conductivity Limit:</strong> The testing technique is restricted to conductive materials, requiring alternative NDT methods for plastics.</li>
@@ -3504,15 +3532,15 @@ content: `
       </p>
 
       <div class="overflow-x-auto my-8 not-prose">
-        <table class="min-w-full divide-y divide-gray-200 border border-gray-150 text-[13.5px]">
+        <table class="min-w-full divide-y divide-gray-200 border border-gray-150">
           <thead class="bg-slate-50">
             <tr>
-              <th scope="col" class="px-4 py-3 text-left text-xs font-semibold text-slate-900 uppercase tracking-wider border-b border-gray-150">Probe Configuration</th>
-              <th scope="col" class="px-4 py-3 text-left text-xs font-semibold text-slate-900 uppercase tracking-wider border-b border-gray-150">Coil Layout</th>
-              <th scope="col" class="px-4 py-3 text-left text-xs font-semibold text-slate-900 uppercase tracking-wider border-b border-gray-150">Primary Application</th>
+              <th scope="col" class="px-4 py-3 text-left font-semibold text-slate-900 uppercase tracking-wider border-b border-gray-150">Probe Configuration</th>
+              <th scope="col" class="px-4 py-3 text-left font-semibold text-slate-900 uppercase tracking-wider border-b border-gray-150">Coil Layout</th>
+              <th scope="col" class="px-4 py-3 text-left font-semibold text-slate-900 uppercase tracking-wider border-b border-gray-150">Primary Application</th>
             </tr>
           </thead>
-          <tbody class="bg-white divide-y divide-gray-150 text-[13px]">
+          <tbody class="bg-white divide-y divide-gray-150">
             <tr>
               <td class="px-4 py-3 font-semibold text-slate-900 bg-slate-50/40">Bobbin Probe</td>
               <td class="px-4 py-3 text-gray-600">Circumferential coils wrapped around probe body</td>
@@ -3588,12 +3616,13 @@ content: `
   },
   "mechanical-testing-materials": {title: "Mechanical Testing in Materials Engineering: A Complete Technical Guide",
     seoTitle: "Mechanical Testing in Materials Engineering: A Complete Technical Guide",
-    metaDescription: "Comprehensive guide to mechanical testing of materials — tensile, hardness, impact, bend, and fracture toughness testing.",
+    metaDescription: "Learn how to master mechanical testing in materials engineering with our comprehensive guide. Access standards, tips, and implementation advice.",
     category: "Mechanical Testing",
-    date: "July 6, 2026",
+    date: "April 15, 2025",
     readTime: "9 Min Read",
     pillar: "Pillar 3: Analyzers & Inspection",
     description: "Comprehensive guide to mechanical testing of materials — tensile, hardness, impact, bend, and fracture toughness testing.",
+    keywords: "mechanical testing, material testing, engineering properties",
     image: "/images/services/mechanical-testing.jpg",
     imageAlt: "A computerized universal tensile testing machine pulling a metal specimen to measure yield strength.",
 content: `
@@ -3602,8 +3631,8 @@ content: `
       </p>
 
       <div class="my-6 rounded-lg bg-slate-50 border border-slate-200 p-5 not-prose">
-        <h4 class="text-[13.5px] font-bold text-slate-900 mb-2">💡 Key Takeaways</h4>
-        <ul class="text-[13px] text-slate-600 space-y-2 list-disc pl-4">
+        <h4 class="font-bold text-slate-900 mb-2">💡 Key Takeaways</h4>
+        <ul class="text-slate-600 space-y-2 list-disc pl-4">
           <li><strong>Tensile Focus:</strong> Stretching specimens under tension determines yield points, UTS, and elongation limits.</li>
           <li><strong>Hardness Scales:</strong> Brinell, Rockwell, and Vickers methods measure surface resistance to indentation.</li>
           <li><strong>Toughness Focus:</strong> Charpy impact testing quantifies energy absorption to identify brittle failure risks.</li>
@@ -3632,16 +3661,16 @@ content: `
       </p>
 
       <div class="overflow-x-auto my-8 not-prose">
-        <table class="min-w-full divide-y divide-gray-200 border border-gray-150 text-[13.5px]">
+        <table class="min-w-full divide-y divide-gray-200 border border-gray-150">
           <thead class="bg-slate-50">
             <tr>
-              <th scope="col" class="px-4 py-3 text-left text-xs font-semibold text-slate-900 uppercase tracking-wider border-b border-gray-150">Hardness Scale</th>
-              <th scope="col" class="px-4 py-3 text-left text-xs font-semibold text-slate-900 uppercase tracking-wider border-b border-gray-150">Indenter Geometry</th>
-              <th scope="col" class="px-4 py-3 text-left text-xs font-semibold text-slate-900 uppercase tracking-wider border-b border-gray-150">Measurement Basis</th>
-              <th scope="col" class="px-4 py-3 text-left text-xs font-semibold text-slate-900 uppercase tracking-wider border-b border-gray-150">Standard Codes</th>
+              <th scope="col" class="px-4 py-3 text-left font-semibold text-slate-900 uppercase tracking-wider border-b border-gray-150">Hardness Scale</th>
+              <th scope="col" class="px-4 py-3 text-left font-semibold text-slate-900 uppercase tracking-wider border-b border-gray-150">Indenter Geometry</th>
+              <th scope="col" class="px-4 py-3 text-left font-semibold text-slate-900 uppercase tracking-wider border-b border-gray-150">Measurement Basis</th>
+              <th scope="col" class="px-4 py-3 text-left font-semibold text-slate-900 uppercase tracking-wider border-b border-gray-150">Standard Codes</th>
             </tr>
           </thead>
-          <tbody class="bg-white divide-y divide-gray-150 text-[13px]">
+          <tbody class="bg-white divide-y divide-gray-150">
             <tr>
               <td class="px-4 py-3 font-semibold text-slate-900 bg-slate-50/40">Rockwell (HRC/HRB)</td>
               <td class="px-4 py-3 text-gray-600">120&deg; diamond cone or steel ball</td>
@@ -3709,12 +3738,13 @@ content: `
   },
   "weld-inspection-standards": {title: "Weld Inspection Standards: ASME, AWS, and API Requirements Explained",
     seoTitle: "Weld Inspection Standards: ASME, AWS, and API Requirements Explained",
-    metaDescription: "Understand weld inspection standards — ASME, AWS, and API requirements for welding engineers, QA/QC managers, and inspectors.",
+    metaDescription: "Learn how to master weld inspection standards with our comprehensive guide. Access standards, tips, and implementation advice.",
     category: "NDT Inspection",
-    date: "July 6, 2026",
+    date: "April 28, 2025",
     readTime: "9 Min Read",
     pillar: "Pillar 3: Analyzers & Inspection",
     description: "Understand weld inspection standards — ASME, AWS, and API requirements for welding engineers, QA/QC managers, and inspectors.",
+    keywords: "weld inspection, ASME AWS standards, weld quality",
     image: "/images/services/inspection-testing.jpg",
     imageAlt: "A quality inspector checking weld profile parameters on structural piping using a weld gauge.",
 content: `
@@ -3723,8 +3753,8 @@ content: `
       </p>
 
       <div class="my-6 rounded-lg bg-slate-50 border border-slate-200 p-5 not-prose">
-        <h4 class="text-[13.5px] font-bold text-slate-900 mb-2">💡 Key Takeaways</h4>
-        <ul class="text-[13px] text-slate-600 space-y-2 list-disc pl-4">
+        <h4 class="font-bold text-slate-900 mb-2">💡 Key Takeaways</h4>
+        <ul class="text-slate-600 space-y-2 list-disc pl-4">
           <li><strong>Pressure Vessel Codes:</strong> ASME Sections V and IX govern welder qualification and NDT procedures for boilers and vessels.</li>
           <li><strong>Structural Steel Code:</strong> AWS D1.1 sets fabrication and inspection criteria for buildings and civil steel structures.</li>
           <li><strong>Pipeline Standard:</strong> API 1104 governs welding procedures and NDT acceptance limits for cross-country piping runs.</li>
@@ -3757,15 +3787,15 @@ content: `
       </p>
 
       <div class="overflow-x-auto my-8 not-prose">
-        <table class="min-w-full divide-y divide-gray-200 border border-gray-150 text-[13.5px]">
+        <table class="min-w-full divide-y divide-gray-200 border border-gray-150">
           <thead class="bg-slate-50">
             <tr>
-              <th scope="col" class="px-4 py-3 text-left text-xs font-semibold text-slate-900 uppercase tracking-wider border-b border-gray-150">Standard</th>
-              <th scope="col" class="px-4 py-3 text-left text-xs font-semibold text-slate-900 uppercase tracking-wider border-b border-gray-150">Scope &amp; Application</th>
-              <th scope="col" class="px-4 py-3 text-left text-xs font-semibold text-slate-900 uppercase tracking-wider border-b border-gray-150">Common NDT Methods</th>
+              <th scope="col" class="px-4 py-3 text-left font-semibold text-slate-900 uppercase tracking-wider border-b border-gray-150">Standard</th>
+              <th scope="col" class="px-4 py-3 text-left font-semibold text-slate-900 uppercase tracking-wider border-b border-gray-150">Scope &amp; Application</th>
+              <th scope="col" class="px-4 py-3 text-left font-semibold text-slate-900 uppercase tracking-wider border-b border-gray-150">Common NDT Methods</th>
             </tr>
           </thead>
-          <tbody class="bg-white divide-y divide-gray-150 text-[13px]">
+          <tbody class="bg-white divide-y divide-gray-150">
             <tr>
               <td class="px-4 py-3 font-semibold text-slate-900 bg-slate-50/40">ASME Section IX</td>
               <td class="px-4 py-3 text-gray-600">Qualification of welders and procedures for pressure vessels</td>
@@ -3828,12 +3858,13 @@ content: `
   },
   "magnetic-flux-leakage-pipeline-inspection": {title: "Magnetic Flux Leakage (MFL) Testing: Pipeline and Storage Tank Inspection Guide",
     seoTitle: "Magnetic Flux Leakage (MFL) Testing: Pipeline & Storage Tank Inspection",
-    metaDescription: "Understand MFL testing for storage tanks and pipelines. Compare MFL vs UT for corrosion detection and learn about API 653 inspections.",
+    metaDescription: "Want to excel at magnetic flux leakage (mfl) testing? Our expert guide covers standards, best practices, and real-world strategies.",
     category: "NDT Inspection",
-    date: "July 6, 2026",
+    date: "May 10, 2025",
     readTime: "8 Min Read",
     pillar: "Pillar 3: Analyzers & Inspection",
     description: "Understand MFL testing for storage tanks and pipelines. Compare MFL vs UT for corrosion detection and learn about API 653 inspections.",
+    keywords: "MFL testing, pipeline inspection, storage tank inspection",
     image: "/images/services/Magnetic-Flux-Leakage.jpg",
     imageAlt: "A magnetic flux leakage (MFL) tool scanning the floor plates of a bulk liquid storage tank.",
 content: `
@@ -3842,8 +3873,8 @@ content: `
       </p>
 
       <div class="my-6 rounded-lg bg-slate-50 border border-slate-200 p-5 not-prose">
-        <h4 class="text-[13.5px] font-bold text-slate-900 mb-2">💡 Key Takeaways</h4>
-        <ul class="text-[13px] text-slate-600 space-y-2 list-disc pl-4">
+        <h4 class="font-bold text-slate-900 mb-2">💡 Key Takeaways</h4>
+        <ul class="text-slate-600 space-y-2 list-disc pl-4">
           <li><strong>Leakage Tracking:</strong> Corrosion thinning forces magnetic flux lines to leak from steel walls, triggering sensor signals.</li>
           <li><strong>Storage Tank Scanning:</strong> MFL floor scanners verify tank plates, satisfying API 653 inspection standards.</li>
           <li><strong>Pipeline In-Line Scans:</strong> Smart MFL pigs inspect pipeline interiors without requiring trench excavation.</li>
@@ -3874,15 +3905,15 @@ content: `
       </p>
 
       <div class="overflow-x-auto my-8 not-prose">
-        <table class="min-w-full divide-y divide-gray-200 border border-gray-150 text-[13.5px]">
+        <table class="min-w-full divide-y divide-gray-200 border border-gray-150">
           <thead class="bg-slate-50">
             <tr>
-              <th scope="col" class="px-4 py-3 text-left text-xs font-semibold text-slate-900 uppercase tracking-wider border-b border-gray-150">Inspection Feature</th>
-              <th scope="col" class="px-4 py-3 text-left text-xs font-semibold text-slate-900 uppercase tracking-wider border-b border-gray-150">Magnetic Flux Leakage (MFL)</th>
-              <th scope="col" class="px-4 py-3 text-left text-xs font-semibold text-slate-900 uppercase tracking-wider border-b border-gray-150">Ultrasonic Testing (UT)</th>
+              <th scope="col" class="px-4 py-3 text-left font-semibold text-slate-900 uppercase tracking-wider border-b border-gray-150">Inspection Feature</th>
+              <th scope="col" class="px-4 py-3 text-left font-semibold text-slate-900 uppercase tracking-wider border-b border-gray-150">Magnetic Flux Leakage (MFL)</th>
+              <th scope="col" class="px-4 py-3 text-left font-semibold text-slate-900 uppercase tracking-wider border-b border-gray-150">Ultrasonic Testing (UT)</th>
             </tr>
           </thead>
-          <tbody class="bg-white divide-y divide-gray-150 text-[13px]">
+          <tbody class="bg-white divide-y divide-gray-150">
             <tr>
               <td class="px-4 py-3 font-semibold text-slate-900 bg-slate-50/40">Inspection Speed</td>
               <td class="px-4 py-3 text-gray-600">Very High (Motorized scanning)</td>
@@ -3939,12 +3970,13 @@ content: `
   },
   "positive-material-identification-pmi": {title: "Positive Material Identification (PMI): Why Material Verification Matters",
     seoTitle: "Positive Material Identification (PMI): Alloy Verification Guide",
-    metaDescription: "Learn why Positive Material Identification (PMI) is required for safety. Compare XRF vs OES and see how API 578 dictates alloy verification.",
+    metaDescription: "Get the definitive guide to positive material identification (pmi). Expert advice, industry standards, and step-by-step strategies.",
     category: "PMI Inspection",
-    date: "July 6, 2026",
+    date: "May 22, 2025",
     readTime: "8 Min Read",
     pillar: "Pillar 3: Analyzers & Inspection",
     description: "Learn why Positive Material Identification (PMI) is required for safety. Compare XRF vs OES and see how API 578 dictates alloy verification.",
+    keywords: "PMI, material identification, positive material verification",
     image: "/images/services/Macro-and-Micro-Test.jpg",
     imageAlt: "Metallurgists examining structural microstructures in a quality control laboratory.",
 content: `
@@ -3953,8 +3985,8 @@ content: `
       </p>
 
       <div class="my-6 rounded-lg bg-slate-50 border border-slate-200 p-5 not-prose">
-        <h4 class="text-[13.5px] font-bold text-slate-900 mb-2">💡 Key Takeaways</h4>
-        <ul class="text-[13px] text-slate-600 space-y-2 list-disc pl-4">
+        <h4 class="font-bold text-slate-900 mb-2">💡 Key Takeaways</h4>
+        <ul class="text-slate-600 space-y-2 list-disc pl-4">
           <li><strong>Technological Options:</strong> XRF handheld guns analyze heavy alloying elements, while OES units verify carbon concentrations.</li>
           <li><strong>Mandatory Audits:</strong> API 578 guidelines outline material verification program requirements in oil and gas environments.</li>
           <li><strong>Quality Control:</strong> Executing PMI verifies that installed components match certified Mill Test Reports (MTRs).</li>
@@ -3972,15 +4004,15 @@ content: `
       </p>
 
       <div class="overflow-x-auto my-8 not-prose">
-        <table class="min-w-full divide-y divide-gray-200 border border-gray-150 text-[13.5px]">
+        <table class="min-w-full divide-y divide-gray-200 border border-gray-150">
           <thead class="bg-slate-50">
             <tr>
-              <th scope="col" class="px-4 py-3 text-left text-xs font-semibold text-slate-900 uppercase tracking-wider border-b border-gray-150">Feature</th>
-              <th scope="col" class="px-4 py-3 text-left text-xs font-semibold text-slate-900 uppercase tracking-wider border-b border-gray-150">X-Ray Fluorescence (XRF)</th>
-              <th scope="col" class="px-4 py-3 text-left text-xs font-semibold text-slate-900 uppercase tracking-wider border-b border-gray-150">Optical Emission Spectrometry (OES)</th>
+              <th scope="col" class="px-4 py-3 text-left font-semibold text-slate-900 uppercase tracking-wider border-b border-gray-150">Feature</th>
+              <th scope="col" class="px-4 py-3 text-left font-semibold text-slate-900 uppercase tracking-wider border-b border-gray-150">X-Ray Fluorescence (XRF)</th>
+              <th scope="col" class="px-4 py-3 text-left font-semibold text-slate-900 uppercase tracking-wider border-b border-gray-150">Optical Emission Spectrometry (OES)</th>
             </tr>
           </thead>
-          <tbody class="bg-white divide-y divide-gray-150 text-[13px]">
+          <tbody class="bg-white divide-y divide-gray-150">
             <tr>
               <td class="px-4 py-3 font-semibold text-slate-900 bg-slate-50/40">Measurement Method</td>
               <td class="px-4 py-3 text-gray-600">X-ray excitation (atomic energy emission)</td>
@@ -4048,12 +4080,13 @@ content: `
 
   "dust-analyzer-cement-plant": {title: "Dust Analyzers for Cement and Steel Plants: Selection and Compliance Guide",
     seoTitle: "Dust Analyzers for Cement and Steel Plants: Selection & Compliance",
-    metaDescription: "Dust analyzer selection and emission compliance guide for cement and steel plants — comparing transmissometry, forward scatter, and backward scatter systems.",
+    metaDescription: "Want to excel at dust analyzers for cement and steel plants? Our expert guide covers standards, best practices, and real-world strategies.",
     category: "Analyzers",
-    date: "July 6, 2026",
+    date: "May 10, 2026",
     readTime: "8 Min Read",
     pillar: "Pillar 3: Analyzers & Inspection",
     description: "Dust analyzer selection and emission compliance guide for cement and steel plants — comparing transmissometry, forward scatter, and backward scatter systems.",
+    keywords: "dust analyzer, cement plant, particulate monitoring",
     image: "/dust_analyzer.png",
     imageAlt: "A laser-based stack dust analyzer transceiver unit mounted on an industrial exhaust stack duct.",
 content: `
@@ -4062,8 +4095,8 @@ content: `
       </p>
 
       <div class="my-6 rounded-lg bg-slate-50 border border-slate-200 p-5 not-prose">
-        <h4 class="text-[13.5px] font-bold text-slate-900 mb-2">💡 Key Takeaways</h4>
-        <ul class="text-[13px] text-slate-600 space-y-2 list-disc pl-4">
+        <h4 class="font-bold text-slate-900 mb-2">💡 Key Takeaways</h4>
+        <ul class="text-slate-600 space-y-2 list-disc pl-4">
           <li><strong>Technological Selection:</strong> Transmissometers monitor high dust loading, while forward and backward scatter systems resolve low dust concentrations.</li>
           <li><strong>Sensor Protection:</strong> Air purge systems blow clean air across stack lenses to prevent dust accumulation.</li>
           <li><strong>Regulatory Standards:</strong> Automated dust monitors must satisfy EN 15267 performance certifications and EN 13284 calibrations.</li>
@@ -4101,15 +4134,15 @@ content: `
       </p>
 
       <div class="overflow-x-auto my-8 not-prose">
-        <table class="min-w-full divide-y divide-gray-200 border border-gray-150 text-[13.5px]">
+        <table class="min-w-full divide-y divide-gray-200 border border-gray-150">
           <thead class="bg-slate-50">
             <tr>
-              <th scope="col" class="px-4 py-3 text-left text-xs font-semibold text-slate-900 uppercase tracking-wider border-b border-gray-150">Technology</th>
-              <th scope="col" class="px-4 py-3 text-left text-xs font-semibold text-slate-900 uppercase tracking-wider border-b border-gray-150">Measurement Range</th>
-              <th scope="col" class="px-4 py-3 text-left text-xs font-semibold text-slate-900 uppercase tracking-wider border-b border-gray-150">Physical Mounting Layout</th>
+              <th scope="col" class="px-4 py-3 text-left font-semibold text-slate-900 uppercase tracking-wider border-b border-gray-150">Technology</th>
+              <th scope="col" class="px-4 py-3 text-left font-semibold text-slate-900 uppercase tracking-wider border-b border-gray-150">Measurement Range</th>
+              <th scope="col" class="px-4 py-3 text-left font-semibold text-slate-900 uppercase tracking-wider border-b border-gray-150">Physical Mounting Layout</th>
             </tr>
           </thead>
-          <tbody class="bg-white divide-y divide-gray-150 text-[13px]">
+          <tbody class="bg-white divide-y divide-gray-150">
             <tr>
               <td class="px-4 py-3 font-semibold text-slate-900 bg-slate-50/40">Transmissometry (Opacity)</td>
               <td class="px-4 py-3 text-gray-600">5 to 1000 mg/m³ (Standard to high dust loading)</td>
@@ -4166,12 +4199,13 @@ content: `
   },
   "gas-analyzers-petrochemical-refinery": {title: "Gas Analyzers in Petrochemical Refineries: Detection and Process Control Guide",
     seoTitle: "Gas Analyzers in Petrochemical Refineries: Process Control Guide",
-    metaDescription: "Process gas analyzer selection, safety, and control guide for petrochemical refineries — covering H2S, O2, gas chromatographs, and analyzer shelters.",
+    metaDescription: "Get the definitive guide to gas analyzers in petrochemical refineries. Expert advice, industry standards, and step-by-step strategies.",
     category: "Analyzers",
-    date: "July 6, 2026",
+    date: "May 22, 2026",
     readTime: "9 Min Read",
     pillar: "Pillar 3: Analyzers & Inspection",
     description: "Process gas analyzer selection, safety, and control guide for petrochemical refineries — covering H2S, O2, gas chromatographs, and analyzer shelters.",
+    keywords: "gas analyzers, petrochemical, refinery analytics",
     image: "/gas_analyzer.png",
     imageAlt: "An extractive multi-gas analyzer system installed inside an instrumentation enclosure.",
 content: `
@@ -4180,8 +4214,8 @@ content: `
       </p>
 
       <div class="my-6 rounded-lg bg-slate-50 border border-slate-200 p-5 not-prose">
-        <h4 class="text-[13.5px] font-bold text-slate-900 mb-2">💡 Key Takeaways</h4>
-        <ul class="text-[13px] text-slate-600 space-y-2 list-disc pl-4">
+        <h4 class="font-bold text-slate-900 mb-2">💡 Key Takeaways</h4>
+        <ul class="text-slate-600 space-y-2 list-disc pl-4">
           <li><strong>Technological Variety:</strong> Systems include H2S sensors, paramagnetic O2 analyzers, and process gas chromatographs.</li>
           <li><strong>Conditioning Priority:</strong> Sample conditioning designs must maintain temperature levels to prevent heavy hydrocarbon condensation.</li>
           <li><strong>Hazardous Suitability:</strong> Refinery analyzers require ATEX/IECEx certifications for Zone 1 or Zone 2 locations.</li>
@@ -4194,15 +4228,15 @@ content: `
       </p>
 
       <div class="overflow-x-auto my-8 not-prose">
-        <table class="min-w-full divide-y divide-gray-200 border border-gray-150 text-[13.5px]">
+        <table class="min-w-full divide-y divide-gray-200 border border-gray-150">
           <thead class="bg-slate-50">
             <tr>
-              <th scope="col" class="px-4 py-3 text-left text-xs font-semibold text-slate-900 uppercase tracking-wider border-b border-gray-150">Analyzer Technology</th>
-              <th scope="col" class="px-4 py-3 text-left text-xs font-semibold text-slate-900 uppercase tracking-wider border-b border-gray-150">Process Application</th>
-              <th scope="col" class="px-4 py-3 text-left text-xs font-semibold text-slate-900 uppercase tracking-wider border-b border-gray-150">Applicable Standard</th>
+              <th scope="col" class="px-4 py-3 text-left font-semibold text-slate-900 uppercase tracking-wider border-b border-gray-150">Analyzer Technology</th>
+              <th scope="col" class="px-4 py-3 text-left font-semibold text-slate-900 uppercase tracking-wider border-b border-gray-150">Process Application</th>
+              <th scope="col" class="px-4 py-3 text-left font-semibold text-slate-900 uppercase tracking-wider border-b border-gray-150">Applicable Standard</th>
             </tr>
           </thead>
-          <tbody class="bg-white divide-y divide-gray-150 text-[13px]">
+          <tbody class="bg-white divide-y divide-gray-150">
             <tr>
               <td class="px-4 py-3 font-semibold text-slate-900 bg-slate-50/40">H2S Analyzer</td>
               <td class="px-4 py-3 text-gray-600">Amine unit efficiency monitoring, fuel gas sulfur tracking</td>
@@ -4274,12 +4308,13 @@ content: `
   },
   "in-situ-vs-extractive-cems": {title: "In-Situ vs. Extractive CEMS: Which Technology is Right for Your Plant?",
     seoTitle: "In-Situ vs Extractive CEMS: Technical Selection Guide",
-    metaDescription: "Technical comparison of in-situ vs extractive CEMS — covering sample transport, cold wet, hot wet, dilution extractive, and cross-stack lasers.",
+    metaDescription: "Learn how to master in-situ vs. extractive cems with our comprehensive guide. Access standards, tips, and implementation advice.",
     category: "Emissions Compliance",
-    date: "July 6, 2026",
+    date: "June 5, 2026",
     readTime: "8 Min Read",
     pillar: "Pillar 3: Analyzers & Inspection",
     description: "Technical comparison of in-situ vs extractive CEMS — covering sample transport, cold wet, hot wet, dilution extractive, and cross-stack lasers.",
+    keywords: "in-situ CEMS, extractive CEMS, emissions monitoring",
     image: "/extractive_gas_analyzer.jpg",
     imageAlt: "An extractive gas analysis system displaying concentration curves on a laboratory monitor.",
 content: `
@@ -4288,8 +4323,8 @@ content: `
       </p>
 
       <div class="my-6 rounded-lg bg-slate-50 border border-slate-200 p-5 not-prose">
-        <h4 class="text-[13.5px] font-bold text-slate-900 mb-2">💡 Key Takeaways</h4>
-        <ul class="text-[13px] text-slate-600 space-y-2 list-disc pl-4">
+        <h4 class="font-bold text-slate-900 mb-2">💡 Key Takeaways</h4>
+        <ul class="text-slate-600 space-y-2 list-disc pl-4">
           <li><strong>In-Situ Layout:</strong> Measures gas directly inside the stack using optical beams, eliminating sample lines and conditioning chillers.</li>
           <li><strong>Extractive Layout:</strong> Pulls gas to a ground-level shelter, allowing multi-analyzer configurations in clean, climate-controlled spaces.</li>
           <li><strong>Standards Alignment:</strong> Both designs meet EPA 40 CFR Part 60 and European EN 15267 compliance certification requirements.</li>
@@ -4310,15 +4345,15 @@ content: `
       </p>
 
       <div class="overflow-x-auto my-8 not-prose">
-        <table class="min-w-full divide-y divide-gray-200 border border-gray-150 text-[13.5px]">
+        <table class="min-w-full divide-y divide-gray-200 border border-gray-150">
           <thead class="bg-slate-50">
             <tr>
-              <th scope="col" class="px-4 py-3 text-left text-xs font-semibold text-slate-900 uppercase tracking-wider border-b border-gray-150">Comparison Factor</th>
-              <th scope="col" class="px-4 py-3 text-left text-xs font-semibold text-slate-900 uppercase tracking-wider border-b border-gray-150">In-Situ CEMS</th>
-              <th scope="col" class="px-4 py-3 text-left text-xs font-semibold text-slate-900 uppercase tracking-wider border-b border-gray-150">Extractive CEMS</th>
+              <th scope="col" class="px-4 py-3 text-left font-semibold text-slate-900 uppercase tracking-wider border-b border-gray-150">Comparison Factor</th>
+              <th scope="col" class="px-4 py-3 text-left font-semibold text-slate-900 uppercase tracking-wider border-b border-gray-150">In-Situ CEMS</th>
+              <th scope="col" class="px-4 py-3 text-left font-semibold text-slate-900 uppercase tracking-wider border-b border-gray-150">Extractive CEMS</th>
             </tr>
           </thead>
-          <tbody class="bg-white divide-y divide-gray-150 text-[13px]">
+          <tbody class="bg-white divide-y divide-gray-150">
             <tr>
               <td class="px-4 py-3 font-semibold text-slate-900 bg-slate-50/40">Measurement Location</td>
               <td class="px-4 py-3 text-gray-600">Inside the stack or duct</td>
@@ -4426,12 +4461,13 @@ content: `
   },
   "custody-metering-solutions-architecture": {title: "Custody Metering Solutions: Products, Components, and System Architecture",
     seoTitle: "Custody Metering Solutions & System Architecture Guide",
-    metaDescription: "Technical breakdown of custody metering solutions — including flow computers, metering skid components, and overall system architecture design.",
+    metaDescription: "Transform your approach to custody metering solutions. Access expert strategies, industry standards, and proven results.",
     category: "Flow Measurement",
-    date: "July 6, 2026",
+    date: "March 29, 2026",
     readTime: "9 Min Read",
     pillar: "Pillar 1: Flow Measurement & Custody Metering",
     description: "Technical breakdown of custody metering solutions — including flow computers, metering skid components, and overall system architecture design.",
+    keywords: "custody metering solutions, metering system architecture, flow measurement",
     image: "/flow_metering_skid.jpg",
     imageAlt: "A complete custody transfer flow metering skid with liquid turbine meters and a proving run.",
 content: `
@@ -4440,8 +4476,8 @@ content: `
       </p>
 
       <div class="my-6 rounded-lg bg-slate-50 border border-slate-200 p-5 not-prose">
-        <h4 class="text-[13.5px] font-bold text-slate-900 mb-2">💡 Key Takeaways</h4>
-        <ul class="text-[13px] text-slate-600 space-y-2 list-disc pl-4">
+        <h4 class="font-bold text-slate-900 mb-2">💡 Key Takeaways</h4>
+        <ul class="text-slate-600 space-y-2 list-disc pl-4">
           <li><strong>Integrated Design:</strong> Skids combine physical flow meters with automated flow computers to ensure dynamic correction.</li>
           <li><strong>Calibration Proving:</strong> Integrating inline pipe prover valves allows real-time meter factor verifications.</li>
           <li><strong>Fiscal Reliability:</strong> System layouts satisfy API MPMS accuracy tolerances, reducing commercial exposure.</li>
@@ -4459,15 +4495,15 @@ content: `
       </p>
 
       <div class="overflow-x-auto my-8 not-prose">
-        <table class="min-w-full divide-y divide-gray-200 border border-gray-150 text-[13.5px]">
+        <table class="min-w-full divide-y divide-gray-200 border border-gray-150">
           <thead class="bg-slate-50">
             <tr>
-              <th scope="col" class="px-4 py-3 text-left text-xs font-semibold text-slate-900 uppercase tracking-wider border-b border-gray-150">Skid Component</th>
-              <th scope="col" class="px-4 py-3 text-left text-xs font-semibold text-slate-900 uppercase tracking-wider border-b border-gray-150">Engineering Function</th>
-              <th scope="col" class="px-4 py-3 text-left text-xs font-semibold text-slate-900 uppercase tracking-wider border-b border-gray-150">Applicable Standard</th>
+              <th scope="col" class="px-4 py-3 text-left font-semibold text-slate-900 uppercase tracking-wider border-b border-gray-150">Skid Component</th>
+              <th scope="col" class="px-4 py-3 text-left font-semibold text-slate-900 uppercase tracking-wider border-b border-gray-150">Engineering Function</th>
+              <th scope="col" class="px-4 py-3 text-left font-semibold text-slate-900 uppercase tracking-wider border-b border-gray-150">Applicable Standard</th>
             </tr>
           </thead>
-          <tbody class="bg-white divide-y divide-gray-150 text-[13px]">
+          <tbody class="bg-white divide-y divide-gray-150">
             <tr>
               <td class="px-4 py-3 font-semibold text-slate-900 bg-slate-50/40">Primary Flow Meter</td>
               <td class="px-4 py-3 text-gray-600">Measures raw fluid mass or velocity using Coriolis or ultrasonic waves</td>
@@ -4529,12 +4565,13 @@ content: `
   },
   "sick-analyzers-oil-gas-integration": {title: "SICK Analyzers in Oil & Gas: Applications and Integration Guide",
     seoTitle: "SICK Analyzers in Oil & Gas: Applications & Integration",
-    metaDescription: "Technical application and integration guide for SICK analyzers in the oil & gas industry — covering gas analyzers, CEMS, and process optimization.",
+    metaDescription: "Get the definitive guide to sick analyzers in oil & gas. Expert advice, industry standards, and step-by-step strategies.",
     category: "Analyzers",
-    date: "July 6, 2026",
+    date: "June 18, 2026",
     readTime: "8 Min Read",
     pillar: "Pillar 3: Analyzers & Inspection",
     description: "Technical application and integration guide for SICK analyzers in the oil & gas industry — covering gas analyzers, CEMS, and process optimization.",
+    keywords: "SICK analyzers, oil gas, process integration",
     image: "/images/cems/1.jpg",
     imageAlt: "A shelter housing integrated SICK process gas analyzers in an oil and gas refining plant.",
 content: `
@@ -4543,8 +4580,8 @@ content: `
       </p>
 
       <div class="my-6 rounded-lg bg-slate-50 border border-slate-200 p-5 not-prose">
-        <h4 class="text-[13.5px] font-bold text-slate-900 mb-2">💡 Key Takeaways</h4>
-        <ul class="text-[13px] text-slate-600 space-y-2 list-disc pl-4">
+        <h4 class="font-bold text-slate-900 mb-2">💡 Key Takeaways</h4>
+        <ul class="text-slate-600 space-y-2 list-disc pl-4">
           <li><strong>Spectroscopic Precision:</strong> SICK analyzers utilize FTIR, NDIR, and TDLAS methods to measure trace gas fractions.</li>
           <li><strong>Flow Metrology:</strong> Ultrasonic gas flow meters (FLOWSIC series) deliver stable custody-grade flow profiles.</li>
           <li><strong>Compliance Standards:</strong> Analyzer configurations satisfy EN 15267, EN 14181, and ATEX safety directives.</li>
@@ -4562,15 +4599,15 @@ content: `
       </p>
 
       <div class="overflow-x-auto my-8 not-prose">
-        <table class="min-w-full divide-y divide-gray-200 border border-gray-150 text-[13.5px]">
+        <table class="min-w-full divide-y divide-gray-200 border border-gray-150">
           <thead class="bg-slate-50">
             <tr>
-              <th scope="col" class="px-4 py-3 text-left text-xs font-semibold text-slate-900 uppercase tracking-wider border-b border-gray-150">Analyzer Model</th>
-              <th scope="col" class="px-4 py-3 text-left text-xs font-semibold text-slate-900 uppercase tracking-wider border-b border-gray-150">Measurement Parameters</th>
-              <th scope="col" class="px-4 py-3 text-left text-xs font-semibold text-slate-900 uppercase tracking-wider border-b border-gray-150">Process Application</th>
+              <th scope="col" class="px-4 py-3 text-left font-semibold text-slate-900 uppercase tracking-wider border-b border-gray-150">Analyzer Model</th>
+              <th scope="col" class="px-4 py-3 text-left font-semibold text-slate-900 uppercase tracking-wider border-b border-gray-150">Measurement Parameters</th>
+              <th scope="col" class="px-4 py-3 text-left font-semibold text-slate-900 uppercase tracking-wider border-b border-gray-150">Process Application</th>
             </tr>
           </thead>
-          <tbody class="bg-white divide-y divide-gray-150 text-[13px]">
+          <tbody class="bg-white divide-y divide-gray-150">
             <tr>
               <td class="px-4 py-3 font-semibold text-slate-900 bg-slate-50/40">SICK FLOWSIC600</td>
               <td class="px-4 py-3 text-gray-600">Natural gas velocity, temperature, pressure, path transit times</td>
@@ -4627,12 +4664,13 @@ content: `
   },
   "calibration-gas-cems-standards": {title: "Calibration Gas Selection for CEMS: Standards and Best Practices",
     seoTitle: "Calibration Gas Selection for CEMS: Standards & Best Practices",
-    metaDescription: "How to select and manage calibration gas mixtures for Continuous Emissions Monitoring Systems (CEMS) compliance and QA/QC audits.",
+    metaDescription: "Transform your approach to calibration gas selection for cems. Access expert strategies, industry standards, and proven results.",
     category: "Emissions Compliance",
-    date: "July 6, 2026",
+    date: "July 1, 2026",
     readTime: "8 Min Read",
     pillar: "Pillar 3: Analyzers & Inspection",
     description: "How to select and manage calibration gas mixtures for Continuous Emissions Monitoring Systems (CEMS) compliance and QA/QC audits.",
+    keywords: "calibration gas, CEMS standards, emissions compliance",
     image: "/images/cems/mcs100ft/1.png",
     imageAlt: "High-pressure calibration gas cylinders connected to a CEMS gas conditioning panel.",
 content: `
@@ -4641,8 +4679,8 @@ content: `
       </p>
 
       <div class="my-6 rounded-lg bg-slate-50 border border-slate-200 p-5 not-prose">
-        <h4 class="text-[13.5px] font-bold text-slate-900 mb-2">💡 Key Takeaways</h4>
-        <ul class="text-[13px] text-slate-600 space-y-2 list-disc pl-4">
+        <h4 class="font-bold text-slate-900 mb-2">💡 Key Takeaways</h4>
+        <ul class="text-slate-600 space-y-2 list-disc pl-4">
           <li><strong>Traceability Level:</strong> Regulatory compliance demands EPA Protocol Gases certified within narrow concentration tolerances.</li>
           <li><strong>Material Selection:</strong> Corrosive span gases require stainless steel regulators and PTFE tubing to prevent absorption.</li>
           <li><strong>Quality Checks:</strong> Calibration gas cylinders must be tracked for shelf life and pressure limits to prevent audit failures.</li>
@@ -4660,15 +4698,15 @@ content: `
       </p>
 
       <div class="overflow-x-auto my-8 not-prose">
-        <table class="min-w-full divide-y divide-gray-200 border border-gray-150 text-[13.5px]">
+        <table class="min-w-full divide-y divide-gray-200 border border-gray-150">
           <thead class="bg-slate-50">
             <tr>
-              <th scope="col" class="px-4 py-3 text-left text-xs font-semibold text-slate-900 uppercase tracking-wider border-b border-gray-150">Gas Grade</th>
-              <th scope="col" class="px-4 py-3 text-left text-xs font-semibold text-slate-900 uppercase tracking-wider border-b border-gray-150">Concentration Tolerance</th>
-              <th scope="col" class="px-4 py-3 text-left text-xs font-semibold text-slate-900 uppercase tracking-wider border-b border-gray-150">Regulatory Application</th>
+              <th scope="col" class="px-4 py-3 text-left font-semibold text-slate-900 uppercase tracking-wider border-b border-gray-150">Gas Grade</th>
+              <th scope="col" class="px-4 py-3 text-left font-semibold text-slate-900 uppercase tracking-wider border-b border-gray-150">Concentration Tolerance</th>
+              <th scope="col" class="px-4 py-3 text-left font-semibold text-slate-900 uppercase tracking-wider border-b border-gray-150">Regulatory Application</th>
             </tr>
           </thead>
-          <tbody class="bg-white divide-y divide-gray-150 text-[13px]">
+          <tbody class="bg-white divide-y divide-gray-150">
             <tr>
               <td class="px-4 py-3 font-semibold text-slate-900 bg-slate-50/40">EPA Protocol Gas</td>
               <td class="px-4 py-3 text-gray-600">&plusmn;1% to &plusmn;2% (Strict NIST traceability validation)</td>
@@ -4738,12 +4776,13 @@ content: `
   },
   "flue-gas-analyzer-maintenance-guide": {title: "Flue Gas Analyzer Maintenance: Preventing Costly Calibration Failures",
     seoTitle: "Flue Gas Analyzer Maintenance: Preventing Calibration Failures",
-    metaDescription: "Preventive and corrective maintenance guide for flue gas analyzers — covering sensor drift, sample chilling, filter replacement, and troubleshooting.",
+    metaDescription: "Unlock the full potential of flue gas analyzer maintenance. Expert insights, standards compliance, and actionable recommendations.",
     category: "Analyzers",
-    date: "July 6, 2026",
+    date: "July 15, 2026",
     readTime: "8 Min Read",
     pillar: "Pillar 3: Analyzers & Inspection",
     description: "Preventive and corrective maintenance guide for flue gas analyzers — covering sensor drift, sample chilling, filter replacement, and troubleshooting.",
+    keywords: "flue gas analyzer, maintenance, calibration",
     image: "/images/gas_analyzers/gm32/1.jpg",
     imageAlt: "A process technician calibrating an in-situ gas analyzer transceiver on a hot duct flange.",
 content: `
@@ -4752,8 +4791,8 @@ content: `
       </p>
 
       <div class="my-6 rounded-lg bg-slate-50 border border-slate-200 p-5 not-prose">
-        <h4 class="text-[13.5px] font-bold text-slate-900 mb-2">💡 Key Takeaways</h4>
-        <ul class="text-[13px] text-slate-600 space-y-2 list-disc pl-4">
+        <h4 class="font-bold text-slate-900 mb-2">💡 Key Takeaways</h4>
+        <ul class="text-slate-600 space-y-2 list-disc pl-4">
           <li><strong>Condensate Control:</strong> Keeping sample conditioning chillers at +4&deg;C prevents liquid water from damaging analyzer sensors.</li>
           <li><strong>Filter Management:</strong> Regular replacement of particulate filters prevents sample transport restrictions and pump wear.</li>
           <li><strong>Drift Verifications:</strong> Executing weekly zero/span verifications flags cell degradation before audits occur.</li>
@@ -4771,15 +4810,15 @@ content: `
       </p>
 
       <div class="overflow-x-auto my-8 not-prose">
-        <table class="min-w-full divide-y divide-gray-200 border border-gray-150 text-[13.5px]">
+        <table class="min-w-full divide-y divide-gray-200 border border-gray-150">
           <thead class="bg-slate-50">
             <tr>
-              <th scope="col" class="px-4 py-3 text-left text-xs font-semibold text-slate-900 uppercase tracking-wider border-b border-gray-150">Maintenance Interval</th>
-              <th scope="col" class="px-4 py-3 text-left text-xs font-semibold text-slate-900 uppercase tracking-wider border-b border-gray-150">Required Task</th>
-              <th scope="col" class="px-4 py-3 text-left text-xs font-semibold text-slate-900 uppercase tracking-wider border-b border-gray-150">Target Component</th>
+              <th scope="col" class="px-4 py-3 text-left font-semibold text-slate-900 uppercase tracking-wider border-b border-gray-150">Maintenance Interval</th>
+              <th scope="col" class="px-4 py-3 text-left font-semibold text-slate-900 uppercase tracking-wider border-b border-gray-150">Required Task</th>
+              <th scope="col" class="px-4 py-3 text-left font-semibold text-slate-900 uppercase tracking-wider border-b border-gray-150">Target Component</th>
             </tr>
           </thead>
-          <tbody class="bg-white divide-y divide-gray-150 text-[13px]">
+          <tbody class="bg-white divide-y divide-gray-150">
             <tr>
               <td class="px-4 py-3 font-semibold text-slate-900 bg-slate-50/40">Daily</td>
               <td class="px-4 py-3 text-gray-600">Verify chiller temperature (+4&deg;C) and check sample flow rates</td>
@@ -4852,12 +4891,13 @@ content: `
   },
   "gas-chromatograph-custody-transfer": {title: "Gas Chromatograph in Custody Transfer: Natural Gas Composition Analysis",
     seoTitle: "Gas Chromatograph in Custody Transfer: Natural Gas Composition",
-    metaDescription: "How process gas chromatographs (PGC) verify composition and calculate heating value (GCV) for natural gas custody transfer.",
+    metaDescription: "Explore our in-depth guide to gas chromatograph in custody transfer. Expert advice, compliance requirements, and implementation tips.",
     category: "Flow Measurement",
-    date: "July 6, 2026",
+    date: "July 16, 2025",
     readTime: "8 Min Read",
     pillar: "Pillar 1: Flow Measurement & Custody Metering",
     description: "How process gas chromatographs (PGC) verify composition and calculate heating value (GCV) for natural gas custody transfer.",
+    keywords: "gas chromatograph, custody transfer, natural gas analysis",
     image: "/images/cems/mcs200hw/2.png",
     imageAlt: "An industrial process gas chromatograph system executing natural gas composition analyses.",
 content: `
@@ -4866,8 +4906,8 @@ content: `
       </p>
 
       <div class="my-6 rounded-lg bg-slate-50 border border-slate-200 p-5 not-prose">
-        <h4 class="text-[13.5px] font-bold text-slate-900 mb-2">💡 Key Takeaways</h4>
-        <ul class="text-[13px] text-slate-600 space-y-2 list-disc pl-4">
+        <h4 class="font-bold text-slate-900 mb-2">💡 Key Takeaways</h4>
+        <ul class="text-slate-600 space-y-2 list-disc pl-4">
           <li><strong>Energy Billing:</strong> Chromatographs measure gas fractions to calculate Gross Calorific Value (GCV) dynamically.</li>
           <li><strong>Column Backflushing:</strong> Reversing carrier gas flows expels heavy hydrocarbons (C6+), protecting column coatings.</li>
           <li><strong>Compliance Standards:</strong> System validations satisfy ISO 10723 and GPA 2261 metrology requirements.</li>
@@ -4885,15 +4925,15 @@ content: `
       </p>
 
       <div class="overflow-x-auto my-8 not-prose">
-        <table class="min-w-full divide-y divide-gray-200 border border-gray-150 text-[13.5px]">
+        <table class="min-w-full divide-y divide-gray-200 border border-gray-150">
           <thead class="bg-slate-50">
             <tr>
-              <th scope="col" class="px-4 py-3 text-left text-xs font-semibold text-slate-900 uppercase tracking-wider border-b border-gray-150">Gas Component</th>
-              <th scope="col" class="px-4 py-3 text-left text-xs font-semibold text-slate-900 uppercase tracking-wider border-b border-gray-150">Typical Fraction</th>
-              <th scope="col" class="px-4 py-3 text-left text-xs font-semibold text-slate-900 uppercase tracking-wider border-b border-gray-150">Billing Energy Impact</th>
+              <th scope="col" class="px-4 py-3 text-left font-semibold text-slate-900 uppercase tracking-wider border-b border-gray-150">Gas Component</th>
+              <th scope="col" class="px-4 py-3 text-left font-semibold text-slate-900 uppercase tracking-wider border-b border-gray-150">Typical Fraction</th>
+              <th scope="col" class="px-4 py-3 text-left font-semibold text-slate-900 uppercase tracking-wider border-b border-gray-150">Billing Energy Impact</th>
             </tr>
           </thead>
-          <tbody class="bg-white divide-y divide-gray-150 text-[13px]">
+          <tbody class="bg-white divide-y divide-gray-150">
             <tr>
               <td class="px-4 py-3 font-semibold text-slate-900 bg-slate-50/40">Methane (C1)</td>
               <td class="px-4 py-3 text-gray-600">85% to 95%</td>
@@ -4955,12 +4995,13 @@ content: `
   },
   "power-plant-environmental-monitoring-cems": {title: "Environmental Monitoring in Power Plants: CEMS, Analyzers, and Compliance",
     seoTitle: "Power Plant Environmental Monitoring: CEMS & Analyzers",
-    metaDescription: "Comprehensive guide to power plant environmental monitoring — covering CEMS integration, dust analyzers, water quality, and EPA compliance.",
+    metaDescription: "Want to excel at environmental monitoring in power plants? Our expert guide covers standards, best practices, and real-world strategies.",
     category: "Emissions Compliance",
-    date: "July 6, 2026",
+    date: "March 27, 2026",
     readTime: "9 Min Read",
     pillar: "Pillar 3: Analyzers & Inspection",
     description: "Comprehensive guide to power plant environmental monitoring — covering CEMS integration, dust analyzers, water quality, and EPA compliance.",
+    keywords: "power plant CEMS, environmental monitoring, emissions",
     image: "/power_plant.jpg",
     imageAlt: "Cooling towers and emissions stacks of a modern coal-fired thermal power generation station.",
 content: `
@@ -4969,8 +5010,8 @@ content: `
       </p>
 
       <div class="my-6 rounded-lg bg-slate-50 border border-slate-200 p-5 not-prose">
-        <h4 class="text-[13.5px] font-bold text-slate-900 mb-2">💡 Key Takeaways</h4>
-        <ul class="text-[13px] text-slate-600 space-y-2 list-disc pl-4">
+        <h4 class="font-bold text-slate-900 mb-2">💡 Key Takeaways</h4>
+        <ul class="text-slate-600 space-y-2 list-disc pl-4">
           <li><strong>Stack Tracking:</strong> CEMS systems monitor gaseous pollutants (SO2, NOx, CO) in stack flue gases.</li>
           <li><strong>Particulate Control:</strong> Opacity monitors detect filter bag failures in electrostatic precipitators.</li>
           <li><strong>System Validation:</strong> Emissions data acquisition must satisfy EPA 40 CFR Part 60/75 and EN 14181 standards.</li>
@@ -4988,15 +5029,15 @@ content: `
       </p>
 
       <div class="overflow-x-auto my-8 not-prose">
-        <table class="min-w-full divide-y divide-gray-200 border border-gray-150 text-[13.5px]">
+        <table class="min-w-full divide-y divide-gray-200 border border-gray-150">
           <thead class="bg-slate-50">
             <tr>
-              <th scope="col" class="px-4 py-3 text-left text-xs font-semibold text-slate-900 uppercase tracking-wider border-b border-gray-150">Monitoring System</th>
-              <th scope="col" class="px-4 py-3 text-left text-xs font-semibold text-slate-900 uppercase tracking-wider border-b border-gray-150">Key Parameters Measured</th>
-              <th scope="col" class="px-4 py-3 text-left text-xs font-semibold text-slate-900 uppercase tracking-wider border-b border-gray-150">Operational Application</th>
+              <th scope="col" class="px-4 py-3 text-left font-semibold text-slate-900 uppercase tracking-wider border-b border-gray-150">Monitoring System</th>
+              <th scope="col" class="px-4 py-3 text-left font-semibold text-slate-900 uppercase tracking-wider border-b border-gray-150">Key Parameters Measured</th>
+              <th scope="col" class="px-4 py-3 text-left font-semibold text-slate-900 uppercase tracking-wider border-b border-gray-150">Operational Application</th>
             </tr>
           </thead>
-          <tbody class="bg-white divide-y divide-gray-150 text-[13px]">
+          <tbody class="bg-white divide-y divide-gray-150">
             <tr>
               <td class="px-4 py-3 font-semibold text-slate-900 bg-slate-50/40">Stack CEMS</td>
               <td class="px-4 py-3 text-gray-600">SO2, NOx, CO, CO2, O2 concentrations</td>
@@ -5058,12 +5099,13 @@ content: `
   },
   "flow-measurement-upstream-oil-gas": {title: "Flow Measurement in Upstream Oil & Gas: Wellhead to Pipeline",
     seoTitle: "Upstream Flow Measurement Guide: Wellhead to Pipeline",
-    metaDescription: "Comprehensive guide to flow measurement in upstream oil and gas — covering wellhead allocation metering, multiphase meters, and pipeline entry systems.",
+    metaDescription: "Get the definitive guide to flow measurement in upstream oil & gas. Expert advice, industry standards, and step-by-step strategies.",
     category: "Flow Measurement",
-    date: "July 6, 2026",
+    date: "May 28, 2026",
     readTime: "9 Min Read",
     pillar: "Pillar 1: Flow Measurement & Custody Metering",
     description: "Comprehensive guide to flow measurement in upstream oil and gas — covering wellhead allocation metering, multiphase meters, and pipeline entry systems.",
+    keywords: "upstream flow measurement, wellhead metering, oil and gas production",
     image: "/oil_and_gas.jpg",
     imageAlt: "An offshore oil and gas production platform wellhead manifold configuration in deep water.",
 content: `
@@ -5072,8 +5114,8 @@ content: `
       </p>
 
       <div class="my-6 rounded-lg bg-slate-50 border border-slate-200 p-5 not-prose">
-        <h4 class="text-[13.5px] font-bold text-slate-900 mb-2">💡 Key Takeaways</h4>
-        <ul class="text-[13px] text-slate-600 space-y-2 list-disc pl-4">
+        <h4 class="font-bold text-slate-900 mb-2">💡 Key Takeaways</h4>
+        <ul class="text-slate-600 space-y-2 list-disc pl-4">
           <li><strong>Allocation Focus:</strong> Wellhead allocation measurement determines production shares using API MPMS Chapter 20 standards.</li>
           <li><strong>Multiphase Metering:</strong> MPFMs analyze gas, oil, and water phases simultaneously, eliminating separator footprint requirements.</li>
           <li><strong>Custody Handover:</strong> High-precision Coriolis and ultrasonic meters at pipeline entry points protect commercial transactional values.</li>
@@ -5127,15 +5169,15 @@ content: `
       </p>
 
       <div class="overflow-x-auto my-8 not-prose">
-        <table class="min-w-full divide-y divide-gray-200 border border-gray-150 text-[13.5px]">
+        <table class="min-w-full divide-y divide-gray-200 border border-gray-150">
           <thead class="bg-slate-50">
             <tr>
-              <th scope="col" class="px-4 py-3 text-left text-xs font-semibold text-slate-900 uppercase tracking-wider border-b border-gray-150">Production Stage</th>
-              <th scope="col" class="px-4 py-3 text-left text-xs font-semibold text-slate-900 uppercase tracking-wider border-b border-gray-150">Applicable Meter Type</th>
-              <th scope="col" class="px-4 py-3 text-left text-xs font-semibold text-slate-900 uppercase tracking-wider border-b border-gray-150">Primary Metrological Purpose</th>
+              <th scope="col" class="px-4 py-3 text-left font-semibold text-slate-900 uppercase tracking-wider border-b border-gray-150">Production Stage</th>
+              <th scope="col" class="px-4 py-3 text-left font-semibold text-slate-900 uppercase tracking-wider border-b border-gray-150">Applicable Meter Type</th>
+              <th scope="col" class="px-4 py-3 text-left font-semibold text-slate-900 uppercase tracking-wider border-b border-gray-150">Primary Metrological Purpose</th>
             </tr>
           </thead>
-          <tbody class="bg-white divide-y divide-gray-150 text-[13px]">
+          <tbody class="bg-white divide-y divide-gray-150">
             <tr>
               <td class="px-4 py-3 font-semibold text-slate-900 bg-slate-50/40">Wellhead Flowline</td>
               <td class="px-4 py-3 text-gray-600">Multiphase Flow Meter (MPFM), Venturi, Cone meters</td>
@@ -5203,12 +5245,13 @@ content: `
   },
   "custody-transfer-pipeline-operations": {title: "Custody Transfer in Pipeline Operations: Standards and Best Practices",
     seoTitle: "Custody Transfer Pipeline Operations: Standards & Best Practices",
-    metaDescription: "Comprehensive guide to custody transfer in pipeline operations — covering meter station design, proving frequency, ticketing, and dispute prevention.",
+    metaDescription: "Unlock the full potential of custody transfer in pipeline operations. Expert insights, standards compliance, and actionable recommendations.",
     category: "Flow Measurement",
-    date: "July 6, 2026",
+    date: "June 10, 2026",
     readTime: "9 Min Read",
     pillar: "Pillar 1: Flow Measurement & Custody Metering",
     description: "Comprehensive guide to custody transfer in pipeline operations — covering meter station design, proving frequency, ticketing, and dispute prevention.",
+    keywords: "custody transfer pipeline, pipeline metering, transfer operations",
     image: "/refinery.jpg",
     imageAlt: "An aerial view of an oil refinery pipeline junction and distillation columns at sunset.",
 content: `
@@ -5217,8 +5260,8 @@ content: `
       </p>
 
       <div class="my-6 rounded-lg bg-slate-50 border border-slate-200 p-5 not-prose">
-        <h4 class="text-[13.5px] font-bold text-slate-900 mb-2">💡 Key Takeaways</h4>
-        <ul class="text-[13px] text-slate-600 space-y-2 list-disc pl-4">
+        <h4 class="font-bold text-slate-900 mb-2">💡 Key Takeaways</h4>
+        <ul class="text-slate-600 space-y-2 list-disc pl-4">
           <li><strong>Standards Strictness:</strong> Custody transfer stations operate under rigid API MPMS and AGA-7 frameworks to limit uncertainties.</li>
           <li><strong>Proving Calibration:</strong> Inline displacement or master meter proving loops dynamically adjust meter calibration factors.</li>
           <li><strong>Data Security:</strong> Automation tiers secure measurement tickets and events to protect financial logs.</li>
@@ -5252,15 +5295,15 @@ content: `
       </p>
 
       <div class="overflow-x-auto my-8 not-prose">
-        <table class="min-w-full divide-y divide-gray-200 border border-gray-150 text-[13.5px]">
+        <table class="min-w-full divide-y divide-gray-200 border border-gray-150">
           <thead class="bg-slate-50">
             <tr>
-              <th scope="col" class="px-4 py-3 text-left text-xs font-semibold text-slate-900 uppercase tracking-wider border-b border-gray-150">Fluid Type</th>
-              <th scope="col" class="px-4 py-3 text-left text-xs font-semibold text-slate-900 uppercase tracking-wider border-b border-gray-150">Typical Proving Frequency</th>
-              <th scope="col" class="px-4 py-3 text-left text-xs font-semibold text-slate-900 uppercase tracking-wider border-b border-gray-150">Metrological Focus Area</th>
+              <th scope="col" class="px-4 py-3 text-left font-semibold text-slate-900 uppercase tracking-wider border-b border-gray-150">Fluid Type</th>
+              <th scope="col" class="px-4 py-3 text-left font-semibold text-slate-900 uppercase tracking-wider border-b border-gray-150">Typical Proving Frequency</th>
+              <th scope="col" class="px-4 py-3 text-left font-semibold text-slate-900 uppercase tracking-wider border-b border-gray-150">Metrological Focus Area</th>
             </tr>
           </thead>
-          <tbody class="bg-white divide-y divide-gray-150 text-[13px]">
+          <tbody class="bg-white divide-y divide-gray-150">
             <tr>
               <td class="px-4 py-3 font-semibold text-slate-900 bg-slate-50/40">Crude Oil (High Viscosity)</td>
               <td class="px-4 py-3 text-gray-600">Monthly, or upon significant viscosity changes</td>
@@ -5289,7 +5332,7 @@ content: `
       <p>
         Disputes arise when upstream and downstream meters do not balance. To resolve differences, operators implement a structured dispute-prevention strategy:
       </p>
-      <ol class="list-decimal pl-5 text-[13px] text-gray-600 space-y-2">
+      <ol class="list-decimal pl-5 text-gray-600 space-y-2">
         <li>
           <strong>Automated Diagnostics Validation:</strong> Continuously monitor internal diagnostics (like ultrasonic speed-of-sound metrics) to identify meter drift before it causes transactional errors.
         </li>
@@ -5331,12 +5374,13 @@ content: `
   },
   "ndt-oil-gas-refineries": {title: "NDT in Oil & Gas Refineries: Preventing Asset Failure",
     seoTitle: "NDT in Oil & Gas Refineries: Asset Integrity Guide",
-    metaDescription: "Comprehensive guide to NDT in oil and gas refineries — covering failure modes, Risk-Based Inspection (RBI), turnaround planning, and API standards.",
+    metaDescription: "Unlock the full potential of ndt in oil & gas refineries. Expert insights, standards compliance, and actionable recommendations.",
     category: "Analyzers & Inspection",
-    date: "July 6, 2026",
+    date: "June 5, 2025",
     readTime: "9 Min Read",
     pillar: "Pillar 3: Analyzers & Inspection",
     description: "Comprehensive guide to NDT in oil and gas refineries — covering failure modes, Risk-Based Inspection (RBI), turnaround planning, and API standards.",
+    keywords: "NDT oil gas, refinery inspection, asset integrity",
     image: "/images/services/Non-Destructive-Testing-NDT.jpg.webp",
     imageAlt: "A qualified NDT inspector conducting ultrasonic testing on a refinery pressure vessel weld.",
 content: `
@@ -5345,8 +5389,8 @@ content: `
       </p>
 
       <div class="my-6 rounded-lg bg-slate-50 border border-slate-200 p-5 not-prose">
-        <h4 class="text-[13.5px] font-bold text-slate-900 mb-2">💡 Key Takeaways</h4>
-        <ul class="text-[13px] text-slate-600 space-y-2 list-disc pl-4">
+        <h4 class="font-bold text-slate-900 mb-2">💡 Key Takeaways</h4>
+        <ul class="text-slate-600 space-y-2 list-disc pl-4">
           <li><strong>Asset Protection:</strong> NDT methods locate internal defects, wall thinning, and cracking in vessels and process piping.</li>
           <li><strong>Prioritized Resources:</strong> Risk-Based Inspection (RBI) aligns inspection intervals based on the likelihood and consequences of mechanical failure.</li>
           <li><strong>Regulatory Standards:</strong> Inspection procedures satisfy API 510, API 570, and API 653 code compliance requirements.</li>
@@ -5364,15 +5408,15 @@ content: `
       </p>
 
       <div class="overflow-x-auto my-8 not-prose">
-        <table class="min-w-full divide-y divide-gray-200 border border-gray-150 text-[13.5px]">
+        <table class="min-w-full divide-y divide-gray-200 border border-gray-150">
           <thead class="bg-slate-50">
             <tr>
-              <th scope="col" class="px-4 py-3 text-left text-xs font-semibold text-slate-900 uppercase tracking-wider border-b border-gray-150">Refinery Failure Mode</th>
-              <th scope="col" class="px-4 py-3 text-left text-xs font-semibold text-slate-900 uppercase tracking-wider border-b border-gray-150">Primary NDT Method</th>
-              <th scope="col" class="px-4 py-3 text-left text-xs font-semibold text-slate-900 uppercase tracking-wider border-b border-gray-150">Typical Inspection Component</th>
+              <th scope="col" class="px-4 py-3 text-left font-semibold text-slate-900 uppercase tracking-wider border-b border-gray-150">Refinery Failure Mode</th>
+              <th scope="col" class="px-4 py-3 text-left font-semibold text-slate-900 uppercase tracking-wider border-b border-gray-150">Primary NDT Method</th>
+              <th scope="col" class="px-4 py-3 text-left font-semibold text-slate-900 uppercase tracking-wider border-b border-gray-150">Typical Inspection Component</th>
             </tr>
           </thead>
-          <tbody class="bg-white divide-y divide-gray-150 text-[13px]">
+          <tbody class="bg-white divide-y divide-gray-150">
             <tr>
               <td class="px-4 py-3 font-semibold text-slate-900 bg-slate-50/40">Corrosion Under Insulation (CUI)</td>
               <td class="px-4 py-3 text-gray-600">Pulsed Eddy Current (PEC) / Guided Wave Ultrasonic Testing (GWUT)</td>
@@ -5442,12 +5486,13 @@ content: `
   },
   "scada-offshore-oil-gas-platforms": {title: "SCADA Integration in Offshore Oil & Gas Platforms",
     seoTitle: "SCADA Integration in Offshore Oil & Gas Platforms Guide",
-    metaDescription: "Comprehensive guide to SCADA integration on offshore platforms — covering communication protocols, RTUs, and IEC 62443 security.",
+    metaDescription: "Discover expert insights on scada integration in offshore oil & gas platforms. Get actionable strategies and proven best practices for your operations.",
     category: "Industrial Automation",
-    date: "July 6, 2026",
+    date: "February 9, 2026",
     readTime: "9 Min Read",
     pillar: "Pillar 2: Industrial Process Automation",
     description: "Comprehensive guide to SCADA integration on offshore platforms — covering communication protocols, RTUs, and IEC 62443 security.",
+    keywords: "SCADA offshore, oil gas platforms, remote monitoring",
     image: "/images/control_room_interior_and_console/xlat_cyber/2.jpg",
     imageAlt: "SCADA server racks with status indicators flashing inside an offshore platform controls enclosure.",
 content: `
@@ -5456,8 +5501,8 @@ content: `
       </p>
 
       <div class="my-6 rounded-lg bg-slate-50 border border-slate-200 p-5 not-prose">
-        <h4 class="text-[13.5px] font-bold text-slate-900 mb-2">💡 Key Takeaways</h4>
-        <ul class="text-[13px] text-slate-600 space-y-2 list-disc pl-4">
+        <h4 class="font-bold text-slate-900 mb-2">💡 Key Takeaways</h4>
+        <ul class="text-slate-600 space-y-2 list-disc pl-4">
           <li><strong>Remote Connectivity:</strong> System links rely on satellite and microwave networks, requiring telemetry-optimized protocols.</li>
           <li><strong>Platform Safety:</strong> Process control interfaces directly with Emergency Shutdown (ESD) systems under safety interlock rules.</li>
           <li><strong>Cyber Hardening:</strong> Integrating systems requires strict zone isolation in compliance with IEC 62443 security standards.</li>
@@ -5494,15 +5539,15 @@ content: `
       </p>
 
       <div class="overflow-x-auto my-8 not-prose">
-        <table class="min-w-full divide-y divide-gray-200 border border-gray-150 text-[13.5px]">
+        <table class="min-w-full divide-y divide-gray-200 border border-gray-150">
           <thead class="bg-slate-50">
             <tr>
-              <th scope="col" class="px-4 py-3 text-left text-xs font-semibold text-slate-900 uppercase tracking-wider border-b border-gray-150">Communication Protocol</th>
-              <th scope="col" class="px-4 py-3 text-left text-xs font-semibold text-slate-900 uppercase tracking-wider border-b border-gray-150">Offshore Application Focus</th>
-              <th scope="col" class="px-4 py-3 text-left text-xs font-semibold text-slate-900 uppercase tracking-wider border-b border-gray-150">Redundancy Mechanism</th>
+              <th scope="col" class="px-4 py-3 text-left font-semibold text-slate-900 uppercase tracking-wider border-b border-gray-150">Communication Protocol</th>
+              <th scope="col" class="px-4 py-3 text-left font-semibold text-slate-900 uppercase tracking-wider border-b border-gray-150">Offshore Application Focus</th>
+              <th scope="col" class="px-4 py-3 text-left font-semibold text-slate-900 uppercase tracking-wider border-b border-gray-150">Redundancy Mechanism</th>
             </tr>
           </thead>
-          <tbody class="bg-white divide-y divide-gray-150 text-[13px]">
+          <tbody class="bg-white divide-y divide-gray-150">
             <tr>
               <td class="px-4 py-3 font-semibold text-slate-900 bg-slate-50/40">OPC UA</td>
               <td class="px-4 py-3 text-gray-600">High-speed data transfer between platform PLCs, metering flow computers, and HMI servers</td>
@@ -5570,22 +5615,23 @@ content: `
   },
   "corrosion-control-oil-gas-infrastructure": {title: "Corrosion Control in Oil & Gas Infrastructure: Strategies and Technologies",
     seoTitle: "Corrosion Control in Oil & Gas Infrastructure Guide",
-    metaDescription: "Comprehensive guide to corrosion control in oil and gas — covering cathodic protection, coatings, chemical inhibitors, and monitoring technologies.",
+    metaDescription: "Discover expert insights on corrosion control in oil & gas infrastructure. Get actionable strategies and proven best practices for your operations.",
     category: "Analyzers & Inspection",
-    date: "July 6, 2026",
+    date: "November 8, 2025",
     readTime: "9 Min Read",
     pillar: "Pillar 3: Analyzers & Inspection",
     description: "Comprehensive guide to corrosion control in oil and gas — covering cathodic protection, coatings, chemical inhibitors, and monitoring technologies.",
-    image: "/images/services/corrosion-control-services-2.jpg",
-    imageAlt: "Inspectors evaluating anti-corrosive coating thickness on high-pressure gas piping lines.",
+    keywords: "corrosion control, oil gas infrastructure, corrosion prevention",
+    image: "/images/services/maxresdefault.jpg",
+    imageAlt: "Corrosion control and protection services for industrial facilities — Texas Technical Services.",
 content: `
       <p>
         <strong>Corrosion control oil and gas infrastructure</strong> refers to the selection of chemical treatments, protective coatings, cathodic protection systems, and monitoring devices configured to prevent degradation of metallic assets. Across upstream wells, transmission pipelines, and refining systems, corrosion is a primary threat to asset longevity, environmental safety, and operational uptime.
       </p>
 
       <div class="my-6 rounded-lg bg-slate-50 border border-slate-200 p-5 not-prose">
-        <h4 class="text-[13.5px] font-bold text-slate-900 mb-2">💡 Key Takeaways</h4>
-        <ul class="text-[13px] text-slate-600 space-y-2 list-disc pl-4">
+        <h4 class="font-bold text-slate-900 mb-2">💡 Key Takeaways</h4>
+        <ul class="text-slate-600 space-y-2 list-disc pl-4">
           <li><strong>Double Protection:</strong> Combining high-performance external coatings with active cathodic protection creates a redundant corrosion barrier.</li>
           <li><strong>Real-Time Monitoring:</strong> Electrical resistance (ER) probes and linear polarization (LPR) sensors provide early warning of corrosive process changes.</li>
           <li><strong>Standards Alignment:</strong> Implementation follows NACE SP0169, NACE SP0188, and ISO 15589 metrological guidelines.</li>
@@ -5606,15 +5652,15 @@ content: `
       </p>
 
       <div class="overflow-x-auto my-8 not-prose">
-        <table class="min-w-full divide-y divide-gray-200 border border-gray-150 text-[13.5px]">
+        <table class="min-w-full divide-y divide-gray-200 border border-gray-150">
           <thead class="bg-slate-50">
             <tr>
-              <th scope="col" class="px-4 py-3 text-left text-xs font-semibold text-slate-900 uppercase tracking-wider border-b border-gray-150">Cathodic Protection Type</th>
-              <th scope="col" class="px-4 py-3 text-left text-xs font-semibold text-slate-900 uppercase tracking-wider border-b border-gray-150">Operating Mechanism</th>
-              <th scope="col" class="px-4 py-3 text-left text-xs font-semibold text-slate-900 uppercase tracking-wider border-b border-gray-150">Primary Asset Application</th>
+              <th scope="col" class="px-4 py-3 text-left font-semibold text-slate-900 uppercase tracking-wider border-b border-gray-150">Cathodic Protection Type</th>
+              <th scope="col" class="px-4 py-3 text-left font-semibold text-slate-900 uppercase tracking-wider border-b border-gray-150">Operating Mechanism</th>
+              <th scope="col" class="px-4 py-3 text-left font-semibold text-slate-900 uppercase tracking-wider border-b border-gray-150">Primary Asset Application</th>
             </tr>
           </thead>
-          <tbody class="bg-white divide-y divide-gray-150 text-[13px]">
+          <tbody class="bg-white divide-y divide-gray-150">
             <tr>
               <td class="px-4 py-3 font-semibold text-slate-900 bg-slate-50/40">Sacrificial Anode (Galvanic)</td>
               <td class="px-4 py-3 text-gray-600">Uses highly electronegative metals (magnesium, zinc, aluminum) that corrode preferentially, protecting the host steel.</td>
@@ -5685,12 +5731,13 @@ content: `
   },
   "safety-instrumented-systems-oil-gas": {title: "Safety Instrumented Systems (SIS) in Oil & Gas: IEC 61511 Guide",
     seoTitle: "Safety Instrumented Systems in Oil & Gas: IEC 61511",
-    metaDescription: "Comprehensive guide to Safety Instrumented Systems (SIS) in oil and gas — covering IEC 61511 compliance, SIL determination, SIS architecture, and proof testing.",
+    metaDescription: "Explore our in-depth guide to safety instrumented systems (sis) in oil & gas. Expert advice, compliance requirements, and implementation tips.",
     category: "Industrial Automation",
-    date: "July 6, 2026",
+    date: "November 22, 2025",
     readTime: "9 Min Read",
     pillar: "Pillar 2: Industrial Process Automation",
     description: "Comprehensive guide to Safety Instrumented Systems (SIS) in oil and gas — covering IEC 61511 compliance, SIL determination, SIS architecture, and proof testing.",
+    keywords: "safety instrumented systems, IEC 61511, oil gas safety",
     image: "/images/industrial_automation/industrial_control_panels/1.jpg",
     imageAlt: "A safety-instrumented system (SIS) safety PLC cabinet with dual-redundant power supplies.",
 content: `
@@ -5699,8 +5746,8 @@ content: `
       </p>
 
       <div class="my-6 rounded-lg bg-slate-50 border border-slate-200 p-5 not-prose">
-        <h4 class="text-[13.5px] font-bold text-slate-900 mb-2">💡 Key Takeaways</h4>
-        <ul class="text-[13px] text-slate-600 space-y-2 list-disc pl-4">
+        <h4 class="font-bold text-slate-900 mb-2">💡 Key Takeaways</h4>
+        <ul class="text-slate-600 space-y-2 list-disc pl-4">
           <li><strong>Functional Safety:</strong> Compliance requires strict adherence to IEC 61511 and IEC 61508 safety standards.</li>
           <li><strong>Determining Targets:</strong> Target Safety Integrity Levels (SIL) are calculated using LOPA and HAZOP studies.</li>
           <li><strong>Architectural Choice:</strong> Voting architectures (such as 1oo2 or 2oo3) balance process safety and nuisance trip prevention.</li>
@@ -5718,14 +5765,14 @@ content: `
       </p>
 
       <div class="overflow-x-auto my-8 not-prose">
-        <table class="min-w-full divide-y divide-gray-200 border border-gray-150 text-[13.5px]">
+        <table class="min-w-full divide-y divide-gray-200 border border-gray-150">
           <thead class="bg-slate-50">
             <tr>
-              <th scope="col" class="px-4 py-3 text-left text-xs font-semibold text-slate-900 uppercase tracking-wider border-b border-gray-150">Lifecycle Phase</th>
-              <th scope="col" class="px-4 py-3 text-left text-xs font-semibold text-slate-900 uppercase tracking-wider border-b border-gray-150">Engineering Activity</th>
+              <th scope="col" class="px-4 py-3 text-left font-semibold text-slate-900 uppercase tracking-wider border-b border-gray-150">Lifecycle Phase</th>
+              <th scope="col" class="px-4 py-3 text-left font-semibold text-slate-900 uppercase tracking-wider border-b border-gray-150">Engineering Activity</th>
             </tr>
           </thead>
-          <tbody class="bg-white divide-y divide-gray-150 text-[13px]">
+          <tbody class="bg-white divide-y divide-gray-150">
             <tr>
               <td class="px-4 py-3 font-semibold text-slate-900 bg-slate-50/40">Analysis Phase</td>
               <td class="px-4 py-3 text-gray-600">Conduct HAZOP and LOPA studies to identify hazards and determine required SIL targets.</td>
@@ -5802,12 +5849,13 @@ content: `
   },
   "heat-treatment-oil-gas-fabrication": {title: "Heat Treatment in Oil & Gas Fabrication: PWHT Requirements",
     seoTitle: "Heat Treatment in Oil & Gas Fabrication: PWHT",
-    metaDescription: "PWHT and stress relieving guide for oil and gas fabrication — covering ASME codes, heating rates, soak times, and post-PWHT hardness testing.",
+    metaDescription: "Get the definitive guide to heat treatment in oil & gas fabrication. Expert advice, industry standards, and step-by-step strategies.",
     category: "Mechanical Testing",
-    date: "July 6, 2026",
+    date: "September 5, 2025",
     readTime: "8 Min Read",
     pillar: "Pillar 3: Analyzers & Inspection",
     description: "PWHT and stress relieving guide for oil and gas fabrication — covering ASME codes, heating rates, soak times, and post-PWHT hardness testing.",
+    keywords: "heat treatment, PWHT, oil gas fabrication",
     image: "/images/services/Heat-Treatment-Services.jpeg",
     imageAlt: "Electrical resistance heating pads wrapped around a pipe weld joint for pre-heating.",
 content: `
@@ -5816,8 +5864,8 @@ content: `
       </p>
 
       <div class="my-6 rounded-lg bg-slate-50 border border-slate-200 p-5 not-prose">
-        <h4 class="text-[13.5px] font-bold text-slate-900 mb-2">💡 Key Takeaways</h4>
-        <ul class="text-[13px] text-slate-600 space-y-2 list-disc pl-4">
+        <h4 class="font-bold text-slate-900 mb-2">💡 Key Takeaways</h4>
+        <ul class="text-slate-600 space-y-2 list-disc pl-4">
           <li><strong>Stress Relief:</strong> Welding introduces massive localized thermal stresses; PWHT redistributes these stresses to restore ductility.</li>
           <li><strong>Code Mandates:</strong> ASME Section VIII and B31.3 specify PWHT triggers based on material chemistry and nominal wall thickness.</li>
           <li><strong>Hardness Verifications:</strong> Post-PWHT hardness testing verifies that heat-affected zone (HAZ) properties meet sour service limits.</li>
@@ -5835,14 +5883,14 @@ content: `
       </p>
 
       <div class="overflow-x-auto my-8 not-prose">
-        <table class="min-w-full divide-y divide-gray-200 border border-gray-150 text-[13.5px]">
+        <table class="min-w-full divide-y divide-gray-200 border border-gray-150">
           <thead class="bg-slate-50">
             <tr>
-              <th scope="col" class="px-4 py-3 text-left text-xs font-semibold text-slate-900 uppercase tracking-wider border-b border-gray-150">Design Code</th>
-              <th scope="col" class="px-4 py-3 text-left text-xs font-semibold text-slate-900 uppercase tracking-wider border-b border-gray-150">Weld Configuration &amp; Thickness Trigger</th>
+              <th scope="col" class="px-4 py-3 text-left font-semibold text-slate-900 uppercase tracking-wider border-b border-gray-150">Design Code</th>
+              <th scope="col" class="px-4 py-3 text-left font-semibold text-slate-900 uppercase tracking-wider border-b border-gray-150">Weld Configuration &amp; Thickness Trigger</th>
             </tr>
           </thead>
-          <tbody class="bg-white divide-y divide-gray-150 text-[13px]">
+          <tbody class="bg-white divide-y divide-gray-150">
             <tr>
               <td class="px-4 py-3 font-semibold text-slate-900 bg-slate-50/40">ASME Section VIII Div.1</td>
               <td class="px-4 py-3 text-gray-600">Mandated for carbon steel vessels exceeding thickness thresholds defined by Table UCS-56.</td>
@@ -5863,7 +5911,7 @@ content: `
       <p>
         To prevent thermal gradients and localized distortion, heat treatment processes must follow strict procedures:
       </p>
-      <ol class="list-decimal pl-5 text-[13px] text-gray-600 space-y-2">
+      <ol class="list-decimal pl-5 text-gray-600 space-y-2">
         <li>
           <strong>Thermocouple Attachment and Insulation Setup:</strong> Thermocouples are attached to the weld area and heat-affected zone to track temperatures. Insulation blankets are placed to prevent rapid heat loss.
         </li>
@@ -5915,12 +5963,13 @@ content: `
   },
   "lifting-equipment-safety-oil-gas": {title: "Lifting Equipment Safety in Oil & Gas: Regulatory Requirements",
     seoTitle: "Lifting Equipment Safety in Oil & Gas: Regulations",
-    metaDescription: "LOLER and ASME B30 guidelines for lifting equipment safety in oil and gas — covering inspection categories, load testing intervals, and non-conformances.",
+    metaDescription: "Transform your approach to lifting equipment safety in oil & gas. Access expert strategies, industry standards, and proven results.",
     category: "Analyzers & Inspection",
-    date: "July 6, 2026",
+    date: "October 2, 2025",
     readTime: "8 Min Read",
     pillar: "Pillar 3: Analyzers & Inspection",
     description: "LOLER and ASME B30 guidelines for lifting equipment safety in oil and gas — covering inspection categories, load testing intervals, and non-conformances.",
+    keywords: "lifting equipment safety, oil gas, regulatory compliance",
     image: "/images/services/lifting_eq_inspection.jpg",
     imageAlt: "A crane hook and steel cable slings undergoing magnetic particle inspection for stress cracking.",
 content: `
@@ -5929,8 +5978,8 @@ content: `
       </p>
 
       <div class="my-6 rounded-lg bg-slate-50 border border-slate-200 p-5 not-prose">
-        <h4 class="text-[13.5px] font-bold text-slate-900 mb-2">💡 Key Takeaways</h4>
-        <ul class="text-[13px] text-slate-600 space-y-2 list-disc pl-4">
+        <h4 class="font-bold text-slate-900 mb-2">💡 Key Takeaways</h4>
+        <ul class="text-slate-600 space-y-2 list-disc pl-4">
           <li><strong>High Hazards:</strong> Heavy lifts over live process piping present severe risks, making rigging inspections critical.</li>
           <li><strong>LOLER Compliance:</strong> Operations require thorough examinations by competent inspectors to locate defects.</li>
           <li><strong>Proof Validation:</strong> Load testing certifies that components safely support the Safe Working Load (SWL).</li>
@@ -5948,15 +5997,15 @@ content: `
       </p>
 
       <div class="overflow-x-auto my-8 not-prose">
-        <table class="min-w-full divide-y divide-gray-200 border border-gray-150 text-[13.5px]">
+        <table class="min-w-full divide-y divide-gray-200 border border-gray-150">
           <thead class="bg-slate-50">
             <tr>
-              <th scope="col" class="px-4 py-3 text-left text-xs font-semibold text-slate-900 uppercase tracking-wider border-b border-gray-150">Equipment Category</th>
-              <th scope="col" class="px-4 py-3 text-left text-xs font-semibold text-slate-900 uppercase tracking-wider border-b border-gray-150">Target Components</th>
-              <th scope="col" class="px-4 py-3 text-left text-xs font-semibold text-slate-900 uppercase tracking-wider border-b border-gray-150">Typical Inspection Checklist</th>
+              <th scope="col" class="px-4 py-3 text-left font-semibold text-slate-900 uppercase tracking-wider border-b border-gray-150">Equipment Category</th>
+              <th scope="col" class="px-4 py-3 text-left font-semibold text-slate-900 uppercase tracking-wider border-b border-gray-150">Target Components</th>
+              <th scope="col" class="px-4 py-3 text-left font-semibold text-slate-900 uppercase tracking-wider border-b border-gray-150">Typical Inspection Checklist</th>
             </tr>
           </thead>
-          <tbody class="bg-white divide-y divide-gray-150 text-[13px]">
+          <tbody class="bg-white divide-y divide-gray-150">
             <tr>
               <td class="px-4 py-3 font-semibold text-slate-900 bg-slate-50/40">Lifting Appliances</td>
               <td class="px-4 py-3 text-gray-600">Offshore cranes, pedestal winches, overhead gantries, hoist units</td>
@@ -6029,12 +6078,13 @@ content: `
   },
   "hydrotest-pipelines": {title: "Pressure Testing and Hydrotest: Best Practices for Pipelines",
     seoTitle: "Pressure Testing and Hydrotest: Pipeline Best Practices",
-    metaDescription: "Hydrostatic pressure testing guide for pipelines — covering test pressure calculations, fill & vent procedures, safety precautions, and documentation.",
+    metaDescription: "Learn how to master pressure testing and hydrotest with our comprehensive guide. Access standards, tips, and implementation advice.",
     category: "Analyzers & Inspection",
-    date: "July 6, 2026",
+    date: "October 15, 2025",
     readTime: "8 Min Read",
     pillar: "Pillar 3: Analyzers & Inspection",
     description: "Hydrostatic pressure testing guide for pipelines — covering test pressure calculations, fill & vent procedures, safety precautions, and documentation.",
+    keywords: "hydrotest, pressure testing, pipeline integrity",
     image: "/images/services/HOSE-TEST.jpg",
     imageAlt: "A high-pressure hydrostatic test pump assembly connected to a pipeline section for pressure testing.",
 content: `
@@ -6043,8 +6093,8 @@ content: `
       </p>
 
       <div class="my-6 rounded-lg bg-slate-50 border border-slate-200 p-5 not-prose">
-        <h4 class="text-[13.5px] font-bold text-slate-900 mb-2">💡 Key Takeaways</h4>
-        <ul class="text-[13px] text-slate-600 space-y-2 list-disc pl-4">
+        <h4 class="font-bold text-slate-900 mb-2">💡 Key Takeaways</h4>
+        <ul class="text-slate-600 space-y-2 list-disc pl-4">
           <li><strong>Integrity Proof:</strong> Hydrotesting exposes welding defects, structural cracking, and material flaws before commissioning.</li>
           <li><strong>Pressure Metrics:</strong> Test pressures are calculated based on code requirements, typically ranging from 1.25 to 1.5 times the design limit.</li>
           <li><strong>Safety Rules:</strong> Testing zones require safety exclusion areas to protect personnel from high-pressure releases.</li>
@@ -6062,14 +6112,14 @@ content: `
       </p>
 
       <div class="overflow-x-auto my-8 not-prose">
-        <table class="min-w-full divide-y divide-gray-200 border border-gray-150 text-[13.5px]">
+        <table class="min-w-full divide-y divide-gray-200 border border-gray-150">
           <thead class="bg-slate-50">
             <tr>
-              <th scope="col" class="px-4 py-3 text-left text-xs font-semibold text-slate-900 uppercase tracking-wider border-b border-gray-150">Applicable Standard</th>
-              <th scope="col" class="px-4 py-3 text-left text-xs font-semibold text-slate-900 uppercase tracking-wider border-b border-gray-150">Typical Hydrotest Pressure Factor Range</th>
+              <th scope="col" class="px-4 py-3 text-left font-semibold text-slate-900 uppercase tracking-wider border-b border-gray-150">Applicable Standard</th>
+              <th scope="col" class="px-4 py-3 text-left font-semibold text-slate-900 uppercase tracking-wider border-b border-gray-150">Typical Hydrotest Pressure Factor Range</th>
             </tr>
           </thead>
-          <tbody class="bg-white divide-y divide-gray-150 text-[13px]">
+          <tbody class="bg-white divide-y divide-gray-150">
             <tr>
               <td class="px-4 py-3 font-semibold text-slate-900 bg-slate-50/40">ASME B31.3 (Process Piping)</td>
               <td class="px-4 py-3 text-gray-600">Typically 1.5 times the design pressure, adjusted for temperature limits.</td>
@@ -6090,7 +6140,7 @@ content: `
       <p>
         Executing a pipeline hydrotest requires a structured sequence:
       </p>
-      <ol class="list-decimal pl-5 text-[13px] text-gray-600 space-y-2">
+      <ol class="list-decimal pl-5 text-gray-600 space-y-2">
         <li>
           <strong>Fill and Vent Phase:</strong> Water is pumped into the pipeline while venting air pockets at high points to ensure the line is completely filled.
         </li>
@@ -6142,12 +6192,13 @@ content: `
   },
   "material-certification-oil-gas": {title: "Material Certification in Oil & Gas Projects: NACE, ASTM, and API Requirements",
     seoTitle: "Material Certification in Oil & Gas: NACE, ASTM & API",
-    metaDescription: "Mill test certificate and EN 10204 compliance guide for oil and gas materials — covering NACE MR0175, ASTM standards, and PMI verification.",
+    metaDescription: "Transform your approach to material certification in oil & gas projects. Access expert strategies, industry standards, and proven results.",
     category: "Analyzers & Inspection",
-    date: "July 6, 2026",
+    date: "October 28, 2025",
     readTime: "9 Min Read",
     pillar: "Pillar 3: Analyzers & Inspection",
     description: "Mill test certificate and EN 10204 compliance guide for oil and gas materials — covering NACE MR0175, ASTM standards, and PMI verification.",
+    keywords: "material certification, NACE ASTM API, material compliance",
     image: "/images/services/Macro-and-Micro-Test.jpg",
     imageAlt: "A QA/QC manager examining alloy microstructure in a metallurgical laboratory.",
 content: `
@@ -6156,8 +6207,8 @@ content: `
       </p>
 
       <div class="my-6 rounded-lg bg-slate-50 border border-slate-200 p-5 not-prose">
-        <h4 class="text-[13.5px] font-bold text-slate-900 mb-2">💡 Key Takeaways</h4>
-        <ul class="text-[13px] text-slate-600 space-y-2 list-disc pl-4">
+        <h4 class="font-bold text-slate-900 mb-2">💡 Key Takeaways</h4>
+        <ul class="text-slate-600 space-y-2 list-disc pl-4">
           <li><strong>Traceability Level:</strong> Material validation relies on EN 10204 Type 3.1 and Type 3.2 mill certificates to verify quality.</li>
           <li><strong>Sour Service Limits:</strong> Materials operating in H2S environments must comply with NACE MR0175/ISO 15156 hardness limits.</li>
           <li><strong>Double Checking:</strong> Positive Material Identification (PMI) checks verify chemical compositions on-site.</li>
@@ -6175,15 +6226,15 @@ content: `
       </p>
 
       <div class="overflow-x-auto my-8 not-prose">
-        <table class="min-w-full divide-y divide-gray-200 border border-gray-150 text-[13.5px]">
+        <table class="min-w-full divide-y divide-gray-200 border border-gray-150">
           <thead class="bg-slate-50">
             <tr>
-              <th scope="col" class="px-4 py-3 text-left text-xs font-semibold text-slate-900 uppercase tracking-wider border-b border-gray-150">MTR Type</th>
-              <th scope="col" class="px-4 py-3 text-left text-xs font-semibold text-slate-900 uppercase tracking-wider border-b border-gray-150">Verification Mechanism</th>
-              <th scope="col" class="px-4 py-3 text-left text-xs font-semibold text-slate-900 uppercase tracking-wider border-b border-gray-150">Typical Project Application</th>
+              <th scope="col" class="px-4 py-3 text-left font-semibold text-slate-900 uppercase tracking-wider border-b border-gray-150">MTR Type</th>
+              <th scope="col" class="px-4 py-3 text-left font-semibold text-slate-900 uppercase tracking-wider border-b border-gray-150">Verification Mechanism</th>
+              <th scope="col" class="px-4 py-3 text-left font-semibold text-slate-900 uppercase tracking-wider border-b border-gray-150">Typical Project Application</th>
             </tr>
           </thead>
-          <tbody class="bg-white divide-y divide-gray-150 text-[13px]">
+          <tbody class="bg-white divide-y divide-gray-150">
             <tr>
               <td class="px-4 py-3 font-semibold text-slate-900 bg-slate-50/40">EN 10204 Type 2.1</td>
               <td class="px-4 py-3 text-gray-600">Declaration of compliance by the manufacturer without test results.</td>
@@ -6253,12 +6304,13 @@ content: `
   },
   "flow-measurement-power-plants": {title: "Flow Measurement in Power Plants: Steam, Water, and Gas Applications",
     seoTitle: "Flow Measurement in Power Plants Guide: Steam & Water",
-    metaDescription: "Flow meter selection guide for power plants — covering steam flow meters, feedwater measurement, fuel gas metering, and ASME PTC 19.5 compliance.",
+    metaDescription: "Ready to improve your flow measurement in power plants? Explore expert guidance, compliance standards, and proven techniques.",
     category: "Flow Measurement",
-    date: "July 6, 2026",
+    date: "June 22, 2026",
     readTime: "9 Min Read",
     pillar: "Pillar 1: Flow Measurement & Custody Metering",
     description: "Flow meter selection guide for power plants — covering steam flow meters, feedwater measurement, fuel gas metering, and ASME PTC 19.5 compliance.",
+    keywords: "power plant flow measurement, steam metering, power generation",
     image: "/images/services/flow-measurement.jpg",
     imageAlt: "An ultrasonic liquid flow meter with clamp-on transducers measuring boiler feed water flow.",
 content: `
@@ -6267,8 +6319,8 @@ content: `
       </p>
 
       <div class="my-6 rounded-lg bg-slate-50 border border-slate-200 p-5 not-prose">
-        <h4 class="text-[13.5px] font-bold text-slate-900 mb-2">💡 Key Takeaways</h4>
-        <ul class="text-[13px] text-slate-600 space-y-2 list-disc pl-4">
+        <h4 class="font-bold text-slate-900 mb-2">💡 Key Takeaways</h4>
+        <ul class="text-slate-600 space-y-2 list-disc pl-4">
           <li><strong>Thermal Control:</strong> Steam metering requires high-pressure, superheated designs complying with ASME PTC 19.5.</li>
           <li><strong>Efficiency Indicator:</strong> Feedwater flow rates directly determine boiler thermal efficiency and boiler feed pump controls.</li>
           <li><strong>Fuel Tracking:</strong> Gas and fuel oil flows are monitored using custody-grade meters for combustion adjustments.</li>
@@ -6286,15 +6338,15 @@ content: `
       </p>
 
       <div class="overflow-x-auto my-8 not-prose">
-        <table class="min-w-full divide-y divide-gray-200 border border-gray-150 text-[13.5px]">
+        <table class="min-w-full divide-y divide-gray-200 border border-gray-150">
           <thead class="bg-slate-50">
             <tr>
-              <th scope="col" class="px-4 py-3 text-left text-xs font-semibold text-slate-900 uppercase tracking-wider border-b border-gray-150">Steam Meter Type</th>
-              <th scope="col" class="px-4 py-3 text-left text-xs font-semibold text-slate-900 uppercase tracking-wider border-b border-gray-150">Operating Principle</th>
-              <th scope="col" class="px-4 py-3 text-left text-xs font-semibold text-slate-900 uppercase tracking-wider border-b border-gray-150">Primary Power Application</th>
+              <th scope="col" class="px-4 py-3 text-left font-semibold text-slate-900 uppercase tracking-wider border-b border-gray-150">Steam Meter Type</th>
+              <th scope="col" class="px-4 py-3 text-left font-semibold text-slate-900 uppercase tracking-wider border-b border-gray-150">Operating Principle</th>
+              <th scope="col" class="px-4 py-3 text-left font-semibold text-slate-900 uppercase tracking-wider border-b border-gray-150">Primary Power Application</th>
             </tr>
           </thead>
-          <tbody class="bg-white divide-y divide-gray-150 text-[13px]">
+          <tbody class="bg-white divide-y divide-gray-150">
             <tr>
               <td class="px-4 py-3 font-semibold text-slate-900 bg-slate-50/40">Vortex Flow Meter</td>
               <td class="px-4 py-3 text-gray-600">Measures shedding frequency of vortices generated by a bluff body in the steam stream.</td>
@@ -6356,12 +6408,13 @@ content: `
   },
   "cems-coal-gas-fired-power-plants": {title: "CEMS in Coal and Gas-Fired Power Plants: EPA and ISO 14001 Compliance",
     seoTitle: "CEMS in Coal and Gas-Fired Power Plants: Compliance",
-    metaDescription: "Compliance and technology selection guide for power plant CEMS — covering coal vs gas configurations, EPA Part 75, RATA testing, and ISO 14001.",
+    metaDescription: "Unlock the full potential of cems in coal and gas-fired power plants. Expert insights, standards compliance, and actionable recommendations.",
     category: "Emissions Compliance",
-    date: "July 6, 2026",
+    date: "April 7, 2026",
     readTime: "9 Min Read",
     pillar: "Pillar 3: Analyzers & Inspection",
     description: "Compliance and technology selection guide for power plant CEMS — covering coal vs gas configurations, EPA Part 75, RATA testing, and ISO 14001.",
+    keywords: "CEMS coal gas, power plant emissions, EPA compliance",
     image: "/cems.png",
     imageAlt: "A power plant stack continuous emissions monitoring system (CEMS) analytical rack.",
 content: `
@@ -6370,8 +6423,8 @@ content: `
       </p>
 
       <div class="my-6 rounded-lg bg-slate-50 border border-slate-200 p-5 not-prose">
-        <h4 class="text-[13.5px] font-bold text-slate-900 mb-2">💡 Key Takeaways</h4>
-        <ul class="text-[13px] text-slate-600 space-y-2 list-disc pl-4">
+        <h4 class="font-bold text-slate-900 mb-2">💡 Key Takeaways</h4>
+        <ul class="text-slate-600 space-y-2 list-disc pl-4">
           <li><strong>Fuel Specificity:</strong> Coal units require multi-pollutant (SO2, NOx, Hg) and dust CEMS, while gas-fired plants focus on NOx and CO.</li>
           <li><strong>Audit Milestones:</strong> Relative Accuracy Test Audits (RATA) are executed annually using reference method testing to verify compliance.</li>
           <li><strong>Environmental Standards:</strong> Automated emissions tracking supports active ISO 14001:2015 certification audits.</li>
@@ -6389,15 +6442,15 @@ content: `
       </p>
 
       <div class="overflow-x-auto my-8 not-prose">
-        <table class="min-w-full divide-y divide-gray-200 border border-gray-150 text-[13.5px]">
+        <table class="min-w-full divide-y divide-gray-200 border border-gray-150">
           <thead class="bg-slate-50">
             <tr>
-              <th scope="col" class="px-4 py-3 text-left text-xs font-semibold text-slate-900 uppercase tracking-wider border-b border-gray-150">Fuel Type</th>
-              <th scope="col" class="px-4 py-3 text-left text-xs font-semibold text-slate-900 uppercase tracking-wider border-b border-gray-150">Primary Target Pollutants</th>
-              <th scope="col" class="px-4 py-3 text-left text-xs font-semibold text-slate-900 uppercase tracking-wider border-b border-gray-150">Typical CEMS Technology Layout</th>
+              <th scope="col" class="px-4 py-3 text-left font-semibold text-slate-900 uppercase tracking-wider border-b border-gray-150">Fuel Type</th>
+              <th scope="col" class="px-4 py-3 text-left font-semibold text-slate-900 uppercase tracking-wider border-b border-gray-150">Primary Target Pollutants</th>
+              <th scope="col" class="px-4 py-3 text-left font-semibold text-slate-900 uppercase tracking-wider border-b border-gray-150">Typical CEMS Technology Layout</th>
             </tr>
           </thead>
-          <tbody class="bg-white divide-y divide-gray-150 text-[13px]">
+          <tbody class="bg-white divide-y divide-gray-150">
             <tr>
               <td class="px-4 py-3 font-semibold text-slate-900 bg-slate-50/40">Coal-Fired Utility Boiler</td>
               <td class="px-4 py-3 text-gray-600">SO2, NOx, CO, CO2, Hg (Mercury), Particulate Matter (Dust)</td>
@@ -6416,7 +6469,7 @@ content: `
       <p>
         To verify that CEMS readings are representative of stack emissions, systems undergo annual Relative Accuracy Test Audits (RATA). The RATA process consists of several critical steps:
       </p>
-      <ol class="list-decimal pl-5 text-[13px] text-gray-600 space-y-2">
+      <ol class="list-decimal pl-5 text-gray-600 space-y-2">
         <li>
           <strong>Test Plan Submittal and Agency Notification:</strong> The facility submits a test protocol and notifies the environmental agency of the audit schedule.
         </li>
@@ -6471,12 +6524,13 @@ content: `
   },
   "plc-scada-automation-power-plants": {title: "PLC and SCADA Automation in Power Plant Operations",
     seoTitle: "PLC and SCADA Automation in Power Plants Guide",
-    metaDescription: "Automation architecture guide for power plants — comparing PLCs and DCS, redundancy requirements, and integration with metering and CEMS.",
+    metaDescription: "Want to excel at plc and scada automation in power plant operations? Our expert guide covers standards, best practices, and real-world strategies.",
     category: "Industrial Automation",
-    date: "July 6, 2026",
+    date: "December 16, 2025",
     readTime: "8 Min Read",
     pillar: "Pillar 2: Industrial Process Automation",
     description: "Automation architecture guide for power plants — comparing PLCs and DCS, redundancy requirements, and integration with metering and CEMS.",
+    keywords: "PLC SCADA, power plant automation, process control",
     image: "/images/control_room_interior_and_console/dynamic_m/2.jpg",
     imageAlt: "A power station control room console featuring human-machine interface (HMI) screens.",
 content: `
@@ -6485,8 +6539,8 @@ content: `
       </p>
 
       <div class="my-6 rounded-lg bg-slate-50 border border-slate-200 p-5 not-prose">
-        <h4 class="text-[13.5px] font-bold text-slate-900 mb-2">💡 Key Takeaways</h4>
-        <ul class="text-[13px] text-slate-600 space-y-2 list-disc pl-4">
+        <h4 class="font-bold text-slate-900 mb-2">💡 Key Takeaways</h4>
+        <ul class="text-slate-600 space-y-2 list-disc pl-4">
           <li><strong>Integrated Control:</strong> Modern plants utilize PLCs for package control and integrate them into a central Distributed Control System (DCS).</li>
           <li><strong>Hardware Redundancy:</strong> Critical control loops require hot-standby CPU configurations and redundant network pathways.</li>
           <li><strong>Standards Compliance:</strong> Logic code development must follow IEC 61131-3, and networks must be secured to IEC 62443.</li>
@@ -6504,15 +6558,15 @@ content: `
       </p>
 
       <div class="overflow-x-auto my-8 not-prose">
-        <table class="min-w-full divide-y divide-gray-200 border border-gray-150 text-[13.5px]">
+        <table class="min-w-full divide-y divide-gray-200 border border-gray-150">
           <thead class="bg-slate-50">
             <tr>
-              <th scope="col" class="px-4 py-3 text-left text-xs font-semibold text-slate-900 uppercase tracking-wider border-b border-gray-150">Automation Platform</th>
-              <th scope="col" class="px-4 py-3 text-left text-xs font-semibold text-slate-900 uppercase tracking-wider border-b border-gray-150">Control Application Area</th>
-              <th scope="col" class="px-4 py-3 text-left text-xs font-semibold text-slate-900 uppercase tracking-wider border-b border-gray-150">Typical Hardware Architecture</th>
+              <th scope="col" class="px-4 py-3 text-left font-semibold text-slate-900 uppercase tracking-wider border-b border-gray-150">Automation Platform</th>
+              <th scope="col" class="px-4 py-3 text-left font-semibold text-slate-900 uppercase tracking-wider border-b border-gray-150">Control Application Area</th>
+              <th scope="col" class="px-4 py-3 text-left font-semibold text-slate-900 uppercase tracking-wider border-b border-gray-150">Typical Hardware Architecture</th>
             </tr>
           </thead>
-          <tbody class="bg-white divide-y divide-gray-150 text-[13px]">
+          <tbody class="bg-white divide-y divide-gray-150">
             <tr>
               <td class="px-4 py-3 font-semibold text-slate-900 bg-slate-50/40">Programmable Logic Controller (PLC)</td>
               <td class="px-4 py-3 text-gray-600">Discrete package systems, burner safety blocks, water treatment skids, generator controls</td>
@@ -6569,12 +6623,13 @@ content: `
   },
   "ndt-power-plant-boilers": {title: "NDT for Power Plant Boilers: ASME Code Inspection Requirements",
     seoTitle: "NDT for Power Plant Boilers: ASME Code Inspection Guide",
-    metaDescription: "ASME and NBIC compliance guide for power plant boiler NDT — covering tube thinning, creep damage, outage planning, and testing methods.",
+    metaDescription: "Want to excel at ndt for power plant boilers? Our expert guide covers standards, best practices, and real-world strategies.",
     category: "Analyzers & Inspection",
-    date: "July 6, 2026",
+    date: "June 18, 2025",
     readTime: "9 Min Read",
     pillar: "Pillar 3: Analyzers & Inspection",
     description: "ASME and NBIC compliance guide for power plant boiler NDT — covering tube thinning, creep damage, outage planning, and testing methods.",
+    keywords: "NDT power plant, boiler inspection, ASME code",
     image: "/images/services/ndt.jpg",
     imageAlt: "An inspector scanning boiler waterwall tubes inside a power generation boiler during shutdown.",
 content: `
@@ -6583,8 +6638,8 @@ content: `
       </p>
 
       <div class="my-6 rounded-lg bg-slate-50 border border-slate-200 p-5 not-prose">
-        <h4 class="text-[13.5px] font-bold text-slate-900 mb-2">💡 Key Takeaways</h4>
-        <ul class="text-[13px] text-slate-600 space-y-2 list-disc pl-4">
+        <h4 class="font-bold text-slate-900 mb-2">💡 Key Takeaways</h4>
+        <ul class="text-slate-600 space-y-2 list-disc pl-4">
           <li><strong>Tube Inspection:</strong> Electromagnetic testing (ECT) and ultrasonic thickness (UT) identify localized wall thinning.</li>
           <li><strong>Thermal Stress:</strong> Heavy-wall headers and steam drums are checked for creep cracking and fatigue anomalies.</li>
           <li><strong>Regulatory Codes:</strong> Inspection tasks follow ASME Section I, ASME Section V, and NBIC Part 2 guidelines.</li>
@@ -6618,15 +6673,15 @@ content: `
       </p>
 
       <div class="overflow-x-auto my-8 not-prose">
-        <table class="min-w-full divide-y divide-gray-200 border border-gray-150 text-[13.5px]">
+        <table class="min-w-full divide-y divide-gray-200 border border-gray-150">
           <thead class="bg-slate-50">
             <tr>
-              <th scope="col" class="px-4 py-3 text-left text-xs font-semibold text-slate-900 uppercase tracking-wider border-b border-gray-150">Boiler Component</th>
-              <th scope="col" class="px-4 py-3 text-left text-xs font-semibold text-slate-900 uppercase tracking-wider border-b border-gray-150">Primary NDT Method</th>
-              <th scope="col" class="px-4 py-3 text-left text-xs font-semibold text-slate-900 uppercase tracking-wider border-b border-gray-150">Primary Metrological Purpose</th>
+              <th scope="col" class="px-4 py-3 text-left font-semibold text-slate-900 uppercase tracking-wider border-b border-gray-150">Boiler Component</th>
+              <th scope="col" class="px-4 py-3 text-left font-semibold text-slate-900 uppercase tracking-wider border-b border-gray-150">Primary NDT Method</th>
+              <th scope="col" class="px-4 py-3 text-left font-semibold text-slate-900 uppercase tracking-wider border-b border-gray-150">Primary Metrological Purpose</th>
             </tr>
           </thead>
-          <tbody class="bg-white divide-y divide-gray-150 text-[13px]">
+          <tbody class="bg-white divide-y divide-gray-150">
             <tr>
               <td class="px-4 py-3 font-semibold text-slate-900 bg-slate-50/40">Superheater &amp; Reheater Tubes</td>
               <td class="px-4 py-3 text-gray-600">Electromagnetic Testing (ECT) / Internal Rotary Inspection System (IRIS) / UT</td>
@@ -6688,12 +6743,13 @@ content: `
   },
   "vfd-power-plant-fan-pump-control": {title: "VFD Applications in Power Plant Fan and Pump Control",
     seoTitle: "VFD Applications in Power Plant Fan & Pump Control Guide",
-    metaDescription: "Variable Frequency Drive (VFD) guide for power plants — covering ID/FD fan control, boiler feed pump speed regulation, and harmonic mitigation.",
+    metaDescription: "Transform your approach to vfd applications in power plant fan and pump control. Access expert strategies, industry standards, and proven results.",
     category: "Industrial Automation",
-    date: "July 6, 2026",
+    date: "March 14, 2026",
     readTime: "8 Min Read",
     pillar: "Pillar 2: Industrial Process Automation",
     description: "Variable Frequency Drive (VFD) guide for power plants — covering ID/FD fan control, boiler feed pump speed regulation, and harmonic mitigation.",
+    keywords: "VFD power plant, fan pump control, energy efficiency",
     image: "/images/frequency-inverters/FR-A800.webp",
     imageAlt: "A heavy-capacity variable frequency drive cabinet controlling a large boiler draft fan motor.",
 content: `
@@ -6702,8 +6758,8 @@ content: `
       </p>
 
       <div class="my-6 rounded-lg bg-slate-50 border border-slate-200 p-5 not-prose">
-        <h4 class="text-[13.5px] font-bold text-slate-900 mb-2">💡 Key Takeaways</h4>
-        <ul class="text-[13px] text-slate-600 space-y-2 list-disc pl-4">
+        <h4 class="font-bold text-slate-900 mb-2">💡 Key Takeaways</h4>
+        <ul class="text-slate-600 space-y-2 list-disc pl-4">
           <li><strong>Process Efficiency:</strong> Speed-control loops replace throttling valves, lowering auxiliary electrical load requirements.</li>
           <li><strong>Soft Starting:</strong> VFDs eliminate high inrush currents, protecting motors and power distribution grids.</li>
           <li><strong>Harmonic Controls:</strong> Mitigating electrical noise requires passive or active front-end filters in compliance with IEEE 519.</li>
@@ -6724,14 +6780,14 @@ content: `
       </p>
 
       <div class="overflow-x-auto my-8 not-prose">
-        <table class="min-w-full divide-y divide-gray-200 border border-gray-150 text-[13.5px]">
+        <table class="min-w-full divide-y divide-gray-200 border border-gray-150">
           <thead class="bg-slate-50">
             <tr>
-              <th scope="col" class="px-4 py-3 text-left text-xs font-semibold text-slate-900 uppercase tracking-wider border-b border-gray-150">Auxiliary Application</th>
-              <th scope="col" class="px-4 py-3 text-left text-xs font-semibold text-slate-900 uppercase tracking-wider border-b border-gray-150">Primary Operational Benefit</th>
+              <th scope="col" class="px-4 py-3 text-left font-semibold text-slate-900 uppercase tracking-wider border-b border-gray-150">Auxiliary Application</th>
+              <th scope="col" class="px-4 py-3 text-left font-semibold text-slate-900 uppercase tracking-wider border-b border-gray-150">Primary Operational Benefit</th>
             </tr>
           </thead>
-          <tbody class="bg-white divide-y divide-gray-150 text-[13px]">
+          <tbody class="bg-white divide-y divide-gray-150">
             <tr>
               <td class="px-4 py-3 font-semibold text-slate-900 bg-slate-50/40">Induced/Forced Draft Fans</td>
               <td class="px-4 py-3 text-gray-600">Replaces mechanical inlet guide vanes, optimizing furnace pressure control loops.</td>
@@ -6795,12 +6851,13 @@ content: `
   },
   "turbine-flow-meters-steam-measurement": {title: "Turbine Flow Meters for Steam Measurement in Power Generation",
     seoTitle: "Turbine Flow Meters for Steam Measurement: Power Gen Guide",
-    metaDescription: "Guide to selecting turbine flow meters for steam measurement in power plants — covering applications, limitations, and vortex/DP alternatives.",
+    metaDescription: "Ready to improve your turbine flow meters for steam measurement in power generation? Explore expert guidance, compliance standards, and proven techniques.",
     category: "Flow Measurement",
-    date: "July 6, 2026",
+    date: "July 5, 2026",
     readTime: "8 Min Read",
     pillar: "Pillar 1: Flow Measurement & Custody Metering",
     description: "Guide to selecting turbine flow meters for steam measurement in power plants — covering applications, limitations, and vortex/DP alternatives.",
+    keywords: "turbine flow meters, steam measurement, power generation flow",
     image: "/helical_turbine_meter.png",
     imageAlt: "A heavy-duty gas turbine flow meter used for steam and process fluid volume monitoring.",
 content: `
@@ -6809,8 +6866,8 @@ content: `
       </p>
 
       <div class="my-6 rounded-lg bg-slate-50 border border-slate-200 p-5 not-prose">
-        <h4 class="text-[13.5px] font-bold text-slate-900 mb-2">💡 Key Takeaways</h4>
-        <ul class="text-[13px] text-slate-600 space-y-2 list-disc pl-4">
+        <h4 class="font-bold text-slate-900 mb-2">💡 Key Takeaways</h4>
+        <ul class="text-slate-600 space-y-2 list-disc pl-4">
           <li><strong>Operation:</strong> Turbine flow meters convert velocity into volumetric values using a rotor set within the steam stream.</li>
           <li><strong>Limits:</strong> Steam applications introduce high mechanical stresses, making rotor bearing wear a key maintenance factor.</li>
           <li><strong>Alternatives:</strong> Vortex shedding and differential pressure (DP) flow meters are common for superheated steam loops.</li>
@@ -6828,15 +6885,15 @@ content: `
       </p>
 
       <div class="overflow-x-auto my-8 not-prose">
-        <table class="min-w-full divide-y divide-gray-200 border border-gray-150 text-[13.5px]">
+        <table class="min-w-full divide-y divide-gray-200 border border-gray-150">
           <thead class="bg-slate-50">
             <tr>
-              <th scope="col" class="px-4 py-3 text-left text-xs font-semibold text-slate-900 uppercase tracking-wider border-b border-gray-150">Steam State / Application</th>
-              <th scope="col" class="px-4 py-3 text-left text-xs font-semibold text-slate-900 uppercase tracking-wider border-b border-gray-150">Suitable / Limitation Status</th>
-              <th scope="col" class="px-4 py-3 text-left text-xs font-semibold text-slate-900 uppercase tracking-wider border-b border-gray-150">Technical Explanation</th>
+              <th scope="col" class="px-4 py-3 text-left font-semibold text-slate-900 uppercase tracking-wider border-b border-gray-150">Steam State / Application</th>
+              <th scope="col" class="px-4 py-3 text-left font-semibold text-slate-900 uppercase tracking-wider border-b border-gray-150">Suitable / Limitation Status</th>
+              <th scope="col" class="px-4 py-3 text-left font-semibold text-slate-900 uppercase tracking-wider border-b border-gray-150">Technical Explanation</th>
             </tr>
           </thead>
-          <tbody class="bg-white divide-y divide-gray-150 text-[13px]">
+          <tbody class="bg-white divide-y divide-gray-150">
             <tr>
               <td class="px-4 py-3 font-semibold text-slate-900 bg-slate-50/40">Dry Saturated Steam</td>
               <td class="px-4 py-3 text-emerald-600 font-semibold">Suitable</td>
@@ -6898,12 +6955,13 @@ content: `
   },
   "electrical-instrumentation-power-plants": {title: "Electrical Instrumentation in Power Plants: Design and Maintenance",
     seoTitle: "Electrical Instrumentation in Power Plants: Design & PM Guide",
-    metaDescription: "Design and maintenance guide for power plant electrical instrumentation — covering protection relays, CT/PT accuracy, and IEC 61850 compliance.",
+    metaDescription: "Discover expert insights on electrical instrumentation in power plants. Get actionable strategies and proven best practices for your operations.",
     category: "Industrial Automation",
-    date: "July 6, 2026",
+    date: "December 18, 2025",
     readTime: "9 Min Read",
     pillar: "Pillar 2: Industrial Process Automation",
     description: "Design and maintenance guide for power plant electrical instrumentation — covering protection relays, CT/PT accuracy, and IEC 61850 compliance.",
+    keywords: "electrical instrumentation, power plant design, maintenance",
     image: "/images/services/electrical-inst.png",
     imageAlt: "An electrician installing terminal blocks inside a power plant instrumentation junction cabinet.",
 content: `
@@ -6912,8 +6970,8 @@ content: `
       </p>
 
       <div class="my-6 rounded-lg bg-slate-50 border border-slate-200 p-5 not-prose">
-        <h4 class="text-[13.5px] font-bold text-slate-900 mb-2">💡 Key Takeaways</h4>
-        <ul class="text-[13px] text-slate-600 space-y-2 list-disc pl-4">
+        <h4 class="font-bold text-slate-900 mb-2">💡 Key Takeaways</h4>
+        <ul class="text-slate-600 space-y-2 list-disc pl-4">
           <li><strong>Protection Relays:</strong> Microprocessor relays monitor circuits and trip switchgear to isolate electrical faults.</li>
           <li><strong>Grid Integration:</strong> Smart instrumentation utilizes the IEC 61850 protocol to coordinate switchgear and DCS actions.</li>
           <li><strong>Testing Cycles:</strong> Relays, CTs, and PTs require periodic insulation resistance and calibration checks.</li>
@@ -6926,15 +6984,15 @@ content: `
       </p>
 
       <div class="overflow-x-auto my-8 not-prose">
-        <table class="min-w-full divide-y divide-gray-200 border border-gray-150 text-[13.5px]">
+        <table class="min-w-full divide-y divide-gray-200 border border-gray-150">
           <thead class="bg-slate-50">
             <tr>
-              <th scope="col" class="px-4 py-3 text-left text-xs font-semibold text-slate-900 uppercase tracking-wider border-b border-gray-150">Instrumentation Subsystem</th>
-              <th scope="col" class="px-4 py-3 text-left text-xs font-semibold text-slate-900 uppercase tracking-wider border-b border-gray-150">Primary Component Focus</th>
-              <th scope="col" class="px-4 py-3 text-left text-xs font-semibold text-slate-900 uppercase tracking-wider border-b border-gray-150">Primary Metrological / Safety Purpose</th>
+              <th scope="col" class="px-4 py-3 text-left font-semibold text-slate-900 uppercase tracking-wider border-b border-gray-150">Instrumentation Subsystem</th>
+              <th scope="col" class="px-4 py-3 text-left font-semibold text-slate-900 uppercase tracking-wider border-b border-gray-150">Primary Component Focus</th>
+              <th scope="col" class="px-4 py-3 text-left font-semibold text-slate-900 uppercase tracking-wider border-b border-gray-150">Primary Metrological / Safety Purpose</th>
             </tr>
           </thead>
-          <tbody class="bg-white divide-y divide-gray-150 text-[13px]">
+          <tbody class="bg-white divide-y divide-gray-150">
             <tr>
               <td class="px-4 py-3 font-semibold text-slate-900 bg-slate-50/40">Protective Relaying</td>
               <td class="px-4 py-3 text-gray-600">Generator protection relays, transformer differential relays, feeder protection units</td>
@@ -7001,12 +7059,13 @@ content: `
   },
   "control-room-design-power-plants": {title: "Control Room Design for Power Plant Operations: ISO 11064 Guide",
     seoTitle: "Control Room Design for Power Plants: ISO 11064 Guide",
-    metaDescription: "Boiler and power plant control room design guide — covering ISO 11064 ergonomics, HMI layouts, operator workload, and environmental factors.",
+    metaDescription: "Unlock the full potential of control room design for power plant operations. Expert insights, standards compliance, and actionable recommendations.",
     category: "Industrial Automation",
-    date: "July 6, 2026",
+    date: "March 4, 2025",
     readTime: "8 Min Read",
     pillar: "Pillar 2: Industrial Process Automation",
     description: "Boiler and power plant control room design guide — covering ISO 11064 ergonomics, HMI layouts, operator workload, and environmental factors.",
+    keywords: "power plant control room, ISO 11064, operator efficiency",
     image: "/images/control_room_interior_and_console/xlat/1.jpg",
     imageAlt: "A modern control room layout with curved screens displaying electrical grid load balances.",
 content: `
@@ -7015,8 +7074,8 @@ content: `
       </p>
 
       <div class="my-6 rounded-lg bg-slate-50 border border-slate-200 p-5 not-prose">
-        <h4 class="text-[13.5px] font-bold text-slate-900 mb-2">💡 Key Takeaways</h4>
-        <ul class="text-[13px] text-slate-600 space-y-2 list-disc pl-4">
+        <h4 class="font-bold text-slate-900 mb-2">💡 Key Takeaways</h4>
+        <ul class="text-slate-600 space-y-2 list-disc pl-4">
           <li><strong>Ergonomic Layouts:</strong> Operator desk consoles, sightlines, and display angles are optimized to minimize physical strain.</li>
           <li><strong>Standards Compliance:</strong> Implementation of control centers must follow the layout guidelines of ISO 11064.</li>
           <li><strong>Stress Management:</strong> Alarm rationalization programs reduce cognitive load, preventing operator overload during process upsets.</li>
@@ -7034,14 +7093,14 @@ content: `
       </p>
 
       <div class="overflow-x-auto my-8 not-prose">
-        <table class="min-w-full divide-y divide-gray-200 border border-gray-150 text-[13.5px]">
+        <table class="min-w-full divide-y divide-gray-200 border border-gray-150">
           <thead class="bg-slate-50">
             <tr>
-              <th scope="col" class="px-4 py-3 text-left text-xs font-semibold text-slate-900 uppercase tracking-wider border-b border-gray-150">ISO 11064 Part / Principle</th>
-              <th scope="col" class="px-4 py-3 text-left text-xs font-semibold text-slate-900 uppercase tracking-wider border-b border-gray-150">Control Room Application Details</th>
+              <th scope="col" class="px-4 py-3 text-left font-semibold text-slate-900 uppercase tracking-wider border-b border-gray-150">ISO 11064 Part / Principle</th>
+              <th scope="col" class="px-4 py-3 text-left font-semibold text-slate-900 uppercase tracking-wider border-b border-gray-150">Control Room Application Details</th>
             </tr>
           </thead>
-          <tbody class="bg-white divide-y divide-gray-150 text-[13px]">
+          <tbody class="bg-white divide-y divide-gray-150">
             <tr>
               <td class="px-4 py-3 font-semibold text-slate-900 bg-slate-50/40">Part 1: Principles for design</td>
               <td class="px-4 py-3 text-gray-600">Establishes a human-centered design approach, analyzing operator tasks to shape the physical room layout.</td>
@@ -7104,12 +7163,13 @@ content: `
   },
   "thermal-power-plant-emissions-compliance": {title: "Thermal Power Plant Emissions Compliance: SO2, NOx, and Dust Monitoring",
     seoTitle: "Thermal Power Plant Emissions Compliance: SO2, NOx & Dust",
-    metaDescription: "Regulatory and technology compliance guide for thermal power plants — covering SO2, NOx, dust analyzers, FGD/SCR integration, and EPA standards.",
+    metaDescription: "Learn how to master thermal power plant emissions compliance with our comprehensive guide. Access standards, tips, and implementation advice.",
     category: "Emissions Compliance",
-    date: "July 6, 2026",
+    date: "September 1, 2025",
     readTime: "9 Min Read",
     pillar: "Pillar 3: Analyzers & Inspection",
     description: "Regulatory and technology compliance guide for thermal power plants — covering SO2, NOx, dust analyzers, FGD/SCR integration, and EPA standards.",
+    keywords: "thermal power emissions, SO2 NOx monitoring, EPA",
     image: "/power_plant.jpg",
     imageAlt: "Cooling towers emitting steam alongside a flue gas stack at a thermal power plant.",
 content: `
@@ -7118,8 +7178,8 @@ content: `
       </p>
 
       <div class="my-6 rounded-lg bg-slate-50 border border-slate-200 p-5 not-prose">
-        <h4 class="text-[13.5px] font-bold text-slate-900 mb-2">💡 Key Takeaways</h4>
-        <ul class="text-[13px] text-slate-600 space-y-2 list-disc pl-4">
+        <h4 class="font-bold text-slate-900 mb-2">💡 Key Takeaways</h4>
+        <ul class="text-slate-600 space-y-2 list-disc pl-4">
           <li><strong>Regulatory Standards:</strong> Operations comply with EPA 40 CFR Part 60 and EN 15267 metrological performance standards.</li>
           <li><strong>Integrated Control:</strong> Gaseous measurements provide feed-forward control inputs for SCR/SNCR and FGD abatement systems.</li>
           <li><strong>High Availability:</strong> Continuous data logging and automated calibration checks prevent reporting gaps.</li>
@@ -7137,15 +7197,15 @@ content: `
       </p>
 
       <div class="overflow-x-auto my-8 not-prose">
-        <table class="min-w-full divide-y divide-gray-200 border border-gray-150 text-[13.5px]">
+        <table class="min-w-full divide-y divide-gray-200 border border-gray-150">
           <thead class="bg-slate-50">
             <tr>
-              <th scope="col" class="px-4 py-3 text-left text-xs font-semibold text-slate-950 uppercase tracking-wider border-b border-gray-150">Target Pollutant</th>
-              <th scope="col" class="px-4 py-3 text-left text-xs font-semibold text-slate-900 uppercase tracking-wider border-b border-gray-150">Primary Monitoring Technology</th>
-              <th scope="col" class="px-4 py-3 text-left text-xs font-semibold text-slate-900 uppercase tracking-wider border-b border-gray-150">Reference Compliance Standard</th>
+              <th scope="col" class="px-4 py-3 text-left font-semibold text-slate-950 uppercase tracking-wider border-b border-gray-150">Target Pollutant</th>
+              <th scope="col" class="px-4 py-3 text-left font-semibold text-slate-900 uppercase tracking-wider border-b border-gray-150">Primary Monitoring Technology</th>
+              <th scope="col" class="px-4 py-3 text-left font-semibold text-slate-900 uppercase tracking-wider border-b border-gray-150">Reference Compliance Standard</th>
             </tr>
           </thead>
-          <tbody class="bg-white divide-y divide-gray-150 text-[13px]">
+          <tbody class="bg-white divide-y divide-gray-150">
             <tr>
               <td class="px-4 py-3 font-semibold text-slate-900 bg-slate-50/40">Sulfur Dioxide (SO2)</td>
               <td class="px-4 py-3 text-gray-600">Non-Dispersive Infrared (NDIR) / Ultraviolet Absorption (UV)</td>
@@ -7202,12 +7262,13 @@ content: `
   },
   "predictive-maintenance-power-plants": {title: "Predictive Maintenance in Power Plants: Sensors and Analytics",
     seoTitle: "Predictive Maintenance in Power Plants: Sensors & PdM Guide",
-    metaDescription: "Sensor selection and implementation guide for power plant predictive maintenance — covering vibration monitoring, thermal imaging, and ISO 10816 standards.",
+    metaDescription: "Explore our in-depth guide to predictive maintenance in power plants. Expert advice, compliance requirements, and implementation tips.",
     category: "Commissioning & Support",
-    date: "July 6, 2026",
+    date: "October 18, 2025",
     readTime: "9 Min Read",
     pillar: "Pillar 2: Industrial Process Automation",
     description: "Sensor selection and implementation guide for power plant predictive maintenance — covering vibration monitoring, thermal imaging, and ISO 10816 standards.",
+    keywords: "predictive maintenance, power plant sensors, analytics",
     image: "/images/services/inspection-testing.jpg",
     imageAlt: "An engineer using a portable vibration analyzer on a large high-pressure turbine housing.",
 content: `
@@ -7216,8 +7277,8 @@ content: `
       </p>
 
       <div class="my-6 rounded-lg bg-slate-50 border border-slate-200 p-5 not-prose">
-        <h4 class="text-[13.5px] font-bold text-slate-900 mb-2">💡 Key Takeaways</h4>
-        <ul class="text-[13px] text-slate-600 space-y-2 list-disc pl-4">
+        <h4 class="font-bold text-slate-900 mb-2">💡 Key Takeaways</h4>
+        <ul class="text-slate-600 space-y-2 list-disc pl-4">
           <li><strong>Risk Prevention:</strong> Real-time vibration sensors track bearing health, warning operators of imbalance or misalignment.</li>
           <li><strong>Standards Alignment:</strong> Vibration analysis thresholds and diagnostic signals follow ISO 10816 and ISO 13374 parameters.</li>
           <li><strong>Analytics Integration:</strong> Combining sensor histories with database analytics enables optimized outage planning.</li>
@@ -7230,15 +7291,15 @@ content: `
       </p>
 
       <div class="overflow-x-auto my-8 not-prose">
-        <table class="min-w-full divide-y divide-gray-200 border border-gray-150 text-[13.5px]">
+        <table class="min-w-full divide-y divide-gray-200 border border-gray-150">
           <thead class="bg-slate-50">
             <tr>
-              <th scope="col" class="px-4 py-3 text-left text-xs font-semibold text-slate-900 uppercase tracking-wider border-b border-gray-150">Maintenance Strategy</th>
-              <th scope="col" class="px-4 py-3 text-left text-xs font-semibold text-slate-900 uppercase tracking-wider border-b border-gray-150">Operational Approach</th>
-              <th scope="col" class="px-4 py-3 text-left text-xs font-semibold text-slate-900 uppercase tracking-wider border-b border-gray-150">Primary Disadvantage / Risk</th>
+              <th scope="col" class="px-4 py-3 text-left font-semibold text-slate-900 uppercase tracking-wider border-b border-gray-150">Maintenance Strategy</th>
+              <th scope="col" class="px-4 py-3 text-left font-semibold text-slate-900 uppercase tracking-wider border-b border-gray-150">Operational Approach</th>
+              <th scope="col" class="px-4 py-3 text-left font-semibold text-slate-900 uppercase tracking-wider border-b border-gray-150">Primary Disadvantage / Risk</th>
             </tr>
           </thead>
-          <tbody class="bg-white divide-y divide-gray-150 text-[13px]">
+          <tbody class="bg-white divide-y divide-gray-150">
             <tr>
               <td class="px-4 py-3 font-semibold text-slate-900 bg-slate-50/40">Reactive Maintenance</td>
               <td class="px-4 py-3 text-gray-600">Run to failure; repair equipment only after it breaks down.</td>
@@ -7287,7 +7348,7 @@ content: `
       <p>
         Launching a PdM program requires a structured approach:
       </p>
-      <ol class="list-decimal pl-5 text-[13px] text-gray-600 space-y-2">
+      <ol class="list-decimal pl-5 text-gray-600 space-y-2">
         <li>
           <strong>Criticality Analysis:</strong> Identify and rank power plant assets to target high-consequence machinery.
         </li>
@@ -7329,12 +7390,13 @@ content: `
   },
   "lng-terminal-flow-measurement": {title: "LNG Terminal Flow Measurement: Cryogenic Meter Selection",
     seoTitle: "LNG Terminal Flow Measurement: Cryogenic Meter Selection Guide",
-    metaDescription: "Cryogenic flow meter selection guide for LNG terminals — comparing Coriolis and ultrasonic meters, material selection, and density calculations.",
+    metaDescription: "Want to excel at lng terminal flow measurement? Our expert guide covers standards, best practices, and real-world strategies.",
     category: "Flow Measurement",
-    date: "July 6, 2026",
+    date: "January 28, 2026",
     readTime: "9 Min Read",
     pillar: "Pillar 1: Flow Measurement & Custody Metering",
     description: "Cryogenic flow meter selection guide for LNG terminals — comparing Coriolis and ultrasonic meters, material selection, and density calculations.",
+    keywords: "LNG terminal flow, cryogenic metering, LNG measurement",
     image: "/lng.jpg",
     imageAlt: "A cryogenic Liquefied Natural Gas (LNG) carrier ship docked at an import/export terminal.",
 content: `
@@ -7343,8 +7405,8 @@ content: `
       </p>
 
       <div class="my-6 rounded-lg bg-slate-50 border border-slate-200 p-5 not-prose">
-        <h4 class="text-[13.5px] font-bold text-slate-900 mb-2">💡 Key Takeaways</h4>
-        <ul class="text-[13px] text-slate-600 space-y-2 list-disc pl-4">
+        <h4 class="font-bold text-slate-900 mb-2">💡 Key Takeaways</h4>
+        <ul class="text-slate-600 space-y-2 list-disc pl-4">
           <li><strong>Extreme Conditions:</strong> Operating temperatures below -160&deg;C introduce material embrittlement risks, requiring specialized alloys.</li>
           <li><strong>Coriolis Precision:</strong> Coriolis meters track mass flow directly, eliminating the need to compensate for density variations.</li>
           <li><strong>Standards Compliance:</strong> Auditing and calculations follow ISO 8943, GIIGNL, and API MPMS Chapter 14 guidelines.</li>
@@ -7367,15 +7429,15 @@ content: `
       </p>
 
       <div class="overflow-x-auto my-8 not-prose">
-        <table class="min-w-full divide-y divide-gray-200 border border-gray-150 text-[13.5px]">
+        <table class="min-w-full divide-y divide-gray-200 border border-gray-150">
           <thead class="bg-slate-50">
             <tr>
-              <th scope="col" class="px-4 py-3 text-left text-xs font-semibold text-slate-900 uppercase tracking-wider border-b border-gray-150">Metering Feature</th>
-              <th scope="col" class="px-4 py-3 text-left text-xs font-semibold text-slate-900 uppercase tracking-wider border-b border-gray-150">Coriolis Mass Flow Meter</th>
-              <th scope="col" class="px-4 py-3 text-left text-xs font-semibold text-slate-900 uppercase tracking-wider border-b border-gray-150">Transit-Time Ultrasonic Meter</th>
+              <th scope="col" class="px-4 py-3 text-left font-semibold text-slate-900 uppercase tracking-wider border-b border-gray-150">Metering Feature</th>
+              <th scope="col" class="px-4 py-3 text-left font-semibold text-slate-900 uppercase tracking-wider border-b border-gray-150">Coriolis Mass Flow Meter</th>
+              <th scope="col" class="px-4 py-3 text-left font-semibold text-slate-900 uppercase tracking-wider border-b border-gray-150">Transit-Time Ultrasonic Meter</th>
             </tr>
           </thead>
-          <tbody class="bg-white divide-y divide-gray-150 text-[13px]">
+          <tbody class="bg-white divide-y divide-gray-150">
             <tr>
               <td class="px-4 py-3 font-semibold text-slate-900 bg-slate-50/40">Measurement Variable</td>
               <td class="px-4 py-3 text-gray-600">Direct mass flow, density, and temperature</td>
@@ -7437,12 +7499,13 @@ content: `
   },
   "lng-custody-transfer-ship-to-shore": {title: "LNG Custody Transfer: Ship-to-Shore Measurement Protocols",
     seoTitle: "LNG Custody Transfer: Ship-to-Shore Measurement Guide",
-    metaDescription: "Guide to LNG custody transfer ship-to-shore measurement — covering tank gauging, vapor return calculations, GIIGNL protocols, and certificate preparation.",
+    metaDescription: "Transform your approach to lng custody transfer. Access expert strategies, industry standards, and proven results.",
     category: "Flow Measurement",
-    date: "July 6, 2026",
+    date: "January 18, 2026",
     readTime: "9 Min Read",
     pillar: "Pillar 1: Flow Measurement & Custody Metering",
     description: "Guide to LNG custody transfer ship-to-shore measurement — covering tank gauging, vapor return calculations, GIIGNL protocols, and certificate preparation.",
+    keywords: "LNG ship-to-shore, custody transfer protocol, LNG loading",
     image: "/lng.jpg",
     imageAlt: "An LNG tanker terminal loading area showing cryogenic piping manifolds and custody transfer skids.",
 content: `
@@ -7451,8 +7514,8 @@ content: `
       </p>
 
       <div class="my-6 rounded-lg bg-slate-50 border border-slate-200 p-5 not-prose">
-        <h4 class="text-[13.5px] font-bold text-slate-900 mb-2">💡 Key Takeaways</h4>
-        <ul class="text-[13px] text-slate-600 space-y-2 list-disc pl-4">
+        <h4 class="font-bold text-slate-900 mb-2">💡 Key Takeaways</h4>
+        <ul class="text-slate-600 space-y-2 list-disc pl-4">
           <li><strong>Energy Billing:</strong> Billing is based on total energy content (MMBtu) transferred, not simple volumetric flow.</li>
           <li><strong>Mass Auditing:</strong> Cargo volume calculations use high-accuracy ship tank radar gauges and temperature grids.</li>
           <li><strong>Vapor Accounting:</strong> Displaced vapor returned to the ship is measured and subtracted from the net liquid transfer value.</li>
@@ -7463,7 +7526,7 @@ content: `
       <p>
         A typical ship-to-shore transfer involves a sequence of custody milestones:
       </p>
-      <ol class="list-decimal pl-5 text-[13px] text-gray-600 space-y-2">
+      <ol class="list-decimal pl-5 text-gray-600 space-y-2">
         <li>
           <strong>Pre-Transfer Custody Survey:</strong> Inspectors gauge ship tanks to log initial liquid levels, liquid temperatures, and vapor space pressures.
         </li>
@@ -7487,15 +7550,15 @@ content: `
       </p>
 
       <div class="overflow-x-auto my-8 not-prose">
-        <table class="min-w-full divide-y divide-gray-200 border border-gray-150 text-[13.5px]">
+        <table class="min-w-full divide-y divide-gray-200 border border-gray-150">
           <thead class="bg-slate-50">
             <tr>
-              <th scope="col" class="px-4 py-3 text-left text-xs font-semibold text-slate-900 uppercase tracking-wider border-b border-gray-150">Measurement Input</th>
-              <th scope="col" class="px-4 py-3 text-left text-xs font-semibold text-slate-900 uppercase tracking-wider border-b border-gray-150">Instrumentation Technology</th>
-              <th scope="col" class="px-4 py-3 text-left text-xs font-semibold text-slate-900 uppercase tracking-wider border-b border-gray-150">Metrological Correction Role</th>
+              <th scope="col" class="px-4 py-3 text-left font-semibold text-slate-900 uppercase tracking-wider border-b border-gray-150">Measurement Input</th>
+              <th scope="col" class="px-4 py-3 text-left font-semibold text-slate-900 uppercase tracking-wider border-b border-gray-150">Instrumentation Technology</th>
+              <th scope="col" class="px-4 py-3 text-left font-semibold text-slate-900 uppercase tracking-wider border-b border-gray-150">Metrological Correction Role</th>
             </tr>
           </thead>
-          <tbody class="bg-white divide-y divide-gray-150 text-[13px]">
+          <tbody class="bg-white divide-y divide-gray-150">
             <tr>
               <td class="px-4 py-3 font-semibold text-slate-900 bg-slate-50/40">Liquid Level</td>
               <td class="px-4 py-3 text-gray-600">Non-contact Radar Gauges / Float Gauges</td>
@@ -7568,12 +7631,13 @@ content: `
   },
   "cems-lng-facilities": {title: "CEMS for LNG Facilities: Environmental Monitoring Requirements",
     seoTitle: "CEMS for LNG Facilities: Environmental Monitoring Guide",
-    metaDescription: "CEMS and environmental compliance guide for LNG facilities — covering combustion turbines, flare gas monitoring, LDAR, and EPA Part 60 standards.",
+    metaDescription: "Learn how to master cems for lng facilities with our comprehensive guide. Access standards, tips, and implementation advice.",
     category: "Emissions Compliance",
-    date: "July 6, 2026",
+    date: "January 1, 2025",
     readTime: "8 Min Read",
     pillar: "Pillar 3: Analyzers & Inspection",
     description: "CEMS and environmental compliance guide for LNG facilities — covering combustion turbines, flare gas monitoring, LDAR, and EPA Part 60 standards.",
+    keywords: "CEMS LNG, environmental monitoring, LNG compliance",
     image: "/cems.png",
     imageAlt: "A CEMS analyzer cabinet designed for monitoring stack emissions at an LNG liquefaction facility.",
 content: `
@@ -7582,8 +7646,8 @@ content: `
       </p>
 
       <div class="my-6 rounded-lg bg-slate-50 border border-slate-200 p-5 not-prose">
-        <h4 class="text-[13.5px] font-bold text-slate-900 mb-2">💡 Key Takeaways</h4>
-        <ul class="text-[13px] text-slate-600 space-y-2 list-disc pl-4">
+        <h4 class="font-bold text-slate-900 mb-2">💡 Key Takeaways</h4>
+        <ul class="text-slate-600 space-y-2 list-disc pl-4">
           <li><strong>Turbine Tracking:</strong> CEMS monitors NOx, CO, and diluent O2 in refrigeration compressor gas turbine exhausts.</li>
           <li><strong>Fugitive Detection:</strong> Leak Detection and Repair (LDAR) programs target fugitive methane leaks from valves and seals.</li>
           <li><strong>Standard Compliance:</strong> Systems satisfy EPA 40 CFR Part 60 and ISO 14001:2015 environmental standards.</li>
@@ -7596,15 +7660,15 @@ content: `
       </p>
 
       <div class="overflow-x-auto my-8 not-prose">
-        <table class="min-w-full divide-y divide-gray-200 border border-gray-150 text-[13.5px]">
+        <table class="min-w-full divide-y divide-gray-200 border border-gray-150">
           <thead class="bg-slate-50">
             <tr>
-              <th scope="col" class="px-4 py-3 text-left text-xs font-semibold text-slate-900 uppercase tracking-wider border-b border-gray-150">Facility Source</th>
-              <th scope="col" class="px-4 py-3 text-left text-xs font-semibold text-slate-900 uppercase tracking-wider border-b border-gray-150">Target Pollutants</th>
-              <th scope="col" class="px-4 py-3 text-left text-xs font-semibold text-slate-900 uppercase tracking-wider border-b border-gray-150">Primary Monitoring System</th>
+              <th scope="col" class="px-4 py-3 text-left font-semibold text-slate-900 uppercase tracking-wider border-b border-gray-150">Facility Source</th>
+              <th scope="col" class="px-4 py-3 text-left font-semibold text-slate-900 uppercase tracking-wider border-b border-gray-150">Target Pollutants</th>
+              <th scope="col" class="px-4 py-3 text-left font-semibold text-slate-900 uppercase tracking-wider border-b border-gray-150">Primary Monitoring System</th>
             </tr>
           </thead>
-          <tbody class="bg-white divide-y divide-gray-150 text-[13px]">
+          <tbody class="bg-white divide-y divide-gray-150">
             <tr>
               <td class="px-4 py-3 font-semibold text-slate-900 bg-slate-50/40">Refrigeration Gas Turbines</td>
               <td class="px-4 py-3 text-gray-600">NOx, CO, O2 (Diluent)</td>
@@ -7666,12 +7730,13 @@ content: `
   },
   "ndt-lng-storage-tanks": {title: "NDT for LNG Storage Tanks: Cryogenic Material Inspection",
     seoTitle: "NDT for LNG Storage Tanks: Cryogenic Inspection Guide",
-    metaDescription: "ASME and API 620 compliance guide for NDT on LNG storage tanks — covering 9% nickel steel inspection, acoustic emission testing, and weld testing.",
+    metaDescription: "Unlock the full potential of ndt for lng storage tanks. Expert insights, standards compliance, and actionable recommendations.",
     category: "Analyzers & Inspection",
-    date: "July 6, 2026",
+    date: "July 2, 2025",
     readTime: "9 Min Read",
     pillar: "Pillar 3: Analyzers & Inspection",
     description: "ASME and API 620 compliance guide for NDT on LNG storage tanks — covering 9% nickel steel inspection, acoustic emission testing, and weld testing.",
+    keywords: "NDT LNG tanks, cryogenic inspection, storage tank integrity",
     image: "/images/services/ndt.jpg",
     imageAlt: "Technicians performing ultrasonic weld inspections on a cryogenic LNG storage tank wall.",
 content: `
@@ -7680,8 +7745,8 @@ content: `
       </p>
 
       <div class="my-6 rounded-lg bg-slate-50 border border-slate-200 p-5 not-prose">
-        <h4 class="text-[13.5px] font-bold text-slate-900 mb-2">💡 Key Takeaways</h4>
-        <ul class="text-[13px] text-slate-600 space-y-2 list-disc pl-4">
+        <h4 class="font-bold text-slate-900 mb-2">💡 Key Takeaways</h4>
+        <ul class="text-slate-600 space-y-2 list-disc pl-4">
           <li><strong>Material Focus:</strong> Cryogenic inner tanks are built from 9% nickel steel to maintain low-temperature toughness.</li>
           <li><strong>Volumetric Testing:</strong> Phased Array Ultrasonic Testing (PAUT) and Radiographic Testing (RT) verify weld joint integrity.</li>
           <li><strong>Standards Compliance:</strong> Inspection procedures satisfy API 620 and API 625 design code requirements.</li>
@@ -7704,15 +7769,15 @@ content: `
       </p>
 
       <div class="overflow-x-auto my-8 not-prose">
-        <table class="min-w-full divide-y divide-gray-200 border border-gray-150 text-[13.5px]">
+        <table class="min-w-full divide-y divide-gray-200 border border-gray-150">
           <thead class="bg-slate-50">
             <tr>
-              <th scope="col" class="px-4 py-3 text-left text-xs font-semibold text-slate-900 uppercase tracking-wider border-b border-gray-150">NDT Method</th>
-              <th scope="col" class="px-4 py-3 text-left text-xs font-semibold text-slate-900 uppercase tracking-wider border-b border-gray-150">Target Tank Application</th>
-              <th scope="col" class="px-4 py-3 text-left text-xs font-semibold text-slate-900 uppercase tracking-wider border-b border-gray-150">Primary Metrological Purpose</th>
+              <th scope="col" class="px-4 py-3 text-left font-semibold text-slate-900 uppercase tracking-wider border-b border-gray-150">NDT Method</th>
+              <th scope="col" class="px-4 py-3 text-left font-semibold text-slate-900 uppercase tracking-wider border-b border-gray-150">Target Tank Application</th>
+              <th scope="col" class="px-4 py-3 text-left font-semibold text-slate-900 uppercase tracking-wider border-b border-gray-150">Primary Metrological Purpose</th>
             </tr>
           </thead>
-          <tbody class="bg-white divide-y divide-gray-150 text-[13px]">
+          <tbody class="bg-white divide-y divide-gray-150">
             <tr>
               <td class="px-4 py-3 font-semibold text-slate-900 bg-slate-50/40">Phased Array Ultrasonic (PAUT)</td>
               <td class="px-4 py-3 text-gray-600">Inner container plate seam welds (vertical and horizontal welds)</td>
@@ -7774,12 +7839,13 @@ content: `
   },
   "safety-systems-lng-plants": {title: "Safety Systems in LNG Plants: IEC 61511 SIS Requirements",
     seoTitle: "Safety Systems in LNG Plants: IEC 61511 compliance",
-    metaDescription: "Functional safety and SIS design guide for LNG plants — covering ESD systems, F&G detection, HIPPS, and IEC 61511 lifecycle compliance.",
+    metaDescription: "Unlock the full potential of safety systems in lng plants. Expert insights, standards compliance, and actionable recommendations.",
     category: "Industrial Automation",
-    date: "July 6, 2026",
+    date: "October 12, 2025",
     readTime: "9 Min Read",
     pillar: "Pillar 2: Industrial Process Automation",
     description: "Functional safety and SIS design guide for LNG plants — covering ESD systems, F&G detection, HIPPS, and IEC 61511 lifecycle compliance.",
+    keywords: "safety systems, LNG plants, IEC 61511 SIS",
     image: "/images/control_room_interior_and_console/xlat_cyber/1.jpg",
     imageAlt: "High-integrity safety instrumented systems and ESD panel indicators inside an LNG control room.",
 content: `
@@ -7788,8 +7854,8 @@ content: `
       </p>
 
       <div class="my-6 rounded-lg bg-slate-50 border border-slate-200 p-5 not-prose">
-        <h4 class="text-[13.5px] font-bold text-slate-900 mb-2">💡 Key Takeaways</h4>
-        <ul class="text-[13px] text-slate-600 space-y-2 list-disc pl-4">
+        <h4 class="font-bold text-slate-900 mb-2">💡 Key Takeaways</h4>
+        <ul class="text-slate-600 space-y-2 list-disc pl-4">
           <li><strong>Risk Mitigation:</strong> SIS design focuses on Emergency Shutdown (ESD) systems and High Integrity Pressure Protection (HIPPS).</li>
           <li><strong>Gas Detection:</strong> Fire and Gas (F&amp;G) networks utilize optical flame scanners and open-path infrared gas detectors.</li>
           <li><strong>Standards Alignment:</strong> SIF loops are designed and maintained in compliance with IEC 61511 and NFPA 59A codes.</li>
@@ -7807,15 +7873,15 @@ content: `
       </p>
 
       <div class="overflow-x-auto my-8 not-prose">
-        <table class="min-w-full divide-y divide-gray-200 border border-gray-150 text-[13.5px]">
+        <table class="min-w-full divide-y divide-gray-200 border border-gray-150">
           <thead class="bg-slate-50">
             <tr>
-              <th scope="col" class="px-4 py-3 text-left text-xs font-semibold text-slate-900 uppercase tracking-wider border-b border-gray-150">Safety Instrumented Function</th>
-              <th scope="col" class="px-4 py-3 text-left text-xs font-semibold text-slate-900 uppercase tracking-wider border-b border-gray-150">Target Hazard Mitigation</th>
-              <th scope="col" class="px-4 py-3 text-left text-xs font-semibold text-slate-900 uppercase tracking-wider border-b border-gray-150">System Configuration Purpose</th>
+              <th scope="col" class="px-4 py-3 text-left font-semibold text-slate-900 uppercase tracking-wider border-b border-gray-150">Safety Instrumented Function</th>
+              <th scope="col" class="px-4 py-3 text-left font-semibold text-slate-900 uppercase tracking-wider border-b border-gray-150">Target Hazard Mitigation</th>
+              <th scope="col" class="px-4 py-3 text-left font-semibold text-slate-900 uppercase tracking-wider border-b border-gray-150">System Configuration Purpose</th>
             </tr>
           </thead>
-          <tbody class="bg-white divide-y divide-gray-150 text-[13px]">
+          <tbody class="bg-white divide-y divide-gray-150">
             <tr>
               <td class="px-4 py-3 font-semibold text-slate-900 bg-slate-50/40">Emergency Shutdown (ESD)</td>
               <td class="px-4 py-3 text-gray-600">Major process leaks, pipeline ruptures, thermal events</td>
@@ -7887,12 +7953,13 @@ content: `
   },
   "lng-vaporizer-flow-control": {title: "LNG Vaporizer Flow Control: Instrumentation and Automation",
     seoTitle: "LNG Vaporizer Flow Control: Instrumentation & SCADA",
-    metaDescription: "Flow control and automation guide for LNG vaporizers — comparing ORV, SCV, and AAV systems, loop design, and turndown management.",
+    metaDescription: "Ready to improve your lng vaporizer flow control? Explore expert guidance, compliance standards, and proven techniques.",
     category: "Industrial Automation",
-    date: "July 6, 2026",
+    date: "November 2, 2025",
     readTime: "8 Min Read",
     pillar: "Pillar 2: Industrial Process Automation",
     description: "Flow control and automation guide for LNG vaporizers — comparing ORV, SCV, and AAV systems, loop design, and turndown management.",
+    keywords: "LNG vaporizer, flow control, cryogenic instrumentation",
     image: "/images/services/flow-measurement.jpg",
     imageAlt: "An ultrasonic flow meter tracking boil-off gas rates on cryogenic vaporizer piping.",
 content: `
@@ -7901,8 +7968,8 @@ content: `
       </p>
 
       <div class="my-6 rounded-lg bg-slate-50 border border-slate-200 p-5 not-prose">
-        <h4 class="text-[13.5px] font-bold text-slate-900 mb-2">💡 Key Takeaways</h4>
-        <ul class="text-[13px] text-slate-600 space-y-2 list-disc pl-4">
+        <h4 class="font-bold text-slate-900 mb-2">💡 Key Takeaways</h4>
+        <ul class="text-slate-600 space-y-2 list-disc pl-4">
           <li><strong>Temperature Limits:</strong> Automated loops control flow rates based on seawater intake temperature and bath thermal limits.</li>
           <li><strong>Response Speed:</strong> SCV burners adjust firing rates dynamically to manage sudden swings in send-out gas demand.</li>
           <li><strong>Preventing Icing:</strong> Low seawater flow rates trigger automatic shutdowns to prevent water freeze-up on heat exchanger panels.</li>
@@ -7915,15 +7982,15 @@ content: `
       </p>
 
       <div class="overflow-x-auto my-8 not-prose">
-        <table class="min-w-full divide-y divide-gray-200 border border-gray-150 text-[13.5px]">
+        <table class="min-w-full divide-y divide-gray-200 border border-gray-150">
           <thead class="bg-slate-50">
             <tr>
-              <th scope="col" class="px-4 py-3 text-left text-xs font-semibold text-slate-900 uppercase tracking-wider border-b border-gray-150">Vaporizer Technology</th>
-              <th scope="col" class="px-4 py-3 text-left text-xs font-semibold text-slate-900 uppercase tracking-wider border-b border-gray-150">Heat Transfer Medium</th>
-              <th scope="col" class="px-4 py-3 text-left text-xs font-semibold text-slate-900 uppercase tracking-wider border-b border-gray-150">Primary Control Focus</th>
+              <th scope="col" class="px-4 py-3 text-left font-semibold text-slate-900 uppercase tracking-wider border-b border-gray-150">Vaporizer Technology</th>
+              <th scope="col" class="px-4 py-3 text-left font-semibold text-slate-900 uppercase tracking-wider border-b border-gray-150">Heat Transfer Medium</th>
+              <th scope="col" class="px-4 py-3 text-left font-semibold text-slate-900 uppercase tracking-wider border-b border-gray-150">Primary Control Focus</th>
             </tr>
           </thead>
-          <tbody class="bg-white divide-y divide-gray-150 text-[13px]">
+          <tbody class="bg-white divide-y divide-gray-150">
             <tr>
               <td class="px-4 py-3 font-semibold text-slate-900 bg-slate-50/40">Open Rack Vaporizer (ORV)</td>
               <td class="px-4 py-3 text-gray-600">Flowing seawater (gravity-fed down outer panels)</td>
@@ -7985,12 +8052,13 @@ content: `
   },
   "boil-off-gas-measurement-lng": {title: "Boil-Off Gas (BOG) Measurement in LNG Terminals",
     seoTitle: "Boil-Off Gas (BOG) Measurement in LNG Terminals Guide",
-    metaDescription: "Guide to Boil-Off Gas (BOG) flow measurement in LNG terminals — covering BOG recovery compressors, flare gas metering, and meter selection.",
+    metaDescription: "Unlock the full potential of boil-off gas (bog) measurement in lng terminals. Expert insights, standards compliance, and actionable recommendations.",
     category: "Flow Measurement",
-    date: "July 6, 2026",
+    date: "November 15, 2025",
     readTime: "8 Min Read",
     pillar: "Pillar 1: Flow Measurement & Custody Metering",
     description: "Guide to Boil-Off Gas (BOG) flow measurement in LNG terminals — covering BOG recovery compressors, flare gas metering, and meter selection.",
+    keywords: "boil-off gas measurement, LNG terminals, BOG monitoring",
     image: "/images/services/DigitalOilAndGas-1 (1).webp",
     imageAlt: "An industrial gas metering run processing boil-off gas (BOG) in an LNG storage facility.",
 content: `
@@ -7999,8 +8067,8 @@ content: `
       </p>
 
       <div class="my-6 rounded-lg bg-slate-50 border border-slate-200 p-5 not-prose">
-        <h4 class="text-[13.5px] font-bold text-slate-900 mb-2">💡 Key Takeaways</h4>
-        <ul class="text-[13px] text-slate-600 space-y-2 list-disc pl-4">
+        <h4 class="font-bold text-slate-900 mb-2">💡 Key Takeaways</h4>
+        <ul class="text-slate-600 space-y-2 list-disc pl-4">
           <li><strong>Causes of BOG:</strong> Heat ingress through insulation causes continuous vaporization of stored liquid natural gas.</li>
           <li><strong>Metering Selection:</strong> BOG loops utilize ultrasonic or thermal mass flow meters to handle low pressure and temperature variations.</li>
           <li><strong>Flare Tracking:</strong> Flare gas meters monitor BOG volumes during process upsets, tracking environmental releases.</li>
@@ -8018,15 +8086,15 @@ content: `
       </p>
 
       <div class="overflow-x-auto my-8 not-prose">
-        <table class="min-w-full divide-y divide-gray-200 border border-gray-150 text-[13.5px]">
+        <table class="min-w-full divide-y divide-gray-200 border border-gray-150">
           <thead class="bg-slate-50">
             <tr>
-              <th scope="col" class="px-4 py-3 text-left text-xs font-semibold text-slate-900 uppercase tracking-wider border-b border-gray-150">BOG Process Location</th>
-              <th scope="col" class="px-4 py-3 text-left text-xs font-semibold text-slate-900 uppercase tracking-wider border-b border-gray-150">Recommended Flow Meter</th>
-              <th scope="col" class="px-4 py-3 text-left text-xs font-semibold text-slate-900 uppercase tracking-wider border-b border-gray-150">Primary Metrological Purpose</th>
+              <th scope="col" class="px-4 py-3 text-left font-semibold text-slate-900 uppercase tracking-wider border-b border-gray-150">BOG Process Location</th>
+              <th scope="col" class="px-4 py-3 text-left font-semibold text-slate-900 uppercase tracking-wider border-b border-gray-150">Recommended Flow Meter</th>
+              <th scope="col" class="px-4 py-3 text-left font-semibold text-slate-900 uppercase tracking-wider border-b border-gray-150">Primary Metrological Purpose</th>
             </tr>
           </thead>
-          <tbody class="bg-white divide-y divide-gray-150 text-[13px]">
+          <tbody class="bg-white divide-y divide-gray-150">
             <tr>
               <td class="px-4 py-3 font-semibold text-slate-900 bg-slate-50/40">Storage Tank Vapor Header</td>
               <td class="px-4 py-3 text-gray-600">Multi-path Ultrasonic Flow Meter (Cryogenic design)</td>
@@ -8083,12 +8151,13 @@ content: `
   },
   "lng-truck-loading-metering-skid": {title: "Metering Skid Design for LNG Truck Loading Applications",
     seoTitle: "LNG Truck Loading Metering Skid Design Guide",
-    metaDescription: "Cryogenic design guide for LNG truck loading metering skids — covering Coriolis selection, batch controllers, safety interlocks, and NFPA 59A.",
+    metaDescription: "Ready to improve your metering skid design for lng truck loading applications? Explore expert guidance, compliance standards, and proven techniques.",
     category: "Flow Measurement",
-    date: "July 6, 2026",
+    date: "December 1, 2025",
     readTime: "8 Min Read",
     pillar: "Pillar 1: Flow Measurement & Custody Metering",
     description: "Cryogenic design guide for LNG truck loading metering skids — covering Coriolis selection, batch controllers, safety interlocks, and NFPA 59A.",
+    keywords: "LNG truck loading, metering skid, LNG distribution",
     image: "/flow_metering_skid.jpg",
     imageAlt: "A specialized skid system with Coriolis flow meters designed for fiscal LNG truck loading.",
 content: `
@@ -8097,8 +8166,8 @@ content: `
       </p>
 
       <div class="my-6 rounded-lg bg-slate-50 border border-slate-200 p-5 not-prose">
-        <h4 class="text-[13.5px] font-bold text-slate-900 mb-2">💡 Key Takeaways</h4>
-        <ul class="text-[13px] text-slate-600 space-y-2 list-disc pl-4">
+        <h4 class="font-bold text-slate-900 mb-2">💡 Key Takeaways</h4>
+        <ul class="text-slate-600 space-y-2 list-disc pl-4">
           <li><strong>Mass Billing:</strong> Coriolis mass flow meters provide the high accuracy required for commercial batch transfers.</li>
           <li><strong>Safety Logic:</strong> Interlocks monitor earth connections, ESD paths, and overfill limits to secure operations.</li>
           <li><strong>Standard Compliance:</strong> Mechanical layouts and spacing requirements comply with NFPA 59A design codes.</li>
@@ -8111,14 +8180,14 @@ content: `
       </p>
 
       <div class="overflow-x-auto my-8 not-prose">
-        <table class="min-w-full divide-y divide-gray-200 border border-gray-150 text-[13.5px]">
+        <table class="min-w-full divide-y divide-gray-200 border border-gray-150">
           <thead class="bg-slate-50">
             <tr>
-              <th scope="col" class="px-4 py-3 text-left text-xs font-semibold text-slate-900 uppercase tracking-wider border-b border-gray-150">Skid Component</th>
-              <th scope="col" class="px-4 py-3 text-left text-xs font-semibold text-slate-900 uppercase tracking-wider border-b border-gray-150">Primary Cryogenic Role</th>
+              <th scope="col" class="px-4 py-3 text-left font-semibold text-slate-900 uppercase tracking-wider border-b border-gray-150">Skid Component</th>
+              <th scope="col" class="px-4 py-3 text-left font-semibold text-slate-900 uppercase tracking-wider border-b border-gray-150">Primary Cryogenic Role</th>
             </tr>
           </thead>
-          <tbody class="bg-white divide-y divide-gray-150 text-[13px]">
+          <tbody class="bg-white divide-y divide-gray-150">
             <tr>
               <td class="px-4 py-3 font-semibold text-slate-900 bg-slate-50/40">Coriolis Mass Flow Meter</td>
               <td class="px-4 py-3 text-gray-600">Measures liquid LNG mass and temperature directly, providing volume-independent batch totals.</td>
@@ -8181,12 +8250,13 @@ content: `
   },
   "lng-plant-automation-plc-scada": {title: "LNG Plant Automation: PLC/SCADA Integration Challenges",
     seoTitle: "LNG Plant Automation: PLC/SCADA Integration Challenges Guide",
-    metaDescription: "Automation integration guide for LNG plants — covering multi-vendor PLC strategies, SCADA databases, safety interfaces, and IEC 61511.",
+    metaDescription: "Learn how to master lng plant automation with our comprehensive guide. Access standards, tips, and implementation advice.",
     category: "Industrial Automation",
-    date: "July 6, 2026",
+    date: "December 15, 2025",
     readTime: "9 Min Read",
     pillar: "Pillar 2: Industrial Process Automation",
     description: "Automation integration guide for LNG plants — covering multi-vendor PLC strategies, SCADA databases, safety interfaces, and IEC 61511.",
+    keywords: "LNG plant automation, PLC SCADA, cryogenic control",
     image: "/images/control_room_interior_and_console/dynamic_xe/2.jpg",
     imageAlt: "Dual-redundant PLC automation panels controlling gas purification loops at an LNG plant.",
 content: `
@@ -8195,8 +8265,8 @@ content: `
       </p>
 
       <div class="my-6 rounded-lg bg-slate-50 border border-slate-200 p-5 not-prose">
-        <h4 class="text-[13.5px] font-bold text-slate-950 mb-2">💡 Key Takeaways</h4>
-        <ul class="text-[13px] text-slate-600 space-y-2 list-disc pl-4">
+        <h4 class="font-bold text-slate-950 mb-2">💡 Key Takeaways</h4>
+        <ul class="text-slate-600 space-y-2 list-disc pl-4">
           <li><strong>Complex Interfaces:</strong> Integrating multi-vendor PLCs requires standardized communication protocols like OPC UA.</li>
           <li><strong>Safety Isolation:</strong> Emergency shutdown (ESD) interlocks must operate independently of process control loops.</li>
           <li><strong>Commissioning Audits:</strong> Logic validation requires checking cause-and-effect matrices during loop checks.</li>
@@ -8214,14 +8284,14 @@ content: `
       </p>
 
       <div class="overflow-x-auto my-8 not-prose">
-        <table class="min-w-full divide-y divide-gray-200 border border-gray-150 text-[13.5px]">
+        <table class="min-w-full divide-y divide-gray-200 border border-gray-150">
           <thead class="bg-slate-50">
             <tr>
-              <th scope="col" class="px-4 py-3 text-left text-xs font-semibold text-slate-900 uppercase tracking-wider border-b border-gray-150">Integration Challenge</th>
-              <th scope="col" class="px-4 py-3 text-left text-xs font-semibold text-slate-900 uppercase tracking-wider border-b border-gray-150">Technical Integration Solution</th>
+              <th scope="col" class="px-4 py-3 text-left font-semibold text-slate-900 uppercase tracking-wider border-b border-gray-150">Integration Challenge</th>
+              <th scope="col" class="px-4 py-3 text-left font-semibold text-slate-900 uppercase tracking-wider border-b border-gray-150">Technical Integration Solution</th>
             </tr>
           </thead>
-          <tbody class="bg-white divide-y divide-gray-150 text-[13px]">
+          <tbody class="bg-white divide-y divide-gray-150">
             <tr>
               <td class="px-4 py-3 font-semibold text-slate-900 bg-slate-50/40">Multi-Vendor PLC Protocols</td>
               <td class="px-4 py-3 text-gray-600">Deploying OPC UA and Modbus TCP gateways to standardize data registers across packages.</td>
@@ -8280,12 +8350,13 @@ content: `
   },
   "leak-detection-lng-facilities": {title: "Leak Detection and Monitoring Systems for LNG Facilities",
     seoTitle: "Leak Detection & Monitoring Systems for LNG Facilities Guide",
-    metaDescription: "Leak detection and Fire & Gas (F&G) system guide for LNG facilities — covering open-path detectors, cryogenic spill monitoring, and voting logic.",
+    metaDescription: "Unlock the full potential of leak detection and monitoring systems for lng facilities. Expert insights, standards compliance, and actionable ",
     category: "Analyzers & Inspection",
-    date: "July 6, 2026",
+    date: "January 5, 2026",
     readTime: "9 Min Read",
     pillar: "Pillar 3: Analyzers & Inspection",
     description: "Leak detection and Fire & Gas (F&G) system guide for LNG facilities — covering open-path detectors, cryogenic spill monitoring, and voting logic.",
+    keywords: "leak detection, LNG facilities, safety monitoring",
     image: "/images/services/Non-Destructive-Testing-NDT.jpg.webp",
     imageAlt: "An NDT technician checking cryogenic piping connections for structural leaks using ultrasonic probes.",
 content: `
@@ -8294,8 +8365,8 @@ content: `
       </p>
 
       <div class="my-6 rounded-lg bg-slate-50 border border-slate-200 p-5 not-prose">
-        <h4 class="text-[13.5px] font-bold text-slate-900 mb-2">💡 Key Takeaways</h4>
-        <ul class="text-[13px] text-slate-600 space-y-2 list-disc pl-4">
+        <h4 class="font-bold text-slate-900 mb-2">💡 Key Takeaways</h4>
+        <ul class="text-slate-600 space-y-2 list-disc pl-4">
           <li><strong>Combustion Hazards:</strong> Point and open-path infrared gas detectors identify gas releases early.</li>
           <li><strong>Spill Detection:</strong> Low-temperature thermocouple grids identify cold spots from liquid leaks.</li>
           <li><strong>Safety Rules:</strong> Fire and Gas (F&amp;G) networks utilize voting logic to reduce false alarms.</li>
@@ -8308,15 +8379,15 @@ content: `
       </p>
 
       <div class="overflow-x-auto my-8 not-prose">
-        <table class="min-w-full divide-y divide-gray-200 border border-gray-150 text-[13.5px]">
+        <table class="min-w-full divide-y divide-gray-200 border border-gray-150">
           <thead class="bg-slate-50">
             <tr>
-              <th scope="col" class="px-4 py-3 text-left text-xs font-semibold text-slate-900 uppercase tracking-wider border-b border-gray-150">Detection Technology</th>
-              <th scope="col" class="px-4 py-3 text-left text-xs font-semibold text-slate-900 uppercase tracking-wider border-b border-gray-150">Operating Principle</th>
-              <th scope="col" class="px-4 py-3 text-left text-xs font-semibold text-slate-900 uppercase tracking-wider border-b border-gray-150">Primary Facility Application</th>
+              <th scope="col" class="px-4 py-3 text-left font-semibold text-slate-900 uppercase tracking-wider border-b border-gray-150">Detection Technology</th>
+              <th scope="col" class="px-4 py-3 text-left font-semibold text-slate-900 uppercase tracking-wider border-b border-gray-150">Operating Principle</th>
+              <th scope="col" class="px-4 py-3 text-left font-semibold text-slate-900 uppercase tracking-wider border-b border-gray-150">Primary Facility Application</th>
             </tr>
           </thead>
-          <tbody class="bg-white divide-y divide-gray-150 text-[13px]">
+          <tbody class="bg-white divide-y divide-gray-150">
             <tr>
               <td class="px-4 py-3 font-semibold text-slate-900 bg-slate-50/40">Open-Path IR Gas Detector</td>
               <td class="px-4 py-3 text-gray-600">Measures light absorption of infrared beams projected over long distances.</td>
@@ -8383,12 +8454,13 @@ content: `
   },
   "flow-measurement-water-treatment": {title: "Flow Measurement in Water Treatment Plants: Technology Selection",
     seoTitle: "Flow Measurement in Water Treatment Plants: Technology Selection Guide",
-    metaDescription: "Guide to flow meter selection in water treatment plants — covering electromagnetic flow meters, open channel measurement, and partially-full pipes.",
+    metaDescription: "Get the definitive guide to flow measurement in water treatment plants. Expert advice, industry standards, and step-by-step strategies.",
     category: "Flow Measurement",
     date: "July 6, 2026",
     readTime: "9 Min Read",
     pillar: "Pillar 1: Flow Measurement & Custody Metering",
     description: "Guide to flow meter selection in water treatment plants — covering electromagnetic flow meters, open channel measurement, and partially-full pipes.",
+    keywords: "water treatment flow measurement, municipal water, flow meters",
     image: "/water_treatment.jpg",
     imageAlt: "Large circular clarification and sedimentation tanks in a wastewater treatment facility.",
 content: `
@@ -8397,8 +8469,8 @@ content: `
       </p>
 
       <div class="my-6 rounded-lg bg-slate-50 border border-slate-200 p-5 not-prose">
-        <h4 class="text-[13.5px] font-bold text-slate-900 mb-2">💡 Key Takeaways</h4>
-        <ul class="text-[13px] text-slate-600 space-y-2 list-disc pl-4">
+        <h4 class="font-bold text-slate-900 mb-2">💡 Key Takeaways</h4>
+        <ul class="text-slate-600 space-y-2 list-disc pl-4">
           <li><strong>Magmeter Standard:</strong> Electromagnetic flow meters are the water industry standard due to zero pressure drop and high reliability.</li>
           <li><strong>Open Channel:</strong> Wastewater intake and discharge structures utilize flumes and weirs coupled with level sensors.</li>
           <li><strong>Standards Compliance:</strong> Flow calibrations and performance criteria follow ISO 6817 and ISO 4064 metrological codes.</li>
@@ -8421,15 +8493,15 @@ content: `
       </p>
 
       <div class="overflow-x-auto my-8 not-prose">
-        <table class="min-w-full divide-y divide-gray-200 border border-gray-150 text-[13.5px]">
+        <table class="min-w-full divide-y divide-gray-200 border border-gray-150">
           <thead class="bg-slate-50">
             <tr>
-              <th scope="col" class="px-4 py-3 text-left text-xs font-semibold text-slate-900 uppercase tracking-wider border-b border-gray-150">Device Type</th>
-              <th scope="col" class="px-4 py-3 text-left text-xs font-semibold text-slate-900 uppercase tracking-wider border-b border-gray-150">Measurement Principle</th>
-              <th scope="col" class="px-4 py-3 text-left text-xs font-semibold text-slate-900 uppercase tracking-wider border-b border-gray-150">Typical Utility Application</th>
+              <th scope="col" class="px-4 py-3 text-left font-semibold text-slate-900 uppercase tracking-wider border-b border-gray-150">Device Type</th>
+              <th scope="col" class="px-4 py-3 text-left font-semibold text-slate-900 uppercase tracking-wider border-b border-gray-150">Measurement Principle</th>
+              <th scope="col" class="px-4 py-3 text-left font-semibold text-slate-900 uppercase tracking-wider border-b border-gray-150">Typical Utility Application</th>
             </tr>
           </thead>
-          <tbody class="bg-white divide-y divide-gray-150 text-[13px]">
+          <tbody class="bg-white divide-y divide-gray-150">
             <tr>
               <td class="px-4 py-3 font-semibold text-slate-900 bg-slate-50/40">Parshall Flume</td>
               <td class="px-4 py-3 text-gray-600">Standardized throat restriction converts channel level to volumetric flow rate.</td>
@@ -8486,12 +8558,13 @@ content: `
   },
   "scada-water-wastewater-treatment": {title: "SCADA Automation in Water and Wastewater Treatment",
     seoTitle: "SCADA Automation in Water & Wastewater Treatment Guide",
-    metaDescription: "Centralized SCADA and PLC automation guide for water utilities — covering lift station monitoring, alarm systems, and IEC 62443 compliance.",
+    metaDescription: "Explore our in-depth guide to scada automation in water and wastewater treatment. Expert advice, compliance requirements, and implementation tips.",
     category: "Industrial Automation",
-    date: "July 6, 2026",
+    date: "November 10, 2025",
     readTime: "8 Min Read",
     pillar: "Pillar 2: Industrial Process Automation",
     description: "Centralized SCADA and PLC automation guide for water utilities — covering lift station monitoring, alarm systems, and IEC 62443 compliance.",
+    keywords: "SCADA automation, water wastewater treatment, process control",
     image: "/images/control_room_interior_and_console/dynamic_m/3.jpg",
     imageAlt: "SCADA systems displaying pump and aeration basin status in a water reclamation control center.",
 content: `
@@ -8500,8 +8573,8 @@ content: `
       </p>
 
       <div class="my-6 rounded-lg bg-slate-50 border border-slate-200 p-5 not-prose">
-        <h4 class="text-[13.5px] font-bold text-slate-900 mb-2">💡 Key Takeaways</h4>
-        <ul class="text-[13px] text-slate-600 space-y-2 list-disc pl-4">
+        <h4 class="font-bold text-slate-900 mb-2">💡 Key Takeaways</h4>
+        <ul class="text-slate-600 space-y-2 list-disc pl-4">
           <li><strong>Remote Control:</strong> SCADA systems connect remote lift stations and booster pumps to a central control room.</li>
           <li><strong>Alarm Logic:</strong> Automated alarm management flags operational issues, contacting staff to prevent overflows.</li>
           <li><strong>Cybersecurity:</strong> Securing municipal networks requires segmenting networks in compliance with IEC 62443 codes.</li>
@@ -8519,14 +8592,14 @@ content: `
       </p>
 
       <div class="overflow-x-auto my-8 not-prose">
-        <table class="min-w-full divide-y divide-gray-200 border border-gray-150 text-[13.5px]">
+        <table class="min-w-full divide-y divide-gray-200 border border-gray-150">
           <thead class="bg-slate-50">
             <tr>
-              <th scope="col" class="px-4 py-3 text-left text-xs font-semibold text-slate-900 uppercase tracking-wider border-b border-gray-150">SCADA Function</th>
-              <th scope="col" class="px-4 py-3 text-left text-xs font-semibold text-slate-900 uppercase tracking-wider border-b border-gray-150">Utility Benefit</th>
+              <th scope="col" class="px-4 py-3 text-left font-semibold text-slate-900 uppercase tracking-wider border-b border-gray-150">SCADA Function</th>
+              <th scope="col" class="px-4 py-3 text-left font-semibold text-slate-900 uppercase tracking-wider border-b border-gray-150">Utility Benefit</th>
             </tr>
           </thead>
-          <tbody class="bg-white divide-y divide-gray-150 text-[13px]">
+          <tbody class="bg-white divide-y divide-gray-150">
             <tr>
               <td class="px-4 py-3 font-semibold text-slate-900 bg-slate-50/40">Real-Time Monitoring</td>
               <td class="px-4 py-3 text-gray-600">Visualizes pump parameters, chemical tank levels, and system pressures.</td>
@@ -8585,12 +8658,13 @@ content: `
   },
   "chemical-dosing-control-flow-meters": {title: "Chemical Dosing Control: Flow Meters and Instrumentation",
     seoTitle: "Chemical Dosing Control: Flow Meters & Pumps",
-    metaDescription: "Guide to chemical dosing flow meters and instrumentation — covering Coriolis low-flow meters, paced dosing, and calibration practices.",
+    metaDescription: "Explore our in-depth guide to chemical dosing control. Expert advice, compliance requirements, and implementation tips.",
     category: "Flow Measurement",
-    date: "July 6, 2026",
+    date: "November 25, 2025",
     readTime: "8 Min Read",
     pillar: "Pillar 1: Flow Measurement & Custody Metering",
     description: "Guide to chemical dosing flow meters and instrumentation — covering Coriolis low-flow meters, paced dosing, and calibration practices.",
+    keywords: "chemical dosing control, flow meters, water treatment instrumentation",
     image: "/images/field_instruments/flow_sensor/1.png",
     imageAlt: "A high-precision chemical dosing flow sensor mounted on a water treatment process line.",
 content: `
@@ -8599,8 +8673,8 @@ content: `
       </p>
 
       <div class="my-6 rounded-lg bg-slate-50 border border-slate-200 p-5 not-prose">
-        <h4 class="text-[13.5px] font-bold text-slate-900 mb-2">💡 Key Takeaways</h4>
-        <ul class="text-[13px] text-slate-600 space-y-2 list-disc pl-4">
+        <h4 class="font-bold text-slate-900 mb-2">💡 Key Takeaways</h4>
+        <ul class="text-slate-600 space-y-2 list-disc pl-4">
           <li><strong>Dosing Precision:</strong> Accurate dosing prevents chemical overfeed, reducing utility operating costs.</li>
           <li><strong>Low Flow Metering:</strong> Coriolis mass flow meters are selected for chemical feed due to direct mass tracking.</li>
           <li><strong>Paced Control:</strong> Automated systems adjust dosing pump stroke rates based on main influent flow trends.</li>
@@ -8618,15 +8692,15 @@ content: `
       </p>
 
       <div class="overflow-x-auto my-8 not-prose">
-        <table class="min-w-full divide-y divide-gray-200 border border-gray-150 text-[13.5px]">
+        <table class="min-w-full divide-y divide-gray-200 border border-gray-150">
           <thead class="bg-slate-50">
             <tr>
-              <th scope="col" class="px-4 py-3 text-left text-xs font-semibold text-slate-900 uppercase tracking-wider border-b border-gray-150">Meter Technology</th>
-              <th scope="col" class="px-4 py-3 text-left text-xs font-semibold text-slate-900 uppercase tracking-wider border-b border-gray-150">Dosing Application Area</th>
-              <th scope="col" class="px-4 py-3 text-left text-xs font-semibold text-slate-900 uppercase tracking-wider border-b border-gray-150">Primary Metrological Benefit</th>
+              <th scope="col" class="px-4 py-3 text-left font-semibold text-slate-900 uppercase tracking-wider border-b border-gray-150">Meter Technology</th>
+              <th scope="col" class="px-4 py-3 text-left font-semibold text-slate-900 uppercase tracking-wider border-b border-gray-150">Dosing Application Area</th>
+              <th scope="col" class="px-4 py-3 text-left font-semibold text-slate-900 uppercase tracking-wider border-b border-gray-150">Primary Metrological Benefit</th>
             </tr>
           </thead>
-          <tbody class="bg-white divide-y divide-gray-150 text-[13px]">
+          <tbody class="bg-white divide-y divide-gray-150">
             <tr>
               <td class="px-4 py-3 font-semibold text-slate-900 bg-slate-50/40">Coriolis Mass Flow Meter</td>
               <td class="px-4 py-3 text-gray-600">High-concentration acid feeds, lime slurry dosing, polymer additions.</td>
@@ -8688,12 +8762,13 @@ content: `
   },
   "water-quality-analyzers-ph-turbidity-chlorine": {title: "Water Quality Analyzers: pH, Turbidity, and Chlorine Monitoring",
     seoTitle: "Water Quality Analyzers: pH, Turbidity, & Chlorine Guide",
-    metaDescription: "Guide to water quality analyzers — covering online turbidity meters, chlorine residual analyzers, pH analyzers, and calibration frequencies.",
+    metaDescription: "Ready to improve your water quality analyzers? Explore expert guidance, compliance standards, and proven techniques.",
     category: "Analyzers & Inspection",
-    date: "July 6, 2026",
+    date: "December 10, 2025",
     readTime: "9 Min Read",
     pillar: "Pillar 3: Analyzers & Inspection",
     description: "Guide to water quality analyzers — covering online turbidity meters, chlorine residual analyzers, pH analyzers, and calibration frequencies.",
+    keywords: "water quality analyzers, pH turbidity, water monitoring",
     image: "/images/services/inspection-testing.jpg",
     imageAlt: "An analytical technician testing water samples for pH, turbidity, and chemical content.",
 content: `
@@ -8702,8 +8777,8 @@ content: `
       </p>
 
       <div class="my-6 rounded-lg bg-slate-50 border border-slate-200 p-5 not-prose">
-        <h4 class="text-[13.5px] font-bold text-slate-900 mb-2">💡 Key Takeaways</h4>
-        <ul class="text-[13px] text-slate-600 space-y-2 list-disc pl-4">
+        <h4 class="font-bold text-slate-900 mb-2">💡 Key Takeaways</h4>
+        <ul class="text-slate-600 space-y-2 list-disc pl-4">
           <li><strong>Clarity Tracking:</strong> Online turbidity meters monitor filtration effectiveness, logging clarity in NTUs.</li>
           <li><strong>Disinfection:</strong> Chlorine residual analyzers monitor free and total chlorine to ensure complete disinfection.</li>
           <li><strong>Standards Compliance:</strong> Measuring methods and systems comply with ISO 7027-1 and EPA Method 180.1 codes.</li>
@@ -8726,15 +8801,15 @@ content: `
       </p>
 
       <div class="overflow-x-auto my-8 not-prose">
-        <table class="min-w-full divide-y divide-gray-200 border border-gray-150 text-[13.5px]">
+        <table class="min-w-full divide-y divide-gray-200 border border-gray-150">
           <thead class="bg-slate-50">
             <tr>
-              <th scope="col" class="px-4 py-3 text-left text-xs font-semibold text-slate-900 uppercase tracking-wider border-b border-gray-150">Turbidity Standard Method</th>
-              <th scope="col" class="px-4 py-3 text-left text-xs font-semibold text-slate-900 uppercase tracking-wider border-b border-gray-150">Analytical Detection Principle</th>
-              <th scope="col" class="px-4 py-3 text-left text-xs font-semibold text-slate-900 uppercase tracking-wider border-b border-gray-150">Primary Water Application</th>
+              <th scope="col" class="px-4 py-3 text-left font-semibold text-slate-900 uppercase tracking-wider border-b border-gray-150">Turbidity Standard Method</th>
+              <th scope="col" class="px-4 py-3 text-left font-semibold text-slate-900 uppercase tracking-wider border-b border-gray-150">Analytical Detection Principle</th>
+              <th scope="col" class="px-4 py-3 text-left font-semibold text-slate-900 uppercase tracking-wider border-b border-gray-150">Primary Water Application</th>
             </tr>
           </thead>
-          <tbody class="bg-white divide-y divide-gray-150 text-[13px]">
+          <tbody class="bg-white divide-y divide-gray-150">
             <tr>
               <td class="px-4 py-3 font-semibold text-slate-900 bg-slate-50/40">EPA Method 180.1</td>
               <td class="px-4 py-3 text-gray-600">Uses tungsten lamp source to measure 90-degree scattered light.</td>
@@ -8791,12 +8866,13 @@ content: `
   },
   "vfd-water-pump-control": {title: "VFD Applications in Water Pump Control: Energy Savings Guide",
     seoTitle: "VFD Applications in Water Pump Control: Energy Savings",
-    metaDescription: "Guide to variable frequency drives (VFD) in water pump control — covering Affinity laws, sizing, harmonic mitigation, and IEEE 519 compliance.",
+    metaDescription: "Want to excel at vfd applications in water pump control? Our expert guide covers standards, best practices, and real-world strategies.",
     category: "Industrial Automation",
-    date: "July 6, 2026",
+    date: "December 22, 2025",
     readTime: "8 Min Read",
     pillar: "Pillar 2: Industrial Process Automation",
     description: "Guide to variable frequency drives (VFD) in water pump control — covering Affinity laws, sizing, harmonic mitigation, and IEEE 519 compliance.",
+    keywords: "VFD water pump, energy savings, water treatment",
     image: "/images/frequency-inverters/FR-A800.webp",
     imageAlt: "Mitsubishi variable frequency drives (VFD) controlling water distribution pump motors.",
 content: `
@@ -8805,8 +8881,8 @@ content: `
       </p>
 
       <div class="my-6 rounded-lg bg-slate-50 border border-slate-200 p-5 not-prose">
-        <h4 class="text-[13.5px] font-bold text-slate-900 mb-2">💡 Key Takeaways</h4>
-        <ul class="text-[13px] text-slate-600 space-y-2 list-disc pl-4">
+        <h4 class="font-bold text-slate-900 mb-2">💡 Key Takeaways</h4>
+        <ul class="text-slate-600 space-y-2 list-disc pl-4">
           <li><strong>Energy Savings:</strong> Centrifugal pump power consumption is proportional to the speed cubed, meaning speed reductions yield savings.</li>
           <li><strong>Soft Ramping:</strong> VFD speed control eliminates water hammer risks by ramping speeds up and down slowly.</li>
           <li><strong>Harmonic Limits:</strong> High-power drives require harmonic filters to meet IEEE 519 electrical standards.</li>
@@ -8824,15 +8900,15 @@ content: `
       </p>
 
       <div class="overflow-x-auto my-8 not-prose">
-        <table class="min-w-full divide-y divide-gray-200 border border-gray-150 text-[13.5px]">
+        <table class="min-w-full divide-y divide-gray-200 border border-gray-150">
           <thead class="bg-slate-50">
             <tr>
-              <th scope="col" class="px-4 py-3 text-left text-xs font-semibold text-slate-900 uppercase tracking-wider border-b border-gray-150">Pumping Configuration</th>
-              <th scope="col" class="px-4 py-3 text-left text-xs font-semibold text-slate-900 uppercase tracking-wider border-b border-gray-150">VFD Control Strategy</th>
-              <th scope="col" class="px-4 py-3 text-left text-xs font-semibold text-slate-900 uppercase tracking-wider border-b border-gray-150">Primary Operational Benefit</th>
+              <th scope="col" class="px-4 py-3 text-left font-semibold text-slate-900 uppercase tracking-wider border-b border-gray-150">Pumping Configuration</th>
+              <th scope="col" class="px-4 py-3 text-left font-semibold text-slate-900 uppercase tracking-wider border-b border-gray-150">VFD Control Strategy</th>
+              <th scope="col" class="px-4 py-3 text-left font-semibold text-slate-900 uppercase tracking-wider border-b border-gray-150">Primary Operational Benefit</th>
             </tr>
           </thead>
-          <tbody class="bg-white divide-y divide-gray-150 text-[13px]">
+          <tbody class="bg-white divide-y divide-gray-150">
             <tr>
               <td class="px-4 py-3 font-semibold text-slate-900 bg-slate-50/40">High-Service Booster Pumps</td>
               <td class="px-4 py-3 text-gray-600">Discharge header pressure feedback trims motor speed.</td>
@@ -8889,12 +8965,13 @@ content: `
   },
   "ndt-water-treatment-infrastructure": {title: "NDT for Water Treatment Infrastructure: Pipe and Vessel Inspection",
     seoTitle: "NDT for Water Treatment Infrastructure Guide: Pipe & Vessel",
-    metaDescription: "ASME and NDT inspection guide for water treatment infrastructure — covering pipe wall thickness, corrosion checks, and pressure vessel testing.",
+    metaDescription: "Want to excel at ndt for water treatment infrastructure? Our expert guide covers standards, best practices, and real-world strategies.",
     category: "Analyzers & Inspection",
-    date: "July 6, 2026",
+    date: "July 14, 2025",
     readTime: "8 Min Read",
     pillar: "Pillar 3: Analyzers & Inspection",
     description: "ASME and NDT inspection guide for water treatment infrastructure — covering pipe wall thickness, corrosion checks, and pressure vessel testing.",
+    keywords: "NDT water treatment, pipe vessel inspection, infrastructure",
     image: "/images/services/ndt.jpg",
     imageAlt: "An inspector conducting NDT ultrasonic tests on high-pressure water mains and tanks.",
 content: `
@@ -8903,8 +8980,8 @@ content: `
       </p>
 
       <div class="my-6 rounded-lg bg-slate-50 border border-slate-200 p-5 not-prose">
-        <h4 class="text-[13.5px] font-bold text-slate-900 mb-2">💡 Key Takeaways</h4>
-        <ul class="text-[13px] text-slate-600 space-y-2 list-disc pl-4">
+        <h4 class="font-bold text-slate-900 mb-2">💡 Key Takeaways</h4>
+        <ul class="text-slate-600 space-y-2 list-disc pl-4">
           <li><strong>Wall Thinning:</strong> Ultrasonic thickness gauging locates internal pipe corrosion and erosion issues.</li>
           <li><strong>Weld Integrity:</strong> Visual and magnetic particle testing check storage tank and vessel welds for stress cracks.</li>
           <li><strong>Inspection Guidelines:</strong> Assessments conform to ASME Section V and API 653 code standards.</li>
@@ -8922,15 +8999,15 @@ content: `
       </p>
 
       <div class="overflow-x-auto my-8 not-prose">
-        <table class="min-w-full divide-y divide-gray-200 border border-gray-150 text-[13.5px]">
+        <table class="min-w-full divide-y divide-gray-200 border border-gray-150">
           <thead class="bg-slate-50">
             <tr>
-              <th scope="col" class="px-4 py-3 text-left text-xs font-semibold text-slate-900 uppercase tracking-wider border-b border-gray-150">NDT Method</th>
-              <th scope="col" class="px-4 py-3 text-left text-xs font-semibold text-slate-900 uppercase tracking-wider border-b border-gray-150">Target Plant Infrastructure</th>
-              <th scope="col" class="px-4 py-3 text-left text-xs font-semibold text-slate-900 uppercase tracking-wider border-b border-gray-150">Primary Metrological Purpose</th>
+              <th scope="col" class="px-4 py-3 text-left font-semibold text-slate-900 uppercase tracking-wider border-b border-gray-150">NDT Method</th>
+              <th scope="col" class="px-4 py-3 text-left font-semibold text-slate-900 uppercase tracking-wider border-b border-gray-150">Target Plant Infrastructure</th>
+              <th scope="col" class="px-4 py-3 text-left font-semibold text-slate-900 uppercase tracking-wider border-b border-gray-150">Primary Metrological Purpose</th>
             </tr>
           </thead>
-          <tbody class="bg-white divide-y divide-gray-150 text-[13px]">
+          <tbody class="bg-white divide-y divide-gray-150">
             <tr>
               <td class="px-4 py-3 font-semibold text-slate-900 bg-slate-50/40">Ultrasonic Thickness (UT)</td>
               <td class="px-4 py-3 text-gray-600">High-service discharge piping, aeration basin supply manifolds.</td>
@@ -8987,12 +9064,13 @@ content: `
   },
   "ultrasonic-flow-meters-water-distribution": {title: "Ultrasonic Flow Meters for Water Distribution Networks",
     seoTitle: "Ultrasonic Flow Meters for Water Distribution networks guide",
-    metaDescription: "Ultrasonic flow meter selection guide for water distribution — comparing clamp-on vs inline sensors, DMA setups, and ISO 4064 standards.",
+    metaDescription: "Explore our in-depth guide to ultrasonic flow meters for water distribution networks. Expert advice, compliance requirements, and implementation tips.",
     category: "Flow Measurement",
-    date: "July 6, 2026",
+    date: "December 26, 2025",
     readTime: "8 Min Read",
     pillar: "Pillar 1: Flow Measurement & Custody Metering",
     description: "Ultrasonic flow meter selection guide for water distribution — comparing clamp-on vs inline sensors, DMA setups, and ISO 4064 standards.",
+    keywords: "ultrasonic flow meters, water distribution, municipal metering",
     image: "/clamp_on_meter.png",
     imageAlt: "A clamp-on transit-time ultrasonic liquid flow meter installed on a municipal water main.",
 content: `
@@ -9001,8 +9079,8 @@ content: `
       </p>
 
       <div class="my-6 rounded-lg bg-slate-50 border border-slate-200 p-5 not-prose">
-        <h4 class="text-[13.5px] font-bold text-slate-900 mb-2">💡 Key Takeaways</h4>
-        <ul class="text-[13px] text-slate-600 space-y-2 list-disc pl-4">
+        <h4 class="font-bold text-slate-900 mb-2">💡 Key Takeaways</h4>
+        <ul class="text-slate-600 space-y-2 list-disc pl-4">
           <li><strong>Clamp-On Advantage:</strong> Clamp-on sensors mount onto the pipe exterior, avoiding excavation and service shutdowns.</li>
           <li><strong>Leakage Tracking:</strong> Installing meters at District Metered Area (DMA) inlets allows utilities to isolate leaks.</li>
           <li><strong>Standard Compliance:</strong> Meter testing and calibration follow ISO 4064 and OIML R49 metrological guidelines.</li>
@@ -9020,15 +9098,15 @@ content: `
       </p>
 
       <div class="overflow-x-auto my-8 not-prose">
-        <table class="min-w-full divide-y divide-gray-200 border border-gray-150 text-[13.5px]">
+        <table class="min-w-full divide-y divide-gray-200 border border-gray-150">
           <thead class="bg-slate-50">
             <tr>
-              <th scope="col" class="px-4 py-3 text-left text-xs font-semibold text-slate-900 uppercase tracking-wider border-b border-gray-150">Metering Feature</th>
-              <th scope="col" class="px-4 py-3 text-left text-xs font-semibold text-slate-900 uppercase tracking-wider border-b border-gray-150">Clamp-On Ultrasonic Meter</th>
-              <th scope="col" class="px-4 py-3 text-left text-xs font-semibold text-slate-900 uppercase tracking-wider border-b border-gray-150">Inline Ultrasonic Meter</th>
+              <th scope="col" class="px-4 py-3 text-left font-semibold text-slate-900 uppercase tracking-wider border-b border-gray-150">Metering Feature</th>
+              <th scope="col" class="px-4 py-3 text-left font-semibold text-slate-900 uppercase tracking-wider border-b border-gray-150">Clamp-On Ultrasonic Meter</th>
+              <th scope="col" class="px-4 py-3 text-left font-semibold text-slate-900 uppercase tracking-wider border-b border-gray-150">Inline Ultrasonic Meter</th>
             </tr>
           </thead>
-          <tbody class="bg-white divide-y divide-gray-150 text-[13px]">
+          <tbody class="bg-white divide-y divide-gray-150">
             <tr>
               <td class="px-4 py-3 font-semibold text-slate-900 bg-slate-50/40">Installation Impact</td>
               <td class="px-4 py-3 text-gray-600">Zero pipe cutting, mounts on exterior shell.</td>
@@ -9090,12 +9168,13 @@ content: `
   },
   "remote-monitoring-scada-water-utilities": {title: "Remote Monitoring and SCADA for Water Utilities",
     seoTitle: "Remote Monitoring and SCADA for Water Utilities Guide",
-    metaDescription: "Guide to SCADA and telemetry for water utilities — comparing cellular and radio options, alarm systems, and IEC 62443 security.",
+    metaDescription: "Learn how to master remote monitoring and scada for water utilities with our comprehensive guide. Access standards, tips, and implementation advice.",
     category: "Industrial Automation",
-    date: "July 6, 2026",
+    date: "January 8, 2026",
     readTime: "8 Min Read",
     pillar: "Pillar 2: Industrial Process Automation",
     description: "Guide to SCADA and telemetry for water utilities — comparing cellular and radio options, alarm systems, and IEC 62443 security.",
+    keywords: "remote monitoring, SCADA, water utilities automation",
     image: "/images/control_room_interior_and_console/xlat/3.jpg",
     imageAlt: "Operators monitoring pump stations and reservoir levels via SCADA screens in a utility room.",
 content: `
@@ -9104,8 +9183,8 @@ content: `
       </p>
 
       <div class="my-6 rounded-lg bg-slate-50 border border-slate-200 p-5 not-prose">
-        <h4 class="text-[13.5px] font-bold text-slate-900 mb-2">💡 Key Takeaways</h4>
-        <ul class="text-[13px] text-slate-600 space-y-2 list-disc pl-4">
+        <h4 class="font-bold text-slate-900 mb-2">💡 Key Takeaways</h4>
+        <ul class="text-slate-600 space-y-2 list-disc pl-4">
           <li><strong>Distributed Tracking:</strong> SCADA networks monitor remote tanks and pumps, coordinating system pressures.</li>
           <li><strong>Telemetry Layout:</strong> Communication links utilize cellular, radio, or satellite pathways depending on location.</li>
           <li><strong>Utility Security:</strong> Remote network designs follow IEC 62443 cybersecurity guidelines to secure access.</li>
@@ -9123,15 +9202,15 @@ content: `
       </p>
 
       <div class="overflow-x-auto my-8 not-prose">
-        <table class="min-w-full divide-y divide-gray-200 border border-gray-150 text-[13.5px]">
+        <table class="min-w-full divide-y divide-gray-200 border border-gray-150">
           <thead class="bg-slate-50">
             <tr>
-              <th scope="col" class="px-4 py-3 text-left text-xs font-semibold text-slate-900 uppercase tracking-wider border-b border-gray-150">Telemetry Pathway</th>
-              <th scope="col" class="px-4 py-3 text-left text-xs font-semibold text-slate-900 uppercase tracking-wider border-b border-gray-150">Communication Configuration</th>
-              <th scope="col" class="px-4 py-3 text-left text-xs font-semibold text-slate-900 uppercase tracking-wider border-b border-gray-150">Primary Utility Application</th>
+              <th scope="col" class="px-4 py-3 text-left font-semibold text-slate-900 uppercase tracking-wider border-b border-gray-150">Telemetry Pathway</th>
+              <th scope="col" class="px-4 py-3 text-left font-semibold text-slate-900 uppercase tracking-wider border-b border-gray-150">Communication Configuration</th>
+              <th scope="col" class="px-4 py-3 text-left font-semibold text-slate-900 uppercase tracking-wider border-b border-gray-150">Primary Utility Application</th>
             </tr>
           </thead>
-          <tbody class="bg-white divide-y divide-gray-150 text-[13px]">
+          <tbody class="bg-white divide-y divide-gray-150">
             <tr>
               <td class="px-4 py-3 font-semibold text-slate-900 bg-slate-50/40">Cellular Telemetry (LTE-M / 5G)</td>
               <td class="px-4 py-3 text-gray-600">Uses commercial cellular networks to transmit data packets.</td>
@@ -9188,12 +9267,13 @@ content: `
   },
   "desalination-plant-instrumentation": {title: "Desalination Plant Instrumentation: Flow and Pressure Measurement",
     seoTitle: "Desalination Plant Instrumentation Guide: Flow & Pressure",
-    metaDescription: "Instrumentation and material selection guide for desalination plants — covering RO membrane monitoring, high pressure meters, and salinity sensors.",
+    metaDescription: "Get the definitive guide to desalination plant instrumentation. Expert advice, industry standards, and step-by-step strategies.",
     category: "Flow Measurement",
-    date: "July 6, 2026",
+    date: "January 22, 2026",
     readTime: "9 Min Read",
     pillar: "Pillar 1: Flow Measurement & Custody Metering",
     description: "Instrumentation and material selection guide for desalination plants — covering RO membrane monitoring, high pressure meters, and salinity sensors.",
+    keywords: "desalination instrumentation, flow pressure measurement, desalination",
     image: "/water_treatment.jpg",
     imageAlt: "Reverse osmosis filter racks and pressure gauges in a sea water desalination plant.",
 content: `
@@ -9202,8 +9282,8 @@ content: `
       </p>
 
       <div class="my-6 rounded-lg bg-slate-50 border border-slate-200 p-5 not-prose">
-        <h4 class="text-[13.5px] font-bold text-slate-900 mb-2">💡 Key Takeaways</h4>
-        <ul class="text-[13px] text-slate-600 space-y-2 list-disc pl-4">
+        <h4 class="font-bold text-slate-900 mb-2">💡 Key Takeaways</h4>
+        <ul class="text-slate-600 space-y-2 list-disc pl-4">
           <li><strong>Material Focus:</strong> Seawater piping and sensors require corrosion-resistant alloys like super duplex stainless steel.</li>
           <li><strong>RO Optimization:</strong> Differential pressure and salinity sensors monitor reverse osmosis membrane conditions.</li>
           <li><strong>Energy Efficiency:</strong> Precise flow tracking secures the operation of high-pressure pumps and energy recovery devices.</li>
@@ -9221,15 +9301,15 @@ content: `
       </p>
 
       <div class="overflow-x-auto my-8 not-prose">
-        <table class="min-w-full divide-y divide-gray-200 border border-gray-150 text-[13.5px]">
+        <table class="min-w-full divide-y divide-gray-200 border border-gray-150">
           <thead class="bg-slate-50">
             <tr>
-              <th scope="col" class="px-4 py-3 text-left text-xs font-semibold text-slate-900 uppercase tracking-wider border-b border-gray-150">Flow Meter Type</th>
-              <th scope="col" class="px-4 py-3 text-left text-xs font-semibold text-slate-900 uppercase tracking-wider border-b border-gray-150">Materials of Construction</th>
-              <th scope="col" class="px-4 py-3 text-left text-xs font-semibold text-slate-900 uppercase tracking-wider border-b border-gray-150">Typical Desalination Application</th>
+              <th scope="col" class="px-4 py-3 text-left font-semibold text-slate-900 uppercase tracking-wider border-b border-gray-150">Flow Meter Type</th>
+              <th scope="col" class="px-4 py-3 text-left font-semibold text-slate-900 uppercase tracking-wider border-b border-gray-150">Materials of Construction</th>
+              <th scope="col" class="px-4 py-3 text-left font-semibold text-slate-900 uppercase tracking-wider border-b border-gray-150">Typical Desalination Application</th>
             </tr>
           </thead>
-          <tbody class="bg-white divide-y divide-gray-150 text-[13px]">
+          <tbody class="bg-white divide-y divide-gray-150">
             <tr>
               <td class="px-4 py-3 font-semibold text-slate-900 bg-slate-50/40">Electromagnetic Meter</td>
               <td class="px-4 py-3 text-gray-600">Super Duplex body, PVDF or Ebonite liner, Platinum electrodes.</td>
@@ -9290,12 +9370,13 @@ content: `
   },
   "corrosion-monitoring-water-treatment": {title: "Corrosion Monitoring in Water Treatment Systems",
     seoTitle: "Corrosion Monitoring in Water Treatment Systems Guide",
-    metaDescription: "Guide to corrosion monitoring in water treatment — covering coupons, ER probes, Langelier Saturation Index (LSI), and NACE SP0169.",
+    metaDescription: "Explore our in-depth guide to corrosion monitoring in water treatment systems. Expert advice, compliance requirements, and implementation tips.",
     category: "Analyzers & Inspection",
-    date: "July 6, 2026",
+    date: "November 20, 2025",
     readTime: "8 Min Read",
     pillar: "Pillar 3: Analyzers & Inspection",
     description: "Guide to corrosion monitoring in water treatment — covering coupons, ER probes, Langelier Saturation Index (LSI), and NACE SP0169.",
+    keywords: "corrosion monitoring, water treatment, corrosion prevention",
     image: "/images/services/Magnetic-Flux-Leakage.jpg",
     imageAlt: "An inspector using magnetic flux leakage (MFL) to check structural steel tank bottoms for corrosion.",
 content: `
@@ -9304,8 +9385,8 @@ content: `
       </p>
 
       <div class="my-6 rounded-lg bg-slate-50 border border-slate-200 p-5 not-prose">
-        <h4 class="text-[13.5px] font-bold text-slate-900 mb-2">💡 Key Takeaways</h4>
-        <ul class="text-[13px] text-slate-600 space-y-2 list-disc pl-4">
+        <h4 class="font-bold text-slate-900 mb-2">💡 Key Takeaways</h4>
+        <ul class="text-slate-600 space-y-2 list-disc pl-4">
           <li><strong>Monitoring Methods:</strong> Physical coupons and online ER probes track real-time corrosion rates.</li>
           <li><strong>Corrosion Index:</strong> The Langelier Saturation Index (LSI) calculates scale-forming vs. corrosive water tendencies.</li>
           <li><strong>Tank Protection:</strong> Cathodic protection designs prevent corrosion on metal storage tank interiors.</li>
@@ -9323,15 +9404,15 @@ content: `
       </p>
 
       <div class="overflow-x-auto my-8 not-prose">
-        <table class="min-w-full divide-y divide-gray-200 border border-gray-150 text-[13.5px]">
+        <table class="min-w-full divide-y divide-gray-200 border border-gray-150">
           <thead class="bg-slate-50">
             <tr>
-              <th scope="col" class="px-4 py-3 text-left text-xs font-semibold text-slate-900 uppercase tracking-wider border-b border-gray-150">Monitoring Method</th>
-              <th scope="col" class="px-4 py-3 text-left text-xs font-semibold text-slate-900 uppercase tracking-wider border-b border-gray-150">Operating Principle</th>
-              <th scope="col" class="px-4 py-3 text-left text-xs font-semibold text-slate-900 uppercase tracking-wider border-b border-gray-150">Primary Utility Benefit</th>
+              <th scope="col" class="px-4 py-3 text-left font-semibold text-slate-900 uppercase tracking-wider border-b border-gray-150">Monitoring Method</th>
+              <th scope="col" class="px-4 py-3 text-left font-semibold text-slate-900 uppercase tracking-wider border-b border-gray-150">Operating Principle</th>
+              <th scope="col" class="px-4 py-3 text-left font-semibold text-slate-900 uppercase tracking-wider border-b border-gray-150">Primary Utility Benefit</th>
             </tr>
           </thead>
-          <tbody class="bg-white divide-y divide-gray-150 text-[13px]">
+          <tbody class="bg-white divide-y divide-gray-150">
             <tr>
               <td class="px-4 py-3 font-semibold text-slate-900 bg-slate-50/40">Corrosion Coupons</td>
               <td class="px-4 py-3 text-gray-600">Metal plates are exposed to flow, then weighed to calculate average metal loss.</td>
@@ -9387,12 +9468,13 @@ content: `
   },
   "cement-plant-emissions-monitoring": {title: "Cement Plant Emissions Monitoring: CEMS and Dust Analyzer Guide",
     seoTitle: "Cement Plant Emissions Monitoring: CEMS & Dust Analyzer",
-    metaDescription: "Compliance guide for cement plant emissions monitoring — covering kiln CEMS, continuous dust analyzers, baghouse leaks, and EN 15267 compliance.",
+    metaDescription: "Unlock the full potential of cement plant emissions monitoring. Expert insights, standards compliance, and actionable recommendations.",
     category: "Emissions Compliance",
-    date: "July 6, 2026",
+    date: "April 27, 2025",
     readTime: "9 Min Read",
     pillar: "Pillar 3: Analyzers & Inspection",
     description: "Compliance guide for cement plant emissions monitoring — covering kiln CEMS, continuous dust analyzers, baghouse leaks, and EN 15267 compliance.",
+    keywords: "cement plant emissions, CEMS, dust monitoring",
     image: "/cement_industry.jpg",
     imageAlt: "Emissions stack and rotary kiln assembly of a dry-process cement manufacturing plant.",
 content: `
@@ -9401,8 +9483,8 @@ content: `
       </p>
 
       <div class="my-6 rounded-lg bg-slate-50 border border-slate-200 p-5 not-prose">
-        <h4 class="text-[13.5px] font-bold text-slate-900 mb-2">💡 Key Takeaways</h4>
-        <ul class="text-[13px] text-slate-600 space-y-2 list-disc pl-4">
+        <h4 class="font-bold text-slate-900 mb-2">💡 Key Takeaways</h4>
+        <ul class="text-slate-600 space-y-2 list-disc pl-4">
           <li><strong>Regulatory Compliance:</strong> Industrial emissions monitoring equipment must be certified under the EN 15267 standard to verify measurement stability.</li>
           <li><strong>CEMS Integration:</strong> A complete cement kiln CEMS measures NOx, SO2, CO, and oxygen to optimize combustion and report emissions.</li>
           <li><strong>Particulate Management:</strong> Continuous dust monitors detect filter degradation, supporting bag filter monitoring to prevent particulate releases.</li>
@@ -9419,15 +9501,15 @@ content: `
       </p>
 
       <div class="overflow-x-auto my-8 not-prose">
-        <table class="min-w-full divide-y divide-gray-200 border border-gray-150 text-[13.5px]">
+        <table class="min-w-full divide-y divide-gray-200 border border-gray-150">
           <thead class="bg-slate-50">
             <tr>
-              <th scope="col" class="px-4 py-3 text-left text-xs font-semibold text-slate-900 uppercase tracking-wider border-b border-gray-150">Process Source</th>
-              <th scope="col" class="px-4 py-3 text-left text-xs font-semibold text-slate-900 uppercase tracking-wider border-b border-gray-150">Primary Target Pollutants</th>
-              <th scope="col" class="px-4 py-3 text-left text-xs font-semibold text-slate-900 uppercase tracking-wider border-b border-gray-150">Monitoring Configuration &amp; Technology</th>
+              <th scope="col" class="px-4 py-3 text-left font-semibold text-slate-900 uppercase tracking-wider border-b border-gray-150">Process Source</th>
+              <th scope="col" class="px-4 py-3 text-left font-semibold text-slate-900 uppercase tracking-wider border-b border-gray-150">Primary Target Pollutants</th>
+              <th scope="col" class="px-4 py-3 text-left font-semibold text-slate-900 uppercase tracking-wider border-b border-gray-150">Monitoring Configuration &amp; Technology</th>
             </tr>
           </thead>
-          <tbody class="bg-white divide-y divide-gray-150 text-[13px]">
+          <tbody class="bg-white divide-y divide-gray-150">
             <tr>
               <td class="px-4 py-3 font-semibold text-slate-900 bg-slate-50/40">Rotary Kiln &amp; Preheater Stack</td>
               <td class="px-4 py-3 text-gray-600">NOx from calcination, SO2 kiln emissions, CO, CO2, HCl, HF</td>
@@ -9506,12 +9588,13 @@ content: `
   },
   "flow-measurement-cement-manufacturing": {title: "Flow Measurement in Cement Manufacturing: Air, Gas, and Slurry",
     seoTitle: "Flow Measurement in Cement Manufacturing: Air, Gas & Slurry",
-    metaDescription: "Flow meter selection guide for cement plants — covering kiln combustion air, process gas flow, cement slurry metering, and material wear resistance.",
+    metaDescription: "Ready to improve your flow measurement in cement manufacturing? Explore expert guidance, compliance standards, and proven techniques.",
     category: "Flow Measurement",
-    date: "July 6, 2026",
+    date: "July 18, 2026",
     readTime: "9 Min Read",
     pillar: "Pillar 1: Flow Measurement & Custody Metering",
     description: "Flow meter selection guide for cement plants — covering kiln combustion air, process gas flow, cement slurry metering, and material wear resistance.",
+    keywords: "cement plant flow measurement, air flow, slurry metering",
     image: "/images/services/flow-measurement.jpg",
     imageAlt: "An industrial flow meter tracking air flow rates on large baghouse dust collectors in a cement mill.",
 content: `
@@ -9520,8 +9603,8 @@ content: `
       </p>
 
       <div class="my-6 rounded-lg bg-slate-50 border border-slate-200 p-5 not-prose">
-        <h4 class="text-[13.5px] font-bold text-slate-900 mb-2">💡 Key Takeaways</h4>
-        <ul class="text-[13px] text-slate-600 space-y-2 list-disc pl-4">
+        <h4 class="font-bold text-slate-900 mb-2">💡 Key Takeaways</h4>
+        <ul class="text-slate-600 space-y-2 list-disc pl-4">
           <li><strong>Kiln Combustion:</strong> Accurate kiln air flow measurement is critical to maintain optimal fuel-to-oxygen ratios.</li>
           <li><strong>Slurry Transport:</strong> Electromagnetic flow meters with specialized polyurethane linings are selected for raw slurry lines.</li>
           <li><strong>Gas Flow:</strong> Process gas flow cement plant applications rely on purged averaging Pitot tubes and thermal mass meters.</li>
@@ -9543,15 +9626,15 @@ content: `
       </p>
 
       <div class="overflow-x-auto my-8 not-prose">
-        <table class="min-w-full divide-y divide-gray-200 border border-gray-150 text-[13.5px]">
+        <table class="min-w-full divide-y divide-gray-200 border border-gray-150">
           <thead class="bg-slate-50">
             <tr>
-              <th scope="col" class="px-4 py-3 text-left text-xs font-semibold text-slate-900 uppercase tracking-wider border-b border-gray-150">Piping Application</th>
-              <th scope="col" class="px-4 py-3 text-left text-xs font-semibold text-slate-900 uppercase tracking-wider border-b border-gray-150">Recommended Flow Meter</th>
-              <th scope="col" class="px-4 py-3 text-left text-xs font-semibold text-slate-900 uppercase tracking-wider border-b border-gray-150">Primary Operational Benefit</th>
+              <th scope="col" class="px-4 py-3 text-left font-semibold text-slate-900 uppercase tracking-wider border-b border-gray-150">Piping Application</th>
+              <th scope="col" class="px-4 py-3 text-left font-semibold text-slate-900 uppercase tracking-wider border-b border-gray-150">Recommended Flow Meter</th>
+              <th scope="col" class="px-4 py-3 text-left font-semibold text-slate-900 uppercase tracking-wider border-b border-gray-150">Primary Operational Benefit</th>
             </tr>
           </thead>
-          <tbody class="bg-white divide-y divide-gray-150 text-[13px]">
+          <tbody class="bg-white divide-y divide-gray-150">
             <tr>
               <td class="px-4 py-3 font-semibold text-slate-900 bg-slate-50/40">Primary Combustion Air</td>
               <td class="px-4 py-3 text-gray-600">Thermal mass flow meter</td>
@@ -9621,12 +9704,13 @@ content: `
   },
   "plc-automation-cement-kiln": {title: "PLC Automation in Cement Kiln Control Systems",
     seoTitle: "PLC Automation in Cement Kiln Control Systems Guide",
-    metaDescription: "Kiln control automation guide for cement plants — covering preheater loops, alternative fuel feed controls, and PLC configurations.",
+    metaDescription: "Explore our in-depth guide to plc automation in cement kiln control systems. Expert advice, compliance requirements, and implementation tips.",
     category: "Industrial Automation",
-    date: "July 6, 2026",
+    date: "April 30, 2026",
     readTime: "8 Min Read",
     pillar: "Pillar 2: Industrial Process Automation",
     description: "Kiln control automation guide for cement plants — covering preheater loops, alternative fuel feed controls, and PLC configurations.",
+    keywords: "PLC automation, cement kiln control, process optimization",
     image: "/images/plc/MELSEC-iQ-R-Series.png",
     imageAlt: "PLC systems controlling raw material feed and burner temperatures in a cement rotary kiln.",
 content: `
@@ -9635,8 +9719,8 @@ content: `
       </p>
 
       <div class="my-6 rounded-lg bg-slate-50 border border-slate-200 p-5 not-prose">
-        <h4 class="text-[13.5px] font-bold text-slate-900 mb-2">💡 Key Takeaways</h4>
-        <ul class="text-[13px] text-slate-600 space-y-2 list-disc pl-4">
+        <h4 class="font-bold text-slate-900 mb-2">💡 Key Takeaways</h4>
+        <ul class="text-slate-600 space-y-2 list-disc pl-4">
           <li><strong>Temperature Control:</strong> Kiln temperature control automation manages combustion fuel rates to maintain clinkerization zones.</li>
           <li><strong>Draft Management:</strong> Preheater control loops adjust induced draft fans to optimize heat recovery and material drying.</li>
           <li><strong>Fuel Flexibility:</strong> Automated fuel control cement kiln loops manage primary fuels and alternative fuel streams based on kiln heat demands.</li>
@@ -9658,15 +9742,15 @@ content: `
       </p>
 
       <div class="overflow-x-auto my-8 not-prose">
-        <table class="min-w-full divide-y divide-gray-200 border border-gray-150 text-[13.5px]">
+        <table class="min-w-full divide-y divide-gray-200 border border-gray-150">
           <thead class="bg-slate-50">
             <tr>
-              <th scope="col" class="px-4 py-3 text-left text-xs font-semibold text-slate-900 uppercase tracking-wider border-b border-gray-150">Control Loop</th>
-              <th scope="col" class="px-4 py-3 text-left text-xs font-semibold text-slate-900 uppercase tracking-wider border-b border-gray-150">Primary Sensed Parameter</th>
-              <th scope="col" class="px-4 py-3 text-left text-xs font-semibold text-slate-900 uppercase tracking-wider border-b border-gray-150">Automation Purpose &amp; Action</th>
+              <th scope="col" class="px-4 py-3 text-left font-semibold text-slate-900 uppercase tracking-wider border-b border-gray-150">Control Loop</th>
+              <th scope="col" class="px-4 py-3 text-left font-semibold text-slate-900 uppercase tracking-wider border-b border-gray-150">Primary Sensed Parameter</th>
+              <th scope="col" class="px-4 py-3 text-left font-semibold text-slate-900 uppercase tracking-wider border-b border-gray-150">Automation Purpose &amp; Action</th>
             </tr>
           </thead>
-          <tbody class="bg-white divide-y divide-gray-150 text-[13px]">
+          <tbody class="bg-white divide-y divide-gray-150">
             <tr>
               <td class="px-4 py-3 font-semibold text-slate-900 bg-slate-50/40">Burning Zone Temperature</td>
               <td class="px-4 py-3 text-gray-600">Kiln temperature (optical pyrometer)</td>
@@ -9734,12 +9818,13 @@ content: `
   },
   "ndt-steel-manufacturing": {title: "NDT in Steel Manufacturing: Weld and Material Inspection",
     seoTitle: "NDT in Steel Manufacturing: Weld & Material Guide",
-    metaDescription: "ASME and ASTM A435 compliance guide for NDT in steel manufacturing — covering rolled steel products, weld testing, laminations, and inclusions.",
+    metaDescription: "Unlock the full potential of ndt in steel manufacturing. Expert insights, standards compliance, and actionable recommendations.",
     category: "Analyzers & Inspection",
-    date: "July 6, 2026",
+    date: "July 28, 2025",
     readTime: "8 Min Read",
     pillar: "Pillar 3: Analyzers & Inspection",
     description: "ASME and ASTM A435 compliance guide for NDT in steel manufacturing — covering rolled steel products, weld testing, laminations, and inclusions.",
+    keywords: "NDT steel manufacturing, weld inspection, material testing",
     image: "/metal_and_steel.jpg",
     imageAlt: "An industrial furnace processing structural steel sheets in a manufacturing plant.",
 content: `
@@ -9748,8 +9833,8 @@ content: `
       </p>
 
       <div class="my-6 rounded-lg bg-slate-50 border border-slate-200 p-5 not-prose">
-        <h4 class="text-[13.5px] font-bold text-slate-900 mb-2">💡 Key Takeaways</h4>
-        <ul class="text-[13px] text-slate-600 space-y-2 list-disc pl-4">
+        <h4 class="font-bold text-slate-900 mb-2">💡 Key Takeaways</h4>
+        <ul class="text-slate-600 space-y-2 list-disc pl-4">
           <li><strong>Quality Assurance:</strong> Weld testing and plate scanning follow ASME Section V and AWS D1.1 guidelines.</li>
           <li><strong>Plate Integrity:</strong> Ultrasonic testing plate arrays detect internal defects like laminations and trapped slag.</li>
           <li><strong>Weld Safety:</strong> Magnetic particle weld inspection is selected to detect surface-breaking cracks in structural fillet welds.</li>
@@ -9771,15 +9856,15 @@ content: `
       </p>
 
       <div class="overflow-x-auto my-8 not-prose">
-        <table class="min-w-full divide-y divide-gray-200 border border-gray-150 text-[13.5px]">
+        <table class="min-w-full divide-y divide-gray-200 border border-gray-150">
           <thead class="bg-slate-50">
             <tr>
-              <th scope="col" class="px-4 py-3 text-left text-xs font-semibold text-slate-900 uppercase tracking-wider border-b border-gray-150">NDT Method</th>
-              <th scope="col" class="px-4 py-3 text-left text-xs font-semibold text-slate-900 uppercase tracking-wider border-b border-gray-150">Target Component</th>
-              <th scope="col" class="px-4 py-3 text-left text-xs font-semibold text-slate-900 uppercase tracking-wider border-b border-gray-150">Primary Defect Detected &amp; Standard</th>
+              <th scope="col" class="px-4 py-3 text-left font-semibold text-slate-900 uppercase tracking-wider border-b border-gray-150">NDT Method</th>
+              <th scope="col" class="px-4 py-3 text-left font-semibold text-slate-900 uppercase tracking-wider border-b border-gray-150">Target Component</th>
+              <th scope="col" class="px-4 py-3 text-left font-semibold text-slate-900 uppercase tracking-wider border-b border-gray-150">Primary Defect Detected &amp; Standard</th>
             </tr>
           </thead>
-          <tbody class="bg-white divide-y divide-gray-150 text-[13px]">
+          <tbody class="bg-white divide-y divide-gray-150">
             <tr>
               <td class="px-4 py-3 font-semibold text-slate-900 bg-slate-50/40">Ultrasonic Testing (UT)</td>
               <td class="px-4 py-3 text-gray-600">Flat steel plates, structural profiles, forgings</td>
@@ -9847,12 +9932,13 @@ content: `
   },
   "steel-fabrication-quality-control": {title: "Steel Fabrication Quality Control: Mechanical Testing Requirements",
     seoTitle: "Steel Fabrication Quality Control: Mechanical Testing Guide",
-    metaDescription: "Mechanical testing compliance guide for steel fabrication — covering tensile tests, bend tests, PQR qualification, and ASME IX requirements.",
+    metaDescription: "Explore our in-depth guide to steel fabrication quality control. Expert advice, compliance requirements, and implementation tips.",
     category: "Mechanical Testing",
-    date: "July 6, 2026",
+    date: "August 22, 2025",
     readTime: "8 Min Read",
     pillar: "Pillar 3: Analyzers & Inspection",
     description: "Mechanical testing compliance guide for steel fabrication — covering tensile tests, bend tests, PQR qualification, and ASME IX requirements.",
+    keywords: "steel fabrication QC, mechanical testing, quality control",
     image: "/images/services/Structural-Steel-Work.webp",
     imageAlt: "Quality inspectors examining weld seams on structural steel beams in a fabrication shop.",
 content: `
@@ -9861,8 +9947,8 @@ content: `
       </p>
 
       <div class="my-6 rounded-lg bg-slate-50 border border-slate-200 p-5 not-prose">
-        <h4 class="text-[13.5px] font-bold text-slate-900 mb-2">💡 Key Takeaways</h4>
-        <ul class="text-[13px] text-slate-600 space-y-2 list-disc pl-4">
+        <h4 class="font-bold text-slate-900 mb-2">💡 Key Takeaways</h4>
+        <ul class="text-slate-600 space-y-2 list-disc pl-4">
           <li><strong>Procedure Validation:</strong> Mechanical testing is required to qualify welding procedure specifications (WPS) and compile Procedure Qualification Records (PQRs).</li>
           <li><strong>Destructive Testing:</strong> Tensile and bend testing evaluates joint ductility and ultimate tensile strength.</li>
           <li><strong>Hardness Checks:</strong> Hardness surveys across the heat-affected zone verify that welding thermal cycles do not embrittle the metal.</li>
@@ -9881,15 +9967,15 @@ content: `
       </p>
 
       <div class="overflow-x-auto my-8 not-prose">
-        <table class="min-w-full divide-y divide-gray-200 border border-gray-150 text-[13.5px]">
+        <table class="min-w-full divide-y divide-gray-200 border border-gray-150">
           <thead class="bg-slate-50">
             <tr>
-              <th scope="col" class="px-4 py-3 text-left text-xs font-semibold text-slate-900 uppercase tracking-wider border-b border-gray-150">Mechanical Test Type</th>
-              <th scope="col" class="px-4 py-3 text-left text-xs font-semibold text-slate-900 uppercase tracking-wider border-b border-gray-150">Specimen Preparation &amp; Code</th>
-              <th scope="col" class="px-4 py-3 text-left text-xs font-semibold text-slate-900 uppercase tracking-wider border-b border-gray-150">Primary Metrological Purpose</th>
+              <th scope="col" class="px-4 py-3 text-left font-semibold text-slate-900 uppercase tracking-wider border-b border-gray-150">Mechanical Test Type</th>
+              <th scope="col" class="px-4 py-3 text-left font-semibold text-slate-900 uppercase tracking-wider border-b border-gray-150">Specimen Preparation &amp; Code</th>
+              <th scope="col" class="px-4 py-3 text-left font-semibold text-slate-900 uppercase tracking-wider border-b border-gray-150">Primary Metrological Purpose</th>
             </tr>
           </thead>
-          <tbody class="bg-white divide-y divide-gray-150 text-[13px]">
+          <tbody class="bg-white divide-y divide-gray-150">
             <tr>
               <td class="px-4 py-3 font-semibold text-slate-900 bg-slate-50/40">Transverse Tension Test</td>
               <td class="px-4 py-3 text-gray-600">Reduced-section coupon cut perpendicular to weld, following ASTM E8.</td>
@@ -9959,12 +10045,13 @@ content: `
   },
   "vfd-cement-plant-fan-mill": {title: "VFD Drives in Cement Plant Fan and Mill Applications",
     seoTitle: "VFD Drives in Cement Plant Fan and Mill Applications Guide",
-    metaDescription: "Guide to variable frequency drives (VFD) in cement plants — covering raw/cement mills, kiln fans, medium-voltage drives, and IEEE 519.",
+    metaDescription: "Transform your approach to vfd drives in cement plant fan and mill applications. Access expert strategies, industry standards, and proven results.",
     category: "Industrial Automation",
-    date: "July 6, 2026",
+    date: "July 3, 2025",
     readTime: "8 Min Read",
     pillar: "Pillar 2: Industrial Process Automation",
     description: "Guide to variable frequency drives (VFD) in cement plants — covering raw/cement mills, kiln fans, medium-voltage drives, and IEEE 519.",
+    keywords: "VFD drives, cement plant, fan mill control",
     image: "/images/frequency-inverters/FR-A800.webp",
     imageAlt: "High-capacity variable speed drive units controlling cement kiln exhaust fan motors.",
 content: `
@@ -9973,8 +10060,8 @@ content: `
       </p>
 
       <div class="my-6 rounded-lg bg-slate-50 border border-slate-200 p-5 not-prose">
-        <h4 class="text-[13.5px] font-bold text-slate-900 mb-2">💡 Key Takeaways</h4>
-        <ul class="text-[13px] text-slate-600 space-y-2 list-disc pl-4">
+        <h4 class="font-bold text-slate-900 mb-2">💡 Key Takeaways</h4>
+        <ul class="text-slate-600 space-y-2 list-disc pl-4">
           <li><strong>Combustion Drafts:</strong> An ID fan speed control manages kiln draft air flow dynamically, reducing fan power draw.</li>
           <li><strong>Grinding Mills:</strong> A variable frequency drive cement mill provides soft-starting torque to protect heavy gears.</li>
           <li><strong>Power Quality:</strong> Medium-voltage VFD systems require harmonic filters to comply with IEEE 519 grid limits.</li>
@@ -9993,15 +10080,15 @@ content: `
       </p>
 
       <div class="overflow-x-auto my-8 not-prose">
-        <table class="min-w-full divide-y divide-gray-200 border border-gray-150 text-[13.5px]">
+        <table class="min-w-full divide-y divide-gray-200 border border-gray-150">
           <thead class="bg-slate-50">
             <tr>
-              <th scope="col" class="px-4 py-3 text-left text-xs font-semibold text-slate-900 uppercase tracking-wider border-b border-gray-150">Process Application</th>
-              <th scope="col" class="px-4 py-3 text-left text-xs font-semibold text-slate-900 uppercase tracking-wider border-b border-gray-150">VFD Drive Configuration</th>
-              <th scope="col" class="px-4 py-3 text-left text-xs font-semibold text-slate-900 uppercase tracking-wider border-b border-gray-150">Primary Metrological &amp; Mechanical Benefit</th>
+              <th scope="col" class="px-4 py-3 text-left font-semibold text-slate-900 uppercase tracking-wider border-b border-gray-150">Process Application</th>
+              <th scope="col" class="px-4 py-3 text-left font-semibold text-slate-900 uppercase tracking-wider border-b border-gray-150">VFD Drive Configuration</th>
+              <th scope="col" class="px-4 py-3 text-left font-semibold text-slate-900 uppercase tracking-wider border-b border-gray-150">Primary Metrological &amp; Mechanical Benefit</th>
             </tr>
           </thead>
-          <tbody class="bg-white divide-y divide-gray-150 text-[13px]">
+          <tbody class="bg-white divide-y divide-gray-150">
             <tr>
               <td class="px-4 py-3 font-semibold text-slate-900 bg-slate-50/40">Raw Mill &amp; Cement Mill Grinding</td>
               <td class="px-4 py-3 text-gray-600">Medium-voltage high-torque VFD</td>
@@ -10073,12 +10160,13 @@ content: `
   },
   "structural-steel-inspection-ndt": {title: "Structural Steel Inspection: NDT Methods and Standards",
     seoTitle: "Structural Steel Inspection: NDT Methods & Standards Guide",
-    metaDescription: "Structural steel NDT inspection guide — covering weld testing, magnetic particle testing, ultrasonic testing, and AWS D1.1 compliance.",
+    metaDescription: "Get the definitive guide to structural steel inspection. Expert advice, industry standards, and step-by-step strategies.",
     category: "Analyzers & Inspection",
-    date: "July 6, 2026",
+    date: "August 8, 2025",
     readTime: "9 Min Read",
     pillar: "Pillar 3: Analyzers & Inspection",
     description: "Structural steel NDT inspection guide — covering weld testing, magnetic particle testing, ultrasonic testing, and AWS D1.1 compliance.",
+    keywords: "structural steel inspection, NDT methods, steel standards",
     image: "/images/services/ndt.jpg",
     imageAlt: "An NDT inspector scanning structural steel columns using an ultrasonic testing device.",
 content: `
@@ -10087,8 +10175,8 @@ content: `
       </p>
 
       <div class="my-6 rounded-lg bg-slate-50 border border-slate-200 p-5 not-prose">
-        <h4 class="text-[13.5px] font-bold text-slate-900 mb-2">💡 Key Takeaways</h4>
-        <ul class="text-[13px] text-slate-600 space-y-2 list-disc pl-4">
+        <h4 class="font-bold text-slate-900 mb-2">💡 Key Takeaways</h4>
+        <ul class="text-slate-600 space-y-2 list-disc pl-4">
           <li><strong>Weld Integrity:</strong> Volumetric ultrasonic testing (UT) welds checks groove welds for internal defects.</li>
           <li><strong>Surface Diagnostics:</strong> Visual inspection (VT) and magnetic particle testing (MT) are selected to identify surface weld flaws.</li>
           <li><strong>Joint Security:</strong> Bolted connection inspection programs verify high-strength bolt tensions using calibrated torque wrenches.</li>
@@ -10107,15 +10195,15 @@ content: `
       </p>
 
       <div class="overflow-x-auto my-8 not-prose">
-        <table class="min-w-full divide-y divide-gray-200 border border-gray-150 text-[13.5px]">
+        <table class="min-w-full divide-y divide-gray-200 border border-gray-150">
           <thead class="bg-slate-50">
             <tr>
-              <th scope="col" class="px-4 py-3 text-left text-xs font-semibold text-slate-900 uppercase tracking-wider border-b border-gray-150">NDT Method</th>
-              <th scope="col" class="px-4 py-3 text-left text-xs font-semibold text-slate-900 uppercase tracking-wider border-b border-gray-150">Weld Application</th>
-              <th scope="col" class="px-4 py-3 text-left text-xs font-semibold text-slate-900 uppercase tracking-wider border-b border-gray-150">Target Defect Type Detected</th>
+              <th scope="col" class="px-4 py-3 text-left font-semibold text-slate-900 uppercase tracking-wider border-b border-gray-150">NDT Method</th>
+              <th scope="col" class="px-4 py-3 text-left font-semibold text-slate-900 uppercase tracking-wider border-b border-gray-150">Weld Application</th>
+              <th scope="col" class="px-4 py-3 text-left font-semibold text-slate-900 uppercase tracking-wider border-b border-gray-150">Target Defect Type Detected</th>
             </tr>
           </thead>
-          <tbody class="bg-white divide-y divide-gray-150 text-[13px]">
+          <tbody class="bg-white divide-y divide-gray-150">
             <tr>
               <td class="px-4 py-3 font-semibold text-slate-900 bg-slate-50/40">Visual Inspection (VT)</td>
               <td class="px-4 py-3 text-gray-600">All weld joints prior to surface or volumetric scans.</td>
@@ -10182,12 +10270,13 @@ content: `
   },
   "heat-treatment-steel-fabrication": {title: "Heat Treatment in Steel Fabrication: PWHT and Annealing Guide",
     seoTitle: "Heat Treatment in Steel Fabrication: PWHT and Annealing",
-    metaDescription: "Guide to heat treatment in steel fabrication — comparing PWHT, annealing, and normalizing under ASME VIII and AWS D1.1 codes.",
+    metaDescription: "Explore our in-depth guide to heat treatment in steel fabrication. Expert advice, compliance requirements, and implementation tips.",
     category: "Mechanical Testing",
-    date: "July 6, 2026",
+    date: "September 18, 2025",
     readTime: "8 Min Read",
     pillar: "Pillar 3: Analyzers & Inspection",
     description: "Guide to heat treatment in steel fabrication — comparing PWHT, annealing, and normalizing under ASME VIII and AWS D1.1 codes.",
+    keywords: "heat treatment steel, PWHT annealing, fabrication processes",
     image: "/images/services/Heat-Treatment-Services.jpeg",
     imageAlt: "Preheating structural steel beams using induction coils before post-weld heat treatment.",
 content: `
@@ -10196,8 +10285,8 @@ content: `
       </p>
 
       <div class="my-6 rounded-lg bg-slate-50 border border-slate-200 p-5 not-prose">
-        <h4 class="text-[13.5px] font-bold text-slate-900 mb-2">💡 Key Takeaways</h4>
-        <ul class="text-[13px] text-slate-600 space-y-2 list-disc pl-4">
+        <h4 class="font-bold text-slate-900 mb-2">💡 Key Takeaways</h4>
+        <ul class="text-slate-600 space-y-2 list-disc pl-4">
           <li><strong>Stress Relaxation:</strong> PWHT steel fabrication processes relieve internal stresses introduced by weld contraction.</li>
           <li><strong>Ductility Restoration:</strong> Annealing processes soften hard carbon steels, restoring ductility for machining or cold forming.</li>
           <li><strong>Grain Refinement:</strong> Normalizing cycles refine metal grain structures, improving low-temperature toughness.</li>
@@ -10216,15 +10305,15 @@ content: `
       </p>
 
       <div class="overflow-x-auto my-8 not-prose">
-        <table class="min-w-full divide-y divide-gray-200 border border-gray-150 text-[13.5px]">
+        <table class="min-w-full divide-y divide-gray-200 border border-gray-150">
           <thead class="bg-slate-50">
             <tr>
-              <th scope="col" class="px-4 py-3 text-left text-xs font-semibold text-slate-900 uppercase tracking-wider border-b border-gray-150">Thermal Process</th>
-              <th scope="col" class="px-4 py-3 text-left text-xs font-semibold text-slate-900 uppercase tracking-wider border-b border-gray-150">Controlled Thermal Cycle</th>
-              <th scope="col" class="px-4 py-3 text-left text-xs font-semibold text-slate-900 uppercase tracking-wider border-b border-gray-150">Primary Purpose &amp; Application</th>
+              <th scope="col" class="px-4 py-3 text-left font-semibold text-slate-900 uppercase tracking-wider border-b border-gray-150">Thermal Process</th>
+              <th scope="col" class="px-4 py-3 text-left font-semibold text-slate-900 uppercase tracking-wider border-b border-gray-150">Controlled Thermal Cycle</th>
+              <th scope="col" class="px-4 py-3 text-left font-semibold text-slate-900 uppercase tracking-wider border-b border-gray-150">Primary Purpose &amp; Application</th>
             </tr>
           </thead>
-          <tbody class="bg-white divide-y divide-gray-150 text-[13px]">
+          <tbody class="bg-white divide-y divide-gray-150">
             <tr>
               <td class="px-4 py-3 font-semibold text-slate-900 bg-slate-50/40">PWHT</td>
               <td class="px-4 py-3 text-gray-600">Heated below critical transformation point, held, and cooled slowly under insulation.</td>
@@ -10284,12 +10373,13 @@ content: `
   },
   "dust-control-monitoring-metal-processing": {title: "Dust Control and Monitoring in Metal Processing Plants",
     seoTitle: "Dust Control and Monitoring in Metal Processing Plants Guide",
-    metaDescription: "Particulate emissions monitoring guide for metal processing — covering baghouse checks, opacity monitors, and EN 15267 compliance.",
+    metaDescription: "Get the definitive guide to dust control and monitoring in metal processing plants. Expert advice, industry standards, and step-by-step strategies.",
     category: "Emissions Compliance",
-    date: "July 6, 2026",
+    date: "January 8, 2025",
     readTime: "8 Min Read",
     pillar: "Pillar 3: Analyzers & Inspection",
     description: "Particulate emissions monitoring guide for metal processing — covering baghouse checks, opacity monitors, and EN 15267 compliance.",
+    keywords: "dust control, metal processing, environmental monitoring",
     image: "/dust_analyzer.png",
     imageAlt: "A stack dust analyzer sensor checking particulate levels in a steel mill exhaust stack.",
 content: `
@@ -10298,8 +10388,8 @@ content: `
       </p>
 
       <div class="my-6 rounded-lg bg-slate-50 border border-slate-200 p-5 not-prose">
-        <h4 class="text-[13.5px] font-bold text-slate-900 mb-2">💡 Key Takeaways</h4>
-        <ul class="text-[13px] text-slate-600 space-y-2 list-disc pl-4">
+        <h4 class="font-bold text-slate-900 mb-2">💡 Key Takeaways</h4>
+        <ul class="text-slate-600 space-y-2 list-disc pl-4">
           <li><strong>Smelting Vents:</strong> Baghouses capture heavy metal dusts from primary furnace hoods.</li>
           <li><strong>Leak Detection:</strong> Continuous dust monitors detect broken filters in stack ducts, preventing particulate leaks.</li>
           <li><strong>Compliance Codes:</strong> Systems satisfy EN 15267 and ISO 14001:2015 monitoring standards.</li>
@@ -10317,15 +10407,15 @@ content: `
       </p>
 
       <div class="overflow-x-auto my-8 not-prose">
-        <table class="min-w-full divide-y divide-gray-200 border border-gray-150 text-[13.5px]">
+        <table class="min-w-full divide-y divide-gray-200 border border-gray-150">
           <thead class="bg-slate-50">
             <tr>
-              <th scope="col" class="px-4 py-3 text-left text-xs font-semibold text-slate-900 uppercase tracking-wider border-b border-gray-150">Monitoring Technology</th>
-              <th scope="col" class="px-4 py-3 text-left text-xs font-semibold text-slate-900 uppercase tracking-wider border-b border-gray-150">Target Process Application</th>
-              <th scope="col" class="px-4 py-3 text-left text-xs font-semibold text-slate-900 uppercase tracking-wider border-b border-gray-150">Primary Metrological Advantage</th>
+              <th scope="col" class="px-4 py-3 text-left font-semibold text-slate-900 uppercase tracking-wider border-b border-gray-150">Monitoring Technology</th>
+              <th scope="col" class="px-4 py-3 text-left font-semibold text-slate-900 uppercase tracking-wider border-b border-gray-150">Target Process Application</th>
+              <th scope="col" class="px-4 py-3 text-left font-semibold text-slate-900 uppercase tracking-wider border-b border-gray-150">Primary Metrological Advantage</th>
             </tr>
           </thead>
-          <tbody class="bg-white divide-y divide-gray-150 text-[13px]">
+          <tbody class="bg-white divide-y divide-gray-150">
             <tr>
               <td class="px-4 py-3 font-semibold text-slate-900 bg-slate-50/40">Scattered Light Photometer</td>
               <td class="px-4 py-3 text-gray-600">EAF stacks, clinker cooler exhaust stacks</td>
@@ -10382,12 +10472,13 @@ content: `
   },
   "industrial-sensors-steel-plant": {title: "Industrial Sensors for Steel Plant Process Control",
     seoTitle: "Industrial Sensors for Steel Plant Process Control Guide",
-    metaDescription: "Sensor selection guide for steel plant process control — covering high-temp pyrometers, thermocouples, radar level sensors, and position encoders.",
+    metaDescription: "Discover expert insights on industrial sensors for steel plant process control. Get actionable strategies and proven best practices for your operations.",
     category: "Industrial Automation",
-    date: "July 6, 2026",
+    date: "March 19, 2025",
     readTime: "9 Min Read",
     pillar: "Pillar 2: Industrial Process Automation",
     description: "Sensor selection guide for steel plant process control — covering high-temp pyrometers, thermocouples, radar level sensors, and position encoders.",
+    keywords: "industrial sensors, steel plant, process monitoring",
     image: "/images/sensors/Photoelectric Sensors.png",
     imageAlt: "Heavy-duty industrial proximity and distance sensors installed on a steel rolling mill table.",
 content: `
@@ -10396,8 +10487,8 @@ content: `
       </p>
 
       <div class="my-6 rounded-lg bg-slate-50 border border-slate-200 p-5 not-prose">
-        <h4 class="text-[13.5px] font-bold text-slate-900 mb-2">💡 Key Takeaways</h4>
-        <ul class="text-[13px] text-slate-600 space-y-2 list-disc pl-4">
+        <h4 class="font-bold text-slate-900 mb-2">💡 Key Takeaways</h4>
+        <ul class="text-slate-600 space-y-2 list-disc pl-4">
           <li><strong>High Temperature:</strong> Non-contact infrared pyrometer systems track steel temperatures during casting.</li>
           <li><strong>Level Tracking:</strong> Radar level sensors track molten metal heights inside charging ladles.</li>
           <li><strong>Mill Controls:</strong> Pressure sensors rolling mill teams install monitor hydraulic roll gap forces to maintain steel thickness.</li>
@@ -10411,15 +10502,15 @@ content: `
       </p>
 
       <div class="overflow-x-auto my-8 not-prose">
-        <table class="min-w-full divide-y divide-gray-200 border border-gray-150 text-[13.5px]">
+        <table class="min-w-full divide-y divide-gray-200 border border-gray-150">
           <thead class="bg-slate-50">
             <tr>
-              <th scope="col" class="px-4 py-3 text-left text-xs font-semibold text-slate-900 uppercase tracking-wider border-b border-gray-150">Sensor Class</th>
-              <th scope="col" class="px-4 py-3 text-left text-xs font-semibold text-slate-900 uppercase tracking-wider border-b border-gray-150">Mill Application</th>
-              <th scope="col" class="px-4 py-3 text-left text-xs font-semibold text-slate-900 uppercase tracking-wider border-b border-gray-150">Process Stage</th>
+              <th scope="col" class="px-4 py-3 text-left font-semibold text-slate-900 uppercase tracking-wider border-b border-gray-150">Sensor Class</th>
+              <th scope="col" class="px-4 py-3 text-left font-semibold text-slate-900 uppercase tracking-wider border-b border-gray-150">Mill Application</th>
+              <th scope="col" class="px-4 py-3 text-left font-semibold text-slate-900 uppercase tracking-wider border-b border-gray-150">Process Stage</th>
             </tr>
           </thead>
-          <tbody class="bg-white divide-y divide-gray-150 text-[13px]">
+          <tbody class="bg-white divide-y divide-gray-150">
             <tr>
               <td class="px-4 py-3 font-semibold text-slate-900 bg-slate-50/40">Infrared Pyrometer</td>
               <td class="px-4 py-3 text-gray-600">Measures slab temperature profile before rolling stand entry.</td>
@@ -10486,12 +10577,13 @@ content: `
   },
   "custody-transfer-metering-skid": {title: "Custody Transfer Metering Skid: Components and Design Guide",
     seoTitle: "Custody Transfer Metering Skid Design & Components Guide",
-    metaDescription: "Technical guide to custody transfer metering skid design — covering piping configurations, prover loops, flow computers, and API MPMS compliance.",
+    metaDescription: "Learn how to master custody transfer metering skid with our comprehensive guide. Access standards, tips, and implementation advice.",
     category: "Flow Measurement",
-    date: "July 6, 2026",
+    date: "February 12, 2026",
     readTime: "9 Min Read",
     pillar: "Pillar 1: Flow Measurement & Custody Metering",
     description: "Technical guide to custody transfer metering skid design — covering piping configurations, prover loops, flow computers, and API MPMS compliance.",
+    keywords: "custody transfer metering skid, metering components, flow measurement",
     image: "/flow_metering_skid.jpg",
     imageAlt: "A liquid hydrocarbon custody transfer metering skid with turbine flow meters and a prover.",
 content: `
@@ -10500,8 +10592,8 @@ content: `
       </p>
 
       <div class="my-6 rounded-lg bg-slate-50 border border-slate-200 p-5 not-prose">
-        <h4 class="text-[13.5px] font-bold text-slate-900 mb-2">💡 Key Takeaways</h4>
-        <ul class="text-[13px] text-slate-600 space-y-2 list-disc pl-4">
+        <h4 class="font-bold text-slate-900 mb-2">💡 Key Takeaways</h4>
+        <ul class="text-slate-600 space-y-2 list-disc pl-4">
           <li><strong>Skid Integration:</strong> Skids combine inline meters, block-and-bleed valves, and strainers onto a steel framework.</li>
           <li><strong>Piping Design:</strong> Upstream piping configurations utilize flow conditioners to eliminate swirl and profile anomalies.</li>
           <li><strong>Proving Capabilities:</strong> Integrated prover loops enable inline verification under active pressure and temperature profiles.</li>
@@ -10515,15 +10607,15 @@ content: `
       </p>
 
       <div class="overflow-x-auto my-8 not-prose">
-        <table class="min-w-full divide-y divide-gray-200 border border-gray-150 text-[13.5px]">
+        <table class="min-w-full divide-y divide-gray-200 border border-gray-150">
           <thead class="bg-slate-50">
             <tr>
-              <th scope="col" class="px-4 py-3 text-left text-xs font-semibold text-slate-900 uppercase tracking-wider border-b border-gray-150">Skid Component</th>
-              <th scope="col" class="px-4 py-3 text-left text-xs font-semibold text-slate-900 uppercase tracking-wider border-b border-gray-150">Design Specification</th>
-              <th scope="col" class="px-4 py-3 text-left text-xs font-semibold text-slate-900 uppercase tracking-wider border-b border-gray-150">Operational Function</th>
+              <th scope="col" class="px-4 py-3 text-left font-semibold text-slate-900 uppercase tracking-wider border-b border-gray-150">Skid Component</th>
+              <th scope="col" class="px-4 py-3 text-left font-semibold text-slate-900 uppercase tracking-wider border-b border-gray-150">Design Specification</th>
+              <th scope="col" class="px-4 py-3 text-left font-semibold text-slate-900 uppercase tracking-wider border-b border-gray-150">Operational Function</th>
             </tr>
           </thead>
-          <tbody class="bg-white divide-y divide-gray-150 text-[13px]">
+          <tbody class="bg-white divide-y divide-gray-150">
             <tr>
               <td class="px-4 py-3 font-semibold text-slate-900 bg-slate-50/40">Flow Meter Run</td>
               <td class="px-4 py-3 text-gray-600">Dual or multi-run layout with isolation valves.</td>
@@ -10617,12 +10709,13 @@ content: `
   },
   "faure-herman-helical-flow-meters": {title: "Faure Herman Helical Flow Meters: Technical Overview",
     seoTitle: "Faure Herman Helical Flow Meters Technical Overview Guide",
-    metaDescription: "Technical overview of Faure Herman helical turbine flow meters — covering operating principles, custody transfer performance, and API MPMS 5.",
+    metaDescription: "Get the definitive guide to faure herman helical flow meters. Expert advice, industry standards, and step-by-step strategies.",
     category: "Flow Measurement",
-    date: "July 6, 2026",
+    date: "February 25, 2026",
     readTime: "8 Min Read",
     pillar: "Pillar 1: Flow Measurement & Custody Metering",
     description: "Technical overview of Faure Herman helical turbine flow meters — covering operating principles, custody transfer performance, and API MPMS 5.",
+    keywords: "Faure Herman flow meters, helical turbine, custody transfer",
     image: "/helical_turbine_meter.png",
     imageAlt: "A Faure Herman helical turbine flow meter installed in an oil pipeline run.",
 content: `
@@ -10631,8 +10724,8 @@ content: `
       </p>
 
       <div class="my-6 rounded-lg bg-slate-50 border border-slate-200 p-5 not-prose">
-        <h4 class="text-[13.5px] font-bold text-slate-900 mb-2">💡 Key Takeaways</h4>
-        <ul class="text-[13px] text-slate-600 space-y-2 list-disc pl-4">
+        <h4 class="font-bold text-slate-900 mb-2">💡 Key Takeaways</h4>
+        <ul class="text-slate-600 space-y-2 list-disc pl-4">
           <li><strong>Rotor Design:</strong> Helical rotors rotate in proportion to fluid velocity, minimizing pressure drops.</li>
           <li><strong>Viscosity Performance:</strong> Helical meters offer viscosity insensitivity, maintaining calibration under varying crude oil grades.</li>
           <li><strong>Bidirectional Flow:</strong> High-performance designs support bidirectional measurement for pipeline loading and unloading.</li>
@@ -10654,15 +10747,15 @@ content: `
       </p>
 
       <div class="overflow-x-auto my-8 not-prose">
-        <table class="min-w-full divide-y divide-gray-200 border border-gray-150 text-[13.5px]">
+        <table class="min-w-full divide-y divide-gray-200 border border-gray-150">
           <thead class="bg-slate-50">
             <tr>
-              <th scope="col" class="px-4 py-3 text-left text-xs font-semibold text-slate-900 uppercase tracking-wider border-b border-gray-150">Process Application</th>
-              <th scope="col" class="px-4 py-3 text-left text-xs font-semibold text-slate-900 uppercase tracking-wider border-b border-gray-150">Helical Meter Advantage</th>
-              <th scope="col" class="px-4 py-3 text-left text-xs font-semibold text-slate-900 uppercase tracking-wider border-b border-gray-150">Operational Impact</th>
+              <th scope="col" class="px-4 py-3 text-left font-semibold text-slate-900 uppercase tracking-wider border-b border-gray-150">Process Application</th>
+              <th scope="col" class="px-4 py-3 text-left font-semibold text-slate-900 uppercase tracking-wider border-b border-gray-150">Helical Meter Advantage</th>
+              <th scope="col" class="px-4 py-3 text-left font-semibold text-slate-900 uppercase tracking-wider border-b border-gray-150">Operational Impact</th>
             </tr>
           </thead>
-          <tbody class="bg-white divide-y divide-gray-150 text-[13px]">
+          <tbody class="bg-white divide-y divide-gray-150">
             <tr>
               <td class="px-4 py-3 font-semibold text-slate-900 bg-slate-50/40">Crude Oil Pipeline Metering</td>
               <td class="px-4 py-3 text-gray-600">Maintains calibration across varying crude viscosity grades.</td>
@@ -10730,12 +10823,13 @@ content: `
   },
   "liquid-flow-meters-crude-oil-refined-products": {title: "Liquid Flow Meters: Selection for Crude Oil and Refined Products",
     seoTitle: "Liquid Flow Meters Selection Guide: Crude Oil & Refined",
-    metaDescription: "Liquid flow meter selection guide for crude oil and refined products — comparing Coriolis, turbine, and PD meters under API MPMS 5.",
+    metaDescription: "Transform your approach to liquid flow meters. Access expert strategies, industry standards, and proven results.",
     category: "Flow Measurement",
-    date: "July 6, 2026",
+    date: "March 10, 2026",
     readTime: "9 Min Read",
     pillar: "Pillar 1: Flow Measurement & Custody Metering",
     description: "Liquid flow meter selection guide for crude oil and refined products — comparing Coriolis, turbine, and PD meters under API MPMS 5.",
+    keywords: "liquid flow meters, crude oil metering, refined products",
     image: "/ultrasonic_liquid_flow_meter.png",
     imageAlt: "A multi-path ultrasonic liquid flow meter designed for crude oil custody transfer.",
 content: `
@@ -10744,8 +10838,8 @@ content: `
       </p>
 
       <div class="my-6 rounded-lg bg-slate-50 border border-slate-200 p-5 not-prose">
-        <h4 class="text-[13.5px] font-bold text-slate-900 mb-2">💡 Key Takeaways</h4>
-        <ul class="text-[13px] text-slate-600 space-y-2 list-disc pl-4">
+        <h4 class="font-bold text-slate-900 mb-2">💡 Key Takeaways</h4>
+        <ul class="text-slate-600 space-y-2 list-disc pl-4">
           <li><strong>Viscosity Effects:</strong> Viscosity variation shifts meter factors in turbine meters, requiring Coriolis or positive displacement designs.</li>
           <li><strong>Direct Mass:</strong> Coriolis meters provide direct mass and density measurements, ignoring fluid parameter changes.</li>
           <li><strong>Mechanical Precision:</strong> Positive displacement meters offer high repeatability in high-viscosity crude oil service.</li>
@@ -10764,15 +10858,15 @@ content: `
       </p>
 
       <div class="overflow-x-auto my-8 not-prose">
-        <table class="min-w-full divide-y divide-gray-200 border border-gray-150 text-[13.5px]">
+        <table class="min-w-full divide-y divide-gray-200 border border-gray-150">
           <thead class="bg-slate-50">
             <tr>
-              <th scope="col" class="px-4 py-3 text-left text-xs font-semibold text-slate-900 uppercase tracking-wider border-b border-gray-150">Flow Meter Class</th>
-              <th scope="col" class="px-4 py-3 text-left text-xs font-semibold text-slate-900 uppercase tracking-wider border-b border-gray-150">Viscosity Performance</th>
-              <th scope="col" class="px-4 py-3 text-left text-xs font-semibold text-slate-900 uppercase tracking-wider border-b border-gray-150">Primary Metrological Advantage</th>
+              <th scope="col" class="px-4 py-3 text-left font-semibold text-slate-900 uppercase tracking-wider border-b border-gray-150">Flow Meter Class</th>
+              <th scope="col" class="px-4 py-3 text-left font-semibold text-slate-900 uppercase tracking-wider border-b border-gray-150">Viscosity Performance</th>
+              <th scope="col" class="px-4 py-3 text-left font-semibold text-slate-900 uppercase tracking-wider border-b border-gray-150">Primary Metrological Advantage</th>
             </tr>
           </thead>
-          <tbody class="bg-white divide-y divide-gray-150 text-[13px]">
+          <tbody class="bg-white divide-y divide-gray-150">
             <tr>
               <td class="px-4 py-3 font-semibold text-slate-900 bg-slate-50/40">Coriolis Mass Meter</td>
               <td class="px-4 py-3 text-gray-600">Excellent; immune to viscosity and density variations.</td>
@@ -10829,12 +10923,13 @@ content: `
   },
   "gas-flow-meters-aga-standards": {title: "Gas Flow Meters: AGA Standards and Selection Criteria",
     seoTitle: "Gas Flow Meters: AGA Standards & Selection Guide",
-    metaDescription: "Gas flow meter selection guide — covering ultrasonic (AGA-9), orifice (AGA-3), turbine (AGA-7) standards, and custody transfer criteria.",
+    metaDescription: "Ready to improve your gas flow meters? Explore expert guidance, compliance standards, and proven techniques.",
     category: "Flow Measurement",
-    date: "July 6, 2026",
+    date: "March 22, 2026",
     readTime: "9 Min Read",
     pillar: "Pillar 1: Flow Measurement & Custody Metering",
     description: "Gas flow meter selection guide — covering ultrasonic (AGA-9), orifice (AGA-3), turbine (AGA-7) standards, and custody transfer criteria.",
+    keywords: "gas flow meters, AGA standards, gas measurement",
     image: "/custody_transfer_gas_flow_meter.png",
     imageAlt: "A high-capacity custody transfer ultrasonic gas flow meter installed on a pipeline.",
 content: `
@@ -10843,8 +10938,8 @@ content: `
       </p>
 
       <div class="my-6 rounded-lg bg-slate-50 border border-slate-200 p-5 not-prose">
-        <h4 class="text-[13.5px] font-bold text-slate-900 mb-2">💡 Key Takeaways</h4>
-        <ul class="text-[13px] text-slate-600 space-y-2 list-disc pl-4">
+        <h4 class="font-bold text-slate-900 mb-2">💡 Key Takeaways</h4>
+        <ul class="text-slate-600 space-y-2 list-disc pl-4">
           <li><strong>Multipath Accuracy:</strong> An ultrasonic gas meter AGA-9 system utilizes transit-time arrays to measure velocities in large pipelines.</li>
           <li><strong>Traditional Precision:</strong> Orifice plates remain common, utilizing pressure differences under the orifice meter AGA-3 standard.</li>
           <li><strong>Mechanical Flow:</strong> Turbine meters measure volumes mechanically, complying with the AGA-7 standard for gas flow.</li>
@@ -10858,15 +10953,15 @@ content: `
       </p>
 
       <div class="overflow-x-auto my-8 not-prose">
-        <table class="min-w-full divide-y divide-gray-200 border border-gray-150 text-[13.5px]">
+        <table class="min-w-full divide-y divide-gray-200 border border-gray-150">
           <thead class="bg-slate-50">
             <tr>
-              <th scope="col" class="px-4 py-3 text-left text-xs font-semibold text-slate-900 uppercase tracking-wider border-b border-gray-150">AGA Standard</th>
-              <th scope="col" class="px-4 py-3 text-left text-xs font-semibold text-slate-900 uppercase tracking-wider border-b border-gray-150">Metering Technology</th>
-              <th scope="col" class="px-4 py-3 text-left text-xs font-semibold text-slate-900 uppercase tracking-wider border-b border-gray-150">Primary Engineering Scope</th>
+              <th scope="col" class="px-4 py-3 text-left font-semibold text-slate-900 uppercase tracking-wider border-b border-gray-150">AGA Standard</th>
+              <th scope="col" class="px-4 py-3 text-left font-semibold text-slate-900 uppercase tracking-wider border-b border-gray-150">Metering Technology</th>
+              <th scope="col" class="px-4 py-3 text-left font-semibold text-slate-900 uppercase tracking-wider border-b border-gray-150">Primary Engineering Scope</th>
             </tr>
           </thead>
-          <tbody class="bg-white divide-y divide-gray-150 text-[13px]">
+          <tbody class="bg-white divide-y divide-gray-150">
             <tr>
               <td class="px-4 py-3 font-semibold text-slate-900 bg-slate-50/40">AGA Report No. 3</td>
               <td class="px-4 py-3 text-gray-600">Orifice Plate Meters</td>
@@ -10933,12 +11028,13 @@ content: `
   },
   "flare-gas-flow-meters": {title: "Flare Gas Flow Meters: Environmental and Safety Applications",
     seoTitle: "Flare Gas Flow Meters: Environmental & Safety Guide",
-    metaDescription: "Guide to flare gas flow meters — covering ultrasonic systems, low-flow capabilities, header installations, and EPA 40 CFR 60 compliance.",
+    metaDescription: "Discover expert insights on flare gas flow meters. Get actionable strategies and proven best practices for your operations.",
     category: "Flow Measurement",
-    date: "July 6, 2026",
+    date: "April 5, 2026",
     readTime: "8 Min Read",
     pillar: "Pillar 1: Flow Measurement & Custody Metering",
     description: "Guide to flare gas flow meters — covering ultrasonic systems, low-flow capabilities, header installations, and EPA 40 CFR 60 compliance.",
+    keywords: "flare gas flow meters, environmental compliance, flare monitoring",
     image: "/flare_meter.png",
     imageAlt: "An ultrasonic flare gas meter sensor assembly mounted on a flare header stack.",
 content: `
@@ -10947,8 +11043,8 @@ content: `
       </p>
 
       <div class="my-6 rounded-lg bg-slate-50 border border-slate-200 p-5 not-prose">
-        <h4 class="text-[13.5px] font-bold text-slate-900 mb-2">💡 Key Takeaways</h4>
-        <ul class="text-[13px] text-slate-600 space-y-2 list-disc pl-4">
+        <h4 class="font-bold text-slate-900 mb-2">💡 Key Takeaways</h4>
+        <ul class="text-slate-600 space-y-2 list-disc pl-4">
           <li><strong>Regulatory Reporting:</strong> Stack monitoring systems satisfy EPA 40 CFR Part 60 rules for greenhouse gas emission reporting.</li>
           <li><strong>Ultrasonic Advantage:</strong> An ultrasonic flare gas meter uses transit-time arrays to track velocities from leaks to relief events.</li>
           <li><strong>Low-Flow Sensitivity:</strong> Systems utilize a low flow gas meter flare configuration to identify valve leaks early.</li>
@@ -10967,15 +11063,15 @@ content: `
       </p>
 
       <div class="overflow-x-auto my-8 not-prose">
-        <table class="min-w-full divide-y divide-gray-200 border border-gray-150 text-[13.5px]">
+        <table class="min-w-full divide-y divide-gray-200 border border-gray-150">
           <thead class="bg-slate-50">
             <tr>
-              <th scope="col" class="px-4 py-3 text-left text-xs font-semibold text-slate-900 uppercase tracking-wider border-b border-gray-150">Flow Meter Type</th>
-              <th scope="col" class="px-4 py-3 text-left text-xs font-semibold text-slate-900 uppercase tracking-wider border-b border-gray-150">Standard/Configuration</th>
-              <th scope="col" class="px-4 py-3 text-left text-xs font-semibold text-slate-900 uppercase tracking-wider border-b border-gray-150">Primary Metrological Advantage</th>
+              <th scope="col" class="px-4 py-3 text-left font-semibold text-slate-900 uppercase tracking-wider border-b border-gray-150">Flow Meter Type</th>
+              <th scope="col" class="px-4 py-3 text-left font-semibold text-slate-900 uppercase tracking-wider border-b border-gray-150">Standard/Configuration</th>
+              <th scope="col" class="px-4 py-3 text-left font-semibold text-slate-900 uppercase tracking-wider border-b border-gray-150">Primary Metrological Advantage</th>
             </tr>
           </thead>
-          <tbody class="bg-white divide-y divide-gray-150 text-[13px]">
+          <tbody class="bg-white divide-y divide-gray-150">
             <tr>
               <td class="px-4 py-3 font-semibold text-slate-900 bg-slate-50/40">Ultrasonic Flare Meter</td>
               <td class="px-4 py-3 text-gray-600">Cross-stack spool piece in compliance with AGA-9 principles.</td>
@@ -11038,12 +11134,13 @@ content: `
   },
   "omni-flow-computers-custody-transfer": {title: "Omni Flow Computers: Configuration and Custody Transfer Applications",
     seoTitle: "Omni Flow Computers Configuration & Custody Transfer",
-    metaDescription: "Configuration guide for Omni flow computers in custody transfer — covering calculation standards, audit trails, and API MPMS Ch.21 compliance.",
+    metaDescription: "Explore our in-depth guide to omni flow computers. Expert advice, compliance requirements, and implementation tips.",
     category: "Flow Measurement",
-    date: "July 6, 2026",
+    date: "April 15, 2026",
     readTime: "8 Min Read",
     pillar: "Pillar 1: Flow Measurement & Custody Metering",
     description: "Configuration guide for Omni flow computers in custody transfer — covering calculation standards, audit trails, and API MPMS Ch.21 compliance.",
+    keywords: "Omni flow computers, custody transfer, flow computation",
     image: "/omni_flow_computer.png",
     imageAlt: "An Omni 6000 flow computer system panel processing custody transfer calculations.",
 content: `
@@ -11052,8 +11149,8 @@ content: `
       </p>
 
       <div class="my-6 rounded-lg bg-slate-50 border border-slate-200 p-5 not-prose">
-        <h4 class="text-[13.5px] font-bold text-slate-900 mb-2">💡 Key Takeaways</h4>
-        <ul class="text-[13px] text-slate-600 space-y-2 list-disc pl-4">
+        <h4 class="font-bold text-slate-900 mb-2">💡 Key Takeaways</h4>
+        <ul class="text-slate-600 space-y-2 list-disc pl-4">
           <li><strong>Metrological Computations:</strong> Systems calculate corrected volume, mass, and energy parameters in real-time.</li>
           <li><strong>Configuration Audit:</strong> A configuration audit trail tracks firmware edits, parameter shifts, and calibration cycles.</li>
           <li><strong>Standards Compliance:</strong> Flow calculations follow API MPMS guidelines and AGA standards.</li>
@@ -11072,15 +11169,15 @@ content: `
       </p>
 
       <div class="overflow-x-auto my-8 not-prose">
-        <table class="min-w-full divide-y divide-gray-200 border border-gray-150 text-[13.5px]">
+        <table class="min-w-full divide-y divide-gray-200 border border-gray-150">
           <thead class="bg-slate-50">
             <tr>
-              <th scope="col" class="px-4 py-3 text-left text-xs font-semibold text-slate-900 uppercase tracking-wider border-b border-gray-150">Configuration Parameter</th>
-              <th scope="col" class="px-4 py-3 text-left text-xs font-semibold text-slate-900 uppercase tracking-wider border-b border-gray-150">Target Meter/Process Interface</th>
-              <th scope="col" class="px-4 py-3 text-left text-xs font-semibold text-slate-900 uppercase tracking-wider border-b border-gray-150">Metrological &amp; Security Purpose</th>
+              <th scope="col" class="px-4 py-3 text-left font-semibold text-slate-900 uppercase tracking-wider border-b border-gray-150">Configuration Parameter</th>
+              <th scope="col" class="px-4 py-3 text-left font-semibold text-slate-900 uppercase tracking-wider border-b border-gray-150">Target Meter/Process Interface</th>
+              <th scope="col" class="px-4 py-3 text-left font-semibold text-slate-900 uppercase tracking-wider border-b border-gray-150">Metrological &amp; Security Purpose</th>
             </tr>
           </thead>
-          <tbody class="bg-white divide-y divide-gray-150 text-[13px]">
+          <tbody class="bg-white divide-y divide-gray-150">
             <tr>
               <td class="px-4 py-3 font-semibold text-slate-900 bg-slate-50/40">Meter K-Factor</td>
               <td class="px-4 py-3 text-gray-600">Rotor pulse output or frequency signal from turbine flow meters.</td>
@@ -11145,12 +11242,13 @@ content: `
   },
   "coriolis-vs-turbine-flow-meters": {title: "Coriolis vs Turbine Flow Meters: Head-to-Head Comparison",
     seoTitle: "Coriolis vs Turbine Flow Meters Comparison Guide",
-    metaDescription: "Coriolis vs turbine flow meters head-to-head comparison — covering measurement principles, bearing wear, multi-variable outputs, and API MPMS 5.",
+    metaDescription: "Ready to improve your coriolis vs turbine flow meters? Explore expert guidance, compliance standards, and proven techniques.",
     category: "Flow Measurement",
-    date: "July 6, 2026",
+    date: "April 28, 2026",
     readTime: "9 Min Read",
     pillar: "Pillar 1: Flow Measurement & Custody Metering",
     description: "Coriolis vs turbine flow meters head-to-head comparison — covering measurement principles, bearing wear, multi-variable outputs, and API MPMS 5.",
+    keywords: "Coriolis vs turbine, flow meter comparison, meter selection",
     image: "/helical_turbine_meter.png",
     imageAlt: "A side-by-side comparison setup of a Coriolis mass flow meter and a turbine flow meter.",
 content: `
@@ -11159,8 +11257,8 @@ content: `
       </p>
 
       <div class="my-6 rounded-lg bg-slate-50 border border-slate-200 p-5 not-prose">
-        <h4 class="text-[13.5px] font-bold text-slate-900 mb-2">💡 Key Takeaways</h4>
-        <ul class="text-[13px] text-slate-600 space-y-2 list-disc pl-4">
+        <h4 class="font-bold text-slate-900 mb-2">💡 Key Takeaways</h4>
+        <ul class="text-slate-600 space-y-2 list-disc pl-4">
           <li><strong>Direct Mass:</strong> Coriolis meter advantages include direct mass measurement, which is unaffected by density or viscosity variations.</li>
           <li><strong>Mechanical Simplicity:</strong> Turbine meters offer a cost-effective volumetric measurement solution for clean, low-viscosity fluids.</li>
           <li><strong>Maintenance Differences:</strong> Turbine meter maintenance schedules must account for bearing wear due to moving parts.</li>
@@ -11182,15 +11280,15 @@ content: `
       </p>
 
       <div class="overflow-x-auto my-8 not-prose">
-        <table class="min-w-full divide-y divide-gray-200 border border-gray-150 text-[13.5px]">
+        <table class="min-w-full divide-y divide-gray-200 border border-gray-150">
           <thead class="bg-slate-50">
             <tr>
-              <th scope="col" class="px-4 py-3 text-left text-xs font-semibold text-slate-900 uppercase tracking-wider border-b border-gray-150">Comparison Factor</th>
-              <th scope="col" class="px-4 py-3 text-left text-xs font-semibold text-slate-900 uppercase tracking-wider border-b border-gray-150">Coriolis Mass Flow Meter</th>
-              <th scope="col" class="px-4 py-3 text-left text-xs font-semibold text-slate-900 uppercase tracking-wider border-b border-gray-150">Turbine Volumetric Flow Meter</th>
+              <th scope="col" class="px-4 py-3 text-left font-semibold text-slate-900 uppercase tracking-wider border-b border-gray-150">Comparison Factor</th>
+              <th scope="col" class="px-4 py-3 text-left font-semibold text-slate-900 uppercase tracking-wider border-b border-gray-150">Coriolis Mass Flow Meter</th>
+              <th scope="col" class="px-4 py-3 text-left font-semibold text-slate-900 uppercase tracking-wider border-b border-gray-150">Turbine Volumetric Flow Meter</th>
             </tr>
           </thead>
-          <tbody class="bg-white divide-y divide-gray-150 text-[13px]">
+          <tbody class="bg-white divide-y divide-gray-150">
             <tr>
               <td class="px-4 py-3 font-semibold text-slate-900 bg-slate-50/40">Measurement Variable</td>
               <td class="px-4 py-3 text-gray-600">Direct mass flow, density, and temperature.</td>
@@ -11283,12 +11381,13 @@ content: `
   },
   "ultrasonic-liquid-flow-meters-installation": {title: "Ultrasonic Liquid Flow Meters: Installation and Performance Guide",
     seoTitle: "Ultrasonic Liquid Flow Meters Installation Guide",
-    metaDescription: "Installation guide for ultrasonic liquid flow meters — covering straight-run requirements, multi-path arrays, and API MPMS Ch.5.8 compliance.",
+    metaDescription: "Transform your approach to ultrasonic liquid flow meters. Access expert strategies, industry standards, and proven results.",
     category: "Flow Measurement",
-    date: "July 6, 2026",
+    date: "May 10, 2026",
     readTime: "8 Min Read",
     pillar: "Pillar 1: Flow Measurement & Custody Metering",
     description: "Installation guide for ultrasonic liquid flow meters — covering straight-run requirements, multi-path arrays, and API MPMS Ch.5.8 compliance.",
+    keywords: "ultrasonic liquid flow meters, installation guide, performance",
     image: "/clamp_on_meter.png",
     imageAlt: "Transducer alignment on an ultrasonic clamp-on liquid flow meter pipe installation.",
 content: `
@@ -11297,8 +11396,8 @@ content: `
       </p>
 
       <div class="my-6 rounded-lg bg-slate-50 border border-slate-200 p-5 not-prose">
-        <h4 class="text-[13.5px] font-bold text-slate-900 mb-2">💡 Key Takeaways</h4>
-        <ul class="text-[13px] text-slate-600 space-y-2 list-disc pl-4">
+        <h4 class="font-bold text-slate-900 mb-2">💡 Key Takeaways</h4>
+        <ul class="text-slate-600 space-y-2 list-disc pl-4">
           <li><strong>Acoustic Principle:</strong> A transit-time liquid meter measures velocity by comparing sound pulse travel times.</li>
           <li><strong>Upstream Piping:</strong> Piping layout designs must satisfy ultrasonic meter straight run requirements to prevent swirl.</li>
           <li><strong>Sensor Geometry:</strong> Multi-path configuration designs utilize multiple acoustic paths to scan the velocity profile.</li>
@@ -11317,15 +11416,15 @@ content: `
       </p>
 
       <div class="overflow-x-auto my-8 not-prose">
-        <table class="min-w-full divide-y divide-gray-200 border border-gray-150 text-[13.5px]">
+        <table class="min-w-full divide-y divide-gray-200 border border-gray-150">
           <thead class="bg-slate-50">
             <tr>
-              <th scope="col" class="px-4 py-3 text-left text-xs font-semibold text-slate-900 uppercase tracking-wider border-b border-gray-150">Installation Requirement</th>
-              <th scope="col" class="px-4 py-3 text-left text-xs font-semibold text-slate-900 uppercase tracking-wider border-b border-gray-150">Engineering Target / Standard</th>
-              <th scope="col" class="px-4 py-3 text-left text-xs font-semibold text-slate-900 uppercase tracking-wider border-b border-gray-150">Operational Verification Purpose</th>
+              <th scope="col" class="px-4 py-3 text-left font-semibold text-slate-900 uppercase tracking-wider border-b border-gray-150">Installation Requirement</th>
+              <th scope="col" class="px-4 py-3 text-left font-semibold text-slate-900 uppercase tracking-wider border-b border-gray-150">Engineering Target / Standard</th>
+              <th scope="col" class="px-4 py-3 text-left font-semibold text-slate-900 uppercase tracking-wider border-b border-gray-150">Operational Verification Purpose</th>
             </tr>
           </thead>
-          <tbody class="bg-white divide-y divide-gray-150 text-[13px]">
+          <tbody class="bg-white divide-y divide-gray-150">
             <tr>
               <td class="px-4 py-3 font-semibold text-slate-900 bg-slate-50/40">Straight Pipe Runs</td>
               <td class="px-4 py-3 text-gray-600">Per API MPMS Ch.5.8 and manufacturer guidance.</td>
@@ -11387,12 +11486,13 @@ content: `
   },
   "meter-proving-systems-pipe-prover-small-volume-prover": {title: "Meter Proving Systems: Pipe Prover vs Small Volume Prover",
     seoTitle: "Meter Proving Systems: Pipe Prover vs Small Volume Prover Guide",
-    metaDescription: "Comparison guide for meter proving systems — comparing pipe provers and small volume provers (SVP) under API MPMS Chapter 4.",
+    metaDescription: "Ready to improve your meter proving systems? Explore expert guidance, compliance standards, and proven techniques.",
     category: "Flow Measurement",
-    date: "July 6, 2026",
+    date: "May 22, 2026",
     readTime: "9 Min Read",
     pillar: "Pillar 1: Flow Measurement & Custody Metering",
     description: "Comparison guide for meter proving systems — comparing pipe provers and small volume provers (SVP) under API MPMS Chapter 4.",
+    keywords: "meter proving, pipe prover, small volume prover",
     image: "/images/services/METERING-1.png",
     imageAlt: "A bi-directional pipe prover system validating flow meter factors on-site.",
 content: `
@@ -11401,8 +11501,8 @@ content: `
       </p>
 
       <div class="my-6 rounded-lg bg-slate-50 border border-slate-200 p-5 not-prose">
-        <h4 class="text-[13.5px] font-bold text-slate-900 mb-2">💡 Key Takeaways</h4>
-        <ul class="text-[13px] text-slate-600 space-y-2 list-disc pl-4">
+        <h4 class="font-bold text-slate-900 mb-2">💡 Key Takeaways</h4>
+        <ul class="text-slate-600 space-y-2 list-disc pl-4">
           <li><strong>In-Situ Calibration:</strong> Online proving calibrates flow meters under active process pressures, temperatures, and viscosities.</li>
           <li><strong>Displacement Methods:</strong> Pipe provers utilize an elastomer displacer sphere and mechanical detector switches to define a known volume.</li>
           <li><strong>Compact Design:</strong> Small volume provers utilize a piston displacer and high-resolution pulse interpolation to reduce skid size.</li>
@@ -11431,15 +11531,15 @@ content: `
       </p>
 
       <div class="overflow-x-auto my-8 not-prose">
-        <table class="min-w-full divide-y divide-gray-200 border border-gray-150 text-[13.5px]">
+        <table class="min-w-full divide-y divide-gray-200 border border-gray-150">
           <thead class="bg-slate-50">
             <tr>
-              <th scope="col" class="px-4 py-3 text-left text-xs font-semibold text-slate-900 uppercase tracking-wider border-b border-gray-150">Comparison Factor</th>
-              <th scope="col" class="px-4 py-3 text-left text-xs font-semibold text-slate-900 uppercase tracking-wider border-b border-gray-150">Pipe Prover System</th>
-              <th scope="col" class="px-4 py-3 text-left text-xs font-semibold text-slate-900 uppercase tracking-wider border-b border-gray-150">Small Volume Prover (SVP)</th>
+              <th scope="col" class="px-4 py-3 text-left font-semibold text-slate-900 uppercase tracking-wider border-b border-gray-150">Comparison Factor</th>
+              <th scope="col" class="px-4 py-3 text-left font-semibold text-slate-900 uppercase tracking-wider border-b border-gray-150">Pipe Prover System</th>
+              <th scope="col" class="px-4 py-3 text-left font-semibold text-slate-900 uppercase tracking-wider border-b border-gray-150">Small Volume Prover (SVP)</th>
             </tr>
           </thead>
-          <tbody class="bg-white divide-y divide-gray-150 text-[13px]">
+          <tbody class="bg-white divide-y divide-gray-150">
             <tr>
               <td class="px-4 py-3 font-semibold text-slate-900 bg-slate-50/40">Displacer Type</td>
               <td class="px-4 py-3 text-gray-600">Inflatable elastomer sphere.</td>
@@ -11514,12 +11614,13 @@ content: `
   },
   "metering-skid-fat-testing": {title: "Metering Skid FAT: What to Test Before Delivery",
     seoTitle: "Metering Skid FAT: What to Test Before Delivery Guide",
-    metaDescription: "Factory acceptance test (FAT) guide for metering skids — covering hydrostatic checks, loop tests, functional checks, and ISO 9001:2015 compliance.",
+    metaDescription: "Learn how to master metering skid fat with our comprehensive guide. Access standards, tips, and implementation advice.",
     category: "Commissioning & Support",
-    date: "July 6, 2026",
+    date: "March 30, 2026",
     readTime: "9 Min Read",
     pillar: "Pillar 4: Commissioning & After-Sales Support",
     description: "Factory acceptance test (FAT) guide for metering skids — covering hydrostatic checks, loop tests, functional checks, and ISO 9001:2015 compliance.",
+    keywords: "metering skid FAT, factory acceptance testing, pre-delivery testing",
     image: "/images/flow_metering_skid/1.png",
     imageAlt: "Factory acceptance testing (FAT) of a completed custody metering skid in a workshop.",
 content: `
@@ -11528,8 +11629,8 @@ content: `
       </p>
 
       <div class="my-6 rounded-lg bg-slate-50 border border-slate-200 p-5 not-prose">
-        <h4 class="text-[13.5px] font-bold text-slate-900 mb-2">💡 Key Takeaways</h4>
-        <ul class="text-[13px] text-slate-600 space-y-2 list-disc pl-4">
+        <h4 class="font-bold text-slate-900 mb-2">💡 Key Takeaways</h4>
+        <ul class="text-slate-600 space-y-2 list-disc pl-4">
           <li><strong>Risk Reduction:</strong> FAT identifies weld defects, cabling errors, and programming bugs before field delivery.</li>
           <li><strong>Piping Integrity:</strong> Hydrostatic pressure checks verify that there are zero leaks across the skid header.</li>
           <li><strong>Signal Verification:</strong> Instrument loop checks confirm that transmitters communicate correctly with the flow computer.</li>
@@ -11542,7 +11643,7 @@ content: `
         Executing an FAT program is a quality checkpoint during skid manufacturing. If a skid is shipped directly to the field without shop testing, errors in piping, wiring, or programming must be resolved onsite. Field repairs are expensive and can delay plant commissioning. By running the skid through an FAT program in the fabrication shop, technicians can resolve issues, reducing commissioning risks. The testing process follows a numbered testing sequence:
       </p>
 
-      <ol class="list-decimal pl-6 my-6 text-[13.5px] text-gray-700 space-y-2">
+      <ol class="list-decimal pl-6 my-6 text-gray-700 space-y-2">
         <li>Mechanical inspection and dimensions verification against structural drawings.</li>
         <li>Hydrostatic pressure testing of piping headers to confirm pressure integrity.</li>
         <li>Pneumatic pressure testing of control valves and air supply lines.</li>
@@ -11561,15 +11662,15 @@ content: `
       </p>
 
       <div class="overflow-x-auto my-8 not-prose">
-        <table class="min-w-full divide-y divide-gray-200 border border-gray-150 text-[13.5px]">
+        <table class="min-w-full divide-y divide-gray-200 border border-gray-150">
           <thead class="bg-slate-50">
             <tr>
-              <th scope="col" class="px-4 py-3 text-left text-xs font-semibold text-slate-900 uppercase tracking-wider border-b border-gray-150">Verification Category</th>
-              <th scope="col" class="px-4 py-3 text-left text-xs font-semibold text-slate-900 uppercase tracking-wider border-b border-gray-150">Target Skid Component</th>
-              <th scope="col" class="px-4 py-3 text-left text-xs font-semibold text-slate-900 uppercase tracking-wider border-b border-gray-150">Primary Inspection &amp; Testing Check</th>
+              <th scope="col" class="px-4 py-3 text-left font-semibold text-slate-900 uppercase tracking-wider border-b border-gray-150">Verification Category</th>
+              <th scope="col" class="px-4 py-3 text-left font-semibold text-slate-900 uppercase tracking-wider border-b border-gray-150">Target Skid Component</th>
+              <th scope="col" class="px-4 py-3 text-left font-semibold text-slate-900 uppercase tracking-wider border-b border-gray-150">Primary Inspection &amp; Testing Check</th>
             </tr>
           </thead>
-          <tbody class="bg-white divide-y divide-gray-150 text-[13px]">
+          <tbody class="bg-white divide-y divide-gray-150">
             <tr>
               <td class="px-4 py-3 font-semibold text-slate-900 bg-slate-50/40">Mechanical &amp; NDT</td>
               <td class="px-4 py-3 text-gray-600">Piping, structural skid frame, and flange joints.</td>
@@ -11638,6 +11739,2388 @@ content: `
       <p><strong>Q: Which ISO standard governs quality assurance during FAT?</strong><br />
       <strong>A:</strong> Quality management and testing procedures are certified under the ISO 9001:2015 standards.</p>
     `
+  },
+  "ut-vs-rt-ndt-comparison": {title: "UT vs RT: Which NDT Method Is Right for Your Application?",
+    seoTitle: "UT vs RT NDT Comparison Guide | Ultrasonic vs Radiographic Testing",
+    metaDescription: "Compare UT vs RT for non-destructive testing. Explore principles, defect detection, thickness range, speed, cost, safety, and application-specific recommendations.",
+    category: "NDT",
+    date: "March 15, 2025",
+    readTime: "8 Min Read",
+    pillar: "Pillar 2: Inspection & Testing",
+    description: "UT vs RT NDT comparison — covering principles, defect detection capabilities, thickness range, speed, cost, safety, and application-specific recommendations.",
+    keywords: "UT vs RT, ultrasonic testing, radiographic testing, NDT comparison",
+    image: "/images/services/Non-Destructive-Testing-NDT.jpg.webp",
+    imageAlt: "Ultrasonic thickness testing of pressure vessel — Texas Technical Services Kuwait.",
+content: `
+      <p>
+        <strong>Ultrasonic testing (UT) vs radiographic testing (RT)</strong> represents the two most widely used volumetric non-destructive testing (NDT) methods for detecting internal defects in welds, forgings, and castings. Both methods penetrate beneath the surface to reveal subsurface flaws, but they operate on fundamentally different physical principles. Selecting the correct method depends on material thickness, defect orientation, required sensitivity, access constraints, and radiation safety requirements.
+      </p>
+
+      <div class="my-6 rounded-lg bg-slate-50 border border-slate-200 p-5 not-prose">
+        <h4 class="font-bold text-slate-900 mb-2">Key Takeaways</h4>
+        <ul class="text-slate-600 space-y-2 list-disc pl-4">
+          <li><strong>UT Advantages:</strong> Superior sensitivity to planar defects (like cracks), no radiation hazard, portable equipment, and real-time results.</li>
+          <li><strong>RT Advantages:</strong> Permanent film record, excellent for volumetric flaw sizing, well-established acceptance criteria (ASME V, API 1104).</li>
+          <li><strong>Material Thickness:</strong> UT is preferred for thick sections (over 50 mm); RT works well for thinner materials but loses sensitivity above 75 mm.</li>
+          <li><strong>Safety:</strong> UT poses no ionizing radiation risk, making it safer for confined-space and high-traffic inspections.</li>
+        </ul>
+      </div>
+
+      <h2>How Ultrasonic Testing (UT) Works</h2>
+      <p>
+        Ultrasonic testing uses high-frequency sound waves (typically 0.5 MHz to 15 MHz) transmitted through a piezoelectric transducer into the test material. When the sound beam encounters a boundary — such as a crack, void, or lack of fusion — a portion of the energy is reflected back to the transducer. The time-of-flight and amplitude of the reflected signal indicate the defect's depth and severity.
+      </p>
+      <p>
+        Modern UT techniques include conventional pulse-echo, Time-of-Flight Diffraction (TOFD), and phased array ultrasonic testing (PAUT). PAUT uses multiple element arrays to steer and focus the beam, producing detailed cross-sectional images of internal structures without moving the probe.
+      </p>
+
+      <h2>How Radiographic Testing (RT) Works</h2>
+      <p>
+        Radiographic testing uses X-ray or gamma-ray radiation to penetrate the test material. Defects such as porosity, slag inclusions, and lack of penetration absorb radiation differently than sound metal, creating density variations on a photographic film or digital detector. The resulting radiograph provides a permanent two-dimensional shadow image of the internal structure.
+      </p>
+      <p>
+        RT is particularly effective at detecting volumetric defects (rounded pores, voids, inclusions) but is less sensitive to tight planar defects like fatigue cracks or lack of side-wall fusion, which present minimal density variation in the radiation beam path.
+      </p>
+
+      <h2>UT vs RT: Detailed Comparison</h2>
+      <div class="overflow-x-auto my-8 not-prose">
+        <table class="min-w-full divide-y divide-gray-200 border border-gray-150">
+          <thead class="bg-slate-50">
+            <tr>
+              <th scope="col" class="px-4 py-3 text-left font-semibold text-slate-900 uppercase tracking-wider border-b border-gray-150">Comparison Factor</th>
+              <th scope="col" class="px-4 py-3 text-left font-semibold text-slate-900 uppercase tracking-wider border-b border-gray-150">Ultrasonic Testing (UT)</th>
+              <th scope="col" class="px-4 py-3 text-left font-semibold text-slate-900 uppercase tracking-wider border-b border-gray-150">Radiographic Testing (RT)</th>
+            </tr>
+          </thead>
+          <tbody class="bg-white divide-y divide-gray-150">
+            <tr>
+              <td class="px-4 py-3 font-semibold text-slate-900 bg-slate-50/40">Physical Principle</td>
+              <td class="px-4 py-3 text-gray-600">High-frequency sound wave reflection and transmission.</td>
+              <td class="px-4 py-3 text-gray-600">X-ray or gamma-ray radiation absorption and density contrast.</td>
+            </tr>
+            <tr>
+              <td class="px-4 py-3 font-semibold text-slate-900 bg-slate-50/40">Defect Types Detected</td>
+              <td class="px-4 py-3 text-gray-600">Excellent for planar defects: cracks, lack of fusion, laminations.</td>
+              <td class="px-4 py-3 text-gray-600">Excellent for volumetric defects: porosity, slag inclusions, voids.</td>
+            </tr>
+            <tr>
+              <td class="px-4 py-3 font-semibold text-slate-900 bg-slate-50/40">Material Thickness Range</td>
+              <td class="px-4 py-3 text-gray-600">Effective from 6 mm to over 500 mm; preferred for thick sections.</td>
+              <td class="px-4 py-3 text-gray-600">Effective from 2 mm to 75 mm; sensitivity drops above 75 mm.</td>
+            </tr>
+            <tr>
+              <td class="px-4 py-3 font-semibold text-slate-900 bg-slate-50/40">Inspection Speed</td>
+              <td class="px-4 py-3 text-gray-600">Fast; real-time results with no film processing.</td>
+              <td class="px-4 py-3 text-gray-600">Slower; requires film development, viewing, and interpretation.</td>
+            </tr>
+            <tr>
+              <td class="px-4 py-3 font-semibold text-slate-900 bg-slate-50/40">Safety Requirements</td>
+              <td class="px-4 py-3 text-gray-600">No ionizing radiation; safe in confined spaces and occupied areas.</td>
+              <td class="px-4 py-3 text-gray-600">Requires radiation safety zone, licensed operators, and controlled access.</td>
+            </tr>
+            <tr>
+              <td class="px-4 py-3 font-semibold text-slate-900 bg-slate-50/40">Record Keeping</td>
+              <td class="px-4 py-3 text-gray-600">Digital A-scan or sector scan data; requires calibrated equipment.</td>
+              <td class="px-4 py-3 text-gray-600">Permanent film or digital radiograph; easy to archive and review.</td>
+            </tr>
+            <tr>
+              <td class="px-4 py-3 font-semibold text-slate-900 bg-slate-50/40">Surface Preparation</td>
+              <td class="px-4 py-3 text-gray-600">Requires smooth, clean surface for couplant contact.</td>
+              <td class="px-4 py-3 text-gray-600">Minimal preparation; one side access sufficient.</td>
+            </tr>
+            <tr>
+              <td class="px-4 py-3 font-semibold text-slate-900 bg-slate-50/40">Applicable Standards</td>
+              <td class="px-4 py-3 text-gray-600">ASME V Article 4/5, API 1104 Appendix L, EN ISO 11666.</td>
+              <td class="px-4 py-3 text-gray-600">ASME V Article 2, API 1104 Appendix G, EN ISO 17636.</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <h2>Defect Detection Capabilities</h2>
+      <p>
+        UT excels at detecting planar defects oriented perpendicular to the sound beam. Tight cracks, lack of side-wall fusion in narrow-gap welds, and delaminations in plate material produce strong echoes. PAUT and TOFD techniques provide precise defect sizing through amplitude and time-of-flight analysis.
+      </p>
+      <p>
+        RT excels at detecting volumetric defects that present a density contrast. Porosity, trapped slag, incomplete root penetration, and tungsten inclusions appear clearly on radiographic film. However, tight planar defects oriented parallel to the radiation beam may be missed entirely.
+      </p>
+
+      <h2>Application-Specific Recommendations</h2>
+      <p>
+        For thick-wall pressure vessels and heavy wall piping (above 50 mm), UT is the preferred method because sound energy penetrates efficiently while X-ray or gamma-ray sensitivity drops significantly. For thin-wall pipe welds and small-diameter tubing, RT provides excellent sensitivity and a permanent visual record that satisfies many client specifications.
+      </p>
+      <p>
+        In refineries and petrochemical plants where radiation exclusion zones would disrupt nearby operations, UT eliminates the need for cordoning off large areas. For new construction fabrication shops where radiographic film records are contractually required, RT remains the standard. Many projects use a combination: RT for volumetric screening and UT for planar defect confirmation on suspect areas.
+      </p>
+
+      <h2>Cost and Throughput Considerations</h2>
+      <p>
+        UT generally offers lower cost per inspection due to faster execution, minimal setup time, and no consumable film costs. RT requires film, chemicals, darkroom facilities, or computed radiography readers, plus radiation safety personnel. For high-volume production inspections (such as pipeline girth welds), automated UT systems achieve significantly higher throughput than conventional RT.
+      </p>
+
+      <h2>TTS NDT Inspection Services</h2>
+      <p>
+        Texas Technical Services (TTS) provides comprehensive ultrasonic testing and radiographic testing inspection services. Our Level II and Level III NDT technicians are certified to ASNT SNT-TC-1A, ISO 9712, and ASNT CP-189 standards. We perform conventional UT, TOFD, phased array (PAUT), and film/digital radiography in compliance with ASME V, API 1104, and EN ISO standards across Kuwait, UAE, and Saudi Arabia.
+      </p>
+      <p>
+        TTS helps you select the optimal NDT method for your application. Learn more about our <a href="/service/ultrasonic-testing-ut/">ultrasonic testing</a> and <a href="/service/radiographic-testing-rt/">radiographic testing</a> services.
+      </p>
+
+      <h2>Frequently Asked Questions (FAQ)</h2>
+      <p><strong>Q: Can UT detect porosity as effectively as RT?</strong><br />
+      <strong>A:</strong> UT can detect porosity, but small, evenly distributed pores may not produce strong individual echoes. RT is generally superior for detecting scattered volumetric porosity.</p>
+
+      <p><strong>Q: Which method is better for detecting cracks in welds?</strong><br />
+      <strong>A:</strong> UT is significantly better at detecting planar defects like cracks, especially when the crack is oriented perpendicular to the sound beam.</p>
+
+      <p><strong>Q: Does RT require both sides access to the component?</strong><br />
+      <strong>A:</strong> No. RT only requires access to one side for source placement and the other for film or detector, but both sides must be accessible for equipment setup.</p>
+
+      <p><strong>Q: What thickness range makes UT the preferred choice?</strong><br />
+      <strong>A:</strong> UT is preferred for material thicknesses above 50 mm, where radiographic sensitivity decreases significantly due to radiation scattering.</p>
+
+      <p><strong>Q: Is phased array UT (PAUT) replacing RT in most applications?</strong><br />
+      <strong>A:</strong> PAUT is increasingly replacing RT for girth welds and thick-wall applications, but RT remains required by many client specifications for thin-wall welds and volumetric defect screening.</p>
+    `
+  },
+  "mt-vs-pt-ndt-comparison": {title: "Magnetic Particle vs Liquid Penetrant Testing: Surface NDT Comparison",
+    seoTitle: "Magnetic Particle vs Liquid Penetrant Testing Comparison Guide",
+    metaDescription: "Compare MT vs PT surface NDT methods. Learn about material requirements, defect types, sensitivity, speed, cost, and when to use each method.",
+    category: "NDT",
+    date: "April 2, 2025",
+    readTime: "7 Min Read",
+    pillar: "Pillar 2: Inspection & Testing",
+    description: "Magnetic particle vs liquid penetrant testing comparison — covering material requirements, defect types, sensitivity, speed, cost, and application guidance.",
+    keywords: "magnetic particle testing, liquid penetrant testing, MT vs PT, NDT surface inspection",
+    image: "/images/services/Magnetic-Particle-Inspection.jpg",
+    imageAlt: "Magnetic particle inspection of ferromagnetic weld — TTS Kuwait.",
+content: `
+      <p>
+        <strong>Magnetic particle testing (MT) vs liquid penetrant testing (PT)</strong> are the two primary surface NDT methods used to detect discontinuities open to the surface in industrial components. Both methods are widely specified in oil and gas, power generation, aerospace, and structural engineering. However, they rely on fundamentally different physical principles and are suited to different material types, defect characteristics, and inspection environments.
+      </p>
+
+      <div class="my-6 rounded-lg bg-slate-50 border border-slate-200 p-5 not-prose">
+        <h4 class="font-bold text-slate-900 mb-2">Key Takeaways</h4>
+        <ul class="text-slate-600 space-y-2 list-disc pl-4">
+          <li><strong>Material Restriction:</strong> MT only works on ferromagnetic materials (iron, steel, nickel, cobalt alloys); PT works on any non-porous material.</li>
+          <li><strong>Sensitivity:</strong> Both detect surface-breaking defects, but MT also detects near-surface defects up to 2 mm deep.</li>
+          <li><strong>Speed:</strong> MT is generally faster for large-area inspections due to rapid magnetic field application.</li>
+          <li><strong>Cost:</strong> PT consumables (penetrant, developer) are lower cost, but MT equipment (yokes, coils) is a one-time investment.</li>
+        </ul>
+      </div>
+
+      <h2>How Magnetic Particle Testing (MT) Works</h2>
+      <p>
+        Magnetic particle testing induces a magnetic field into a ferromagnetic component using a permanent magnet, electromagnetic yoke, or coil. If a surface or near-surface discontinuity disrupts the magnetic flux, leakage flux occurs at the defect. Fine ferromagnetic particles (dry powder or suspended in liquid) are applied to the surface and accumulate at the leakage site, forming a visible indication.
+      </p>
+      <p>
+        MT can be performed using dry powder, wet visible, or wet fluorescent techniques. Fluorescent MT under UV light provides the highest sensitivity for critical components like aerospace landing gear and pressure vessel welds.
+      </p>
+
+      <h2>How Liquid Penetrant Testing (PT) Works</h2>
+      <p>
+        Liquid penetrant testing applies a colored or fluorescent liquid penetrant to the surface of a clean, non-porous component. The penetrant seeps into surface-breaking defects by capillary action during a specified dwell time. After excess penetrant is removed, a developer is applied to draw the trapped penetrant back to the surface, producing a visible indication that is wider than the actual defect.
+      </p>
+      <p>
+        PT is available in visible dye (red on white developer) and fluorescent (under UV light) variants. Fluorescent penetrant testing provides the highest sensitivity for detecting tight surface cracks in non-ferromagnetic materials.
+      </p>
+
+      <h2>MT vs PT: Detailed Comparison</h2>
+      <div class="overflow-x-auto my-8 not-prose">
+        <table class="min-w-full divide-y divide-gray-200 border border-gray-150">
+          <thead class="bg-slate-50">
+            <tr>
+              <th scope="col" class="px-4 py-3 text-left font-semibold text-slate-900 uppercase tracking-wider border-b border-gray-150">Comparison Factor</th>
+              <th scope="col" class="px-4 py-3 text-left font-semibold text-slate-900 uppercase tracking-wider border-b border-gray-150">Magnetic Particle (MT)</th>
+              <th scope="col" class="px-4 py-3 text-left font-semibold text-slate-900 uppercase tracking-wider border-b border-gray-150">Liquid Penetrant (PT)</th>
+            </tr>
+          </thead>
+          <tbody class="bg-white divide-y divide-gray-150">
+            <tr>
+              <td class="px-4 py-3 font-semibold text-slate-900 bg-slate-50/40">Material Requirement</td>
+              <td class="px-4 py-3 text-gray-600">Ferromagnetic only: carbon steel, low alloy steel, nickel, cobalt.</td>
+              <td class="px-4 py-3 text-gray-600">Any non-porous material: stainless steel, aluminum, titanium, plastics.</td>
+            </tr>
+            <tr>
+              <td class="px-4 py-3 font-semibold text-slate-900 bg-slate-50/40">Defect Types</td>
+              <td class="px-4 py-3 text-gray-600">Surface and near-surface (up to 2 mm depth) defects.</td>
+              <td class="px-4 py-3 text-gray-600">Surface-breaking defects only.</td>
+            </tr>
+            <tr>
+              <td class="px-4 py-3 font-semibold text-slate-900 bg-slate-50/40">Sensitivity</td>
+              <td class="px-4 py-3 text-gray-600">High; fluorescent MT detects very fine cracks.</td>
+              <td class="px-4 py-3 text-gray-600">High; fluorescent PT detects tight surface cracks.</td>
+            </tr>
+            <tr>
+              <td class="px-4 py-3 font-semibold text-slate-900 bg-slate-50/40">Inspection Speed</td>
+              <td class="px-4 py-3 text-gray-600">Fast; magnetic field applied in seconds, particles applied immediately.</td>
+              <td class="px-4 py-3 text-gray-600">Slower; requires dwell time (5–30 min), cleaning, and development.</td>
+            </tr>
+            <tr>
+              <td class="px-4 py-3 font-semibold text-slate-900 bg-slate-50/40">Equipment Cost</td>
+              <td class="px-4 py-3 text-gray-600">Moderate; electromagnetic yokes and power packs.</td>
+              <td class="px-4 py-3 text-gray-600">Low; spray cans, UV lamp, minimal equipment.</td>
+            </tr>
+            <tr>
+              <td class="px-4 py-3 font-semibold text-slate-900 bg-slate-50/40">Consumable Cost</td>
+              <td class="px-4 py-3 text-gray-600">Moderate; particle suspension is reusable.</td>
+              <td class="px-4 py-3 text-gray-600">Higher per inspection; penetrant and developer are single-use.</td>
+            </tr>
+            <tr>
+              <td class="px-4 py-3 font-semibold text-slate-900 bg-slate-50/40">Post-Cleaning</td>
+              <td class="px-4 py-3 text-gray-600">Simple; particles removed with minimal cleaning.</td>
+              <td class="px-4 py-3 text-gray-600">Critical; thorough pre-cleaning required to prevent false indications.</td>
+            </tr>
+            <tr>
+              <td class="px-4 py-3 font-semibold text-slate-900 bg-slate-50/40">Applicable Standards</td>
+              <td class="px-4 py-3 text-gray-600">ASME V Article 7, ASTM E709, ISO 17638.</td>
+              <td class="px-4 py-3 text-gray-600">ASME V Article 6, ASTM E165, ISO 3452.</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <h2>When to Choose MT</h2>
+      <p>
+        MT is the preferred method when inspecting ferromagnetic components where near-surface defects are a concern. Carbon steel pipe welds, pressure vessel shell seams, structural steel connections, and machined forgings are common MT applications. MT is also preferred when speed is critical — the magnetic field can be applied and indications read within seconds, making it ideal for high-volume production inspections.
+      </p>
+
+      <h2>When to Choose PT</h2>
+      <p>
+        PT is the method of choice for non-ferromagnetic materials. Stainless steel welds, aluminum castings, titanium components, and non-metallic ceramics are inspected using PT. PT is also selected when the component geometry makes magnetic field application difficult, or when the component must not be magnetized (such as electronic equipment or instruments sensitive to magnetic fields).
+      </p>
+
+      <h2>Limitations of Each Method</h2>
+      <p>
+        MT cannot be used on austenitic stainless steel, aluminum, copper, or titanium because these materials cannot be magnetized. Surface coatings (paint, galvanizing) thicker than approximately 0.05 mm can mask indications. PT cannot detect defects that are not open to the surface, and it requires thorough pre-cleaning — residual oils, scale, or corrosion products in defects produce false indications.
+      </p>
+
+      <h2>TTS Surface NDT Inspection Services</h2>
+      <p>
+        Texas Technical Services (TTS) provides comprehensive magnetic particle testing and liquid penetrant testing inspection services. Our Level II and Level III NDT technicians are certified to ASNT SNT-TC-1A and ISO 9712 standards. We perform wet fluorescent, wet visible, and dry powder MT along with visible and fluorescent PT in compliance with ASME V, ASTM E709, ASTM E165, and ISO standards across Kuwait, UAE, and Saudi Arabia.
+      </p>
+      <p>
+        TTS helps you select the optimal surface NDT method for your application. Learn more about our <a href="/service/magnetic-particle-inspection-mt/">magnetic particle inspection</a> and <a href="/service/liquid-penetrant-inspection-pt/">liquid penetrant inspection</a> services.
+      </p>
+
+      <h2>Frequently Asked Questions (FAQ)</h2>
+      <p><strong>Q: Can MT detect defects in stainless steel welds?</strong><br />
+      <strong>A:</strong> No. Austenitic stainless steel is non-ferromagnetic and cannot be magnetized. PT or other surface NDT methods must be used.</p>
+
+      <p><strong>Q: How deep can MT detect defects below the surface?</strong><br />
+      <strong>A:</strong> MT can typically detect near-surface defects up to 2 mm below the surface, depending on material permeability and magnetization strength.</p>
+
+      <p><strong>Q: Why is pre-cleaning more critical for PT than MT?</strong><br />
+      <strong>A:</strong> Penetrant relies on capillary action to enter defects; contaminants blocking the defect entrance prevent penetrant entry, causing missed or false indications.</p>
+
+      <p><strong>Q: Which method is more cost-effective for production line inspections?</strong><br />
+      <strong>A:</strong> MT is generally more cost-effective for ferromagnetic production parts because it is faster and particle suspension is reusable.</p>
+
+      <p><strong>Q: Can PT detect subsurface defects?</strong><br />
+      <strong>A:</strong> No. PT only detects defects that break the surface. Subsurface defects require UT, RT, or MT (for ferromagnetic materials).</p>
+    `
+  },
+  "plc-vs-dcs-automation-comparison": {title: "PLC vs DCS: Choosing the Right Industrial Automation Platform",
+    seoTitle: "PLC vs DCS Industrial Automation Comparison Guide",
+    metaDescription: "Compare PLC vs DCS for industrial automation. Explore architecture, scalability, programming, redundancy, use cases, and cost differences.",
+    category: "Industrial Automation",
+    date: "May 10, 2025",
+    readTime: "9 Min Read",
+    pillar: "Pillar 3: Industrial Automation",
+    description: "PLC vs DCS comparison — covering architecture, scalability, programming, redundancy, use cases, and cost for industrial automation platforms.",
+    keywords: "PLC vs DCS, industrial automation, process control, distributed control system",
+    image: "/images/control_room_interior_and_console/dynamic_m/1.jpg",
+    imageAlt: "Industrial control room displaying both PLC-based and DCS-based process control systems on multiple monitors.",
+content: `
+      <p>
+        <strong>Programmable logic controller (PLC) vs distributed control system (DCS)</strong> is a fundamental architecture decision in industrial automation. Both platforms execute process control, but they differ in architecture philosophy, scalability, programming approach, and redundancy design. Understanding these differences helps engineers select the platform that aligns with plant size, process complexity, and operational requirements.
+      </p>
+
+      <div class="my-6 rounded-lg bg-slate-50 border border-slate-200 p-5 not-prose">
+        <h4 class="font-bold text-slate-900 mb-2">Key Takeaways</h4>
+        <ul class="text-slate-600 space-y-2 list-disc pl-4">
+          <li><strong>Architecture:</strong> PLCs are modular controllers for discrete and small batch processes; DCS are integrated systems designed for continuous large-scale process control.</li>
+          <li><strong>Scalability:</strong> PLCs scale by adding modules; DCS scales natively with built-in redundancy and centralized databases.</li>
+          <li><strong>Redundancy:</strong> DCS offers built-in controller, network, and I/O redundancy; PLCs require additional hardware and programming for redundancy.</li>
+          <li><strong>Best Fit:</strong> PLCs suit discrete automation and small plants; DCS suits continuous process industries (refineries, chemical plants, power generation).</li>
+        </ul>
+      </div>
+
+      <h2>Architecture Differences</h2>
+      <p>
+        A PLC is a standalone microprocessor-based controller that executes ladder logic, structured text, or function block programs to control discrete and sequential operations. PLCs are connected to I/O modules that interface with field sensors and actuators. Multiple PLCs can be networked together, but each operates independently with its own program and database.
+      </p>
+      <p>
+        A DCS is an integrated control architecture where multiple distributed controllers are connected to a centralized operator workstation, engineering station, and historical database. The DCS manages the entire plant through a unified configuration database, shared alarm system, and centralized trending. Controllers communicate over a high-speed deterministic network, providing plant-wide coordination.
+      </p>
+
+      <h2>PLC vs DCS: Detailed Comparison</h2>
+      <div class="overflow-x-auto my-8 not-prose">
+        <table class="min-w-full divide-y divide-gray-200 border border-gray-150">
+          <thead class="bg-slate-50">
+            <tr>
+              <th scope="col" class="px-4 py-3 text-left font-semibold text-slate-900 uppercase tracking-wider border-b border-gray-150">Comparison Factor</th>
+              <th scope="col" class="px-4 py-3 text-left font-semibold text-slate-900 uppercase tracking-wider border-b border-gray-150">PLC</th>
+              <th scope="col" class="px-4 py-3 text-left font-semibold text-slate-900 uppercase tracking-wider border-b border-gray-150">DCS</th>
+            </tr>
+          </thead>
+          <tbody class="bg-white divide-y divide-gray-150">
+            <tr>
+              <td class="px-4 py-3 font-semibold text-slate-900 bg-slate-50/40">Control Architecture</td>
+              <td class="px-4 py-3 text-gray-600">Centralized or distributed discrete controllers; each unit runs independently.</td>
+              <td class="px-4 py-3 text-gray-600">Integrated network of controllers sharing a unified database and operator interface.</td>
+            </tr>
+            <tr>
+              <td class="px-4 py-3 font-semibold text-slate-900 bg-slate-50/40">Scalability</td>
+              <td class="px-4 py-3 text-gray-600">Scale by adding I/O modules and additional PLC racks.</td>
+              <td class="px-4 py-3 text-gray-600">Native scalability; add controllers and I/O to the existing network seamlessly.</td>
+            </tr>
+            <tr>
+              <td class="px-4 py-3 font-semibold text-slate-900 bg-slate-50/40">Redundancy</td>
+              <td class="px-4 py-3 text-gray-600">Optional; requires hot-standby modules and switchover programming.</td>
+              <td class="px-4 py-3 text-gray-600">Built-in controller, network, and I/O redundancy with automatic failover.</td>
+            </tr>
+            <tr>
+              <td class="px-4 py-3 font-semibold text-slate-900 bg-slate-50/40">Programming</td>
+              <td class="px-4 py-3 text-gray-600">IEC 61131-3 (ladder, ST, FBD); fast scan cycles for discrete logic.</td>
+              <td class="px-4 py-3 text-gray-600">IEC 61131-3 plus proprietary function blocks; advanced process control libraries.</td>
+            </tr>
+            <tr>
+              <td class="px-4 py-3 font-semibold text-slate-900 bg-slate-50/40">Operator Interface</td>
+              <td class="px-4 py-3 text-gray-600">Separate HMI software; each PLC requires its own HMI configuration.</td>
+              <td class="px-4 py-3 text-gray-600">Integrated operator workstation with centralized alarms, trends, and faceplates.</td>
+            </tr>
+            <tr>
+              <td class="px-4 py-3 font-semibold text-slate-900 bg-slate-50/40">Typical I/O Count</td>
+              <td class="px-4 py-3 text-gray-600">100 to 10,000 I/O per system.</td>
+              <td class="px-4 py-3 text-gray-600">10,000 to 100,000+ I/O across the plant.</td>
+            </tr>
+            <tr>
+              <td class="px-4 py-3 font-semibold text-slate-900 bg-slate-50/40">Scan Speed</td>
+              <td class="px-4 py-3 text-gray-600">Fast (1–10 ms); optimized for discrete event processing.</td>
+              <td class="px-4 py-3 text-gray-600">Moderate (50–500 ms); optimized for continuous PID loop control.</td>
+            </tr>
+            <tr>
+              <td class="px-4 py-3 font-semibold text-slate-900 bg-slate-50/40">Capital Cost</td>
+              <td class="px-4 py-3 text-gray-600">Lower entry cost; scales linearly with modules.</td>
+              <td class="px-4 py-3 text-gray-600">Higher initial cost; more economical at large scale due to shared infrastructure.</td>
+            </tr>
+            <tr>
+              <td class="px-4 py-3 font-semibold text-slate-900 bg-slate-50/40">Best Applications</td>
+              <td class="px-4 py-3 text-gray-600">Discrete manufacturing, packaging, small batch, machine control.</td>
+              <td class="px-4 py-3 text-gray-600">Refineries, chemical plants, power generation, large continuous processes.</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <h2>When to Choose a PLC</h2>
+      <p>
+        PLCs are the preferred platform for discrete and sequential automation applications. Packaging lines, material handling systems, machine tool control, and small to medium batch processes benefit from PLC speed, flexibility, and lower entry cost. Modern PLCs (such as Siemens S7-1500, Allen-Bradley ControlLogix, and Mitsubishi MELSEC iQ-R) also support analog PID control, making them viable for smaller continuous processes.
+      </p>
+
+      <h2>When to Choose a DCS</h2>
+      <p>
+        DCS is the standard architecture for large-scale continuous process industries. Refineries, petrochemical plants, power generation stations, and pulp and paper mills require thousands of PID loops, advanced process control (APC), and built-in redundancy. DCS platforms (such as Honeywell Experion, Emerson DeltaV, and ABB 800xA) provide integrated alarm management, historical data archiving, and plant-wide coordination that would be prohibitively complex to replicate with standalone PLCs.
+      </p>
+
+      <h2>The Convergence of PLC and DCS</h2>
+      <p>
+        Modern automation is blurring the traditional PLC vs DCS boundary. High-end PLC platforms now support redundancy, integrated HMI, and advanced process control, making them capable of handling medium-scale continuous processes. Similarly, DCS platforms have adopted open communication standards (OPC UA, Modbus TCP) and modular controller architectures that rival PLC flexibility. The decision increasingly depends on plant scale, process criticality, and the operator's preference for centralized vs distributed intelligence.
+      </p>
+
+      <h2>TTS Industrial Automation Services</h2>
+      <p>
+        Texas Technical Services (TTS) provides comprehensive PLC and DCS system design, programming, integration, and commissioning services. Our control engineers have extensive experience with Siemens S7-1500, Allen-Bradley ControlLogix, Mitsubishi MELSEC, Schneider Modicon, and DCS platforms including Honeywell and ABB systems.
+      </p>
+      <p>
+        TTS helps you evaluate process requirements and select the optimal control architecture. Learn more about our <a href="/service/industrial-automation/">industrial automation</a> and <a href="/service/plc-scada-programming/">PLC SCADA programming</a> services.
+      </p>
+
+      <h2>Frequently Asked Questions (FAQ)</h2>
+      <p><strong>Q: Can a PLC replace a DCS for a refinery application?</strong><br />
+      <strong>A:</strong> For smallauxiliary units, modern PLCs with redundancy modules can suffice. For large continuous process units requiring thousands of loops and APC, DCS remains the standard.</p>
+
+      <p><strong>Q: What is the main advantage of DCS over PLC?</strong><br />
+      <strong>A:</strong> DCS provides built-in redundancy, a unified plant-wide database, centralized operator interface, and advanced process control libraries out of the box.</p>
+
+      <p><strong>Q: What programming languages do PLCs and DCS use?</strong><br />
+      <strong>A:</strong> Both support IEC 61131-3 languages (ladder logic, structured text, function block diagram). DCS platforms also include proprietary advanced control function blocks.</p>
+
+      <p><strong>Q: Is DCS more expensive than PLC?</strong><br />
+      <strong>A:</strong> DCS has a higher initial cost but becomes more economical at large scale because controllers, networks, and operator stations are shared across the entire plant.</p>
+
+      <p><strong>Q: What is advanced process control (APC) in DCS?</strong><br />
+      <strong>A:</strong> APC refers to model-predictive control and multivariable control strategies that optimize process performance beyond what standard PID loops achieve.</p>
+    `
+  },
+  "coriolis-vs-ultrasonic-flow-comparison": {title: "Coriolis vs Ultrasonic Flow Meters: Accuracy and Application Guide",
+    seoTitle: "Coriolis vs Ultrasonic Flow Meters Comparison Guide",
+    metaDescription: "Compare Coriolis vs ultrasonic flow meters for accuracy, maintenance, applications, and custody transfer suitability. Expert comparison guide.",
+    category: "Flow Measurement",
+    date: "June 5, 2025",
+    readTime: "8 Min Read",
+    pillar: "Pillar 1: Flow Measurement & Custody Metering",
+    description: "Coriolis vs ultrasonic flow meters comparison — covering measurement principles, accuracy, maintenance, applications, and custody transfer suitability.",
+    keywords: "Coriolis vs ultrasonic flow meter, flow meter comparison, custody transfer",
+    image: "/images/services/flow-measurement.jpg",
+    imageAlt: "A Coriolis mass flow meter and an ultrasonic flow meter side by side on an industrial pipeline.",
+content: `
+      <p>
+        <strong>Coriolis vs ultrasonic flow meters</strong> represents the two leading high-accuracy flow measurement technologies for custody transfer and process control applications. Coriolis meters measure mass flow directly using the Coriolis effect, while ultrasonic meters measure fluid velocity using acoustic transit-time differences. Both technologies offer excellent accuracy classes, but they differ in measurement principle, installation requirements, and suitability for different fluid types.
+      </p>
+
+      <div class="my-6 rounded-lg bg-slate-50 border border-slate-200 p-5 not-prose">
+        <h4 class="font-bold text-slate-900 mb-2">Key Takeaways</h4>
+        <ul class="text-slate-600 space-y-2 list-disc pl-4">
+          <li><strong>Direct Mass:</strong> Coriolis meters measure mass flow directly, eliminating density compensation errors.</li>
+          <li><strong>Zero Pressure Drop:</strong> Ultrasonic meters feature a full-bore flow path with no obstruction or pressure loss.</li>
+          <li><strong>Size Range:</strong> Coriolis excels in smaller pipes (below 12 inches); ultrasonic scales to large-diameter pipelines.</li>
+          <li><strong>Multi-Variable:</strong> Coriolis provides mass flow, density, and temperature from a single sensor; ultrasonic provides volumetric velocity.</li>
+        </ul>
+      </div>
+
+      <h2>Measurement Principles Compared</h2>
+      <p>
+        Coriolis meters use one or more vibrating tubes. As fluid flows through the tubes, the mass of the fluid induces a Coriolis force that creates a phase shift between the inlet and outlet ends of the tube. Electromagnetic sensors detect this twist angle, which is directly proportional to mass flow. The natural frequency of tube vibration also provides real-time density measurement.
+      </p>
+      <p>
+        Ultrasonic transit-time meters use pairs of acoustic transducers mounted on opposite sides of the pipe. Each transducer sends sound pulses across the flow path. The downstream pulse travels faster than the upstream pulse. The time difference is proportional to the average fluid velocity. Multi-path configurations (3 to 18 paths) scan the entire velocity profile to improve accuracy.
+      </p>
+
+      <h2>Coriolis vs Ultrasonic: Detailed Comparison</h2>
+      <div class="overflow-x-auto my-8 not-prose">
+        <table class="min-w-full divide-y divide-gray-200 border border-gray-150">
+          <thead class="bg-slate-50">
+            <tr>
+              <th scope="col" class="px-4 py-3 text-left font-semibold text-slate-900 uppercase tracking-wider border-b border-gray-150">Comparison Factor</th>
+              <th scope="col" class="px-4 py-3 text-left font-semibold text-slate-900 uppercase tracking-wider border-b border-gray-150">Coriolis Mass Flow Meter</th>
+              <th scope="col" class="px-4 py-3 text-left font-semibold text-slate-900 uppercase tracking-wider border-b border-gray-150">Ultrasonic Flow Meter</th>
+            </tr>
+          </thead>
+          <tbody class="bg-white divide-y divide-gray-150">
+            <tr>
+              <td class="px-4 py-3 font-semibold text-slate-900 bg-slate-50/40">Measurement Variable</td>
+              <td class="px-4 py-3 text-gray-600">Direct mass flow, density, and temperature.</td>
+              <td class="px-4 py-3 text-gray-600">Volumetric flow velocity (requires P/T compensation for standard volume).</td>
+            </tr>
+            <tr>
+              <td class="px-4 py-3 font-semibold text-slate-900 bg-slate-50/40">Liquid Accuracy</td>
+              <td class="px-4 py-3 text-gray-600">&plusmn;0.05% to &plusmn;0.10% of reading.</td>
+              <td class="px-4 py-3 text-gray-600">&plusmn;0.15% to &plusmn;0.50% of reading.</td>
+            </tr>
+            <tr>
+              <td class="px-4 py-3 font-semibold text-slate-900 bg-slate-50/40">Gas Accuracy</td>
+              <td class="px-4 py-3 text-gray-600">&plusmn;0.35% to &plusmn;0.50% of reading.</td>
+              <td class="px-4 py-3 text-gray-600">&plusmn;0.50% to &plusmn;1.00% of reading.</td>
+            </tr>
+            <tr>
+              <td class="px-4 py-3 font-semibold text-slate-900 bg-slate-50/40">Pressure Drop</td>
+              <td class="px-4 py-3 text-gray-600">Moderate to high; tube geometry creates restriction.</td>
+              <td class="px-4 py-3 text-gray-600">Zero; full-bore unobstructed flow path.</td>
+            </tr>
+            <tr>
+              <td class="px-4 py-3 font-semibold text-slate-900 bg-slate-50/40">Pipe Size Range</td>
+              <td class="px-4 py-3 text-gray-600">1/8 inch to 12 inches (limited by tube design).</td>
+              <td class="px-4 py-3 text-gray-600">1 inch to 120+ inches (scales to large pipelines).</td>
+            </tr>
+            <tr>
+              <td class="px-4 py-3 font-semibold text-slate-900 bg-slate-50/40">Moving Parts</td>
+              <td class="px-4 py-3 text-gray-600">None; vibrating tubes only.</td>
+              <td class="px-4 py-3 text-gray-600">None; transducers are external or wetted but static.</td>
+            </tr>
+            <tr>
+              <td class="px-4 py-3 font-semibold text-slate-900 bg-slate-50/40">Viscosity Sensitivity</td>
+              <td class="px-4 py-3 text-gray-600">Negligible; mass measurement is viscosity-independent.</td>
+              <td class="px-4 py-3 text-gray-600">Low; velocity profile changes with viscosity affect accuracy.</td>
+            </tr>
+            <tr>
+              <td class="px-4 py-3 font-semibold text-slate-900 bg-slate-50/40">Straight Run Requirements</td>
+              <td class="px-4 py-3 text-gray-600">Minimal; can be installed near bends or valves.</td>
+              <td class="px-4 py-3 text-gray-600">Significant; requires 10D upstream and 5D downstream per API MPMS.</td>
+            </tr>
+            <tr>
+              <td class="px-4 py-3 font-semibold text-slate-900 bg-slate-50/40">Capital Cost</td>
+              <td class="px-4 py-3 text-gray-600">High; increases sharply above 8 inches.</td>
+              <td class="px-4 py-3 text-gray-600">Moderate; more economical for large pipe sizes.</td>
+            </tr>
+            <tr>
+              <td class="px-4 py-3 font-semibold text-slate-900 bg-slate-50/40">Standard Compliance</td>
+              <td class="px-4 py-3 text-gray-600">API MPMS Ch. 5.6, AGA-11.</td>
+              <td class="px-4 py-3 text-gray-600">API MPMS Ch. 5.8, AGA-9.</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <h2>Custody Transfer Suitability</h2>
+      <p>
+        Both technologies are approved for custody transfer. Coriolis meters are the preferred choice for liquid custody transfer in pipe sizes below 12 inches because they measure mass directly, eliminating density compensation errors. The API MPMS Chapter 5.6 standard governs liquid Coriolis custody transfer.
+      </p>
+      <p>
+        Ultrasonic meters dominate gas custody transfer in large-diameter transmission pipelines (above 8 inches) because they scale to large pipe sizes without pressure drop. The AGA-9 standard governs multipath ultrasonic gas custody transfer. For liquid custody transfer in large pipelines (above 12 inches), ultrasonic meters with multiple paths provide excellent accuracy while maintaining zero pressure loss.
+      </p>
+
+      <h2>Maintenance and Total Cost of Ownership</h2>
+      <p>
+        Both technologies have no moving parts and require minimal maintenance. Coriolis meters must be checked for tube coating or erosion in abrasive services, which can shift vibration characteristics and affect density readings. Ultrasonic meters require periodic transducer inspection and cleaning to maintain signal quality. In gas service, liquid carryover or particulate can attenuate acoustic signals.
+      </p>
+
+      <h2>TTS Flow Meter Selection Services</h2>
+      <p>
+        Texas Technical Services (TTS) provides comprehensive flow meter sizing, selection, supply, and calibration services. Our engineers help you evaluate fluid properties, pipe dimensions, accuracy requirements, and budget to recommend the optimal technology. TTS configures flow computers and performs site commissioning in compliance with API MPMS Chapter 5 and AGA standards.
+      </p>
+      <p>
+        TTS ensures your flow measurement system meets custody transfer requirements. Learn more about our <a href="/service/flow-measurement-solutions/">flow measurement solutions</a> and <a href="/service/flow-meter-calibration/">flow meter calibration</a> services.
+      </p>
+
+      <h2>Frequently Asked Questions (FAQ)</h2>
+      <p><strong>Q: Why are Coriolis meters preferred for liquid custody transfer?</strong><br />
+      <strong>A:</strong> Coriolis meters measure mass directly, eliminating density compensation errors and providing the highest accuracy classes for liquid fiscal measurement.</p>
+
+      <p><strong>Q: Can ultrasonic meters measure mass flow?</strong><br />
+      <strong>A:</strong> No. Ultrasonic meters measure volumetric velocity. Mass flow is calculated by combining velocity with density derived from separate measurements or equations of state.</p>
+
+      <p><strong>Q: What pipe sizes favor ultrasonic over Coriolis?</strong><br />
+      <strong>A:</strong> Ultrasonic meters are more economical and practical above 8 inches. Coriolis meters become prohibitively expensive and physically large above 12 inches.</p>
+
+      <p><strong>Q: Which technology is better for high-viscosity fluids?</strong><br />
+      <strong>A:</strong> Coriolis meters handle high-viscosity fluids better because mass measurement is independent of viscosity. Ultrasonic meters are affected by viscosity-induced velocity profile changes.</p>
+
+      <p><strong>Q: Do both technologies comply with custody transfer standards?</strong><br />
+      <strong>A:</strong> Yes. Coriolis complies with API MPMS Ch. 5.6 and AGA-11; ultrasonic complies with API MPMS Ch. 5.8 and AGA-9.</p>
+    `
+  },
+  "in-situ-vs-extractive-cems-comparison": {title: "In-Situ vs Extractive CEMS: Technology Comparison for Emissions Monitoring",
+    seoTitle: "In-Situ vs Extractive CEMS Technology Comparison Guide",
+    metaDescription: "Compare in-situ vs extractive CEMS for emissions monitoring. Explore measurement principles, installation, maintenance, accuracy, and compliance requirements.",
+    category: "Analyzers",
+    date: "July 3, 2025",
+    readTime: "8 Min Read",
+    pillar: "Pillar 4: Analyzers & Inspection",
+    description: "In-situ vs extractive CEMS comparison — covering measurement principles, installation, maintenance, accuracy, and environmental compliance.",
+    keywords: "in-situ CEMS, extractive CEMS, continuous emissions monitoring, CEMS comparison",
+    image: "/cems.png",
+    imageAlt: "Comparison of in-situ CEMS probe mounted on stack and extractive CEMS analyzer shelter system.",
+content: `
+      <p>
+        <strong>In-situ vs extractive continuous emissions monitoring systems (CEMS)</strong> represent the two primary technology approaches for measuring gaseous pollutant emissions from industrial stacks and ducts. In-situ systems measure directly inside the stack, while extractive systems draw a sample to a remote analyzer shelter. The choice between these technologies affects installation complexity, maintenance access, measurement accuracy, and long-term compliance costs.
+      </p>
+
+      <div class="my-6 rounded-lg bg-slate-50 border border-slate-200 p-5 not-prose">
+        <h4 class="font-bold text-slate-900 mb-2">Key Takeaways</h4>
+        <ul class="text-slate-600 space-y-2 list-disc pl-4">
+          <li><strong>In-Situ Advantage:</strong> No sample transport; measures raw stack gas directly inside the duct, eliminating conditioning errors.</li>
+          <li><strong>Extractive Advantage:</strong> Analyzer accessible at ground level in a climate-controlled shelter; easier maintenance and calibration.</li>
+          <li><strong>Accuracy:</strong> Both achieve compliance accuracy, but extractive systems allow more rigorous calibration with reference gases.</li>
+          <li><strong>Compliance:</strong> Both satisfy EPA 40 CFR Part 60 and EN 14181 standards when properly maintained.</li>
+        </ul>
+      </div>
+
+      <h2>How In-Situ CEMS Works</h2>
+      <p>
+        In-situ CEMS analyzers are mounted directly inside the stack or duct. The measurement probe contains optical components (transmitter and receiver) that project an infrared, ultraviolet, or tunable diode laser beam across the gas stream. The absorption of specific wavelengths by target gases (SO2, NOx, CO, CO2, O2) determines concentration using Beer-Lambert law calculations. Because the measurement occurs in the stack, no sample extraction or transport is required.
+      </p>
+      <p>
+        Common in-situ technologies include cross-duct optical analyzers, extractive dilution probes (sometimes classified as a hybrid approach), and in-situ TDLAS (Tunable Diode Laser Absorption Spectroscopy) analyzers.
+      </p>
+
+      <h2>How Extractive CEMS Works</h2>
+      <p>
+        Extractive CEMS systems draw a continuous sample from the stack through a heated probe and sample transport line to a ground-level analyzer shelter. The sample conditioning system removes particulate matter, cools the gas, and removes moisture to prevent condensation and gas absorption. The conditioned sample is then analyzed by NDIR (Non-Dispersive Infrared), chemiluminescence, or paramagnetic analyzers.
+      </p>
+      <p>
+        Extractive systems are the most widely deployed CEMS technology globally. They offer the advantage of housing analyzers in a climate-controlled environment, enabling easy access for calibration gas injection, routine maintenance, and analyzer servicing.
+      </p>
+
+      <h2>In-Situ vs Extractive CEMS: Detailed Comparison</h2>
+      <div class="overflow-x-auto my-8 not-prose">
+        <table class="min-w-full divide-y divide-gray-200 border border-gray-150">
+          <thead class="bg-slate-50">
+            <tr>
+              <th scope="col" class="px-4 py-3 text-left font-semibold text-slate-900 uppercase tracking-wider border-b border-gray-150">Comparison Factor</th>
+              <th scope="col" class="px-4 py-3 text-left font-semibold text-slate-900 uppercase tracking-wider border-b border-gray-150">In-Situ CEMS</th>
+              <th scope="col" class="px-4 py-3 text-left font-semibold text-slate-900 uppercase tracking-wider border-b border-gray-150">Extractive CEMS</th>
+            </tr>
+          </thead>
+          <tbody class="bg-white divide-y divide-gray-150">
+            <tr>
+              <td class="px-4 py-3 font-semibold text-slate-900 bg-slate-50/40">Measurement Location</td>
+              <td class="px-4 py-3 text-gray-600">Directly inside the stack or duct.</td>
+              <td class="px-4 py-3 text-gray-600">Remote analyzer shelter (typically ground level).</td>
+            </tr>
+            <tr>
+              <td class="px-4 py-3 font-semibold text-slate-900 bg-slate-50/40">Sample Transport</td>
+              <td class="px-4 py-3 text-gray-600">Not required; direct path measurement.</td>
+              <td class="px-4 py-3 text-gray-600">Yes; heated sample transport lines from stack to shelter.</td>
+            </tr>
+            <tr>
+              <td class="px-4 py-3 font-semibold text-slate-900 bg-slate-50/40">Sample Conditioning</td>
+              <td class="px-4 py-3 text-gray-600">Not required; analyzes raw stack gas directly.</td>
+              <td class="px-4 py-3 text-gray-600 required; removes moisture, particulate, and cools sample gas.</td>
+            </tr>
+            <tr>
+              <td class="px-4 py-3 font-semibold text-slate-900 bg-slate-50/40">Maintenance Access</td>
+              <td class="px-4 py-3 text-gray-600">Difficult; requires stack-mounted platforms and heights.</td>
+              <td class="px-4 py-3 text-gray-600">Easy; climate-controlled analyzer shelter at ground level.</td>
+            </tr>
+            <tr>
+              <td class="px-4 py-3 font-semibold text-slate-900 bg-slate-50/40">Installation Complexity</td>
+              <td class="px-4 py-3 text-gray-600">Moderate; single penetration with mounting hardware.</td>
+              <td class="px-4 py-3 text-gray-600">High; requires stack probe, heated lines, shelter, and conditioning system.</td>
+            </tr>
+            <tr>
+              <td class="px-4 py-3 font-semibold text-slate-900 bg-slate-50/40">Calibration Method</td>
+              <td class="px-4 py-3 text-gray-600">In-situ calibration gas injection at the probe.</td>
+              <td class="px-4 py-3 text-gray-600">Reference gas injection at the analyzer; independent reference method testing.</td>
+            </tr>
+            <tr>
+              <td class="px-4 py-3 font-semibold text-slate-900 bg-slate-50/40">Capital Cost</td>
+              <td class="px-4 py-3 text-gray-600">Lower; fewer components.</td>
+              <td class="px-4 py-3 text-gray-600">Higher; analyzer shelter, conditioning system, heated lines.</td>
+            </tr>
+            <tr>
+              <td class="px-4 py-3 font-semibold text-slate-900 bg-slate-50/40">Operating Cost</td>
+              <td class="px-4 py-3 text-gray-600">Higher; stack access for maintenance adds cost.</td>
+              <td class="px-4 py-3 text-gray-600">Lower; ground-level access reduces maintenance cost.</td>
+            </tr>
+            <tr>
+              <td class="px-4 py-3 font-semibold text-slate-900 bg-slate-50/40">Multi-Gas Capability</td>
+              <td class="px-4 py-3 text-gray-600">Limited; typically measures 1–3 gases per probe.</td>
+              <td class="px-4 py-3 text-gray-600">Extensive; multiple analyzers can measure 6+ gases simultaneously.</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <h2>Accuracy and Compliance Considerations</h2>
+      <p>
+        Both technologies achieve compliance accuracy when properly installed and maintained. In-situ systems measure the actual gas stream without sample degradation, which eliminates conditioning-related errors. However, optical components mounted inside the stack are exposed to harsh conditions — dust, acid condensation, and vibration — which can degrade optical windows and affect measurement stability.
+      </p>
+      <p>
+        Extractive systems benefit from controlled analyzer environments and rigorous multi-point calibration using reference gases. The sample conditioning system introduces potential errors (such as SO2 absorption in condensed water), but these are mitigated through heated sample lines, Peltier coolers, and conditioning monitors. Extractive systems generally provide more consistent long-term data quality for regulatory reporting.
+      </p>
+
+      <h2>When to Choose In-Situ CEMS</h2>
+      <p>
+        In-situ CEMS is preferred when stack access is limited, space for an analyzer shelter is unavailable, or when the installation must be completed quickly. Smaller industrial boilers, heating facilities, and remote combustion sources benefit from in-situ's simpler installation. TDLAS in-situ analyzers are increasingly used for natural gas-fired applications requiring fast response times.
+      </p>
+
+      <h2>When to Choose Extractive CEMS</h2>
+      <p>
+        Extractive CEMS is the standard for large power plants, refineries, cement kilns, and waste incinerators that require multi-gas monitoring and strict EPA or EN compliance. The ability to house multiple analyzers in a single shelter, perform routine calibration gas checks, and maintain equipment at ground level makes extractive systems the most widely deployed CEMS technology for regulatory-grade emissions monitoring.
+      </p>
+
+      <h2>TTS CEMS Integration Services</h2>
+      <p>
+        Texas Technical Services (TTS) provides comprehensive CEMS design, supply, installation, and calibration services. Our environmental engineers configure both in-situ and extractive CEMS, install heated sample lines, and configure Data Acquisition and Handling Systems (DAHS) to meet EPA 40 CFR Part 60/75 and EN 14181 standards.
+      </p>
+      <p>
+        TTS ensures your emissions monitoring systems are fully integrated and compliant. Learn more about our <a href="/products/analyzers/cems/">continuous emissions monitoring systems</a> and <a href="/service/flow-meter-calibration/">calibration services</a>.
+      </p>
+
+      <h2>Frequently Asked Questions (FAQ)</h2>
+      <p><strong>Q: What is the primary advantage of in-situ CEMS over extractive?</strong><br />
+      <strong>A:</strong> In-situ eliminates sample transport and conditioning, measuring the raw gas stream directly, which avoids conditioning-related measurement errors.</p>
+
+      <p><strong>Q: Why are extractive CEMS more widely deployed?</strong><br />
+      <strong>A:</strong> Extractive systems offer easier maintenance access, multi-gas capability, and more rigorous calibration procedures, making them the standard for large regulatory-grade installations.</p>
+
+      <p><strong>Q: Can in-situ CEMS measure multiple gases?</strong><br />
+      <strong>A:</strong> Limited. Most in-situ probes measure 1–3 gases. Extractive systems can house multiple analyzers for 6+ gases simultaneously.</p>
+
+      <p><strong>Q: What is sample conditioning in extractive CEMS?</strong><br />
+      <strong>A:</strong> Sample conditioning is the process of removing moisture, particulate, and cooling the gas sample to protect analyzer cells and prevent gas absorption before analysis.</p>
+
+      <p><strong>Q: Which CEMS technology is more cost-effective for small boilers?</strong><br />
+      <strong>A:</strong> In-situ CEMS is typically more cost-effective for small boilers because it requires fewer components and no analyzer shelter.</p>
+    `
+  },
+
+  "metering-inspection-automation-core-services": {
+    title: "Metering, Inspection, Automation: The Core Services of Texas Technical Service Company",
+    seoTitle: "Metering, Inspection, Automation: Core Services of TTS | Texas Technical Services",
+    metaDescription: "Explore the three core service divisions of Texas Technical Services: flow measurement, inspection & testing, and industrial process automation for the Middle East.",
+    category: "Industrial Automation",
+    date: "July 3, 2026",
+    readTime: "3 Min Read",
+    pillar: "Pillar 2: Industrial Process Automation",
+    description: "Discover how TTS delivers precision metering, rigorous inspection, and smart automation across the Middle East's toughest industrial sectors.",
+    keywords: "flow measurement, custody metering, inspection testing, industrial automation, SCADA, PLC, Kuwait, UAE, oil and gas",
+    image: "/blog/core-services-banner.png",
+    imageAlt: "Three-panel industrial banner showing flow meters on a pipeline, a technician inspecting a pipe, and a SCADA control room.",
+    content: `
+      <p>
+        In highly regulated industries like Oil &amp; Gas, Petrochemicals, Power Generation, and Water Treatment, the margin for error is zero. Facility operators face constant pressure to maintain absolute measurement accuracy, ensure rigorous safety compliance, and maximize production efficiency.
+      </p>
+      <p>
+        At <strong>Texas Technical Service Company (TTS)</strong>, we bridge the gap between these complex operational challenges and reliable, long-term solutions. As an ISO 9001:2015 certified partner established in 2008, our expertise is focused on three primary divisions to support critical infrastructure in Kuwait and the UAE.
+      </p>
+
+      <h2>1. Flow Measurement &amp; Control System Solutions</h2>
+      <p>
+        Accurate custody transfer is the financial lifeblood of the energy sector. Even the slightest miscalibration can result in significant revenue loss or compliance failures. Our highly skilled metering consultants, engineers, and technicians possess in-depth knowledge of API, AGA, and other relevant international metering standards.
+      </p>
+      <p><strong>Our comprehensive offerings include:</strong></p>
+      <ul>
+        <li><strong>End-to-End Custody Metering:</strong> Complete liquid and gas metering solutions, including the deployment of custody transfer flow metering skids.</li>
+        <li><strong>Advanced Instrumentation:</strong> Integration of high-precision flow computers, Continuous Emissions Monitoring Systems (CEMS), analyzers, and field instruments.</li>
+        <li><strong>Lifecycle Support:</strong> Metering control system upgrades, ongoing maintenance, and rigorous validation services to ensure systems operate at peak accuracy.</li>
+        <li><strong>Expert Consultancy:</strong> Specialized advisory services designed to optimize custody metering processes and enhance overall site productivity.</li>
+      </ul>
+
+      <h2>2. Inspection &amp; Testing</h2>
+      <p>
+        Safety, asset integrity, and regulatory adherence form the bedrock of any sustainable industrial operation. Our Inspection and Testing division operates in strict compliance with ISO 14001:2015, ISO 45001:2018, and ISO 9001:2015 standards, providing peace of mind in high-stakes environments.
+      </p>
+      <p><strong>How we protect your assets and mitigate risks:</strong></p>
+      <ul>
+        <li><strong>Thorough Equipment Inspections:</strong> Comprehensive evaluations to ensure all machinery and infrastructure meet stringent industry regulations.</li>
+        <li><strong>Non-Destructive Testing (NDT):</strong> Advanced testing methodologies that evaluate the properties of materials and components without causing damage.</li>
+        <li><strong>Functional Testing &amp; Certification:</strong> Rigorous operational checks followed by official certification to guarantee your equipment is safe, compliant, and ready for deployment.</li>
+      </ul>
+
+      <h2>3. Industrial Process Automation Solutions</h2>
+      <p>
+        Modernizing industrial operations is essential for reducing downtime and achieving better control over production processes. We specialize in total industrial automation and system integration, transforming complex legacy operations into streamlined, highly visible processes.
+      </p>
+      <p><strong>Our automation capabilities include:</strong></p>
+      <ul>
+        <li><strong>System Integration:</strong> Expert design, implementation, and integration using leading brands of PLCs, SCADA systems, and HMIs.</li>
+        <li><strong>Legacy Upgrades:</strong> Seamless modernization of outdated control systems and SCADA software to improve facility-wide efficiency.</li>
+        <li><strong>Custom Software Development:</strong> Creation of tailored software solutions and customized reporting tools to give operators actionable, real-time insights into their production lines.</li>
+      </ul>
+
+      <h2>Partner With TTS</h2>
+      <p>
+        At TTS, we don't just supply industrial products &mdash; we provide comprehensive, end-to-end solutions through strategic partnerships with reputable OEMs. Whether you need to validate a custody metering system, inspect critical infrastructure, or automate a manufacturing process, our team is equipped to deliver. Learn more about our <a href="/service/flow-measurement-solutions/">flow measurement solutions</a> and <a href="/service/inspection-testing/">inspection and testing services</a>.
+      </p>
+
+      <h2>Frequently Asked Questions (FAQ)</h2>
+      <p><strong>Q: What are the three core service divisions of Texas Technical Services?</strong><br />
+      <strong>A:</strong> TTS operates three primary divisions: Flow Measurement &amp; Control System Solutions (custody metering, flow computers, CEMS), Inspection &amp; Testing (NDT, functional testing, certification), and Industrial Process Automation (PLC, SCADA, HMI integration and upgrades).</p>
+
+      <p><strong>Q: Does TTS comply with international standards for custody transfer metering?</strong><br />
+      <strong>A:</strong> Yes. TTS metering consultants and engineers possess deep expertise in API (American Petroleum Institute) standards for liquid measurement, AGA (American Gas Association) reports for natural gas custody transfer, and ISO quality and safety management standards including ISO 9001, ISO 14001, and ISO 45001.</p>
+
+      <p><strong>Q: What NDT methods does TTS offer through its Inspection &amp; Testing division?</strong><br />
+      <strong>A:</strong> TTS provides Non-Destructive Testing (NDT) using advanced methodologies that evaluate material properties and components without causing damage. This includes ultrasonic testing, radiographic testing, magnetic particle inspection, liquid penetrant examination, and visual inspection, all performed in compliance with ISO 14001:2015, ISO 45001:2018, and ISO 9001:2015 standards.</p>
+
+      <p><strong>Q: Can TTS upgrade legacy SCADA and PLC systems without shutting down production?</strong><br />
+      <strong>A:</strong> Yes. TTS specializes in seamless modernization of outdated control systems using a phased approach that includes parallel development, offline testing, and strategic cut-over strategies. This ensures operations remain online during the transition, minimizing downtime and risk.</p>
+
+      <p><strong>Q: In which regions does TTS provide industrial automation and metering services?</strong><br />
+      <strong>A:</strong> TTS has regional offices in Kuwait and Dubai, serving oil &amp; gas, petrochemicals, power generation, and water treatment facilities across the Middle East. Their ISO 9001:2015 certified team delivers tailored solutions to clients in Kuwait and the United Arab Emirates.</p>
+    `
+  },
+
+  "scada-plc-upgrade-without-downtime": {
+    title: "A Plant Manager's Guide to Upgrading Legacy SCADA & PLC Systems Without Operational Downtime",
+    seoTitle: "Upgrading Legacy SCADA & PLC Systems Without Downtime | TTS Guide",
+    metaDescription: "A plant manager's guide to upgrading legacy SCADA and PLC systems without downtime — parallel running, phased cutover, and commissioning strategies.",
+    category: "Industrial Automation",
+    date: "July 25, 2026",
+    readTime: "3 Min Read",
+    pillar: "Pillar 2: Industrial Process Automation",
+    description: "Modernizing your industrial automation infrastructure doesn't have to mean shutting down production. Discover how strategic system integration minimizes risk and maximizes efficiency.",
+    keywords: "SCADA upgrade, PLC modernization, industrial automation, control system upgrade, manufacturing downtime, HMI development",
+    image: "/blog/scada-plc-upgrade.jpg",
+    imageAlt: "An engineer inspecting and working on an open industrial PLC control panel with wiring.",
+    content: `
+      <p>
+        In the manufacturing, oil &amp; gas, and petrochemical sectors, process automation is the heartbeat of production. However, many facilities still rely on aging Programmable Logic Controllers (PLCs) and outdated Supervisory Control and Data Acquisition (SCADA) systems. While these legacy setups might still be operational, they expose facilities to significant risks, including hardware failure, cybersecurity vulnerabilities, and crippling unplanned downtime.
+      </p>
+      <p>
+        At <strong>Texas Technical Services Co. (TTS)</strong>, an ISO 9001:2015 certified company established in 2008, we understand that the biggest hurdle to modernizing automation is the fear of disrupting active production. Here is how a strategic approach to industrial process automation can modernize your plant seamlessly.
+      </p>
+
+      <h2>The Hidden Costs of Legacy Control Systems</h2>
+      <p>
+        Running an aging control system is a continuous gamble. As hardware manufacturers phase out support for older PLCs and Human-Machine Interfaces (HMIs), sourcing replacement parts becomes incredibly expensive and time-consuming. Furthermore, older SCADA architectures often lack the robust security protocols necessary to defend against modern industrial cyber threats.
+      </p>
+
+      <h2>The TTS Approach to Seamless System Upgrades</h2>
+      <p>
+        We provide total industrial automation solutions and system integration using various brands of PLCs, SCADA, and HMIs. Our specialized approach to control system design, implementation, and upgrades ensures that your operations remain online during the transition. A successful upgrade requires a phased, meticulously planned execution:
+      </p>
+      <ul>
+        <li><strong>Comprehensive System Audit:</strong> Before any code is written, our engineers conduct a thorough site assessment to map out the existing legacy system architecture and identify critical integration points.</li>
+        <li><strong>Parallel Development &amp; Offline Testing:</strong> We develop customized software solutions and reporting software in a controlled, offline environment. By running the new SCADA architecture parallel to the existing one, we test functionality without touching your live processes.</li>
+        <li><strong>Phased Cut-Over Strategies:</strong> Instead of a risky "rip and replace" method, we execute control system upgrades in strategic phases. This allows operators to adapt to new HMI developments gradually.</li>
+        <li><strong>Rigorous Commissioning:</strong> Commissioning involves the meticulous process of validating and fine-tuning automation systems to ensure they operate in strict accordance with predefined specifications.</li>
+      </ul>
+
+      <h2>End-to-End Automation Excellence</h2>
+      <p>
+        From process plant automation to control system integration, modernizing your infrastructure allows you to streamline operations, reduce downtime, and achieve better control over your production processes. With regional offices strategically located in Kuwait and Dubai, our highly trained engineers are equipped to deliver tailored solutions that meet your specific operational needs.
+      </p>
+
+      <h2>Partner With Texas Technical Services (TTS)</h2>
+      <p>
+        At Texas Technical Services Co. (TTS), we don't just supply industrial hardware &mdash; we design, integrate, and support end-to-end automation and control solutions tailored to your operational demands. Whether you need to upgrade aging PLCs, modernize your SCADA architecture, or perform critical equipment validation without disrupting active production, our team of expert engineers is equipped to deliver safely, efficiently, and on schedule. Learn more about our <a href="/plc-scada-systems-integration/">PLC and SCADA integration</a> and <a href="/service/industrial-automation/">industrial automation</a> services.
+      </p>
+
+      <h2>Frequently Asked Questions (FAQ)</h2>
+      <p><strong>Q: How does parallel running minimize risk during a SCADA system upgrade?</strong><br />
+      <strong>A:</strong> Parallel running involves operating the new SCADA architecture alongside the existing legacy system. This allows engineers to test functionality, validate data accuracy, and verify integration points without touching live processes. Any issues can be resolved in the offline environment before the phased cut-over begins.</p>
+
+      <p><strong>Q: What are the main cybersecurity risks of running outdated SCADA systems?</strong><br />
+      <strong>A:</strong> Older SCADA architectures often lack modern security protocols, making them vulnerable to industrial cyber threats. As hardware manufacturers phase out support for legacy PLCs and HMIs, patches and security updates are no longer available, exposing facilities to potential breaches, data manipulation, and operational disruption.</p>
+
+      <p><strong>Q: What is the difference between a PLC upgrade and a full SCADA modernization?</strong><br />
+      <strong>A:</strong> A PLC upgrade focuses on replacing or reprogramming the programmable logic controllers that execute machine-level tasks. A full SCADA modernization encompasses the entire supervisory layer, including HMI development, data historian integration, alarm management, reporting software, and cybersecurity hardening across the facility.</p>
+
+      <p><strong>Q: How long does a typical phased SCADA upgrade take?</strong><br />
+      <strong>A:</strong> Timeline varies by facility size and complexity, but a typical phased upgrade follows: comprehensive system audit (2-4 weeks), parallel development and offline testing (4-8 weeks), phased cut-over (2-6 weeks per phase), and rigorous commissioning (1-2 weeks per phase). TTS tailors the schedule to minimize production impact.</p>
+
+      <p><strong>Q: Can TTS modernize systems from different PLC manufacturers?</strong><br />
+      <strong>A:</strong> Yes. TTS provides total industrial automation solutions using various brands of PLCs, SCADA, and HMIs. Our engineers are experienced in multi-vendor environments and can integrate, migrate, or replace systems from different manufacturers while maintaining operational continuity.</p>
+    `
+  },
+
+  "hidden-costs-legacy-flow-measurement": {
+    title: "The Hidden Costs of Legacy Flow Measurement Systems in Oil & Gas",
+    seoTitle: "Hidden Costs of Legacy Flow Measurement Systems in Oil & Gas | TTS",
+    metaDescription: "How fractional measurement errors silently erode plant profitability — and what modern metering technology can do to stop revenue leakage.",
+    category: "Flow Measurement",
+    date: "July 23, 2026",
+    readTime: "3 Min Read",
+    pillar: "Pillar 1: Flow Measurement & Custody Metering",
+    description: "How fractional measurement errors silently erode plant profitability — and what modern metering technology can do to stop the leak.",
+    keywords: "legacy flow measurement, custody metering upgrade, flow computer, ultrasonic flow meter, oil and gas metering, measurement drift",
+    image: "/blog/legacy-flow-costs.jpg",
+    imageAlt: "A sprawling oil refinery operating at twilight with illuminated distillation towers and industrial piping.",
+    content: `
+      <p>
+        In the energy and petrochemical sectors, the phrase "if it isn't broken, don't fix it" is a common approach to infrastructure. When legacy custody metering and flow measurement systems are still technically operational, upgrading them is often pushed down the priority list.
+      </p>
+      <p>
+        However, in heavy industry, "operational" does not always mean "accurate." When it comes to custody transfer &mdash; the exact moment high-value liquids and gases change commercial ownership &mdash; a measurement error of just a fraction of a percent can result in the loss of millions of dollars over a fiscal quarter. If your facility is relying on outdated flow computers and aging field instruments, you aren't just risking compliance; you are silently bleeding revenue.
+      </p>
+
+      <h2>1. The Cost of "Acceptable" Drift</h2>
+      <p>
+        Mechanical flow meters and aging sensors naturally degrade and experience calculation drift over time. While legacy flow computers might have been top-of-the-line fifteen years ago, their microprocessors struggle to handle the high-speed, complex calculations required by today's stringent AGA and API standards.
+      </p>
+      <p>
+        When your system miscalculates dynamic variables like pressure, temperature, and fluid density, your metering skid loses accuracy.
+      </p>
+      <ul>
+        <li><strong>If you are the seller:</strong> You are giving away free product.</li>
+        <li><strong>If you are the buyer:</strong> You are paying for volume you never received.</li>
+      </ul>
+      <p>
+        Modern solutions, such as the <strong>OMNI 4000 and OMNI 7000 Series Flow Computers</strong>, utilize advanced processing to calculate mass and volumetric flow in real-time with zero calculation drift, ensuring your fiscal transfers are exact to the drop.
+      </p>
+
+      <h2>2. Escalating Maintenance and Unplanned Downtime</h2>
+      <p>
+        Older systems require constant babysitting. Mechanical meters feature moving parts that suffer from wear and tear, requiring frequent calibration, maintenance, and eventually, total replacement of internal components. Every hour your custody transfer skid is shut down for emergency maintenance is an hour of lost productivity.
+      </p>
+      <p>
+        By contrast, modern <strong>Ultrasonic Gas and Liquid Flow Meters</strong> (like those from our OEM partners SICK and Faure Herman) rely on advanced acoustic sensor technology. With no moving parts to wear out, these meters drastically reduce maintenance intervals, extend the lifespan of the equipment, and keep your product moving.
+      </p>
+
+      <h2>3. The Burden of Non-Compliance</h2>
+      <p>
+        Industry standards for safety, environmental emissions, and fiscal metering are constantly evolving. Relying on legacy systems makes it increasingly difficult to meet strict ISO 9001, ISO 14001, and ISO 45001 compliance standards.
+      </p>
+      <p>
+        Beyond fiscal loss, failing an audit or exceeding environmental thresholds due to inaccurate flare gas metering can result in severe regulatory fines. Upgrading to state-of-the-art <strong>Continuous Emissions Monitoring Systems (CEMS)</strong> and modern custody skids ensures your facility remains ahead of regulatory curves, protecting both the environment and your operating licenses.
+      </p>
+
+      <h2>The Path to Rapid ROI</h2>
+      <p>
+        The capital expenditure required to upgrade a custody metering system or install modern flow computers is often entirely offset by the recovered revenue from improved measurement accuracy alone. Furthermore, a complete system overhaul isn't always necessary. Through strategic engineering, existing metering skids can often be retrofitted with modernized control systems, preserving your heavy infrastructure while instantly upgrading its "brain."
+      </p>
+
+      <h2>Partner With TTS</h2>
+      <p>
+        At TTS, we don't just supply industrial products &mdash; we provide comprehensive, end-to-end solutions through strategic partnerships with reputable OEMs. Whether you need to validate a custody metering system, inspect critical infrastructure, or automate a manufacturing process, our team is equipped to deliver. Explore our <a href="/service/flow-meter-calibration/">flow meter calibration</a> and <a href="/products/flow-meters/">flow meter solutions</a>.
+      </p>
+
+      <h2>Frequently Asked Questions (FAQ)</h2>
+      <p><strong>Q: How does measurement drift affect custody transfer profitability?</strong><br />
+      <strong>A:</strong> Measurement drift occurs when aging flow meters and sensors gradually lose accuracy. In custody transfer, even a 0.1% systematic error on a 150,000 BPD crude oil line at $75/barrel results in over $4 million in annual unaccounted financial exposure. Modern flow computers like the OMNI 4000/7000 eliminate calculation drift entirely.</p>
+
+      <p><strong>Q: What are the advantages of ultrasonic flow meters over mechanical meters?</strong><br />
+      <strong>A:</strong> Ultrasonic flow meters from OEM partners like SICK and Faure Herman have no moving parts, drastically reducing maintenance intervals and eliminating wear-related accuracy degradation. They provide zero pressure drop, higher turndown ratios, and advanced diagnostics that mechanical meters cannot match.</p>
+
+      <p><strong>Q: Can existing metering skids be retrofitted instead of fully replaced?</strong><br />
+      <strong>A:</strong> Yes. Through strategic engineering, existing metering skids can often be retrofitted with modernized control systems, flow computers, and instrumentation. This preserves heavy infrastructure while instantly upgrading the measurement "brain," delivering rapid ROI without the capital expenditure of a complete system overhaul.</p>
+
+      <p><strong>Q: What role does CEMS play in custody transfer compliance?</strong><br />
+      <strong>A:</strong> Continuous Emissions Monitoring Systems (CEMS) ensure facilities meet environmental compliance standards including EPA and ISO 14001. Inaccurate flare gas metering due to legacy CEMS can result in regulatory fines and environmental threshold violations. Modern CEMS protects both environmental compliance and operating licenses.</p>
+
+      <p><strong>Q: How does TTS approach legacy flow computer upgrades?</strong><br />
+      <strong>A:</strong> TTS takes a phased approach: comprehensive site audit, parallel development in offline environments, strategic phased cut-over, and rigorous commissioning. This ensures legacy flow computers are replaced or upgraded without disrupting live custody transfer operations, maintaining fiscal measurement continuity throughout the transition.</p>
+    `
+  },
+
+  "zero-error-fiscal-transfer-custody-metering": {
+    title: "Zero-Error Fiscal Transfer: A Deep Dive into TTS Custody Metering Solutions",
+    seoTitle: "Zero-Error Fiscal Transfer: TTS Custody Metering Solutions | Texas Technical Services",
+    metaDescription: "Precision-engineered custody transfer systems — turnkey skids, OMNI flow computers, API/AGA compliance, and validation services from TTS.",
+    category: "Flow Measurement",
+    date: "July 22, 2026",
+    readTime: "3 Min Read",
+    pillar: "Pillar 1: Flow Measurement & Custody Metering",
+    description: "Precision-engineered custody transfer systems — turnkey skids, OMNI flow computers, API/AGA compliance, and validation services from TTS.",
+    keywords: "custody transfer metering, FLOWSKID, OMNI flow computer, API AGA compliance, custody metering skid, fiscal transfer",
+    image: "/flow_metering_skid.jpg",
+    imageAlt: "An industrial custody transfer flow metering skid with piping, valves, and measuring instruments.",
+    content: `
+      <p>
+        In the oil, gas, LNG, and petrochemical sectors, the point of <strong>custody transfer</strong> (fiscal metering) is the single most critical junction in the supply chain. This is the exact moment commercial ownership shifts from one entity to another. When millions of barrels or thousands of cubic meters of product pass through a pipeline, even a fraction of a percent in measurement error can lead to millions of dollars in financial discrepancies.
+      </p>
+      <p>
+        At <strong>Texas Technical Services (TTS)</strong>, our Custody Metering Solutions are built to eliminate uncertainty, ensure absolute compliance with global standards, and protect your bottom line.
+      </p>
+
+      <h2>What Makes a Reliable Custody Metering System?</h2>
+      <p>
+        A true custody transfer system is much more than a standalone meter &mdash; it is an integrated, highly calibrated ecosystem designed for uncompromising precision. Our solutions focus on four core pillars:
+      </p>
+
+      <h2>1. Turnkey Custody Transfer Skids (FLOWSKID)</h2>
+      <p>
+        We supply complete, skid-mounted liquid and gas custody metering systems engineered for fast deployment and maximum durability. Designed in strategic partnership with leading world-class OEMs, our skids bring together top-tier pipework, valves, flow meters, and sampling systems onto a single structural frame ready for immediate field integration.
+      </p>
+
+      <h2>2. Next-Gen Flow Computers (OMNI 4000 / 7000 Series)</h2>
+      <p>
+        At the heart of every fiscal measurement system is the flow computer. TTS supplies and integrates industry-standard <strong>OMNI 4000 and OMNI 7000 series flow computers</strong>. These ultra-reliable units compute complex temperature, pressure, and density variables in real time to calculate exact mass and volumetric flow with zero calculation drift.
+      </p>
+
+      <h2>3. Strict Compliance with Global Standards (API &amp; AGA)</h2>
+      <p>
+        Regulatory compliance is non-negotiable. Our metering consultants, engineers, and field technicians possess deep domain expertise in:
+      </p>
+      <ul>
+        <li><strong>API (American Petroleum Institute)</strong> standards for liquid measurement.</li>
+        <li><strong>AGA (American Gas Association)</strong> reports for natural gas custody transfer.</li>
+        <li>ISO quality and safety management standards (ISO 9001, ISO 14001, ISO 45001).</li>
+      </ul>
+
+      <h2>4. Metering Upgrades, Validation &amp; Recalibration</h2>
+      <p>
+        Instrumentation ages over time, but complete hardware replacement isn't always necessary. We specialize in upgrading legacy control systems, validating existing metering setups, and performing system recalibrations to restore your metering skids to peak operating accuracy without excessive capital expenditure.
+      </p>
+
+      <h2>Why Leading Energy Producers Choose TTS</h2>
+      <p>
+        Whether operating midstream pipelines, offshore platforms, or downstream refinery loading racks, our clients rely on TTS for end-to-end custody transfer excellence:
+      </p>
+      <ul>
+        <li><strong>End-to-End Delivery:</strong> From initial engineering consultancy and hardware selection to commissioning and site acceptance testing.</li>
+        <li><strong>OEM Partnerships:</strong> Access to top-tier international brands for meters, provers, and control hardware.</li>
+        <li><strong>Regional Footprint:</strong> On-the-ground support and technical personnel across Kuwait and Dubai.</li>
+      </ul>
+
+      <h2>Partner With TTS</h2>
+      <p>
+        At TTS, we don't just supply industrial products &mdash; we provide comprehensive, end-to-end solutions through strategic partnerships with reputable OEMs. Whether you need to validate a custody metering system, inspect critical infrastructure, or automate a manufacturing process, our team is equipped to deliver. See our <a href="/service/flow-measurement-solutions/">custody transfer metering</a> and <a href="/products/flow-meters/custody-transfer-flow-meters/">custody transfer flow meters</a>.
+      </p>
+
+      <h2>Frequently Asked Questions (FAQ)</h2>
+      <p><strong>Q: What components are included in a TTS turnkey custody transfer skid (FLOWSKID)?</strong><br />
+      <strong>A:</strong> A FLOWSKID includes top-tier pipework, valves, flow meters (Coriolis, ultrasonic, or turbine), sampling systems, flow computers (OMNI 4000/7000), and all structural framing. The skid is designed for fast deployment and immediate field integration, assembled in partnership with world-class OEMs.</p>
+
+      <p><strong>Q: What is the difference between the OMNI 4000 and OMNI 7000 flow computers?</strong><br />
+      <strong>A:</strong> Both are ultra-reliable fiscal measurement units that compute temperature, pressure, and density variables in real time. The OMNI 7000 offers enhanced processing capacity and additional communication protocols for complex multi-metering run configurations, while the OMNI 4000 is ideal for standard custody transfer applications.</p>
+
+      <p><strong>Q: How often should custody metering systems be validated and recalibrated?</strong><br />
+      <strong>A:</strong> Validation frequency depends on regulatory requirements and meter type, but industry best practice recommends proving custody meters against a known standard (pipe prover or small volume prover) at regular intervals defined by API MPMS Chapter 4. TTS provides ongoing maintenance and validation services to ensure continuous compliance.</p>
+
+      <p><strong>Q: Does TTS provide metering upgrades for legacy control systems?</strong><br />
+      <strong>A:</strong> Yes. TTS specializes in upgrading legacy control systems and performing recalibrations to restore metering skids to peak accuracy. This includes modernizing flow computers, replacing aging sensors, upgrading metering control systems, and reconfiguring SCADA integration — often without requiring complete hardware replacement.</p>
+
+      <p><strong>Q: Which industries use TTS custody metering solutions?</strong><br />
+      <strong>A:</strong> TTS custody metering solutions serve upstream production, midstream pipelines, downstream refining, and terminal distribution networks across oil &amp; gas, LNG, petrochemicals, and power generation sectors in Kuwait and the UAE.</p>
+    `
+  },
+
+  "tts-product-portfolio-deep-dive": {
+    title: "Driving Industrial Efficiency: A Deep Dive into Texas Technical Services' Product Portfolio",
+    seoTitle: "TTS Product Portfolio: Custody Metering, Analyzers, Automation | Texas Technical Services",
+    metaDescription: "Deep dive into TTS products — flow meters, CEMS, gas analyzers, PLCs, VFDs, and control room consoles for heavy industries across the Middle East.",
+    category: "Industrial Automation",
+    date: "July 21, 2026",
+    readTime: "4 Min Read",
+    pillar: "Pillar 2: Industrial Process Automation",
+    description: "From precision custody transfer metering to cutting-edge industrial automation, discover how TTS equips modern heavy industries for success.",
+    keywords: "industrial products, custody metering, flow meters, CEMS, analyzers, PLC, SCADA, control room consoles, industrial automation",
+    image: "/blog/product-portfolio.jpg",
+    imageAlt: "Industrial operations driving efficiency and safety across heavy industries.",
+    content: `
+      <p>
+        In today's fast-paced industrial landscape, operational efficiency, safety, and precision are not just goals &mdash; they are absolute necessities. Whether you are managing a petrochemical refinery, a power plant, or a large-scale water treatment facility, the reliability of your field instruments dictates the success of your entire operation.
+      </p>
+      <p>
+        Since 2008, <strong>Texas Technical Services Co. (TTS)</strong> has been a trusted, ISO 9001:2015 certified partner for heavy industries across the Middle East. While we are known for our specialized engineering and inspection services, our comprehensive product portfolio is the backbone that empowers our clients' operations.
+      </p>
+
+      <h2>1. Precision Measurement: Custody Metering &amp; Flow Meters</h2>
+      <p>
+        When it comes to the transfer of high-value resources like oil and gas, even a fraction of a percent of measurement error can result in massive financial discrepancies. We provide comprehensive, end-to-end custody metering solutions designed in strict compliance with API, AGA, and other relevant metering standards.
+      </p>
+      <p>Through our strategic partnerships with world-renowned OEMs, we supply highly accurate measurement technology, including:</p>
+      <ul>
+        <li><strong>Liquid Flow Meters:</strong> Ensuring exact volumetric or mass flow measurements for critical pipeline applications.</li>
+        <li><strong>Gas Flow Meters:</strong> Highly sensitive instruments engineered to withstand high-pressure gas transfers.</li>
+        <li><strong>Flare Meters:</strong> Essential for monitoring flare gas emissions, ensuring both safety and environmental compliance.</li>
+        <li><strong>Custody Transfer Skids:</strong> Fully integrated systems ready for deployment in complex midstream and downstream environments.</li>
+      </ul>
+
+      <h2>2. Environmental &amp; Process Clarity: Advanced Analyzers</h2>
+      <p>
+        Regulatory compliance and process optimization require real-time data on the chemical makeup of emissions and process gases. Our range of industrial analyzers helps plant operators maintain safe, eco-friendly, and efficient environments.
+      </p>
+      <ul>
+        <li><strong>CEMS (Continuous Emissions Monitoring Systems):</strong> Crucial for power plants and refineries to monitor effluent gases and maintain environmental standards.</li>
+        <li><strong>Gas Analyzers:</strong> Providing instantaneous data on gas composition to keep critical processes within safe operating limits.</li>
+        <li><strong>Dust Analyzers:</strong> Monitoring particulate matter in challenging environments like cement and steel manufacturing.</li>
+      </ul>
+
+      <h2>3. Empowering the Future: Industrial Automation</h2>
+      <p>
+        Modern facilities require seamless integration between field sensors and control systems. We supply the hardware required to upgrade legacy systems, streamline SCADA integration, and reduce operational downtime.
+      </p>
+      <p>Our automation product line includes:</p>
+      <ul>
+        <li><strong>Field Instruments &amp; Industrial Sensors:</strong> The "eyes and ears" of your facility, gathering real-time data from the factory floor.</li>
+        <li><strong>PLCs &amp; GOT (Graphic Operator Panels):</strong> Robust programmable logic controllers and user-friendly interfaces that give operators total command over complex processes.</li>
+        <li><strong>Drive Technology:</strong> Frequency Inverters (VFDs) and AC Servos that optimize motor speeds, drastically reducing energy consumption and mechanical wear.</li>
+      </ul>
+
+      <h2>4. The Command Center: Control Room Interiors &amp; Consoles</h2>
+      <p>
+        Data is only valuable if it can be effectively monitored. Beyond field hardware, TTS designs and supplies Control Room Interiors and Consoles. We provide ergonomic, high-tech control environments that allow human operators to monitor plant operations comfortably and safely during long shifts, reducing fatigue and the risk of critical errors.
+      </p>
+
+      <h2>Engineered for the World's Toughest Industries</h2>
+      <p>
+        We don't just sell equipment; we provide the exact tools needed for specific industrial challenges. Our products are currently deployed across a wide range of demanding sectors:
+      </p>
+      <ul>
+        <li>Oil &amp; Gas, Refineries, and LNG</li>
+        <li>Petrochemicals</li>
+        <li>Power Generation</li>
+        <li>Water Treatment Facilities</li>
+        <li>Cement, Metal, and Steel Manufacturing</li>
+      </ul>
+
+      <h2>Partner With TTS</h2>
+      <p>
+        At TTS, we don't just supply industrial products &mdash; we provide comprehensive, end-to-end solutions through strategic partnerships with reputable OEMs. Whether you need to validate a custody metering system, inspect critical infrastructure, or automate a manufacturing process, our team is equipped to deliver. Discover our <a href="/products/flow-meters/">flow meters</a> and <a href="/products/analyzers/">process analyzers</a>.
+      </p>
+
+      <h2>Frequently Asked Questions (FAQ)</h2>
+      <p><strong>Q: What types of flow meters does TTS supply for custody transfer applications?</strong><br />
+      <strong>A:</strong> TTS supplies Coriolis, ultrasonic, turbine, vortex, and electromagnetic flow meters through OEM partnerships. For custody transfer, Coriolis meters offer the highest accuracy (±0.05%), ultrasonic meters provide zero pressure drop for large-diameter pipelines, and turbine meters deliver cost-effective volumetric measurement.</p>
+
+      <p><strong>Q: What is the difference between CEMS and gas analyzers?</strong><br />
+      <strong>A:</strong> CEMS (Continuous Emissions Monitoring Systems) are regulatory-grade systems that continuously monitor stack emissions for EPA and ISO compliance. Gas analyzers provide instantaneous data on gas composition for process control and safety monitoring. TTS supplies both, with CEMS designed for regulatory reporting and analyzers for real-time process optimization.</p>
+
+      <p><strong>Q: Does TTS supply Mitsubishi Electric PLC and automation hardware?</strong><br />
+      <strong>A:</strong> Yes. TTS is an authorized channel partner for Mitsubishi Electric Factory Automation, supplying MELSEC PLCs, GOT graphic operator panels, frequency inverters (VFDs), AC servo drives, and ICONICS SCADA software for industrial automation applications.</p>
+
+      <p><strong>Q: What control room solutions does TTS provide?</strong><br />
+      <strong>A:</strong> TTS designs and supplies ergonomic Control Room Interiors and Consoles that allow operators to monitor plant operations comfortably during long shifts. These high-tech control environments reduce operator fatigue, minimize critical errors, and support 24/7 continuous plant monitoring across industrial facilities.</p>
+
+      <p><strong>Q: In which industries are TTS products deployed?</strong><br />
+      <strong>A:</strong> TTS products are deployed across oil &amp; gas, refineries, LNG, petrochemicals, power generation, water treatment, cement, and metal/steel manufacturing. Each product line is selected and configured to meet the specific challenges of these demanding industrial sectors.</p>
+    `
+  },
+
+  "building-maintenance-units-high-altitude": {
+    title: "Mastering High-Altitude Maintenance: The Importance of Advanced Building Maintenance Units",
+    seoTitle: "Building Maintenance Units & Skylight Gantry Systems | TTS Construction Solutions",
+    metaDescription: "Why engineered facade access and skylight gantry systems are essential for the safety and upkeep of modern high-rise architecture in the Middle East.",
+    category: "Building Maintenance",
+    date: "July 9, 2026",
+    readTime: "3 Min Read",
+    pillar: "Pillar 3: Analyzers & Inspection",
+    description: "Why engineered facade access and skylight gantry systems are essential for the safety and upkeep of modern architecture.",
+    keywords: "building maintenance unit, BMU, skylight gantry, facade access, high-rise maintenance, construction solutions, Kuwait, Dubai",
+    image: "/blog/bmu-rooftop.jpg",
+    imageAlt: "A permanently installed Building Maintenance Unit crane platform on the rooftop of a high-rise glass building.",
+    content: `
+      <p>
+        Modern architecture is defined by sweeping glass facades, complex geometric structures, and massive atriums. While these designs are visually stunning and maximize natural light, they present a significant ongoing engineering challenge: how do you safely and efficiently maintain them?
+      </p>
+      <p>
+        The answer lies in specialized <strong>Building Maintenance Units (BMUs)</strong> and <strong>Constructions</strong>. Whether it is routine window cleaning, glass replacement, or structural inspections, relying on temporary scaffolding or rope access is often inefficient and risky for complex structures. Permanent, engineered access systems are the safest way to ensure your building remains pristine and operational without putting workers at risk.
+      </p>
+
+      <h2>The Challenge of Complex Facades</h2>
+      <p>
+        As buildings grow taller and architectural designs become more intricate, traditional access methods fall short. A permanent BMU &mdash; such as a roof trolley system, monorail, or davit system &mdash; is integrated directly into the building's structural design.
+      </p>
+      <p>
+        These customized cradles and platforms allow maintenance crews to lower themselves safely down the exterior of a high-rise. Because the systems run on engineered tracks or fixed anchor points, they provide a highly stable working environment even at extreme heights, ensuring that every inch of the facade is accessible for cleaning and repairs.
+      </p>
+
+      <h2>Navigating Atriums with Skylight Gantry Systems</h2>
+      <p>
+        While exterior facades get most of the attention, internal and external roof skylights require just as much care. Accessing the center of a sprawling glass roof over a busy commercial atrium is impossible without the right infrastructure.
+      </p>
+      <p>
+        This is where <strong>Skylight Travelling Gantry Systems</strong> are critical. Purposefully engineered for efficient access, these gantries travel along discreet tracks installed alongside the skylight. They allow maintenance teams to seamlessly "glide" over or under fragile glass structures.
+      </p>
+      <ul>
+        <li><strong>Internal and External Access:</strong> Gantries can be engineered for both the outside roof and the indoor ceiling.</li>
+        <li><strong>Maximum Safety:</strong> Workers remain enclosed in a secure platform with zero risk of falling through fragile architectural glass.</li>
+        <li><strong>Operational Continuity:</strong> Maintenance can often be performed without disrupting the business operations happening on the floor below.</li>
+      </ul>
+
+      <h2>Prioritizing Safety and Compliance</h2>
+      <p>
+        Working at height is inherently dangerous, making compliance with stringent safety regulations non-negotiable. High-quality construction and installation of BMUs guarantee that your facility meets all local and international safety standards. By investing in permanent facade access systems, building owners mitigate severe liability risks and ensure that every maintenance team stepping onto the cradle is fully protected.
+      </p>
+      <p>
+        At <strong>Texas Technical Services</strong>, we provide cutting-edge construction solutions for building maintenance, including the highly reliable TRANSWILL Facade Access and Skylight Travelling Gantry systems. We engineer access solutions that perfectly match your building's unique architectural profile, ensuring absolute safety and efficiency.
+      </p>
+
+      <h2>Ready to Secure Your High-Altitude Access?</h2>
+      <p>
+        If your commercial building or industrial facility requires state-of-the-art Building Maintenance Units, facade access systems, or skylight gantries, you need a partner who understands the high stakes of modern architectural maintenance. Texas Technical Services blends premium engineering with unmatched workmanship to secure your infrastructure. Explore our <a href="/service/constructions/">construction solutions</a> and <a href="/service/inspection-testing/">inspection and testing</a> services.
+      </p>
+
+      <h2>Frequently Asked Questions (FAQ)</h2>
+      <p><strong>Q: What types of Building Maintenance Units (BMUs) does TTS supply?</strong><br />
+      <strong>A:</strong> TTS provides roof trolley systems, monorail systems, davit systems, and custom-designed cradle and platform solutions. Each BMU is engineered to match the building's specific architectural profile, with permanent tracks or anchor points for stable working environments at extreme heights.</p>
+
+      <p><strong>Q: What is a Skylight Travelling Gantry System?</strong><br />
+      <strong>A:</strong> A Skylight Travelling Gantry is a purpose-built access system that travels along discreet tracks installed alongside glass skylights. It allows maintenance teams to safely traverse over or under fragile glass structures, providing both internal and external access without disrupting business operations on the floor below.</p>
+
+      <p><strong>Q: Why are permanent facade access systems safer than rope access or scaffolding?</strong><br />
+      <strong>A:</strong> Permanent BMU systems run on engineered tracks or fixed anchor points, providing a highly stable working environment even at extreme heights. Unlike rope access or temporary scaffolding, permanent systems eliminate fall risks, reduce setup time, and ensure every inch of the facade is accessible for routine maintenance and emergency repairs.</p>
+
+      <p><strong>Q: Does TTS provide TRANSWILL facade access systems?</strong><br />
+      <strong>A:</strong> Yes. TTS provides the highly reliable TRANSWILL Facade Access and Skylight Travelling Gantry systems. These are custom-engineered solutions designed to perfectly match each building's unique architectural profile, ensuring absolute safety and efficiency for high-altitude maintenance operations.</p>
+
+      <p><strong>Q: Can BMU maintenance be performed without disrupting building operations?</strong><br />
+      <strong>A:</strong> Yes. One of the key advantages of permanent BMU and gantry systems is operational continuity. Maintenance crews can perform window cleaning, glass replacement, and structural inspections without disrupting the business operations happening inside the building, as the systems operate externally on dedicated tracks.</p>
+    `
+  },
+
+  "industrial-process-automation-future-manufacturing": {
+    title: "The Future of Manufacturing: Unlocking Efficiency with Industrial Process Automation",
+    seoTitle: "Industrial Process Automation: SCADA, PLC, HMI Solutions | TTS",
+    metaDescription: "How modern control systems, SCADA integration, and PLC programming are transforming the industrial floor. A guide to industrial process automation.",
+    category: "Industrial Automation",
+    date: "July 8, 2026",
+    readTime: "3 Min Read",
+    pillar: "Pillar 2: Industrial Process Automation",
+    description: "How modern control systems, SCADA integration, and PLC programming are transforming the industrial floor.",
+    keywords: "industrial process automation, SCADA integration, PLC programming, HMI development, manufacturing efficiency, Industry 4.0",
+    image: "/blog/scada-monitors.jpg",
+    imageAlt: "An operator using multi-monitor displays showing complex SCADA system diagrams.",
+    content: `
+      <p>
+        In today's hyper-competitive industrial landscape, relying on legacy systems or manual oversight is no longer a sustainable strategy. For sectors like heavy manufacturing, power generation, and petrochemicals, the margin for error is razor-thin. To stay competitive, facilities must move faster, operate safer, and eliminate inefficiencies. The solution lies in <strong>Industrial Process Automation</strong>.
+      </p>
+      <p>
+        By intelligently upgrading and integrating advanced control systems, facilities can transform unpredictable manual workflows into streamlined, data-driven operations.
+      </p>
+
+      <h2>The Brain of the Operation: PLC Programming</h2>
+      <p>
+        If industrial automation is the body, the <strong>Programmable Logic Controller (PLC)</strong> is the brain. PLCs are ruggedized computers designed specifically to control manufacturing processes, from a single assembly line to complex, multi-stage refinery operations.
+      </p>
+      <p>
+        Expert PLC programming ensures that your machinery executes tasks with absolute precision and repeatability. Upgrading outdated or poorly programmed PLCs removes bottlenecks, prevents sequence errors, and allows your equipment to adapt dynamically to different production loads. The result is a dramatic reduction in material waste and a significant boost in operational consistency.
+      </p>
+
+      <h2>Total Visibility at Scale: SCADA Integration</h2>
+      <p>
+        Having efficient machines is only half the battle; knowing exactly what they are doing in real-time is the other. This is where <strong>Supervisory Control and Data Acquisition (SCADA)</strong> systems come into play.
+      </p>
+      <p>
+        SCADA integration pulls data from sensors, PLCs, and machinery across your entire facility into a centralized hub. Instead of walking the plant floor to check gauges or diagnose a fault, operators can monitor critical metrics &mdash; like temperature, pressure, and flow rates &mdash; from a single control room.
+      </p>
+      <ul>
+        <li><strong>Real-time alerts:</strong> Instantly identify and isolate anomalies before they cause a shutdown.</li>
+        <li><strong>Historical data analysis:</strong> Track long-term performance trends to optimize preventative maintenance schedules.</li>
+        <li><strong>Remote accessibility:</strong> Securely monitor your facility's health from anywhere in the world.</li>
+      </ul>
+
+      <h2>The Human-Machine Connection: HMI Development</h2>
+      <p>
+        Even the most advanced automation systems are only as effective as the people operating them. <strong>Human-Machine Interfaces (HMIs)</strong> bridge the gap between complex background code and the human operator.
+      </p>
+      <p>
+        Expert HMI development focuses on creating intuitive, visual dashboards. Instead of forcing operators to decode raw data or navigate clunky legacy screens, a modern HMI translates complex machine statuses into clear visual indicators. This reduces the learning curve for new technicians, minimizes operator fatigue, and drastically lowers the risk of human error during critical operations.
+      </p>
+
+      <h2>Slashing Downtime and Boosting Productivity</h2>
+      <p>
+        Ultimately, investing in industrial automation is about your bottom line. Every minute of unexpected downtime eats into profitability. By designing, implementing, and upgrading sophisticated control systems, industrial automation solutions strip away inefficiencies. They allow you to predict failures before they happen, maintain tighter control over your production quality, and free up your human workforce to focus on high-value problem-solving rather than repetitive monitoring.
+      </p>
+      <p>
+        At <strong>Texas Technical Services</strong>, we specialize in the end-to-end modernization of industrial workflows. From initial control system design to advanced SCADA and PLC integration, we provide the architecture your facility needs to operate at peak efficiency.
+      </p>
+
+      <h2>Ready to Automate Your Operations?</h2>
+      <p>
+        If your facility is looking to upgrade legacy systems, integrate advanced SCADA, or optimize production through expert PLC programming, you need a partner equipped for the future of industry. Texas Technical Services blends premium technology with unmatched expertise to transform your operational efficiency. See our <a href="/plc-scada-systems-integration/">PLC and SCADA integration</a> and <a href="/service/industrial-automation/">industrial automation</a> capabilities.
+      </p>
+
+      <h2>Frequently Asked Questions (FAQ)</h2>
+      <p><strong>Q: What is the difference between a PLC and a DCS in industrial automation?</strong><br />
+      <strong>A:</strong> PLCs (Programmable Logic Controllers) are ruggedized computers designed for discrete and sequential control of individual machines or production lines. DCS (Distributed Control Systems) manage continuous process control across an entire plant. PLCs are more cost-effective for discrete manufacturing, while DCS excels in continuous process industries like refining and power generation.</p>
+
+      <p><strong>Q: How does SCADA integration improve real-time plant visibility?</strong><br />
+      <strong>A:</strong> SCADA pulls data from sensors, PLCs, and machinery across the entire facility into a centralized hub. Operators can monitor critical metrics like temperature, pressure, and flow rates from a single control room, with real-time alerts for anomalies, historical data for trend analysis, and remote accessibility for off-site monitoring.</p>
+
+      <p><strong>Q: What makes a good HMI design for industrial operations?</strong><br />
+      <strong>A:</strong> Effective HMI design focuses on intuitive visual dashboards that translate complex machine statuses into clear indicators. Key principles include reducing operator fatigue, minimizing the learning curve for new technicians, providing alarm rationalization, and following standards like ISA-101 for display hierarchy and ISO 11064 for control room ergonomics.</p>
+
+      <p><strong>Q: How does industrial automation reduce unplanned downtime?</strong><br />
+      <strong>A:</strong> Modern automation systems provide predictive maintenance capabilities through sensor data analytics, real-time monitoring of equipment health, and early detection of anomalies before they cause failures. PLCs and SCADA systems log operational data that enables facilities to schedule maintenance proactively rather than reactively.</p>
+
+      <p><strong>Q: Can TTS automate facilities with legacy equipment from multiple vendors?</strong><br />
+      <strong>A:</strong> Yes. TTS specializes in multi-vendor integration, designing automation architectures that incorporate existing legacy equipment alongside modern PLCs, SCADA systems, and HMIs. Their phased approach ensures facilities can upgrade incrementally without requiring a complete rip-and-replace of existing infrastructure.</p>
+    `
+  },
+
+  "comprehensive-inspection-testing-industrial-assets": {
+    title: "Safeguarding Your Industrial Assets: The Critical Role of Comprehensive Inspection & Testing",
+    seoTitle: "Industrial Inspection & Testing: NDT, Functional Testing, Certification | TTS",
+    metaDescription: "Comprehensive guide to NDT methods, functional testing, ISO certification, and proactive maintenance for industrial assets in Kuwait and the UAE.",
+    category: "Inspection & Testing",
+    date: "July 7, 2026",
+    readTime: "3 Min Read",
+    pillar: "Pillar 3: Analyzers & Inspection",
+    description: "Why proactive testing and compliance certifications are the backbone of modern industrial operations.",
+    keywords: "industrial inspection, non-destructive testing, NDT, equipment testing, compliance certification, ISO 9001, asset integrity",
+    image: "/homevideos/INSPECTION-AND-TESTING1.jpg",
+    imageAlt: "Routine industrial inspections identifying issues before they cause critical failures.",
+    content: `
+      <p>
+        In high-stakes industries like oil and gas, power generation, and heavy manufacturing, operational integrity isn't just a metric &mdash; it's the lifeline of your business. A single equipment failure can lead to catastrophic downtime, severe safety hazards, and massive financial losses.
+      </p>
+      <p>
+        That's where comprehensive <strong>Inspection &amp; Testing</strong> comes in. Moving beyond basic preventative maintenance, a rigorous testing protocol ensures your assets not only meet strict industry regulations but perform optimally under the most demanding conditions.
+      </p>
+
+      <h2>Proactive Defense Through Equipment Inspections</h2>
+      <p>
+        Reactive maintenance is a costly gamble. Waiting for machinery to fail before addressing it disrupts production and jeopardizes workplace safety. Thorough, routine equipment inspections act as a proactive defense mechanism. By systematically evaluating your infrastructure &mdash; from pipelines to complex operational machinery &mdash; expert technicians can identify wear and tear, corrosion, and structural weaknesses long before they escalate into critical failures. This extends the lifecycle of your assets and ensures continuous, predictable operations.
+      </p>
+
+      <h2>The Edge of Non-Destructive Testing (NDT)</h2>
+      <p>
+        How do you evaluate the structural integrity of critical infrastructure without taking it offline or causing damage? The answer is <strong>Non-Destructive Testing (NDT)</strong>.
+      </p>
+      <p>
+        NDT is a vital component of modern industrial maintenance. Using advanced methodologies, experts can detect internal flaws, microscopic cracks, and material inconsistencies seamlessly.
+      </p>
+      <ul>
+        <li><strong>Zero operational disruption:</strong> Assets remain intact and often operational during the testing process.</li>
+        <li><strong>Precision data:</strong> Engineers receive a highly accurate, data-backed picture of material health.</li>
+        <li><strong>Cost savings:</strong> Eliminates the need to disassemble or replace parts purely for exploratory checks.</li>
+      </ul>
+
+      <h2>Validating Performance with Functional Testing</h2>
+      <p>
+        An asset may look structurally sound on the surface, but does it operate correctly when integrated into your wider system? Functional testing bridges the gap between physical condition and operational capability. By simulating real-world pressures, loads, and operational scenarios, testing experts validate that your equipment performs exactly as designed. This is especially critical for safety mechanisms, control valves, and pressure systems where a failure to actuate can have compounding consequences.
+      </p>
+
+      <h2>Navigating Certification and Compliance</h2>
+      <p>
+        Regulatory landscapes in heavy industrial sectors are notoriously complex and constantly evolving. Operating out of compliance isn't just a legal and financial risk; it's a reputational one. Professional inspection teams don't just find faults &mdash; they guide you through the certification process. By aligning your equipment's performance with stringent industry standards, you guarantee that your facility operates safely and legally. Certified infrastructure provides tangible proof to stakeholders, regulators, and clients that your operations are secure and trustworthy.
+      </p>
+
+      <h2>Securing Peace of Mind</h2>
+      <p>
+        At the end of the day, comprehensive inspection and testing is about risk mitigation. It's about knowing that when your team steps onto the facility floor, the infrastructure around them is sound. At <strong>Texas Technical Services</strong>, our team of experts provides end-to-end equipment inspections, non-destructive testing, functional testing, and certification across a wide variety of industrial sectors. We help you maintain the integrity of your assets, giving you the peace of mind to focus on what you do best: driving your industry forward.
+      </p>
+
+      <h2>Ready to Secure Your Industrial Assets?</h2>
+      <p>
+        If your facility requires comprehensive equipment inspections, non-destructive testing (NDT), or rigorous certification to meet the latest industry standards, you need a partner who understands the high stakes of the region's energy and manufacturing sectors. <strong>Texas Technical Services</strong> blends advanced testing technology with expert insights to safeguard your infrastructure and minimize downtime. Learn more about our <a href="/service/inspection-testing/">inspection and testing services</a> and <a href="/service/inspection-testing/non-destructive-testing-ndt/">non-destructive testing</a> solutions.
+      </p>
+
+      <h2>Frequently Asked Questions (FAQ)</h2>
+      <p><strong>Q: What is the difference between NDT and destructive testing?</strong><br />
+      <strong>A:</strong> Non-Destructive Testing (NDT) evaluates the structural integrity of components without causing damage, allowing assets to remain operational during testing. Destructive testing requires physically breaking or damaging a sample to determine its properties. NDT is preferred for in-service inspections where asset availability is critical.</p>
+
+      <p><strong>Q: What types of NDT methods does TTS offer?</strong><br />
+      <strong>A:</strong> TTS provides ultrasonic testing (UT), radiographic testing (RT), magnetic particle inspection (MT), liquid penetrant examination (PT), eddy current testing, phased array ultrasonic testing (PAUT), time of flight diffraction (TOFD), and visual inspection. Each method is selected based on the material type, defect type, and asset configuration.</p>
+
+      <p><strong>Q: How does functional testing differ from visual inspection?</strong><br />
+      <strong>A:</strong> Visual inspection identifies surface-level defects, corrosion, and wear. Functional testing goes further by simulating real-world pressures, loads, and operational scenarios to validate that equipment performs correctly under actual operating conditions. This is critical for safety mechanisms, control valves, and pressure systems.</p>
+
+      <p><strong>Q: What certifications does TTS help facilities achieve?</strong><br />
+      <strong>A:</strong> TTS guides facilities through compliance with ISO 9001 (quality management), ISO 14001 (environmental management), ISO 45001 (occupational health and safety), ASME, API, and AWS standards. Their inspection teams ensure equipment meets all local and international regulatory requirements, providing tangible proof of compliance to stakeholders and regulators.</p>
+
+      <p><strong>Q: Why is proactive inspection better than reactive maintenance?</strong><br />
+      <strong>A:</strong> Reactive maintenance waits for equipment to fail, causing unplanned downtime, safety hazards, and cascading production losses. Proactive inspection identifies wear, corrosion, and structural weaknesses early, extending asset lifecycle, ensuring continuous operations, and preventing costly emergency repairs that disrupt production schedules.</p>
+    `
+  },
+
+  "custody-metering-upgrade-strategic-necessity": {
+    title: "The Precision Mandate: Why Upgrading Your Custody Metering System is a Strategic Necessity",
+    seoTitle: "Why Upgrade Your Custody Metering System | Strategic Necessity | TTS",
+    metaDescription: "The financial impact of measurement inaccuracy and why upgrading custody metering is a strategic investment in revenue protection and compliance.",
+    category: "Flow Measurement",
+    date: "July 6, 2026",
+    readTime: "4 Min Read",
+    pillar: "Pillar 1: Flow Measurement & Custody Metering",
+    description: "In high-stakes industries like Oil & Gas, Petrochemicals, and Power Generation, every drop — and every data point — counts.",
+    keywords: "custody metering upgrade, flow measurement accuracy, API AGA standards, metering system modernization, fiscal transfer, revenue protection",
+    image: "/flow_metering_skid.jpg",
+    imageAlt: "A modern custody transfer metering skid with valves, meters, and sensors for absolute precision.",
+    content: `
+      <p>
+        In high-stakes industries like Oil &amp; Gas, Petrochemicals, and Power Generation, every drop &mdash; and every data point &mdash; counts. Here is why upgrading your flow measurement systems is a strategic necessity, not just a maintenance task.
+      </p>
+      <p>
+        When dealing with heavy industrial processes, the margin for error isn't just slim; it is fiercely expensive. Whether you are operating a refinery, managing a municipal water treatment facility, or overseeing liquefied natural gas (LNG) transfers, the financial and operational impact of inaccurate measurement can be staggering.
+      </p>
+      <p>
+        At the absolute center of this challenge lies <strong>custody transfer</strong> &mdash; the critical juncture where a physical product changes hands and, consequently, changes ownership. It is the industrial equivalent of a cash register, but instead of scanning barcodes, you are measuring highly pressurized, volatile, and immensely valuable fluids or gases.
+      </p>
+
+      <h2>The True Cost of Inaccuracy</h2>
+      <p>
+        In custody metering, accuracy is the only metric that matters. Even a fraction of a percent in measurement error &mdash; often caused by drifting calibration, outdated sensors, or uncompensated environmental factors &mdash; can result in massive financial discrepancies.
+      </p>
+      <p>
+        Consider a pipeline transferring millions of barrels of crude oil or cubic meters of natural gas. A 0.1% measurement error isn't a rounding issue; it is a multi-million dollar leak in your revenue stream. Beyond direct financial loss, relying on outdated or poorly maintained metering control systems introduces unnecessary risk into an otherwise tightly controlled environment, leading to:
+      </p>
+      <ul>
+        <li><strong>Regulatory Penalties:</strong> Failing to meet strict local and international measurement standards (such as API or AGA guidelines).</li>
+        <li><strong>Disputed Contracts:</strong> Lack of transparent, reliable data leads to friction and legal disputes between buyers and sellers.</li>
+        <li><strong>Process Inefficiencies:</strong> Inaccurate flow data upstream can completely derail optimization efforts downstream.</li>
+      </ul>
+      <p>
+        To maintain transparency, profitability, and trust, facilities must ensure their measurement control systems operate flawlessly.
+      </p>
+
+      <h2>Elevating Your Standards: What a Specialized Partner Brings</h2>
+      <p>
+        At <strong>Texas Technical Services</strong>, based right here in the Middle East, we provide comprehensive solutions to ensure your metering systems are not just operational, but optimal. Here is what a state-of-the-art service approach entails:
+      </p>
+
+      <h3>1. System Upgrades &amp; Modernization</h3>
+      <p>
+        Legacy mechanical meters and older analog control systems are a liability. Upgrading your metering control systems ensures you are leveraging the latest in digital accuracy. This includes transitioning to ultrasonic or Coriolis flow meters that offer higher turndown ratios, better diagnostics, and minimal pressure drop. Modernization also means integrating these meters into advanced supervisory systems that offer real-time data monitoring and automated reporting.
+      </p>
+
+      <h3>2. Rigorous Maintenance &amp; Validation</h3>
+      <p>
+        Accuracy is not a static state; it degrades over time. Routine maintenance and validation (proving) for custody metering systems guarantee that your operations consistently meet strict industry standards. This involves verifying the meter's performance against a known standard &mdash; often using a mobile or stationary prover &mdash; under actual operating conditions. Regular validation prevents "measurement drift" and ensures every transaction is legally defensible.
+      </p>
+
+      <h3>3. Strategic Consultancy &amp; System Design</h3>
+      <p>
+        Sometimes the issue isn't the individual meter, but the overarching system architecture. Our specialized consultancy services audit your current custody metering workflows. We look at the entire skid design &mdash; valves, strainers, straight-run piping, flow computers, and analyzers &mdash; identifying bottlenecks and uncovering opportunities to enhance productivity and reduce measurement uncertainty.
+      </p>
+
+      <h2>The Bottom Line: Protecting Your Product and Your Profit</h2>
+      <p>
+        Investing in expert flow measurement services is not an operational expense; it is a direct investment in revenue protection. The benefits are clear and measurable:
+      </p>
+      <ul>
+        <li><strong>Uncompromising Accuracy:</strong> Complete financial protection and transparency during every custody transfer.</li>
+        <li><strong>Guaranteed Compliance:</strong> Staying ahead of rigorous local, international, and industry-specific regulations.</li>
+        <li><strong>Optimized Productivity:</strong> Streamlined operations with predictive maintenance that drastically reduces unplanned downtime.</li>
+      </ul>
+      <p>
+        By blending advanced automation technology with rigorous, one-on-one field service, facilities can achieve high-quality results without compromising on safety or operational speed.
+      </p>
+
+      <h2>Ready to Optimize Your Flow?</h2>
+      <p>
+        If your facility is due for a system upgrade or requires rigorous validation to meet the latest industry standards, you need a partner who understands the high stakes of the region's energy and industrial sectors. Texas Technical Services specializes in blending premium technology with unmatched workmanship to secure your assets. Explore our <a href="/service/flow-measurement-solutions/">flow measurement solutions</a> and <a href="/service/flow-computer-configuration/">flow computer configuration</a> services.
+      </p>
+
+      <h2>Frequently Asked Questions (FAQ)</h2>
+      <p><strong>Q: What is the financial impact of a 0.1% measurement error in custody transfer?</strong><br />
+      <strong>A:</strong> Consider a 150,000 BPD crude oil pipeline at $75/barrel: a 0.1% systematic error creates $11,250 in daily discrepancies, totaling over $4.1 million annually. For high-value petrochemicals and LNG, the financial impact is magnified further. Upgrading metering systems typically pays for itself through recovered measurement accuracy alone.</p>
+
+      <p><strong>Q: What does API MPMS Chapter 21 compliance require for flow computers?</strong><br />
+      <strong>A:</strong> API MPMS Chapter 21 defines requirements for petroleum measurement computing systems, including calculation algorithms, audit trail functionality, data integrity protection, alarm management, and reporting capabilities. Modern flow computers like the OMNI 4000/7000 are designed to meet these requirements out of the box.</p>
+
+      <p><strong>Q: How does meter proving validate custody transfer accuracy?</strong><br />
+      <strong>A:</strong> Meter proving verifies a flow meter's performance against a known standard (pipe prover or small volume prover) under actual operating conditions. This generates a meter factor that corrects for systematic bias. Regular proving ensures every fiscal transaction is legally defensible and prevents measurement drift from accumulating over time.</p>
+
+      <p><strong>Q: Can TTS audit our current custody metering workflows?</strong><br />
+      <strong>A:</strong> Yes. TTS provides specialized consultancy services that audit your entire custody metering workflow — including skid design, valves, strainers, straight-run piping, flow computers, and analyzers. We identify bottlenecks, uncover measurement uncertainty sources, and recommend optimizations to enhance productivity and accuracy.</p>
+
+      <p><strong>Q: What are the regulatory consequences of failing a custody metering audit?</strong><br />
+      <strong>A:</strong> Failing a custody metering audit can result in regulatory penalties, disputed contracts between buyers and sellers, loss of operating licenses, and severe financial discrepancies. Beyond direct fines, inaccurate metering damages commercial relationships and undermines trust in fiscal transactions. Proactive validation and upgrades prevent these consequences.</p>
+    `
+  },
+
+  "coriolis-flow-meter-calibration-guide": {
+    title: "Coriolis Flow Meter Calibration: Complete Guide to Standards and Accuracy",
+    seoTitle: "Coriolis Flow Meter Calibration Guide — Standards, Process & GCC Services",
+    metaDescription: "Complete guide to Coriolis flow meter calibration — ISO 17025, OIML R117, API MPMS standards, and calibration services in Kuwait.",
+    category: "Flow Measurement",
+    date: "July 28, 2026",
+    readTime: "12 Min Read",
+    pillar: "Pillar 1: Flow Measurement & Custody Metering",
+    description: "Learn how Coriolis flow meter calibration works, the international standards that govern it, and why choosing an accredited calibration provider matters for custody transfer accuracy.",
+    keywords: "Coriolis flow meter calibration, Coriolis meter calibration, micro motion flow meter calibration, flow meter calibration Kuwait, ISO 17025 calibration",
+    image: "/flow_metering_skid.jpg",
+    imageAlt: "A Coriolis flow meter being calibrated in an accredited laboratory with reference standards.",
+    content: `
+      <p>
+        <strong>Coriolis flow meter calibration</strong> is a critical process that ensures the accuracy and reliability of mass flow measurement in industrial applications. Coriolis meters are widely used in custody transfer, process control, and batching applications across oil &amp; gas, petrochemical, and power generation industries. Because Coriolis meters measure mass flow directly — independent of fluid properties like density, viscosity, and temperature — they are considered the gold standard for fiscal measurement and process optimization.
+      </p>
+      <p>
+        However, like all precision instruments, Coriolis flow meters require regular calibration to maintain their specified accuracy. Over time, factors such as mechanical wear, coating buildup, and electronic drift can affect meter performance. In custody transfer applications, even a small measurement error can translate into significant financial discrepancies, making calibration a critical investment rather than an optional expense.
+      </p>
+
+      <h2>How Coriolis Flow Meters Work</h2>
+      <p>
+        A Coriolis flow meter operates on the principle of the Coriolis effect — the same force that causes large-scale weather patterns to curve on the rotating Earth. Inside the meter, fluid flows through one or more vibrating tubes. As fluid moves through these vibrating tubes, it induces a phase shift in the vibration pattern. This phase shift is directly proportional to the mass flow rate of the fluid.
+      </p>
+      <p>
+        Key advantages of Coriolis technology include:
+      </p>
+      <ul>
+        <li><strong>Direct mass flow measurement</strong> — no need for density or temperature compensation</li>
+        <li><strong>High accuracy</strong> — typically ±0.1% of reading for custody transfer applications</li>
+        <li><strong>Multi-parameter measurement</strong> — mass flow, density, temperature, and concentration in a single device</li>
+        <li><strong>No moving parts</strong> — minimal maintenance requirements compared to mechanical meters</li>
+        <li><strong>Wide turndown ratio</strong> — accurate across a broad range of flow rates</li>
+      </ul>
+
+      <h2>International Calibration Standards</h2>
+      <p>
+        Coriolis flow meter calibration must comply with internationally recognized standards to ensure measurement traceability and accuracy. The most important standards governing Coriolis meter calibration include:
+      </p>
+      <p>
+        <strong>ISO 17025:2017</strong> — The international standard for testing and calibration laboratories. Accredited laboratories maintain documented quality management systems, calibrated reference standards, and uncertainty budgets that demonstrate measurement capability. ISO 17025 accreditation is the baseline requirement for any calibration laboratory performing custody transfer meter verification.
+      </p>
+      <p>
+        <strong>OIML R117</strong> — The International Organization of Legal Metrology recommendation for measuring systems for liquids other than water. OIML R117 defines accuracy classes (Class 0.3, 0.5, 1.0, 1.5, 2.0) and specifies maximum permissible errors for custody transfer applications. Coriolis meters used for fiscal measurement must typically achieve OIML Class 0.3 or 0.5.
+      </p>
+      <p>
+        <strong>API MPMS Chapter 21</strong> — The American Petroleum Institute's Manual of Petroleum Measurement Standards, Chapter 21, provides guidelines for flow measurement using electronic flow meters. This chapter covers meter design, installation, operation, calibration, and data management for petroleum custody transfer.
+      </p>
+      <p>
+        <strong>AGA Report No. 11</strong> — The American Gas Association report on measurement of natural gas and related gases using ultrasonic and Coriolis meters. This report provides installation recommendations, performance verification procedures, and calibration requirements specific to natural gas custody transfer.
+      </p>
+      <p>
+        <strong>MID (Measuring Instruments Directive)</strong> — The European directive that regulates measuring instruments used for fiscal purposes. Coriolis meters must be MID-certified to be used for custody transfer within the European Economic Area and many GCC countries that reference European standards.
+      </p>
+
+      <h2>The Calibration Process</h2>
+      <p>
+        A comprehensive Coriolis flow meter calibration typically follows these steps:
+      </p>
+      <p>
+        <strong>1. Pre-Calibration Inspection</strong> — The meter is visually inspected for mechanical damage, corrosion, coating buildup, or loose connections. Electrical connections and wiring are verified. The meter's configuration parameters are documented.
+      </p>
+      <p>
+        <strong>2. Reference Standard Verification</strong> — The calibration reference standard (gravimetric system, pipe prover, or master meter) is verified and its own calibration status confirmed. All reference standards must have traceability to national or international metrological institutes.
+      </p>
+      <p>
+        <strong>3. Zero-Point Verification</strong> — With no flow through the meter, the zero-point stability is checked. A drift in the zero-point reading indicates potential issues with tube vibration, sensor alignment, or internal coating.
+      </p>
+      <p>
+        <strong>4. Multi-Point Calibration</strong> — The meter is tested at multiple flow rates across its operating range (typically 5-6 points from minimum to maximum flow). At each point, the meter's reading is compared to the reference standard. This establishes the meter's linearity and repeatability.
+      </p>
+      <p>
+        <strong>5. Density and Temperature Verification</strong> — For Coriolis meters that also measure density, the density reading is verified against known reference values. Temperature sensor accuracy is confirmed.
+      </p>
+      <p>
+        <strong>6. Documentation and Certification</strong> — Calibration results are documented in a formal certificate that includes as-found data (before adjustment), as-left data (after adjustment), measurement uncertainty, traceability information, and the next recommended calibration date.
+      </p>
+
+      <h2>Micro Motion Coriolis Meter Calibration</h2>
+      <p>
+        <strong>Micro Motion</strong>, manufactured by Emerson, is one of the most widely used Coriolis meter brands in oil &amp; gas custody transfer applications. Micro Motion meters are known for their high accuracy, robust construction, and advanced diagnostics capabilities.
+      </p>
+      <p>
+        Calibrating Micro Motion Coriolis meters requires specialized knowledge of the meter's design, firmware, and configuration parameters. Key considerations include:
+      </p>
+      <ul>
+        <li>Tube drive amplitude and frequency verification</li>
+        <li>Sensor drive gain and balance checks</li>
+        <li>Density calibration against reference fluids</li>
+        <li>Verification of meter-specific diagnostic parameters</li>
+        <li>Compliance with Emerson's recommended calibration procedures</li>
+      </ul>
+
+      <h2>Calibration Frequency and Triggers</h2>
+      <p>
+        The recommended calibration frequency for Coriolis flow meters depends on several factors:
+      </p>
+      <ul>
+        <li><strong>Custody transfer applications</strong> — Annual calibration is typically required by regulatory authorities and fiscal measurement standards</li>
+        <li><strong>Process control applications</strong> — Calibration every 2-3 years may be acceptable, depending on the criticality of the measurement</li>
+        <li><strong>Harsh service conditions</strong> — Meters handling corrosive, erosive, or high-viscosity fluids may require more frequent calibration</li>
+        <li><strong>After maintenance or repair</strong> — Any meter that has been disassembled, repaired, or subjected to mechanical stress should be recalibrated before returning to service</li>
+      </ul>
+
+      <h2>Why Calibration Accuracy Matters in Custody Transfer</h2>
+      <p>
+        In custody transfer applications, flow measurements directly determine financial transactions. Even a small calibration error can result in significant revenue loss or overpayment. Consider this example:
+      </p>
+      <p>
+        A Coriolis meter on a crude oil custody transfer skid measures 100,000 barrels per day at $75/barrel. If the meter has a systematic error of just 0.05% (half the typical accuracy specification), the daily financial discrepancy is $3,750 — or $1.37 million per year. Regular calibration identifies and corrects such errors before they accumulate.
+      </p>
+
+      <h2>TTS Calibration Services in Kuwait and the GCC</h2>
+      <p>
+        Texas Technical Services provides professional Coriolis flow meter calibration services across Kuwait and the GCC region. Our calibration capabilities include:
+      </p>
+      <ul>
+        <li>ISO 17025 accredited laboratory calibration with traceable reference standards</li>
+        <li>On-site calibration using mobile calibration rigs and portable provers</li>
+        <li>As-found and as-left calibration with full uncertainty documentation</li>
+        <li>Multi-brand capability — Micro Motion, Endress+Hauser, KROHNE, and other major OEMs</li>
+        <li>OIML R117, API MPMS, AGA, and MID compliance verification</li>
+        <li>Emergency 2-week turnaround for critical custody transfer applications</li>
+      </ul>
+      <p>
+        Our calibration engineers hold internationally recognized certifications and have extensive experience calibrating Coriolis meters in upstream, midstream, and downstream oil &amp; gas facilities throughout the region.
+      </p>
+
+      <h2>Frequently Asked Questions (FAQ)</h2>
+      <p><strong>Q: How often should a Coriolis flow meter be calibrated?</strong><br />
+      <strong>A:</strong> For custody transfer applications, annual calibration is recommended and often required by regulatory authorities. For process control applications, calibration every 2-3 years may be acceptable. Meters in harsh service conditions or those that have undergone maintenance should be recalibrated more frequently.</p>
+
+      <p><strong>Q: What is the difference between calibration and verification?</strong><br />
+      <strong>A:</strong> Calibration compares the meter's readings against a known reference standard and adjusts the meter to minimize measurement error. Verification (or proving) confirms that the meter is performing within its specified accuracy limits without making adjustments. Both processes are important for maintaining custody transfer accuracy.</p>
+
+      <p><strong>Q: Can Coriolis meters be calibrated on-site?</strong><br />
+      <strong>A:</strong> Yes. On-site calibration is possible using mobile calibration rigs, portable provers, or reference meters. On-site calibration eliminates the need to remove the meter from the process, reducing downtime and maintaining operational continuity. However, laboratory calibration under controlled conditions provides the highest accuracy and traceability.</p>
+
+      <p><strong>Q: What calibration standards apply to Coriolis meters in Kuwait?</strong><br />
+      <strong>A:</strong> Kuwait follows international standards including OIML R117 for legal metrology, API MPMS for petroleum measurement, and AGA Report No. 11 for natural gas measurement. The Kuwait Institute for Scientific Research (KISR) and the Public Authority for Industry (PAI) oversee metrological compliance in the region.</p>
+
+      <p><strong>Q: What is the typical accuracy of a calibrated Coriolis meter?</strong><br />
+      <strong>A:</strong> A properly calibrated Coriolis meter typically achieves ±0.1% of reading for mass flow, ±0.0005 g/cm³ for density, and ±0.5°C for temperature. For custody transfer applications, OIML Class 0.3 (±0.3% of actual flow rate) is commonly required. These accuracy levels are maintained through regular calibration and proper installation practices.</p>
+    `
+  },
+
+  "ultrasonic-flow-meter-guide": {
+    title: "Ultrasonic Flow Meters: Types, Applications, and Selection Guide",
+    seoTitle: "Ultrasonic Flow Meters — Types, Selection & Applications Guide | TTS",
+    metaDescription: "Comprehensive guide to ultrasonic flow meters — clamp-on, insertion, and inline types for oil & gas, power, and industrial applications.",
+    category: "Flow Measurement",
+    date: "June 18, 2026",
+    readTime: "11 Min Read",
+    pillar: "Pillar 1: Flow Measurement & Custody Metering",
+    description: "Understand the different types of ultrasonic flow meters, how they work, and how to select the right technology for your application in oil & gas, power generation, and industrial processes.",
+    keywords: "ultrasonic flow meter, ultrasonic pipe flow meter, clamp on liquid flow meter, ultrasonic natural gas flow meter, high pressure gas flow meter",
+    image: "/ultrasonic_gas_flow_meter.jpg",
+    imageAlt: "An industrial ultrasonic flow meter installed on a pipeline for flow measurement.",
+    content: `
+      <p>
+        <strong>Ultrasonic flow meters</strong> use sound waves to measure the velocity of a fluid flowing through a pipe. Unlike mechanical flow meters with moving parts, ultrasonic meters have no wear components, making them ideal for long-term reliability in demanding industrial applications. Ultrasonic flow meters are widely used in oil &amp; gas, power generation, water treatment, and chemical processing industries for both process monitoring and custody transfer applications.
+      </p>
+      <p>
+        The ultrasonic flow measurement market has grown significantly due to the technology's non-invasive installation options, high accuracy, wide turndown ratio, and ability to handle a broad range of fluid types and pipe sizes. Understanding the different ultrasonic technologies and their applications is essential for selecting the right meter for your specific requirements.
+      </p>
+
+      <h2>How Ultrasonic Flow Meters Work</h2>
+      <p>
+        Ultrasonic flow meters operate on one of two primary measurement principles:
+      </p>
+      <p>
+        <strong>Transit-Time (Time of Flight)</strong> — Two ultrasonic transducers are installed on opposite sides of the pipe. Each transducer alternately transmits and receives ultrasonic signals. The signal traveling with the flow arrives faster than the signal traveling against the flow. The difference in transit time is proportional to the flow velocity. Transit-time meters are best suited for clean liquids and gases with low ultrasonic attenuation.
+      </p>
+      <p>
+        <strong>Doppler Effect</strong> — An ultrasonic signal is transmitted into the fluid. Particles, bubbles, or density variations in the fluid reflect the signal back at a different frequency (the Doppler shift). The frequency shift is proportional to the flow velocity. Doppler meters are ideal for fluids containing suspended solids or entrained gas.
+      </p>
+
+      <h2>Types of Ultrasonic Flow Meters</h2>
+
+      <h3>Clamp-On (Non-Invasive) Ultrasonic Meters</h3>
+      <p>
+        <strong>Clamp-on ultrasonic flow meters</strong> are mounted on the outside of the pipe, requiring no pipe cutting, no process interruption, and no risk of contamination. This makes them particularly valuable for:
+      </p>
+      <ul>
+        <li>Retrofit installations on existing piping systems</li>
+        <li>Applications where process shutdown is costly or impractical</li>
+        <li>Corrosive or high-purity fluids where inline contact is undesirable</li>
+        <li>Temporary measurement campaigns and auditing</li>
+      </ul>
+      <p>
+        Clamp-on meters use transit-time technology and require homogeneous fluids with minimal acoustic noise. Pipe diameter, wall thickness, lining material, and fluid acoustic properties must be considered during selection.
+      </p>
+
+      <h3>Inline Ultrasonic Meters</h3>
+      <p>
+        <strong>Inline ultrasonic flow meters</strong> are installed directly in the pipeline with transducers flush-mounted or recessed into the pipe wall. Inline meters provide the highest accuracy because the transducers are in direct contact with the fluid, eliminating the acoustic coupling challenges of clamp-on designs. They are commonly used for custody transfer and fiscal measurement applications.
+      </p>
+
+      <h3>Insertion Ultrasonic Meters</h3>
+      <p>
+        <strong>Insertion ultrasonic flow meters</strong> are installed through a hot tap or weldolet, positioning the transducer directly in the flow stream. They offer a balance between the accuracy of inline meters and the installation flexibility of clamp-on designs. Insertion meters are ideal for large-diameter pipes where inline installation would be prohibitively expensive.
+      </p>
+
+      <h2>Applications in Oil &amp; Gas</h2>
+      <p>
+        Ultrasonic flow meters serve critical roles across the oil &amp; gas value chain:
+      </p>
+      <ul>
+        <li><strong>Natural gas custody transfer</strong> — Inline ultrasonic meters with multiple chord paths (4, 6, or 8 paths) are the standard for fiscal gas measurement at production facilities, pipeline interconnections, and LNG terminals</li>
+        <li><strong>Crude oil measurement</strong> — Both inline and clamp-on meters are used for allocation metering and process optimization</li>
+        <li><strong>Refinery process monitoring</strong> — Clamp-on meters provide non-invasive flow measurement on process lines without shutting down operations</li>
+        <li><strong>Produced water measurement</strong> — Ultrasonic meters handle the high-salinity, abrasive fluids common in upstream water handling</li>
+        <li><strong>High-pressure gas applications</strong> — Specialized high-pressure ultrasonic meters are designed for HP/HT gas well testing and production measurement</li>
+      </ul>
+
+      <h2>Selection Criteria</h2>
+      <p>
+        Selecting the right ultrasonic flow meter requires evaluating several key factors:
+      </p>
+      <ul>
+        <li><strong>Fluid properties</strong> — Clean vs. dirty, liquid vs. gas, viscosity, density, temperature, and acoustic attenuation characteristics</li>
+        <li><strong>Pipe size and material</strong> — Ultrasonic meters are available for pipe sizes from ½ inch to over 120 inches. Pipe material affects acoustic coupling and signal propagation</li>
+        <li><strong>Accuracy requirements</strong> — Custody transfer applications require ±0.5% or better; process monitoring may accept ±1-2%</li>
+        <li><strong>Installation type</strong> — Clamp-on for non-invasive applications; inline or insertion for higher accuracy requirements</li>
+        <li><strong>Flow range and turndown</strong> — Ensure the meter can accurately measure both minimum and maximum flow rates</li>
+        <li><strong>Pressure rating</strong> — High-pressure gas applications require specialized meter designs rated for the operating pressure</li>
+      </ul>
+
+      <h2>Advantages of Ultrasonic Technology</h2>
+      <ul>
+        <li><strong>No moving parts</strong> — Eliminates mechanical wear and reduces maintenance costs</li>
+        <li><strong>Non-invasive options</strong> — Clamp-on designs eliminate process interruption and contamination risk</li>
+        <li><strong>Wide size range</strong> — Effective for pipe sizes from small bore to large transmission pipelines</li>
+        <li><strong>High accuracy</strong> — Multi-path inline meters achieve ±0.5% or better for custody transfer</li>
+        <li><strong>Low pressure drop</strong> — No obstructions in the flow path reduce energy losses</li>
+        <li><strong>Bidirectional measurement</strong> — Most ultrasonic meters can measure flow in both directions</li>
+      </ul>
+
+      <h2>TTS Ultrasonic Flow Meter Services</h2>
+      <p>
+        Texas Technical Services provides comprehensive ultrasonic flow meter solutions across Kuwait and the GCC:
+      </p>
+      <ul>
+        <li>Ultrasonic meter selection, supply, and installation for custody transfer and process applications</li>
+        <li>Clamp-on meter installation and commissioning for retrofit projects</li>
+        <li>Meter calibration and verification services</li>
+        <li>Flow measurement system design and engineering</li>
+        <li>Technical support and after-sales service</li>
+      </ul>
+
+      <h2>Frequently Asked Questions (FAQ)</h2>
+      <p><strong>Q: What is the difference between clamp-on and inline ultrasonic flow meters?</strong><br />
+      <strong>A:</strong> Clamp-on meters are mounted on the outside of the pipe and do not contact the fluid, making them non-invasive but potentially less accurate. Inline meters are installed directly in the pipeline with transducers in contact with the fluid, providing higher accuracy for custody transfer applications.</p>
+
+      <p><strong>Q: Can ultrasonic meters measure natural gas flow?</strong><br />
+      <strong>A:</strong> Yes. Inline multi-path ultrasonic meters are the industry standard for natural gas custody transfer. They use multiple chord paths to profile the velocity distribution across the pipe cross-section, achieving ±0.5% accuracy or better.</p>
+
+      <p><strong>Q: Are ultrasonic meters suitable for dirty or corrosive fluids?</strong><br />
+      <strong>A:</strong> Doppler-type ultrasonic meters can measure fluids containing suspended solids or entrained gas. For clean but corrosive fluids, clamp-on meters provide a non-contact solution. Inline meters with corrosion-resistant materials (Hastelloy, titanium) are also available for severe service applications.</p>
+
+      <p><strong>Q: What pipe sizes can ultrasonic flow meters handle?</strong><br />
+      <strong>A:</strong> Ultrasonic flow meters are available for pipe sizes ranging from ½ inch to over 120 inches (3 meters). Clamp-on meters are particularly advantageous for large-diameter pipes where inline installation would be prohibitively expensive.</p>
+
+      <p><strong>Q: How does TTS support ultrasonic flow meter projects in the GCC?</strong><br />
+      <strong>A:</strong> TTS provides end-to-end support including meter selection, system design, supply, installation, calibration, and ongoing maintenance. Our engineers have extensive experience with ultrasonic metering systems for oil &amp; gas custody transfer, process monitoring, and fiscal measurement applications across Kuwait and the GCC region.</p>
+    `
+  },
+
+  "factorytalk-mes-guide": {
+    title: "FactoryTalk MES: How Manufacturing Execution Systems Improve Industrial Efficiency",
+    seoTitle: "FactoryTalk MES Guide — Manufacturing Execution Systems for Industry | TTS",
+    metaDescription: "Complete guide to FactoryTalk MES — MES benefits, PLC/SCADA integration, FactoryTalk Analytics, and implementation services in Kuwait.",
+    category: "Industrial Automation",
+    date: "June 4, 2026",
+    readTime: "10 Min Read",
+    pillar: "Pillar 2: Industrial Process Automation",
+    description: "Understand how FactoryTalk MES connects production systems to business systems, enabling real-time visibility, optimized scheduling, and improved operational efficiency.",
+    keywords: "FactoryTalk MES, FactoryTalk analytics, FactoryTalk Asset Centre, FactoryTalk software, MES vendor, Rockwell automation factorytalk",
+    image: "/images/industrial_automation/industrial_control_panels/1.jpg",
+    imageAlt: "An industrial manufacturing execution system dashboard displaying real-time production metrics.",
+    content: `
+      <p>
+        <strong>FactoryTalk MES</strong> is Rockwell Automation's manufacturing execution system (MES) platform that bridges the gap between enterprise-level business systems (ERP, supply chain) and shop-floor control systems (PLC, SCADA, DCS). By connecting these layers, FactoryTalk MES provides real-time visibility into production operations, enabling manufacturers to optimize scheduling, improve quality, reduce waste, and increase Overall Equipment Effectiveness (OEE).
+      </p>
+      <p>
+        In today's competitive industrial landscape, manufacturers need more than just automation — they need intelligence. FactoryTalk MES transforms raw production data into actionable insights, helping operations teams make informed decisions that directly impact productivity and profitability.
+      </p>
+
+      <h2>What is Manufacturing Execution System (MES)?</h2>
+      <p>
+        An MES is a software system that manages and monitors work-in-progress on the factory floor. It tracks raw materials as they move through the production process, from order release to finished goods. The MES provides real-time information about production status, quality metrics, resource utilization, and material movement.
+      </p>
+      <p>
+        Unlike ERP systems that operate at the planning level, MES operates at the execution level — the actual moment of production. This makes MES the critical link between "what we plan to produce" and "what we actually produce."
+      </p>
+
+      <h2>FactoryTalk MES Platform Components</h2>
+      <p>
+        The FactoryTalk MES platform includes several integrated modules:
+      </p>
+      <ul>
+        <li><strong>Production Management</strong> — Work order management, production scheduling, and real-time production tracking. Enables dynamic scheduling based on actual equipment availability and material readiness.</li>
+        <li><strong>Quality Management</strong> — In-process quality checks, SPC (Statistical Process Control), non-conformance tracking, and electronic batch records. Ensures product quality at every production stage.</li>
+        <li><strong>Material Management</strong> — Material tracking, lot traceability, and inventory management. Provides full traceability from raw materials to finished products.</li>
+        <li><strong>Performance Management</strong> — OEE calculation, downtime tracking, and performance dashboards. Identifies bottlenecks and improvement opportunities.</li>
+        <li><strong>Maintenance Management</strong> — Preventive maintenance scheduling, work order management, and spare parts tracking. Reduces unplanned downtime.</li>
+      </ul>
+
+      <h2>FactoryTalk Analytics</h2>
+      <p>
+        <strong>FactoryTalk Analytics</strong> is a suite of data analytics tools that transforms production data into actionable business intelligence. Key capabilities include:
+      </p>
+      <ul>
+        <li><strong>Real-time dashboards</strong> — Visual displays of KPIs, production metrics, and alarm summaries</li>
+        <li><strong>Trend analysis</strong> — Historical data visualization to identify patterns and trends</li>
+        <li><strong>Predictive analytics</strong> — Machine learning algorithms that predict equipment failures before they occur</li>
+        <li><strong>Root cause analysis</strong> — Tools to quickly identify the root causes of quality issues, downtime events, and production losses</li>
+        <li><strong>Mobile access</strong> — Dashboards and alerts accessible from smartphones and tablets for remote monitoring</li>
+      </ul>
+
+      <h2>FactoryTalk Asset Centre</h2>
+      <p>
+        <strong>FactoryTalk Asset Centre</strong> provides centralized management and control of automation assets across the plant. It enables:
+      </p>
+      <ul>
+        <li>Centralized configuration and version control for PLCs, HMIs, and drives</li>
+        <li>Audit trail and change management for regulatory compliance</li>
+        <li>User authentication and access control (integration with Active Directory)</li>
+        <li>Asset documentation and inventory management</li>
+        <li>Automated backup and disaster recovery</li>
+      </ul>
+
+      <h2>Integration with PLC and SCADA Systems</h2>
+      <p>
+        FactoryTalk MES integrates seamlessly with Allen-Bradley PLCs (ControlLogix, CompactLogix) and FactoryTalk SCADA software. This integration enables:
+      </p>
+      <ul>
+        <li>Direct data collection from PLCs without custom programming</li>
+        <li>Bi-directional communication for work order download and production feedback</li>
+        <li>Real-time equipment status and alarm monitoring</li>
+        <li>Unified platform for visualization, data collection, and production management</li>
+      </ul>
+
+      <h2>Benefits for Industrial Operations</h2>
+      <p>
+        Implementing FactoryTalk MES delivers measurable benefits:
+      </p>
+      <ul>
+        <li><strong>Increased OEE</strong> — Typical improvements of 5-15% through reduced downtime, faster changeovers, and optimized scheduling</li>
+        <li><strong>Improved quality</strong> — Real-time quality monitoring reduces scrap rates and rework costs</li>
+        <li><strong>Full traceability</strong> — Complete lot and batch tracking from raw materials to finished goods</li>
+        <li><strong>Regulatory compliance</strong> — Electronic batch records and audit trails simplify FDA, ISO, and other regulatory requirements</li>
+        <li><strong>Data-driven decisions</strong> — Real-time visibility enables faster, more informed operational decisions</li>
+      </ul>
+
+      <h2>TTS FactoryTalk MES Implementation Services</h2>
+      <p>
+        Texas Technical Services provides FactoryTalk MES implementation services across Kuwait and the GCC:
+      </p>
+      <ul>
+        <li>MES requirements analysis and solution design</li>
+        <li>PLC/SCADA integration and data collection configuration</li>
+        <li>Production management, quality, and material tracking module deployment</li>
+        <li>Dashboard and analytics setup with FactoryTalk Analytics</li>
+        <li>Operator training and change management support</li>
+        <li>Ongoing maintenance and optimization services</li>
+      </ul>
+
+      <h2>Frequently Asked Questions (FAQ)</h2>
+      <p><strong>Q: What is the difference between MES and ERP?</strong><br />
+      <strong>A:</strong> ERP (Enterprise Resource Planning) handles business-level planning — purchasing, inventory, finance, and order management. MES operates at the production execution level, managing real-time production operations on the shop floor. MES and ERP are complementary systems that work together to optimize the entire value chain.</p>
+
+      <p><strong>Q: Can FactoryTalk MES integrate with non-Rockwell PLCs?</strong><br />
+      <strong>A:</strong> Yes. While FactoryTalk MES integrates most naturally with Allen-Bradley PLCs, it can connect to other PLC brands through OPC UA, OPC DA, or custom adapters. However, integration with Rockwell Automation platforms provides the smoothest data exchange and configuration experience.</p>
+
+      <p><strong>Q: How long does a typical FactoryTalk MES implementation take?</strong><br />
+      <strong>A:</strong> Implementation timelines vary based on scope, but a typical project takes 3-6 months from requirements analysis to go-live. Complex enterprise-wide deployments may take 6-12 months. TTS follows a phased implementation approach to deliver value incrementally.</p>
+
+      <p><strong>Q: What industries benefit most from FactoryTalk MES?</strong><br />
+      <strong>A:</strong> FactoryTalk MES is widely used in oil &amp; gas, food &amp; beverage, pharmaceutical, automotive, semiconductor, and discrete manufacturing industries. Any production environment that requires traceability, quality management, or production optimization can benefit from MES implementation.</p>
+
+      <p><strong>Q: Can TTS implement FactoryTalk MES for our operations in Kuwait?</strong><br />
+      <strong>A:</strong> Yes. TTS provides complete FactoryTalk MES implementation services in Kuwait and the GCC. Our team includes Rockwell Automation-certified engineers with extensive experience in manufacturing execution system design, integration, and deployment for industrial operations.</p>
+    `
+  },
+
+  "allen-bradley-plc-repair-maintenance": {
+    title: "Allen-Bradley PLC Repair and Maintenance: Complete Service Guide",
+    seoTitle: "Allen-Bradley PLC Repair & Maintenance — Service Guide | TTS Kuwait",
+    metaDescription: "Complete guide to Allen-Bradley PLC repair — ControlLogix, CompactLogix, PanelView troubleshooting, spare parts, and repair services in Kuwait.",
+    category: "Industrial Automation",
+    date: "May 22, 2026",
+    readTime: "10 Min Read",
+    pillar: "Pillar 2: Industrial Process Automation",
+    description: "Learn about common Allen-Bradley PLC failure modes, preventive maintenance best practices, and when to choose repair vs. replacement for your automation systems.",
+    keywords: "Allen Bradley PLC repair, Allen Bradley system integrators, PLC distributors, Allen Bradley tools, Rockwell automation support",
+    image: "/images/industrial_automation/plc_&_io_module/1.jpg",
+    imageAlt: "Allen-Bradley ControlLogix PLC system in an industrial control panel with diagnostic indicators.",
+    content: `
+      <p>
+        <strong>Allen-Bradley PLC repair and maintenance</strong> is essential for maintaining the reliability and uptime of industrial automation systems. Allen-Bradley, manufactured by Rockwell Automation, is one of the most widely used programmable logic controller (PLC) platforms in oil &amp; gas, power generation, manufacturing, and process industries worldwide. From the flagship ControlLogix platform to the compact CompactLogix series and PanelView human-machine interfaces (HMIs), these systems form the backbone of industrial process control.
+      </p>
+      <p>
+        When an Allen-Bradley PLC fails or degrades, the consequences can be severe — unplanned downtime, lost production, safety hazards, and cascading equipment failures. Understanding common failure modes, implementing preventive maintenance, and knowing when to engage professional repair services are critical for maintaining operational continuity.
+      </p>
+
+      <h2>Common Allen-Bradley PLC Failure Modes</h2>
+      <p>
+        Allen-Bradley PLCs are designed for industrial reliability, but several failure modes can affect performance:
+      </p>
+      <ul>
+        <li><strong>Power supply failures</strong> — Voltage fluctuations, power surges, and component aging can cause power supply modules to fail or deliver unstable voltage to the backplane</li>
+        <li><strong>CPU module faults</strong> — Memory corruption, firmware issues, and hardware degradation can cause watchdog timeouts, program faults, and communication errors</li>
+        <li><strong>I/O module failures</strong> — Input/output modules can fail due to electrical surges, wiring faults, or environmental exposure to dust, moisture, and temperature extremes</li>
+        <li><strong>Communication module issues</strong> — Ethernet/IP, DeviceNet, and ControlNet modules can develop faults due to cable damage, electromagnetic interference, or configuration errors</li>
+        <li><strong>HMI/PanelView failures</strong> — Touchscreen degradation, backlight failure, memory corruption, and communication loss with the PLC</li>
+        <li><strong>PowerFlex drive faults</strong> — VFD failures due to capacitor aging, IGBT module failure, fan degradation, and encoder feedback issues</li>
+      </ul>
+
+      <h2>Preventive Maintenance Best Practices</h2>
+      <p>
+        Implementing a structured preventive maintenance program significantly reduces unplanned downtime:
+      </p>
+      <ul>
+        <li><strong>Regular firmware updates</strong> — Keep PLCs, HMIs, and drives updated with the latest firmware for security patches and bug fixes</li>
+        <li><strong>Battery management</strong> — Replace CPU batteries annually to prevent program loss. Monitor battery voltage through the PLC's diagnostic interface</li>
+        <li><strong>Environmental monitoring</strong> — Maintain control panel temperatures below 50°C, ensure proper ventilation, and filter incoming air to prevent dust accumulation</li>
+        <li><strong>Power quality monitoring</strong> — Install surge protection, UPS systems, and voltage regulators to protect against power quality events</li>
+        <li><strong>Communication cable inspection</strong> — Regularly inspect Ethernet, DeviceNet, and ControlNet cables for damage, loose connections, and electromagnetic interference sources</li>
+        <li><strong>Backup and redundancy</strong> — Maintain current backups of all PLC programs, HMI configurations, and drive parameters. Implement redundant CPUs and communication paths for critical applications</li>
+      </ul>
+
+      <h2>Allen-Bradley Product Range</h2>
+      <p>
+        Rockwell Automation's Allen-Bradley product portfolio includes several platforms:
+      </p>
+      <ul>
+        <li><strong>ControlLogix</strong> — High-performance modular PLC for large-scale process control applications. Supports redundant CPUs, extensive I/O capacity, and advanced communication options</li>
+        <li><strong>CompactLogix</strong> — Mid-range PLC for small to medium applications. Compact form factor with integrated I/O and communication capabilities</li>
+        <li><strong>MicroLogix</strong> — Small-scale PLC for simple machine control and OEM applications</li>
+        <li><strong>PanelView</strong> — Touchscreen HMIs for operator interface. PanelView Plus 6 and PanelView 7 series provide advanced visualization and data logging</li>
+        <li><strong>PowerFlex</strong> — Variable frequency drives (VFDs) for motor speed control. PowerFlex 525, 753, and 755 series cover a wide range of power ratings and applications</li>
+        <li><strong>Kinetix</strong> — Servo drives and motors for precision motion control applications</li>
+      </ul>
+
+      <h2>Repair vs. Replacement Decision</h2>
+      <p>
+        When an Allen-Bradley module fails, the decision to repair or replace depends on several factors:
+      </p>
+      <ul>
+        <li><strong>Module age and availability</strong> — Older modules that are discontinued may be difficult to replace. Repair or refurbishment may be the only option</li>
+        <li><strong>Repair cost vs. replacement cost</strong> — If repair cost exceeds 50-60% of replacement cost, replacement is typically more economical</li>
+        <li><strong>Downtime impact</strong> — If spare modules are in stock, replacement is faster. If not, repair with expedited parts sourcing may minimize downtime</li>
+        <li><strong>System compatibility</strong> — Replacing an older module with a newer version may require firmware upgrades, program modifications, or I/O reconfiguration</li>
+        <li><strong>Warranty and support</strong> — New modules come with manufacturer warranty and ongoing support. Repaired modules may have limited warranty coverage</li>
+      </ul>
+
+      <h2>TTS PLC Repair and Maintenance Services</h2>
+      <p>
+        Texas Technical Services provides comprehensive Allen-Bradley PLC repair and maintenance services across Kuwait and the GCC:
+      </p>
+      <ul>
+        <li>On-site PLC, HMI, and drive troubleshooting and repair</li>
+        <li>Module-level repair and component replacement</li>
+        <li>Firmware upgrades and program optimization</li>
+        <li>Preventive maintenance contracts and scheduled inspections</li>
+        <li>Spare parts sourcing and inventory management</li>
+        <li>24/7 emergency support for critical process control systems</li>
+      </ul>
+
+      <h2>Frequently Asked Questions (FAQ)</h2>
+      <p><strong>Q: How do I know if my Allen-Bradley PLC needs repair?</strong><br />
+      <strong>A:</strong> Common signs include: unexpected CPU faults or watchdog timeouts, I/O modules not responding, communication errors on Ethernet/IP or DeviceNet networks, HMI screens freezing or going blank, VFD fault codes that cannot be cleared, and battery low warnings that persist after battery replacement.</p>
+
+      <p><strong>Q: Can TTS repair obsolete Allen-Bradley modules?</strong><br />
+      <strong>A:</strong> Yes. TTS maintains relationships with authorized Rockwell Automation distributors and surplus equipment suppliers to source discontinued modules. For truly obsolete components, we can evaluate migration paths to current-generation platforms while minimizing program changes.</p>
+
+      <p><strong>Q: What is the typical turnaround time for PLC repair?</strong><br />
+      <strong>A:</strong> On-site troubleshooting and repair is typically completed within 24-48 hours. Module-level repair or replacement can be completed in 1-5 business days depending on parts availability. Emergency 24-hour response is available for critical process control applications.</p>
+
+      <p><strong>Q: Does TTS offer preventive maintenance contracts?</strong><br />
+      <strong>A:</strong> Yes. TTS offers structured preventive maintenance contracts that include scheduled inspections, firmware updates, battery replacements, backup verification, and performance trending. Preventive maintenance typically reduces unplanned downtime by 40-60%.</p>
+
+      <p><strong>Q: Can TTS support our Allen-Bradley systems in Kuwait?</strong><br />
+      <strong>A:</strong> Yes. TTS provides full Allen-Bradley PLC repair and maintenance services throughout Kuwait and the GCC. Our engineers are Rockwell Automation certified and carry common spare parts for rapid on-site response.</p>
+    `
+  },
+
+  "industrial-gas-detection-guide": {
+    title: "Industrial Gas Detection Systems: Selection, Installation, and Compliance Guide",
+    seoTitle: "Industrial Gas Detection Systems — Selection & Compliance Guide | TTS",
+    metaDescription: "Complete guide to industrial gas detection — fixed and portable monitors, Honeywell analytics, system design, and compliance in Kuwait.",
+    category: "Industrial Automation",
+    date: "May 14, 2026",
+    readTime: "11 Min Read",
+    pillar: "Pillar 2: Industrial Process Automation",
+    description: "Learn how to select, design, and implement industrial gas detection systems for worker safety and regulatory compliance in oil & gas, refinery, and industrial facilities.",
+    keywords: "gas detection system, Honeywell analytics gas detection, portable multi gas monitor, fixed gas detection system, industrial gas detection systems, gas detection panel",
+    image: "/extractive_gas_analyzer.jpg",
+    imageAlt: "An industrial gas detection system with fixed detectors and control panel in a processing facility.",
+    content: `
+      <p>
+        <strong>Industrial gas detection systems</strong> are critical safety infrastructure that protects workers, facilities, and the environment from the hazards of toxic gases, combustible gases, and oxygen-deficient atmospheres. In oil &amp; gas, refinery, petrochemical, and power generation facilities, gas detection systems provide early warning of hazardous conditions, enabling timely evacuation, process shutdown, and emergency response.
+      </p>
+      <p>
+        The selection, design, and installation of gas detection systems must consider the specific hazards present, the facility layout, regulatory requirements, and the operational characteristics of the process. A well-designed gas detection system is not just a safety investment — it is a regulatory requirement in most jurisdictions and a fundamental component of Process Safety Management (PSM) programs.
+      </p>
+
+      <h2>Types of Gas Detection Systems</h2>
+
+      <h3>Fixed Gas Detection Systems</h3>
+      <p>
+        <strong>Fixed gas detectors</strong> are permanently installed at strategic locations throughout a facility. They continuously monitor the atmosphere and trigger alarms, activate ventilation systems, or initiate emergency shutdowns when gas concentrations exceed preset thresholds. Fixed systems are essential for:
+      </p>
+      <ul>
+        <li>Enclosed or semi-enclosed spaces (pump rooms, compressor buildings, valve nests)</li>
+        <li>Areas near potential release points (flanges, valves, process connections)</li>
+        <li>Perimeter monitoring around hazardous process areas</li>
+        <li>Confined space entry monitoring</li>
+      </ul>
+
+      <h3>Portable Gas Monitors</h3>
+      <p>
+        <strong>Portable multi-gas monitors</strong> are personal protective equipment (PPE) carried by workers entering hazardous areas. These handheld devices typically detect 1-5 gases simultaneously, including combustible gases (LEL), oxygen (O₂), hydrogen sulfide (H₂S), carbon monoxide (CO), and sulfur dioxide (SO₂).
+      </p>
+      <p>
+        Key features of portable gas monitors include:
+      </p>
+      <ul>
+        <li>Real-time gas concentration display with audible, visual, and vibration alarms</li>
+        <li>Data logging for incident investigation and compliance documentation</li>
+        <li>Bump test and calibration reminders</li>
+        <li>Intrinsic safety certification for use in explosive atmospheres</li>
+        <li>Rugged design for industrial environments (IP67/IP68 rating)</li>
+      </ul>
+
+      <h3>Personal Gas Detection Monitors</h3>
+      <p>
+        <strong>Personal gas detection monitors</strong> are wearable devices that provide individual workers with continuous gas hazard awareness. Unlike portable monitors that are carried in hand, personal monitors are clipped to clothing and provide hands-free protection. They are particularly valuable for:
+      </p>
+      <ul>
+        <li>Solo workers in hazardous environments</li>
+        <li>Workers moving between different hazard zones</li>
+        <li>Emergency response teams</li>
+        <li>Confined space entrants and attendants</li>
+      </ul>
+
+      <h2>Honeywell Analytics Gas Detection</h2>
+      <p>
+        <strong>Honeywell Analytics</strong> is a leading manufacturer of gas detection equipment, offering a comprehensive range of fixed, portable, and personal gas monitors. Key Honeywell products include:
+      </p>
+      <ul>
+        <li><strong>BW Solo</strong> — Single-gas personal monitor for worker safety. Available in H₂S, CO, SO₂, and O₂ configurations</li>
+        <li><strong>BW Clip Series</strong> — Maintenance-free personal gas detectors with 2-3 year operational life</li>
+        <li><strong>Midas Gas Detector</strong> — Fixed gas detector with smart sensor technology for toxic and combustible gases</li>
+        <li><strong>Searchpoint Optima Plus</strong> — Infrared combustible gas detector for fixed installation in hazardous areas</li>
+        <li><strong>Gas-Pro</strong> — Portable multi-gas monitor supporting up to 5 simultaneous gas detections</li>
+        <li><strong>Intellidox</strong> — Instrument management system for automated bump testing and calibration</li>
+      </ul>
+
+      <h2>Gas Detection System Design</h2>
+      <p>
+        Effective gas detection system design requires careful consideration of several factors:
+      </p>
+      <ul>
+        <li><strong>Hazard identification</strong> — Identify all potentially hazardous gases, their locations, and expected concentrations</li>
+        <li><strong>Detector placement</strong> — Position detectors based on gas properties (density, diffusion characteristics), ventilation patterns, and potential release sources</li>
+        <li><strong>Alarm setpoints</strong> — Configure alarm levels according to occupational exposure limits (OELs), lower explosive limits (LEL), and regulatory requirements</li>
+        <li><strong>Integration</strong> — Connect gas detection systems to process control systems (PLC/SCADA) for automated emergency response actions</li>
+        <li><strong>Redundancy</strong> — Design critical detection zones with redundant detectors to prevent false alarms and ensure reliability</li>
+      </ul>
+
+      <h2>Compliance Standards</h2>
+      <p>
+        Gas detection systems must comply with various national and international standards:
+      </p>
+      <ul>
+        <li><strong>IEC 60079</strong> — Explosive atmospheres standards for equipment selection and installation in hazardous areas</li>
+        <li><strong>ISA 92.00.01</strong> — Performance requirements for toxic gas detectors</li>
+        <li><strong>ISA 92.00.04</strong> — Performance requirements for combustible gas detectors</li>
+        <li><strong>EN 50402</strong> — Fixed gas detection systems for combustible and toxic gases</li>
+        <li><strong>NFPA 72</strong> — National Fire Alarm and Signaling Code (includes gas detection requirements)</li>
+        <li><strong>OSHA 29 CFR 1910.146</strong> — Permit-required confined space standard (gas monitoring requirements)</li>
+      </ul>
+
+      <h2>TTS Gas Detection Services</h2>
+      <p>
+        Texas Technical Services provides comprehensive gas detection solutions across Kuwait and the GCC:
+      </p>
+      <ul>
+        <li>Gas hazard assessment and detection system design</li>
+        <li>Supply and installation of fixed and portable gas detection equipment</li>
+        <li>System integration with PLC/SCADA for automated emergency response</li>
+        <li>Calibration, bump testing, and maintenance services</li>
+        <li>Operator training on gas detection equipment use and maintenance</li>
+        <li>Compliance auditing and documentation support</li>
+      </ul>
+
+      <h2>Frequently Asked Questions (FAQ)</h2>
+      <p><strong>Q: How many gas detectors do I need for my facility?</strong><br />
+      <strong>A:</strong> The number depends on the facility layout, hazard types, ventilation patterns, and regulatory requirements. A gas hazard assessment performed by qualified engineers determines optimal detector placement. Typically, detectors are positioned near potential release points, in enclosed spaces, and at perimeter locations.</p>
+
+      <p><strong>Q: What is the difference between a fixed and portable gas detector?</strong><br />
+      <strong>A:</strong> Fixed detectors are permanently installed and continuously monitor specific locations. They trigger facility-wide alarms and can activate emergency shutdowns. Portable detectors are personal devices carried by workers, providing individual protection and localized gas concentration readings.</p>
+
+      <p><strong>Q: How often should gas detectors be calibrated?</strong><br />
+      <strong>A:</strong> Most manufacturers recommend calibration every 3-6 months for fixed detectors and monthly bump testing for portable monitors. Calibration frequency may be higher for detectors in harsh environments or those exposed to known interferents.</p>
+
+      <p><strong>Q: Can gas detection systems be integrated with PLC/SCADA?</strong><br />
+      <strong>A:</strong> Yes. Gas detection systems can be connected to PLC and SCADA platforms via analog (4-20mA), digital (HART, Modbus), or network (Ethernet/IP) interfaces. Integration enables automated emergency actions such as ventilation activation, process shutdown, and alarm notification.</p>
+
+      <p><strong>Q: Does TTS supply and install Honeywell gas detection systems?</strong><br />
+      <strong>A:</strong> Yes. TTS is an authorized partner for Honeywell Analytics gas detection products. We supply, install, calibrate, and maintain Honeywell fixed and portable gas detection systems throughout Kuwait and the GCC region.</p>
+    `
+  },
+
+  "vibration-condition-monitoring-predictive-maintenance": {
+    title: "Vibration Monitoring and Condition Monitoring for Predictive Maintenance",
+    seoTitle: "Vibration & Condition Monitoring for Predictive Maintenance | TTS Kuwait",
+    metaDescription: "Guide to vibration and condition monitoring for predictive maintenance — ABB and Rockwell solutions and services in Kuwait.",
+    category: "Industrial Automation",
+    date: "May 25, 2026",
+    readTime: "10 Min Read",
+    pillar: "Pillar 2: Industrial Process Automation",
+    description: "Learn how vibration monitoring and condition monitoring systems predict equipment failures, reduce unplanned downtime, and optimize maintenance strategies for rotating equipment.",
+    keywords: "ABB vibration monitoring, ABB condition monitoring, Rockwell vibration monitoring, Rockwell condition monitoring, predictive maintenance Kuwait, vibration monitoring Dubai",
+    image: "/images/field_instruments/condition_monitoring_sensors/1.png",
+    imageAlt: "A vibration monitoring sensor installed on an industrial rotating equipment with data analysis dashboard.",
+    content: `
+      <p>
+        <strong>Vibration monitoring and condition monitoring</strong> are predictive maintenance technologies that detect early signs of equipment degradation before failures occur. By continuously or periodically measuring vibration patterns in rotating equipment — motors, pumps, compressors, fans, turbines — these systems identify developing faults weeks or months in advance, enabling planned maintenance instead of costly emergency repairs.
+      </p>
+      <p>
+        In oil &amp; gas, power generation, and process industries, rotating equipment represents a significant portion of total maintenance costs. Unplanned failures of critical equipment can cause production losses of $10,000-$100,000+ per hour, making predictive maintenance a high-value investment.
+      </p>
+
+      <h2>How Vibration Monitoring Works</h2>
+      <p>
+        Every rotating machine produces vibration as a natural consequence of its operation. The vibration signature contains information about the machine's mechanical condition. By analyzing vibration patterns, condition monitoring experts can identify specific fault types:
+      </p>
+      <ul>
+        <li><strong>Imbalance</strong> — Uneven mass distribution on the rotor causes vibration at the rotational frequency (1x RPM)</li>
+        <li><strong>Misalignment</strong> — Shaft misalignment between coupled machines produces vibration at 1x and 2x RPM, often with axial vibration components</li>
+        <li><strong>Bearing defects</strong> — Rolling element bearing damage generates characteristic defect frequencies that can be calculated from bearing geometry and rotational speed</li>
+        <li><strong>Gear faults</strong> — Gear mesh damage produces vibration at gear mesh frequency and sidebands</li>
+        <li><strong>Looseness</strong> — Mechanical looseness creates sub-harmonic and harmonic vibration patterns</li>
+        <li><strong>Resonance</strong> — Excitation of natural frequencies causes excessive vibration at specific operating speeds</li>
+        <li><strong>Electrical faults</strong> — Motor electrical issues (rotor bar defects, eccentricity) produce vibration at line frequency harmonics</li>
+      </ul>
+
+      <h2>ABB Vibration Monitoring Solutions</h2>
+      <p>
+        <strong>ABB</strong> offers a comprehensive range of vibration monitoring and condition monitoring solutions:
+      </p>
+      <ul>
+        <li><strong>ABB Ability™ Meridium</strong> — Enterprise asset performance management platform that combines vibration monitoring with reliability analysis, maintenance optimization, and risk assessment</li>
+        <li><strong>ABB Ability™ Smart Sensor</strong> — Wireless vibration sensors that mount directly on motors and pumps, providing real-time condition data without wiring infrastructure</li>
+        <li><strong>ABB Vibration Monitoring System (VMS)</strong> — Permanent protection systems for critical machinery, providing continuous monitoring and automatic shutdown on dangerous vibration levels</li>
+        <li><strong>ABB Machine Condition Monitoring</strong> — Portable data collection and analysis systems for periodic route-based monitoring programs</li>
+      </ul>
+
+      <h2>Rockwell Automation Condition Monitoring</h2>
+      <p>
+        <strong>Rockwell Automation</strong> provides condition monitoring solutions integrated with the FactoryTalk software platform:
+      </p>
+      <ul>
+        <li><strong>Allen-Bradley vibration monitoring modules</strong> — Backplane-mounted vibration analysis modules for ControlLogix and CompactLogix PLCs, providing real-time vibration data directly in the PLC</li>
+        <li><strong>FactoryTalk Analytics</strong> — Data analytics platform that processes vibration data alongside other operational data for comprehensive equipment health assessment</li>
+        <li><strong>Rockwell condition monitoring sensors</strong> — IEPE and 4-20mA vibration sensors designed for industrial environments with integration to Rockwell automation platforms</li>
+        <li><strong>FactoryTalk Asset Centre</strong> — Centralized management of vibration monitoring configurations, firmware versions, and calibration records</li>
+      </ul>
+
+      <h2>Benefits of Predictive Maintenance</h2>
+      <p>
+        Implementing a vibration-based predictive maintenance program delivers measurable benefits:
+      </p>
+      <ul>
+        <li><strong>Reduced unplanned downtime</strong> — Early fault detection prevents catastrophic failures, reducing emergency shutdowns by 40-70%</li>
+        <li><strong>Extended equipment life</strong> — Addressing minor faults before they escalate extends bearing, seal, and coupling life by 2-3x</li>
+        <li><strong>Optimized maintenance scheduling</strong> — Plan repairs during scheduled shutdowns rather than emergency outages</li>
+        <li><strong>Lower spare parts inventory</strong> — Predictive data enables just-in-time parts ordering, reducing inventory carrying costs</li>
+        <li><strong>Improved safety</strong> — Preventing catastrophic equipment failures reduces safety hazards for personnel</li>
+      </ul>
+
+      <h2>Implementation Approach</h2>
+      <p>
+        A successful vibration monitoring program follows these steps:
+      </p>
+      <ul>
+        <li><strong>1. Criticality assessment</strong> — Identify which machines are most critical to production and most likely to fail</li>
+        <li><strong>2. Sensor selection and placement</strong> — Choose appropriate sensors (permanent vs. portable, accelerometer type, frequency range) and optimal mounting locations</li>
+        <li><strong>3. Baseline data collection</strong> — Record vibration signatures for healthy machines to establish baseline reference data</li>
+        <li><strong>4. Alarm configuration</strong> — Set alarm thresholds based on international standards (ISO 10816, ISO 20816) and machine-specific historical data</li>
+        <li><strong>5. Analysis and trending</strong> — Regularly analyze vibration data, identify trends, and generate maintenance work orders for developing faults</li>
+        <li><strong>6. Continuous improvement</strong> — Refine alarm settings, add new machine types, and expand the program based on lessons learned</li>
+      </ul>
+
+      <h2>TTS Condition Monitoring Services</h2>
+      <p>
+        Texas Technical Services provides vibration monitoring and condition monitoring services across Kuwait and the GCC:
+      </p>
+      <ul>
+        <li>Vibration monitoring system design and specification</li>
+        <li>Permanent and portable sensor installation and commissioning</li>
+        <li>Data collection, analysis, and reporting</li>
+        <li>Integration with PLC/SCADA and maintenance management systems</li>
+        <li>Operator and maintenance team training</li>
+        <li>Ongoing condition monitoring program management</li>
+      </ul>
+
+      <h2>Frequently Asked Questions (FAQ)</h2>
+      <p><strong>Q: What types of equipment benefit most from vibration monitoring?</strong><br />
+      <strong>A:</strong> Rotating equipment — motors, pumps, compressors, fans, blowers, turbines, gearboxes, and conveyors — benefits most from vibration monitoring. Critical assets with high repair costs or significant production impact should be prioritized.</p>
+
+      <p><strong>Q: How far in advance can vibration monitoring detect equipment problems?</strong><br />
+      <strong>A:</strong> Depending on the fault type and severity progression, vibration monitoring can detect developing problems 2-12 months before failure. Bearing defects are typically detectable 2-6 months in advance, while misalignment and imbalance can be detected even earlier.</p>
+
+      <p><strong>Q: Can vibration monitoring be integrated with our existing PLC system?</strong><br />
+      <strong>A:</strong> Yes. Vibration data can be integrated with Allen-Bradley, Siemens, Schneider, and other PLC platforms via analog (4-20mA), digital (HART, Modbus), or network (OPC UA, Ethernet/IP) interfaces. This enables automated alarm handling and process protection.</p>
+
+      <p><strong>Q: What is the difference between ABB and Rockwell condition monitoring solutions?</strong><br />
+      <strong>A:</strong> ABB offers dedicated condition monitoring platforms (Meridium, VMS) with specialized vibration analysis capabilities. Rockwell integrates vibration monitoring into the FactoryTalk ecosystem, providing unified data across automation and condition monitoring. Both are effective; the choice depends on your existing automation platform and monitoring requirements.</p>
+
+      <p><strong>Q: Can TTS implement a vibration monitoring program for our facility in Kuwait?</strong><br />
+      <strong>A:</strong> Yes. TTS provides complete vibration monitoring and condition monitoring implementation services in Kuwait and the GCC. Our team includes certified vibration analysts with experience in oil &amp; gas, power generation, and process industry applications.</p>
+    `
+  },
+
+  "vfd-selection-programming-guide": {
+    title: "Variable Frequency Drives (VFDs): Selection, Programming, and Optimization Guide",
+    seoTitle: "VFD Selection & Programming Guide — Allen-Bradley PowerFlex | TTS Kuwait",
+    metaDescription: "Complete guide to variable frequency drives (VFDs) — Allen-Bradley PowerFlex selection, programming, energy savings, and VFD services in Kuwait and the GCC.",
+    category: "Industrial Automation",
+    date: "July 2, 2026",
+    readTime: "11 Min Read",
+    pillar: "Pillar 2: Industrial Process Automation",
+    description: "Learn how to select, program, and optimize variable frequency drives for motor speed control, energy savings, and process optimization in industrial applications.",
+    keywords: "Allen Bradley VFD distributor, PowerFlex drive, PowerFlex 753 AC drive, variable speed drive system, VFD generator, Allen Bradley motor controller",
+    image: "/images/industrial_automation/industrial_control_panels/1.jpg",
+    imageAlt: "Allen-Bradley PowerFlex variable frequency drives installed in an industrial motor control center.",
+    content: `
+      <p>
+        <strong>Variable frequency drives (VFDs)</strong> are electronic motor controllers that adjust the speed and torque of AC motors by varying the frequency and voltage of the power supplied to the motor. VFDs are one of the most effective energy-saving technologies in industrial applications, capable of reducing motor energy consumption by 30-60% compared to fixed-speed operation.
+      </p>
+      <p>
+        Beyond energy savings, VFDs provide process optimization benefits including soft starting, precise speed control, reduced mechanical stress, and improved process quality. In oil &amp; gas, water treatment, HVAC, and manufacturing applications, VFDs are essential for modern process control.
+      </p>
+
+      <h2>How VFDs Work</h2>
+      <p>
+        A VFD controls motor speed by converting fixed-frequency, fixed-voltage AC power into variable-frequency, variable-voltage AC power. The basic components of a VFD include:
+      </p>
+      <ul>
+        <li><strong>Rectifier</strong> — Converts incoming AC power to DC power</li>
+        <li><strong>DC bus</strong> — Stores and smooths the DC voltage</li>
+        <li><strong>Inverter</strong> — Converts DC power back to AC power at the desired frequency and voltage using IGBT (Insulated Gate Bipolar Transistor) switching</li>
+        <li><strong>Control circuit</strong> — Manages the inverter switching pattern using Pulse Width Modulation (PWM) to produce the desired output waveform</li>
+        <li><strong>Operator interface</strong> — Provides local control, parameter configuration, and status display</li>
+      </ul>
+
+      <h2>Allen-Bradley PowerFlex VFD Range</h2>
+      <p>
+        Rockwell Automation's Allen-Bradley PowerFlex series covers a wide range of applications and power ratings:
+      </p>
+      <ul>
+        <li><strong>PowerFlex 525</strong> — Compact, cost-effective VFD for simple motor control applications. Power range: 0.2-22 kW (0.25-30 HP). Features built-in EtherNet/IP and USB programming port</li>
+        <li><strong>PowerFlex 527</strong> — Designed for OEM machine builders with tight integration to CompactLogix PLCs. Seamless configuration through Studio 5000</li>
+        <li><strong>PowerFlex 753</strong> — Feature-rich VFD for demanding industrial applications. Advanced motor control (vector, servo), safety features (STO, SS1), and extensive I/O capabilities</li>
+        <li><strong>PowerFlex 755</strong> — High-performance VFD for critical applications. Supports induction, permanent magnet, and servo motors. Integrated safety and advanced control algorithms</li>
+        <li><strong>PowerFlex 7000</strong> — Medium-voltage VFD for large motors (2.3-11 kV). Active front end for regenerative applications and power quality management</li>
+      </ul>
+
+      <h2>VFD Selection Criteria</h2>
+      <p>
+        Selecting the right VFD requires evaluating several key factors:
+      </p>
+      <ul>
+        <li><strong>Motor specifications</strong> — Motor voltage, current, power rating, and type (induction, PM, servo)</li>
+        <li><strong>Application requirements</strong> — Torque/speed profile, dynamic response, accuracy, and duty cycle</li>
+        <li><strong>Environmental conditions</strong> — Ambient temperature, humidity, dust, and corrosive atmospheres</li>
+        <li><strong>Power supply quality</strong> — Input voltage tolerance, harmonic distortion limits, and power factor requirements</li>
+        <li><strong>Communication requirements</strong> — Integration with PLC/SCADA systems (EtherNet/IP, Modbus, Profibus)</li>
+        <li><strong>Safety requirements</strong> — Functional safety ratings (SIL, PL) for emergency stop and safe torque off</li>
+        <li><strong>Energy efficiency</strong> — Regenerative capability, active front end, and energy monitoring features</li>
+      </ul>
+
+      <h2>VFD Energy Savings</h2>
+      <p>
+        The energy savings potential of VFDs is most significant for variable-torque applications (fans, pumps, compressors) where power consumption follows the affinity laws:
+      </p>
+      <ul>
+        <li>Power is proportional to the cube of speed: P ∝ n³</li>
+        <li>Reducing speed by 20% reduces power consumption by approximately 50%</li>
+        <li>Reducing speed by 50% reduces power consumption by approximately 87.5%</li>
+      </ul>
+      <p>
+        For a 100 kW pump operating at 80% speed, the power consumption drops from 100 kW to approximately 51 kW — a 49% energy savings. At typical industrial electricity rates, this represents significant annual cost savings with a VFD payback period of 1-3 years.
+      </p>
+
+      <h2>VFD Programming and Configuration</h2>
+      <p>
+        Modern VFDs require careful programming to optimize performance:
+      </p>
+      <ul>
+        <li><strong>Motor parameters</strong> — Enter nameplate data (voltage, current, speed, power factor) for accurate motor modeling</li>
+        <li><strong>Acceleration/deceleration ramps</strong> — Configure ramp times to prevent motor trip on start/stop and avoid process upsets</li>
+        <li><strong>Speed references</strong> — Set up speed reference sources (local, PLC, 4-20mA, network) and scaling</li>
+        <li><strong>Motor control mode</strong> — Select V/Hz, vector, or servo control based on application requirements</li>
+        <li><strong>Protection parameters</strong> — Configure overcurrent, overvoltage, undervoltage, overload, and ground fault protection</li>
+        <li><strong>Communication setup</strong> — Configure EtherNet/IP, Modbus, or Profibus parameters for PLC/SCADA integration</li>
+        <li><strong>Safety functions</strong> — Configure Safe Torque Off (STO), Safe Stop 1 (SS1), and other safety functions per IEC 62061</li>
+      </ul>
+
+      <h2>TTS VFD Services</h2>
+      <p>
+        Texas Technical Services provides comprehensive VFD services across Kuwait and the GCC:
+      </p>
+      <ul>
+        <li>VFD selection, sizing, and specification for industrial applications</li>
+        <li>Supply of Allen-Bradley PowerFlex and other major VFD brands</li>
+        <li>VFD panel design, fabrication, and assembly</li>
+        <li>Programming, commissioning, and optimization</li>
+        <li>Motor-VFD compatibility analysis and motor insulation assessment</li>
+        <li>Harmonic analysis and mitigation (line reactors, active filters)</li>
+        <li>Preventive maintenance and repair services</li>
+      </ul>
+
+      <h2>Frequently Asked Questions (FAQ)</h2>
+      <p><strong>Q: How do I calculate the energy savings from installing a VFD?</strong><br />
+      <strong>A:</strong> For variable-torque applications (fans, pumps), power is proportional to the cube of speed. Use the formula: P₂ = P₁ × (n₂/n₁)³ where P₁ is rated power and n₂/n₁ is the speed ratio. For constant-torque applications, savings are linear with speed reduction. TTS can perform a detailed energy assessment for your specific application.</p>
+
+      <p><strong>Q: Can a VFD be installed on any motor?</strong><br />
+      <strong>A:</strong> Most modern AC induction motors are VFD-compatible, but older motors with low-insulation ratings may require insulation upgrades. VFD-rated motors with reinforced insulation and proper bearings are recommended for applications with long cable runs or high switching frequencies. Permanent magnet motors require VFDs with specific control algorithms.</p>
+
+      <p><strong>Q: What is the typical payback period for a VFD installation?</strong><br />
+      <strong>A:</strong> For variable-torque applications running 4,000+ hours per year, VFD payback is typically 1-3 years. Constant-torque applications may have longer payback periods due to lower energy savings potential. Additional benefits (reduced maintenance, improved process quality, soft starting) further improve the return on investment.</p>
+
+      <p><strong>Q: Can TTS program and commission Allen-Bradley PowerFlex VFDs?</strong><br />
+      <strong>A:</strong> Yes. TTS is an authorized Allen-Bradley system integrator with certified engineers experienced in PowerFlex VFD programming, commissioning, and optimization. We support all PowerFlex models from 525 to 7000 series.</p>
+
+      <p><strong>Q: Do VFDs cause power quality issues?</strong><br />
+      <strong>A:</strong> VFDs can generate harmonic distortion on the power system. The severity depends on VFD topology (6-pulse, 12-pulse, active front end), loading, and system impedance. TTS performs harmonic analysis and recommends mitigation solutions (line reactors, multi-pulse transformers, active filters) to meet IEEE 519 limits.</p>
+    `
+  },
+
+  "metering-skids-design-commissioning": {
+    title: "Metering Skids: Design, Fabrication, and Commissioning for Custody Transfer",
+    seoTitle: "Metering Skids — Design, Fabrication & Commissioning Guide | TTS Kuwait",
+    metaDescription: "Complete guide to metering skids — design, components, fabrication, commissioning, and professional metering skid services in Kuwait.",
+    category: "Flow Measurement",
+    date: "July 15, 2026",
+    readTime: "12 Min Read",
+    pillar: "Pillar 1: Flow Measurement & Custody Metering",
+    description: "Learn about metering skid design, components, fabrication, and commissioning for custody transfer applications in oil & gas, refinery, and petrochemical industries.",
+    keywords: "metering skids, custody transfer metering, flow computer configuration, metering control system integration, Coriolis meter oil and gas",
+    image: "/flow_metering_skid.jpg",
+    imageAlt: "A custody transfer metering skid with flow meters, valves, and control instruments in an oil and gas facility.",
+    content: `
+      <p>
+        <strong>Metering skids</strong> are pre-engineered, skid-mounted flow measurement systems designed to provide accurate and reliable custody transfer measurement of liquids and gases. A metering skid integrates all necessary components — flow meters, valves, strainers, pressure and temperature instruments, flow computers, and control systems — onto a single structural steel frame for streamlined installation and commissioning.
+      </p>
+      <p>
+        In oil &amp; gas custody transfer applications, metering skids serve as the "cash register" of the production and distribution system. Every barrel of crude oil, every cubic foot of natural gas, and every gallon of refined product that passes through a metering skid is measured for fiscal purposes. The accuracy and reliability of the metering skid directly impacts revenue, regulatory compliance, and commercial relationships.
+      </p>
+
+      <h2>Key Components of a Metering Skid</h2>
+      <p>
+        A complete custody transfer metering skid typically includes:
+      </p>
+      <ul>
+        <li><strong>Flow meter</strong> — The primary measurement device. Common types include Coriolis, ultrasonic, turbine, and positive displacement meters. The meter type is selected based on fluid properties, accuracy requirements, and application conditions</li>
+        <li><strong>Pipeline and piping</strong> — ASME B31.3 compliant piping with specified straight-run upstream and downstream of the meter to ensure fully developed flow profiles</li>
+        <li><strong>Isolation valves</strong> — Block valves (ball, gate, or butterfly) for isolating the metering system during maintenance</li>
+        <li><strong>Pressure relief valve</strong> — Overpressure protection for the meter and piping system</li>
+        <li><strong>Strainer/filter</strong> — Removes particulates and debris that could damage the meter or affect measurement accuracy</li>
+        <li><strong>Pressure transmitter</strong> — Measures line pressure for flow compensation and monitoring</li>
+        <li><strong>Temperature sensor</strong> — Measures fluid temperature for density and volume correction calculations</li>
+        <li><strong>Flow computer</strong> — Specialized computing device that calculates corrected flow rates, totals, and quality parameters based on input from all instruments</li>
+        <li><strong>Control panel</strong> — Houses the flow computer, PLC/HMI, power supply, and signal conditioning equipment</li>
+        <li><strong>Prover connection</strong> — Connections for inline or field provers used to verify meter accuracy</li>
+      </ul>
+
+      <h2>Design Considerations</h2>
+      <p>
+        Effective metering skid design requires careful attention to several factors:
+      </p>
+      <ul>
+        <li><strong>Straight-run requirements</strong> — Most flow meters require specific upstream and downstream straight pipe lengths to achieve specified accuracy. Coriolis meters typically require 5D upstream and 2D downstream, while ultrasonic meters may require 10D-20D upstream</li>
+        <li><strong>Flow conditioning</strong> — When straight-run requirements cannot be met, flow conditioners (tube bundles, plate type, or tab-type) can be used to develop a uniform flow profile</li>
+        <li><strong>Vibration isolation</strong> — Metering skids should be isolated from external vibration sources that could affect meter accuracy, particularly for Coriolis and ultrasonic meters</li>
+        <li><strong>Thermal management</strong> — For applications with wide temperature variations, insulation, heat tracing, or temperature-controlled enclosures may be required</li>
+        <li><strong>Corrosion protection</strong> — Material selection must account for fluid corrosivity, environmental conditions, and expected service life</li>
+        <li><strong>Accessibility</strong> — The skid layout must provide adequate access for maintenance, calibration, and proving operations</li>
+      </ul>
+
+      <h2>Flow Computer Configuration</h2>
+      <p>
+        The flow computer is the intellectual center of the metering skid. It performs real-time calculations to convert raw meter signals into corrected flow measurements. Key functions include:
+      </p>
+      <ul>
+        <li><strong>Volume correction</strong> — Converts measured volume to standard conditions (15°C, 101.325 kPa) using temperature and pressure inputs</li>
+        <li><strong>Density calculation</strong> — Calculates fluid density from Coriolis meter inputs or correlation equations</li>
+        <li><strong>Mass-to-volume conversion</strong> — Converts mass flow readings to standard volume for fiscal reporting</li>
+        <li><strong>Batch control</strong> — Manages batch loading operations with automatic start/stop and totalization</li>
+        <li><strong>Alarm management</strong> — Monitors for abnormal conditions (high/low flow, pressure, temperature) and triggers alarms or shutdowns</li>
+        <li><strong>Audit trail</strong> — Records all measurement data, configuration changes, and operator actions for regulatory compliance</li>
+      </ul>
+
+      <h2>Fabrication and Assembly</h2>
+      <p>
+        Metering skid fabrication follows a structured process:
+      </p>
+      <ul>
+        <li><strong>1. Engineering design</strong> — P&amp;ID development, equipment specification, piping design, structural design, and electrical/instrumentation design</li>
+        <li><strong>2. Procurement</strong> — Sourcing of all components (meters, valves, instruments, piping, structural steel, electrical equipment)</li>
+        <li><strong>3. Structural fabrication</strong> — Steel frame fabrication, welding, and surface treatment</li>
+        <li><strong>4. Piping fabrication</strong> — Pipe cutting, bending, welding, and NDE (non-destructive examination)</li>
+        <li><strong>5. Instrument installation</strong> — Mounting and wiring of all instruments, flow computers, and control equipment</li>
+        <li><strong>6. Testing</strong> — Hydrostatic testing, leak testing, and functional testing of all systems</li>
+        <li><strong>7. Painting and preservation</strong> — Surface preparation, painting, and weather protection</li>
+      </ul>
+
+      <h2>Commissioning</h2>
+      <p>
+        Metering skid commissioning is a critical phase that verifies the system performs as designed:
+      </p>
+      <ul>
+        <li><strong>Pre-commissioning checks</strong> — Verify piping integrity, instrument wiring, power supply, and communication connections</li>
+        <li><strong>Loop testing</strong> — Verify each instrument signal path from sensor to flow computer</li>
+        <li><strong>Flow verification</strong> — Run the system at various flow rates to verify meter performance against design specifications</li>
+        <li><strong>Flow computer configuration</strong> — Input all meter, instrument, and process parameters into the flow computer</li>
+        <li><strong>Proving</strong> — Verify meter accuracy against a prover or reference meter under actual operating conditions</li>
+        <li><strong>Documentation</strong> — Compile as-built drawings, test certificates, calibration records, and operating procedures</li>
+      </ul>
+
+      <h2>TTS Metering Skid Services</h2>
+      <p>
+        Texas Technical Services provides end-to-end metering skid solutions across Kuwait and the GCC:
+      </p>
+      <ul>
+        <li>Metering skid conceptual and detailed engineering design</li>
+        <li>Equipment procurement and vendor management</li>
+        <li>Fabrication supervision and quality control</li>
+        <li>Installation, commissioning, and startup support</li>
+        <li>Flow computer configuration and programming</li>
+        <li>Meter proving and calibration services</li>
+        <li>Ongoing maintenance and calibration support</li>
+      </ul>
+
+      <h2>Frequently Asked Questions (FAQ)</h2>
+      <p><strong>Q: What is the typical accuracy of a custody transfer metering skid?</strong><br />
+      <strong>A:</strong> Custody transfer metering skids typically achieve ±0.1-0.5% accuracy depending on the meter technology and application. Coriolis-based skids achieve ±0.1% for mass flow, while ultrasonic-based gas metering skids achieve ±0.5% or better with multi-path configurations.</p>
+
+      <p><strong>Q: How long does it take to design and build a metering skid?</strong><br />
+      <strong>A:</strong> Typical lead times range from 12-20 weeks from engineering design to delivery, depending on equipment availability and complexity. Standard designs for common applications can be delivered in 8-12 weeks. Custom designs for high-pressure or high-temperature applications may require 16-24 weeks.</p>
+
+      <p><strong>Q: What standards govern metering skid design?</strong><br />
+      <strong>A:</strong> Key standards include API MPMS (petroleum measurement), AGA (gas measurement), ASME B31.3 (process piping), ISO 17025 (calibration), OIML R117 (legal metrology), and facility-specific design codes (Shell DEP, Saudi Aramco SAES, etc.).</p>
+
+      <p><strong>Q: Can TTS design metering skids for high-pressure gas applications?</strong><br />
+      <strong>A:</strong> Yes. TTS designs and commissions metering skids for a wide range of pressure ratings, from low-pressure distribution systems to high-pressure HP/HT wellhead applications. Our engineering team is experienced with pressure ratings up to 15,000 psi and temperature ranges from -46°C to +200°C.</p>
+
+      <p><strong>Q: Does TTS provide after-sales support for metering skids?</strong><br />
+      <strong>A:</strong> Yes. TTS provides comprehensive after-sales support including scheduled calibration, meter proving, flow computer maintenance, instrument replacement, and 24/7 emergency technical support for custody transfer metering systems throughout the GCC region.</p>
+    `
   }
 };
 
@@ -11647,7 +14130,8 @@ export const blogCategories = [
   "Analyzers & Inspection",
   "Emissions Compliance",
   "Mechanical Testing",
-  "Commissioning & Support"
+  "Commissioning & Support",
+  "NDT"
 ];
 
 

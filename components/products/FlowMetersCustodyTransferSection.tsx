@@ -39,16 +39,16 @@ const ITEMS: IconCardItem[] = [
 
 export default function FlowMetersCustodyTransferSection() {
   return (
-    <section className="bg-[#000000] blueprint-grid blueprint-dot-grid py-16 lg:py-20">
+    <section className="bg-[#0B0D26] py-16 lg:py-20">
       <div className="max-w-7xl mx-auto px-4 sm:px-6">
         <div className="text-center mb-12">
-          <span className="text-[#e7212b] text-[10px] font-semibold tracking-[3px] uppercase">
+          <span className="text-[#e7212b] text-[11px] font-semibold tracking-[3px] uppercase">
             Precision Metering
           </span>
           <h2 className="mt-3 text-white text-2xl sm:text-3xl font-bold">
             Custody Transfer Metering
           </h2>
-          <p className="text-white/55 text-[14px] mt-3 max-w-2xl mx-auto">
+          <p className="text-white/60 text-[15px] mt-3 max-w-2xl mx-auto">
             Fiscal metering, calibration &amp; verification systems — built
             to API MPMS and OIML standards for oil &amp; gas, refinery, and
             pipeline applications.
@@ -58,7 +58,7 @@ export default function FlowMetersCustodyTransferSection() {
         <IconCardGrid items={ITEMS} cols={3} variant="dark" />
 
         <div className="mt-10 text-center">
-          <p className="text-white/40 text-[10px] font-semibold tracking-[3px] uppercase">
+          <p className="text-white/40 text-[11px] font-semibold tracking-[3px] uppercase">
             ── Approved Vendors ──
           </p>
         </div>

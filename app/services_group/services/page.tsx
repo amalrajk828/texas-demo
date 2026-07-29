@@ -4,7 +4,7 @@ import ServiceGroupGrid from "@/components/services_group/ServiceGroupGrid";
 import { BreadcrumbJsonLd } from "@/components/schema/BreadcrumbJsonLd";
 
 export const metadata: Metadata = {
-  title: "Main Services | Texas Technical Services",
+  title: "Main Services",
   description:
     "Browse our complete range of industrial services — flow measurement, inspection & testing, process automation, and construction solutions for oil & gas, refinery, and petrochemical sectors.",
   alternates: { canonical: "/services_group/services/" },
@@ -16,14 +16,14 @@ export const metadata: Metadata = {
     "industrial construction services",
   ],
   openGraph: {
-    title: "Main Services | Texas Technical Services",
+    title: "Main Services",
     description: "Complete range of industrial services — flow measurement, inspection & testing, process automation, and construction.",
     url: "/services_group/services/",
     images: [{ url: "/og-services.jpg", width: 1200, height: 630, alt: "Texas Technical Services" }],
   },
   twitter: {
     card: "summary_large_image",
-    title: "Main Services | Texas Technical Services",
+    title: "Main Services",
     description:
       "Browse our complete range of industrial services — flow measurement, inspection & testing, process automation, and construction solutions for oil & gas, refinery, and petrochemical sectors.",
   },

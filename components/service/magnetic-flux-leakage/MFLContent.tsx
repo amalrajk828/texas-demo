@@ -34,6 +34,15 @@ export default function MFLContent() {
             MFL Inspection Applications
           </h2>
         </FadeUp>
+        <FadeUp delay={0.06} className="mb-12">
+          <div className="max-w-3xl">
+            <div className="flex items-center gap-2.5 mb-4"><span className="w-5 h-px bg-[#e7212b]" /><span className="text-[#e7212b] text-[10px] font-semibold tracking-[3.5px] uppercase">What We Do</span></div>
+            <h2 className="text-3xl sm:text-[2.2rem] font-bold text-[#0B0D26] leading-[1.15] mb-5">MFL Scanning for Pipeline and Tank Floor Integrity</h2>
+            <p className="text-gray-500 text-[15px] leading-[1.85] mb-4">Magnetic flux leakage (MFL) is a non-destructive testing technique used to detect and quantify corrosion, pitting, and wall loss in ferromagnetic materials. The technique works by magnetising the test piece to near-saturation — where any reduction in wall thickness causes the magnetic field to leak from the surface, which is then detected by Hall-effect sensors mounted on the scanning probe.</p>
+            <p className="text-gray-500 text-[15px] leading-[1.85] mb-8">TTS provides MFL inspection services for above-ground and buried pipelines, storage tank floors, and structural steel members. Our MFL systems generate detailed corrosion maps with depth sizing estimates, enabling remaining life calculations and prioritised maintenance planning. MFL is often combined with ultrasonic thickness mapping for comprehensive integrity assessment.</p>
+            <p className="text-gray-500 text-[15px] leading-[1.85] mb-8">Our MFL inspection teams are experienced in pipeline commissioning surveys, in-service integrity assessments, and pre-decommissioning condition evaluations. Inspection data is processed using advanced analysis software to produce corrosion growth rate estimates, threat assessments, and recommended inspection intervals — supporting risk-based maintenance strategies for your pipeline and tank assets.</p>
+          </div>
+        </FadeUp>
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 mb-16">
           {CARDS.map((card, i) => (
             <FadeUp key={card.title} delay={0.08 * i}>

@@ -4,7 +4,6 @@ import Link from "next/link";
 import { motion, useInView } from "framer-motion";
 import { useRef } from "react";
 import { ArrowRight } from "lucide-react";
-import LightGradientBackground from "@/components/LightGradientBackground";
 
 interface ServiceItem {
   title: string;
@@ -21,7 +20,7 @@ const ALL_SERVICES: ServiceItem[] = [
   { title: "Supply and Installation of Suspended Access Equipment", category: "Constructions", image: "/images/services/WINDOW-CLEANING-FACADE-CLEANING-BMU-CRADLE-ROOF-MACHINE-13-1-scaled.jpg", href: "/service/supply-and-installation-of-suspended-access-equipments/", body: "Supply and installation of telescopic roof machines, twin track roof machines, powered cradles, recess cradles, monorails, and davit systems." },
   { title: "Lifting Equipment Inspection", category: "Specialized Inspection Services", image: "/images/services/lifting_equp.png", href: "/service/lifting-equipment-inspection/", body: "Systematic inspection of cranes, hoists, forklifts, and elevators — certified inspectors identify defects, wear, and safety standard deviations." },
   { title: "Hose Test", category: "Specialized Inspection Services", image: "/images/services/HOSE-TEST.jpg", href: "/service/hose-test/", body: "Quality assurance field water check for installed curtain walls, exterior windows and doors — identifies leakage vulnerabilities." },
-  { title: "Air Permeability Test", category: "Specialized Inspection Services", image: "/images/services/AIR-PERMEABILITY-TEST-800x664.jpg", href: "/service/air-permeability-test/", body: "Measures air infiltration through windows, doors, and curtain walls per ASTM E783 — locates air leakage paths." },
+  { title: "Air Permeability Test", category: "Specialized Inspection Services", image: "/images/services/AIR-PERMEABILITY-TEST.jpg", href: "/service/air-permeability-test/", body: "Measures air infiltration through windows, doors, and curtain walls per ASTM E783 — locates air leakage paths." },
   { title: "Water Penetration Test", category: "Specialized Inspection Services", image: "/images/services/WATER-PENETRATION-TEST.jpg", href: "/service/water-penetration-test/", body: "Determines whether leakage is present through windows, doors, and curtain wall systems from exterior to interior." },
   { title: "Pullout Test", category: "Specialized Inspection Services", image: "/images/services/ANCHORS-PULL-TESTING.jpg", href: "/service/pullout-test/", body: "Determines strength and integrity of the bond between a bolt and embedded material — concrete or masonry structural anchorage testing." },
   { title: "Torque Tightening & Bolt Tensioning", category: "Specialized Inspection Services", image: "/images/services/torque.png", href: "/service/torque-tightening-bolt-tensioning/", body: "Assesses tightness and preload of fasteners using calibrated torque sensors — proper installation and integrity of bolted connections." },
@@ -107,25 +106,25 @@ function ServiceCard({ service, index }: { service: ServiceItem; index: number }
   const inView = useInView(ref, { once: true, margin: "-40px" });
   return (
     <motion.div ref={ref} initial={{ opacity: 0, y: 28 }} animate={inView ? { opacity: 1, y: 0 } : {}} transition={{ duration: 0.5, ease: [0.22, 1, 0.36, 1], delay: 0.03 + (index % 3) * 0.06 }} whileHover={{ y: -4, transition: { duration: 0.22 } }} className="h-full">
-      <Link href={service.href} className="group relative rounded-2xl border border-[#e8eaf0] bg-white overflow-hidden flex flex-col hover:border-[#e7212b]/25 hover:shadow-xl hover:shadow-[#e7212b]/6 transition-all duration-300 h-full">
-        <div className="relative h-[155px] w-full bg-[#000000] blueprint-grid blueprint-dot-grid overflow-hidden flex items-center justify-center shrink-0">
+      <Link href={service.href} className="group relative rounded-2xl border border-white/40 bg-white/25 backdrop-blur-xl overflow-hidden flex flex-col hover:border-[#e7212b]/25 hover:shadow-2xl hover:shadow-[#e7212b]/8 transition-all duration-300 h-full">
+        <div className="relative aspect-[16/10] bg-[#0B0D26] overflow-hidden flex items-center justify-center">
           {service.image ? (
             <Image src={service.image} alt={service.title} fill sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw" className="object-cover group-hover:scale-105 transition-transform duration-500" />
           ) : (
-            <span className="text-[64px] font-black text-white/10 group-hover:text-[#e7212b]/20 group-hover:scale-110 transition-all duration-500 select-none">01</span>
+            <span className="text-[72px] font-black text-white/10 group-hover:text-[#e7212b]/20 group-hover:scale-110 transition-all duration-500 select-none">01</span>
           )}
           <div className="absolute top-0 left-0 right-0 h-[2px] bg-gradient-to-r from-transparent via-[#e7212b] to-transparent opacity-0 group-hover:opacity-70 transition-opacity duration-300" />
-          <div className="absolute top-3 left-3 z-10">
-            <span className="text-[10px] font-semibold text-white/70 bg-[#000000] blueprint-grid blueprint-dot-grid/75 backdrop-blur-sm border border-white/10 px-2.5 py-1 rounded-full tracking-[1.5px] uppercase">{service.category}</span>
+          <div className="absolute top-3 left-3">
+            <span className="text-[10px] font-semibold text-white/70 bg-[#0B0D26]/75 backdrop-blur-sm border border-white/10 px-2.5 py-1 rounded-full tracking-[1.5px] uppercase">{service.category}</span>
           </div>
         </div>
-        <div className="flex flex-col flex-1 p-[18px]">
-          <div className="w-7 h-[2px] bg-[#e7212b] rounded-full mb-2.5 group-hover:w-11 transition-all duration-300" />
-          <h3 className="text-[16px] font-bold text-[#0B0D26] leading-snug mb-2">{service.title}</h3>
-          <p className="text-gray-500 text-[13px] leading-[1.65] flex-1 line-clamp-3">{service.body}</p>
-          <div className="mt-3 pt-3 border-t border-[#e8eaf0] text-[#e7212b] text-[12.5px] font-semibold flex items-center gap-1">
+        <div className="flex flex-col flex-1 p-5">
+          <div className="w-7 h-[2px] bg-[#e7212b] rounded-full mb-3 group-hover:w-10 transition-all duration-300" />
+          <h3 className="text-[15px] font-bold text-white leading-snug mb-2">{service.title}</h3>
+          <p className="text-white/80 text-[13px] leading-[1.7] flex-1">{service.body}</p>
+          <div className="mt-4 pt-3 border-t border-white/40 text-[#e7212b] text-[12px] font-semibold flex items-center gap-1">
             Read more
-            <ArrowRight className="w-3.5 h-3.5 group-hover:translate-x-1 transition-transform duration-200" />
+            <ArrowRight className="w-3 h-3 group-hover:translate-x-1 transition-transform duration-200" />
           </div>
         </div>
       </Link>
@@ -139,11 +138,11 @@ export default function ServiceGroupGrid({ page }: { page: number }) {
   const pageServices = ALL_SERVICES.slice(startIdx, startIdx + PER_PAGE);
 
   return (
-    <LightGradientBackground className="py-20">
-      <div className="relative max-w-7xl mx-auto px-4 sm:px-6 z-10">
+    <section className="relative bg-[#0B0D26] py-20 overflow-hidden">
+      <div className="relative max-w-7xl mx-auto px-4 sm:px-6">
         <span id="services-grid" className="absolute -top-28" />
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5 sm:gap-[22px] mb-14">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 mb-14">
           {pageServices.map((svc, i) => (
             <ServiceCard key={`${svc.title}-${startIdx + i}`} service={svc} index={i} />
           ))}
@@ -154,13 +153,13 @@ export default function ServiceGroupGrid({ page }: { page: number }) {
           {page > 1 ? (
             <Link
               href={page === 2 ? "/services_group/services/" : `/services_group/services/page/${page - 1}/`}
-              className="inline-flex items-center gap-1 px-4 py-2 rounded-lg border border-[#e8eaf0] bg-white text-[13px] font-semibold text-[#0B0D26] hover:border-[#e7212b]/40 hover:text-[#e7212b] transition-all duration-200"
+              className="inline-flex items-center gap-1 px-4 py-2 rounded-lg border border-white/10 bg-white/10 backdrop-blur-xl text-[13px] font-semibold text-white hover:border-[#e7212b]/40 hover:text-[#e7212b] transition-all duration-200"
             >
               <ArrowRight className="w-3.5 h-3.5 rotate-180" />
               Prev
             </Link>
           ) : (
-            <span className="inline-flex items-center gap-1 px-4 py-2 rounded-lg border border-[#e8eaf0] bg-gray-50 text-[13px] font-semibold text-gray-300 cursor-not-allowed">
+            <span className="inline-flex items-center gap-1 px-4 py-2 rounded-lg border border-white/5 bg-white/5 backdrop-blur-sm text-[13px] font-semibold text-white/30 cursor-not-allowed">
               <ArrowRight className="w-3.5 h-3.5 rotate-180" />
               Prev
             </span>
@@ -179,7 +178,7 @@ export default function ServiceGroupGrid({ page }: { page: number }) {
                 );
               }
               return (
-                <Link key={p} href={href} className="w-9 h-9 rounded-lg border border-[#e8eaf0] bg-white text-[13px] font-semibold text-[#0B0D26] hover:border-[#e7212b]/40 hover:text-[#e7212b] transition-all duration-200 flex items-center justify-center">
+                <Link key={p} href={href} className="w-9 h-9 rounded-lg border border-white/10 bg-white/10 backdrop-blur-xl text-[13px] font-semibold text-white hover:border-[#e7212b]/40 hover:text-[#e7212b] transition-all duration-200 flex items-center justify-center">
                   {p}
                 </Link>
               );
@@ -189,23 +188,23 @@ export default function ServiceGroupGrid({ page }: { page: number }) {
           {page < totalPages ? (
             <Link
               href={page === 1 ? "/services_group/services/page/2/" : `/services_group/services/page/${page + 1}/`}
-              className="inline-flex items-center gap-1 px-4 py-2 rounded-lg border border-[#e8eaf0] bg-white text-[13px] font-semibold text-[#0B0D26] hover:border-[#e7212b]/40 hover:text-[#e7212b] transition-all duration-200"
+              className="inline-flex items-center gap-1 px-4 py-2 rounded-lg border border-white/10 bg-white/10 backdrop-blur-xl text-[13px] font-semibold text-white hover:border-[#e7212b]/40 hover:text-[#e7212b] transition-all duration-200"
             >
               Next
               <ArrowRight className="w-3.5 h-3.5" />
             </Link>
           ) : (
-            <span className="inline-flex items-center gap-1 px-4 py-2 rounded-lg border border-[#e8eaf0] bg-gray-50 text-[13px] font-semibold text-gray-300 cursor-not-allowed">
+            <span className="inline-flex items-center gap-1 px-4 py-2 rounded-lg border border-white/5 bg-white/5 backdrop-blur-sm text-[13px] font-semibold text-white/30 cursor-not-allowed">
               Next
               <ArrowRight className="w-3.5 h-3.5" />
             </span>
           )}
         </div>
 
-        <p className="text-center text-[12px] text-gray-400 mt-6">
+        <p className="text-center text-[12px] text-white/40 mt-6">
           Page {page} of {totalPages} — {ALL_SERVICES.length} services total
         </p>
       </div>
-    </LightGradientBackground>
+    </section>
   );
 }

@@ -34,6 +34,15 @@ export default function TOFDContent() {
             TOFD Applications &amp; Capabilities
           </h2>
         </FadeUp>
+        <FadeUp delay={0.06} className="mb-12">
+          <div className="max-w-3xl">
+            <div className="flex items-center gap-2.5 mb-4"><span className="w-5 h-px bg-[#e7212b]" /><span className="text-[#e7212b] text-[10px] font-semibold tracking-[3.5px] uppercase">What We Do</span></div>
+            <h2 className="text-3xl sm:text-[2.2rem] font-bold text-[#0B0D26] leading-[1.15] mb-5">Advanced TOFD Inspection for Volumetric Defect Detection</h2>
+            <p className="text-gray-500 text-[15px] leading-[1.85] mb-4">Time-of-flight diffraction (TOFD) is a high-precision ultrasonic technique that uses the diffraction of sound waves from crack tips to detect and size planar defects within welds and base materials. Unlike conventional pulse-echo UT, TOFD provides accurate through-wall sizing of defects regardless of their orientation — making it one of the most reliable methods for fitness-for-service assessments and remaining life calculations.</p>
+            <p className="text-gray-500 text-[15px] leading-[1.85] mb-8">TTS deploys TOFD systems for inspection of circumferential and longitudinal welds in pressure vessels, pipelines, and structural components. Our qualified TOFD technicians produce digitised data records that can be archived and reanalysed — providing a permanent inspection history for your assets. All TOFD work complies with BS 7706, EN ISO 10863, and ASME V Article 4.</p>
+            <p className="text-gray-500 text-[15px] leading-[1.85] mb-8">Our TOFD capabilities include manual and automated scanning systems, multi-zone inspection for thick-section components, and combined TOFD-phased array techniques for enhanced defect characterisation. Each inspection is supported by calibrated reference blocks and quality assurance procedures that ensure repeatable, reliable results across your inspection programme.</p>
+          </div>
+        </FadeUp>
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 mb-16">
           {CARDS.map((card, i) => (
             <FadeUp key={card.title} delay={0.08 * i}>

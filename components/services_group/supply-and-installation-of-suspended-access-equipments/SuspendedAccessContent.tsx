@@ -34,6 +34,15 @@ export default function SuspendedAccessContent() {
             Suspended Access Equipment Solutions
           </h2>
         </FadeUp>
+        <FadeUp delay={0.06} className="mb-12">
+          <div className="max-w-3xl">
+            <div className="flex items-center gap-2.5 mb-4"><span className="w-5 h-px bg-[#e7212b]" /><span className="text-[#e7212b] text-[10px] font-semibold tracking-[3.5px] uppercase">What We Do</span></div>
+            <h2 className="text-3xl sm:text-[2.2rem] font-bold text-[#0B0D26] leading-[1.15] mb-5">Permanent and Temporary Suspended Access Systems</h2>
+            <p className="text-gray-500 text-[15px] leading-[1.85] mb-4">Suspended access equipment — including building maintenance units (BMUs), cradles, and rope access systems — provides safe access to building facades, curtain walls, and external structures for cleaning, maintenance, inspection, and repair. TTS supplies, installs, and maintains permanent and temporary suspended access solutions for commercial, residential, and industrial buildings.</p>
+            <p className="text-gray-500 text-[15px] leading-[1.85] mb-4">Our services cover system design, structural anchor installation, guide rail and track systems, and commissioning of powered access equipment to EN 1808 and local regulatory requirements. We also provide periodic examination, load testing, and maintenance programmes that keep your suspended access equipment in safe, compliant, and operational condition throughout its service life.</p>
+            <p className="text-gray-500 text-[15px] leading-[1.85] mb-8">From initial feasibility study and system specification through installation, commissioning, and ongoing maintenance, TTS manages the complete suspended access lifecycle. Our engineering team works with building owners, facade contractors, and facility managers to deliver access solutions that balance safety, functionality, aesthetic requirements, and long-term maintenance costs.</p>
+          </div>
+        </FadeUp>
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 mb-16">
           {CARDS.map((card, i) => (
             <FadeUp key={card.title} delay={0.08 * i}>

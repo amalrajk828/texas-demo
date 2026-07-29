@@ -13,12 +13,14 @@ import {
   getFilter,
   getPageNumber,
   buildBaseSlug,
+  industryMatches,
   type CategoryLink,
 } from "@/lib/portfolio-group";
 import PortfolioGroupHero from "@/components/portfolio_group/PortfolioGroupHero";
 import PortfolioGroupCategoryGrid from "@/components/portfolio_group/PortfolioGroupCategoryGrid";
 import PortfolioGroupProductGrid from "@/components/portfolio_group/PortfolioGroupProductGrid";
 import PortfolioGroupPagination from "@/components/portfolio_group/PortfolioGroupPagination";
+import { BreadcrumbJsonLd } from "@/components/schema/BreadcrumbJsonLd";
 
 export async function generateMetadata({
   params,
@@ -28,9 +30,20 @@ export async function generateMetadata({
   const { slug } = await params;
   if (!slug || slug.length === 0) {
     return {
-      title: "Portfolio Categories | Texas Technical Services",
+      title: "Portfolio Categories",
       description:
         "Browse our portfolio by industry, product category, or application area.",
+      openGraph: {
+        title: "Portfolio Categories",
+        description: "Browse our portfolio by industry, product category, or application area.",
+        url: "/portfolio_group/",
+      },
+      twitter: {
+        card: "summary_large_image",
+        title: "Portfolio Categories",
+        description: "Browse our portfolio by industry, product category, or application area.",
+      },
+      keywords: ["industrial products Kuwait", "portfolio categories", "product catalog"],
     };
   }
   const result = getFilter(slug);
@@ -39,6 +52,17 @@ export async function generateMetadata({
     title: result.title,
     description: `Portfolio items in ${result.breadcrumb} — browse our range of industrial products and solutions.`,
     alternates: { canonical: `/portfolio_group/${slug.join("/")}/` },
+    openGraph: {
+      title: result.title,
+      description: `Portfolio items in ${result.breadcrumb} — browse our range of industrial products and solutions.`,
+      url: `/portfolio_group/${slug.join("/")}/`,
+    },
+    twitter: {
+      card: "summary_large_image",
+      title: result.title,
+      description: `Portfolio items in ${result.breadcrumb} — browse our range of industrial products and solutions.`,
+    },
+    keywords: ["industrial products Kuwait", "portfolio", result.title],
   };
 }
 
@@ -53,9 +77,7 @@ export default async function PortfolioGroupPage({
     const industryLinks: CategoryLink[] = Object.entries(INDUSTRY_TITLES).map(
       ([key, title]) => {
         const count = products.filter((p) =>
-          (p.industries ?? []).some((ind) =>
-            key.split("-").some((part) => ind.toLowerCase().includes(part)),
-          ),
+          (p.industries ?? []).some((ind) => industryMatches(ind, key)),
         ).length;
         return {
           href: `/portfolio_group/industries/${key}/`,
@@ -97,6 +119,7 @@ export default async function PortfolioGroupPage({
 
     return (
       <main>
+        <BreadcrumbJsonLd items={[{ name: "Home", href: "/" }, { name: "Portfolio", href: "/portfolio/" }, { name: "Categories", href: "/portfolio_group/" }]} />
         <PortfolioGroupHero
           breadcrumb="Portfolio Group"
           eyebrow="Portfolio"
@@ -104,7 +127,7 @@ export default async function PortfolioGroupPage({
           titleSuffix="Categories"
           description="Browse our product portfolio by industry, product category, or application area."
         />
-        <section className="relative bg-[#000000] blueprint-grid blueprint-dot-grid overflow-hidden pb-24">
+        <section className="relative bg-[#0B0D26] overflow-hidden pb-24">
           <div className="relative max-w-7xl mx-auto px-4 sm:px-6">
             <PortfolioGroupCategoryGrid links={allLinks} />
           </div>
@@ -127,6 +150,7 @@ export default async function PortfolioGroupPage({
 
   return (
     <main>
+      <BreadcrumbJsonLd items={[{ name: "Home", href: "/" }, { name: "Portfolio", href: "/portfolio/" }, { name: result.breadcrumb, href: `/portfolio_group/${slug.join("/")}/` }]} />
       <PortfolioGroupHero
         breadcrumb="Portfolio Group"
         breadcrumbHref="/portfolio_group/"
@@ -137,7 +161,7 @@ export default async function PortfolioGroupPage({
       />
 
       {pageItems.length > 0 ? (
-        <section className="bg-[#f4f5f8] py-20">
+        <section className="bg-[#0B0D26] py-20">
           <div className="max-w-7xl mx-auto px-4 sm:px-6">
             <PortfolioGroupProductGrid products={pageItems} />
             <PortfolioGroupPagination
@@ -149,13 +173,13 @@ export default async function PortfolioGroupPage({
           </div>
         </section>
       ) : (
-        <section className="bg-[#f4f5f8] py-20">
+        <section className="bg-[#0B0D26] py-20">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 text-center">
-            <div className="bg-white border border-[#e8eaf0] rounded-2xl p-12">
-              <h3 className="text-[18px] font-bold text-[#0B0D26] mb-2">
+            <div className="bg-white/[0.12] backdrop-blur-xl border border-white/[0.15] rounded-2xl p-12">
+              <h3 className="text-[18px] font-bold text-white mb-2">
                 No portfolio items found
               </h3>
-              <p className="text-gray-500 text-[14px]">
+              <p className="text-white/70 text-[14px]">
                 There are no items in this category yet.
               </p>
               <Link

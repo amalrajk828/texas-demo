@@ -19,21 +19,23 @@ import {
 } from "lucide-react";
 
 export const metadata: Metadata = {
-  title: "Products",
+  title: "Flow Meters, Analyzers, PLCs & Industrial Automation Products",
   description:
-    "Explore Texas Technical Services' full product range — flow meters, analyzers, sensors, PLCs, ICONICS SCADA, HMI panels, VFDs, AC servos, custody metering, and industrial automation solutions.",
+    "Flow meters, analyzers, sensors, PLCs, SCADA, HMI panels, VFDs, AC servos, and custody metering solutions from leading OEMs.",
   alternates: { canonical: "/products/" },
   openGraph: {
-    title: "Products | Texas Technical Services",
+    title: "Flow Meters, Analyzers, PLCs & Industrial Automation Products",
     description:
-      "Explore Texas Technical Services' full product range — flow meters, analyzers, sensors, PLCs, ICONICS SCADA, HMI panels, VFDs, AC servos, custody metering skids, and industrial automation solutions from leading OEMs.",
+      "Flow meters, analyzers, sensors, PLCs, SCADA, HMI panels, VFDs, AC servos, and custody metering solutions from leading OEMs.",
     url: "/products/",
+    images: [{ url: "/og-default.png", width: 1200, height: 630 }],
   },
   twitter: {
     card: "summary_large_image",
-    title: "Products | Texas Technical Services",
+    title: "Flow Meters, Analyzers, PLCs & Industrial Automation Products",
     description:
-      "Flow meters, analyzers, sensors, PLCs, ICONICS SCADA, HMI panels, VFDs, AC servos, and custody metering solutions from leading OEMs.",
+      "Flow meters, analyzers, sensors, PLCs, SCADA, HMI panels, VFDs, AC servos, and custody metering solutions from leading OEMs.",
+    images: ["/og-default.png"],
   },
   keywords: [
     "flow meters Kuwait",
@@ -222,7 +224,7 @@ export default function ProductsPage() {
             </span>
           </div>
           <h1 className="text-4xl sm:text-5xl font-medium text-white leading-tight mb-4">
-            Products
+            Flow Meters, PLCs & Automation Products
           </h1>
           <p className="text-white/45 text-base max-w-xl">
             Flow measurement, industrial automation, and process instrumentation solutions from world-class

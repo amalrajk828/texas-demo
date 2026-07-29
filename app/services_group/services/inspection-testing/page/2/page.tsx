@@ -13,15 +13,16 @@ export const metadata: Metadata = {
     canonical: "/services_group/services/inspection-testing/page/2/",
   },
   openGraph: {
-    title: "Inspection & Testing Services — Page 2 | Texas Technical Services",
+    title: "Inspection & Testing Services — Page 2",
     description: "TOFD, Eddy Current, Phased Array UT, and mechanical testing services in Kuwait and Dubai.",
     url: "/services_group/services/inspection-testing/page/2/",
   },
   twitter: {
     card: "summary_large_image",
-    title: "Inspection & Testing Services — Page 2 | Texas Technical Services",
+    title: "Inspection & Testing Services — Page 2",
     description: "TOFD, Eddy Current, Phased Array UT, and mechanical testing in Kuwait and Dubai.",
   },
+  keywords: ["inspection testing Kuwait", "NDT services", "TOFD", "eddy current testing", "mechanical testing"],
 };
 
 const faqItems = [

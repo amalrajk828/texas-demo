@@ -34,6 +34,15 @@ export default function NewInstallationContent() {
             Design &amp; Commissioning Capabilities
           </h2>
         </FadeUp>
+        <FadeUp delay={0.06} className="mb-12">
+          <div className="max-w-3xl">
+            <div className="flex items-center gap-2.5 mb-4"><span className="w-5 h-px bg-[#e7212b]" /><span className="text-[#e7212b] text-[10px] font-semibold tracking-[3.5px] uppercase">What We Do</span></div>
+            <h2 className="text-3xl sm:text-[2.2rem] font-bold text-[#0B0D26] leading-[1.15] mb-5">Design, Installation Supervision, and Commissioning of New Systems</h2>
+            <p className="text-gray-500 text-[15px] leading-[1.85] mb-4">TTS supports clients through the complete lifecycle of new system installation — from concept design and detailed engineering through installation supervision, testing, and commissioning. Our engineering team develops functional specifications, P&IDs, electrical schematics, and control system architectures that meet your operational requirements and comply with applicable codes and standards.</p>
+            <p className="text-gray-500 text-[15px] leading-[1.85] mb-4">During construction, our site engineers supervise installation quality, manage vendor interfaces, and coordinate testing activities including loop checking, pressure testing, and integrated system testing. Commissioning support covers factory acceptance testing (FAT), site acceptance testing (SAT), pre-commissioning checks, and operational handover — with comprehensive documentation packages that satisfy regulatory and owner-operator requirements.</p>
+            <p className="text-gray-500 text-[15px] leading-[1.85] mb-8">TTS works as an extension of your project team — providing specialist commissioning expertise that complements your internal resources. Our engineers have experience across oil and gas, petrochemical, power generation, and infrastructure sectors, delivering commissioning solutions that reduce risk, optimise schedules, and ensure your new systems perform as designed from day one.</p>
+          </div>
+        </FadeUp>
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 mb-16">
           {CARDS.map((card, i) => (
             <FadeUp key={card.title} delay={0.08 * i}>

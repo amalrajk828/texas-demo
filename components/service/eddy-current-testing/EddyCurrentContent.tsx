@@ -34,6 +34,15 @@ export default function EddyCurrentContent() {
             Eddy Current Testing Applications
           </h2>
         </FadeUp>
+        <FadeUp delay={0.06} className="mb-12">
+          <div className="max-w-3xl">
+            <div className="flex items-center gap-2.5 mb-4"><span className="w-5 h-px bg-[#e7212b]" /><span className="text-[#e7212b] text-[10px] font-semibold tracking-[3.5px] uppercase">What We Do</span></div>
+            <h2 className="text-3xl sm:text-[2.2rem] font-bold text-[#0B0D26] leading-[1.15] mb-5">Eddy Current Testing for Surface and Sub-Surface Defect Detection</h2>
+            <p className="text-gray-500 text-[15px] leading-[1.85] mb-4">Eddy current testing (ECT) is a non-contact electromagnetic method that induces circulating eddy currents in electrically conductive materials. Disruptions to these currents — caused by cracks, corrosion, wall thinning, or changes in material properties — are detected as impedance changes in the test coil, providing sensitive detection of surface and near-surface defects.</p>
+            <p className="text-gray-500 text-[15px] leading-[1.85] mb-8">TTS deploys eddy current testing for heat exchanger tube inspection, aircraft component assessment, weld surface examination, and coating thickness measurement. Our array and rotary probe systems achieve high-resolution scanning of non-ferrous materials including aluminium, copper, titanium, and stainless steel. All ECT work is performed to ASME V, ISO 15549, and ASTM E2884 standards.</p>
+            <p className="text-gray-500 text-[15px] leading-[1.85] mb-8">Our eddy current inspection capabilities include bobbin coil, rotating probe, and array probe configurations for tubular inspection, as well as surface probes for flat and curved component assessment. Inspection data is analysed by certified Level 2 and Level 3 technicians — providing defect sizing, characterisation, and fitness-for-service recommendations based on your acceptance criteria.</p>
+          </div>
+        </FadeUp>
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 mb-16">
           {CARDS.map((card, i) => (
             <FadeUp key={card.title} delay={0.08 * i}>

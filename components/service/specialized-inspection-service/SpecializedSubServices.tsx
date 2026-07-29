@@ -32,20 +32,48 @@ const SERVICES = [
   { Icon: Truck, title: "Lifting Equipment Inspection", body: "Systematic inspection of cranes, hoists, forklifts, and elevators by certified inspectors to identify defects, wear, and deviations from safety standards — with written report.", href: "/service/lifting-equipment-inspection/" },
 ];
 
-import LightGradientBackground from "@/components/LightGradientBackground";
-import SubServiceCard from "@/components/service/common/SubServiceCard";
+function ServiceCard({ item, index }: { item: (typeof SERVICES)[number]; index: number }) {
+  const ref = useRef<HTMLDivElement>(null);
+  const inView = useInView(ref, { once: true, margin: "-40px" });
+  return (
+    <motion.div
+      ref={ref}
+      initial={{ opacity: 0, y: 28 }}
+      animate={inView ? { opacity: 1, y: 0 } : {}}
+      transition={{ duration: 0.55, ease: [0.22, 1, 0.36, 1], delay: 0.04 + (index % 3) * 0.08 }}
+      whileHover={{ y: -4, transition: { duration: 0.22 } }}
+    >
+      <Link href={item.href} className="group relative rounded-2xl border border-white/40 bg-white/25 backdrop-blur-xl overflow-hidden flex flex-col hover:border-[#e7212b]/25 hover:shadow-2xl hover:shadow-[#e7212b]/8 transition-all duration-300 h-full p-6">
+        <div className="flex items-center justify-between mb-4">
+          <div className="w-10 h-10 rounded-xl bg-[#e7212b]/8 border border-[#e7212b]/15 backdrop-blur-sm flex items-center justify-center group-hover:bg-[#e7212b]/15 group-hover:border-[#e7212b]/30 transition-all duration-300">
+            <item.Icon className="w-4.5 h-4.5 text-[#e7212b]" strokeWidth={1.8} />
+          </div>
+          <span className="text-[10px] font-bold text-[#e7212b]/25 tracking-[2.5px]">{String(index + 1).padStart(2, "0")}</span>
+        </div>
+        <div className="w-8 h-[2px] bg-[#e7212b] rounded-full mb-3 group-hover:w-12 transition-all duration-300" />
+        <h3 className="text-[15px] font-bold text-white leading-snug mb-2.5">{item.title}</h3>
+        <p className="text-white/80 text-[13px] leading-[1.7] flex-1" dangerouslySetInnerHTML={{ __html: item.body }} />
+        <div className="mt-4 pt-4 border-t border-white/40 flex items-center gap-1.5 text-[#e7212b] text-[12px] font-semibold">
+          <span>Learn more</span>
+          <ArrowRight className="w-3.5 h-3.5 group-hover:translate-x-1 transition-transform duration-200" />
+        </div>
+      </Link>
+    </motion.div>
+  );
+}
 
 export default function SpecializedSubServices() {
   return (
-    <LightGradientBackground className="py-20 lg:py-28">
-      <div className="relative max-w-7xl mx-auto px-4 sm:px-6 z-10">
-        <FadeUp delay={0} className="mb-12">
-          <div className="flex items-center gap-2.5 mb-3">
+    <section className="relative bg-[#0B0D26] py-24 lg:py-32 overflow-hidden">
+      <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[600px] h-[1px] pointer-events-none" style={{ background: "linear-gradient(90deg, transparent, rgba(231,33,43,0.15) 50%, transparent)" }} />
+      <div className="relative max-w-7xl mx-auto px-4 sm:px-6">
+        <FadeUp delay={0} className="mb-14">
+          <div className="flex items-center gap-2.5 mb-4">
             <span className="w-5 h-px bg-[#e7212b]" />
             <span className="text-[#e7212b] text-[10px] font-semibold tracking-[3.5px] uppercase">Our Services</span>
           </div>
           <div className="flex flex-col sm:flex-row sm:items-end justify-between gap-4">
-            <h2 className="text-3xl sm:text-[2.4rem] font-bold text-[#0B0D26] leading-[1.15]">
+            <h2 className="text-3xl sm:text-[2.4rem] font-bold text-white leading-[1.15]">
               Specialized Inspection Capabilities
             </h2>
             <Link href="#contact" className="inline-flex items-center gap-2 bg-[#e7212b] hover:bg-[#aa0b1b] text-white font-semibold px-6 py-3 rounded-lg transition-colors duration-200 text-[13px] shrink-0 shadow-lg shadow-[#e7212b]/15">
@@ -54,12 +82,12 @@ export default function SpecializedSubServices() {
             </Link>
           </div>
         </FadeUp>
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5 sm:gap-[22px]">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
           {SERVICES.map((item, i) => (
-            <SubServiceCard key={item.title} item={item} index={i} categoryTag="Specialized Services" />
+            <ServiceCard key={item.title} item={item} index={i} />
           ))}
         </div>
       </div>
-    </LightGradientBackground>
+    </section>
   );
 }

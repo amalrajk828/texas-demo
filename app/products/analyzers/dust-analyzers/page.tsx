@@ -1,13 +1,13 @@
 import React from "react";
 import type { Metadata } from "next";
 import Link from "next/link";
+import { BreadcrumbJsonLd } from "@/components/schema/BreadcrumbJsonLd";
 import { ChevronRight } from "lucide-react";
 import ProductCard from "@/components/ProductCard";
 import { getProductsByPath } from "@/lib/products";
-import { BreadcrumbJsonLd } from "@/components/schema/BreadcrumbJsonLd";
 
 export const metadata: Metadata = {
-  title: "Dust Analyzers - Texas Technical Services",
+  title: "Dust Analyzers",
   description:
     "SICK dust analyzers for continuous monitoring of dust concentration and opacity in stack emissions from power plants, waste incineration, and industrial facilities.",
   alternates: { canonical: "/products/analyzers/dust-analyzers/" },
@@ -16,23 +16,27 @@ export const metadata: Metadata = {
     "SICK DUSTHUNTER",
     "stack emissions monitoring",
     "dust concentration measurement",
+    "dust monitoring Kuwait power plant",
+    "opacity measurement GCC",
+    "particulate emissions analyzer",
+    "industrial dust monitoring Dubai",
   ],
   openGraph: {
-    title: "Dust Analyzers - Texas Technical Services",
+    title: "Dust Analyzers",
     description:
       "SICK dust analyzers for dust concentration and opacity monitoring in stack emissions.",
     url: "/products/analyzers/dust-analyzers/",
   },
   twitter: {
     card: "summary_large_image",
-    title: "Dust Analyzers - Texas Technical Services",
+    title: "Dust Analyzers",
     description:
       "SICK dust analyzers for dust concentration and opacity monitoring in stack emissions.",
   },
 };
 
 export default function DustAnalyzersPage() {
-  const dustAnalyzerProducts = getProductsByPath("/products/analyzers/dust-analyzers/");
+  const products = getProductsByPath("/products/analyzers/dust-analyzers/");
   return (
     <div className="min-h-screen bg-white font-sans antialiased selection:bg-[#e7212b] selection:text-white">
       <BreadcrumbJsonLd items={[{ name: "Home", href: "/" }, { name: "Products", href: "/products/" }, { name: "Analyzers", href: "/products/analyzers/" }, { name: "Dust Analyzers", href: "/products/analyzers/dust-analyzers/" }]} />
@@ -53,15 +57,13 @@ export default function DustAnalyzersPage() {
         />
 
         <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 pt-[calc(var(--navbar-height,92px)+1.75rem)] pb-16 lg:pt-[calc(var(--navbar-height,92px)+2.5rem)] lg:pb-20">
-          <nav className="flex items-center gap-1.5 text-[11px] text-white/50 mb-6 flex-wrap">
+          <nav className="flex items-center gap-1.5 text-[11px] text-white/50 mb-6">
             <Link href="/" className="hover:text-white transition-colors">Home</Link>
-            <ChevronRight className="w-3 h-3 text-white/30 shrink-0" />
+            <ChevronRight className="w-3 h-3 text-white/30" />
             <Link href="/products" className="hover:text-white transition-colors">Products</Link>
-            <ChevronRight className="w-3 h-3 text-white/30 shrink-0" />
-            <Link href="/products/analyzers/" className="hover:text-white transition-colors">
-              Analyzers
-            </Link>
-            <ChevronRight className="w-3 h-3 text-white/30 shrink-0" />
+            <ChevronRight className="w-3 h-3 text-white/30" />
+            <Link href="/products/analyzers/" className="hover:text-white transition-colors">Analyzers</Link>
+            <ChevronRight className="w-3 h-3 text-white/30" />
             <span className="text-white">Dust Analyzers</span>
           </nav>
 
@@ -71,10 +73,10 @@ export default function DustAnalyzersPage() {
               SICK · Dust Measurement
             </span>
           </div>
-          <h1 className="text-4xl sm:text-5xl font-medium text-white leading-none mb-2">
+          <h1 className="text-4xl sm:text-5xl font-medium text-white leading-tight mb-4">
             Dust Analyzers
           </h1>
-          <p className="text-white/60 text-base max-w-xl font-medium">
+          <p className="text-white/60 text-base max-w-xl">
             Dust Concentration &amp; Opacity Measurement for Stack Emissions
           </p>
         </div>
@@ -99,19 +101,16 @@ export default function DustAnalyzersPage() {
 
       {/* ── Products List Section ─────────────────────────────── */}
       <section className="bg-[#F8F9FA] py-14 border-t border-[#E8E8F0] border-b border-[#E8E8F0]">
-        <div className="max-w-[1100px] mx-auto px-10 pb-[80px]">
-          <div className="flex flex-col">
-            {dustAnalyzerProducts.map((prod, index) => (
-              <React.Fragment key={prod.slug}>
-                <ProductCard
-                  product={prod}
-                  category="Dust Analyzers"
-                  imageFit="contain"
-                />
-                {index < dustAnalyzerProducts.length - 1 && (
-                  <div className="border-t border-[#E8E8F0] my-[10px]" />
-                )}
-              </React.Fragment>
+        <div className="max-w-7xl mx-auto px-4 sm:px-6">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5">
+            {products.map((product, index) => (
+              <ProductCard
+                key={product.slug}
+                product={product}
+                category="Dust Analyzers"
+                imageFit="contain"
+                priority={index < 3}
+              />
             ))}
           </div>
         </div>
@@ -122,9 +121,9 @@ export default function DustAnalyzersPage() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6">
           <div className="flex flex-col sm:flex-row items-center justify-between gap-6">
             <div>
-              <h3 className="text-white font-bold text-[22px] mb-1">
+              <p className="text-white font-bold text-[22px] mb-1">
                 Need a dust analyzer for stack emissions?
-              </h3>
+              </p>
               <p className="text-[#A0A8C0] text-sm">
                 Our emissions monitoring specialists can help you select the right dust
                 analyzer for your particulate matter compliance and process control
@@ -132,8 +131,8 @@ export default function DustAnalyzersPage() {
               </p>
             </div>
             <Link
-              href="/contact"
-              className="shrink-0 inline-flex items-center gap-2 bg-[#e7212b] hover:bg-[#aa0b1b] text-white font-bold px-6 py-3.5 rounded-[6px] shadow-lg hover:shadow-[#e7212b]/20 transition-all duration-200"
+              href="/contacts/"
+              className="shrink-0 inline-flex items-center gap-2 bg-[#e7212b] hover:bg-[#aa0b1b] text-white font-bold px-6 py-3.5 rounded-lg shadow-lg hover:shadow-[#e7212b]/20 transition-all duration-200"
             >
               Contact Us &rarr;
             </Link>
