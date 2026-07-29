@@ -5,7 +5,6 @@ import ScrollObserver from "@/components/ScrollObserver";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import SmoothScroll from "@/components/SmoothScroll";
-import { OrganizationJsonLd } from "@/components/schema/OrganizationJsonLd";
 import { SITE_URL } from "@/lib/site";
 import "./globals.css";
 
@@ -74,6 +73,8 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
       <head>
         <meta charSet="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
         <Script
           id="gtm"
           strategy="afterInteractive"
@@ -144,15 +145,6 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
               ],
             }),
           }}
-        />
-        <OrganizationJsonLd
-          sameAs={[
-            "https://www.linkedin.com/company/texas-technical-service-company",
-            "https://www.facebook.com/texastechserv",
-            "https://www.instagram.com/texas_technical_services",
-            "https://www.youtube.com/@TEXASTECHNICALSERVICES",
-            "https://x.com/texastechserv",
-          ]}
         />
       </head>
       <body>
