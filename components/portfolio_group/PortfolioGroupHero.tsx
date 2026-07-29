@@ -167,10 +167,10 @@ export default function PortfolioGroupHero({
           {HIGHLIGHTS.map((h) => (
             <div
               key={h.text}
-              className="flex items-center gap-3 bg-white/[0.04] border border-white/[0.08] rounded-xl px-4 py-3"
+              className="flex items-center gap-3 bg-white/[0.08] border border-white/[0.12] backdrop-blur-sm rounded-xl px-4 py-3"
             >
               <h.icon className="w-5 h-5 text-[#e7212b] shrink-0" strokeWidth={1.5} />
-              <span className="text-white/55 text-[13px] leading-snug">{h.text}</span>
+              <span className="text-white/70 text-[13px] leading-snug">{h.text}</span>
             </div>
           ))}
         </motion.div>
