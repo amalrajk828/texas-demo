@@ -163,9 +163,9 @@ const getMenuData = (label: string) => {
 };
 
 const getMenuViewAll = (label: string) => {
-  if (label === "Products") return { label: "View all products →", link: "/products/" };
-  if (label === "Services") return { label: "View all services →", link: "/services/" };
-  if (label === "Industries") return { label: "View all industries →", link: "/industries/" };
+  if (label === "Products") return { label: "View all products", link: "/products/" };
+  if (label === "Services") return { label: "View all services", link: "/services/" };
+  if (label === "Industries") return { label: "View all industries", link: "/industries/" };
   return undefined;
 };
 
