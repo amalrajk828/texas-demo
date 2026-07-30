@@ -4,6 +4,9 @@ import BlogGrid from "@/components/blog/BlogGrid";
 import { BreadcrumbJsonLd } from "@/components/schema/BreadcrumbJsonLd";
 import { ItemListJsonLd } from "@/components/schema/ItemListJsonLd";
 import { SpeakableJsonLd } from "@/components/schema/SpeakableJsonLd";
+import { FaqPageJsonLd } from "@/components/schema/FaqPageJsonLd";
+import PageFaqSection from "@/components/PageFaqSection";
+import { blogIndexFaq } from "@/lib/pageFaqData";
 import { 
   BookOpen, 
   ChevronRight,
@@ -186,6 +189,9 @@ export default function BlogIndexPage() {
 
         </section>
       </main>
+
+      <FaqPageJsonLd items={blogIndexFaq} />
+      <PageFaqSection items={blogIndexFaq} title="Questions About" highlight="Our Technical Blog" />
 
       {/* ═══ CALL TO ACTION ═══════════════════════════════════════ */}
       <section className="bg-white py-16 lg:py-20 border-t border-gray-100">

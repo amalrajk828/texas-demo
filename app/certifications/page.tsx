@@ -4,6 +4,9 @@ import Link from "next/link";
 import { ChevronRight, ArrowRight } from "lucide-react";
 import { BreadcrumbJsonLd } from "@/components/schema/BreadcrumbJsonLd";
 import { SpeakableJsonLd } from "@/components/schema/SpeakableJsonLd";
+import { FaqPageJsonLd } from "@/components/schema/FaqPageJsonLd";
+import PageFaqSection from "@/components/PageFaqSection";
+import { certificationsFaq } from "@/lib/pageFaqData";
 export const metadata: Metadata = {
   title: "Certifications — ISO 9001, 14001, 45001",
   description:
@@ -164,6 +167,9 @@ export default function CertificationsPage() {
           </div>
         </div>
       </section>
+
+      <FaqPageJsonLd items={certificationsFaq} />
+      <PageFaqSection items={certificationsFaq} title="Questions About" highlight="Our Certifications" />
 
       {/* CTA */}
       <section className="py-16 lg:py-20">

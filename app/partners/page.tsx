@@ -5,6 +5,9 @@ import { ChevronRight } from "lucide-react";
 import { BreadcrumbJsonLd } from "@/components/schema/BreadcrumbJsonLd";
 import { ServiceJsonLd } from "@/components/schema/ServiceJsonLd";
 import { SpeakableJsonLd } from "@/components/schema/SpeakableJsonLd";
+import { FaqPageJsonLd } from "@/components/schema/FaqPageJsonLd";
+import PageFaqSection from "@/components/PageFaqSection";
+import { partnersFaq } from "@/lib/pageFaqData";
 import { PARTNERS, STRATEGIC_PARTNERS } from "@/lib/partners";
 
 export const metadata: Metadata = {
@@ -261,6 +264,9 @@ export default function PartnersPage() {
           </div>
         </div>
       </section>
+
+      <FaqPageJsonLd items={partnersFaq} />
+      <PageFaqSection items={partnersFaq} title="Questions About" highlight="Our Partners" />
 
       {/* ── CTA ───────────────────────────────────────────────── */}
       <section className="relative bg-[#000000] blueprint-grid blueprint-dot-grid border-t-4 border-[#e7212b] py-14">

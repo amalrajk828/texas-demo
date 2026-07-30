@@ -14,6 +14,9 @@ import {
 } from "lucide-react";
 import { BreadcrumbJsonLd } from "@/components/schema/BreadcrumbJsonLd";
 import { SpeakableJsonLd } from "@/components/schema/SpeakableJsonLd";
+import { FaqPageJsonLd } from "@/components/schema/FaqPageJsonLd";
+import PageFaqSection from "@/components/PageFaqSection";
+import { industriesListingFaq } from "@/lib/pageFaqData";
 import IndustryCtaBanner from "@/components/industries/IndustryCtaBanner";
 import IndustryFeatureCard from "@/components/industries/IndustryFeatureCard";
 
@@ -263,6 +266,9 @@ export default function IndustriesPage() {
           </div>
         </div>
       </section>
+
+      <FaqPageJsonLd items={industriesListingFaq} />
+      <PageFaqSection items={industriesListingFaq} title="Questions About" highlight="The Industries We Serve" />
 
       {/* CTA */}
       <IndustryCtaBanner

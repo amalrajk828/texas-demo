@@ -3,6 +3,9 @@ import Link from "next/link";
 import { ChevronRight, ArrowRight, ExternalLink } from "lucide-react";
 import { BreadcrumbJsonLd } from "@/components/schema/BreadcrumbJsonLd";
 import { OrganizationJsonLd } from "@/components/schema/OrganizationJsonLd";
+import { FaqPageJsonLd } from "@/components/schema/FaqPageJsonLd";
+import PageFaqSection from "@/components/PageFaqSection";
+import { socialMediaFaq } from "@/lib/pageFaqData";
 import { SITE_EMAIL } from "@/lib/site";
 
 const SOCIAL_URLS = [
@@ -386,6 +389,9 @@ export default function SocialMediaPage() {
           </div>
         </div>
       </section>
+
+      <FaqPageJsonLd items={socialMediaFaq} />
+      <PageFaqSection items={socialMediaFaq} title="Questions About" highlight="Our Social Media" />
 
       {/* ══ CTA BANNER ══════════════════════════════════════ */}
       <section className="bg-[#000000] blueprint-grid blueprint-dot-grid py-20">

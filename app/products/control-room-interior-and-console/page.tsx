@@ -3,6 +3,9 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { BreadcrumbJsonLd } from "@/components/schema/BreadcrumbJsonLd";
 import { VideoObjectJsonLd } from "@/components/schema/VideoObjectJsonLd";
+import { FaqPageJsonLd } from "@/components/schema/FaqPageJsonLd";
+import PageFaqSection from "@/components/PageFaqSection";
+import { controlRoomFaq } from "@/lib/pageFaqData";
 import { ChevronRight } from "lucide-react";
 import ProductCard from "@/components/ProductCard";
 import ControlRoomErgonomicSection from "@/components/products/ControlRoomErgonomicSection";
@@ -181,6 +184,9 @@ export default function ControlRoomPage() {
           </div>
         </div>
       </section>
+
+      <FaqPageJsonLd items={controlRoomFaq} />
+      <PageFaqSection items={controlRoomFaq} title="Questions About" highlight="Control Room Interior & Console" />
     </div>
   );
 }

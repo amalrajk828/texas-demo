@@ -9,6 +9,9 @@ import {
 } from "@/components/schema/ReviewJsonLd";
 import { OrganizationJsonLd } from "@/components/schema/OrganizationJsonLd";
 import { SpeakableJsonLd } from "@/components/schema/SpeakableJsonLd";
+import { FaqPageJsonLd } from "@/components/schema/FaqPageJsonLd";
+import PageFaqSection from "@/components/PageFaqSection";
+import { aboutUsFaq } from "@/lib/pageFaqData";
 import AnimatedSkillBars from "@/components/about/AnimatedSkillBars";
 import FadeSection from "@/components/motion/FadeSection";
 
@@ -671,6 +674,9 @@ export default function AboutPage() {
           </div>
         </div>
       </section>
+
+      <FaqPageJsonLd items={aboutUsFaq} />
+      <PageFaqSection items={aboutUsFaq} title="Questions About" highlight="Texas Technical Services" />
 
     </div>
   );

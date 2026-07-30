@@ -3,12 +3,14 @@ import { notFound } from "next/navigation";
 import Link from "next/link";
 import Image from "next/image";
 import { ChevronRight, Check, ArrowRight, ExternalLink, Download } from "lucide-react";
-import { products, getProductBySlug, getProduct, getAllProductSlugs, type BulletSection, type SubBlock } from "@/lib/products";
+import { products, getProductBySlug, getProduct, getAllProductSlugs, getProductFaq, type BulletSection, type SubBlock } from "@/lib/products";
 import ProductInquiryForm from "@/components/ProductInquiryForm";
 import RelatedProducts from "@/components/RelatedProducts";
 import { ProductJsonLd } from "@/components/schema/ProductJsonLd";
 import { BreadcrumbJsonLd } from "@/components/schema/BreadcrumbJsonLd";
 import { VideoObjectJsonLd } from "@/components/schema/VideoObjectJsonLd";
+import { FaqPageJsonLd } from "@/components/schema/FaqPageJsonLd";
+import PageFaqSection from "@/components/PageFaqSection";
 import { SITE_URL } from "@/lib/site";
 
 function getYoutubeId(url?: string) {
@@ -188,6 +190,7 @@ export default async function ProductPage({ params }: Props) {
   const { slug } = await params;
   const product = getProduct(slug);
   if (!product) notFound();
+  const faqItems = getProductFaq(product);
 
   return (
     <>
@@ -512,6 +515,9 @@ export default async function ProductPage({ params }: Props) {
         category={product.category}
         title="Related Products"
       />
+
+      <FaqPageJsonLd items={faqItems} />
+      <PageFaqSection items={faqItems} title="Questions About" highlight={product.name} />
 
       {/* ══ CTA BANNER ════════════════════════════════════════════ */}
       <section className="bg-[#000000] blueprint-grid blueprint-dot-grid py-20">

@@ -5,6 +5,9 @@ import ServicesCtaBanner from "@/components/service/ServicesCtaBanner";
 import { BreadcrumbJsonLd } from "@/components/schema/BreadcrumbJsonLd";
 import { ServiceJsonLd } from "@/components/schema/ServiceJsonLd";
 import { SpeakableJsonLd } from "@/components/schema/SpeakableJsonLd";
+import { FaqPageJsonLd } from "@/components/schema/FaqPageJsonLd";
+import PageFaqSection from "@/components/PageFaqSection";
+import { servicesListingFaq } from "@/lib/pageFaqData";
 export const metadata: Metadata = {
   title: "Industrial Services in Kuwait & UAE",
   description: "PLC SCADA integration, flow measurement, inspection & testing, and process automation for oil & gas and industrial sectors in Kuwait and the GCC.",
@@ -73,6 +76,8 @@ export default function ServicesPage() {
       />
       <ServicesHero />
       <ServicesAllGrid />
+      <FaqPageJsonLd items={servicesListingFaq} />
+      <PageFaqSection items={servicesListingFaq} title="Questions About" highlight="Our Services" />
       <ServicesCtaBanner />
     </>
   );

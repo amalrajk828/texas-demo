@@ -2,6 +2,9 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { BreadcrumbJsonLd } from "@/components/schema/BreadcrumbJsonLd";
 import { SpeakableJsonLd } from "@/components/schema/SpeakableJsonLd";
+import { FaqPageJsonLd } from "@/components/schema/FaqPageJsonLd";
+import PageFaqSection from "@/components/PageFaqSection";
+import { productsListingFaq } from "@/lib/pageFaqData";
 import {
   Gauge,
   Activity,
@@ -245,6 +248,9 @@ export default function ProductsPage() {
           </div>
         </div>
       </section>
+
+      <FaqPageJsonLd items={productsListingFaq} />
+      <PageFaqSection items={productsListingFaq} title="Questions About" highlight="Our Products" />
 
       {/* ── CTA Banner ───────────────────────────────────────── */}
       <section className="bg-[#12163A] border-t border-white/[0.06] py-16">

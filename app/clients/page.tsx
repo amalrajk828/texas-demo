@@ -5,6 +5,9 @@ import { ChevronRight, ExternalLink, ArrowRight } from "lucide-react";
 import ClientsMarquee from "@/components/clients/ClientsMarquee";
 import TestimonialsSection from "@/components/clients/TestimonialsSection";
 import { BreadcrumbJsonLd } from "@/components/schema/BreadcrumbJsonLd";
+import { FaqPageJsonLd } from "@/components/schema/FaqPageJsonLd";
+import PageFaqSection from "@/components/PageFaqSection";
+import { clientsFaq } from "@/lib/pageFaqData";
 export const metadata: Metadata = {
   title: "Our Clients",
   description:
@@ -275,7 +278,9 @@ export default function ClientsPage() {
 
       <TestimonialsSection />
 
-      
+      <FaqPageJsonLd items={clientsFaq} />
+      <PageFaqSection items={clientsFaq} title="Questions About" highlight="Our Clients" />
+
       {/* ══ CTA BANNER ════════════════════════════════════════════ */}
       <section className="bg-[#000000] blueprint-grid blueprint-dot-grid py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 text-center">

@@ -1,3 +1,6 @@
+import type { FaqItem } from "@/lib/pageFaqData";
+import { genericProductFaq } from "@/lib/pageFaqData";
+
 export type BulletSection = {
   heading: string;
   items: string[];
@@ -38,6 +41,7 @@ export type ProductData = {
   detailHref?: string;
   detailHrefs?: string[];
   downloadHref?: string;
+  faq?: FaqItem[];
 };
 
 const PRODUCTS: Record<string, ProductData> = {
@@ -61,6 +65,13 @@ const PRODUCTS: Record<string, ProductData> = {
       "PowerCEMS100",
     ],
     detailHref: "#",
+    faq: [
+      { q: "What is a CEMS solution?", a: "A Continuous Emissions Monitoring System (CEMS) measures and reports pollutants such as SO₂, NOₓ, CO, and particulates from industrial stacks. SICK CEMS solutions from Texas Technical Services help power plants, refineries, and factories in Kuwait and the GCC meet environmental regulations with continuous, reliable emissions data." },
+      { q: "Which industries require CEMS?", a: "CEMS is required in power generation, oil & gas, refineries, petrochemicals, cement, and waste-to-energy plants where continuous emissions monitoring is mandated by environmental regulators." },
+      { q: "Do you provide CEMS installation and commissioning?", a: "Yes. We supply, install, commission, and maintain SICK CEMS analyzers including extractive and in-situ systems, ensuring they are calibrated, validated, and integrated with plant DCS or SCADA." },
+      { q: "What CEMS analyzer models do you supply?", a: "We supply SICK MCS200HW, MCS100FT, MARSIC280, MARSIC300, PowerCEMS50, and PowerCEMS100 solutions, along with shelters and complete turnkey CEMS packages." },
+      { q: "How do you ensure CEMS compliance with local regulations?", a: "We configure CEMS systems according to applicable national environmental permits, EU directives, and US EPA standards, providing documentation, calibration records, and validation support for compliance reporting." },
+    ],
   },
 
   "flow-metering-skid": {
@@ -112,6 +123,13 @@ const PRODUCTS: Record<string, ProductData> = {
     ],
     models: ["FLOWSKID600", "FLOWSKID600-compact"],
     detailHref: "https://www.sick.com/in/en/system-solutions/flow-metering-systems/flowskid/c/g472153",
+    faq: [
+      { q: "What is a flow metering skid?", a: "A flow metering skid is a pre-engineered, factory-tested package containing flow meters, flow computers, valves, piping, instruments, and analyzers mounted on a steel frame. It is used for custody transfer and process metering in oil & gas applications." },
+      { q: "Why choose a skid-mounted metering system?", a: "Skid-mounted systems reduce site installation time, improve quality control through factory testing, simplify maintenance access, and provide a compact, standardized metering solution for refineries and gas pipelines." },
+      { q: "What standards do FLOWSKID systems meet?", a: "FLOWSKID systems are manufactured according to ISO, DIN, ANSI, and ASME standards, and are designed to meet fiscal metering and custody transfer requirements in Kuwait and the GCC." },
+      { q: "Can you integrate a gas chromatograph into a metering skid?", a: "Yes. FLOWSKID systems can be integrated with gas chromatographs, gas analyzers, and SICK Flow-X flow computers for complete energy measurement and fiscal metering." },
+      { q: "Do you deliver turnkey metering skids in Kuwait?", a: "Yes. We design, procure, assemble, test, deliver, install, and commission turnkey metering skids for clients across Kuwait and the GCC." },
+    ],
   },
 
   "ultrasonic-liquid-flow-meter": {
@@ -128,6 +146,13 @@ const PRODUCTS: Record<string, ProductData> = {
     ],
     models: ["FH Sonic", "FH83NEO"],
     detailHref: "#",
+    faq: [
+      { q: "What is an ultrasonic liquid flow meter?", a: "The Faure Herman FH Sonic is a high-performance ultrasonic liquid flow meter that uses transit-time measurement to accurately measure liquid volume flow for custody transfer and process applications." },
+      { q: "How many measuring paths does the FH Sonic have?", a: "The standard FH Sonic integrates up to five parallel measuring paths arranged asymmetrically to optimize flow profile evaluation, plus a sixth embedded path dedicated to diagnostics." },
+      { q: "What liquids can the FH Sonic measure?", a: "The FH Sonic is suitable for crude oil, refined products, chemicals, and other hydrocarbon and industrial liquids where high accuracy and custody transfer reliability are required." },
+      { q: "Is the FH Sonic suitable for custody transfer?", a: "Yes. The FH Sonic is designed for custody transfer measurement and complies with applicable international standards for accuracy, repeatability, and fiscal metering." },
+      { q: "Do you provide calibration support for ultrasonic liquid flow meters?", a: "Yes. We provide installation, commissioning, calibration, and validation support for Faure Herman ultrasonic liquid flow meters through our Kuwait and Dubai facilities." },
+    ],
   },
 
   "ultrasonic-gas-flow-meter": {
@@ -143,6 +168,13 @@ const PRODUCTS: Record<string, ProductData> = {
     ],
     models: ["FH83NEO"],
     detailHref: "#",
+    faq: [
+      { q: "What is an ultrasonic gas flow meter?", a: "The Faure Herman FH83NEO is a full-bore ultrasonic gas flow meter that measures gas flow velocity without pressure drop. It is designed for high-performance gas measurement in oil & gas production, transmission, and distribution." },
+      { q: "Does the FH83NEO cause pressure drop?", a: "No. Because it is a full-bore ultrasonic meter, the FH83NEO has no obstruction and creates virtually no pressure drop, reducing energy loss and operating cost." },
+      { q: "What gas applications suit the FH83NEO?", a: "The FH83NEO is suitable for natural gas, process gas, LNG boil-off gas, and other gas measurement applications requiring high accuracy and long-term stability." },
+      { q: "How does ultrasonic gas metering reduce maintenance?", a: "Ultrasonic gas meters have no moving parts, which significantly reduces wear, maintenance intervals, and calibration frequency compared to mechanical meters." },
+      { q: "Can the FH83NEO be used for custody transfer?", a: "Yes. The FH83NEO is designed for precision fiscal and custody transfer gas measurement applications across the GCC." },
+    ],
   },
 
   "helical-turbine-meter": {
@@ -158,6 +190,13 @@ const PRODUCTS: Record<string, ProductData> = {
     ],
     models: ["TZN", "TGM", "TLM"],
     detailHref: "#",
+    faq: [
+      { q: "What is a helical turbine meter?", a: "A helical turbine meter, such as the Faure Herman Heliflu TZN, is a positive-displacement-type turbine meter designed for high-accuracy liquid measurement from light LPG to heavy crude oils." },
+      { q: "What makes helical turbine meters suitable for custody transfer?", a: "Helical turbine meters offer high accuracy, wide flow range, robust construction, and proven performance in fiscal metering applications, making them ideal for custody transfer of liquids." },
+      { q: "Which products can the Heliflu TZN measure?", a: "The Heliflu TZN can measure a wide range of products including crude oil, refined products, LPG, and other industrial liquids across varying viscosities and densities." },
+      { q: "Do helical turbine meters require frequent maintenance?", a: "Helical turbine meters are designed for long service life with minimal maintenance. We also supply genuine spare parts and field service support across the GCC." },
+      { q: "Can Texas Technical Services repair helical turbine meters?", a: "Yes. We provide helical turbine meter repair, refurbishment, calibration, and validation services through our Kuwait facility." },
+    ],
   },
 
   "flare-meter": {
@@ -173,6 +212,13 @@ const PRODUCTS: Record<string, ProductData> = {
     ],
     models: ["FLOWSIC100 Flare-XT", "FLOWSIC100 Flare"],
     detailHref: "#",
+    faq: [
+      { q: "What is a flare meter used for?", a: "A flare meter measures the flow rate of gas being sent to a flare stack for combustion. It is used for emissions reporting, process safety, and environmental compliance in refineries and petrochemical plants." },
+      { q: "Why is flare gas measurement important?", a: "Accurate flare gas measurement helps operators report emissions, detect process upsets, reduce flaring volumes, and comply with environmental regulations in Kuwait and the GCC." },
+      { q: "What technologies are used for flare metering?", a: "Flare meters commonly use ultrasonic technology because it can measure very low and very high flow rates across large pipe diameters without obstruction." },
+      { q: "Can flare meters handle varying gas compositions?", a: "Yes. Modern flare meters are designed to measure flare gas accurately even when composition, temperature, and pressure vary significantly." },
+      { q: "Do you provide flare meter installation and commissioning?", a: "Yes. We supply, install, commission, and maintain flare metering systems for clients across the GCC oil & gas industry." },
+    ],
   },
 
   "custody-transfer-gas-flow-meter": {
@@ -343,6 +389,13 @@ const PRODUCTS: Record<string, ProductData> = {
     ],
     models: ["OMNI 7000", "OMNI 6000", "OMNI 4000", "FLOW-X"],
     detailHrefs: ["https://omniflow.com/", "https://omniflow.com/4000-7000-flow-computers"],
+    faq: [
+      { q: "What is a flow computer?", a: "A flow computer is a specialized computing device that calculates flow rates, totals, and quality parameters from flow meters, pressure, temperature, and gas composition inputs. It is essential for custody transfer and fiscal metering in oil & gas applications." },
+      { q: "Which flow computer brands do you supply?", a: "We supply OMNI Series 4000/7000 flow computers and SICK Flow-X flow computers for liquid and gas custody transfer applications." },
+      { q: "What standards do OMNI flow computers comply with?", a: "OMNI flow computers comply with API MPMS, AGA reports, ISO standards, and have received WELMEC WG7.2 approval for traceability and fiscal measurement security." },
+      { q: "Can a flow computer integrate with ultrasonic gas meters?", a: "Yes. The SICK Flow-X is specifically designed to integrate with FLOWSIC600 ultrasonic gas meters for custody transfer gas metering systems." },
+      { q: "Do you provide flow computer configuration and commissioning?", a: "Yes. We configure, install, commission, and calibrate flow computers to ensure accurate, traceable, and compliant fiscal measurement operations." },
+    ],
   },
 
   "gas-analyzers": {
@@ -366,6 +419,13 @@ const PRODUCTS: Record<string, ProductData> = {
     ],
     detailHref: "https://www.sick.com/ae/en/gas-analyzers/in-situ-gas-analyzers/gm32/c/g75251",
     downloadHref: "https://cdn.sick.com/media/docs/5/95/195/product_information_gm32_en_im0030195.pdf",
+    faq: [
+      { q: "What are gas analyzers used for?", a: "Gas analyzers measure the concentration of gases such as O₂, CO, CO₂, NOₓ, SO₂, and hydrocarbons in process streams, stacks, and emissions points. They are used for process control, safety, and environmental compliance." },
+      { q: "What is the difference between in-situ and extractive gas analyzers?", a: "In-situ analyzers measure gas directly in the process duct or stack, while extractive analyzers draw a gas sample through a probe and conditioning system to an analyzer cabinet. The best choice depends on application temperature, pressure, dust load, and measurement requirements." },
+      { q: "Which gas analyzer models do you supply?", a: "We supply SICK gas analyzers including GM32, GM35, GM700, ZIRKOR100, GM901, ZIRKOR200, and ZIRKOR302 for a wide range of in-situ and extractive applications." },
+      { q: "Are gas analyzers used in CEMS?", a: "Yes. Gas analyzers are a core component of Continuous Emissions Monitoring Systems (CEMS) for measuring pollutants and demonstrating environmental compliance." },
+      { q: "Do you provide commissioning and maintenance for gas analyzers?", a: "Yes. We install, commission, calibrate, and maintain gas analyzers for clients across the GCC, including integration with CEMS and plant DCS/SCADA systems." },
+    ],
   },
 
   "extractive-gas-analyzers": {
@@ -416,6 +476,11 @@ export function getProduct(slug: string): any {
 
 export function getAllProductSlugs(): string[] {
   return [...Object.keys(PRODUCTS), ...products.map((p) => p.slug)];
+}
+
+export function getProductFaq(product: { name: string; brand?: string; category?: string; faq?: FaqItem[] }): FaqItem[] {
+  if (product.faq && product.faq.length > 0) return product.faq;
+  return genericProductFaq(product.name, product.brand, product.category);
 }
 
 
