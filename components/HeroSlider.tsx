@@ -28,6 +28,7 @@ const SLIDES = [
   {
     type: "video" as const,
     src: "/homevideos/Automated-1-2.mp4",
+    poster: "/homevideos/Automated-1-2-poster.jpg",
     alt: "Industrial Process Automation — PLC SCADA automation systems by leading automation company TTS",
     eyebrow: "Industrial Automation",
     heading: ["Industrial Process", "Automation", "Solutions"],
@@ -42,6 +43,7 @@ const SLIDES = [
   {
     type: "video" as const,
     src: "/homevideos/newproduct.mp4",
+    poster: "/homevideos/newproduct-poster.jpg",
     alt: "Flow Measurement and Control System Solutions — liquid hydrocarbon and gas metering by TTS",
     eyebrow: "Flow Measurement Solutions",
     heading: ["Flow Measurement &", "Control System", "Solutions"],
@@ -365,9 +367,9 @@ export default function HeroSlider() {
               style={{ aspectRatio: "16/9", background: "var(--color-brand-navy-mid)" }}
             >
               {slide.type === "image" ? (
-                <Image src={slide.src} alt={slide.alt} fill priority={current === 0} sizes="600px" className="object-cover" quality={90} />
+                <Image src={slide.src} alt={slide.alt} fill priority={current === 0} sizes="(max-width: 1024px) 100vw, 50vw" className="object-cover" quality={90} />
               ) : (
-                <video ref={mainVideoRef} key={slide.src} src={slide.src} aria-label={slide.alt} autoPlay muted loop playsInline className="w-full h-full object-cover" />
+                <video ref={mainVideoRef} key={slide.src} src={slide.src} poster={(slide as any).poster} aria-label={slide.alt} autoPlay muted loop playsInline preload="metadata" className="w-full h-full object-cover" />
               )}
 
               <div className="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-black/10 pointer-events-none" />

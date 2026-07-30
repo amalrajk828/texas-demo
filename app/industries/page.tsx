@@ -18,7 +18,7 @@ import IndustryCtaBanner from "@/components/industries/IndustryCtaBanner";
 import IndustryFeatureCard from "@/components/industries/IndustryFeatureCard";
 
 export const metadata: Metadata = {
-  title: "Industries We Serve",
+  title: "Industries We Serve — Oil & Gas, Power & Petrochemicals",
   description:
     "Flow measurement, automation, and inspection for oil & gas, refinery, power plant, LNG, petrochemicals, water treatment, cement, and metal & steel.",
   alternates: { canonical: "/industries/" },
@@ -64,7 +64,7 @@ const industries = [
     slug: "refinery",
     Icon: Factory,
     sub: "Process Control · CEMS",
-    image: "/refinery.jpg",
+    image: "/refinery.webp",
     desc: "Cutting-edge offerings for the demanding world of refinery operations — including precision flow meters, flow computers, CEMS and analyzers — providing the refinery industry with essential industrial automation solutions.",
   },
   {
@@ -72,7 +72,7 @@ const industries = [
     slug: "petrochemicals",
     Icon: FlaskConical,
     sub: "Process Automation · Flow Solutions",
-    image: "/petrochemical.png",
+    image: "/petrochemical.webp",
     desc: "State-of-the-art flow metering solutions, precise flow meters, flow computers, and analyzers catering to the ever-evolving needs of the petrochemical industry's complex production environments.",
   },
   {
@@ -96,7 +96,7 @@ const industries = [
     slug: "water-treatment",
     Icon: Droplets,
     sub: "Municipal · Industrial",
-    image: "/water_treatment.jpg",
+    image: "/water_treatment.webp",
     desc: "Products designed for water treatment applications, including CEMS, analyzers, and industrial process automation systems, delivering advanced solutions to ensure precise monitoring, quality control, and operational efficiency.",
   },
   {
@@ -132,7 +132,12 @@ const highlights = [
 export default function IndustriesPage() {
   return (
     <>
-      <BreadcrumbJsonLd items={[{ name: "Home", href: "/" }, { name: "Industries", href: "/industries/" }]} />
+      <BreadcrumbJsonLd
+        items={[
+          { name: "Home", href: "/" },
+          { name: "Industries", href: "/industries/" },
+        ]}
+      />
       <SpeakableJsonLd headline="Industries We Serve — Oil & Gas, Refinery, Power Plant & More" />
 
       {/* HERO */}
@@ -188,8 +193,13 @@ export default function IndustriesPage() {
                   key={h.text}
                   className="flex items-center gap-3 bg-white/[0.08] border border-white/[0.12] backdrop-blur-sm rounded-xl px-4 py-3"
                 >
-                  <h.icon className="w-5 h-5 text-[#e7212b] shrink-0" strokeWidth={1.5} />
-                  <span className="text-white/70 text-[13px] leading-snug">{h.text}</span>
+                  <h.icon
+                    className="w-5 h-5 text-[#e7212b] shrink-0"
+                    strokeWidth={1.5}
+                  />
+                  <span className="text-white/70 text-[13px] leading-snug">
+                    {h.text}
+                  </span>
                 </div>
               ))}
             </div>
@@ -201,7 +211,9 @@ export default function IndustriesPage() {
             {stats.map((s) => (
               <div key={s.label} className="px-6 py-5 text-center">
                 <p className="text-2xl font-medium text-[#e7212b]">{s.num}</p>
-                <p className="text-[11px] text-white/40 tracking-wide mt-1">{s.label}</p>
+                <p className="text-[11px] text-white/40 tracking-wide mt-1">
+                  {s.label}
+                </p>
               </div>
             ))}
           </div>
@@ -217,8 +229,12 @@ export default function IndustriesPage() {
               "repeating-linear-gradient(0deg,transparent,transparent 39px,rgba(255,255,255,0.05) 40px),repeating-linear-gradient(90deg,transparent,transparent 39px,rgba(255,255,255,0.05) 40px)",
           }}
         />
-        <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[600px] h-[400px] pointer-events-none"
-          style={{ background: "radial-gradient(circle, rgba(231,33,43,0.08) 0%, transparent 70%)" }}
+        <div
+          className="absolute top-0 left-1/2 -translate-x-1/2 w-[600px] h-[400px] pointer-events-none"
+          style={{
+            background:
+              "radial-gradient(circle, rgba(231,33,43,0.08) 0%, transparent 70%)",
+          }}
         />
         <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6">
           <div className="flex items-center justify-between mb-10">

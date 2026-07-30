@@ -20,7 +20,12 @@ export const metadata: Metadata = {
     url: "/service/structural-steel-erection/",
     images: [{ url: "/og-default.png", width: 1200, height: 630, alt: "Structural Steel Erection — Texas Technical Services" }],
   },
-  twitter: { card: "summary_large_image", title: "Structural Steel Erection — Supply & Installation", description: "Pre-fabricated steel component assembly creating skeletal frameworks for buildings, bridges, and large industrial structures — precise, safe, and on schedule." },
+  twitter: {
+    card: "summary_large_image",
+    title: "Structural Steel Erection — Supply & Installation",
+    description: "Pre-fabricated steel component assembly creating skeletal frameworks for buildings, bridges, and large industrial structures — precise, safe, and on schedule.",
+    images: [{ url: "/og-default.png", width: 1200, height: 630, alt: "Texas Technical Services" }],
+  },
   keywords: ["Structural Steel Erection Kuwait", "Structural Steel Erection Dubai", "Texas Structural Steel Erection", "industrial steel erection Kuwait", "steel framework assembly Kuwait", "building steel structure Kuwait"],
 };
 

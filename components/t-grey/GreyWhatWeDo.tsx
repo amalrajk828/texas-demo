@@ -103,7 +103,7 @@ export default function GreyWhatWeDo() {
               transition={{ duration: 0.7, ease: "easeOut", delay: 0.15 }}
               className="text-[2.2rem] sm:text-[2.8rem] lg:text-[3.4rem] font-black leading-[1.08] tracking-tight block text-[#111827]"
             >
-              Precision Solutions for Critical Industries
+              What precision solutions do we deliver for critical industries?
             </motion.h2>
           </div>
 

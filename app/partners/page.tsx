@@ -8,7 +8,7 @@ import { SpeakableJsonLd } from "@/components/schema/SpeakableJsonLd";
 import { PARTNERS, STRATEGIC_PARTNERS } from "@/lib/partners";
 
 export const metadata: Metadata = {
-  title: "Global Network | 15+ Authorized Partners & Vendors",
+  title: "Global Network — 15+ Authorized Partners",
   description:
     "Texas Technical Services Co. is the authorized partner and distributor for 15+ world-class OEMs in Kuwait, UAE, and the GCC — covering flow measurement, industrial automation, analyzers, sensors, and SCADA.",
   alternates: { canonical: "/partners/" },

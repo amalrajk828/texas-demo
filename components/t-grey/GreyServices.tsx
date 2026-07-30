@@ -39,7 +39,7 @@ export default function GreyServices() {
           minFlakeSize={1.25}
           pixelResolution={150}
           speed={0.8}
-          density={0.25}
+          density={0.1}
           direction={125}
           brightness={0.8}
           variant="square"
@@ -70,7 +70,7 @@ export default function GreyServices() {
               <span className="text-[11px] font-bold tracking-[3.5px] uppercase" style={{ color: "var(--color-brand-red)" }}>Our Services</span>
             </div>
             <h2 className="text-[2.8rem] sm:text-[3.4rem] font-black leading-[1.05] tracking-tight" style={{ color: "var(--g-heading)" }}>
-              What We Offer
+              What services do we offer for industrial automation and flow measurement?
             </h2>
           </div>
           <p className="max-w-md text-[17px] leading-[1.85]" style={{ color: "var(--g-muted)" }}>

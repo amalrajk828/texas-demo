@@ -129,7 +129,7 @@ export default function WaterTreatmentPage() {
       <IndustryHero
         name="Water Treatment"
         breadcrumbLabel="Water Treatment"
-        image="/water_treatment.jpg"
+        image="/water_treatment.webp"
         alt="Water treatment plant facility"
         Icon={Droplets}
         description="Advanced OEM solutions for municipal and industrial water treatment — delivering precise monitoring, quality control, and operational efficiency through flow meters, CEMS, dust analyzers, and process automation systems."

@@ -7,7 +7,7 @@ import { ServiceJsonLd } from "@/components/schema/ServiceJsonLd";
 import { SpeakableJsonLd } from "@/components/schema/SpeakableJsonLd";
 
 export const metadata: Metadata = {
-  title: "PLC & SCADA Systems Integration | Industrial Automation Solutions",
+  title: "PLC & SCADA Systems Integration",
   description:
     "Texas Technical Services offers advanced PLC and SCADA system integration — PLC and SCADA system integrators in Kuwait and Dubai, PLC programming, SCADA UAE, SCADA monitoring, HMI development, and control system upgrades across oil & gas, power, and industrial sectors in Kuwait, UAE, Dubai, and Saudi Arabia.",
   alternates: {

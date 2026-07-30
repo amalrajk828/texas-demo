@@ -20,7 +20,12 @@ export const metadata: Metadata = {
     url: "/service/radiographic-testing-rt/",
     images: [{ url: "/og-default.png", width: 1200, height: 630, alt: "Radiographic Testing — Texas Technical Services" }],
   },
-  twitter: { card: "summary_large_image", title: "Radiographic Testing (RT) — X-Ray & Gamma Inspection", description: "X-ray and gamma radiography. ASME V, API 1104, ISO 17636. Kuwait & Dubai." },
+  twitter: {
+    card: "summary_large_image",
+    title: "Radiographic Testing (RT) — X-Ray & Gamma Inspection",
+    description: "X-ray and gamma radiography. ASME V, API 1104, ISO 17636. Kuwait & Dubai.",
+    images: [{ url: "/og-default.png", width: 1200, height: 630, alt: "Texas Technical Services" }],
+  },
   keywords: ["radiographic testing Kuwait", "RT NDT Kuwait", "X-ray testing Kuwait", "gamma ray testing Kuwait", "weld radiography Kuwait", "digital radiography Kuwait", "ASME V RT Kuwait", "Texas Technical Services radiography"],
 };
 

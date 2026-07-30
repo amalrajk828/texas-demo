@@ -20,7 +20,12 @@ export const metadata: Metadata = {
     url: "/service/pullout-test/",
     images: [{ url: "/og-default.png", width: 1200, height: 630, alt: "Pullout Test — Texas Technical Services" }],
   },
-  twitter: { card: "summary_large_image", title: "Pullout Testing — Anchor, Rebar & Fastener Strength", description: "Anchor bolt pullout testing. ASTM C900, ACI 318. Kuwait & Dubai." },
+  twitter: {
+    card: "summary_large_image",
+    title: "Pullout Testing — Anchor, Rebar & Fastener Strength",
+    description: "Anchor bolt pullout testing. ASTM C900, ACI 318. Kuwait & Dubai.",
+    images: [{ url: "/og-default.png", width: 1200, height: 630, alt: "Texas Technical Services" }],
+  },
   keywords: ["pullout test Kuwait", "anchor bolt test Kuwait", "bolt pullout test Kuwait", "concrete anchor testing Kuwait", "bond strength test Kuwait", "Texas Technical Services pullout test"],
 };
 

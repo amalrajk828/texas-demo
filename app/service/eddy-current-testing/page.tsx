@@ -20,7 +20,12 @@ export const metadata: Metadata = {
     url: "/service/eddy-current-testing/",
     images: [{ url: "/og-default.png", width: 1200, height: 630, alt: "Eddy Current Testing — Texas Technical Services" }],
   },
-  twitter: { card: "summary_large_image", title: "Eddy Current Testing (ECT) — Tube & Surface Inspection", description: "ECT tube and surface inspection. ASME V, ASTM E426. Kuwait & Dubai." },
+  twitter: {
+    card: "summary_large_image",
+    title: "Eddy Current Testing (ECT) — Tube & Surface Inspection",
+    description: "ECT tube and surface inspection. ASME V, ASTM E426. Kuwait & Dubai.",
+    images: [{ url: "/og-default.png", width: 1200, height: 630, alt: "Texas Technical Services" }],
+  },
   keywords: ["eddy current testing Kuwait", "ECT NDT Kuwait", "heat exchanger tube inspection Kuwait", "eddy current inspection Kuwait", "ASME V ECT Kuwait", "Texas Technical Services eddy current"],
 };
 

@@ -4,7 +4,7 @@ import ServiceGroupGrid from "@/components/services_group/ServiceGroupGrid";
 import { BreadcrumbJsonLd } from "@/components/schema/BreadcrumbJsonLd";
 
 export const metadata: Metadata = {
-  title: "Main Services",
+  title: "All Industrial Services — Technical Guides",
   description:
     "Browse our complete range of industrial services — flow measurement, inspection & testing, process automation, and construction solutions for oil & gas, refinery, and petrochemical sectors.",
   alternates: { canonical: "/services_group/services/" },

@@ -36,7 +36,7 @@ export default function GreyAbout() {
               <span className="text-[11px] font-bold tracking-[3.5px] uppercase" style={{ color: "var(--color-brand-red)" }}>About Texas Technical Services</span>
             </div>
             <h2 className="text-3xl sm:text-4xl font-black tracking-tight mb-4 text-[#111827]">
-              Established 2008. Built on precision.
+              Why was Texas Technical Services established in 2008?
             </h2>
             <p className="text-[17px] leading-relaxed mb-6 text-[#4B5563]">
               Texas Technical Service Company is an ISO 9001:2015 certified company established in 2008. Primarily focused

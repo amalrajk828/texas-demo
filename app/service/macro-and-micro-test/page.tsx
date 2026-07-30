@@ -20,7 +20,12 @@ export const metadata: Metadata = {
     url: "/service/macro-and-micro-test/",
     images: [{ url: "/og-default.png", width: 1200, height: 630, alt: "Macro and Micro Test — Texas Technical Services" }],
   },
-  twitter: { card: "summary_large_image", title: "Macro & Micro Testing — Weld Profile Examination", description: "Weld macro, metallographic micro examination, grain size, phase analysis. Kuwait & Dubai." },
+  twitter: {
+    card: "summary_large_image",
+    title: "Macro & Micro Testing — Weld Profile Examination",
+    description: "Weld macro, metallographic micro examination, grain size, phase analysis. Kuwait & Dubai.",
+    images: [{ url: "/og-default.png", width: 1200, height: 630, alt: "Texas Technical Services" }],
+  },
   keywords: ["macro test Kuwait", "micro test Kuwait", "metallographic testing Kuwait", "weld macro examination Kuwait", "grain size analysis Kuwait", "microstructural analysis Kuwait", "metallography Kuwait", "Texas Technical Services macro micro test"],
 };
 

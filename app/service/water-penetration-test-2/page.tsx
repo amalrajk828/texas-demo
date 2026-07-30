@@ -20,7 +20,12 @@ export const metadata: Metadata = {
     url: "/service/water-penetration-test-2/",
     images: [{ url: "/og-default.png", width: 1200, height: 630, alt: "Water Penetration Test — Field Hose Testing & Leak Diagnostics — Texas Technical Services" }],
   },
-  twitter: { card: "summary_large_image", title: "Water Penetration Test — Field Hose Testing & Leak Diagnostics", description: "Field water spray and hose testing for leak diagnostics. AAMA 502, ASTM E1105. Kuwait & Dubai." },
+  twitter: {
+    card: "summary_large_image",
+    title: "Water Penetration Test — Field Hose Testing & Leak Diagnostics",
+    description: "Field water spray and hose testing for leak diagnostics. AAMA 502, ASTM E1105. Kuwait & Dubai.",
+    images: [{ url: "/og-default.png", width: 1200, height: 630, alt: "Texas Technical Services" }],
+  },
   keywords: ["field water penetration test Kuwait", "hose test curtain wall Kuwait", "window leak diagnostics Kuwait", "dynamic water spray test Kuwait", "AAMA 502 Kuwait", "building leak detection Kuwait", "Texas Technical Services water test"],
 };
 

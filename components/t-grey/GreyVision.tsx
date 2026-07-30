@@ -78,8 +78,8 @@ export default function GreyVision() {
           </motion.div>
           <motion.h2 initial={{ opacity: 0, y: 24 }} animate={inView ? { opacity: 1, y: 0 } : {}} transition={{ duration: 0.9, delay: 0.1 }}
             className="text-[clamp(2.2rem,4.5vw,3.4rem)] font-black leading-[1.15] max-w-2xl mx-auto tracking-tight text-[#111827]">
-            To be a prominent market leader and a{" "}
-            <span style={{ color: "var(--color-brand-red)" }}>complete solution provider.</span>
+            What is our vision for industrial automation{" "}
+            <span style={{ color: "var(--color-brand-red)" }}>in the GCC?</span>
           </motion.h2>
         </div>
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6">

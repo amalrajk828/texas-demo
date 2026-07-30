@@ -20,7 +20,12 @@ export const metadata: Metadata = {
     url: "/service/water-penetration-test/",
     images: [{ url: "/og-default.png", width: 1200, height: 630, alt: "Water Penetration Test — Texas Technical Services" }],
   },
-  twitter: { card: "summary_large_image", title: "Water Penetration Testing — Facade & Building", description: "Window and curtain wall water penetration testing. ASTM E1105. Kuwait & Dubai." },
+  twitter: {
+    card: "summary_large_image",
+    title: "Water Penetration Testing — Facade & Building",
+    description: "Window and curtain wall water penetration testing. ASTM E1105. Kuwait & Dubai.",
+    images: [{ url: "/og-default.png", width: 1200, height: 630, alt: "Texas Technical Services" }],
+  },
   keywords: ["water penetration test Kuwait", "curtain wall testing Kuwait", "window water test Kuwait", "building envelope testing Kuwait", "ASTM E1105 Kuwait", "Texas Technical Services water test"],
 };
 

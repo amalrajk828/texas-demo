@@ -34,8 +34,8 @@ export const metadata: Metadata = {
   twitter: {
     card: "summary_large_image",
     title: "Metering Control System Integration",
-    description:
-      "Custody transfer flow metering control system development, SCADA, PLC, HMI integration — authorised OEM representative in Kuwait & Dubai.",
+    description: "Custody transfer flow metering control system development, SCADA, PLC, HMI integration — authorised OEM representative in Kuwait & Dubai.",
+    images: [{ url: "/og-default.png", width: 1200, height: 630, alt: "Texas Technical Services" }],
   },
   keywords: [
     "metering control system integration Kuwait",

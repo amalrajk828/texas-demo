@@ -82,8 +82,8 @@ const SUB_SERVICES = [
     Icon: Wrench,
     title: "Repair & Upgrades for Helical Flow Meters",
     body: "We offer flow meters preventive and corrective maintenance services, performance and failure analysis and provide suitable solutions to restore and enhance the reliability of your helical flow meter assets.",
-    imageSrc: "/images/services/helical-repair.png",
-    imagePlaceholder: "/images/services/helical-repair.png",
+    imageSrc: "/images/services/helical-repair.webp",
+    imagePlaceholder: "/images/services/helical-repair.webp",
     href: "/service/repair-upgrades-for-helical-flow-meters/",
   },
   {

@@ -20,7 +20,12 @@ export const metadata: Metadata = {
     url: "/service/air-permeability-test/",
     images: [{ url: "/og-default.png", width: 1200, height: 630, alt: "Air Permeability Test — Texas Technical Services" }],
   },
-  twitter: { card: "summary_large_image", title: "Air Permeability Testing — Building Envelope", description: "Air infiltration testing for facades. ASTM E783. Kuwait & Dubai." },
+  twitter: {
+    card: "summary_large_image",
+    title: "Air Permeability Testing — Building Envelope",
+    description: "Air infiltration testing for facades. ASTM E783. Kuwait & Dubai.",
+    images: [{ url: "/og-default.png", width: 1200, height: 630, alt: "Texas Technical Services" }],
+  },
   keywords: ["air permeability test Kuwait", "air leakage test Kuwait", "curtain wall air test Kuwait", "ASTM E783 Kuwait", "window air infiltration Kuwait", "building envelope air test Kuwait", "Texas Technical Services air test"],
 };
 

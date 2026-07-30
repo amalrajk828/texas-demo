@@ -20,7 +20,12 @@ export const metadata: Metadata = {
     url: "/service/corrosion-control-services-2/",
     images: [{ url: "/og-default.png", width: 1200, height: 630, alt: "Corrosion Control Services — Texas Technical Services" }],
   },
-  twitter: { card: "summary_large_image", title: "Corrosion Control — Assessment, Mitigation & Coatings", description: "Coatings, cathodic protection, and corrosion management. Kuwait & Dubai." },
+  twitter: {
+    card: "summary_large_image",
+    title: "Corrosion Control — Assessment, Mitigation & Coatings",
+    description: "Coatings, cathodic protection, and corrosion management. Kuwait & Dubai.",
+    images: [{ url: "/og-default.png", width: 1200, height: 630, alt: "Texas Technical Services" }],
+  },
   keywords: ["corrosion control Kuwait", "cathodic protection Kuwait", "protective coatings Kuwait", "corrosion management Kuwait", "pipeline corrosion Kuwait", "Texas Technical Services corrosion"],
 };
 

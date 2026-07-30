@@ -20,7 +20,12 @@ export const metadata: Metadata = {
     url: "/service/time-of-flight-diffraction/",
     images: [{ url: "/og-default.png", width: 1200, height: 630, alt: "Time of Flight Diffraction — Texas Technical Services" }],
   },
-  twitter: { card: "summary_large_image", title: "TOFD Ultrasonic Inspection — Weld Flaw Sizing", description: "TOFD weld inspection and crack sizing. ASME V. Kuwait & Dubai." },
+  twitter: {
+    card: "summary_large_image",
+    title: "TOFD Ultrasonic Inspection — Weld Flaw Sizing",
+    description: "TOFD weld inspection and crack sizing. ASME V. Kuwait & Dubai.",
+    images: [{ url: "/og-default.png", width: 1200, height: 630, alt: "Texas Technical Services" }],
+  },
   keywords: ["TOFD Kuwait", "time of flight diffraction Kuwait", "weld TOFD Kuwait", "crack sizing NDT Kuwait", "TOFD inspection Kuwait", "ASME V TOFD Kuwait", "Texas Technical Services TOFD"],
 };
 

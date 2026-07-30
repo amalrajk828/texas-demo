@@ -20,7 +20,12 @@ export const metadata: Metadata = {
     url: "/service/hand-rail-fabrication/",
     images: [{ url: "/og-default.png", width: 1200, height: 630, alt: "Hand Rail Fabrication — Texas Technical Services" }],
   },
-  twitter: { card: "summary_large_image", title: "Hand Rail Fabrication — Safety Guardrails & Platforms", description: "Skilled creation of safety handrails and support structures — steel, aluminum, and durable materials compliant with safety regulations for industrial and commercial applications." },
+  twitter: {
+    card: "summary_large_image",
+    title: "Hand Rail Fabrication — Safety Guardrails & Platforms",
+    description: "Skilled creation of safety handrails and support structures — steel, aluminum, and durable materials compliant with safety regulations for industrial and commercial applications.",
+    images: [{ url: "/og-default.png", width: 1200, height: 630, alt: "Texas Technical Services" }],
+  },
   keywords: ["Hand Rail Fabrication Kuwait", "Hand Rail Fabrication Dubai", "Texas Technical Services Hand Rail Fabrication", "industrial handrails Kuwait", "safety handrails Kuwait", "steel handrail fabrication Kuwait"],
 };
 

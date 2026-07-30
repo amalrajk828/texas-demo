@@ -33,6 +33,7 @@ export async function generateMetadata({
       title: "Portfolio Categories",
       description:
         "Browse our portfolio by industry, product category, or application area.",
+      alternates: { canonical: "/portfolio_group/" },
       openGraph: {
         title: "Portfolio Categories",
         description: "Browse our portfolio by industry, product category, or application area.",

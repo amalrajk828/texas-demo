@@ -166,7 +166,7 @@ export default function PetrochemicalsPage() {
       <IndustryHero
         name="Petrochemicals"
         breadcrumbLabel="Petrochemicals"
-        image="/petrochemical.png"
+        image="/petrochemical.webp"
         alt="Petrochemical plant"
         Icon={FlaskConical}
         description="State-of-the-art flow metering, gas analyzers, and process automation solutions for the petrochemical industry — from feedstock measurement to product custody transfer and continuous emissions monitoring."

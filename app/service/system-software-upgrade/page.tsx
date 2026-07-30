@@ -20,7 +20,12 @@ export const metadata: Metadata = {
     url: "/service/system-software-upgrade/",
     images: [{ url: "/og-default.png", width: 1200, height: 630, alt: "Control System Integration — Texas Technical Services" }],
   },
-  twitter: { card: "summary_large_image", title: "Control System Integration & Upgradation", description: "PLC, SCADA, and control system integration. Kuwait & Dubai." },
+  twitter: {
+    card: "summary_large_image",
+    title: "Control System Integration & Upgradation",
+    description: "PLC, SCADA, and control system integration. Kuwait & Dubai.",
+    images: [{ url: "/og-default.png", width: 1200, height: 630, alt: "Texas Technical Services" }],
+  },
   keywords: ["PLC integration Kuwait", "SCADA Kuwait", "control system upgrade Kuwait", "automation integration Kuwait", "Siemens PLC Kuwait", "Allen-Bradley Kuwait", "SCADA system Kuwait", "Texas Technical Services PLC"],
 };
 
@@ -53,8 +58,8 @@ export default function ControlSystemPage() {
               </span>
             </div>
             <h2 className="text-3xl sm:text-[2.4rem] font-bold text-[#0B0D26] leading-[1.15] mb-12">
-              Explore{" "}
-              <em className="not-italic text-[#e7212b]">More Services</em>
+              Which services complement{" "}
+              <em className="not-italic text-[#e7212b]">control system upgrades?</em>
             </h2>
             <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
               {serviceCrossLinks["system-software-upgrade"]?.map((link) => (
@@ -91,8 +96,8 @@ export default function ControlSystemPage() {
             </span>
           </div>
           <h2 className="text-3xl sm:text-[2.4rem] font-bold text-[#0B0D26] leading-[1.15] mb-12">
-            Questions About{" "}
-            <em className="not-italic text-[#e7212b]">Control System Upgrades</em>
+            What are the most common questions about{" "}
+            <em className="not-italic text-[#e7212b]">control system upgrades?</em>
           </h2>
           <div className="max-w-4xl mx-auto space-y-4">
             {serviceFaqData["system-software-upgrade"]?.map((item) => (

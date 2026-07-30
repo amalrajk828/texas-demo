@@ -25,8 +25,8 @@ export const metadata: Metadata = {
   twitter: {
     card: "summary_large_image",
     title: "Industrial Automation, PLC SCADA & Process Control",
-    description:
-      "Industrial automation & control systems, control and automation engineering, plant and process automation, and automation in power plant — serving Kuwait, UAE, Dubai, and Saudi Arabia.",
+    description: "Industrial automation & control systems, control and automation engineering, plant and process automation, and automation in power plant — serving Kuwait, UAE, Dubai, and Saudi Arabia.",
+    images: [{ url: "/og-default.png", width: 1200, height: 630, alt: "Texas Technical Services" }],
   },
   keywords: [
     "industrial automation companies in Kuwait",
@@ -326,9 +326,9 @@ export default function IndustrialAutomationPage() {
             </span>
           </div>
           <h2 className="text-3xl sm:text-[2.4rem] font-bold text-[#0B0D26] leading-[1.15] mb-3 max-w-3xl">
-            Complete Integrated Ecosystem: From{" "}
-            <em className="not-italic text-[#e7212b]">Field Devices</em> to{" "}
-            <em className="not-italic text-[#e7212b]">Enterprise Analytics</em>
+            How do we build a complete integrated ecosystem from{" "}
+            <em className="not-italic text-[#e7212b]">field devices</em> to{" "}
+            <em className="not-italic text-[#e7212b]">enterprise analytics?</em>
           </h2>
           <p className="text-gray-500 text-[15px] leading-relaxed mb-10 max-w-3xl">
             Our automation stack follows the ISA-95 Purdue Model — integrating
@@ -387,8 +387,8 @@ export default function IndustrialAutomationPage() {
             </span>
           </div>
           <h2 className="text-3xl sm:text-[2.4rem] font-bold text-[#0B0D26] leading-[1.15] mb-3">
-            Integrated{" "}
-            <em className="not-italic text-[#e7212b]">BMS Solutions</em>
+            What integrated{" "}
+            <em className="not-italic text-[#e7212b]">BMS solutions</em> do we deliver?
           </h2>
           <p className="text-gray-500 text-[15px] leading-relaxed mb-10 max-w-3xl">
             Building management system integration combining Mitsubishi Electric
@@ -520,8 +520,9 @@ export default function IndustrialAutomationPage() {
             </span>
           </div>
           <h2 className="text-3xl sm:text-[2.4rem] font-bold text-white leading-[1.15] mb-3">
-            <em className="not-italic text-[#e7212b]">iFIX SCADA</em> —
-            Industry-Leading HMI/SCADA
+            Why is{" "}
+            <em className="not-italic text-[#e7212b]">iFIX SCADA</em> an
+            industry-leading HMI/SCADA solution?
           </h2>
           <p className="text-white/55 text-[15px] leading-relaxed mb-10 max-w-3xl">
             High performance automation for intelligent industrial operations —
@@ -587,8 +588,8 @@ export default function IndustrialAutomationPage() {
             </span>
           </div>
           <h2 className="text-3xl sm:text-[2.4rem] font-bold text-[#0B0D26] leading-[1.15] mb-3">
-            Industrial Communication —{" "}
-            <em className="not-italic text-[#e7212b]">Hardware Meets Software</em>
+            How does HMS Networks bridge{" "}
+            <em className="not-italic text-[#e7212b]">industrial hardware and software?</em>
           </h2>
           <p className="text-gray-500 text-[15px] leading-relaxed mb-10 max-w-3xl">
             Six product families covering every industrial communication need —
@@ -635,9 +636,9 @@ export default function IndustrialAutomationPage() {
             </span>
           </div>
           <h2 className="text-3xl sm:text-[2.4rem] font-bold text-[#0B0D26] leading-[1.15] mb-3">
-            Innovative Automation —{" "}
+            How does NOVUS Automation enable{" "}
             <em className="not-italic text-[#e7212b]">
-              We Measure, We Control, We Record
+              measurement, control, and recording?
             </em>
           </h2>
           <p className="text-gray-500 text-[15px] leading-relaxed mb-10 max-w-3xl">
@@ -685,8 +686,8 @@ export default function IndustrialAutomationPage() {
             </span>
           </div>
           <h2 className="text-3xl sm:text-[2.4rem] font-bold text-[#0B0D26] leading-[1.15] mb-12">
-            Questions About{" "}
-            <em className="not-italic text-[#e7212b]">Industrial Automation</em>
+            What are the most common questions about{" "}
+            <em className="not-italic text-[#e7212b]">industrial automation?</em>
           </h2>
           <div className="max-w-4xl mx-auto space-y-4">
             {faqItems.map((item) => (
@@ -722,8 +723,8 @@ export default function IndustrialAutomationPage() {
               </span>
             </div>
             <h2 className="text-3xl sm:text-[2.4rem] font-bold text-[#0B0D26] leading-[1.15] mb-12">
-              Explore{" "}
-              <em className="not-italic text-[#e7212b]">More Services</em>
+              Which services complement{" "}
+              <em className="not-italic text-[#e7212b]">industrial automation?</em>
             </h2>
             <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
               {serviceCrossLinks["industrial-automation"]?.map((link) => (

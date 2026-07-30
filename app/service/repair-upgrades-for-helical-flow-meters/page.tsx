@@ -33,8 +33,8 @@ export const metadata: Metadata = {
   twitter: {
     card: "summary_large_image",
     title: "Repair & Upgrades for Helical Flow Meters",
-    description:
-      "Faure Herman authorised OEM maintenance and repair for helical flow meters — preventive, corrective, and failure analysis. Kuwait & Dubai.",
+    description: "Faure Herman authorised OEM maintenance and repair for helical flow meters — preventive, corrective, and failure analysis. Kuwait & Dubai.",
+    images: [{ url: "/og-default.png", width: 1200, height: 630, alt: "Texas Technical Services" }],
   },
   keywords: [
     "helical flow meter repair Kuwait",

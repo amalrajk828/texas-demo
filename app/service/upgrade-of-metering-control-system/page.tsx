@@ -34,8 +34,8 @@ export const metadata: Metadata = {
   twitter: {
     card: "summary_large_image",
     title: "Upgrade of Metering Control System",
-    description:
-      "Metering control system upgrades — SCADA, PLC, Flow Computer, HMI integration. Cost-effective, minimal disruption, authorised OEM representative in Kuwait & Dubai.",
+    description: "Metering control system upgrades — SCADA, PLC, Flow Computer, HMI integration. Cost-effective, minimal disruption, authorised OEM representative in Kuwait & Dubai.",
+    images: [{ url: "/og-default.png", width: 1200, height: 630, alt: "Texas Technical Services" }],
   },
   keywords: [
     "metering control system upgrade Kuwait",

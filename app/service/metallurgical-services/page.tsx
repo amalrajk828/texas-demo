@@ -20,7 +20,12 @@ export const metadata: Metadata = {
     url: "/service/metallurgical-services/",
     images: [{ url: "/og-default.png", width: 1200, height: 630, alt: "Metallurgical Services PMI — Texas Technical Services" }],
   },
-  twitter: { card: "summary_large_image", title: "Metallurgical Services (PMI)", description: "PMI alloy verification and material traceability. API 578. Kuwait & Dubai." },
+  twitter: {
+    card: "summary_large_image",
+    title: "Metallurgical Services (PMI)",
+    description: "PMI alloy verification and material traceability. API 578. Kuwait & Dubai.",
+    images: [{ url: "/og-default.png", width: 1200, height: 630, alt: "Texas Technical Services" }],
+  },
   keywords: ["PMI Kuwait", "positive material identification Kuwait", "metallurgical services Kuwait", "XRF analysis Kuwait", "alloy verification Kuwait", "material traceability Kuwait", "Texas Technical Services PMI"],
 };
 

@@ -13,7 +13,7 @@ import AnimatedSkillBars from "@/components/about/AnimatedSkillBars";
 import FadeSection from "@/components/motion/FadeSection";
 
 export const metadata: Metadata = {
-  title: "About Us | Industrial Automation Company in Kuwait & GCC",
+  title: "About Us — Industrial Automation Company",
   description:
     "Texas Technical Services — industrial automation company in Kuwait, UAE & GCC since 2008. PLC SCADA, flow measurement, and inspection services.",
   alternates: { canonical: "/about-us/" },
@@ -671,6 +671,7 @@ export default function AboutPage() {
           </div>
         </div>
       </section>
+
     </div>
   );
 }

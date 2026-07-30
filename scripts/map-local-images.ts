@@ -176,7 +176,7 @@ const MAPPINGS: Record<string, { image: string, alt: string }> = {
     alt: "An offshore oil and gas production platform wellhead manifold configuration in deep water."
   },
   "custody-transfer-pipeline-operations": {
-    image: "/refinery.jpg",
+    image: "/refinery.webp",
     alt: "An aerial view of an oil refinery pipeline junction and distillation columns at sunset."
   },
   "ndt-oil-gas-refineries": {
@@ -302,7 +302,7 @@ const MAPPINGS: Record<string, { image: string, alt: string }> = {
 
   // Cluster 8: Water & Wastewater Process Automation (71-80)
   "flow-measurement-water-treatment": {
-    image: "/water_treatment.jpg",
+    image: "/water_treatment.webp",
     alt: "Large circular clarification and sedimentation tanks in a wastewater treatment facility."
   },
   "scada-water-wastewater-treatment": {
@@ -334,7 +334,7 @@ const MAPPINGS: Record<string, { image: string, alt: string }> = {
     alt: "Operators monitoring pump stations and reservoir levels via SCADA screens in a utility room."
   },
   "desalination-plant-instrumentation": {
-    image: "/water_treatment.jpg",
+    image: "/water_treatment.webp",
     alt: "Reverse osmosis filter racks and pressure gauges in a sea water desalination plant."
   },
   "corrosion-monitoring-water-treatment": {

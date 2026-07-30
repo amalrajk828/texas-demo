@@ -20,7 +20,12 @@ export const metadata: Metadata = {
     url: "/service/phased-array-ultrasonic-testing/",
     images: [{ url: "/og-default.png", width: 1200, height: 630, alt: "Phased Array Ultrasonic Testing — Texas Technical Services" }],
   },
-  twitter: { card: "summary_large_image", title: "Phased Array Ultrasonic Testing (PAUT)", description: "PAUT defect detection and weld inspection. ASME V, API 1104. Kuwait & Dubai." },
+  twitter: {
+    card: "summary_large_image",
+    title: "Phased Array Ultrasonic Testing (PAUT)",
+    description: "PAUT defect detection and weld inspection. ASME V, API 1104. Kuwait & Dubai.",
+    images: [{ url: "/og-default.png", width: 1200, height: 630, alt: "Texas Technical Services" }],
+  },
   keywords: ["phased array ultrasonic testing Kuwait", "PAUT Kuwait", "PAUT NDT Kuwait", "weld PAUT Kuwait", "phased array inspection Kuwait", "ASME V PAUT Kuwait", "Texas Technical Services PAUT"],
 };
 

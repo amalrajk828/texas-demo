@@ -162,7 +162,7 @@ export default function RefineryPage() {
       <IndustryHero
         name="Refinery"
         breadcrumbLabel="Refinery"
-        image="/refinery.jpg"
+        image="/refinery.webp"
         alt="Refinery industrial facility"
         Icon={Factory}
         description="Cutting-edge flow metering, CEMS, and industrial automation solutions for the demanding world of refinery operations — ensuring process control, emissions compliance, and precise custody transfer across the full product slate."

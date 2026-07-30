@@ -20,7 +20,12 @@ export const metadata: Metadata = {
     url: "/service/gamma-ray-pipe-crawler-inspection-systems/",
     images: [{ url: "/og-default.png", width: 1200, height: 630, alt: "Gamma Ray Pipe Crawler — Texas Technical Services" }],
   },
-  twitter: { card: "summary_large_image", title: "Gamma Ray Pipe Crawler Inspection", description: "Pipeline circumferential weld radiography. ASME V, API 1104. Kuwait & Dubai." },
+  twitter: {
+    card: "summary_large_image",
+    title: "Gamma Ray Pipe Crawler Inspection",
+    description: "Pipeline circumferential weld radiography. ASME V, API 1104. Kuwait & Dubai.",
+    images: [{ url: "/og-default.png", width: 1200, height: 630, alt: "Texas Technical Services" }],
+  },
   keywords: ["gamma ray pipe crawler Kuwait", "pipeline radiography Kuwait", "pipe crawler inspection Kuwait", "SWSI radiography Kuwait", "circumferential weld inspection Kuwait", "Texas Technical Services pipe crawler"],
 };
 

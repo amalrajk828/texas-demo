@@ -2,6 +2,7 @@ import React from "react";
 import type { Metadata } from "next";
 import Link from "next/link";
 import { BreadcrumbJsonLd } from "@/components/schema/BreadcrumbJsonLd";
+import { VideoObjectJsonLd } from "@/components/schema/VideoObjectJsonLd";
 import { ChevronRight } from "lucide-react";
 import ProductCard from "@/components/ProductCard";
 import ControlRoomErgonomicSection from "@/components/products/ControlRoomErgonomicSection";
@@ -45,6 +46,13 @@ export default function ControlRoomPage() {
         { name: "Products", href: "/products/" },
         { name: "Control Room Interior & Console", href: "/products/control-room-interior-and-console/" },
       ]} />
+      <VideoObjectJsonLd
+        name="Control Room Interior & Console Solutions"
+        description="Pyrotech Workspace Solutions delivers turnkey Control Room Solutions and Ergonomic Command Centre Consoles designed for sustainable, safe and contemporary workspaces."
+        thumbnailUrl="https://img.youtube.com/vi/t90rfWiViw8/maxresdefault.jpg"
+        contentUrl="https://www.youtube.com/watch?v=t90rfWiViw8"
+        embedUrl="https://www.youtube.com/embed/t90rfWiViw8"
+      />
       {/* ── Hero Banner ─────────────────────────────────────── */}
       <section className="relative bg-[#000000] blueprint-grid blueprint-dot-grid overflow-hidden border-b-4 border-[#e7212b]">
         <div

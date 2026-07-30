@@ -5,9 +5,8 @@ import ServicesCtaBanner from "@/components/service/ServicesCtaBanner";
 import { BreadcrumbJsonLd } from "@/components/schema/BreadcrumbJsonLd";
 import { ServiceJsonLd } from "@/components/schema/ServiceJsonLd";
 import { SpeakableJsonLd } from "@/components/schema/SpeakableJsonLd";
-
 export const metadata: Metadata = {
-  title: "Our Services",
+  title: "Industrial Services in Kuwait & UAE",
   description: "PLC SCADA integration, flow measurement, inspection & testing, and process automation for oil & gas and industrial sectors in Kuwait and the GCC.",
   alternates: { canonical: "/services/" },
   openGraph: {
