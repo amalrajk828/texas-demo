@@ -3,7 +3,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { motion, useInView } from "framer-motion";
 import { useRef, useState, useEffect, useMemo } from "react";
-import { useRouter } from "next/navigation";
+import { flushSync } from "react-dom";
 import { ArrowRight, ChevronLeft, ChevronRight, Search, X } from "lucide-react";
 import { useIsMobile } from "@/hooks/useIsMobile";
 
@@ -22,10 +22,10 @@ const ALL_SERVICES: ServiceItem[] = [
   { title: "Upgrade of Metering Control System", category: "Flow Measurement Solutions", image: "/images/services/metering-upgrade.png", href: "/service/upgrade-of-metering-control-system/", body: "Expert Metering Control System Upgradation — optimizing existing control systems to meet the latest industry standards." },
   { title: "Flow Computer Configuration", category: "Flow Measurement Solutions", image: "/images/services/flow-computer.png", href: "/service/flow-computer-configuration/", body: "Customized flow computational solutions in compliance with API MPMS, AGA, ISO, NTEP & OIML for seamless integration." },
   { title: "Flow Meter Calibration", category: "Flow Measurement Solutions", image: "/images/services/Banc-Calibr.jpg", href: "/service/flow-meter-calibration/", body: "Faure Herman offers calibration services in our world class ILAC/COFRAC ISO 17025 accredited facility located in France to handle your range of flowmeters, with services available for other brands as well." },
-  { title: "Repair & Upgrades for Helical Flow Meters", category: "Flow Measurement Solutions", image: "/images/services/helical-repair.webp", href: "/service/repair-upgrades-helical-flow-meters/", body: "Preventive and corrective maintenance, performance and failure analysis for helical flow meter assets." },
-  { title: "Audits and Specialized Consultancy", category: "Flow Measurement Solutions", image: "/images/services/audits-1500x750-1.jpeg", href: "/service/audits-specialized-consultancy/", body: "Comprehensive audits ensuring compliance with industry regulations and precise measurements within custody metering skid systems." },
-  { title: "Validation and Uncertainty Calculations", category: "Flow Measurement Solutions", image: "/images/services/validation.jpg", href: "/service/validation-uncertainty-calculations/", body: "Advanced techniques to assess and minimize uncertainties — confidence in the reliability of your measurement data." },
-  { title: "Commissioning and After Sales Support", category: "Flow Measurement Solutions", image: "/images/services/commissioning.png", href: "/service/commissioning-after-sales-support/", body: "Seamless integration and performance of critical equipment — flow meters, metering skids, flow computers, and control systems." },
+  { title: "Repair & Upgrades for Helical Flow Meters", category: "Flow Measurement Solutions", image: "/images/services/helical-repair.webp", href: "/service/repair-upgrades-for-helical-flow-meters/", body: "Preventive and corrective maintenance, performance and failure analysis for helical flow meter assets." },
+  { title: "Audits and Specialized Consultancy", category: "Flow Measurement Solutions", image: "/images/services/audits-1500x750-1.jpeg", href: "/service/audits-and-specialized-consultancy/", body: "Comprehensive audits ensuring compliance with industry regulations and precise measurements within custody metering skid systems." },
+  { title: "Validation and Uncertainty Calculations", category: "Flow Measurement Solutions", image: "/images/services/validation.jpg", href: "/service/validation-and-uncertainty-calculations/", body: "Advanced techniques to assess and minimize uncertainties — confidence in the reliability of your measurement data." },
+  { title: "Commissioning and After Sales Support", category: "Flow Measurement Solutions", image: "/images/services/commissioning.png", href: "/service/commissioning-and-after-sales-support/", body: "Seamless integration and performance of critical equipment — flow meters, metering skids, flow computers, and control systems." },
   { title: "Genuine Spare Parts", category: "Flow Measurement Solutions", image: "/images/services/spare-parts.png", href: "/service/genuine-spare-parts/", body: "Authorized OEM Representative — genuine spare parts for flow metering, flow meters, control systems, analyzers, CEMS, and industrial sensors." },
 
   // Page 2 Items
@@ -173,7 +173,7 @@ function ServiceCard({ service, index }: { service: ServiceItem; index: number }
 export default function ServicesAllGrid({ initialPage = 1 }: { initialPage?: number }) {
   const [page, setPage] = useState(initialPage);
   const [searchQuery, setSearchQuery] = useState("");
-  const router = useRouter();
+  const gridRef = useRef<HTMLDivElement>(null);
 
   // Sync page with initialPage after mount / props change to avoid render side-effects
   useEffect(() => {
@@ -195,13 +195,21 @@ export default function ServicesAllGrid({ initialPage = 1 }: { initialPage?: num
   const currentServices = filteredServices.slice(start, start + PER_PAGE);
 
   const goTo = (p: number) => {
-    setPage(p);
-    if (p === 1) {
-      router.push("/service/");
-    } else {
-      router.push(`/service/page/${p}/`);
-    }
-    window.scrollTo({ top: 0, behavior: "smooth" });
+    flushSync(() => {
+      setPage(p);
+    });
+
+    requestAnimationFrame(() => {
+      requestAnimationFrame(() => {
+        const lenis = typeof window !== "undefined" ? (window as any).lenis : null;
+
+        if (lenis && gridRef.current) {
+          lenis.scrollTo(gridRef.current, { offset: -88 });
+        } else {
+          gridRef.current?.scrollIntoView({ behavior: "auto", block: "start" });
+        }
+      });
+    });
   };
 
   return (
@@ -263,7 +271,10 @@ export default function ServicesAllGrid({ initialPage = 1 }: { initialPage?: num
             </p>
           </div>
         ) : (
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5 sm:gap-[22px] mb-14">
+          <div
+            ref={gridRef}
+            className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5 sm:gap-[22px] mb-14 scroll-mt-[88px]"
+          >
             {currentServices.map((svc, i) => (
               <ServiceCard key={`${svc.title}-${i}`} service={svc} index={i} />
             ))}
