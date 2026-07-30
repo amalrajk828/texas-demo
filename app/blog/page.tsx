@@ -1,18 +1,11 @@
 import type { Metadata } from "next";
 import Link from "next/link";
-import Image from "next/image";
-import ProductCard from "@/components/ProductCard";
+import BlogGrid from "@/components/blog/BlogGrid";
 import { BreadcrumbJsonLd } from "@/components/schema/BreadcrumbJsonLd";
 import { ItemListJsonLd } from "@/components/schema/ItemListJsonLd";
 import { 
   BookOpen, 
-  Calendar, 
-  Clock, 
   ChevronRight,
-  ArrowRight,
-  Gauge,
-  Cpu,
-  Activity
 } from "lucide-react";
 
 export const metadata: Metadata = {
@@ -173,7 +166,7 @@ export default function BlogIndexPage() {
 
       {/* ═══ BLOG ARCHIVE GRID ══════════════════════════════════════ */}
       <main className="bg-gray-50/50 py-16 lg:py-24">
-        <section className="max-w-7xl mx-auto px-4 sm:px-6">
+        <section id="blog-section" className="max-w-7xl mx-auto px-4 sm:px-6">
           
           <div className="flex items-center justify-between border-b border-gray-200 pb-6 mb-10">
             <div>
@@ -187,32 +180,7 @@ export default function BlogIndexPage() {
           </div>
 
           {/* Cards Grid */}
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {blogPosts.map((post, index) => {
-              // We pass custom mapping for fields and custom tags/badge
-              const mappedPost = {
-                name: post.title,
-                slug: post.slug,
-                image: post.image,
-                description: post.description,
-                category: post.category,
-                brand: post.pillar,
-                date: post.date,
-                readTime: post.readTime,
-              };
-              return (
-                <ProductCard
-                  key={post.slug}
-                  product={mappedPost}
-                  iconName={post.icon}
-                  readMoreText="Read Article"
-                  href={`/blog/${post.slug}/`}
-                  priority={index < 3}
-                  badgeClassName="bg-white/80 text-[#e7212b] border-[#e7212b]/20 backdrop-blur-md px-2.5 py-1 rounded-full border text-[9px] font-medium tracking-[1.5px] uppercase"
-                />
-              );
-            })}
-          </div>
+          <BlogGrid posts={blogPosts} />
 
         </section>
       </main>
