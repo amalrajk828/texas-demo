@@ -214,15 +214,15 @@ export const servicesListingFaq: FaqItem[] = [
 export const socialMediaFaq: FaqItem[] = [
   {
     q: "Which social media platforms does Texas Technical Services use?",
-    a: "We are active on LinkedIn, Facebook, Instagram, X (Twitter), YouTube, Medium, Quora, and Wellfound. Links to all profiles are available above.",
+    a: "Our official channels are LinkedIn, Facebook, Instagram, X (Twitter), YouTube, and Bluesky. We also maintain registered profiles on Medium, Quora, Wellfound, Hashnode, Substack, Pinterest, The Gulf Directory, and Angloinfo Kuwait. Links to all profiles are available above.",
   },
   {
     q: "What do you share on social media?",
-    a: "We share project updates, technical insights, product announcements, industry news, career opportunities, and company milestones relevant to the GCC industrial sector.",
+    a: "We share project updates, technical insights, product announcements, industry news, career opportunities, engineering articles, and company milestones relevant to the GCC industrial sector.",
   },
   {
     q: "Can I contact you through social media?",
-    a: "Yes. You can send messages through LinkedIn, Facebook, Instagram, or X. For formal quotes or technical support, please use our contact form or email.",
+    a: "Yes. You can send messages through LinkedIn, Facebook, Instagram, X, or Bluesky. For formal quotes or technical support, please use our contact form or email.",
   },
   {
     q: "Do you post job openings on social media?",

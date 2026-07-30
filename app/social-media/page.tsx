@@ -14,7 +14,11 @@ const SOCIAL_URLS = [
   "https://www.instagram.com/texas_technical_services",
   "https://www.youtube.com/@TEXASTECHNICALSERVICES",
   "https://x.com/texastechserv",
+  "https://bsky.app/profile/texastechserv.bsky.social",
   "https://medium.com/@texastechserv",
+  "https://hashnode.com/@texastechserv",
+  "https://substack.com/@texastechserv",
+  "https://www.pinterest.com/texastechserv/",
   "https://www.quora.com/profile/Texas-Technical-Service-Company-W-L-L",
   "https://wellfound.com/company/texas-technical-service-company-w-l-l",
   "https://thegulfdirectory.com/businesses/texas-technical-service-company-wll",
@@ -24,12 +28,12 @@ const SOCIAL_URLS = [
 export const metadata: Metadata = {
   title: "Social Media Platforms | Connect With Us",
   description:
-    "Find Texas Technical Service Company on LinkedIn, Facebook, Instagram, YouTube, X (Twitter), Medium, Quora, and more — your source for industrial automation and flow measurement expertise across the GCC.",
+    "Find Texas Technical Service Company on LinkedIn, Facebook, Instagram, YouTube, X (Twitter), Bluesky, Medium, Quora, Hashnode, Substack, Pinterest, and more — your source for industrial automation and flow measurement expertise across the GCC.",
   alternates: { canonical: "/social-media/" },
   openGraph: {
     title: "Social Media Platforms | Texas Technical Services",
     description:
-      "Follow Texas Technical Service Company on LinkedIn, Facebook, Instagram, YouTube, X, and industry directories for automation and flow measurement expertise.",
+      "Follow Texas Technical Service Company on LinkedIn, Facebook, Instagram, YouTube, X, Bluesky, Hashnode, Substack, Pinterest, and industry directories for automation and flow measurement expertise.",
     url: "/social-media/",
     images: [{ url: "/og-default.png", width: 1200, height: 630 }],
   },
@@ -37,7 +41,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "Social Media Platforms | Texas Technical Services",
     description:
-      "Connect with Texas Technical Service Company on LinkedIn, Facebook, Instagram, YouTube, X, and more.",
+      "Connect with Texas Technical Service Company on LinkedIn, Facebook, Instagram, YouTube, X, Bluesky, Hashnode, Substack, Pinterest, and more.",
     images: ["/og-default.png"],
   },
   keywords: [
@@ -50,6 +54,11 @@ export const metadata: Metadata = {
     "automation company Facebook Kuwait",
     "PLC SCADA company Instagram",
     "industrial services GCC social media",
+    "Texas Technical Services Bluesky",
+    "Texas Technical Services Hashnode",
+    "Texas Technical Services Substack",
+    "Texas Technical Services Pinterest",
+    "texastechserv social media",
   ],
 };
 
@@ -65,7 +74,7 @@ type Platform = {
 const official: Platform[] = [
   {
     name: "LinkedIn",
-    handle: "linkedin.com/company/texas-technical-service-company",
+    handle: "@texas-technical-service-company",
     url: "https://www.linkedin.com/company/texas-technical-service-company",
     description:
       "Company updates, project highlights, and what we're building across the GCC.",
@@ -73,7 +82,7 @@ const official: Platform[] = [
   },
   {
     name: "Facebook",
-    handle: "facebook.com/texastechserv",
+    handle: "@texastechserv",
     url: "https://www.facebook.com/texastechserv",
     description:
       "Project milestones and announcements from the team.",
@@ -102,6 +111,14 @@ const official: Platform[] = [
     description:
       "Short updates on industrial automation and the GCC energy sector.",
     icon: "M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z",
+  },
+  {
+    name: "Bluesky",
+    handle: "@texastechserv",
+    url: "https://bsky.app/profile/texastechserv.bsky.social",
+    description:
+      "Quick industry updates and conversations on the open social web.",
+    icon: "M5.202 2.857C7.954 4.922 10.913 9.11 12 11.358c1.087-2.247 4.046-6.436 6.798-8.501C20.783 1.366 24 .213 24 3.883c0 .732-.42 6.156-.667 7.037-.856 3.061-3.978 3.842-6.755 3.37 4.854.826 6.089 3.562 3.422 6.299-5.065 5.196-7.28-1.304-7.847-2.97-.104-.305-.152-.448-.153-.327 0-.121-.05.022-.153.327-.568 1.666-2.782 8.166-7.847 2.97-2.667-2.737-1.432-5.473 3.422-6.3-2.777.473-5.899-.308-6.755-3.369C.42 10.04 0 4.615 0 3.883c0-3.67 3.217-2.517 5.202-1.026",
   },
 ];
 
@@ -147,12 +164,35 @@ const registered: Platform[] = [
       "Business listing on Angloinfo Kuwait for services in the GCC.",
     icon: "M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 17.93c-3.95-.49-7-3.85-7-7.93 0-.62.08-1.21.21-1.79L9 15v1c0 1.1.9 2 2 2v1.93zm6.9-2.54c-.26-.81-1-1.39-1.9-1.39h-1v-3c0-.55-.45-1-1-1H8v-2h2c.55 0 1-.45 1-1V7h2c1.1 0 2-.9 2-2v-.41c2.93 1.19 5 4.06 5 7.41 0 2.08-.8 3.97-2.1 5.39z",
   },
+  {
+    name: "Hashnode",
+    handle: "@texastechserv",
+    url: "https://hashnode.com/@texastechserv",
+    description:
+      "Engineering articles and technical deep-dives from the TTS team.",
+    icon: "M22.351 8.019l-6.37-6.37a5.63 5.63 0 0 0-7.962 0l-6.37 6.37a5.63 5.63 0 0 0 0 7.962l6.37 6.37a5.63 5.63 0 0 0 7.962 0l6.37-6.37a5.63 5.63 0 0 0 0-7.962zM12 15.953a3.953 3.953 0 1 1 0-7.906 3.953 3.953 0 0 1 0 7.906z",
+  },
+  {
+    name: "Substack",
+    handle: "@texastechserv",
+    url: "https://substack.com/@texastechserv",
+    description:
+      "Newsletter updates on projects, products, and industry trends.",
+    icon: "M22.539 8.242H1.46V5.406h21.08v2.836zM1.46 10.812V24L12 18.11 22.54 24V10.812H1.46zM22.54 0H1.46v2.836h21.08V0z",
+  },
+  {
+    name: "Pinterest",
+    handle: "@texastechserv",
+    url: "https://www.pinterest.com/texastechserv/",
+    description:
+      "Visual boards for industrial projects, automation, and instrumentation.",
+    icon: "M12.017 0C5.396 0 .029 5.367.029 11.987c0 5.079 3.158 9.417 7.618 11.162-.105-.949-.199-2.403.041-3.439.219-.937 1.406-5.957 1.406-5.957s-.359-.72-.359-1.781c0-1.663.967-2.911 2.168-2.911 1.024 0 1.518.769 1.518 1.688 0 1.029-.653 2.567-.992 3.992-.285 1.193.6 2.165 1.775 2.165 2.128 0 3.768-2.245 3.768-5.487 0-2.861-2.063-4.869-5.008-4.869-3.41 0-5.409 2.562-5.409 5.199 0 1.033.394 2.143.889 2.741.099.12.112.225.085.345-.09.375-.293 1.199-.334 1.363-.053.225-.172.271-.401.165-1.495-.69-2.433-2.878-2.433-4.646 0-3.776 2.748-7.252 7.92-7.252 4.158 0 7.392 2.967 7.392 6.923 0 4.135-2.607 7.462-6.233 7.462-1.214 0-2.354-.629-2.758-1.379l-.749 2.848c-.269 1.045-1.004 2.352-1.498 3.146 1.123.345 2.306.535 3.55.535 6.607 0 11.985-5.365 11.985-11.987C23.97 5.39 18.592.026 11.985.026L12.017 0z",
+  },
 ];
 
 const stats = [
-  { num: "4", label: "Active Channels" },
-  { num: "9", label: "Total Profiles" },
-  { num: "18+", label: "Years of Expertise" },
+  { num: "6", label: "Active Channels" },
+  { num: "14", label: "Total Profiles" },
 ];
 
 export default function SocialMediaPage() {

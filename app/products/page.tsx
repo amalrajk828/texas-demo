@@ -3,6 +3,7 @@ import Link from "next/link";
 import { BreadcrumbJsonLd } from "@/components/schema/BreadcrumbJsonLd";
 import { SpeakableJsonLd } from "@/components/schema/SpeakableJsonLd";
 import { FaqPageJsonLd } from "@/components/schema/FaqPageJsonLd";
+import { ItemListJsonLd } from "@/components/schema/ItemListJsonLd";
 import PageFaqSection from "@/components/PageFaqSection";
 import { productsListingFaq } from "@/lib/pageFaqData";
 import {
@@ -195,6 +196,14 @@ export default function ProductsPage() {
         { name: "Home", href: "/" },
         { name: "Products", href: "/products/" },
       ]} />
+      <ItemListJsonLd
+        name="Industrial Product Categories"
+        items={categories.map((c) => ({
+          name: c.title,
+          url: c.href,
+          description: c.description,
+        }))}
+      />
       <SpeakableJsonLd headline="Flow Meters, Analyzers, PLCs & Industrial Automation Products" />
       {/* ── Hero Banner ─────────────────────────────────────── */}
       <section className="relative bg-[#000000] blueprint-grid blueprint-dot-grid overflow-hidden pt-[calc(var(--navbar-height,92px)+1rem)] lg:pt-[calc(var(--navbar-height,92px)+1.5rem)]">

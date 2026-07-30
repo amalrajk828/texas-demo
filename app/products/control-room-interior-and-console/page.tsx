@@ -2,6 +2,7 @@ import React from "react";
 import type { Metadata } from "next";
 import Link from "next/link";
 import { BreadcrumbJsonLd } from "@/components/schema/BreadcrumbJsonLd";
+import { ItemListJsonLd } from "@/components/schema/ItemListJsonLd";
 import { VideoObjectJsonLd } from "@/components/schema/VideoObjectJsonLd";
 import { FaqPageJsonLd } from "@/components/schema/FaqPageJsonLd";
 import PageFaqSection from "@/components/PageFaqSection";
@@ -49,6 +50,14 @@ export default function ControlRoomPage() {
         { name: "Products", href: "/products/" },
         { name: "Control Room Interior & Console", href: "/products/control-room-interior-and-console/" },
       ]} />
+      <ItemListJsonLd
+        name="Control Room Interior And Console"
+        items={products.map((product) => ({
+          name: product.name,
+          url: `/portfolio/${product.slug}/`,
+          description: product.description || "",
+        }))}
+      />
       <VideoObjectJsonLd
         name="Control Room Interior & Console Solutions"
         description="Pyrotech Workspace Solutions delivers turnkey Control Room Solutions and Ergonomic Command Centre Consoles designed for sustainable, safe and contemporary workspaces."
