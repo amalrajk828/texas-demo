@@ -172,13 +172,13 @@ export default function ServiceGroupGrid({ page }: { page: number }) {
               const href = p === 1 ? "/services_group/services/" : `/services_group/services/page/${p}/`;
               if (isCurrent) {
                 return (
-                  <span key={p} className="w-9 h-9 rounded-lg bg-[#e7212b] text-white text-[13px] font-bold flex items-center justify-center">
+                  <span key={p} className="min-w-[44px] min-h-[44px] rounded-lg bg-[#e7212b] text-white text-[13px] font-bold flex items-center justify-center">
                     {p}
                   </span>
                 );
               }
               return (
-                <Link key={p} href={href} className="w-9 h-9 rounded-lg border border-white/10 bg-white/10 backdrop-blur-xl text-[13px] font-semibold text-white hover:border-[#e7212b]/40 hover:text-[#e7212b] transition-all duration-200 flex items-center justify-center">
+                <Link key={p} href={href} className="min-w-[44px] min-h-[44px] rounded-lg border border-white/10 bg-white/10 backdrop-blur-xl text-[13px] font-semibold text-white hover:border-[#e7212b]/40 hover:text-[#e7212b] transition-all duration-200 flex items-center justify-center">
                   {p}
                 </Link>
               );

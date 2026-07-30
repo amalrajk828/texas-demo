@@ -151,11 +151,11 @@ export default function ContactPage() {
                   <div className="w-12 h-12 rounded-full bg-[#e7212b]/10 flex items-center justify-center shrink-0 group-hover:bg-[#e7212b]/20 transition-colors">
                     <Mail className="w-5 h-5 text-[#e7212b]" />
                   </div>
-                  <div>
+                  <div className="min-w-0">
                     <p className="text-[13px] font-semibold text-gray-400 mb-1">
                       Email Us
                     </p>
-                    <p className="text-[#181D4E] font-medium">{SITE_EMAIL}</p>
+                    <p className="text-[#181D4E] font-medium break-all">{SITE_EMAIL}</p>
                   </div>
                 </a>
 

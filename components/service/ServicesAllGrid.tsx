@@ -5,6 +5,7 @@ import { motion, useInView } from "framer-motion";
 import { useRef, useState, useEffect, useMemo } from "react";
 import { useRouter } from "next/navigation";
 import { ArrowRight, ChevronLeft, ChevronRight, Search, X } from "lucide-react";
+import { useIsMobile } from "@/hooks/useIsMobile";
 
 interface ServiceItem {
   title: string;
@@ -90,6 +91,7 @@ const PER_PAGE = 9;
 function ServiceCard({ service, index }: { service: ServiceItem; index: number }) {
   const ref = useRef<HTMLDivElement>(null);
   const inView = useInView(ref, { once: true, margin: "-40px" });
+  const isMobile = useIsMobile();
   return (
     <motion.div
       ref={ref}
@@ -134,8 +136,8 @@ function ServiceCard({ service, index }: { service: ServiceItem; index: number }
           className="relative flex flex-col flex-1 p-[18px] overflow-hidden rounded-b-2xl"
           style={{
             background: "rgba(255, 255, 255, 0.20)",
-            backdropFilter: "blur(28px)",
-            WebkitBackdropFilter: "blur(28px)",
+            backdropFilter: isMobile ? "none" : "blur(28px)",
+            WebkitBackdropFilter: isMobile ? "none" : "blur(28px)",
             borderTop: "1px solid rgba(255, 255, 255, 0.60)",
             boxShadow: "inset 0 1px 1px rgba(255, 255, 255, 0.8)",
           }}
@@ -272,15 +274,15 @@ export default function ServicesAllGrid({ initialPage = 1 }: { initialPage?: num
         {filteredServices.length > 0 && (
           <>
             <div className="flex items-center justify-center gap-2 flex-wrap">
-              <button onClick={() => goTo(Math.max(1, page - 1))} disabled={page === 1} className="w-9 h-9 rounded-lg border border-white/60 bg-white/40 backdrop-blur-md flex items-center justify-center text-[#0B0D26] hover:border-[#e7212b]/40 hover:text-[#e7212b] disabled:opacity-30 disabled:cursor-not-allowed transition-all duration-200 shadow-sm">
+              <button onClick={() => goTo(Math.max(1, page - 1))} disabled={page === 1} className="min-w-[44px] min-h-[44px] rounded-lg border border-white/60 bg-white/40 backdrop-blur-md flex items-center justify-center text-[#0B0D26] hover:border-[#e7212b]/40 hover:text-[#e7212b] disabled:opacity-30 disabled:cursor-not-allowed transition-all duration-200 shadow-sm">
                 <ChevronLeft className="w-4 h-4" />
               </button>
               {Array.from({ length: totalPages }, (_, i) => i + 1).map((p) => (
-                <button key={p} onClick={() => goTo(p)} className={`w-9 h-9 rounded-lg border text-[13px] font-semibold transition-all duration-200 ${p === page ? "bg-[#e7212b] border-[#e7212b] text-white shadow-lg shadow-[#e7212b]/20" : "bg-white/40 backdrop-blur-md border-white/60 text-[#0B0D26] hover:border-[#e7212b]/40 hover:text-[#e7212b] shadow-sm"}`}>
+                <button key={p} onClick={() => goTo(p)} className={`min-w-[44px] min-h-[44px] rounded-lg border text-[13px] font-semibold transition-all duration-200 ${p === page ? "bg-[#e7212b] border-[#e7212b] text-white shadow-lg shadow-[#e7212b]/20" : "bg-white/40 backdrop-blur-md border-white/60 text-[#0B0D26] hover:border-[#e7212b]/40 hover:text-[#e7212b] shadow-sm"}`}>
                   {p}
                 </button>
               ))}
-              <button onClick={() => goTo(Math.min(totalPages, page + 1))} disabled={page === totalPages} className="w-9 h-9 rounded-lg border border-white/60 bg-white/40 backdrop-blur-md flex items-center justify-center text-[#0B0D26] hover:border-[#e7212b]/40 hover:text-[#e7212b] disabled:opacity-30 disabled:cursor-not-allowed transition-all duration-200 shadow-sm">
+              <button onClick={() => goTo(Math.min(totalPages, page + 1))} disabled={page === totalPages} className="min-w-[44px] min-h-[44px] rounded-lg border border-white/60 bg-white/40 backdrop-blur-md flex items-center justify-center text-[#0B0D26] hover:border-[#e7212b]/40 hover:text-[#e7212b] disabled:opacity-30 disabled:cursor-not-allowed transition-all duration-200 shadow-sm">
                 <ChevronRight className="w-4 h-4" />
               </button>
             </div>

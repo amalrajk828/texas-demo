@@ -3,6 +3,7 @@ import Link from "next/link";
 import BlogGrid from "@/components/blog/BlogGrid";
 import { BreadcrumbJsonLd } from "@/components/schema/BreadcrumbJsonLd";
 import { ItemListJsonLd } from "@/components/schema/ItemListJsonLd";
+import { SpeakableJsonLd } from "@/components/schema/SpeakableJsonLd";
 import { 
   BookOpen, 
   ChevronRight,
@@ -104,6 +105,7 @@ export default function BlogIndexPage() {
   return (
     <div className="min-h-screen bg-white font-sans antialiased text-[#333333]">
       <BreadcrumbJsonLd items={[{ name: "Home", href: "/" }, { name: "Blog", href: "/blog/" }]} />
+      <SpeakableJsonLd headline="Industrial Engineering Knowledge Hub" />
       <ItemListJsonLd
         name="Texas Technical Services Knowledge Hub"
         items={blogPosts.map((post) => ({
@@ -173,7 +175,7 @@ export default function BlogIndexPage() {
               <h2 className="text-[#0B0D26] text-xl font-bold">Featured Publications</h2>
               <p className="text-gray-500 text-xs mt-1">Providing actionable data and risk-mitigation solutions</p>
             </div>
-            <div className="flex items-center gap-1.5 text-[12px] text-gray-400">
+            <div className="hidden sm:flex items-center gap-1.5 text-[12px] text-gray-400">
               <BookOpen className="w-4 h-4 text-[#e7212b]" />
               <span>{blogPosts.length} Technical Articles</span>
             </div>

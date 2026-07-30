@@ -4,6 +4,7 @@ import Link from "next/link";
 import { ChevronRight } from "lucide-react";
 import { BreadcrumbJsonLd } from "@/components/schema/BreadcrumbJsonLd";
 import { ServiceJsonLd } from "@/components/schema/ServiceJsonLd";
+import { SpeakableJsonLd } from "@/components/schema/SpeakableJsonLd";
 import { PARTNERS, STRATEGIC_PARTNERS } from "@/lib/partners";
 
 export const metadata: Metadata = {
@@ -46,6 +47,7 @@ export default function PartnersPage() {
           { name: "Global Network", href: "/partners/" },
         ]}
       />
+      <SpeakableJsonLd headline="Global Network | 15+ Authorized Partners & Vendors" />
       <ServiceJsonLd
         name="Global Network — Authorized Partnerships & Distribution"
         description="Texas Technical Services is the authorized partner and distributor for 15+ world-class OEMs across Kuwait, UAE, and the GCC — covering flow measurement, industrial automation, analyzers, sensors, and SCADA."

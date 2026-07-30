@@ -5,7 +5,9 @@ import Image from "next/image";
 import { useRef, useState, useEffect, useCallback } from "react";
 import { AnimatePresence, motion, type Variants } from "framer-motion";
 import { ArrowRight, Play } from "lucide-react";
-import Ferrofluid from "@/components/Ferrofluid";
+import dynamic from "next/dynamic";
+
+const Ferrofluid = dynamic(() => import("@/components/Ferrofluid"), { ssr: false });
 
 /* ── Slide data ─────────────────────────────────────────────────── */
 const SLIDES = [
@@ -19,7 +21,7 @@ const SLIDES = [
     tag: "Industrial Services",
     light: false,
     ctas: [
-      { label: "About Us", href: "/about-us/", primary: true },
+      { label: "About Us", href: "/contacts/", primary: true },
       { label: "Our Services", href: "/services/", primary: false },
     ],
   },
@@ -109,11 +111,16 @@ export default function HeroSlider() {
   const [current, setCurrent] = useState(0);
   const [paused, setPaused] = useState(false);
   const [progress, setProgress] = useState(0);
+  const [isMobile, setIsMobile] = useState(false);
 
   const rafRef = useRef<number | null>(null);
   const startRef = useRef<number | null>(null);
   const mainVideoRef = useRef<HTMLVideoElement | null>(null);
   const thumbVideoRefs = useRef<(HTMLVideoElement | null)[]>([null, null, null, null]);
+
+  useEffect(() => {
+    setIsMobile(window.matchMedia("(pointer: coarse)").matches || window.innerWidth < 768);
+  }, []);
 
   const goTo = useCallback((idx: number) => {
     setCurrent(idx);
@@ -163,30 +170,32 @@ export default function HeroSlider() {
   return (
     <section
       className="relative w-full overflow-hidden flex flex-col justify-center"
-      style={{ minHeight: "110vh", background: "#050505" }}
+      style={{ minHeight: "100vh", background: "#050505" }}
       onMouseEnter={() => setPaused(true)}
       onMouseLeave={() => setPaused(false)}
       {...swipe}
     >
-      {/* Ferrofluid WebGL background layer */}
-      <div style={{ width: '100%', height: '100%', position: 'absolute', inset: 0, zIndex: 0, pointerEvents: 'none' }}>
-        <Ferrofluid
-          colors={["#ffffff", "#ffffff", "#ffffff"]}
-          speed={0.4}
-          scale={1.6}
-          turbulence={1}
-          fluidity={0.15}
-          rimWidth={0.2}
-          sharpness={2.5}
-          shimmer={1.3}
-          glow={2}
-          flowDirection="down"
-          opacity={0.6}
-          mouseInteraction={true}
-          mouseStrength={0.8}
-          mouseRadius={0.3}
-        />
-      </div>
+      {/* Ferrofluid WebGL background layer — desktop only */}
+      {!isMobile && (
+        <div style={{ width: '100%', height: '100%', position: 'absolute', inset: 0, zIndex: 0, pointerEvents: 'none' }}>
+          <Ferrofluid
+            colors={["#ffffff", "#ffffff", "#ffffff"]}
+            speed={0.4}
+            scale={1.6}
+            turbulence={1}
+            fluidity={0.15}
+            rimWidth={0.2}
+            sharpness={2.5}
+            shimmer={1.3}
+            glow={2}
+            flowDirection="down"
+            opacity={0.6}
+            mouseInteraction={true}
+            mouseStrength={0.8}
+            mouseRadius={0.3}
+          />
+        </div>
+      )}
 
       {/* Noise texture */}
       <div
@@ -237,8 +246,8 @@ export default function HeroSlider() {
                   className="absolute -inset-8 sm:-inset-10 rounded-3xl -z-10"
                   style={{
                     background: "rgba(255,255,255,0.88)",
-                    backdropFilter: "blur(20px)",
-                    WebkitBackdropFilter: "blur(20px)",
+                    backdropFilter: isMobile ? "none" : "blur(20px)",
+                    WebkitBackdropFilter: isMobile ? "none" : "blur(20px)",
                     boxShadow: "0 8px 40px rgba(0,0,0,0.10)",
                     border: "1px solid rgba(255,255,255,0.40)",
                   }}
@@ -383,7 +392,7 @@ export default function HeroSlider() {
             </motion.div>
           </AnimatePresence>
 
-          {/* Thumbnail filmstrip — taller cards */}
+          {/* Thumbnail filmstrip — static images only, no video preloading */}
           <div className="grid grid-cols-4 gap-3 relative z-10">
             {SLIDES.map((s, i) => (
               <button
@@ -401,10 +410,10 @@ export default function HeroSlider() {
                   } as React.CSSProperties : {}),
                 }}
               >
-                {s.type === "image" ? (
-                  <Image src={s.src} alt={s.tag} fill sizes="160px" className="object-cover" quality={60} />
+                {s.type === "video" ? (
+                  <video src={s.src} muted playsInline className="w-full h-full object-cover" />
                 ) : (
-                  <video ref={(el) => { thumbVideoRefs.current[i] = el; }} src={s.src} muted loop playsInline className="w-full h-full object-cover" />
+                  <Image src={s.src} alt={s.tag} fill sizes="160px" className="object-cover" quality={60} />
                 )}
                 <div className="absolute inset-0 bg-black/30" />
 
@@ -443,7 +452,7 @@ export default function HeroSlider() {
       {/* Mobile dot nav — larger dots */}
       <div className="lg:hidden absolute bottom-6 left-1/2 -translate-x-1/2 z-20 flex items-center gap-2.5">
         {SLIDES.map((_, i) => (
-          <button key={i} onClick={() => goTo(i)} aria-label={`Go to slide ${i + 1}`}>
+          <button key={i} onClick={() => goTo(i)} aria-label={`Go to slide ${i + 1}`} className="min-w-[44px] min-h-[44px] flex items-center justify-center">
             <span
               className="block h-[4px] rounded-full transition-all duration-300"
               style={{

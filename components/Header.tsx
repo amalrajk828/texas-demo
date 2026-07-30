@@ -10,7 +10,7 @@ import {
   Gauge, FlaskConical, Cpu,
   Droplet, Factory, Flame, Snowflake, Zap, Droplets, Building2, Hammer,
   BarChart3, Radio, Monitor, Tablet, Activity, Settings, Wrench, Target,
-  Wifi, LayoutGrid,
+  Wifi, LayoutGrid, Globe,
 } from "lucide-react";
 import type { LucideIcon } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
@@ -382,6 +382,7 @@ export default function Header() {
   const [scrolled, setScrolled]       = useState(false);
   const [mobileExpanded, setMobileExpanded] = useState<string | null>(null);
   const [socialOpen, setSocialOpen]         = useState(false);
+  const [isMobile, setIsMobile]             = useState(false);
   const ref = useRef<HTMLDivElement>(null);
   const timeoutRef = useRef<NodeJS.Timeout | null>(null);
 
@@ -416,6 +417,11 @@ export default function Header() {
     const onScroll = () => setScrolled(window.scrollY > 10);
     window.addEventListener("scroll", onScroll, { passive: true });
     return () => window.removeEventListener("scroll", onScroll);
+  }, []);
+
+  /* Detect mobile for disabling layout animations */
+  useEffect(() => {
+    setIsMobile(window.matchMedia("(pointer: coarse)").matches || window.innerWidth < 768);
   }, []);
 
   /* Close everything on route change */
@@ -479,7 +485,7 @@ export default function Header() {
             <div className="hidden lg:block w-px h-8 bg-white/10 shrink-0" />
 
             {/* ── Desktop Nav ──────────────────────────────────── */}
-            <nav className="hidden lg:flex items-center gap-0.5 flex-1 justify-center">
+              <nav aria-label="Main navigation" className="hidden lg:flex items-center gap-0.5 flex-1 justify-center">
               {NAV.map((item) => (
                 <div
                   key={item.label}
@@ -506,12 +512,19 @@ export default function Header() {
                           }`}
                         />
                         {isActive(item.href) && (
-                          <motion.span
-                            layoutId="nav-underline"
-                            className="absolute bottom-0 left-4 right-4 h-[2px] rounded-full"
-                            style={{ background: "linear-gradient(90deg, #E53935, #B71C1C)" }}
-                            transition={{ type: "spring", stiffness: 380, damping: 30 }}
-                          />
+                          isMobile ? (
+                            <span
+                              className="absolute bottom-0 left-4 right-4 h-[2px] rounded-full"
+                              style={{ background: "linear-gradient(90deg, #E53935, #B71C1C)" }}
+                            />
+                          ) : (
+                            <motion.span
+                              layoutId="nav-underline"
+                              className="absolute bottom-0 left-4 right-4 h-[2px] rounded-full"
+                              style={{ background: "linear-gradient(90deg, #E53935, #B71C1C)" }}
+                              transition={{ type: "spring", stiffness: 380, damping: 30 }}
+                            />
+                          )
                         )}
                       </button>
 
@@ -540,12 +553,19 @@ export default function Header() {
                     >
                       {item.label}
                       {isActive(item.href) && (
-                        <motion.span
-                          layoutId="nav-underline"
-                          className="absolute bottom-0 left-4 right-4 h-[2px] rounded-full"
-                          style={{ background: "linear-gradient(90deg, #E53935, #B71C1C)" }}
-                          transition={{ type: "spring", stiffness: 380, damping: 30 }}
-                        />
+                        isMobile ? (
+                          <span
+                            className="absolute bottom-0 left-4 right-4 h-[2px] rounded-full"
+                            style={{ background: "linear-gradient(90deg, #E53935, #B71C1C)" }}
+                          />
+                        ) : (
+                          <motion.span
+                            layoutId="nav-underline"
+                            className="absolute bottom-0 left-4 right-4 h-[2px] rounded-full"
+                            style={{ background: "linear-gradient(90deg, #E53935, #B71C1C)" }}
+                            transition={{ type: "spring", stiffness: 380, damping: 30 }}
+                          />
+                        )
                       )}
                     </Link>
                   )}
@@ -567,6 +587,8 @@ export default function Header() {
               <div className="hidden lg:block relative">
                 <button
                   onClick={() => setSocialOpen(!socialOpen)}
+                  aria-expanded={socialOpen}
+                  aria-haspopup="true"
                   className="w-10 h-10 rounded-lg border border-white/15 flex items-center justify-center text-white/50 hover:text-white hover:border-white/30 transition-colors"
                   aria-label="Social media"
                 >
@@ -576,7 +598,7 @@ export default function Header() {
                 {socialOpen && (
                   <div className="absolute top-full right-0 mt-2 w-56 bg-[#0B0D26] border border-white/10 rounded-xl shadow-2xl shadow-black/50 overflow-hidden z-50">
                     <div className="px-4 py-2.5 border-b border-white/10">
-                      <span className="text-white/40 text-[10px] font-medium tracking-[2px] uppercase">
+                      <span className="text-white/60 text-[10px] font-medium tracking-[2px] uppercase">
                         Connect
                       </span>
                     </div>
@@ -635,7 +657,7 @@ export default function Header() {
                   {/* Close button */}
                   <button
                     onClick={() => setMobileOpen(false)}
-                    className="absolute top-4 right-4 w-9 h-9 rounded-full border border-white/15 flex items-center justify-center text-white/50 hover:text-white hover:border-white/30 transition-colors z-10"
+                    className="absolute top-4 right-4 w-11 h-11 rounded-full border border-white/15 flex items-center justify-center text-white/50 hover:text-white hover:border-white/30 transition-colors z-10"
                     aria-label="Close menu"
                   >
                     <X className="w-4 h-4" />
@@ -673,6 +695,8 @@ export default function Header() {
                               onClick={() =>
                                 setMobileExpanded(mobileExpanded === item.label ? null : item.label)
                               }
+                              aria-expanded={mobileExpanded === item.label}
+                              aria-haspopup="true"
                               className="p-2 text-white/40 hover:text-white"
                             >
                               <ChevronDown
@@ -750,6 +774,18 @@ export default function Header() {
                       </div>
                     ))}
                   </nav>
+
+                  {/* Social link */}
+                  <div className="px-4 py-2 border-t" style={{ borderColor: "rgba(255,255,255,0.08)" }}>
+                    <Link
+                      href="/social-media/"
+                      onClick={() => setMobileOpen(false)}
+                      className="flex items-center gap-3 px-4 py-3 text-[14px] font-medium font-sans tracking-wide text-white/40 hover:text-white rounded-lg transition-colors"
+                    >
+                      <Globe className="w-4 h-4" />
+                      Follow Us
+                    </Link>
+                  </div>
 
                   {/* Bottom CTA */}
                   <div className="p-4 border-t mt-auto" style={{ borderColor: "rgba(255,255,255,0.08)" }}>

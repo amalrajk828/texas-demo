@@ -33,6 +33,7 @@ const PixelSnow: React.FC<PixelSnowProps> = ({
   useEffect(() => {
     const container = containerRef.current;
     if (!container) return;
+    if (window.matchMedia("(pointer: coarse)").matches || window.innerWidth < 768) return;
 
     // Visibility observer to pause rendering off-screen
     const observer = new IntersectionObserver(

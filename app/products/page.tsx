@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { BreadcrumbJsonLd } from "@/components/schema/BreadcrumbJsonLd";
+import { SpeakableJsonLd } from "@/components/schema/SpeakableJsonLd";
 import {
   Gauge,
   Activity,
@@ -191,6 +192,7 @@ export default function ProductsPage() {
         { name: "Home", href: "/" },
         { name: "Products", href: "/products/" },
       ]} />
+      <SpeakableJsonLd headline="Flow Meters, Analyzers, PLCs & Industrial Automation Products" />
       {/* ── Hero Banner ─────────────────────────────────────── */}
       <section className="relative bg-[#000000] blueprint-grid blueprint-dot-grid overflow-hidden pt-[calc(var(--navbar-height,92px)+1rem)] lg:pt-[calc(var(--navbar-height,92px)+1.5rem)]">
         {/* Grid texture */}

@@ -2,6 +2,7 @@
 /* Kit D — Grey: light glassmorphic stat cards on soft light gradient */
 import { useRef, useEffect, useState } from "react";
 import { motion, useInView, useSpring, useTransform, useMotionValue } from "framer-motion";
+import { useIsMobile } from "@/hooks/useIsMobile";
 
 const STATS = [
   { value: 400, suffix: "+", label: "Projects Completed", desc: "Across oil & gas, refinery & beyond" },
@@ -21,6 +22,7 @@ function useLiquidCounter(target: number, started: boolean, delay: number) {
 
 function StatCard({ value, suffix, label, desc, index, started }: { value: number; suffix: string; label: string; desc: string; index: number; started: boolean }) {
   const count = useLiquidCounter(value, started, index * 180);
+  const isMobile = useIsMobile();
   return (
     <motion.div
       initial={{ opacity: 0, y: 40 }} animate={started ? { opacity: 1, y: 0 } : {}}
@@ -32,8 +34,8 @@ function StatCard({ value, suffix, label, desc, index, started }: { value: numbe
         className="relative flex flex-col items-center text-center px-8 py-12 w-full h-full overflow-hidden rounded-[24px] transition-all duration-300" 
         style={{ 
           background: "rgba(255, 255, 255, 0.35)", 
-          backdropFilter: "blur(20px)",
-          WebkitBackdropFilter: "blur(20px)",
+          backdropFilter: isMobile ? "none" : "blur(20px)",
+          WebkitBackdropFilter: isMobile ? "none" : "blur(20px)",
           border: "1px solid rgba(255, 255, 255, 0.65)", 
           boxShadow: "0 8px 32px rgba(0, 0, 0, 0.08), inset 0 1px 1px rgba(255, 255, 255, 0.8)",
         }}

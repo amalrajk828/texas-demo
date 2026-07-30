@@ -1,36 +1,64 @@
 "use client";
-import { useEffect } from "react";
+import { useEffect, useRef } from "react";
 import { usePathname } from "next/navigation";
 
 export default function ScrollObserver() {
   const pathname = usePathname();
+  const obsRef = useRef<IntersectionObserver | null>(null);
 
   useEffect(() => {
-    let obs: IntersectionObserver | null = null;
+    if (typeof window === "undefined") return;
 
-    // Small delay lets Next.js finish painting the new page's DOM
-    const timer = setTimeout(() => {
+    const prefersReduced = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+
+    if (prefersReduced) {
+      document.querySelectorAll<HTMLElement>(".fade-up:not(.visible)")
+        .forEach((el) => el.classList.add("visible"));
+      return;
+    }
+
+    function observeElements() {
       const els = document.querySelectorAll<HTMLElement>(".fade-up:not(.visible)");
       if (!els.length) return;
 
-      obs = new IntersectionObserver(
-        (entries) => {
-          entries.forEach((e) => {
-            if (e.isIntersecting) {
-              e.target.classList.add("visible");
-              obs?.unobserve(e.target);
-            }
-          });
-        },
-        { threshold: 0.1 }
-      );
+      els.forEach((el) => {
+        obsRef.current!.observe(el);
+      });
+    }
 
-      els.forEach((el) => obs!.observe(el));
-    }, 50);
+    if (obsRef.current) {
+      obsRef.current.disconnect();
+    }
+
+    obsRef.current = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((e) => {
+          if (e.isIntersecting) {
+            e.target.classList.add("visible");
+            obsRef.current?.unobserve(e.target);
+          }
+        });
+      },
+      { threshold: 0.1 }
+    );
+
+    requestAnimationFrame(() => {
+      observeElements();
+
+      const mutObs = new MutationObserver(() => {
+        observeElements();
+      });
+      mutObs.observe(document.body, { childList: true, subtree: true });
+
+      const cleanup = () => {
+        mutObs.disconnect();
+      };
+      (obsRef.current as any)._cleanup = cleanup;
+    });
 
     return () => {
-      clearTimeout(timer);
-      obs?.disconnect();
+      obsRef.current?.disconnect();
+      (obsRef.current as any)?._cleanup?.();
     };
   }, [pathname]);
 

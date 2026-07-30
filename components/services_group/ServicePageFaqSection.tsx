@@ -3,12 +3,14 @@
 import { useRef, useState, type ReactNode } from "react";
 import { motion, AnimatePresence, useInView } from "framer-motion";
 import { ChevronRight } from "lucide-react";
+import { useIsMobile } from "@/hooks/useIsMobile";
 
 export type FaqItem = { q: string; a: string };
 
 /** Single animated accordion item */
 function FaqRow({ item, delay }: { item: FaqItem; delay: number }) {
   const [open, setOpen] = useState(false);
+  const isMobile = useIsMobile();
 
   return (
     <motion.div
@@ -25,8 +27,8 @@ function FaqRow({ item, delay }: { item: FaqItem; delay: number }) {
         }`}
         style={{
           background: "rgba(255, 255, 255, 0.04)",
-          backdropFilter: "blur(16px)",
-          WebkitBackdropFilter: "blur(16px)",
+          backdropFilter: isMobile ? "none" : "blur(16px)",
+          WebkitBackdropFilter: isMobile ? "none" : "blur(16px)",
           boxShadow: "0 4px 24px rgba(0, 0, 0, 0.40)",
         }}
       >

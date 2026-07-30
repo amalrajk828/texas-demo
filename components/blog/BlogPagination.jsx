@@ -1,14 +1,23 @@
 "use client";
 
-import React from "react";
+import React, { useState, useEffect } from "react";
 import { ChevronLeft, ChevronRight } from "lucide-react";
 
 export default function BlogPagination({ currentPage, totalPages, onPageChange }) {
+  const [isMobile, setIsMobile] = useState(false);
+
+  useEffect(() => {
+    const check = () => setIsMobile(window.innerWidth < 640);
+    check();
+    window.addEventListener("resize", check);
+    return () => window.removeEventListener("resize", check);
+  }, []);
+
   if (totalPages <= 1) return null;
 
   const getPageNumbers = () => {
     const pages = [];
-    const maxVisible = 5;
+    const maxVisible = isMobile ? 2 : 5;
 
     if (totalPages <= maxVisible + 2) {
       for (let i = 1; i <= totalPages; i++) pages.push(i);
@@ -56,7 +65,7 @@ export default function BlogPagination({ currentPage, totalPages, onPageChange }
           <button
             key={page}
             onClick={() => onPageChange(page)}
-            className={`w-9 h-9 text-[13px] font-medium rounded-lg transition-colors ${
+            className={`w-9 h-8 text-[13px] font-medium rounded-lg transition-colors ${
               currentPage === page
                 ? "bg-[#e7212b] text-white shadow-md shadow-[#e7212b]/20"
                 : "border border-gray-200 text-gray-500 hover:border-[#e7212b]/40 hover:text-[#e7212b]"

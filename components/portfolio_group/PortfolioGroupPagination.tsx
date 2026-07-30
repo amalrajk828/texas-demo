@@ -48,7 +48,7 @@ export default function PortfolioGroupPagination({
             return p === currentPage ? (
               <span
                 key={p}
-                className="w-9 h-9 rounded-lg bg-[#e7212b] text-white text-[13px] font-bold flex items-center justify-center"
+                className="min-w-[44px] min-h-[44px] rounded-lg bg-[#e7212b] text-white text-[13px] font-bold flex items-center justify-center"
               >
                 {p}
               </span>
@@ -56,7 +56,7 @@ export default function PortfolioGroupPagination({
               <Link
                 key={p}
                 href={href}
-                className="w-9 h-9 rounded-lg border border-white/[0.15] bg-white/[0.12] backdrop-blur-xl text-[13px] font-semibold text-white hover:border-[#e7212b]/40 hover:text-[#e7212b] transition-all duration-200 flex items-center justify-center"
+                className="min-w-[44px] min-h-[44px] rounded-lg border border-white/[0.15] bg-white/[0.12] backdrop-blur-xl text-[13px] font-semibold text-white hover:border-[#e7212b]/40 hover:text-[#e7212b] transition-all duration-200 flex items-center justify-center"
               >
                 {p}
               </Link>

@@ -1,6 +1,12 @@
+import type { Metadata } from "next";
 import Link from "next/link";
 import { ArrowRight } from "lucide-react";
 import { blogArticles } from "@/lib/blogArticles";
+
+export const metadata: Metadata = {
+  title: "Page Not Found",
+  robots: { index: false, follow: false },
+};
 
 const POPULAR_SERVICES = [
   { title: "Flow Measurement & Control", href: "/service/flow-measurement-solutions/" },

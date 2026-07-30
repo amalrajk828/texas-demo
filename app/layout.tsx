@@ -24,7 +24,7 @@ const inter = Inter({
 
 const jetbrainsMono = JetBrains_Mono({
   subsets: ["latin"],
-  weight: ["400", "500", "600"],
+  weight: ["400"],
   variable: "--font-mono",
   display: "swap",
 });
@@ -37,6 +37,12 @@ export const metadata: Metadata = {
   },
   description:
     "Flow measurement, control systems, inspection, and industrial automation for oil & gas, refinery, petrochemical, and power plant sectors.",
+  keywords: [
+    "flow measurement", "industrial automation", "PLC SCADA integration",
+    "inspection testing", "NDT services", "custody metering",
+    "oil and gas", "refinery", "petrochemical", "power plant",
+    "Kuwait", "UAE", "Dubai", "GCC",
+  ],
   openGraph: {
     type: "website",
     locale: "en_US",
@@ -72,12 +78,12 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
     <html lang="en" data-scroll-behavior="smooth" className={`${plusJakarta.variable} ${inter.variable} ${jetbrainsMono.variable}`}>
       <head>
         <meta charSet="UTF-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
         <Script
           id="gtm"
-          strategy="afterInteractive"
+          strategy="lazyOnload"
           dangerouslySetInnerHTML={{
             __html: `(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src='https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);})(window,document,'script','dataLayer','${GTM}');`,
           }}
@@ -147,7 +153,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
           }}
         />
       </head>
-      <body>
+      <body className="overflow-x-hidden">
         <a
           href="#main-content"
           className="sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 focus:z-[9999] focus:bg-white focus:px-4 focus:py-2 focus:rounded-lg focus:shadow-lg focus:text-[#e7212b] focus:font-semibold"

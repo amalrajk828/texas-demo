@@ -4,10 +4,12 @@ import Link from "next/link";
 import { motion, useInView } from "framer-motion";
 import { useRef } from "react";
 import { ArrowRight } from "lucide-react";
+import { useIsMobile } from "@/hooks/useIsMobile";
 
 export default function GreyAbout() {
   const ref = useRef<HTMLDivElement>(null);
   const inView = useInView(ref, { once: true, margin: "-80px" });
+  const isMobile = useIsMobile();
   return (
     <section className="relative py-16 lg:py-20 overflow-hidden" style={{ background: "linear-gradient(135deg, #f5f7fa 0%, #e2e7ee 45%, #c9d2dc 100%)" }}>
       {/* Background depth blobs for frosted glass refraction */}
@@ -63,8 +65,8 @@ export default function GreyAbout() {
                       }
                     : {
                         background: "rgba(255, 255, 255, 0.35)",
-                        backdropFilter: "blur(18px)",
-                        WebkitBackdropFilter: "blur(18px)",
+                        backdropFilter: isMobile ? "none" : "blur(18px)",
+                        WebkitBackdropFilter: isMobile ? "none" : "blur(18px)",
                         border: "1px solid rgba(255, 255, 255, 0.65)",
                         boxShadow: "0 8px 24px rgba(0, 0, 0, 0.06), inset 0 1px 1px rgba(255, 255, 255, 0.8)",
                       }
