@@ -36,7 +36,7 @@ const ALL_SERVICES: ServiceItem[] = [
   { title: "Supply and Installation of Suspended Access Equipment", category: "Constructions", image: "/images/services/WINDOW-CLEANING-FACADE-CLEANING-BMU-CRADLE-ROOF-MACHINE-13-1-scaled.jpg", href: "/service/#construction", body: "Supply and installation of telescopic roof machines, twin track roof machines, powered cradles, recess cradles, monorails, and davit systems." },
   { title: "Lifting Equipment Inspection", category: "Specialized Inspection Services", image: "/images/services/lifting_equp.png", href: "/service/lifting-equipment-inspection-2/", body: "Systematic inspection of cranes, hoists, forklifts, and elevators — certified inspectors identify defects, wear, and safety standard deviations." },
   { title: "Hose Test", category: "Specialized Inspection Services", image: "/images/services/HOSE-TEST.jpg", href: "/service/hose-test-2/", body: "Quality assurance field water check for installed curtain walls, exterior windows and doors — identifies leakage vulnerabilities." },
-  { title: "Air Permeability Test", category: "Specialized Inspection Services", image: "", placeholderNumber: "09", href: "/service/air-permeability-test-2/", body: "Measures air infiltration through windows, doors, and curtain walls per ASTM E783 — locates air leakage paths." },
+  { title: "Air Permeability Test", category: "Specialized Inspection Services", image: "/images/services/AIR-PERMEABILITY-TEST.jpg", href: "/service/air-permeability-test-2/", body: "Measures air infiltration through windows, doors, and curtain walls per ASTM E783 — locates air leakage paths." },
   { title: "Water Penetration Test", category: "Specialized Inspection Services", image: "/images/services/WATER-PENETRATION-TEST.jpg", href: "/service/water-penetration-test-2/", body: "Determines whether leakage is present through windows, doors, and curtain wall systems from exterior to interior." },
 
   // Page 3 Items
@@ -70,7 +70,7 @@ const ALL_SERVICES: ServiceItem[] = [
   { title: "Steel Fabrication", category: "Constructions", image: "/images/services/Fabrication-Shop-Grinding.jpg", href: "/service/#construction", body: "Transforming raw steel into finished structures through cutting, bending, welding, and assembling — skids, pipework, and structural components." },
   { title: "Commissioning and Start-up Support", category: "Industrial Automation", image: "/images/services/DigitalOilAndGas-1 (1).webp", href: "/service/commissioning-and-start-up-support/", body: "Validating automation systems from pre-commissioning through hot commissioning, start-up, and post-commissioning handover." },
   { title: "Control System Integration and Upgradation", category: "Industrial Automation", image: "/images/services/Blank-Funky-Collage-Template.webp", href: "/service/system-software-upgrade/", body: "PLC and SCADA-based automation and system integration — from legacy system migrations to full greenfield automation builds." },
-  { title: "Process Plant Automation", category: "Industrial Automation", image: "", placeholderNumber: "08", href: "/service/plant-automation/", body: "Top-tier Plant Automation solutions streamlining industrial processes — boosting efficiency, reducing costs, and enhancing productivity." },
+  { title: "Process Plant Automation", category: "Industrial Automation", image: "/images/services/automation.jpg", href: "/service/plant-automation/", body: "Top-tier Plant Automation solutions streamlining industrial processes — boosting efficiency, reducing costs, and enhancing productivity." },
 
   // Page 6 Items
   { title: "Inspection & Testing", category: "Main Services", image: "/images/services/Usinage-2.jpg", href: "/service/inspection-testing/", body: "Comprehensive inspection and testing — equipment inspections, NDT, functional testing, and certification to industry standards." },
@@ -80,7 +80,7 @@ const ALL_SERVICES: ServiceItem[] = [
   { title: "Magnetic Particle Inspection (MT)", category: "Non Destructive Testing", image: "/images/services/Magnetic-Particle-Inspection.jpg", href: "/service/magnetic-particle-inspection-mt/", body: "Detects surface and near-surface defects in ferromagnetic materials — fast and effective with minimal surface preparation." },
   { title: "Liquid / Dye Penetrant Examination (PT)", category: "Non Destructive Testing", image: "/images/services/PT.jpg", href: "/service/liquid-penetrant-dye-penetrant-examination-pt/", body: "Detects surface defects using capillary action — effective on metals, ceramics, plastics, and non-metallic materials." },
   { title: "Visual Inspection (VI)", category: "Non Destructive Testing", image: "/images/services/ndt.jpg", href: "/service/visual-inspection-vi/", body: "Systematic visual examination of surfaces, welds, and components — the first step in any NDT program." },
-  { title: "Non Destructive Testing (NDT)", category: "Inspection & Testing", image: "", placeholderNumber: "01", href: "/service/non-destructive-testing-ndt/", body: "Visual Inspection, Liquid/Dye Penetrant, Magnetic Particle, Radiographic Testing, and Ultrasonic Testing services." },
+  { title: "Non Destructive Testing (NDT)", category: "Inspection & Testing", image: "/images/services/ndt.jpg", href: "/service/non-destructive-testing-ndt/", body: "Visual Inspection, Liquid/Dye Penetrant, Magnetic Particle, Radiographic Testing, and Ultrasonic Testing services." },
   { title: "Mechanical Testing", category: "Inspection & Testing", image: "/images/services/mechanical-testing.jpg", href: "/service/mechanical-testing/", body: "Tensile, hardness, impact, bend, fracture, and macro/micro testing — full material conformity to international standards." },
   { title: "Industrial Process Automation Solutions", category: "Main Services", image: "/images/services/automation_full.jpg", href: "/service/industrial-automation/", body: "Total industrial automation — PLC, SCADA, HMI, custom software for oil & gas and industrial sectors." },
   { title: "Constructions", category: "Main Services", image: "/images/services/SKYLIGHT-GANTRY-scaled.jpg", href: "/service/#construction", body: "Gantry & structural fabrication, industrial facility design, piping, civil & mechanical construction, turnkey EPC execution." },
@@ -173,6 +173,7 @@ function ServiceCard({ service, index }: { service: ServiceItem; index: number }
 export default function ServicesAllGrid({ initialPage = 1 }: { initialPage?: number }) {
   const [page, setPage] = useState(initialPage);
   const [searchQuery, setSearchQuery] = useState("");
+  const searchRef = useRef<HTMLDivElement>(null);
   const gridRef = useRef<HTMLDivElement>(null);
 
   // Sync page with initialPage after mount / props change to avoid render side-effects
@@ -203,10 +204,10 @@ export default function ServicesAllGrid({ initialPage = 1 }: { initialPage?: num
       requestAnimationFrame(() => {
         const lenis = typeof window !== "undefined" ? (window as any).lenis : null;
 
-        if (lenis && gridRef.current) {
-          lenis.scrollTo(gridRef.current, { offset: -88 });
+        if (lenis && searchRef.current) {
+          lenis.scrollTo(searchRef.current, { offset: -88 });
         } else {
-          gridRef.current?.scrollIntoView({ behavior: "auto", block: "start" });
+          searchRef.current?.scrollIntoView({ behavior: "auto", block: "start" });
         }
       });
     });
@@ -234,7 +235,7 @@ export default function ServicesAllGrid({ initialPage = 1 }: { initialPage?: num
       <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6">
         
         {/* Search Bar */}
-        <div className="relative max-w-md mx-auto mb-12">
+        <div ref={searchRef} className="relative max-w-md mx-auto mb-12">
           <div className="relative flex items-center">
             <Search className="absolute left-4 w-5 h-5 text-gray-400 pointer-events-none" />
             <input
