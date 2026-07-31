@@ -38,7 +38,7 @@ export default function GreyTeam() {
           minFlakeSize={1.25}
           pixelResolution={150}
           speed={0.8}
-          density={0.25}
+          density={0.1}
           direction={125}
           brightness={0.8}
           variant="square"
@@ -87,8 +87,8 @@ export default function GreyTeam() {
             </FadeUp>
             <FadeUp delay={0.1}>
               <h2 className="text-[clamp(2.2rem,4.5vw,3.2rem)] font-black leading-[1.08] mb-5 tracking-tight" style={{ color: "#F9FAFB" }}>
-                Meet the people{" "}
-                <span style={{ color: "var(--color-brand-red)" }}>behind the scenes</span>
+                Who are the specialists{" "}
+                <span style={{ color: "var(--color-brand-red)" }}>behind every project?</span>
               </h2>
             </FadeUp>
             <FadeUp delay={0.16}>

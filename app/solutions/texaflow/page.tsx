@@ -4,6 +4,7 @@ import { ServiceJsonLd } from "@/components/schema/ServiceJsonLd";
 import { ProductJsonLd } from "@/components/schema/ProductJsonLd";
 import { FaqPageJsonLd } from "@/components/schema/FaqPageJsonLd";
 import { SpeakableJsonLd } from "@/components/schema/SpeakableJsonLd";
+import PageFaqSection from "@/components/PageFaqSection";
 import TexaflowContent from "@/components/solutions/TexaflowContent";
 
 export const metadata: Metadata = {
@@ -87,6 +88,7 @@ export default function TexaflowPage() {
       <FaqPageJsonLd items={faqItems} />
       <SpeakableJsonLd headline="Texaflow — Custody Metering Integrated Control System" />
       <TexaflowContent />
+      <PageFaqSection items={faqItems} title="Questions About" highlight="Texaflow" />
     </>
   );
 }

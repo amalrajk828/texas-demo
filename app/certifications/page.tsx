@@ -4,9 +4,11 @@ import Link from "next/link";
 import { ChevronRight, ArrowRight } from "lucide-react";
 import { BreadcrumbJsonLd } from "@/components/schema/BreadcrumbJsonLd";
 import { SpeakableJsonLd } from "@/components/schema/SpeakableJsonLd";
-
+import { FaqPageJsonLd } from "@/components/schema/FaqPageJsonLd";
+import PageFaqSection from "@/components/PageFaqSection";
+import { certificationsFaq } from "@/lib/pageFaqData";
 export const metadata: Metadata = {
-  title: "Certifications | ISO 9001, ISO 14001, ISO 45001 | Texas Technical Services",
+  title: "Certifications — ISO 9001, 14001, 45001",
   description:
     "Texas Technical Services holds ISO 9001:2015, ISO 14001:2015, and ISO 45001:2018 certifications — demonstrating our commitment to quality, environmental responsibility, and workplace safety across Kuwait and the GCC.",
   alternates: { canonical: "/certifications/" },
@@ -165,6 +167,9 @@ export default function CertificationsPage() {
           </div>
         </div>
       </section>
+
+      <FaqPageJsonLd items={certificationsFaq} />
+      <PageFaqSection items={certificationsFaq} title="Questions About" highlight="Our Certifications" />
 
       {/* CTA */}
       <section className="py-16 lg:py-20">

@@ -164,9 +164,9 @@ export default function ProductCard({
                   {product.date}
                 </span>
               )}
-              {product.date && product.readTime && <span className="w-1 h-1 rounded-full bg-gray-300" />}
+              {product.date && product.readTime && <span className="w-1 h-1 rounded-full bg-gray-300 hidden sm:block" />}
               {product.readTime && (
-                <span className="flex items-center gap-1">
+                <span className="hidden sm:flex items-center gap-1">
                   <Clock className="w-3.5 h-3.5" />
                   {product.readTime}
                 </span>

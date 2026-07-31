@@ -4,6 +4,7 @@ import { BreadcrumbJsonLd } from "@/components/schema/BreadcrumbJsonLd";
 import { ServiceJsonLd } from "@/components/schema/ServiceJsonLd";
 import { ProductJsonLd } from "@/components/schema/ProductJsonLd";
 import { FaqPageJsonLd } from "@/components/schema/FaqPageJsonLd";
+import PageFaqSection from "@/components/PageFaqSection";
 import MitsubishiContent from "@/components/solutions/MitsubishiContent";
 import PwsFloorSolutions from "@/components/solutions/PwsFloorSolutions";
 
@@ -155,6 +156,8 @@ export default async function SolutionDetailPage({ params }: { params: Promise<{
 
       {slug === "mitsubishi-electric" && <MitsubishiContent />}
       {slug === "pws-floor-solutions" && <PwsFloorSolutions />}
+
+      <PageFaqSection items={meta.faqItems} title="Questions About" highlight={meta.serviceName} />
     </div>
   );
 }

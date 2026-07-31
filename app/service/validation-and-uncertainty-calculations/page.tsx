@@ -35,8 +35,8 @@ export const metadata: Metadata = {
   twitter: {
     card: "summary_large_image",
     title: "Validation and Uncertainty Calculations",
-    description:
-      "GUM-compliant uncertainty calculations and custody metering validation. API MPMS Chapter 21, ISO, OIML. Kuwait & Dubai.",
+    description: "GUM-compliant uncertainty calculations and custody metering validation. API MPMS Chapter 21, ISO, OIML. Kuwait & Dubai.",
+    images: [{ url: "/og-default.png", width: 1200, height: 630, alt: "Texas Technical Services" }],
   },
   keywords: [
     "measurement uncertainty calculations Kuwait",

@@ -35,7 +35,7 @@ content: `
         <strong>Custody transfer metering</strong> is a specialized flow measurement discipline designed to determine the physical volume or mass of fluid hydrocarbons during a change of ownership. Often referred to as the "cash register" of the energy sector, custody transfer systems are deployed at critical transactional boundaries across upstream production, midstream pipelines, downstream refining, and terminal distribution networks. Because custody transfer involves high-volume, high-value oil, gas, refined products, and liquefied natural gas (LNG), custody transfer metering requires extreme accuracy, absolute traceability, and strict compliance with national and international metrological standards.
       </p>
 
-      <h2>The Financial Impact of Custody Transfer in Oil &amp; Gas</h2>
+      <h2>How does custody transfer accuracy affect financial risk in oil &amp; gas?</h2>
       <p>
         In industrial custody transfer systems, minor systematic errors scale rapidly into multi-million dollar annual discrepancies. Because flow measurements directly define commercial invoices, metrology engineers must manage custody transfer flow meter systems to achieve the narrowest possible uncertainty limits. Even a fraction of a percent of systematic measurement bias represents significant financial risk.
       </p>
@@ -46,7 +46,7 @@ content: `
         For specialty petrochemical feedstocks, high-purity refined products, and LNG transfers, the financial impact of custody transfer uncertainty is magnified further. Minimizing this uncertainty is the primary objective of custody transfer engineering, driving the design of metering runs, instrument selections, and verification practices.
       </p>
 
-      <h2>Key Components of a Custody Transfer Metering Skid</h2>
+      <h2>What are the key components of a custody transfer metering skid?</h2>
       <p>
         To ensure repeatable and legally defensible custody transfer measurements under varying process conditions, the primary instrumentation is housed within a custody transfer skid. The skid functions as a unified, self-contained metrological system.
       </p>
@@ -134,7 +134,7 @@ content: `
         In-situ provers, such as bidirectional pipe provers or small-volume piston provers, feature a certified, calibrated volume. During a proving cycle, the meter's indicated volume is compared directly to the prover's volume under identical operating conditions. This comparison yields a Meter Factor (MF) that is applied in the flow computer to correct raw meter readings. Master meters, which are highly stable reference meters calibrated at a metrology lab, are also used to prove operational meters.
       </p>
 
-      <h2>Critical Industry Standards</h2>
+      <h2>Which industry standards govern custody transfer metering?</h2>
       <p>
         Custody transfer metrology is governed by rigorous standardization frameworks established by leading industry bodies. These standards dictate hardware designs, installation details, and calculation formulas.
       </p>
@@ -174,7 +174,7 @@ content: `
         </li>
       </ul>
 
-      <h2>Common Flow Measurement Challenges and Solutions</h2>
+      <h2>What are common custody transfer flow measurement challenges and solutions?</h2>
       <p>
         Operating a custody transfer skid requires constant attention to process conditions that can compromise system accuracy:
       </p>
@@ -190,7 +190,7 @@ content: `
         </li>
       </ul>
 
-      <h2>Texas Technical Services: Your Custody Metering Partner</h2>
+      <h2>Why choose Texas Technical Services as your custody metering partner?</h2>
       <p>
         Texas Technical Services (TTS) specializes in the design, audit, validation, and upgrade of custody transfer metering systems. Our instrumentation engineers support operators to ensure that metering skids operate in compliance with API MPMS, AGA, and OIML R117 guidelines. 
       </p>
@@ -198,7 +198,7 @@ content: `
         TTS offers comprehensive metrology solutions, including flow computer configurations (such as OMNI 6000 and OMNI 7000 systems) and high-performance <a href="/service/metering-control-system-integration/">metering control system integration</a>. Through our <a href="/service/flow-measurement-solutions/">flow measurement solutions</a>, we assist plants in minimizing uncertainty, maintaining regulatory compliance, and protecting transactional value.
       </p>
 
-      <h2>Frequently Asked Questions (FAQ)</h2>
+      <h2>What are the most frequently asked questions about custody transfer metering?</h2>
       <p><strong>Q: What is the main difference between allocation metering and custody transfer metering?</strong><br />
       <strong>A:</strong> Custody transfer metering occurs at fiscal change-of-ownership points and requires strict compliance with high-accuracy standards (typically &plusmn;0.25% uncertainty or better), whereas allocation metering is used to distribute shared production volume among partners and operates under wider tolerance thresholds.</p>
 
@@ -240,7 +240,7 @@ content: `
         </ul>
       </div>
 
-      <h2>The Hidden Costs of Running Legacy SCADA</h2>
+      <h2>What are the hidden costs of running legacy SCADA systems?</h2>
       <p>
         Many plant managers postpone SCADA upgrades due to the fear of execution risks and capital expenditure. However, running obsolete control hardware and software introduces massive operational costs. Legacy components suffer from increased failure rates and escalating maintenance fees. Finding replacement hardware for discontinued PLCs or HMIs often forces purchasing teams to source used parts from unverified brokers, presenting severe quality risks.
       </p>
@@ -248,7 +248,7 @@ content: `
         Furthermore, unplanned downtime is exceptionally costly. For a process plant, refinery, or power utility, one hour of unscheduled outages can cost tens or hundreds of thousands of dollars in lost production, startup penalties, and labor overhead. Additionally, legacy systems require specialized knowledge. As senior automation engineers retire, plants face a growing talent shortage that makes maintaining obsolete code bases increasingly difficult.
       </p>
 
-      <h2>5 Signs It's Time to Upgrade</h2>
+      <h2>What are the signs that it is time to upgrade your SCADA system?</h2>
       <p>
         Identifying the symptoms of an failing control architecture allows operators to plan upgrades proactively, avoiding sudden catastrophic breakdowns.
       </p>
@@ -278,7 +278,7 @@ content: `
         Modern business intelligence tools, enterprise historians, and predictive analytics systems require clean, high-frequency data streams. Legacy SCADA systems, restricted by slow serial ports and proprietary databases, cannot provide the real-time visibility required to optimize production and manage energy efficiency metrics.
       </p>
 
-      <h2>Legacy vs. Modern SCADA</h2>
+      <h2>How do legacy SCADA systems compare to modern SCADA architectures?</h2>
       <p>
         Understanding the core architecture differences illustrates why modernization is necessary for modern process control:
       </p>
@@ -317,7 +317,7 @@ content: `
         </table>
       </div>
 
-      <h2>Best Practices for Seamless SCADA Migration</h2>
+      <h2>What are the best practices for a seamless SCADA migration?</h2>
       <p>
         A successful SCADA upgrade requires careful planning to minimize risks and eliminate unplanned process interruptions. Following standardized phases ensures project success:
       </p>
@@ -332,7 +332,7 @@ content: `
         To avoid costly process shutdowns, modern SCADA upgrades use phased migrations and parallel system execution. The new system executes in shadow mode alongside the legacy controllers, validating configuration parameters and alarm sequences on live process inputs. Once the configuration data matches the legacy metrics with zero discrepancies, the system cutover is executed.
       </p>
 
-      <h2>How TTS Integrates Multi-Brand PLC &amp; HMI Systems</h2>
+      <h2>How does TTS integrate multi-brand PLC and HMI systems?</h2>
       <p>
         Texas Technical Services Co. (TTS) specializes in legacy control system modernization, integrating high-performance hardware and software suites. Our engineering team has extensive experience upgrading older controllers to modern Mitsubishi Electric PLCs (such as the MELSEC iQ-R or iQ-F series), Siemens S7-1500 architectures, Allen-Bradley ControlLogix processors, and Schneider Electric Modicon systems.
       </p>
@@ -343,7 +343,7 @@ content: `
         Before commencing your next upgrade project, request a TTS SCADA system audit to review your network safety, tag layouts, and hardware life expectancy. Our engineers are certified to deliver comprehensive integration and support from concept through commissioning.
       </p>
 
-      <h2>Frequently Asked Questions (FAQ)</h2>
+      <h2>What are the most frequently asked questions about SCADA system upgrades?</h2>
       <p><strong>Q: What is the primary focus of the IEC 62443 standard?</strong><br />
       <strong>A:</strong> The IEC 62443 standard establishes cybersecurity requirements for industrial automation and control systems (IACS), defining zone segmentation and hardening procedures.</p>
 
@@ -383,7 +383,7 @@ content: `
         </p>
       </div>
 
-      <h2>What is a CEMS and Why is it Mandatory?</h2>
+      <h2>What is a CEMS and why is it mandatory?</h2>
       <p>
         Environmental regulatory bodies (such as the EPA and European environmental agencies) mandate that power plants, waste incinerators, and refineries monitor stack gases continuously. CEMS provides a legally binding record of stack emissions. 
       </p>
@@ -391,7 +391,7 @@ content: `
         Operating without a functional CEMS or failing to meet availability limits (often 95% or higher) results in severe operational penalties and plant shutdowns.
       </p>
 
-      <h2>Extractive vs. In-Situ CEMS</h2>
+      <h2>How do extractive and in-situ CEMS technologies compare?</h2>
       <p>
         The two main CEMS technologies differ in their sample handling and measurement locations:
       </p>
@@ -430,7 +430,7 @@ content: `
         </table>
       </div>
 
-      <h2>Key CEMS Components</h2>
+      <h2>What are the key components of a continuous emissions monitoring system?</h2>
       <h3>Gas Analyzers (SO2, NOx, CO2, O2)</h3>
       <p>
         The gas analyzers measure concentration profiles. Standard analytical methods include Non-Dispersive Infrared (NDIR) spectroscopy for CO, CO2, and SO2, chemiluminescence for NOx, and paramagnetic sensors for oxygen verification.
@@ -446,17 +446,17 @@ content: `
         The DAHS is the software core of the system. It records raw analyzer signals, calculates dry/wet corrections, scales values against atmospheric oxygen percentages, and compiles hourly and daily averages into standardized compliance reports.
       </p>
 
-      <h2>ISO 14001 and Environmental Standards</h2>
+      <h2>How do ISO 14001 and environmental standards apply to CEMS?</h2>
       <p>
         A compliant CEMS must operate within an environmental management system, satisfying ISO 14001:2015 specifications. In Europe, CEMS performance is governed by EN 15267 certification standards, and operational quality checks are executed in compliance with EN 14181 guidelines.
       </p>
 
-      <h2>Calibration and QA/QC Best Practices</h2>
+      <h2>What are the best practices for CEMS calibration and QA/QC?</h2>
       <p>
         Safety and compliance audits demand regular calibrations. Automated QAL3 checks inject reference calibration gases (zero and span values) directly at the stack probe to verify system response times and drift levels. The system calibration curve is validated through independent reference test methods (QAL2) and Annual Surveillance Tests (AST).
       </p>
 
-      <h2>TTS CEMS Integration Services</h2>
+      <h2>How does TTS deliver CEMS integration services?</h2>
       <p>
         Texas Technical Services (TTS) provides custom engineering, supply, integration, and calibration services for Continuous Emissions Monitoring Systems (CEMS). Our instrumentation engineers configure extractive and in-situ CEMS, install heated lines, and configure DAHS software to meet EPA 40 CFR Part 60/75 and EN 14181 standards. 
       </p>
@@ -464,7 +464,7 @@ content: `
         TTS ensures your environmental monitoring is fully integrated, certified, and compliant. Learn more about our <a href="/products/analyzers/cems/">continuous emissions monitoring systems (CEMS)</a> and <a href="/products/analyzers/gas-analyzers/">process gas analyzers</a>.
       </p>
 
-      <h2>Frequently Asked Questions (FAQ)</h2>
+      <h2>What are the most frequently asked questions about CEMS compliance?</h2>
       <p><strong>Q: What does EPA 40 CFR Part 60 regulate for CEMS?</strong><br />
       <strong>A:</strong> EPA 40 CFR Part 60 regulates the installation, performance specifications, and quality control procedures for emissions monitoring systems in new source industries.</p>
 
@@ -497,7 +497,7 @@ content: `
         <strong>Liquid vs gas flow meters</strong> comparison highlights that liquid meters operate primarily under fluid compressibility limits and viscous friction boundaries, whereas gas flow meters must resolve high pressure-dependent volume expansions and temperature compressibility variations. Selecting the correct flow measurement technology is critical in petrochemical applications, where fluids range from highly viscous heavy crude oils to compressible natural gas mixtures and superheated steam. Making the wrong choice leads to high uncertainty, pressure drop penalties, and costly process upsets.
       </p>
 
-      <h2>Why Flow Meter Selection Matters in Petrochemical Applications</h2>
+      <h2>Why does flow meter selection matter in petrochemical applications?</h2>
       <p>
         In the petrochemical and process industries, choosing a flow meter involves more than matching connection sizes. Fluid states dictate physical parameters: liquids are essentially incompressible and present high viscosity variations, while gases are highly compressible and experience significant density shifts with minor temperature or pressure fluctuations.
       </p>
@@ -505,7 +505,7 @@ content: `
         Evaluating selection options requires analyzing the Reynolds number ($Re$), which defines whether flow is laminar, transitional, or turbulent. Velocity-based meters (like turbine or vortex meters) rely on turbulent profiles to preserve their calibration accuracy classes, whereas mass-based Coriolis meters remain highly accurate across all flow regimes. Factors like turndown ratio (rangeability) and downstream pressure drop also directly impact operational efficiency and cost of ownership.
       </p>
 
-      <h2>Liquid Flow Meter Technologies</h2>
+      <h2>Which liquid flow meter technologies are used in petrochemical applications?</h2>
       <p>
         Liquid metrology relies on technologies optimized for fluid densities, viscosities, and process conditions:
       </p>
@@ -525,7 +525,7 @@ content: `
         An oval gear or helical flow meter is a positive displacement (PD) device that physically isolates and measures discrete fluid volumes using meshing gears or rotors. These meters are exceptionally suited for high-viscosity fluids like heavy crude oil, fuel oils, and viscous chemical polymers, where other technologies suffer from high pressure drops or loss of linearity.
       </p>
 
-      <h2>Gas Flow Meter Technologies</h2>
+      <h2>Which gas flow meter technologies are used in petrochemical applications?</h2>
       <p>
         Gas flow measurement requires compensation for pressure and temperature changes, using technologies designed for compressible states:
       </p>
@@ -545,7 +545,7 @@ content: `
         A vortex shedding flow meter is a velocity-based sensor that measures the frequency of vortices shed from a bluff body placed in the flow path. Since the shedding frequency is directly proportional to flow velocity, vortex meters provide highly repeatable measurements for steam, clean natural gas, and utility gas lines under high temperatures, without moving parts.
       </p>
 
-      <h2>Key Selection Criteria</h2>
+      <h2>What are the key criteria for selecting a flow meter?</h2>
       <div class="overflow-x-auto my-8 not-prose">
         <table class="min-w-full divide-y divide-gray-200 border border-gray-150">
           <thead class="bg-slate-50">
@@ -591,7 +591,7 @@ content: `
         </table>
       </div>
 
-      <h2>Installation and Maintenance Considerations</h2>
+      <h2>What installation and maintenance considerations affect flow meter performance?</h2>
       <p>
         Achieving the specified accuracy class of a flow meter requires careful attention during physical installation. For velocity-based meters (ultrasonic, turbine, and orifice plate), velocity profile distortion caused by elbows, valves, and header manifolds will degrade accuracy. Engineers must install straight piping runs and high-performance flow conditioners to ensure profile symmetry. 
       </p>
@@ -599,7 +599,7 @@ content: `
         Additionally, the flow calibration must remain traceable. Over time, erosion, corrosion, or mechanical wear alters the meter's internal dimensions, shifting the calibration factor. Regular calibrations at certified flow laboratories or in-situ meter proving are required to maintain compliance and resolve measurement drift.
       </p>
 
-      <h2>TTS Flow Meter Supply and Commissioning</h2>
+      <h2>How does TTS supply and commission flow meters?</h2>
       <p>
         Texas Technical Services (TTS) provides comprehensive flow meter sizing, supply, configuration, and commissioning services. Our engineers assist you in selecting the optimal technology for liquid and gas systems, ensuring your installations are optimized for accuracy and low pressure drops. 
       </p>
@@ -607,7 +607,7 @@ content: `
         Whether deploying Coriolis mass meters for high-value liquid petrochemicals or transit-time ultrasonic systems for high-pressure natural gas lines, TTS ensures compliance with API MPMS Chapter 5 and AGA guidelines. We also provide certified <a href="/service/flow-meter-calibration/">flow meter calibration</a> services and <a href="/products/flow-meters/liquid-flow-meters/">liquid flow meters</a> selections to keep your facility performing at peak efficiency.
       </p>
 
-      <h2>Frequently Asked Questions (FAQ)</h2>
+      <h2>What are the most frequently asked questions about liquid and gas flow meters?</h2>
       <p><strong>Q: How does fluid viscosity affect flow meter selection?</strong><br />
       <strong>A:</strong> High viscosity increases pressure drops and creates laminar flow conditions, making positive displacement (helical gear) or Coriolis mass flow meters much more suitable than turbine flow meters.</p>
 
@@ -640,12 +640,12 @@ content: `
         <strong>Custody metering skid validation</strong> is the structured procedure of verifying that all instrumentation, calculation algorithms, and physical piping configurations of a metering skid operate within specified uncertainty limits. To satisfy ISO 9001:2015 quality standards and API MPMS compliance, operators must establish documented verification procedures at every stage of the skid's lifecycle—from factory manufacturing through on-site commissioning and routine operations.
       </p>
 
-      <h2>What is Metering Skid Validation?</h2>
+      <h2>What is metering skid validation and why is it required?</h2>
       <p>
         Skid validation is a comprehensive quality process designed to verify that the integrated metrology system meets the required accuracy classes and uncertainty budgets. It represents the primary defense against commercial invoice disputes and compliance failures. Validation involves checking physical instrument loops, validating flow computer parameters, and calculating the combined expanded uncertainty of the entire system.
       </p>
 
-      <h2>Factory Acceptance Testing (FAT) — What to Verify</h2>
+      <h2>What should you verify during factory acceptance testing (FAT) of a metering skid?</h2>
       <p>
         The Factory Acceptance Test (FAT) represents the initial verification phase performed at the manufacturer's facility prior to shipping. During the FAT, engineers execute three main procedures:
       </p>
@@ -661,7 +661,7 @@ content: `
         </li>
       </ol>
 
-      <h2>Site Acceptance Testing (SAT) — Field Commissioning Checks</h2>
+      <h2>What SAT and field commissioning checks validate a metering skid?</h2>
       <p>
         The Site Acceptance Test (SAT) is executed at the plant site to confirm that shipping, installation, and field connections have not compromised the system's metrology. The SAT focuses on end-to-end loops and live-fluid proving checks.
       </p>
@@ -700,7 +700,7 @@ content: `
         </table>
       </div>
 
-      <h2>Ongoing Maintenance and Calibration Requirements</h2>
+      <h2>What ongoing maintenance and calibration does a metering skid require?</h2>
       <p>
         Once the skid is commissioned, maintaining ISO 9001 metering compliance requires structured calibration intervals and proving cycles.
       </p>
@@ -715,7 +715,7 @@ content: `
         Flow meter proving frequency is determined by pipeline rules or contractual terms. High-volume fiscal skids are often proved weekly or after specific batch transfers, using dedicated piston or displacement provers to calculate updated Meter Factors.
       </p>
 
-      <h2>Measurement Uncertainty Calculations (GUM Methodology)</h2>
+      <h2>How are measurement uncertainty calculations performed using GUM methodology?</h2>
       <p>
         Evaluating the total uncertainty of a metering skid requires combining the errors of all components according to the Guide to the Expression of Uncertainty in Measurement (GUM) methodology. The GUM framework defines Type A evaluation (statistical analysis of observations) and Type B evaluation (using calibration certificates, manufacturer specifications, and standards data). 
       </p>
@@ -723,7 +723,7 @@ content: `
         Engineers calculate sensitivity coefficients to determine how individual transmitter uncertainties affect the final volume or mass calculation. By combining these standard uncertainties quadratically and applying a coverage factor ($k=2$), engineers establish the expanded system uncertainty, typically targeting &plusmn;0.25% or better for liquids.
       </p>
 
-      <h2>How TTS Delivers Validation Services</h2>
+      <h2>How does TTS deliver metering skid validation services?</h2>
       <p>
         Texas Technical Services (TTS) provides comprehensive metering skid validation, audits, and uncertainty calculation services. Our engineers conduct FAT/SAT witness testing, calibration loop verifications, and GUM-compliant uncertainty calculations. 
       </p>
@@ -731,7 +731,7 @@ content: `
         TTS ensures your custody metering skids comply with ISO 9001:2015, API MPMS Chapter 21, and OIML R117 standards. We also offer expert <a href="/service/validation-uncertainty-calculations/">validation uncertainty calculations</a> and <a href="/service/audits-specialized-consultancy/">audits specialized consultancy</a> services.
       </p>
 
-      <h2>Frequently Asked Questions (FAQ)</h2>
+      <h2>What are the most frequently asked questions about metering skid validation?</h2>
       <p><strong>Q: What is the difference between FAT and SAT for metering skids?</strong><br />
       <strong>A:</strong> Factory Acceptance Testing verifies system engineering and loops at the manufacturer's workshop, while Site Acceptance Testing validates operational integration and metrology under live field conditions.</p>
 
@@ -5252,7 +5252,7 @@ content: `
     pillar: "Pillar 1: Flow Measurement & Custody Metering",
     description: "Comprehensive guide to custody transfer in pipeline operations — covering meter station design, proving frequency, ticketing, and dispute prevention.",
     keywords: "custody transfer pipeline, pipeline metering, transfer operations",
-    image: "/refinery.jpg",
+    image: "/refinery.webp",
     imageAlt: "An aerial view of an oil refinery pipeline junction and distillation columns at sunset.",
 content: `
       <p>
@@ -8461,7 +8461,7 @@ content: `
     pillar: "Pillar 1: Flow Measurement & Custody Metering",
     description: "Guide to flow meter selection in water treatment plants — covering electromagnetic flow meters, open channel measurement, and partially-full pipes.",
     keywords: "water treatment flow measurement, municipal water, flow meters",
-    image: "/water_treatment.jpg",
+    image: "/water_treatment.webp",
     imageAlt: "Large circular clarification and sedimentation tanks in a wastewater treatment facility.",
 content: `
       <p>
@@ -9274,7 +9274,7 @@ content: `
     pillar: "Pillar 1: Flow Measurement & Custody Metering",
     description: "Instrumentation and material selection guide for desalination plants — covering RO membrane monitoring, high pressure meters, and salinity sensors.",
     keywords: "desalination instrumentation, flow pressure measurement, desalination",
-    image: "/water_treatment.jpg",
+    image: "/water_treatment.webp",
     imageAlt: "Reverse osmosis filter racks and pressure gauges in a sea water desalination plant.",
 content: `
       <p>

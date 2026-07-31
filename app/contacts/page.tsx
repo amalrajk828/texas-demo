@@ -2,6 +2,9 @@ import type { Metadata } from "next";
 import { BreadcrumbJsonLd } from "@/components/schema/BreadcrumbJsonLd";
 import { ContactPageJsonLd } from "@/components/schema/ContactPageJsonLd";
 import { SpeakableJsonLd } from "@/components/schema/SpeakableJsonLd";
+import { FaqPageJsonLd } from "@/components/schema/FaqPageJsonLd";
+import PageFaqSection from "@/components/PageFaqSection";
+import { contactsFaq } from "@/lib/pageFaqData";
 import ContactPageClient from "@/components/ContactPage";
 
 export const metadata: Metadata = {
@@ -64,6 +67,8 @@ export default function ContactPage() {
       />
       <SpeakableJsonLd headline="Contact Texas Technical Services — Kuwait & Dubai" />
       <ContactPageClient />
+      <FaqPageJsonLd items={contactsFaq} />
+      <PageFaqSection items={contactsFaq} title="Questions About" highlight="Contacting TTS" />
     </>
   );
 }

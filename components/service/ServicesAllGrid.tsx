@@ -3,8 +3,9 @@ import Image from "next/image";
 import Link from "next/link";
 import { motion, useInView } from "framer-motion";
 import { useRef, useState, useEffect, useMemo } from "react";
-import { useRouter } from "next/navigation";
+import { flushSync } from "react-dom";
 import { ArrowRight, ChevronLeft, ChevronRight, Search, X } from "lucide-react";
+import { useIsMobile } from "@/hooks/useIsMobile";
 
 interface ServiceItem {
   title: string;
@@ -21,10 +22,10 @@ const ALL_SERVICES: ServiceItem[] = [
   { title: "Upgrade of Metering Control System", category: "Flow Measurement Solutions", image: "/images/services/metering-upgrade.png", href: "/service/upgrade-of-metering-control-system/", body: "Expert Metering Control System Upgradation — optimizing existing control systems to meet the latest industry standards." },
   { title: "Flow Computer Configuration", category: "Flow Measurement Solutions", image: "/images/services/flow-computer.png", href: "/service/flow-computer-configuration/", body: "Customized flow computational solutions in compliance with API MPMS, AGA, ISO, NTEP & OIML for seamless integration." },
   { title: "Flow Meter Calibration", category: "Flow Measurement Solutions", image: "/images/services/Banc-Calibr.jpg", href: "/service/flow-meter-calibration/", body: "Faure Herman offers calibration services in our world class ILAC/COFRAC ISO 17025 accredited facility located in France to handle your range of flowmeters, with services available for other brands as well." },
-  { title: "Repair & Upgrades for Helical Flow Meters", category: "Flow Measurement Solutions", image: "/images/services/helical-repair.png", href: "/service/repair-upgrades-helical-flow-meters/", body: "Preventive and corrective maintenance, performance and failure analysis for helical flow meter assets." },
-  { title: "Audits and Specialized Consultancy", category: "Flow Measurement Solutions", image: "/images/services/audits-1500x750-1.jpeg", href: "/service/audits-specialized-consultancy/", body: "Comprehensive audits ensuring compliance with industry regulations and precise measurements within custody metering skid systems." },
-  { title: "Validation and Uncertainty Calculations", category: "Flow Measurement Solutions", image: "/images/services/validation.jpg", href: "/service/validation-uncertainty-calculations/", body: "Advanced techniques to assess and minimize uncertainties — confidence in the reliability of your measurement data." },
-  { title: "Commissioning and After Sales Support", category: "Flow Measurement Solutions", image: "/images/services/commissioning.png", href: "/service/commissioning-after-sales-support/", body: "Seamless integration and performance of critical equipment — flow meters, metering skids, flow computers, and control systems." },
+  { title: "Repair & Upgrades for Helical Flow Meters", category: "Flow Measurement Solutions", image: "/images/services/helical-repair.webp", href: "/service/repair-upgrades-for-helical-flow-meters/", body: "Preventive and corrective maintenance, performance and failure analysis for helical flow meter assets." },
+  { title: "Audits and Specialized Consultancy", category: "Flow Measurement Solutions", image: "/images/services/audits-1500x750-1.jpeg", href: "/service/audits-and-specialized-consultancy/", body: "Comprehensive audits ensuring compliance with industry regulations and precise measurements within custody metering skid systems." },
+  { title: "Validation and Uncertainty Calculations", category: "Flow Measurement Solutions", image: "/images/services/validation.jpg", href: "/service/validation-and-uncertainty-calculations/", body: "Advanced techniques to assess and minimize uncertainties — confidence in the reliability of your measurement data." },
+  { title: "Commissioning and After Sales Support", category: "Flow Measurement Solutions", image: "/images/services/commissioning.png", href: "/service/commissioning-and-after-sales-support/", body: "Seamless integration and performance of critical equipment — flow meters, metering skids, flow computers, and control systems." },
   { title: "Genuine Spare Parts", category: "Flow Measurement Solutions", image: "/images/services/spare-parts.png", href: "/service/genuine-spare-parts/", body: "Authorized OEM Representative — genuine spare parts for flow metering, flow meters, control systems, analyzers, CEMS, and industrial sensors." },
 
   // Page 2 Items
@@ -35,7 +36,7 @@ const ALL_SERVICES: ServiceItem[] = [
   { title: "Supply and Installation of Suspended Access Equipment", category: "Constructions", image: "/images/services/WINDOW-CLEANING-FACADE-CLEANING-BMU-CRADLE-ROOF-MACHINE-13-1-scaled.jpg", href: "/service/#construction", body: "Supply and installation of telescopic roof machines, twin track roof machines, powered cradles, recess cradles, monorails, and davit systems." },
   { title: "Lifting Equipment Inspection", category: "Specialized Inspection Services", image: "/images/services/lifting_equp.png", href: "/service/lifting-equipment-inspection-2/", body: "Systematic inspection of cranes, hoists, forklifts, and elevators — certified inspectors identify defects, wear, and safety standard deviations." },
   { title: "Hose Test", category: "Specialized Inspection Services", image: "/images/services/HOSE-TEST.jpg", href: "/service/hose-test-2/", body: "Quality assurance field water check for installed curtain walls, exterior windows and doors — identifies leakage vulnerabilities." },
-  { title: "Air Permeability Test", category: "Specialized Inspection Services", image: "", placeholderNumber: "09", href: "/service/air-permeability-test-2/", body: "Measures air infiltration through windows, doors, and curtain walls per ASTM E783 — locates air leakage paths." },
+  { title: "Air Permeability Test", category: "Specialized Inspection Services", image: "/images/services/AIR-PERMEABILITY-TEST.jpg", href: "/service/air-permeability-test-2/", body: "Measures air infiltration through windows, doors, and curtain walls per ASTM E783 — locates air leakage paths." },
   { title: "Water Penetration Test", category: "Specialized Inspection Services", image: "/images/services/WATER-PENETRATION-TEST.jpg", href: "/service/water-penetration-test-2/", body: "Determines whether leakage is present through windows, doors, and curtain wall systems from exterior to interior." },
 
   // Page 3 Items
@@ -68,8 +69,8 @@ const ALL_SERVICES: ServiceItem[] = [
   { title: "Structural Steel Erection", category: "Constructions", image: "/images/services/Structural-Steel-Work.webp", href: "/service/#construction", body: "Pre-fabricated steel component assembly creating skeletal frameworks for buildings, bridges, and large industrial structures." },
   { title: "Steel Fabrication", category: "Constructions", image: "/images/services/Fabrication-Shop-Grinding.jpg", href: "/service/#construction", body: "Transforming raw steel into finished structures through cutting, bending, welding, and assembling — skids, pipework, and structural components." },
   { title: "Commissioning and Start-up Support", category: "Industrial Automation", image: "/images/services/DigitalOilAndGas-1 (1).webp", href: "/service/commissioning-and-start-up-support/", body: "Validating automation systems from pre-commissioning through hot commissioning, start-up, and post-commissioning handover." },
-  { title: "Control System Integration and Upgradation", category: "Industrial Automation", image: "/images/services/Blank-Funky-Collage-Template.png", href: "/service/system-software-upgrade/", body: "PLC and SCADA-based automation and system integration — from legacy system migrations to full greenfield automation builds." },
-  { title: "Process Plant Automation", category: "Industrial Automation", image: "", placeholderNumber: "08", href: "/service/plant-automation/", body: "Top-tier Plant Automation solutions streamlining industrial processes — boosting efficiency, reducing costs, and enhancing productivity." },
+  { title: "Control System Integration and Upgradation", category: "Industrial Automation", image: "/images/services/Blank-Funky-Collage-Template.webp", href: "/service/system-software-upgrade/", body: "PLC and SCADA-based automation and system integration — from legacy system migrations to full greenfield automation builds." },
+  { title: "Process Plant Automation", category: "Industrial Automation", image: "/images/services/automation.jpg", href: "/service/plant-automation/", body: "Top-tier Plant Automation solutions streamlining industrial processes — boosting efficiency, reducing costs, and enhancing productivity." },
 
   // Page 6 Items
   { title: "Inspection & Testing", category: "Main Services", image: "/images/services/Usinage-2.jpg", href: "/service/inspection-testing/", body: "Comprehensive inspection and testing — equipment inspections, NDT, functional testing, and certification to industry standards." },
@@ -79,7 +80,7 @@ const ALL_SERVICES: ServiceItem[] = [
   { title: "Magnetic Particle Inspection (MT)", category: "Non Destructive Testing", image: "/images/services/Magnetic-Particle-Inspection.jpg", href: "/service/magnetic-particle-inspection-mt/", body: "Detects surface and near-surface defects in ferromagnetic materials — fast and effective with minimal surface preparation." },
   { title: "Liquid / Dye Penetrant Examination (PT)", category: "Non Destructive Testing", image: "/images/services/PT.jpg", href: "/service/liquid-penetrant-dye-penetrant-examination-pt/", body: "Detects surface defects using capillary action — effective on metals, ceramics, plastics, and non-metallic materials." },
   { title: "Visual Inspection (VI)", category: "Non Destructive Testing", image: "/images/services/ndt.jpg", href: "/service/visual-inspection-vi/", body: "Systematic visual examination of surfaces, welds, and components — the first step in any NDT program." },
-  { title: "Non Destructive Testing (NDT)", category: "Inspection & Testing", image: "", placeholderNumber: "01", href: "/service/non-destructive-testing-ndt/", body: "Visual Inspection, Liquid/Dye Penetrant, Magnetic Particle, Radiographic Testing, and Ultrasonic Testing services." },
+  { title: "Non Destructive Testing (NDT)", category: "Inspection & Testing", image: "/images/services/ndt.jpg", href: "/service/non-destructive-testing-ndt/", body: "Visual Inspection, Liquid/Dye Penetrant, Magnetic Particle, Radiographic Testing, and Ultrasonic Testing services." },
   { title: "Mechanical Testing", category: "Inspection & Testing", image: "/images/services/mechanical-testing.jpg", href: "/service/mechanical-testing/", body: "Tensile, hardness, impact, bend, fracture, and macro/micro testing — full material conformity to international standards." },
   { title: "Industrial Process Automation Solutions", category: "Main Services", image: "/images/services/automation_full.jpg", href: "/service/industrial-automation/", body: "Total industrial automation — PLC, SCADA, HMI, custom software for oil & gas and industrial sectors." },
   { title: "Constructions", category: "Main Services", image: "/images/services/SKYLIGHT-GANTRY-scaled.jpg", href: "/service/#construction", body: "Gantry & structural fabrication, industrial facility design, piping, civil & mechanical construction, turnkey EPC execution." },
@@ -90,6 +91,7 @@ const PER_PAGE = 9;
 function ServiceCard({ service, index }: { service: ServiceItem; index: number }) {
   const ref = useRef<HTMLDivElement>(null);
   const inView = useInView(ref, { once: true, margin: "-40px" });
+  const isMobile = useIsMobile();
   return (
     <motion.div
       ref={ref}
@@ -134,8 +136,8 @@ function ServiceCard({ service, index }: { service: ServiceItem; index: number }
           className="relative flex flex-col flex-1 p-[18px] overflow-hidden rounded-b-2xl"
           style={{
             background: "rgba(255, 255, 255, 0.20)",
-            backdropFilter: "blur(28px)",
-            WebkitBackdropFilter: "blur(28px)",
+            backdropFilter: isMobile ? "none" : "blur(28px)",
+            WebkitBackdropFilter: isMobile ? "none" : "blur(28px)",
             borderTop: "1px solid rgba(255, 255, 255, 0.60)",
             boxShadow: "inset 0 1px 1px rgba(255, 255, 255, 0.8)",
           }}
@@ -171,7 +173,8 @@ function ServiceCard({ service, index }: { service: ServiceItem; index: number }
 export default function ServicesAllGrid({ initialPage = 1 }: { initialPage?: number }) {
   const [page, setPage] = useState(initialPage);
   const [searchQuery, setSearchQuery] = useState("");
-  const router = useRouter();
+  const searchRef = useRef<HTMLDivElement>(null);
+  const gridRef = useRef<HTMLDivElement>(null);
 
   // Sync page with initialPage after mount / props change to avoid render side-effects
   useEffect(() => {
@@ -193,13 +196,21 @@ export default function ServicesAllGrid({ initialPage = 1 }: { initialPage?: num
   const currentServices = filteredServices.slice(start, start + PER_PAGE);
 
   const goTo = (p: number) => {
-    setPage(p);
-    if (p === 1) {
-      router.push("/service/");
-    } else {
-      router.push(`/service/page/${p}/`);
-    }
-    window.scrollTo({ top: 0, behavior: "smooth" });
+    flushSync(() => {
+      setPage(p);
+    });
+
+    requestAnimationFrame(() => {
+      requestAnimationFrame(() => {
+        const lenis = typeof window !== "undefined" ? (window as any).lenis : null;
+
+        if (lenis && searchRef.current) {
+          lenis.scrollTo(searchRef.current, { offset: -88 });
+        } else {
+          searchRef.current?.scrollIntoView({ behavior: "auto", block: "start" });
+        }
+      });
+    });
   };
 
   return (
@@ -224,7 +235,7 @@ export default function ServicesAllGrid({ initialPage = 1 }: { initialPage?: num
       <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6">
         
         {/* Search Bar */}
-        <div className="relative max-w-md mx-auto mb-12">
+        <div ref={searchRef} className="relative max-w-md mx-auto mb-12">
           <div className="relative flex items-center">
             <Search className="absolute left-4 w-5 h-5 text-gray-400 pointer-events-none" />
             <input
@@ -261,7 +272,10 @@ export default function ServicesAllGrid({ initialPage = 1 }: { initialPage?: num
             </p>
           </div>
         ) : (
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5 sm:gap-[22px] mb-14">
+          <div
+            ref={gridRef}
+            className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5 sm:gap-[22px] mb-14 scroll-mt-[88px]"
+          >
             {currentServices.map((svc, i) => (
               <ServiceCard key={`${svc.title}-${i}`} service={svc} index={i} />
             ))}
@@ -272,15 +286,15 @@ export default function ServicesAllGrid({ initialPage = 1 }: { initialPage?: num
         {filteredServices.length > 0 && (
           <>
             <div className="flex items-center justify-center gap-2 flex-wrap">
-              <button onClick={() => goTo(Math.max(1, page - 1))} disabled={page === 1} className="w-9 h-9 rounded-lg border border-white/60 bg-white/40 backdrop-blur-md flex items-center justify-center text-[#0B0D26] hover:border-[#e7212b]/40 hover:text-[#e7212b] disabled:opacity-30 disabled:cursor-not-allowed transition-all duration-200 shadow-sm">
+              <button onClick={() => goTo(Math.max(1, page - 1))} disabled={page === 1} className="min-w-[44px] min-h-[44px] rounded-lg border border-white/60 bg-white/40 backdrop-blur-md flex items-center justify-center text-[#0B0D26] hover:border-[#e7212b]/40 hover:text-[#e7212b] disabled:opacity-30 disabled:cursor-not-allowed transition-all duration-200 shadow-sm">
                 <ChevronLeft className="w-4 h-4" />
               </button>
               {Array.from({ length: totalPages }, (_, i) => i + 1).map((p) => (
-                <button key={p} onClick={() => goTo(p)} className={`w-9 h-9 rounded-lg border text-[13px] font-semibold transition-all duration-200 ${p === page ? "bg-[#e7212b] border-[#e7212b] text-white shadow-lg shadow-[#e7212b]/20" : "bg-white/40 backdrop-blur-md border-white/60 text-[#0B0D26] hover:border-[#e7212b]/40 hover:text-[#e7212b] shadow-sm"}`}>
+                <button key={p} onClick={() => goTo(p)} className={`min-w-[44px] min-h-[44px] rounded-lg border text-[13px] font-semibold transition-all duration-200 ${p === page ? "bg-[#e7212b] border-[#e7212b] text-white shadow-lg shadow-[#e7212b]/20" : "bg-white/40 backdrop-blur-md border-white/60 text-[#0B0D26] hover:border-[#e7212b]/40 hover:text-[#e7212b] shadow-sm"}`}>
                   {p}
                 </button>
               ))}
-              <button onClick={() => goTo(Math.min(totalPages, page + 1))} disabled={page === totalPages} className="w-9 h-9 rounded-lg border border-white/60 bg-white/40 backdrop-blur-md flex items-center justify-center text-[#0B0D26] hover:border-[#e7212b]/40 hover:text-[#e7212b] disabled:opacity-30 disabled:cursor-not-allowed transition-all duration-200 shadow-sm">
+              <button onClick={() => goTo(Math.min(totalPages, page + 1))} disabled={page === totalPages} className="min-w-[44px] min-h-[44px] rounded-lg border border-white/60 bg-white/40 backdrop-blur-md flex items-center justify-center text-[#0B0D26] hover:border-[#e7212b]/40 hover:text-[#e7212b] disabled:opacity-30 disabled:cursor-not-allowed transition-all duration-200 shadow-sm">
                 <ChevronRight className="w-4 h-4" />
               </button>
             </div>

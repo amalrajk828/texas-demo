@@ -20,7 +20,12 @@ export const metadata: Metadata = {
     url: "/service/visual-inspection-vi/",
     images: [{ url: "/og-default.png", width: 1200, height: 630, alt: "Visual Inspection — Texas Technical Services" }],
   },
-  twitter: { card: "summary_large_image", title: "Visual Inspection (VI) — Certified Weld & Structure", description: "Surface and external visual inspection NDT. Kuwait & Dubai." },
+  twitter: {
+    card: "summary_large_image",
+    title: "Visual Inspection (VI) — Certified Weld & Structure",
+    description: "Surface and external visual inspection NDT. Kuwait & Dubai.",
+    images: [{ url: "/og-default.png", width: 1200, height: 630, alt: "Texas Technical Services" }],
+  },
   keywords: ["visual inspection Kuwait", "NDT visual inspection Kuwait", "weld visual examination Kuwait", "surface inspection Kuwait", "VI NDT Kuwait", "remote visual inspection Kuwait", "Texas Technical Services visual inspection"],
 };
 

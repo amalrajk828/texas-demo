@@ -33,8 +33,8 @@ export const metadata: Metadata = {
   twitter: {
     card: "summary_large_image",
     title: "Genuine Spare Parts — Flow Meters, PLCs, Analyzers",
-    description:
-      "Genuine Faure Herman OEM spare parts for helical flow meters. Authorised representative — Kuwait & Dubai.",
+    description: "Genuine Faure Herman OEM spare parts for helical flow meters. Authorised representative — Kuwait & Dubai.",
+    images: [{ url: "/og-default.png", width: 1200, height: 630, alt: "Texas Technical Services" }],
   },
   keywords: [
     "Faure Herman spare parts Kuwait",

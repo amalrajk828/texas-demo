@@ -20,7 +20,12 @@ export const metadata: Metadata = {
     url: "/service/bend-test/",
     images: [{ url: "/og-default.png", width: 1200, height: 630, alt: "Bend Test — Texas Technical Services" }],
   },
-  twitter: { card: "summary_large_image", title: "Bend Testing — Ductility & Weld Integrity", description: "Guided bend, weld qualification bend, and flexural testing. ASTM & ISO standards. Kuwait & Dubai." },
+  twitter: {
+    card: "summary_large_image",
+    title: "Bend Testing — Ductility & Weld Integrity",
+    description: "Guided bend, weld qualification bend, and flexural testing. ASTM & ISO standards. Kuwait & Dubai.",
+    images: [{ url: "/og-default.png", width: 1200, height: 630, alt: "Texas Technical Services" }],
+  },
   keywords: ["bend test Kuwait", "guided bend test Kuwait", "weld bend test Kuwait", "flexural test Kuwait", "ductility test Kuwait", "ASTM A370 bend test Kuwait", "ISO 7438 bend test Kuwait", "Texas Technical Services bend test"],
 };
 

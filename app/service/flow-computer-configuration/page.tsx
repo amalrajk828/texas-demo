@@ -35,8 +35,8 @@ export const metadata: Metadata = {
   twitter: {
     card: "summary_large_image",
     title: "Flow Computer Configuration — Custody Transfer API",
-    description:
-      "Flow computer configuration to API MPMS, AGA, ISO, NTEP & OIML standards — custody transfer, SCADA integration, commissioning in Kuwait & Dubai.",
+    description: "Flow computer configuration to API MPMS, AGA, ISO, NTEP & OIML standards — custody transfer, SCADA integration, commissioning in Kuwait & Dubai.",
+    images: [{ url: "/og-default.png", width: 1200, height: 630, alt: "Texas Technical Services" }],
   },
   keywords: [
     "flow computer configuration Kuwait",

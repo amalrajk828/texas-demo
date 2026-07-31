@@ -22,7 +22,12 @@ export const metadata: Metadata = {
     url: "/service/commissioning-and-start-up-support/",
     images: [{ url: "/og-default.png", width: 1200, height: 630, alt: "Commissioning and Start-up Support — Texas Technical Services" }],
   },
-  twitter: { card: "summary_large_image", title: "Commissioning and Start-up Support", description: "Automation commissioning and start-up. Kuwait & Dubai." },
+  twitter: {
+    card: "summary_large_image",
+    title: "Commissioning and Start-up Support",
+    description: "Automation commissioning and start-up. Kuwait & Dubai.",
+    images: [{ url: "/og-default.png", width: 1200, height: 630, alt: "Texas Technical Services" }],
+  },
   keywords: ["commissioning Kuwait", "automation commissioning Kuwait", "start-up support Kuwait", "PLC commissioning Kuwait", "SCADA commissioning Kuwait", "industrial commissioning Kuwait", "Texas Technical Services commissioning"],
 };
 

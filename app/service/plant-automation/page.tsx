@@ -20,7 +20,12 @@ export const metadata: Metadata = {
     url: "/service/plant-automation/",
     images: [{ url: "/og-default.png", width: 1200, height: 630, alt: "Process Plant Automation — Texas Technical Services" }],
   },
-  twitter: { card: "summary_large_image", title: "Process Plant Automation — Electrical & Instrumentation", description: "Customised plant automation for efficiency and safety. Kuwait & Dubai." },
+  twitter: {
+    card: "summary_large_image",
+    title: "Process Plant Automation — Electrical & Instrumentation",
+    description: "Customised plant automation for efficiency and safety. Kuwait & Dubai.",
+    images: [{ url: "/og-default.png", width: 1200, height: 630, alt: "Texas Technical Services" }],
+  },
   keywords: ["plant automation Kuwait", "process automation Kuwait", "industrial automation Kuwait", "SCADA Kuwait", "DCS Kuwait", "automation systems Kuwait", "Texas Technical Services automation"],
 };
 

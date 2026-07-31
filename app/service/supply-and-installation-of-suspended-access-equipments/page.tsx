@@ -20,7 +20,12 @@ export const metadata: Metadata = {
     url: "/service/supply-and-installation-of-suspended-access-equipments/",
     images: [{ url: "/og-default.png", width: 1200, height: 630, alt: "Suspended Access Equipment — Texas Technical Services" }],
   },
-  twitter: { card: "summary_large_image", title: "Supply and Installation of Suspended Access Equipment", description: "Supply and installation of telescopic roof machines, twin track roof machines, powered cradles, recess cradles, monorails, and davit systems for building maintenance and facade access." },
+  twitter: {
+    card: "summary_large_image",
+    title: "Supply and Installation of Suspended Access Equipment",
+    description: "Supply and installation of telescopic roof machines, twin track roof machines, powered cradles, recess cradles, monorails, and davit systems for building maintenance and facade access.",
+    images: [{ url: "/og-default.png", width: 1200, height: 630, alt: "Texas Technical Services" }],
+  },
   keywords: ["Suspended Access Equipment Kuwait", "Suspended Access Equipment Dubai", "Texas Technical Services Suspended Access", "building maintenance equipment Kuwait", "facade access equipment Kuwait", "davit systems Kuwait"],
 };
 

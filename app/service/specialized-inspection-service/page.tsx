@@ -20,7 +20,12 @@ export const metadata: Metadata = {
     url: "/service/specialized-inspection-service/",
     images: [{ url: "/og-default.png", width: 1200, height: 630, alt: "Specialized Inspection Service — Texas Technical Services" }],
   },
-  twitter: { card: "summary_large_image", title: "Specialized Inspection — Custom Programs & Turnarounds", description: "PAUT, ECT, TOFD, MFL and 15 specialist services. Kuwait & Dubai." },
+  twitter: {
+    card: "summary_large_image",
+    title: "Specialized Inspection — Custom Programs & Turnarounds",
+    description: "PAUT, ECT, TOFD, MFL and 15 specialist services. Kuwait & Dubai.",
+    images: [{ url: "/og-default.png", width: 1200, height: 630, alt: "Texas Technical Services" }],
+  },
   keywords: ["specialized inspection Kuwait", "PAUT Kuwait", "phased array ultrasonic testing Kuwait", "eddy current testing Kuwait", "TOFD Kuwait", "magnetic flux leakage Kuwait", "corrosion control Kuwait", "PMI Kuwait", "heat treatment Kuwait", "lifting inspection Kuwait", "Texas Technical Services inspection"],
 };
 

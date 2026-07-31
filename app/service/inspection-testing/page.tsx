@@ -27,8 +27,8 @@ export const metadata: Metadata = {
   twitter: {
     card: "summary_large_image",
     title: "Inspection & Testing — NDT, Mechanical & Specialized",
-    description:
-      "Industrial inspection and testing company in Kuwait — NDT, mechanical testing, phased array UT, ISO 9001/14001/45001 certified.",
+    description: "Industrial inspection and testing company in Kuwait — NDT, mechanical testing, phased array UT, ISO 9001/14001/45001 certified.",
+    images: [{ url: "/og-default.png", width: 1200, height: 630, alt: "Texas Technical Services" }],
   },
   keywords: [
     "industrial inspection and testing companies Kuwait",
@@ -95,8 +95,8 @@ export default function InspectionTestingPage() {
             </span>
           </div>
           <h2 className="text-3xl sm:text-[2.4rem] font-bold text-[#0B0D26] leading-[1.15] mb-12">
-            Questions About{" "}
-            <em className="not-italic text-[#e7212b]">Inspection &amp; Testing</em>
+            What are the most common questions about{" "}
+            <em className="not-italic text-[#e7212b]">inspection and testing?</em>
           </h2>
           <div className="max-w-4xl mx-auto space-y-4">
             {faqItems.map((item) => (
@@ -132,8 +132,8 @@ export default function InspectionTestingPage() {
               </span>
             </div>
             <h2 className="text-3xl sm:text-[2.4rem] font-bold text-[#0B0D26] leading-[1.15] mb-12">
-              Explore{" "}
-              <em className="not-italic text-[#e7212b]">More Services</em>
+              Which services complement{" "}
+              <em className="not-italic text-[#e7212b]">inspection and testing?</em>
             </h2>
             <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
               {serviceCrossLinks["inspection-testing"]?.map((link) => (

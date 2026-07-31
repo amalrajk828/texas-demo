@@ -6,6 +6,7 @@ import { useRef } from "react";
 import { Gauge, FlaskConical, Cpu, ArrowRight } from "lucide-react";
 import BorderGlow from "@/components/BorderGlow";
 import dynamic from "next/dynamic";
+import { useIsMobile } from "@/hooks/useIsMobile";
 
 const PixelSnow = dynamic(() => import("@/components/PixelSnow"), { ssr: false });
 
@@ -27,6 +28,7 @@ function FadeUp({ children, delay = 0, className = "" }: { children: React.React
 }
 
 export default function GreyServices() {
+  const isMobile = useIsMobile();
   return (
     <section className="relative py-24 lg:py-32 overflow-hidden bg-[#000000] blueprint-grid blueprint-dot-grid">
       {/* PixelSnow Background Layer */}
@@ -37,7 +39,7 @@ export default function GreyServices() {
           minFlakeSize={1.25}
           pixelResolution={150}
           speed={0.8}
-          density={0.25}
+          density={0.1}
           direction={125}
           brightness={0.8}
           variant="square"
@@ -68,7 +70,7 @@ export default function GreyServices() {
               <span className="text-[11px] font-bold tracking-[3.5px] uppercase" style={{ color: "var(--color-brand-red)" }}>Our Services</span>
             </div>
             <h2 className="text-[2.8rem] sm:text-[3.4rem] font-black leading-[1.05] tracking-tight" style={{ color: "var(--g-heading)" }}>
-              What We Offer
+              What services do we offer for industrial automation and flow measurement?
             </h2>
           </div>
           <p className="max-w-md text-[17px] leading-[1.85]" style={{ color: "var(--g-muted)" }}>
@@ -100,8 +102,8 @@ export default function GreyServices() {
                   className="relative w-full h-full min-h-[350px] p-6 flex flex-col rounded-[20px] cursor-pointer transition-all duration-300 overflow-hidden border border-white/[0.12] group-hover:border-white/[0.22] group-hover:bg-[#0E1117]/75"
                   style={{
                     background: "rgba(14, 17, 23, 0.58)",
-                    backdropFilter: "blur(18px)",
-                    WebkitBackdropFilter: "blur(18px)",
+                    backdropFilter: isMobile ? "none" : "blur(18px)",
+                    WebkitBackdropFilter: isMobile ? "none" : "blur(18px)",
                     boxShadow: "0 20px 40px rgba(0, 0, 0, 0.5)",
                   }}
                 >

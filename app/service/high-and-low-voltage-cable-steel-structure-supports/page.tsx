@@ -20,7 +20,12 @@ export const metadata: Metadata = {
     url: "/service/high-and-low-voltage-cable-steel-structure-supports/",
     images: [{ url: "/og-default.png", width: 1200, height: 630, alt: "Cable Steel Structure Supports — Texas Technical Services" }],
   },
-  twitter: { card: "summary_large_image", title: "High and Low Voltage Cable Steel Structure Supports", description: "Design, fabrication, and erection of high and low voltage cable support structures, pathways, and steel structural supports for industrial electrical infrastructure." },
+  twitter: {
+    card: "summary_large_image",
+    title: "High and Low Voltage Cable Steel Structure Supports",
+    description: "Design, fabrication, and erection of high and low voltage cable support structures, pathways, and steel structural supports for industrial electrical infrastructure.",
+    images: [{ url: "/og-default.png", width: 1200, height: 630, alt: "Texas Technical Services" }],
+  },
   keywords: ["Cable Steel Structure Supports Kuwait", "Cable Steel Structure Supports Dubai", "Texas Technical Services Cable Supports", "industrial cable supports Kuwait", "voltage cable structure Kuwait", "steel cable pathway Kuwait"],
 };
 

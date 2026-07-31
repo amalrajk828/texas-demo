@@ -29,7 +29,7 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
     title: article.seoTitle,
     description: article.metaDescription,
     keywords: article.keywords,
-    alternates: { canonical: `https://texastechserv.com/blog/${slug}/` },
+    alternates: { canonical: `/blog/${slug}/` },
     robots: {
       index: true,
       follow: true,
@@ -39,7 +39,7 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
     openGraph: {
       title: article.seoTitle,
       description: article.metaDescription,
-      url: `https://texastechserv.com/blog/${slug}/`,
+      url: `/blog/${slug}/`,
       type: "article",
       publishedTime: article.date,
       modifiedTime: article.date,

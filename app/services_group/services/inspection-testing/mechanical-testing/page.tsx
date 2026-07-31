@@ -2,6 +2,8 @@ import type { Metadata } from "next";
 import MechanicalHero from "@/components/service/mechanical-testing/MechanicalHero";
 import MechanicalSubServices from "@/components/service/mechanical-testing/MechanicalSubServices";
 import { BreadcrumbJsonLd } from "@/components/schema/BreadcrumbJsonLd";
+import { FaqPageJsonLd } from "@/components/schema/FaqPageJsonLd";
+import { servicesListingFaq } from "@/lib/pageFaqData";
 import { ServiceJsonLd } from "@/components/schema/ServiceJsonLd";
 
 export const metadata: Metadata = {
@@ -53,6 +55,7 @@ export default function MechanicalTestingPage() {
 />
       <MechanicalHero />
       <MechanicalSubServices />
+      <FaqPageJsonLd items={servicesListingFaq} />
     </>
   );
 }

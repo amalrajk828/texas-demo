@@ -35,8 +35,8 @@ export const metadata: Metadata = {
   twitter: {
     card: "summary_large_image",
     title: "Flow Meter Calibration — Lab & On-Site Services",
-    description:
-      "ILAC/COFRAC ISO 17025 accredited calibration — OIML R117, API MPMS, MID compliance. Emergency 2-week service available. Kuwait & Dubai.",
+    description: "ILAC/COFRAC ISO 17025 accredited calibration — OIML R117, API MPMS, MID compliance. Emergency 2-week service available. Kuwait & Dubai.",
+    images: [{ url: "/og-default.png", width: 1200, height: 630, alt: "Texas Technical Services" }],
   },
   keywords: [
     "flow meter calibration Kuwait",

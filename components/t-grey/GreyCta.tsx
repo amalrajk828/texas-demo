@@ -26,7 +26,7 @@ export default function GreyCta() {
             className="text-[2.6rem] sm:text-[3.2rem] font-black leading-[1.08] tracking-tight mb-5"
             style={{ color: "var(--color-brand-red)" }}
           >
-            Let's Solve Your Flow Measurement Challenge
+            How can we solve your flow measurement challenge?
           </h2>
         </FadeSection>
 

@@ -4,6 +4,9 @@ import Image from "next/image";
 import { ChevronRight, Scale, Brain, Cpu, Layers } from "lucide-react";
 import { BreadcrumbJsonLd } from "@/components/schema/BreadcrumbJsonLd";
 import { SpeakableJsonLd } from "@/components/schema/SpeakableJsonLd";
+import { FaqPageJsonLd } from "@/components/schema/FaqPageJsonLd";
+import PageFaqSection from "@/components/PageFaqSection";
+import { solutionsFaq } from "@/lib/pageFaqData";
 
 export const metadata: Metadata = {
   title: "Solutions — Proprietary Platforms & Strategic Partnerships",
@@ -176,6 +179,9 @@ export default function SolutionsPage() {
           </div>
         </div>
       </section>
+
+      <FaqPageJsonLd items={solutionsFaq} />
+      <PageFaqSection items={solutionsFaq} title="Questions About" highlight="Our Solutions" />
     </div>
   );
 }

@@ -4,6 +4,7 @@ import Link from "next/link";
 import { motion, useInView } from "framer-motion";
 import { useRef } from "react";
 import { ArrowRight } from "lucide-react";
+import { useIsMobile } from "@/hooks/useIsMobile";
 
 export interface SubServiceItem {
   title: string;
@@ -25,6 +26,7 @@ export interface SubServiceCardProps {
 export function SubServiceCard({ item, index = 0, categoryTag, className = "" }: SubServiceCardProps) {
   const ref = useRef<HTMLDivElement>(null);
   const inView = useInView(ref, { once: true, margin: "-40px" });
+  const isMobile = useIsMobile();
 
   const badge = categoryTag || item.categoryTag;
   const isLink = Boolean(item.href);
@@ -121,8 +123,8 @@ export function SubServiceCard({ item, index = 0, categoryTag, className = "" }:
           className="group relative rounded-2xl overflow-hidden flex flex-col hover:border-white/95 hover:shadow-xl transition-all duration-300 h-full"
           style={{
             background: "var(--g-card-bg, rgba(255, 255, 255, 0.38))",
-            backdropFilter: "blur(20px)",
-            WebkitBackdropFilter: "blur(20px)",
+            backdropFilter: isMobile ? "none" : "blur(20px)",
+            WebkitBackdropFilter: isMobile ? "none" : "blur(20px)",
             border: "1px solid var(--g-border, rgba(255, 255, 255, 0.60))",
             boxShadow: "var(--g-card-shadow, 0 8px 24px rgba(0, 0, 0, 0.06)), inset 0 1px 1px rgba(255, 255, 255, 0.85)",
           }}
@@ -134,8 +136,8 @@ export function SubServiceCard({ item, index = 0, categoryTag, className = "" }:
           className="group relative rounded-2xl overflow-hidden flex flex-col hover:border-white/95 hover:shadow-xl transition-all duration-300 h-full"
           style={{
             background: "var(--g-card-bg, rgba(255, 255, 255, 0.38))",
-            backdropFilter: "blur(20px)",
-            WebkitBackdropFilter: "blur(20px)",
+            backdropFilter: isMobile ? "none" : "blur(20px)",
+            WebkitBackdropFilter: isMobile ? "none" : "blur(20px)",
             border: "1px solid var(--g-border, rgba(255, 255, 255, 0.60))",
             boxShadow: "var(--g-card-shadow, 0 8px 24px rgba(0, 0, 0, 0.06)), inset 0 1px 1px rgba(255, 255, 255, 0.85)",
           }}

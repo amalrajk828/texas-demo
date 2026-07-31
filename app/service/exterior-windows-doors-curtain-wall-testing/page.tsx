@@ -21,7 +21,12 @@ export const metadata: Metadata = {
     url: "/service/exterior-windows-doors-curtain-wall-testing/",
     images: [{ url: "/og-default.png", width: 1200, height: 630, alt: "Exterior Windows, Doors & Curtain Wall Testing" }],
   },
-  twitter: { card: "summary_large_image", title: "Exterior Windows, Doors & Curtain Wall Testing", description: "Water penetration, air permeability, and structural testing. Kuwait & GCC." },
+  twitter: {
+    card: "summary_large_image",
+    title: "Exterior Windows, Doors & Curtain Wall Testing",
+    description: "Water penetration, air permeability, and structural testing. Kuwait & GCC.",
+    images: [{ url: "/og-default.png", width: 1200, height: 630, alt: "Texas Technical Services" }],
+  },
   keywords: ["curtain wall testing Kuwait", "window testing Kuwait", "door testing Kuwait", "water penetration test ASTM E1105", "air permeability test ASTM E783", "exterior window testing", "curtain wall performance test", "Texas Technical Services"],
 };
 

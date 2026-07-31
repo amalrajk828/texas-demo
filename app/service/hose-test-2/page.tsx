@@ -20,7 +20,12 @@ export const metadata: Metadata = {
     url: "/service/hose-test-2/",
     images: [{ url: "/og-default.png", width: 1200, height: 630, alt: "Hose Test — Existing Building Leak Diagnostics — Texas Technical Services" }],
   },
-  twitter: { card: "summary_large_image", title: "Hose Test — Existing Building Leak Diagnostics", description: "Hose test leak diagnostics for existing buildings. AAMA 501.2. Kuwait & Dubai." },
+  twitter: {
+    card: "summary_large_image",
+    title: "Hose Test — Existing Building Leak Diagnostics",
+    description: "Hose test leak diagnostics for existing buildings. AAMA 501.2. Kuwait & Dubai.",
+    images: [{ url: "/og-default.png", width: 1200, height: 630, alt: "Texas Technical Services" }],
+  },
   keywords: ["existing building leak diagnostics Kuwait", "hose test leak detection Kuwait", "curtain wall hose test Kuwait", "window leak diagnostics Kuwait", "AAMA 501.2 Kuwait", "water intrusion test Kuwait", "Texas Technical Services hose test"],
 };
 

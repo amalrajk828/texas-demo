@@ -20,7 +20,12 @@ export const metadata: Metadata = {
     url: "/service/impact-test/",
     images: [{ url: "/og-default.png", width: 1200, height: 630, alt: "Impact Test — Texas Technical Services" }],
   },
-  twitter: { card: "summary_large_image", title: "Impact Testing — Charpy & Izod Standards", description: "Charpy and Izod impact testing. Low-temperature testing available. Kuwait & Dubai." },
+  twitter: {
+    card: "summary_large_image",
+    title: "Impact Testing — Charpy & Izod Standards",
+    description: "Charpy and Izod impact testing. Low-temperature testing available. Kuwait & Dubai.",
+    images: [{ url: "/og-default.png", width: 1200, height: 630, alt: "Texas Technical Services" }],
+  },
   keywords: ["impact test Kuwait", "Charpy impact test Kuwait", "Izod impact test Kuwait", "low temperature impact test Kuwait", "fracture toughness impact Kuwait", "ASTM E23 impact test Kuwait", "Texas Technical Services impact test"],
 };
 

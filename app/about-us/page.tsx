@@ -5,15 +5,17 @@ import { Gauge, ClipboardCheck, Cpu } from "lucide-react";
 import { BreadcrumbJsonLd } from "@/components/schema/BreadcrumbJsonLd";
 import {
   ReviewJsonLd,
-  AggregateRatingJsonLd,
 } from "@/components/schema/ReviewJsonLd";
 import { OrganizationJsonLd } from "@/components/schema/OrganizationJsonLd";
 import { SpeakableJsonLd } from "@/components/schema/SpeakableJsonLd";
+import { FaqPageJsonLd } from "@/components/schema/FaqPageJsonLd";
+import PageFaqSection from "@/components/PageFaqSection";
+import { aboutUsFaq } from "@/lib/pageFaqData";
 import AnimatedSkillBars from "@/components/about/AnimatedSkillBars";
 import FadeSection from "@/components/motion/FadeSection";
 
 export const metadata: Metadata = {
-  title: "About Us | Industrial Automation Company in Kuwait & GCC",
+  title: "About Us — Industrial Automation Company",
   description:
     "Texas Technical Services — industrial automation company in Kuwait, UAE & GCC since 2008. PLC SCADA, flow measurement, and inspection services.",
   alternates: { canonical: "/about-us/" },
@@ -246,7 +248,6 @@ export default function AboutPage() {
           },
         ]}
       />
-      <AggregateRatingJsonLd ratingValue={4.8} reviewCount={49} />
       <OrganizationJsonLd
         logo="/logo.svg"
         telephone={[
@@ -671,6 +672,10 @@ export default function AboutPage() {
           </div>
         </div>
       </section>
+
+      <FaqPageJsonLd items={aboutUsFaq} />
+      <PageFaqSection items={aboutUsFaq} title="Questions About" highlight="Texas Technical Services" />
+
     </div>
   );
 }

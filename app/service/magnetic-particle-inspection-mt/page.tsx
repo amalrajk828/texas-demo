@@ -20,7 +20,12 @@ export const metadata: Metadata = {
     url: "/service/magnetic-particle-inspection-mt/",
     images: [{ url: "/og-default.png", width: 1200, height: 630, alt: "Magnetic Particle Inspection — Texas Technical Services" }],
   },
-  twitter: { card: "summary_large_image", title: "Magnetic Particle Inspection (MT) — Surface Crack Detection", description: "MPI for ferromagnetic materials. ASME V, ISO 17638. Kuwait & Dubai." },
+  twitter: {
+    card: "summary_large_image",
+    title: "Magnetic Particle Inspection (MT) — Surface Crack Detection",
+    description: "MPI for ferromagnetic materials. ASME V, ISO 17638. Kuwait & Dubai.",
+    images: [{ url: "/og-default.png", width: 1200, height: 630, alt: "Texas Technical Services" }],
+  },
   keywords: ["magnetic particle inspection Kuwait", "MPI Kuwait", "MPT Kuwait", "MT NDT Kuwait", "weld MPI Kuwait", "ferromagnetic inspection Kuwait", "ASME V MPI Kuwait", "Texas Technical Services MPI"],
 };
 

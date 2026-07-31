@@ -25,8 +25,8 @@ export const metadata: Metadata = {
   twitter: {
     card: "summary_large_image",
     title: "Flow Measurement & Control System Solutions",
-    description:
-      "Flow measurement services in Ahmadi Kuwait — custody metering upgrades, calibration, validation, flow computer configuration across Kuwait and the GCC.",
+    description: "Flow measurement services in Ahmadi Kuwait — custody metering upgrades, calibration, validation, flow computer configuration across Kuwait and the GCC.",
+    images: [{ url: "/og-default.png", width: 1200, height: 630, alt: "Texas Technical Services" }],
   },
   keywords: [
     "flow measurement services in Ahmadi Kuwait",
@@ -107,8 +107,8 @@ export default function FlowMeasurementPage() {
             </span>
           </div>
           <h2 className="text-3xl sm:text-[2.4rem] font-bold text-[#0B0D26] leading-[1.15] mb-12">
-            Questions About{" "}
-            <em className="not-italic text-[#e7212b]">Flow Measurement</em>
+            What are the most common questions about{" "}
+            <em className="not-italic text-[#e7212b]">flow measurement solutions?</em>
           </h2>
           <div className="max-w-4xl mx-auto space-y-4">
             {faqItems.map((item) => (
@@ -144,8 +144,8 @@ export default function FlowMeasurementPage() {
               </span>
             </div>
             <h2 className="text-3xl sm:text-[2.4rem] font-bold text-[#0B0D26] leading-[1.15] mb-12">
-              Explore{" "}
-              <em className="not-italic text-[#e7212b]">More Services</em>
+              Which services complement{" "}
+              <em className="not-italic text-[#e7212b]">flow measurement solutions?</em>
             </h2>
             <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
               {serviceCrossLinks["flow-measurement-solutions"]?.map((link) => (

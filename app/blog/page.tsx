@@ -1,18 +1,15 @@
 import type { Metadata } from "next";
 import Link from "next/link";
-import Image from "next/image";
-import ProductCard from "@/components/ProductCard";
+import BlogGrid from "@/components/blog/BlogGrid";
 import { BreadcrumbJsonLd } from "@/components/schema/BreadcrumbJsonLd";
 import { ItemListJsonLd } from "@/components/schema/ItemListJsonLd";
+import { SpeakableJsonLd } from "@/components/schema/SpeakableJsonLd";
+import { FaqPageJsonLd } from "@/components/schema/FaqPageJsonLd";
+import PageFaqSection from "@/components/PageFaqSection";
+import { blogIndexFaq } from "@/lib/pageFaqData";
 import { 
   BookOpen, 
-  Calendar, 
-  Clock, 
   ChevronRight,
-  ArrowRight,
-  Gauge,
-  Cpu,
-  Activity
 } from "lucide-react";
 
 export const metadata: Metadata = {
@@ -111,6 +108,7 @@ export default function BlogIndexPage() {
   return (
     <div className="min-h-screen bg-white font-sans antialiased text-[#333333]">
       <BreadcrumbJsonLd items={[{ name: "Home", href: "/" }, { name: "Blog", href: "/blog/" }]} />
+      <SpeakableJsonLd headline="Industrial Engineering Knowledge Hub" />
       <ItemListJsonLd
         name="Texas Technical Services Knowledge Hub"
         items={blogPosts.map((post) => ({
@@ -173,49 +171,27 @@ export default function BlogIndexPage() {
 
       {/* ═══ BLOG ARCHIVE GRID ══════════════════════════════════════ */}
       <main className="bg-gray-50/50 py-16 lg:py-24">
-        <section className="max-w-7xl mx-auto px-4 sm:px-6">
+        <section id="blog-section" className="max-w-7xl mx-auto px-4 sm:px-6">
           
           <div className="flex items-center justify-between border-b border-gray-200 pb-6 mb-10">
             <div>
               <h2 className="text-[#0B0D26] text-xl font-bold">Featured Publications</h2>
               <p className="text-gray-500 text-xs mt-1">Providing actionable data and risk-mitigation solutions</p>
             </div>
-            <div className="flex items-center gap-1.5 text-[12px] text-gray-400">
+            <div className="hidden sm:flex items-center gap-1.5 text-[12px] text-gray-400">
               <BookOpen className="w-4 h-4 text-[#e7212b]" />
               <span>{blogPosts.length} Technical Articles</span>
             </div>
           </div>
 
           {/* Cards Grid */}
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {blogPosts.map((post, index) => {
-              // We pass custom mapping for fields and custom tags/badge
-              const mappedPost = {
-                name: post.title,
-                slug: post.slug,
-                image: post.image,
-                description: post.description,
-                category: post.category,
-                brand: post.pillar,
-                date: post.date,
-                readTime: post.readTime,
-              };
-              return (
-                <ProductCard
-                  key={post.slug}
-                  product={mappedPost}
-                  iconName={post.icon}
-                  readMoreText="Read Article"
-                  href={`/blog/${post.slug}/`}
-                  priority={index < 3}
-                  badgeClassName="bg-white/80 text-[#e7212b] border-[#e7212b]/20 backdrop-blur-md px-2.5 py-1 rounded-full border text-[9px] font-medium tracking-[1.5px] uppercase"
-                />
-              );
-            })}
-          </div>
+          <BlogGrid posts={blogPosts} />
 
         </section>
       </main>
+
+      <FaqPageJsonLd items={blogIndexFaq} />
+      <PageFaqSection items={blogIndexFaq} title="Questions About" highlight="Our Technical Blog" />
 
       {/* ═══ CALL TO ACTION ═══════════════════════════════════════ */}
       <section className="bg-white py-16 lg:py-20 border-t border-gray-100">

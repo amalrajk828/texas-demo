@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Factory, Gauge, Shield, Thermometer, ChevronRight } from "lucide-react";
 import { BreadcrumbJsonLd } from "@/components/schema/BreadcrumbJsonLd";
 import { FaqPageJsonLd } from "@/components/schema/FaqPageJsonLd";
+import { SpeakableJsonLd } from "@/components/schema/SpeakableJsonLd";
 import { industryFaqData } from "@/lib/industryFaqData";
 import IndustryHero from "@/components/industries/IndustryHero";
 import IndustryProductsGrid from "@/components/industries/IndustryProductsGrid";
@@ -159,10 +160,11 @@ export default function RefineryPage() {
         { name: "Industries", href: "/industries/" },
         { name: "Refinery", href: "/industries/refinery/" },
       ]} />
+      <SpeakableJsonLd headline="Refinery Industry Solutions" cssSelector={["h2", "p"]} />
       <IndustryHero
         name="Refinery"
         breadcrumbLabel="Refinery"
-        image="/refinery.jpg"
+        image="/refinery.webp"
         alt="Refinery industrial facility"
         Icon={Factory}
         description="Cutting-edge flow metering, CEMS, and industrial automation solutions for the demanding world of refinery operations — ensuring process control, emissions compliance, and precise custody transfer across the full product slate."

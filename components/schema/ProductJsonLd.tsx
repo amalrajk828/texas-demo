@@ -7,6 +7,7 @@ export function ProductJsonLd({
   brand,
   category,
   image,
+  offers,
 }: {
   name: string;
   description: string;
@@ -14,6 +15,11 @@ export function ProductJsonLd({
   brand?: string;
   category?: string;
   image?: string;
+  offers?: {
+    price?: string;
+    priceCurrency?: string;
+    availability?: string;
+  };
 }) {
   const jsonLd: Record<string, unknown> = {
     "@context": "https://schema.org",
@@ -25,6 +31,14 @@ export function ProductJsonLd({
   if (brand) jsonLd.brand = { "@type": "Brand", name: brand };
   if (category) jsonLd.category = category;
   if (image) jsonLd.image = image;
+  if (offers) {
+    jsonLd.offers = {
+      "@type": "Offer",
+      ...(offers.price && { price: offers.price }),
+      ...(offers.priceCurrency && { priceCurrency: offers.priceCurrency }),
+      ...(offers.availability && { availability: offers.availability }),
+    };
+  }
   return (
     <script
       type="application/ld+json"

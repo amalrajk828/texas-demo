@@ -21,6 +21,7 @@ import PortfolioGroupCategoryGrid from "@/components/portfolio_group/PortfolioGr
 import PortfolioGroupProductGrid from "@/components/portfolio_group/PortfolioGroupProductGrid";
 import PortfolioGroupPagination from "@/components/portfolio_group/PortfolioGroupPagination";
 import { BreadcrumbJsonLd } from "@/components/schema/BreadcrumbJsonLd";
+import { ItemListJsonLd } from "@/components/schema/ItemListJsonLd";
 
 export async function generateMetadata({
   params,
@@ -33,6 +34,7 @@ export async function generateMetadata({
       title: "Portfolio Categories",
       description:
         "Browse our portfolio by industry, product category, or application area.",
+      alternates: { canonical: "/portfolio_group/" },
       openGraph: {
         title: "Portfolio Categories",
         description: "Browse our portfolio by industry, product category, or application area.",
@@ -120,6 +122,14 @@ export default async function PortfolioGroupPage({
     return (
       <main>
         <BreadcrumbJsonLd items={[{ name: "Home", href: "/" }, { name: "Portfolio", href: "/portfolio/" }, { name: "Categories", href: "/portfolio_group/" }]} />
+      <ItemListJsonLd
+        name="Portfolio Categories"
+        items={allLinks.map((link) => ({
+          name: link.label,
+          url: link.href,
+          description: link.description,
+        }))}
+      />
         <PortfolioGroupHero
           breadcrumb="Portfolio Group"
           eyebrow="Portfolio"
@@ -151,6 +161,14 @@ export default async function PortfolioGroupPage({
   return (
     <main>
       <BreadcrumbJsonLd items={[{ name: "Home", href: "/" }, { name: "Portfolio", href: "/portfolio/" }, { name: result.breadcrumb, href: `/portfolio_group/${slug.join("/")}/` }]} />
+      <ItemListJsonLd
+        name={`${result.breadcrumb} Portfolio`}
+        items={pageItems.map((product) => ({
+          name: product.name,
+          url: `/portfolio/${product.slug}/`,
+          description: product.description || "",
+        }))}
+      />
       <PortfolioGroupHero
         breadcrumb="Portfolio Group"
         breadcrumbHref="/portfolio_group/"

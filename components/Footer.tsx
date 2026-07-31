@@ -114,7 +114,7 @@ export default function Footer() {
                   target="_blank"
                   rel="noopener noreferrer"
                   aria-label={label}
-                  className="w-9 h-9 rounded-full border border-white/10 flex items-center justify-center text-white/40 hover:text-white hover:border-[#E53935]/40 hover:bg-[#E53935]/10 transition-all"
+                   className="w-11 h-11 rounded-full border border-white/10 flex items-center justify-center text-white/40 hover:text-white hover:border-[#E53935]/40 hover:bg-[#E53935]/10 transition-all"
                 >
                   <svg viewBox="0 0 24 24" className="w-4 h-4" fill="none" stroke="currentColor" strokeWidth={2} strokeLinecap="round" strokeLinejoin="round">
                     <path d={path} />
@@ -156,7 +156,7 @@ export default function Footer() {
                   <p className="text-white text-[15px] font-bold mb-2 flex items-center gap-2">
                     <MapPin className="w-3.5 h-3.5 text-[#E53935]" /> {office.city}
                   </p>
-                  <p className="text-white/35 text-[13px] leading-relaxed mb-2 font-medium">
+                  <p className="text-white/50 text-[13px] leading-relaxed mb-2 font-medium">
                     {office.address}
                   </p>
                   {office.phones.map((p) => (
@@ -262,7 +262,6 @@ export default function Footer() {
             TEXAS TECHNICAL SERVICE COMPANY W.L.L. © {new Date().getFullYear()}. All Rights Reserved.
           </p>
           <div className="flex items-center gap-4">
-            <span className="text-white/20 text-[10px] hidden sm:inline">Serving the Middle East — industrial automation companies near me, Kuwait, UAE, Dubai, Bahrain &amp; Saudi Arabia</span>
             <span className="text-brand-red text-[11px] font-medium">ISO 9001:2015 Certified</span>
           </div>
         </div>

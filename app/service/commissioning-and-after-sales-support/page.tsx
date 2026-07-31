@@ -33,8 +33,8 @@ export const metadata: Metadata = {
   twitter: {
     card: "summary_large_image",
     title: "Commissioning and After Sales Support",
-    description:
-      "Flow meter, CEMS, and metering skid commissioning with 24/7 after-sales support. Kuwait & Dubai.",
+    description: "Flow meter, CEMS, and metering skid commissioning with 24/7 after-sales support. Kuwait & Dubai.",
+    images: [{ url: "/og-default.png", width: 1200, height: 630, alt: "Texas Technical Services" }],
   },
   keywords: [
     "flow meter commissioning Kuwait",

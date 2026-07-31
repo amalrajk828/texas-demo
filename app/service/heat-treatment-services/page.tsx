@@ -20,7 +20,12 @@ export const metadata: Metadata = {
     url: "/service/heat-treatment-services/",
     images: [{ url: "/og-default.png", width: 1200, height: 630, alt: "Heat Treatment Services — Texas Technical Services" }],
   },
-  twitter: { card: "summary_large_image", title: "Heat Treatment — PWHT, Stress Relief, Annealing", description: "PWHT and heat treatment. ASME VIII, AWS D1.1. Kuwait & Dubai." },
+  twitter: {
+    card: "summary_large_image",
+    title: "Heat Treatment — PWHT, Stress Relief, Annealing",
+    description: "PWHT and heat treatment. ASME VIII, AWS D1.1. Kuwait & Dubai.",
+    images: [{ url: "/og-default.png", width: 1200, height: 630, alt: "Texas Technical Services" }],
+  },
   keywords: ["heat treatment Kuwait", "PWHT Kuwait", "post weld heat treatment Kuwait", "stress relief Kuwait", "electrical resistance heating Kuwait", "heat treatment services Kuwait", "Texas Technical Services heat treatment"],
 };
 

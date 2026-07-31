@@ -2,6 +2,11 @@ import React from "react";
 import type { Metadata } from "next";
 import Link from "next/link";
 import { BreadcrumbJsonLd } from "@/components/schema/BreadcrumbJsonLd";
+import { ItemListJsonLd } from "@/components/schema/ItemListJsonLd";
+import { VideoObjectJsonLd } from "@/components/schema/VideoObjectJsonLd";
+import { FaqPageJsonLd } from "@/components/schema/FaqPageJsonLd";
+import PageFaqSection from "@/components/PageFaqSection";
+import { controlRoomFaq } from "@/lib/pageFaqData";
 import { ChevronRight } from "lucide-react";
 import ProductCard from "@/components/ProductCard";
 import ControlRoomErgonomicSection from "@/components/products/ControlRoomErgonomicSection";
@@ -45,6 +50,21 @@ export default function ControlRoomPage() {
         { name: "Products", href: "/products/" },
         { name: "Control Room Interior & Console", href: "/products/control-room-interior-and-console/" },
       ]} />
+      <ItemListJsonLd
+        name="Control Room Interior And Console"
+        items={products.map((product) => ({
+          name: product.name,
+          url: `/portfolio/${product.slug}/`,
+          description: product.description || "",
+        }))}
+      />
+      <VideoObjectJsonLd
+        name="Control Room Interior & Console Solutions"
+        description="Pyrotech Workspace Solutions delivers turnkey Control Room Solutions and Ergonomic Command Centre Consoles designed for sustainable, safe and contemporary workspaces."
+        thumbnailUrl="https://img.youtube.com/vi/t90rfWiViw8/maxresdefault.jpg"
+        contentUrl="https://www.youtube.com/watch?v=t90rfWiViw8"
+        embedUrl="https://www.youtube.com/embed/t90rfWiViw8"
+      />
       {/* ── Hero Banner ─────────────────────────────────────── */}
       <section className="relative bg-[#000000] blueprint-grid blueprint-dot-grid overflow-hidden border-b-4 border-[#e7212b]">
         <div
@@ -173,6 +193,9 @@ export default function ControlRoomPage() {
           </div>
         </div>
       </section>
+
+      <FaqPageJsonLd items={controlRoomFaq} />
+      <PageFaqSection items={controlRoomFaq} title="Questions About" highlight="Control Room Interior & Console" />
     </div>
   );
 }

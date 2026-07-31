@@ -5,7 +5,9 @@ import { ChevronRight, ExternalLink, ArrowRight } from "lucide-react";
 import ClientsMarquee from "@/components/clients/ClientsMarquee";
 import TestimonialsSection from "@/components/clients/TestimonialsSection";
 import { BreadcrumbJsonLd } from "@/components/schema/BreadcrumbJsonLd";
-
+import { FaqPageJsonLd } from "@/components/schema/FaqPageJsonLd";
+import PageFaqSection from "@/components/PageFaqSection";
+import { clientsFaq } from "@/lib/pageFaqData";
 export const metadata: Metadata = {
   title: "Our Clients",
   description:
@@ -75,7 +77,7 @@ const clients: Client[] = [
   { name: "MJW International Trading Co. LLC",                         logo: "/mjw.png",          url: "/clients/",                                     external: false },
   { name: "FIRSTGROUP",                                                logo: "/first_group.jpeg", url: "https://firstgroupkw.com/",                     external: true  },
 
-  { name: "Rezayat Group",                                             logo: "/rezayat.jpeg",     url: "https://www.rezayat.com/",                      external: true  },
+  { name: "Rezayat Group",                                             logo: "/rezayat.svg",      url: "https://www.rezayat.com/",                      external: true  },
   { name: "Combined Group Contracting Co.",                            logo: "/cgc.png",          url: "https://www.cgc-kw.com/",                       external: true  },
   { name: "Ducting & Servicing Company (DASCO)",                       logo: "/dasco.png",        url: "https://dasco.com.kw/",                         external: true  },
   { name: "Hassan Abul Company",                                       logo: "/hassanabul.png",   url: "https://www.hassanabul.com/",                   external: true  },
@@ -275,6 +277,9 @@ export default function ClientsPage() {
       </section>
 
       <TestimonialsSection />
+
+      <FaqPageJsonLd items={clientsFaq} />
+      <PageFaqSection items={clientsFaq} title="Questions About" highlight="Our Clients" />
 
       {/* ══ CTA BANNER ════════════════════════════════════════════ */}
       <section className="bg-[#000000] blueprint-grid blueprint-dot-grid py-20">

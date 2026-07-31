@@ -183,6 +183,22 @@ body, .page-wrapper {
 
 @media (prefers-reduced-motion: reduce) {
   .fade-up, .fade-up.visible { opacity: 1; animation: none; }
+  .ticker-track { animation: none; }
+  .neumorphic-card-dark:hover,
+  .clean-white-card:hover,
+  .neumorphic-item-soft:hover { transform: none !important; }
+}
+
+/* Mobile performance: replace expensive backdrop-blur with solid backgrounds */
+@media (pointer: coarse) {
+  .backdrop-blur-xl { backdrop-filter: none !important; -webkit-backdrop-filter: none !important; }
+  .backdrop-blur-xs { backdrop-filter: none !important; -webkit-backdrop-filter: none !important; }
+  .backdrop-blur-md { backdrop-filter: none !important; -webkit-backdrop-filter: none !important; }
+  .backdrop-blur-sm { backdrop-filter: none !important; -webkit-backdrop-filter: none !important; }
+  .neumorphic-item-soft { backdrop-filter: none !important; -webkit-backdrop-filter: none !important; }
+  .neumorphic-card-dark { box-shadow: 0 4px 12px rgba(0,0,0,0.5); }
+  .module-card-neumorphic { box-shadow: 0 4px 12px rgba(0,0,0,0.5); }
+  .ticker-track { animation: none !important; }
 }
 
 /* Ticker */

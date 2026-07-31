@@ -20,7 +20,12 @@ export const metadata: Metadata = {
     url: "/service/tensile-test/",
     images: [{ url: "/og-default.png", width: 1200, height: 630, alt: "Tensile Test — Texas Technical Services" }],
   },
-  twitter: { card: "summary_large_image", title: "Tensile Testing — ASTM E8, ISO 6892", description: "Tensile strength, yield strength, ductility testing. ASTM E8, ISO 6892. Kuwait & Dubai." },
+  twitter: {
+    card: "summary_large_image",
+    title: "Tensile Testing — ASTM E8, ISO 6892",
+    description: "Tensile strength, yield strength, ductility testing. ASTM E8, ISO 6892. Kuwait & Dubai.",
+    images: [{ url: "/og-default.png", width: 1200, height: 630, alt: "Texas Technical Services" }],
+  },
   keywords: ["tensile test Kuwait", "tensile strength testing Kuwait", "yield strength test Kuwait", "tensile testing metals Kuwait", "ASTM E8 tensile test Kuwait", "ISO 6892 tensile test Kuwait", "Texas Technical Services tensile test"],
 };
 

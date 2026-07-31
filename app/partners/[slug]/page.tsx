@@ -17,7 +17,7 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
   if (!partner) return {};
 
   return {
-    title: `${partner.name} — ${partner.product} | Texas Technical Services`,
+    title: `${partner.name} — ${partner.product}`,
     description: partner.description,
     alternates: { canonical: `/partners/${partner.slug}/` },
     openGraph: {

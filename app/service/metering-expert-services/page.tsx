@@ -33,8 +33,8 @@ export const metadata: Metadata = {
   twitter: {
     card: "summary_large_image",
     title: "Metering Expert Services — Fiscal Audits & Compliance",
-    description:
-      "Specialist custody transfer metering engineers for on-site assignments and project support. Kuwait & Dubai.",
+    description: "Specialist custody transfer metering engineers for on-site assignments and project support. Kuwait & Dubai.",
+    images: [{ url: "/og-default.png", width: 1200, height: 630, alt: "Texas Technical Services" }],
   },
   keywords: [
     "metering expert Kuwait",

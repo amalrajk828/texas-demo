@@ -1,6 +1,8 @@
 import type { Metadata } from "next";
 import InspectionHero from "@/components/service/inspection-testing/InspectionHero";
 import { BreadcrumbJsonLd } from "@/components/schema/BreadcrumbJsonLd";
+import { FaqPageJsonLd } from "@/components/schema/FaqPageJsonLd";
+import { servicesListingFaq } from "@/lib/pageFaqData";
 import { ServiceJsonLd } from "@/components/schema/ServiceJsonLd";
 
 export const metadata: Metadata = {
@@ -46,6 +48,7 @@ export default function InspectionTestingPage() {
         areaServed={["Kuwait", "United Arab Emirates", "Saudi Arabia", "Bahrain", "Qatar", "Oman"]}
       />
       <InspectionHero />
+      <FaqPageJsonLd items={servicesListingFaq} />
     </>
   );
 }

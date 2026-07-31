@@ -28,6 +28,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "Mechanical Testing — Tensile, Hardness, Impact, Bend",
     description: "Tensile, hardness, impact, bend, fracture, and macro/micro testing. Kuwait & Dubai.",
+    images: [{ url: "/og-default.png", width: 1200, height: 630, alt: "Texas Technical Services" }],
   },
   keywords: [
     "mechanical testing Kuwait",
