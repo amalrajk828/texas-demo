@@ -1,6 +1,8 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { BreadcrumbJsonLd } from "@/components/schema/BreadcrumbJsonLd";
+import { FaqPageJsonLd } from "@/components/schema/FaqPageJsonLd";
+import { servicesListingFaq } from "@/lib/pageFaqData";
 import { ServiceJsonLd } from "@/components/schema/ServiceJsonLd";
 import { ArrowRight, Droplets, Wind, Building2 } from "lucide-react";
 
@@ -122,6 +124,7 @@ export default function ExteriorWindowsGroupPage() {
           </Link>
         </div>
       </section>
+      <FaqPageJsonLd items={servicesListingFaq} />
     </>
   );
 }

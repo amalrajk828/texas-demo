@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Building2, Flame, Shield, CheckCircle, ChevronRight } from "lucide-react";
 import { BreadcrumbJsonLd } from "@/components/schema/BreadcrumbJsonLd";
 import { FaqPageJsonLd } from "@/components/schema/FaqPageJsonLd";
+import { SpeakableJsonLd } from "@/components/schema/SpeakableJsonLd";
 import { industryFaqData } from "@/lib/industryFaqData";
 import IndustryHero from "@/components/industries/IndustryHero";
 import IndustryProductsGrid from "@/components/industries/IndustryProductsGrid";
@@ -75,6 +76,7 @@ export default function CementPage() {
   return (
     <>
       <BreadcrumbJsonLd items={[{ name: "Home", href: "/" }, { name: "Industries", href: "/industries/" }, { name: "Cement", href: "/industries/cement/" }]} />
+      <SpeakableJsonLd headline="Cement Industry Solutions" cssSelector={["h2", "p"]} />
       <IndustryHero
         name="Cement"
         breadcrumbLabel="Cement"

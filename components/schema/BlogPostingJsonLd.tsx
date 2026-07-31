@@ -38,12 +38,12 @@ export function BlogPostingJsonLd({
     dateModified: toIsoDate(dateModified) || toIsoDate(datePublished),
     author: {
       "@type": "Organization",
-      name: "Texas Technical Services",
+      name: "Texas Technical Service Company W.L.L.",
       url: SITE_URL,
     },
     publisher: {
       "@type": "Organization",
-      name: "Texas Technical Services",
+      name: "Texas Technical Service Company W.L.L.",
       url: SITE_URL,
       logo: {
         "@type": "ImageObject",

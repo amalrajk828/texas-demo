@@ -27,7 +27,7 @@ export function VideoObjectJsonLd({
   if (uploadDate) jsonLd.uploadDate = uploadDate;
   jsonLd.publisher = {
     "@type": "Organization",
-    name: "Texas Technical Services",
+    name: "Texas Technical Service Company W.L.L.",
     url: SITE_URL,
   };
   return (

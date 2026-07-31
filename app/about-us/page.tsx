@@ -5,7 +5,6 @@ import { Gauge, ClipboardCheck, Cpu } from "lucide-react";
 import { BreadcrumbJsonLd } from "@/components/schema/BreadcrumbJsonLd";
 import {
   ReviewJsonLd,
-  AggregateRatingJsonLd,
 } from "@/components/schema/ReviewJsonLd";
 import { OrganizationJsonLd } from "@/components/schema/OrganizationJsonLd";
 import { SpeakableJsonLd } from "@/components/schema/SpeakableJsonLd";
@@ -249,7 +248,6 @@ export default function AboutPage() {
           },
         ]}
       />
-      <AggregateRatingJsonLd ratingValue={4.8} reviewCount={49} />
       <OrganizationJsonLd
         logo="/logo.svg"
         telephone={[

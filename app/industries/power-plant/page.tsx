@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Zap, Activity, Shield, TrendingUp, ChevronRight } from "lucide-react";
 import { BreadcrumbJsonLd } from "@/components/schema/BreadcrumbJsonLd";
 import { FaqPageJsonLd } from "@/components/schema/FaqPageJsonLd";
+import { SpeakableJsonLd } from "@/components/schema/SpeakableJsonLd";
 import { industryFaqData } from "@/lib/industryFaqData";
 import IndustryHero from "@/components/industries/IndustryHero";
 import IndustryProductsGrid from "@/components/industries/IndustryProductsGrid";
@@ -142,6 +143,7 @@ export default function PowerPlantPage() {
   return (
     <>
       <BreadcrumbJsonLd items={[{ name: "Home", href: "/" }, { name: "Industries", href: "/industries/" }, { name: "Power Plant", href: "/industries/power-plant/" }]} />
+      <SpeakableJsonLd headline="Power Plant Industry Solutions" cssSelector={["h2", "p"]} />
       <IndustryHero
         name="Power Plant"
         breadcrumbLabel="Power Plant"

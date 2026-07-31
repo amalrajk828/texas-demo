@@ -2,6 +2,8 @@ import type { Metadata } from "next";
 import NDTHero from "@/components/service/non-destructive-testing-ndt/NDTHero";
 import NDTSubServices from "@/components/service/non-destructive-testing-ndt/NDTSubServices";
 import { BreadcrumbJsonLd } from "@/components/schema/BreadcrumbJsonLd";
+import { FaqPageJsonLd } from "@/components/schema/FaqPageJsonLd";
+import { servicesListingFaq } from "@/lib/pageFaqData";
 import { ServiceJsonLd } from "@/components/schema/ServiceJsonLd";
 
 export const metadata: Metadata = {
@@ -37,6 +39,7 @@ export default function NDTPage() {
 />
       <NDTHero />
       <NDTSubServices />
+      <FaqPageJsonLd items={servicesListingFaq} />
     </>
   );
 }

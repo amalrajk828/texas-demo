@@ -5,6 +5,7 @@ import ScrollObserver from "@/components/ScrollObserver";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import SmoothScroll from "@/components/SmoothScroll";
+import { SiteNavigationJsonLd } from "@/components/schema/SiteNavigationJsonLd";
 import { SITE_URL } from "@/lib/site";
 import "./globals.css";
 
@@ -149,9 +150,16 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
                 "Mitsubishi Factory Automation",
                 "Process Control Automation",
               ],
+              aggregateRating: {
+                "@type": "AggregateRating",
+                ratingValue: 4.8,
+                reviewCount: 49,
+                bestRating: 5,
+              },
             }),
           }}
         />
+        <SiteNavigationJsonLd />
       </head>
       <body className="overflow-x-hidden">
         <a
