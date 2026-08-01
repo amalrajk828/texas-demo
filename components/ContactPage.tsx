@@ -13,6 +13,7 @@ import {
   CheckCircle,
 } from "lucide-react";
 import { SITE_EMAIL } from "@/lib/site";
+import { useFormSubmit } from "@/lib/useFormSubmit";
 
 const offices = [
   {
@@ -42,6 +43,7 @@ export default function ContactPage() {
     message: "",
   });
   const [submitted, setSubmitted] = useState(false);
+  const { submitForm, isSubmitting } = useFormSubmit();
 
   const handleChange = (
     e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
@@ -49,13 +51,21 @@ export default function ContactPage() {
     setForm((prev) => ({ ...prev, [e.target.name]: e.target.value }));
   };
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     if (!form.fullName || !form.email || !form.message) {
       alert("Please fill in all required fields.");
       return;
     }
-    setSubmitted(true);
+    const result = await submitForm({
+      ...form,
+      _subject: "New Contact Form Submission",
+    });
+    if (result.success) {
+      setSubmitted(true);
+    } else {
+      alert("Something went wrong. Please try again later.");
+    }
   };
 
   return (
@@ -336,9 +346,10 @@ export default function ContactPage() {
                   {/* Submit */}
                   <button
                     type="submit"
-                    className="w-full bg-[#e7212b] hover:bg-[#aa0b1b] text-white font-semibold py-3.5 px-6 rounded-lg transition-all duration-200 text-sm shadow-md shadow-[#e7212b]/15 active:scale-[0.99] cursor-pointer inline-flex items-center justify-center gap-2"
+                    disabled={isSubmitting}
+                    className="w-full bg-[#e7212b] hover:bg-[#aa0b1b] text-white font-semibold py-3.5 px-6 rounded-lg transition-all duration-200 text-sm shadow-md shadow-[#e7212b]/15 active:scale-[0.99] cursor-pointer inline-flex items-center justify-center gap-2 disabled:opacity-50 disabled:cursor-not-allowed"
                   >
-                    Send Message <Send className="w-4 h-4" />
+                    {isSubmitting ? "Sending..." : "Send Message"} <Send className="w-4 h-4" />
                   </button>
                 </form>
               )}

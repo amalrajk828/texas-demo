@@ -1,6 +1,7 @@
 "use client";
 
 import React, { useState } from "react";
+import { useFormSubmit } from "@/lib/useFormSubmit";
 
 export type ProductInquiryFormProps = {
   productName: string;
@@ -22,15 +23,20 @@ export default function ProductInquiryForm({
   });
 
   const [submitted, setSubmitted] = useState(false);
+  const { submitForm, isSubmitting } = useFormSubmit();
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     if (!formData.fullName || !formData.companyName || !formData.email) {
       alert("Please fill in all required fields.");
       return;
     }
-    // No backend yet - just show success message
-    setSubmitted(true);
+    const result = await submitForm(formData);
+    if (result.success) {
+      setSubmitted(true);
+    } else {
+      alert("Something went wrong. Please try again later.");
+    }
   };
 
   const handleChange = (
@@ -178,9 +184,10 @@ export default function ProductInquiryForm({
             {/* Submit Button */}
             <button
               type="submit"
-              className="w-full bg-[#e7212b] hover:bg-[#aa0b1b] text-white font-bold py-3.5 px-6 rounded-[6px] transition-all duration-200 text-sm shadow-md hover:shadow-[#e7212b]/15 active:scale-[0.99] cursor-pointer"
+              disabled={isSubmitting}
+              className="w-full bg-[#e7212b] hover:bg-[#aa0b1b] text-white font-bold py-3.5 px-6 rounded-[6px] transition-all duration-200 text-sm shadow-md hover:shadow-[#e7212b]/15 active:scale-[0.99] cursor-pointer disabled:opacity-50 disabled:cursor-not-allowed"
             >
-              Send Inquiry &rarr;
+              {isSubmitting ? "Sending..." : "Send Inquiry"} &rarr;
             </button>
           </form>
         )}
