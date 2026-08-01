@@ -1,3 +1,4 @@
+import NeumorphicDeliverCard from "@/components/service/common/NeumorphicDeliverCard";
 "use client";
 import Image from "next/image";
 import Link from "next/link";
@@ -179,13 +180,13 @@ export default function CalibrationContent() {
               <FadeUp key={item.title} delay={0.08 + i * 0.08}>
                 <motion.div
                   whileHover={{ y: -3, transition: { duration: 0.22 } }}
-                  className="group rounded-2xl border border-[#e8eaf0] bg-[#f4f5f8] p-6 hover:border-[#e7212b]/25 hover:bg-white hover:shadow-xl hover:shadow-[#e7212b]/5 transition-all duration-300 cursor-default h-full flex flex-col"
+                  className="neumorphic-press-card p-7 flex flex-col justify-between h-full group block text-left"
                 >
                   <span className="text-[10px] font-bold text-[#e7212b]/25 tracking-[3px] mb-4 block">
                     {String(i + 1).padStart(2, "0")}
                   </span>
 
-                  <div className="w-11 h-11 rounded-xl bg-white border border-[#e8eaf0] group-hover:border-[#e7212b]/20 group-hover:bg-[#e7212b]/5 flex items-center justify-center mb-4 transition-all duration-300 shadow-sm">
+                  <div className="neumorphic-press-btn w-11 h-11 flex items-center justify-center text-[#e7212b] mb-4">
                     <item.Icon className="w-5 h-5 text-[#e7212b]" strokeWidth={1.8} />
                   </div>
 

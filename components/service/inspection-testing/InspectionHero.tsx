@@ -5,7 +5,7 @@ import { ArrowRight, FlaskConical } from "lucide-react";
 
 export default function InspectionHero() {
   return (
-    <section className="relative bg-[#000000] blueprint-grid blueprint-dot-grid overflow-hidden pt-32 pb-20 lg:pb-28">
+    <section className="relative bg-[#000000] blueprint-grid blueprint-dot-grid overflow-hidden pt-32 pb-16 lg:pb-20">
       {/* Hairline top and bottom borders */}
       <div className="absolute top-0 inset-x-0 h-px bg-white/[0.08] pointer-events-none z-0" />
       <div className="absolute bottom-0 inset-x-0 h-px bg-white/[0.08] pointer-events-none z-0" />
@@ -26,7 +26,7 @@ export default function InspectionHero() {
           <span className="text-white/60">Inspection &amp; Testing</span>
         </motion.div>
 
-        <div className="max-w-3xl">
+        <div className="max-w-full">
 
           {/* Eyebrow */}
           <motion.div
@@ -59,12 +59,12 @@ export default function InspectionHero() {
             initial={{ opacity: 0, y: 14 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.55, delay: 0.18, ease: [0.22, 1, 0.36, 1] }}
-            className="space-y-4"
+            className="space-y-4 max-w-none"
           >
-            <p className="text-white/60 text-base sm:text-[16px] leading-relaxed max-w-3xl">
+            <p className="text-white/60 text-base sm:text-[16px] leading-relaxed">
               Texas Technical Services Co. (TTS) is a highly diversified independent service provider in the industry mainly as a Third Party Inspection &amp; Testing Company. Since it was founded, TTS has participated in supporting our clients in ensuring quality and safety of their products and our inspectors are committed to providing objective, independent assessments of product compliance and conformity, contributing to production and distribution processes that safeguard consumer health and providing businesses that demonstrate good practices with the tools they need to promote their companies and products, thereby building long-lasting trust-based relationships with their clients.
             </p>
-            <p className="text-white/50 text-[15px] leading-relaxed max-w-3xl">
+            <p className="text-white/50 text-[15px] leading-relaxed">
               TTS led by a strong management, technical expertise, engineers and well trained technicians are on a mission to deliver on-time top quality client focused service. We know that a successful company is the result of intelligent planning, capable leadership and active participation by all company members. TTS in that matter respects the talents and experiences of its employees and give the best training possible to keep them in touch with latest technologies.
             </p>
           </motion.div>

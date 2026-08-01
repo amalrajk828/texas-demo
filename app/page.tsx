@@ -123,7 +123,7 @@ export default function HomePage() {
           }),
         }}
       />
-      <main>
+      <main style={{ background: "linear-gradient(135deg, #f5f7fa 0%, #e2e7ee 45%, #c9d2dc 100%)" }}>
         <HeroSlider />
         <PartnersTicker />
         <TickerBanner />

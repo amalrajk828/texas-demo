@@ -23,7 +23,7 @@ const STATS = [
 
 export default function SpecializedHero() {
   return (
-    <section className="relative bg-[#000000] blueprint-grid blueprint-dot-grid overflow-hidden pt-28 pb-20 lg:pt-36 lg:pb-28">
+    <section className="relative bg-[#000000] blueprint-grid blueprint-dot-grid overflow-hidden pt-28 pb-16 lg:pb-20">
       {/* Background grid */}
       <div className="absolute inset-0 pointer-events-none" style={{ backgroundImage: "linear-gradient(rgba(255,255,255,0.025) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,0.025) 1px,transparent 1px)", backgroundSize: "60px 60px" }} />
       <div className="absolute top-0 left-0 w-[700px] h-[700px] rounded-full bg-[#e7212b]/5 blur-[120px] -translate-x-1/3 -translate-y-1/3 pointer-events-none" />
@@ -43,7 +43,7 @@ export default function SpecializedHero() {
           </nav>
         </FadeUp>
 
-        <div className="max-w-4xl">
+        <div className="max-w-full">
           {/* Eyebrow */}
           <FadeUp delay={0.05}>
             <div className="inline-flex items-center gap-2.5 bg-[#e7212b]/10 border border-[#e7212b]/20 rounded-full px-4 py-2 mb-6">
@@ -61,7 +61,7 @@ export default function SpecializedHero() {
           </FadeUp>
 
           <FadeUp delay={0.15}>
-            <p className="text-white/55 text-lg leading-relaxed max-w-2xl mb-10">
+            <p className="text-white/55 text-lg leading-relaxed max-w-none mb-10">
               From Phased Array Ultrasonic Testing and Eddy Current Testing to Corrosion Control, Metallurgical Analysis, and Lifting Equipment Inspection — TTS delivers advanced specialist services for the oil &amp; gas, petrochemical, and construction industries in Kuwait and Dubai.
             </p>
           </FadeUp>

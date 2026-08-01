@@ -47,7 +47,7 @@ export default function InspectionTestingPage() {
         areaServed={["Kuwait", "United Arab Emirates", "Saudi Arabia", "Bahrain", "Qatar", "Oman"]}
       />
       <InspectionHero />
-      <InspectionOverview />
+      <InspectionOverview hideHeading={true} />
     </>
   );
 }

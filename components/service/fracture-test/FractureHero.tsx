@@ -12,7 +12,7 @@ const STATS = [
 
 export default function FractureHero() {
   return (
-    <section className="relative bg-[#000000] blueprint-grid blueprint-dot-grid overflow-hidden pt-32 pb-20 lg:pb-28">
+    <section className="relative bg-[#000000] blueprint-grid blueprint-dot-grid overflow-hidden pt-32 pb-16 lg:pb-20">
       <div className="absolute inset-0 pointer-events-none" style={{ backgroundImage: "repeating-linear-gradient(0deg,transparent,transparent 59px,rgba(255,255,255,0.018) 60px),repeating-linear-gradient(90deg,transparent,transparent 59px,rgba(255,255,255,0.018) 60px)" }} />
       <div className="absolute top-1/3 -left-32 w-[420px] h-[420px] rounded-full pointer-events-none" style={{ background: "radial-gradient(circle, rgba(231,33,43,0.13) 0%, transparent 70%)" }} />
       <div className="absolute bottom-0 right-0 w-[320px] h-[320px] rounded-full pointer-events-none" style={{ background: "radial-gradient(circle, rgba(231,33,43,0.07) 0%, transparent 70%)" }} />
@@ -24,7 +24,7 @@ export default function FractureHero() {
           <Link href="/service/mechanical-testing/" className="hover:text-white/60 transition-colors">Mechanical Testing</Link><span>/</span>
           <span className="text-white/50">Fracture Test</span>
         </motion.div>
-        <div className="max-w-3xl">
+        <div className="max-w-full">
           <motion.div initial={{ opacity: 0, y: 16 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.55, ease: [0.22, 1, 0.36, 1], delay: 0.06 }} className="flex items-center gap-2.5 mb-5">
             <div className="w-8 h-8 rounded-lg bg-[#e7212b]/15 border border-[#e7212b]/25 flex items-center justify-center">
               <Scissors className="w-4 h-4 text-[#e7212b]" strokeWidth={1.8} />
@@ -34,7 +34,7 @@ export default function FractureHero() {
           <motion.h1 initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.6, ease: [0.22, 1, 0.36, 1], delay: 0.1 }} className="text-4xl sm:text-5xl lg:text-[3.4rem] font-bold text-white leading-[1.08] mb-6">
             <em className="not-italic text-[#e7212b]">Fracture</em> Test
           </motion.h1>
-          <motion.p initial={{ opacity: 0, y: 18 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.6, ease: [0.22, 1, 0.36, 1], delay: 0.16 }} className="text-white/50 text-[16px] leading-[1.85] mb-10 max-w-2xl">
+          <motion.p initial={{ opacity: 0, y: 18 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.6, ease: [0.22, 1, 0.36, 1], delay: 0.16 }} className="text-white/50 text-[16px] leading-[1.85] mb-10 max-w-none">
             Fracture toughness tests measure a material's ability to resist the growth or propagation of a pre-existing flaw — whether a fatigue crack, void, or any inconsistency in the test material. Critical for pressure vessels, pipelines, and structural components in service.
           </motion.p>
           <motion.div initial={{ opacity: 0, y: 14 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.55, ease: [0.22, 1, 0.36, 1], delay: 0.22 }} className="flex flex-wrap gap-3">

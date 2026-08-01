@@ -2,7 +2,7 @@
 import Link from "next/link";
 import { motion, useInView } from "framer-motion";
 import { useRef } from "react";
-import { ArrowRight } from "lucide-react";
+import NeumorphicServiceCard from "@/components/service/common/NeumorphicServiceCard";
 
 /* ─── Fade-up helper ─────────────────────────────────────────── */
 function FadeUp({
@@ -104,46 +104,24 @@ const RELATED_SERVICES = [
 
 export default function FlowSubServices() {
   return (
-    <section className="bg-[#f8f9fa] py-20 border-t border-[#e8eaf0]">
+    <section className="bg-white py-20 lg:py-24 border-t border-gray-100">
       <div className="max-w-7xl mx-auto px-4 sm:px-6">
-        <FadeUp delay={0} className="mb-10">
+        <FadeUp delay={0} className="mb-12">
           <div className="flex items-center gap-2.5 mb-3">
             <span className="w-5 h-px bg-[#e7212b]" />
             <span className="text-[#e7212b] text-[10px] font-semibold tracking-[3.5px] uppercase">
               Flow Measurement Solutions
             </span>
           </div>
-          <h2 className="text-2xl sm:text-3xl font-bold text-[#0B0D26]">
+          <h2 className="text-2xl sm:text-3xl font-bold text-[#1f2937]">
             Related Services
           </h2>
         </FadeUp>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-7 sm:gap-8">
           {RELATED_SERVICES.map((card, i) => (
             <FadeUp key={card.title} delay={0.04 + i * 0.03}>
-              <div className="bg-white border border-[#e8eaf0] rounded-2xl p-7 sm:p-8 flex flex-col justify-between h-full hover:border-[#e7212b]/30 hover:shadow-md transition-all duration-200 group">
-                <div>
-                  <p className="text-gray-400 text-[11px] font-semibold uppercase tracking-wider mb-2">
-                    {card.category}
-                  </p>
-                  <h3 className="text-[#0B0D26] text-[19px] font-bold leading-snug mb-3 group-hover:text-[#e7212b] transition-colors duration-200">
-                    {card.title}
-                  </h3>
-                  <p className="text-gray-500 text-[13.5px] leading-relaxed mb-6 line-clamp-3">
-                    {card.description}
-                  </p>
-                </div>
-
-                <div>
-                  <Link
-                    href={card.href}
-                    aria-label={`Read more about ${card.title}`}
-                    className="w-10 h-10 rounded-full border border-gray-300 flex items-center justify-center text-gray-700 hover:bg-[#e7212b] hover:border-[#e7212b] hover:text-white transition-all duration-200"
-                  >
-                    <ArrowRight className="w-4 h-4" />
-                  </Link>
-                </div>
-              </div>
+              <NeumorphicServiceCard card={card} />
             </FadeUp>
           ))}
         </div>

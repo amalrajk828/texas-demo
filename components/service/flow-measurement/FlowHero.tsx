@@ -6,7 +6,7 @@ import { ArrowRight, Gauge } from "lucide-react";
 
 export default function FlowHero() {
   return (
-    <section className="relative pt-32 pb-20 lg:pb-28 overflow-hidden bg-[#000000] blueprint-grid blueprint-dot-grid">
+    <section className="relative pt-32 pb-16 lg:pb-20 overflow-hidden bg-[#000000] blueprint-grid blueprint-dot-grid">
 
       {/* Layer 4: Hairline top and bottom borders */}
       <div className="absolute top-0 inset-x-0 h-px bg-white/[0.08] pointer-events-none z-0" />
@@ -29,7 +29,7 @@ export default function FlowHero() {
           <span className="text-white/70 font-medium">Flow Measurement</span>
         </motion.div>
 
-        <div className="max-w-3xl">
+        <div className="max-w-full">
 
           {/* Eyebrow */}
           <motion.div
@@ -64,7 +64,7 @@ export default function FlowHero() {
             initial={{ opacity: 0, y: 14 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.55, delay: 0.18, ease: [0.22, 1, 0.36, 1] }}
-            className="text-white/60 text-base sm:text-[17px] leading-relaxed max-w-3xl"
+            className="text-white/60 text-base sm:text-[17px] leading-relaxed max-w-none"
           >
             We provide metering control system upgrades, maintenance, and validation services for custody metering systems. Our experienced team ensures that your metering systems operate efficiently and accurately, meeting industry standards and compliance requirements. Additionally, we offer specialized consultancy services to optimize your custody metering processes and enhance productivity.
           </motion.p>

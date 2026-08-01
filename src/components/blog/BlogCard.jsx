@@ -1,17 +1,18 @@
 import React from "react";
 import { Calendar, Clock, ArrowRight } from "lucide-react";
 
+
 /**
  * Presentational component for displaying a preview card of a blog post.
  * 
  * Props:
- * - post: Object containing { id, title, excerpt, image, date, author: { name, avatar }, readTime }
+ * - post: Object containing { id, title, excerpt, image, date, author: { name, avatar }, readTime, category }
  * - onReadMore: Callback when clicking to view details, receives the post ID
  */
 export default function BlogCard({ post, onReadMore }) {
   if (!post) return null;
 
-  const { id, title, excerpt, image, date, author, readTime } = post;
+  const { id, title, excerpt, image, date, author, readTime, category } = post;
 
   return (
     <article 
@@ -28,9 +29,16 @@ export default function BlogCard({ post, onReadMore }) {
         />
         <div className="absolute inset-0 bg-gradient-to-t from-black/20 via-transparent to-transparent pointer-events-none" />
         
-        {/* Read Time Tag */}
+        {/* Category badge — top-left */}
+        {category && (
+          <span className="absolute top-3 left-3 z-10 text-[9.5px] font-bold uppercase tracking-[1.5px] px-2.5 py-1 rounded-full bg-[#e7212b] text-white">
+            {category}
+          </span>
+        )}
+
+        {/* Read Time Tag — top-right */}
         {readTime && (
-          <span className="absolute top-4 right-4 z-10 px-2.5 py-1 text-[10px] font-semibold text-white bg-black/60 backdrop-blur-md rounded-full tracking-wide">
+          <span className="absolute top-3 right-3 z-10 px-2.5 py-1 text-[10px] font-semibold text-white bg-black/60 backdrop-blur-md rounded-full tracking-wide">
             {readTime}
           </span>
         )}
@@ -47,7 +55,7 @@ export default function BlogCard({ post, onReadMore }) {
           {readTime && <span className="w-1 h-1 rounded-full bg-gray-200" />}
           <span className="flex items-center gap-1">
             <Clock className="w-3.5 h-3.5 text-gray-300" />
-            Industrial Tech
+            {readTime}
           </span>
         </div>
 

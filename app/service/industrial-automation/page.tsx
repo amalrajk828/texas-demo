@@ -3,7 +3,6 @@ import AutomationHero from "@/components/service/industrial-automation/Automatio
 import AutomationSubServices from "@/components/service/industrial-automation/AutomationSubServices";
 import { BreadcrumbJsonLd } from "@/components/schema/BreadcrumbJsonLd";
 import { ServiceJsonLd } from "@/components/schema/ServiceJsonLd";
-import LightGradientBackground from "@/components/LightGradientBackground";
 
 export const metadata: Metadata = {
   title: "Industrial Automation, PLC SCADA & Process Control Solutions",
@@ -66,11 +65,7 @@ export default function IndustrialAutomationPage() {
         areaServed={["Kuwait", "United Arab Emirates", "Saudi Arabia", "Bahrain", "Qatar", "Oman"]}
       />
       <AutomationHero />
-
-      {/* ══ CONTINUOUS LIGHT GLASS SECTION ═══════════════════════ */}
-      <LightGradientBackground className="py-20 lg:py-28">
-        <AutomationSubServices />
-      </LightGradientBackground>
+      <AutomationSubServices />
     </>
   );
 }

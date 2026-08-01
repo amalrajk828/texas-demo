@@ -60,13 +60,12 @@ function StatCard({ value, suffix, label, desc, index, started }: { value: numbe
   );
 }
 
-import LightGradientBackground from "@/components/LightGradientBackground";
 
 export default function GreyVision() {
   const ref = useRef<HTMLDivElement>(null);
   const inView = useInView(ref, { once: true, margin: "-80px" });
   return (
-    <LightGradientBackground className="py-24 lg:py-32">
+    <section className="relative py-24 lg:py-32 overflow-hidden" style={{ background: "linear-gradient(135deg, #f5f7fa 0%, #e2e7ee 45%, #c9d2dc 100%)" }}>
       <div ref={ref} className="relative max-w-7xl mx-auto px-4 sm:px-6 z-10">
         <div className="text-center mb-16">
           <motion.div initial={{ opacity: 0, y: 12 }} animate={inView ? { opacity: 1, y: 0 } : {}} transition={{ duration: 0.6 }} className="inline-flex items-center gap-3 mb-5">
@@ -90,6 +89,6 @@ export default function GreyVision() {
           </p>
         </motion.div>
       </div>
-    </LightGradientBackground>
+    </section>
   );
 }

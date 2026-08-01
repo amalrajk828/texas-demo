@@ -48,7 +48,6 @@ const NDT_METHODS = [
 ];
 
 import LightGradientBackground from "@/components/LightGradientBackground";
-import SubServiceCard from "@/components/service/common/SubServiceCard";
 
 export default function NDTSubServices() {
   return (
@@ -69,7 +68,42 @@ export default function NDTSubServices() {
 
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5 sm:gap-[22px]">
           {NDT_METHODS.map((item, i) => (
-            <SubServiceCard key={item.title} item={item} index={i} categoryTag="NDT Services" />
+            <FadeUp key={item.title} delay={0.04 + (i % 3) * 0.08}>
+              <motion.div whileHover={{ y: -3, transition: { duration: 0.22 } }} className="h-full">
+                <Link
+                  href={item.href}
+                  className="neumorphic-press-card p-7 flex flex-col justify-between h-full group block text-left"
+                >
+                  {/* Step number */}
+                  <span className="text-[10px] font-bold text-[#e7212b]/25 tracking-[3px] mb-4 block">
+                    {String(i + 1).padStart(2, "0")}
+                  </span>
+
+                  {/* Icon badge */}
+                  <div className="neumorphic-press-btn w-11 h-11 flex items-center justify-center text-[#e7212b] mb-4 shrink-0">
+                    <item.Icon className="w-5 h-5 text-[#e7212b]" strokeWidth={1.8} />
+                  </div>
+
+                  {/* Red accent bar */}
+                  <div className="w-8 h-[2px] bg-[#e7212b] rounded-full mb-3 group-hover:w-12 transition-all duration-300" />
+
+                  {/* Title */}
+                  <h3 className="text-[15px] font-bold text-[#0B0D26] leading-snug mb-2 group-hover:text-[#e7212b] transition-colors duration-200">
+                    {item.title}
+                  </h3>
+
+                  {/* Body */}
+                  <p className="text-gray-500 text-[13px] leading-[1.75] flex-1 mb-5">
+                    {item.body}
+                  </p>
+
+                  {/* Read More CTA */}
+                  <span className="inline-flex items-center gap-1.5 text-[#e7212b] text-[12px] font-semibold group-hover:gap-2.5 transition-all duration-200">
+                    Read More <ArrowRight className="w-3.5 h-3.5" />
+                  </span>
+                </Link>
+              </motion.div>
+            </FadeUp>
           ))}
         </div>
       </div>

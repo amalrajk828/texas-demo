@@ -23,7 +23,7 @@ const STATS = [
 
 export default function PlantAutomationHero() {
   return (
-    <section className="relative bg-[#000000] blueprint-grid blueprint-dot-grid overflow-hidden pt-28 pb-20 lg:pt-36 lg:pb-28">
+    <section className="relative bg-[#000000] blueprint-grid blueprint-dot-grid overflow-hidden pt-28 pb-16 lg:pb-20">
       <div className="absolute inset-0 pointer-events-none" style={{ backgroundImage: "linear-gradient(rgba(255,255,255,0.025) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,0.025) 1px,transparent 1px)", backgroundSize: "60px 60px" }} />
       <div className="absolute top-0 left-0 w-[700px] h-[700px] rounded-full bg-[#e7212b]/5 blur-[120px] -translate-x-1/3 -translate-y-1/3 pointer-events-none" />
       <div className="absolute bottom-0 right-0 w-[500px] h-[500px] rounded-full bg-[#e7212b]/4 blur-[100px] translate-x-1/4 translate-y-1/4 pointer-events-none" />
@@ -39,7 +39,7 @@ export default function PlantAutomationHero() {
             <span className="text-white/60">Process Plant Automation</span>
           </nav>
         </FadeUp>
-        <div className="max-w-4xl">
+        <div className="max-w-full">
           <FadeUp delay={0.05}>
             <div className="inline-flex items-center gap-2.5 bg-[#e7212b]/10 border border-[#e7212b]/20 rounded-full px-4 py-2 mb-6">
               <Factory className="w-3.5 h-3.5 text-[#e7212b]" strokeWidth={2} />
@@ -53,7 +53,7 @@ export default function PlantAutomationHero() {
             </h1>
           </FadeUp>
           <FadeUp delay={0.15}>
-            <p className="text-white/55 text-lg leading-relaxed max-w-2xl mb-10">
+            <p className="text-white/55 text-lg leading-relaxed max-w-none mb-10">
               TTS specialises in delivering top-tier Plant Automation solutions that streamline industrial processes. Our cutting-edge automation systems boost efficiency, reduce operational costs, and enhance productivity — with customised solutions for process optimisation, remote monitoring, and safety enhancements, backed by continuous expert support.
             </p>
           </FadeUp>

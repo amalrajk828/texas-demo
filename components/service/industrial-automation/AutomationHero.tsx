@@ -5,7 +5,7 @@ import { ArrowRight, Cpu } from "lucide-react";
 
 export default function AutomationHero() {
   return (
-    <section className="relative bg-[#000000] blueprint-grid blueprint-dot-grid overflow-hidden pt-32 pb-20 lg:pb-28">
+    <section className="relative bg-[#000000] blueprint-grid blueprint-dot-grid overflow-hidden pt-32 pb-16 lg:pb-20">
       {/* Hairline top and bottom borders */}
       <div className="absolute top-0 inset-x-0 h-px bg-white/[0.08] pointer-events-none z-0" />
       <div className="absolute bottom-0 inset-x-0 h-px bg-white/[0.08] pointer-events-none z-0" />
@@ -26,7 +26,7 @@ export default function AutomationHero() {
           <span className="text-white/60">Industrial Automation</span>
         </motion.div>
 
-        <div className="max-w-3xl">
+        <div className="max-w-full">
 
           {/* Eyebrow */}
           <motion.div
@@ -61,7 +61,7 @@ export default function AutomationHero() {
             initial={{ opacity: 0, y: 14 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.55, delay: 0.18, ease: [0.22, 1, 0.36, 1] }}
-            className="text-white/50 text-base sm:text-[16px] leading-relaxed mb-8 max-w-2xl"
+            className="text-white/50 text-base sm:text-[16px] leading-relaxed mb-8 max-w-none"
           >
             As a leading PLC and SCADA system integrator in Kuwait and the GCC, we provide
             total industrial automation &amp; control systems using various brands of PLCs, SCADA,

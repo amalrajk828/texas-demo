@@ -3,8 +3,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { motion, useInView } from "framer-motion";
 import { useRef } from "react";
-import { ArrowRight, Factory, Network, Rocket } from "lucide-react";
-import SubServiceCard from "@/components/service/common/SubServiceCard";
+import NeumorphicServiceCard from "@/components/service/common/NeumorphicServiceCard";
 
 function FadeUp({
   children,
@@ -30,32 +29,35 @@ function FadeUp({
   );
 }
 
-const SUB_SERVICES = [
+const AUTOMATION_SERVICES = [
   {
-    Icon: Factory,
     title: "Process Plant Automation",
-    body: "Plant Automation Excellence: At TTS, we specialize in delivering top-tier Plant Automation solutions that streamline your industrial processes. Our cutting-edge automation systems are designed to boost efficiency, reduce operational costs, and enhance overall productivity — ensuring your plant operates at peak performance levels with full visibility and control.",
+    category: "Industrial Automation",
+    description:
+      "Plant Automation Excellence: At TTS, we specialize in delivering top-tier Plant Automation solutions that streamline your industrial processes. Our cutting-edge automation systems are designed to boost efficiency, reduce operational costs, and enhance overall productivity — ensuring your plant operates at peak performance levels with full visibility and control.",
     href: "/service/plant-automation/",
   },
   {
-    Icon: Network,
     title: "Control System Integration and Upgradation",
-    body: "At TTS, we are your trusted partner for PLC (Programmable Logic Controller) and SCADA (Supervisory Control and Data Acquisition)-based automation and system integration. Our expertise in this field empowers industries to achieve higher levels of efficiency, reliability, and control — from legacy system migrations to full greenfield automation builds.",
+    category: "Industrial Automation",
+    description:
+      "At TTS, we are your trusted partner for PLC (Programmable Logic Controller) and SCADA (Supervisory Control and Data Acquisition)-based automation and system integration. Our expertise in this field empowers industries to achieve higher levels of efficiency, reliability, and control — from legacy system migrations to full greenfield automation builds.",
     href: "/service/system-software-upgrade/",
   },
   {
-    Icon: Rocket,
     title: "Commissioning and Start-up Support",
-    body: "Commissioning for Industrial Process Automation involves the meticulous process of validating and fine-tuning automation systems to ensure they operate in strict accordance with predefined specifications. Our experienced team guides your project from pre-commissioning through hot commissioning, start-up, and post-commissioning handover — minimizing downtime and risk.",
+    category: "Industrial Automation",
+    description:
+      "Commissioning for Industrial Process Automation involves the meticulous process of validating and fine-tuning automation systems to ensure they operate in strict accordance with predefined specifications. Our experienced team guides your project from pre-commissioning through hot commissioning, start-up, and post-commissioning handover — minimizing downtime and risk.",
     href: "/service/commissioning-and-start-up-support/",
   },
 ];
 
 export default function AutomationSubServices() {
   return (
-    <div className="relative max-w-7xl mx-auto px-4 sm:px-6 z-10">
-      {/* ── Header + cards ── */}
-      <div>
+    <section className="bg-white py-20 lg:py-24 border-t border-gray-100">
+      <div className="relative max-w-7xl mx-auto px-4 sm:px-6 z-10">
+        {/* ── Section Header ── */}
         <FadeUp delay={0} className="mb-12">
           <div className="flex items-center gap-2.5 mb-3">
             <span className="w-5 h-px bg-[#e7212b]" />
@@ -63,22 +65,14 @@ export default function AutomationSubServices() {
               Industrial Automation
             </span>
           </div>
-          <div className="flex flex-col sm:flex-row sm:items-end justify-between gap-4">
-            <h2 className="text-3xl sm:text-[2.4rem] font-bold text-[#0B0D26] leading-[1.15]">
-              Our Automation Services
-            </h2>
-            <Link
-              href="#contact"
-              className="inline-flex items-center gap-2 bg-[#e7212b] hover:bg-[#aa0b1b] text-white font-semibold px-6 py-3 rounded-lg transition-colors duration-200 text-[13px] shrink-0 shadow-lg shadow-[#e7212b]/15"
-            >
-              Get More Information
-              <ArrowRight className="w-3.5 h-3.5" />
-            </Link>
-          </div>
+          <h2 className="text-2xl sm:text-3xl font-bold text-[#1f2937]">
+            Our Automation Services
+          </h2>
         </FadeUp>
 
-        <FadeUp delay={0.1} className="mb-16">
-          <div className="relative rounded-2xl overflow-hidden aspect-[21/7] shadow-2xl shadow-black/20">
+        {/* ── Banner Image ── */}
+        <FadeUp delay={0.05} className="mb-14">
+          <div className="relative rounded-3xl overflow-hidden aspect-[21/7] shadow-xl">
             <Image
               src="/images/services/automation_full.jpg"
               alt="Industrial automation control system — PLC SCADA integration by Texas Technical Services Kuwait"
@@ -91,12 +85,15 @@ export default function AutomationSubServices() {
           </div>
         </FadeUp>
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5 sm:gap-[22px]">
-          {SUB_SERVICES.map((item, i) => (
-            <SubServiceCard key={item.title} item={item} index={i} categoryTag="Industrial Automation" />
+        {/* ── Neumorphic Service Cards (3-Column Grid) ── */}
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-7 sm:gap-8">
+          {AUTOMATION_SERVICES.map((card, i) => (
+            <FadeUp key={card.title} delay={0.04 + i * 0.03}>
+              <NeumorphicServiceCard card={card} />
+            </FadeUp>
           ))}
         </div>
       </div>
-    </div>
+    </section>
   );
 }

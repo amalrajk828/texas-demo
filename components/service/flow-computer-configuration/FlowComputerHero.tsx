@@ -5,7 +5,7 @@ import { ArrowRight, Settings2 } from "lucide-react";
 
 export default function FlowComputerHero() {
   return (
-    <section className="relative bg-[#000000] blueprint-grid blueprint-dot-grid overflow-hidden pt-32 pb-20 lg:pb-28">
+    <section className="relative bg-[#000000] blueprint-grid blueprint-dot-grid overflow-hidden pt-32 pb-16 lg:pb-20">
 
       {/* Grid texture */}
       <div
@@ -52,7 +52,7 @@ export default function FlowComputerHero() {
           <span className="text-white/60">Flow Computer Configuration</span>
         </motion.div>
 
-        <div className="max-w-3xl">
+        <div className="max-w-full">
 
           {/* Eyebrow */}
           <motion.div
@@ -85,7 +85,7 @@ export default function FlowComputerHero() {
             initial={{ opacity: 0, y: 14 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.55, delay: 0.18, ease: [0.22, 1, 0.36, 1] }}
-            className="text-white/50 text-base sm:text-[16px] leading-relaxed mb-8 max-w-2xl"
+            className="text-white/50 text-base sm:text-[16px] leading-relaxed mb-8 max-w-none"
           >
             Our dedicated team customizes solutions to your specific flow computational and
             configuration needs in compliance with global standards (API MPMS, AGA, ISO, NTEP

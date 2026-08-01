@@ -1,9 +1,10 @@
 "use client";
-import Image from "next/image";
 import Link from "next/link";
 import { motion, useInView } from "framer-motion";
 import { useRef } from "react";
-import { ArrowRight, MoveHorizontal, Shield, Zap, Rotate3D, Scissors, Microscope } from "lucide-react";
+import { ArrowRight, Ruler, Shield, Zap, GitBranch, Cpu, Microscope } from "lucide-react";
+import LightGradientBackground from "@/components/LightGradientBackground";
+import NeumorphicDeliverCard from "@/components/service/common/NeumorphicDeliverCard";
 
 function FadeUp({ children, delay = 0, className = "" }: { children: React.ReactNode; delay?: number; className?: string }) {
   const ref = useRef<HTMLDivElement>(null);
@@ -17,51 +18,42 @@ function FadeUp({ children, delay = 0, className = "" }: { children: React.React
 
 const TESTS = [
   {
-    Icon: MoveHorizontal,
+    Icon: Ruler,
     title: "Tensile Test",
     body: "One of the most fundamental mechanical tests — determines tensile strength, yield strength, and ductility of metals, plastics, ceramics, and composites by measuring the force required to stretch a specimen until it breaks.",
-    imageSrc: "/images/services/tensile-test2.jpg",
     href: "/service/tensile-test/",
   },
   {
     Icon: Shield,
     title: "Hardness Test",
     body: "Measures a material's resistance to permanent deformation by penetration of a harder indenter under a specified load. Widely used for metals, plastics, and ceramics to determine surface hardness and material quality.",
-    imageSrc: "/images/services/Hardness-Test.jpg",
     href: "/service/hardness-test/",
   },
   {
     Icon: Zap,
     title: "Impact Test",
     body: "Measures a material's resistance to sudden shock loading that causes immediate deformation, fracture, or rupture. Critical for construction, automotive, and aerospace applications where impact resistance is paramount.",
-    imageSrc: "/images/services/charpy_impact_test.jpg",
     href: "/service/impact-test/",
   },
   {
-    Icon: Rotate3D,
+    Icon: GitBranch,
     title: "Bend Test",
     body: "Assesses a material's ability to withstand bending forces without breaking. A qualitative test evaluating both ductility and soundness — essential for structural applications in construction, aerospace, and engineering.",
-    imageSrc: "/images/services/Three_point_flexural_test-scaled.jpg",
     href: "/service/bend-test/",
   },
   {
-    Icon: Scissors,
+    Icon: Cpu,
     title: "Fracture Test",
     body: "Fracture toughness tests measure a material's ability to resist growth or propagation of a pre-existing flaw — whether a fatigue crack, void, or any inconsistency present in the test material.",
-    imageSrc: "/images/services/fracture-testing.jpg",
     href: "/service/fracture-test/",
   },
   {
     Icon: Microscope,
     title: "Macro and Micro Test",
     body: "Two categories of experiments conducted to study mechanical properties at different length scales — providing insights into material behaviour under various loading conditions for characterisation, design optimisation, and quality control.",
-    imageSrc: "/images/services/Macro-and-Micro-Test.jpg",
     href: "/service/macro-and-micro-test/",
   },
 ];
-
-import LightGradientBackground from "@/components/LightGradientBackground";
-import SubServiceCard from "@/components/service/common/SubServiceCard";
 
 export default function MechanicalSubServices() {
   return (
@@ -80,9 +72,13 @@ export default function MechanicalSubServices() {
           </div>
         </FadeUp>
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5 sm:gap-[22px]">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5 sm:gap-6">
           {TESTS.map((item, i) => (
-            <SubServiceCard key={item.title} item={item} index={i} categoryTag="Mechanical Testing" />
+            <FadeUp key={item.title} delay={0.08 + i * 0.08}>
+              <Link href={item.href} className="block h-full">
+                <NeumorphicDeliverCard item={item} index={i} />
+              </Link>
+            </FadeUp>
           ))}
         </div>
       </div>

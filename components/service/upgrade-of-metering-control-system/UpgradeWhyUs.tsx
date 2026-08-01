@@ -3,6 +3,7 @@ import Link from "next/link";
 import { motion, useInView } from "framer-motion";
 import { useRef } from "react";
 import { ArrowRight, BadgeDollarSign, Award, MinusCircle, TrendingUp, Headphones } from "lucide-react";
+import NeumorphicReasonCard from "@/components/service/common/NeumorphicReasonCard";
 
 function FadeUp({
   children,
@@ -126,8 +127,8 @@ export default function UpgradeWhyUs() {
             </FadeUp>
           </div>
 
-          {/* Right — reason cards (2 col grid, last one spans) */}
-          <div className="grid grid-cols-1 sm:grid-cols-2 gap-5">
+          {/* Right — reason cards */}
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 sm:gap-7">
             {REASONS.map((reason, i) => {
               const isLast = i === REASONS.length - 1;
               return (
@@ -136,28 +137,7 @@ export default function UpgradeWhyUs() {
                   delay={0.08 + i * 0.07}
                   className={isLast ? "sm:col-span-2 lg:col-span-1" : ""}
                 >
-                  <motion.div
-                    whileHover={{ y: -3, transition: { duration: 0.22 } }}
-                    className="group rounded-2xl border border-[#e8eaf0] bg-[#f4f5f8] p-6 hover:border-[#e7212b]/25 hover:bg-white hover:shadow-xl hover:shadow-[#e7212b]/5 transition-all duration-300 cursor-default h-full"
-                  >
-                    <span className="text-[10px] font-bold text-[#e7212b]/25 tracking-[3px] mb-4 block">
-                      {String(i + 1).padStart(2, "0")}
-                    </span>
-
-                    <div className="w-11 h-11 rounded-xl bg-white border border-[#e8eaf0] group-hover:border-[#e7212b]/20 group-hover:bg-[#e7212b]/5 flex items-center justify-center mb-4 transition-all duration-300 shadow-sm">
-                      <reason.Icon className="w-5 h-5 text-[#e7212b]" strokeWidth={1.8} />
-                    </div>
-
-                    <div className="w-8 h-[2px] bg-[#e7212b] rounded-full mb-3 group-hover:w-12 transition-all duration-300" />
-
-                    <h3 className="text-[15px] font-bold text-[#0B0D26] leading-snug mb-2">
-                      {reason.title}
-                    </h3>
-
-                    <p className="text-gray-500 text-[13px] leading-[1.75]">
-                      {reason.body}
-                    </p>
-                  </motion.div>
+                  <NeumorphicReasonCard item={reason} index={i} />
                 </FadeUp>
               );
             })}

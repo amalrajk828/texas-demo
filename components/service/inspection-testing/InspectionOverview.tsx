@@ -11,6 +11,7 @@ import {
   AudioWaveform,
   ArrowRight,
 } from "lucide-react";
+import NeumorphicServiceCard from "@/components/service/common/NeumorphicServiceCard";
 
 function FadeUp({
   children,
@@ -68,11 +69,11 @@ const RELATED_SERVICES = [
   },
 ];
 
-export default function InspectionOverview() {
+export default function InspectionOverview({ hideHeading = false }: { hideHeading?: boolean }) {
   return (
     <>
       {/* ── Main Content Section: Commitment, Consultancy & NDT ── */}
-      <section className="relative bg-white py-20 lg:py-28 overflow-hidden">
+      <section className="relative bg-white pt-10 pb-4 lg:pt-14 lg:pb-6 overflow-hidden">
         {/* Subtle background glow */}
         <div
           className="absolute -top-40 -right-40 w-[500px] h-[500px] rounded-full pointer-events-none"
@@ -88,19 +89,22 @@ export default function InspectionOverview() {
                 Our Commitment
               </span>
             </div>
-            <h2 className="text-2xl sm:text-3xl font-bold text-[#0B0D26] leading-[1.25] mb-5 max-w-4xl">
-              Driving Excellence: Texas Technical Services Co.&apos;s Integrated Approach to Health, Safety, Environment, and Quality Management
+            <h2 className="text-2xl sm:text-3xl font-bold text-[#0B0D26] leading-[1.25] mb-5 max-w-full">
+              Driving Excellence: Texas Technical Services Co.'s Integrated Approach to Health, Safety, Environment, and Quality Management
             </h2>
-            <p className="text-gray-600 text-[15px] leading-[1.85] max-w-4xl">
+            <p className="text-gray-600 text-[15px] leading-[1.85] max-w-none">
               Texas Technical Services Co. (TTS) is committed to health and safety, the environment and quality is delivered by adopting an integrated approach to our management systems, and complying with all relevant legislation, regulations and other legal and industry requirements. This provides a framework for integration of the ISO 14001:2015, ISO 45001:2018 and ISO 9001:2015 standards and is externally certificated by a UASL accredited certification body.
             </p>
           </FadeUp>
 
-          {/* ── 5 & 6. Two-column: TTS Offers / Consultancy + NDT Examinations ── */}
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-stretch">
+          {/* ── 5 & 6. Stacked: TTS Offers / Consultancy + NDT Examinations ── */}
+          <div className="flex flex-col gap-6">
             {/* 5. TTS Offers / Consultancy Services Card */}
             <FadeUp delay={0.05}>
-              <div className="rounded-2xl bg-[#000000] blueprint-grid blueprint-dot-grid overflow-hidden relative h-full flex flex-col justify-between p-8 sm:p-9 shadow-xl">
+              <motion.div
+                whileHover={{ y: -4, boxShadow: "0 20px 40px rgba(0,0,0,0.35)", transition: { duration: 0.25 } }}
+                className="rounded-2xl bg-[#000000] blueprint-grid blueprint-dot-grid overflow-hidden relative flex flex-col p-7 sm:p-9 shadow-xl w-full"
+              >
                 {/* Grid texture overlay */}
                 <div
                   className="absolute inset-0 pointer-events-none"
@@ -127,12 +131,14 @@ export default function InspectionOverview() {
                     TTS provides an efficient QA consultancy service in preparing various documents like Quality Control Procedures, Inspection Test Plan (ITP), Method of Statement, Welding Procedure Specification (WPS), Procedure Qualification Record (PQR), and Welder Qualification Certificates (WQT).
                   </p>
                 </div>
-              </div>
+              </motion.div>
             </FadeUp>
 
-            {/* 6. NDT Examinations Card */}
-            <FadeUp delay={0.1}>
-              <div className="rounded-2xl border border-[#e8eaf0] bg-[#f4f5f8] p-8 sm:p-9 h-full flex flex-col justify-between shadow-sm">
+            <FadeUp delay={0.15}>
+              <motion.div
+                whileHover={{ y: -4, boxShadow: "0 16px 36px rgba(0,0,0,0.08)", transition: { duration: 0.25 } }}
+                className="rounded-2xl border border-[#e8eaf0] bg-white p-7 sm:p-9 flex flex-col shadow-sm w-full"
+              >
                 <div>
                   <div className="flex items-center gap-2.5 mb-4">
                     <span className="w-5 h-px bg-[#e7212b]" />
@@ -144,78 +150,57 @@ export default function InspectionOverview() {
                     Non Destructive Testing (NDT)
                   </h3>
                   <p className="text-gray-600 text-[14px] leading-[1.8] mb-6">
-                    The following non destructive examinations services are available in TTS with technical expertise, qualified and experienced technicians and modern equipment&apos;s. These inspection services include:
+                    The following non destructive examinations services are available in TTS with technical expertise, qualified and experienced technicians and modern equipment's. These inspection services include:
                   </p>
 
-                  <div className="space-y-2.5">
+                  {/* NDT list — flat 2-column chip grid, single column on mobile */}
+                  <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-2.5">
                     {NDT_METHODS.map(({ Icon, abbr, label }, i) => (
                       <motion.div
                         key={abbr}
-                        initial={{ opacity: 0, x: -10 }}
-                        whileInView={{ opacity: 1, x: 0 }}
-                        viewport={{ once: true, margin: "-30px" }}
-                        transition={{ duration: 0.4, ease: [0.22, 1, 0.36, 1], delay: 0.05 + i * 0.05 }}
-                        className="group flex items-center gap-3.5 bg-white border border-[#e8eaf0] rounded-xl px-4.5 py-3 hover:border-[#e7212b]/30 hover:shadow-md transition-all duration-200"
+                        initial={{ opacity: 0, y: 12 }}
+                        whileInView={{ opacity: 1, y: 0 }}
+                        viewport={{ once: false, margin: "-40px" }}
+                        transition={{ duration: 0.4, ease: [0.22, 1, 0.36, 1], delay: i * 0.08 }}
+                        className="group flex items-center gap-3 w-full bg-[#f8f9fb] hover:bg-[#f1f3f6] rounded-xl px-3.5 py-3 transition-colors duration-200 cursor-pointer"
                       >
-                        <div className="w-8 h-8 rounded-lg bg-[#e7212b]/8 border border-[#e7212b]/15 flex items-center justify-center shrink-0">
+                        <div className="w-8 h-8 rounded-lg bg-[#e7212b]/10 border border-[#e7212b]/15 flex items-center justify-center shrink-0">
                           <Icon className="w-4 h-4 text-[#e7212b]" strokeWidth={1.8} />
                         </div>
-                        <span className="text-[#0B0D26] text-[13.5px] font-medium">{label}</span>
+                        <span className="text-[#0B0D26] text-[13px] font-medium leading-snug group-hover:text-[#e7212b] transition-colors duration-200">{label}</span>
                       </motion.div>
                     ))}
                   </div>
                 </div>
-              </div>
+              </motion.div>
             </FadeUp>
           </div>
         </div>
       </section>
 
       {/* ── 7. Explore More / Related Services Section ── */}
-      <section className="bg-[#f8f9fa] py-20 border-t border-[#e8eaf0]">
+      <section className="bg-white pt-4 pb-10 lg:pt-6 lg:pb-12">
         <div className="max-w-7xl mx-auto px-4 sm:px-6">
           <FadeUp delay={0} className="mb-10">
-            <div className="flex items-center gap-2.5 mb-3">
-              <span className="w-5 h-px bg-[#e7212b]" />
-              <span className="text-[#e7212b] text-[10px] font-semibold tracking-[3.5px] uppercase">
-                Explore More
-              </span>
-            </div>
-            <h2 className="text-2xl sm:text-3xl font-bold text-[#0B0D26]">
-              Related Services
-            </h2>
-          </FadeUp>
-
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-            {RELATED_SERVICES.map((card, i) => (
-              <FadeUp
-                key={card.title}
-                delay={0.05 + i * 0.05}
-                className={i === 2 ? "col-span-1" : ""}
-              >
-                <div className="bg-white border border-[#e8eaf0] rounded-2xl p-7 sm:p-8 flex flex-col justify-between h-full hover:border-[#e7212b]/30 hover:shadow-md transition-all duration-200 group">
-                  <div>
-                    <p className="text-gray-400 text-[11px] font-semibold uppercase tracking-wider mb-2">
-                      {card.category}
-                    </p>
-                    <h3 className="text-[#0B0D26] text-[19px] font-bold leading-snug mb-3 group-hover:text-[#e7212b] transition-colors duration-200">
-                      {card.title}
-                    </h3>
-                    <p className="text-gray-500 text-[13.5px] leading-relaxed mb-6 line-clamp-3">
-                      {card.description}
-                    </p>
-                  </div>
-
-                  <div>
-                    <Link
-                      href={card.href}
-                      aria-label={`Read more about ${card.title}`}
-                      className="w-10 h-10 rounded-full border border-gray-300 flex items-center justify-center text-gray-700 hover:bg-[#e7212b] hover:border-[#e7212b] hover:text-white transition-all duration-200"
-                    >
-                      <ArrowRight className="w-4 h-4" />
-                    </Link>
-                  </div>
+            {/* Heading block hidden when hideHeading is true */}
+            {!hideHeading && (
+              <>
+                <div className="flex items-center gap-2.5 mb-3">
+                  <span className="w-5 h-px bg-[#e7212b]" />
+                  <span className="text-[#e7212b] text-[10px] font-semibold tracking-[3.5px] uppercase">
+                    Explore More
+                  </span>
                 </div>
+                <h2 className="text-2xl sm:text-3xl font-bold text-[#1f2937]">
+                  Related Services
+                </h2>
+              </>
+            )}
+          </FadeUp>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-7 sm:gap-8">
+            {RELATED_SERVICES.map((card, i) => (
+              <FadeUp key={card.title} delay={0.05 + i * 0.05}>
+                <NeumorphicServiceCard card={card} />
               </FadeUp>
             ))}
           </div>
