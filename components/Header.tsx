@@ -466,16 +466,16 @@ export default function Header() {
         />
 
         <div className="max-w-7xl mx-auto px-4 sm:px-6">
-          <div className="flex items-center h-[88px] gap-10">
+          <div className="flex items-center lg:h-[72px] h-[88px] gap-10 lg:gap-5 xl:gap-10">
 
             {/* ── Logo ─────────────────────────────────────────── */}
-            <Link href="/" className="flex items-center gap-4 shrink-0">
-              <Image src="/logo.svg" alt="Texas Technical Services" width={62} height={62} priority />
+            <Link href="/" className="flex items-center gap-4 lg:gap-3 shrink-0">
+              <Image src="/logo.svg" alt="Texas Technical Services" width={62} height={62} className="lg:w-12 lg:h-12" priority />
               <div className="hidden sm:flex flex-col gap-0.5">
-                <span className="text-white font-black tracking-[6px] text-[18px] leading-none">
+                <span className="text-white font-black tracking-[6px] lg:tracking-[4px] text-[18px] lg:text-[15px] leading-none">
                   TEXAS
                 </span>
-                <span className="text-[#E53935] text-[11px] tracking-[3px] leading-none font-semibold mt-0.5">
+                <span className="text-[#E53935] text-[11px] lg:text-[10px] tracking-[3px] lg:tracking-[2px] leading-none font-semibold mt-0.5">
                   TECHNICAL SERVICES
                 </span>
               </div>
@@ -501,7 +501,7 @@ export default function Header() {
                         onBlur={item.children ? handleMouseLeave : undefined}
                         aria-expanded={open === item.label ? "true" : "false"}
                         aria-haspopup="true"
-                        className={`flex items-center gap-1.5 px-4 py-2.5 text-[14px] font-medium font-sans tracking-wide rounded-lg transition-colors relative ${
+                        className={`flex items-center gap-1.5 lg:px-3 xl:px-4 py-2.5 lg:text-[13px] xl:text-[14px] font-medium font-sans tracking-wide lg:tracking-normal whitespace-nowrap rounded-lg transition-colors relative ${
                           isActive(item.href) ? "text-white" : "text-white/60 hover:text-white"
                         }`}
                       >
@@ -547,7 +547,7 @@ export default function Header() {
                     /* Simple link (Home, About, Clients) */
                     <Link
                       href={item.href}
-                      className={`relative px-4 py-2.5 text-[14px] font-medium font-sans tracking-wide rounded-lg transition-colors block ${
+                      className={`relative lg:px-3 xl:px-4 py-2.5 lg:text-[13px] xl:text-[14px] font-medium font-sans tracking-wide lg:tracking-normal whitespace-nowrap rounded-lg transition-colors block ${
                         isActive(item.href) ? "text-white" : "text-white/60 hover:text-white"
                       }`}
                     >
@@ -814,7 +814,7 @@ export default function Header() {
       </header>
 
       {/* Spacer — matches header height */}
-      <div className="h-[88px]" aria-hidden="true" />
+      <div className="h-[88px] lg:h-[72px]" aria-hidden="true" />
     </>
   );
 }

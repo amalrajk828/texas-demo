@@ -112,11 +112,13 @@ function useSwipe(onLeft: () => void, onRight: () => void) {
 export default function HeroSlider() {
   const [current, setCurrent] = useState(0);
   const [paused, setPaused] = useState(false);
-  const [progress, setProgress] = useState(0);
   const [isMobile, setIsMobile] = useState(false);
 
   const rafRef = useRef<number | null>(null);
   const startRef = useRef<number | null>(null);
+  const progressRef = useRef(0);
+  const progressBarDesktopRef = useRef<HTMLDivElement>(null);
+  const progressBarMobileRef = useRef<HTMLDivElement>(null);
   const mainVideoRef = useRef<HTMLVideoElement | null>(null);
   const thumbVideoRefs = useRef<(HTMLVideoElement | null)[]>([null, null, null, null]);
 
@@ -126,8 +128,10 @@ export default function HeroSlider() {
 
   const goTo = useCallback((idx: number) => {
     setCurrent(idx);
-    setProgress(0);
+    progressRef.current = 0;
     startRef.current = null;
+    if (progressBarDesktopRef.current) progressBarDesktopRef.current.style.width = '0%';
+    if (progressBarMobileRef.current) progressBarMobileRef.current.style.width = '0%';
   }, []);
 
   const next = useCallback(() => goTo((current + 1) % SLIDES.length), [current, goTo]);
@@ -144,13 +148,17 @@ export default function HeroSlider() {
     const tick = (ts: number) => {
       if (!startRef.current) startRef.current = ts;
       const pct = Math.min(((ts - startRef.current) / DURATION) * 100, 100);
-      setProgress(pct);
+      progressRef.current = pct;
+      if (progressBarDesktopRef.current) progressBarDesktopRef.current.style.width = `${pct}%`;
+      if (progressBarMobileRef.current) progressBarMobileRef.current.style.width = `${pct}%`;
       if (pct < 100) {
         rafRef.current = requestAnimationFrame(tick);
       } else {
         setCurrent((c) => (c + 1) % SLIDES.length);
-        setProgress(0);
+        progressRef.current = 0;
         startRef.current = null;
+        if (progressBarDesktopRef.current) progressBarDesktopRef.current.style.width = '0%';
+        if (progressBarMobileRef.current) progressBarMobileRef.current.style.width = '0%';
       }
     };
     rafRef.current = requestAnimationFrame(tick);
@@ -177,6 +185,17 @@ export default function HeroSlider() {
       onMouseLeave={() => setPaused(false)}
       {...swipe}
     >
+      <style>{`
+        @keyframes hero-circle-progress {
+          from { stroke-dashoffset: ${2 * Math.PI * 13}; }
+          to { stroke-dashoffset: 0; }
+        }
+        .hero-thumb-progress {
+          animation-name: hero-circle-progress;
+          animation-timing-function: linear;
+          animation-fill-mode: forwards;
+        }
+      `}</style>
       {/* Ferrofluid WebGL background layer — desktop only */}
       {!isMobile && (
         <div style={{ width: '100%', height: '100%', position: 'absolute', inset: 0, zIndex: 0, pointerEvents: 'none' }}>
@@ -211,25 +230,27 @@ export default function HeroSlider() {
       {/* Progress bar — top on desktop, bottom on mobile */}
       <div className="absolute top-0 left-0 right-0 h-[2px] bg-white/5 z-30 hidden lg:block">
         <div
-          className="h-full transition-none"
+          ref={progressBarDesktopRef}
+          className="h-full"
           style={{
-            width: `${progress}%`,
+            width: '0%',
             background: "linear-gradient(to right, var(--color-brand-red), color-mix(in srgb, var(--color-brand-red) 80%, #fff))",
           }}
         />
       </div>
       <div className="absolute bottom-16 left-0 right-0 h-[2px] bg-white/5 z-30 lg:hidden">
         <div
-          className="h-full transition-none"
+          ref={progressBarMobileRef}
+          className="h-full"
           style={{
-            width: `${progress}%`,
+            width: '0%',
             background: "linear-gradient(to right, var(--color-brand-red), color-mix(in srgb, var(--color-brand-red) 80%, #fff))",
           }}
         />
       </div>
 
       {/* ── Two-column layout ──────────────────────────────── */}
-      <div className="relative z-10 w-full max-w-[1536px] mx-auto px-5 sm:px-10 lg:px-16 grid grid-cols-1 lg:grid-cols-[1fr_560px] xl:grid-cols-[1fr_680px] 2xl:grid-cols-[1fr_780px] gap-8 lg:gap-14 items-center pt-[116px] pb-10 lg:pt-[132px] lg:pb-14">
+      <div className="relative z-10 w-full max-w-[1536px] mx-auto px-5 sm:px-10 lg:px-16 grid grid-cols-1 lg:grid-cols-[1fr_560px] xl:grid-cols-[1fr_680px] 2xl:grid-cols-[1fr_780px] gap-8 lg:gap-14 items-center pt-[116px] pb-10 lg:pt-[76px] lg:pb-14">
 
         {/* LEFT: Text column */}
         <div className="flex flex-col justify-center pt-16 pb-8 lg:py-0">
@@ -428,8 +449,9 @@ export default function HeroSlider() {
                         cx="16" cy="16" r="13" fill="none" strokeWidth="2" strokeLinecap="round"
                         stroke="var(--color-brand-red)"
                         strokeDasharray={`${2 * Math.PI * 13}`}
-                        strokeDashoffset={`${2 * Math.PI * 13 * (1 - progress / 100)}`}
-                        style={{ transition: "stroke-dashoffset 0.1s linear" }}
+                        strokeDashoffset={0}
+                        className="hero-thumb-progress"
+                        style={{ animationDuration: `${DURATION}ms`, animationPlayState: paused ? 'paused' : 'running' }}
                       />
                     </svg>
                   </div>
