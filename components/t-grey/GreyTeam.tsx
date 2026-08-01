@@ -5,9 +5,6 @@ import Link from "next/link";
 import { motion, useInView } from "framer-motion";
 import { useRef } from "react";
 import { ArrowRight, Users, Award, ShieldCheck } from "lucide-react";
-import dynamic from "next/dynamic";
-
-const PixelSnow = dynamic(() => import("@/components/PixelSnow"), { ssr: false });
 
 const HIGHLIGHTS = [
   { Icon: Users,       label: "Expert Engineers" },
@@ -30,20 +27,6 @@ function FadeUp({ children, delay = 0, className = "", dir = "up" }: { children:
 export default function GreyTeam() {
   return (
     <section className="relative py-24 lg:py-32 overflow-hidden bg-[#000000]">
-      {/* PixelSnow Background Layer */}
-      <div style={{ width: '100%', height: '100%', position: 'absolute', inset: 0, zIndex: 0, pointerEvents: 'none' }}>
-        <PixelSnow
-          color="#ffffff"
-          flakeSize={0.01}
-          minFlakeSize={1.25}
-          pixelResolution={150}
-          speed={0.8}
-          density={0.1}
-          direction={125}
-          brightness={0.8}
-          variant="square"
-        />
-      </div>
 
       <div className="absolute top-0 inset-x-0 h-px" style={{ background: "var(--g-border)" }} />
       <div className="absolute -top-48 right-0 w-[500px] h-[500px] rounded-full pointer-events-none" style={{ background: "radial-gradient(circle, color-mix(in srgb, var(--color-brand-red) 4%, transparent), transparent 70%)" }} />

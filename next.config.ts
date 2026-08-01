@@ -51,7 +51,7 @@ const nextConfig: NextConfig = {
         ],
       },
       {
-        source: "/_next/static/:path*",
+        source: "/homevideos/:path*",
         headers: [
           {
             key: "Cache-Control",
@@ -60,11 +60,74 @@ const nextConfig: NextConfig = {
         ],
       },
       {
-        source: "/homevideos/:path*",
+        source: "/:all*(svg|jpg|jpeg|png|webp|ico|gif|mp4|pdf|woff|woff2)",
         headers: [
           {
             key: "Cache-Control",
-            value: "public, max-age=31536000, immutable",
+            value: "public, max-age=2592000",
+          },
+        ],
+      },
+      {
+        source: "/images/:path*",
+        headers: [
+          {
+            key: "Cache-Control",
+            value: "public, max-age=2592000",
+          },
+        ],
+      },
+      {
+        source: "/video/:path*",
+        headers: [
+          {
+            key: "Cache-Control",
+            value: "public, max-age=2592000",
+          },
+        ],
+      },
+      {
+        source: "/blog/:path*",
+        headers: [
+          {
+            key: "Cache-Control",
+            value: "public, max-age=2592000",
+          },
+        ],
+      },
+      {
+        source: "/products/:path*",
+        headers: [
+          {
+            key: "Cache-Control",
+            value: "public, max-age=2592000",
+          },
+        ],
+      },
+      {
+        source: "/industries/:path*",
+        headers: [
+          {
+            key: "Cache-Control",
+            value: "public, max-age=2592000",
+          },
+        ],
+      },
+      {
+        source: "/assets/:path*",
+        headers: [
+          {
+            key: "Cache-Control",
+            value: "public, max-age=2592000",
+          },
+        ],
+      },
+      {
+        source: "/logos/:path*",
+        headers: [
+          {
+            key: "Cache-Control",
+            value: "public, max-age=2592000",
           },
         ],
       },

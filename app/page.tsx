@@ -1,8 +1,8 @@
 import type { Metadata } from "next";
 import Script from "next/script";
+import dynamic from "next/dynamic";
 import ThemeWrapper from "@/components/ThemeWrapper";
 import { SITE_URL } from "@/lib/site";
-import HeroSlider from "@/components/HeroSlider";
 import PartnersTicker from "@/components/PartnersTicker";
 import TickerBanner from "@/components/TickerBanner";
 import GreyWhatWeDo from "@/components/t-grey/GreyWhatWeDo";
@@ -12,6 +12,8 @@ import GreyVision from "@/components/t-grey/GreyVision";
 import GreyTeam from "@/components/t-grey/GreyTeam";
 import GreyAbout from "@/components/t-grey/GreyAbout";
 import GreyCta from "@/components/t-grey/GreyCta";
+
+const HeroSlider = dynamic(() => import("@/components/HeroSlider"));
 
 export const metadata: Metadata = {
   title: "Industrial Automation, PLC SCADA & Flow Measurement",
