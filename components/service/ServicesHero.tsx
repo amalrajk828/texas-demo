@@ -12,7 +12,7 @@ const SERVICES_NAV = [
 
 export default function ServicesHero() {
   return (
-    <section className="relative bg-[#000000] blueprint-grid blueprint-dot-grid overflow-hidden pt-32 pb-20 lg:pb-28">
+    <section className="relative bg-[#000000] blueprint-grid blueprint-dot-grid overflow-hidden pt-32 pb-16 lg:pb-20">
 
       {/* Grid texture */}
       <div
@@ -58,7 +58,7 @@ export default function ServicesHero() {
         <div className="grid grid-cols-1 lg:grid-cols-[1fr_auto] gap-12 items-center">
 
           {/* Left — headline */}
-          <div className="max-w-3xl">
+          <div className="max-w-full">
             <motion.div
               initial={{ opacity: 0, y: 14 }}
               animate={{ opacity: 1, y: 0 }}
@@ -87,7 +87,7 @@ export default function ServicesHero() {
               initial={{ opacity: 0, y: 14 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.55, delay: 0.18, ease: [0.22, 1, 0.36, 1] }}
-              className="text-white/50 text-base sm:text-[17px] leading-relaxed mb-8 max-w-xl"
+              className="text-white/50 text-base sm:text-[17px] leading-relaxed mb-8 max-w-none"
             >
               At Texas Technical Services, we deliver end-to-end industrial solutions — from
               flow measurement and custody metering to industrial automation, inspection &amp;

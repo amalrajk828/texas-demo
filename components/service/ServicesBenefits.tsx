@@ -1,3 +1,4 @@
+import NeumorphicDeliverCard from "@/components/service/common/NeumorphicDeliverCard";
 "use client";
 import { motion, useInView } from "framer-motion";
 import { useRef } from "react";
@@ -164,7 +165,7 @@ function BenefitCard({
       animate={inView ? { opacity: 1, y: 0 } : {}}
       transition={{ duration: 0.55, ease: [0.22, 1, 0.36, 1], delay: 0.08 + index * 0.08 }}
       whileHover={{ y: -3, transition: { duration: 0.22 } }}
-      className="group relative rounded-2xl border border-[#e8eaf0] bg-[#f4f5f8] p-7 flex flex-col hover:border-[#e7212b]/25 hover:bg-white hover:shadow-xl hover:shadow-[#e7212b]/5 transition-all duration-300 cursor-default"
+      className="neumorphic-press-card p-7 flex flex-col justify-between h-full group block text-left"
     >
       {/* Number */}
       <span className="text-[10px] font-bold text-[#e7212b]/25 tracking-[3px] mb-4 block">

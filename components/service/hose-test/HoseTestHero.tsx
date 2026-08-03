@@ -24,7 +24,7 @@ const STATS = [
 
 export default function HoseTestHero() {
   return (
-    <section className="relative bg-[#000000] blueprint-grid blueprint-dot-grid overflow-hidden pt-28 pb-20 lg:pt-36 lg:pb-28">
+    <section className="relative bg-[#000000] blueprint-grid blueprint-dot-grid overflow-hidden pt-28 pb-16 lg:pb-20">
       <div className="absolute inset-0 pointer-events-none" style={{ backgroundImage: "linear-gradient(rgba(255,255,255,0.025) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,0.025) 1px,transparent 1px)", backgroundSize: "60px 60px" }} />
       <div className="absolute top-0 left-0 w-[700px] h-[700px] rounded-full bg-[#e7212b]/5 blur-[120px] -translate-x-1/3 -translate-y-1/3 pointer-events-none" />
       <div className="absolute bottom-0 right-0 w-[500px] h-[500px] rounded-full bg-[#e7212b]/4 blur-[100px] translate-x-1/4 translate-y-1/4 pointer-events-none" />
@@ -42,7 +42,7 @@ export default function HoseTestHero() {
             <span className="text-white/60">Hose Test</span>
           </nav>
         </FadeUp>
-        <div className="max-w-4xl">
+        <div className="max-w-full">
           <div className="relative rounded-2xl overflow-hidden aspect-[16/7] mb-10 shadow-2xl shadow-black/40">
             <Image src="/images/services/HOSE-TEST.jpg" alt="Hydrostatic pressure testing of industrial hoses — Texas Technical Services" fill sizes="100vw" className="object-cover opacity-60" />
             <div className="absolute inset-0 bg-gradient-to-t from-[#0B0D26] via-transparent to-transparent" />
@@ -60,7 +60,7 @@ export default function HoseTestHero() {
             </h1>
           </FadeUp>
           <FadeUp delay={0.15}>
-            <p className="text-white/55 text-lg leading-relaxed max-w-2xl mb-10">
+            <p className="text-white/55 text-lg leading-relaxed max-w-none mb-10">
               The hose test provides quality assurance and diagnostic field water checking for installed curtain walls, exterior windows, and doors. Spraying water in a specified pattern is a quick and effective method to check whether the installed system is vulnerable to leakage — providing immediate on-site results during or after construction.
             </p>
           </FadeUp>

@@ -83,7 +83,7 @@ export default function InspectionTestingPage() {
       />
       <FaqPageJsonLd items={faqItems} />
       <InspectionHero />
-      <InspectionOverview />
+      <InspectionOverview hideHeading={true} />
       <InspectionSubServices />
       {/* ══ FAQ ════════════════════════════════════════════ */}
       <section className="bg-[#f4f5f8] py-20 lg:py-24">

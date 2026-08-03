@@ -4,27 +4,22 @@ import UpgradeServices from "@/components/service/upgrade-of-metering-control-sy
 import UpgradeWhyUs from "@/components/service/upgrade-of-metering-control-system/UpgradeWhyUs";
 import { BreadcrumbJsonLd } from "@/components/schema/BreadcrumbJsonLd";
 import { ServiceJsonLd } from "@/components/schema/ServiceJsonLd";
-import { serviceCrossLinks } from "@/lib/serviceCrossLinks";
-import Link from "next/link";
-import { FaqPageJsonLd } from "@/components/schema/FaqPageJsonLd";
-import { serviceFaqData } from "@/lib/serviceFaqData";
-import { ChevronRight } from "lucide-react";
 
 export const metadata: Metadata = {
   title: "Upgrade of Metering Control System",
   description:
-    "Metering control system upgrades — assessment, SCADA/PLC enhancements, flow computer integration, and data management for custody transfer in Kuwait and Dubai.",
+    "Texas Technical Services (TTS) specializes in Metering Control System upgradation — comprehensive assessment, tailored upgrade plans, SCADA & PLC enhancements, Flow Computer integration, and seamless data management for custody transfer operations in Kuwait and Dubai.",
   alternates: {
     canonical: "/service/upgrade-of-metering-control-system/",
   },
   openGraph: {
-    title: "Upgrade of Metering Control System",
+    title: "Upgrade of Metering Control System | Texas Technical Services",
     description:
       "Cost-effective metering control system upgrades — SCADA, PLC, Flow Computer & HMI integration, comprehensive system assessment, and minimal disruption delivery. Authorised OEM representative.",
     url: "/service/upgrade-of-metering-control-system/",
     images: [
       {
-        url: "/og-default.png",
+        url: "/og-upgrade-metering-control-system.jpg",
         width: 1200,
         height: 630,
         alt: "Upgrade of Metering Control System — Texas Technical Services",
@@ -33,9 +28,9 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Upgrade of Metering Control System",
-    description: "Metering control system upgrades — SCADA, PLC, Flow Computer, HMI integration. Cost-effective, minimal disruption, authorised OEM representative in Kuwait & Dubai.",
-    images: [{ url: "/og-default.png", width: 1200, height: 630, alt: "Texas Technical Services" }],
+    title: "Upgrade of Metering Control System | Texas Technical Services",
+    description:
+      "Metering control system upgrades — SCADA, PLC, Flow Computer, HMI integration. Cost-effective, minimal disruption, authorised OEM representative in Kuwait & Dubai.",
   },
   keywords: [
     "metering control system upgrade Kuwait",
@@ -50,99 +45,48 @@ export const metadata: Metadata = {
   ],
 };
 
+import { WhatWeDoSection } from "@/components/service/common/WhatWeDoSection";
+
 export default function UpgradeMeteringPage() {
   return (
     <>
       <BreadcrumbJsonLd items={[
-  { name: "Home", href: "/" },
-  { name: "Services", href: "/services/" },
-  { name: "Upgrade of Metering Control System", href: "/service/upgrade-of-metering-control-system/" },
-]} />
-<ServiceJsonLd
-  name="Upgrade of Metering Control System"
-  description="Texas Technical Services (TTS) specializes in Metering Control System upgradation — comprehensive assessment, tailored upgrade plans, SCADA & PLC enhancements, Flow Computer integration, and seamless data management for custody transfer operations in Kuwait and Dubai."
-  url="/service/upgrade-of-metering-control-system/"
-  serviceType="Flow Measurement"
-  areaServed={["Kuwait", "United Arab Emirates", "Saudi Arabia", "Bahrain", "Qatar", "Oman"]}
-/>
+        { name: "Home", href: "/" },
+        { name: "Services", href: "/services/" },
+        { name: "Upgrade of Metering Control System", href: "/service/upgrade-of-metering-control-system/" },
+      ]} />
+      <ServiceJsonLd
+        name="Upgrade of Metering Control System"
+        description="Texas Technical Services (TTS) specializes in Metering Control System upgradation — comprehensive assessment, tailored upgrade plans, SCADA & PLC enhancements, Flow Computer integration, and seamless data management for custody transfer operations in Kuwait and Dubai."
+        url="/service/upgrade-of-metering-control-system/"
+        serviceType="Flow Measurement"
+        areaServed={["Kuwait", "United Arab Emirates", "Saudi Arabia", "Bahrain", "Qatar", "Oman"]}
+      />
       <UpgradeHero />
+      <WhatWeDoSection
+        label="WHAT WE DO"
+        heading="Metering Control System Upgradation & Modernisation"
+        paragraphs={[
+          "Elevate your industrial operations with our expert Metering Control System Upgradation service. At Texas Technical Services Co. (TTS), we specialize in optimizing your existing control systems, ensuring they meet the latest industry standards and technological advancements.",
+          "We seamlessly integrate state-of-the-art technologies like Flow Computers, SCADA, PLCs, servers, and HMI interfaces into your existing infrastructure — empowering you to make data-driven decisions while minimizing operational downtime.",
+        ]}
+        checklist={[
+          "Comprehensive System Assessment",
+          "Tailored Upgradation Plans",
+          "Flow Computer Integration",
+          "SCADA & PLC Enhancements",
+          "Seamless Data Management",
+          "Zero-Disruption Migration",
+        ]}
+        imageSrc="/images/services/metering-upgrade.png"
+        imageAlt="Metering control system upgrade by Texas Technical Services"
+        badgeTitle="AUTHORISED OEM"
+        badgeSubtitle="System Integration Representative"
+        buttonText="Get More Information"
+        buttonHref="#contact"
+      />
       <UpgradeServices />
       <UpgradeWhyUs />
-
-      {/* ══ RELATED SERVICES ═══════════════════════════════ */}
-      {serviceCrossLinks["upgrade-of-metering-control-system"] && serviceCrossLinks["upgrade-of-metering-control-system"].length > 0 && (
-        <section className="py-16 lg:py-20 bg-white">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6">
-            <div className="flex items-center gap-2.5 mb-4">
-              <span className="w-5 h-px bg-[#e7212b]" />
-              <span className="text-[#e7212b] text-[10px] font-semibold tracking-[3.5px] uppercase">
-                Related Services
-              </span>
-            </div>
-            <h2 className="text-3xl sm:text-[2.4rem] font-bold text-[#0B0D26] leading-[1.15] mb-12">
-              Explore{" "}
-              <em className="not-italic text-[#e7212b]">More Services</em>
-            </h2>
-            <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
-              {serviceCrossLinks["upgrade-of-metering-control-system"]?.map((link) => (
-                <Link
-                  key={link.slug}
-                  href={`/service/${link.slug}/`}
-                  className="group block bg-[#f4f5f8] rounded-2xl p-6 border border-[#e8eaf0] hover:border-[#e7212b]/30 hover:shadow-lg transition-all duration-300"
-                >
-                  <h3 className="text-lg font-bold text-[#0B0D26] group-hover:text-[#e7212b] transition-colors mb-2">
-                    {link.label}
-                  </h3>
-                  <span className="text-[#e7212b] text-sm font-semibold flex items-center gap-1">
-                    Learn More
-                    <svg className="w-4 h-4 group-hover:translate-x-1 transition-transform" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
-                    </svg>
-                  </span>
-                </Link>
-              ))}
-            </div>
-          </div>
-        </section>
-      )}
-      {/* Contact section — to be added */}
-    
-      <FaqPageJsonLd items={serviceFaqData["upgrade-of-metering-control-system"]} />
-      {/* ══ FAQ ════════════════════════════════════════════ */}
-      <section className="bg-[#f4f5f8] py-20 lg:py-24">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6">
-          <div className="flex items-center gap-2.5 mb-4">
-            <span className="w-5 h-px bg-[#e7212b]" />
-            <span className="text-[#e7212b] text-[10px] font-semibold tracking-[3.5px] uppercase">
-              FAQ
-            </span>
-          </div>
-          <h2 className="text-3xl sm:text-[2.4rem] font-bold text-[#0B0D26] leading-[1.15] mb-12">
-            Questions About{" "}
-            <em className="not-italic text-[#e7212b]">Metering Control System Upgrade</em>
-          </h2>
-          <div className="max-w-4xl mx-auto space-y-4">
-            {serviceFaqData["upgrade-of-metering-control-system"]?.map((item) => (
-              <details
-                key={item.q}
-                className="group bg-white border border-[#e8eaf0] rounded-2xl overflow-hidden transition-all duration-200 open:border-[#e7212b]/25 open:shadow-lg"
-              >
-                <summary className="flex items-center justify-between p-5 lg:p-6 cursor-pointer list-none">
-                  <span className="text-[15px] font-semibold text-[#0B0D26] pr-4 leading-snug">
-                    {item.q}
-                  </span>
-                  <span className="w-6 h-6 rounded-full bg-[#e7212b]/10 border border-[#e7212b]/20 flex items-center justify-center shrink-0 group-open:bg-[#e7212b] group-open:border-[#e7212b] transition-all duration-200">
-                    <ChevronRight className="w-3.5 h-3.5 text-[#e7212b] group-open:text-white group-open:rotate-90 transition-all duration-200" />
-                  </span>
-                </summary>
-                <div className="px-5 lg:px-6 pb-5 lg:pb-6 pt-0">
-                  <p className="text-gray-500 text-[14px] leading-[1.8]">{item.a}</p>
-                </div>
-              </details>
-            ))}
-          </div>
-        </div>
-      </section>
-</>
+    </>
   );
 }

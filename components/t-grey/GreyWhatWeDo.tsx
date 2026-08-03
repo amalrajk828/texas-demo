@@ -6,7 +6,6 @@ import { motion, useInView, useSpring, useTransform, useMotionValue } from "fram
 import { useRef, useEffect, useState } from "react";
 import { ArrowRight, ChevronRight, Gauge, FlaskConical, Cpu } from "lucide-react";
 import BorderGlow from "@/components/BorderGlow";
-import LightGradientBackground from "@/components/LightGradientBackground";
 import { useIsMobile } from "@/hooks/useIsMobile";
 
 const SERVICES = [
@@ -83,7 +82,7 @@ export default function GreyWhatWeDo() {
   const statInView = useInView(statRef, { once: true, margin: "-60px" });
   const isMobile = useIsMobile();
   return (
-    <LightGradientBackground className="py-24 lg:py-32">
+    <section className="relative py-24 lg:py-32 overflow-hidden" style={{ background: "linear-gradient(135deg, #f5f7fa 0%, #e2e7ee 45%, #c9d2dc 100%)" }}>
       <div className="relative max-w-7xl mx-auto px-4 sm:px-6 z-10">
         <div className="flex flex-col lg:flex-row lg:items-end lg:justify-between gap-6 mb-10 sm:mb-12 lg:mb-14">
           <div className="flex flex-col max-w-2xl">
@@ -283,6 +282,6 @@ export default function GreyWhatWeDo() {
           </div>
         </div>
       </div>
-    </LightGradientBackground>
+    </section>
   );
 }

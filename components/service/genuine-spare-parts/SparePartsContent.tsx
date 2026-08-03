@@ -3,7 +3,9 @@ import Image from "next/image";
 import Link from "next/link";
 import { motion, useInView } from "framer-motion";
 import { useRef } from "react";
-import { ArrowRight, CheckCircle2, Package, ShieldCheck, Truck, Wrench } from "lucide-react";
+import { ArrowRight, Package, ShieldCheck, Truck, Wrench } from "lucide-react";
+import WhatWeDoSection from "@/components/service/common/WhatWeDoSection";
+import NeumorphicDeliverCard from "@/components/service/common/NeumorphicDeliverCard";
 
 function FadeUp({ children, delay = 0, className = "" }: { children: React.ReactNode; delay?: number; className?: string }) {
   const ref = useRef<HTMLDivElement>(null);
@@ -16,10 +18,10 @@ function FadeUp({ children, delay = 0, className = "" }: { children: React.React
 }
 
 const SERVICES = [
-  { Icon: Package,    title: "Genuine OEM Parts",        body: "As an authorised Faure Herman OEM Representative, we supply 100% genuine spare parts — not aftermarket alternatives — ensuring full compatibility, warranted performance, and traceability for your helical flow meters." },
-  { Icon: ShieldCheck, title: "Quality Assurance",       body: "Every part supplied by TTS carries full OEM documentation, traceability, and quality certification — giving your maintenance team confidence in authenticity and regulatory compliance." },
-  { Icon: Truck,      title: "Efficient Parts Supply",   body: "Streamlined procurement and logistics for spare parts — minimizing lead times and ensuring the right components reach your facility on time to reduce operational downtime." },
-  { Icon: Wrench,     title: "Technical Support",        body: "Our expert team provides technical guidance on part selection, compatibility assessment, and installation recommendations — ensuring you get the right part for your specific meter model and application." },
+  { Icon: Package, title: "Genuine OEM Parts", body: "As an authorised Faure Herman OEM Representative, we supply 100% genuine spare parts — not aftermarket alternatives — ensuring full compatibility, warranted performance, and traceability for your helical flow meters." },
+  { Icon: ShieldCheck, title: "Quality Assurance", body: "Every part supplied by TTS carries full OEM documentation, traceability, and quality certification — giving your maintenance team confidence in authenticity and regulatory compliance." },
+  { Icon: Truck, title: "Efficient Parts Supply", body: "Streamlined procurement and logistics for spare parts — minimizing lead times and ensuring the right components reach your facility on time to reduce operational downtime." },
+  { Icon: Wrench, title: "Technical Support", body: "Our expert team provides technical guidance on part selection, compatibility assessment, and installation recommendations — ensuring you get the right part for your specific meter model and application." },
 ];
 
 const PARTS = [
@@ -35,69 +37,47 @@ const PARTS = [
 
 export default function SparePartsContent() {
   return (
-    <section className="relative bg-white py-24 lg:py-32 overflow-hidden">
-      <div className="absolute -top-40 -left-40 w-[500px] h-[500px] rounded-full pointer-events-none" style={{ background: "radial-gradient(circle, rgba(231,33,43,0.04) 0%, transparent 70%)" }} />
-      <div className="relative max-w-7xl mx-auto px-4 sm:px-6 space-y-24">
+    <>
+      <WhatWeDoSection
+        label="WHAT WE DO"
+        heading="Genuine OEM Spare Parts for Helical Flow Meters"
+        paragraphs={[
+          "As an authorised Faure Herman OEM Representative, Texas Technical Services (TTS) supplies genuine spare parts for helical flow meters and associated metering equipment. Our parts procurement ensures authenticity and reliability, allowing your operations to run smoothly and efficiently.",
+          "We understand the critical importance of having the right parts available when you need them. Our streamlined parts supply process and technical expertise ensure you receive genuine OEM components with full traceability — protecting measurement performance and regulatory compliance in your custody transfer operations.",
+        ]}
+        checklist={PARTS}
+        imageSrc="/images/services/spare-parts.png"
+        imageAlt="Genuine spare parts for flow meters by Texas Technical Services"
+        badgeTitle="AUTHORISED OEM"
+        badgeSubtitle="Faure Herman Representative"
+        buttonText="Get More Information"
+        buttonHref="#contact"
+      />
 
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-14 lg:gap-20 items-center">
-          <FadeUp delay={0} className="relative">
-            <div className="relative rounded-2xl overflow-hidden aspect-[16/11] bg-[#0B0D26] shadow-2xl shadow-black/15">
-              <Image src="/images/services/spare-parts.png" alt="Genuine Faure Herman spare parts for flow meters — Texas Technical Services" fill sizes="(max-width: 1024px) 100vw, 50vw" className="object-cover" />
-              <div className="absolute bottom-0 left-0 right-0 h-16 bg-gradient-to-t from-[#0B0D26]/40 to-transparent" />
-            </div>
-            <div className="absolute -bottom-5 -right-4 lg:-right-6 bg-gradient-to-br from-[#e7212b] to-[#aa0b1b] rounded-xl px-5 py-3.5 shadow-lg shadow-[#e7212b]/30">
-              <p className="text-white text-[10px] font-bold tracking-[1.5px] uppercase leading-none">Authorised OEM</p>
-              <p className="text-white/75 text-[12px] mt-1 leading-none font-medium">Faure Herman Representative</p>
-            </div>
-          </FadeUp>
-
-          <div>
-            <FadeUp delay={0.08}>
-              <div className="flex items-center gap-2.5 mb-4"><span className="w-5 h-px bg-[#e7212b]" /><span className="text-[#e7212b] text-[10px] font-semibold tracking-[3.5px] uppercase">What We Do</span></div>
-              <h2 className="text-3xl sm:text-[2.2rem] font-bold text-[#0B0D26] leading-[1.15] mb-5">Genuine OEM Spare Parts for Helical Flow Meters</h2>
-              <p className="text-gray-500 text-[15px] leading-[1.85] mb-4">As an authorised Faure Herman OEM Representative, Texas Technical Services (TTS) supplies genuine spare parts for helical flow meters and associated metering equipment. Our parts procurement ensures authenticity and reliability, allowing your operations to run smoothly and efficiently.</p>
-              <p className="text-gray-500 text-[15px] leading-[1.85] mb-8">We understand the critical importance of having the right parts available when you need them. Our streamlined parts supply process and technical expertise ensure you receive genuine OEM components with full traceability — protecting measurement performance and regulatory compliance in your custody transfer operations.</p>
-            </FadeUp>
-            <FadeUp delay={0.16}>
-              <div className="grid grid-cols-1 gap-2.5 mb-8">
-                {PARTS.map((part) => (
-                  <div key={part} className="flex items-start gap-2.5">
-                    <CheckCircle2 className="w-4 h-4 text-[#e7212b] shrink-0 mt-0.5" strokeWidth={2} />
-                    <span className="text-[#555] text-[13.5px] leading-snug">{part}</span>
-                  </div>
-                ))}
-              </div>
-            </FadeUp>
-            <FadeUp delay={0.22}>
-              <a href="#contact" className="inline-flex items-center gap-2 bg-[#e7212b] hover:bg-[#aa0b1b] text-white font-semibold px-7 py-3.5 rounded-lg transition-colors duration-200 text-[14px] shadow-lg shadow-[#e7212b]/15">
-                Get More Information <ArrowRight className="w-4 h-4" />
-              </a>
-            </FadeUp>
-          </div>
-        </div>
-
-        <div>
+      <section className="relative bg-white py-20 lg:py-24 border-t border-gray-100 overflow-hidden">
+        <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6">
           <FadeUp delay={0} className="mb-12">
-            <div className="flex items-center gap-2.5 mb-4"><span className="w-5 h-px bg-[#e7212b]" /><span className="text-[#e7212b] text-[10px] font-semibold tracking-[3.5px] uppercase">Our Services</span></div>
-            <h2 className="text-3xl sm:text-[2.2rem] font-bold text-[#0B0D26] leading-[1.15]">What We Offer</h2>
+            <div className="flex items-center gap-2.5 mb-4">
+              <span className="w-5 h-px bg-[#e7212b]" />
+              <span className="text-[#e7212b] text-[10px] font-semibold tracking-[3.5px] uppercase">
+                Our Services
+              </span>
+            </div>
+            <h2 className="text-3xl sm:text-[2.2rem] font-bold text-[#1f2937] leading-[1.15]">
+              What We Offer
+            </h2>
           </FadeUp>
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5">
+
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
             {SERVICES.map((item, i) => (
               <FadeUp key={item.title} delay={0.08 + i * 0.08}>
-                <motion.div whileHover={{ y: -3, transition: { duration: 0.22 } }} className="group rounded-2xl border border-[#e8eaf0] bg-[#f4f5f8] p-6 hover:border-[#e7212b]/25 hover:bg-white hover:shadow-xl hover:shadow-[#e7212b]/5 transition-all duration-300 cursor-default h-full flex flex-col">
-                  <span className="text-[10px] font-bold text-[#e7212b]/25 tracking-[3px] mb-4 block">{String(i + 1).padStart(2, "0")}</span>
-                  <div className="w-11 h-11 rounded-xl bg-white border border-[#e8eaf0] group-hover:border-[#e7212b]/20 group-hover:bg-[#e7212b]/5 flex items-center justify-center mb-4 transition-all duration-300 shadow-sm">
-                    <item.Icon className="w-5 h-5 text-[#e7212b]" strokeWidth={1.8} />
-                  </div>
-                  <div className="w-8 h-[2px] bg-[#e7212b] rounded-full mb-3 group-hover:w-12 transition-all duration-300" />
-                  <h3 className="text-[15px] font-bold text-[#0B0D26] leading-snug mb-2">{item.title}</h3>
-                  <p className="text-gray-500 text-[13px] leading-[1.75] flex-1">{item.body}</p>
-                </motion.div>
+                <NeumorphicDeliverCard item={item} index={i} />
               </FadeUp>
             ))}
           </div>
+
           <FadeUp delay={0.42}>
-            <div className="mt-8 rounded-2xl bg-[#0B0D26] overflow-hidden relative">
+            <div className="mt-12 rounded-2xl bg-[#000000] blueprint-grid blueprint-dot-grid overflow-hidden relative">
               <div className="absolute inset-0 pointer-events-none" style={{ backgroundImage: "repeating-linear-gradient(0deg,transparent,transparent 39px,rgba(255,255,255,0.02) 40px),repeating-linear-gradient(90deg,transparent,transparent 39px,rgba(255,255,255,0.02) 40px)" }} />
               <div className="absolute right-0 top-0 w-64 h-full pointer-events-none" style={{ background: "radial-gradient(ellipse at right, rgba(231,33,43,0.10) 0%, transparent 70%)" }} />
               <div className="absolute top-0 left-0 right-0 h-[2px] bg-gradient-to-r from-transparent via-[#e7212b] to-transparent opacity-60" />
@@ -114,7 +94,7 @@ export default function SparePartsContent() {
             </div>
           </FadeUp>
         </div>
-      </div>
-    </section>
+      </section>
+    </>
   );
 }

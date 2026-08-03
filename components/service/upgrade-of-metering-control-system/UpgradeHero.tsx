@@ -5,7 +5,7 @@ import { ArrowRight, ArrowUpCircle } from "lucide-react";
 
 export default function UpgradeHero() {
   return (
-    <section className="relative bg-[#000000] blueprint-grid blueprint-dot-grid overflow-hidden pt-32 pb-20 lg:pb-28">
+    <section className="relative bg-[#000000] blueprint-grid blueprint-dot-grid overflow-hidden pt-32 pb-16 lg:pb-20">
 
       {/* Grid texture */}
       <div
@@ -52,7 +52,7 @@ export default function UpgradeHero() {
           <span className="text-white/60">Upgrade of Metering Control System</span>
         </motion.div>
 
-        <div className="max-w-3xl">
+        <div className="max-w-full">
 
           {/* Eyebrow */}
           <motion.div
@@ -87,7 +87,7 @@ export default function UpgradeHero() {
             initial={{ opacity: 0, y: 14 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.55, delay: 0.18, ease: [0.22, 1, 0.36, 1] }}
-            className="text-white/50 text-base sm:text-[16px] leading-relaxed mb-8 max-w-2xl"
+            className="text-white/50 text-base sm:text-[16px] leading-relaxed mb-8 max-w-none"
           >
             Elevate your industrial operations with our expert Metering Control System Upgradation
             service. At TTS, we specialize in optimizing your existing control systems, ensuring
