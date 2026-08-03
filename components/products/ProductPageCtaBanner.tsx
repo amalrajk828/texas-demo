@@ -12,14 +12,14 @@ export default function ProductPageCtaBanner({
   ctaLabel?: string;
 }) {
   return (
-    <section className="relative bg-[#1A1A2E] border-t-4 border-[#e7212b] py-16">
+    <section className="relative bg-[#0B0D26] border-t-4 border-[#e7212b] py-16">
       <div className="max-w-7xl mx-auto px-4 sm:px-6">
         <div className="flex flex-col sm:flex-row items-center justify-between gap-6">
           <div>
             <p className="text-white font-bold text-[22px] mb-1">
               {title}
             </p>
-            <p className="text-[#A0A8C0] text-sm">
+            <p className="text-white/60 text-sm">
               {description}
             </p>
           </div>

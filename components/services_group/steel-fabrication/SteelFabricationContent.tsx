@@ -34,6 +34,15 @@ export default function SteelFabricationContent() {
             Steel Fabrication Capabilities
           </h2>
         </FadeUp>
+        <FadeUp delay={0.06} className="mb-12">
+          <div className="max-w-3xl">
+            <div className="flex items-center gap-2.5 mb-4"><span className="w-5 h-px bg-[#e7212b]" /><span className="text-[#e7212b] text-[10px] font-semibold tracking-[3.5px] uppercase">What We Do</span></div>
+            <h2 className="text-3xl sm:text-[2.2rem] font-bold text-[#0B0D26] leading-[1.15] mb-5">Precision Steel Fabrication for Industrial Applications</h2>
+            <p className="text-gray-500 text-[15px] leading-[1.85] mb-4">TTS provides comprehensive steel fabrication services for oil and gas, petrochemical, infrastructure, and industrial projects. Our fabrication capabilities encompass CNC plasma and flame cutting, MIG/TIG and submerged arc welding, press brake forming, rolling, and assembly — producing components and assemblies from carbon steel, stainless steel, and alloy materials to engineering specifications.</p>
+            <p className="text-gray-500 text-[15px] leading-[1.85] mb-4">Quality control is embedded throughout our fabrication process — from incoming material verification and welder qualification through to in-process dimensional inspection, non-destructive testing of welds, and final dimensional verification. Our quality management system complies with ISO 9001, ISO 3834, and EN 1090 — ensuring fabricated components meet the structural, pressure, and corrosion resistance requirements of your project.</p>
+            <p className="text-gray-500 text-[15px] leading-[1.85] mb-8">TTS supports projects from small-batch bespoke components through to large-volume structural steel programmes. Our fabrication facility handles material procurement, cutting, forming, welding, surface treatment, and delivery — providing a single point of responsibility for your steel fabrication requirements across Kuwait and the wider GCC region.</p>
+          </div>
+        </FadeUp>
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 mb-16">
           {CARDS.map((card, i) => (
             <FadeUp key={card.title} delay={0.08 * i}>

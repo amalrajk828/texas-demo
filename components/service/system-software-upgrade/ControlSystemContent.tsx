@@ -34,6 +34,15 @@ export default function ControlSystemContent() {
             Control System Integration Capabilities
           </h2>
         </FadeUp>
+        <FadeUp delay={0.06} className="mb-12">
+          <div className="max-w-3xl">
+            <div className="flex items-center gap-2.5 mb-4"><span className="w-5 h-px bg-[#e7212b]" /><span className="text-[#e7212b] text-[10px] font-semibold tracking-[3.5px] uppercase">What We Do</span></div>
+            <h2 className="text-3xl sm:text-[2.2rem] font-bold text-[#0B0D26] leading-[1.15] mb-5">Control System Modernisation and Software Migration</h2>
+            <p className="text-gray-500 text-[15px] leading-[1.85] mb-4">Legacy control systems — including PLCs, DCS, SCADA, and HMI platforms — become increasingly difficult and costly to maintain as hardware reaches end-of-life and software support is withdrawn. A structured upgrade programme replaces obsolete components with current-generation platforms while preserving process knowledge, maintaining operational continuity, and improving system reliability and cybersecurity.</p>
+            <p className="text-gray-500 text-[15px] leading-[1.85] mb-8">TTS manages the complete upgrade lifecycle from system audit and requirements capture through hardware specification, software development, factory acceptance testing, site installation, and post-commissioning support. Our engineers have deep expertise across Mitsubishi MELSEC, Siemens S7, Allen-Bradley ControlLogix, and Schneider Modicon platforms — ensuring seamless migration with minimal production disruption.</p>
+            <p className="text-gray-500 text-[15px] leading-[1.85] mb-8">We provide comprehensive documentation including hardware and software specifications, migration plans, test procedures, and operator training materials. Our upgrade approach includes parallel running and staged cutover options to maintain operational continuity throughout the transition — delivering improved system performance, enhanced cybersecurity, and extended asset life.</p>
+          </div>
+        </FadeUp>
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 mb-16">
           {CARDS.map((card, i) => (
             <FadeUp key={card.title} delay={0.08 * i}>

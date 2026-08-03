@@ -2,24 +2,47 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { ChevronRight, ArrowRight, ExternalLink } from "lucide-react";
 import { BreadcrumbJsonLd } from "@/components/schema/BreadcrumbJsonLd";
+import { OrganizationJsonLd } from "@/components/schema/OrganizationJsonLd";
+import { FaqPageJsonLd } from "@/components/schema/FaqPageJsonLd";
+import PageFaqSection from "@/components/PageFaqSection";
+import { socialMediaFaq } from "@/lib/pageFaqData";
 import { SITE_EMAIL } from "@/lib/site";
+
+const SOCIAL_URLS = [
+  "https://www.linkedin.com/company/texas-technical-service-company",
+  "https://www.facebook.com/texastechserv",
+  "https://www.instagram.com/texas_technical_services",
+  "https://www.youtube.com/@TEXASTECHNICALSERVICES",
+  "https://x.com/texastechserv",
+  "https://bsky.app/profile/texastechserv.bsky.social",
+  "https://medium.com/@texastechserv",
+  "https://hashnode.com/@texastechserv",
+  "https://substack.com/@texastechserv",
+  "https://www.pinterest.com/texastechserv/",
+  "https://www.quora.com/profile/Texas-Technical-Service-Company-W-L-L",
+  "https://wellfound.com/company/texas-technical-service-company-w-l-l",
+  "https://thegulfdirectory.com/businesses/texas-technical-service-company-wll",
+  "https://angloinfo.com/kuwait-city/directory/work/services/texas-technical-service-company-wll-6a3f737560dbd",
+];
 
 export const metadata: Metadata = {
   title: "Social Media Platforms | Connect With Us",
   description:
-    "Find Texas Technical Service Company on LinkedIn, Facebook, Instagram, X (Twitter), Medium, Quora, and more — your source for industrial automation and flow measurement expertise across the GCC.",
+    "Find Texas Technical Service Company on LinkedIn, Facebook, Instagram, YouTube, X (Twitter), Bluesky, Medium, Quora, Hashnode, Substack, Pinterest, and more — your source for industrial automation and flow measurement expertise across the GCC.",
   alternates: { canonical: "/social-media/" },
   openGraph: {
     title: "Social Media Platforms | Texas Technical Services",
     description:
-      "Follow Texas Technical Service Company on LinkedIn, Facebook, Instagram, X, and industry directories for automation and flow measurement expertise.",
+      "Follow Texas Technical Service Company on LinkedIn, Facebook, Instagram, YouTube, X, Bluesky, Hashnode, Substack, Pinterest, and industry directories for automation and flow measurement expertise.",
     url: "/social-media/",
+    images: [{ url: "/og-default.png", width: 1200, height: 630 }],
   },
   twitter: {
     card: "summary_large_image",
     title: "Social Media Platforms | Texas Technical Services",
     description:
-      "Connect with Texas Technical Service Company on LinkedIn, Facebook, Instagram, X, and more.",
+      "Connect with Texas Technical Service Company on LinkedIn, Facebook, Instagram, YouTube, X, Bluesky, Hashnode, Substack, Pinterest, and more.",
+    images: ["/og-default.png"],
   },
   keywords: [
     "Texas Technical Services social media",
@@ -27,9 +50,15 @@ export const metadata: Metadata = {
     "flow measurement company Kuwait social",
     "Texas Technical Service Company W.L.L. profiles",
     "follow Texas Technical Services",
+    "Texas Technical Services YouTube",
     "automation company Facebook Kuwait",
     "PLC SCADA company Instagram",
     "industrial services GCC social media",
+    "Texas Technical Services Bluesky",
+    "Texas Technical Services Hashnode",
+    "Texas Technical Services Substack",
+    "Texas Technical Services Pinterest",
+    "texastechserv social media",
   ],
 };
 
@@ -45,7 +74,7 @@ type Platform = {
 const official: Platform[] = [
   {
     name: "LinkedIn",
-    handle: "linkedin.com/company/texas-technical-service-company",
+    handle: "@texas-technical-service-company",
     url: "https://www.linkedin.com/company/texas-technical-service-company",
     description:
       "Company updates, project highlights, and what we're building across the GCC.",
@@ -53,7 +82,7 @@ const official: Platform[] = [
   },
   {
     name: "Facebook",
-    handle: "facebook.com/texastechserv",
+    handle: "@texastechserv",
     url: "https://www.facebook.com/texastechserv",
     description:
       "Project milestones and announcements from the team.",
@@ -68,12 +97,28 @@ const official: Platform[] = [
     icon: "M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 1 0 0 12.324 6.162 6.162 0 0 0 0-12.324zM12 16a4 4 0 1 1 0-8 4 4 0 0 1 0 8zm6.406-11.845a1.44 1.44 0 1 0 0 2.881 1.44 1.44 0 0 0 0-2.881z",
   },
   {
+    name: "YouTube",
+    handle: "@TEXASTECHNICALSERVICES",
+    url: "https://www.youtube.com/@TEXASTECHNICALSERVICES",
+    description:
+      "Video walkthroughs, equipment demos, and project highlights from the field.",
+    icon: "M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z",
+  },
+  {
     name: "X (Twitter)",
     handle: "@texastechserv",
     url: "https://x.com/texastechserv",
     description:
       "Short updates on industrial automation and the GCC energy sector.",
     icon: "M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z",
+  },
+  {
+    name: "Bluesky",
+    handle: "@texastechserv",
+    url: "https://bsky.app/profile/texastechserv.bsky.social",
+    description:
+      "Quick industry updates and conversations on the open social web.",
+    icon: "M5.202 2.857C7.954 4.922 10.913 9.11 12 11.358c1.087-2.247 4.046-6.436 6.798-8.501C20.783 1.366 24 .213 24 3.883c0 .732-.42 6.156-.667 7.037-.856 3.061-3.978 3.842-6.755 3.37 4.854.826 6.089 3.562 3.422 6.299-5.065 5.196-7.28-1.304-7.847-2.97-.104-.305-.152-.448-.153-.327 0-.121-.05.022-.153.327-.568 1.666-2.782 8.166-7.847 2.97-2.667-2.737-1.432-5.473 3.422-6.3-2.777.473-5.899-.308-6.755-3.369C.42 10.04 0 4.615 0 3.883c0-3.67 3.217-2.517 5.202-1.026",
   },
 ];
 
@@ -119,18 +164,53 @@ const registered: Platform[] = [
       "Business listing on Angloinfo Kuwait for services in the GCC.",
     icon: "M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 17.93c-3.95-.49-7-3.85-7-7.93 0-.62.08-1.21.21-1.79L9 15v1c0 1.1.9 2 2 2v1.93zm6.9-2.54c-.26-.81-1-1.39-1.9-1.39h-1v-3c0-.55-.45-1-1-1H8v-2h2c.55 0 1-.45 1-1V7h2c1.1 0 2-.9 2-2v-.41c2.93 1.19 5 4.06 5 7.41 0 2.08-.8 3.97-2.1 5.39z",
   },
+  {
+    name: "Hashnode",
+    handle: "@texastechserv",
+    url: "https://hashnode.com/@texastechserv",
+    description:
+      "Engineering articles and technical deep-dives from the TTS team.",
+    icon: "M22.351 8.019l-6.37-6.37a5.63 5.63 0 0 0-7.962 0l-6.37 6.37a5.63 5.63 0 0 0 0 7.962l6.37 6.37a5.63 5.63 0 0 0 7.962 0l6.37-6.37a5.63 5.63 0 0 0 0-7.962zM12 15.953a3.953 3.953 0 1 1 0-7.906 3.953 3.953 0 0 1 0 7.906z",
+  },
+  {
+    name: "Substack",
+    handle: "@texastechserv",
+    url: "https://substack.com/@texastechserv",
+    description:
+      "Newsletter updates on projects, products, and industry trends.",
+    icon: "M22.539 8.242H1.46V5.406h21.08v2.836zM1.46 10.812V24L12 18.11 22.54 24V10.812H1.46zM22.54 0H1.46v2.836h21.08V0z",
+  },
+  {
+    name: "Pinterest",
+    handle: "@texastechserv",
+    url: "https://www.pinterest.com/texastechserv/",
+    description:
+      "Visual boards for industrial projects, automation, and instrumentation.",
+    icon: "M12.017 0C5.396 0 .029 5.367.029 11.987c0 5.079 3.158 9.417 7.618 11.162-.105-.949-.199-2.403.041-3.439.219-.937 1.406-5.957 1.406-5.957s-.359-.72-.359-1.781c0-1.663.967-2.911 2.168-2.911 1.024 0 1.518.769 1.518 1.688 0 1.029-.653 2.567-.992 3.992-.285 1.193.6 2.165 1.775 2.165 2.128 0 3.768-2.245 3.768-5.487 0-2.861-2.063-4.869-5.008-4.869-3.41 0-5.409 2.562-5.409 5.199 0 1.033.394 2.143.889 2.741.099.12.112.225.085.345-.09.375-.293 1.199-.334 1.363-.053.225-.172.271-.401.165-1.495-.69-2.433-2.878-2.433-4.646 0-3.776 2.748-7.252 7.92-7.252 4.158 0 7.392 2.967 7.392 6.923 0 4.135-2.607 7.462-6.233 7.462-1.214 0-2.354-.629-2.758-1.379l-.749 2.848c-.269 1.045-1.004 2.352-1.498 3.146 1.123.345 2.306.535 3.55.535 6.607 0 11.985-5.365 11.985-11.987C23.97 5.39 18.592.026 11.985.026L12.017 0z",
+  },
 ];
 
 const stats = [
-  { num: "4", label: "Active Channels" },
-  { num: "9", label: "Total Profiles" },
-  { num: "18+", label: "Years of Expertise" },
+  { num: "6", label: "Active Channels" },
+  { num: "14", label: "Total Profiles" },
 ];
 
 export default function SocialMediaPage() {
   return (
     <>
       <BreadcrumbJsonLd items={[{ name: "Home", href: "/" }, { name: "Social Media", href: "/social-media/" }]} />
+      <OrganizationJsonLd
+        name="Texas Technical Service Company W.L.L."
+        url="https://texastechserv.com"
+        sameAs={SOCIAL_URLS}
+        telephone="+96566347267"
+        email="sales@texastechserv.com"
+        address={{
+          streetAddress: "Fahaheel",
+          addressLocality: "Kuwait City",
+          addressCountry: "KW",
+        }}
+      />
 
       {/* ══ HERO ══════════════════════════════════════════════ */}
       <section className="bg-[#000000] blueprint-grid blueprint-dot-grid relative overflow-hidden">
@@ -234,8 +314,8 @@ export default function SocialMediaPage() {
               >
                 <div className="flex items-start gap-4">
                   {/* Icon */}
-                  <div className="w-12 h-12 rounded-xl bg-[#000000] blueprint-grid blueprint-dot-grid flex items-center justify-center shrink-0 group-hover:bg-[#e7212b] transition-colors duration-300">
-                    <svg viewBox={platform.viewBox || "0 0 24 24"} className="w-5 h-5 text-white" fill="currentColor">
+                  <div className="w-12 h-12 rounded-xl bg-[#000000] blueprint-grid blueprint-dot-grid flex items-center justify-center shrink-0 group-hover:bg-[#e7212b]/10 transition-colors duration-300">
+                    <svg viewBox={platform.viewBox || "0 0 24 24"} className="w-5 h-5 text-white group-hover:text-[#e7212b] transition-colors" fill="currentColor">
                       <path d={platform.icon} />
                     </svg>
                   </div>
@@ -288,7 +368,7 @@ export default function SocialMediaPage() {
                 <div className="flex items-center gap-3 mb-3">
                   {/* Small icon badge */}
                   <div className="w-11 h-11 rounded-xl bg-[#000000] blueprint-grid blueprint-dot-grid/5 flex items-center justify-center shrink-0 group-hover:bg-[#e7212b]/10 transition-colors">
-                    <svg viewBox={platform.viewBox || "0 0 24 24"} className="w-5 h-5 text-[#0B0D26] group-hover:text-[#e7212b] transition-colors" fill="currentColor">
+                    <svg viewBox={platform.viewBox || "0 0 24 24"} className="w-5 h-5 text-white group-hover:text-[#e7212b] transition-colors" fill="currentColor">
                       <path d={platform.icon} />
                     </svg>
                   </div>
@@ -349,6 +429,9 @@ export default function SocialMediaPage() {
           </div>
         </div>
       </section>
+
+      <FaqPageJsonLd items={socialMediaFaq} />
+      <PageFaqSection items={socialMediaFaq} title="Questions About" highlight="Our Social Media" />
 
       {/* ══ CTA BANNER ══════════════════════════════════════ */}
       <section className="bg-[#000000] blueprint-grid blueprint-dot-grid py-20">

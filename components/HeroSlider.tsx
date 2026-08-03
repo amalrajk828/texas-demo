@@ -5,7 +5,9 @@ import Image from "next/image";
 import { useRef, useState, useEffect, useCallback } from "react";
 import { AnimatePresence, motion, type Variants } from "framer-motion";
 import { ArrowRight, Play } from "lucide-react";
-import Ferrofluid from "@/components/Ferrofluid";
+import dynamic from "next/dynamic";
+
+const Ferrofluid = dynamic(() => import("@/components/Ferrofluid"), { ssr: false });
 
 /* ── Slide data ─────────────────────────────────────────────────── */
 const SLIDES = [
@@ -19,13 +21,14 @@ const SLIDES = [
     tag: "Industrial Services",
     light: false,
     ctas: [
-      { label: "About Us", href: "/about-us/", primary: true },
+      { label: "About Us", href: "/contacts/", primary: true },
       { label: "Our Services", href: "/services/", primary: false },
     ],
   },
   {
     type: "video" as const,
     src: "/homevideos/Automated-1-2.mp4",
+    poster: "/homevideos/Automated-1-2-poster.jpg",
     alt: "Industrial Process Automation — PLC SCADA automation systems by leading automation company TTS",
     eyebrow: "Industrial Automation",
     heading: ["Industrial Process", "Automation", "Solutions"],
@@ -40,6 +43,7 @@ const SLIDES = [
   {
     type: "video" as const,
     src: "/homevideos/newproduct.mp4",
+    poster: "/homevideos/newproduct-poster.jpg",
     alt: "Flow Measurement and Control System Solutions — liquid hydrocarbon and gas metering by TTS",
     eyebrow: "Flow Measurement Solutions",
     heading: ["Flow Measurement &", "Control System", "Solutions"],
@@ -47,7 +51,7 @@ const SLIDES = [
     tag: "Metering",
     light: false,
     ctas: [
-      { label: "Know More", href: "/service/flow-measurement/", primary: true },
+      { label: "Know More", href: "/service/flow-measurement-solutions/", primary: true },
       { label: "Our Products", href: "/products/", primary: false },
     ],
   },
@@ -108,17 +112,26 @@ function useSwipe(onLeft: () => void, onRight: () => void) {
 export default function HeroSlider() {
   const [current, setCurrent] = useState(0);
   const [paused, setPaused] = useState(false);
-  const [progress, setProgress] = useState(0);
+  const [isMobile, setIsMobile] = useState(false);
 
   const rafRef = useRef<number | null>(null);
   const startRef = useRef<number | null>(null);
+  const progressRef = useRef(0);
+  const progressBarDesktopRef = useRef<HTMLDivElement>(null);
+  const progressBarMobileRef = useRef<HTMLDivElement>(null);
   const mainVideoRef = useRef<HTMLVideoElement | null>(null);
   const thumbVideoRefs = useRef<(HTMLVideoElement | null)[]>([null, null, null, null]);
 
+  useEffect(() => {
+    setIsMobile(window.matchMedia("(pointer: coarse)").matches || window.innerWidth < 768);
+  }, []);
+
   const goTo = useCallback((idx: number) => {
     setCurrent(idx);
-    setProgress(0);
+    progressRef.current = 0;
     startRef.current = null;
+    if (progressBarDesktopRef.current) progressBarDesktopRef.current.style.width = '0%';
+    if (progressBarMobileRef.current) progressBarMobileRef.current.style.width = '0%';
   }, []);
 
   const next = useCallback(() => goTo((current + 1) % SLIDES.length), [current, goTo]);
@@ -135,13 +148,17 @@ export default function HeroSlider() {
     const tick = (ts: number) => {
       if (!startRef.current) startRef.current = ts;
       const pct = Math.min(((ts - startRef.current) / DURATION) * 100, 100);
-      setProgress(pct);
+      progressRef.current = pct;
+      if (progressBarDesktopRef.current) progressBarDesktopRef.current.style.width = `${pct}%`;
+      if (progressBarMobileRef.current) progressBarMobileRef.current.style.width = `${pct}%`;
       if (pct < 100) {
         rafRef.current = requestAnimationFrame(tick);
       } else {
         setCurrent((c) => (c + 1) % SLIDES.length);
-        setProgress(0);
+        progressRef.current = 0;
         startRef.current = null;
+        if (progressBarDesktopRef.current) progressBarDesktopRef.current.style.width = '0%';
+        if (progressBarMobileRef.current) progressBarMobileRef.current.style.width = '0%';
       }
     };
     rafRef.current = requestAnimationFrame(tick);
@@ -155,10 +172,7 @@ export default function HeroSlider() {
     if (SLIDES[current].type === "video") { v.currentTime = 0; v.play().catch(() => {}); }
   }, [current]);
 
-  /* Auto-play thumb videos */
-  useEffect(() => {
-    thumbVideoRefs.current.forEach((v) => { if (v) v.play().catch(() => {}); });
-  }, []);
+  /* Thumb videos play on click only — no auto-play to save resources */
 
   const slide = SLIDES[current];
   const isLight = slide.light;
@@ -166,30 +180,43 @@ export default function HeroSlider() {
   return (
     <section
       className="relative w-full overflow-hidden flex flex-col justify-center"
-      style={{ minHeight: "110vh", background: "#050505" }}
+      style={{ minHeight: "100vh", background: "#050505" }}
       onMouseEnter={() => setPaused(true)}
       onMouseLeave={() => setPaused(false)}
       {...swipe}
     >
-      {/* Ferrofluid WebGL background layer */}
-      <div style={{ width: '100%', height: '100%', position: 'absolute', inset: 0, zIndex: 0, pointerEvents: 'none' }}>
-        <Ferrofluid
-          colors={["#ffffff", "#ffffff", "#ffffff"]}
-          speed={0.4}
-          scale={1.6}
-          turbulence={1}
-          fluidity={0.15}
-          rimWidth={0.2}
-          sharpness={2.5}
-          shimmer={1.3}
-          glow={2}
-          flowDirection="down"
-          opacity={0.6}
-          mouseInteraction={true}
-          mouseStrength={0.8}
-          mouseRadius={0.3}
-        />
-      </div>
+      <style>{`
+        @keyframes hero-circle-progress {
+          from { stroke-dashoffset: ${2 * Math.PI * 13}; }
+          to { stroke-dashoffset: 0; }
+        }
+        .hero-thumb-progress {
+          animation-name: hero-circle-progress;
+          animation-timing-function: linear;
+          animation-fill-mode: forwards;
+        }
+      `}</style>
+      {/* Ferrofluid WebGL background layer — desktop only */}
+      {!isMobile && (
+        <div style={{ width: '100%', height: '100%', position: 'absolute', inset: 0, zIndex: 0, pointerEvents: 'none' }}>
+          <Ferrofluid
+            colors={["#ffffff", "#ffffff", "#ffffff"]}
+            speed={0.4}
+            scale={1.6}
+            turbulence={1}
+            fluidity={0.15}
+            rimWidth={0.2}
+            sharpness={2.5}
+            shimmer={1.3}
+            glow={2}
+            flowDirection="down"
+            opacity={0.6}
+            mouseInteraction={true}
+            mouseStrength={0.8}
+            mouseRadius={0.3}
+          />
+        </div>
+      )}
 
       {/* Noise texture */}
       <div
@@ -203,25 +230,27 @@ export default function HeroSlider() {
       {/* Progress bar — top on desktop, bottom on mobile */}
       <div className="absolute top-0 left-0 right-0 h-[2px] bg-white/5 z-30 hidden lg:block">
         <div
-          className="h-full transition-none"
+          ref={progressBarDesktopRef}
+          className="h-full"
           style={{
-            width: `${progress}%`,
+            width: '0%',
             background: "linear-gradient(to right, var(--color-brand-red), color-mix(in srgb, var(--color-brand-red) 80%, #fff))",
           }}
         />
       </div>
       <div className="absolute bottom-16 left-0 right-0 h-[2px] bg-white/5 z-30 lg:hidden">
         <div
-          className="h-full transition-none"
+          ref={progressBarMobileRef}
+          className="h-full"
           style={{
-            width: `${progress}%`,
+            width: '0%',
             background: "linear-gradient(to right, var(--color-brand-red), color-mix(in srgb, var(--color-brand-red) 80%, #fff))",
           }}
         />
       </div>
 
       {/* ── Two-column layout ──────────────────────────────── */}
-      <div className="relative z-10 w-full max-w-[1536px] mx-auto px-5 sm:px-10 lg:px-16 grid grid-cols-1 lg:grid-cols-[1fr_560px] xl:grid-cols-[1fr_680px] 2xl:grid-cols-[1fr_780px] gap-8 lg:gap-14 items-center pt-[116px] pb-10 lg:pt-[132px] lg:pb-14">
+      <div className="relative z-10 w-full max-w-[1536px] mx-auto px-5 sm:px-10 lg:px-16 grid grid-cols-1 lg:grid-cols-[1fr_560px] xl:grid-cols-[1fr_680px] 2xl:grid-cols-[1fr_780px] gap-8 lg:gap-14 items-center pt-[116px] pb-10 lg:pt-[76px] lg:pb-14">
 
         {/* LEFT: Text column */}
         <div className="flex flex-col justify-center pt-16 pb-8 lg:py-0">
@@ -240,8 +269,8 @@ export default function HeroSlider() {
                   className="absolute -inset-8 sm:-inset-10 rounded-3xl -z-10"
                   style={{
                     background: "rgba(255,255,255,0.88)",
-                    backdropFilter: "blur(20px)",
-                    WebkitBackdropFilter: "blur(20px)",
+                    backdropFilter: isMobile ? "none" : "blur(20px)",
+                    WebkitBackdropFilter: isMobile ? "none" : "blur(20px)",
                     boxShadow: "0 8px 40px rgba(0,0,0,0.10)",
                     border: "1px solid rgba(255,255,255,0.40)",
                   }}
@@ -359,9 +388,9 @@ export default function HeroSlider() {
               style={{ aspectRatio: "16/9", background: "var(--color-brand-navy-mid)" }}
             >
               {slide.type === "image" ? (
-                <Image src={slide.src} alt={slide.alt} fill priority={current === 0} sizes="600px" className="object-cover" quality={90} />
+                <Image src={slide.src} alt={slide.alt} fill priority={current === 0} sizes="(max-width: 1024px) 100vw, 50vw" className="object-cover" quality={90} />
               ) : (
-                <video ref={mainVideoRef} key={slide.src} src={slide.src} aria-label={slide.alt} autoPlay muted loop playsInline className="w-full h-full object-cover" />
+                <video ref={mainVideoRef} key={slide.src} src={slide.src} poster={(slide as any).poster} aria-label={slide.alt} autoPlay muted loop playsInline preload="metadata" className="w-full h-full object-cover" />
               )}
 
               <div className="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-black/10 pointer-events-none" />
@@ -386,7 +415,7 @@ export default function HeroSlider() {
             </motion.div>
           </AnimatePresence>
 
-          {/* Thumbnail filmstrip — taller cards */}
+          {/* Thumbnail filmstrip — static images only, no video preloading */}
           <div className="grid grid-cols-4 gap-3 relative z-10">
             {SLIDES.map((s, i) => (
               <button
@@ -404,10 +433,10 @@ export default function HeroSlider() {
                   } as React.CSSProperties : {}),
                 }}
               >
-                {s.type === "image" ? (
-                  <Image src={s.src} alt={s.tag} fill sizes="160px" className="object-cover" quality={60} />
+                {s.type === "video" ? (
+                  <video src={s.src} muted playsInline className="w-full h-full object-cover" />
                 ) : (
-                  <video ref={(el) => { thumbVideoRefs.current[i] = el; }} src={s.src} muted loop playsInline className="w-full h-full object-cover" />
+                  <Image src={s.src} alt={s.tag} fill sizes="160px" className="object-cover" quality={60} />
                 )}
                 <div className="absolute inset-0 bg-black/30" />
 
@@ -420,8 +449,9 @@ export default function HeroSlider() {
                         cx="16" cy="16" r="13" fill="none" strokeWidth="2" strokeLinecap="round"
                         stroke="var(--color-brand-red)"
                         strokeDasharray={`${2 * Math.PI * 13}`}
-                        strokeDashoffset={`${2 * Math.PI * 13 * (1 - progress / 100)}`}
-                        style={{ transition: "stroke-dashoffset 0.1s linear" }}
+                        strokeDashoffset={0}
+                        className="hero-thumb-progress"
+                        style={{ animationDuration: `${DURATION}ms`, animationPlayState: paused ? 'paused' : 'running' }}
                       />
                     </svg>
                   </div>
@@ -446,7 +476,7 @@ export default function HeroSlider() {
       {/* Mobile dot nav — larger dots */}
       <div className="lg:hidden absolute bottom-6 left-1/2 -translate-x-1/2 z-20 flex items-center gap-2.5">
         {SLIDES.map((_, i) => (
-          <button key={i} onClick={() => goTo(i)} aria-label={`Go to slide ${i + 1}`}>
+          <button key={i} onClick={() => goTo(i)} aria-label={`Go to slide ${i + 1}`} className="min-w-[44px] min-h-[44px] flex items-center justify-center">
             <span
               className="block h-[4px] rounded-full transition-all duration-300"
               style={{

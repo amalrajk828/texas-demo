@@ -34,6 +34,15 @@ export default function MetallurgicalContent() {
             PMI &amp; Metallurgical Analysis Capabilities
           </h2>
         </FadeUp>
+        <FadeUp delay={0.06} className="mb-12">
+          <div className="max-w-3xl">
+            <div className="flex items-center gap-2.5 mb-4"><span className="w-5 h-px bg-[#e7212b]" /><span className="text-[#e7212b] text-[10px] font-semibold tracking-[3.5px] uppercase">What We Do</span></div>
+            <h2 className="text-3xl sm:text-[2.2rem] font-bold text-[#0B0D26] leading-[1.15] mb-5">Material Identification and Metallurgical Analysis</h2>
+            <p className="text-gray-500 text-[15px] leading-[1.85] mb-4">Positive material identification (PMI) is essential for verifying that the correct alloys have been installed — particularly in high-pressure, high-temperature, and sour service environments where material substitution can have catastrophic consequences. Our handheld XRF analysers and optical emission spectrometers (OES) provide rapid, non-destructive elemental analysis of ferrous and non-ferrous metals.</p>
+            <p className="text-gray-500 text-[15px] leading-[1.85] mb-8">TTS supports clients across the oil and gas, petrochemical, and power generation sectors with PMI programmes that comply with API 578 and ASME BPVC requirements. Our metallurgical services also include microstructure examination, hardness testing, and corrosion resistance evaluation — providing comprehensive material characterisation for new installations, in-service assets, and failure investigations.</p>
+            <p className="text-gray-500 text-[15px] leading-[1.85] mb-8">Our laboratory and field capabilities enable rapid material verification during construction, receiving inspection, and in-service condition assessment. PMI results are documented with full traceability to reference standards, supporting your quality management system and regulatory compliance requirements across all operational facilities.</p>
+          </div>
+        </FadeUp>
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 mb-16">
           {CARDS.map((card, i) => (
             <FadeUp key={card.title} delay={0.08 * i}>

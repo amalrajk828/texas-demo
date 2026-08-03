@@ -44,7 +44,7 @@ export default function MFLHero() {
         </FadeUp>
         <div className="max-w-full">
           <div className="relative rounded-2xl overflow-hidden aspect-[16/7] mb-10 shadow-2xl shadow-black/40">
-            <Image src="/images/services/Magnetic-Flux-Leakage.jpg" alt="Magnetic Flux Leakage" fill sizes="100vw" className="object-cover opacity-60" />
+            <Image src="/images/services/Magnetic-Flux-Leakage.jpg" alt="Magnetic flux leakage inspection of steel pipeline — TTS Kuwait" fill sizes="100vw" className="object-cover opacity-60" />
             <div className="absolute inset-0 bg-gradient-to-t from-[#0B0D26] via-transparent to-transparent" />
           </div>
           <FadeUp delay={0.05}>

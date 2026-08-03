@@ -1,46 +1,53 @@
 import type { Metadata } from "next";
 import Script from "next/script";
+import dynamic from "next/dynamic";
 import ThemeWrapper from "@/components/ThemeWrapper";
 import { SITE_URL } from "@/lib/site";
-import { BreadcrumbJsonLd } from "@/components/schema/BreadcrumbJsonLd";
-import HeroSlider from "@/components/HeroSlider";
 import PartnersTicker from "@/components/PartnersTicker";
 import TickerBanner from "@/components/TickerBanner";
 import GreyWhatWeDo from "@/components/t-grey/GreyWhatWeDo";
 import GreyServices from "@/components/t-grey/GreyServices";
+import GreySolutions from "@/components/t-grey/GreySolutions";
 import GreyVision from "@/components/t-grey/GreyVision";
 import GreyTeam from "@/components/t-grey/GreyTeam";
 import GreyAbout from "@/components/t-grey/GreyAbout";
 import GreyCta from "@/components/t-grey/GreyCta";
 
+const HeroSlider = dynamic(() => import("@/components/HeroSlider"));
+
 export const metadata: Metadata = {
   title: "Industrial Automation, PLC SCADA & Flow Measurement",
   description:
-    "Texas Technical Services is a leading industrial automation company in Kuwait and the UAE — specializing in PLC SCADA integration, flow measurement services in Ahmadi, inspection & testing, and automation engineering services in Fahaheel for oil & gas, refinery, and petrochemical sectors across the GCC.",
+    "Industrial automation company in Kuwait & GCC — PLC SCADA integration, flow measurement, inspection, and engineering services for oil & gas.",
   alternates: { canonical: "/" },
   openGraph: {
     title: "Texas Technical Services — Industrial Automation Company in Kuwait & GCC",
     description:
-      "Leading industrial automation company in Kuwait and UAE — PLC SCADA integration, flow measurement, inspection, and automation engineering services in Fahaheel and across Dubai, Bahrain, and Saudi Arabia.",
+      "Leading industrial automation company in Kuwait and UAE — PLC SCADA integration, flow measurement, inspection, and automation engineering services.",
     url: "/",
+    images: [{ url: "/og-default.png", width: 1200, height: 630 }],
   },
   twitter: {
     card: "summary_large_image",
     title: "Texas Technical Services — Industrial Automation Company in Kuwait & GCC",
     description:
-      "Leading industrial automation company in Kuwait and UAE — PLC SCADA integration, flow measurement, inspection, and automation engineering across the GCC.",
+      "Leading industrial automation company in Kuwait and UAE — PLC SCADA integration, flow measurement, inspection, and automation engineering.",
+    images: ["/og-default.png"],
   },
   keywords: [
-    "industrial automation companies near me",
-    "vision industrial automation services & products",
     "industrial automation companies in Kuwait",
     "industrial automation companies in Dubai",
     "automation companies in Dubai",
     "industrial automation companies in UAE",
-    "list of industrial automation companies in UAE",
     "automation and engineering services Fahaheel",
-    "mechatronics Bahrain",
-    "automation control service LLC",
+    "metering skids Kuwait",
+    "flow meter calibration Dubai",
+    "Allen Bradley system integrators GCC",
+    "NDT inspection Kuwait",
+    "predictive maintenance GCC",
+    "gas detection system Kuwait",
+    "Coriolis flow meter calibration",
+    "condition monitoring Kuwait",
   ],
 };
 
@@ -105,7 +112,7 @@ const LIGHT_GREY_VARS: Record<string, string> = {
 export default function HomePage() {
   return (
     <ThemeWrapper vars={VARS}>
-      <BreadcrumbJsonLd items={[{ name: "Home", href: "/" }]} />
+
       <Script
         id="website-schema"
         type="application/ld+json"
@@ -115,11 +122,6 @@ export default function HomePage() {
             "@type": "WebSite",
             name: "Texas Technical Services",
             url: SITE_URL,
-            potentialAction: {
-              "@type": "SearchAction",
-              target: `${SITE_URL}/portfolio/?q={search_term_string}`,
-              "query-input": "required name=search_term_string",
-            },
           }),
         }}
       />
@@ -138,18 +140,22 @@ export default function HomePage() {
         </ThemeWrapper>
 
         <ThemeWrapper vars={LIGHT_GREY_VARS}>
+          <GreySolutions />
+        </ThemeWrapper>
+
+        <ThemeWrapper vars={DARK_GREY_VARS}>
           <GreyVision />
         </ThemeWrapper>
 
-        <ThemeWrapper vars={DARK_GREY_VARS}>
+        <ThemeWrapper vars={LIGHT_GREY_VARS}>
           <GreyTeam />
         </ThemeWrapper>
 
-        <ThemeWrapper vars={LIGHT_GREY_VARS}>
+        <ThemeWrapper vars={DARK_GREY_VARS}>
           <GreyAbout />
         </ThemeWrapper>
 
-        <ThemeWrapper vars={DARK_GREY_VARS}>
+        <ThemeWrapper vars={LIGHT_GREY_VARS}>
           <GreyCta />
         </ThemeWrapper>
       </main>

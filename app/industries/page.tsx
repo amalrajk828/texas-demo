@@ -1,6 +1,5 @@
 import type { Metadata } from "next";
 import Link from "next/link";
-import Image from "next/image";
 import {
   Flame,
   Factory,
@@ -10,29 +9,48 @@ import {
   Snowflake,
   Building2,
   Layers,
-  ArrowRight,
   ChevronRight,
+  Globe,
 } from "lucide-react";
 import { BreadcrumbJsonLd } from "@/components/schema/BreadcrumbJsonLd";
+import { SpeakableJsonLd } from "@/components/schema/SpeakableJsonLd";
+import { FaqPageJsonLd } from "@/components/schema/FaqPageJsonLd";
+import PageFaqSection from "@/components/PageFaqSection";
+import { industriesListingFaq } from "@/lib/pageFaqData";
 import IndustryCtaBanner from "@/components/industries/IndustryCtaBanner";
+import IndustryFeatureCard from "@/components/industries/IndustryFeatureCard";
 
 export const metadata: Metadata = {
-  title: "Industries We Serve | Texas Technical Services",
+  title: "Industries We Serve — Oil & Gas, Power & Petrochemicals",
   description:
-    "Texas Technical Services delivers flow measurement, industrial automation, and inspection solutions across oil & gas, refinery, power plant, LNG, petrochemicals, water treatment, cement, and metal & steel.",
+    "Flow measurement, automation, and inspection for oil & gas, refinery, power plant, LNG, petrochemicals, water treatment, cement, and metal & steel.",
   alternates: { canonical: "/industries/" },
   openGraph: {
-    title: "Industries We Serve | Texas Technical Services",
+    title: "Industries We Serve",
     description:
-      "Comprehensive OEM solutions for oil & gas, refinery, power plant, LNG, petrochemicals, water treatment, cement, and metal & steel — backed by 18+ years of precision engineering.",
+      "Flow measurement, automation, and inspection solutions for oil & gas, refinery, power plant, LNG, petrochemicals, water treatment, cement, and metal & steel.",
     url: "/industries/",
+    images: [{ url: "/og-default.png", width: 1200, height: 630 }],
   },
   twitter: {
     card: "summary_large_image",
-    title: "Industries We Serve | Texas Technical Services",
+    title: "Industries We Serve",
     description:
-      "Comprehensive OEM solutions for oil & gas, refinery, power plant, LNG, petrochemicals, water treatment, cement, and metal & steel.",
+      "Flow measurement, automation, and inspection solutions for oil & gas, refinery, power plant, LNG, petrochemicals, water treatment, cement, and metal & steel.",
+    images: ["/og-default.png"],
   },
+  keywords: [
+    "oil and gas industry solutions Kuwait",
+    "refinery automation and metering",
+    "power plant instrumentation Kuwait",
+    "LNG metering solutions GCC",
+    "petrochemical automation solutions",
+    "water treatment flow measurement",
+    "cement industry automation",
+    "metal and steel inspection services",
+    "industrial automation for oil and gas",
+    "flow measurement for refineries",
+  ],
 };
 
 const industries = [
@@ -49,7 +67,7 @@ const industries = [
     slug: "refinery",
     Icon: Factory,
     sub: "Process Control · CEMS",
-    image: "/refinery.jpg",
+    image: "/refinery.webp",
     desc: "Cutting-edge offerings for the demanding world of refinery operations — including precision flow meters, flow computers, CEMS and analyzers — providing the refinery industry with essential industrial automation solutions.",
   },
   {
@@ -57,7 +75,7 @@ const industries = [
     slug: "petrochemicals",
     Icon: FlaskConical,
     sub: "Process Automation · Flow Solutions",
-    image: "/petrochemical.png",
+    image: "/petrochemical.webp",
     desc: "State-of-the-art flow metering solutions, precise flow meters, flow computers, and analyzers catering to the ever-evolving needs of the petrochemical industry's complex production environments.",
   },
   {
@@ -81,7 +99,7 @@ const industries = [
     slug: "water-treatment",
     Icon: Droplets,
     sub: "Municipal · Industrial",
-    image: "/water_treatment.jpg",
+    image: "/water_treatment.webp",
     desc: "Products designed for water treatment applications, including CEMS, analyzers, and industrial process automation systems, delivering advanced solutions to ensure precise monitoring, quality control, and operational efficiency.",
   },
   {
@@ -103,19 +121,30 @@ const industries = [
 ];
 
 const stats = [
-  { num: "15+", label: "Years" },
+  { num: "18+", label: "Years" },
   { num: "8", label: "Industries" },
   { num: "200+", label: "Clients" },
+];
+
+const highlights = [
+  { icon: Building2, text: "OEM Partnerships" },
+  { icon: Globe, text: "Global Reach" },
+  { icon: Layers, text: "End-to-End Solutions" },
 ];
 
 export default function IndustriesPage() {
   return (
     <>
-      <BreadcrumbJsonLd items={[{ name: "Home", href: "/" }, { name: "Industries", href: "/industries/" }]} />
+      <BreadcrumbJsonLd
+        items={[
+          { name: "Home", href: "/" },
+          { name: "Industries", href: "/industries/" },
+        ]}
+      />
+      <SpeakableJsonLd headline="Industries We Serve — Oil & Gas, Refinery, Power Plant & More" />
 
-      {/* ══ HERO ══════════════════════════════════════════════ */}
-      <section className="bg-[#000000] blueprint-grid blueprint-dot-grid relative overflow-hidden pt-[108px] lg:pt-[116px]">
-        {/* Grid texture */}
+      {/* HERO */}
+      <section className="bg-[#0B0D26] relative overflow-hidden min-h-[480px] flex flex-col justify-end">
         <div
           className="absolute inset-0 pointer-events-none"
           style={{
@@ -123,7 +152,6 @@ export default function IndustriesPage() {
               "repeating-linear-gradient(0deg,transparent,transparent 39px,rgba(255,255,255,0.03) 40px),repeating-linear-gradient(90deg,transparent,transparent 39px,rgba(255,255,255,0.03) 40px)",
           }}
         />
-        {/* Red glow — top right */}
         <div
           className="absolute top-0 right-0 w-[520px] h-[520px] pointer-events-none"
           style={{
@@ -132,175 +160,115 @@ export default function IndustriesPage() {
           }}
         />
 
-        <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 pb-16 lg:pb-24 pt-4">
-          {/* Breadcrumb */}
-          <nav className="flex items-center gap-1.5 mb-8 text-[11px] text-white/30">
-            <Link href="/" className="hover:text-white/60 transition-colors">
+        <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 pt-24 pb-8 w-full">
+          <nav className="flex items-center gap-1.5 mb-6 text-[11px] text-white/35 flex-wrap">
+            <Link href="/" className="hover:text-white/70 transition-colors">
               Home
             </Link>
-            <ChevronRight className="w-3 h-3" />
-            <span className="text-white/55">Industries</span>
+            <ChevronRight className="w-3 h-3 shrink-0" />
+            <span className="text-white/60">Industries</span>
           </nav>
 
-          <div className="flex flex-col lg:flex-row lg:items-end gap-10 lg:gap-16">
-            {/* Left — headline */}
-            <div className="flex-1 max-w-2xl">
+          <div className="flex items-start gap-8 lg:gap-10 mb-8">
+            <div className="min-w-0">
               <div className="flex items-center gap-2 mb-5">
                 <span className="w-5 h-px bg-[#e7212b]" />
                 <span className="text-[#e7212b] text-[10px] font-medium tracking-[2.5px] uppercase">
                   ISO 9001:2015 Certified · Est. 2008
                 </span>
               </div>
-              <h1 className="text-4xl sm:text-5xl lg:text-[3.5rem] font-medium text-white leading-[1.15] mb-5">
+
+              <h1 className="text-3xl sm:text-4xl lg:text-[2.75rem] font-medium text-white leading-[1.15] mb-5">
                 Industries
                 <br />
                 <em className="not-italic text-[#e7212b]">We Serve</em>
               </h1>
-              <p className="text-white/55 text-base sm:text-lg leading-relaxed">
+
+              <p className="text-white/60 text-base sm:text-lg leading-relaxed max-w-xl">
                 Precision OEM solutions across the world&apos;s most demanding
                 industrial sectors — from oil &amp; gas to water treatment.
               </p>
             </div>
 
-            {/* Right — stats */}
-            <div className="flex flex-row lg:flex-col gap-3 shrink-0">
-              {stats.map((s) => (
+            <div className="hidden lg:flex flex-col gap-3 shrink-0 w-[240px] ml-auto">
+              {highlights.map((h) => (
                 <div
-                  key={s.label}
-                  className="bg-white/[0.04] border border-white/[0.08] hover:border-[#e7212b]/30 rounded-xl px-5 py-4 text-center min-w-[88px] transition-colors duration-200"
+                  key={h.text}
+                  className="flex items-center gap-3 bg-white/[0.08] border border-white/[0.12] backdrop-blur-sm rounded-xl px-4 py-3"
                 >
-                  <p className="text-2xl font-medium text-[#e7212b]">{s.num}</p>
-                  <p className="text-[10px] text-white/30 mt-1 tracking-wide">{s.label}</p>
+                  <h.icon
+                    className="w-5 h-5 text-[#e7212b] shrink-0"
+                    strokeWidth={1.5}
+                  />
+                  <span className="text-white/70 text-[13px] leading-snug">
+                    {h.text}
+                  </span>
                 </div>
               ))}
             </div>
           </div>
         </div>
-      </section>
 
-      {/* ══ INDUSTRY CARDS ════════════════════════════════════ */}
-      <section
-        className="relative py-20 lg:py-24 overflow-hidden"
-        style={{ background: "linear-gradient(135deg, #f5f7fa 0%, #e2e7ee 45%, #c9d2dc 100%)" }}
-      >
-        {/* Background depth blobs for frosted glass refraction */}
-        <div
-          className="absolute top-[-5%] left-[-5%] w-[650px] h-[650px] rounded-full pointer-events-none blur-[90px] opacity-90"
-          style={{ background: "radial-gradient(circle, rgba(255,255,255,0.95) 0%, rgba(235,240,248,0.55) 45%, transparent 70%)" }}
-        />
-        <div
-          className="absolute top-[35%] right-[-5%] w-[600px] h-[600px] rounded-full pointer-events-none blur-[100px] opacity-75"
-          style={{ background: "radial-gradient(circle, rgba(165,180,200,0.55) 0%, rgba(140,158,180,0.25) 50%, transparent 70%)" }}
-        />
-        <div
-          className="absolute bottom-[-5%] left-[-8%] w-[650px] h-[650px] rounded-full pointer-events-none blur-[90px] opacity-80"
-          style={{ background: "radial-gradient(circle, rgba(255,255,255,0.9) 0%, rgba(230,238,248,0.45) 50%, transparent 70%)" }}
-        />
-
-        <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6">
-
-          {/* Section label row */}
-          <div className="flex items-center justify-between mb-10">
-            <div className="flex items-center gap-3">
-              <span className="w-8 h-px bg-[#e7212b]/40" />
-              <span className="text-[#e7212b] text-[9px] font-medium tracking-[2.5px] uppercase">
-                Our Coverage
-              </span>
-            </div>
-            <span className="text-[#4B5563] text-[12px] font-semibold">8 Industries</span>
-          </div>
-
-          {/* Grid */}
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-            {industries.map((ind, i) => (
-              <Link
-                key={ind.slug}
-                href={`/industries/${ind.slug}/`}
-                className={`fade-up d${i + 1} group flex flex-col rounded-2xl overflow-hidden bg-transparent border border-white/60 hover:border-white/95 transition-all duration-300 hover:-translate-y-1 h-full`}
-                style={{
-                  boxShadow: "0 12px 32px rgba(0, 0, 0, 0.10)",
-                }}
-              >
-                {/* ── Image area ── */}
-                <div className="relative aspect-[16/10] w-full shrink-0 overflow-hidden bg-[#000000] blueprint-grid blueprint-dot-grid">
-                  <Image
-                    src={ind.image}
-                    alt={`${ind.name} industry solutions — Texas Technical Services`}
-                    fill
-                    className="object-cover object-center transition-transform duration-700 ease-out group-hover:scale-[1.06]"
-                    sizes="(max-width: 768px) 100vw, (max-width: 1280px) 50vw, 640px"
-                  />
-
-                  {/* Gradient: bottom-heavy for text readability */}
-                  <div className="absolute inset-0 bg-gradient-to-t from-[#0B0D26]/85 via-[#0B0D26]/20 to-transparent" />
-
-                  {/* Industry pill — top left */}
-                  <div className="absolute top-4 left-4 z-10">
-                    <span className="inline-flex items-center gap-1.5 text-[9px] text-white/75 tracking-[2px] uppercase bg-black/40 backdrop-blur-sm px-2.5 py-1 rounded-full border border-white/[0.12]">
-                      <span className="w-1 h-1 rounded-full bg-[#e7212b]" />
-                      Industry
-                    </span>
-                  </div>
-
-                  {/* Icon box — top right */}
-                  <div className="absolute top-4 right-4 z-10 w-9 h-9 bg-[#e7212b] rounded-lg flex items-center justify-center shadow-lg transition-transform duration-300 group-hover:scale-110">
-                    <ind.Icon className="w-4 h-4 text-white" strokeWidth={1.5} />
-                  </div>
-
-                  {/* Industry name overlay — bottom */}
-                  <div className="absolute bottom-0 left-0 right-0 z-10 px-5 pb-4 pt-10">
-                    <h2 className="text-white font-medium text-xl leading-tight group-hover:text-[#e7212b] transition-colors duration-200">
-                      {ind.name}
-                    </h2>
-                    <p className="text-white/45 text-[11px] mt-0.5 tracking-wide">
-                      {ind.sub}
-                    </p>
-                  </div>
-                </div>
-
-                {/* ── Content area — Light Glassmorphic Style ── */}
-                <div
-                  className="relative flex flex-col flex-1 px-5 pt-4 pb-5 overflow-hidden rounded-b-2xl"
-                  style={{
-                    background: "rgba(255, 255, 255, 0.20)",
-                    backdropFilter: "blur(28px)",
-                    WebkitBackdropFilter: "blur(28px)",
-                    borderTop: "1px solid rgba(255, 255, 255, 0.60)",
-                    boxShadow: "inset 0 1px 1px rgba(255, 255, 255, 0.8)",
-                  }}
-                >
-                  {/* Distinct diagonal light streak sheen overlay */}
-                  <div
-                    className="absolute inset-0 pointer-events-none"
-                    style={{
-                      background: "linear-gradient(135deg, rgba(255, 255, 255, 0.35) 0%, rgba(255, 255, 255, 0.05) 50%, transparent 100%)",
-                    }}
-                  />
-
-                  {/* Top specular edge highlight */}
-                  <div className="absolute top-0 inset-x-0 h-[1px] bg-gradient-to-r from-transparent via-white to-transparent pointer-events-none" />
-
-                  <p className="relative z-10 text-[#2D3748] text-[13px] font-medium leading-relaxed line-clamp-3 mb-4">
-                    {ind.desc}
-                  </p>
-
-                  <div className="relative z-10 flex items-center justify-between">
-                    <span className="inline-flex items-center gap-1.5 text-[#e7212b] text-[12px] font-bold group-hover:gap-2.5 transition-all duration-200">
-                      Read More
-                      <ArrowRight className="w-3.5 h-3.5" />
-                    </span>
-                    {/* Expanding red line accent */}
-                    <span className="block h-px w-6 bg-[#e7212b]/40 group-hover:w-14 transition-all duration-300 ease-out" />
-                  </div>
-                </div>
-
-                {/* Red bottom border reveal on hover */}
-                <div className="h-[3px] bg-[#e7212b] scale-x-0 group-hover:scale-x-100 transition-transform duration-300 origin-left" />
-              </Link>
+        <div className="relative z-10 bg-white/[0.06] backdrop-blur-xl border-t border-white/[0.10]">
+          <div className="max-w-7xl mx-auto grid grid-cols-3 divide-x divide-white/[0.08]">
+            {stats.map((s) => (
+              <div key={s.label} className="px-6 py-5 text-center">
+                <p className="text-2xl font-medium text-[#e7212b]">{s.num}</p>
+                <p className="text-[11px] text-white/40 tracking-wide mt-1">
+                  {s.label}
+                </p>
+              </div>
             ))}
           </div>
         </div>
       </section>
+
+      {/* INDUSTRY CARDS */}
+      <section className="bg-[#0B0D26] relative overflow-hidden py-20 lg:py-24">
+        <div
+          className="absolute inset-0 pointer-events-none"
+          style={{
+            backgroundImage:
+              "repeating-linear-gradient(0deg,transparent,transparent 39px,rgba(255,255,255,0.05) 40px),repeating-linear-gradient(90deg,transparent,transparent 39px,rgba(255,255,255,0.05) 40px)",
+          }}
+        />
+        <div
+          className="absolute top-0 left-1/2 -translate-x-1/2 w-[600px] h-[400px] pointer-events-none"
+          style={{
+            background:
+              "radial-gradient(circle, rgba(231,33,43,0.08) 0%, transparent 70%)",
+          }}
+        />
+        <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6">
+          <div className="flex items-center justify-between mb-10">
+            <div className="flex items-center gap-3">
+              <span className="w-8 h-px bg-[#e7212b]" />
+              <span className="text-[#e7212b] text-[9px] font-medium tracking-[2.5px] uppercase">
+                Our Coverage
+              </span>
+            </div>
+            <span className="text-white/50 text-[12px]">8 Industries</span>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+            {industries.map((ind, i) => (
+              <IndustryFeatureCard
+                key={ind.slug}
+                name={ind.name}
+                slug={ind.slug}
+                Icon={ind.Icon}
+                image={ind.image}
+                sub={ind.sub}
+                desc={ind.desc}
+                animationDelay={i}
+              />
+            ))}
+          </div>
+        </div>
+      </section>
+
+      <FaqPageJsonLd items={industriesListingFaq} />
+      <PageFaqSection items={industriesListingFaq} title="Questions About" highlight="The Industries We Serve" />
 
       {/* CTA */}
       <IndustryCtaBanner

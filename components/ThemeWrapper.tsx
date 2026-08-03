@@ -1,5 +1,3 @@
-"use client";
-
 export default function ThemeWrapper({
   vars,
   children,

@@ -2,12 +2,15 @@ import React from "react";
 import type { Metadata } from "next";
 import Link from "next/link";
 import { BreadcrumbJsonLd } from "@/components/schema/BreadcrumbJsonLd";
+import { ItemListJsonLd } from "@/components/schema/ItemListJsonLd";
+import { FaqPageJsonLd } from "@/components/schema/FaqPageJsonLd";
+import { productsListingFaq } from "@/lib/pageFaqData";
 import { ChevronRight } from "lucide-react";
 import ProductCard from "@/components/ProductCard";
 import { getProductsByPath } from "@/lib/products";
 
 export const metadata: Metadata = {
-  title: "PLC - Texas Technical Services",
+  title: "PLC",
   description: "Mitsubishi Electric PLC solutions for industrial automation including MELSEC iQ-R, MELSEC-Q, FX5U, FX5UJ, and FX5S series.",
   alternates: { canonical: "/products/plc/" },
   keywords: [
@@ -18,13 +21,13 @@ export const metadata: Metadata = {
     "industrial PLC solutions",
   ],
   openGraph: {
-    title: "PLC - Texas Technical Services",
+    title: "PLC",
     description: "Mitsubishi Electric PLC solutions for industrial automation including MELSEC iQ-R, MELSEC-Q, FX5U, FX5UJ, and FX5S series.",
     url: "/products/plc/",
   },
   twitter: {
     card: "summary_large_image",
-    title: "PLC - Texas Technical Services",
+    title: "PLC",
     description: "Mitsubishi Electric PLC solutions for industrial automation including MELSEC iQ-R, MELSEC-Q, FX5U, FX5UJ, and FX5S series.",
   },
 };
@@ -38,6 +41,14 @@ export default function PlcPage() {
         { name: "Products", href: "/products/" },
         { name: "PLC", href: "/products/plc/" },
       ]} />
+      <ItemListJsonLd
+        name="PLC"
+        items={plcProducts.map((product) => ({
+          name: product.name,
+          url: `/portfolio/${product.slug}/`,
+          description: product.description || "",
+        }))}
+      />
       {/* ── Hero Banner ─────────────────────────────────────── */}
       <section className="relative bg-[#000000] blueprint-grid blueprint-dot-grid overflow-hidden border-b-4 border-[#e7212b]">
         {/* Grid texture */}
@@ -100,7 +111,7 @@ export default function PlcPage() {
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5">
             {plcProducts.map((plc, index) => (
               <React.Fragment key={plc.slug}>
-                <ProductCard product={plc} category="plc" />
+                <ProductCard product={plc} category="plc" priority={index < 3} />
                 
               </React.Fragment>
             ))}
@@ -108,6 +119,7 @@ export default function PlcPage() {
         </div>
       </section>
 
+      <FaqPageJsonLd items={productsListingFaq} />
       {/* ── CTA Banner ───────────────────────────────────────── */}
       <section className="relative bg-[#1A1A2E] border-t-4 border-[#e7212b] py-16">
         <div className="max-w-7xl mx-auto px-4 sm:px-6">

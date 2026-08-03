@@ -7,7 +7,7 @@ import { FaqPageJsonLd } from "@/components/schema/FaqPageJsonLd";
 import ServicePageFaqSection from "@/components/services_group/ServicePageFaqSection";
 
 export const metadata: Metadata = {
-  title: "Industrial Construction & Project Delivery | Texas Technical Services",
+  title: "Industrial Construction & Project Delivery",
   description:
     "Texas Technical Services provides industrial construction and project delivery services in Kuwait and across the GCC — structural steel fabrication, gantry fabrication, piping, electrical works, and EPC project execution for oil and gas plants.",
   alternates: {
@@ -21,14 +21,14 @@ export const metadata: Metadata = {
     "gantry fabrication services",
   ],
   openGraph: {
-    title: "Industrial Construction & Project Delivery | Texas Technical Services",
+    title: "Industrial Construction & Project Delivery",
     description:
       "Structural steel fabrication, gantry fabrication, piping, electrical works, and EPC project execution for oil and gas plants in Kuwait and the GCC.",
     url: "/services_group/services/constructions/",
   },
   twitter: {
     card: "summary_large_image",
-    title: "Industrial Construction & Project Delivery | Texas Technical Services",
+    title: "Industrial Construction & Project Delivery",
     description:
       "Structural steel fabrication, gantry fabrication, piping, electrical works, and EPC project execution across Kuwait and the GCC.",
   },

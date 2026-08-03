@@ -41,8 +41,8 @@ export default function PenetrantContent() {
       <div className="relative max-w-7xl mx-auto px-4 sm:px-6 space-y-24">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-14 lg:gap-20 items-center">
           <FadeUp delay={0} className="relative">
-            <div className="relative rounded-2xl overflow-hidden aspect-[16/11] bg-[#000000] blueprint-grid blueprint-dot-grid shadow-2xl shadow-black/15">
-              <Image src="/images/services/PT.jpg" alt="Liquid dye penetrant testing" fill sizes="(max-width: 1024px) 100vw, 50vw" className="object-cover" />
+            <div className="relative rounded-2xl overflow-hidden aspect-[16/11] bg-[#0B0D26] shadow-2xl shadow-black/15">
+              <Image src="/images/services/PT.jpg" alt="Red dye penetrant testing on machined steel component — Texas Technical Services" fill sizes="(max-width: 1024px) 100vw, 50vw" className="object-cover" />
               <div className="absolute bottom-0 left-0 right-0 h-16 bg-gradient-to-t from-[#0B0D26]/40 to-transparent" />
             </div>
             <div className="absolute -bottom-5 -right-4 lg:-right-6 bg-gradient-to-br from-[#e7212b] to-[#aa0b1b] rounded-xl px-5 py-3.5 shadow-lg shadow-[#e7212b]/30">
@@ -93,7 +93,7 @@ export default function PenetrantContent() {
             ))}
           </div>
           <FadeUp delay={0.42}>
-            <div className="mt-8 rounded-2xl bg-[#000000] blueprint-grid blueprint-dot-grid overflow-hidden relative">
+            <div className="mt-8 rounded-2xl bg-[#0B0D26] overflow-hidden relative">
               <div className="absolute inset-0 pointer-events-none" style={{ backgroundImage: "repeating-linear-gradient(0deg,transparent,transparent 39px,rgba(255,255,255,0.02) 40px),repeating-linear-gradient(90deg,transparent,transparent 39px,rgba(255,255,255,0.02) 40px)" }} />
               <div className="absolute right-0 top-0 w-64 h-full pointer-events-none" style={{ background: "radial-gradient(ellipse at right, rgba(231,33,43,0.10) 0%, transparent 70%)" }} />
               <div className="absolute top-0 left-0 right-0 h-[2px] bg-gradient-to-r from-transparent via-[#e7212b] to-transparent opacity-60" />

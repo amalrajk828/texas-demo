@@ -1,13 +1,16 @@
 import React from "react";
 import type { Metadata } from "next";
 import Link from "next/link";
+import { BreadcrumbJsonLd } from "@/components/schema/BreadcrumbJsonLd";
+import { ItemListJsonLd } from "@/components/schema/ItemListJsonLd";
+import { FaqPageJsonLd } from "@/components/schema/FaqPageJsonLd";
+import { productsListingFaq } from "@/lib/pageFaqData";
 import { ChevronRight } from "lucide-react";
 import ProductCard from "@/components/ProductCard";
 import { getProductsByPath } from "@/lib/products";
-import { BreadcrumbJsonLd } from "@/components/schema/BreadcrumbJsonLd";
 
 export const metadata: Metadata = {
-  title: "CEMS - Texas Technical Services",
+  title: "CEMS",
   description:
     "Continuous emissions monitoring systems (CEMS) from SICK for compliance monitoring of all pollutant components in exhaust gases from waste incineration, power plants, and industrial facilities.",
   alternates: { canonical: "/products/analyzers/cems/" },
@@ -16,26 +19,38 @@ export const metadata: Metadata = {
     "continuous emissions monitoring",
     "SICK MCS100FT MCS200HW",
     "flue gas monitoring systems",
+    "CEMS Kuwait power plant",
+    "emissions monitoring Kuwait",
+    "power plant CEMS GCC",
+    "stack gas analysis Dubai",
   ],
   openGraph: {
-    title: "CEMS - Texas Technical Services",
+    title: "CEMS",
     description:
       "Continuous emissions monitoring systems (CEMS) from SICK for emissions compliance.",
     url: "/products/analyzers/cems/",
   },
   twitter: {
     card: "summary_large_image",
-    title: "CEMS - Texas Technical Services",
+    title: "CEMS",
     description:
       "Continuous emissions monitoring systems (CEMS) from SICK for emissions compliance.",
   },
 };
 
 export default function CemsPage() {
-  const cemsProducts = getProductsByPath("/products/analyzers/cems/");
+  const products = getProductsByPath("/products/analyzers/cems/");
   return (
     <div className="min-h-screen bg-white font-sans antialiased selection:bg-[#e7212b] selection:text-white">
       <BreadcrumbJsonLd items={[{ name: "Home", href: "/" }, { name: "Products", href: "/products/" }, { name: "Analyzers", href: "/products/analyzers/" }, { name: "CEMS", href: "/products/analyzers/cems/" }]} />
+      <ItemListJsonLd
+        name="CEMS"
+        items={products.map((product) => ({
+          name: product.name,
+          url: `/portfolio/${product.slug}/`,
+          description: product.description || "",
+        }))}
+      />
       {/* ── Hero Banner ─────────────────────────────────────── */}
       <section className="relative bg-[#000000] blueprint-grid blueprint-dot-grid overflow-hidden border-b-4 border-[#e7212b]">
         <div
@@ -53,15 +68,13 @@ export default function CemsPage() {
         />
 
         <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 pt-[calc(var(--navbar-height,92px)+1.75rem)] pb-16 lg:pt-[calc(var(--navbar-height,92px)+2.5rem)] lg:pb-20">
-          <nav className="flex items-center gap-1.5 text-[11px] text-white/50 mb-6 flex-wrap">
+          <nav className="flex items-center gap-1.5 text-[11px] text-white/50 mb-6">
             <Link href="/" className="hover:text-white transition-colors">Home</Link>
-            <ChevronRight className="w-3 h-3 text-white/30 shrink-0" />
+            <ChevronRight className="w-3 h-3 text-white/30" />
             <Link href="/products" className="hover:text-white transition-colors">Products</Link>
-            <ChevronRight className="w-3 h-3 text-white/30 shrink-0" />
-            <Link href="/products/analyzers/" className="hover:text-white transition-colors">
-              Analyzers
-            </Link>
-            <ChevronRight className="w-3 h-3 text-white/30 shrink-0" />
+            <ChevronRight className="w-3 h-3 text-white/30" />
+            <Link href="/products/analyzers/" className="hover:text-white transition-colors">Analyzers</Link>
+            <ChevronRight className="w-3 h-3 text-white/30" />
             <span className="text-white">CEMS</span>
           </nav>
 
@@ -71,10 +84,10 @@ export default function CemsPage() {
               SICK · CEMS Monitoring
             </span>
           </div>
-          <h1 className="text-4xl sm:text-5xl font-medium text-white leading-none mb-2">
+          <h1 className="text-4xl sm:text-5xl font-medium text-white leading-tight mb-4">
             CEMS
           </h1>
-          <p className="text-white/60 text-base max-w-xl font-medium">
+          <p className="text-white/60 text-base max-w-xl">
             Continuous Emissions Monitoring Systems
           </p>
         </div>
@@ -99,32 +112,30 @@ export default function CemsPage() {
 
       {/* ── Products List Section ─────────────────────────────── */}
       <section className="bg-[#F8F9FA] py-14 border-t border-[#E8E8F0] border-b border-[#E8E8F0]">
-        <div className="max-w-[1100px] mx-auto px-10 pb-[80px]">
-          <div className="flex flex-col">
-            {cemsProducts.map((prod, index) => (
-              <React.Fragment key={prod.slug}>
-                <ProductCard
-                  product={prod}
-                  category="CEMS"
-                  imageFit="contain"
-                />
-                {index < cemsProducts.length - 1 && (
-                  <div className="border-t border-[#E8E8F0] my-[10px]" />
-                )}
-              </React.Fragment>
+        <div className="max-w-7xl mx-auto px-4 sm:px-6">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5">
+            {products.map((product, index) => (
+              <ProductCard
+                key={product.slug}
+                product={product}
+                category="CEMS"
+                imageFit="contain"
+                priority={index < 3}
+              />
             ))}
           </div>
         </div>
       </section>
 
+      <FaqPageJsonLd items={productsListingFaq} />
       {/* ── CTA Banner ───────────────────────────────────────── */}
       <section className="relative bg-[#1A1A2E] border-t-4 border-[#e7212b] py-16">
         <div className="max-w-7xl mx-auto px-4 sm:px-6">
           <div className="flex flex-col sm:flex-row items-center justify-between gap-6">
             <div>
-              <h3 className="text-white font-bold text-[22px] mb-1">
+              <p className="text-white font-bold text-[22px] mb-1">
                 Need a CEMS solution for your facility?
-              </h3>
+              </p>
               <p className="text-[#A0A8C0] text-sm">
                 Our emissions monitoring specialists can help you select and configure the
                 right continuous emissions monitoring system for your regulatory compliance
@@ -132,8 +143,8 @@ export default function CemsPage() {
               </p>
             </div>
             <Link
-              href="/contact"
-              className="shrink-0 inline-flex items-center gap-2 bg-[#e7212b] hover:bg-[#aa0b1b] text-white font-bold px-6 py-3.5 rounded-[6px] shadow-lg hover:shadow-[#e7212b]/20 transition-all duration-200"
+              href="/contacts/"
+              className="shrink-0 inline-flex items-center gap-2 bg-[#e7212b] hover:bg-[#aa0b1b] text-white font-bold px-6 py-3.5 rounded-lg shadow-lg hover:shadow-[#e7212b]/20 transition-all duration-200"
             >
               Contact Us &rarr;
             </Link>

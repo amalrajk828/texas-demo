@@ -1,7 +1,7 @@
 "use client";
 import Link from "next/link";
 import { motion } from "framer-motion";
-import { ArrowRight, LayoutGrid } from "lucide-react";
+import { ArrowRight, LayoutGrid, Settings } from "lucide-react";
 
 export default function ServiceGroupHero() {
   return (
@@ -40,60 +40,78 @@ export default function ServiceGroupHero() {
           <span className="text-white/60">Main Services</span>
         </motion.div>
 
-        <div className="max-w-3xl">
+        <div className="flex items-start gap-12 lg:gap-16">
           <motion.div
-            initial={{ opacity: 0, y: 14 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.5, delay: 0.05, ease: [0.22, 1, 0.36, 1] }}
-            className="flex items-center gap-2.5 mb-5"
-          >
-            <span className="w-5 h-px bg-[#e7212b]" />
-            <span className="text-[#e7212b] text-[11px] font-semibold tracking-[3px] uppercase">
-              Our Complete Portfolio
-            </span>
-          </motion.div>
-
-          <motion.h1
-            initial={{ opacity: 0, y: 18 }}
-            animate={{ opacity: 1, y: 0 }}
+            initial={{ opacity: 0, scale: 0.9 }}
+            animate={{ opacity: 1, scale: 1 }}
             transition={{ duration: 0.6, delay: 0.1, ease: [0.22, 1, 0.36, 1] }}
-            className="text-4xl sm:text-5xl lg:text-[3.4rem] font-bold text-white leading-[1.12] mb-6"
+            className="hidden lg:flex items-center justify-center shrink-0 w-[280px]"
           >
-            Main <em className="not-italic text-[#e7212b]">Services</em>
-          </motion.h1>
-
-          <motion.p
-            initial={{ opacity: 0, y: 14 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.55, delay: 0.18, ease: [0.22, 1, 0.36, 1] }}
-            className="text-white/50 text-base sm:text-[17px] leading-relaxed mb-8 max-w-xl"
-          >
-            Browse our full range of industrial services — from flow measurement and
-            inspection &amp; testing to process automation and construction — delivered
-            across oil &amp; gas, refinery, and petrochemical sectors since 2008.
-          </motion.p>
-
-          <motion.div
-            initial={{ opacity: 0, y: 12 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.5, delay: 0.24, ease: [0.22, 1, 0.36, 1] }}
-            className="flex flex-wrap gap-3"
-          >
-            <Link
-              href="/contacts/"
-              className="inline-flex items-center gap-2 bg-[#e7212b] hover:bg-[#aa0b1b] text-white font-semibold px-7 py-3.5 rounded-lg transition-colors duration-200 text-[14px] shadow-lg shadow-[#e7212b]/20"
-            >
-              Get in Touch
-              <ArrowRight className="w-4 h-4" />
-            </Link>
-            <a
-              href="#services-grid"
-              className="inline-flex items-center gap-2 border border-white/15 hover:border-white/35 text-white/60 hover:text-white px-7 py-3.5 rounded-lg transition-all duration-200 text-[14px]"
-            >
-              <LayoutGrid className="w-4 h-4" />
-              View All Services
-            </a>
+            <div className="relative">
+              <div className="absolute inset-0 -m-6 rounded-full border border-white/[0.08]" />
+              <div className="absolute inset-0 -m-2 rounded-full border border-white/[0.06]" />
+              <div className="absolute -top-2 -right-2 w-3 h-3 rounded-full bg-[#e7212b]/30" />
+              <div className="w-[160px] h-[160px] rounded-2xl bg-[#e7212b]/10 border border-[#e7212b]/20 flex items-center justify-center">
+                <Settings className="w-[80px] h-[80px] text-[#e7212b]" strokeWidth={1} />
+              </div>
+            </div>
           </motion.div>
+
+          <div className="flex-1 min-w-0">
+            <motion.div
+              initial={{ opacity: 0, y: 14 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.5, delay: 0.05, ease: [0.22, 1, 0.36, 1] }}
+              className="flex items-center gap-2.5 mb-5"
+            >
+              <span className="w-5 h-px bg-[#e7212b]" />
+              <span className="text-[#e7212b] text-[11px] font-semibold tracking-[3px] uppercase">
+                Our Complete Portfolio
+              </span>
+            </motion.div>
+
+            <motion.h1
+              initial={{ opacity: 0, y: 18 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, delay: 0.1, ease: [0.22, 1, 0.36, 1] }}
+              className="text-4xl sm:text-5xl lg:text-[3.4rem] font-bold text-white leading-[1.12] mb-6"
+            >
+              Main <em className="not-italic text-[#e7212b]">Services</em>
+            </motion.h1>
+
+            <motion.p
+              initial={{ opacity: 0, y: 14 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.55, delay: 0.18, ease: [0.22, 1, 0.36, 1] }}
+              className="text-white/50 text-base sm:text-[17px] leading-relaxed mb-8 max-w-xl"
+            >
+              Browse our full range of industrial services — from flow measurement and
+              inspection &amp; testing to process automation and construction — delivered
+              across oil &amp; gas, refinery, and petrochemical sectors since 2008.
+            </motion.p>
+
+            <motion.div
+              initial={{ opacity: 0, y: 12 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.5, delay: 0.24, ease: [0.22, 1, 0.36, 1] }}
+              className="flex flex-wrap gap-3"
+            >
+              <Link
+                href="/contacts/"
+                className="inline-flex items-center gap-2 bg-[#e7212b] hover:bg-[#aa0b1b] text-white font-semibold px-7 py-3.5 rounded-lg transition-colors duration-200 text-[14px] shadow-lg shadow-[#e7212b]/20"
+              >
+                Get in Touch
+                <ArrowRight className="w-4 h-4" />
+              </Link>
+              <a
+                href="#services-grid"
+                className="inline-flex items-center gap-2 border border-white/15 hover:border-white/35 text-white/60 hover:text-white px-7 py-3.5 rounded-lg transition-all duration-200 text-[14px]"
+              >
+                <LayoutGrid className="w-4 h-4" />
+                View All Services
+              </a>
+            </motion.div>
+          </div>
         </div>
 
         <motion.div

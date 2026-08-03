@@ -5,6 +5,7 @@ import ScrollObserver from "@/components/ScrollObserver";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import SmoothScroll from "@/components/SmoothScroll";
+import { SiteNavigationJsonLd } from "@/components/schema/SiteNavigationJsonLd";
 import { SITE_URL } from "@/lib/site";
 import "./globals.css";
 
@@ -24,7 +25,7 @@ const inter = Inter({
 
 const jetbrainsMono = JetBrains_Mono({
   subsets: ["latin"],
-  weight: ["400", "500", "600"],
+  weight: ["400"],
   variable: "--font-mono",
   display: "swap",
 });
@@ -36,7 +37,13 @@ export const metadata: Metadata = {
     template: "%s | Texas Technical Services",
   },
   description:
-    "Texas specializes in flow measurement, control systems, inspection, and industrial automation solutions for oil & gas, refinery, petrochemical, and power plant sectors.",
+    "Flow measurement, control systems, inspection, and industrial automation for oil & gas, refinery, petrochemical, and power plant sectors.",
+  keywords: [
+    "flow measurement", "industrial automation", "PLC SCADA integration",
+    "inspection testing", "NDT services", "custody metering",
+    "oil and gas", "refinery", "petrochemical", "power plant",
+    "Kuwait", "UAE", "Dubai", "GCC",
+  ],
   openGraph: {
     type: "website",
     locale: "en_US",
@@ -51,18 +58,31 @@ export const metadata: Metadata = {
       },
     ],
   },
+  icons: {
+    icon: [
+      { url: "/favicon.svg", type: "image/svg+xml" },
+      { url: "/favicon.ico", sizes: "32x32" },
+    ],
+    apple: "/apple-touch-icon.png",
+  },
   robots: { index: true, follow: true },
+  twitter: {
+    card: "summary_large_image",
+    site: "@texastechserv",
+  },
 };
 
-const GTM = "GTM-NK9KQVKJ";
+const GTM = "GTM-W776KVLW";
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <html lang="en" data-scroll-behavior="smooth" className={`${plusJakarta.variable} ${inter.variable} ${jetbrainsMono.variable}`}>
       <head>
+        <meta charSet="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
         <Script
           id="gtm"
-          strategy="afterInteractive"
+          strategy="lazyOnload"
           dangerouslySetInnerHTML={{
             __html: `(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src='https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);})(window,document,'script','dataLayer','${GTM}');`,
           }}
@@ -78,6 +98,12 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
               description:
                 "Industrial automation, PLC SCADA integration, flow measurement, and inspection & testing company serving Kuwait, UAE, Dubai, and the GCC.",
               url: `${SITE_URL}/`,
+              image: `${SITE_URL}/og-default.png`,
+              logo: {
+                "@type": "ImageObject",
+                url: `${SITE_URL}/logo.svg`,
+              },
+              email: "sales@texastechserv.com",
               telephone: ["+965 97243755", "+965 66347267", "+971 569553747", "+971 567793973"],
               foundingDate: "2008",
               areaServed: ["Kuwait", "United Arab Emirates", "Saudi Arabia", "Bahrain", "Qatar", "Oman"],
@@ -95,10 +121,23 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
                   addressCountry: "AE",
                 },
               ],
+              geo: [
+                {
+                  "@type": "GeoCoordinates",
+                  latitude: 29.1137,
+                  longitude: 48.1295,
+                },
+                {
+                  "@type": "GeoCoordinates",
+                  latitude: 25.2882,
+                  longitude: 55.3247,
+                },
+              ],
               sameAs: [
                 "https://www.linkedin.com/company/texas-technical-service-company",
                 "https://www.facebook.com/texastechserv",
                 "https://www.instagram.com/texas_technical_services",
+                "https://www.youtube.com/@TEXASTECHNICALSERVICES",
                 "https://x.com/texastechserv",
               ],
               knowsAbout: [
@@ -109,11 +148,24 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
                 "Mitsubishi Factory Automation",
                 "Process Control Automation",
               ],
+              aggregateRating: {
+                "@type": "AggregateRating",
+                ratingValue: 4.8,
+                reviewCount: 49,
+                bestRating: 5,
+              },
             }),
           }}
         />
+        <SiteNavigationJsonLd />
       </head>
-      <body>
+      <body className="overflow-x-hidden">
+        <a
+          href="#main-content"
+          className="sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 focus:z-[9999] focus:bg-white focus:px-4 focus:py-2 focus:rounded-lg focus:shadow-lg focus:text-[#e7212b] focus:font-semibold"
+        >
+          Skip to main content
+        </a>
         <noscript>
           <iframe
             src={`https://www.googletagmanager.com/ns.html?id=${GTM}`}
@@ -125,7 +177,9 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         <ScrollObserver />
         <SmoothScroll>
           <Header />
-          {children}
+          <main id="main-content">
+            {children}
+          </main>
           <Footer />
         </SmoothScroll>
       </body>

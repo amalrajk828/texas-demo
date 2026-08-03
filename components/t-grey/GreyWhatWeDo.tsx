@@ -6,6 +6,7 @@ import { motion, useInView, useSpring, useTransform, useMotionValue } from "fram
 import { useRef, useEffect, useState } from "react";
 import { ArrowRight, ChevronRight, Gauge, FlaskConical, Cpu } from "lucide-react";
 import BorderGlow from "@/components/BorderGlow";
+import { useIsMobile } from "@/hooks/useIsMobile";
 
 const SERVICES = [
   { Icon: Gauge,        num: "01", title: "Flow Measurement & Control", desc: "Comprehensive custody metering, flow computers, metering skids, and control system upgrades for liquid, gas, and water applications." },
@@ -30,7 +31,7 @@ function FadeUp({ children, delay = 0, className = "" }: { children: React.React
 
 // Stat definitions: value = numeric target, suffix = trailing string
 const STATS = [
-  { value: 15,  suffix: "+", label: "Years" },
+  { value: 18,  suffix: "+", label: "Years" },
   { value: 200, suffix: "+", label: "Clients" },
   { value: 8,   suffix: "",  label: "Industries" },
   { value: 100, suffix: "%", label: "ISO Quality" },
@@ -54,13 +55,14 @@ function StatCard({
   value, suffix, label, index, started,
 }: { value: number; suffix: string; label: string; index: number; started: boolean }) {
   const count = useLiquidCounter(value, started, index * 160);
+  const isMobile = useIsMobile();
   return (
     <div
       className="relative px-5 py-4 w-full h-full rounded-2xl overflow-hidden transition-all duration-300 group"
       style={{
         background: "rgba(255, 255, 255, 0.35)",
-        backdropFilter: "blur(18px)",
-        WebkitBackdropFilter: "blur(18px)",
+        backdropFilter: isMobile ? "none" : "blur(18px)",
+        WebkitBackdropFilter: isMobile ? "none" : "blur(18px)",
         border: "1px solid rgba(255, 255, 255, 0.65)",
         boxShadow: "0 8px 24px rgba(0, 0, 0, 0.06), inset 0 1px 1px rgba(255, 255, 255, 0.8)",
       }}
@@ -78,6 +80,7 @@ function StatCard({
 export default function GreyWhatWeDo() {
   const statRef = useRef<HTMLDivElement>(null);
   const statInView = useInView(statRef, { once: true, margin: "-60px" });
+  const isMobile = useIsMobile();
   return (
     <section className="relative py-24 lg:py-32 overflow-hidden" style={{ background: "linear-gradient(135deg, #f5f7fa 0%, #e2e7ee 45%, #c9d2dc 100%)" }}>
       <div className="relative max-w-7xl mx-auto px-4 sm:px-6 z-10">
@@ -99,7 +102,7 @@ export default function GreyWhatWeDo() {
               transition={{ duration: 0.7, ease: "easeOut", delay: 0.15 }}
               className="text-[2.2rem] sm:text-[2.8rem] lg:text-[3.4rem] font-black leading-[1.08] tracking-tight block text-[#111827]"
             >
-              Precision Solutions for Critical Industries
+              What precision solutions do we deliver for critical industries?
             </motion.h2>
           </div>
 
@@ -139,8 +142,8 @@ export default function GreyWhatWeDo() {
                   className="relative rounded-[24px] flex flex-col h-full overflow-hidden cursor-pointer transition-all duration-300 group-hover:border-white/95"
                   style={{
                     background: "rgba(255, 255, 255, 0.28)",
-                    backdropFilter: "blur(22px)",
-                    WebkitBackdropFilter: "blur(22px)",
+                    backdropFilter: isMobile ? "none" : "blur(22px)",
+                    WebkitBackdropFilter: isMobile ? "none" : "blur(22px)",
                     border: "1px solid rgba(255, 255, 255, 0.65)",
                     boxShadow: "0 8px 32px rgba(0, 0, 0, 0.08), inset 0 1px 1px rgba(255, 255, 255, 0.85)",
                   }}
@@ -175,7 +178,7 @@ export default function GreyWhatWeDo() {
                     {/* Learn More Link */}
                     <div className="mt-auto pt-4 border-t border-black/[0.06]">
                       <Link
-                        href="/service/"
+                        href="/services/"
                         className="inline-flex items-center gap-2 text-[14px] font-semibold text-[#E53935] no-underline hover:underline transition-all duration-200"
                       >
                         Learn more{" "}
@@ -269,8 +272,8 @@ export default function GreyWhatWeDo() {
                   </Link>
                 </motion.div>
                 <motion.div whileHover={{ scale: 1.03 }} whileTap={{ scale: 0.97 }}>
-                  <Link href="/service/" className="inline-flex items-center gap-2 font-semibold px-7 py-4 rounded-xl text-[15px] border transition-colors"
-                    style={{ color: "#111827", borderColor: "rgba(255,255,255,0.65)", background: "rgba(255,255,255,0.35)", backdropFilter: "blur(18px)", WebkitBackdropFilter: "blur(18px)" }}>
+                  <Link href="/services/" className="inline-flex items-center gap-2 font-semibold px-7 py-4 rounded-xl text-[15px] border transition-colors"
+                    style={{ color: "#111827", borderColor: "rgba(255,255,255,0.65)", background: "rgba(255,255,255,0.35)", backdropFilter: isMobile ? "none" : "blur(18px)", WebkitBackdropFilter: isMobile ? "none" : "blur(18px)" }}>
                     Our Services <ChevronRight className="w-4 h-4" />
                   </Link>
                 </motion.div>

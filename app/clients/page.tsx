@@ -5,21 +5,23 @@ import { ChevronRight, ExternalLink, ArrowRight } from "lucide-react";
 import ClientsMarquee from "@/components/clients/ClientsMarquee";
 import TestimonialsSection from "@/components/clients/TestimonialsSection";
 import { BreadcrumbJsonLd } from "@/components/schema/BreadcrumbJsonLd";
-
+import { FaqPageJsonLd } from "@/components/schema/FaqPageJsonLd";
+import PageFaqSection from "@/components/PageFaqSection";
+import { clientsFaq } from "@/lib/pageFaqData";
 export const metadata: Metadata = {
-  title: "Our Clients | Texas Technical Services",
+  title: "Our Clients",
   description:
     "Texas Technical Services proudly serves 49+ clients across Kuwait and Dubai — from national oil companies and government bodies to international engineering groups.",
   alternates: { canonical: "/clients/" },
   openGraph: {
-    title: "Our Clients | Texas Technical Services",
+    title: "Our Clients",
     description:
       "49+ clients across oil & gas, power, water, and industrial sectors — trusted by Kuwait Oil Company, KNPC, KIPIC, Chevron, Siemens, Honeywell and many more.",
     url: "/clients/",
   },
   twitter: {
     card: "summary_large_image",
-    title: "Our Clients | Texas Technical Services",
+    title: "Our Clients",
     description:
       "49+ clients across oil & gas, power, water, and industrial sectors — trusted by KOC, KNPC, Chevron, Siemens, Honeywell and more.",
   },
@@ -74,19 +76,19 @@ const clients: Client[] = [
   { name: "IMAR",                                                      logo: "/imar.png",         url: "https://imar.com/",                             external: true  },
   { name: "MJW International Trading Co. LLC",                         logo: "/mjw.png",          url: "/clients/",                                     external: false },
   { name: "FIRSTGROUP",                                                logo: "/first_group.jpeg", url: "https://firstgroupkw.com/",                     external: true  },
-  { name: "International Standard Group (ISG)",                        logo: "/isg.jpeg",         url: "http://www.isg-c.com/",                         external: true  },
-  { name: "Rezayat Group",                                             logo: "/rezayat.jpeg",     url: "https://www.rezayat.com/",                      external: true  },
+
+  { name: "Rezayat Group",                                             logo: "/rezayat.svg",      url: "https://www.rezayat.com/",                      external: true  },
   { name: "Combined Group Contracting Co.",                            logo: "/cgc.png",          url: "https://www.cgc-kw.com/",                       external: true  },
   { name: "Ducting & Servicing Company (DASCO)",                       logo: "/dasco.png",        url: "https://dasco.com.kw/",                         external: true  },
   { name: "Hassan Abul Company",                                       logo: "/hassanabul.png",   url: "https://www.hassanabul.com/",                   external: true  },
   { name: "China State Construction Engineering Corporation (CSCEC)",  logo: "/cscec.png",        url: "https://www.cscec.com/",                        external: true  },
-  { name: "Alico Kuwait for Light Industries & Aluminium W.L.L.",      logo: "/alico.jpeg",       url: "http://alicokuwait.com/",                       external: true  },
+
   { name: "Green Spring Group Co.",                                    logo: "/gsgc.jpeg",        url: "https://gsgckwt.com/",                          external: true  },
   { name: "Sadeem Al-Kuwait for General Trading & Contracting",        logo: "/sadeem.png",       url: "https://www.sadeemalkuwait.com/",               external: true  },
   { name: "Hydrotek Engineering Company",                              logo: "/hydrotek.jpeg",    url: "https://hydrotek.com/",                         external: true  },
   { name: "Lingyun Technology Group",                                  logo: "/lingyun.jpeg",     url: "https://www.lingyun.com/",                      external: true  },
   { name: "Advanced Technology Company K.S.C.P. (ATC)",               logo: "/atc.png",          url: "https://www.atc.com.kw/",                       external: true  },
-  { name: "Al-Bahar Industries Group",                                 logo: "/albahar.jpeg",     url: "http://www.albahar-industries.com/",             external: true  },
+  { name: "Al-Bahar Industries Group",                                 logo: "/albahar.jpeg",     url: "https://www.albahar-industries.com/",            external: true  },
   { name: "WTE Group",                                                 logo: "/wte.png",          url: "https://www.wte.de/",                           external: true  },
   { name: "Limak Group",                                               logo: "/limak.jpeg",       url: "https://www.limak.com.tr/",                     external: true  },
   { name: "SSH",                                                       logo: "/ssh.png",          url: "https://www.sshic.com/",                        external: true  },
@@ -275,6 +277,9 @@ export default function ClientsPage() {
       </section>
 
       <TestimonialsSection />
+
+      <FaqPageJsonLd items={clientsFaq} />
+      <PageFaqSection items={clientsFaq} title="Questions About" highlight="Our Clients" />
 
       {/* ══ CTA BANNER ════════════════════════════════════════════ */}
       <section className="bg-[#000000] blueprint-grid blueprint-dot-grid py-20">

@@ -4,6 +4,7 @@ import { ArrowRight, ChevronRight, MapPin, Cpu, Thermometer, ShieldCheck } from 
 import { BreadcrumbJsonLd } from "@/components/schema/BreadcrumbJsonLd";
 import { ServiceJsonLd } from "@/components/schema/ServiceJsonLd";
 import { FaqPageJsonLd } from "@/components/schema/FaqPageJsonLd";
+import { SpeakableJsonLd } from "@/components/schema/SpeakableJsonLd";
 
 export const metadata: Metadata = {
   title: "Industrial Automation Services Kuwait | PLC, SCADA & Flow Measurement",
@@ -105,6 +106,7 @@ export default function IndustrialAutomationKuwaitPage() {
         areaServed={["Kuwait", "United Arab Emirates", "Saudi Arabia", "Bahrain", "Qatar", "Oman"]}
       />
       <FaqPageJsonLd items={faqItems} />
+      <SpeakableJsonLd headline="Industrial Automation Services Kuwait — PLC, SCADA & Flow Measurement" />
       {/* ══ HERO ════════════════════════════════════════════ */}
       <section className="relative bg-[#000000] blueprint-grid blueprint-dot-grid overflow-hidden pt-32 pb-20 lg:pb-28">
         <div

@@ -1,6 +1,11 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { BreadcrumbJsonLd } from "@/components/schema/BreadcrumbJsonLd";
+import { SpeakableJsonLd } from "@/components/schema/SpeakableJsonLd";
+import { FaqPageJsonLd } from "@/components/schema/FaqPageJsonLd";
+import { ItemListJsonLd } from "@/components/schema/ItemListJsonLd";
+import PageFaqSection from "@/components/PageFaqSection";
+import { productsListingFaq } from "@/lib/pageFaqData";
 import {
   Gauge,
   Activity,
@@ -19,21 +24,23 @@ import {
 } from "lucide-react";
 
 export const metadata: Metadata = {
-  title: "Products",
+  title: "Flow Meters, Analyzers, PLCs & Industrial Automation Products",
   description:
-    "Explore Texas Technical Services' full product range — flow meters, analyzers, sensors, PLCs, ICONICS SCADA, HMI panels, VFDs, AC servos, custody metering, and industrial automation solutions.",
+    "Flow meters, analyzers, sensors, PLCs, SCADA, HMI panels, VFDs, AC servos, and custody metering solutions from leading OEMs.",
   alternates: { canonical: "/products/" },
   openGraph: {
-    title: "Products | Texas Technical Services",
+    title: "Flow Meters, Analyzers, PLCs & Industrial Automation Products",
     description:
-      "Explore Texas Technical Services' full product range — flow meters, analyzers, sensors, PLCs, ICONICS SCADA, HMI panels, VFDs, AC servos, custody metering skids, and industrial automation solutions from leading OEMs.",
+      "Flow meters, analyzers, sensors, PLCs, SCADA, HMI panels, VFDs, AC servos, and custody metering solutions from leading OEMs.",
     url: "/products/",
+    images: [{ url: "/og-default.png", width: 1200, height: 630 }],
   },
   twitter: {
     card: "summary_large_image",
-    title: "Products | Texas Technical Services",
+    title: "Flow Meters, Analyzers, PLCs & Industrial Automation Products",
     description:
-      "Flow meters, analyzers, sensors, PLCs, ICONICS SCADA, HMI panels, VFDs, AC servos, and custody metering solutions from leading OEMs.",
+      "Flow meters, analyzers, sensors, PLCs, SCADA, HMI panels, VFDs, AC servos, and custody metering solutions from leading OEMs.",
+    images: ["/og-default.png"],
   },
   keywords: [
     "flow meters Kuwait",
@@ -189,6 +196,15 @@ export default function ProductsPage() {
         { name: "Home", href: "/" },
         { name: "Products", href: "/products/" },
       ]} />
+      <ItemListJsonLd
+        name="Industrial Product Categories"
+        items={categories.map((c) => ({
+          name: c.title,
+          url: c.href,
+          description: c.description,
+        }))}
+      />
+      <SpeakableJsonLd headline="Flow Meters, Analyzers, PLCs & Industrial Automation Products" />
       {/* ── Hero Banner ─────────────────────────────────────── */}
       <section className="relative bg-[#000000] blueprint-grid blueprint-dot-grid overflow-hidden pt-[calc(var(--navbar-height,92px)+1rem)] lg:pt-[calc(var(--navbar-height,92px)+1.5rem)]">
         {/* Grid texture */}
@@ -222,7 +238,7 @@ export default function ProductsPage() {
             </span>
           </div>
           <h1 className="text-4xl sm:text-5xl font-medium text-white leading-tight mb-4">
-            Products
+            Flow Meters, PLCs & Automation Products
           </h1>
           <p className="text-white/45 text-base max-w-xl">
             Flow measurement, industrial automation, and process instrumentation solutions from world-class
@@ -241,6 +257,9 @@ export default function ProductsPage() {
           </div>
         </div>
       </section>
+
+      <FaqPageJsonLd items={productsListingFaq} />
+      <PageFaqSection items={productsListingFaq} title="Questions About" highlight="Our Products" />
 
       {/* ── CTA Banner ───────────────────────────────────────── */}
       <section className="bg-[#12163A] border-t border-white/[0.06] py-16">

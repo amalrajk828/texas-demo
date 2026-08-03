@@ -1,25 +1,28 @@
 import type { Metadata } from "next";
-import { Flame } from "lucide-react";
+import { Flame, Gauge, Shield, Timer, ChevronRight } from "lucide-react";
 import { BreadcrumbJsonLd } from "@/components/schema/BreadcrumbJsonLd";
+import { FaqPageJsonLd } from "@/components/schema/FaqPageJsonLd";
+import { SpeakableJsonLd } from "@/components/schema/SpeakableJsonLd";
+import { industryFaqData } from "@/lib/industryFaqData";
 import IndustryHero from "@/components/industries/IndustryHero";
 import IndustryProductsGrid from "@/components/industries/IndustryProductsGrid";
 import IndustryCtaBanner from "@/components/industries/IndustryCtaBanner";
 import type { CategoryColors, IndustryProduct } from "@/components/industries/types";
 
 export const metadata: Metadata = {
-  title: "Oil & Gas Industry Solutions | Texas Technical Services",
+  title: "Oil & Gas Industry Solutions",
   description:
     "Texas Technical Services delivers precision flow metering, CEMS, analyzers, and industrial automation solutions for the oil & gas industry — upstream, midstream, and downstream.",
   alternates: { canonical: "/industries/oil-gas/" },
   openGraph: {
-    title: "Oil & Gas Industry Solutions | Texas Technical Services",
+    title: "Oil & Gas Industry Solutions",
     description:
       "Complete OEM flow metering, CEMS, gas analyzers, and industrial automation solutions for the oil & gas sector — upstream, midstream, and downstream — backed by 18+ years in Kuwait and the GCC.",
     url: "/industries/oil-gas/",
   },
   twitter: {
     card: "summary_large_image",
-    title: "Oil & Gas Industry Solutions | Texas Technical Services",
+    title: "Oil & Gas Industry Solutions",
     description:
       "Flow metering, CEMS, analyzers, and automation solutions for upstream, midstream, and downstream oil & gas — serving Kuwait and the GCC since 2008.",
   },
@@ -34,6 +37,10 @@ export const metadata: Metadata = {
     "flow computers for oil and gas",
     "custody transfer metering oil and gas",
     "oil and gas instrumentation Kuwait",
+    "production optimization oil gas GCC",
+    "oil and gas support services Kuwait",
+    "innovative solutions oil gas",
+    "Coriolis meter oil and gas",
   ],
 };
 
@@ -161,6 +168,7 @@ export default function OilGasPage() {
         { name: "Industries", href: "/industries/" },
         { name: "Oil & Gas", href: "/industries/oil-gas/" },
       ]} />
+      <SpeakableJsonLd headline="Oil & Gas Industry Solutions" cssSelector={["h2", "p"]} />
       <IndustryHero
         name="Oil & Gas"
         breadcrumbLabel="Oil & Gas"
@@ -174,6 +182,11 @@ export default function OilGasPage() {
           { num: "5+", label: "OEM Brands" },
           { num: "18+", label: "Years" },
         ]}
+        highlights={[
+          { icon: Gauge, text: "Custody Transfer Metering" },
+          { icon: Shield, text: "CEMS Compliance" },
+          { icon: Timer, text: "Upstream-to-Downstream" },
+        ]}
       />
       <IndustryProductsGrid
         title="Solutions for Oil & Gas"
@@ -184,6 +197,43 @@ export default function OilGasPage() {
         heading="Have an oil & gas project?"
         subtext="Talk to our specialists about your flow measurement, CEMS, or automation requirements. Kuwait and Dubai offices ready to help."
       />
+
+      <FaqPageJsonLd items={industryFaqData["oil-gas"]} />
+      {/* ══ FAQ ════════════════════════════════════════════ */}
+      <section className="bg-[#f4f5f8] py-20 lg:py-24">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6">
+          <div className="flex items-center gap-2.5 mb-4">
+            <span className="w-5 h-px bg-[#e7212b]" />
+            <span className="text-[#e7212b] text-[10px] font-semibold tracking-[3.5px] uppercase">
+              FAQ
+            </span>
+          </div>
+          <h2 className="text-3xl sm:text-[2.4rem] font-bold text-[#0B0D26] leading-[1.15] mb-12">
+            Questions About{" "}
+            <em className="not-italic text-[#e7212b]">Oil & Gas</em>
+          </h2>
+          <div className="max-w-4xl mx-auto space-y-4">
+            {industryFaqData["oil-gas"]?.map((item) => (
+              <details
+                key={item.q}
+                className="group bg-white border border-[#e8eaf0] rounded-2xl overflow-hidden transition-all duration-200 open:border-[#e7212b]/25 open:shadow-lg"
+              >
+                <summary className="flex items-center justify-between p-5 lg:p-6 cursor-pointer list-none">
+                  <span className="text-[15px] font-semibold text-[#0B0D26] pr-4 leading-snug">
+                    {item.q}
+                  </span>
+                  <span className="w-6 h-6 rounded-full bg-[#e7212b]/10 border border-[#e7212b]/20 flex items-center justify-center shrink-0 group-open:bg-[#e7212b] group-open:border-[#e7212b] transition-all duration-200">
+                    <ChevronRight className="w-3.5 h-3.5 text-[#e7212b] group-open:text-white group-open:rotate-90 transition-all duration-200" />
+                  </span>
+                </summary>
+                <div className="px-5 lg:px-6 pb-5 lg:pb-6 pt-0">
+                  <p className="text-gray-500 text-[14px] leading-[1.8]">{item.a}</p>
+                </div>
+              </details>
+            ))}
+          </div>
+        </div>
+      </section>
     </>
   );
 }

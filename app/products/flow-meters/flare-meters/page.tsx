@@ -2,12 +2,15 @@ import React from "react";
 import type { Metadata } from "next";
 import Link from "next/link";
 import { BreadcrumbJsonLd } from "@/components/schema/BreadcrumbJsonLd";
+import { ItemListJsonLd } from "@/components/schema/ItemListJsonLd";
+import { FaqPageJsonLd } from "@/components/schema/FaqPageJsonLd";
+import { productsListingFaq } from "@/lib/pageFaqData";
 import { ChevronRight } from "lucide-react";
 import ProductCard from "@/components/ProductCard";
 import { getProductsByPath } from "@/lib/products";
 
 export const metadata: Metadata = {
-  title: "Flare Meters - Texas Technical Services",
+  title: "Flare Meters",
   description:
     "SICK ultrasonic flare gas and steam flow meters — FLOWSIC100 Flare and FLOWSIC100-Flare-XT for reliable, low-maintenance measurement on refinery and petrochemical flare stacks.",
   alternates: { canonical: "/products/flow-meters/flare-meters/" },
@@ -16,34 +19,45 @@ export const metadata: Metadata = {
     "SICK FLOWSIC100 Flare",
     "flare stack measurement",
     "steam flow meters refinery",
+    "flare gas measurement Kuwait",
+    "ultrasonic flare meter GCC",
+    "refinery flare monitoring",
+    "flare flow measurement Dubai",
   ],
   openGraph: {
-    title: "Flare Meters - Texas Technical Services",
+    title: "Flare Meters",
     description:
       "SICK ultrasonic flare gas and steam flow meters — FLOWSIC100 Flare and FLOWSIC100-Flare-XT for reliable, low-maintenance measurement on flare stacks.",
     url: "/products/flow-meters/flare-meters/",
   },
   twitter: {
     card: "summary_large_image",
-    title: "Flare Meters - Texas Technical Services",
+    title: "Flare Meters",
     description:
       "SICK ultrasonic flare gas and steam flow meters — FLOWSIC100 Flare and FLOWSIC100-Flare-XT for reliable, low-maintenance measurement on flare stacks.",
   },
 };
 
 export default function FlareMetersPage() {
-  const flareMeterProducts = getProductsByPath("/products/flow-meters/flare-meters/");
+  const products = getProductsByPath("/products/flow-meters/flare-meters/");
   return (
-<div className="min-h-screen bg-white font-sans antialiased selection:bg-[#e7212b] selection:text-white">
+    <div className="min-h-screen bg-white font-sans antialiased selection:bg-[#e7212b] selection:text-white">
       <BreadcrumbJsonLd items={[
         { name: "Home", href: "/" },
         { name: "Products", href: "/products/" },
         { name: "Flow Meters", href: "/products/flow-meters/" },
         { name: "Flare Meters", href: "/products/flow-meters/flare-meters/" },
       ]} />
+      <ItemListJsonLd
+        name="Flare Meters"
+        items={products.map((product) => ({
+          name: product.name,
+          url: `/portfolio/${product.slug}/`,
+          description: product.description || "",
+        }))}
+      />
       {/* ── Hero Banner ─────────────────────────────────────── */}
       <section className="relative bg-[#000000] blueprint-grid blueprint-dot-grid overflow-hidden border-b-4 border-[#e7212b]">
-        {/* Grid texture */}
         <div
           className="absolute inset-0 pointer-events-none opacity-30"
           style={{
@@ -51,7 +65,6 @@ export default function FlareMetersPage() {
               "repeating-linear-gradient(0deg,transparent,transparent 39px,rgba(255,255,255,0.02) 40px),repeating-linear-gradient(90deg,transparent,transparent 39px,rgba(255,255,255,0.02) 40px)",
           }}
         />
-        {/* Orange radial glow */}
         <div
           className="absolute bottom-0 left-1/2 -translate-x-1/2 w-[600px] h-40 pointer-events-none"
           style={{
@@ -60,16 +73,13 @@ export default function FlareMetersPage() {
         />
 
         <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 pt-[calc(var(--navbar-height,92px)+1.75rem)] pb-16 lg:pt-[calc(var(--navbar-height,92px)+2.5rem)] lg:pb-20">
-          {/* Breadcrumb */}
-          <nav className="flex items-center gap-1.5 text-[11px] text-white/50 mb-6 flex-wrap">
+          <nav className="flex items-center gap-1.5 text-[11px] text-white/50 mb-6">
             <Link href="/" className="hover:text-white transition-colors">Home</Link>
-            <ChevronRight className="w-3 h-3 text-white/30 shrink-0" />
+            <ChevronRight className="w-3 h-3 text-white/30" />
             <Link href="/products" className="hover:text-white transition-colors">Products</Link>
-            <ChevronRight className="w-3 h-3 text-white/30 shrink-0" />
-            <Link href="/products/flow-meters/" className="hover:text-white transition-colors">
-              Flow Meters
-            </Link>
-            <ChevronRight className="w-3 h-3 text-white/30 shrink-0" />
+            <ChevronRight className="w-3 h-3 text-white/30" />
+            <Link href="/products/flow-meters/" className="hover:text-white transition-colors">Flow Meters</Link>
+            <ChevronRight className="w-3 h-3 text-white/30" />
             <span className="text-white">Flare Meters</span>
           </nav>
 
@@ -79,10 +89,10 @@ export default function FlareMetersPage() {
               SICK · Flare Gas &amp; Steam Measurement
             </span>
           </div>
-          <h1 className="text-4xl sm:text-5xl font-medium text-white leading-none mb-2">
+          <h1 className="text-4xl sm:text-5xl font-medium text-white leading-tight mb-4">
             Flare Meters
           </h1>
-          <p className="text-white/60 text-base max-w-xl font-medium">
+          <p className="text-white/60 text-base max-w-xl">
             Ultrasonic Flare Gas &amp; Steam Flow Measurement
           </p>
         </div>
@@ -108,28 +118,28 @@ export default function FlareMetersPage() {
       <section className="bg-[#F8F9FA] py-14 border-t border-[#E8E8F0] border-b border-[#E8E8F0]">
         <div className="max-w-7xl mx-auto px-4 sm:px-6">
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5">
-            {flareMeterProducts.map((prod, index) => (
-              <React.Fragment key={prod.slug}>
-                <ProductCard
-                  product={prod}
-                  category="Flare Flow Meters"
-                  imageFit="contain"
-                />
-                
-              </React.Fragment>
+            {products.map((product, index) => (
+              <ProductCard
+                key={product.slug}
+                product={product}
+                category="Flare Flow Meters"
+                imageFit="contain"
+                priority={index < 3}
+              />
             ))}
           </div>
         </div>
       </section>
 
+      <FaqPageJsonLd items={productsListingFaq} />
       {/* ── CTA Banner ───────────────────────────────────────── */}
       <section className="relative bg-[#1A1A2E] border-t-4 border-[#e7212b] py-16">
         <div className="max-w-7xl mx-auto px-4 sm:px-6">
           <div className="flex flex-col sm:flex-row items-center justify-between gap-6">
             <div>
-              <h3 className="text-white font-bold text-[22px] mb-1">
+              <p className="text-white font-bold text-[22px] mb-1">
                 Need a reliable flare gas measurement solution?
-              </h3>
+              </p>
               <p className="text-[#A0A8C0] text-sm">
                 Our flow measurement specialists can help you select, size, and configure the right SICK ultrasonic
                 flare meter for your refinery or petrochemical application.
@@ -137,7 +147,7 @@ export default function FlareMetersPage() {
             </div>
             <Link
               href="/contacts/"
-              className="shrink-0 inline-flex items-center gap-2 bg-[#e7212b] hover:bg-[#aa0b1b] text-white font-bold px-6 py-3.5 rounded-[6px] shadow-lg hover:shadow-[#e7212b]/20 transition-all duration-200"
+              className="shrink-0 inline-flex items-center gap-2 bg-[#e7212b] hover:bg-[#aa0b1b] text-white font-bold px-6 py-3.5 rounded-lg shadow-lg hover:shadow-[#e7212b]/20 transition-all duration-200"
             >
               Contact Us &rarr;
             </Link>

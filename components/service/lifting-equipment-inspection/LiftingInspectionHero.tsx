@@ -44,7 +44,7 @@ export default function LiftingInspectionHero() {
         </FadeUp>
         <div className="max-w-full">
           <div className="relative rounded-2xl overflow-hidden aspect-[16/7] mb-10 shadow-2xl shadow-black/40">
-            <Image src="/images/services/lifting_eq_inspection.jpg" alt="Lifting Equipment Inspection" fill sizes="100vw" className="object-cover opacity-60" />
+            <Image src="/images/services/lifting_eq_inspection.jpg" alt="Lifting equipment inspection and load testing — Texas Technical Services" fill sizes="100vw" className="object-cover opacity-60" />
             <div className="absolute inset-0 bg-gradient-to-t from-[#0B0D26] via-transparent to-transparent" />
           </div>
           <FadeUp delay={0.05}>

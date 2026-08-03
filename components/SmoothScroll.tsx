@@ -1,14 +1,38 @@
 "use client";
 
 import { useEffect } from "react";
+import { usePathname } from "next/navigation";
 import Lenis from "lenis";
+
+function ScrollReset() {
+  const pathname = usePathname();
+  useEffect(() => {
+    if (typeof window === "undefined") return;
+    window.scrollTo(0, 0);
+    const lenis = (window as any).lenis;
+    if (lenis) {
+      lenis.scrollTo(0, { immediate: true });
+    }
+  }, [pathname]);
+  return null;
+}
 
 export default function SmoothScroll({ children }: { children: React.ReactNode }) {
   useEffect(() => {
-    console.log("Lenis initialized");
+    if (typeof window === "undefined") return;
+
+    const prefersReduced = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+    const isMobile = window.matchMedia("(pointer: coarse)").matches
+      || window.innerWidth < 768;
+
+    if (prefersReduced || isMobile) {
+      (window as any).lenis = null;
+      return;
+    }
+
     const lenis = new Lenis({
       duration: 1.2,
-      easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)), // standard ease-out exponential
+      easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)),
       orientation: "vertical",
       gestureOrientation: "vertical",
       smoothWheel: true,
@@ -16,25 +40,27 @@ export default function SmoothScroll({ children }: { children: React.ReactNode }
       touchMultiplier: 2,
     });
 
-    if (typeof window !== "undefined") {
-      (window as any).lenis = lenis;
-    }
+    (window as any).lenis = lenis;
 
+    let rafId: number;
     function raf(time: number) {
       lenis.raf(time);
-      requestAnimationFrame(raf);
+      rafId = requestAnimationFrame(raf);
     }
 
-    requestAnimationFrame(raf);
+    rafId = requestAnimationFrame(raf);
 
     return () => {
-      console.log("Lenis destroyed");
-      if (typeof window !== "undefined") {
-        (window as any).lenis = null;
-      }
+      cancelAnimationFrame(rafId);
+      (window as any).lenis = null;
       lenis.destroy();
     };
   }, []);
 
-  return <>{children}</>;
+  return (
+    <>
+      <ScrollReset />
+      {children}
+    </>
+  );
 }

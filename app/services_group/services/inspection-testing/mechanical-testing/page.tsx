@@ -2,6 +2,8 @@ import type { Metadata } from "next";
 import MechanicalHero from "@/components/service/mechanical-testing/MechanicalHero";
 import MechanicalSubServices from "@/components/service/mechanical-testing/MechanicalSubServices";
 import { BreadcrumbJsonLd } from "@/components/schema/BreadcrumbJsonLd";
+import { FaqPageJsonLd } from "@/components/schema/FaqPageJsonLd";
+import { servicesListingFaq } from "@/lib/pageFaqData";
 import { ServiceJsonLd } from "@/components/schema/ServiceJsonLd";
 
 export const metadata: Metadata = {
@@ -12,7 +14,7 @@ export const metadata: Metadata = {
     canonical: "/services_group/services/inspection-testing/mechanical-testing/",
   },
   openGraph: {
-    title: "Mechanical Testing Services | Texas Technical Services",
+    title: "Mechanical Testing Services",
     description:
       "Tensile, hardness, impact, bend, fracture toughness, and macro/micro testing for metals, plastics, ceramics, and composites. Kuwait & Dubai.",
     url: "/services_group/services/inspection-testing/mechanical-testing/",
@@ -20,7 +22,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Mechanical Testing Services | Texas Technical Services",
+    title: "Mechanical Testing Services",
     description: "Tensile, hardness, impact, bend, fracture, and macro/micro testing. Kuwait & Dubai.",
   },
   keywords: [
@@ -53,6 +55,7 @@ export default function MechanicalTestingPage() {
 />
       <MechanicalHero />
       <MechanicalSubServices />
+      <FaqPageJsonLd items={servicesListingFaq} />
     </>
   );
 }

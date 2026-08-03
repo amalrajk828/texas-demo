@@ -3,11 +3,21 @@ import { notFound } from "next/navigation";
 import Link from "next/link";
 import Image from "next/image";
 import { ChevronRight, Check, ArrowRight, ExternalLink, Download } from "lucide-react";
-import { products, getProductBySlug, getProduct, getAllProductSlugs, type BulletSection, type SubBlock } from "@/lib/products";
+import { products, getProductBySlug, getProduct, getAllProductSlugs, getProductFaq, type BulletSection, type SubBlock } from "@/lib/products";
 import ProductInquiryForm from "@/components/ProductInquiryForm";
 import RelatedProducts from "@/components/RelatedProducts";
 import { ProductJsonLd } from "@/components/schema/ProductJsonLd";
+import { BreadcrumbJsonLd } from "@/components/schema/BreadcrumbJsonLd";
+import { VideoObjectJsonLd } from "@/components/schema/VideoObjectJsonLd";
+import { FaqPageJsonLd } from "@/components/schema/FaqPageJsonLd";
+import PageFaqSection from "@/components/PageFaqSection";
 import { SITE_URL } from "@/lib/site";
+
+function getYoutubeId(url?: string) {
+  if (!url) return null;
+  const match = url.match(/(?:youtu\.be\/|youtube\.com\/embed\/|youtube\.com\/watch\?v=|youtube\.com\/v\/|youtube\.com\/\?v=)([a-zA-Z0-9_-]{11})/);
+  return match?.[1] ?? null;
+}
 
 type Props = { params: Promise<{ slug: string }> };
 
@@ -20,18 +30,18 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const product = getProduct(slug);
   if (!product) return {};
   return {
-    title: `${product.name} | Texas Technical Services`,
+    title: `${product.name}`,
     description: product.paragraphs?.[0] ?? `${product.name} — ${product.brand}`,
     keywords: [product.name, product.brand, product.category, "industrial automation"],
     alternates: { canonical: `/portfolio/${slug}/` },
     openGraph: {
-      title: `${product.name} | Texas Technical Services`,
+      title: `${product.name}`,
       description: product.paragraphs?.[0] ?? `${product.name} — ${product.brand}`,
       url: `/portfolio/${slug}/`,
     },
     twitter: {
       card: "summary_large_image",
-      title: `${product.name} | Texas Technical Services`,
+      title: `${product.name}`,
       description: product.paragraphs?.[0] ?? `${product.name} — ${product.brand}`,
     },
   };
@@ -180,6 +190,7 @@ export default async function ProductPage({ params }: Props) {
   const { slug } = await params;
   const product = getProduct(slug);
   if (!product) notFound();
+  const faqItems = getProductFaq(product);
 
   return (
     <>
@@ -191,6 +202,20 @@ export default async function ProductPage({ params }: Props) {
         category={product.category}
         image={product.heroImage}
       />
+      <BreadcrumbJsonLd items={[{ name: "Home", href: "/" }, { name: "Products", href: "/products/" }, { name: product.name, href: `/portfolio/${product.slug}/` }]} />
+      {(() => {
+        const videoId = getYoutubeId(product.youtubeUrl ?? undefined);
+        if (!videoId) return null;
+        return (
+          <VideoObjectJsonLd
+            name={`${product.name} — Product Video`}
+            description={product.paragraphs?.[0] ?? `${product.name} — ${product.brand}`}
+            thumbnailUrl={`https://img.youtube.com/vi/${videoId}/maxresdefault.jpg`}
+            contentUrl={`https://www.youtube.com/watch?v=${videoId}`}
+            embedUrl={`https://www.youtube.com/embed/${videoId}`}
+          />
+        );
+      })()}
       {/* ══ HERO ══════════════════════════════════════════════════ */}
       <section className="relative overflow-hidden min-h-[400px] flex items-end">
         <div className="absolute inset-0">
@@ -490,6 +515,9 @@ export default async function ProductPage({ params }: Props) {
         category={product.category}
         title="Related Products"
       />
+
+      <FaqPageJsonLd items={faqItems} />
+      <PageFaqSection items={faqItems} title="Questions About" highlight={product.name} />
 
       {/* ══ CTA BANNER ════════════════════════════════════════════ */}
       <section className="bg-[#000000] blueprint-grid blueprint-dot-grid py-20">

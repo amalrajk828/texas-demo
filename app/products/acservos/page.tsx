@@ -2,12 +2,15 @@ import React from "react";
 import type { Metadata } from "next";
 import Link from "next/link";
 import { BreadcrumbJsonLd } from "@/components/schema/BreadcrumbJsonLd";
+import { ItemListJsonLd } from "@/components/schema/ItemListJsonLd";
+import { FaqPageJsonLd } from "@/components/schema/FaqPageJsonLd";
+import { productsListingFaq } from "@/lib/pageFaqData";
 import { ChevronRight } from "lucide-react";
 import ProductCard from "@/components/ProductCard";
 import { getProductsByPath } from "@/lib/products";
 
 export const metadata: Metadata = {
-  title: "AC Servos - Texas Technical Services",
+  title: "AC Servos",
   description: "Mitsubishi Electric MELSERVO AC servo drives and motors for precise motion control in industrial automation.",
   alternates: { canonical: "/products/acservos/" },
   keywords: [
@@ -15,15 +18,20 @@ export const metadata: Metadata = {
     "MELSERVO servo motors",
     "MR-J5 servo amplifier",
     "motion control solutions Kuwait",
+    "Kinetix servo motor",
+    "Kinetix 5700 servo drive",
+    "Kinetix 5100",
+    "Allen Bradley 3 phase motor starter",
+    "motor control center manufacturers",
   ],
   openGraph: {
-    title: "AC Servos - Texas Technical Services",
+    title: "AC Servos",
     description: "Mitsubishi Electric MELSERVO AC servo drives and motors for precise motion control in industrial automation.",
     url: "/products/acservos/",
   },
   twitter: {
     card: "summary_large_image",
-    title: "AC Servos - Texas Technical Services",
+    title: "AC Servos",
     description: "Mitsubishi Electric MELSERVO AC servo drives and motors for precise motion control in industrial automation.",
   },
 };
@@ -41,6 +49,14 @@ export default function AcServosPage() {
         { name: "Products", href: "/products/" },
         { name: "AC Servos", href: "/products/acservos/" },
       ]} />
+      <ItemListJsonLd
+        name="AC Servos"
+        items={acServosData.map((product) => ({
+          name: product.name,
+          url: `/portfolio/${product.slug}/`,
+          description: product.description || "",
+        }))}
+      />
       {/* ── Hero Banner ─────────────────────────────────────── */}
       <section className="relative bg-[#000000] blueprint-grid blueprint-dot-grid overflow-hidden border-b-4 border-[#e7212b]">
         {/* Grid texture */}
@@ -111,8 +127,8 @@ export default function AcServosPage() {
             </div>
             
             <div className="flex flex-col gap-6">
-              {jeSeriesProducts.map((servo) => (
-                <ProductCard key={servo.slug} product={servo} category="acservos" />
+              {jeSeriesProducts.map((servo, index) => (
+                <ProductCard key={servo.slug} product={servo} category="acservos" priority={index < 3} />
               ))}
             </div>
 
@@ -134,6 +150,7 @@ export default function AcServosPage() {
         </div>
       </section>
 
+      <FaqPageJsonLd items={productsListingFaq} />
       {/* ── CTA Banner ───────────────────────────────────────── */}
       <section className="relative bg-[#1A1A2E] border-t-4 border-[#e7212b] py-16">
         <div className="max-w-7xl mx-auto px-4 sm:px-6">

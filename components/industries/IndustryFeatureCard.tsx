@@ -25,7 +25,7 @@ export default function IndustryFeatureCard({
     <IndustryProductCardMotion delay={animationDelay}>
       <Link
         href={`/industries/${slug}/`}
-        className="group block rounded-2xl overflow-hidden bg-white border border-[#e8eaf0] hover:border-[#e7212b]/60 transition-all duration-300 hover:shadow-2xl"
+        className="group block rounded-2xl overflow-hidden bg-white/[0.10] backdrop-blur-xl border border-white/[0.12] hover:border-[#e7212b]/40 transition-all duration-500 shadow-[0_4px_32px_rgba(0,0,0,0.35)] hover:shadow-[0_8px_40px_rgba(231,33,43,0.12)]"
         style={
           {
             "--tw-shadow-color": "rgba(231,33,43,0.12)",
@@ -33,7 +33,11 @@ export default function IndustryFeatureCard({
           } as React.CSSProperties
         }
       >
-        <div className="relative h-60 overflow-hidden bg-[#000000] blueprint-grid blueprint-dot-grid">
+        <div className="absolute top-0 left-0 right-0 h-[2px] z-20 bg-gradient-to-r from-transparent via-[#e7212b] to-transparent opacity-50 group-hover:opacity-100 transition-opacity duration-300" />
+        <div className="absolute -top-12 -right-12 w-36 h-36 rounded-full opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none z-20"
+          style={{ background: "radial-gradient(circle, rgba(231,33,43,0.16) 0%, transparent 70%)" }}
+        />
+        <div className="relative h-60 overflow-hidden bg-[#0B0D26]">
           <Image
             src={image}
             alt={`${name} industry solutions — Texas Technical Services`}
@@ -56,22 +60,22 @@ export default function IndustryFeatureCard({
           </div>
 
           <div className="absolute bottom-0 left-0 right-0 px-5 pb-4 pt-10">
-            <h2 className="text-white font-medium text-xl leading-tight group-hover:text-[#e7212b] transition-colors duration-200">
+            <h2 className="text-white font-medium text-2xl leading-tight group-hover:text-[#e7212b] transition-colors duration-200">
               {name}
             </h2>
-            <p className="text-white/45 text-[11px] mt-0.5 tracking-wide">
+            <p className="text-white/80 text-xs mt-0.5 tracking-wide">
               {sub}
             </p>
           </div>
         </div>
 
         <div className="px-5 pt-4 pb-5">
-          <p className="text-gray-500 text-[13px] leading-relaxed line-clamp-3 mb-4">
+          <p className="text-white/80 text-sm leading-relaxed line-clamp-3 mb-4">
             {desc}
           </p>
 
           <div className="flex items-center justify-between">
-            <span className="inline-flex items-center gap-1.5 text-[#e7212b] text-[12px] font-medium group-hover:gap-2.5 transition-all duration-200">
+            <span className="inline-flex items-center gap-1.5 text-[#e7212b] text-[13px] font-medium group-hover:gap-2.5 transition-all duration-200">
               Read More
               <ArrowRight className="w-3.5 h-3.5" />
             </span>

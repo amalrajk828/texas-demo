@@ -13,6 +13,7 @@ import {
   CheckCircle,
 } from "lucide-react";
 import { SITE_EMAIL } from "@/lib/site";
+import { useFormSubmit } from "@/lib/useFormSubmit";
 
 const offices = [
   {
@@ -42,6 +43,7 @@ export default function ContactPage() {
     message: "",
   });
   const [submitted, setSubmitted] = useState(false);
+  const { submitForm, isSubmitting } = useFormSubmit();
 
   const handleChange = (
     e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
@@ -49,13 +51,21 @@ export default function ContactPage() {
     setForm((prev) => ({ ...prev, [e.target.name]: e.target.value }));
   };
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     if (!form.fullName || !form.email || !form.message) {
       alert("Please fill in all required fields.");
       return;
     }
-    setSubmitted(true);
+    const result = await submitForm({
+      ...form,
+      _subject: "New Contact Form Submission",
+    });
+    if (result.success) {
+      setSubmitted(true);
+    } else {
+      alert("Something went wrong. Please try again later.");
+    }
   };
 
   return (
@@ -151,11 +161,11 @@ export default function ContactPage() {
                   <div className="w-12 h-12 rounded-full bg-[#e7212b]/10 flex items-center justify-center shrink-0 group-hover:bg-[#e7212b]/20 transition-colors">
                     <Mail className="w-5 h-5 text-[#e7212b]" />
                   </div>
-                  <div>
+                  <div className="min-w-0">
                     <p className="text-[13px] font-semibold text-gray-400 mb-1">
                       Email Us
                     </p>
-                    <p className="text-[#181D4E] font-medium">{SITE_EMAIL}</p>
+                    <p className="text-[#181D4E] font-medium break-all">{SITE_EMAIL}</p>
                   </div>
                 </a>
 
@@ -211,10 +221,10 @@ export default function ContactPage() {
                       Working Hours
                     </p>
                     <p className="text-[#181D4E] font-medium">
-                      Sun – Thu: 8:00 AM – 5:00 PM
+                      Sat – Thu: 8:00 AM – 5:00 PM
                     </p>
                     <p className="text-gray-400 text-sm mt-0.5">
-                      Friday &amp; Saturday: Closed
+                      Friday: Closed
                     </p>
                   </div>
                 </div>
@@ -249,12 +259,13 @@ export default function ContactPage() {
                   <div className="grid grid-cols-1 sm:grid-cols-2 gap-5">
                     {/* Full Name */}
                     <div className="flex flex-col">
-                      <label className="text-[13px] font-semibold text-gray-500 mb-1.5">
+                      <label htmlFor="fullName" className="text-[13px] font-semibold text-gray-500 mb-1.5">
                         Full Name *
                       </label>
                       <input
                         type="text"
                         name="fullName"
+                        id="fullName"
                         value={form.fullName}
                         onChange={handleChange}
                         required
@@ -265,12 +276,13 @@ export default function ContactPage() {
 
                     {/* Email */}
                     <div className="flex flex-col">
-                      <label className="text-[13px] font-semibold text-gray-500 mb-1.5">
+                      <label htmlFor="email" className="text-[13px] font-semibold text-gray-500 mb-1.5">
                         Email Address *
                       </label>
                       <input
                         type="email"
                         name="email"
+                        id="email"
                         value={form.email}
                         onChange={handleChange}
                         required
@@ -283,12 +295,13 @@ export default function ContactPage() {
                   <div className="grid grid-cols-1 sm:grid-cols-2 gap-5">
                     {/* Phone */}
                     <div className="flex flex-col">
-                      <label className="text-[13px] font-semibold text-gray-500 mb-1.5">
+                      <label htmlFor="phone" className="text-[13px] font-semibold text-gray-500 mb-1.5">
                         Phone Number
                       </label>
                       <input
                         type="tel"
                         name="phone"
+                        id="phone"
                         value={form.phone}
                         onChange={handleChange}
                         placeholder="+1 (555) 000-0000"
@@ -298,12 +311,13 @@ export default function ContactPage() {
 
                     {/* Subject */}
                     <div className="flex flex-col">
-                      <label className="text-[13px] font-semibold text-gray-500 mb-1.5">
+                      <label htmlFor="subject" className="text-[13px] font-semibold text-gray-500 mb-1.5">
                         Subject
                       </label>
                       <input
                         type="text"
                         name="subject"
+                        id="subject"
                         value={form.subject}
                         onChange={handleChange}
                         placeholder="How can we help?"
@@ -314,11 +328,12 @@ export default function ContactPage() {
 
                   {/* Message */}
                   <div className="flex flex-col">
-                    <label className="text-[13px] font-semibold text-gray-500 mb-1.5">
+                    <label htmlFor="message" className="text-[13px] font-semibold text-gray-500 mb-1.5">
                       Message *
                     </label>
                     <textarea
                       name="message"
+                      id="message"
                       value={form.message}
                       onChange={handleChange}
                       required
@@ -331,9 +346,10 @@ export default function ContactPage() {
                   {/* Submit */}
                   <button
                     type="submit"
-                    className="w-full bg-[#e7212b] hover:bg-[#aa0b1b] text-white font-semibold py-3.5 px-6 rounded-lg transition-all duration-200 text-sm shadow-md shadow-[#e7212b]/15 active:scale-[0.99] cursor-pointer inline-flex items-center justify-center gap-2"
+                    disabled={isSubmitting}
+                    className="w-full bg-[#e7212b] hover:bg-[#aa0b1b] text-white font-semibold py-3.5 px-6 rounded-lg transition-all duration-200 text-sm shadow-md shadow-[#e7212b]/15 active:scale-[0.99] cursor-pointer inline-flex items-center justify-center gap-2 disabled:opacity-50 disabled:cursor-not-allowed"
                   >
-                    Send Message <Send className="w-4 h-4" />
+                    {isSubmitting ? "Sending..." : "Send Message"} <Send className="w-4 h-4" />
                   </button>
                 </form>
               )}

@@ -56,15 +56,22 @@ export function findCategoryImage(category: string): string {
 }
 
 export function findIndustryImage(industrySlug: string): string {
-  const parts = industrySlug.split("-");
   return (
     products.find(
       (p) =>
-        (p.industries ?? []).some((ind) =>
-          parts.some((part) => ind.toLowerCase().includes(part)),
-        ) && p.image,
+        (p.industries ?? []).some((ind) => industryMatches(ind, industrySlug)) &&
+        p.image,
     )?.image ?? ""
   );
+}
+
+export function industryMatches(industryStr: string, slugKey: string): boolean {
+  const parts = slugKey.split("-");
+  const lower = industryStr.toLowerCase();
+  return parts.some((part) => {
+    const pattern = part.replace(/s$/, "").replace(/y$/, "");
+    return lower.includes(pattern);
+  });
 }
 
 export function getFilter(
@@ -76,11 +83,10 @@ export function getFilter(
     const industry = slugWithoutPage[1];
     const title = INDUSTRY_TITLES[industry];
     if (!title) return null;
-    const parts = industry.split("-");
     return {
       filter: (p) =>
         (p.industries ?? []).some((ind) =>
-          parts.some((part) => ind.toLowerCase().includes(part)),
+          industryMatches(ind, industry),
         ),
       title: `${title} — Portfolio`,
       breadcrumb: title,

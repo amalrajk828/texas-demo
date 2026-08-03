@@ -6,10 +6,11 @@ import Link from "next/link";
 import Image from "next/image";
 import { usePathname } from "next/navigation";
 import {
-  ChevronDown, Menu, ArrowRight, X, ChevronRight, Wifi,
+  ChevronDown, ChevronRight, Menu, ArrowRight, X,
   Gauge, FlaskConical, Cpu,
   Droplet, Factory, Flame, Snowflake, Zap, Droplets, Building2, Hammer,
   BarChart3, Radio, Monitor, Tablet, Activity, Settings, Wrench, Target,
+  Wifi, LayoutGrid, Globe,
 } from "lucide-react";
 import type { LucideIcon } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
@@ -33,17 +34,23 @@ type NavItem = {
 };
 
 /* ── Navigation Data ──────────────────────────────────────────────── */
+const SOCIALS = [
+  { label: "LinkedIn", href: "https://www.linkedin.com/company/texas-technical-service-company", path: "M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6zM2 9h4v12H2z M4 6a2 2 0 1 0 0-4 2 2 0 0 0 0 4z" },
+  { label: "Facebook", href: "https://www.facebook.com/texastechserv", path: "M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z" },
+  { label: "Instagram", href: "https://www.instagram.com/texas_technical_services", path: "M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z M17.5 6.5h.01 M7.5 2h9A5.5 5.5 0 0 1 22 7.5v9A5.5 5.5 0 0 1 16.5 22h-9A5.5 5.5 0 0 1 2 16.5v-9A5.5 5.5 0 0 1 7.5 2z" },
+];
+
 const NAV: NavItem[] = [
   { label: "Home", href: "/" },
   { label: "About Us", href: "/about-us/" },
   {
     label: "Services",
-    href: "/service/",
+    href: "/services/",
     children: [
       { label: "Flow Measurement & Control", href: "/service/flow-measurement-solutions/", icon: Gauge,        desc: "Custody metering, flow computers, and control system upgrades" },
       { label: "Inspection & Testing",       href: "/service/inspection-testing/",          icon: FlaskConical, desc: "NDT, mechanical testing, and ISO-certified inspection services" },
       { label: "Industrial Automation",      href: "/service/industrial-automation/",        icon: Cpu,          desc: "PLC, SCADA, HMI, and VFD integration for industrial plants" },
-      { label: "View all services →",        href: "/service/",                              highlight: true },
+      { label: "View all services →",        href: "/services/",                              highlight: true },
     ],
   },
   {
@@ -156,9 +163,9 @@ const getMenuData = (label: string) => {
 };
 
 const getMenuViewAll = (label: string) => {
-  if (label === "Products") return { label: "View all products →", link: "/products/" };
-  if (label === "Services") return { label: "View all services →", link: "/service/" };
-  if (label === "Industries") return { label: "View all industries →", link: "/industries/" };
+  if (label === "Products") return { label: "View all products", link: "/products/" };
+  if (label === "Services") return { label: "View all services", link: "/services/" };
+  if (label === "Industries") return { label: "View all industries", link: "/industries/" };
   return undefined;
 };
 
@@ -367,59 +374,33 @@ function NestedDropdown({ menuLabel, data, viewAll, isOpen, onClose, pathname, o
   );
 }
 
-const getDropdownPos = (label: string) => {
-  if (label === "Products") return "left-1/2 -translate-x-1/2";
-  if (label === "Services") return "left-0";
-  if (label === "Industries") return "right-0";
-  return "left-0";
-};
-
-const getDropdownWidth = (label: string) => {
-  if (label === "Products") return "w-[660px]";
-  if (label === "Services") return "w-[360px]";
-  if (label === "Industries") return "w-[540px]";
-  return "w-[360px]";
-};
-
-const getDropdownCols = (label: string) => {
-  if (label === "Products") return "grid-cols-2";
-  if (label === "Services") return "grid-cols-1";
-  if (label === "Industries") return "grid-cols-2";
-  return "grid-cols-1";
-};
-
-const showDesc = (label: string) => label === "Services";
-
 /* ── Component ────────────────────────────────────────────────────── */
 export default function Header() {
   const pathname = usePathname();
-  const isHome = pathname === "/";
-  const isAboutUs = pathname.startsWith("/about-us");
   const [open, setOpen]               = useState<string | null>(null);
   const [mobileOpen, setMobileOpen]   = useState(false);
   const [scrolled, setScrolled]       = useState(false);
   const [mobileExpanded, setMobileExpanded] = useState<string | null>(null);
+  const [socialOpen, setSocialOpen]         = useState(false);
+  const [isMobile, setIsMobile]             = useState(false);
   const ref = useRef<HTMLDivElement>(null);
-  const closeTimeoutRef = useRef<NodeJS.Timeout | null>(null);
+  const timeoutRef = useRef<NodeJS.Timeout | null>(null);
 
   const handleMouseEnter = (label: string) => {
-    if (closeTimeoutRef.current) {
-      clearTimeout(closeTimeoutRef.current);
-      closeTimeoutRef.current = null;
-    }
+    if (timeoutRef.current) clearTimeout(timeoutRef.current);
     setOpen(label);
   };
 
   const handleMouseLeave = () => {
-    if (closeTimeoutRef.current) clearTimeout(closeTimeoutRef.current);
-    closeTimeoutRef.current = setTimeout(() => {
+    if (timeoutRef.current) clearTimeout(timeoutRef.current);
+    timeoutRef.current = setTimeout(() => {
       setOpen(null);
-    }, 180);
+    }, 200);
   };
 
   useEffect(() => {
     return () => {
-      if (closeTimeoutRef.current) clearTimeout(closeTimeoutRef.current);
+      if (timeoutRef.current) clearTimeout(timeoutRef.current);
     };
   }, []);
 
@@ -433,80 +414,30 @@ export default function Header() {
 
   /* Scroll listener */
   useEffect(() => {
-    console.log("Header scroll effect mounted");
-    let lenisInstance: any = typeof window !== "undefined" ? (window as any).lenis : null;
-    let unsubLenis: (() => void) | null = null;
-    let checkInterval: NodeJS.Timeout | null = null;
+    const onScroll = () => setScrolled(window.scrollY > 10);
+    window.addEventListener("scroll", onScroll, { passive: true });
+    return () => window.removeEventListener("scroll", onScroll);
+  }, []);
 
-    const onScroll = (e?: any) => {
-      const scrollY = e && typeof e.scroll === "number" ? e.scroll : window.scrollY;
-      const nextScrolled = scrollY > 10;
-      setScrolled(prev => {
-        if (prev !== nextScrolled) {
-          console.log("scrolled ->", nextScrolled);
-        }
-        return nextScrolled;
-      });
-    };
-
-    const setupLenisListener = (lenis: any) => {
-      lenisInstance = lenis;
-      window.removeEventListener("scroll", onScroll);
-      lenis.on("scroll", onScroll);
-      unsubLenis = () => {
-        lenis.off("scroll", onScroll);
-      };
-      // Force initial run
-      onScroll({ scroll: lenis.scroll });
-    };
-
-    if (lenisInstance) {
-      console.log("Header scroll: found window.lenis immediately");
-      setupLenisListener(lenisInstance);
-    } else if (typeof window !== "undefined") {
-      console.log("Header scroll: lenis not found immediately. Falling back to native listener and starting polling...");
-      window.addEventListener("scroll", onScroll, { passive: true });
-      onScroll();
-
-      // Check if Lenis is initialized shortly after mount
-      checkInterval = setInterval(() => {
-        if ((window as any).lenis) {
-          console.log("Header scroll: lenis found via polling");
-          setupLenisListener((window as any).lenis);
-          if (checkInterval) clearInterval(checkInterval);
-        }
-      }, 50);
-
-      // Clear interval after 2 seconds to avoid running it forever if Lenis is not used
-      setTimeout(() => {
-        if (checkInterval) {
-          console.log("Header scroll: stopped polling for lenis");
-          clearInterval(checkInterval);
-        }
-      }, 2000);
-    }
-
-    return () => {
-      console.log("Header scroll effect unmounted");
-      if (checkInterval) clearInterval(checkInterval);
-      if (unsubLenis) {
-        unsubLenis();
-      } else if (typeof window !== "undefined") {
-        window.removeEventListener("scroll", onScroll);
-      }
-    };
+  /* Detect mobile for disabling layout animations */
+  useEffect(() => {
+    setIsMobile(window.matchMedia("(pointer: coarse)").matches || window.innerWidth < 768);
   }, []);
 
   /* Close everything on route change */
   useEffect(() => {
     setMobileOpen(false);
     setOpen(null);
+    setSocialOpen(false);
   }, [pathname]);
 
   /* Click outside */
   useEffect(() => {
     const handler = (e: MouseEvent) => {
-      if (ref.current && !ref.current.contains(e.target as Node)) setOpen(null);
+      if (ref.current && !ref.current.contains(e.target as Node)) {
+        setOpen(null);
+        setSocialOpen(false);
+      }
     };
     document.addEventListener("mousedown", handler);
     return () => document.removeEventListener("mousedown", handler);
@@ -519,35 +450,32 @@ export default function Header() {
     <>
       <header
         ref={ref}
-        className="fixed top-4 left-1/2 -translate-x-1/2 z-[100] w-[calc(100%-2rem)] max-w-7xl transition-all duration-300 rounded-2xl border border-white/[0.10]"
-        style={{
-          background: "rgba(15, 15, 18, 0.55)",
-          backdropFilter: "blur(18px)",
-          WebkitBackdropFilter: "blur(18px)",
-          boxShadow: scrolled
-            ? "0 12px 32px rgba(0, 0, 0, 0.40), inset 0 1px 1px rgba(255, 255, 255, 0.08)"
-            : "0 8px 24px rgba(0, 0, 0, 0.30), inset 0 1px 1px rgba(255, 255, 255, 0.05)",
-          transition: "box-shadow 0.3s ease, background 0.3s ease, border-color 0.3s ease",
-        }}
+        className={`fixed top-0 inset-x-0 z-50 transition-all duration-300 ${
+          scrolled
+            ? "bg-[#0F1117]/92 backdrop-blur-xl shadow-2xl shadow-black/40"
+            : "bg-[#0F1117]"
+        }`}
       >
-        {/* Inner background clip for sheen overlays only */}
-        <div className="absolute inset-0 rounded-2xl overflow-hidden pointer-events-none">
-          {/* Subtle top specular highlight sheen */}
-          <div className="absolute top-0 inset-x-0 h-10 bg-gradient-to-b from-white/[0.05] to-transparent pointer-events-none rounded-t-2xl" />
-          <div className="absolute top-0 inset-x-0 h-[1px] bg-gradient-to-r from-transparent via-white/20 to-transparent pointer-events-none" />
-        </div>
+        {/* Red accent line — appears on scroll */}
+        <div
+          className="absolute top-0 inset-x-0 h-[2px] transition-opacity duration-300"
+          style={{
+            background: "linear-gradient(90deg, transparent 10%, #E53935 50%, transparent 90%)",
+            opacity: scrolled ? 1 : 0,
+          }}
+        />
 
-        <div className="w-full px-4 sm:px-6">
-          <div className="flex items-center h-[76px] gap-10">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6">
+          <div className="flex items-center lg:h-[72px] h-[88px] gap-10 lg:gap-5 xl:gap-10">
 
             {/* ── Logo ─────────────────────────────────────────── */}
-            <Link href="/" className="flex items-center gap-4 shrink-0">
-              <Image src="/logo.svg" alt="Texas Technical Services" width={52} height={52} priority />
+            <Link href="/" className="flex items-center gap-4 lg:gap-3 shrink-0">
+              <Image src="/logo.svg" alt="Texas Technical Services" width={62} height={62} className="lg:w-12 lg:h-12" priority />
               <div className="hidden sm:flex flex-col gap-0.5">
-                <span className="text-white font-black tracking-[6px] text-[18px] leading-none">
+                <span className="text-white font-black tracking-[6px] lg:tracking-[4px] text-[18px] lg:text-[15px] leading-none">
                   TEXAS
                 </span>
-                <span className="text-[#E53935] text-[11px] tracking-[3px] leading-none font-semibold mt-0.5">
+                <span className="text-[#E53935] text-[11px] lg:text-[10px] tracking-[3px] lg:tracking-[2px] leading-none font-semibold mt-0.5">
                   TECHNICAL SERVICES
                 </span>
               </div>
@@ -557,13 +485,13 @@ export default function Header() {
             <div className="hidden lg:block w-px h-8 bg-white/10 shrink-0" />
 
             {/* ── Desktop Nav ──────────────────────────────────── */}
-            <nav className="hidden lg:flex items-center gap-0.5 flex-1 justify-center">
+              <nav aria-label="Main navigation" className="hidden lg:flex items-center gap-0.5 flex-1 justify-center">
               {NAV.map((item) => (
-                <div 
-                  key={item.label} 
+                <div
+                  key={item.label}
                   className="relative"
-                  onMouseEnter={() => handleMouseEnter(item.label)}
-                  onMouseLeave={handleMouseLeave}
+                  onMouseEnter={item.children ? () => handleMouseEnter(item.label) : undefined}
+                  onMouseLeave={item.children ? handleMouseLeave : undefined}
                 >
                   {item.children ? (
                     <>
@@ -573,7 +501,7 @@ export default function Header() {
                         onBlur={item.children ? handleMouseLeave : undefined}
                         aria-expanded={open === item.label ? "true" : "false"}
                         aria-haspopup="true"
-                        className={`whitespace-nowrap flex items-center gap-1.5 px-4 py-2.5 text-[14px] font-medium font-sans tracking-wide rounded-lg transition-colors relative ${
+                        className={`flex items-center gap-1.5 lg:px-3 xl:px-4 py-2.5 lg:text-[13px] xl:text-[14px] font-medium font-sans tracking-wide lg:tracking-normal whitespace-nowrap rounded-lg transition-colors relative ${
                           isActive(item.href) ? "text-white" : "text-white/60 hover:text-white"
                         }`}
                       >
@@ -584,99 +512,34 @@ export default function Header() {
                           }`}
                         />
                         {isActive(item.href) && (
-                          <motion.span
-                            layoutId="nav-underline"
-                            className="absolute bottom-0 left-4 right-4 h-[2px] rounded-full"
-                            style={{ background: "linear-gradient(90deg, #E53935, #B71C1C)" }}
-                            transition={{ type: "spring", stiffness: 380, damping: 30 }}
-                          />
+                          isMobile ? (
+                            <span
+                              className="absolute bottom-0 left-4 right-4 h-[2px] rounded-full"
+                              style={{ background: "linear-gradient(90deg, #E53935, #B71C1C)" }}
+                            />
+                          ) : (
+                            <motion.span
+                              layoutId="nav-underline"
+                              className="absolute bottom-0 left-4 right-4 h-[2px] rounded-full"
+                              style={{ background: "linear-gradient(90deg, #E53935, #B71C1C)" }}
+                              transition={{ type: "spring", stiffness: 380, damping: 30 }}
+                            />
+                          )
                         )}
                       </button>
 
-                      {/* ── Dark Glassmorphic Dropdown Panel ──────────────── */}
                       <AnimatePresence>
                         {open === item.label && (
-                          <motion.div
-                            key={`dd-${item.label}`}
-                            initial={{ opacity: 0, y: -8, scale: 0.96 }}
-                            animate={{ opacity: 1, y: 0, scale: 1 }}
-                            exit={{ opacity: 0, y: -8, scale: 0.96 }}
-                            transition={{ duration: 0.18, ease: [0.22, 1, 0.36, 1] }}
+                          <NestedDropdown
+                            menuLabel={item.label}
+                            data={getMenuData(item.label)}
+                            viewAll={getMenuViewAll(item.label)}
+                            isOpen={open === item.label}
+                            onClose={() => setOpen(null)}
+                            pathname={pathname}
                             onMouseEnter={() => handleMouseEnter(item.label)}
                             onMouseLeave={handleMouseLeave}
-                            className={`absolute top-full ${getDropdownPos(item.label)} mt-3 ${getDropdownWidth(item.label)} rounded-2xl shadow-2xl shadow-black/60 overflow-hidden border border-white/15 z-[110] backdrop-blur-2xl`}
-                            style={{ background: "rgba(15, 15, 18, 0.88)", backdropFilter: "blur(28px)", WebkitBackdropFilter: "blur(28px)" }}
-                          >
-                            {/* Dark scrim overlay to mute background textures */}
-                            <div className="absolute inset-0 bg-black/20 pointer-events-none" />
-
-                            {/* Gradient accent at top */}
-                            <div
-                              className="relative z-10 h-[2px]"
-                              style={{ background: "linear-gradient(90deg, #E53935, #FF7043, #E53935)" }}
-                            />
-
-                            {/* Items grid */}
-                            <div className={`relative z-10 ${item.label === "Products" ? "p-4 gap-x-8 gap-y-1" : "p-3.5 gap-1"} grid ${getDropdownCols(item.label)}`}>
-                              {item.children!
-                                .filter((c) => !c.highlight)
-                                .map((child) => {
-                                  const childActive =
-                                    pathname === child.href ||
-                                    pathname.startsWith(child.href.replace(/\/$/, "") + "/");
-                                  const Icon = child.icon;
-
-                                  return (
-                                    <Link
-                                      key={child.href}
-                                      href={child.href}
-                                      onClick={() => setOpen(null)}
-                                      className={`flex items-center gap-2.5 px-2.5 py-1.5 rounded-lg transition-all duration-200 group border ${
-                                        childActive
-                                          ? "bg-[#E53935]/20 text-white border-[#E53935]/40"
-                                          : "text-white/90 hover:text-white hover:bg-white/[0.09] border-transparent"
-                                      }`}
-                                    >
-                                      {Icon && (
-                                        <span
-                                          className={`flex items-center justify-center w-7 h-7 rounded-md shrink-0 transition-colors ${
-                                            childActive
-                                              ? "bg-[#E53935]/25 text-[#ff5252]"
-                                              : "bg-white/10 text-white/80 group-hover:bg-[#E53935]/20 group-hover:text-white"
-                                          }`}
-                                        >
-                                          <Icon className="w-3.5 h-3.5" strokeWidth={1.8} />
-                                        </span>
-                                      )}
-                                      <div className="min-w-0 flex-1">
-                                        <p className="text-[13px] font-medium leading-tight text-white drop-shadow-[0_1px_2px_rgba(0,0,0,0.5)]">
-                                          {child.label}
-                                        </p>
-                                        {showDesc(item.label) && child.desc && (
-                                          <p className="text-[11.5px] text-white/70 mt-0.5 leading-relaxed">
-                                            {child.desc}
-                                          </p>
-                                        )}
-                                      </div>
-                                    </Link>
-                                  );
-                                })}
-                            </div>
-
-                            {/* "View all" footer */}
-                            {item.children!.find((c) => c.highlight) && (
-                              <div className="relative z-10 border-t border-white/15 px-4 py-2 bg-black/40">
-                                <Link
-                                  href={item.children!.find((c) => c.highlight)!.href}
-                                  onClick={() => setOpen(null)}
-                                  className="inline-flex items-center gap-1.5 text-[12px] font-bold text-[#FF5252] hover:text-white transition-colors"
-                                >
-                                  {item.children!.find((c) => c.highlight)!.label}
-                                  <ArrowRight className="w-3.5 h-3.5" />
-                                </Link>
-                              </div>
-                            )}
-                          </motion.div>
+                          />
                         )}
                       </AnimatePresence>
                     </>
@@ -684,18 +547,25 @@ export default function Header() {
                     /* Simple link (Home, About, Clients) */
                     <Link
                       href={item.href}
-                      className={`whitespace-nowrap relative px-4 py-2.5 text-[14px] font-medium font-sans tracking-wide rounded-lg transition-colors block ${
+                      className={`relative lg:px-3 xl:px-4 py-2.5 lg:text-[13px] xl:text-[14px] font-medium font-sans tracking-wide lg:tracking-normal whitespace-nowrap rounded-lg transition-colors block ${
                         isActive(item.href) ? "text-white" : "text-white/60 hover:text-white"
                       }`}
                     >
                       {item.label}
                       {isActive(item.href) && (
-                        <motion.span
-                          layoutId="nav-underline"
-                          className="absolute bottom-0 left-4 right-4 h-[2px] rounded-full"
-                          style={{ background: "linear-gradient(90deg, #E53935, #B71C1C)" }}
-                          transition={{ type: "spring", stiffness: 380, damping: 30 }}
-                        />
+                        isMobile ? (
+                          <span
+                            className="absolute bottom-0 left-4 right-4 h-[2px] rounded-full"
+                            style={{ background: "linear-gradient(90deg, #E53935, #B71C1C)" }}
+                          />
+                        ) : (
+                          <motion.span
+                            layoutId="nav-underline"
+                            className="absolute bottom-0 left-4 right-4 h-[2px] rounded-full"
+                            style={{ background: "linear-gradient(90deg, #E53935, #B71C1C)" }}
+                            transition={{ type: "spring", stiffness: 380, damping: 30 }}
+                          />
+                        )
                       )}
                     </Link>
                   )}
@@ -708,10 +578,64 @@ export default function Header() {
               {/* Contact — desktop */}
               <Link
                 href="/contacts/"
-                className="whitespace-nowrap hidden lg:inline-flex items-center gap-2 bg-[#E53935] hover:bg-[#B71C1C] text-white text-[14px] font-medium font-sans px-7 py-3 rounded-xl transition-colors tracking-wide shadow-lg shadow-[#E53935]/20"
+                className="hidden lg:inline-flex items-center gap-2 bg-[#E53935] hover:bg-[#B71C1C] text-white text-[14px] font-medium font-sans px-7 py-3 rounded-xl transition-colors tracking-wide shadow-lg shadow-[#E53935]/20"
               >
                 Contact Us
               </Link>
+
+              {/* Social media dropdown — desktop */}
+              <div className="hidden lg:block relative">
+                <button
+                  onClick={() => setSocialOpen(!socialOpen)}
+                  aria-expanded={socialOpen}
+                  aria-haspopup="true"
+                  className="w-10 h-10 rounded-lg border border-white/15 flex items-center justify-center text-white/50 hover:text-white hover:border-white/30 transition-colors"
+                  aria-label="Social media"
+                >
+                  <LayoutGrid className="w-4 h-4" />
+                </button>
+
+                {socialOpen && (
+                  <div className="absolute top-full right-0 mt-2 w-56 bg-[#0B0D26] border border-white/10 rounded-xl shadow-2xl shadow-black/50 overflow-hidden z-50">
+                    <div className="px-4 py-2.5 border-b border-white/10">
+                      <span className="text-white/60 text-[10px] font-medium tracking-[2px] uppercase">
+                        Connect
+                      </span>
+                    </div>
+                    <div className="p-2">
+                      {SOCIALS.map((s) => (
+                        <a
+                          key={s.label}
+                          href={s.href}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="flex items-center gap-3 px-3 py-2.5 rounded-lg text-white/55 hover:text-white hover:bg-white/5 transition-colors"
+                        >
+                          <span className="w-7 h-7 rounded-full border border-white/10 flex items-center justify-center shrink-0">
+                            <svg viewBox="0 0 24 24" className="w-3 h-3" fill="none" stroke="currentColor" strokeWidth={2} strokeLinecap="round" strokeLinejoin="round">
+                              <path d={s.path} />
+                            </svg>
+                          </span>
+                          <span className="text-[13px] font-medium">{s.label}</span>
+                          <svg className="w-3 h-3 ml-auto text-white/25" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={2} strokeLinecap="round" strokeLinejoin="round">
+                            <path d="M9 18l6-6-6-6" />
+                          </svg>
+                        </a>
+                      ))}
+                    </div>
+                    <div className="border-t border-white/10 p-2">
+                      <Link
+                        href="/social-media/"
+                        onClick={() => setSocialOpen(false)}
+                        className="flex items-center justify-center gap-1.5 px-3 py-2.5 rounded-lg text-[13px] font-semibold text-[#E53935] hover:bg-white/5 transition-colors"
+                      >
+                        View all platforms
+                        <ArrowRight className="w-3.5 h-3.5" />
+                      </Link>
+                    </div>
+                  </div>
+                )}
+              </div>
 
               {/* ── Mobile Menu (shadcn Sheet) ─────────────────── */}
               <Sheet open={mobileOpen} onOpenChange={(v) => setMobileOpen(v as boolean)}>
@@ -733,7 +657,7 @@ export default function Header() {
                   {/* Close button */}
                   <button
                     onClick={() => setMobileOpen(false)}
-                    className="absolute top-4 right-4 w-9 h-9 rounded-full border border-white/15 flex items-center justify-center text-white/50 hover:text-white hover:border-white/30 transition-colors z-10"
+                    className="absolute top-4 right-4 w-11 h-11 rounded-full border border-white/15 flex items-center justify-center text-white/50 hover:text-white hover:border-white/30 transition-colors z-10"
                     aria-label="Close menu"
                   >
                     <X className="w-4 h-4" />
@@ -771,6 +695,8 @@ export default function Header() {
                               onClick={() =>
                                 setMobileExpanded(mobileExpanded === item.label ? null : item.label)
                               }
+                              aria-expanded={mobileExpanded === item.label}
+                              aria-haspopup="true"
                               className="p-2 text-white/40 hover:text-white"
                             >
                               <ChevronDown
@@ -849,6 +775,18 @@ export default function Header() {
                     ))}
                   </nav>
 
+                  {/* Social link */}
+                  <div className="px-4 py-2 border-t" style={{ borderColor: "rgba(255,255,255,0.08)" }}>
+                    <Link
+                      href="/social-media/"
+                      onClick={() => setMobileOpen(false)}
+                      className="flex items-center gap-3 px-4 py-3 text-[14px] font-medium font-sans tracking-wide text-white/40 hover:text-white rounded-lg transition-colors"
+                    >
+                      <Globe className="w-4 h-4" />
+                      Follow Us
+                    </Link>
+                  </div>
+
                   {/* Bottom CTA */}
                   <div className="p-4 border-t mt-auto" style={{ borderColor: "rgba(255,255,255,0.08)" }}>
                     <Link
@@ -867,24 +805,16 @@ export default function Header() {
 
         {/* Bottom accent line — visible on scroll */}
         <div
-          className="absolute bottom-0 inset-x-0 h-px transition-opacity duration-300 rounded-b-2xl overflow-hidden"
+          className="absolute bottom-0 inset-x-0 h-px transition-opacity duration-300"
           style={{
             background: "linear-gradient(90deg, transparent, rgba(229,57,53,0.25), transparent)",
             opacity: scrolled ? 1 : 0,
           }}
         />
-
-        <style>{`
-          @keyframes fadeIn {
-            from { opacity: 0; transform: translateY(-4px) scale(0.98); }
-            to { opacity: 1; transform: translateY(0) scale(1); }
-          }
-          .animate-fade-in {
-            animation: fadeIn 0.15s ease-out forwards;
-          }
-        `}</style>
       </header>
 
+      {/* Spacer — matches header height */}
+      <div className="h-[88px] lg:h-[72px]" aria-hidden="true" />
     </>
   );
 }

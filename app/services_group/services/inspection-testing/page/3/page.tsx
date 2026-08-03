@@ -14,15 +14,16 @@ export const metadata: Metadata = {
     canonical: "/services_group/services/inspection-testing/page/3/",
   },
   openGraph: {
-    title: "Inspection & Testing Services — Page 3 | Texas Technical Services",
+    title: "Inspection & Testing Services — Page 3",
     description: "NDT methods — UT, RT, MT, PT, and VI services in Kuwait and Dubai.",
     url: "/services_group/services/inspection-testing/page/3/",
   },
   twitter: {
     card: "summary_large_image",
-    title: "Inspection & Testing Services — Page 3 | Texas Technical Services",
+    title: "Inspection & Testing Services — Page 3",
     description: "UT, RT, MT, PT, VI — full NDT services in Kuwait and Dubai.",
   },
+  keywords: ["NDT Kuwait", "ultrasonic testing", "radiographic testing", "magnetic particle inspection", "visual inspection"],
 };
 
 const faqItems = [

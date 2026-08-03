@@ -1,12 +1,11 @@
 import React from "react";
 import ProductCard from "@/components/ProductCard";
 import type { Product } from "@/lib/products";
-import ProductPageProductsListItem from "./ProductPageProductsListItem";
 
 export default function ProductPageProductsList({
   products,
   category,
-  imageFit = "contain",
+  imageFit = "cover",
   resolveCardHref,
 }: {
   products: Product[];
@@ -15,19 +14,29 @@ export default function ProductPageProductsList({
   resolveCardHref?: (slug: string) => string | undefined;
 }) {
   return (
-    <section className="bg-[#F8F9FA] py-14 lg:py-20 border-t border-[#E8E8F0] border-b border-[#E8E8F0]">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8">
+    <section className="bg-[#0B0D26] relative overflow-hidden py-14 border-t border-b border-white/10">
+      <div
+        className="absolute inset-0 pointer-events-none"
+        style={{
+          backgroundImage:
+            "repeating-linear-gradient(0deg,transparent,transparent 39px,rgba(255,255,255,0.05) 40px),repeating-linear-gradient(90deg,transparent,transparent 39px,rgba(255,255,255,0.05) 40px)",
+        }}
+      />
+      <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[600px] h-[400px] pointer-events-none"
+        style={{ background: "radial-gradient(circle, rgba(231,33,43,0.08) 0%, transparent 70%)" }}
+      />
+      <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5">
           {products.map((product, index) => (
-            <ProductPageProductsListItem key={product.slug} delay={index}>
-              <ProductCard
-                product={product}
-                category={category}
-                imageFit={imageFit}
-                href={resolveCardHref ? resolveCardHref(product.slug) : undefined}
-                className="h-full"
-              />
-            </ProductPageProductsListItem>
+            <ProductCard
+              key={product.slug}
+              product={product}
+              category={category}
+              imageFit={imageFit}
+              dark
+              href={resolveCardHref ? resolveCardHref(product.slug) : undefined}
+              priority={index < 3}
+            />
           ))}
         </div>
       </div>

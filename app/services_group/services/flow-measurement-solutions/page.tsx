@@ -14,14 +14,14 @@ export const metadata: Metadata = {
     canonical: "/services_group/services/flow-measurement-solutions/",
   },
   openGraph: {
-    title: "Flow Measurement & Control System Solutions | Texas Technical Services",
+    title: "Flow Measurement & Control System Solutions",
     description:
       "Flow measurement services in Ahmadi, Kuwait — expert custody transfer metering, system integration, upgrades, flow computer configuration, calibration, and validation across the GCC.",
     url: "/services_group/services/flow-measurement-solutions/",
   },
   twitter: {
     card: "summary_large_image",
-    title: "Flow Measurement & Control System Solutions | Texas Technical Services",
+    title: "Flow Measurement & Control System Solutions",
     description: "Flow measurement services in Ahmadi Kuwait — custody metering upgrades, calibration, validation, flow computer configuration across Kuwait and the GCC.",
   },
   keywords: [

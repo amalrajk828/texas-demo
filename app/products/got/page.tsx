@@ -2,12 +2,15 @@ import React from "react";
 import type { Metadata } from "next";
 import Link from "next/link";
 import { BreadcrumbJsonLd } from "@/components/schema/BreadcrumbJsonLd";
+import { ItemListJsonLd } from "@/components/schema/ItemListJsonLd";
+import { FaqPageJsonLd } from "@/components/schema/FaqPageJsonLd";
+import { productsListingFaq } from "@/lib/pageFaqData";
 import { ChevronRight } from "lucide-react";
 import ProductCard from "@/components/ProductCard";
 import { getProductsByPath } from "@/lib/products";
 
 export const metadata: Metadata = {
-  title: "GOT (Graphic Operator Panels) - Texas Technical Services",
+  title: "GOT (Graphic Operator Panels)",
   description: "Mitsubishi Electric GOT2000 Series graphic operation terminals for industrial automation systems.",
   alternates: { canonical: "/products/got/" },
   keywords: [
@@ -15,15 +18,21 @@ export const metadata: Metadata = {
     "GOT2000 graphic operator panel",
     "HMI touchscreen Kuwait",
     "industrial HMI solutions",
+    "Mitsubishi HMI panel Dubai",
+    "GOT1000 series Kuwait",
+    "operator interface panel GCC",
+    "SCADA HMI integration Kuwait",
+    "industrial display panel",
+    "HMI programming Kuwait",
   ],
   openGraph: {
-    title: "GOT (Graphic Operator Panels) - Texas Technical Services",
+    title: "GOT (Graphic Operator Panels)",
     description: "Mitsubishi Electric GOT2000 Series graphic operation terminals for industrial automation systems.",
     url: "/products/got/",
   },
   twitter: {
     card: "summary_large_image",
-    title: "GOT (Graphic Operator Panels) - Texas Technical Services",
+    title: "GOT (Graphic Operator Panels)",
     description: "Mitsubishi Electric GOT2000 Series graphic operation terminals for industrial automation systems.",
   },
 };
@@ -37,6 +46,14 @@ export default function GotPage() {
         { name: "Products", href: "/products/" },
         { name: "GOT", href: "/products/got/" },
       ]} />
+      <ItemListJsonLd
+        name="GOT"
+        items={gotProducts.map((product) => ({
+          name: product.name,
+          url: `/portfolio/${product.slug}/`,
+          description: product.description || "",
+        }))}
+      />
       {/* ── Hero Banner ─────────────────────────────────────── */}
       <section className="relative bg-[#000000] blueprint-grid blueprint-dot-grid overflow-hidden border-b-4 border-[#e7212b]">
         {/* Grid texture */}
@@ -99,7 +116,7 @@ export default function GotPage() {
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5">
             {gotProducts.map((prod, index) => (
               <React.Fragment key={prod.slug}>
-                <ProductCard product={prod} category="got" />
+                <ProductCard product={prod} category="got" priority={index < 3} />
                 
               </React.Fragment>
             ))}
@@ -107,6 +124,7 @@ export default function GotPage() {
         </div>
       </section>
 
+      <FaqPageJsonLd items={productsListingFaq} />
       {/* ── CTA Banner ───────────────────────────────────────── */}
       <section className="relative bg-[#1A1A2E] border-t-4 border-[#e7212b] py-16">
         <div className="max-w-7xl mx-auto px-4 sm:px-6">

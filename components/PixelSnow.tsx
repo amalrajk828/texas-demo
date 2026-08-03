@@ -1,7 +1,17 @@
 "use client";
 
 import React, { useEffect, useRef } from "react";
-import * as THREE from "three";
+import {
+  Scene,
+  PerspectiveCamera,
+  WebGLRenderer,
+  BufferGeometry,
+  BufferAttribute,
+  ShaderMaterial,
+  Color,
+  Vector2,
+  Points,
+} from "three";
 import "./PixelSnow.css";
 
 interface PixelSnowProps {
@@ -33,6 +43,7 @@ const PixelSnow: React.FC<PixelSnowProps> = ({
   useEffect(() => {
     const container = containerRef.current;
     if (!container) return;
+    if (window.matchMedia("(pointer: coarse)").matches || window.innerWidth < 768) return;
 
     // Visibility observer to pause rendering off-screen
     const observer = new IntersectionObserver(
@@ -47,11 +58,11 @@ const PixelSnow: React.FC<PixelSnowProps> = ({
     const width = container.clientWidth || 300;
     const height = container.clientHeight || 300;
 
-    const scene = new THREE.Scene();
-    const camera = new THREE.PerspectiveCamera(60, width / height, 0.1, 100);
+    const scene = new Scene();
+    const camera = new PerspectiveCamera(60, width / height, 0.1, 100);
     camera.position.z = 10;
 
-    const renderer = new THREE.WebGLRenderer({ alpha: true, antialias: false });
+    const renderer = new WebGLRenderer({ alpha: true, antialias: false });
     renderer.setPixelRatio(1); // Keep retro aliasing
     renderer.setSize(width, height);
     renderer.setClearColor(0x000000, 0); // Transparent background
@@ -73,15 +84,15 @@ const PixelSnow: React.FC<PixelSnowProps> = ({
       positions[i * 3 + 2] = (Math.random() - 0.5) * 20; // z
     }
 
-    const geometry = new THREE.BufferGeometry();
-    geometry.setAttribute("position", new THREE.BufferAttribute(positions, 3));
+    const geometry = new BufferGeometry();
+    geometry.setAttribute("position", new BufferAttribute(positions, 3));
 
     // Shader Material
-    const material = new THREE.ShaderMaterial({
+    const material = new ShaderMaterial({
       transparent: true,
       depthWrite: false,
       uniforms: {
-        uColor: { value: new THREE.Color(color) },
+        uColor: { value: new Color(color) },
         uFlakeSize: { value: flakeSize },
         uMinFlakeSize: { value: minFlakeSize },
         uPixelResolution: { value: pixelResolution },
@@ -89,7 +100,7 @@ const PixelSnow: React.FC<PixelSnowProps> = ({
         uDirection: { value: (direction * Math.PI) / 180 },
         uBrightness: { value: brightness },
         uTime: { value: 0 },
-        uResolution: { value: new THREE.Vector2(width, height) }
+        uResolution: { value: new Vector2(width, height) }
       },
       vertexShader: `
         uniform float uTime;
@@ -155,7 +166,7 @@ const PixelSnow: React.FC<PixelSnowProps> = ({
       material.defines = { VARIANT_SNOWFLAKE: 1 };
     }
 
-    const points = new THREE.Points(geometry, material);
+    const points = new Points(geometry, material);
     scene.add(points);
 
     // Resize handler

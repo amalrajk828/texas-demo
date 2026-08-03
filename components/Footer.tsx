@@ -7,6 +7,7 @@ const services = [
   { label: "Flow Measurement Solutions", href: "/service/flow-measurement-solutions/" },
   { label: "Industrial Automation", href: "/service/industrial-automation/" },
   { label: "Inspection & Testing", href: "/service/inspection-testing/" },
+  { label: "PLC & SCADA Integration", href: "/plc-scada-systems-integration/" },
   { label: "Flow Meter Calibration", href: "/service/flow-meter-calibration/" },
   { label: "Plant Automation", href: "/service/plant-automation/" },
 ];
@@ -26,8 +27,9 @@ const solutions = [
   { label: "Global Network", href: "/partners/" },
   { label: "Texaflow Custody Metering", href: "/solutions/texaflow/" },
   { label: "Space AI Industrial AI", href: "/solutions/space-ai/" },
-  { label: "Mitsubishi Electric", href: "/mitsubishi-electric-factory-automation/" },
-  { label: "PLC & SCADA Integration", href: "/plc-scada-systems-integration/" },
+  { label: "Mitsubishi Electric", href: "/solutions/mitsubishi-electric/" },
+  { label: "PWS Floor Solutions", href: "/solutions/pws-floor-solutions/" },
+  { label: "Certifications", href: "/certifications/" },
 ];
 
 const socials = [
@@ -112,7 +114,7 @@ export default function Footer() {
                   target="_blank"
                   rel="noopener noreferrer"
                   aria-label={label}
-                  className="w-9 h-9 rounded-full border border-white/10 flex items-center justify-center text-white/40 hover:text-white hover:border-[#E53935]/40 hover:bg-[#E53935]/10 transition-all"
+                   className="w-11 h-11 rounded-full border border-white/10 flex items-center justify-center text-white/40 hover:text-white hover:border-[#E53935]/40 hover:bg-[#E53935]/10 transition-all"
                 >
                   <svg viewBox="0 0 24 24" className="w-4 h-4" fill="none" stroke="currentColor" strokeWidth={2} strokeLinecap="round" strokeLinejoin="round">
                     <path d={path} />
@@ -122,9 +124,9 @@ export default function Footer() {
             </div>
               <Link
                 href="/social-media/"
-                className="text-white/30 text-[11px] hover:text-white transition-colors flex items-center gap-1.5 mt-3"
+                className="text-white/50 text-[13px] font-medium hover:text-white transition-colors flex items-center gap-2 mt-3"
               >
-                <LayoutGrid className="w-3 h-3" />
+                <LayoutGrid className="w-4 h-4" />
                 View all platforms
               </Link>
           </div>
@@ -154,7 +156,7 @@ export default function Footer() {
                   <p className="text-white text-[15px] font-bold mb-2 flex items-center gap-2">
                     <MapPin className="w-3.5 h-3.5 text-[#E53935]" /> {office.city}
                   </p>
-                  <p className="text-white/35 text-[13px] leading-relaxed mb-2 font-medium">
+                  <p className="text-white/50 text-[13px] leading-relaxed mb-2 font-medium">
                     {office.address}
                   </p>
                   {office.phones.map((p) => (
@@ -214,22 +216,41 @@ export default function Footer() {
 
           {/* Solutions */}
           <div>
-            <h3 className="text-white/40 text-[9px] font-medium tracking-[2px] uppercase mb-5">
+            <h3 className="flex items-center gap-2 text-white/70 text-[12px] font-bold tracking-[2.5px] uppercase mb-6">
+              <span className="w-[2px] h-4 rounded-full bg-[#E53935]" />
               Solutions
             </h3>
-            <ul className="space-y-2">
+            <ul className="space-y-2.5">
               {solutions.map((s) => (
                 <li key={s.href}>
                   <Link
                     href={s.href}
-                    className="text-white/40 text-[12px] hover:text-white transition-colors flex items-center gap-1.5 group"
+                    className="text-white/45 text-[14px] font-medium hover:text-white transition-colors flex items-center gap-2 group"
                   >
-                    <span className="w-1 h-1 rounded-full bg-brand-red/40 group-hover:bg-brand-red transition-colors shrink-0" />
+                    <span className="w-1.5 h-1.5 rounded-full bg-[#E53935]/30 group-hover:bg-[#E53935] transition-colors shrink-0" />
                     {s.label}
                   </Link>
                 </li>
               ))}
             </ul>
+          </div>
+        </div>
+      </div>
+
+      {/* Certifications */}
+      <div className="border-t" style={{ borderColor: "rgba(255,255,255,0.06)" }}>
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 py-6">
+          <div className="flex flex-wrap items-center justify-center gap-6 sm:gap-10">
+            {[
+              { src: "/about/cert-iso9001.png", alt: "ISO 9001:2015 Quality Management" },
+              { src: "/about/cert-iso14001.png", alt: "ISO 14001 Environmental Management" },
+              { src: "/about/cert-iso45001.png", alt: "ISO 45001 Occupational Health & Safety" },
+              { src: "/about/cert-uasl.png", alt: "UASL Certification" },
+            ].map((cert) => (
+              <div key={cert.src} className="relative h-12 w-12 sm:h-14 sm:w-14 opacity-50 hover:opacity-100 transition-opacity duration-300">
+                <Image src={cert.src} alt={cert.alt} fill className="object-contain" sizes="56px" />
+              </div>
+            ))}
           </div>
         </div>
       </div>
@@ -241,7 +262,6 @@ export default function Footer() {
             TEXAS TECHNICAL SERVICE COMPANY W.L.L. © {new Date().getFullYear()}. All Rights Reserved.
           </p>
           <div className="flex items-center gap-4">
-            <span className="text-white/20 text-[10px] hidden sm:inline">Serving the Middle East — industrial automation companies near me, Kuwait, UAE, Dubai, Bahrain &amp; Saudi Arabia</span>
             <span className="text-brand-red text-[11px] font-medium">ISO 9001:2015 Certified</span>
           </div>
         </div>

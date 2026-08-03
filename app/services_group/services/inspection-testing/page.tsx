@@ -1,6 +1,8 @@
 import type { Metadata } from "next";
 import InspectionHero from "@/components/service/inspection-testing/InspectionHero";
 import { BreadcrumbJsonLd } from "@/components/schema/BreadcrumbJsonLd";
+import { FaqPageJsonLd } from "@/components/schema/FaqPageJsonLd";
+import { servicesListingFaq } from "@/lib/pageFaqData";
 import { ServiceJsonLd } from "@/components/schema/ServiceJsonLd";
 
 export const metadata: Metadata = {
@@ -11,14 +13,14 @@ export const metadata: Metadata = {
     canonical: "/services_group/services/inspection-testing/",
   },
   openGraph: {
-    title: "Inspection & Testing Services | Texas Technical Services",
+    title: "Inspection & Testing Services",
     description:
       "Industrial inspection and testing company in Kuwait — NDT, QA consultancy, and ISO-certified quality management across the GCC.",
     url: "/services_group/services/inspection-testing/",
   },
   twitter: {
     card: "summary_large_image",
-    title: "Inspection & Testing Services | Texas Technical Services",
+    title: "Inspection & Testing Services",
     description:
       "Industrial inspection and testing company in Kuwait — NDT, ISO 9001/14001/45001 certified.",
   },
@@ -46,6 +48,7 @@ export default function InspectionTestingPage() {
         areaServed={["Kuwait", "United Arab Emirates", "Saudi Arabia", "Bahrain", "Qatar", "Oman"]}
       />
       <InspectionHero />
+      <FaqPageJsonLd items={servicesListingFaq} />
     </>
   );
 }

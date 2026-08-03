@@ -6,6 +6,7 @@ import { usePathname } from "next/navigation";
 import { ChevronDown, ChevronRight, Menu, X, LayoutGrid } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
 import { SITE_EMAIL } from "@/lib/site";
+import { useIsMobile } from "@/hooks/useIsMobile";
 
 type NavItem = {
   label: string;
@@ -73,6 +74,7 @@ export default function ThemedHeader() {
   const [mobileExpanded, setMobileExpanded] = useState<string | null>(null);
   const [socialOpen, setSocialOpen] = useState(false);
   const ref = useRef<HTMLDivElement>(null);
+  const isMobile = useIsMobile();
 
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 10);
@@ -104,8 +106,8 @@ export default function ThemedHeader() {
         className="fixed top-0 inset-x-0 z-50 transition-all duration-300"
         style={{
           background: "rgba(15, 15, 18, 0.55)",
-          backdropFilter: "blur(18px)",
-          WebkitBackdropFilter: "blur(18px)",
+          backdropFilter: isMobile ? "none" : "blur(18px)",
+          WebkitBackdropFilter: isMobile ? "none" : "blur(18px)",
           borderBottom: "1px solid rgba(255, 255, 255, 0.10)",
           boxShadow: "0 8px 24px rgba(0, 0, 0, 0.30)",
         }}
