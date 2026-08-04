@@ -1,7 +1,6 @@
 import type { Metadata } from "next";
 import InspectionHero from "@/components/service/inspection-testing/InspectionHero";
 import InspectionOverview from "@/components/service/inspection-testing/InspectionOverview";
-import InspectionSubServices from "@/components/service/inspection-testing/InspectionSubServices";
 import { BreadcrumbJsonLd } from "@/components/schema/BreadcrumbJsonLd";
 import { ServiceJsonLd } from "@/components/schema/ServiceJsonLd";
 import { FaqPageJsonLd } from "@/components/schema/FaqPageJsonLd";
@@ -84,7 +83,6 @@ export default function InspectionTestingPage() {
       <FaqPageJsonLd items={faqItems} />
       <InspectionHero />
       <InspectionOverview hideHeading={true} />
-      <InspectionSubServices />
       {/* ══ FAQ ════════════════════════════════════════════ */}
       <section className="bg-[#f4f5f8] py-20 lg:py-24">
         <div className="max-w-7xl mx-auto px-4 sm:px-6">
