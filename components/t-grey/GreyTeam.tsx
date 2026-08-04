@@ -54,7 +54,7 @@ export default function GreyTeam() {
             </motion.div>
 
             <motion.div initial={{ opacity: 0, scale: 0.88 }} whileInView={{ opacity: 1, scale: 1 }} viewport={{ once: true }} transition={{ duration: 0.55, delay: 0.5 }}
-              className="absolute -top-5 -left-3 lg:-left-6 rounded-xl px-4 py-3 shadow-lg"
+              className="absolute -top-5 -left-3 lg:-left-3 rounded-xl px-4 py-3 shadow-lg"
               style={{ background: "var(--color-brand-red)", boxShadow: "0 8px 24px color-mix(in srgb, var(--color-brand-red) 35%, transparent)" }}>
               <p className="text-white text-[10px] font-bold tracking-[2px] uppercase leading-none">Our Team</p>
               <p className="text-white/70 text-[11px] mt-1 leading-none">Est. 2008</p>

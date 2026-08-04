@@ -256,7 +256,7 @@ export default function ContactPage() {
                 </div>
               ) : (
                 <form onSubmit={handleSubmit} className="space-y-5">
-                  <div className="grid grid-cols-1 sm:grid-cols-2 gap-5">
+                  <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
                     {/* Full Name */}
                     <div className="flex flex-col">
                       <label htmlFor="fullName" className="text-[13px] font-semibold text-gray-500 mb-1.5">
@@ -292,7 +292,7 @@ export default function ContactPage() {
                     </div>
                   </div>
 
-                  <div className="grid grid-cols-1 sm:grid-cols-2 gap-5">
+                  <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
                     {/* Phone */}
                     <div className="flex flex-col">
                       <label htmlFor="phone" className="text-[13px] font-semibold text-gray-500 mb-1.5">
