@@ -43,7 +43,7 @@ const NAV: NavItem[] = [
       { label: "Flow Measurement & Control", href: "/service/flow-measurement-solutions/", icon: Gauge,        desc: "Custody metering, flow computers, and control system upgrades" },
       { label: "Inspection & Testing",       href: "/service/inspection-testing/",          icon: FlaskConical, desc: "NDT, mechanical testing, and ISO-certified inspection services" },
       { label: "Industrial Automation",      href: "/service/industrial-automation/",        icon: Cpu,          desc: "PLC, SCADA, HMI, and VFD integration for industrial plants" },
-      { label: "View all services →",        href: "/service/",                              highlight: true },
+      { label: "View all services",        href: "/service/",                              highlight: true },
     ],
   },
   {
@@ -58,7 +58,7 @@ const NAV: NavItem[] = [
       { label: "Water Treatment",  href: "/industries/water-treatment/", icon: Droplets  },
       { label: "Cement",           href: "/industries/cement/",          icon: Building2 },
       { label: "Metal & Steel",    href: "/industries/metal-steel/",     icon: Hammer    },
-      { label: "View all industries →", href: "/industries/",            highlight: true },
+      { label: "View all industries", href: "/industries/",            highlight: true },
     ],
   },
   {
@@ -76,7 +76,7 @@ const NAV: NavItem[] = [
       { label: "AC Servos",                 href: "/products/acservos/",                    icon: Wrench   },
       { label: "Custody Metering",          href: "/products/custody-metering-solutions/",  icon: Target   },
       { label: "Field Instruments",         href: "/products/field-instruments/",            icon: Settings },
-      { label: "View all products →",       href: "/products/",                              highlight: true },
+      { label: "View all products",       href: "/products/",                              highlight: true },
     ],
   },
   { label: "Blog", href: "/blog/" },
@@ -156,9 +156,9 @@ const getMenuData = (label: string) => {
 };
 
 const getMenuViewAll = (label: string) => {
-  if (label === "Products") return { label: "View all products →", link: "/products/" };
-  if (label === "Services") return { label: "View all services →", link: "/service/" };
-  if (label === "Industries") return { label: "View all industries →", link: "/industries/" };
+  if (label === "Products") return { label: "View all products", link: "/products/" };
+  if (label === "Services") return { label: "View all services", link: "/service/" };
+  if (label === "Industries") return { label: "View all industries", link: "/industries/" };
   return undefined;
 };
 
@@ -531,16 +531,16 @@ export default function Header() {
         </div>
 
         <div className="w-full px-4 sm:px-6">
-          <div className="flex items-center h-[76px] gap-10">
+          <div className="flex items-center h-[76px] gap-2 lg:gap-4 xl:gap-10">
 
             {/* ── Logo ─────────────────────────────────────────── */}
             <Link href="/" className="flex items-center gap-4 shrink-0">
               <Image src="/logo.svg" alt="Texas Technical Services" width={52} height={52} priority />
               <div className="hidden sm:flex flex-col gap-0.5">
-                <span className="text-white font-black tracking-[6px] text-[18px] leading-none">
+                <span className="text-white font-black tracking-[6px] lg:tracking-[0px] xl:tracking-[6px] text-[18px] leading-none">
                   TEXAS
                 </span>
-                <span className="text-[#E53935] text-[11px] tracking-[3px] leading-none font-semibold mt-0.5">
+                <span className="text-[#E53935] text-[11px] tracking-[3px] lg:tracking-[0px] xl:tracking-[3px] leading-none font-semibold mt-0.5">
                   TECHNICAL SERVICES
                 </span>
               </div>
@@ -566,7 +566,7 @@ export default function Header() {
                         onBlur={item.children ? handleMouseLeave : undefined}
                         aria-expanded={open === item.label ? "true" : "false"}
                         aria-haspopup="true"
-                        className={`whitespace-nowrap flex items-center gap-1.5 px-4 py-2.5 text-[14px] font-medium font-sans tracking-wide rounded-lg transition-colors relative ${
+                        className={`whitespace-nowrap flex items-center gap-1.5 px-2.5 lg:px-3 xl:px-4 py-2.5 text-[14px] font-medium font-sans tracking-wide rounded-lg transition-colors relative ${
                           isActive(item.href) ? "text-white" : "text-white/60 hover:text-white"
                         }`}
                       >
@@ -677,7 +677,7 @@ export default function Header() {
                     /* Simple link (Home, About, Clients) */
                     <Link
                       href={item.href}
-                      className={`whitespace-nowrap relative px-4 py-2.5 text-[14px] font-medium font-sans tracking-wide rounded-lg transition-colors block ${
+                      className={`whitespace-nowrap relative px-2.5 lg:px-3 xl:px-4 py-2.5 text-[14px] font-medium font-sans tracking-wide rounded-lg transition-colors block ${
                         isActive(item.href) ? "text-white" : "text-white/60 hover:text-white"
                       }`}
                     >
@@ -697,13 +697,14 @@ export default function Header() {
             </nav>
 
             {/* ── Right Side ───────────────────────────────────── */}
-            <div className="flex items-center gap-3 ml-auto lg:ml-0">
+            <div className="flex items-center gap-3 ml-auto">
               {/* Contact — desktop */}
               <Link
                 href="/contacts/"
-                className="whitespace-nowrap hidden lg:inline-flex items-center gap-2 bg-[#E53935] hover:bg-[#B71C1C] text-white text-[14px] font-medium font-sans px-7 py-3 rounded-xl transition-colors tracking-wide shadow-lg shadow-[#E53935]/20"
+                className="whitespace-nowrap hidden lg:inline-flex items-center gap-2 bg-[#E53935] hover:bg-[#B71C1C] text-white text-[14px] font-medium font-sans px-3 xl:px-7 py-3 rounded-xl transition-colors tracking-wide shadow-lg shadow-[#E53935]/20"
               >
-                Contact Us
+                <span className="hidden lg:inline xl:hidden">Contact</span>
+                <span className="hidden xl:inline">Contact Us</span>
               </Link>
 
               {/* ── Mobile Menu (shadcn Sheet) ─────────────────── */}
@@ -849,7 +850,7 @@ export default function Header() {
                       onClick={() => setMobileOpen(false)}
                       className="block text-center bg-[#E53935] hover:bg-[#B71C1C] text-white text-[14px] font-medium font-sans tracking-wide px-4 py-3.5 rounded-xl transition-colors"
                     >
-                      Contact Us
+                Contact Us
                     </Link>
                   </div>
                 </SheetContent>

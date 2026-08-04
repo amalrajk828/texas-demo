@@ -261,7 +261,16 @@ export default function AboutPage() {
           "https://www.linkedin.com/company/texas-technical-service-company",
           "https://www.facebook.com/texastechserv",
           "https://www.instagram.com/texas_technical_services",
+          "https://www.youtube.com/@TEXASTECHNICALSERVICES",
           "https://x.com/texastechserv",
+          "https://bsky.app/profile/texastechserv.bsky.social",
+          "https://medium.com/@texastechserv",
+          "https://hashnode.com/@texastechserv",
+          "https://substack.com/@texastechserv",
+          "https://www.quora.com/profile/Texas-Technical-Service-Company-W-L-L",
+          "https://wellfound.com/company/texas-technical-service-company-w-l-l",
+          "https://www.dnb.com/business-directory/company-profiles.texas_technical_services_company_for_general_trading__contracting_wll.7ca7aec2c7eaf2e011689ae38a275cdf.html",
+          "https://www.crunchbase.com/organization/texas-technical-services",
         ]}
         address={{
           streetAddress:
