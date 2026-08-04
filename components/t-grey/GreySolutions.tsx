@@ -60,24 +60,25 @@ export default function GreySolutions() {
         </div>
 
         {/* Solution Cards */}
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 items-stretch">
           {SOLUTIONS.map((s, i) => (
             <motion.div
               key={s.label}
               initial={{ opacity: 0, y: 40 }}
               animate={inView ? { opacity: 1, y: 0 } : {}}
               transition={{ duration: 0.9, delay: 0.2 + i * 0.15, ease: [0.16, 1, 0.3, 1] }}
+              className="flex flex-col h-full"
             >
               <Link
                 href={s.href}
-                className="group block relative rounded-2xl overflow-hidden transition-all duration-300 hover:-translate-y-1"
+                className="group flex flex-col h-full relative rounded-2xl overflow-hidden transition-all duration-300 hover:-translate-y-1"
                 style={{
                   background: "var(--g-card-bg)",
                   border: "1px solid var(--g-card-border)",
                   boxShadow: "var(--g-card-shadow)",
                 }}
               >
-                <div className="p-8 sm:p-10">
+                <div className="p-8 sm:p-10 flex flex-col flex-1">
                   {/* Icon + Label */}
                   <div className="flex items-center gap-4 mb-6">
                     <div
@@ -100,13 +101,13 @@ export default function GreySolutions() {
                   </h3>
 
                   {/* Description */}
-                  <p className="text-[14px] leading-relaxed mb-8" style={{ color: "var(--g-muted)" }}>
+                  <p className="text-[14px] leading-relaxed mb-8 flex-grow" style={{ color: "var(--g-muted)" }}>
                     {s.desc}
                   </p>
 
                   {/* CTA */}
                   <span
-                    className="inline-flex items-center gap-2 text-[13px] font-bold tracking-wide group-hover:gap-3 transition-all"
+                    className="inline-flex items-center gap-2 text-[13px] font-bold tracking-wide group-hover:gap-3 transition-all mt-auto"
                     style={{ color: "var(--color-brand-red)" }}
                   >
                     Learn more
@@ -115,7 +116,7 @@ export default function GreySolutions() {
                 </div>
 
                 {/* Bottom accent bar */}
-                <div className="h-[2px] w-full" style={{ background: "var(--color-brand-red)", opacity: 0.15 }} />
+                <div className="h-[2px] w-full mt-auto" style={{ background: "var(--color-brand-red)", opacity: 0.15 }} />
               </Link>
             </motion.div>
           ))}

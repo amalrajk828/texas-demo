@@ -6,7 +6,6 @@ import { SpeakableJsonLd } from "@/components/schema/SpeakableJsonLd";
 import { industryFaqData } from "@/lib/industryFaqData";
 import IndustryHero from "@/components/industries/IndustryHero";
 import IndustryProductsGrid from "@/components/industries/IndustryProductsGrid";
-import IndustryCtaBanner from "@/components/industries/IndustryCtaBanner";
 import type { CategoryColors, IndustryProduct } from "@/components/industries/types";
 
 export const metadata: Metadata = {
@@ -101,11 +100,6 @@ export default function CementPage() {
         products={products}
         categoryColors={categoryColors}
       />
-      <IndustryCtaBanner
-        heading="Have a cement industry project?"
-        subtext="Talk to our specialists about your CEMS or gas analysis requirements. Kuwait and Dubai offices ready to help."
-      />
-
       <FaqPageJsonLd items={industryFaqData["cement"]} />
       {/* ══ FAQ ════════════════════════════════════════════ */}
       <section className="bg-[#f4f5f8] py-20 lg:py-24">

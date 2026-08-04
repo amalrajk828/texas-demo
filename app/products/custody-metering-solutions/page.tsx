@@ -101,12 +101,12 @@ export default function CustodyMeteringSolutionsPage() {
 
       {/* ── Intro Section ────────────────────────────────────── */}
       <section className="bg-white py-12">
-        <div className="max-w-[700px] mx-auto px-4 sm:px-6 text-center">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6">
           <h2 className="text-[#1A1A2E] text-[28px] font-bold">
             Custody Metering Solutions
           </h2>
-          <div className="w-[60px] h-[3px] bg-[#e7212b] mx-auto mt-3 mb-4" />
-          <p className="text-[#555770] text-base leading-relaxed">
+          <div className="w-[60px] h-[3px] bg-[#e7212b] mt-3 mb-4" />
+          <p className="text-[#555770] text-base sm:text-lg leading-relaxed w-full">
             At Texas Technical Service Co., we take pride in offering top-of-the-line custody metering solutions that cater to a wide range of industries and applications. Our comprehensive product range, backed by cutting-edge technology, ensures accurate and reliable measurements for all your custody transfer needs.
           </p>
         </div>
@@ -130,27 +130,6 @@ export default function CustodyMeteringSolutionsPage() {
       </section>
 
       <FaqPageJsonLd items={productsListingFaq} />
-      {/* ── CTA Banner ───────────────────────────────────────── */}
-      <section className="relative bg-[#1A1A2E] border-t-4 border-[#e7212b] py-16">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6">
-          <div className="flex flex-col sm:flex-row items-center justify-between gap-6">
-            <div>
-              <p className="text-white font-bold text-[22px] mb-1">
-                Need a custody metering solution for your facility?
-              </p>
-              <p className="text-[#A0A8C0] text-sm">
-                Our metering specialists can help you design, integrate, and commission a custody transfer solution tailored to your oil &amp; gas application.
-              </p>
-            </div>
-            <Link
-              href="/contacts/"
-              className="shrink-0 inline-flex items-center gap-2 bg-[#e7212b] hover:bg-[#aa0b1b] text-white font-bold px-6 py-3.5 rounded-lg shadow-lg hover:shadow-[#e7212b]/20 transition-all duration-200"
-            >
-              Contact Us &rarr;
-            </Link>
-          </div>
-        </div>
-      </section>
     </div>
   );
 }

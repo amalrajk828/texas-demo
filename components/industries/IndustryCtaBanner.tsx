@@ -12,31 +12,30 @@ export default function IndustryCtaBanner({
 }) {
   return (
     <section className="bg-[#000000] blueprint-grid blueprint-dot-grid py-20">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 text-center">
-        <div className="flex items-center justify-center gap-3 mb-4">
-          <span className="w-8 h-px bg-[#e7212b]/40" />
-          <span className="text-[#e7212b] text-[9px] font-medium tracking-[2.5px] uppercase">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6">
+        <div className="flex items-center gap-2.5 mb-4">
+          <span className="w-5 h-px bg-[#e7212b]" />
+          <span className="text-[#e7212b] text-[9px] font-semibold tracking-[2.5px] uppercase">
             Get in touch
           </span>
-          <span className="w-8 h-px bg-[#e7212b]/40" />
         </div>
-        <h2 className="text-3xl sm:text-4xl font-medium text-white mb-3">
+        <h2 className="text-3xl sm:text-4xl font-bold text-white mb-3 max-w-2xl">
           {heading}
         </h2>
-        <p className="text-white/50 text-base mb-8 max-w-md mx-auto">
+        <p className="text-white/60 text-base leading-relaxed mb-8 max-w-2xl">
           {subtext}
         </p>
-        <div className="flex flex-wrap items-center justify-center gap-3">
+        <div className="flex flex-wrap items-center gap-3.5">
           <Link
             href="/contacts/"
-            className="inline-flex items-center gap-2 bg-[#e7212b] hover:bg-[#aa0b1b] text-white font-medium px-8 py-3.5 rounded-lg transition-colors duration-200"
+            className="inline-flex items-center gap-2 bg-[#e7212b] hover:bg-[#aa0b1b] text-white font-semibold px-8 py-3.5 rounded-lg transition-colors duration-200"
           >
             Contact Us <ArrowRight className="w-4 h-4" />
           </Link>
           {showAllIndustriesLink && (
             <Link
               href="/industries/"
-              className="inline-flex items-center gap-2 border border-white/20 hover:border-white/40 text-white/70 hover:text-white px-6 py-3.5 rounded-lg transition-colors duration-200 text-sm"
+              className="inline-flex items-center gap-2 border border-white/20 hover:border-white/40 text-white/80 hover:text-white px-6 py-3.5 rounded-lg transition-colors duration-200 text-sm font-medium"
             >
               All Industries
             </Link>

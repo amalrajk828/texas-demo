@@ -370,7 +370,7 @@ function NestedDropdown({ menuLabel, data, viewAll, isOpen, onClose, pathname, o
 const getDropdownPos = (label: string) => {
   if (label === "Products") return "left-1/2 -translate-x-1/2";
   if (label === "Services") return "left-0";
-  if (label === "Industries") return "right-0";
+  if (label === "Industries") return "left-0";
   return "left-0";
 };
 
