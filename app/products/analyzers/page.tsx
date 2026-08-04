@@ -7,8 +7,6 @@ import { FaqPageJsonLd } from "@/components/schema/FaqPageJsonLd";
 import { productsListingFaq } from "@/lib/pageFaqData";
 import { ChevronRight } from "lucide-react";
 import ProductCard from "@/components/ProductCard";
-import AnalyzersTypesSection from "@/components/products/AnalyzersTypesSection";
-import AnalyzersEhSection from "@/components/products/AnalyzersEhSection";
 import { getProductsByPath } from "@/lib/products";
 
 export const metadata: Metadata = {
@@ -109,19 +107,16 @@ export default function AnalyzersPage() {
 
       {/* ── Intro Section ────────────────────────────────────── */}
       <section className="bg-white py-12">
-        <div className="max-w-[700px] mx-auto px-4 sm:px-6 text-center">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6">
           <h2 className="text-[#1A1A2E] text-[28px] font-bold">
             Analytical Instrumentation
           </h2>
-          <div className="w-[60px] h-[3px] bg-[#e7212b] mx-auto mt-3 mb-4" />
-          <p className="text-[#555770] text-base leading-relaxed">
+          <div className="w-[60px] h-[3px] bg-[#e7212b] mt-3 mb-4" />
+          <p className="text-[#555770] text-base sm:text-lg leading-relaxed w-full">
             Seven categories of process and emissions analyzers from world-class OEMs (SICK, Endress+Hauser, and Kurz Instruments) — covering compositional analysis, CEMS, laser TDLAS, water quality, and steam quality for the most demanding industrial applications.
           </p>
         </div>
       </section>
-
-      <AnalyzersTypesSection />
-      <AnalyzersEhSection />
 
       {/* ── Products List Section ─────────────────────────────── */}
       <section className="bg-[#F8F9FA] py-14 border-t border-[#E8E8F0] border-b border-[#E8E8F0]">
@@ -150,27 +145,6 @@ export default function AnalyzersPage() {
       </section>
 
       <FaqPageJsonLd items={productsListingFaq} />
-      {/* ── CTA Banner ───────────────────────────────────────── */}
-      <section className="relative bg-[#1A1A2E] border-t-4 border-[#e7212b] py-16">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6">
-          <div className="flex flex-col sm:flex-row items-center justify-between gap-6">
-            <div>
-              <p className="text-white font-bold text-[22px] mb-1">
-                Need help selecting the right gas analyzer?
-              </p>
-              <p className="text-[#A0A8C0] text-sm">
-                Our gas analysis specialists can help you choose and configure the right CEMS, dust analyzer, or gas analyzer for your emissions monitoring and process control requirements.
-              </p>
-            </div>
-            <Link
-              href="/contacts/"
-              className="shrink-0 inline-flex items-center gap-2 bg-[#e7212b] hover:bg-[#aa0b1b] text-white font-bold px-6 py-3.5 rounded-lg shadow-lg hover:shadow-[#e7212b]/20 transition-all duration-200"
-            >
-              Contact Us &rarr;
-            </Link>
-          </div>
-        </div>
-      </section>
     </div>
   );
 }

@@ -99,12 +99,12 @@ export default function GotPage() {
 
       {/* ── Intro Section ────────────────────────────────────── */}
       <section className="bg-white py-12">
-        <div className="max-w-[700px] mx-auto px-4 sm:px-6 text-center">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6">
           <h2 className="text-[#1A1A2E] text-[28px] font-bold">
             GOT — Graphic Operator Panels
           </h2>
-          <div className="w-[60px] h-[3px] bg-[#e7212b] mx-auto mt-3 mb-4" />
-          <p className="text-[#555770] text-base leading-relaxed">
+          <div className="w-[60px] h-[3px] bg-[#e7212b] mt-3 mb-4" />
+          <p className="text-[#555770] text-base sm:text-lg leading-relaxed w-full">
             Mitsubishi Electric&apos;s GOT series delivers high-performance HMI terminals for industrial automation — combining high-resolution visualization, intuitive touch operation, and seamless PLC connectivity for efficient operator interaction across oil &amp; gas, manufacturing, and utility applications.
           </p>
         </div>
@@ -125,27 +125,6 @@ export default function GotPage() {
       </section>
 
       <FaqPageJsonLd items={productsListingFaq} />
-      {/* ── CTA Banner ───────────────────────────────────────── */}
-      <section className="relative bg-[#1A1A2E] border-t-4 border-[#e7212b] py-16">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6">
-          <div className="flex flex-col sm:flex-row items-center justify-between gap-6">
-            <div>
-              <h3 className="text-white font-bold text-[22px] mb-1">
-                Looking for the right HMI for your application?
-              </h3>
-              <p className="text-[#A0A8C0] text-sm">
-                Our engineers can help you select and configure the ideal GOT HMI panel for your control system.
-              </p>
-            </div>
-            <Link
-              href="/contacts/"
-              className="shrink-0 inline-flex items-center gap-2 bg-[#e7212b] hover:bg-[#aa0b1b] text-white font-bold px-6 py-3.5 rounded-[6px] shadow-lg hover:shadow-[#e7212b]/20 transition-all duration-200"
-            >
-              Contact Us &rarr;
-            </Link>
-          </div>
-        </div>
-      </section>
     </div>
   );
 }

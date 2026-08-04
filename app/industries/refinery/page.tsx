@@ -6,7 +6,6 @@ import { SpeakableJsonLd } from "@/components/schema/SpeakableJsonLd";
 import { industryFaqData } from "@/lib/industryFaqData";
 import IndustryHero from "@/components/industries/IndustryHero";
 import IndustryProductsGrid from "@/components/industries/IndustryProductsGrid";
-import IndustryCtaBanner from "@/components/industries/IndustryCtaBanner";
 import type { CategoryColors, IndustryProduct } from "@/components/industries/types";
 
 export const metadata: Metadata = {
@@ -185,11 +184,6 @@ export default function RefineryPage() {
         products={products}
         categoryColors={categoryColors}
       />
-      <IndustryCtaBanner
-        heading="Have a refinery project?"
-        subtext="Talk to our specialists about your flow measurement, CEMS, or process control requirements. Kuwait and Dubai offices ready to help."
-      />
-
       <FaqPageJsonLd items={industryFaqData["refinery"]} />
       {/* ══ FAQ ════════════════════════════════════════════ */}
       <section className="bg-[#f4f5f8] py-20 lg:py-24">

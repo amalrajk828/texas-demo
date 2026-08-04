@@ -7,11 +7,6 @@ import { FaqPageJsonLd } from "@/components/schema/FaqPageJsonLd";
 import { productsListingFaq } from "@/lib/pageFaqData";
 import { ChevronRight } from "lucide-react";
 import ProductCard from "@/components/ProductCard";
-import FlowMetersCustodyTransferSection from "@/components/products/FlowMetersCustodyTransferSection";
-import FlowMetersTechnologiesSection from "@/components/products/FlowMetersTechnologiesSection";
-import FlowMetersKemSection from "@/components/products/FlowMetersKemSection";
-import FlowMetersProversSection from "@/components/products/FlowMetersProversSection";
-import FlowMetersFhLabSection from "@/components/products/FlowMetersFhLabSection";
 import { getProductsByPath } from "@/lib/products";
 
 export const metadata: Metadata = {
@@ -116,22 +111,16 @@ export default function FlowMetersPage() {
 
       {/* ── Intro Section ────────────────────────────────────── */}
       <section className="bg-white py-12">
-        <div className="max-w-[700px] mx-auto px-4 sm:px-6 text-center">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6">
           <h2 className="text-[#1A1A2E] text-[28px] font-bold">
             Flow Measurement Solutions
           </h2>
-          <div className="w-[60px] h-[3px] bg-[#e7212b] mx-auto mt-3 mb-4" />
-          <p className="text-[#555770] text-base leading-relaxed">
+          <div className="w-[60px] h-[3px] bg-[#e7212b] mt-3 mb-4" />
+          <p className="text-[#555770] text-base sm:text-lg leading-relaxed w-full">
             Flow measurement technology finds applications across various industries, and our authorized principals — SICK, Faure Herman, KEM Küppers, Endress+Hauser, Tek-Trol, and Rockwin — are well equipped to address this diverse challenge. Whether it&apos;s custody transfer meters or devices for monitoring and control, our flow measurement technology consistently operates with utmost safety and reliability.
           </p>
         </div>
       </section>
-
-      <FlowMetersCustodyTransferSection />
-      <FlowMetersTechnologiesSection />
-      <FlowMetersKemSection />
-      <FlowMetersProversSection />
-      <FlowMetersFhLabSection />
 
       {/* ── Products List Section ─────────────────────────────── */}
       <section className="bg-[#F8F9FA] py-14 border-t border-[#E8E8F0] border-b border-[#E8E8F0]">
@@ -160,27 +149,6 @@ export default function FlowMetersPage() {
       </section>
 
       <FaqPageJsonLd items={productsListingFaq} />
-      {/* ── CTA Banner ───────────────────────────────────────── */}
-      <section className="relative bg-[#1A1A2E] border-t-4 border-[#e7212b] py-16">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6">
-          <div className="flex flex-col sm:flex-row items-center justify-between gap-6">
-            <div>
-              <p className="text-white font-bold text-[22px] mb-1">
-                Need help selecting the right flow meter?
-              </p>
-              <p className="text-[#A0A8C0] text-sm">
-                Our flow measurement specialists can help you choose and configure the right liquid, gas, or flare flow meter for your application.
-              </p>
-            </div>
-            <Link
-              href="/contacts/"
-              className="shrink-0 inline-flex items-center gap-2 bg-[#e7212b] hover:bg-[#aa0b1b] text-white font-bold px-6 py-3.5 rounded-lg shadow-lg hover:shadow-[#e7212b]/20 transition-all duration-200"
-            >
-              Contact Us &rarr;
-            </Link>
-          </div>
-        </div>
-      </section>
     </div>
   );
 }

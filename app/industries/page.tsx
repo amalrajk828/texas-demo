@@ -17,7 +17,6 @@ import { SpeakableJsonLd } from "@/components/schema/SpeakableJsonLd";
 import { FaqPageJsonLd } from "@/components/schema/FaqPageJsonLd";
 import PageFaqSection from "@/components/PageFaqSection";
 import { industriesListingFaq } from "@/lib/pageFaqData";
-import IndustryCtaBanner from "@/components/industries/IndustryCtaBanner";
 import IndustryFeatureCard from "@/components/industries/IndustryFeatureCard";
 
 export const metadata: Metadata = {
@@ -270,12 +269,6 @@ export default function IndustriesPage() {
       <FaqPageJsonLd items={industriesListingFaq} />
       <PageFaqSection items={industriesListingFaq} title="Questions About" highlight="The Industries We Serve" />
 
-      {/* CTA */}
-      <IndustryCtaBanner
-        heading="Have a project in mind?"
-        subtext="Talk to our team about your requirements. Kuwait and Dubai offices ready to help."
-        showAllIndustriesLink={false}
-      />
     </>
   );
 }

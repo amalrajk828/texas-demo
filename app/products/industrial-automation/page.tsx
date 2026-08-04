@@ -96,12 +96,12 @@ export default function IndustrialAutomationPage() {
 
       {/* ── Intro Section ────────────────────────────────────── */}
       <section className="bg-white py-12">
-        <div className="max-w-[700px] mx-auto px-4 sm:px-6 text-center">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6">
           <h2 className="text-[#1A1A2E] text-[28px] font-bold">
             Comprehensive Industrial Automation Portfolio
           </h2>
-          <div className="w-[60px] h-[3px] bg-[#e7212b] mx-auto mt-3 mb-4" />
-          <p className="text-[#555770] text-base leading-relaxed">
+          <div className="w-[60px] h-[3px] bg-[#e7212b] mt-3 mb-4" />
+          <p className="text-[#555770] text-base sm:text-lg leading-relaxed w-full">
             We deliver a complete range of industrial automation solutions — from PLC &amp; I/O modules and control panels to industrial workstations, controllers, converters, Ethernet switches, and ergonomic command centre consoles — engineered for reliability, efficiency, and seamless integration.
           </p>
         </div>
@@ -125,27 +125,6 @@ export default function IndustrialAutomationPage() {
       </section>
 
       <FaqPageJsonLd items={productsListingFaq} />
-      {/* ── CTA Banner ───────────────────────────────────────── */}
-      <section className="relative bg-[#1A1A2E] border-t-4 border-[#e7212b] py-16">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6">
-          <div className="flex flex-col sm:flex-row items-center justify-between gap-6">
-            <div>
-              <p className="text-white font-bold text-[22px] mb-1">
-                Need an industrial automation solution for your plant?
-              </p>
-              <p className="text-[#A0A8C0] text-sm">
-                Our automation engineers can help you design and deploy the right system for your application.
-              </p>
-            </div>
-            <Link
-              href="/contacts/"
-              className="shrink-0 inline-flex items-center gap-2 bg-[#e7212b] hover:bg-[#aa0b1b] text-white font-bold px-6 py-3.5 rounded-lg shadow-lg hover:shadow-[#e7212b]/20 transition-all duration-200"
-            >
-              Contact Us &rarr;
-            </Link>
-          </div>
-        </div>
-      </section>
     </div>
   );
 }
