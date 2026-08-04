@@ -81,7 +81,7 @@ export default function BlogPageContent({ allPosts }: Props) {
           separation: 60.00,
           alignment: 30.00,
           cohesion: 30.00,
-          quantity: isMobile ? 3 : 5,
+          quantity: isMobile ? 2 : 4,
         });
       } catch (err) {
         console.error("Vanta Birds init error:", err);
