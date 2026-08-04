@@ -101,10 +101,10 @@ export default function Footer() {
             </p>
             <a
               href={`mailto:${SITE_EMAIL}`}
-              className="flex items-center gap-2 text-white/50 text-sm hover:text-brand-red transition-colors mb-4"
+              className="flex items-start gap-2 text-white/50 text-sm hover:text-brand-red transition-colors mb-4"
             >
-              <Mail className="w-3.5 h-3.5 shrink-0" />
-              {SITE_EMAIL}
+              <Mail className="w-3.5 h-3.5 shrink-0 mt-0.5" />
+              <span className="min-w-0 break-all">{SITE_EMAIL}</span>
             </a>
             <div className="flex flex-wrap gap-2">
               {socials.map(({ href, label, path }) => (
