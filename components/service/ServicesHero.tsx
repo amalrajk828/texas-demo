@@ -1,7 +1,9 @@
 "use client";
+import { useRef } from "react";
 import Link from "next/link";
 import { motion } from "framer-motion";
 import { ArrowRight, Gauge, FlaskConical, Cpu, HardHat } from "lucide-react";
+import VantaTopology from "@/components/service/common/VantaTopology";
 
 const SERVICES_NAV = [
   { Icon: Gauge,       label: "Flow Measurement",     href: "#flow-measurement" },
@@ -11,8 +13,11 @@ const SERVICES_NAV = [
 ];
 
 export default function ServicesHero() {
+  const vantaRef = useRef<HTMLDivElement>(null);
+
   return (
-    <section className="relative bg-[#000000] blueprint-grid blueprint-dot-grid overflow-hidden pt-32 pb-16 lg:pb-20">
+    <section ref={vantaRef} className="relative bg-gradient-to-br from-black via-[#1a0505] to-black blueprint-grid blueprint-dot-grid overflow-hidden pt-32 pb-16 lg:pb-20">
+      <VantaTopology targetRef={vantaRef} />
 
       {/* Grid texture */}
       <div

@@ -433,19 +433,19 @@ export default function Header() {
 
   /* Scroll listener */
   useEffect(() => {
-    console.log("Header scroll effect mounted");
-    let lenisInstance: any = typeof window !== "undefined" ? (window as any).lenis : null;
+    let lenisInstance: any = (window as any).lenis;
     let unsubLenis: (() => void) | null = null;
     let checkInterval: NodeJS.Timeout | null = null;
+    let timeoutId: NodeJS.Timeout | null = null;
 
     const onScroll = (e?: any) => {
-      const scrollY = e && typeof e.scroll === "number" ? e.scroll : window.scrollY;
+      const scrollY = e && typeof e.scroll === "number" ? e.scroll : (window.scrollY || 0);
       const nextScrolled = scrollY > 10;
       setScrolled(prev => {
         if (prev !== nextScrolled) {
-          console.log("scrolled ->", nextScrolled);
+          return nextScrolled;
         }
-        return nextScrolled;
+        return prev;
       });
     };
 
@@ -456,42 +456,35 @@ export default function Header() {
       unsubLenis = () => {
         lenis.off("scroll", onScroll);
       };
-      // Force initial run
       onScroll({ scroll: lenis.scroll });
     };
 
     if (lenisInstance) {
-      console.log("Header scroll: found window.lenis immediately");
       setupLenisListener(lenisInstance);
-    } else if (typeof window !== "undefined") {
-      console.log("Header scroll: lenis not found immediately. Falling back to native listener and starting polling...");
+    } else {
       window.addEventListener("scroll", onScroll, { passive: true });
       onScroll();
 
-      // Check if Lenis is initialized shortly after mount
       checkInterval = setInterval(() => {
         if ((window as any).lenis) {
-          console.log("Header scroll: lenis found via polling");
           setupLenisListener((window as any).lenis);
           if (checkInterval) clearInterval(checkInterval);
         }
       }, 50);
 
-      // Clear interval after 2 seconds to avoid running it forever if Lenis is not used
-      setTimeout(() => {
+      timeoutId = setTimeout(() => {
         if (checkInterval) {
-          console.log("Header scroll: stopped polling for lenis");
           clearInterval(checkInterval);
         }
       }, 2000);
     }
 
     return () => {
-      console.log("Header scroll effect unmounted");
       if (checkInterval) clearInterval(checkInterval);
+      if (timeoutId) clearTimeout(timeoutId);
       if (unsubLenis) {
         unsubLenis();
-      } else if (typeof window !== "undefined") {
+      } else {
         window.removeEventListener("scroll", onScroll);
       }
     };

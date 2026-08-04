@@ -1,11 +1,16 @@
 "use client";
+import { useRef } from "react";
 import Link from "next/link";
 import { motion } from "framer-motion";
 import { ArrowRight, Cpu } from "lucide-react";
+import VantaTopology from "@/components/service/common/VantaTopology";
 
 export default function AutomationHero() {
+  const vantaRef = useRef<HTMLDivElement>(null);
+
   return (
-    <section className="relative bg-[#000000] blueprint-grid blueprint-dot-grid overflow-hidden pt-32 pb-16 lg:pb-20">
+    <section ref={vantaRef} className="relative bg-gradient-to-br from-black via-[#1a0505] to-black blueprint-grid blueprint-dot-grid overflow-hidden pt-32 pb-16 lg:pb-20">
+      <VantaTopology targetRef={vantaRef} />
       {/* Hairline top and bottom borders */}
       <div className="absolute top-0 inset-x-0 h-px bg-white/[0.08] pointer-events-none z-0" />
       <div className="absolute bottom-0 inset-x-0 h-px bg-white/[0.08] pointer-events-none z-0" />
