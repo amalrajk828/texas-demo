@@ -23,6 +23,14 @@ const SOCIAL_URLS = [
   "https://wellfound.com/company/texas-technical-service-company-w-l-l",
   "https://thegulfdirectory.com/businesses/texas-technical-service-company-wll",
   "https://angloinfo.com/kuwait-city/directory/work/services/texas-technical-service-company-wll-6a3f737560dbd",
+  "https://texastechserv.blogspot.com/",
+  "https://www.dnb.com/business-directory/company-profiles.texas_technical_services_company_for_general_trading__contracting_wll.7ca7aec2c7eaf2e011689ae38a275cdf.html",
+  "https://www.crunchbase.com/organization/texas-technical-services",
+  "https://www.zoominfo.com/c/texas-technical-services-co/476359721",
+  "https://mymidlist.com/listing/texas-technical-service-company-w-l-l-industrial-engineering-technical-solutions-in-kuwait/",
+  "https://www.expat.com/en/business/141927_texas-technical-service-company-wll.html",
+  "https://uae.enrollbusiness.com/BusinessProfile/7873457/Texas-Technical-Service-Company-W-L-L-Dubai/Home",
+  "https://www.dubaionline.ae/profile/texas-technical-service-company-w-l-l",
 ];
 
 export const metadata: Metadata = {
@@ -41,7 +49,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "Social Media Platforms | Texas Technical Services",
     description:
-      "Connect with Texas Technical Service Company on LinkedIn, Facebook, Instagram, YouTube, X, Bluesky, Hashnode, Substack, Pinterest, and more.",
+      "Connect with Texas Technical Service Company on LinkedIn, Facebook, Instagram, YouTube, X, Bluesky, Medium, Hashnode, Substack, Pinterest, Quora, Wellfound, Blogger, Dun & Bradstreet, Crunchbase, and more.",
     images: ["/og-default.png"],
   },
   keywords: [
@@ -59,6 +67,14 @@ export const metadata: Metadata = {
     "Texas Technical Services Substack",
     "Texas Technical Services Pinterest",
     "texastechserv social media",
+    "Texas Technical Services Blogger",
+    "Texas Technical Services Dun Bradstreet",
+    "Texas Technical Services Crunchbase",
+    "Texas Technical Services ZoomInfo",
+    "Texas Technical Services MyMidList",
+    "Texas Technical Services Expat.com",
+    "Texas Technical Services Enroll Business",
+    "Texas Technical Services Dubai Online",
   ],
 };
 
@@ -188,11 +204,75 @@ const registered: Platform[] = [
       "Visual boards for industrial projects, automation, and instrumentation.",
     icon: "M12.017 0C5.396 0 .029 5.367.029 11.987c0 5.079 3.158 9.417 7.618 11.162-.105-.949-.199-2.403.041-3.439.219-.937 1.406-5.957 1.406-5.957s-.359-.72-.359-1.781c0-1.663.967-2.911 2.168-2.911 1.024 0 1.518.769 1.518 1.688 0 1.029-.653 2.567-.992 3.992-.285 1.193.6 2.165 1.775 2.165 2.128 0 3.768-2.245 3.768-5.487 0-2.861-2.063-4.869-5.008-4.869-3.41 0-5.409 2.562-5.409 5.199 0 1.033.394 2.143.889 2.741.099.12.112.225.085.345-.09.375-.293 1.199-.334 1.363-.053.225-.172.271-.401.165-1.495-.69-2.433-2.878-2.433-4.646 0-3.776 2.748-7.252 7.92-7.252 4.158 0 7.392 2.967 7.392 6.923 0 4.135-2.607 7.462-6.233 7.462-1.214 0-2.354-.629-2.758-1.379l-.749 2.848c-.269 1.045-1.004 2.352-1.498 3.146 1.123.345 2.306.535 3.55.535 6.607 0 11.985-5.365 11.985-11.987C23.97 5.39 18.592.026 11.985.026L12.017 0z",
   },
+  {
+    name: "Blogger",
+    handle: "Texas Technical Service Company W.L.L.",
+    url: "https://texastechserv.blogspot.com/",
+    description:
+      "Technical blog posts and industry insights from the TTS team.",
+    icon: "M21.976 24H2.026C.9 24 0 23.1 0 21.976V2.026C0 .9.9 0 2.025 0H22.05C23.1 0 24 .9 24 2.025v19.95C24 23.1 23.1 24 21.976 24zM12 3.975H9c-2.775 0-5.025 2.25-5.025 5.025v6c0 2.774 2.25 5.024 5.025 5.024h6c2.774 0 5.024-2.25 5.024-5.024v-3.975c0-.6-.45-1.05-1.05-1.05H18c-.524 0-.976-.45-.976-.976 0-2.776-2.25-5.026-5.024-5.026zm3.074 12H9c-.525 0-.975-.45-.975-.975s.45-.976.975-.976h6.074c.526 0 .977.45.977.976s-.45.976-.975.976zm-2.55-7.95c.527 0 .976.45.976.975s-.45.975-.975.975h-3.6c-.525 0-.976-.45-.976-.975s.45-.975.975-.975h3.6z",
+  },
+  {
+    name: "Dun & Bradstreet",
+    handle: "Texas Technical Service Company W.L.L.",
+    url: "https://www.dnb.com/business-directory/company-profiles.texas_technical_services_company_for_general_trading__contracting_wll.7ca7aec2c7eaf2e011689ae38a275cdf.html",
+    description:
+      "Verified business profile and company data on D&B.",
+    icon: "M19 21V5a2 2 0 0 0-2-2H7a2 2 0 0 0-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1v1H9V7zm5 0h1v1h-1V7zm-5 4h1v1H9v-1zm5 0h1v1h-1v-1zm-3 4h2a1 1 0 0 1 1 1v4h-4v-4a1 1 0 0 1 1-1z",
+  },
+  {
+    name: "Crunchbase",
+    handle: "Texas Technical Services",
+    url: "https://www.crunchbase.com/organization/texas-technical-services",
+    description:
+      "Company overview, funding information, and industry data.",
+    icon: "M21.6 0H2.4A2.41 2.41 0 0 0 0 2.4v19.2A2.41 2.41 0 0 0 2.4 24h19.2a2.41 2.41 0 0 0 2.4-2.4V2.4A2.41 2.41 0 0 0 21.6 0zM7.045 14.465A2.11 2.11 0 0 0 9.84 13.42h1.66a3.69 3.69 0 1 1 0-1.75H9.84a2.11 2.11 0 1 0-2.795 2.795zm11.345.845a3.55 3.55 0 0 1-1.06.63 3.68 3.68 0 0 1-3.39-.38v.38h-1.51V5.37h1.5v4.11a3.74 3.74 0 0 1 1.8-.63H16a3.67 3.67 0 0 1 2.39 6.46zm-.223-2.766a2.104 2.104 0 1 1-4.207 0 2.104 2.104 0 0 1 4.207 0z",
+  },
+  {
+    name: "ZoomInfo",
+    handle: "Texas Technical Services Co",
+    url: "https://www.zoominfo.com/c/texas-technical-services-co/476359721",
+    description:
+      "Business contact and company intelligence profile.",
+    icon: "M19 21V5a2 2 0 0 0-2-2H7a2 2 0 0 0-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1v1H9V7zm5 0h1v1h-1V7zm-5 4h1v1H9v-1zm5 0h1v1h-1v-1zm-3 4h2a1 1 0 0 1 1 1v4h-4v-4a1 1 0 0 1 1-1z",
+  },
+  {
+    name: "MyMidList Kuwait",
+    handle: "Texas Technical Service Company W.L.L.",
+    url: "https://mymidlist.com/listing/texas-technical-service-company-w-l-l-industrial-engineering-technical-solutions-in-kuwait/",
+    description:
+      "Business directory listing in Kuwait for industrial engineering services.",
+    icon: "M19 21V5a2 2 0 0 0-2-2H7a2 2 0 0 0-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1v1H9V7zm5 0h1v1h-1V7zm-5 4h1v1H9v-1zm5 0h1v1h-1v-1zm-3 4h2a1 1 0 0 1 1 1v4h-4v-4a1 1 0 0 1 1-1z",
+  },
+  {
+    name: "Expat.com",
+    handle: "Texas Technical Service Company W.L.L.",
+    url: "https://www.expat.com/en/business/141927_texas-technical-service-company-wll.html",
+    description:
+      "Business listing for services in Kuwait on Expat.com.",
+    icon: "M19 21V5a2 2 0 0 0-2-2H7a2 2 0 0 0-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1v1H9V7zm5 0h1v1h-1V7zm-5 4h1v1H9v-1zm5 0h1v1h-1v-1zm-3 4h2a1 1 0 0 1 1 1v4h-4v-4a1 1 0 0 1 1-1z",
+  },
+  {
+    name: "Enroll Business UAE",
+    handle: "Texas Technical Service Company W.L.L.",
+    url: "https://uae.enrollbusiness.com/BusinessProfile/7873457/Texas-Technical-Service-Company-W-L-L-Dubai/Home",
+    description:
+      "UAE business directory listing for Dubai operations.",
+    icon: "M19 21V5a2 2 0 0 0-2-2H7a2 2 0 0 0-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1v1H9V7zm5 0h1v1h-1V7zm-5 4h1v1H9v-1zm5 0h1v1h-1v-1zm-3 4h2a1 1 0 0 1 1 1v4h-4v-4a1 1 0 0 1 1-1z",
+  },
+  {
+    name: "Dubai Online",
+    handle: "Texas Technical Service Company W.L.L.",
+    url: "https://www.dubaionline.ae/profile/texas-technical-service-company-w-l-l",
+    description:
+      "Dubai business directory profile for local services.",
+    icon: "M19 21V5a2 2 0 0 0-2-2H7a2 2 0 0 0-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1v1H9V7zm5 0h1v1h-1V7zm-5 4h1v1H9v-1zm5 0h1v1h-1v-1zm-3 4h2a1 1 0 0 1 1 1v4h-4v-4a1 1 0 0 1 1-1z",
+  },
 ];
 
 const stats = [
   { num: "6", label: "Active Channels" },
-  { num: "14", label: "Total Profiles" },
+  { num: "22", label: "Total Profiles" },
 ];
 
 export default function SocialMediaPage() {
