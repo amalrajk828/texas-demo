@@ -14,19 +14,19 @@ const HeroSlider = dynamic(() => import("@/components/HeroSlider"), {
 });
 
 const PartnersTicker = dynamic(() => import("@/components/PartnersTicker"), {
-  loading: () => <div className="py-7 border-y" style={{ minHeight: 154 }} />,
+  loading: () => <div className="py-7 border-y" style={{ minHeight: 200 }} />,
 });
 
 const GreyWhatWeDo = dynamic(() => import("@/components/t-grey/GreyWhatWeDo"), {
-  loading: () => <div className="py-24 lg:py-32" style={{ minHeight: 700 }} />,
+  loading: () => <div className="py-24 lg:py-32" style={{ minHeight: 1500 }} />,
 });
 
 const GreyServices = dynamic(() => import("@/components/t-grey/GreyServices"), {
-  loading: () => <div className="py-24 lg:py-32" style={{ minHeight: 650 }} />,
+  loading: () => <div className="py-24 lg:py-32" style={{ minHeight: 1000 }} />,
 });
 
 const GreyVision = dynamic(() => import("@/components/t-grey/GreyVision"), {
-  loading: () => <div className="py-24 lg:py-32" style={{ minHeight: 550 }} />,
+  loading: () => <div className="py-24 lg:py-32" style={{ minHeight: 800 }} />,
 });
 
 export const metadata: Metadata = {
@@ -126,7 +126,14 @@ const LIGHT_GREY_VARS: Record<string, string> = {
 export default function HomePage() {
   return (
     <ThemeWrapper vars={VARS}>
-      <link rel="preload" href="/homevideos/homebannerimage.jpg" as="image" fetchPriority="high" />
+      <link
+        rel="preload"
+        as="image"
+        href="/homevideos/homebannerimage.jpg"
+        imageSrcSet="/homevideos/homebannerimage.jpg?w=375 375w, /homevideos/homebannerimage.jpg?w=768 768w, /homevideos/homebannerimage.jpg 2290w"
+        imageSizes="100vw"
+        fetchPriority="high"
+      />
 
       <Script
         id="website-schema"

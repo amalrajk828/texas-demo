@@ -38,7 +38,7 @@ export default function OurTeam() {
               style={{ background: "var(--color-brand-navy)" }}
             >
               <Image
-                src="/our-team/our_team.png"
+                src="/our-team/our_team.webp"
                 alt="Texas Technical Services team of certified engineers"
                 fill
                 sizes="(max-width: 1024px) 100vw, 50vw"

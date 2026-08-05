@@ -56,7 +56,7 @@ export default function GreyServices() {
               <span className="w-10 h-[3px] rounded-full" style={{ background: "var(--color-brand-red)" }} />
               <span className="text-[11px] font-bold tracking-[3.5px] uppercase" style={{ color: "var(--color-brand-red)" }}>Our Services</span>
             </div>
-            <h2 className="text-[2.8rem] sm:text-[3.4rem] font-black leading-[1.05] tracking-tight" style={{ color: "var(--g-heading)" }}>
+            <h2 className="text-[1.8rem] sm:text-[2.8rem] lg:text-[3.4rem] font-black leading-[1.05] tracking-tight" style={{ color: "var(--g-heading)" }}>
               What services do we offer for industrial automation and flow measurement?
             </h2>
           </div>
@@ -106,7 +106,7 @@ export default function GreyServices() {
                   </div>
 
                   {/* Heading */}
-                  <h3 className="text-[19px] font-black leading-snug text-white mb-2.5 pr-4 tracking-tight relative z-10">
+                  <h3 className="text-[17px] sm:text-[19px] font-black leading-snug text-white mb-2.5 pr-4 tracking-tight relative z-10 break-words">
                     {svc.title}
                   </h3>
 

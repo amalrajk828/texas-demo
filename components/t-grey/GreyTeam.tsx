@@ -22,7 +22,7 @@ export default function GreyTeam() {
 
           <div className="relative pb-10 lg:pb-0 fade-up">
             <div className="relative rounded-2xl overflow-hidden aspect-[4/5] lg:aspect-[3/4] shadow-2xl" style={{ border: "1px solid var(--g-border)" }}>
-              <Image src="/our-team/our_team.png" alt="Our team" fill sizes="(max-width: 1024px) 100vw, 50vw" className="object-cover object-top" quality={90} loading="eager" />
+              <Image src="/our-team/our_team.webp" alt="Our team" fill sizes="(max-width: 1024px) 100vw, 50vw" className="object-cover object-top" quality={80} loading="lazy" />
               <div className="absolute bottom-0 inset-x-0 h-28" style={{ background: "linear-gradient(to top, rgba(0,0,0,0.25), transparent)" }} />
             </div>
 

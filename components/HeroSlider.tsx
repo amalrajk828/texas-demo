@@ -7,7 +7,7 @@ import { AnimatePresence, motion, type Variants } from "framer-motion";
 import { ArrowRight, Play } from "lucide-react";
 import dynamic from "next/dynamic";
 
-const Ferrofluid = dynamic(() => import("@/components/Ferrofluid"), { ssr: false });
+const Ferrofluid = dynamic(() => import("@/components/Ferrofluid"), { ssr: false, loading: () => null });
 
 /* ── Slide data ─────────────────────────────────────────────────── */
 const SLIDES = [
@@ -112,7 +112,7 @@ function useSwipe(onLeft: () => void, onRight: () => void) {
 export default function HeroSlider() {
   const [current, setCurrent] = useState(0);
   const [paused, setPaused] = useState(false);
-  const [isMobile, setIsMobile] = useState(false);
+  const [isMobile, setIsMobile] = useState<boolean | undefined>(undefined);
 
   const rafRef = useRef<number | null>(null);
   const startRef = useRef<number | null>(null);
@@ -197,7 +197,7 @@ export default function HeroSlider() {
         }
       `}</style>
       {/* Ferrofluid WebGL background layer — desktop only */}
-      {!isMobile && (
+      {isMobile === false && (
         <div style={{ width: '100%', height: '100%', position: 'absolute', inset: 0, zIndex: 0, pointerEvents: 'none' }}>
           <Ferrofluid
             colors={["#ffffff", "#ffffff", "#ffffff"]}
@@ -290,7 +290,7 @@ export default function HeroSlider() {
 
               {/* Heading */}
               <h1
-                className="text-[clamp(2rem,6vw,3.6rem)] font-black leading-[1.08] mb-6 tracking-tight"
+                className="text-[clamp(1.75rem,5.5vw,3.6rem)] font-black leading-[1.08] mb-6 tracking-tight"
                 style={{ color: isLight ? "#111827" : "white" }}
               >
                 {slide.heading.map((line, i) => (
@@ -343,12 +343,12 @@ export default function HeroSlider() {
               </div>
 
               {/* Stats */}
-              <div className="flex items-center gap-6 sm:gap-8">
+              <div className="grid grid-cols-2 gap-4 sm:flex sm:items-center sm:gap-6 lg:gap-8">
                 {STATS.map((s, i) => (
                   <div key={s.label} className="flex items-center gap-3">
                     {i > 0 && (
                       <div
-                        className="w-px h-7"
+                        className="w-px h-7 hidden sm:block"
                         style={{ background: isLight ? "rgba(0,0,0,0.08)" : "rgba(255,255,255,0.10)" }}
                       />
                     )}

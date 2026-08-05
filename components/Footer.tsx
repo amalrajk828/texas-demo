@@ -111,7 +111,7 @@ export default function Footer() {
           {/* ── Brand Column ──────────────── */}
           <div>
             <Link href="/" className="flex flex-col items-center gap-3 mb-7 w-fit">
-              <Image src="/logo.svg" alt="Texas Technical Services" width={90} height={90} loading="eager" priority />
+              <Image src="/logo.svg" alt="Texas Technical Services" width={90} height={90} loading="lazy" />
               <div className="text-center">
                 <p className="text-white font-black tracking-[7px] text-[20px] leading-none">
                   TEXAS
