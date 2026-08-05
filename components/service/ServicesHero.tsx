@@ -108,7 +108,7 @@ export default function ServicesHero() {
 
           {/* Right — quick-nav pills */}
           <div
-            className="flex lg:flex-col gap-3"
+            className="flex flex-wrap lg:flex-col gap-3"
           >
             {SERVICES_NAV.map(({ Icon, label, href }) => (
               <a
@@ -119,7 +119,7 @@ export default function ServicesHero() {
                 <div className="w-8 h-8 rounded-lg bg-[#e7212b]/10 border border-[#e7212b]/20 flex items-center justify-center shrink-0 group-hover:bg-[#e7212b]/20 transition-colors duration-200">
                   <Icon className="w-4 h-4 text-[#e7212b]" strokeWidth={1.8} />
                 </div>
-                <span className="text-white/50 text-[13px] font-medium group-hover:text-white transition-colors duration-200 whitespace-nowrap">
+                <span className="text-white/50 text-[13px] font-medium group-hover:text-white transition-colors duration-200">
                   {label}
                 </span>
               </a>

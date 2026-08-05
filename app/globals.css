@@ -145,6 +145,7 @@ body, .page-wrapper {
   }
   html {
     font-size: 17px;
+    scroll-padding-top: 92px;
   }
   body {
     @apply bg-background text-foreground;
@@ -199,6 +200,11 @@ body, .page-wrapper {
   .neumorphic-card-dark { box-shadow: 0 4px 12px rgba(0,0,0,0.5); }
   .module-card-neumorphic { box-shadow: 0 4px 12px rgba(0,0,0,0.5); }
   .ticker-track { animation: none !important; }
+  .header-glass {
+    backdrop-filter: none !important;
+    -webkit-backdrop-filter: none !important;
+    background: rgba(15, 15, 18, 0.95) !important;
+  }
 }
 
 /* Ticker */
