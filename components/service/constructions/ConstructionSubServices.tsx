@@ -1,7 +1,6 @@
 "use client";
 import Image from "next/image";
 import Link from "next/link";
-import { motion, useInView } from "framer-motion";
 import { useRef } from "react";
 import {
   ArrowRight,
@@ -13,16 +12,6 @@ import {
   Ruler,
   Zap,
 } from "lucide-react";
-
-function FadeUp({ children, delay = 0, className = "" }: { children: React.ReactNode; delay?: number; className?: string }) {
-  const ref = useRef<HTMLDivElement>(null);
-  const inView = useInView(ref, { once: true, margin: "-60px" });
-  return (
-    <motion.div ref={ref} initial={{ opacity: 0, y: 24 }} animate={inView ? { opacity: 1, y: 0 } : {}} transition={{ duration: 0.6, ease: [0.22, 1, 0.36, 1], delay }} className={className}>
-      {children}
-    </motion.div>
-  );
-}
 
 interface SubServiceItem {
   Icon: React.ComponentType<{ className?: string; strokeWidth?: number }>;
@@ -44,9 +33,8 @@ const SUB_SERVICES: SubServiceItem[] = [
 
 function SubServiceCard({ item, index }: { item: SubServiceItem; index: number }) {
   const ref = useRef<HTMLDivElement>(null);
-  const inView = useInView(ref, { once: true, margin: "-40px" });
   return (
-    <motion.div ref={ref} initial={{ opacity: 0, y: 28 }} animate={inView ? { opacity: 1, y: 0 } : {}} transition={{ duration: 0.55, ease: [0.22, 1, 0.36, 1], delay: 0.06 + (index % 3) * 0.08 }} whileHover={{ y: -4, transition: { duration: 0.22 } }} className="h-full">
+    <div ref={ref} className="h-full">
       <Link href={item.href} className="group relative rounded-2xl border border-white/40 bg-white/25 backdrop-blur-xl overflow-hidden flex flex-col hover:border-[#e7212b]/25 hover:shadow-2xl hover:shadow-[#e7212b]/8 transition-all duration-300 h-full">
         <div className="relative aspect-[16/9] bg-[#0B0D26] overflow-hidden">
           <Image src={item.imageSrc} alt={item.title} fill sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw" className="object-cover group-hover:scale-105 transition-transform duration-500" />
@@ -71,7 +59,7 @@ function SubServiceCard({ item, index }: { item: SubServiceItem; index: number }
           </div>
         </div>
       </Link>
-    </motion.div>
+    </div>
   );
 }
 
@@ -80,7 +68,7 @@ export default function ConstructionSubServices() {
     <section className="relative bg-[#0B0D26] py-24 lg:py-32 overflow-hidden">
       <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[600px] h-[1px] pointer-events-none" style={{ background: "linear-gradient(90deg, transparent, rgba(231,33,43,0.15) 50%, transparent)" }} />
       <div className="relative max-w-7xl mx-auto px-4 sm:px-6">
-        <FadeUp delay={0} className="mb-14">
+        <div className="fade-up mb-14">
           <div className="flex items-center gap-2.5 mb-4">
             <span className="w-5 h-px bg-[#e7212b]" />
             <span className="text-[#e7212b] text-[10px] font-semibold tracking-[3.5px] uppercase">Constructions</span>
@@ -91,7 +79,7 @@ export default function ConstructionSubServices() {
               Get More Information <ArrowRight className="w-3.5 h-3.5" />
             </Link>
           </div>
-        </FadeUp>
+        </div>
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
           {SUB_SERVICES.map((item, i) => (
             <SubServiceCard key={item.title} item={item} index={i} />

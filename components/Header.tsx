@@ -512,7 +512,7 @@ export default function Header() {
     <>
       <header
         ref={ref}
-        className="fixed top-4 left-1/2 -translate-x-1/2 z-[100] w-[calc(100%-2rem)] max-w-7xl transition-all duration-300 rounded-2xl border border-white/[0.10]"
+        className="header-glass fixed top-4 left-1/2 -translate-x-1/2 z-[100] w-[calc(100%-2rem)] max-w-7xl transition-all duration-300 rounded-2xl border border-white/[0.10]"
         style={{
           background: "rgba(15, 15, 18, 0.55)",
           backdropFilter: "blur(18px)",

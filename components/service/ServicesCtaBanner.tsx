@@ -1,33 +1,7 @@
 "use client";
 import Link from "next/link";
-import { motion, useInView } from "framer-motion";
-import { useRef } from "react";
 import { ArrowRight, Mail, Phone } from "lucide-react";
 import { SITE_EMAIL } from "@/lib/site";
-
-function FadeUp({
-  children,
-  delay = 0,
-  className = "",
-}: {
-  children: React.ReactNode;
-  delay?: number;
-  className?: string;
-}) {
-  const ref = useRef<HTMLDivElement>(null);
-  const inView = useInView(ref, { once: true, margin: "-60px" });
-  return (
-    <motion.div
-      ref={ref}
-      initial={{ opacity: 0, y: 20 }}
-      animate={inView ? { opacity: 1, y: 0 } : {}}
-      transition={{ duration: 0.55, ease: [0.22, 1, 0.36, 1], delay }}
-      className={className}
-    >
-      {children}
-    </motion.div>
-  );
-}
 
 export default function ServicesCtaBanner() {
   return (
@@ -56,7 +30,7 @@ export default function ServicesCtaBanner() {
 
           {/* Left — copy */}
           <div>
-            <FadeUp delay={0}>
+            <div className="fade-up">
               <div className="flex items-center gap-2.5 mb-5">
                 <span className="w-5 h-px bg-[#e7212b]" />
                 <span className="text-[#e7212b] text-[10px] font-semibold tracking-[3.5px] uppercase">
@@ -71,9 +45,9 @@ export default function ServicesCtaBanner() {
                 to help with flow measurement, automation, inspection, and construction projects
                 of any scale.
               </p>
-            </FadeUp>
+            </div>
 
-            <FadeUp delay={0.1}>
+            <div className="fade-up d1">
               <div className="flex flex-col sm:flex-row gap-3">
                 <Link
                   href="/contacts/"
@@ -89,11 +63,11 @@ export default function ServicesCtaBanner() {
                   Back to Services
                 </Link>
               </div>
-            </FadeUp>
+            </div>
           </div>
 
           {/* Right — contact cards */}
-          <FadeUp delay={0.18} className="flex flex-col gap-4 min-w-[280px]">
+          <div className="fade-up flex flex-col gap-4 min-w-[280px]">
 
             <a
               href={`mailto:${SITE_EMAIL}`}
@@ -135,7 +109,7 @@ export default function ServicesCtaBanner() {
               </div>
             </a>
 
-          </FadeUp>
+          </div>
         </div>
       </div>
     </section>

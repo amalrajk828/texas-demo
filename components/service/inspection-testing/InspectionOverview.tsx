@@ -1,7 +1,5 @@
 "use client";
 import Link from "next/link";
-import { motion, useInView } from "framer-motion";
-import { useRef } from "react";
 import {
   FileText,
   Eye,
@@ -12,30 +10,6 @@ import {
   ArrowRight,
 } from "lucide-react";
 import NeumorphicServiceCard from "@/components/service/common/NeumorphicServiceCard";
-
-function FadeUp({
-  children,
-  delay = 0,
-  className = "",
-}: {
-  children: React.ReactNode;
-  delay?: number;
-  className?: string;
-}) {
-  const ref = useRef<HTMLDivElement>(null);
-  const inView = useInView(ref, { once: true, margin: "-60px" });
-  return (
-    <motion.div
-      ref={ref}
-      initial={{ opacity: 0, y: 24 }}
-      animate={inView ? { opacity: 1, y: 0 } : {}}
-      transition={{ duration: 0.6, ease: [0.22, 1, 0.36, 1], delay }}
-      className={className}
-    >
-      {children}
-    </motion.div>
-  );
-}
 
 const NDT_METHODS = [
   { Icon: Eye, abbr: "VI", label: "Visual Inspection (VI)" },
@@ -82,7 +56,7 @@ export default function InspectionOverview({ hideHeading = false }: { hideHeadin
 
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 space-y-16">
           {/* ── 4. Our Commitment Section ── */}
-          <FadeUp delay={0}>
+          <div className="fade-up">
             <div className="flex items-center gap-2.5 mb-4">
               <span className="w-5 h-px bg-[#e7212b]" />
               <span className="text-[#e7212b] text-[10px] font-semibold tracking-[3.5px] uppercase">
@@ -95,14 +69,13 @@ export default function InspectionOverview({ hideHeading = false }: { hideHeadin
             <p className="text-gray-600 text-[15px] leading-[1.85] max-w-none">
               Texas Technical Services Co. (TTS) is committed to health and safety, the environment and quality is delivered by adopting an integrated approach to our management systems, and complying with all relevant legislation, regulations and other legal and industry requirements. This provides a framework for integration of the ISO 14001:2015, ISO 45001:2018 and ISO 9001:2015 standards and is externally certificated by a UASL accredited certification body.
             </p>
-          </FadeUp>
+          </div>
 
           {/* ── 5 & 6. Stacked: TTS Offers / Consultancy + NDT Examinations ── */}
           <div className="flex flex-col gap-6">
             {/* 5. TTS Offers / Consultancy Services Card */}
-            <FadeUp delay={0.05}>
-              <motion.div
-                whileHover={{ y: -4, boxShadow: "0 20px 40px rgba(0,0,0,0.35)", transition: { duration: 0.25 } }}
+            <div className="fade-up d1">
+              <div
                 className="rounded-2xl bg-[#000000] blueprint-grid blueprint-dot-grid overflow-hidden relative flex flex-col p-7 sm:p-9 shadow-xl w-full"
               >
                 {/* Grid texture overlay */}
@@ -131,12 +104,11 @@ export default function InspectionOverview({ hideHeading = false }: { hideHeadin
                     TTS provides an efficient QA consultancy service in preparing various documents like Quality Control Procedures, Inspection Test Plan (ITP), Method of Statement, Welding Procedure Specification (WPS), Procedure Qualification Record (PQR), and Welder Qualification Certificates (WQT).
                   </p>
                 </div>
-              </motion.div>
-            </FadeUp>
+              </div>
+            </div>
 
-            <FadeUp delay={0.15}>
-              <motion.div
-                whileHover={{ y: -4, boxShadow: "0 16px 36px rgba(0,0,0,0.08)", transition: { duration: 0.25 } }}
+            <div className="fade-up d2">
+              <div
                 className="rounded-2xl border border-[#e8eaf0] bg-white p-7 sm:p-9 flex flex-col shadow-sm w-full"
               >
                 <div>
@@ -156,24 +128,20 @@ export default function InspectionOverview({ hideHeading = false }: { hideHeadin
                   {/* NDT list — flat 2-column chip grid, single column on mobile */}
                   <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-2.5">
                     {NDT_METHODS.map(({ Icon, abbr, label }, i) => (
-                      <motion.div
+                      <div
                         key={abbr}
-                        initial={{ opacity: 0, y: 12 }}
-                        whileInView={{ opacity: 1, y: 0 }}
-                        viewport={{ once: false, margin: "-40px" }}
-                        transition={{ duration: 0.4, ease: [0.22, 1, 0.36, 1], delay: i * 0.08 }}
-                        className="group flex items-center gap-3 w-full bg-[#f8f9fb] hover:bg-[#f1f3f6] rounded-xl px-3.5 py-3 transition-colors duration-200 cursor-pointer"
+                        className="group flex items-center gap-3 w-full bg-[#f8f9fb] hover:bg-[#f1f3f6] rounded-xl px-3.5 py-3 transition-colors duration-200 cursor-pointer fade-up"
                       >
                         <div className="w-8 h-8 rounded-lg bg-[#e7212b]/10 border border-[#e7212b]/15 flex items-center justify-center shrink-0">
                           <Icon className="w-4 h-4 text-[#e7212b]" strokeWidth={1.8} />
                         </div>
                         <span className="text-[#0B0D26] text-[13px] font-medium leading-snug group-hover:text-[#e7212b] transition-colors duration-200">{label}</span>
-                      </motion.div>
+                      </div>
                     ))}
                   </div>
                 </div>
-              </motion.div>
-            </FadeUp>
+              </div>
+            </div>
           </div>
         </div>
       </section>
@@ -181,7 +149,7 @@ export default function InspectionOverview({ hideHeading = false }: { hideHeadin
       {/* ── 7. Explore More / Related Services Section ── */}
       <section className="bg-white pt-4 pb-10 lg:pt-6 lg:pb-12">
         <div className="max-w-7xl mx-auto px-4 sm:px-6">
-          <FadeUp delay={0} className="mb-10">
+          <div className="fade-up mb-10">
             {/* Heading block hidden when hideHeading is true */}
             {!hideHeading && (
               <>
@@ -196,12 +164,12 @@ export default function InspectionOverview({ hideHeading = false }: { hideHeadin
                 </h2>
               </>
             )}
-          </FadeUp>
+          </div>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-7 sm:gap-8">
             {RELATED_SERVICES.map((card, i) => (
-              <FadeUp key={card.title} delay={0.05 + i * 0.05}>
+              <div className="fade-up">
                 <NeumorphicServiceCard card={card} />
-              </FadeUp>
+              </div>
             ))}
           </div>
         </div>

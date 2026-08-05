@@ -1,20 +1,8 @@
 "use client";
 import Link from "next/link";
-import { motion, useInView } from "framer-motion";
-import { useRef } from "react";
 import { ArrowRight, Ruler, Shield, Zap, GitBranch, Cpu, Microscope } from "lucide-react";
 import LightGradientBackground from "@/components/LightGradientBackground";
 import NeumorphicDeliverCard from "@/components/service/common/NeumorphicDeliverCard";
-
-function FadeUp({ children, delay = 0, className = "" }: { children: React.ReactNode; delay?: number; className?: string }) {
-  const ref = useRef<HTMLDivElement>(null);
-  const inView = useInView(ref, { once: true, margin: "-60px" });
-  return (
-    <motion.div ref={ref} initial={{ opacity: 0, y: 24 }} animate={inView ? { opacity: 1, y: 0 } : {}} transition={{ duration: 0.6, ease: [0.22, 1, 0.36, 1], delay }} className={className}>
-      {children}
-    </motion.div>
-  );
-}
 
 const TESTS = [
   {
@@ -59,7 +47,7 @@ export default function MechanicalSubServices() {
   return (
     <LightGradientBackground className="py-20 lg:py-28">
       <div className="relative max-w-7xl mx-auto px-4 sm:px-6 z-10">
-        <FadeUp delay={0} className="mb-12">
+        <div className="fade-up mb-12">
           <div className="flex items-center gap-2.5 mb-3">
             <span className="w-5 h-px bg-[#e7212b]" />
             <span className="text-[#e7212b] text-[10px] font-semibold tracking-[3.5px] uppercase">Mechanical Testing</span>
@@ -70,15 +58,15 @@ export default function MechanicalSubServices() {
               Get More Information <ArrowRight className="w-3.5 h-3.5" />
             </a>
           </div>
-        </FadeUp>
+        </div>
 
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5 sm:gap-6">
           {TESTS.map((item, i) => (
-            <FadeUp key={item.title} delay={0.08 + i * 0.08}>
+            <div className="fade-up">
               <Link href={item.href} className="block h-full">
                 <NeumorphicDeliverCard item={item} index={i} />
               </Link>
-            </FadeUp>
+            </div>
           ))}
         </div>
       </div>

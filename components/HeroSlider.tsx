@@ -7,7 +7,7 @@ import { AnimatePresence, motion, type Variants } from "framer-motion";
 import { ArrowRight, Play } from "lucide-react";
 import dynamic from "next/dynamic";
 
-const Ferrofluid = dynamic(() => import("@/components/Ferrofluid"), { ssr: false });
+const Ferrofluid = dynamic(() => import("@/components/Ferrofluid"), { ssr: false, loading: () => null });
 
 /* ── Slide data ─────────────────────────────────────────────────── */
 const SLIDES = [
@@ -112,7 +112,7 @@ function useSwipe(onLeft: () => void, onRight: () => void) {
 export default function HeroSlider() {
   const [current, setCurrent] = useState(0);
   const [paused, setPaused] = useState(false);
-  const [isMobile, setIsMobile] = useState(false);
+  const [isMobile, setIsMobile] = useState<boolean | undefined>(undefined);
 
   const rafRef = useRef<number | null>(null);
   const startRef = useRef<number | null>(null);
@@ -197,7 +197,7 @@ export default function HeroSlider() {
         }
       `}</style>
       {/* Ferrofluid WebGL background layer — desktop only */}
-      {!isMobile && (
+      {isMobile === false && (
         <div style={{ width: '100%', height: '100%', position: 'absolute', inset: 0, zIndex: 0, pointerEvents: 'none' }}>
           <Ferrofluid
             colors={["#ffffff", "#ffffff", "#ffffff"]}
@@ -253,7 +253,7 @@ export default function HeroSlider() {
       <div className="relative z-10 w-full max-w-[1536px] mx-auto px-5 sm:px-10 lg:px-10 grid grid-cols-1 lg:grid-cols-[1fr_420px] xl:grid-cols-[1fr_680px] 2xl:grid-cols-[1fr_780px] gap-8 lg:gap-8 items-center pt-[116px] pb-10 lg:pt-[76px] lg:pb-14">
 
         {/* LEFT: Text column */}
-        <div className="flex flex-col justify-center pt-16 pb-8 lg:py-0">
+        <div className="flex flex-col justify-center pt-16 pb-8 lg:py-0" style={{ minHeight: "400px" }}>
           <AnimatePresence mode="wait" initial={false}>
             <motion.div
               key={current}
@@ -290,7 +290,7 @@ export default function HeroSlider() {
 
               {/* Heading */}
               <h1
-                className="text-[clamp(2rem,6vw,3.6rem)] font-black leading-[1.08] mb-6 tracking-tight"
+                className="text-[clamp(1.75rem,5.5vw,3.6rem)] font-black leading-[1.08] mb-6 tracking-tight"
                 style={{ color: isLight ? "#111827" : "white" }}
               >
                 {slide.heading.map((line, i) => (
@@ -343,12 +343,12 @@ export default function HeroSlider() {
               </div>
 
               {/* Stats */}
-              <div className="flex items-center gap-6 sm:gap-8">
+              <div className="grid grid-cols-2 gap-4 sm:flex sm:items-center sm:gap-6 lg:gap-8">
                 {STATS.map((s, i) => (
                   <div key={s.label} className="flex items-center gap-3">
                     {i > 0 && (
                       <div
-                        className="w-px h-7"
+                        className="w-px h-7 hidden sm:block"
                         style={{ background: isLight ? "rgba(0,0,0,0.08)" : "rgba(255,255,255,0.10)" }}
                       />
                     )}
@@ -388,7 +388,7 @@ export default function HeroSlider() {
               style={{ aspectRatio: "16/9", background: "var(--color-brand-navy-mid)" }}
             >
               {slide.type === "image" ? (
-                <Image src={slide.src} alt={slide.alt} fill priority={current === 0} sizes="(max-width: 1024px) 100vw, 50vw" className="object-cover" quality={90} />
+                <Image src={slide.src} alt={slide.alt} fill priority sizes="(max-width: 1024px) 100vw, 50vw" className="object-cover" quality={80} loading="eager" />
               ) : (
                 <video ref={mainVideoRef} key={slide.src} src={slide.src} poster={(slide as any).poster} aria-label={slide.alt} autoPlay muted loop playsInline preload="metadata" className="w-full h-full object-cover" />
               )}
@@ -456,9 +456,7 @@ export default function HeroSlider() {
                     </svg>
                   </div>
                 )}
-                <span className="absolute bottom-1.5 right-1.5 text-white/50 text-[9px] font-mono">
-                  {String(i + 1).padStart(2, "0")}
-                </span>
+                <span className="sr-only">{String(i + 1).padStart(2, "0")}</span>
               </button>
             ))}
           </div>
@@ -466,6 +464,7 @@ export default function HeroSlider() {
           {/* Next button */}
           <button
             onClick={next}
+            aria-label="Next slide"
             className="group flex items-center gap-2 text-white/20 hover:text-white/60 text-[11px] font-semibold tracking-[2px] uppercase transition-colors duration-200 self-end"
           >
             Next <ArrowRight className="w-3.5 h-3.5 group-hover:translate-x-1 transition-transform duration-200" />

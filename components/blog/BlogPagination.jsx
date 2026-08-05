@@ -1,23 +1,14 @@
 "use client";
 
-import React, { useState, useEffect } from "react";
+import React from "react";
 import { ChevronLeft, ChevronRight } from "lucide-react";
 
 export default function BlogPagination({ currentPage, totalPages, onPageChange }) {
-  const [isMobile, setIsMobile] = useState(false);
-
-  useEffect(() => {
-    const check = () => setIsMobile(window.innerWidth < 640);
-    check();
-    window.addEventListener("resize", check);
-    return () => window.removeEventListener("resize", check);
-  }, []);
-
   if (totalPages <= 1) return null;
 
   const getPageNumbers = () => {
     const pages = [];
-    const maxVisible = isMobile ? 2 : 5;
+    const maxVisible = 5;
 
     if (totalPages <= maxVisible + 2) {
       for (let i = 1; i <= totalPages; i++) pages.push(i);
@@ -45,12 +36,15 @@ export default function BlogPagination({ currentPage, totalPages, onPageChange }
     return pages;
   };
 
+  const isMobileExtra = (page) =>
+    page !== 1 && page !== totalPages && page !== currentPage && Math.abs(page - currentPage) > 1;
+
   return (
     <div className="flex items-center justify-center gap-1.5 mt-12">
       <button
         onClick={() => onPageChange(currentPage - 1)}
         disabled={currentPage === 1}
-        className="inline-flex items-center gap-1 px-3 py-2 text-[13px] font-medium rounded-lg border border-gray-200 text-gray-500 hover:border-[#e7212b]/40 hover:text-[#e7212b] transition-colors disabled:opacity-30 disabled:pointer-events-none"
+        className="inline-flex items-center gap-1 px-3 py-2 min-h-[44px] text-[13px] font-medium rounded-lg border border-gray-200 text-gray-500 hover:border-[#e7212b]/40 hover:text-[#e7212b] transition-colors disabled:opacity-30 disabled:pointer-events-none"
       >
         <ChevronLeft className="w-3.5 h-3.5" />
         Prev
@@ -58,14 +52,16 @@ export default function BlogPagination({ currentPage, totalPages, onPageChange }
 
       {getPageNumbers().map((page, i) =>
         page === "..." ? (
-          <span key={`dots-${i}`} className="px-2 py-2 text-[13px] text-gray-400">
+          <span key={`dots-${i}`} className="hidden sm:inline-flex px-2 py-2 text-[13px] text-gray-500">
             ...
           </span>
         ) : (
           <button
             key={page}
             onClick={() => onPageChange(page)}
-            className={`w-9 h-8 text-[13px] font-medium rounded-lg transition-colors ${
+            className={`min-w-[44px] min-h-[44px] text-[13px] font-medium rounded-lg transition-colors ${
+              isMobileExtra(page) ? "hidden sm:inline-flex " : ""
+            }${
               currentPage === page
                 ? "bg-[#e7212b] text-white shadow-md shadow-[#e7212b]/20"
                 : "border border-gray-200 text-gray-500 hover:border-[#e7212b]/40 hover:text-[#e7212b]"
@@ -79,7 +75,7 @@ export default function BlogPagination({ currentPage, totalPages, onPageChange }
       <button
         onClick={() => onPageChange(currentPage + 1)}
         disabled={currentPage === totalPages}
-        className="inline-flex items-center gap-1 px-3 py-2 text-[13px] font-medium rounded-lg border border-gray-200 text-gray-500 hover:border-[#e7212b]/40 hover:text-[#e7212b] transition-colors disabled:opacity-30 disabled:pointer-events-none"
+        className="inline-flex items-center gap-1 px-3 py-2 min-h-[44px] text-[13px] font-medium rounded-lg border border-gray-200 text-gray-500 hover:border-[#e7212b]/40 hover:text-[#e7212b] transition-colors disabled:opacity-30 disabled:pointer-events-none"
       >
         Next
         <ChevronRight className="w-3.5 h-3.5" />

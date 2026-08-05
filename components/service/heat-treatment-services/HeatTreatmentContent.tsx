@@ -1,18 +1,6 @@
 "use client";
 import Link from "next/link";
-import { motion, useInView } from "framer-motion";
-import { useRef } from "react";
 import { ArrowRight, Flame, Zap, Thermometer, FileSearch } from "lucide-react";
-
-function FadeUp({ children, delay = 0, className = "" }: { children: React.ReactNode; delay?: number; className?: string }) {
-  const ref = useRef<HTMLDivElement>(null);
-  const inView = useInView(ref, { once: true, margin: "-60px" });
-  return (
-    <motion.div ref={ref} initial={{ opacity: 0, y: 24 }} animate={inView ? { opacity: 1, y: 0 } : {}} transition={{ duration: 0.6, ease: [0.22, 1, 0.36, 1], delay }} className={className}>
-      {children}
-    </motion.div>
-  );
-}
 
 const CARDS = [
   { Icon: Flame, title: "Post Weld Heat Treatment (PWHT)", body: "PWHT to relieve residual stresses in welded components, reduce hardness in the heat-affected zone, and improve dimensional stability and toughness." },
@@ -25,7 +13,7 @@ export default function HeatTreatmentContent() {
   return (
     <section className="bg-white py-24 lg:py-32">
       <div className="max-w-7xl mx-auto px-4 sm:px-6">
-        <FadeUp delay={0} className="mb-14">
+        <div className="fade-up mb-14">
           <div className="flex items-center gap-2.5 mb-4">
             <span className="w-5 h-px bg-[#e7212b]" />
             <span className="text-[#e7212b] text-[10px] font-semibold tracking-[3.5px] uppercase">Capabilities</span>
@@ -33,18 +21,18 @@ export default function HeatTreatmentContent() {
           <h2 className="text-3xl sm:text-[2.4rem] font-bold text-[#0B0D26] leading-[1.15] max-w-2xl">
             Heat Treatment Capabilities
           </h2>
-        </FadeUp>
-        <FadeUp delay={0.06} className="mb-12">
+        </div>
+        <div className="fade-up mb-12">
           <div className="max-w-3xl">
             <div className="flex items-center gap-2.5 mb-4"><span className="w-5 h-px bg-[#e7212b]" /><span className="text-[#e7212b] text-[10px] font-semibold tracking-[3.5px] uppercase">What We Do</span></div>
             <h2 className="text-3xl sm:text-[2.2rem] font-bold text-[#0B0D26] leading-[1.15] mb-5">Post-Weld Heat Treatment and Stress Relief Services</h2>
             <p className="text-gray-500 text-[15px] leading-[1.85] mb-4">Post-weld heat treatment (PWHT) is essential for relieving residual stresses introduced during welding — reducing the risk of stress corrosion cracking, hydrogen-induced cracking, and brittle fracture in welded components. PWHT involves controlled heating to a specified temperature, holding for a defined period, and controlled cooling at a rate that prevents thermal shock.</p>
             <p className="text-gray-500 text-[15px] leading-[1.85] mb-8">TTS provides electric resistance heating blanket PWHT with multi-zone thermocouple monitoring and automated temperature recording — compliant with ASME VIII, AWS D1.1, and BS EN 13445. Our services cover pressure vessels, piping, structural welds, and repair welds, with full thermal documentation including time-temperature charts, thermocouple maps, and heat treatment certificates for your quality records.</p>
           </div>
-        </FadeUp>
+        </div>
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 mb-16">
           {CARDS.map((card, i) => (
-            <FadeUp key={card.title} delay={0.08 * i}>
+            <div className="fade-up">
               <div className="group rounded-2xl border border-[#e8eaf0] bg-white p-6 hover:border-[#e7212b]/25 hover:shadow-xl hover:shadow-[#e7212b]/6 transition-all duration-300 h-full">
                 <div className="w-10 h-10 rounded-xl bg-[#e7212b]/8 border border-[#e7212b]/15 flex items-center justify-center mb-4 group-hover:bg-[#e7212b]/15 transition-all duration-300">
                   <card.Icon className="w-4.5 h-4.5 text-[#e7212b]" strokeWidth={1.8} />
@@ -53,10 +41,10 @@ export default function HeatTreatmentContent() {
                 <h3 className="text-[15px] font-bold text-[#0B0D26] mb-2">{card.title}</h3>
                 <p className="text-gray-500 text-[13px] leading-[1.7]">{card.body}</p>
               </div>
-            </FadeUp>
+            </div>
           ))}
         </div>
-        <FadeUp delay={0.1}>
+        <div className="fade-up d1">
           <div className="rounded-2xl bg-[#000000] blueprint-grid blueprint-dot-grid p-8 sm:p-10 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-6">
             <div>
               <p className="text-white/40 text-[10px] tracking-[2px] uppercase mb-2">Standards &amp; Codes</p>
@@ -68,7 +56,7 @@ export default function HeatTreatmentContent() {
               <ArrowRight className="w-4 h-4" />
             </Link>
           </div>
-        </FadeUp>
+        </div>
       </div>
     </section>
   );

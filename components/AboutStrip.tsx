@@ -1,12 +1,10 @@
 "use client";
 import Link from "next/link";
-import { motion, useInView } from "framer-motion";
 import { useRef } from "react";
 import { ArrowRight } from "lucide-react";
 
 export default function AboutStrip() {
   const ref = useRef<HTMLDivElement>(null);
-  const inView = useInView(ref, { once: true, margin: "-80px" });
 
   return (
     <section className="py-16 lg:py-20" style={{ background: "var(--color-brand-navy-mid)" }}>
@@ -14,10 +12,7 @@ export default function AboutStrip() {
         <div ref={ref} className="grid grid-cols-1 lg:grid-cols-[1fr_auto] gap-10 items-center">
 
           {/* Left — copy */}
-          <motion.div
-            initial={{ opacity: 0, x: -24 }}
-            animate={inView ? { opacity: 1, x: 0 } : {}}
-            transition={{ duration: 0.6, ease: [0.22, 1, 0.36, 1] }}
+          <div
             className="max-w-2xl"
           >
             <div className="flex items-center gap-2 mb-4">
@@ -45,13 +40,10 @@ export default function AboutStrip() {
             >
               Learn more about us <ArrowRight className="w-4 h-4" />
             </Link>
-          </motion.div>
+          </div>
 
           {/* Right — ISO badges */}
-          <motion.div
-            initial={{ opacity: 0, x: 24 }}
-            animate={inView ? { opacity: 1, x: 0 } : {}}
-            transition={{ duration: 0.6, delay: 0.1, ease: [0.22, 1, 0.36, 1] }}
+          <div
             className="flex flex-col sm:flex-row lg:flex-col gap-3"
           >
             <div
@@ -68,7 +60,7 @@ export default function AboutStrip() {
               <p className="text-white text-[15px] font-bold">ISO 14001:2015</p>
               <p className="text-white/40 text-[12px] mt-1 font-medium">Environmental</p>
             </div>
-          </motion.div>
+          </div>
 
         </div>
       </div>

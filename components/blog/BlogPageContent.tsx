@@ -1,6 +1,6 @@
 "use client";
 
-import { useState, useRef, useEffect } from "react";
+import { useState, useRef, useEffect, useLayoutEffect } from "react";
 import Link from "next/link";
 import Image from "next/image";
 import Script from "next/script";
@@ -10,7 +10,10 @@ import {
   Clock,
   BookOpen,
   User,
+  Search,
+  X,
 } from "lucide-react";
+import BlogPagination from "./BlogPagination";
 
 /* ─── Types ─────────────────────────────────────────────────────────── */
 export interface BlogPost {
@@ -44,11 +47,13 @@ const HERO_STATS = [
 ];
 
 const ALL = "All";
+const POSTS_PER_PAGE = 9;
 
 /* ─── Main component ──────────────────────────────────────────────────── */
 export default function BlogPageContent({ allPosts }: Props) {
   const vantaRef = useRef<HTMLDivElement>(null);
   const vantaEffectRef = useRef<any>(null);
+  const articlesSectionRef = useRef<HTMLDivElement>(null);
   const [threeLoaded, setThreeLoaded] = useState(false);
   const [vantaLoaded, setVantaLoaded] = useState(false);
 
@@ -111,11 +116,43 @@ export default function BlogPageContent({ allPosts }: Props) {
   const dayIndex = Math.floor(Date.now() / 86400000);
   const featured = allPosts.length > 0 ? allPosts[dayIndex % allPosts.length] : undefined;
 
-  const gridPosts = featured ? allPosts.filter((p) => p.slug !== featured.slug) : allPosts;
+  const gridPosts = (featured ? allPosts.filter((p) => p.slug !== featured.slug) : allPosts)
+    .sort((a, b) => new Date(b.date).getTime() - new Date(a.date).getTime());
 
   const [activeFilter, setActiveFilter] = useState(ALL);
+  const [searchQuery, setSearchQuery] = useState("");
+  const [currentPage, setCurrentPage] = useState(1);
+
   const categories = [ALL, ...Array.from(new Set(gridPosts.map((p) => p.category)))];
-  const filteredGrid = activeFilter === ALL ? gridPosts : gridPosts.filter((p) => p.category === activeFilter);
+
+  // Filter by category + search
+  const filteredGrid = gridPosts.filter((p) => {
+    const matchesCategory = activeFilter === ALL || p.category === activeFilter;
+    if (!matchesCategory) return false;
+    if (!searchQuery.trim()) return true;
+    const q = searchQuery.toLowerCase();
+    return p.title.toLowerCase().includes(q) || p.description.toLowerCase().includes(q);
+  });
+
+  // Pagination
+  const totalPages = Math.ceil(filteredGrid.length / POSTS_PER_PAGE);
+  const paginatedPosts = filteredGrid.slice(
+    (currentPage - 1) * POSTS_PER_PAGE,
+    currentPage * POSTS_PER_PAGE
+  );
+
+  // Reset to page 1 when filter or search changes
+  useEffect(() => {
+    setCurrentPage(1);
+  }, [activeFilter, searchQuery]);
+
+  // Scroll to article grid on every page change
+  useLayoutEffect(() => {
+    if (articlesSectionRef.current) {
+      const y = articlesSectionRef.current.getBoundingClientRect().top + window.scrollY - 20;
+      window.scrollTo({ top: y, behavior: "smooth" });
+    }
+  }, [currentPage]);
 
   return (
     <div className="min-h-screen bg-[#f8f9fb] font-sans antialiased text-[#0B0D26]">
@@ -138,7 +175,7 @@ export default function BlogPageContent({ allPosts }: Props) {
       <section
         id="hero-vanta"
         ref={vantaRef}
-        className="relative bg-[#000000] blueprint-grid blueprint-dot-grid overflow-hidden pt-32 pb-16 lg:pb-24"
+        className="relative bg-[#000000] blueprint-grid blueprint-dot-grid overflow-hidden pt-32 pb-16 lg:pb-24 min-h-[400px]"
       >
         {/* Red radial glow top-right */}
         <div
@@ -237,7 +274,7 @@ export default function BlogPageContent({ allPosts }: Props) {
                       {featured.description}
                     </p>
                     <hr className="border-gray-100 mb-5" />
-                    <div className="flex flex-wrap items-center gap-4 text-[12px] text-gray-400 font-medium">
+                    <div className="flex flex-wrap items-center gap-4 text-[12px] text-gray-500 font-medium">
                       <span className="flex items-center gap-1.5 text-[#0B0D26] font-bold uppercase tracking-wide text-[11px]">
                         <User className="w-3.5 h-3.5" />
                         TTS Editorial
@@ -265,19 +302,41 @@ export default function BlogPageContent({ allPosts }: Props) {
       )}
 
       {/* ══════════════════════════════════════════════════════════════
-          3. CATEGORY FILTER + ARTICLE GRID
+          3. SEARCH + CATEGORY FILTER + ARTICLE GRID
       ══════════════════════════════════════════════════════════════ */}
-      <section className="py-16 lg:py-24">
+      <section ref={articlesSectionRef} id="articles" className="py-16 lg:py-24">
         <div className="max-w-7xl mx-auto px-4 sm:px-6">
           <div className="flex items-center gap-2.5 mb-8">
             <span className="w-4 h-px bg-[#e7212b]" />
             <span className="text-[#e7212b] text-[10.5px] font-bold tracking-[3.5px] uppercase">
-              — All Articles
+              All Articles
             </span>
           </div>
 
+          {/* Search input */}
+          <div className="relative max-w-md mb-6">
+            <Search className="absolute left-3.5 top-1/2 -translate-y-1/2 w-4 h-4 text-gray-600 pointer-events-none" />
+            <input
+              type="text"
+              value={searchQuery}
+              onChange={(e) => setSearchQuery(e.target.value)}
+              placeholder="Search articles..."
+              aria-label="Search articles"
+              className="w-full pl-10 pr-10 py-2.5 rounded-xl border border-gray-300 bg-white text-[14px] text-[#0B0D26] placeholder:text-gray-500 focus:outline-none focus:border-[#e7212b]/50 focus:ring-1 focus:ring-[#e7212b]/20 transition-colors"
+            />
+            {searchQuery && (
+              <button
+                onClick={() => setSearchQuery("")}
+                className="absolute right-3 top-1/2 -translate-y-1/2 p-0.5 rounded-full text-gray-600 hover:text-gray-800 hover:bg-gray-100 transition-colors"
+                aria-label="Clear search"
+              >
+                <X className="w-3.5 h-3.5" />
+              </button>
+            )}
+          </div>
+
           {/* Filter pills */}
-          <div className="flex flex-wrap gap-2.5 mb-10">
+          <div className="hidden sm:flex flex-wrap gap-2.5 mb-10">
             {categories.map((cat) => (
               <button
                 key={cat}
@@ -294,6 +353,11 @@ export default function BlogPageContent({ allPosts }: Props) {
             ))}
           </div>
 
+          {/* Result count */}
+          <p className="text-gray-500 text-[13px] mb-6">
+            Showing {paginatedPosts.length} of {filteredGrid.length} articles
+          </p>
+
           {/* Grid */}
           {filteredGrid.length === 0 ? (
             <div className="flex flex-col items-center justify-center py-20 text-center">
@@ -302,15 +366,24 @@ export default function BlogPageContent({ allPosts }: Props) {
               </div>
               <h3 className="text-lg font-bold text-[#0B0D26]">No Articles Found</h3>
               <p className="text-gray-500 text-sm mt-1 max-w-xs">
-                No articles in this category yet. Try &quot;All&quot; to see everything.
+                No articles match your search. Try &quot;All&quot; or adjust your filters.
               </p>
             </div>
           ) : (
-            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-7">
-              {filteredGrid.map((post) => (
-                <ArticleCard key={post.slug} post={post} />
-              ))}
-            </div>
+            <>
+              <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-7">
+                {paginatedPosts.map((post) => (
+                  <ArticleCard key={post.slug} post={post} />
+                ))}
+              </div>
+
+              {/* Pagination */}
+              <BlogPagination
+                currentPage={currentPage}
+                totalPages={totalPages}
+                onPageChange={setCurrentPage}
+              />
+            </>
           )}
         </div>
       </section>
@@ -347,7 +420,7 @@ function ArticleCard({ post }: { post: BlogPost }) {
             {post.description}
           </p>
           <div className="border-t border-gray-100 pt-3.5 flex items-center justify-between mt-auto">
-            <span className="flex items-center gap-3 text-[11px] text-gray-400 font-medium">
+            <span className="flex items-center gap-3 text-[11px] text-gray-500 font-medium">
               <span className="flex items-center gap-1">
                 <Calendar className="w-3 h-3" />
                 {post.date}

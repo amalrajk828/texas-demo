@@ -71,7 +71,7 @@ export default function ContactPage() {
   return (
     <div className="bg-white">
       {/* ═══ HERO ═══════════════════════════════════════════════════ */}
-      <section className="relative bg-[#000000] blueprint-grid blueprint-dot-grid overflow-hidden pt-32 pb-20 lg:pb-28">
+      <section className="relative bg-[#000000] blueprint-grid blueprint-dot-grid overflow-hidden pt-32 pb-20 lg:pb-28 min-h-[400px]">
         {/* Grid texture */}
         <div
           className="absolute inset-0 pointer-events-none"
@@ -381,7 +381,7 @@ export default function ContactPage() {
                 className="bg-white rounded-2xl overflow-hidden border border-gray-100 hover:border-[#e7212b]/30 transition-colors"
               >
                 {/* Map */}
-                <div className="relative aspect-[16/10] bg-gray-100">
+                <div className="relative aspect-[16/10] min-h-[200px] bg-gray-100">
                   <iframe
                     src={office.mapEmbed}
                     width="100%"

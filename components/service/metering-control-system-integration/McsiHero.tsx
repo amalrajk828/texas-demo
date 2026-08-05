@@ -1,11 +1,10 @@
 "use client";
 import Link from "next/link";
-import { motion } from "framer-motion";
 import { ArrowRight, Cpu } from "lucide-react";
 
 export default function McsiHero() {
   return (
-    <section className="relative bg-[#000000] blueprint-grid blueprint-dot-grid overflow-hidden pt-32 pb-16 lg:pb-20">
+    <section className="relative bg-[#000000] blueprint-grid blueprint-dot-grid overflow-hidden pt-32 pb-16 lg:pb-20 min-h-[400px]">
 
       {/* Grid texture */}
       <div
@@ -37,10 +36,7 @@ export default function McsiHero() {
       <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6">
 
         {/* Breadcrumb */}
-        <motion.div
-          initial={{ opacity: 0, y: 12 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.5, ease: [0.22, 1, 0.36, 1] }}
+        <div
           className="flex items-center gap-2 mb-8 text-[12px] text-white/30 flex-wrap"
         >
           <Link href="/" className="hover:text-white/60 transition-colors">Home</Link>
@@ -50,15 +46,12 @@ export default function McsiHero() {
           <Link href="/service/flow-measurement-solutions/" className="hover:text-white/60 transition-colors">Flow Measurement</Link>
           <span>/</span>
           <span className="text-white/60">Metering Control System Integration</span>
-        </motion.div>
+        </div>
 
         <div className="max-w-full">
 
           {/* Eyebrow */}
-          <motion.div
-            initial={{ opacity: 0, y: 14 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.5, delay: 0.05, ease: [0.22, 1, 0.36, 1] }}
+          <div
             className="flex items-center gap-2.5 mb-5"
           >
             <div className="w-9 h-9 rounded-xl bg-[#e7212b]/10 border border-[#e7212b]/25 flex items-center justify-center">
@@ -67,39 +60,30 @@ export default function McsiHero() {
             <span className="text-[#e7212b] text-[11px] font-semibold tracking-[3px] uppercase">
               Flow Measurement Solutions
             </span>
-          </motion.div>
+          </div>
 
           {/* Heading */}
-          <motion.h1
-            initial={{ opacity: 0, y: 18 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, delay: 0.1, ease: [0.22, 1, 0.36, 1] }}
+          <h1
             className="text-4xl sm:text-5xl lg:text-[3.2rem] font-bold text-white leading-[1.12] mb-6"
           >
             Metering Control{" "}
             <em className="not-italic text-[#e7212b]">System</em>
             <br className="hidden sm:block" />
             {" "}Integration
-          </motion.h1>
+          </h1>
 
           {/* Body */}
-          <motion.p
-            initial={{ opacity: 0, y: 14 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.55, delay: 0.18, ease: [0.22, 1, 0.36, 1] }}
+          <p
             className="text-white/50 text-base sm:text-[16px] leading-relaxed mb-8 max-w-none"
           >
             Welcome to TTS, where we specialize in Custody Transfer Flow Metering Control System
             Development and Integration. With an unwavering commitment to precision, accuracy, and
             compliance, we are your trusted partner for optimizing and enhancing your custody
             transfer operations.
-          </motion.p>
+          </p>
 
           {/* CTAs */}
-          <motion.div
-            initial={{ opacity: 0, y: 12 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.5, delay: 0.24, ease: [0.22, 1, 0.36, 1] }}
+          <div
             className="flex flex-wrap gap-3"
           >
             <a
@@ -115,15 +99,12 @@ export default function McsiHero() {
             >
               ← Flow Measurement
             </Link>
-          </motion.div>
+          </div>
 
         </div>
 
         {/* Stats bar */}
-        <motion.div
-          initial={{ opacity: 0, y: 16 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.55, delay: 0.3, ease: [0.22, 1, 0.36, 1] }}
+        <div
           className="mt-16 grid grid-cols-2 sm:grid-cols-4 gap-4"
         >
           {[
@@ -140,7 +121,7 @@ export default function McsiHero() {
               <p className="text-[12px] text-white/30 mt-1.5 tracking-wide">{stat.label}</p>
             </div>
           ))}
-        </motion.div>
+        </div>
 
       </div>
     </section>

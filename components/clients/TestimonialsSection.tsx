@@ -1,8 +1,6 @@
 "use client";
 
 import Image from "next/image";
-import { motion, useInView } from "framer-motion";
-import { useRef } from "react";
 import { Star } from "lucide-react";
 
 const testimonials = [
@@ -26,18 +24,6 @@ const testimonials = [
   },
 ];
 
-function FadeUp({ children, delay = 0 }: { children: React.ReactNode; delay?: number }) {
-  const ref = useRef<HTMLDivElement>(null);
-  const inView = useInView(ref, { once: true, margin: "-60px" });
-  return (
-    <motion.div ref={ref} initial={{ opacity: 0, y: 28 }}
-      animate={inView ? { opacity: 1, y: 0 } : {}}
-      transition={{ duration: 0.65, ease: [0.22, 1, 0.36, 1], delay }}>
-      {children}
-    </motion.div>
-  );
-}
-
 export default function TestimonialsSection() {
   return (
     <section className="bg-[#000000] blueprint-grid blueprint-dot-grid relative overflow-hidden">
@@ -48,21 +34,21 @@ export default function TestimonialsSection() {
 
       <div className="relative z-10 max-w-6xl mx-auto px-4 sm:px-6 py-20 lg:py-28">
         <div className="text-center mb-14">
-          <FadeUp>
+          <div className="fade-up">
             <span className="text-[11px] font-bold tracking-[0.28em] uppercase text-[#e7212b]">
               testimonials
             </span>
-          </FadeUp>
-          <FadeUp delay={0.1}>
+          </div>
+          <div className="fade-up d1">
             <h2 className="mt-4 text-3xl lg:text-4xl font-bold text-white">
               What people say
             </h2>
-          </FadeUp>
+          </div>
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
           {testimonials.map((t, i) => (
-            <FadeUp key={t.name} delay={0.15 + i * 0.1}>
+            <div key={t.name} className={`fade-up d${i + 2}`}>
               <div
                 className="bg-white/5 border border-white/10 hover:border-[#e7212b]/40 rounded-2xl p-8 flex flex-col gap-5 transition-all duration-300 h-full"
               >
@@ -84,7 +70,7 @@ export default function TestimonialsSection() {
                   </div>
                 </div>
               </div>
-            </FadeUp>
+            </div>
           ))}
         </div>
       </div>

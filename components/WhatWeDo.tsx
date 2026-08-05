@@ -1,8 +1,6 @@
 "use client";
 import Link from "next/link";
 import Image from "next/image";
-import { motion, useInView } from "framer-motion";
-import { useRef } from "react";
 import { ArrowRight, Gauge, FlaskConical, Cpu } from "lucide-react";
 import { ThemePrimaryLink } from "@/components/ThemeButton";
 import { SITE_URL } from "@/lib/site";
@@ -18,17 +16,6 @@ const BODY = [
   "Committed to end-to-end metering solutions through strategic OEM partnerships — custody transfer skids, flow meters, flow computers, CEMS analyzers, and field instruments across oil & gas, power plants, and commercial sectors.",
 ];
 
-function FadeUp({ children, delay = 0, className = "" }: { children: React.ReactNode; delay?: number; className?: string }) {
-  const ref = useRef<HTMLDivElement>(null);
-  const inView = useInView(ref, { once: true, margin: "-60px" });
-  return (
-    <motion.div ref={ref} initial={{ opacity: 0, y: 24 }} animate={inView ? { opacity: 1, y: 0 } : {}}
-      transition={{ duration: 0.6, ease: [0.22, 1, 0.36, 1], delay }} className={className}>
-      {children}
-    </motion.div>
-  );
-}
-
 export default function WhatWeDo() {
   return (
     <section className="relative bg-white py-24 lg:py-32 overflow-hidden">
@@ -43,7 +30,7 @@ export default function WhatWeDo() {
 
         {/* Header */}
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 lg:gap-16 items-end mb-16">
-          <FadeUp delay={0}>
+          <div className="fade-up">
             <div className="flex items-center gap-2.5 mb-4">
               <span className="w-6 h-px" style={{ background: "var(--color-brand-red)" }} />
               <span className="text-[11px] font-semibold tracking-[3px] uppercase" style={{ color: "var(--color-brand-red)" }}>
@@ -53,20 +40,20 @@ export default function WhatWeDo() {
             <h2 className="text-4xl sm:text-[2.8rem] font-bold leading-[1.12]" style={{ color: "var(--color-brand-navy)" }}>
               What We Do
             </h2>
-          </FadeUp>
-          <FadeUp delay={0.1} className="lg:text-right">
+          </div>
+          <div className="fade-up lg:text-right">
             <p className="text-gray-500 text-[15px] leading-relaxed max-w-lg lg:ml-auto">
               Texas Technical Services delivers precision-engineered solutions across
               flow measurement, inspection, and industrial automation — trusted by
               leading operators since 2008.
             </p>
-          </FadeUp>
+          </div>
         </div>
 
         {/* Service cards */}
         <div className="grid grid-cols-1 md:grid-cols-3 gap-5 mb-20">
           {SERVICES.map((svc, i) => (
-            <FadeUp key={svc.title} delay={0.08 + i * 0.1}>
+            <div className="fade-up">
               <div
                 className="group relative rounded-2xl overflow-hidden transition-all duration-300 hover:-translate-y-1 h-full flex flex-col border"
                 style={{
@@ -115,7 +102,7 @@ export default function WhatWeDo() {
                   </div>
                 </div>
               </div>
-            </FadeUp>
+            </div>
           ))}
         </div>
 
@@ -123,7 +110,7 @@ export default function WhatWeDo() {
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-14 lg:gap-20 items-center">
 
           {/* LEFT — images */}
-          <FadeUp delay={0} className="relative pb-10 lg:pb-0">
+          <div className="fade-up relative pb-10 lg:pb-0">
             <div
               className="relative rounded-2xl overflow-hidden aspect-[16/11] shadow-2xl shadow-black/20"
               style={{ background: "var(--color-brand-navy)" }}
@@ -163,19 +150,19 @@ export default function WhatWeDo() {
               <p className="text-white text-[10px] font-bold tracking-[1.5px] uppercase leading-none">ISO 9001:2015</p>
               <p className="text-white/70 text-[11px] mt-1 leading-none font-medium tracking-wide">Certified · Est. 2008</p>
             </div>
-          </FadeUp>
+          </div>
 
           {/* RIGHT — copy */}
           <div>
-            <FadeUp delay={0.08}>
+            <div className="fade-up d1">
               <div className="space-y-5 mb-10">
                 {BODY.map((para, i) => (
                   <p key={i} className="text-[#4a4a4a] text-[15px] leading-[1.8]">{para}</p>
                 ))}
               </div>
-            </FadeUp>
+            </div>
 
-            <FadeUp delay={0.16}>
+            <div className="fade-up d2">
               <div className="grid grid-cols-2 gap-4 mb-10">
                 {[
                   { num: "18+",  label: "Years of Excellence" },
@@ -189,9 +176,9 @@ export default function WhatWeDo() {
                   </div>
                 ))}
               </div>
-            </FadeUp>
+            </div>
 
-            <FadeUp delay={0.22}>
+            <div className="fade-up d2">
               <div className="flex flex-wrap gap-3">
                 <ThemePrimaryLink href={`${SITE_URL}/contacts/`} external>
                   Contact Us <ArrowRight className="w-4 h-4" />
@@ -203,7 +190,7 @@ export default function WhatWeDo() {
                   Our Services →
                 </Link>
               </div>
-            </FadeUp>
+            </div>
           </div>
         </div>
 

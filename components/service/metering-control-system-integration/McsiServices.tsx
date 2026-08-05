@@ -1,7 +1,5 @@
 "use client";
 import Image from "next/image";
-import { motion, useInView } from "framer-motion";
-import { useRef } from "react";
 import {
   Gauge,
   Network,
@@ -14,29 +12,6 @@ import {
 import NeumorphicDeliverCard from "@/components/service/common/NeumorphicDeliverCard";
 
 /* ─── Fade-up helper ─────────────────────────────────────────── */
-function FadeUp({
-  children,
-  delay = 0,
-  className = "",
-}: {
-  children: React.ReactNode;
-  delay?: number;
-  className?: string;
-}) {
-  const ref = useRef<HTMLDivElement>(null);
-  const inView = useInView(ref, { once: true, margin: "-60px" });
-  return (
-    <motion.div
-      ref={ref}
-      initial={{ opacity: 0, y: 24 }}
-      animate={inView ? { opacity: 1, y: 0 } : {}}
-      transition={{ duration: 0.6, ease: [0.22, 1, 0.36, 1], delay }}
-      className={className}
-    >
-      {children}
-    </motion.div>
-  );
-}
 
 const SERVICES = [
   {
@@ -76,7 +51,7 @@ export default function McsiServices() {
     <section className="relative bg-white py-20 lg:py-24 border-t border-gray-100 overflow-hidden">
       <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6">
         {/* ── Section header ── */}
-        <FadeUp delay={0} className="mb-14">
+        <div className="fade-up mb-14">
           <div className="flex items-center gap-2.5 mb-4">
             <span className="w-5 h-px bg-[#e7212b]" />
             <span className="text-[#e7212b] text-[10px] font-semibold tracking-[3.5px] uppercase">
@@ -86,14 +61,14 @@ export default function McsiServices() {
           <h2 className="text-3xl sm:text-[2.4rem] font-bold text-[#1f2937] leading-[1.15] max-w-2xl">
             What We Deliver
           </h2>
-        </FadeUp>
+        </div>
 
         {/* ── Service cards grid ── */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-7 sm:gap-8">
           {SERVICES.map((item, i) => (
-            <FadeUp key={item.title} delay={0.04 + i * 0.03}>
+            <div className="fade-up">
               <NeumorphicDeliverCard item={item} index={i} />
-            </FadeUp>
+            </div>
           ))}
         </div>
       </div>

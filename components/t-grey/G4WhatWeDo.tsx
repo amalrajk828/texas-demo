@@ -2,8 +2,6 @@
 /* Kit G4 — Minimal line-rule: borderless, typography-only, red rule separators */
 import Link from "next/link";
 import Image from "next/image";
-import { motion, useInView } from "framer-motion";
-import { useRef } from "react";
 import { ArrowRight, Gauge, FlaskConical, Cpu } from "lucide-react";
 
 const SERVICES = [
@@ -11,17 +9,6 @@ const SERVICES = [
   { Icon: FlaskConical, num: "02", title: "Inspection & Testing",       desc: "Specialised NDT, validation and mechanical testing of metering systems with full ISO-certified consultancy support." },
   { Icon: Cpu,          num: "03", title: "Industrial Automation",      desc: "End-to-end plant automation — PLC, SCADA, HMI, VFDs and CEMS for oil & gas, power, and manufacturing sectors." },
 ];
-
-function FadeUp({ children, delay = 0, className = "" }: { children: React.ReactNode; delay?: number; className?: string }) {
-  const ref = useRef<HTMLDivElement>(null);
-  const inView = useInView(ref, { once: true, margin: "-60px" });
-  return (
-    <motion.div ref={ref} initial={{ opacity: 0, y: 20 }} animate={inView ? { opacity: 1, y: 0 } : {}}
-      transition={{ duration: 0.6, ease: [0.22, 1, 0.36, 1], delay }} className={className}>
-      {children}
-    </motion.div>
-  );
-}
 
 export default function G4WhatWeDo() {
   return (
@@ -31,7 +18,7 @@ export default function G4WhatWeDo() {
 
         <div className="grid grid-cols-1 lg:grid-cols-[400px_1fr] gap-16 lg:gap-24">
           {/* Left column */}
-          <FadeUp>
+          <div className="fade-up">
             <div className="flex items-center gap-3 mb-5">
               <span className="w-10 h-[3px] rounded-full" style={{ background: "var(--color-brand-red)" }} />
               <span className="text-[11px] font-bold tracking-[3.5px] uppercase" style={{ color: "var(--color-brand-red)" }}>What We Do</span>
@@ -57,12 +44,12 @@ export default function G4WhatWeDo() {
               onMouseLeave={e => (e.currentTarget.style.background = "var(--color-brand-red)")}>
               Contact Us <ArrowRight className="w-4 h-4" />
             </Link>
-          </FadeUp>
+          </div>
 
           {/* Right — typography-only service list */}
           <div className="flex flex-col justify-center">
             {SERVICES.map((svc, i) => (
-              <FadeUp key={svc.title} delay={0.1 + i * 0.1}>
+              <div className="fade-up d1">
                 <div className={`group py-10 ${i > 0 ? "border-t" : ""}`} style={{ borderColor: "var(--g-border)" }}>
                   <div className="flex items-start gap-8">
                     {/* Number + icon */}
@@ -84,11 +71,11 @@ export default function G4WhatWeDo() {
                     </div>
                   </div>
                 </div>
-              </FadeUp>
+              </div>
             ))}
 
             {/* Stats */}
-            <FadeUp delay={0.4}>
+            <div className="fade-up d4">
               <div className="mt-6 pt-8 border-t grid grid-cols-3 gap-6" style={{ borderColor: "var(--g-border)" }}>
                 {[{ num: "18+", label: "Years" }, { num: "200+", label: "Clients" }, { num: "8", label: "Industries" }].map(s => (
                   <div key={s.label}>
@@ -97,7 +84,7 @@ export default function G4WhatWeDo() {
                   </div>
                 ))}
               </div>
-            </FadeUp>
+            </div>
           </div>
         </div>
       </div>

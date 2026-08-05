@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { blogArticles } from "@/lib/blogArticles";
+import { blogMetadata } from "@/lib/blogMetadata";
 import BlogPageContent, { type BlogPost } from "@/components/blog/BlogPageContent";
 import { BreadcrumbJsonLd } from "@/components/schema/BreadcrumbJsonLd";
 import { ItemListJsonLd } from "@/components/schema/ItemListJsonLd";
@@ -57,13 +57,13 @@ export const metadata: Metadata = {
   },
 };
 
-const blogPosts: BlogPost[] = Object.entries(blogArticles).map(([slug, article]) => {
+const blogPosts: BlogPost[] = blogMetadata.map((article) => {
   let icon = "Activity";
   if (article.category === "Flow Measurement") icon = "Gauge";
   else if (article.category === "Industrial Automation") icon = "Cpu";
 
   return {
-    slug,
+    slug: article.slug,
     title: article.title,
     description: article.description,
     date: article.date,

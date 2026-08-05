@@ -1,7 +1,6 @@
 "use client";
 import Image from "next/image";
 import Link from "next/link";
-import { motion, useInView } from "framer-motion";
 import { useRef } from "react";
 import { ArrowRight } from "lucide-react";
 
@@ -103,9 +102,8 @@ const PER_PAGE = 12;
 
 function ServiceCard({ service, index }: { service: ServiceItem; index: number }) {
   const ref = useRef<HTMLDivElement>(null);
-  const inView = useInView(ref, { once: true, margin: "-40px" });
   return (
-    <motion.div ref={ref} initial={{ opacity: 0, y: 28 }} animate={inView ? { opacity: 1, y: 0 } : {}} transition={{ duration: 0.5, ease: [0.22, 1, 0.36, 1], delay: 0.03 + (index % 3) * 0.06 }} whileHover={{ y: -4, transition: { duration: 0.22 } }} className="h-full">
+    <div ref={ref} className="h-full">
       <Link href={service.href} className="group relative rounded-2xl border border-white/40 bg-white/25 backdrop-blur-xl overflow-hidden flex flex-col hover:border-[#e7212b]/25 hover:shadow-2xl hover:shadow-[#e7212b]/8 transition-all duration-300 h-full">
         <div className="relative aspect-[16/10] bg-[#0B0D26] overflow-hidden flex items-center justify-center">
           {service.image ? (
@@ -128,7 +126,7 @@ function ServiceCard({ service, index }: { service: ServiceItem; index: number }
           </div>
         </div>
       </Link>
-    </motion.div>
+    </div>
   );
 }
 

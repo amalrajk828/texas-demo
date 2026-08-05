@@ -1,33 +1,8 @@
 "use client";
 import Link from "next/link";
-import { motion, useInView } from "framer-motion";
-import { useRef } from "react";
 import NeumorphicServiceCard from "@/components/service/common/NeumorphicServiceCard";
 
 /* ─── Fade-up helper ─────────────────────────────────────────── */
-function FadeUp({
-  children,
-  delay = 0,
-  className = "",
-}: {
-  children: React.ReactNode;
-  delay?: number;
-  className?: string;
-}) {
-  const ref = useRef<HTMLDivElement>(null);
-  const inView = useInView(ref, { once: true, margin: "-60px" });
-  return (
-    <motion.div
-      ref={ref}
-      initial={{ opacity: 0, y: 24 }}
-      animate={inView ? { opacity: 1, y: 0 } : {}}
-      transition={{ duration: 0.6, ease: [0.22, 1, 0.36, 1], delay }}
-      className={className}
-    >
-      {children}
-    </motion.div>
-  );
-}
 
 const RELATED_SERVICES = [
   {
@@ -106,7 +81,7 @@ export default function FlowSubServices() {
   return (
     <section className="bg-white py-20 lg:py-24 border-t border-gray-100">
       <div className="max-w-7xl mx-auto px-4 sm:px-6">
-        <FadeUp delay={0} className="mb-12">
+        <div className="fade-up mb-12">
           <div className="flex items-center gap-2.5 mb-3">
             <span className="w-5 h-px bg-[#e7212b]" />
             <span className="text-[#e7212b] text-[10px] font-semibold tracking-[3.5px] uppercase">
@@ -116,13 +91,13 @@ export default function FlowSubServices() {
           <h2 className="text-2xl sm:text-3xl font-bold text-[#1f2937]">
             Related Services
           </h2>
-        </FadeUp>
+        </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-7 sm:gap-8">
           {RELATED_SERVICES.map((card, i) => (
-            <FadeUp key={card.title} delay={0.04 + i * 0.03}>
+            <div className="fade-up">
               <NeumorphicServiceCard card={card} />
-            </FadeUp>
+            </div>
           ))}
         </div>
       </div>
