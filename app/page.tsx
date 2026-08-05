@@ -28,7 +28,7 @@ const GreyVision = dynamic(() => import("@/components/t-grey/GreyVision"), {
 });
 
 export const metadata: Metadata = {
-  title: "Industrial Automation, PLC SCADA & Flow Measurement",
+  title: "Industrial Automation & Flow Measurement",
   description:
     "Industrial automation company in Kuwait & GCC — PLC SCADA integration, flow measurement, inspection, and engineering services for oil & gas.",
   alternates: { canonical: "/" },
