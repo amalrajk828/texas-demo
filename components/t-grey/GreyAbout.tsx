@@ -57,7 +57,7 @@ export default function GreyAbout() {
                 style={
                   cert.accent
                     ? {
-                        background: "var(--color-brand-red)",
+                        background: "var(--color-brand-red-dark, #B71C1C)",
                         border: "none",
                         boxShadow: "0 4px 20px color-mix(in srgb, var(--color-brand-red) 28%, transparent)",
                       }
@@ -81,7 +81,7 @@ export default function GreyAbout() {
                 <p className="relative z-10 text-[15px] font-bold" style={{ color: cert.accent ? "white" : "#111827" }}>
                   {cert.label}
                 </p>
-                <p className="relative z-10 text-[12px] mt-1 font-medium" style={{ color: cert.accent ? "rgba(255,255,255,0.75)" : "#4B5563" }}>
+                <p className="relative z-10 text-[12px] mt-1 font-medium" style={{ color: cert.accent ? "rgba(255,255,255,0.90)" : "#4B5563" }}>
                   {cert.sub}
                 </p>
               </div>

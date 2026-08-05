@@ -39,7 +39,7 @@ export default function PartnersTicker() {
       className="relative py-7 overflow-hidden select-none border-y"
       style={{ background: "#FFFFFF", borderColor: "rgba(0,0,0,0.05)" }}
     >
-      <Link href="/partners/" className="block text-center text-[10px] font-bold tracking-[4px] uppercase mb-5 hover:opacity-70 transition-opacity" style={{ color: "rgba(0,0,0,0.40)" }}>
+      <Link href="/partners/" className="block text-center text-[10px] font-bold tracking-[4px] uppercase mb-5 hover:opacity-70 transition-opacity" style={{ color: "rgba(0,0,0,0.60)" }}>
         Trusted Technology Partners
       </Link>
 

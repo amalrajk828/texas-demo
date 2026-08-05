@@ -97,7 +97,7 @@ export default function GreyServices() {
                     <span className="text-[10px] font-bold uppercase tracking-[1.5px] text-[#ff4d4d] border border-[#ff4d4d]/20 bg-[#ff4d4d]/5 rounded-full px-2.5 py-0.5 w-fit">
                       {svc.tag}
                     </span>
-                    <span className="text-[11px] font-bold tracking-[3px] text-white/30 font-mono">0{i + 1}</span>
+                     <span className="text-[11px] font-bold tracking-[3px] text-white/60 font-mono">0{i + 1}</span>
                   </div>
 
                   {/* Glassy Icon layer */}

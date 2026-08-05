@@ -76,7 +76,7 @@ export default function GreySolutions() {
                     >
                       <s.icon className="w-5 h-5" style={{ color: "var(--color-brand-red)" }} strokeWidth={1.8} />
                     </div>
-                    <span className="text-[11px] font-bold tracking-[3px] uppercase" style={{ color: "var(--color-brand-red)" }}>
+                    <span className="text-[11px] font-bold tracking-[3px] uppercase" style={{ color: "#B71C1C" }}>
                       {s.label}
                     </span>
                   </div>
@@ -97,7 +97,7 @@ export default function GreySolutions() {
                   {/* CTA */}
                   <span
                     className="inline-flex items-center gap-2 text-[13px] font-bold tracking-wide group-hover:gap-3 transition-all mt-auto"
-                    style={{ color: "var(--color-brand-red)" }}
+                    style={{ color: "#B71C1C" }}
                   >
                     Learn more
                     <ArrowRight className="w-4 h-4" />

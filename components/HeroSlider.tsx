@@ -456,9 +456,7 @@ export default function HeroSlider() {
                     </svg>
                   </div>
                 )}
-                <span className="absolute bottom-1.5 right-1.5 text-white/50 text-[9px] font-mono">
-                  {String(i + 1).padStart(2, "0")}
-                </span>
+                <span className="sr-only">{String(i + 1).padStart(2, "0")}</span>
               </button>
             ))}
           </div>
@@ -466,6 +464,7 @@ export default function HeroSlider() {
           {/* Next button */}
           <button
             onClick={next}
+            aria-label="Next slide"
             className="group flex items-center gap-2 text-white/20 hover:text-white/60 text-[11px] font-semibold tracking-[2px] uppercase transition-colors duration-200 self-end"
           >
             Next <ArrowRight className="w-3.5 h-3.5 group-hover:translate-x-1 transition-transform duration-200" />
