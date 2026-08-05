@@ -124,6 +124,9 @@ const LIGHT_GREY_VARS: Record<string, string> = {
 export default function HomePage() {
   return (
     <ThemeWrapper vars={VARS}>
+      <head>
+        <link rel="preload" href="/homevideos/homebannerimage.jpg" as="image" fetchPriority="high" />
+      </head>
 
       <Script
         id="website-schema"

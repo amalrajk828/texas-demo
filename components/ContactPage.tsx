@@ -381,7 +381,7 @@ export default function ContactPage() {
                 className="bg-white rounded-2xl overflow-hidden border border-gray-100 hover:border-[#e7212b]/30 transition-colors"
               >
                 {/* Map */}
-                <div className="relative aspect-[16/10] bg-gray-100">
+                <div className="relative aspect-[16/10] min-h-[200px] bg-gray-100">
                   <iframe
                     src={office.mapEmbed}
                     width="100%"
