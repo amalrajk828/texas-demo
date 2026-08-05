@@ -99,7 +99,7 @@ export default function GreySolutions() {
                     className="inline-flex items-center gap-2 text-[13px] font-bold tracking-wide group-hover:gap-3 transition-all mt-auto"
                     style={{ color: "#B71C1C" }}
                   >
-                    Learn more
+                    Learn more about {s.label}
                     <ArrowRight className="w-4 h-4" />
                   </span>
                 </div>

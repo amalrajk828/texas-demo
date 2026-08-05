@@ -85,9 +85,6 @@ export default function GreyTeam() {
                   onMouseLeave={e => (e.currentTarget.style.background = "var(--color-brand-red)")}>
                   Know More <ArrowRight className="w-4 h-4" />
                 </Link>
-                <Link href="/about-us/" className="text-[15px] font-semibold" style={{ color: "var(--g-muted)" }}>
-                  Learn more about us →
-                </Link>
               </div>
             </div>
           </div>

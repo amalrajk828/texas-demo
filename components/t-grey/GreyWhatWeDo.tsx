@@ -181,7 +181,7 @@ export default function GreyWhatWeDo() {
                         href="/services/"
                         className="inline-flex items-center gap-2 text-[14px] font-semibold text-[#E53935] no-underline hover:underline transition-all duration-200"
                       >
-                        Learn more{" "}
+                        Learn more about our services{" "}
                         <ArrowRight className="w-4 h-4 transition-transform duration-200 group-hover:translate-x-1" />
                       </Link>
                     </div>
