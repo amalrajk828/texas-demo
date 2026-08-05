@@ -253,7 +253,7 @@ export default function HeroSlider() {
       <div className="relative z-10 w-full max-w-[1536px] mx-auto px-5 sm:px-10 lg:px-10 grid grid-cols-1 lg:grid-cols-[1fr_420px] xl:grid-cols-[1fr_680px] 2xl:grid-cols-[1fr_780px] gap-8 lg:gap-8 items-center pt-[116px] pb-10 lg:pt-[76px] lg:pb-14">
 
         {/* LEFT: Text column */}
-        <div className="flex flex-col justify-center pt-16 pb-8 lg:py-0">
+        <div className="flex flex-col justify-center pt-16 pb-8 lg:py-0" style={{ minHeight: "400px" }}>
           <AnimatePresence mode="wait" initial={false}>
             <motion.div
               key={current}

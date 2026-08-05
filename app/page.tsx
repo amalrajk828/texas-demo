@@ -9,7 +9,9 @@ import GreyTeam from "@/components/t-grey/GreyTeam";
 import GreyAbout from "@/components/t-grey/GreyAbout";
 import GreyCta from "@/components/t-grey/GreyCta";
 
-const HeroSlider = dynamic(() => import("@/components/HeroSlider"));
+const HeroSlider = dynamic(() => import("@/components/HeroSlider"), {
+  loading: () => <div style={{ minHeight: "100vh", background: "#000" }} />,
+});
 
 const PartnersTicker = dynamic(() => import("@/components/PartnersTicker"), {
   loading: () => <div className="py-7 border-y" style={{ minHeight: 154 }} />,
