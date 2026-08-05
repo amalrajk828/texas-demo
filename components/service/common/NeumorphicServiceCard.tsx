@@ -1,5 +1,6 @@
-import NeumorphicDeliverCard from "@/components/service/common/NeumorphicDeliverCard";
 "use client";
+
+import NeumorphicDeliverCard from "@/components/service/common/NeumorphicDeliverCard";
 import Link from "next/link";
 import { ArrowRight } from "lucide-react";
 

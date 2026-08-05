@@ -1,6 +1,5 @@
 "use client";
 import Link from "next/link";
-import { motion, useInView } from "framer-motion";
 import { useRef } from "react";
 import {
   Flame, Factory, Zap, Droplets,
@@ -20,18 +19,14 @@ const INDUSTRIES = [
 
 export default function Industries() {
   const ref = useRef<HTMLDivElement>(null);
-  const inView = useInView(ref, { once: true, margin: "-80px" });
 
   return (
     <section className="bg-white py-20 lg:py-24">
       <div className="max-w-7xl mx-auto px-4 sm:px-6">
 
         {/* Header */}
-        <motion.div
+        <div
           ref={ref}
-          initial={{ opacity: 0, y: 20 }}
-          animate={inView ? { opacity: 1, y: 0 } : {}}
-          transition={{ duration: 0.55, ease: [0.22, 1, 0.36, 1] }}
           className="text-center mb-12"
         >
           <div className="flex items-center justify-center gap-3 mb-3">
@@ -44,16 +39,13 @@ export default function Industries() {
           <h2 className="text-3xl sm:text-4xl font-bold text-[#0B0D26]">
             Built for the world&apos;s most demanding sectors
           </h2>
-        </motion.div>
+        </div>
 
         {/* Grid */}
         <div className="grid grid-cols-2 sm:grid-cols-4 gap-4 lg:gap-5">
           {INDUSTRIES.map((ind, i) => (
-            <motion.div
+            <div
               key={ind.slug}
-              initial={{ opacity: 0, y: 24 }}
-              animate={inView ? { opacity: 1, y: 0 } : {}}
-              transition={{ duration: 0.5, delay: 0.06 + i * 0.06, ease: [0.22, 1, 0.36, 1] }}
             >
               <Link
                 href={`/industries/${ind.slug}/`}
@@ -67,7 +59,7 @@ export default function Industries() {
                 </p>
                 <p className="text-[11px] text-gray-400 mt-1">{ind.sub}</p>
               </Link>
-            </motion.div>
+            </div>
           ))}
         </div>
 

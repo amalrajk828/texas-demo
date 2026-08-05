@@ -5,7 +5,7 @@ const nextConfig: NextConfig = {
   trailingSlash: true,
   transpilePackages: ["lucide-react"],
   experimental: {
-    optimizePackageImports: ["lucide-react", "framer-motion", "three"],
+    optimizePackageImports: ["lucide-react", "framer-motion"],
   },
   images: {
     remotePatterns: [

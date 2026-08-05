@@ -2,7 +2,6 @@
 
 import { useEffect } from "react";
 import { usePathname } from "next/navigation";
-import Lenis from "lenis";
 
 function ScrollReset() {
   const pathname = usePathname();
@@ -30,30 +29,36 @@ export default function SmoothScroll({ children }: { children: React.ReactNode }
       return;
     }
 
-    const lenis = new Lenis({
-      duration: 1.2,
-      easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)),
-      orientation: "vertical",
-      gestureOrientation: "vertical",
-      smoothWheel: true,
-      wheelMultiplier: 1,
-      touchMultiplier: 2,
-    });
-
-    (window as any).lenis = lenis;
-
     let rafId: number;
-    function raf(time: number) {
-      lenis.raf(time);
-      rafId = requestAnimationFrame(raf);
-    }
+    let lenisInstance: any = null;
 
-    rafId = requestAnimationFrame(raf);
+    import("lenis").then(({ default: Lenis }) => {
+      lenisInstance = new Lenis({
+        duration: 1.2,
+        easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)),
+        orientation: "vertical",
+        gestureOrientation: "vertical",
+        smoothWheel: true,
+        wheelMultiplier: 1,
+        touchMultiplier: 2,
+      });
+
+      (window as any).lenis = lenisInstance;
+
+      function raf(time: number) {
+        lenisInstance.raf(time);
+        rafId = requestAnimationFrame(raf);
+      }
+
+      rafId = requestAnimationFrame(raf);
+    });
 
     return () => {
       cancelAnimationFrame(rafId);
       (window as any).lenis = null;
-      lenis.destroy();
+      if (lenisInstance) {
+        lenisInstance.destroy();
+      }
     };
   }, []);
 

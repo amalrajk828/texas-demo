@@ -1,7 +1,6 @@
 "use client";
 
 import { useRef } from "react";
-import { motion, useInView } from "framer-motion";
 import { ShieldCheck } from "lucide-react";
 import BadgeList from "./BadgeList";
 import type { BadgeItem } from "./types";
@@ -92,13 +91,9 @@ export default function AnalyzersEhSection() {
 
 function EhCard({ category }: { category: EhCategory }) {
   const ref = useRef<HTMLDivElement>(null);
-  const inView = useInView(ref, { once: true, margin: "-80px" });
   return (
-    <motion.div
+    <div
       ref={ref}
-      initial={{ opacity: 0, y: 24 }}
-      animate={inView ? { opacity: 1, y: 0 } : {}}
-      transition={{ duration: 0.5, ease: [0.22, 1, 0.36, 1] }}
       className="rounded-xl border border-white/[0.12] bg-white/[0.10] backdrop-blur-xl p-6 flex flex-col shadow-[0_4px_32px_rgba(0,0,0,0.35)]"
     >
       <div className="mb-3">
@@ -125,6 +120,6 @@ function EhCard({ category }: { category: EhCategory }) {
           {category.benefit}
         </p>
       </div>
-    </motion.div>
+    </div>
   );
 }

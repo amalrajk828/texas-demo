@@ -369,7 +369,7 @@ content: `
     pillar: "Pillar 3: Analyzers & Inspection",
     description: "Continuous Emissions Monitoring Systems (CEMS) compliance guide for industrial plants — covering extractive, in-situ, calibration gas, and EPA regulations.",
     keywords: "CEMS, emissions monitoring, environmental compliance",
-    image: "/cems.png",
+    image: "/cems.webp",
     imageAlt: "A Continuous Emissions Monitoring System (CEMS) cabinet with analysis modules and digital readouts.",
 content: `
       <p>
@@ -1000,7 +1000,7 @@ content: `
     pillar: "Pillar 1: Flow Measurement & Custody Metering",
     description: "Learn how flare meter calibration ensures EPA and ISO 14001 compliance. Compare ultrasonic insertion and thermal mass flow meters.",
     keywords: "flare meter calibration, environmental compliance, flare gas measurement",
-    image: "/flare_meter.png",
+    image: "/flare_meter.webp",
     imageAlt: "A specialized ultrasonic flare gas flow meter sensor assembly installed on a heavy industrial stack header.",
 content: `
       <p>
@@ -5002,7 +5002,7 @@ content: `
     pillar: "Pillar 3: Analyzers & Inspection",
     description: "Comprehensive guide to power plant environmental monitoring — covering CEMS integration, dust analyzers, water quality, and EPA compliance.",
     keywords: "power plant CEMS, environmental monitoring, emissions",
-    image: "/power_plant.jpg",
+    image: "/power_plant.webp",
     imageAlt: "Cooling towers and emissions stacks of a modern coal-fired thermal power generation station.",
 content: `
       <p>
@@ -5106,7 +5106,7 @@ content: `
     pillar: "Pillar 1: Flow Measurement & Custody Metering",
     description: "Comprehensive guide to flow measurement in upstream oil and gas — covering wellhead allocation metering, multiphase meters, and pipeline entry systems.",
     keywords: "upstream flow measurement, wellhead metering, oil and gas production",
-    image: "/oil_and_gas.jpg",
+    image: "/oil_and_gas.webp",
     imageAlt: "An offshore oil and gas production platform wellhead manifold configuration in deep water.",
 content: `
       <p>
@@ -6415,7 +6415,7 @@ content: `
     pillar: "Pillar 3: Analyzers & Inspection",
     description: "Compliance and technology selection guide for power plant CEMS — covering coal vs gas configurations, EPA Part 75, RATA testing, and ISO 14001.",
     keywords: "CEMS coal gas, power plant emissions, EPA compliance",
-    image: "/cems.png",
+    image: "/cems.webp",
     imageAlt: "A power plant stack continuous emissions monitoring system (CEMS) analytical rack.",
 content: `
       <p>
@@ -7170,7 +7170,7 @@ content: `
     pillar: "Pillar 3: Analyzers & Inspection",
     description: "Regulatory and technology compliance guide for thermal power plants — covering SO2, NOx, dust analyzers, FGD/SCR integration, and EPA standards.",
     keywords: "thermal power emissions, SO2 NOx monitoring, EPA",
-    image: "/power_plant.jpg",
+    image: "/power_plant.webp",
     imageAlt: "Cooling towers emitting steam alongside a flue gas stack at a thermal power plant.",
 content: `
       <p>
@@ -7638,7 +7638,7 @@ content: `
     pillar: "Pillar 3: Analyzers & Inspection",
     description: "CEMS and environmental compliance guide for LNG facilities — covering combustion turbines, flare gas monitoring, LDAR, and EPA Part 60 standards.",
     keywords: "CEMS LNG, environmental monitoring, LNG compliance",
-    image: "/cems.png",
+    image: "/cems.webp",
     imageAlt: "A CEMS analyzer cabinet designed for monitoring stack emissions at an LNG liquefaction facility.",
 content: `
       <p>
@@ -9475,7 +9475,7 @@ content: `
     pillar: "Pillar 3: Analyzers & Inspection",
     description: "Compliance guide for cement plant emissions monitoring — covering kiln CEMS, continuous dust analyzers, baghouse leaks, and EN 15267 compliance.",
     keywords: "cement plant emissions, CEMS, dust monitoring",
-    image: "/cement_industry.jpg",
+    image: "/cement_industry.webp",
     imageAlt: "Emissions stack and rotary kiln assembly of a dry-process cement manufacturing plant.",
 content: `
       <p>
@@ -11035,7 +11035,7 @@ content: `
     pillar: "Pillar 1: Flow Measurement & Custody Metering",
     description: "Guide to flare gas flow meters — covering ultrasonic systems, low-flow capabilities, header installations, and EPA 40 CFR 60 compliance.",
     keywords: "flare gas flow meters, environmental compliance, flare monitoring",
-    image: "/flare_meter.png",
+    image: "/flare_meter.webp",
     imageAlt: "An ultrasonic flare gas meter sensor assembly mounted on a flare header stack.",
 content: `
       <p>
@@ -12300,7 +12300,7 @@ content: `
     pillar: "Pillar 4: Analyzers & Inspection",
     description: "In-situ vs extractive CEMS comparison — covering measurement principles, installation, maintenance, accuracy, and environmental compliance.",
     keywords: "in-situ CEMS, extractive CEMS, continuous emissions monitoring, CEMS comparison",
-    image: "/cems.png",
+    image: "/cems.webp",
     imageAlt: "Comparison of in-situ CEMS probe mounted on stack and extractive CEMS analyzer shelter system.",
 content: `
       <p>
@@ -13312,7 +13312,7 @@ content: `
     pillar: "Pillar 1: Flow Measurement & Custody Metering",
     description: "Understand the different types of ultrasonic flow meters, how they work, and how to select the right technology for your application in oil & gas, power generation, and industrial processes.",
     keywords: "ultrasonic flow meter, ultrasonic pipe flow meter, clamp on liquid flow meter, ultrasonic natural gas flow meter, high pressure gas flow meter",
-    image: "/ultrasonic_gas_flow_meter.jpg",
+    image: "/ultrasonic_gas_flow_meter.webp",
     imageAlt: "An industrial ultrasonic flow meter installed on a pipeline for flow measurement.",
     content: `
       <p>

@@ -1,9 +1,8 @@
-import NeumorphicDeliverCard from "@/components/service/common/NeumorphicDeliverCard";
 "use client";
+
+import NeumorphicDeliverCard from "@/components/service/common/NeumorphicDeliverCard";
 import Image from "next/image";
 import Link from "next/link";
-import { motion, useInView } from "framer-motion";
-import { useRef } from "react";
 import {
   ArrowRight,
   CheckCircle2,
@@ -12,30 +11,6 @@ import {
   Droplets,
   Zap,
 } from "lucide-react";
-
-function FadeUp({
-  children,
-  delay = 0,
-  className = "",
-}: {
-  children: React.ReactNode;
-  delay?: number;
-  className?: string;
-}) {
-  const ref = useRef<HTMLDivElement>(null);
-  const inView = useInView(ref, { once: true, margin: "-60px" });
-  return (
-    <motion.div
-      ref={ref}
-      initial={{ opacity: 0, y: 24 }}
-      animate={inView ? { opacity: 1, y: 0 } : {}}
-      transition={{ duration: 0.6, ease: [0.22, 1, 0.36, 1], delay }}
-      className={className}
-    >
-      {children}
-    </motion.div>
-  );
-}
 
 const SERVICES = [
   {
@@ -87,7 +62,7 @@ export default function CalibrationContent() {
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-14 lg:gap-20 items-center">
 
           {/* Image */}
-          <FadeUp delay={0} className="relative">
+          <div className="fade-up relative">
             <div className="relative rounded-2xl overflow-hidden aspect-[16/11] bg-[#000000] blueprint-grid blueprint-dot-grid shadow-2xl shadow-black/15">
               <Image
                 src="/images/services/Banc-Calibr.jpg"
@@ -108,11 +83,11 @@ export default function CalibrationContent() {
                 ISO 17025 Accredited
               </p>
             </div>
-          </FadeUp>
+          </div>
 
           {/* Content */}
           <div>
-            <FadeUp delay={0.08}>
+            <div className="fade-up d1">
               <div className="flex items-center gap-2.5 mb-4">
                 <span className="w-5 h-px bg-[#e7212b]" />
                 <span className="text-[#e7212b] text-[10px] font-semibold tracking-[3.5px] uppercase">
@@ -134,10 +109,10 @@ export default function CalibrationContent() {
                 scope available at{" "}
                 <span className="text-[#e7212b] font-medium">www.cofrac.fr/en</span>
               </p>
-            </FadeUp>
+            </div>
 
             {/* Capabilities checklist */}
-            <FadeUp delay={0.16}>
+            <div className="fade-up d2">
               <div className="grid grid-cols-1 gap-2.5 mb-8">
                 {CAPABILITIES.map((cap) => (
                   <div key={cap} className="flex items-start gap-2.5">
@@ -146,9 +121,9 @@ export default function CalibrationContent() {
                   </div>
                 ))}
               </div>
-            </FadeUp>
+            </div>
 
-            <FadeUp delay={0.22}>
+            <div className="fade-up d2">
               <a
                 href="#contact"
                 className="inline-flex items-center gap-2 bg-[#e7212b] hover:bg-[#aa0b1b] text-white font-semibold px-7 py-3.5 rounded-lg transition-colors duration-200 text-[14px] shadow-lg shadow-[#e7212b]/15"
@@ -156,14 +131,14 @@ export default function CalibrationContent() {
                 Get More Information
                 <ArrowRight className="w-4 h-4" />
               </a>
-            </FadeUp>
+            </div>
           </div>
 
         </div>
 
         {/* ── 4 service cards ── */}
         <div>
-          <FadeUp delay={0} className="mb-12">
+          <div className="fade-up mb-12">
             <div className="flex items-center gap-2.5 mb-4">
               <span className="w-5 h-px bg-[#e7212b]" />
               <span className="text-[#e7212b] text-[10px] font-semibold tracking-[3.5px] uppercase">
@@ -173,13 +148,12 @@ export default function CalibrationContent() {
             <h2 className="text-3xl sm:text-[2.2rem] font-bold text-[#0B0D26] leading-[1.15]">
               What We Offer
             </h2>
-          </FadeUp>
+          </div>
 
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5">
             {SERVICES.map((item, i) => (
-              <FadeUp key={item.title} delay={0.08 + i * 0.08}>
-                <motion.div
-                  whileHover={{ y: -3, transition: { duration: 0.22 } }}
+              <div className="fade-up">
+                <div
                   className="neumorphic-press-card p-7 flex flex-col justify-between h-full group block text-left"
                 >
                   <span className="text-[10px] font-bold text-[#e7212b]/25 tracking-[3px] mb-4 block">
@@ -199,13 +173,13 @@ export default function CalibrationContent() {
                   <p className="text-gray-500 text-[13px] leading-[1.75] flex-1">
                     {item.body}
                   </p>
-                </motion.div>
-              </FadeUp>
+                </div>
+              </div>
             ))}
           </div>
 
           {/* Emergency service highlight + CTA */}
-          <FadeUp delay={0.42}>
+          <div className="fade-up d4">
             <div className="mt-8 rounded-2xl bg-[#000000] blueprint-grid blueprint-dot-grid overflow-hidden relative">
               {/* Grid texture */}
               <div
@@ -251,7 +225,7 @@ export default function CalibrationContent() {
                 </div>
               </div>
             </div>
-          </FadeUp>
+          </div>
         </div>
 
       </div>

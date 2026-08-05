@@ -272,7 +272,7 @@ export default function BlogPageContent({ allPosts }: Props) {
           <div className="flex items-center gap-2.5 mb-8">
             <span className="w-4 h-px bg-[#e7212b]" />
             <span className="text-[#e7212b] text-[10.5px] font-bold tracking-[3.5px] uppercase">
-              — All Articles
+              All Articles
             </span>
           </div>
 

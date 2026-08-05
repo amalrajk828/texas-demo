@@ -1,7 +1,6 @@
 "use client";
 import Image from "next/image";
 import Link from "next/link";
-import { motion } from "framer-motion";
 import { ArrowRight, CheckCircle2 } from "lucide-react";
 
 export interface WhatWeDoProps {
@@ -35,12 +34,8 @@ export function WhatWeDoSection({
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center">
           
           {/* ── Left Column: Image with Badge Overlay ── */}
-          <motion.div
-            initial={{ opacity: 0, x: -24 }}
-            whileInView={{ opacity: 1, x: 0 }}
-            viewport={{ once: true, margin: "-60px" }}
-            transition={{ duration: 0.6, ease: [0.22, 1, 0.36, 1] }}
-            className="relative"
+          <div
+            className="relative fade-up"
           >
             <div className="relative rounded-3xl overflow-hidden aspect-[4/3] shadow-2xl shadow-black/10 border border-gray-100 bg-gray-50">
               <Image
@@ -66,14 +61,11 @@ export function WhatWeDoSection({
                 )}
               </div>
             )}
-          </motion.div>
+          </div>
 
           {/* ── Right Column: Text Content & Checklist ── */}
-          <motion.div
-            initial={{ opacity: 0, x: 24 }}
-            whileInView={{ opacity: 1, x: 0 }}
-            viewport={{ once: true, margin: "-60px" }}
-            transition={{ duration: 0.6, ease: [0.22, 1, 0.36, 1], delay: 0.1 }}
+          <div
+            className="fade-up d2"
           >
             {/* Eyebrow Label */}
             <div className="flex items-center gap-2.5 mb-4">
@@ -121,7 +113,7 @@ export function WhatWeDoSection({
                 <ArrowRight className="w-4 h-4" />
               </Link>
             )}
-          </motion.div>
+          </div>
 
         </div>
       </div>

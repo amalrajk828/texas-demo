@@ -1,8 +1,6 @@
 "use client";
 /* Kit D — Grey: light section-b, white cards with grey border, red accent */
 import Link from "next/link";
-import { motion, useInView } from "framer-motion";
-import { useRef } from "react";
 import { Gauge, FlaskConical, Cpu, ArrowRight } from "lucide-react";
 import BorderGlow from "@/components/BorderGlow";
 import dynamic from "next/dynamic";
@@ -15,17 +13,6 @@ const SERVICES = [
   { Icon: FlaskConical, title: "Inspection & Testing",                        body: "Comprehensive inspection, non-destructive testing, functional testing and certification across all industrial sectors. Full ISO 14001:2015 and 45001:2018 compliance.", href: "/service/inspection-testing/",          tag: "NDT & QA" },
   { Icon: Cpu,          title: "Industrial Process Automation Solutions",     body: "Control system design, PLC programming, SCADA integration, and HMI development — optimising operations across oil & gas, power, and manufacturing plants.", href: "/service/industrial-automation/",        tag: "Automation" },
 ];
-
-function FadeUp({ children, delay = 0, className = "" }: { children: React.ReactNode; delay?: number; className?: string }) {
-  const ref = useRef<HTMLDivElement>(null);
-  const inView = useInView(ref, { once: true, margin: "-60px" });
-  return (
-    <motion.div ref={ref} initial={{ opacity: 0, y: 28 }} animate={inView ? { opacity: 1, y: 0 } : {}}
-      transition={{ duration: 0.65, ease: [0.22, 1, 0.36, 1], delay }} className={className}>
-      {children}
-    </motion.div>
-  );
-}
 
 export default function GreyServices() {
   const isMobile = useIsMobile();
@@ -63,7 +50,7 @@ export default function GreyServices() {
       <div className="absolute bottom-0 inset-x-0 h-px bg-white/[0.08]" />
 
       <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6">
-        <FadeUp className="flex flex-col lg:flex-row lg:items-end lg:justify-between gap-6 mb-14">
+        <div className="fade-up flex flex-col lg:flex-row lg:items-end lg:justify-between gap-6 mb-14">
           <div>
             <div className="flex items-center gap-3 mb-4">
               <span className="w-10 h-[3px] rounded-full" style={{ background: "var(--color-brand-red)" }} />
@@ -76,11 +63,11 @@ export default function GreyServices() {
           <p className="max-w-md text-[17px] leading-[1.85]" style={{ color: "var(--g-muted)" }}>
             Extensive expertise in custody metering, industrial automation, and inspection & testing — since 2008.
           </p>
-        </FadeUp>
+        </div>
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-12">
           {SERVICES.map((svc, i) => (
-            <FadeUp key={svc.title} delay={0.1 + i * 0.1} className="w-full h-full">
+            <div key={svc.title} className="fade-up d1 w-full h-full">
               <div className="relative group h-full">
                 {/* Soft ambient edge glow element positioned behind the card */}
                 <div
@@ -93,13 +80,8 @@ export default function GreyServices() {
                 />
 
                 {/* Single cohesive Glassmorphic Card Container */}
-                <motion.div 
-                  whileHover={{ 
-                    y: -6, 
-                    scale: 1.015,
-                    transition: { duration: 0.25, ease: "easeOut" } 
-                  }}
-                  className="relative w-full h-full min-h-[350px] p-6 flex flex-col rounded-[20px] cursor-pointer transition-all duration-300 overflow-hidden border border-white/[0.12] group-hover:border-white/[0.22] group-hover:bg-[#0E1117]/75"
+                <div 
+                  className="relative w-full h-full min-h-[350px] p-6 flex flex-col rounded-[20px] cursor-pointer transition-all duration-300 overflow-hidden border border-white/[0.12] group-hover:border-white/[0.22] group-hover:bg-[#0E1117]/75 hover:-translate-y-1.5 hover:scale-[1.015]"
                   style={{
                     background: "rgba(14, 17, 23, 0.58)",
                     backdropFilter: isMobile ? "none" : "blur(18px)",
@@ -137,18 +119,18 @@ export default function GreyServices() {
                   <Link href={svc.href} className="inline-flex items-center gap-1.5 text-xs sm:text-sm font-bold text-[#E53935] hover:gap-2.5 transition-all duration-200 mt-auto relative z-10">
                     Learn more <ArrowRight className="w-3.5 h-3.5" />
                   </Link>
-                </motion.div>
+                </div>
               </div>
-            </FadeUp>
+            </div>
           ))}
         </div>
 
-        <FadeUp delay={0.4} className="text-center">
+        <div className="fade-up text-center">
           <Link href="/services/" className="inline-flex items-center gap-2 font-semibold px-8 py-4 rounded-xl text-[15px] border hover:-translate-y-0.5 transition-all"
             style={{ color: "var(--g-heading)", borderColor: "var(--g-border)", background: "var(--g-card-bg)", boxShadow: "var(--g-card-shadow)" }}>
             View all services <ArrowRight className="w-4 h-4" />
           </Link>
-        </FadeUp>
+        </div>
       </div>
     </section>
   );

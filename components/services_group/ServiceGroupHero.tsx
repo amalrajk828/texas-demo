@@ -1,6 +1,5 @@
 "use client";
 import Link from "next/link";
-import { motion } from "framer-motion";
 import { ArrowRight, LayoutGrid, Settings } from "lucide-react";
 
 export default function ServiceGroupHero() {
@@ -29,22 +28,16 @@ export default function ServiceGroupHero() {
       />
 
       <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6">
-        <motion.div
-          initial={{ opacity: 0, y: 12 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.5, ease: [0.22, 1, 0.36, 1] }}
+        <div
           className="flex items-center gap-2 mb-8 text-[12px] text-white/30"
         >
           <Link href="/" className="hover:text-white/60 transition-colors">Home</Link>
           <span>/</span>
           <span className="text-white/60">Main Services</span>
-        </motion.div>
+        </div>
 
         <div className="flex items-start gap-12 lg:gap-16">
-          <motion.div
-            initial={{ opacity: 0, scale: 0.9 }}
-            animate={{ opacity: 1, scale: 1 }}
-            transition={{ duration: 0.6, delay: 0.1, ease: [0.22, 1, 0.36, 1] }}
+          <div
             className="hidden lg:flex items-center justify-center shrink-0 w-[280px]"
           >
             <div className="relative">
@@ -55,45 +48,33 @@ export default function ServiceGroupHero() {
                 <Settings className="w-[80px] h-[80px] text-[#e7212b]" strokeWidth={1} />
               </div>
             </div>
-          </motion.div>
+          </div>
 
           <div className="flex-1 min-w-0">
-            <motion.div
-              initial={{ opacity: 0, y: 14 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.5, delay: 0.05, ease: [0.22, 1, 0.36, 1] }}
+            <div
               className="flex items-center gap-2.5 mb-5"
             >
               <span className="w-5 h-px bg-[#e7212b]" />
               <span className="text-[#e7212b] text-[11px] font-semibold tracking-[3px] uppercase">
                 Our Complete Portfolio
               </span>
-            </motion.div>
+            </div>
 
-            <motion.h1
-              initial={{ opacity: 0, y: 18 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: 0.1, ease: [0.22, 1, 0.36, 1] }}
+            <h1
               className="text-4xl sm:text-5xl lg:text-[3.4rem] font-bold text-white leading-[1.12] mb-6"
             >
               Main <em className="not-italic text-[#e7212b]">Services</em>
-            </motion.h1>
+            </h1>
 
-            <motion.p
-              initial={{ opacity: 0, y: 14 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.55, delay: 0.18, ease: [0.22, 1, 0.36, 1] }}
+            <p
               className="text-white/50 text-base sm:text-[17px] leading-relaxed mb-8 max-w-xl"
             >
               Browse our full range of industrial services — from flow measurement and
               inspection &amp; testing to process automation and construction — delivered
               across oil &amp; gas, refinery, and petrochemical sectors since 2008.
-            </motion.p>
+            </p>
 
-            <motion.div
-              initial={{ opacity: 0, y: 12 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.5, delay: 0.24, ease: [0.22, 1, 0.36, 1] }}
+            <div
               className="flex flex-wrap gap-3"
             >
               <Link
@@ -110,14 +91,11 @@ export default function ServiceGroupHero() {
                 <LayoutGrid className="w-4 h-4" />
                 View All Services
               </a>
-            </motion.div>
+            </div>
           </div>
         </div>
 
-        <motion.div
-          initial={{ opacity: 0, y: 16 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.55, delay: 0.34, ease: [0.22, 1, 0.36, 1] }}
+        <div
           className="mt-16 grid grid-cols-2 sm:grid-cols-4 gap-4"
         >
           {[
@@ -134,7 +112,7 @@ export default function ServiceGroupHero() {
               <p className="text-[12px] text-white/30 mt-1.5 tracking-wide">{stat.label}</p>
             </div>
           ))}
-        </motion.div>
+        </div>
       </div>
     </section>
   );

@@ -1,33 +1,7 @@
 "use client";
 import Image from "next/image";
 import Link from "next/link";
-import { motion, useInView } from "framer-motion";
-import { useRef } from "react";
 import { HardHat, ArrowRight, CheckCircle2 } from "lucide-react";
-
-function FadeUp({
-  children,
-  delay = 0,
-  className = "",
-}: {
-  children: React.ReactNode;
-  delay?: number;
-  className?: string;
-}) {
-  const ref = useRef<HTMLDivElement>(null);
-  const inView = useInView(ref, { once: true, margin: "-60px" });
-  return (
-    <motion.div
-      ref={ref}
-      initial={{ opacity: 0, y: 28 }}
-      animate={inView ? { opacity: 1, y: 0 } : {}}
-      transition={{ duration: 0.6, ease: [0.22, 1, 0.36, 1], delay }}
-      className={className}
-    >
-      {children}
-    </motion.div>
-  );
-}
 
 const HIGHLIGHTS = [
   "Gantry & structural fabrication (SKYLIGHT GANTRY and similar projects)",
@@ -71,7 +45,7 @@ export default function ServicesConstruction() {
       <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6">
 
         {/* ── Section header ── */}
-        <FadeUp delay={0} className="text-center mb-16">
+        <div className="fade-up text-center mb-16">
           <div className="inline-flex items-center gap-2.5 mb-5">
             <span className="w-6 h-px bg-[#e7212b]" />
             <span className="text-[#e7212b] text-[10px] font-semibold tracking-[3.5px] uppercase">
@@ -82,13 +56,13 @@ export default function ServicesConstruction() {
           <h2 className="text-4xl sm:text-[2.8rem] font-bold text-white leading-[1.12]">
             Constructions
           </h2>
-        </FadeUp>
+        </div>
 
         {/* ── Two-column layout ── */}
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-14 lg:gap-20 items-center">
 
           {/* LEFT — image */}
-          <FadeUp delay={0} className="relative">
+          <div className="fade-up relative">
 
             {/* Primary image */}
             <div className="relative rounded-2xl overflow-hidden aspect-[16/11] bg-[#12163A] shadow-2xl shadow-black/40 border border-white/[0.06]">
@@ -129,11 +103,11 @@ export default function ServicesConstruction() {
               ))}
             </div>
 
-          </FadeUp>
+          </div>
 
           {/* RIGHT — content */}
           <div>
-            <FadeUp delay={0.08}>
+            <div className="fade-up d1">
               <div className="flex items-start gap-4 mb-6">
                 <div className="w-12 h-12 rounded-xl bg-[#e7212b]/10 border border-[#e7212b]/20 flex items-center justify-center shrink-0 mt-0.5">
                   <HardHat className="w-5 h-5 text-[#e7212b]" strokeWidth={1.8} />
@@ -156,10 +130,10 @@ export default function ServicesConstruction() {
                   fabrication to complete turnkey EPC project execution.
                 </p>
               </div>
-            </FadeUp>
+            </div>
 
             {/* Highlights */}
-            <FadeUp delay={0.16}>
+            <div className="fade-up d2">
               <div className="space-y-3 mb-9">
                 {HIGHLIGHTS.map((item) => (
                   <div key={item} className="flex items-start gap-3">
@@ -168,10 +142,10 @@ export default function ServicesConstruction() {
                   </div>
                 ))}
               </div>
-            </FadeUp>
+            </div>
 
             {/* ISO badge */}
-            <FadeUp delay={0.2}>
+            <div className="fade-up d2">
               <div className="flex items-center gap-4 mb-8 p-4 rounded-xl bg-white/[0.03] border border-white/[0.07]">
                 <div className="w-10 h-10 rounded-lg bg-[#e7212b] flex items-center justify-center shrink-0">
                   <span className="text-white text-[9px] font-bold tracking-[0.5px] text-center leading-tight">ISO<br/>9001</span>
@@ -181,10 +155,10 @@ export default function ServicesConstruction() {
                   <p className="text-white/35 text-[12px] mt-0.5">All construction work delivered under certified quality management systems.</p>
                 </div>
               </div>
-            </FadeUp>
+            </div>
 
             {/* CTA */}
-            <FadeUp delay={0.26}>
+            <div className="fade-up d3">
               <div className="flex flex-wrap gap-3">
                 <Link
                   href="/contacts/"
@@ -200,7 +174,7 @@ export default function ServicesConstruction() {
                   View All Services
                 </Link>
               </div>
-            </FadeUp>
+            </div>
           </div>
 
         </div>

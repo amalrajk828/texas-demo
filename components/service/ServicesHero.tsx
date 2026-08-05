@@ -1,7 +1,6 @@
 "use client";
 import { useRef } from "react";
 import Link from "next/link";
-import { motion } from "framer-motion";
 import { ArrowRight, Gauge, FlaskConical, Cpu, HardHat } from "lucide-react";
 import VantaTopology from "@/components/service/common/VantaTopology";
 
@@ -49,61 +48,46 @@ export default function ServicesHero() {
       <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6">
 
         {/* Breadcrumb */}
-        <motion.div
-          initial={{ opacity: 0, y: 12 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.5, ease: [0.22, 1, 0.36, 1] }}
+        <div
           className="flex items-center gap-2 mb-8 text-[12px] text-white/30"
         >
           <Link href="/" className="hover:text-white/60 transition-colors">Home</Link>
           <span>/</span>
           <span className="text-white/60">Services</span>
-        </motion.div>
+        </div>
 
         <div className="grid grid-cols-1 lg:grid-cols-[1fr_auto] gap-12 items-center">
 
           {/* Left — headline */}
           <div className="max-w-full">
-            <motion.div
-              initial={{ opacity: 0, y: 14 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.5, delay: 0.05, ease: [0.22, 1, 0.36, 1] }}
+            <div
               className="flex items-center gap-2.5 mb-5"
             >
               <span className="w-5 h-px bg-[#e7212b]" />
               <span className="text-[#e7212b] text-[11px] font-semibold tracking-[3px] uppercase">
                 What We Offer
               </span>
-            </motion.div>
+            </div>
 
-            <motion.h1
-              initial={{ opacity: 0, y: 18 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: 0.1, ease: [0.22, 1, 0.36, 1] }}
+            <h1
               className="text-4xl sm:text-5xl lg:text-[3.4rem] font-bold text-white leading-[1.12] mb-6"
             >
               Precision Services for{" "}
               <em className="not-italic text-[#e7212b]">Industrial</em>
               <br />
               Excellence
-            </motion.h1>
+            </h1>
 
-            <motion.p
-              initial={{ opacity: 0, y: 14 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.55, delay: 0.18, ease: [0.22, 1, 0.36, 1] }}
+            <p
               className="text-white/50 text-base sm:text-[17px] leading-relaxed mb-8 max-w-none"
             >
               At Texas Technical Services, we deliver end-to-end industrial solutions — from
               flow measurement and custody metering to industrial automation, inspection &amp;
               testing, and construction — trusted across oil &amp; gas, refinery, and petrochemical
               sectors since 2008.
-            </motion.p>
+            </p>
 
-            <motion.div
-              initial={{ opacity: 0, y: 12 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.5, delay: 0.24, ease: [0.22, 1, 0.36, 1] }}
+            <div
               className="flex flex-wrap gap-3"
             >
               <Link
@@ -119,14 +103,11 @@ export default function ServicesHero() {
               >
                 Explore Services
               </a>
-            </motion.div>
+            </div>
           </div>
 
           {/* Right — quick-nav pills */}
-          <motion.div
-            initial={{ opacity: 0, x: 20 }}
-            animate={{ opacity: 1, x: 0 }}
-            transition={{ duration: 0.6, delay: 0.28, ease: [0.22, 1, 0.36, 1] }}
+          <div
             className="flex lg:flex-col gap-3"
           >
             {SERVICES_NAV.map(({ Icon, label, href }) => (
@@ -143,15 +124,12 @@ export default function ServicesHero() {
                 </span>
               </a>
             ))}
-          </motion.div>
+          </div>
 
         </div>
 
         {/* Stats bar */}
-        <motion.div
-          initial={{ opacity: 0, y: 16 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.55, delay: 0.34, ease: [0.22, 1, 0.36, 1] }}
+        <div
           className="mt-16 grid grid-cols-2 sm:grid-cols-4 gap-4"
         >
           {[
@@ -168,7 +146,7 @@ export default function ServicesHero() {
               <p className="text-[12px] text-white/30 mt-1.5 tracking-wide">{stat.label}</p>
             </div>
           ))}
-        </motion.div>
+        </div>
 
       </div>
     </section>

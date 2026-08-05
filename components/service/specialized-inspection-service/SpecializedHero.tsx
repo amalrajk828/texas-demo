@@ -1,18 +1,6 @@
 "use client";
 import Link from "next/link";
-import { motion, useInView } from "framer-motion";
-import { useRef } from "react";
 import { ScanSearch, ChevronRight, ArrowRight } from "lucide-react";
-
-function FadeUp({ children, delay = 0, className = "" }: { children: React.ReactNode; delay?: number; className?: string }) {
-  const ref = useRef<HTMLDivElement>(null);
-  const inView = useInView(ref, { once: true, margin: "-60px" });
-  return (
-    <motion.div ref={ref} initial={{ opacity: 0, y: 24 }} animate={inView ? { opacity: 1, y: 0 } : {}} transition={{ duration: 0.6, ease: [0.22, 1, 0.36, 1], delay }} className={className}>
-      {children}
-    </motion.div>
-  );
-}
 
 const STATS = [
   { value: "15", label: "Specialist Services" },
@@ -31,7 +19,7 @@ export default function SpecializedHero() {
 
       <div className="relative max-w-7xl mx-auto px-4 sm:px-6">
         {/* Breadcrumb */}
-        <FadeUp delay={0}>
+        <div className="fade-up">
           <nav className="flex items-center gap-1.5 text-[11px] text-white/35 tracking-[1.5px] uppercase mb-10 flex-wrap">
             <Link href="/" className="hover:text-white/60 transition-colors">Home</Link>
             <ChevronRight className="w-3 h-3" />
@@ -41,33 +29,33 @@ export default function SpecializedHero() {
             <ChevronRight className="w-3 h-3" />
             <span className="text-white/60">Specialized Inspection Service</span>
           </nav>
-        </FadeUp>
+        </div>
 
         <div className="max-w-full">
           {/* Eyebrow */}
-          <FadeUp delay={0.05}>
+          <div className="fade-up d1">
             <div className="inline-flex items-center gap-2.5 bg-[#e7212b]/10 border border-[#e7212b]/20 rounded-full px-4 py-2 mb-6">
               <ScanSearch className="w-3.5 h-3.5 text-[#e7212b]" strokeWidth={2} />
               <span className="text-[#e7212b] text-[11px] font-semibold tracking-[2.5px] uppercase">Specialized Inspection Service</span>
             </div>
-          </FadeUp>
+          </div>
 
           {/* Heading */}
-          <FadeUp delay={0.1}>
+          <div className="fade-up d1">
             <h1 className="text-4xl sm:text-5xl lg:text-[3.5rem] font-bold text-white leading-[1.08] tracking-tight mb-6">
               Advanced Inspection &{" "}
               <span className="text-[#e7212b]">Specialist NDT</span> Services
             </h1>
-          </FadeUp>
+          </div>
 
-          <FadeUp delay={0.15}>
+          <div className="fade-up d2">
             <p className="text-white/55 text-lg leading-relaxed max-w-none mb-10">
               From Phased Array Ultrasonic Testing and Eddy Current Testing to Corrosion Control, Metallurgical Analysis, and Lifting Equipment Inspection — TTS delivers advanced specialist services for the oil &amp; gas, petrochemical, and construction industries in Kuwait and Dubai.
             </p>
-          </FadeUp>
+          </div>
 
           {/* CTAs */}
-          <FadeUp delay={0.2}>
+          <div className="fade-up d2">
             <div className="flex flex-wrap gap-3 mb-14">
               <Link href="#contact" className="inline-flex items-center gap-2 bg-[#e7212b] hover:bg-[#aa0b1b] text-white font-semibold px-7 py-3.5 rounded-lg transition-colors duration-200 text-sm shadow-lg shadow-[#e7212b]/25">
                 Get More Information
@@ -77,10 +65,10 @@ export default function SpecializedHero() {
                 ← Inspection &amp; Testing
               </Link>
             </div>
-          </FadeUp>
+          </div>
 
           {/* Stats */}
-          <FadeUp delay={0.25}>
+          <div className="fade-up d3">
             <div className="grid grid-cols-2 sm:grid-cols-4 gap-px bg-white/6 rounded-2xl overflow-hidden border border-white/6">
               {STATS.map((s) => (
                 <div key={s.label} className="bg-[#000000] blueprint-grid blueprint-dot-grid px-5 py-5 flex flex-col gap-1">
@@ -89,7 +77,7 @@ export default function SpecializedHero() {
                 </div>
               ))}
             </div>
-          </FadeUp>
+          </div>
         </div>
       </div>
     </section>
