@@ -388,7 +388,7 @@ export default function HeroSlider() {
               style={{ aspectRatio: "16/9", background: "var(--color-brand-navy-mid)" }}
             >
               {slide.type === "image" ? (
-                <Image src={slide.src} alt={slide.alt} fill priority={current === 0} sizes="(max-width: 1024px) 100vw, 50vw" className="object-cover" quality={90} />
+                <Image src={slide.src} alt={slide.alt} fill priority sizes="(max-width: 1024px) 100vw, 50vw" className="object-cover" quality={80} loading="eager" />
               ) : (
                 <video ref={mainVideoRef} key={slide.src} src={slide.src} poster={(slide as any).poster} aria-label={slide.alt} autoPlay muted loop playsInline preload="metadata" className="w-full h-full object-cover" />
               )}

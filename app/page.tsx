@@ -3,17 +3,29 @@ import Script from "next/script";
 import dynamic from "next/dynamic";
 import ThemeWrapper from "@/components/ThemeWrapper";
 import { SITE_URL } from "@/lib/site";
-import PartnersTicker from "@/components/PartnersTicker";
 import TickerBanner from "@/components/TickerBanner";
-import GreyWhatWeDo from "@/components/t-grey/GreyWhatWeDo";
-import GreyServices from "@/components/t-grey/GreyServices";
 import GreySolutions from "@/components/t-grey/GreySolutions";
-import GreyVision from "@/components/t-grey/GreyVision";
 import GreyTeam from "@/components/t-grey/GreyTeam";
 import GreyAbout from "@/components/t-grey/GreyAbout";
 import GreyCta from "@/components/t-grey/GreyCta";
 
 const HeroSlider = dynamic(() => import("@/components/HeroSlider"));
+
+const PartnersTicker = dynamic(() => import("@/components/PartnersTicker"), {
+  loading: () => <div className="py-7 border-y" style={{ minHeight: 154 }} />,
+});
+
+const GreyWhatWeDo = dynamic(() => import("@/components/t-grey/GreyWhatWeDo"), {
+  loading: () => <div className="py-24 lg:py-32" style={{ minHeight: 700 }} />,
+});
+
+const GreyServices = dynamic(() => import("@/components/t-grey/GreyServices"), {
+  loading: () => <div className="py-24 lg:py-32" style={{ minHeight: 650 }} />,
+});
+
+const GreyVision = dynamic(() => import("@/components/t-grey/GreyVision"), {
+  loading: () => <div className="py-24 lg:py-32" style={{ minHeight: 550 }} />,
+});
 
 export const metadata: Metadata = {
   title: "Industrial Automation, PLC SCADA & Flow Measurement",
