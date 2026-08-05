@@ -6,6 +6,7 @@ import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import SmoothScroll from "@/components/SmoothScroll";
 import { SiteNavigationJsonLd } from "@/components/schema/SiteNavigationJsonLd";
+import WhatsAppButton from "@/components/WhatsAppButton";
 import { SITE_URL } from "@/lib/site";
 import "./globals.css";
 
@@ -192,6 +193,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
           </main>
           <Footer />
         </SmoothScroll>
+        <WhatsAppButton />
       </body>
     </html>
   );
