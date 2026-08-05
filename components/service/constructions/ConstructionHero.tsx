@@ -4,7 +4,7 @@ import { ArrowRight, HardHat } from "lucide-react";
 
 export default function ConstructionHero() {
   return (
-    <section className="relative bg-[#000000] blueprint-grid blueprint-dot-grid overflow-hidden pt-32 pb-16 lg:pb-20">
+    <section className="relative bg-[#000000] blueprint-grid blueprint-dot-grid overflow-hidden pt-32 pb-16 lg:pb-20 min-h-[400px]">
       {/* Hairline top and bottom borders */}
       <div className="absolute top-0 inset-x-0 h-px bg-white/[0.08] pointer-events-none z-0" />
       <div className="absolute bottom-0 inset-x-0 h-px bg-white/[0.08] pointer-events-none z-0" />

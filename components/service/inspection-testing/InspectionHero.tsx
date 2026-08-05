@@ -8,7 +8,7 @@ export default function InspectionHero() {
   const vantaRef = useRef<HTMLDivElement>(null);
 
   return (
-    <section ref={vantaRef} className="relative bg-gradient-to-br from-black via-[#1a0505] to-black blueprint-grid blueprint-dot-grid overflow-hidden pt-32 pb-16 lg:pb-20">
+    <section ref={vantaRef} className="relative bg-gradient-to-br from-black via-[#1a0505] to-black blueprint-grid blueprint-dot-grid overflow-hidden pt-32 pb-16 lg:pb-20 min-h-[400px]">
       <VantaTopology targetRef={vantaRef} />
       {/* Hairline top and bottom borders */}
       <div className="absolute top-0 inset-x-0 h-px bg-white/[0.08] pointer-events-none z-0" />

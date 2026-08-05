@@ -58,7 +58,7 @@ export default function BlogPagination({ currentPage, totalPages, onPageChange }
 
       {getPageNumbers().map((page, i) =>
         page === "..." ? (
-          <span key={`dots-${i}`} className="px-2 py-2 text-[13px] text-gray-400">
+          <span key={`dots-${i}`} className="px-2 py-2 text-[13px] text-gray-500">
             ...
           </span>
         ) : (

@@ -138,7 +138,7 @@ export default function BlogPageContent({ allPosts }: Props) {
       <section
         id="hero-vanta"
         ref={vantaRef}
-        className="relative bg-[#000000] blueprint-grid blueprint-dot-grid overflow-hidden pt-32 pb-16 lg:pb-24"
+        className="relative bg-[#000000] blueprint-grid blueprint-dot-grid overflow-hidden pt-32 pb-16 lg:pb-24 min-h-[400px]"
       >
         {/* Red radial glow top-right */}
         <div
@@ -237,7 +237,7 @@ export default function BlogPageContent({ allPosts }: Props) {
                       {featured.description}
                     </p>
                     <hr className="border-gray-100 mb-5" />
-                    <div className="flex flex-wrap items-center gap-4 text-[12px] text-gray-400 font-medium">
+                    <div className="flex flex-wrap items-center gap-4 text-[12px] text-gray-500 font-medium">
                       <span className="flex items-center gap-1.5 text-[#0B0D26] font-bold uppercase tracking-wide text-[11px]">
                         <User className="w-3.5 h-3.5" />
                         TTS Editorial
@@ -347,7 +347,7 @@ function ArticleCard({ post }: { post: BlogPost }) {
             {post.description}
           </p>
           <div className="border-t border-gray-100 pt-3.5 flex items-center justify-between mt-auto">
-            <span className="flex items-center gap-3 text-[11px] text-gray-400 font-medium">
+            <span className="flex items-center gap-3 text-[11px] text-gray-500 font-medium">
               <span className="flex items-center gap-1">
                 <Calendar className="w-3 h-3" />
                 {post.date}

@@ -9,7 +9,7 @@ export default function FlowHero() {
   const vantaRef = useRef<HTMLDivElement>(null);
 
   return (
-    <section ref={vantaRef} className="relative pt-32 pb-16 lg:pb-20 overflow-hidden bg-gradient-to-br from-black via-[#1a0505] to-black blueprint-grid blueprint-dot-grid">
+    <section ref={vantaRef} className="relative pt-32 pb-16 lg:pb-20 overflow-hidden bg-gradient-to-br from-black via-[#1a0505] to-black blueprint-grid blueprint-dot-grid min-h-[400px]">
       <VantaTopology targetRef={vantaRef} />
 
       {/* Layer 4: Hairline top and bottom borders */}

@@ -4,7 +4,7 @@ import { ArrowRight, ArrowUpCircle } from "lucide-react";
 
 export default function UpgradeHero() {
   return (
-    <section className="relative bg-[#000000] blueprint-grid blueprint-dot-grid overflow-hidden pt-32 pb-16 lg:pb-20">
+    <section className="relative bg-[#000000] blueprint-grid blueprint-dot-grid overflow-hidden pt-32 pb-16 lg:pb-20 min-h-[400px]">
 
       {/* Grid texture */}
       <div
