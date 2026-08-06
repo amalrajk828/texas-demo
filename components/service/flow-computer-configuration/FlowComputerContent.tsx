@@ -151,7 +151,7 @@ export default function FlowComputerContent() {
 
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5">
             {WHAT_WE_DELIVER.map((item, i) => (
-              <div className="fade-up">
+              <div key={item.title || i} className="fade-up">
                 <div
                   className="neumorphic-press-card p-7 flex flex-col justify-between h-full group block text-left"
                 >

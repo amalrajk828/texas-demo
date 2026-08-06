@@ -44,7 +44,7 @@ export default function SpecializedSubServices() {
         </div>
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5 sm:gap-6">
           {SERVICES.map((item, i) => (
-            <div className="fade-up">
+            <div key={item.title || i} className="fade-up">
               <Link href={item.href} className="block h-full">
                 <NeumorphicDeliverCard item={item} index={i} />
               </Link>

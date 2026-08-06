@@ -152,7 +152,7 @@ export default function CalibrationContent() {
 
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5">
             {SERVICES.map((item, i) => (
-              <div className="fade-up">
+              <div key={item.title || i} className="fade-up">
                 <div
                   className="neumorphic-press-card p-7 flex flex-col justify-between h-full group block text-left"
                 >

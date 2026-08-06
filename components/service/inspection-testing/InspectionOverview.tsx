@@ -167,7 +167,7 @@ export default function InspectionOverview({ hideHeading = false }: { hideHeadin
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-7 sm:gap-8">
             {RELATED_SERVICES.map((card, i) => (
-              <div className="fade-up">
+              <div key={card.title || i} className="fade-up">
                 <NeumorphicServiceCard card={card} />
               </div>
             ))}
