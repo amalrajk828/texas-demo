@@ -66,7 +66,7 @@ export default function McsiServices() {
         {/* ── Service cards grid ── */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-7 sm:gap-8">
           {SERVICES.map((item, i) => (
-            <div className="fade-up">
+            <div key={item.title || i} className="fade-up">
               <NeumorphicDeliverCard item={item} index={i} />
             </div>
           ))}

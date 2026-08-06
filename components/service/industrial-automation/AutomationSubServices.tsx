@@ -62,7 +62,7 @@ export default function AutomationSubServices() {
         {/* ── Neumorphic Service Cards (3-Column Grid) ── */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-7 sm:gap-8">
           {AUTOMATION_SERVICES.map((card, i) => (
-            <div className="fade-up">
+            <div key={card.title || i} className="fade-up">
               <NeumorphicServiceCard card={card} />
             </div>
           ))}

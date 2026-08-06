@@ -58,7 +58,7 @@ export default function SparePartsContent() {
 
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
             {SERVICES.map((item, i) => (
-              <div className="fade-up">
+              <div key={item.title || i} className="fade-up">
                 <NeumorphicDeliverCard item={item} index={i} />
               </div>
             ))}

@@ -68,7 +68,7 @@ export default function RadiographicContent() {
           </div>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5">
             {CARDS.map((item, i) => (
-              <div className="fade-up">
+              <div key={item.title || i} className="fade-up">
                 <div className="neumorphic-press-card p-7 flex flex-col justify-between h-full group block text-left">
                   <span className="text-[10px] font-bold text-[#e7212b]/25 tracking-[3px] mb-4 block">{String(i + 1).padStart(2, "0")}</span>
                   <div className="neumorphic-press-btn w-11 h-11 flex items-center justify-center text-[#e7212b] mb-4">

@@ -97,7 +97,7 @@ export default function McsiWhyUs() {
           {/* Right — reason cards */}
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 sm:gap-7">
             {REASONS.map((reason, i) => (
-              <div className="fade-up">
+              <div key={reason.title || i} className="fade-up">
                 <NeumorphicReasonCard item={reason} index={i} />
               </div>
             ))}

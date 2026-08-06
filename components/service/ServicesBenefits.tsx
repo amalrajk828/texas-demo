@@ -63,7 +63,7 @@ export default function ServicesBenefits() {
         {/* ── Cards grid ── */}
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
           {BENEFITS.map((benefit, i) => (
-            <div className="fade-up">
+            <div key={benefit.title || i} className="fade-up">
               <BenefitCard benefit={benefit} index={i} />
             </div>
           ))}

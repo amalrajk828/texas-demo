@@ -300,6 +300,8 @@ a, button, [role="button"], label, select,
   font-size: 17px;
   line-height: 1.8;
   color: #4b5563;
+  overflow-wrap: anywhere;
+  word-break: break-word;
 }
 
 .blog-content p {
@@ -394,6 +396,18 @@ a, button, [role="button"], label, select,
   font-weight: 600;
   color: #1e293b;
   background: #f8fafc;
+}
+
+@media (max-width: 768px) {
+  .blog-content table {
+    display: block;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+  }
+  .blog-content table th,
+  .blog-content table td {
+    white-space: nowrap;
+  }
 }
 
 .blog-content blockquote {
