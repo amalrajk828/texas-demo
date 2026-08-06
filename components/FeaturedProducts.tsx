@@ -1,6 +1,5 @@
 "use client";
 import Link from "next/link";
-import { motion, useInView } from "framer-motion";
 import { useRef } from "react";
 import { ArrowRight } from "lucide-react";
 
@@ -15,18 +14,14 @@ const PRODUCTS = [
 
 export default function FeaturedProducts() {
   const ref = useRef<HTMLDivElement>(null);
-  const inView = useInView(ref, { once: true, margin: "-80px" });
 
   return (
     <section className="bg-[#f4f5f8] py-20 lg:py-24">
       <div className="max-w-7xl mx-auto px-4 sm:px-6">
 
         {/* Header */}
-        <motion.div
+        <div
           ref={ref}
-          initial={{ opacity: 0, y: 20 }}
-          animate={inView ? { opacity: 1, y: 0 } : {}}
-          transition={{ duration: 0.55, ease: [0.22, 1, 0.36, 1] }}
           className="flex flex-col sm:flex-row sm:items-end justify-between gap-4 mb-12"
         >
           <div>
@@ -47,16 +42,13 @@ export default function FeaturedProducts() {
           >
             View all products <ArrowRight className="w-4 h-4" />
           </Link>
-        </motion.div>
+        </div>
 
         {/* Product cards */}
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5">
           {PRODUCTS.map((prod, i) => (
-            <motion.div
+            <div
               key={prod.slug}
-              initial={{ opacity: 0, y: 28 }}
-              animate={inView ? { opacity: 1, y: 0 } : {}}
-              transition={{ duration: 0.5, delay: 0.08 + i * 0.07, ease: [0.22, 1, 0.36, 1] }}
             >
               <Link
                 href={`/portfolio/${prod.slug}/`}
@@ -81,7 +73,7 @@ export default function FeaturedProducts() {
                   <p className="text-[12px] text-gray-400 mt-1">{prod.brand}</p>
                 </div>
               </Link>
-            </motion.div>
+            </div>
           ))}
         </div>
 

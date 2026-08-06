@@ -1,8 +1,6 @@
 "use client";
 /* Kit G4 — Services: minimal, large headline cards with thin borders */
 import Link from "next/link";
-import { motion, useInView } from "framer-motion";
-import { useRef } from "react";
 import { Gauge, FlaskConical, Cpu, ArrowRight } from "lucide-react";
 
 const SERVICES = [
@@ -11,23 +9,12 @@ const SERVICES = [
   { Icon: Cpu,          title: "Industrial Automation",      body: "Control system design, PLC programming, SCADA integration and HMI engineering — optimising operations across oil & gas and manufacturing.",        href: "/service/industrial-automation/",        tag: "Automation", col: "color-mix(in srgb, var(--color-brand-red) 5%, white)" },
 ];
 
-function FadeUp({ children, delay = 0, className = "" }: { children: React.ReactNode; delay?: number; className?: string }) {
-  const ref = useRef<HTMLDivElement>(null);
-  const inView = useInView(ref, { once: true, margin: "-60px" });
-  return (
-    <motion.div ref={ref} initial={{ opacity: 0, y: 28 }} animate={inView ? { opacity: 1, y: 0 } : {}}
-      transition={{ duration: 0.65, ease: [0.22, 1, 0.36, 1], delay }} className={className}>
-      {children}
-    </motion.div>
-  );
-}
-
 export default function G4Services() {
   return (
     <section className="relative py-24 lg:py-32" style={{ background: "var(--g-section-b)" }}>
       <div className="absolute top-0 inset-x-0 h-px" style={{ background: "var(--g-border)" }} />
       <div className="relative max-w-7xl mx-auto px-4 sm:px-6">
-        <FadeUp className="flex flex-col lg:flex-row lg:items-end lg:justify-between gap-6 mb-14">
+        <div className="fade-up flex flex-col lg:flex-row lg:items-end lg:justify-between gap-6 mb-14">
           <div>
             <div className="flex items-center gap-3 mb-4">
               <span className="w-10 h-[3px] rounded-full" style={{ background: "var(--color-brand-red)" }} />
@@ -36,14 +23,14 @@ export default function G4Services() {
             <h2 className="text-[2.8rem] sm:text-[3.4rem] font-black leading-[1.05] tracking-tight" style={{ color: "var(--g-heading)" }}>What We Offer</h2>
           </div>
           <p className="max-w-md text-[17px] leading-[1.85]" style={{ color: "var(--g-muted)" }}>ISO-certified expertise since 2008.</p>
-        </FadeUp>
+        </div>
 
         {/* Large bold cards — minimal style */}
         <div className="grid grid-cols-1 md:grid-cols-3 gap-5">
           {SERVICES.map((svc, i) => (
-            <FadeUp key={svc.title} delay={0.1 + i * 0.1}>
-              <motion.div whileHover={{ y: -8, scale: 1.02, transition: { duration: 0.3, ease: "easeOut" } }}
-                className="group relative flex flex-col h-full rounded-2xl overflow-hidden cursor-pointer"
+            <div className="fade-up d1">
+              <div
+                className="group relative flex flex-col h-full rounded-2xl overflow-hidden cursor-pointer hover:-translate-y-2 hover:scale-[1.02] transition-all duration-300"
                 style={{ background: "var(--g-card-bg)", border: "1px solid var(--g-card-border)", boxShadow: "var(--g-card-shadow)" }}
                 onMouseEnter={e => (e.currentTarget.style.boxShadow = `0 16px 48px rgba(0,0,0,0.09), 0 0 0 1.5px var(--color-brand-red)`)}
                 onMouseLeave={e => (e.currentTarget.style.boxShadow = "var(--g-card-shadow)")}
@@ -80,17 +67,17 @@ export default function G4Services() {
                     </div>
                   </div>
                 </div>
-              </motion.div>
-            </FadeUp>
+              </div>
+            </div>
           ))}
         </div>
 
-        <FadeUp delay={0.4} className="text-center mt-10">
+        <div className="fade-up text-center mt-10">
           <Link href="/services/" className="inline-flex items-center gap-2 font-semibold px-8 py-4 rounded-xl text-[15px] border hover:-translate-y-0.5 transition-all"
             style={{ color: "var(--g-heading)", borderColor: "var(--g-border)", background: "var(--g-card-bg)", boxShadow: "var(--g-card-shadow)" }}>
             View all services <ArrowRight className="w-4 h-4" />
           </Link>
-        </FadeUp>
+        </div>
       </div>
     </section>
   );

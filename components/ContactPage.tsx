@@ -71,7 +71,7 @@ export default function ContactPage() {
   return (
     <div className="bg-white">
       {/* ═══ HERO ═══════════════════════════════════════════════════ */}
-      <section className="relative bg-[#000000] blueprint-grid blueprint-dot-grid overflow-hidden pt-32 pb-20 lg:pb-28">
+      <section className="relative bg-[#000000] blueprint-grid blueprint-dot-grid overflow-hidden pt-32 pb-20 lg:pb-28 min-h-[400px]">
         {/* Grid texture */}
         <div
           className="absolute inset-0 pointer-events-none"
@@ -256,7 +256,7 @@ export default function ContactPage() {
                 </div>
               ) : (
                 <form onSubmit={handleSubmit} className="space-y-5">
-                  <div className="grid grid-cols-1 sm:grid-cols-2 gap-5">
+                  <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
                     {/* Full Name */}
                     <div className="flex flex-col">
                       <label htmlFor="fullName" className="text-[13px] font-semibold text-gray-500 mb-1.5">
@@ -292,7 +292,7 @@ export default function ContactPage() {
                     </div>
                   </div>
 
-                  <div className="grid grid-cols-1 sm:grid-cols-2 gap-5">
+                  <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
                     {/* Phone */}
                     <div className="flex flex-col">
                       <label htmlFor="phone" className="text-[13px] font-semibold text-gray-500 mb-1.5">
@@ -381,7 +381,7 @@ export default function ContactPage() {
                 className="bg-white rounded-2xl overflow-hidden border border-gray-100 hover:border-[#e7212b]/30 transition-colors"
               >
                 {/* Map */}
-                <div className="relative aspect-[16/10] bg-gray-100">
+                <div className="relative aspect-[16/10] min-h-[200px] bg-gray-100">
                   <iframe
                     src={office.mapEmbed}
                     width="100%"

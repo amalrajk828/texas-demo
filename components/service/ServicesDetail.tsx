@@ -1,8 +1,6 @@
 "use client";
 import Image from "next/image";
 import Link from "next/link";
-import { motion, useInView } from "framer-motion";
-import { useRef } from "react";
 import {
   Gauge,
   FlaskConical,
@@ -12,29 +10,6 @@ import {
 } from "lucide-react";
 
 /* ─── Fade-up helper ─────────────────────────────────────────── */
-function FadeUp({
-  children,
-  delay = 0,
-  className = "",
-}: {
-  children: React.ReactNode;
-  delay?: number;
-  className?: string;
-}) {
-  const ref = useRef<HTMLDivElement>(null);
-  const inView = useInView(ref, { once: true, margin: "-60px" });
-  return (
-    <motion.div
-      ref={ref}
-      initial={{ opacity: 0, y: 28 }}
-      animate={inView ? { opacity: 1, y: 0 } : {}}
-      transition={{ duration: 0.6, ease: [0.22, 1, 0.36, 1], delay }}
-      className={className}
-    >
-      {children}
-    </motion.div>
-  );
-}
 
 /* ─── Services data ──────────────────────────────────────────── */
 const SERVICES = [
@@ -160,7 +135,7 @@ function ServiceBlock({
         }`}
       >
         {/* Image column */}
-        <FadeUp delay={0} className="relative">
+        <div className="fade-up relative">
           <ServiceImage
             src={service.imageSrc}
             alt={service.imageAlt}
@@ -171,11 +146,11 @@ function ServiceBlock({
             <span className="text-[10px] text-white/70 leading-none font-semibold tracking-[1px]">No.</span>
             <span className="text-white text-xl font-bold leading-none">{String(index + 1).padStart(2, "0")}</span>
           </div>
-        </FadeUp>
+        </div>
 
         {/* Content column */}
         <div>
-          <FadeUp delay={0.08}>
+          <div className="fade-up d1">
             {/* Eyebrow */}
             <div className="flex items-center gap-2.5 mb-4">
               <span className="w-5 h-px bg-[#e7212b]" />
@@ -202,10 +177,10 @@ function ServiceBlock({
                 </p>
               ))}
             </div>
-          </FadeUp>
+          </div>
 
           {/* Highlights */}
-          <FadeUp delay={0.16}>
+          <div className="fade-up d2">
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-2.5 mb-8">
               {service.highlights.map((item) => (
                 <div key={item} className="flex items-start gap-2.5">
@@ -214,10 +189,10 @@ function ServiceBlock({
                 </div>
               ))}
             </div>
-          </FadeUp>
+          </div>
 
           {/* CTA */}
-          <FadeUp delay={0.22}>
+          <div className="fade-up d2">
             <Link
               href={service.href}
               className="inline-flex items-center gap-2 bg-[#e7212b] hover:bg-[#aa0b1b] text-white font-semibold px-7 py-3.5 rounded-lg transition-colors duration-200 text-[14px] shadow-lg shadow-[#e7212b]/15"
@@ -225,7 +200,7 @@ function ServiceBlock({
               Learn More
               <ArrowRight className="w-4 h-4" />
             </Link>
-          </FadeUp>
+          </div>
         </div>
       </div>
     </div>
@@ -254,7 +229,7 @@ export default function ServicesDetail() {
       <div className="relative max-w-7xl mx-auto px-4 sm:px-6">
 
         {/* ── Section header ── */}
-        <FadeUp delay={0} className="text-center mb-20 lg:mb-28">
+        <div className="fade-up text-center mb-20 lg:mb-28">
           <div className="inline-flex items-center gap-2.5 mb-5">
             <span className="w-6 h-px bg-[#e7212b]" />
             <span className="text-[#e7212b] text-[10px] font-semibold tracking-[3.5px] uppercase">
@@ -270,7 +245,7 @@ export default function ServicesDetail() {
             related to Custody Metering systems, Industrial Automation, and Inspection &amp; Testing —
             trusted by leading operators across Kuwait, Dubai, and beyond.
           </p>
-        </FadeUp>
+        </div>
 
         {/* ── Service blocks ── */}
         <div className="space-y-24 lg:space-y-32">

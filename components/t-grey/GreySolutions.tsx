@@ -2,7 +2,6 @@
 
 import { useRef } from "react";
 import Link from "next/link";
-import { motion, useInView } from "framer-motion";
 import { ArrowRight, Scale, Brain } from "lucide-react";
 
 const SOLUTIONS = [
@@ -24,7 +23,6 @@ const SOLUTIONS = [
 
 export default function GreySolutions() {
   const ref = useRef<HTMLDivElement>(null);
-  const inView = useInView(ref, { once: true, margin: "-80px" });
 
   return (
     <section className="relative overflow-hidden py-24 lg:py-32" style={{ background: "var(--g-section-a)" }}>
@@ -34,10 +32,7 @@ export default function GreySolutions() {
       <div ref={ref} className="relative max-w-7xl mx-auto px-4 sm:px-6">
         {/* Eyebrow */}
         <div className="text-center mb-16">
-          <motion.div
-            initial={{ opacity: 0, y: 12 }}
-            animate={inView ? { opacity: 1, y: 0 } : {}}
-            transition={{ duration: 0.6 }}
+          <div
             className="inline-flex items-center gap-3 mb-5"
           >
             <span className="w-6 h-px" style={{ background: "var(--color-brand-red)" }} />
@@ -45,28 +40,22 @@ export default function GreySolutions() {
               Solutions & Partners
             </span>
             <span className="w-6 h-px" style={{ background: "var(--color-brand-red)" }} />
-          </motion.div>
+          </div>
 
-          <motion.h2
-            initial={{ opacity: 0, y: 24 }}
-            animate={inView ? { opacity: 1, y: 0 } : {}}
-            transition={{ duration: 0.9, delay: 0.1 }}
-            className="text-[clamp(2.2rem,4.5vw,3.4rem)] font-black leading-[1.15] max-w-2xl mx-auto tracking-tight"
+          <h2
+            className="text-[clamp(2.2rem,4.5vw,3.4rem)] font-black leading-[1.15] max-w-2xl mx-auto tracking-tight fade-up"
             style={{ color: "var(--g-heading)" }}
           >
             Which proprietary platforms deliver{" "}
             <span style={{ color: "var(--color-brand-red)" }}>proven results?</span>
-          </motion.h2>
+          </h2>
         </div>
 
         {/* Solution Cards */}
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6 items-stretch">
           {SOLUTIONS.map((s, i) => (
-            <motion.div
+            <div
               key={s.label}
-              initial={{ opacity: 0, y: 40 }}
-              animate={inView ? { opacity: 1, y: 0 } : {}}
-              transition={{ duration: 0.9, delay: 0.2 + i * 0.15, ease: [0.16, 1, 0.3, 1] }}
               className="flex flex-col h-full"
             >
               <Link
@@ -87,7 +76,7 @@ export default function GreySolutions() {
                     >
                       <s.icon className="w-5 h-5" style={{ color: "var(--color-brand-red)" }} strokeWidth={1.8} />
                     </div>
-                    <span className="text-[11px] font-bold tracking-[3px] uppercase" style={{ color: "var(--color-brand-red)" }}>
+                    <span className="text-[11px] font-bold tracking-[3px] uppercase" style={{ color: "#B71C1C" }}>
                       {s.label}
                     </span>
                   </div>
@@ -108,9 +97,9 @@ export default function GreySolutions() {
                   {/* CTA */}
                   <span
                     className="inline-flex items-center gap-2 text-[13px] font-bold tracking-wide group-hover:gap-3 transition-all mt-auto"
-                    style={{ color: "var(--color-brand-red)" }}
+                    style={{ color: "#B71C1C" }}
                   >
-                    Learn more
+                    Learn more about {s.label}
                     <ArrowRight className="w-4 h-4" />
                   </span>
                 </div>
@@ -118,15 +107,12 @@ export default function GreySolutions() {
                 {/* Bottom accent bar */}
                 <div className="h-[2px] w-full mt-auto" style={{ background: "var(--color-brand-red)", opacity: 0.15 }} />
               </Link>
-            </motion.div>
+            </div>
           ))}
         </div>
 
         {/* CTA */}
-        <motion.div
-          initial={{ opacity: 0, y: 10 }}
-          animate={inView ? { opacity: 1, y: 0 } : {}}
-          transition={{ duration: 0.8, delay: 0.7 }}
+        <div
           className="text-center mt-14 pt-10 border-t"
           style={{ borderColor: "var(--g-border)" }}
         >
@@ -138,7 +124,7 @@ export default function GreySolutions() {
             Explore all partners
             <ArrowRight className="w-4 h-4" />
           </Link>
-        </motion.div>
+        </div>
       </div>
     </section>
   );

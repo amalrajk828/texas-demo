@@ -100,7 +100,7 @@ export default function GreyWhatWeDo() {
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.7, ease: "easeOut", delay: 0.15 }}
-              className="text-[2.2rem] sm:text-[2.8rem] lg:text-[3.4rem] font-black leading-[1.08] tracking-tight block text-[#111827]"
+              className="text-[1.6rem] sm:text-[2.2rem] lg:text-[2.8rem] xl:text-[3.4rem] font-black leading-[1.08] tracking-tight block text-[#111827]"
             >
               What precision solutions do we deliver for critical industries?
             </motion.h2>
@@ -181,7 +181,7 @@ export default function GreyWhatWeDo() {
                         href="/services/"
                         className="inline-flex items-center gap-2 text-[14px] font-semibold text-[#E53935] no-underline hover:underline transition-all duration-200"
                       >
-                        Learn more{" "}
+                        Learn more about our services{" "}
                         <ArrowRight className="w-4 h-4 transition-transform duration-200 group-hover:translate-x-1" />
                       </Link>
                     </div>

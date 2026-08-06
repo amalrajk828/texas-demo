@@ -238,7 +238,7 @@ Texas Technical Services (TTS) provides engineering, commissioning, calibration,
 - [Partners](https://texastechserv.com/partners/): Global technology partners and principal representations.
 - [Contact](https://texastechserv.com/contacts/): Office locations in Fahaheel (Kuwait) and Dubai (UAE), phone numbers, and email.
 - [YouTube](https://www.youtube.com/@TEXASTECHNICALSERVICES): Video walkthroughs, equipment demos, and project highlights from the field.
-- [Social Media](https://texastechserv.com/social-media/): Official channels and registered profiles including LinkedIn, Facebook, Instagram, X (Twitter), Bluesky, YouTube, Medium, Quora, Hashnode, Substack, Pinterest, Wellfound, The Gulf Directory, and Angloinfo Kuwait.
+- [Social Media](https://texastechserv.com/social-media/): Official channels and registered profiles including LinkedIn, Facebook, Instagram, X (Twitter), Bluesky, YouTube, Medium, Quora, Hashnode, Substack, Pinterest, Wellfound, The Gulf Directory, Angloinfo Kuwait, Blogger, Dun & Bradstreet, Crunchbase, ZoomInfo, MyMidList Kuwait, Expat.com, Enroll Business UAE, and Dubai Online.
 
 ## Social Media
 
@@ -259,4 +259,12 @@ Texas Technical Services (TTS) provides engineering, commissioning, calibration,
 - [Pinterest](https://www.pinterest.com/texastechserv/): Visual boards for industrial projects, automation, and instrumentation.
 - [The Gulf Directory](https://thegulfdirectory.com/businesses/texas-technical-service-company-wll): Verified business listing on the Gulf region's premier business directory.
 - [Angloinfo Kuwait](https://angloinfo.com/kuwait-city/directory/work/services/texas-technical-service-company-wll-6a3f737560dbd): Business listing on Angloinfo Kuwait for services in the GCC.
+- [Blogger](https://texastechserv.blogspot.com/): Technical blog posts and industry insights from the TTS team.
+- [Dun & Bradstreet](https://www.dnb.com/business-directory/company-profiles.texas_technical_services_company_for_general_trading__contracting_wll.7ca7aec2c7eaf2e011689ae38a275cdf.html): Verified business profile and company data on D&B.
+- [Crunchbase](https://www.crunchbase.com/organization/texas-technical-services): Company overview, funding information, and industry data.
+- [ZoomInfo](https://www.zoominfo.com/c/texas-technical-services-co/476359721): Business contact and company intelligence profile.
+- [MyMidList Kuwait](https://mymidlist.com/listing/texas-technical-service-company-w-l-l-industrial-engineering-technical-solutions-in-kuwait/): Business directory listing in Kuwait for industrial engineering services.
+- [Expat.com](https://www.expat.com/en/business/141927_texas-technical-service-company-wll.html): Business listing for services in Kuwait on Expat.com.
+- [Enroll Business UAE](https://uae.enrollbusiness.com/BusinessProfile/7873457/Texas-Technical-Service-Company-W-L-L-Dubai/Home): UAE business directory listing for Dubai operations.
+- [Dubai Online](https://www.dubaionline.ae/profile/texas-technical-service-company-w-l-l): Dubai business directory profile for local services.
 

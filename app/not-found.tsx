@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { ArrowRight } from "lucide-react";
-import { blogArticles } from "@/lib/blogArticles";
+import { blogMetadata } from "@/lib/blogMetadata";
 
 export const metadata: Metadata = {
   title: "Page Not Found",
@@ -27,11 +27,11 @@ const POPULAR_INDUSTRIES = [
   { title: "Petrochemicals", href: "/industries/petrochemicals/" },
 ];
 
-const latestArticles = Object.entries(blogArticles)
+const latestArticles = blogMetadata
   .slice(-2)
   .reverse()
-  .map(([slug, article]) => ({
-    slug,
+  .map((article) => ({
+    slug: article.slug,
     title: article.title,
     category: article.category,
   }));

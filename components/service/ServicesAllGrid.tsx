@@ -1,7 +1,6 @@
 "use client";
 import Image from "next/image";
 import Link from "next/link";
-import { motion, useInView } from "framer-motion";
 import { useRef, useState, useEffect, useMemo } from "react";
 import { flushSync } from "react-dom";
 import { ArrowRight, ChevronLeft, ChevronRight, Search, X } from "lucide-react";
@@ -90,15 +89,10 @@ const PER_PAGE = 9;
 
 function ServiceCard({ service, index }: { service: ServiceItem; index: number }) {
   const ref = useRef<HTMLDivElement>(null);
-  const inView = useInView(ref, { once: true, margin: "-40px" });
   const isMobile = useIsMobile();
   return (
-    <motion.div
+    <div
       ref={ref}
-      initial={{ opacity: 0, y: 28 }}
-      animate={inView ? { opacity: 1, y: 0 } : {}}
-      transition={{ duration: 0.5, ease: [0.22, 1, 0.36, 1], delay: 0.03 + (index % 3) * 0.06 }}
-      whileHover={{ y: -4, transition: { duration: 0.22 } }}
       className="h-full"
     >
       <Link
@@ -166,7 +160,7 @@ function ServiceCard({ service, index }: { service: ServiceItem; index: number }
           </div>
         </div>
       </Link>
-    </motion.div>
+    </div>
   );
 }
 

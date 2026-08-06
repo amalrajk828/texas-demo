@@ -1,20 +1,9 @@
-import NeumorphicDeliverCard from "@/components/service/common/NeumorphicDeliverCard";
 "use client";
+
+import NeumorphicDeliverCard from "@/components/service/common/NeumorphicDeliverCard";
 import Image from "next/image";
 import Link from "next/link";
-import { motion, useInView } from "framer-motion";
-import { useRef } from "react";
 import { ArrowRight, CheckCircle2, MoveHorizontal, BarChart3, FlaskConical, ShieldCheck } from "lucide-react";
-
-function FadeUp({ children, delay = 0, className = "" }: { children: React.ReactNode; delay?: number; className?: string }) {
-  const ref = useRef<HTMLDivElement>(null);
-  const inView = useInView(ref, { once: true, margin: "-60px" });
-  return (
-    <motion.div ref={ref} initial={{ opacity: 0, y: 24 }} animate={inView ? { opacity: 1, y: 0 } : {}} transition={{ duration: 0.6, ease: [0.22, 1, 0.36, 1], delay }} className={className}>
-      {children}
-    </motion.div>
-  );
-}
 
 const CARDS = [
   { Icon: MoveHorizontal,      title: "Tensile Strength",     body: "Determines the maximum stress a material can withstand while being stretched before breaking — a fundamental property for structural design and material selection." },
@@ -40,7 +29,7 @@ export default function TensileContent() {
       <div className="absolute -top-40 -left-40 w-[500px] h-[500px] rounded-full pointer-events-none" style={{ background: "radial-gradient(circle, rgba(231,33,43,0.04) 0%, transparent 70%)" }} />
       <div className="relative max-w-7xl mx-auto px-4 sm:px-6 space-y-24">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-14 lg:gap-20 items-center">
-          <FadeUp delay={0} className="relative">
+          <div className="fade-up relative">
             <div className="relative rounded-2xl overflow-hidden aspect-[16/11] bg-[#0B0D26] shadow-2xl shadow-black/15">
               <Image src="/images/services/tensile-test2.jpg" alt="Universal testing machine performing tensile test on steel specimen — TTS Kuwait" fill sizes="(max-width: 1024px) 100vw, 50vw" className="object-cover" />
               <div className="absolute bottom-0 left-0 right-0 h-16 bg-gradient-to-t from-[#0B0D26]/40 to-transparent" />
@@ -49,15 +38,15 @@ export default function TensileContent() {
               <p className="text-white text-[10px] font-bold tracking-[1.5px] uppercase leading-none">ASTM / ISO</p>
               <p className="text-white/75 text-[12px] mt-1 leading-none font-medium">Standards Compliant</p>
             </div>
-          </FadeUp>
+          </div>
           <div>
-            <FadeUp delay={0.08}>
+            <div className="fade-up d1">
               <div className="flex items-center gap-2.5 mb-4"><span className="w-5 h-px bg-[#e7212b]" /><span className="text-[#e7212b] text-[10px] font-semibold tracking-[3.5px] uppercase">What We Do</span></div>
               <h2 className="text-3xl sm:text-[2.2rem] font-bold text-[#0B0D26] leading-[1.15] mb-5">Fundamental Tensile Testing for Material Property Determination</h2>
               <p className="text-gray-500 text-[15px] leading-[1.85] mb-4">The tensile test is one of the most fundamental mechanical tests used to determine the mechanical properties of a material. It is commonly conducted on metals, but can also be performed on various other materials like plastics, ceramics, and composites.</p>
               <p className="text-gray-500 text-[15px] leading-[1.85] mb-8">The test helps engineers and scientists understand how a material responds to tensile forces, which involve stretching or elongating the material until it eventually breaks — providing the critical data needed for material qualification, design verification, and quality assurance.</p>
-            </FadeUp>
-            <FadeUp delay={0.16}>
+            </div>
+            <div className="fade-up d2">
               <div className="grid grid-cols-1 gap-2.5 mb-8">
                 {CAPABILITIES.map((cap) => (
                   <div key={cap} className="flex items-start gap-2.5">
@@ -66,24 +55,24 @@ export default function TensileContent() {
                   </div>
                 ))}
               </div>
-            </FadeUp>
-            <FadeUp delay={0.22}>
+            </div>
+            <div className="fade-up d2">
               <a href="#contact" className="inline-flex items-center gap-2 bg-[#e7212b] hover:bg-[#aa0b1b] text-white font-semibold px-7 py-3.5 rounded-lg transition-colors duration-200 text-[14px] shadow-lg shadow-[#e7212b]/15">
                 Get More Information <ArrowRight className="w-4 h-4" />
               </a>
-            </FadeUp>
+            </div>
           </div>
         </div>
 
         <div>
-          <FadeUp delay={0} className="mb-12">
+          <div className="fade-up mb-12">
             <div className="flex items-center gap-2.5 mb-4"><span className="w-5 h-px bg-[#e7212b]" /><span className="text-[#e7212b] text-[10px] font-semibold tracking-[3.5px] uppercase">What We Measure</span></div>
             <h2 className="text-3xl sm:text-[2.2rem] font-bold text-[#0B0D26] leading-[1.15]">Key Properties Determined</h2>
-          </FadeUp>
+          </div>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5">
             {CARDS.map((item, i) => (
-              <FadeUp key={item.title} delay={0.08 + i * 0.08}>
-                <motion.div whileHover={{ y: -3, transition: { duration: 0.22 } }} className="neumorphic-press-card p-7 flex flex-col justify-between h-full group block text-left">
+              <div key={item.title || i} className="fade-up">
+                <div className="neumorphic-press-card p-7 flex flex-col justify-between h-full group block text-left">
                   <span className="text-[10px] font-bold text-[#e7212b]/25 tracking-[3px] mb-4 block">{String(i + 1).padStart(2, "0")}</span>
                   <div className="neumorphic-press-btn w-11 h-11 flex items-center justify-center text-[#e7212b] mb-4">
                     <item.Icon className="w-5 h-5 text-[#e7212b]" strokeWidth={1.8} />
@@ -91,11 +80,11 @@ export default function TensileContent() {
                   <div className="w-8 h-[2px] bg-[#e7212b] rounded-full mb-3 group-hover:w-12 transition-all duration-300" />
                   <h3 className="text-[15px] font-bold text-[#0B0D26] leading-snug mb-2">{item.title}</h3>
                   <p className="text-gray-500 text-[13px] leading-[1.75] flex-1">{item.body}</p>
-                </motion.div>
-              </FadeUp>
+                </div>
+              </div>
             ))}
           </div>
-          <FadeUp delay={0.42}>
+          <div className="fade-up d4">
             <div className="mt-8 rounded-2xl bg-[#0B0D26] overflow-hidden relative">
               <div className="absolute inset-0 pointer-events-none" style={{ backgroundImage: "repeating-linear-gradient(0deg,transparent,transparent 39px,rgba(255,255,255,0.02) 40px),repeating-linear-gradient(90deg,transparent,transparent 39px,rgba(255,255,255,0.02) 40px)" }} />
               <div className="absolute right-0 top-0 w-64 h-full pointer-events-none" style={{ background: "radial-gradient(ellipse at right, rgba(231,33,43,0.10) 0%, transparent 70%)" }} />
@@ -111,7 +100,7 @@ export default function TensileContent() {
                 </div>
               </div>
             </div>
-          </FadeUp>
+          </div>
         </div>
       </div>
     </section>

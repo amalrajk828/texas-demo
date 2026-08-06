@@ -1,33 +1,7 @@
 "use client";
 import Link from "next/link";
-import { motion, useInView } from "framer-motion";
-import { useRef } from "react";
 import { ArrowRight, Settings, ShieldCheck, Headphones, Zap } from "lucide-react";
 import NeumorphicReasonCard from "@/components/service/common/NeumorphicReasonCard";
-
-function FadeUp({
-  children,
-  delay = 0,
-  className = "",
-}: {
-  children: React.ReactNode;
-  delay?: number;
-  className?: string;
-}) {
-  const ref = useRef<HTMLDivElement>(null);
-  const inView = useInView(ref, { once: true, margin: "-60px" });
-  return (
-    <motion.div
-      ref={ref}
-      initial={{ opacity: 0, y: 24 }}
-      animate={inView ? { opacity: 1, y: 0 } : {}}
-      transition={{ duration: 0.6, ease: [0.22, 1, 0.36, 1], delay }}
-      className={className}
-    >
-      {children}
-    </motion.div>
-  );
-}
 
 const REASONS = [
   {
@@ -77,7 +51,7 @@ export default function McsiWhyUs() {
 
           {/* Left — header + OEM note + CTA */}
           <div>
-            <FadeUp delay={0}>
+            <div className="fade-up">
               <div className="flex items-center gap-2.5 mb-4">
                 <span className="w-5 h-px bg-[#e7212b]" />
                 <span className="text-[#e7212b] text-[10px] font-semibold tracking-[3.5px] uppercase">
@@ -99,9 +73,9 @@ export default function McsiWhyUs() {
                 your project and let&apos;s embark on a journey toward enhanced accuracy, compliance,
                 and efficiency in your custody transfer operations.
               </p>
-            </FadeUp>
+            </div>
 
-            <FadeUp delay={0.1}>
+            <div className="fade-up d1">
               <div className="flex flex-wrap gap-3">
                 <a
                   href="#contact"
@@ -117,15 +91,15 @@ export default function McsiWhyUs() {
                   Flow Measurement Services
                 </Link>
               </div>
-            </FadeUp>
+            </div>
           </div>
 
           {/* Right — reason cards */}
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 sm:gap-7">
             {REASONS.map((reason, i) => (
-              <FadeUp key={reason.title} delay={0.08 + i * 0.08}>
+              <div key={reason.title || i} className="fade-up">
                 <NeumorphicReasonCard item={reason} index={i} />
-              </FadeUp>
+              </div>
             ))}
           </div>
 

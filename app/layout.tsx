@@ -6,12 +6,13 @@ import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import SmoothScroll from "@/components/SmoothScroll";
 import { SiteNavigationJsonLd } from "@/components/schema/SiteNavigationJsonLd";
+import WhatsAppButton from "@/components/WhatsAppButton";
 import { SITE_URL } from "@/lib/site";
 import "./globals.css";
 
 const plusJakarta = Plus_Jakarta_Sans({
   subsets: ["latin"],
-  weight: ["400", "500", "600"],
+  weight: ["400", "500", "600", "700", "800"],
   variable: "--font-plus-jakarta",
   display: "swap",
 });
@@ -90,7 +91,6 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
           src="/vendor/vanta.topology.min.js"
           strategy="beforeInteractive"
         />
-
         <Script
           id="gtm"
           strategy="lazyOnload"
@@ -105,6 +105,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
             __html: JSON.stringify({
               "@context": "https://schema.org",
               "@type": "LocalBusiness",
+              "@id": `${SITE_URL}/#local-business`,
               name: "Texas Technical Service Company W.L.L.",
               description:
                 "Industrial automation, PLC SCADA integration, flow measurement, and inspection & testing company serving Kuwait, UAE, Dubai, and the GCC.",
@@ -150,6 +151,14 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
                 "https://www.instagram.com/texas_technical_services",
                 "https://www.youtube.com/@TEXASTECHNICALSERVICES",
                 "https://x.com/texastechserv",
+                "https://bsky.app/profile/texastechserv.bsky.social",
+                "https://medium.com/@texastechserv",
+                "https://hashnode.com/@texastechserv",
+                "https://substack.com/@texastechserv",
+                "https://www.quora.com/profile/Texas-Technical-Service-Company-W-L-L",
+                "https://wellfound.com/company/texas-technical-service-company-w-l-l",
+                "https://www.dnb.com/business-directory/company-profiles.texas_technical_services_company_for_general_trading__contracting_wll.7ca7aec2c7eaf2e011689ae38a275cdf.html",
+                "https://www.crunchbase.com/organization/texas-technical-services",
               ],
               knowsAbout: [
                 "Industrial Automation",
@@ -193,6 +202,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
           </main>
           <Footer />
         </SmoothScroll>
+        <WhatsAppButton />
       </body>
     </html>
   );

@@ -2,7 +2,6 @@
 /* Kit D — Grey: CTA — clean white section, red accent text */
 import Link from "next/link";
 import { ArrowRight } from "lucide-react";
-import { motion } from "framer-motion";
 import FadeSection from "@/components/motion/FadeSection";
 
 export default function GreyCta() {
@@ -43,7 +42,7 @@ export default function GreyCta() {
 
         <FadeSection delay={0.26}>
           <div className="flex flex-wrap gap-4 justify-center">
-            <motion.div whileHover={{ scale: 1.03 }} whileTap={{ scale: 0.97 }}>
+            <div className="hover:scale-105 transition-transform">
               <Link
                 href="/contacts/"
                 className="inline-flex items-center gap-2 text-white font-bold text-[15px] px-8 py-4 rounded-xl transition-colors"
@@ -54,8 +53,8 @@ export default function GreyCta() {
               >
                 Contact Us <ArrowRight className="w-4 h-4" />
               </Link>
-            </motion.div>
-            <motion.div whileHover={{ scale: 1.03 }} whileTap={{ scale: 0.97 }}>
+            </div>
+            <div className="hover:scale-105 transition-transform">
               <Link
                 href="/services/"
                 className="inline-flex items-center gap-2 font-semibold text-[15px] px-8 py-4 rounded-xl border transition-colors"
@@ -67,7 +66,7 @@ export default function GreyCta() {
               >
                 Our Services
               </Link>
-            </motion.div>
+            </div>
           </div>
         </FadeSection>
       </div>

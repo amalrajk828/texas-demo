@@ -1,33 +1,7 @@
 "use client";
 import Link from "next/link";
-import { motion, useInView } from "framer-motion";
-import { useRef } from "react";
 import { ArrowRight, BadgeDollarSign, Award, MinusCircle, TrendingUp, Headphones } from "lucide-react";
 import NeumorphicReasonCard from "@/components/service/common/NeumorphicReasonCard";
-
-function FadeUp({
-  children,
-  delay = 0,
-  className = "",
-}: {
-  children: React.ReactNode;
-  delay?: number;
-  className?: string;
-}) {
-  const ref = useRef<HTMLDivElement>(null);
-  const inView = useInView(ref, { once: true, margin: "-60px" });
-  return (
-    <motion.div
-      ref={ref}
-      initial={{ opacity: 0, y: 24 }}
-      animate={inView ? { opacity: 1, y: 0 } : {}}
-      transition={{ duration: 0.6, ease: [0.22, 1, 0.36, 1], delay }}
-      className={className}
-    >
-      {children}
-    </motion.div>
-  );
-}
 
 const REASONS = [
   {
@@ -82,7 +56,7 @@ export default function UpgradeWhyUs() {
 
           {/* Left — header + OEM badge + CTA */}
           <div>
-            <FadeUp delay={0}>
+            <div className="fade-up">
               <div className="flex items-center gap-2.5 mb-4">
                 <span className="w-5 h-px bg-[#e7212b]" />
                 <span className="text-[#e7212b] text-[10px] font-semibold tracking-[3.5px] uppercase">
@@ -106,9 +80,9 @@ export default function UpgradeWhyUs() {
                 breathe new life into your existing systems — backed by deep OEM expertise and a
                 commitment to long-term performance.
               </p>
-            </FadeUp>
+            </div>
 
-            <FadeUp delay={0.1}>
+            <div className="fade-up d1">
               <div className="flex flex-wrap gap-3">
                 <a
                   href="#contact"
@@ -124,7 +98,7 @@ export default function UpgradeWhyUs() {
                   Flow Measurement Services
                 </Link>
               </div>
-            </FadeUp>
+            </div>
           </div>
 
           {/* Right — reason cards */}
@@ -132,13 +106,9 @@ export default function UpgradeWhyUs() {
             {REASONS.map((reason, i) => {
               const isLast = i === REASONS.length - 1;
               return (
-                <FadeUp
-                  key={reason.title}
-                  delay={0.08 + i * 0.07}
-                  className={isLast ? "sm:col-span-2 lg:col-span-1" : ""}
-                >
+                <div className="fade-up">
                   <NeumorphicReasonCard item={reason} index={i} />
-                </FadeUp>
+                </div>
               );
             })}
           </div>

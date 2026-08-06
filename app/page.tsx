@@ -3,20 +3,34 @@ import Script from "next/script";
 import dynamic from "next/dynamic";
 import ThemeWrapper from "@/components/ThemeWrapper";
 import { SITE_URL } from "@/lib/site";
-import PartnersTicker from "@/components/PartnersTicker";
 import TickerBanner from "@/components/TickerBanner";
-import GreyWhatWeDo from "@/components/t-grey/GreyWhatWeDo";
-import GreyServices from "@/components/t-grey/GreyServices";
 import GreySolutions from "@/components/t-grey/GreySolutions";
-import GreyVision from "@/components/t-grey/GreyVision";
 import GreyTeam from "@/components/t-grey/GreyTeam";
 import GreyAbout from "@/components/t-grey/GreyAbout";
 import GreyCta from "@/components/t-grey/GreyCta";
 
-const HeroSlider = dynamic(() => import("@/components/HeroSlider"));
+const HeroSlider = dynamic(() => import("@/components/HeroSlider"), {
+  loading: () => <div style={{ minHeight: "100vh", background: "#000" }} />,
+});
+
+const PartnersTicker = dynamic(() => import("@/components/PartnersTicker"), {
+  loading: () => <div className="py-7 border-y" style={{ minHeight: 200 }} />,
+});
+
+const GreyWhatWeDo = dynamic(() => import("@/components/t-grey/GreyWhatWeDo"), {
+  loading: () => <div className="py-24 lg:py-32" style={{ minHeight: 1500 }} />,
+});
+
+const GreyServices = dynamic(() => import("@/components/t-grey/GreyServices"), {
+  loading: () => <div className="py-24 lg:py-32" style={{ minHeight: 1000 }} />,
+});
+
+const GreyVision = dynamic(() => import("@/components/t-grey/GreyVision"), {
+  loading: () => <div className="py-24 lg:py-32" style={{ minHeight: 800 }} />,
+});
 
 export const metadata: Metadata = {
-  title: "Industrial Automation, PLC SCADA & Flow Measurement",
+  title: "Industrial Automation & Flow Measurement",
   description:
     "Industrial automation company in Kuwait & GCC — PLC SCADA integration, flow measurement, inspection, and engineering services for oil & gas.",
   alternates: { canonical: "/" },
@@ -112,6 +126,14 @@ const LIGHT_GREY_VARS: Record<string, string> = {
 export default function HomePage() {
   return (
     <ThemeWrapper vars={VARS}>
+      <link
+        rel="preload"
+        as="image"
+        href="/homevideos/homebannerimage.jpg"
+        imageSrcSet="/homevideos/homebannerimage.jpg?w=375 375w, /homevideos/homebannerimage.jpg?w=768 768w, /homevideos/homebannerimage.jpg 2290w"
+        imageSizes="100vw"
+        fetchPriority="high"
+      />
 
       <Script
         id="website-schema"

@@ -1,7 +1,6 @@
 "use client";
 import Image from "next/image";
 import Link from "next/link";
-import { motion, useInView } from "framer-motion";
 import { useRef } from "react";
 import { ArrowRight } from "lucide-react";
 import { useIsMobile } from "@/hooks/useIsMobile";
@@ -25,7 +24,6 @@ export interface SubServiceCardProps {
 
 export function SubServiceCard({ item, index = 0, categoryTag, className = "" }: SubServiceCardProps) {
   const ref = useRef<HTMLDivElement>(null);
-  const inView = useInView(ref, { once: true, margin: "-40px" });
   const isMobile = useIsMobile();
 
   const badge = categoryTag || item.categoryTag;
@@ -109,11 +107,8 @@ export function SubServiceCard({ item, index = 0, categoryTag, className = "" }:
   );
 
   return (
-    <motion.div
+    <div
       ref={ref}
-      initial={{ opacity: 0, y: 24 }}
-      animate={inView ? { opacity: 1, y: 0 } : {}}
-      transition={{ duration: 0.55, ease: [0.22, 1, 0.36, 1], delay: 0.04 + (index % 3) * 0.08 }}
       className={`h-full ${className}`}
     >
       {isLink ? (
@@ -144,7 +139,7 @@ export function SubServiceCard({ item, index = 0, categoryTag, className = "" }:
           {cardContent}
         </div>
       )}
-    </motion.div>
+    </div>
   );
 }
 

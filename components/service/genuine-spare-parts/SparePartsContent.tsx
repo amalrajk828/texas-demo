@@ -1,21 +1,9 @@
 "use client";
 import Image from "next/image";
 import Link from "next/link";
-import { motion, useInView } from "framer-motion";
-import { useRef } from "react";
 import { ArrowRight, Package, ShieldCheck, Truck, Wrench } from "lucide-react";
 import WhatWeDoSection from "@/components/service/common/WhatWeDoSection";
 import NeumorphicDeliverCard from "@/components/service/common/NeumorphicDeliverCard";
-
-function FadeUp({ children, delay = 0, className = "" }: { children: React.ReactNode; delay?: number; className?: string }) {
-  const ref = useRef<HTMLDivElement>(null);
-  const inView = useInView(ref, { once: true, margin: "-60px" });
-  return (
-    <motion.div ref={ref} initial={{ opacity: 0, y: 24 }} animate={inView ? { opacity: 1, y: 0 } : {}} transition={{ duration: 0.6, ease: [0.22, 1, 0.36, 1], delay }} className={className}>
-      {children}
-    </motion.div>
-  );
-}
 
 const SERVICES = [
   { Icon: Package, title: "Genuine OEM Parts", body: "As an authorised Faure Herman OEM Representative, we supply 100% genuine spare parts — not aftermarket alternatives — ensuring full compatibility, warranted performance, and traceability for your helical flow meters." },
@@ -56,7 +44,7 @@ export default function SparePartsContent() {
 
       <section className="relative bg-white py-20 lg:py-24 border-t border-gray-100 overflow-hidden">
         <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6">
-          <FadeUp delay={0} className="mb-12">
+          <div className="fade-up mb-12">
             <div className="flex items-center gap-2.5 mb-4">
               <span className="w-5 h-px bg-[#e7212b]" />
               <span className="text-[#e7212b] text-[10px] font-semibold tracking-[3.5px] uppercase">
@@ -66,17 +54,17 @@ export default function SparePartsContent() {
             <h2 className="text-3xl sm:text-[2.2rem] font-bold text-[#1f2937] leading-[1.15]">
               What We Offer
             </h2>
-          </FadeUp>
+          </div>
 
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
             {SERVICES.map((item, i) => (
-              <FadeUp key={item.title} delay={0.08 + i * 0.08}>
+              <div key={item.title || i} className="fade-up">
                 <NeumorphicDeliverCard item={item} index={i} />
-              </FadeUp>
+              </div>
             ))}
           </div>
 
-          <FadeUp delay={0.42}>
+          <div className="fade-up d4">
             <div className="mt-12 rounded-2xl bg-[#000000] blueprint-grid blueprint-dot-grid overflow-hidden relative">
               <div className="absolute inset-0 pointer-events-none" style={{ backgroundImage: "repeating-linear-gradient(0deg,transparent,transparent 39px,rgba(255,255,255,0.02) 40px),repeating-linear-gradient(90deg,transparent,transparent 39px,rgba(255,255,255,0.02) 40px)" }} />
               <div className="absolute right-0 top-0 w-64 h-full pointer-events-none" style={{ background: "radial-gradient(ellipse at right, rgba(231,33,43,0.10) 0%, transparent 70%)" }} />
@@ -92,7 +80,7 @@ export default function SparePartsContent() {
                 </div>
               </div>
             </div>
-          </FadeUp>
+          </div>
         </div>
       </section>
     </>

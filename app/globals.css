@@ -145,6 +145,7 @@ body, .page-wrapper {
   }
   html {
     font-size: 17px;
+    scroll-padding-top: 92px;
   }
   body {
     @apply bg-background text-foreground;
@@ -199,6 +200,11 @@ body, .page-wrapper {
   .neumorphic-card-dark { box-shadow: 0 4px 12px rgba(0,0,0,0.5); }
   .module-card-neumorphic { box-shadow: 0 4px 12px rgba(0,0,0,0.5); }
   .ticker-track { animation: none !important; }
+  .header-glass {
+    backdrop-filter: none !important;
+    -webkit-backdrop-filter: none !important;
+    background: rgba(15, 15, 18, 0.95) !important;
+  }
 }
 
 /* Ticker */
@@ -294,6 +300,8 @@ a, button, [role="button"], label, select,
   font-size: 17px;
   line-height: 1.8;
   color: #4b5563;
+  overflow-wrap: anywhere;
+  word-break: break-word;
 }
 
 .blog-content p {
@@ -388,6 +396,18 @@ a, button, [role="button"], label, select,
   font-weight: 600;
   color: #1e293b;
   background: #f8fafc;
+}
+
+@media (max-width: 768px) {
+  .blog-content table {
+    display: block;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+  }
+  .blog-content table th,
+  .blog-content table td {
+    white-space: nowrap;
+  }
 }
 
 .blog-content blockquote {

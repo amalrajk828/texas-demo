@@ -1,6 +1,5 @@
 "use client";
 import Link from "next/link";
-import { motion } from "framer-motion";
 import { ArrowRight, Layers, Shield, Globe, Wrench, Clock } from "lucide-react";
 
 const HIGHLIGHTS = [
@@ -40,10 +39,7 @@ export default function PortfolioGroupHero({
           {/* Left: content */}
           <div className="flex-1 min-w-0">
             {/* Breadcrumb */}
-            <motion.nav
-              initial={{ opacity: 0, y: 8 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.4, ease: [0.22, 1, 0.36, 1] }}
+            <nav
               className="flex items-center gap-2 mb-8 text-[11px] text-white/30"
             >
               <Link href="/" className="hover:text-white/60 transition-colors">
@@ -60,59 +56,44 @@ export default function PortfolioGroupHero({
               ) : (
                 <span className="text-white/60">{breadcrumb}</span>
               )}
-            </motion.nav>
+            </nav>
 
             {/* Pill eyebrow */}
-            <motion.div
-              initial={{ opacity: 0, y: 10 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.4, delay: 0.04, ease: [0.22, 1, 0.36, 1] }}
+            <div
               className="flex items-center gap-2 mb-5"
             >
               <span className="w-5 h-px bg-[#e7212b]" />
               <span className="text-[#e7212b] text-[10px] font-semibold tracking-[2.5px] uppercase">
                 {eyebrow}
               </span>
-            </motion.div>
+            </div>
 
             {/* Title */}
-            <motion.h1
-              initial={{ opacity: 0, y: 14 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.5, delay: 0.08, ease: [0.22, 1, 0.36, 1] }}
+            <h1
               className="text-4xl sm:text-5xl lg:text-[3.5rem] font-bold text-white leading-[1.1] mb-5"
             >
               {titleHighlight}
               <em className="not-italic text-[#e7212b]">{titleSuffix}</em>
-            </motion.h1>
+            </h1>
 
             {/* Description */}
-            <motion.p
-              initial={{ opacity: 0, y: 10 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.45, delay: 0.12, ease: [0.22, 1, 0.36, 1] }}
+            <p
               className="text-white/50 text-base sm:text-[17px] leading-relaxed mb-3 max-w-xl"
             >
               {description}
-            </motion.p>
+            </p>
 
             {/* Extended description */}
-            <motion.p
-              initial={{ opacity: 0, y: 10 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.45, delay: 0.16, ease: [0.22, 1, 0.36, 1] }}
+            <p
               className="text-white/35 text-sm sm:text-[15px] leading-relaxed mb-8 max-w-xl"
             >
               From industrial sensors and flow meters to PLCs, automation systems, and
               control room solutions — we partner with world-class manufacturers to deliver
               reliable, certified equipment across the Middle East and beyond.
-            </motion.p>
+            </p>
 
             {/* CTAs */}
-            <motion.div
-              initial={{ opacity: 0, y: 10 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.45, delay: 0.2, ease: [0.22, 1, 0.36, 1] }}
+            <div
               className="flex flex-wrap gap-3"
             >
               <Link
@@ -129,14 +110,11 @@ export default function PortfolioGroupHero({
                 <Layers className="w-4 h-4" />
                 View All Projects
               </a>
-            </motion.div>
+            </div>
           </div>
 
           {/* Right: mosaic stats */}
-          <motion.div
-            initial={{ opacity: 0, y: 14 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.5, delay: 0.14, ease: [0.22, 1, 0.36, 1] }}
+          <div
             className="hidden lg:block shrink-0 w-[320px] mt-8 lg:mt-16"
           >
             <div className="grid grid-cols-2 gap-4">
@@ -154,14 +132,11 @@ export default function PortfolioGroupHero({
                 </div>
               ))}
             </div>
-          </motion.div>
+          </div>
         </div>
 
         {/* Feature highlight cards — full width */}
-        <motion.div
-          initial={{ opacity: 0, y: 12 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.5, delay: 0.26, ease: [0.22, 1, 0.36, 1] }}
+        <div
           className="grid grid-cols-2 sm:grid-cols-4 gap-4 mt-12 pb-12"
         >
           {HIGHLIGHTS.map((h) => (
@@ -173,7 +148,7 @@ export default function PortfolioGroupHero({
               <span className="text-white/70 text-[13px] leading-snug">{h.text}</span>
             </div>
           ))}
-        </motion.div>
+        </div>
       </div>
     </section>
   );

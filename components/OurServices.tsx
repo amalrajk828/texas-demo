@@ -1,6 +1,5 @@
 "use client";
 import Link from "next/link";
-import { motion, useInView } from "framer-motion";
 import { useRef } from "react";
 import { Gauge, FlaskConical, Cpu, ArrowRight } from "lucide-react";
 
@@ -24,31 +23,6 @@ const SERVICES = [
     href: "/service/industrial-automation/",
   },
 ];
-
-function FadeUp({
-  children,
-  delay = 0,
-  className = "",
-}: {
-  children: React.ReactNode;
-  delay?: number;
-  className?: string;
-}) {
-  const ref = useRef<HTMLDivElement>(null);
-  const inView = useInView(ref, { once: true, margin: "-60px" });
-  return (
-    <motion.div
-      ref={ref}
-      initial={{ opacity: 0, y: 28 }}
-      animate={inView ? { opacity: 1, y: 0 } : {}}
-      transition={{ duration: 0.6, ease: [0.22, 1, 0.36, 1], delay }}
-      className={className}
-      style={className?.includes("h-full") ? { height: "100%" } : undefined}
-    >
-      {children}
-    </motion.div>
-  );
-}
 
 export default function OurServices() {
   return (
@@ -82,7 +56,7 @@ export default function OurServices() {
       <div className="relative max-w-7xl mx-auto px-4 sm:px-6">
 
         {/* Section header */}
-        <FadeUp delay={0} className="text-center mb-16">
+        <div className="fade-up text-center mb-16">
           <div className="inline-flex items-center gap-2.5 mb-5">
             <span className="w-6 h-px" style={{ background: "var(--color-brand-red)" }} />
             <span className="text-[10px] font-semibold tracking-[3.5px] uppercase" style={{ color: "var(--color-brand-red)" }}>
@@ -97,19 +71,19 @@ export default function OurServices() {
             At Texas Technical Service Co., we have extensive expertise in a wide range of services
             related to Custody Metering systems, Industrial Automation, and Inspection &amp; Testing.
           </p>
-        </FadeUp>
+        </div>
 
         {/* Cards grid */}
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6 items-stretch">
           {SERVICES.map((svc, i) => (
-            <FadeUp key={svc.title} delay={0.1 + i * 0.1} className="h-full">
+            <div key={svc.title} className="fade-up d1 h-full">
               <ServiceCard svc={svc} index={i} />
-            </FadeUp>
+            </div>
           ))}
         </div>
 
         {/* Bottom CTA */}
-        <FadeUp delay={0.45} className="text-center mt-14">
+        <div className="fade-up text-center mt-14">
           <Link
             href="/services/"
             className="inline-flex items-center gap-2 border border-white/15 hover:border-white/40 text-white/60 hover:text-white px-7 py-3.5 rounded-lg transition-all duration-200 text-[14px] font-medium backdrop-blur-sm"
@@ -117,7 +91,7 @@ export default function OurServices() {
             View all services
             <ArrowRight className="w-4 h-4" />
           </Link>
-        </FadeUp>
+        </div>
 
       </div>
     </section>
@@ -132,15 +106,10 @@ function ServiceCard({
   index: number;
 }) {
   const ref = useRef<HTMLDivElement>(null);
-  const inView = useInView(ref, { once: true, margin: "-40px" });
 
   return (
-    <motion.div
+    <div
       ref={ref}
-      initial={{ opacity: 0, y: 32 }}
-      animate={inView ? { opacity: 1, y: 0 } : {}}
-      transition={{ duration: 0.6, ease: [0.22, 1, 0.36, 1], delay: 0.1 + index * 0.1 }}
-      whileHover={{ y: -4, transition: { duration: 0.25 } }}
       className="group relative rounded-2xl border border-white/[0.08] backdrop-blur-sm overflow-hidden flex flex-col cursor-default h-full"
       style={{
         background: "color-mix(in srgb, var(--color-brand-navy-mid) 60%, transparent)",
@@ -207,6 +176,6 @@ function ServiceCard({
           </Link>
         </div>
       </div>
-    </motion.div>
+    </div>
   );
 }

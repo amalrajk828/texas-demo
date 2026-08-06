@@ -1,32 +1,7 @@
 import NeumorphicDeliverCard from "@/components/service/common/NeumorphicDeliverCard";
 "use client";
-import { motion, useInView } from "framer-motion";
 import { useRef } from "react";
 import { Clock, ThumbsUp, ShieldCheck, HardHat } from "lucide-react";
-
-function FadeUp({
-  children,
-  delay = 0,
-  className = "",
-}: {
-  children: React.ReactNode;
-  delay?: number;
-  className?: string;
-}) {
-  const ref = useRef<HTMLDivElement>(null);
-  const inView = useInView(ref, { once: true, margin: "-60px" });
-  return (
-    <motion.div
-      ref={ref}
-      initial={{ opacity: 0, y: 24 }}
-      animate={inView ? { opacity: 1, y: 0 } : {}}
-      transition={{ duration: 0.6, ease: [0.22, 1, 0.36, 1], delay }}
-      className={className}
-    >
-      {children}
-    </motion.div>
-  );
-}
 
 const BENEFITS = [
   {
@@ -67,7 +42,7 @@ export default function ServicesBenefits() {
       <div className="relative max-w-7xl mx-auto px-4 sm:px-6">
 
         {/* ── Header ── */}
-        <FadeUp delay={0} className="max-w-2xl mb-16">
+        <div className="fade-up max-w-2xl mb-16">
           <div className="flex items-center gap-2.5 mb-4">
             <span className="w-5 h-px bg-[#e7212b]" />
             <span className="text-[#e7212b] text-[10px] font-semibold tracking-[3.5px] uppercase">
@@ -83,19 +58,19 @@ export default function ServicesBenefits() {
             We blend technology and quality workmanship with personal, one-on-one service.
             Our skilled team will provide high quality results — whatever the scale or complexity.
           </p>
-        </FadeUp>
+        </div>
 
         {/* ── Cards grid ── */}
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
           {BENEFITS.map((benefit, i) => (
-            <FadeUp key={benefit.title} delay={0.08 + i * 0.08}>
+            <div key={benefit.title || i} className="fade-up">
               <BenefitCard benefit={benefit} index={i} />
-            </FadeUp>
+            </div>
           ))}
         </div>
 
         {/* ── Bottom ISO strip ── */}
-        <FadeUp delay={0.42}>
+        <div className="fade-up d4">
           <div className="mt-16 rounded-2xl bg-[#000000] blueprint-grid blueprint-dot-grid overflow-hidden relative">
             {/* Grid texture */}
             <div
@@ -140,7 +115,7 @@ export default function ServicesBenefits() {
               </div>
             </div>
           </div>
-        </FadeUp>
+        </div>
 
       </div>
     </section>
@@ -156,15 +131,10 @@ function BenefitCard({
   index: number;
 }) {
   const ref = useRef<HTMLDivElement>(null);
-  const inView = useInView(ref, { once: true, margin: "-40px" });
 
   return (
-    <motion.div
+    <div
       ref={ref}
-      initial={{ opacity: 0, y: 24 }}
-      animate={inView ? { opacity: 1, y: 0 } : {}}
-      transition={{ duration: 0.55, ease: [0.22, 1, 0.36, 1], delay: 0.08 + index * 0.08 }}
-      whileHover={{ y: -3, transition: { duration: 0.22 } }}
       className="neumorphic-press-card p-7 flex flex-col justify-between h-full group block text-left"
     >
       {/* Number */}
@@ -189,6 +159,6 @@ function BenefitCard({
       <p className="text-gray-500 text-[14px] leading-[1.75]">
         {benefit.body}
       </p>
-    </motion.div>
+    </div>
   );
 }

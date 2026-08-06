@@ -2,6 +2,7 @@ import Link from "next/link";
 import Image from "next/image";
 import { Mail, Phone, MapPin, LayoutGrid, ArrowRight } from "lucide-react";
 import { SITE_EMAIL } from "@/lib/site";
+import { ALL_PARTNERS } from "@/lib/partners";
 
 const services = [
   { label: "Flow Measurement Solutions", href: "/service/flow-measurement-solutions/" },
@@ -50,6 +51,31 @@ const socials = [
   },
 ];
 
+function FooterTrack() {
+  return (
+    <div className="flex shrink-0 items-center footer-marquee-mask">
+      {ALL_PARTNERS.map((p) => (
+        <div key={p.slug} className="shrink-0 flex items-center justify-center mx-4 sm:mx-6">
+          <Link
+            href={p.href.startsWith("/solutions/") ? p.href : `/partners/${p.slug}/`}
+            className="block"
+            aria-label={p.name}
+          >
+            <Image
+              src={p.logo}
+              alt={p.name}
+              width={160}
+              height={60}
+              className="object-contain h-7 w-auto opacity-40 hover:opacity-100 transition-opacity duration-300"
+              style={{ mixBlendMode: "screen" }}
+            />
+          </Link>
+        </div>
+      ))}
+    </div>
+  );
+}
+
 export default function Footer() {
   return (
     <footer style={{ background: "#0A0C11" }}>
@@ -85,7 +111,7 @@ export default function Footer() {
           {/* ── Brand Column ──────────────── */}
           <div>
             <Link href="/" className="flex flex-col items-center gap-3 mb-7 w-fit">
-              <Image src="/logo.svg" alt="Texas Technical Services" width={90} height={90} />
+              <Image src="/logo.svg" alt="Texas Technical Services" width={90} height={90} loading="lazy" />
               <div className="text-center">
                 <p className="text-white font-black tracking-[7px] text-[20px] leading-none">
                   TEXAS
@@ -95,16 +121,16 @@ export default function Footer() {
                 </p>
               </div>
             </Link>
-            <p className="text-white/45 text-[14px] leading-[1.8] mb-5 font-medium">
+            <p className="text-white/70 text-[14px] leading-[1.8] mb-5 font-medium">
               ISO 9001:2015 certified company established in 2008. Flow measurement,
               automation &amp; inspection for oil &amp; gas and industrial sectors.
             </p>
             <a
               href={`mailto:${SITE_EMAIL}`}
-              className="flex items-center gap-2 text-white/50 text-sm hover:text-brand-red transition-colors mb-4"
+              className="flex items-start gap-2 text-white/50 text-sm hover:text-brand-red transition-colors mb-4"
             >
-              <Mail className="w-3.5 h-3.5 shrink-0" />
-              {SITE_EMAIL}
+              <Mail className="w-3.5 h-3.5 shrink-0 mt-0.5" />
+              <span className="min-w-0 break-all">{SITE_EMAIL}</span>
             </a>
             <div className="flex flex-wrap gap-2">
               {socials.map(({ href, label, path }) => (
@@ -114,7 +140,7 @@ export default function Footer() {
                   target="_blank"
                   rel="noopener noreferrer"
                   aria-label={label}
-                   className="w-11 h-11 rounded-full border border-white/10 flex items-center justify-center text-white/40 hover:text-white hover:border-[#E53935]/40 hover:bg-[#E53935]/10 transition-all"
+                   className="w-11 h-11 rounded-full border border-white/10 flex items-center justify-center text-white/70 hover:text-white hover:border-[#E53935]/40 hover:bg-[#E53935]/10 transition-all"
                 >
                   <svg viewBox="0 0 24 24" className="w-4 h-4" fill="none" stroke="currentColor" strokeWidth={2} strokeLinecap="round" strokeLinejoin="round">
                     <path d={path} />
@@ -122,9 +148,9 @@ export default function Footer() {
                 </a>
               ))}
             </div>
-              <Link
+                <Link
                 href="/social-media/"
-                className="text-white/50 text-[13px] font-medium hover:text-white transition-colors flex items-center gap-2 mt-3"
+                className="text-white/70 text-[13px] font-medium hover:text-white transition-colors flex items-center gap-2 mt-3"
               >
                 <LayoutGrid className="w-4 h-4" />
                 View all platforms
@@ -156,14 +182,14 @@ export default function Footer() {
                   <p className="text-white text-[15px] font-bold mb-2 flex items-center gap-2">
                     <MapPin className="w-3.5 h-3.5 text-[#E53935]" /> {office.city}
                   </p>
-                  <p className="text-white/50 text-[13px] leading-relaxed mb-2 font-medium">
+                  <p className="text-white/70 text-[13px] leading-relaxed mb-2 font-medium">
                     {office.address}
                   </p>
                   {office.phones.map((p) => (
                     <a
                       key={p}
                       href={`tel:${p.replace(/\s/g, "")}`}
-                      className="flex items-center gap-2 text-white/40 text-[13px] font-medium hover:text-[#E53935] transition-colors"
+                      className="flex items-center gap-2 py-1.5 text-white/70 text-[13px] font-medium hover:text-[#E53935] transition-colors"
                     >
                       <Phone className="w-3 h-3" /> {p}
                     </a>
@@ -184,7 +210,7 @@ export default function Footer() {
                 <li key={s.href}>
                   <Link
                     href={s.href}
-                    className="text-white/45 text-[14px] font-medium hover:text-white transition-colors"
+                    className="text-white/70 text-[14px] font-medium hover:text-white transition-colors"
                   >
                     {s.label}
                   </Link>
@@ -204,7 +230,7 @@ export default function Footer() {
                 <li key={i.href}>
                   <Link
                     href={i.href}
-                    className="text-white/45 text-[14px] font-medium hover:text-white transition-colors flex items-center gap-2 group"
+                    className="text-white/70 text-[14px] font-medium hover:text-white transition-colors flex items-center gap-2 group"
                   >
                     <span className="w-1.5 h-1.5 rounded-full bg-[#E53935]/30 group-hover:bg-[#E53935] transition-colors shrink-0" />
                     {i.label}
@@ -225,7 +251,7 @@ export default function Footer() {
                 <li key={s.href}>
                   <Link
                     href={s.href}
-                    className="text-white/45 text-[14px] font-medium hover:text-white transition-colors flex items-center gap-2 group"
+                    className="text-white/70 text-[14px] font-medium hover:text-white transition-colors flex items-center gap-2 group"
                   >
                     <span className="w-1.5 h-1.5 rounded-full bg-[#E53935]/30 group-hover:bg-[#E53935] transition-colors shrink-0" />
                     {s.label}
@@ -235,6 +261,52 @@ export default function Footer() {
             </ul>
           </div>
         </div>
+      </div>
+
+      {/* Partners — sliding marquee */}
+      <div className="border-t" style={{ borderColor: "rgba(255,255,255,0.06)" }}>
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 pt-8 pb-4">
+          <div className="flex items-center gap-2 mb-6">
+            <span className="w-[2px] h-4 rounded-full bg-[#E53935]" />
+            <h3 className="text-white/70 text-[12px] font-bold tracking-[2.5px] uppercase">
+              Our Partners
+            </h3>
+          </div>
+        </div>
+
+        {/* Marquee */}
+        <div className="overflow-hidden select-none">
+          <div className="footer-partners-wrapper flex w-full" style={{ willChange: "transform" }}>
+            <FooterTrack />
+            <FooterTrack />
+          </div>
+        </div>
+
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 pt-4 pb-2">
+          <Link
+            href="/partners/"
+            className="inline-flex items-center gap-2 text-white/70 text-[13px] font-medium hover:text-white transition-colors"
+          >
+            View all partners <ArrowRight className="w-3.5 h-3.5" />
+          </Link>
+        </div>
+
+        <style>{`
+          .footer-partners-wrapper {
+            animation: footer-marquee 30s linear infinite;
+          }
+          .footer-partners-wrapper:hover {
+            animation-play-state: paused;
+          }
+          @keyframes footer-marquee {
+            0%   { transform: translate3d(0, 0, 0); }
+            100% { transform: translate3d(-50%, 0, 0); }
+          }
+          .footer-marquee-mask {
+            -webkit-mask-image: linear-gradient(to right, transparent 0%, black 4%, black 96%, transparent 100%);
+            mask-image: linear-gradient(to right, transparent 0%, black 4%, black 96%, transparent 100%);
+          }
+        `}</style>
       </div>
 
       {/* Certifications */}
@@ -258,11 +330,11 @@ export default function Footer() {
       {/* Bottom bar */}
       <div className="border-t" style={{ borderColor: "rgba(255,255,255,0.06)" }}>
         <div className="max-w-7xl mx-auto px-4 sm:px-6 py-5 flex flex-col sm:flex-row items-center justify-between gap-3">
-          <p className="text-white/25 text-[12px] font-medium">
+          <p className="text-white/50 text-[12px] font-medium">
             TEXAS TECHNICAL SERVICE COMPANY W.L.L. © {new Date().getFullYear()}. All Rights Reserved.
           </p>
           <div className="flex items-center gap-4">
-            <span className="text-brand-red text-[11px] font-medium">ISO 9001:2015 Certified</span>
+            <span className="text-[11px] font-medium" style={{ color: "#FF5252" }}>ISO 9001:2015 Certified</span>
           </div>
         </div>
       </div>
