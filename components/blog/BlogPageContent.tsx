@@ -1,9 +1,8 @@
 "use client";
 
-import { useState, useRef, useEffect } from "react";
+import { useState } from "react";
 import Link from "next/link";
 import Image from "next/image";
-import Script from "next/script";
 import {
   ArrowRight,
   Calendar,
@@ -11,6 +10,8 @@ import {
   BookOpen,
   User,
 } from "lucide-react";
+
+import BlogHeroLottie from "./BlogHeroLottie";
 
 /* ─── Types ─────────────────────────────────────────────────────────── */
 export interface BlogPost {
@@ -47,66 +48,6 @@ const ALL = "All";
 
 /* ─── Main component ──────────────────────────────────────────────────── */
 export default function BlogPageContent({ allPosts }: Props) {
-  const vantaRef = useRef<HTMLDivElement>(null);
-  const vantaEffectRef = useRef<any>(null);
-  const [threeLoaded, setThreeLoaded] = useState(false);
-  const [vantaLoaded, setVantaLoaded] = useState(false);
-
-  const initVanta = () => {
-    if (
-      typeof window !== "undefined" &&
-      (window as any).THREE &&
-      (window as any).VANTA &&
-      (window as any).VANTA.BIRDS &&
-      vantaRef.current &&
-      !vantaEffectRef.current
-    ) {
-      try {
-        const isMobile = typeof window !== "undefined" && window.innerWidth < 768;
-        vantaEffectRef.current = (window as any).VANTA.BIRDS({
-          el: vantaRef.current,
-          mouseControls: true,
-          touchControls: true,
-          gyroControls: false,
-          minHeight: 200.00,
-          minWidth: 200.00,
-          scale: 1.00,
-          scaleMobile: 1.00,
-          backgroundColor: 0x000000,
-          color1: 0xe22119,
-          color2: 0x8a0f0a,
-          birdSize: 1.20,
-          wingSpan: 25.00,
-          speedLimit: 4.00,
-          separation: 60.00,
-          alignment: 30.00,
-          cohesion: 30.00,
-          quantity: isMobile ? 2 : 4,
-        });
-      } catch (err) {
-        console.error("Vanta Birds init error:", err);
-      }
-    }
-  };
-
-  useEffect(() => {
-    if (vantaLoaded) {
-      initVanta();
-    }
-    return () => {
-      if (vantaEffectRef.current) {
-        vantaEffectRef.current.destroy();
-        vantaEffectRef.current = null;
-      }
-    };
-  }, [vantaLoaded]);
-
-  useEffect(() => {
-    if ((window as any).THREE && (window as any).VANTA?.BIRDS) {
-      initVanta();
-    }
-  }, []);
-
   // Day-based deterministic rotation so it varies daily but stays consistent between server and client render
   const dayIndex = Math.floor(Date.now() / 86400000);
   const featured = allPosts.length > 0 ? allPosts[dayIndex % allPosts.length] : undefined;
@@ -119,27 +60,15 @@ export default function BlogPageContent({ allPosts }: Props) {
 
   return (
     <div className="min-h-screen bg-[#f8f9fb] font-sans antialiased text-[#0B0D26]">
-      <Script
-        src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r134/three.min.js"
-        strategy="afterInteractive"
-        onLoad={() => setThreeLoaded(true)}
-      />
-      {threeLoaded && (
-        <Script
-          src="https://cdn.jsdelivr.net/npm/vanta@latest/dist/vanta.birds.min.js"
-          strategy="afterInteractive"
-          onLoad={() => setVantaLoaded(true)}
-        />
-      )}
-
       {/* ══════════════════════════════════════════════════════════════
           1. HERO SECTION
       ══════════════════════════════════════════════════════════════ */}
       <section
         id="hero-vanta"
-        ref={vantaRef}
         className="relative bg-[#000000] blueprint-grid blueprint-dot-grid overflow-hidden pt-32 pb-16 lg:pb-24"
       >
+        {/* Blog Hero Lottie animated background */}
+        <BlogHeroLottie />
         {/* Red radial glow top-right */}
         <div
           className="absolute -top-24 -right-24 w-[600px] h-[600px] rounded-full pointer-events-none"
@@ -175,10 +104,8 @@ export default function BlogPageContent({ allPosts }: Props) {
                 key={s.label}
                 className="rounded-xl px-5 py-4 border flex flex-col gap-1"
                 style={{
-                  background: "rgba(17, 17, 17, 0.75)",
-                  backdropFilter: "blur(8px)",
-                  WebkitBackdropFilter: "blur(8px)",
-                  borderColor: "rgba(231,33,43,0.18)",
+                  background: "rgba(14, 14, 18, 0.90)",
+                  borderColor: "rgba(231,33,43,0.22)",
                 }}
               >
                 <span className="text-[#e7212b] text-2xl sm:text-3xl font-black leading-none">

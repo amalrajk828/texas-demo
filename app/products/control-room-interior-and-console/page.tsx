@@ -14,6 +14,7 @@ import ControlRoomServicesSection from "@/components/products/ControlRoomService
 import ControlRoomStandardsSection from "@/components/products/ControlRoomStandardsSection";
 import YouTubeEmbed from "@/components/YouTubeEmbed";
 import { getProductsByPath } from "@/lib/products";
+import ProductHeroWithTrunk from "@/components/products/common/ProductHeroWithTrunk";
 
 export const metadata: Metadata = {
   title: "Control Room Interior & Console",
@@ -66,44 +67,16 @@ export default function ControlRoomPage() {
         embedUrl="https://www.youtube.com/embed/t90rfWiViw8"
       />
       {/* ── Hero Banner ─────────────────────────────────────── */}
-      <section className="relative bg-[#000000] blueprint-grid blueprint-dot-grid overflow-hidden border-b-4 border-[#e7212b]">
-        <div
-          className="absolute inset-0 pointer-events-none opacity-30"
-          style={{
-            backgroundImage:
-              "repeating-linear-gradient(0deg,transparent,transparent 39px,rgba(255,255,255,0.02) 40px),repeating-linear-gradient(90deg,transparent,transparent 39px,rgba(255,255,255,0.02) 40px)",
-          }}
-        />
-        <div
-          className="absolute bottom-0 left-1/2 -translate-x-1/2 w-[600px] h-40 pointer-events-none"
-          style={{
-            background: "radial-gradient(ellipse, rgba(231,33,43,0.06) 0%, transparent 70%)",
-          }}
-        />
-
-        <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 pt-[calc(var(--navbar-height,92px)+1.75rem)] pb-16 lg:pt-[calc(var(--navbar-height,92px)+2.5rem)] lg:pb-20">
-          <nav className="flex items-center gap-1.5 text-[11px] text-white/50 mb-6">
-            <Link href="/" className="hover:text-white transition-colors">Home</Link>
-            <ChevronRight className="w-3 h-3 text-white/30" />
-            <Link href="/products" className="hover:text-white transition-colors">Products</Link>
-            <ChevronRight className="w-3 h-3 text-white/30" />
-            <span className="text-white">Control Room Interior & Console</span>
-          </nav>
-
-          <div className="flex items-center gap-2 mb-4">
-            <span className="w-5 h-px bg-[#e7212b]" />
-            <span className="text-[#e7212b] text-[10px] font-medium tracking-[2.5px] uppercase">
-              Control Room Interior & Console
-            </span>
-          </div>
-          <h1 className="text-4xl sm:text-5xl font-medium text-white leading-tight mb-4">
-            Control Room Interior & Console
-          </h1>
-          <p className="text-white/60 text-base max-w-xl">
-            Ergonomic control room furniture and console systems for critical operations — from Pyrotech Workspace Solutions.
-          </p>
-        </div>
-      </section>
+      <ProductHeroWithTrunk
+        breadcrumbs={[
+          { label: "Home", href: "/" },
+          { label: "Products", href: "/products/" },
+          { label: "Control Room Interior & Console" },
+        ]}
+        eyebrow="Control Room Interior & Console"
+        title="Control Room Interior & Console"
+        subtitle="Ergonomic control room furniture and console systems for critical operations — from Pyrotech Workspace Solutions."
+      />
 
       {/* ── Intro Section ────────────────────────────────────── */}
       <section className="bg-white py-12">

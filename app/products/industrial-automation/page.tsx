@@ -1,13 +1,12 @@
 import React from "react";
 import type { Metadata } from "next";
-import Link from "next/link";
 import { BreadcrumbJsonLd } from "@/components/schema/BreadcrumbJsonLd";
 import { ItemListJsonLd } from "@/components/schema/ItemListJsonLd";
 import { FaqPageJsonLd } from "@/components/schema/FaqPageJsonLd";
 import { productsListingFaq } from "@/lib/pageFaqData";
-import { ChevronRight } from "lucide-react";
 import ProductCard from "@/components/ProductCard";
 import { getProductsByPath } from "@/lib/products";
+import ProductHeroWithTrunk from "@/components/products/common/ProductHeroWithTrunk";
 
 export const metadata: Metadata = {
   title: "Industrial Automation",
@@ -55,44 +54,16 @@ export default function IndustrialAutomationPage() {
         }))}
       />
       {/* ── Hero Banner ─────────────────────────────────────── */}
-      <section className="relative bg-[#000000] blueprint-grid blueprint-dot-grid overflow-hidden border-b-4 border-[#e7212b]">
-        <div
-          className="absolute inset-0 pointer-events-none opacity-30"
-          style={{
-            backgroundImage:
-              "repeating-linear-gradient(0deg,transparent,transparent 39px,rgba(255,255,255,0.02) 40px),repeating-linear-gradient(90deg,transparent,transparent 39px,rgba(255,255,255,0.02) 40px)",
-          }}
-        />
-        <div
-          className="absolute bottom-0 left-1/2 -translate-x-1/2 w-[600px] h-40 pointer-events-none"
-          style={{
-            background: "radial-gradient(ellipse, rgba(231,33,43,0.06) 0%, transparent 70%)",
-          }}
-        />
-
-        <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 pt-[calc(var(--navbar-height,92px)+1.75rem)] pb-16 lg:pt-[calc(var(--navbar-height,92px)+2.5rem)] lg:pb-20">
-          <nav className="flex items-center gap-1.5 text-[11px] text-white/50 mb-6">
-            <Link href="/" className="hover:text-white transition-colors">Home</Link>
-            <ChevronRight className="w-3 h-3 text-white/30" />
-            <Link href="/products" className="hover:text-white transition-colors">Products</Link>
-            <ChevronRight className="w-3 h-3 text-white/30" />
-            <span className="text-white">Industrial Automation</span>
-          </nav>
-
-          <div className="flex items-center gap-2 mb-4">
-            <span className="w-5 h-px bg-[#e7212b]" />
-            <span className="text-[#e7212b] text-[10px] font-medium tracking-[2.5px] uppercase">
-              Industrial Automation
-            </span>
-          </div>
-          <h1 className="text-4xl sm:text-5xl font-medium text-white leading-tight mb-4">
-            Industrial Automation
-          </h1>
-          <p className="text-white/60 text-base max-w-xl">
-            End-to-end automation solutions for process plants and manufacturing facilities — from PLCs and control panels to industrial networks and command centres.
-          </p>
-        </div>
-      </section>
+      <ProductHeroWithTrunk
+        breadcrumbs={[
+          { label: "Home", href: "/" },
+          { label: "Products", href: "/products/" },
+          { label: "Industrial Automation" },
+        ]}
+        eyebrow="Industrial Automation"
+        title="Industrial Automation"
+        subtitle="End-to-end automation solutions for process plants and manufacturing facilities — from PLCs and control panels to industrial networks and command centres."
+      />
 
       {/* ── Intro Section ────────────────────────────────────── */}
       <section className="bg-white py-12">

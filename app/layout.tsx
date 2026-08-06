@@ -90,6 +90,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
           src="/vendor/vanta.topology.min.js"
           strategy="beforeInteractive"
         />
+
         <Script
           id="gtm"
           strategy="lazyOnload"
