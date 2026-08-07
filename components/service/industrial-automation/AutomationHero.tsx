@@ -46,7 +46,7 @@ export default function AutomationHero() {
             className="text-4xl sm:text-5xl lg:text-[3.2rem] font-bold text-white leading-[1.12] mb-6"
           >
             Industrial Process{" "}
-            <em className="not-italic text-[#e7212b]">Automation</em>
+            <em className="not-italic text-white">Automation</em>
             <br className="hidden sm:block" />
             {" "}Solutions
           </h1>

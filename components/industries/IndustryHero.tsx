@@ -70,7 +70,7 @@ export default function IndustryHero({
             <h1 className="text-3xl sm:text-4xl lg:text-[2.75rem] font-medium text-white leading-[1.15] mb-5">
               {name}
               <br />
-              <em className="not-italic text-[#e7212b]">Industry</em>
+              <em className="not-italic text-white">Industry</em>
             </h1>
 
             <p className="text-white/60 text-base sm:text-lg leading-relaxed mb-5 max-w-xl">

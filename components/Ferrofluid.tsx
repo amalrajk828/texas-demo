@@ -307,8 +307,8 @@ const Ferrofluid: React.FC<FerrofluidProps> = ({
     const ro = new ResizeObserver(resize);
     ro.observe(container);
 
-    const onPointerMove = (e: PointerEvent) => {
-      const rect = canvas.getBoundingClientRect();
+    const onPointerMove = (e: MouseEvent | PointerEvent) => {
+      const rect = container.getBoundingClientRect();
       const sc = renderer.dpr || 1;
       const x = (e.clientX - rect.left) * sc;
       const y = (rect.height - (e.clientY - rect.top)) * sc;
@@ -317,8 +317,23 @@ const Ferrofluid: React.FC<FerrofluidProps> = ({
         uniforms.iMouse.value = [x, y];
       }
     };
+
+    const onTouchMove = (e: TouchEvent) => {
+      if (!e.touches[0]) return;
+      const rect = container.getBoundingClientRect();
+      const sc = renderer.dpr || 1;
+      const touch = e.touches[0];
+      const x = (touch.clientX - rect.left) * sc;
+      const y = (rect.height - (touch.clientY - rect.top)) * sc;
+      mouseTargetRef.current = [x, y];
+      if (mouseDampening <= 0) {
+        uniforms.iMouse.value = [x, y];
+      }
+    };
+
     if (mouseInteraction) {
-      canvas.addEventListener('pointermove', onPointerMove);
+      window.addEventListener('pointermove', onPointerMove, { passive: true });
+      window.addEventListener('touchmove', onTouchMove, { passive: true });
     }
 
     const loop = (t: number) => {
@@ -350,7 +365,10 @@ const Ferrofluid: React.FC<FerrofluidProps> = ({
 
     return () => {
       if (rafRef.current) cancelAnimationFrame(rafRef.current);
-      if (mouseInteraction) canvas.removeEventListener('pointermove', onPointerMove);
+      if (mouseInteraction) {
+        window.removeEventListener('pointermove', onPointerMove);
+        window.removeEventListener('touchmove', onTouchMove);
+      }
       ro.disconnect();
       if (canvas.parentElement === container) {
         container.removeChild(canvas);

@@ -44,7 +44,7 @@ export default function MFLHero() {
           <div className="fade-up d1">
             <h1 className="text-4xl sm:text-5xl lg:text-[3.5rem] font-bold text-white leading-[1.08] tracking-tight mb-6">
               Magnetic Flux{" "}
-              <span className="text-[#e7212b]">Leakage (MFL)</span>
+              <span className="text-white">Leakage (MFL)</span>
             </h1>
           </div>
           <div className="fade-up d2">

@@ -37,7 +37,7 @@ export default function CommissioningHero() {
           <div className="fade-up d1">
             <h1 className="text-4xl sm:text-5xl lg:text-[3.5rem] font-bold text-white leading-[1.08] tracking-tight mb-6">
               Commissioning &amp;{" "}
-              <span className="text-[#e7212b]">Start-up Support</span>
+              <span className="text-white">Start-up Support</span>
             </h1>
           </div>
           <div className="fade-up d2">

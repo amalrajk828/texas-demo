@@ -37,7 +37,7 @@ export default function ExpertServicesHero() {
 
           <h1 className="text-4xl sm:text-5xl lg:text-[3.4rem] font-bold text-white leading-[1.08] mb-6">
             Metering{" "}
-            <em className="not-italic text-[#e7212b]">Expert Services</em>
+            <em className="not-italic text-white">Expert Services</em>
           </h1>
 
           <p className="text-white/50 text-[16px] leading-[1.85] mb-10 max-w-none">

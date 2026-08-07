@@ -32,7 +32,7 @@ export default function PenetrantHero() {
           </div>
           <h1 className="text-4xl sm:text-5xl lg:text-[3.4rem] font-bold text-white leading-[1.08] mb-6">
             Liquid / Dye Penetrant{" "}
-            <em className="not-italic text-[#e7212b]">Examination (PT)</em>
+            <em className="not-italic text-white">Examination (PT)</em>
           </h1>
           <p className="text-white/50 text-[16px] leading-[1.85] mb-10 max-w-none">
             A widely used NDT method that uses capillary forces to find surface cracks, laps, and porosity and make them visible — particularly effective for non-porous materials including metals, ceramics, plastics, and some non-metallic materials.

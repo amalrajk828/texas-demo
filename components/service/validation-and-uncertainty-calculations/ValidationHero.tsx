@@ -37,7 +37,7 @@ export default function ValidationHero() {
 
           <h1 className="text-4xl sm:text-5xl lg:text-[3.4rem] font-bold text-white leading-[1.08] mb-6">
             Validation &amp;{" "}
-            <em className="not-italic text-[#e7212b]">Uncertainty Calculations</em>
+            <em className="not-italic text-white">Uncertainty Calculations</em>
           </h1>
 
           <p className="text-white/50 text-[16px] leading-[1.85] mb-10 max-w-none">

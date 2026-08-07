@@ -44,7 +44,7 @@ export default function GammaRayHero() {
           <div className="fade-up d1">
             <h1 className="text-4xl sm:text-5xl lg:text-[3.5rem] font-bold text-white leading-[1.08] tracking-tight mb-6">
               Gamma Ray Pipe{" "}
-              <span className="text-[#e7212b]">Crawler Inspection</span>
+              <span className="text-white">Crawler Inspection</span>
             </h1>
           </div>
           <div className="fade-up d2">

@@ -196,27 +196,25 @@ export default function HeroSlider() {
           animation-fill-mode: forwards;
         }
       `}</style>
-      {/* Ferrofluid WebGL background layer — desktop only */}
-      {isMobile === false && (
-        <div style={{ width: '100%', height: '100%', position: 'absolute', inset: 0, zIndex: 0, pointerEvents: 'none' }}>
-          <Ferrofluid
-            colors={["#ffffff", "#ffffff", "#ffffff"]}
-            speed={0.4}
-            scale={1.6}
-            turbulence={1}
-            fluidity={0.15}
-            rimWidth={0.2}
-            sharpness={2.5}
-            shimmer={1.3}
-            glow={2}
-            flowDirection="down"
-            opacity={0.6}
-            mouseInteraction={true}
-            mouseStrength={0.8}
-            mouseRadius={0.3}
-          />
-        </div>
-      )}
+      {/* Ferrofluid WebGL background layer */}
+      <div style={{ width: '100%', height: '100%', position: 'absolute', inset: 0, zIndex: 0, pointerEvents: 'none' }}>
+        <Ferrofluid
+          colors={["#ffffff", "#ffffff", "#ffffff"]}
+          speed={0.4}
+          scale={1.6}
+          turbulence={1}
+          fluidity={0.15}
+          rimWidth={0.2}
+          sharpness={2.5}
+          shimmer={1.3}
+          glow={2}
+          flowDirection="down"
+          opacity={0.6}
+          mouseInteraction={true}
+          mouseStrength={0.8}
+          mouseRadius={0.3}
+        />
+      </div>
 
       {/* Noise texture */}
       <div
@@ -295,7 +293,7 @@ export default function HeroSlider() {
               >
                 {slide.heading.map((line, i) => (
                   <span key={i} className="block">
-                    {i === 1 ? <span style={{ color: "var(--color-brand-red)" }}>{line}</span> : line}
+                    {line}
                   </span>
                 ))}
               </h1>

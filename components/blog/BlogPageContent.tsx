@@ -14,7 +14,7 @@ import {
 } from "lucide-react";
 import BlogPagination from "./BlogPagination";
 
-import BlogHeroLottie from "./BlogHeroLottie";
+import BlogHeroFlowLottie from "./BlogHeroFlowLottie";
 
 /* ─── Types ─────────────────────────────────────────────────────────── */
 export interface BlogPost {
@@ -105,7 +105,7 @@ export default function BlogPageContent({ allPosts }: Props) {
         className="relative bg-[#000000] blueprint-grid blueprint-dot-grid overflow-hidden pt-32 pb-16 lg:pb-24 min-h-[400px]"
       >
         {/* Blog Hero Lottie animated background */}
-        <BlogHeroLottie />
+        <BlogHeroFlowLottie />
         {/* Red radial glow top-right */}
         <div
           className="absolute -top-24 -right-24 w-[600px] h-[600px] rounded-full pointer-events-none"
@@ -124,7 +124,7 @@ export default function BlogPageContent({ allPosts }: Props) {
           {/* Heading — "Engineering Insights Hub" */}
           <h1 className="text-4xl sm:text-5xl lg:text-[3.4rem] font-black leading-[1.08] tracking-tight mb-5 text-white max-w-3xl">
             Engineering{" "}
-            <em className="not-italic text-[#e7212b]">Insights</em>{" "}
+            <em className="not-italic text-white">Insights</em>{" "}
             Hub
           </h1>
 

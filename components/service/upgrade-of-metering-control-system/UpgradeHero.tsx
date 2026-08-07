@@ -67,7 +67,7 @@ export default function UpgradeHero() {
             className="text-4xl sm:text-5xl lg:text-[3.2rem] font-bold text-white leading-[1.12] mb-6"
           >
             Upgrade of{" "}
-            <em className="not-italic text-[#e7212b]">Metering</em>
+            <em className="not-italic text-white">Metering</em>
             <br className="hidden sm:block" />
             {" "}Control System
           </h1>

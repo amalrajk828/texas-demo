@@ -37,7 +37,7 @@ export default function AuditsHero() {
 
           <h1 className="text-4xl sm:text-5xl lg:text-[3.4rem] font-bold text-white leading-[1.08] mb-6">
             Audits &amp;{" "}
-            <em className="not-italic text-[#e7212b]">Specialized Consultancy</em>
+            <em className="not-italic text-white">Specialized Consultancy</em>
           </h1>
 
           <p className="text-white/50 text-[16px] leading-[1.85] mb-10 max-w-none">

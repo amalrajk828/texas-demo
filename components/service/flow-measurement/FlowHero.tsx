@@ -50,7 +50,7 @@ export default function FlowHero() {
           >
             Flow Measurement &amp;{" "}
             <br className="hidden sm:block" />
-            <em className="not-italic text-[#e7212b]">Control System</em>{" "}
+            <em className="not-italic text-white">Control System</em>{" "}
             Solutions
           </h1>
 

@@ -31,7 +31,7 @@ export default function BendHero() {
             <span className="text-[#e7212b] text-[10px] font-semibold tracking-[3.5px] uppercase">Mechanical Testing</span>
           </div>
           <h1 className="text-4xl sm:text-5xl lg:text-[3.4rem] font-bold text-white leading-[1.08] mb-6">
-            <em className="not-italic text-[#e7212b]">Bend</em> Test
+            <em className="not-italic text-white">Bend</em> Test
           </h1>
           <p className="text-white/50 text-[16px] leading-[1.85] mb-10 max-w-none">
             A qualitative test assessing both the ductility and soundness of a material — evaluating its ability to withstand bending forces without breaking. Essential for structural applications in construction, aerospace, and engineering where flexibility and resilience are critical.

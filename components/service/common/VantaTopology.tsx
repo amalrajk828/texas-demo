@@ -37,6 +37,8 @@ export default function VantaTopology({ targetRef }: VantaTopologyProps) {
   useEffect(() => {
     if (!scriptsLoaded) return;
 
+    let lastWidth = typeof window !== "undefined" ? window.innerWidth : 0;
+
     const initVanta = () => {
       if (
         (window as any).p5 &&
@@ -46,7 +48,7 @@ export default function VantaTopology({ targetRef }: VantaTopologyProps) {
         !vantaEffectRef.current
       ) {
         try {
-          vantaEffectRef.current = (window as any).VANTA.TOPOLOGY({
+          const vantaInstance = (window as any).VANTA.TOPOLOGY({
             el: targetRef.current,
             mouseControls: true,
             touchControls: true,
@@ -58,6 +60,23 @@ export default function VantaTopology({ targetRef }: VantaTopologyProps) {
             backgroundColor: 0x000000,
             color: 0x7a0f0a,
           });
+
+          // Prevent mobile address bar height toggles from clearing p5 canvas
+          if (vantaInstance && typeof vantaInstance.resize === "function") {
+            const origResize = vantaInstance.resize.bind(vantaInstance);
+            vantaInstance.resize = function () {
+              if (typeof window !== "undefined" && window.innerWidth === lastWidth) {
+                // Ignore height-only resize (address bar show/hide) to preserve p5 drawing buffer
+                return;
+              }
+              if (typeof window !== "undefined") {
+                lastWidth = window.innerWidth;
+              }
+              origResize();
+            };
+          }
+
+          vantaEffectRef.current = vantaInstance;
         } catch (err) {
           console.error("Vanta Topology init error:", err);
         }
@@ -74,7 +93,7 @@ export default function VantaTopology({ targetRef }: VantaTopologyProps) {
         vantaEffectRef.current = null;
       }
     };
-  }, [scriptsLoaded, targetRef]);
+  }, [scriptsLoaded]);
 
   return (
     <div
