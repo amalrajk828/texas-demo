@@ -44,7 +44,7 @@ export default function CorrosionControlHero() {
           <div className="fade-up d1">
             <h1 className="text-4xl sm:text-5xl lg:text-[3.5rem] font-bold text-white leading-[1.08] tracking-tight mb-6">
               Corrosion{" "}
-              <span className="text-[#e7212b]">Control Services</span>
+              <span className="text-white">Control Services</span>
             </h1>
           </div>
           <div className="fade-up d2">

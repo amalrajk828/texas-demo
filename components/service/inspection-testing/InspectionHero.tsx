@@ -46,7 +46,7 @@ export default function InspectionHero() {
             className="text-4xl sm:text-5xl lg:text-[3.2rem] font-bold text-white leading-[1.12] mb-6"
           >
             Inspection &amp;{" "}
-            <em className="not-italic text-[#e7212b]">Testing</em>
+            <em className="not-italic text-white">Testing</em>
           </h1>
 
           {/* Body paragraphs */}

@@ -67,7 +67,7 @@ export default function McsiHero() {
             className="text-4xl sm:text-5xl lg:text-[3.2rem] font-bold text-white leading-[1.12] mb-6"
           >
             Metering Control{" "}
-            <em className="not-italic text-[#e7212b]">System</em>
+            <em className="not-italic text-white">System</em>
             <br className="hidden sm:block" />
             {" "}Integration
           </h1>

@@ -44,7 +44,7 @@ export default function TorqueHero() {
           <div className="fade-up d1">
             <h1 className="text-4xl sm:text-5xl lg:text-[3.5rem] font-bold text-white leading-[1.08] tracking-tight mb-6">
               Torque Tightening &amp;{" "}
-              <span className="text-[#e7212b]">Bolt Tensioning</span>
+              <span className="text-white">Bolt Tensioning</span>
             </h1>
           </div>
           <div className="fade-up d2">

@@ -44,7 +44,7 @@ export default function AirPermeabilityHero() {
           <div className="fade-up d1">
             <h1 className="text-4xl sm:text-5xl lg:text-[3.5rem] font-bold text-white leading-[1.08] tracking-tight mb-6">
               Air Permeability{" "}
-              <span className="text-[#e7212b]">Test</span>
+              <span className="text-white">Test</span>
             </h1>
           </div>
           <div className="fade-up d2">

@@ -44,7 +44,7 @@ export default function PulloutHero() {
           <div className="fade-up d1">
             <h1 className="text-4xl sm:text-5xl lg:text-[3.5rem] font-bold text-white leading-[1.08] tracking-tight mb-6">
               Pullout Test{" "}
-              <span className="text-[#e7212b]">for Bolts &amp; Anchors</span>
+              <span className="text-white">for Bolts &amp; Anchors</span>
             </h1>
           </div>
           <div className="fade-up d2">

@@ -82,6 +82,15 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         <meta charSet="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
         <link rel="preconnect" href="https://cdnjs.cloudflare.com" crossOrigin="anonymous" />
+        <link rel="preconnect" href="https://cdn.jsdelivr.net" crossOrigin="anonymous" />
+        <Script
+          src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.1.9/p5.min.js"
+          strategy="beforeInteractive"
+        />
+        <Script
+          src="/vendor/vanta.topology.min.js"
+          strategy="beforeInteractive"
+        />
         <Script
           id="gtm"
           strategy="lazyOnload"

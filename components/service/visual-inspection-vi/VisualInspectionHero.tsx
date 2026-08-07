@@ -32,7 +32,7 @@ export default function VisualInspectionHero() {
           </div>
           <h1 className="text-4xl sm:text-5xl lg:text-[3.4rem] font-bold text-white leading-[1.08] mb-6">
             Visual Inspection{" "}
-            <em className="not-italic text-[#e7212b]">(VI)</em>
+            <em className="not-italic text-white">(VI)</em>
           </h1>
           <p className="text-white/50 text-[16px] leading-[1.85] mb-10 max-w-none">
             A fundamental NDT method used to examine the surface and external characteristics of components and materials — identifying visible defects such as cracks, corrosion, surface irregularities, and dimensional discrepancies. Visual inspection is often the first and most important step in any NDT programme.

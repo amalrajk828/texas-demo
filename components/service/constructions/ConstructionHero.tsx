@@ -27,7 +27,7 @@ export default function ConstructionHero() {
           </div>
 
           <h1 className="text-4xl sm:text-5xl lg:text-[3.2rem] font-bold text-white leading-[1.12] mb-6">
-            Industrial Construction &amp; <em className="not-italic text-[#e7212b]">Project Delivery</em>
+            Industrial Construction &amp; <em className="not-italic text-white">Project Delivery</em>
           </h1>
 
           <p className="text-white/50 text-base sm:text-[17px] leading-relaxed mb-8 max-w-none">

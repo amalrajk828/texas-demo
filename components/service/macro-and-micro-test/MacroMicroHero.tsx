@@ -31,7 +31,7 @@ export default function MacroMicroHero() {
             <span className="text-[#e7212b] text-[10px] font-semibold tracking-[3.5px] uppercase">Mechanical Testing</span>
           </div>
           <h1 className="text-4xl sm:text-5xl lg:text-[3.4rem] font-bold text-white leading-[1.08] mb-6">
-            Macro &amp; <em className="not-italic text-[#e7212b]">Micro Test</em>
+            Macro &amp; <em className="not-italic text-white">Micro Test</em>
           </h1>
           <p className="text-white/50 text-[16px] leading-[1.85] mb-10 max-w-none">
             Two categories of experiments conducted to study mechanical properties at different length scales — providing insights into material behaviour under various loading conditions for characterisation, design optimisation, and quality control across all industries.

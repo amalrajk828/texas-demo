@@ -67,7 +67,7 @@ export default function FlowComputerHero() {
             className="text-4xl sm:text-5xl lg:text-[3.2rem] font-bold text-white leading-[1.12] mb-6"
           >
             Flow Computer{" "}
-            <em className="not-italic text-[#e7212b]">Configuration</em>
+            <em className="not-italic text-white">Configuration</em>
           </h1>
 
           {/* Body */}

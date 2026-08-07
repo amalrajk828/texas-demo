@@ -4,10 +4,12 @@ import Image from "next/image";
 import { ChevronRight, ExternalLink, ArrowRight } from "lucide-react";
 import ClientsMarquee from "@/components/clients/ClientsMarquee";
 import TestimonialsSection from "@/components/clients/TestimonialsSection";
+import ClientsHeroFlowLottie from "@/components/clients/ClientsHeroFlowLottie";
 import { BreadcrumbJsonLd } from "@/components/schema/BreadcrumbJsonLd";
 import { FaqPageJsonLd } from "@/components/schema/FaqPageJsonLd";
 import PageFaqSection from "@/components/PageFaqSection";
 import { clientsFaq } from "@/lib/pageFaqData";
+
 export const metadata: Metadata = {
   title: "Our Clients",
   description:
@@ -99,8 +101,8 @@ const clients: Client[] = [
 ];
 
 const stats = [
-  { num: `${clients.length}+`, label: "Clients" },
-  { num: "8",                  label: "Industries" },
+  { num: "49+", label: "Clients Served" },
+  { num: "100%", label: "Satisfaction" },
   { num: "18+", label: "Years" },
   { num: "2",                  label: "Countries" },
 ];
@@ -120,6 +122,9 @@ export default function ClientsPage() {
       <BreadcrumbJsonLd items={[{ name: "Home", href: "/" }, { name: "Clients", href: "/clients/" }]} />
       {/* ══ HERO ══════════════════════════════════════════════════ */}
       <section className="bg-[#000000] blueprint-grid blueprint-dot-grid relative overflow-hidden pt-[108px] lg:pt-[116px]">
+        {/* Polygon Flow Lottie background */}
+        <ClientsHeroFlowLottie />
+
         {/* Grid texture */}
         <div
           className="absolute inset-0 pointer-events-none"
@@ -136,7 +141,7 @@ export default function ClientsPage() {
           }}
         />
 
-        <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 pb-16 lg:pb-24 pt-4">
+        <div className="relative z-20 max-w-7xl mx-auto px-4 sm:px-6 pb-16 lg:pb-24 pt-4">
           {/* Breadcrumb */}
           <nav className="flex items-center gap-1.5 mb-10 text-[11px] text-white/30">
             <Link href="/" className="hover:text-white/60 transition-colors">Home</Link>
@@ -156,9 +161,9 @@ export default function ClientsPage() {
               <h1 className="text-4xl sm:text-5xl lg:text-[3.5rem] font-medium text-white leading-[1.15] mb-5">
                 Companies That
                 <br />
-                <em className="not-italic text-[#e7212b]">Trust Us</em>
+                <em className="not-italic text-white">Trust Us</em>
               </h1>
-              <p className="text-white/55 text-base sm:text-lg leading-relaxed max-w-lg">
+              <p className="text-white/70 text-base sm:text-lg leading-relaxed max-w-lg">
                 From national oil companies and government ministries to international
                 engineering groups — our clients span the full spectrum of Kuwait and
                 the Gulf region&apos;s most demanding industries.
@@ -170,10 +175,10 @@ export default function ClientsPage() {
               {stats.map((s) => (
                 <div
                   key={s.label}
-                  className="bg-white/[0.04] border border-white/[0.08] hover:border-[#e7212b]/30 rounded-xl px-5 py-4 text-center transition-colors duration-200"
+                  className="bg-white/[0.05] border border-white/[0.10] hover:border-[#e7212b]/40 rounded-xl px-5 py-4 text-center transition-colors duration-200"
                 >
-                  <p className="text-2xl font-medium text-[#e7212b]">{s.num}</p>
-                  <p className="text-[10px] text-white/30 mt-1 tracking-wide">{s.label}</p>
+                  <p className="text-2xl font-semibold text-[#e7212b]">{s.num}</p>
+                  <p className="text-[10.5px] text-white/50 mt-1 tracking-wide uppercase font-medium">{s.label}</p>
                 </div>
               ))}
             </div>

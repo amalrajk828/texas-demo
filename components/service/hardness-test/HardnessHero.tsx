@@ -31,7 +31,7 @@ export default function HardnessHero() {
             <span className="text-[#e7212b] text-[10px] font-semibold tracking-[3.5px] uppercase">Mechanical Testing</span>
           </div>
           <h1 className="text-4xl sm:text-5xl lg:text-[3.4rem] font-bold text-white leading-[1.08] mb-6">
-            <em className="not-italic text-[#e7212b]">Hardness</em> Test
+            <em className="not-italic text-white">Hardness</em> Test
           </h1>
           <p className="text-white/50 text-[16px] leading-[1.85] mb-10 max-w-none">
             Measuring a material's resistance to permanent deformation by penetration of a harder indenter under a specified load — widely used for metals, plastics, and ceramics to determine surface hardness, material quality, and suitability for service conditions.

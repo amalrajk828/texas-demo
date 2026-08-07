@@ -6,6 +6,7 @@ import { FaqPageJsonLd } from "@/components/schema/FaqPageJsonLd";
 import { ItemListJsonLd } from "@/components/schema/ItemListJsonLd";
 import PageFaqSection from "@/components/PageFaqSection";
 import { productsListingFaq } from "@/lib/pageFaqData";
+import ProductHeroWithTrunk from "@/components/products/common/ProductHeroWithTrunk";
 import {
   Gauge,
   Activity,
@@ -19,7 +20,6 @@ import {
   Tablet,
   Zap,
   RotateCcw,
-  ChevronRight,
   ArrowRight,
 } from "lucide-react";
 
@@ -206,46 +206,15 @@ export default function ProductsPage() {
       />
       <SpeakableJsonLd headline="Flow Meters, Analyzers, PLCs & Industrial Automation Products" />
       {/* ── Hero Banner ─────────────────────────────────────── */}
-      <section className="relative bg-[#000000] blueprint-grid blueprint-dot-grid overflow-hidden pt-[calc(var(--navbar-height,92px)+1rem)] lg:pt-[calc(var(--navbar-height,92px)+1.5rem)]">
-        {/* Grid texture */}
-        <div
-          className="absolute inset-0 pointer-events-none"
-          style={{
-            backgroundImage:
-              "repeating-linear-gradient(0deg,transparent,transparent 39px,rgba(255,255,255,0.025) 40px),repeating-linear-gradient(90deg,transparent,transparent 39px,rgba(255,255,255,0.025) 40px)",
-          }}
-        />
-        {/* Red radial glow */}
-        <div
-          className="absolute bottom-0 left-1/2 -translate-x-1/2 w-[600px] h-40 pointer-events-none"
-          style={{
-            background: "radial-gradient(ellipse, rgba(231,33,43,0.10) 0%, transparent 70%)",
-          }}
-        />
-
-        <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 pb-16 lg:pb-20 pt-4">
-          {/* Breadcrumb */}
-          <nav className="flex items-center gap-1.5 text-[11px] text-white/30 mb-6">
-            <Link href="/" className="hover:text-white transition-colors">Home</Link>
-            <ChevronRight className="w-3 h-3" />
-            <span className="text-white/60">Products</span>
-          </nav>
-
-          <div className="flex items-center gap-2 mb-4">
-            <span className="w-5 h-px bg-[#e7212b]" />
-            <span className="text-[#e7212b] text-[10px] font-medium tracking-[2.5px] uppercase">
-              Product Catalogue
-            </span>
-          </div>
-          <h1 className="text-4xl sm:text-5xl font-medium text-white leading-tight mb-4">
-            Flow Meters, PLCs & Automation Products
-          </h1>
-          <p className="text-white/45 text-base max-w-xl">
-            Flow measurement, industrial automation, and process instrumentation solutions from world-class
-            manufacturers — engineered for the most demanding environments.
-          </p>
-        </div>
-      </section>
+      <ProductHeroWithTrunk
+        breadcrumbs={[
+          { label: "Home", href: "/" },
+          { label: "Products" },
+        ]}
+        eyebrow="Product Catalogue"
+        title="Flow Meters, PLCs & Automation Products"
+        subtitle="Flow measurement, industrial automation, and process instrumentation solutions from world-class manufacturers — engineered for the most demanding environments."
+      />
 
       {/* ── Products Grid ────────────────────────────────────── */}
       <section className="bg-[#000000] blueprint-grid blueprint-dot-grid py-16 lg:py-20 border-t border-white/[0.05]">

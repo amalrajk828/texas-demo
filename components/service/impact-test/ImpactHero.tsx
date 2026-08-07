@@ -31,7 +31,7 @@ export default function ImpactHero() {
             <span className="text-[#e7212b] text-[10px] font-semibold tracking-[3.5px] uppercase">Mechanical Testing</span>
           </div>
           <h1 className="text-4xl sm:text-5xl lg:text-[3.4rem] font-bold text-white leading-[1.08] mb-6">
-            <em className="not-italic text-[#e7212b]">Impact</em> Test
+            <em className="not-italic text-white">Impact</em> Test
           </h1>
           <p className="text-white/50 text-[16px] leading-[1.85] mb-10 max-w-none">
             Measuring a material's resistance to sudden shock loading — simulating real-world impact scenarios to determine how a specimen will deform, fracture, or rupture under rapid and forceful impacts. Critical for construction, automotive, and aerospace applications.
