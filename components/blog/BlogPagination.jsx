@@ -44,7 +44,7 @@ export default function BlogPagination({ currentPage, totalPages, onPageChange }
       <button
         onClick={() => onPageChange(currentPage - 1)}
         disabled={currentPage === 1}
-        className="inline-flex items-center gap-1 px-3 py-2 min-h-[44px] text-[13px] font-medium rounded-lg border border-gray-200 text-gray-500 hover:border-[#e7212b]/40 hover:text-[#e7212b] transition-colors disabled:opacity-30 disabled:pointer-events-none"
+        className="inline-flex items-center justify-center gap-1 h-11 px-3.5 text-[13px] font-medium leading-none rounded-lg border border-gray-200 text-gray-500 hover:border-[#e7212b]/40 hover:text-[#e7212b] transition-colors disabled:opacity-30 disabled:pointer-events-none"
       >
         <ChevronLeft className="w-3.5 h-3.5" />
         Prev
@@ -52,18 +52,21 @@ export default function BlogPagination({ currentPage, totalPages, onPageChange }
 
       {getPageNumbers().map((page, i) =>
         page === "..." ? (
-          <span key={`dots-${i}`} className="hidden sm:inline-flex px-2 py-2 text-[13px] text-gray-500">
+          <span
+            key={`dots-${i}`}
+            className="hidden sm:inline-flex items-center justify-center h-11 w-11 text-[13px] font-medium leading-none text-gray-500"
+          >
             ...
           </span>
         ) : (
           <button
             key={page}
             onClick={() => onPageChange(page)}
-            className={`min-w-[44px] min-h-[44px] text-[13px] font-medium rounded-lg transition-colors ${
-              isMobileExtra(page) ? "hidden sm:inline-flex " : ""
-            }${
+            className={`h-11 w-11 min-w-[44px] text-[13px] font-medium leading-none rounded-lg transition-colors ${
+              isMobileExtra(page) ? "hidden sm:inline-flex " : "inline-flex "
+            }items-center justify-center ${
               currentPage === page
-                ? "bg-[#e7212b] text-white shadow-md shadow-[#e7212b]/20"
+                ? "bg-[#e7212b] text-white border border-[#e7212b] shadow-md shadow-[#e7212b]/20"
                 : "border border-gray-200 text-gray-500 hover:border-[#e7212b]/40 hover:text-[#e7212b]"
             }`}
           >
@@ -75,7 +78,7 @@ export default function BlogPagination({ currentPage, totalPages, onPageChange }
       <button
         onClick={() => onPageChange(currentPage + 1)}
         disabled={currentPage === totalPages}
-        className="inline-flex items-center gap-1 px-3 py-2 min-h-[44px] text-[13px] font-medium rounded-lg border border-gray-200 text-gray-500 hover:border-[#e7212b]/40 hover:text-[#e7212b] transition-colors disabled:opacity-30 disabled:pointer-events-none"
+        className="inline-flex items-center justify-center gap-1 h-11 px-3.5 text-[13px] font-medium leading-none rounded-lg border border-gray-200 text-gray-500 hover:border-[#e7212b]/40 hover:text-[#e7212b] transition-colors disabled:opacity-30 disabled:pointer-events-none"
       >
         Next
         <ChevronRight className="w-3.5 h-3.5" />
