@@ -318,7 +318,7 @@ export default function Footer() {
               { src: "/about/cert-iso45001.png", alt: "ISO 45001 Occupational Health & Safety" },
               { src: "/about/cert-uasl.png", alt: "UASL Certification" },
             ].map((cert) => (
-              <div key={cert.src} className="relative h-12 w-12 sm:h-14 sm:w-14 opacity-50 hover:opacity-100 transition-opacity duration-300">
+              <div key={cert.src} className="relative h-12 w-12 sm:h-14 sm:w-14 opacity-90 hover:opacity-100 transition-opacity duration-300">
                 <Image src={cert.src} alt={cert.alt} fill className="object-contain" sizes="56px" />
               </div>
             ))}
