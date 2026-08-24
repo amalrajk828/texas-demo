@@ -64,10 +64,9 @@ function FooterTrack() {
             <Image
               src={p.logo}
               alt={p.name}
-              width={160}
-              height={60}
-              className="object-contain h-7 w-auto opacity-40 hover:opacity-100 transition-opacity duration-300"
-              style={{ mixBlendMode: "screen" }}
+              width={240}
+              height={96}
+              className="object-contain h-12 w-auto opacity-60 hover:opacity-100 transition-opacity duration-300"
             />
           </Link>
         </div>
@@ -275,7 +274,7 @@ export default function Footer() {
         </div>
 
         {/* Marquee */}
-        <div className="overflow-hidden select-none">
+        <div className="overflow-hidden select-none bg-white py-6">
           <div className="footer-partners-wrapper flex w-full" style={{ willChange: "transform" }}>
             <FooterTrack />
             <FooterTrack />
