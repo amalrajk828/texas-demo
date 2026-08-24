@@ -66,7 +66,7 @@ function FooterTrack() {
               alt={p.name}
               width={240}
               height={96}
-              className="object-contain h-12 w-auto opacity-60 hover:opacity-100 transition-opacity duration-300"
+              className="object-contain h-12 w-auto opacity-90 hover:opacity-100 transition-opacity duration-300"
             />
           </Link>
         </div>
