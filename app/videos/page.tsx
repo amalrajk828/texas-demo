@@ -7,7 +7,7 @@ import { ItemListJsonLd } from "@/components/schema/ItemListJsonLd";
 import { FaqPageJsonLd } from "@/components/schema/FaqPageJsonLd";
 import { SpeakableJsonLd } from "@/components/schema/SpeakableJsonLd";
 import PageFaqSection from "@/components/PageFaqSection";
-import YouTubeEmbed from "@/components/YouTubeEmbed";
+import VideoGrid from "./_components/VideoGrid";
 import { videos } from "@/lib/videos";
 import { SITE_URL } from "@/lib/site";
 
@@ -167,72 +167,19 @@ export default function VideosPage() {
       </section>
 
       {/* ══ VIDEOS GRID ══════════════════════════════════════ */}
-      <section className="bg-white py-20 lg:py-24">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6">
-          <div className="flex items-center gap-3 mb-4">
-            <span className="w-8 h-px bg-[#e7212b]/40" />
-            <span className="text-[#e7212b] text-[9px] font-medium tracking-[2.5px] uppercase">
-              Video Library
-            </span>
-          </div>
-          <div className="flex items-center justify-between mb-12">
-            <h2 className="text-[1.75rem] sm:text-[2rem] font-semibold text-[#181D4E]">
-              Latest Videos
-            </h2>
-            <span className="text-gray-400 text-[12px]">
-              {videos.length} Videos
-            </span>
-          </div>
+      <VideoGrid videos={videos} />
 
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            {videos.map((video, i) => (
-              <article
-                key={video.id}
-                id={video.id}
-                className={`fade-up d${i + 1} group rounded-2xl border border-[#e8eaf0] hover:border-[#e7212b]/40 transition-all duration-300 hover:shadow-2xl overflow-hidden`}
-              >
-                <div className="relative w-full aspect-video bg-black">
-                  <iframe
-                    src={`https://www.youtube-nocookie.com/embed/${video.id}`}
-                    title={video.title}
-                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                    allowFullScreen
-                    className="absolute inset-0 w-full h-full"
-                    loading="lazy"
-                  />
-                </div>
-                <div className="p-5 lg:p-6">
-                  <time
-                    dateTime={video.uploadDate}
-                    className="text-[11px] text-gray-400 font-medium uppercase tracking-wide"
-                  >
-                    {new Date(video.uploadDate).toLocaleDateString("en-US", {
-                      year: "numeric",
-                      month: "long",
-                      day: "numeric",
-                    })}
-                  </time>
-                  <h3 className="text-[#181D4E] font-semibold text-lg mt-2 mb-2 group-hover:text-[#e7212b] transition-colors leading-snug">
-                    {video.title}
-                  </h3>
-                  <p className="text-gray-500 text-[13px] leading-relaxed">
-                    {video.description}
-                  </p>
-                </div>
-              </article>
-            ))}
-          </div>
-
-          <div className="mt-12 text-center">
-            <a
-              href="https://www.youtube.com/@TEXASTECHNICALSERVICES"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="inline-flex items-center gap-2 bg-[#e7212b] hover:bg-[#aa0b1b] text-white font-medium px-8 py-3.5 rounded-lg transition-colors duration-200"
-            >
-              Visit Our YouTube Channel <ArrowRight className="w-4 h-4" />
-            </a>
-          </div>
+      {/* ══ YOUTUBE CTA ═════════════════════════════════════ */}
+      <section className="bg-white pb-20 lg:pb-24">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 text-center">
+          <a
+            href="https://www.youtube.com/@TEXASTECHNICALSERVICES"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-flex items-center gap-2 bg-[#e7212b] hover:bg-[#aa0b1b] text-white font-medium px-8 py-3.5 rounded-lg transition-colors duration-200"
+          >
+            Visit Our YouTube Channel <ArrowRight className="w-4 h-4" />
+          </a>
         </div>
       </section>
 
