@@ -30,8 +30,6 @@ const solutions = [
   { label: "Space AI Industrial AI", href: "/solutions/space-ai/" },
   { label: "Mitsubishi Electric", href: "/solutions/mitsubishi-electric/" },
   { label: "PWS Floor Solutions", href: "/solutions/pws-floor-solutions/" },
-  { label: "Certifications", href: "/certifications/" },
-  { label: "Videos", href: "/videos/" },
 ];
 
 const socials = [
@@ -283,12 +281,21 @@ export default function Footer() {
         </div>
 
         <div className="max-w-7xl mx-auto px-4 sm:px-6 pt-4 pb-2">
-          <Link
-            href="/partners/"
-            className="inline-flex items-center gap-2 text-white/70 text-[13px] font-medium hover:text-white transition-colors"
-          >
-            View all partners <ArrowRight className="w-3.5 h-3.5" />
-          </Link>
+          <div className="flex items-center gap-4">
+            <Link
+              href="/partners/"
+              className="inline-flex items-center gap-2 text-white/70 text-[13px] font-medium hover:text-white transition-colors"
+            >
+              View all partners <ArrowRight className="w-3.5 h-3.5" />
+            </Link>
+            <span className="text-white/20">·</span>
+            <Link
+              href="/videos/"
+              className="inline-flex items-center gap-2 text-white/70 text-[13px] font-medium hover:text-white transition-colors"
+            >
+              Watch our videos <ArrowRight className="w-3.5 h-3.5" />
+            </Link>
+          </div>
         </div>
 
         <style>{`
@@ -311,7 +318,7 @@ export default function Footer() {
 
       {/* Certifications */}
       <div className="border-t" style={{ borderColor: "rgba(255,255,255,0.06)" }}>
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 py-6">
+        <Link href="/certifications/" className="block max-w-7xl mx-auto px-4 sm:px-6 py-6 hover:opacity-100 opacity-90 transition-opacity duration-300">
           <div className="flex flex-wrap items-center justify-center gap-6 sm:gap-10">
             {[
               { src: "/about/cert-iso9001.png", alt: "ISO 9001:2015 Quality Management" },
@@ -319,12 +326,12 @@ export default function Footer() {
               { src: "/about/cert-iso45001.png", alt: "ISO 45001 Occupational Health & Safety" },
               { src: "/about/cert-uasl.png", alt: "UASL Certification" },
             ].map((cert) => (
-              <div key={cert.src} className="relative h-16 w-16 sm:h-20 sm:w-20 opacity-90 hover:opacity-100 transition-opacity duration-300">
+              <div key={cert.src} className="relative h-16 w-16 sm:h-20 sm:w-20">
                 <Image src={cert.src} alt={cert.alt} fill className="object-contain" sizes="80px" />
               </div>
             ))}
           </div>
-        </div>
+        </Link>
       </div>
 
       {/* Bottom bar */}
