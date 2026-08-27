@@ -31,6 +31,7 @@ const solutions = [
   { label: "Mitsubishi Electric", href: "/solutions/mitsubishi-electric/" },
   { label: "PWS Floor Solutions", href: "/solutions/pws-floor-solutions/" },
   { label: "Certifications", href: "/certifications/" },
+  { label: "Videos", href: "/videos/" },
 ];
 
 const socials = [
