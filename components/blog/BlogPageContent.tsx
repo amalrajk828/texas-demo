@@ -204,7 +204,7 @@ export default function BlogPageContent({ allPosts }: Props) {
                     <div className="flex flex-wrap items-center gap-4 text-[12px] text-gray-500 font-medium">
                       <span className="flex items-center gap-1.5 text-[#0B0D26] font-bold uppercase tracking-wide text-[11px]">
                         <User className="w-3.5 h-3.5" />
-                        <a href="https://www.linkedin.com/company/texas-technical-service-company" target="_blank" rel="noopener noreferrer" className="hover:text-[#e7212b] transition-colors">Texas Technical Services</a>
+                        <button type="button" onClick={(e) => { e.stopPropagation(); window.open("https://www.linkedin.com/company/texas-technical-service-company", "_blank", "noopener,noreferrer"); }} className="hover:text-[#e7212b] transition-colors">Texas Technical Services</button>
                       </span>
                       <span className="flex items-center gap-1.5">
                         <Calendar className="w-3.5 h-3.5 text-[#e7212b]" />
@@ -350,7 +350,7 @@ function ArticleCard({ post }: { post: BlogPost }) {
             <span className="flex items-center gap-3 text-[11px] text-gray-500 font-medium">
               <span className="flex items-center gap-1">
                 <User className="w-3 h-3" />
-                <a href="https://www.linkedin.com/company/texas-technical-service-company" target="_blank" rel="noopener noreferrer" className="hover:text-[#e7212b] transition-colors">TTS</a>
+                <button type="button" onClick={(e) => { e.stopPropagation(); window.open("https://www.linkedin.com/company/texas-technical-service-company", "_blank", "noopener,noreferrer"); }} className="hover:text-[#e7212b] transition-colors">TTS</button>
               </span>
               <span className="flex items-center gap-1">
                 <Calendar className="w-3 h-3" />
