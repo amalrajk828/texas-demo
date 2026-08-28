@@ -73,14 +73,14 @@ const clients: Client[] = [
   { name: "Impresa Pizzarotti & C. S.p.A.",                            logo: "/clients/pizzarotti.svg",   url: "https://www.pizzarotti.it/",                    external: true  },
   { name: "Kuwaiti Danish Dairy Company (KDD)",                        logo: "/clients/kdd.svg",          url: "https://www.kddc.com/",                         external: true  },
   { name: "Société d'Entreprise et de Gestion (SEG)",                  logo: "/clients/seg.svg",          url: "https://seglebanon.com/",                       external: true  },
-  { name: "Al-Essa & Haddad Trading and Decorating Co.",               logo: "/haddads.png",              url: "https://www.haddads-group.com/",                external: true  },
-  { name: "IMAR",                                                      logo: "/imar.png",                 url: "https://imar.com/",                             external: true  },
+  { name: "Al-Essa & Haddad Trading and Decorating Co.",               logo: "/clients/haddads.png",              url: "https://www.haddads-group.com/",                external: true  },
+  { name: "IMAR",                                                      logo: "/clients/imar.png",                 url: "https://imar.com/",                             external: true  },
   { name: "MJW International Trading Co. LLC",                         logo: "/clients/mjw.svg",          url: "/clients/",                                     external: false },
   { name: "FIRSTGROUP",                                                logo: "/clients/first_group.svg",  url: "https://firstgroupkw.com/",                     external: true  },
 
-  { name: "Rezayat Group",                                             logo: "/rezayat.svg",              url: "https://www.rezayat.com/",                      external: true  },
-  { name: "Combined Group Contracting Co.",                            logo: "/cgc.png",                  url: "https://www.cgc-kw.com/",                       external: true  },
-  { name: "Ducting & Servicing Company (DASCO)",                       logo: "/dasco.png",                url: "https://dasco.com.kw/",                         external: true  },
+  { name: "Rezayat Group",                                             logo: "/clients/rezayat.svg",              url: "https://www.rezayat.com/",                      external: true  },
+  { name: "Combined Group Contracting Co.",                            logo: "/clients/cgc.png",                  url: "https://www.cgc-kw.com/",                       external: true  },
+  { name: "Ducting & Servicing Company (DASCO)",                       logo: "/clients/dasco.png",                url: "https://dasco.com.kw/",                         external: true  },
   { name: "Hassan Abul Company",                                       logo: "/clients/hassanabul.svg",   url: "https://www.hassanabul.com/",                   external: true  },
   { name: "China State Construction Engineering Corporation (CSCEC)",  logo: "/clients/cscec.svg",        url: "https://www.cscec.com/",                        external: true  },
 
@@ -94,7 +94,7 @@ const clients: Client[] = [
   { name: "Limak Group",                                               logo: "/clients/limak.svg",        url: "https://www.limak.com.tr/",                     external: true  },
   { name: "SSH",                                                       logo: "/clients/ssh.png",          url: "https://www.sshic.com/",                        external: true  },
   { name: "Kuwait Gulf Oil Company K.S.C.C. (KGOC)",                  logo: "/clients/kgoc.png",         url: "https://www.kgoc.com/",                         external: true  },
-  { name: "Parsons Corporation",                                       logo: "/parsons.jpeg",             url: "https://www.parsons.com/",                      external: true  },
+  { name: "Parsons Corporation",                                       logo: "/clients/parsons.jpeg",             url: "https://www.parsons.com/",                      external: true  },
   { name: "HOT Engineering & Construction Co.-KSCC (HOTECC)",          logo: "/clients/hotecc.svg",       url: "https://www.hotecc.com/",                       external: true  },
   { name: "KEO",                                                       logo: "/clients/keo.svg",          url: "https://www.keo.com/",                          external: true  },
 ];
