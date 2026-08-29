@@ -56,8 +56,7 @@ export default function GreyTeam() {
             </div>
             <div className="fade-up d1">
               <h2 className="text-[clamp(2.2rem,4.5vw,3.2rem)] font-black leading-[1.08] mb-5 tracking-tight" style={{ color: "#F9FAFB" }}>
-                Who are the specialists{" "}
-                <span style={{ color: "var(--color-brand-red)" }}>behind every project?</span>
+                Who are the specialists behind every project?
               </h2>
             </div>
             <div className="fade-up d2">
