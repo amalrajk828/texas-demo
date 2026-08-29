@@ -33,7 +33,7 @@ float bubbleNoise(vec3 p, float t) {
 
 // Distance estimator for gently deforming iridescent glass sphere
 float sdfSphere(vec3 p, float t) {
-  float radius = 1.08;
+  float radius = 0.94;
   float breath = sin(t * 0.28) * 0.024;
   float disp = bubbleNoise(p, t);
   return length(p) - (radius + breath + disp);
