@@ -114,7 +114,7 @@ export default function Footer() {
                 <p className="text-white font-black tracking-[7px] text-[20px] leading-none">
                   TEXAS
                 </p>
-                <p className="text-[#E53935] text-[11px] tracking-[3px] leading-none mt-1.5 font-semibold">
+                <p className="text-white/60 text-[11px] tracking-[3px] leading-none mt-1.5 font-semibold">
                   TECHNICAL SERVICES
                 </p>
               </div>
