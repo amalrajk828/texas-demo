@@ -40,7 +40,7 @@ export default function SteelErectionHero() {
           <div className="fade-up d1">
             <h1 className="text-4xl sm:text-5xl lg:text-[3.5rem] font-bold text-white leading-[1.08] tracking-tight mb-6">
               Structural{" "}
-              <span className="text-[#e7212b]">Steel Erection</span>
+              <span className="text-current">Steel Erection</span>
             </h1>
           </div>
           <div className="fade-up d2">

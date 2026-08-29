@@ -130,7 +130,7 @@ export default function TexaflowContent() {
 
             <h1 className="text-4xl sm:text-5xl lg:text-[3.2rem] font-bold text-white leading-[1.12] mb-6">
               Texaflow —{" "}
-              <em className="not-italic text-[#e7212b]">
+              <em className="not-italic text-current">
                 Custody Metering
               </em>{" "}
               Integrated Control System
@@ -206,7 +206,7 @@ export default function TexaflowContent() {
             <div className="flex flex-col sm:flex-row sm:items-end justify-between gap-4">
               <h2 className="text-3xl sm:text-[2.4rem] font-bold text-[#0B0D26] leading-[1.15]">
                 System Capabilities &amp;{" "}
-                <em className="not-italic text-[#e7212b]">Key Features</em>
+                <em className="not-italic text-current">Key Features</em>
               </h2>
             </div>
           </div>
@@ -269,7 +269,7 @@ export default function TexaflowContent() {
                 </div>
                 <h2 className="text-3xl lg:text-4xl font-bold text-white leading-[1.15] mb-5">
                   Key{" "}
-                  <em className="not-italic text-[#e7212b]">Applications</em>
+                  <em className="not-italic text-current">Applications</em>
                 </h2>
                 <p className="text-white/55 text-[15px] leading-relaxed max-w-md">
                   Texaflow is trusted across the most demanding custody
@@ -309,7 +309,7 @@ export default function TexaflowContent() {
               </div>
               <h2 className="text-3xl lg:text-4xl font-bold text-[#0B0D26] leading-[1.15] mb-5">
                 Engineered for{" "}
-                <em className="not-italic text-[#e7212b]">fiscal accuracy</em>{" "}
+                <em className="not-italic text-current">fiscal accuracy</em>{" "}
                 and operational confidence
               </h2>
               <p className="text-gray-500 text-[15px] leading-relaxed mb-7 max-w-xl">

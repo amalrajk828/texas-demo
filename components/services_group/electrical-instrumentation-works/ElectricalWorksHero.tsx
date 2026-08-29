@@ -40,7 +40,7 @@ export default function ElectricalWorksHero() {
           <div className="fade-up d1">
             <h1 className="text-4xl sm:text-5xl lg:text-[3.5rem] font-bold text-white leading-[1.08] tracking-tight mb-6">
               Electrical &amp;{" "}
-              <span className="text-[#e7212b]">Instrumentation</span> Works
+              <span className="text-current">Instrumentation</span> Works
             </h1>
           </div>
           <div className="fade-up d2">

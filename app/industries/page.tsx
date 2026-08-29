@@ -180,7 +180,7 @@ export default function IndustriesPage() {
               <h1 className="text-3xl sm:text-4xl lg:text-[2.75rem] font-medium text-white leading-[1.15] mb-5">
                 Industries
                 <br />
-                <em className="not-italic text-[#e7212b]">We Serve</em>
+                <em className="not-italic text-current">We Serve</em>
               </h1>
 
               <p className="text-white/60 text-base sm:text-lg leading-relaxed max-w-xl">

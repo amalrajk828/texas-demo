@@ -38,7 +38,7 @@ export default function HeroSection() {
               Industrial Solutions
               <br />
               for{" "}
-              <em className="not-italic text-[#e7212b]">Oil &amp; Gas,</em>
+              <em className="not-italic text-current">Oil &amp; Gas,</em>
               <br />
               Refinery &amp; Beyond
             </h1>

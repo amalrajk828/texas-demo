@@ -200,7 +200,7 @@ export default function PetrochemicalsPage() {
           </div>
           <h2 className="text-3xl sm:text-[2.4rem] font-bold text-[#0B0D26] leading-[1.15] mb-12">
             Questions About{" "}
-            <em className="not-italic text-[#e7212b]">Petrochemicals</em>
+            <em className="not-italic text-current">Petrochemicals</em>
           </h2>
           <div className="max-w-4xl mx-auto space-y-4">
             {industryFaqData["petrochemicals"]?.map((item) => (

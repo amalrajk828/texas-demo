@@ -110,7 +110,7 @@ export default function ContactPage() {
             <h1 className="text-4xl sm:text-5xl lg:text-[3.4rem] font-bold text-white leading-[1.12] mb-6">
               Let&apos;s Talk About
               <br />
-              <em className="not-italic text-[#e7212b]">Your Project</em>
+              <em className="not-italic text-current">Your Project</em>
             </h1>
 
             <p className="text-white/50 text-base sm:text-[17px] leading-relaxed mb-8 max-w-xl">

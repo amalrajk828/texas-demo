@@ -137,7 +137,7 @@ export default function PwsFloorSolutions() {
 
             <h1 className="text-4xl sm:text-5xl lg:text-[3.2rem] font-bold text-white leading-[1.12] mb-6">
               Raised Access{" "}
-              <em className="not-italic text-[#e7212b]">Flooring Systems</em>{" "}
+              <em className="not-italic text-current">Flooring Systems</em>{" "}
               for Critical Environments
             </h1>
 
@@ -209,7 +209,7 @@ export default function PwsFloorSolutions() {
             </div>
             <h2 className="text-3xl sm:text-[2.4rem] font-bold text-[#0B0D26] leading-[1.15] max-w-3xl">
               Engineered for{" "}
-              <em className="not-italic text-[#e7212b]">every critical space</em>
+              <em className="not-italic text-current">every critical space</em>
             </h2>
           </div>
 
@@ -270,7 +270,7 @@ export default function PwsFloorSolutions() {
               </div>
               <h2 className="text-3xl lg:text-4xl font-bold text-[#0B0D26] leading-[1.15] mb-5">
                 Built to last{" "}
-                <em className="not-italic text-[#e7212b]">15-25+ years</em>
+                <em className="not-italic text-current">15-25+ years</em>
               </h2>
               <p className="text-gray-500 text-[15px] leading-relaxed mb-7 max-w-xl">
                 PWS panels are built around a high-density calcium sulphate

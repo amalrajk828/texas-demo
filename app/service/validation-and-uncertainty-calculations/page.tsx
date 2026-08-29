@@ -101,7 +101,7 @@ export default function ValidationUncertaintyPage() {
             </div>
             <h2 className="text-3xl sm:text-[2.4rem] font-bold text-[#0B0D26] leading-[1.15] mb-12">
               Explore{" "}
-              <em className="not-italic text-[#e7212b]">More Services</em>
+              <em className="not-italic text-current">More Services</em>
             </h2>
             <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
               {serviceCrossLinks["validation-and-uncertainty-calculations"]?.map((link) => (
@@ -139,7 +139,7 @@ export default function ValidationUncertaintyPage() {
           </div>
           <h2 className="text-3xl sm:text-[2.4rem] font-bold text-[#0B0D26] leading-[1.15] mb-12">
             Questions About{" "}
-            <em className="not-italic text-[#e7212b]">Validation & Uncertainty Calculations</em>
+            <em className="not-italic text-current">Validation & Uncertainty Calculations</em>
           </h2>
           <div className="max-w-4xl mx-auto space-y-4">
             {serviceFaqData["validation-and-uncertainty-calculations"]?.map((item) => (

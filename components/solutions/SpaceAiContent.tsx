@@ -121,7 +121,7 @@ export default function SpaceAiContent() {
 
             <h1 className="text-4xl sm:text-5xl lg:text-[3.2rem] font-bold text-white leading-[1.12] mb-6">
               Space AI —{" "}
-              <em className="not-italic text-[#e7212b]">
+              <em className="not-italic text-current">
                 Next-Generation AI
               </em>{" "}
               &amp; Machine Learning for Industry
@@ -221,7 +221,7 @@ export default function SpaceAiContent() {
             </div>
             <h2 className="text-3xl sm:text-[2.4rem] font-bold text-[#0B0D26] leading-[1.15] max-w-3xl">
               Three categories of AI that{" "}
-              <em className="not-italic text-[#e7212b]">
+              <em className="not-italic text-current">
                 transform industrial operations
               </em>
             </h2>
@@ -310,7 +310,7 @@ export default function SpaceAiContent() {
                 </div>
                 <h2 className="text-3xl lg:text-4xl font-bold text-white leading-[1.15]">
                   From data to decisions in{" "}
-                  <em className="not-italic text-[#e7212b]">three steps</em>
+                  <em className="not-italic text-current">three steps</em>
                 </h2>
               </div>
 

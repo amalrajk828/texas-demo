@@ -333,7 +333,7 @@ export default function SocialMediaPage() {
               <h1 className="text-4xl sm:text-5xl lg:text-[3.5rem] font-medium text-white leading-[1.15] mb-5">
                 Connect With
                 <br />
-                <em className="not-italic text-[#e7212b]">Us</em>
+                <em className="not-italic text-current">Us</em>
               </h1>
               <p className="text-white/55 text-base sm:text-lg leading-relaxed">
                 One place to find every account we use. Follow us on social media

@@ -72,7 +72,7 @@ export default function MechanicalTestingPage() {
             </div>
             <h2 className="text-3xl sm:text-[2.4rem] font-bold text-[#0B0D26] leading-[1.15] mb-12">
               Explore{" "}
-              <em className="not-italic text-[#e7212b]">More Services</em>
+              <em className="not-italic text-current">More Services</em>
             </h2>
             <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
               {serviceCrossLinks["mechanical-testing"]?.map((link) => (
@@ -110,7 +110,7 @@ export default function MechanicalTestingPage() {
           </div>
           <h2 className="text-3xl sm:text-[2.4rem] font-bold text-[#0B0D26] leading-[1.15] mb-12">
             Questions About{" "}
-            <em className="not-italic text-[#e7212b]">Mechanical Testing</em>
+            <em className="not-italic text-current">Mechanical Testing</em>
           </h2>
           <div className="max-w-4xl mx-auto space-y-4">
             {serviceFaqData["mechanical-testing"]?.map((item) => (

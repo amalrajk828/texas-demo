@@ -66,7 +66,7 @@ export default function ExteriorWindowsGroupPage() {
           </span>
           <h1 className="text-3xl sm:text-5xl lg:text-[3.8rem] font-black text-white leading-[1.08] max-w-4xl mx-auto">
             Exterior Windows, Doors &amp;<br className="hidden sm:block" />
-            <span className="text-[#e7212b]">Curtain Wall Testing</span>
+            <span className="text-current">Curtain Wall Testing</span>
           </h1>
           <p className="text-gray-400 text-[15px] lg:text-[16px] leading-[1.8] max-w-3xl mx-auto mt-6">
             Comprehensive performance testing of building envelope systems — water penetration, air permeability,

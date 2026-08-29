@@ -82,7 +82,7 @@ export default function ConstructionPage() {
             <span className="text-[#0891B2] text-[10px] font-semibold tracking-[3.5px] uppercase">FAQ</span>
           </div>
           <h2 className="text-3xl sm:text-[2.4rem] font-bold text-[#0B0D26] leading-[1.15] mb-12">
-            What are the most common questions about <em className="not-italic text-[#e7212b]">construction services?</em>
+            What are the most common questions about <em className="not-italic text-current">construction services?</em>
           </h2>
           <div className="max-w-4xl mx-auto space-y-4">
             {faqItems.map((item) => (
@@ -114,7 +114,7 @@ export default function ConstructionPage() {
             </div>
             <h2 className="text-3xl sm:text-[2.4rem] font-bold text-[#0B0D26] leading-[1.15] mb-12">
               Which services complement{" "}
-              <em className="not-italic text-[#e7212b]">construction services?</em>
+              <em className="not-italic text-current">construction services?</em>
             </h2>
             <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
               {serviceCrossLinks["constructions"]?.map((link) => (

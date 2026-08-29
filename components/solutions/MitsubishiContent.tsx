@@ -114,7 +114,7 @@ export default function MitsubishiContent() {
 
             <h1 className="text-4xl sm:text-5xl lg:text-[3.2rem] font-bold text-white leading-[1.12] mb-6">
               Mitsubishi Electric{" "}
-              <em className="not-italic text-[#e7212b]">Factory Automation</em> Solutions
+              <em className="not-italic text-current">Factory Automation</em> Solutions
             </h1>
 
             <p className="text-white/50 text-base sm:text-[16px] leading-relaxed mb-8 max-w-2xl">
@@ -182,7 +182,7 @@ export default function MitsubishiContent() {
             <div className="flex flex-col sm:flex-row sm:items-end justify-between gap-4">
               <h2 className="text-3xl sm:text-[2.4rem] font-bold text-[#0B0D26] leading-[1.15]">
                 Our Mitsubishi Electric{" "}
-                <em className="not-italic text-[#e7212b]">Automation Solutions</em>
+                <em className="not-italic text-current">Automation Solutions</em>
               </h2>
               <Link
                 href="/contacts/"
@@ -385,7 +385,7 @@ export default function MitsubishiContent() {
           </div>
           <h2 className="text-3xl sm:text-[2.4rem] font-bold text-[#0B0D26] leading-[1.15] mb-12">
             Questions About{" "}
-            <em className="not-italic text-[#e7212b]">Mitsubishi Factory Automation</em>
+            <em className="not-italic text-current">Mitsubishi Factory Automation</em>
           </h2>
           <div className="max-w-4xl mx-auto space-y-4">
             {faqItems.map((item) => (

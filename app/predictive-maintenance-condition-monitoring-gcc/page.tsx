@@ -153,7 +153,7 @@ export default function PredictiveMaintenanceGccPage() {
 
             <h1 className="text-4xl sm:text-5xl lg:text-[3.2rem] font-bold text-white leading-[1.12] mb-6">
               Predictive Maintenance &amp;{" "}
-              <em className="not-italic text-[#e7212b]">Condition Monitoring</em>{" "}
+              <em className="not-italic text-current">Condition Monitoring</em>{" "}
               Across the GCC
             </h1>
 
@@ -213,7 +213,7 @@ export default function PredictiveMaintenanceGccPage() {
             <div className="flex flex-col sm:flex-row sm:items-end justify-between gap-4">
               <h2 className="text-3xl sm:text-[2.4rem] font-bold text-[#0B0D26] leading-[1.15]">
                 Predictive Maintenance &amp;{" "}
-                <em className="not-italic text-[#e7212b]">Condition Monitoring</em>
+                <em className="not-italic text-current">Condition Monitoring</em>
               </h2>
               <Link
                 href="/contacts/"
@@ -307,7 +307,7 @@ export default function PredictiveMaintenanceGccPage() {
           </div>
           <h2 className="text-3xl sm:text-[2.4rem] font-bold text-[#0B0D26] leading-[1.15] mb-12">
             Questions About Predictive Maintenance{" "}
-            <em className="not-italic text-[#e7212b]">&amp; Condition Monitoring</em>
+            <em className="not-italic text-current">&amp; Condition Monitoring</em>
           </h2>
           <div className="max-w-4xl mx-auto space-y-4">
             {faqItems.map((item) => (

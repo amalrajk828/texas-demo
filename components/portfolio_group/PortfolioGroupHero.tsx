@@ -73,7 +73,7 @@ export default function PortfolioGroupHero({
               className="text-4xl sm:text-5xl lg:text-[3.5rem] font-bold text-white leading-[1.1] mb-5"
             >
               {titleHighlight}
-              <em className="not-italic text-[#e7212b]">{titleSuffix}</em>
+              <em className="not-italic text-current">{titleSuffix}</em>
             </h1>
 
             {/* Description */}

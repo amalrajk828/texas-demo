@@ -121,7 +121,7 @@ export default function ServicePageFaqSection({
             </span>
           </div>
           <h2 className="text-3xl sm:text-[2.4rem] font-bold text-white leading-[1.15] mb-12">
-            Questions About <em className="not-italic text-[#e7212b]">{highlightWord}</em>
+            Questions About <em className="not-italic text-current">{highlightWord}</em>
           </h2>
         </motion.div>
 

@@ -91,7 +91,7 @@ export default function BlogPage() {
               {/* Heading */}
               <h1 className="text-4xl sm:text-5xl lg:text-[3.25rem] font-black leading-[1.08] tracking-tight mb-5 text-white max-w-3xl">
                 Engineering{" "}
-                <em className="not-italic text-[#e7212b]">Insights</em>{" "}
+                <em className="not-italic text-current">Insights</em>{" "}
                 Hub
               </h1>
 

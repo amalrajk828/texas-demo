@@ -134,7 +134,7 @@ export default function VideosPage() {
               <h1 className="text-4xl sm:text-5xl lg:text-[3.5rem] font-medium text-white leading-[1.15] mb-5">
                 Our
                 <br />
-                <em className="not-italic text-[#e7212b]">Videos</em>
+                <em className="not-italic text-current">Videos</em>
               </h1>
               <p className="text-white/55 text-base sm:text-lg leading-relaxed">
                 Watch walkthroughs, equipment demos, and project highlights

@@ -120,7 +120,7 @@ export default function SolutionsPage() {
           </div>
           <h1 className="text-4xl sm:text-5xl font-medium text-white leading-tight mb-4 max-w-3xl">
             Proprietary Platforms &amp;{" "}
-            <span className="text-[#e7212b]">Strategic Partnerships</span>
+            <span className="text-current">Strategic Partnerships</span>
           </h1>
           <p className="text-white/60 text-base max-w-2xl">
             From proprietary custody metering systems to industrial AI and factory

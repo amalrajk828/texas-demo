@@ -163,7 +163,7 @@ export default function WaterTreatmentPage() {
           </div>
           <h2 className="text-3xl sm:text-[2.4rem] font-bold text-[#0B0D26] leading-[1.15] mb-12">
             Questions About{" "}
-            <em className="not-italic text-[#e7212b]">Water Treatment</em>
+            <em className="not-italic text-current">Water Treatment</em>
           </h2>
           <div className="max-w-4xl mx-auto space-y-4">
             {industryFaqData["water-treatment"]?.map((item) => (

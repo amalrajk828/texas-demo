@@ -59,7 +59,7 @@ export default function NewInstallationPage() {
             </div>
             <h2 className="text-3xl sm:text-[2.4rem] font-bold text-[#0B0D26] leading-[1.15] mb-12">
               Explore{" "}
-              <em className="not-italic text-[#e7212b]">More Services</em>
+              <em className="not-italic text-current">More Services</em>
             </h2>
             <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
               {serviceCrossLinks["new-installation-design-and-commissioning"]?.map((link) => (
@@ -96,7 +96,7 @@ export default function NewInstallationPage() {
           </div>
           <h2 className="text-3xl sm:text-[2.4rem] font-bold text-[#0B0D26] leading-[1.15] mb-12">
             Questions About{" "}
-            <em className="not-italic text-[#e7212b]">Metering System Installation</em>
+            <em className="not-italic text-current">Metering System Installation</em>
           </h2>
           <div className="max-w-4xl mx-auto space-y-4">
             {serviceFaqData["new-installation-design-and-commissioning"]?.map((item) => (

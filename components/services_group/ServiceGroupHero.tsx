@@ -63,7 +63,7 @@ export default function ServiceGroupHero() {
             <h1
               className="text-4xl sm:text-5xl lg:text-[3.4rem] font-bold text-white leading-[1.12] mb-6"
             >
-              Main <em className="not-italic text-[#e7212b]">Services</em>
+              Main <em className="not-italic text-current">Services</em>
             </h1>
 
             <p

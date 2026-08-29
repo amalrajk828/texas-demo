@@ -175,7 +175,7 @@ export default function PlcScadaPage() {
 
             <h1 className="text-4xl sm:text-5xl lg:text-[3.2rem] font-bold text-white leading-[1.12] mb-6">
               Advanced PLC &amp; SCADA{" "}
-              <em className="not-italic text-[#e7212b]">System Integration</em>
+              <em className="not-italic text-current">System Integration</em>
             </h1>
 
             <p className="text-white/50 text-base sm:text-[16px] leading-relaxed mb-8 max-w-2xl">
@@ -244,7 +244,7 @@ export default function PlcScadaPage() {
             <div className="flex flex-col sm:flex-row sm:items-end justify-between gap-4">
               <h2 className="text-3xl sm:text-[2.4rem] font-bold text-[#0B0D26] leading-[1.15]">
                 Our PLC &amp; SCADA{" "}
-                <em className="not-italic text-[#e7212b]">Integration Services</em>
+                <em className="not-italic text-current">Integration Services</em>
               </h2>
               <Link
                 href="/contacts/"
@@ -446,7 +446,7 @@ export default function PlcScadaPage() {
           </div>
           <h2 className="text-3xl sm:text-[2.4rem] font-bold text-[#0B0D26] leading-[1.15] mb-12">
             Frequently Asked Questions About{" "}
-            <em className="not-italic text-[#e7212b]">PLC &amp; SCADA Systems</em>
+            <em className="not-italic text-current">PLC &amp; SCADA Systems</em>
           </h2>
 
           <div className="max-w-4xl mx-auto space-y-4">

@@ -153,7 +153,7 @@ export default function IndustrialAutomationDubaiPage() {
 
             <h1 className="text-4xl sm:text-5xl lg:text-[3.2rem] font-bold text-white leading-[1.12] mb-6">
               Premier Industrial Automation &amp; Engineering{" "}
-              <em className="not-italic text-[#e7212b]">Services in Dubai, UAE</em>
+              <em className="not-italic text-current">Services in Dubai, UAE</em>
             </h1>
 
             <p className="text-white/50 text-base sm:text-[16px] leading-relaxed mb-8 max-w-2xl">
@@ -220,7 +220,7 @@ export default function IndustrialAutomationDubaiPage() {
             <div className="flex flex-col sm:flex-row sm:items-end justify-between gap-4">
               <h2 className="text-3xl sm:text-[2.4rem] font-bold text-[#0B0D26] leading-[1.15]">
                 Industrial Automation &amp; Engineering{" "}
-                <em className="not-italic text-[#e7212b]">in Dubai, UAE</em>
+                <em className="not-italic text-current">in Dubai, UAE</em>
               </h2>
               <Link
                 href="/contacts/"
@@ -453,7 +453,7 @@ export default function IndustrialAutomationDubaiPage() {
           </div>
           <h2 className="text-3xl sm:text-[2.4rem] font-bold text-[#0B0D26] leading-[1.15] mb-12">
             Questions About Industrial Automation in{" "}
-            <em className="not-italic text-[#e7212b]">Dubai &amp; the UAE</em>
+            <em className="not-italic text-current">Dubai &amp; the UAE</em>
           </h2>
           <div className="max-w-4xl mx-auto space-y-4">
             {faqItems.map((item) => (
