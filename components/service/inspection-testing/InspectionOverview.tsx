@@ -46,8 +46,33 @@ const RELATED_SERVICES = [
 export default function InspectionOverview({ hideHeading = false }: { hideHeading?: boolean }) {
   return (
     <>
-      {/* ── Main Content Section: Commitment, Consultancy & NDT ── */}
-      <section className="relative bg-white pt-10 pb-4 lg:pt-14 lg:pb-6 overflow-hidden">
+      {/* ── 1. About This Service / Detailed Overview (Relocated from Hero) ── */}
+      <section id="overview" className="relative bg-[#fcfcfd] py-16 lg:py-20 border-b border-gray-100">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6">
+          <div className="fade-up w-full max-w-none">
+            <div className="flex items-center gap-2.5 mb-4">
+              <span className="w-5 h-px bg-[#e7212b]" />
+              <span className="text-[#e7212b] text-[10px] font-semibold tracking-[3.5px] uppercase">
+                About This Service
+              </span>
+            </div>
+            <h2 className="text-2xl sm:text-3xl font-bold text-[#0B0D26] leading-[1.25] mb-6">
+              Independent Third-Party Inspection &amp; Quality Verification
+            </h2>
+            <div className="space-y-5 text-gray-600 text-[15px] sm:text-[16px] leading-[1.85] w-full max-w-none">
+              <p className="w-full max-w-none">
+                Texas Technical Services Co. (TTS) is a highly diversified independent service provider in the industry mainly as a Third Party Inspection &amp; Testing Company. Since it was founded, TTS has participated in supporting our clients in ensuring quality and safety of their products and our inspectors are committed to providing objective, independent assessments of product compliance and conformity, contributing to production and distribution processes that safeguard consumer health and providing businesses that demonstrate good practices with the tools they need to promote their companies and products, thereby building long-lasting trust-based relationships with their clients.
+              </p>
+              <p className="w-full max-w-none">
+                TTS led by a strong management, technical expertise, engineers and well trained technicians are on a mission to deliver on-time top quality client focused service. We know that a successful company is the result of intelligent planning, capable leadership and active participation by all company members. TTS in that matter respects the talents and experiences of its employees and give the best training possible to keep them in touch with latest technologies.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* ── 2. Main Content Section: Commitment, Consultancy & NDT ── */}
+      <section className="relative bg-white pt-12 pb-4 lg:pt-16 lg:pb-6 overflow-hidden">
         {/* Subtle background glow */}
         <div
           className="absolute -top-40 -right-40 w-[500px] h-[500px] rounded-full pointer-events-none"
@@ -55,7 +80,7 @@ export default function InspectionOverview({ hideHeading = false }: { hideHeadin
         />
 
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 space-y-16">
-          {/* ── 4. Our Commitment Section ── */}
+          {/* Our Commitment Section */}
           <div className="fade-up">
             <div className="flex items-center gap-2.5 mb-4">
               <span className="w-5 h-px bg-[#e7212b]" />
@@ -64,16 +89,16 @@ export default function InspectionOverview({ hideHeading = false }: { hideHeadin
               </span>
             </div>
             <h2 className="text-2xl sm:text-3xl font-bold text-[#0B0D26] leading-[1.25] mb-5 max-w-full">
-              Driving Excellence: Texas Technical Services Co.'s Integrated Approach to Health, Safety, Environment, and Quality Management
+              Driving Excellence: Texas Technical Services Co.&apos;s Integrated Approach to Health, Safety, Environment, and Quality Management
             </h2>
             <p className="text-gray-600 text-[15px] leading-[1.85] max-w-none">
               Texas Technical Services Co. (TTS) is committed to health and safety, the environment and quality is delivered by adopting an integrated approach to our management systems, and complying with all relevant legislation, regulations and other legal and industry requirements. This provides a framework for integration of the ISO 14001:2015, ISO 45001:2018 and ISO 9001:2015 standards and is externally certificated by a UASL accredited certification body.
             </p>
           </div>
 
-          {/* ── 5 & 6. Stacked: TTS Offers / Consultancy + NDT Examinations ── */}
+          {/* Stacked: TTS Offers / Consultancy + NDT Examinations */}
           <div className="flex flex-col gap-6">
-            {/* 5. TTS Offers / Consultancy Services Card */}
+            {/* TTS Offers / Consultancy Services Card */}
             <div className="fade-up d1">
               <div
                 className="rounded-2xl bg-[#000000] blueprint-grid blueprint-dot-grid overflow-hidden relative flex flex-col p-7 sm:p-9 shadow-xl w-full"
@@ -122,12 +147,12 @@ export default function InspectionOverview({ hideHeading = false }: { hideHeadin
                     Non Destructive Testing (NDT)
                   </h3>
                   <p className="text-gray-600 text-[14px] leading-[1.8] mb-6">
-                    The following non destructive examinations services are available in TTS with technical expertise, qualified and experienced technicians and modern equipment's. These inspection services include:
+                    The following non destructive examinations services are available in TTS with technical expertise, qualified and experienced technicians and modern equipment&apos;s. These inspection services include:
                   </p>
 
-                  {/* NDT list — flat 2-column chip grid, single column on mobile */}
+                  {/* NDT list */}
                   <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-2.5">
-                    {NDT_METHODS.map(({ Icon, abbr, label }, i) => (
+                    {NDT_METHODS.map(({ Icon, abbr, label }) => (
                       <div
                         key={abbr}
                         className="group flex items-center gap-3 w-full bg-[#f8f9fb] hover:bg-[#f1f3f6] rounded-xl px-3.5 py-3 transition-colors duration-200 cursor-pointer fade-up"
@@ -146,11 +171,10 @@ export default function InspectionOverview({ hideHeading = false }: { hideHeadin
         </div>
       </section>
 
-      {/* ── 7. Explore More / Related Services Section ── */}
+      {/* ── 3. Explore More / Related Services Section ── */}
       <section className="bg-white pt-4 pb-10 lg:pt-6 lg:pb-12">
         <div className="max-w-7xl mx-auto px-4 sm:px-6">
           <div className="fade-up mb-10">
-            {/* Heading block hidden when hideHeading is true */}
             {!hideHeading && (
               <>
                 <div className="flex items-center gap-2.5 mb-3">

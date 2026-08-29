@@ -1,0 +1,12 @@
+import type { Metadata } from "next";
+import HomeV3Page from "../../../demo/home-v3/HomeV3Page";
+
+export const metadata: Metadata = {
+  title: "Demo Variant: Home V3 (Blog Hero with Liquid Gel Blob) | Texas Technical Services",
+  description: "Independent self-contained preview of Home Screen Variant 3 with Blog Hero and SVG Liquid Gel Blob",
+  robots: { index: false, follow: false },
+};
+
+export default function DemoHomeV3Page() {
+  return <HomeV3Page />;
+}

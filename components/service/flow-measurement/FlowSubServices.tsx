@@ -81,7 +81,7 @@ export default function FlowSubServices() {
   return (
     <section className="bg-white py-20 lg:py-24 border-t border-gray-100">
       <div className="max-w-7xl mx-auto px-4 sm:px-6">
-        <div className="fade-up mb-12">
+        <div className="fade-up mb-12" suppressHydrationWarning>
           <div className="flex items-center gap-2.5 mb-3">
             <span className="w-5 h-px bg-[#e7212b]" />
             <span className="text-[#e7212b] text-[10px] font-semibold tracking-[3.5px] uppercase">
@@ -95,7 +95,7 @@ export default function FlowSubServices() {
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-7 sm:gap-8">
           {RELATED_SERVICES.map((card, i) => (
-            <div key={card.title || i} className="fade-up">
+            <div key={card.title || i} className="fade-up" suppressHydrationWarning>
               <NeumorphicServiceCard card={card} />
             </div>
           ))}
@@ -104,3 +104,4 @@ export default function FlowSubServices() {
     </section>
   );
 }
+

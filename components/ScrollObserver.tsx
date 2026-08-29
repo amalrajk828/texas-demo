@@ -9,12 +9,20 @@ export default function ScrollObserver() {
   useEffect(() => {
     if (typeof window === "undefined") return;
 
+    let timeoutId: NodeJS.Timeout | null = null;
+    let mutObs: MutationObserver | null = null;
+
     const prefersReduced = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
 
     if (prefersReduced) {
-      document.querySelectorAll<HTMLElement>(".fade-up:not(.visible)")
-        .forEach((el) => el.classList.add("visible"));
-      return;
+      timeoutId = setTimeout(() => {
+        document
+          .querySelectorAll<HTMLElement>(".fade-up:not(.visible)")
+          .forEach((el) => el.classList.add("visible"));
+      }, 50);
+      return () => {
+        if (timeoutId) clearTimeout(timeoutId);
+      };
     }
 
     function observeElements() {
@@ -22,7 +30,7 @@ export default function ScrollObserver() {
       if (!els.length) return;
 
       els.forEach((el) => {
-        obsRef.current!.observe(el);
+        obsRef.current?.observe(el);
       });
     }
 
@@ -42,23 +50,20 @@ export default function ScrollObserver() {
       { threshold: 0.1 }
     );
 
-    requestAnimationFrame(() => {
+    // Defer initial scan after React finishes initial mount & hydration
+    timeoutId = setTimeout(() => {
       observeElements();
 
-      const mutObs = new MutationObserver(() => {
+      mutObs = new MutationObserver(() => {
         observeElements();
       });
       mutObs.observe(document.body, { childList: true, subtree: true });
-
-      const cleanup = () => {
-        mutObs.disconnect();
-      };
-      (obsRef.current as any)._cleanup = cleanup;
-    });
+    }, 100);
 
     return () => {
+      if (timeoutId) clearTimeout(timeoutId);
       obsRef.current?.disconnect();
-      (obsRef.current as any)?._cleanup?.();
+      mutObs?.disconnect();
     };
   }, [pathname]);
 

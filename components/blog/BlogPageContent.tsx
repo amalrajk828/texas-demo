@@ -1,6 +1,7 @@
 "use client";
 
 import { useState, useRef, useEffect, useLayoutEffect } from "react";
+import dynamic from "next/dynamic";
 import Link from "next/link";
 import Image from "next/image";
 import {
@@ -14,7 +15,10 @@ import {
 } from "lucide-react";
 import BlogPagination from "./BlogPagination";
 
-import BlogHeroFlowLottie from "./BlogHeroFlowLottie";
+const IridescentGlassSphere = dynamic(
+  () => import("./IridescentGlassSphere"),
+  { ssr: false }
+);
 
 /* ─── Types ─────────────────────────────────────────────────────────── */
 export interface BlogPost {
@@ -98,21 +102,42 @@ export default function BlogPageContent({ allPosts }: Props) {
   return (
     <div className="min-h-screen bg-[#f8f9fb] font-sans antialiased text-[#0B0D26]">
       {/* ══════════════════════════════════════════════════════════════
-          1. HERO SECTION
+          1. HERO SECTION (Photorealistic 3D Iridescent Glass Sphere)
       ══════════════════════════════════════════════════════════════ */}
       <section
-        id="hero-vanta"
-        className="relative bg-[#000000] blueprint-grid blueprint-dot-grid overflow-hidden pt-32 pb-16 lg:pb-24 min-h-[400px]"
+        id="hero-blog"
+        className="relative bg-[#0a0a0f] overflow-hidden pt-32 pb-16 lg:pb-24 min-h-[520px] lg:min-h-[580px] flex items-center justify-center"
+        style={{
+          position: "relative",
+          width: "100%",
+          minHeight: "580px",
+          background: "#0a0a0f",
+          overflow: "hidden",
+        }}
       >
-        {/* Blog Hero Lottie animated background */}
-        <BlogHeroFlowLottie />
-        {/* Red radial glow top-right */}
+        {/* Layer 1: Real-time 3D Raymarched Iridescent Glass Sphere */}
         <div
-          className="absolute -top-24 -right-24 w-[600px] h-[600px] rounded-full pointer-events-none"
-          style={{ background: "radial-gradient(circle, rgba(231,33,43,0.10) 0%, transparent 65%)" }}
+          className="absolute inset-0 w-full h-full pointer-events-none z-0"
+          style={{ position: "absolute", inset: 0, width: "100%", height: "100%", zIndex: 0 }}
+        >
+          <IridescentGlassSphere overlayOpacity={0.0} />
+        </div>
+
+        {/* Subtle contrast gradient vignette scrim */}
+        <div
+          className="absolute inset-0 pointer-events-none z-[1]"
+          style={{
+            background:
+              "radial-gradient(ellipse at center, rgba(10,10,15,0.1) 0%, rgba(10,10,15,0.45) 65%, rgba(10,10,15,0.85) 100%)",
+          }}
         />
 
-        <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6">
+        {/* Hairline subtle top and bottom borders */}
+        <div className="absolute top-0 inset-x-0 h-px bg-white/[0.08] pointer-events-none z-[2]" />
+        <div className="absolute bottom-0 inset-x-0 h-px bg-white/[0.08] pointer-events-none z-[2]" />
+
+        {/* Blog hero content */}
+        <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 w-full">
           {/* Eyebrow */}
           <div className="flex items-center gap-2.5 mb-5">
             <span className="w-4 h-px bg-[#e7212b]" />
@@ -123,13 +148,11 @@ export default function BlogPageContent({ allPosts }: Props) {
 
           {/* Heading — "Engineering Insights Hub" */}
           <h1 className="text-4xl sm:text-5xl lg:text-[3.4rem] font-black leading-[1.08] tracking-tight mb-5 text-white max-w-3xl">
-            Engineering{" "}
-            <em className="not-italic text-white">Insights</em>{" "}
-            Hub
+            Engineering Insights Hub
           </h1>
 
           {/* Sub-text */}
-          <p className="text-white/50 text-[15.5px] leading-[1.85] max-w-2xl mb-12">
+          <p className="text-white/75 text-[15.5px] leading-[1.85] max-w-2xl mb-12">
             Technical guides, compliance references, and strategic engineering insights for
             plant managers and automation engineers across the GCC.
           </p>
@@ -139,16 +162,16 @@ export default function BlogPageContent({ allPosts }: Props) {
             {HERO_STATS.map((s) => (
               <div
                 key={s.label}
-                className="rounded-xl px-5 py-4 border flex flex-col gap-1"
+                className="rounded-xl px-5 py-4 border flex flex-col gap-1 backdrop-blur-md"
                 style={{
-                  background: "rgba(14, 14, 18, 0.90)",
-                  borderColor: "rgba(231,33,43,0.22)",
+                  background: "rgba(14, 14, 20, 0.75)",
+                  borderColor: "rgba(255, 255, 255, 0.12)",
                 }}
               >
                 <span className="text-[#e7212b] text-2xl sm:text-3xl font-black leading-none">
                   {s.value}
                 </span>
-                <span className="text-white/45 text-[11px] font-medium tracking-wide uppercase">
+                <span className="text-white/60 text-[11px] font-medium tracking-wide uppercase">
                   {s.label}
                 </span>
               </div>

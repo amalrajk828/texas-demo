@@ -540,7 +540,7 @@ export default function Header() {
                 <span className="text-white font-black tracking-[6px] lg:tracking-[0px] xl:tracking-[6px] text-[18px] leading-none">
                   TEXAS
                 </span>
-                <span className="text-[#E53935] text-[11px] tracking-[3px] lg:tracking-[0px] xl:tracking-[3px] leading-none font-semibold mt-0.5">
+                <span className="text-[#E63329] text-[12.5px] tracking-[3px] lg:tracking-[0px] xl:tracking-[3px] leading-none font-semibold mt-0.5 whitespace-nowrap">
                   TECHNICAL SERVICES
                 </span>
               </div>
@@ -739,7 +739,9 @@ export default function Header() {
                       <Image src="/logo.svg" alt="Texas" width={38} height={38} />
                       <div>
                         <span className="text-white font-black tracking-[5px] text-[15px] block leading-none">TEXAS</span>
-                        <span className="text-[#E53935] text-[10px] tracking-[2.5px] font-semibold block leading-none mt-1">TECHNICAL SERVICES</span>
+                        <span className="text-[#E63329] text-[11px] tracking-[2.5px] font-semibold block leading-none mt-1 whitespace-nowrap">
+                          TECHNICAL SERVICES
+                        </span>
                       </div>
                     </Link>
                   </div>

@@ -39,8 +39,7 @@ export default function HandRailHero() {
           </div>
           <div className="fade-up d1">
             <h1 className="text-4xl sm:text-5xl lg:text-[3.5rem] font-bold text-white leading-[1.08] tracking-tight mb-6">
-              Hand Rail{" "}
-              <span className="text-[#e7212b]">Fabrication</span>
+              Hand Rail Fabrication
             </h1>
           </div>
           <div className="fade-up d2">

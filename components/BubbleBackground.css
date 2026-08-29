@@ -1,0 +1,164 @@
+/* BubbleBackground.css - Ultra smooth GPU-accelerated floating bubble animations */
+
+@keyframes bubbleFloat1 {
+  0% {
+    transform: translate3d(0, 0, 0) scale(1);
+  }
+  25% {
+    transform: translate3d(35px, -45px, 0) scale(1.06);
+  }
+  50% {
+    transform: translate3d(-25px, -95px, 0) scale(0.95);
+  }
+  75% {
+    transform: translate3d(20px, -40px, 0) scale(1.04);
+  }
+  100% {
+    transform: translate3d(0, 0, 0) scale(1);
+  }
+}
+
+@keyframes bubbleFloat2 {
+  0% {
+    transform: translate3d(0, 0, 0) scale(1);
+  }
+  30% {
+    transform: translate3d(-40px, -60px, 0) scale(0.94);
+  }
+  60% {
+    transform: translate3d(30px, -110px, 0) scale(1.08);
+  }
+  85% {
+    transform: translate3d(-15px, -45px, 0) scale(1.02);
+  }
+  100% {
+    transform: translate3d(0, 0, 0) scale(1);
+  }
+}
+
+@keyframes bubbleFloat3 {
+  0% {
+    transform: translate3d(0, 0, 0) scale(1);
+  }
+  20% {
+    transform: translate3d(25px, 35px, 0) scale(1.05);
+  }
+  50% {
+    transform: translate3d(-35px, -70px, 0) scale(0.92);
+  }
+  80% {
+    transform: translate3d(40px, -30px, 0) scale(1.07);
+  }
+  100% {
+    transform: translate3d(0, 0, 0) scale(1);
+  }
+}
+
+@keyframes bubbleFloat4 {
+  0% {
+    transform: translate3d(0, 0, 0) scale(1);
+  }
+  35% {
+    transform: translate3d(-30px, 50px, 0) scale(1.08);
+  }
+  70% {
+    transform: translate3d(45px, -65px, 0) scale(0.93);
+  }
+  100% {
+    transform: translate3d(0, 0, 0) scale(1);
+  }
+}
+
+@keyframes bubbleFloat5 {
+  0% {
+    transform: translate3d(0, 0, 0) scale(1);
+  }
+  25% {
+    transform: translate3d(40px, -50px, 0) scale(0.96);
+  }
+  50% {
+    transform: translate3d(-30px, -100px, 0) scale(1.06);
+  }
+  75% {
+    transform: translate3d(-45px, -40px, 0) scale(0.98);
+  }
+  100% {
+    transform: translate3d(0, 0, 0) scale(1);
+  }
+}
+
+@keyframes bubbleFloat6 {
+  0% {
+    transform: translate3d(0, 0, 0) scale(1);
+  }
+  30% {
+    transform: translate3d(-25px, -35px, 0) scale(1.04);
+  }
+  60% {
+    transform: translate3d(35px, -80px, 0) scale(0.95);
+  }
+  90% {
+    transform: translate3d(-20px, -20px, 0) scale(1.03);
+  }
+  100% {
+    transform: translate3d(0, 0, 0) scale(1);
+  }
+}
+
+.bubble-item {
+  position: absolute;
+  border-radius: 9999px;
+  pointer-events: none;
+  will-change: transform;
+  transform: translate3d(0, 0, 0);
+  backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
+  mix-blend-mode: screen;
+  width: var(--bubble-size, 300px);
+  height: var(--bubble-size, 300px);
+}
+
+@media (max-width: 639px) {
+  .bubble-item {
+    width: var(--bubble-size-sm, var(--bubble-size, 180px));
+    height: var(--bubble-size-sm, var(--bubble-size, 180px));
+  }
+}
+
+.bubble-anim-1 {
+  animation: bubbleFloat1 var(--bubble-duration, 24s) ease-in-out infinite var(--bubble-delay, 0s);
+}
+
+.bubble-anim-2 {
+  animation: bubbleFloat2 var(--bubble-duration, 28s) ease-in-out infinite var(--bubble-delay, 0s);
+}
+
+.bubble-anim-3 {
+  animation: bubbleFloat3 var(--bubble-duration, 32s) ease-in-out infinite var(--bubble-delay, 0s);
+}
+
+.bubble-anim-4 {
+  animation: bubbleFloat4 var(--bubble-duration, 20s) ease-in-out infinite var(--bubble-delay, 0s);
+}
+
+.bubble-anim-5 {
+  animation: bubbleFloat5 var(--bubble-duration, 36s) ease-in-out infinite var(--bubble-delay, 0s);
+}
+
+.bubble-anim-6 {
+  animation: bubbleFloat6 var(--bubble-duration, 26s) ease-in-out infinite var(--bubble-delay, 0s);
+}
+
+/* Respect prefers-reduced-motion: freeze animations */
+@media (prefers-reduced-motion: reduce) {
+  .bubble-item,
+  .bubble-anim-1,
+  .bubble-anim-2,
+  .bubble-anim-3,
+  .bubble-anim-4,
+  .bubble-anim-5,
+  .bubble-anim-6 {
+    animation: none !important;
+    transform: none !important;
+  }
+}
