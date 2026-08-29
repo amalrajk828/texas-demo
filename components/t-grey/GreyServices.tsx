@@ -50,17 +50,18 @@ export default function GreyServices() {
       <div className="absolute bottom-0 inset-x-0 h-px bg-white/[0.08]" />
 
       <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6">
-        <div className="fade-up flex flex-col gap-6 mb-14">
+        <div className="fade-up flex flex-col text-center items-center gap-6 mb-14">
           <div>
-            <div className="flex items-center gap-3 mb-4">
-              <span className="w-10 h-[3px] rounded-full" style={{ background: "#0891B2" }} />
-              <span className="text-[11px] font-bold tracking-[3.5px] uppercase" style={{ color: "#0891B2" }}>Our Services</span>
+            <div className="inline-flex items-center justify-center gap-3 mb-4">
+              <span className="w-6 h-px" style={{ background: "#0891B2" }} />
+              <span className="text-[11px] font-bold tracking-[4px] uppercase" style={{ color: "#0891B2" }}>Our Services</span>
+              <span className="w-6 h-px" style={{ background: "#0891B2" }} />
             </div>
             <h2 className="text-[1.8rem] sm:text-[2.8rem] lg:text-[3.4rem] font-black leading-[1.05] tracking-tight" style={{ color: "var(--g-heading)" }}>
               What services do we offer for industrial automation and flow measurement?
             </h2>
           </div>
-          <p className="text-[17px] leading-[1.85]" style={{ color: "var(--g-muted)" }}>
+          <p className="text-[17px] leading-[1.85] mx-auto" style={{ color: "var(--g-muted)" }}>
             Extensive expertise in custody metering, industrial automation, and inspection & testing — since 2008.
           </p>
         </div>

@@ -84,16 +84,17 @@ export default function GreyWhatWeDo() {
   return (
     <section className="relative py-24 lg:py-32 overflow-hidden" style={{ background: "linear-gradient(135deg, #f5f7fa 0%, #e2e7ee 45%, #c9d2dc 100%)" }}>
       <div className="relative max-w-7xl mx-auto px-4 sm:px-6 z-10">
-        <div className="flex flex-col lg:flex-row lg:items-end lg:justify-between gap-6 mb-10 sm:mb-12 lg:mb-14">
-          <div className="flex flex-col max-w-2xl">
+        <div className="flex flex-col text-center items-center gap-6 mb-10 sm:mb-12 lg:mb-14">
+          <div className="flex flex-col items-center">
             <motion.div
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.7, ease: "easeOut" }}
-              className="flex items-center gap-3 mb-4"
+              className="inline-flex items-center gap-3 mb-4"
             >
-              <span className="w-10 h-[3px] rounded-full" style={{ background: "#0E7490" }} />
-              <span className="text-[11px] font-bold tracking-[3.5px] uppercase" style={{ color: "#0E7490" }}>What We Do</span>
+              <span className="w-6 h-px" style={{ background: "#0E7490" }} />
+              <span className="text-[11px] font-bold tracking-[4px] uppercase" style={{ color: "#0E7490" }}>What We Do</span>
+              <span className="w-6 h-px" style={{ background: "#0E7490" }} />
             </motion.div>
 
             <motion.h2
@@ -110,7 +111,7 @@ export default function GreyWhatWeDo() {
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.7, ease: "easeOut", delay: 0.3 }}
-            className="max-w-md lg:pb-1"
+            className="lg:pb-1 mx-auto"
           >
             <p className="text-[16px] sm:text-[17px] leading-[1.85] text-[#4B5563]">
               Texas Technical Services delivers precision-engineered solutions across flow measurement,
