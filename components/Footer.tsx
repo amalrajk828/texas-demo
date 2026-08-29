@@ -104,32 +104,45 @@ export default function Footer() {
 
       {/* Main footer */}
       <div className="max-w-7xl mx-auto px-4 sm:px-6 py-14">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-10">
-
-          {/* ── Brand Column ──────────────── */}
-          <div>
-            <Link href="/" className="flex flex-col items-center gap-3 mb-7 w-fit">
-              <Image src="/logo.svg" alt="Texas Technical Services" width={90} height={90} loading="lazy" />
-              <div className="text-center">
-                <p className="text-white font-black tracking-[7px] text-[20px] leading-none">
-                  TEXAS
-                </p>
-                <p className="text-white/60 text-[11px] tracking-[3px] leading-none mt-1.5 font-semibold">
-                  TECHNICAL SERVICES
-                </p>
-              </div>
-            </Link>
+        {/* ── Brand row — full width horizontal ── */}
+        <div className="flex flex-col sm:flex-row items-start gap-8 mb-12 pb-12" style={{ borderBottom: "1px solid rgba(255,255,255,0.06)" }}>
+          <Link href="/" className="shrink-0 flex flex-col items-center gap-3">
+            <Image src="/logo.svg" alt="Texas Technical Services" width={90} height={90} loading="lazy" />
+            <div className="text-center">
+              <p className="text-white font-black tracking-[7px] text-[20px] leading-none">
+                TEXAS
+              </p>
+              <p className="text-white/60 text-[11px] tracking-[3px] leading-none mt-1.5 font-semibold">
+                TECHNICAL SERVICES
+              </p>
+            </div>
+          </Link>
+          <div className="flex-1 min-w-0">
             <p className="text-white/70 text-[14px] leading-[1.8] mb-5 font-medium">
               ISO 9001:2015 certified company established in 2008. Flow measurement,
               automation &amp; inspection for oil &amp; gas and industrial sectors.
             </p>
             <a
               href={`mailto:${SITE_EMAIL}`}
-              className="flex items-start gap-2 text-white/50 text-sm hover:text-brand-red transition-colors mb-4"
+              className="flex items-start gap-2 text-white/70 text-sm hover:text-brand-red transition-colors mb-3"
             >
               <Mail className="w-3.5 h-3.5 shrink-0 mt-0.5" />
               <span className="min-w-0 break-all">{SITE_EMAIL}</span>
             </a>
+            <div className="flex flex-wrap gap-x-6 gap-y-1 mb-4">
+              <a href="tel:+96597243755" className="flex items-center gap-2 text-white/70 text-sm hover:text-brand-red transition-colors">
+                <Phone className="w-3.5 h-3.5" /> +965 97243755
+              </a>
+              <a href="tel:+96566347267" className="flex items-center gap-2 text-white/70 text-sm hover:text-brand-red transition-colors">
+                <Phone className="w-3.5 h-3.5" /> +965 66347267
+              </a>
+              <a href="tel:+971569553747" className="flex items-center gap-2 text-white/70 text-sm hover:text-brand-red transition-colors">
+                <Phone className="w-3.5 h-3.5" /> +971 569553747
+              </a>
+              <a href="tel:+971567793973" className="flex items-center gap-2 text-white/70 text-sm hover:text-brand-red transition-colors">
+                <Phone className="w-3.5 h-3.5" /> +971 567793973
+              </a>
+            </div>
             <div className="flex flex-wrap gap-2">
               {socials.map(({ href, label, path }) => (
                 <a
@@ -146,14 +159,18 @@ export default function Footer() {
                 </a>
               ))}
             </div>
-                <Link
-                href="/social-media/"
-                className="text-white/70 text-[13px] font-medium hover:text-white transition-colors flex items-center gap-2 mt-3"
-              >
-                <LayoutGrid className="w-4 h-4" />
-                View all platforms
-              </Link>
+            <Link
+              href="/social-media/"
+              className="text-white/70 text-[13px] font-medium hover:text-white transition-colors flex items-center gap-2 mt-3"
+            >
+              <LayoutGrid className="w-4 h-4" />
+              View all platforms
+            </Link>
           </div>
+        </div>
+
+        {/* ── Columns row ── */}
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10">
 
           {/* ── Locations Column ───────────── */}
           <div>
@@ -167,31 +184,20 @@ export default function Footer() {
                   city: "Kuwait",
                   address:
                     "Munira Tower Office No. 30, 9th Floor – Building No.6702, Block 7 – Makkah Street Fahaheel, Kuwait",
-                  phones: ["+965 97243755", "+965 66347267"],
                 },
                 {
                   city: "Dubai",
                   address:
                     "Amna Naseer Building, Al Marar Area 20th Street #529 Plot #302 Office #201-19, Deira, Dubai",
-                  phones: ["+971 569553747", "+971 567793973"],
                 },
               ].map((office) => (
                 <div key={office.city}>
                   <p className="text-white text-[15px] font-bold mb-2 flex items-center gap-2">
                     <MapPin className="w-3.5 h-3.5 text-[#E53935]" /> {office.city}
                   </p>
-                  <p className="text-white/70 text-[13px] leading-relaxed mb-2 font-medium">
+                  <p className="text-white/70 text-[13px] leading-relaxed font-medium">
                     {office.address}
                   </p>
-                  {office.phones.map((p) => (
-                    <a
-                      key={p}
-                      href={`tel:${p.replace(/\s/g, "")}`}
-                      className="flex items-center gap-2 py-1.5 text-white/70 text-[13px] font-medium hover:text-[#E53935] transition-colors"
-                    >
-                      <Phone className="w-3 h-3" /> {p}
-                    </a>
-                  ))}
                 </div>
               ))}
             </div>
