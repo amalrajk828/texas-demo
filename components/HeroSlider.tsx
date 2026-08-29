@@ -277,10 +277,10 @@ export default function HeroSlider() {
 
               {/* Eyebrow */}
               <div className="flex items-center gap-3 mb-6">
-                <span className="w-6 h-[2px] rounded-full" style={{ background: "var(--color-brand-red)" }} />
+                <span className="w-6 h-[2px] rounded-full" style={{ background: "#0891B2" }} />
                 <span
                   className="text-[10px] font-bold tracking-[3px] uppercase"
-                  style={{ color: "var(--color-brand-red)" }}
+                  style={{ color: "#0891B2" }}
                 >
                   {slide.eyebrow}
                 </span>

@@ -8,11 +8,11 @@ export default function CtaBanner() {
         <div className="flex items-center gap-2.5 mb-4">
           <span
             className="w-5 h-px"
-            style={{ background: "var(--color-brand-red)" }}
+            style={{ background: "#0891B2" }}
           />
           <span
             className="text-[11px] font-semibold tracking-[2.5px] uppercase"
-            style={{ color: "var(--color-brand-red)" }}
+            style={{ color: "#0891B2" }}
           >
             Get in touch
           </span>

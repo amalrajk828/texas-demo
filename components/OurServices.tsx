@@ -58,11 +58,11 @@ export default function OurServices() {
         {/* Section header */}
         <div className="fade-up text-center mb-16">
           <div className="inline-flex items-center gap-2.5 mb-5">
-            <span className="w-6 h-px" style={{ background: "var(--color-brand-red)" }} />
-            <span className="text-[10px] font-semibold tracking-[3.5px] uppercase" style={{ color: "var(--color-brand-red)" }}>
+            <span className="w-6 h-px" style={{ background: "#0891B2" }} />
+            <span className="text-[10px] font-semibold tracking-[3.5px] uppercase" style={{ color: "#0891B2" }}>
               What We Offer
             </span>
-            <span className="w-6 h-px" style={{ background: "var(--color-brand-red)" }} />
+            <span className="w-6 h-px" style={{ background: "#0891B2" }} />
           </div>
           <h2 className="text-4xl sm:text-[2.8rem] font-bold text-white leading-[1.12] mb-5">
             Our Services

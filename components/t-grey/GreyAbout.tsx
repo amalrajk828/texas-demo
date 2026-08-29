@@ -30,8 +30,8 @@ export default function GreyAbout() {
         <div ref={ref} className="grid grid-cols-1 lg:grid-cols-[1fr_auto] gap-10 items-center">
           <div className="max-w-2xl">
             <div className="flex items-center gap-3 mb-4">
-              <span className="w-10 h-[3px] rounded-full" style={{ background: "var(--color-brand-red)" }} />
-              <span className="text-[11px] font-bold tracking-[3.5px] uppercase" style={{ color: "var(--color-brand-red)" }}>About Texas Technical Services</span>
+              <span className="w-10 h-[3px] rounded-full" style={{ background: "#0E7490" }} />
+              <span className="text-[11px] font-bold tracking-[3.5px] uppercase" style={{ color: "#0E7490" }}>About Texas Technical Services</span>
             </div>
             <h2 className="text-3xl sm:text-4xl font-black tracking-tight mb-4 text-[#111827]">
               Why was Texas Technical Services established in 2008?

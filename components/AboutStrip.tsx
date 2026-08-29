@@ -16,10 +16,10 @@ export default function AboutStrip() {
             className="max-w-2xl"
           >
             <div className="flex items-center gap-2 mb-4">
-              <span className="w-5 h-px" style={{ background: "var(--color-brand-red)" }} />
+              <span className="w-5 h-px" style={{ background: "#0891B2" }} />
               <span
                 className="text-[11px] font-semibold tracking-[3px] uppercase"
-                style={{ color: "var(--color-brand-red)" }}
+                style={{ color: "#0891B2" }}
               >
                 About Texas Technical Services
               </span>

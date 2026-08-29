@@ -101,8 +101,8 @@ export default function ContactPage() {
 
           <div className="max-w-3xl">
             <div className="flex items-center gap-2.5 mb-5">
-              <span className="w-5 h-px bg-[#e7212b]" />
-              <span className="text-[#e7212b] text-[11px] font-semibold tracking-[3px] uppercase">
+              <span className="w-5 h-px bg-[#0891B2]" />
+              <span className="text-[#0891B2] text-[11px] font-semibold tracking-[3px] uppercase">
                 Get in Touch
               </span>
             </div>
@@ -140,7 +140,7 @@ export default function ContactPage() {
             {/* Left — info cards */}
             <div className="space-y-8">
               <div>
-                <span className="text-[11px] font-bold tracking-[0.28em] uppercase text-[#e7212b]">
+                <span className="text-[11px] font-bold tracking-[0.28em] uppercase text-[#0E7490]">
                   Contact Info
                 </span>
                 <h2 className="mt-3 text-3xl lg:text-4xl font-bold text-[#181D4E] leading-tight">
@@ -362,7 +362,7 @@ export default function ContactPage() {
       <section className="py-16 lg:py-24 bg-[#F8F9FA]">
         <div className="max-w-7xl mx-auto px-4 sm:px-6">
           <div className="text-center mb-14">
-            <span className="text-[11px] font-bold tracking-[0.28em] uppercase text-[#e7212b]">
+            <span className="text-[11px] font-bold tracking-[0.28em] uppercase text-[#0E7490]">
               Our Offices
             </span>
             <h2 className="mt-3 text-3xl lg:text-4xl font-bold text-[#181D4E]">
@@ -440,12 +440,12 @@ export default function ContactPage() {
               className="w-8 h-px"
               style={{
                 background:
-                  "color-mix(in srgb, var(--color-brand-red) 40%, transparent)",
+                  "color-mix(in srgb, #0891B2 40%, transparent)",
               }}
             />
             <span
               className="text-[11px] font-semibold tracking-[2.5px] uppercase"
-              style={{ color: "var(--color-brand-red)" }}
+              style={{ color: "#0891B2" }}
             >
               Let&apos;s Work Together
             </span>
@@ -453,7 +453,7 @@ export default function ContactPage() {
               className="w-8 h-px"
               style={{
                 background:
-                  "color-mix(in srgb, var(--color-brand-red) 40%, transparent)",
+                  "color-mix(in srgb, #0891B2 40%, transparent)",
               }}
             />
           </div>

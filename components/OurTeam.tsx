@@ -89,8 +89,8 @@ export default function OurTeam() {
           <div className="lg:pl-4 pb-6 lg:pb-0">
             <div className="fade-up d1">
               <div className="flex items-center gap-2.5 mb-5">
-                <span className="w-6 h-px" style={{ background: "var(--color-brand-red)" }} />
-                <span className="text-[10px] font-bold tracking-[3.5px] uppercase" style={{ color: "var(--color-brand-red)" }}>
+                <span className="w-6 h-px" style={{ background: "#0891B2" }} />
+                <span className="text-[10px] font-bold tracking-[3.5px] uppercase" style={{ color: "#0891B2" }}>
                   Our Team
                 </span>
               </div>

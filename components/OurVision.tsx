@@ -189,9 +189,9 @@ export default function OurVision() {
               animate={inView ? { scaleX: 1 } : {}}
               transition={{ duration: 0.7, ease: [0.16, 1, 0.3, 1] }}
               className="block w-6 h-px origin-right"
-              style={{ background: "var(--color-brand-red)" }}
+              style={{ background: "#0E7490" }}
             />
-            <span className="text-[10px] font-bold tracking-[4px] uppercase" style={{ color: "var(--color-brand-red)" }}>
+            <span className="text-[10px] font-bold tracking-[4px] uppercase" style={{ color: "#0E7490" }}>
               Our Vision
             </span>
             <motion.span
@@ -199,7 +199,7 @@ export default function OurVision() {
               animate={inView ? { scaleX: 1 } : {}}
               transition={{ duration: 0.7, ease: [0.16, 1, 0.3, 1] }}
               className="block w-6 h-px origin-left"
-              style={{ background: "var(--color-brand-red)" }}
+              style={{ background: "#0E7490" }}
             />
           </motion.div>
 

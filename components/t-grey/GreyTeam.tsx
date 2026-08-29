@@ -50,8 +50,8 @@ export default function GreyTeam() {
           <div className="lg:pl-4">
             <div className="fade-up d1">
               <div className="flex items-center gap-3 mb-4">
-                <span className="w-10 h-[3px] rounded-full" style={{ background: "var(--color-brand-red)" }} />
-                <span className="text-[11px] font-bold tracking-[3.5px] uppercase" style={{ color: "var(--color-brand-red)" }}>Our Team</span>
+                <span className="w-10 h-[3px] rounded-full" style={{ background: "#0891B2" }} />
+                <span className="text-[11px] font-bold tracking-[3.5px] uppercase" style={{ color: "#0891B2" }}>Our Team</span>
               </div>
             </div>
             <div className="fade-up d1">

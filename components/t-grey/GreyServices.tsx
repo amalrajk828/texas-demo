@@ -53,8 +53,8 @@ export default function GreyServices() {
         <div className="fade-up flex flex-col lg:flex-row lg:items-end lg:justify-between gap-6 mb-14">
           <div>
             <div className="flex items-center gap-3 mb-4">
-              <span className="w-10 h-[3px] rounded-full" style={{ background: "var(--color-brand-red)" }} />
-              <span className="text-[11px] font-bold tracking-[3.5px] uppercase" style={{ color: "var(--color-brand-red)" }}>Our Services</span>
+              <span className="w-10 h-[3px] rounded-full" style={{ background: "#0891B2" }} />
+              <span className="text-[11px] font-bold tracking-[3.5px] uppercase" style={{ color: "#0891B2" }}>Our Services</span>
             </div>
             <h2 className="text-[1.8rem] sm:text-[2.8rem] lg:text-[3.4rem] font-black leading-[1.05] tracking-tight" style={{ color: "var(--g-heading)" }}>
               What services do we offer for industrial automation and flow measurement?

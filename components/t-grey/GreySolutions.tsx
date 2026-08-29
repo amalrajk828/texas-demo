@@ -35,11 +35,11 @@ export default function GreySolutions() {
           <div
             className="inline-flex items-center gap-3 mb-5"
           >
-            <span className="w-6 h-px" style={{ background: "var(--color-brand-red)" }} />
-            <span className="text-[11px] font-bold tracking-[4px] uppercase" style={{ color: "var(--color-brand-red)" }}>
+            <span className="w-6 h-px" style={{ background: "#0E7490" }} />
+            <span className="text-[11px] font-bold tracking-[4px] uppercase" style={{ color: "#0E7490" }}>
               Solutions & Partners
             </span>
-            <span className="w-6 h-px" style={{ background: "var(--color-brand-red)" }} />
+            <span className="w-6 h-px" style={{ background: "#0E7490" }} />
           </div>
 
           <h2
