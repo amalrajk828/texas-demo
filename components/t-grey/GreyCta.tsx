@@ -23,7 +23,7 @@ export default function GreyCta() {
         <FadeSection delay={0.1}>
           <h2
             className="text-[2.6rem] sm:text-[3.2rem] font-black leading-[1.08] tracking-tight mb-5"
-            style={{ color: "var(--color-brand-red)" }}
+            style={{ color: "var(--g-heading)" }}
           >
             How can we solve your flow measurement challenge?
           </h2>

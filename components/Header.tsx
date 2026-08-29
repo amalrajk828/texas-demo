@@ -736,7 +736,7 @@ export default function Header() {
                   {/* Logo */}
                   <div className="px-5 pt-5 pb-4 border-b" style={{ borderColor: "rgba(255,255,255,0.08)" }}>
                     <Link href="/" onClick={() => setMobileOpen(false)} className="flex items-center gap-3">
-                      <Image src="/logo.svg" alt="Texas" width={38} height={38} />
+                      <Image src="/logo.svg" alt="Texas Technical Services" width={38} height={38} loading="eager" />
                       <div>
                         <span className="text-white font-black tracking-[5px] text-[15px] block leading-none">TEXAS</span>
                         <span className="text-white/60 text-[10px] tracking-[2.5px] font-semibold block leading-none mt-1">TECHNICAL SERVICES</span>

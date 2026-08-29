@@ -50,7 +50,7 @@ export default function GreyServices() {
       <div className="absolute bottom-0 inset-x-0 h-px bg-white/[0.08]" />
 
       <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6">
-        <div className="fade-up flex flex-col lg:flex-row lg:items-end lg:justify-between gap-6 mb-14">
+        <div className="fade-up flex flex-col gap-6 mb-14">
           <div>
             <div className="flex items-center gap-3 mb-4">
               <span className="w-10 h-[3px] rounded-full" style={{ background: "#0891B2" }} />
