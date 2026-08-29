@@ -154,7 +154,7 @@ function ServiceBlock({
             {/* Eyebrow */}
             <div className="flex items-center gap-2.5 mb-4">
               <span className="w-5 h-px bg-[#e7212b]" />
-              <span className="text-[#e7212b] text-[10px] font-semibold tracking-[3px] uppercase">
+              <span className="text-[#0891B2] text-[10px] font-semibold tracking-[3px] uppercase">
                 {service.eyebrow}
               </span>
             </div>
@@ -232,7 +232,7 @@ export default function ServicesDetail() {
         <div className="fade-up text-center mb-20 lg:mb-28">
           <div className="inline-flex items-center gap-2.5 mb-5">
             <span className="w-6 h-px bg-[#e7212b]" />
-            <span className="text-[#e7212b] text-[10px] font-semibold tracking-[3.5px] uppercase">
+            <span className="text-[#0891B2] text-[10px] font-semibold tracking-[3.5px] uppercase">
               Our Core Services
             </span>
             <span className="w-6 h-px bg-[#e7212b]" />

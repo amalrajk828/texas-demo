@@ -44,7 +44,7 @@ export default function AuditsContent() {
 
           <div>
             <div className="fade-up d1">
-              <div className="flex items-center gap-2.5 mb-4"><span className="w-5 h-px bg-[#e7212b]" /><span className="text-[#e7212b] text-[10px] font-semibold tracking-[3.5px] uppercase">What We Do</span></div>
+              <div className="flex items-center gap-2.5 mb-4"><span className="w-5 h-px bg-[#e7212b]" /><span className="text-[#0891B2] text-[10px] font-semibold tracking-[3.5px] uppercase">What We Do</span></div>
               <h2 className="text-3xl sm:text-[2.2rem] font-bold text-[#0B0D26] leading-[1.15] mb-5">Comprehensive Custody Metering Audits &amp; Expert Consultancy</h2>
               <p className="text-gray-500 text-[15px] leading-[1.85] mb-4">We offer comprehensive audits to ensure compliance with industry regulations and standards, minimizing risks and ensuring precise measurements within your custody metering skid system. Our team of expert consultants provides specialized guidance tailored to your specific needs, empowering you with insights and strategies for improved efficiency and accuracy in your custody transfer operations.</p>
               <p className="text-gray-500 text-[15px] leading-[1.85] mb-8">Whether you require audits, process optimization, or compliance assessments for your custody metering skid, we customize our services to enhance your practices — delivering reliable, data-driven solutions that optimize your custody metering operations and guarantee confidence in your measurement accuracy.</p>
@@ -70,7 +70,7 @@ export default function AuditsContent() {
         {/* 4 cards */}
         <div>
           <div className="fade-up mb-12">
-            <div className="flex items-center gap-2.5 mb-4"><span className="w-5 h-px bg-[#e7212b]" /><span className="text-[#e7212b] text-[10px] font-semibold tracking-[3.5px] uppercase">Our Services</span></div>
+            <div className="flex items-center gap-2.5 mb-4"><span className="w-5 h-px bg-[#e7212b]" /><span className="text-[#0891B2] text-[10px] font-semibold tracking-[3.5px] uppercase">Our Services</span></div>
             <h2 className="text-3xl sm:text-[2.2rem] font-bold text-[#0B0D26] leading-[1.15]">What We Offer</h2>
           </div>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5">

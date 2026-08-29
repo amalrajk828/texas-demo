@@ -107,7 +107,7 @@ export default function MitsubishiContent() {
               <div className="w-9 h-9 rounded-xl bg-[#e7212b]/10 border border-[#e7212b]/25 flex items-center justify-center">
                 <Cpu className="w-4 h-4 text-[#e7212b]" strokeWidth={1.8} />
               </div>
-              <span className="text-[#e7212b] text-[11px] font-semibold tracking-[3px] uppercase">
+              <span className="text-[#0891B2] text-[11px] font-semibold tracking-[3px] uppercase">
                 Mitsubishi Electric
               </span>
             </div>
@@ -175,7 +175,7 @@ export default function MitsubishiContent() {
           <div className="mb-14">
             <div className="flex items-center gap-2.5 mb-4">
               <span className="w-5 h-px bg-[#e7212b]" />
-              <span className="text-[#e7212b] text-[10px] font-semibold tracking-[3.5px] uppercase">
+              <span className="text-[#0891B2] text-[10px] font-semibold tracking-[3.5px] uppercase">
                 Mitsubishi Solutions
               </span>
             </div>
@@ -253,7 +253,7 @@ export default function MitsubishiContent() {
                 <div>
                   <div className="flex items-center gap-2.5 mb-4">
                     <span className="w-5 h-px bg-[#e7212b]" />
-                    <span className="text-[#e7212b] text-[10px] font-semibold tracking-[3.5px] uppercase">
+                    <span className="text-[#0891B2] text-[10px] font-semibold tracking-[3.5px] uppercase">
                       Capabilities
                     </span>
                   </div>
@@ -286,7 +286,7 @@ export default function MitsubishiContent() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6">
           <div className="flex items-center gap-2.5 mb-4">
             <span className="w-5 h-px bg-[#e7212b]" />
-            <span className="text-[#e7212b] text-[10px] font-semibold tracking-[3.5px] uppercase">
+            <span className="text-[#0891B2] text-[10px] font-semibold tracking-[3.5px] uppercase">
               How We Deliver
             </span>
           </div>
@@ -341,7 +341,7 @@ export default function MitsubishiContent() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6">
           <div className="flex items-center gap-2.5 mb-4">
             <span className="w-5 h-px bg-[#e7212b]" />
-            <span className="text-[#e7212b] text-[10px] font-semibold tracking-[3.5px] uppercase">
+            <span className="text-[#0891B2] text-[10px] font-semibold tracking-[3.5px] uppercase">
               Industries
             </span>
           </div>
@@ -379,7 +379,7 @@ export default function MitsubishiContent() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6">
           <div className="flex items-center gap-2.5 mb-4">
             <span className="w-5 h-px bg-[#e7212b]" />
-            <span className="text-[#e7212b] text-[10px] font-semibold tracking-[3.5px] uppercase">
+            <span className="text-[#0891B2] text-[10px] font-semibold tracking-[3.5px] uppercase">
               FAQ
             </span>
           </div>
@@ -415,7 +415,7 @@ export default function MitsubishiContent() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 text-center">
           <div className="flex items-center justify-center gap-3 mb-4">
             <span className="w-8 h-px bg-[#e7212b]/40" />
-            <span className="text-[#e7212b] text-[9px] font-medium tracking-[2.5px] uppercase">
+            <span className="text-[#0891B2] text-[9px] font-medium tracking-[2.5px] uppercase">
               Get in touch
             </span>
             <span className="w-8 h-px bg-[#e7212b]/40" />

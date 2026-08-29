@@ -33,7 +33,7 @@ export default function ServicesCtaBanner() {
             <div className="fade-up">
               <div className="flex items-center gap-2.5 mb-5">
                 <span className="w-5 h-px bg-[#e7212b]" />
-                <span className="text-[#e7212b] text-[10px] font-semibold tracking-[3.5px] uppercase">
+                <span className="text-[#0891B2] text-[10px] font-semibold tracking-[3.5px] uppercase">
                   Get in Touch
                 </span>
               </div>

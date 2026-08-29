@@ -57,7 +57,7 @@ export default function AnalyzersTypesSection() {
       />
       <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6">
         <div className="text-center mb-10">
-          <span className="text-[#e7212b] text-[11px] font-semibold tracking-[3px] uppercase">
+          <span className="text-[#0891B2] text-[11px] font-semibold tracking-[3px] uppercase">
             Our Solutions
           </span>
           <h2 className="mt-3 text-white text-2xl sm:text-3xl font-bold">

@@ -59,7 +59,7 @@ export default function InspectionOverview({ hideHeading = false }: { hideHeadin
           <div className="fade-up">
             <div className="flex items-center gap-2.5 mb-4">
               <span className="w-5 h-px bg-[#e7212b]" />
-              <span className="text-[#e7212b] text-[10px] font-semibold tracking-[3.5px] uppercase">
+              <span className="text-[#0891B2] text-[10px] font-semibold tracking-[3.5px] uppercase">
                 Our Commitment
               </span>
             </div>
@@ -95,7 +95,7 @@ export default function InspectionOverview({ hideHeading = false }: { hideHeadin
                       <FileText className="w-4.5 h-4.5 text-[#e7212b]" strokeWidth={1.8} />
                     </div>
                     <div>
-                      <p className="text-[10px] text-[#e7212b] tracking-[2px] uppercase font-semibold">TTS Offers</p>
+                      <p className="text-[10px] text-[#0891B2] tracking-[2px] uppercase font-semibold">TTS Offers</p>
                       <h3 className="text-white font-bold text-[20px] leading-tight">Consultancy Services</h3>
                     </div>
                   </div>
@@ -114,7 +114,7 @@ export default function InspectionOverview({ hideHeading = false }: { hideHeadin
                 <div>
                   <div className="flex items-center gap-2.5 mb-4">
                     <span className="w-5 h-px bg-[#e7212b]" />
-                    <span className="text-[#e7212b] text-[10px] font-semibold tracking-[3.5px] uppercase">
+                    <span className="text-[#0891B2] text-[10px] font-semibold tracking-[3.5px] uppercase">
                       NDT Examinations
                     </span>
                   </div>
@@ -155,7 +155,7 @@ export default function InspectionOverview({ hideHeading = false }: { hideHeadin
               <>
                 <div className="flex items-center gap-2.5 mb-3">
                   <span className="w-5 h-px bg-[#e7212b]" />
-                  <span className="text-[#e7212b] text-[10px] font-semibold tracking-[3.5px] uppercase">
+                  <span className="text-[#0891B2] text-[10px] font-semibold tracking-[3.5px] uppercase">
                     Explore More
                   </span>
                 </div>

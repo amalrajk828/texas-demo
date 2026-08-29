@@ -36,7 +36,7 @@ export default function InspectionHero() {
             <div className="w-9 h-9 rounded-xl bg-[#e7212b]/10 border border-[#e7212b]/25 flex items-center justify-center">
               <FlaskConical className="w-4 h-4 text-[#e7212b]" strokeWidth={1.8} />
             </div>
-            <span className="text-[#e7212b] text-[11px] font-semibold tracking-[3px] uppercase">
+            <span className="text-[#0891B2] text-[11px] font-semibold tracking-[3px] uppercase">
               Inspection &amp; Testing
             </span>
           </div>

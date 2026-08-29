@@ -32,7 +32,7 @@ export default function ValidationHero() {
             <div className="w-8 h-8 rounded-lg bg-[#e7212b]/15 border border-[#e7212b]/25 flex items-center justify-center">
               <BarChart3 className="w-4 h-4 text-[#e7212b]" strokeWidth={1.8} />
             </div>
-            <span className="text-[#e7212b] text-[10px] font-semibold tracking-[3.5px] uppercase">Flow Measurement Services</span>
+            <span className="text-[#0891B2] text-[10px] font-semibold tracking-[3.5px] uppercase">Flow Measurement Services</span>
           </div>
 
           <h1 className="text-4xl sm:text-5xl lg:text-[3.4rem] font-bold text-white leading-[1.08] mb-6">

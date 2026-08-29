@@ -31,7 +31,7 @@ export default function FeaturedArticle({ posts = [], onReadMore }) {
         {/* Eyebrow */}
         <div className="flex items-center gap-2.5 mb-7">
           <span className="w-4 h-px bg-[#e7212b]" />
-          <span className="text-[#e7212b] text-[10.5px] font-bold tracking-[3.5px] uppercase">
+          <span className="text-[#0891B2] text-[10.5px] font-bold tracking-[3.5px] uppercase">
             Featured Article
           </span>
         </div>

@@ -32,7 +32,7 @@ export default function PartnerContent({ name, logo, product, description, href,
 
           {/* Right — Description + CTAs */}
           <div>
-            <p className="text-[13px] font-bold tracking-[3px] uppercase text-[#e7212b] mb-3">
+            <p className="text-[13px] font-bold tracking-[3px] uppercase text-[#0891B2] mb-3">
               {product}
             </p>
             <h2 className="text-[clamp(1.5rem,3vw,2rem)] font-bold text-[#181D4E] leading-snug mb-6">
@@ -70,7 +70,7 @@ export default function PartnerContent({ name, logo, product, description, href,
               <div>
                 <div className="flex items-center gap-2.5 mb-4">
                   <span className="w-5 h-px bg-[#e7212b]" />
-                  <span className="text-[#e7212b] text-[11px] font-semibold tracking-[3px] uppercase">
+                  <span className="text-[#0891B2] text-[11px] font-semibold tracking-[3px] uppercase">
                     Key Features
                   </span>
                 </div>
@@ -93,7 +93,7 @@ export default function PartnerContent({ name, logo, product, description, href,
               <div>
                 <div className="flex items-center gap-2.5 mb-4">
                   <span className="w-5 h-px bg-[#e7212b]" />
-                  <span className="text-[#e7212b] text-[11px] font-semibold tracking-[3px] uppercase">
+                  <span className="text-[#0891B2] text-[11px] font-semibold tracking-[3px] uppercase">
                     Applications
                   </span>
                 </div>

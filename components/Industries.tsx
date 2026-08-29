@@ -31,7 +31,7 @@ export default function Industries() {
         >
           <div className="flex items-center justify-center gap-3 mb-3">
             <span className="w-8 h-px bg-[#e7212b]/40" />
-            <span className="text-[#e7212b] text-[11px] font-semibold tracking-[3px] uppercase">
+            <span className="text-[#0891B2] text-[11px] font-semibold tracking-[3px] uppercase">
               Industries we serve
             </span>
             <span className="w-8 h-px bg-[#e7212b]/40" />

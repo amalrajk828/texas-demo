@@ -16,7 +16,7 @@ export default function ControlSystemContent() {
         <div className="fade-up mb-14">
           <div className="flex items-center gap-2.5 mb-4">
             <span className="w-5 h-px bg-[#e7212b]" />
-            <span className="text-[#e7212b] text-[10px] font-semibold tracking-[3.5px] uppercase">Capabilities</span>
+            <span className="text-[#0891B2] text-[10px] font-semibold tracking-[3.5px] uppercase">Capabilities</span>
           </div>
           <h2 className="text-3xl sm:text-[2.4rem] font-bold text-[#0B0D26] leading-[1.15] max-w-2xl">
             Control System Integration Capabilities
@@ -24,7 +24,7 @@ export default function ControlSystemContent() {
         </div>
         <div className="fade-up mb-12">
           <div className="max-w-3xl">
-            <div className="flex items-center gap-2.5 mb-4"><span className="w-5 h-px bg-[#e7212b]" /><span className="text-[#e7212b] text-[10px] font-semibold tracking-[3.5px] uppercase">What We Do</span></div>
+            <div className="flex items-center gap-2.5 mb-4"><span className="w-5 h-px bg-[#e7212b]" /><span className="text-[#0891B2] text-[10px] font-semibold tracking-[3.5px] uppercase">What We Do</span></div>
             <h2 className="text-3xl sm:text-[2.2rem] font-bold text-[#0B0D26] leading-[1.15] mb-5">Control System Modernisation and Software Migration</h2>
             <p className="text-gray-500 text-[15px] leading-[1.85] mb-4">Legacy control systems — including PLCs, DCS, SCADA, and HMI platforms — become increasingly difficult and costly to maintain as hardware reaches end-of-life and software support is withdrawn. A structured upgrade programme replaces obsolete components with current-generation platforms while preserving process knowledge, maintaining operational continuity, and improving system reliability and cybersecurity.</p>
             <p className="text-gray-500 text-[15px] leading-[1.85] mb-8">TTS manages the complete upgrade lifecycle from system audit and requirements capture through hardware specification, software development, factory acceptance testing, site installation, and post-commissioning support. Our engineers have deep expertise across Mitsubishi MELSEC, Siemens S7, Allen-Bradley ControlLogix, and Schneider Modicon platforms — ensuring seamless migration with minimal production disruption.</p>

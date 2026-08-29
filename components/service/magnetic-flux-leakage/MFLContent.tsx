@@ -16,7 +16,7 @@ export default function MFLContent() {
         <div className="fade-up mb-14">
           <div className="flex items-center gap-2.5 mb-4">
             <span className="w-5 h-px bg-[#e7212b]" />
-            <span className="text-[#e7212b] text-[10px] font-semibold tracking-[3.5px] uppercase">Capabilities</span>
+            <span className="text-[#0891B2] text-[10px] font-semibold tracking-[3.5px] uppercase">Capabilities</span>
           </div>
           <h2 className="text-3xl sm:text-[2.4rem] font-bold text-[#0B0D26] leading-[1.15] max-w-2xl">
             MFL Inspection Applications
@@ -24,7 +24,7 @@ export default function MFLContent() {
         </div>
         <div className="fade-up mb-12">
           <div className="max-w-3xl">
-            <div className="flex items-center gap-2.5 mb-4"><span className="w-5 h-px bg-[#e7212b]" /><span className="text-[#e7212b] text-[10px] font-semibold tracking-[3.5px] uppercase">What We Do</span></div>
+            <div className="flex items-center gap-2.5 mb-4"><span className="w-5 h-px bg-[#e7212b]" /><span className="text-[#0891B2] text-[10px] font-semibold tracking-[3.5px] uppercase">What We Do</span></div>
             <h2 className="text-3xl sm:text-[2.2rem] font-bold text-[#0B0D26] leading-[1.15] mb-5">MFL Scanning for Pipeline and Tank Floor Integrity</h2>
             <p className="text-gray-500 text-[15px] leading-[1.85] mb-4">Magnetic flux leakage (MFL) is a non-destructive testing technique used to detect and quantify corrosion, pitting, and wall loss in ferromagnetic materials. The technique works by magnetising the test piece to near-saturation — where any reduction in wall thickness causes the magnetic field to leak from the surface, which is then detected by Hall-effect sensors mounted on the scanning probe.</p>
             <p className="text-gray-500 text-[15px] leading-[1.85] mb-8">TTS provides MFL inspection services for above-ground and buried pipelines, storage tank floors, and structural steel members. Our MFL systems generate detailed corrosion maps with depth sizing estimates, enabling remaining life calculations and prioritised maintenance planning. MFL is often combined with ultrasonic thickness mapping for comprehensive integrity assessment.</p>

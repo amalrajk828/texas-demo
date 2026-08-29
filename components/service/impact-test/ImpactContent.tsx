@@ -41,7 +41,7 @@ export default function ImpactContent() {
           </div>
           <div>
             <div className="fade-up d1">
-              <div className="flex items-center gap-2.5 mb-4"><span className="w-5 h-px bg-[#e7212b]" /><span className="text-[#e7212b] text-[10px] font-semibold tracking-[3.5px] uppercase">What We Do</span></div>
+              <div className="flex items-center gap-2.5 mb-4"><span className="w-5 h-px bg-[#e7212b]" /><span className="text-[#0891B2] text-[10px] font-semibold tracking-[3.5px] uppercase">What We Do</span></div>
               <h2 className="text-3xl sm:text-[2.2rem] font-bold text-[#0B0D26] leading-[1.15] mb-5">Impact Testing for Shock Resistance &amp; Toughness Assessment</h2>
               <p className="text-gray-500 text-[15px] leading-[1.85] mb-4">An impact test is used to observe the mechanics that a material will exhibit when it experiences a shock loading that causes the specimen to immediately deform, fracture or rupture completely.</p>
               <p className="text-gray-500 text-[15px] leading-[1.85] mb-8">Impact testing is a critical mechanical test used to measure a material's resistance to sudden shock and deformation — simulating real-world scenarios where materials are subjected to rapid and forceful impacts. Particularly relevant for construction, automotive, aerospace, and other industries where impact resistance is crucial for product safety and reliability.</p>
@@ -63,7 +63,7 @@ export default function ImpactContent() {
         </div>
         <div>
           <div className="fade-up mb-12">
-            <div className="flex items-center gap-2.5 mb-4"><span className="w-5 h-px bg-[#e7212b]" /><span className="text-[#e7212b] text-[10px] font-semibold tracking-[3.5px] uppercase">Test Methods</span></div>
+            <div className="flex items-center gap-2.5 mb-4"><span className="w-5 h-px bg-[#e7212b]" /><span className="text-[#0891B2] text-[10px] font-semibold tracking-[3.5px] uppercase">Test Methods</span></div>
             <h2 className="text-3xl sm:text-[2.2rem] font-bold text-[#0B0D26] leading-[1.15]">Impact Testing Methods &amp; Applications</h2>
           </div>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5">

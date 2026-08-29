@@ -42,7 +42,7 @@ export default function FlowMetersCustodyTransferSection() {
     <section className="bg-[#0B0D26] py-16 lg:py-20">
       <div className="max-w-7xl mx-auto px-4 sm:px-6">
         <div className="text-center mb-12">
-          <span className="text-[#e7212b] text-[11px] font-semibold tracking-[3px] uppercase">
+          <span className="text-[#0891B2] text-[11px] font-semibold tracking-[3px] uppercase">
             Precision Metering
           </span>
           <h2 className="mt-3 text-white text-2xl sm:text-3xl font-bold">

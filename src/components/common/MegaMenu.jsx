@@ -121,7 +121,7 @@ export default function MegaMenu({
       {hasSubmenu && (
         <div className="w-[260px] p-4 bg-black/15 flex flex-col gap-0.5 pt-5 animate-slide-right border-l border-white/5">
           <div className="px-3 mb-2">
-            <span className="text-[10px] uppercase font-bold tracking-[0.15em] text-[#E53935] block">
+            <span className="text-[10px] uppercase font-bold tracking-[0.15em] text-[#0891B2] block">
               Specifications
             </span>
           </div>

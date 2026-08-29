@@ -61,7 +61,7 @@ export default function ExteriorWindowsGroupPage() {
       <section className="relative bg-[#0B0D26] pt-32 pb-20 lg:pt-40 lg:pb-28 overflow-hidden">
         <div className="absolute inset-0 bg-[url('/images/hero-pattern.svg')] bg-cover bg-center opacity-5" />
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 text-center">
-          <span className="inline-block text-[#e7212b] text-[10px] font-semibold tracking-[3.5px] uppercase mb-6 border border-[#e7212b]/20 rounded-full px-4 py-1.5">
+          <span className="inline-block text-[#0891B2] text-[10px] font-semibold tracking-[3.5px] uppercase mb-6 border border-[#e7212b]/20 rounded-full px-4 py-1.5">
             Inspection & Testing
           </span>
           <h1 className="text-3xl sm:text-5xl lg:text-[3.8rem] font-black text-white leading-[1.08] max-w-4xl mx-auto">
@@ -79,7 +79,7 @@ export default function ExteriorWindowsGroupPage() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6">
           <div className="flex items-center gap-2.5 mb-4">
             <span className="w-5 h-px bg-[#e7212b]" />
-            <span className="text-[#e7212b] text-[10px] font-semibold tracking-[3.5px] uppercase">Testing Services</span>
+            <span className="text-[#0891B2] text-[10px] font-semibold tracking-[3.5px] uppercase">Testing Services</span>
           </div>
           <h2 className="text-3xl sm:text-[2.4rem] font-bold text-white leading-[1.15] mb-14">
             Curtain Wall &amp; Fenestration Testing

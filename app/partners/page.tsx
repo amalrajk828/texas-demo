@@ -86,7 +86,7 @@ export default function PartnersPage() {
 
           <div className="flex items-center gap-2 mb-4">
             <span className="w-5 h-px bg-[#e7212b]" />
-            <span className="text-[#e7212b] text-[10px] font-medium tracking-[2.5px] uppercase">
+            <span className="text-[#0891B2] text-[10px] font-medium tracking-[2.5px] uppercase">
               Global Network
             </span>
           </div>
@@ -141,7 +141,7 @@ export default function PartnersPage() {
       <section className="bg-white py-16 lg:py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6">
           <div className="text-center mb-12">
-            <span className="text-[11px] font-bold tracking-[0.28em] uppercase text-[#e7212b]">
+            <span className="text-[11px] font-bold tracking-[0.28em] uppercase text-[#0891B2]">
               Worldwide Partnerships
             </span>
             <h2 className="mt-3 text-3xl lg:text-4xl font-bold text-[#181D4E]">
@@ -184,7 +184,7 @@ export default function PartnersPage() {
                   <h3 className="text-[#181D4E] text-[18px] font-bold leading-snug">
                     {p.name}
                   </h3>
-                  <p className="text-[12px] font-semibold tracking-wide text-[#e7212b] uppercase mt-1.5">
+                  <p className="text-[12px] font-semibold tracking-wide text-[#0891B2] uppercase mt-1.5">
                     {p.product}
                   </p>
                 </div>
@@ -205,7 +205,7 @@ export default function PartnersPage() {
       <section className="bg-[#F8F9FA] py-16 lg:py-20 border-t border-gray-100">
         <div className="max-w-7xl mx-auto px-4 sm:px-6">
           <div className="text-center mb-12">
-            <span className="text-[11px] font-bold tracking-[0.28em] uppercase text-[#e7212b]">
+            <span className="text-[11px] font-bold tracking-[0.28em] uppercase text-[#0891B2]">
               Proprietary & Strategic
             </span>
             <h2 className="mt-3 text-3xl lg:text-4xl font-bold text-[#181D4E]">
@@ -248,7 +248,7 @@ export default function PartnersPage() {
                   <h3 className="text-[#181D4E] text-[18px] font-bold leading-snug">
                     {p.name}
                   </h3>
-                  <p className="text-[11px] font-semibold tracking-wide text-[#e7212b] uppercase mt-1">
+                  <p className="text-[11px] font-semibold tracking-wide text-[#0891B2] uppercase mt-1">
                     {p.product}
                   </p>
                 </div>

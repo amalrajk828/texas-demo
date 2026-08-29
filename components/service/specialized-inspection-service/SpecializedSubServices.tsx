@@ -30,7 +30,7 @@ export default function SpecializedSubServices() {
         <div className="fade-up mb-12">
           <div className="flex items-center gap-2.5 mb-3">
             <span className="w-5 h-px bg-[#e7212b]" />
-            <span className="text-[#e7212b] text-[10px] font-semibold tracking-[3.5px] uppercase">Our Services</span>
+            <span className="text-[#0891B2] text-[10px] font-semibold tracking-[3.5px] uppercase">Our Services</span>
           </div>
           <div className="flex flex-col sm:flex-row sm:items-end justify-between gap-4">
             <h2 className="text-3xl sm:text-[2.4rem] font-bold text-[#0B0D26] leading-[1.15]">

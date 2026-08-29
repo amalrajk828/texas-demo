@@ -16,7 +16,7 @@ export default function ElectricalWorksContent() {
         <div className="fade-up mb-14">
           <div className="flex items-center gap-2.5 mb-4">
             <span className="w-5 h-px bg-[#e7212b]" />
-            <span className="text-[#e7212b] text-[10px] font-semibold tracking-[3.5px] uppercase">Electrical Services</span>
+            <span className="text-[#0891B2] text-[10px] font-semibold tracking-[3.5px] uppercase">Electrical Services</span>
           </div>
           <h2 className="text-3xl sm:text-[2.4rem] font-bold text-[#0B0D26] leading-[1.15] max-w-2xl">
             Electrical &amp; Instrumentation Capabilities
@@ -24,7 +24,7 @@ export default function ElectricalWorksContent() {
         </div>
         <div className="fade-up mb-12">
           <div className="max-w-3xl">
-            <div className="flex items-center gap-2.5 mb-4"><span className="w-5 h-px bg-[#e7212b]" /><span className="text-[#e7212b] text-[10px] font-semibold tracking-[3.5px] uppercase">What We Do</span></div>
+            <div className="flex items-center gap-2.5 mb-4"><span className="w-5 h-px bg-[#e7212b]" /><span className="text-[#0891B2] text-[10px] font-semibold tracking-[3.5px] uppercase">What We Do</span></div>
             <h2 className="text-3xl sm:text-[2.2rem] font-bold text-[#0B0D26] leading-[1.15] mb-5">Electrical and Instrumentation Installation Services</h2>
             <p className="text-gray-500 text-[15px] leading-[1.85] mb-4">TTS provides electrical and instrumentation installation services for industrial plants, commercial buildings, and infrastructure projects. Our scope covers cable tray and ladder installation, conduit routing, power and control cable pulling, termination, and testing — executed by qualified electricians and instrument technicians working to IEC 60364 and project specifications.</p>
             <p className="text-gray-500 text-[15px] leading-[1.85] mb-4">Our instrumentation capabilities include instrument loop testing, signal verification, calibration, and configuration of transmitters, analysers, and control equipment. We also provide hazardous area wiring and equipment installation compliant with ATEX and IECEx directives — ensuring safe and reliable electrical and instrumentation systems for classified environments across the oil and gas, petrochemical, and power sectors.</p>

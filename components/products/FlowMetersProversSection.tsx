@@ -54,7 +54,7 @@ export default function FlowMetersProversSection() {
     <section className="bg-[#0B0D26] py-16">
       <div className="max-w-7xl mx-auto px-4 sm:px-6">
         <div className="text-center mb-10">
-          <span className="text-[#e7212b] text-[11px] font-semibold tracking-[3px] uppercase">
+          <span className="text-[#0891B2] text-[11px] font-semibold tracking-[3px] uppercase">
             Authorized Agent · Meter Engineers USA
           </span>
           <h2 className="mt-3 text-white text-2xl sm:text-3xl font-bold">
@@ -63,13 +63,13 @@ export default function FlowMetersProversSection() {
         </div>
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
           <div>
-            <h3 className="text-[#e7212b] text-[15px] font-bold tracking-wide uppercase mb-4">
+            <h3 className="text-[#0891B2] text-[15px] font-bold tracking-wide uppercase mb-4">
               Proving Systems — High Accuracy Verification
             </h3>
             <BigCard item={PROVERS} />
           </div>
           <div>
-            <h3 className="text-[#e7212b] text-[15px] font-bold tracking-wide uppercase mb-4">
+            <h3 className="text-[#0891B2] text-[15px] font-bold tracking-wide uppercase mb-4">
               Services &amp; Equipment
             </h3>
             <BigCard item={SERVICES} />

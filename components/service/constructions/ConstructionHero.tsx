@@ -23,7 +23,7 @@ export default function ConstructionHero() {
             <div className="w-9 h-9 rounded-xl bg-[#e7212b]/10 border border-[#e7212b]/25 flex items-center justify-center">
               <HardHat className="w-4.5 h-4.5 text-[#e7212b]" strokeWidth={1.8} />
             </div>
-            <span className="text-[#e7212b] text-[11px] font-semibold tracking-[3px] uppercase">Constructions</span>
+            <span className="text-[#0891B2] text-[11px] font-semibold tracking-[3px] uppercase">Constructions</span>
           </div>
 
           <h1 className="text-4xl sm:text-5xl lg:text-[3.2rem] font-bold text-white leading-[1.12] mb-6">

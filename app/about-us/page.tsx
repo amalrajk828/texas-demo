@@ -327,7 +327,7 @@ export default function AboutPage() {
                   >
                     2008
                   </p>
-                  <p className="text-[#e7212b] text-xs font-bold tracking-[0.45em] uppercase mt-1 pr-1">
+                  <p className="text-[#0891B2] text-xs font-bold tracking-[0.45em] uppercase mt-1 pr-1">
                     ESTD
                   </p>
                 </div>
@@ -413,7 +413,7 @@ export default function AboutPage() {
       <section className="relative z-10 py-16 lg:py-20 bg-transparent">
         <div className="max-w-7xl mx-auto px-4 sm:px-6">
           <div className="text-center mb-14">
-            <span className="text-[11px] font-bold tracking-[0.28em] uppercase text-[#e7212b]">
+            <span className="text-[11px] font-bold tracking-[0.28em] uppercase text-[#0891B2]">
               Authorized Partnerships &amp; Dealerships
             </span>
             <h2 className="mt-3 text-3xl lg:text-4xl font-bold text-[#181D4E]">
@@ -465,7 +465,7 @@ export default function AboutPage() {
 
         <div className="relative z-10 max-w-5xl mx-auto px-4 sm:px-6">
           <div className="text-center mb-10">
-            <span className="text-[11px] font-bold tracking-[0.28em] uppercase text-[#e7212b]">
+            <span className="text-[11px] font-bold tracking-[0.28em] uppercase text-[#0891B2]">
               OUR MISSION
             </span>
             <h2 className="mt-3 text-3xl lg:text-4xl font-bold text-white">
@@ -521,7 +521,7 @@ export default function AboutPage() {
           {/* Heading row */}
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 mb-14">
             <div>
-              <span className="text-[11px] font-bold tracking-[0.28em] uppercase text-[#e7212b]">
+              <span className="text-[11px] font-bold tracking-[0.28em] uppercase text-[#0891B2]">
                 What we offer
               </span>
               <h2 className="mt-3 text-3xl lg:text-4xl font-bold text-white leading-tight">
@@ -574,7 +574,7 @@ export default function AboutPage() {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center">
             {/* Left — text + skill bars */}
             <FadeSection delay={0}>
-              <span className="text-[11px] font-bold tracking-[0.28em] uppercase text-[#e7212b]">
+              <span className="text-[11px] font-bold tracking-[0.28em] uppercase text-[#0891B2]">
                 quality work
               </span>
               <h2 className="mt-3 text-3xl lg:text-4xl font-bold text-[#181D4E] leading-tight">
@@ -644,7 +644,7 @@ export default function AboutPage() {
       <section className="relative z-10 bg-[#000000] blueprint-grid blueprint-dot-grid py-16 lg:py-20">
         <div className="max-w-6xl mx-auto px-4 sm:px-6">
           <div className="text-center mb-12">
-            <span className="text-[11px] font-bold tracking-[0.28em] uppercase text-[#e7212b]">
+            <span className="text-[11px] font-bold tracking-[0.28em] uppercase text-[#0891B2]">
               testimonials
             </span>
             <h2 className="mt-3 text-3xl lg:text-4xl font-bold text-white">

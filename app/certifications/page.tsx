@@ -89,7 +89,7 @@ export default function CertificationsPage() {
           </nav>
           <div className="flex items-center gap-2 mb-4">
             <span className="w-5 h-px bg-[#e7212b]" />
-            <span className="text-[#e7212b] text-[12px] font-semibold tracking-[3px] uppercase">Quality Assurance</span>
+            <span className="text-[#0891B2] text-[12px] font-semibold tracking-[3px] uppercase">Quality Assurance</span>
           </div>
           <h1 className="text-2xl sm:text-3xl lg:text-[2.2rem] font-bold text-white leading-tight mb-5">
             Certifications &amp; Quality Management
@@ -131,7 +131,7 @@ export default function CertificationsPage() {
                     <h2 className="text-xl font-bold text-[#0B0D26] mb-1 group-hover:text-[#e7212b] transition-colors">
                       {cert.title}
                     </h2>
-                    <p className="text-[#e7212b] text-[13px] font-semibold tracking-wide uppercase mb-3">
+                    <p className="text-[#0891B2] text-[13px] font-semibold tracking-wide uppercase mb-3">
                       {cert.subtitle}
                     </p>
                     <p className="text-gray-500 text-[15px] leading-[1.75]">
@@ -151,7 +151,7 @@ export default function CertificationsPage() {
           <div className="max-w-3xl">
             <div className="flex items-center gap-2 mb-6">
               <span className="w-5 h-1 bg-[#e7212b]" />
-              <span className="text-[#e7212b] text-[12px] font-semibold tracking-[3px] uppercase">Why It Matters</span>
+              <span className="text-[#0891B2] text-[12px] font-semibold tracking-[3px] uppercase">Why It Matters</span>
             </div>
             <h2 className="text-2xl sm:text-3xl font-bold text-[#0B0D26] mb-6">
               What Our Certifications Mean for You
@@ -178,7 +178,7 @@ export default function CertificationsPage() {
             <div className="absolute top-0 right-0 w-[400px] h-full pointer-events-none" style={{ background: "radial-gradient(ellipse at right, rgba(231,33,43,0.10) 0%, transparent 70%)" }} />
             <div className="relative z-10 flex flex-col md:flex-row items-center justify-between gap-8">
               <div className="max-w-xl">
-                <span className="text-[#e7212b] text-[11px] font-bold tracking-[3px] uppercase block mb-2">CERTIFIED PARTNER</span>
+                <span className="text-[#0891B2] text-[11px] font-bold tracking-[3px] uppercase block mb-2">CERTIFIED PARTNER</span>
                 <h3 className="text-xl sm:text-2xl font-bold mb-3">Work With a Certified Team</h3>
                 <p className="text-white/60 text-[15px] leading-relaxed">
                   Our ISO-certified management systems ensure your projects are delivered with consistent quality, environmental responsibility, and the highest safety standards.

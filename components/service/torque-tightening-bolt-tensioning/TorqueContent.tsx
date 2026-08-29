@@ -16,7 +16,7 @@ export default function TorqueContent() {
         <div className="fade-up mb-14">
           <div className="flex items-center gap-2.5 mb-4">
             <span className="w-5 h-px bg-[#e7212b]" />
-            <span className="text-[#e7212b] text-[10px] font-semibold tracking-[3.5px] uppercase">Capabilities</span>
+            <span className="text-[#0891B2] text-[10px] font-semibold tracking-[3.5px] uppercase">Capabilities</span>
           </div>
           <h2 className="text-3xl sm:text-[2.4rem] font-bold text-[#0B0D26] leading-[1.15] max-w-2xl">
             Torque &amp; Bolt Tensioning Capabilities
@@ -24,7 +24,7 @@ export default function TorqueContent() {
         </div>
         <div className="fade-up mb-12">
           <div className="max-w-3xl">
-            <div className="flex items-center gap-2.5 mb-4"><span className="w-5 h-px bg-[#e7212b]" /><span className="text-[#e7212b] text-[10px] font-semibold tracking-[3.5px] uppercase">What We Do</span></div>
+            <div className="flex items-center gap-2.5 mb-4"><span className="w-5 h-px bg-[#e7212b]" /><span className="text-[#0891B2] text-[10px] font-semibold tracking-[3.5px] uppercase">What We Do</span></div>
             <h2 className="text-3xl sm:text-[2.2rem] font-bold text-[#0B0D26] leading-[1.15] mb-5">Controlled Bolt Tightening and Hydraulic Tensioning Services</h2>
             <p className="text-gray-500 text-[15px] leading-[1.85] mb-4">Proper bolt tightening is critical to the integrity of flanged joints, structural connections, and pressure-containing assemblies. Torque tightening applies a calculated rotational force to achieve the required bolt load, while hydraulic tensioning directly stretches the bolt to the target preload — eliminating friction-related variability and providing more accurate and repeatable bolt load achievement.</p>
             <p className="text-gray-500 text-[15px] leading-[1.85] mb-8">TTS provides calibrated torque wrenches, hydraulic tensioners, and bolt heating systems for flange bolt-up per ASME PCC-1, API 6A, and EN 1591. Our technicians perform bolt load calculations, joint integrity assessments, and documented bolt-up procedures — ensuring leak-free flange connections and structural joints that meet design requirements and regulatory obligations.</p>

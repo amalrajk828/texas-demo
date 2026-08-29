@@ -41,7 +41,7 @@ export default function FractureContent() {
           </div>
           <div>
             <div className="fade-up d1">
-              <div className="flex items-center gap-2.5 mb-4"><span className="w-5 h-px bg-[#e7212b]" /><span className="text-[#e7212b] text-[10px] font-semibold tracking-[3.5px] uppercase">What We Do</span></div>
+              <div className="flex items-center gap-2.5 mb-4"><span className="w-5 h-px bg-[#e7212b]" /><span className="text-[#0891B2] text-[10px] font-semibold tracking-[3.5px] uppercase">What We Do</span></div>
               <h2 className="text-3xl sm:text-[2.2rem] font-bold text-[#0B0D26] leading-[1.15] mb-5">Fracture Toughness Testing for Flaw Resistance Characterisation</h2>
               <p className="text-gray-500 text-[15px] leading-[1.85] mb-4">Fracture toughness tests measure a material's ability to resist the growth or propagation of a pre-existing flaw. The flaw or defect may be in the form of a fatigue crack, void, or any inconsistency in the test material.</p>
               <p className="text-gray-500 text-[15px] leading-[1.85] mb-8">These tests provide the fracture mechanics data needed to support structural integrity assessments, fitness-for-service evaluations, and material qualification for pressure vessels, pipelines, structural steels, and critical components operating in demanding environments.</p>
@@ -63,7 +63,7 @@ export default function FractureContent() {
         </div>
         <div>
           <div className="fade-up mb-12">
-            <div className="flex items-center gap-2.5 mb-4"><span className="w-5 h-px bg-[#e7212b]" /><span className="text-[#e7212b] text-[10px] font-semibold tracking-[3.5px] uppercase">Test Methods</span></div>
+            <div className="flex items-center gap-2.5 mb-4"><span className="w-5 h-px bg-[#e7212b]" /><span className="text-[#0891B2] text-[10px] font-semibold tracking-[3.5px] uppercase">Test Methods</span></div>
             <h2 className="text-3xl sm:text-[2.2rem] font-bold text-[#0B0D26] leading-[1.15]">Fracture Toughness Methods &amp; Applications</h2>
           </div>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5">

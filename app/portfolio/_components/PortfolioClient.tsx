@@ -76,7 +76,7 @@ export default function PortfolioClient() {
 
           <div className="flex items-center gap-2 mb-4">
             <span className="w-5 h-px bg-[#e7212b]" />
-            <span className="text-[#e7212b] text-[10px] font-medium tracking-[2.5px] uppercase">
+            <span className="text-[#0891B2] text-[10px] font-medium tracking-[2.5px] uppercase">
               Texas Technical Services · Product Showcase
             </span>
           </div>
@@ -172,7 +172,7 @@ function PortfolioCard({ product }: { product: Product }) {
 
         {/* Content Area */}
         <div>
-          <span className="text-[#e7212b] text-[10px] font-bold tracking-wider uppercase">
+          <span className="text-[#0891B2] text-[10px] font-bold tracking-wider uppercase">
             {product.category}
           </span>
           <h3 className="text-[#1A1A2E] text-[16px] font-bold leading-snug mt-1 group-hover:text-[#e7212b] transition-colors duration-200">

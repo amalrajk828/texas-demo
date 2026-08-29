@@ -18,7 +18,7 @@ export function NeumorphicServiceCard({ card }: { card: ServiceCardData }) {
       className="neumorphic-press-card p-5 sm:p-6 flex flex-col justify-between h-full group block text-left"
     >
       <div>
-        <p className="text-[#e7212b] text-[10.5px] font-bold uppercase tracking-wider mb-2">
+        <p className="text-[#0891B2] text-[10.5px] font-bold uppercase tracking-wider mb-2">
           {card.category}
         </p>
         <h3 className="text-[#1f2937] text-[16px] font-bold leading-tight mb-2.5 group-hover:text-[#e7212b] transition-colors duration-200">

@@ -90,7 +90,7 @@ export default function FlowComputerContent() {
             <div className="fade-up d1">
               <div className="flex items-center gap-2.5 mb-4">
                 <span className="w-5 h-px bg-[#e7212b]" />
-                <span className="text-[#e7212b] text-[10px] font-semibold tracking-[3.5px] uppercase">
+                <span className="text-[#0891B2] text-[10px] font-semibold tracking-[3.5px] uppercase">
                   What We Do
                 </span>
               </div>
@@ -140,7 +140,7 @@ export default function FlowComputerContent() {
           <div className="fade-up mb-12">
             <div className="flex items-center gap-2.5 mb-4">
               <span className="w-5 h-px bg-[#e7212b]" />
-              <span className="text-[#e7212b] text-[10px] font-semibold tracking-[3.5px] uppercase">
+              <span className="text-[#0891B2] text-[10px] font-semibold tracking-[3.5px] uppercase">
                 Our Approach
               </span>
             </div>

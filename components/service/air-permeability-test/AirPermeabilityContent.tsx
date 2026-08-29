@@ -16,7 +16,7 @@ export default function AirPermeabilityContent() {
         <div className="fade-up mb-14">
           <div className="flex items-center gap-2.5 mb-4">
             <span className="w-5 h-px bg-[#e7212b]" />
-            <span className="text-[#e7212b] text-[10px] font-semibold tracking-[3.5px] uppercase">Capabilities</span>
+            <span className="text-[#0891B2] text-[10px] font-semibold tracking-[3.5px] uppercase">Capabilities</span>
           </div>
           <h2 className="text-3xl sm:text-[2.4rem] font-bold text-[#0B0D26] leading-[1.15] max-w-2xl">
             Air Permeability Testing Capabilities
@@ -24,7 +24,7 @@ export default function AirPermeabilityContent() {
         </div>
         <div className="fade-up mb-12">
           <div className="max-w-3xl">
-            <div className="flex items-center gap-2.5 mb-4"><span className="w-5 h-px bg-[#e7212b]" /><span className="text-[#e7212b] text-[10px] font-semibold tracking-[3.5px] uppercase">What We Do</span></div>
+            <div className="flex items-center gap-2.5 mb-4"><span className="w-5 h-px bg-[#e7212b]" /><span className="text-[#0891B2] text-[10px] font-semibold tracking-[3.5px] uppercase">What We Do</span></div>
             <h2 className="text-3xl sm:text-[2.2rem] font-bold text-[#0B0D26] leading-[1.15] mb-5">Air Infiltration Testing for Building Envelope Performance</h2>
             <p className="text-gray-500 text-[15px] leading-[1.85] mb-4">Air permeability testing measures the rate of air leakage through building envelope assemblies — including curtain walls, windows, doors, and panel systems — under controlled pressure differentials. The test quantifies air infiltration and exfiltration rates, providing objective data on gasket performance, sealant integrity, and overall weatherseal quality of the installed system.</p>
             <p className="text-gray-500 text-[15px] leading-[1.85] mb-8">TTS performs air permeability testing in accordance with ASTM E783, EN 12153, and AAMA 501 — using calibrated blowers, pressure gauges, and airflow measurement equipment. Our test reports document air leakage rates at specified pressure differentials, enabling comparison against project specifications and international performance benchmarks for energy efficiency and occupant comfort.</p>

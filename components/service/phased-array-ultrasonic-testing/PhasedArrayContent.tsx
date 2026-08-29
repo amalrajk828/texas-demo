@@ -16,7 +16,7 @@ export default function PhasedArrayContent() {
         <div className="fade-up mb-14">
           <div className="flex items-center gap-2.5 mb-4">
             <span className="w-5 h-px bg-[#e7212b]" />
-            <span className="text-[#e7212b] text-[10px] font-semibold tracking-[3.5px] uppercase">Capabilities</span>
+            <span className="text-[#0891B2] text-[10px] font-semibold tracking-[3.5px] uppercase">Capabilities</span>
           </div>
           <h2 className="text-3xl sm:text-[2.4rem] font-bold text-[#0B0D26] leading-[1.15] max-w-2xl">
             What PAUT Detects &amp; Measures
@@ -24,7 +24,7 @@ export default function PhasedArrayContent() {
         </div>
         <div className="fade-up mb-12">
           <div className="max-w-3xl">
-            <div className="flex items-center gap-2.5 mb-4"><span className="w-5 h-px bg-[#e7212b]" /><span className="text-[#e7212b] text-[10px] font-semibold tracking-[3.5px] uppercase">What We Do</span></div>
+            <div className="flex items-center gap-2.5 mb-4"><span className="w-5 h-px bg-[#e7212b]" /><span className="text-[#0891B2] text-[10px] font-semibold tracking-[3.5px] uppercase">What We Do</span></div>
             <h2 className="text-3xl sm:text-[2.2rem] font-bold text-[#0B0D26] leading-[1.15] mb-5">Phased Array UT for Advanced Weld and Material Inspection</h2>
             <p className="text-gray-500 text-[15px] leading-[1.85] mb-4">Phased array ultrasonic testing (PAUT) uses multiple piezoelectric elements that are pulsed independently with calculated time delays — producing steerable, focused, and swept sound beams without moving the probe. This enables sectorial scanning (S-scan) through the full weld volume in a single pass, significantly improving defect detection probability and sizing accuracy compared to conventional single-element UT.</p>
             <p className="text-gray-500 text-[15px] leading-[1.85] mb-8">Our PAUT capabilities cover weld inspection for ferritic and austenitic materials, corrosion mapping, and composite laminate assessment. We perform PAUT in accordance with ASME V, ISO 17640, and ISO 13588 — providing fully digitised data with A-scan, B-scan, C-scan, and S-scan imaging for comprehensive defect characterisation and reporting.</p>

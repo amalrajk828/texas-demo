@@ -152,7 +152,7 @@ export default async function BlogArticlePage({ params }: PageProps) {
           <section className="mt-16 pt-12 border-t border-gray-200">
             <div className="flex items-center gap-2.5 mb-6">
               <span className="w-5 h-px bg-[#e7212b]" />
-              <span className="text-[#e7212b] text-[12px] font-semibold tracking-[3px] uppercase">FAQ</span>
+              <span className="text-[#0891B2] text-[12px] font-semibold tracking-[3px] uppercase">FAQ</span>
             </div>
             <h2 className="text-2xl font-bold text-[#0B0D26] mb-8">Frequently Asked Questions</h2>
             <FaqAccordion items={faqItems} />
@@ -168,7 +168,7 @@ export default async function BlogArticlePage({ params }: PageProps) {
             <section className="mt-16 pt-12 border-t border-gray-200">
               <div className="flex items-center gap-2.5 mb-6">
                 <span className="w-5 h-px bg-[#e7212b]" />
-                <span className="text-[#e7212b] text-[12px] font-semibold tracking-[3px] uppercase">Related</span>
+                <span className="text-[#0891B2] text-[12px] font-semibold tracking-[3px] uppercase">Related</span>
               </div>
               <h2 className="text-2xl font-bold text-[#0B0D26] mb-8">Related Articles</h2>
               <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
@@ -178,7 +178,7 @@ export default async function BlogArticlePage({ params }: PageProps) {
                       <Image src={a.image} alt={a.imageAlt} fill className="object-cover group-hover:scale-105 transition-transform duration-500" sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw" />
                     </div>
                     <div className="p-5">
-                      <span className="text-[11px] font-semibold text-[#e7212b] tracking-[2px] uppercase">{a.category}</span>
+                      <span className="text-[11px] font-semibold text-[#0891B2] tracking-[2px] uppercase">{a.category}</span>
                       <h3 className="text-[16px] font-semibold text-[#0B0D26] mt-2 mb-2 group-hover:text-[#e7212b] transition-colors line-clamp-2">{a.title}</h3>
                       <div className="flex items-center gap-2 text-[13px] text-gray-400">
                         <Calendar className="w-3 h-3" />
@@ -210,7 +210,7 @@ export default async function BlogArticlePage({ params }: PageProps) {
             <div className="absolute top-0 right-0 w-[400px] h-full pointer-events-none" style={{ background: "radial-gradient(ellipse at right, rgba(231,33,43,0.10) 0%, transparent 70%)" }} />
             <div className="relative z-10 flex flex-col md:flex-row items-center justify-between gap-8">
               <div className="max-w-xl">
-                <span className="text-[#e7212b] text-[11px] font-bold tracking-[3px] uppercase block mb-2">ENGINEERING SERVICES</span>
+                <span className="text-[#0891B2] text-[11px] font-bold tracking-[3px] uppercase block mb-2">ENGINEERING SERVICES</span>
                 <h3 className="text-xl sm:text-2xl font-bold mb-3">Discuss Your Requirements with TTS Engineers</h3>
                 <p className="text-white/60 text-[15px] leading-relaxed">Our certified instrumentation engineers are available to review your facility metering, SCADA upgrades, environmental analyzers, and inspection testing needs.</p>
               </div>

@@ -116,7 +116,7 @@ export default function IndustrialAutomationPage() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6">
           <div className="flex items-center gap-2.5 mb-4">
             <span className="w-5 h-px bg-[#e7212b]" />
-            <span className="text-[#e7212b] text-[10px] font-semibold tracking-[3.5px] uppercase">
+            <span className="text-[#0891B2] text-[10px] font-semibold tracking-[3.5px] uppercase">
               FAQ
             </span>
           </div>
@@ -153,7 +153,7 @@ export default function IndustrialAutomationPage() {
           <div className="max-w-7xl mx-auto px-4 sm:px-6">
             <div className="flex items-center gap-2.5 mb-4">
               <span className="w-5 h-px bg-[#e7212b]" />
-              <span className="text-[#e7212b] text-[10px] font-semibold tracking-[3.5px] uppercase">
+              <span className="text-[#0891B2] text-[10px] font-semibold tracking-[3.5px] uppercase">
                 Related Services
               </span>
             </div>

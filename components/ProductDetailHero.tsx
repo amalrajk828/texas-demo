@@ -66,7 +66,7 @@ export default function ProductDetailHero({
         <div className="grid grid-cols-1 min-[769px]:grid-cols-2 gap-10 items-center">
           {/* Left Text Column */}
           <div className="flex flex-col items-start">
-            <span className="text-[#e7212b] text-[11px] font-bold tracking-wider uppercase mb-2">
+            <span className="text-[#0891B2] text-[11px] font-bold tracking-wider uppercase mb-2">
               {product.tag}
             </span>
             {seriesBadge && (

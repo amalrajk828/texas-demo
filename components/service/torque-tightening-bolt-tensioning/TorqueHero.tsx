@@ -38,7 +38,7 @@ export default function TorqueHero() {
           <div className="fade-up d1">
             <div className="inline-flex items-center gap-2.5 bg-[#e7212b]/10 border border-[#e7212b]/20 rounded-full px-4 py-2 mb-6">
               <Wrench className="w-3.5 h-3.5 text-[#e7212b]" strokeWidth={2} />
-              <span className="text-[#e7212b] text-[11px] font-semibold tracking-[2.5px] uppercase">Specialized Inspection Service</span>
+              <span className="text-[#0891B2] text-[11px] font-semibold tracking-[2.5px] uppercase">Specialized Inspection Service</span>
             </div>
           </div>
           <div className="fade-up d1">

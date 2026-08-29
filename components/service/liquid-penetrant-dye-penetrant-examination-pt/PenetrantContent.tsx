@@ -41,7 +41,7 @@ export default function PenetrantContent() {
           </div>
           <div>
             <div className="fade-up d1">
-              <div className="flex items-center gap-2.5 mb-4"><span className="w-5 h-px bg-[#e7212b]" /><span className="text-[#e7212b] text-[10px] font-semibold tracking-[3.5px] uppercase">What We Do</span></div>
+              <div className="flex items-center gap-2.5 mb-4"><span className="w-5 h-px bg-[#e7212b]" /><span className="text-[#0891B2] text-[10px] font-semibold tracking-[3.5px] uppercase">What We Do</span></div>
               <h2 className="text-3xl sm:text-[2.2rem] font-bold text-[#0B0D26] leading-[1.15] mb-5">Liquid &amp; Dye Penetrant Testing for Surface Defect Detection</h2>
               <p className="text-gray-500 text-[15px] leading-[1.85] mb-4">Liquid Penetrant Testing (LPT), also known as Liquid Penetrant Inspection (LPI) or Dye Penetrant Testing (DPT), is a widely used non-destructive testing (NDT) method to detect surface defects and discontinuities in materials. It is particularly effective for inspecting non-porous materials like metals, ceramics, plastics, and some non-metallic materials.</p>
               <p className="text-gray-500 text-[15px] leading-[1.85] mb-8">Dye penetrant testing (PT) is a non-destructive material testing method which uses capillary forces to find surface cracks or pores and make them visible. It can detect surface-breaking flaws such as cracks, laps, and porosity — providing a reliable and cost-effective surface inspection solution across all industry sectors.</p>
@@ -63,7 +63,7 @@ export default function PenetrantContent() {
         </div>
         <div>
           <div className="fade-up mb-12">
-            <div className="flex items-center gap-2.5 mb-4"><span className="w-5 h-px bg-[#e7212b]" /><span className="text-[#e7212b] text-[10px] font-semibold tracking-[3.5px] uppercase">PT Methods</span></div>
+            <div className="flex items-center gap-2.5 mb-4"><span className="w-5 h-px bg-[#e7212b]" /><span className="text-[#0891B2] text-[10px] font-semibold tracking-[3.5px] uppercase">PT Methods</span></div>
             <h2 className="text-3xl sm:text-[2.2rem] font-bold text-[#0B0D26] leading-[1.15]">Penetrant Testing Methods &amp; Applications</h2>
           </div>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5">

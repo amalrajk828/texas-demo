@@ -65,7 +65,7 @@ const categoryColors: Record<string, string> = {
 function BulletList({ section }: { section: BulletSection }) {
   return (
     <div>
-      <p className="text-[10px] font-medium text-[#e7212b] tracking-[2px] uppercase mb-4">
+      <p className="text-[10px] font-medium text-[#0891B2] tracking-[2px] uppercase mb-4">
         {section.heading}
       </p>
       <ul className="space-y-2.5">
@@ -93,7 +93,7 @@ function SubBlockSection({ block, index }: { block: SubBlock; index: number }) {
           <div className={isEven ? "order-1" : "order-1 lg:order-2"}>
             <div className="flex items-center gap-2 mb-3">
               <span className="w-5 h-px bg-[#e7212b]/40" />
-              <span className="text-[#e7212b] text-[9px] font-medium tracking-[2.5px] uppercase">
+              <span className="text-[#0891B2] text-[9px] font-medium tracking-[2.5px] uppercase">
                 {block.id.replace("-", " ").toUpperCase()}
               </span>
             </div>
@@ -274,7 +274,7 @@ export default async function ProductPage({ params }: Props) {
             </h1>
 
             {product.tagline && (
-              <p className="text-[#e7212b] text-sm sm:text-base font-medium tracking-wide uppercase mt-2">
+              <p className="text-[#0891B2] text-sm sm:text-base font-medium tracking-wide uppercase mt-2">
                 {product.tagline}
               </p>
             )}
@@ -378,7 +378,7 @@ export default async function ProductPage({ params }: Props) {
           <div className="max-w-7xl mx-auto px-4 sm:px-6">
             <div className="flex items-center gap-3 mb-8">
               <span className="w-8 h-px bg-[#e7212b]/40" />
-              <span className="text-[#e7212b] text-[9px] font-medium tracking-[2.5px] uppercase">
+              <span className="text-[#0891B2] text-[9px] font-medium tracking-[2.5px] uppercase">
                 Product Gallery
               </span>
             </div>
@@ -422,7 +422,7 @@ export default async function ProductPage({ params }: Props) {
           <div className="max-w-4xl mx-auto px-4 sm:px-6">
             <div className="flex items-center gap-3 mb-8">
               <span className="w-8 h-px bg-[#e7212b]/40" />
-              <span className="text-[#e7212b] text-[9px] font-medium tracking-[2.5px] uppercase">
+              <span className="text-[#0891B2] text-[9px] font-medium tracking-[2.5px] uppercase">
                 Product Video
               </span>
             </div>
@@ -444,7 +444,7 @@ export default async function ProductPage({ params }: Props) {
           <div className="max-w-7xl mx-auto px-4 sm:px-6">
             <div className="flex items-center gap-3 mb-8">
               <span className="w-8 h-px bg-[#e7212b]/40" />
-              <span className="text-[#e7212b] text-[9px] font-medium tracking-[2.5px] uppercase">
+              <span className="text-[#0891B2] text-[9px] font-medium tracking-[2.5px] uppercase">
                 Available Models
               </span>
             </div>
@@ -469,7 +469,7 @@ export default async function ProductPage({ params }: Props) {
           <div className="max-w-7xl mx-auto px-4 sm:px-6">
             <div className="flex items-center gap-3 mb-6">
               <span className="w-8 h-px bg-[#e7212b]/40" />
-              <span className="text-[#e7212b] text-[9px] font-medium tracking-[2.5px] uppercase">
+              <span className="text-[#0891B2] text-[9px] font-medium tracking-[2.5px] uppercase">
                 Resources
               </span>
             </div>
@@ -524,7 +524,7 @@ export default async function ProductPage({ params }: Props) {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 text-center">
           <div className="flex items-center justify-center gap-3 mb-4">
             <span className="w-8 h-px bg-[#e7212b]/40" />
-            <span className="text-[#e7212b] text-[9px] font-medium tracking-[2.5px] uppercase">
+            <span className="text-[#0891B2] text-[9px] font-medium tracking-[2.5px] uppercase">
               Get in touch
             </span>
             <span className="w-8 h-px bg-[#e7212b]/40" />

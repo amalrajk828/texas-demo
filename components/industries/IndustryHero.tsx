@@ -62,7 +62,7 @@ export default function IndustryHero({
               <div className="w-10 h-10 bg-[#e7212b] rounded-lg flex items-center justify-center shadow-lg shrink-0">
                 <Icon className="w-5 h-5 text-white" strokeWidth={1.5} />
               </div>
-              <span className="text-[#e7212b] text-[10px] font-medium tracking-[2.5px] uppercase">
+              <span className="text-[#0891B2] text-[10px] font-medium tracking-[2.5px] uppercase">
                 Industry Solutions
               </span>
             </div>

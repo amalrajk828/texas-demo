@@ -114,7 +114,7 @@ export default function SolutionsPage() {
 
           <div className="flex items-center gap-2 mb-4">
             <span className="w-5 h-px bg-[#e7212b]" />
-            <span className="text-[#e7212b] text-[10px] font-medium tracking-[2.5px] uppercase">
+            <span className="text-[#0891B2] text-[10px] font-medium tracking-[2.5px] uppercase">
               Our Solutions
             </span>
           </div>
@@ -163,7 +163,7 @@ export default function SolutionsPage() {
                     <h3 className="text-[#181D4E] text-[18px] font-bold leading-snug">
                       {s.name}
                     </h3>
-                    <p className="text-[12px] font-semibold tracking-wide text-[#e7212b] uppercase mt-0.5">
+                    <p className="text-[12px] font-semibold tracking-wide text-[#0891B2] uppercase mt-0.5">
                       {s.tagline}
                     </p>
                   </div>

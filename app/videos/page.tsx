@@ -127,7 +127,7 @@ export default function VideosPage() {
             <div className="flex-1 max-w-2xl">
               <div className="flex items-center gap-2 mb-5">
                 <span className="w-5 h-px bg-[#e7212b]" />
-                <span className="text-[#e7212b] text-[10px] font-medium tracking-[2.5px] uppercase">
+                <span className="text-[#0891B2] text-[10px] font-medium tracking-[2.5px] uppercase">
                   ISO 9001:2015 Certified · Est. 2008
                 </span>
               </div>
@@ -196,7 +196,7 @@ export default function VideosPage() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 text-center">
           <div className="flex items-center justify-center gap-3 mb-4">
             <span className="w-8 h-px bg-[#e7212b]/40" />
-            <span className="text-[#e7212b] text-[9px] font-medium tracking-[2.5px] uppercase">
+            <span className="text-[#0891B2] text-[9px] font-medium tracking-[2.5px] uppercase">
               Have a project in mind?
             </span>
             <span className="w-8 h-px bg-[#e7212b]/40" />

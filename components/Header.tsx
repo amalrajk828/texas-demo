@@ -316,7 +316,7 @@ function NestedDropdown({ menuLabel, data, viewAll, isOpen, onClose, pathname, o
           {hasSubmenu && activeParent && (
             <div className="w-[300px] px-6 py-1.5 bg-black/20 flex flex-col gap-0.5 border-l border-white/10 animate-slide-right shrink-0 overflow-visible">
               <div className="px-6 mb-1">
-                <span className="text-[10px] uppercase font-bold tracking-[0.15em] text-[#E53935] block">
+                <span className="text-[10px] uppercase font-bold tracking-[0.15em] text-[#0891B2] block">
                   Specifications
                 </span>
               </div>

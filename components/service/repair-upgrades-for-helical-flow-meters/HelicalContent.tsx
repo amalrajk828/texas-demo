@@ -52,7 +52,7 @@ export default function HelicalContent() {
 
           <div>
             <div className="fade-up d1">
-              <div className="flex items-center gap-2.5 mb-4"><span className="w-5 h-px bg-[#e7212b]" /><span className="text-[#e7212b] text-[10px] font-semibold tracking-[3.5px] uppercase">What We Do</span></div>
+              <div className="flex items-center gap-2.5 mb-4"><span className="w-5 h-px bg-[#e7212b]" /><span className="text-[#0891B2] text-[10px] font-semibold tracking-[3.5px] uppercase">What We Do</span></div>
               <h2 className="text-3xl sm:text-[2.2rem] font-bold text-[#0B0D26] leading-[1.15] mb-5">Preventive & Corrective Maintenance for Helical Flow Meters</h2>
               <p className="text-gray-500 text-[15px] leading-[1.85] mb-4">We offer flow meter preventive and corrective maintenance services, performance and failure analysis and provide suitable solutions. As an Authorised Faure Herman OEM Representative, our team has deep expertise in helical flow meter mechanics, performance characteristics, and failure modes.</p>
               <p className="text-gray-500 text-[15px] leading-[1.85] mb-8">Whether your meter requires scheduled servicing, has experienced a performance deviation, or has suffered a mechanical failure — we diagnose, repair, and validate it back to specification.</p>
@@ -78,7 +78,7 @@ export default function HelicalContent() {
         {/* 4 service cards */}
         <div>
           <div className="fade-up mb-12">
-            <div className="flex items-center gap-2.5 mb-4"><span className="w-5 h-px bg-[#e7212b]" /><span className="text-[#e7212b] text-[10px] font-semibold tracking-[3.5px] uppercase">Our Services</span></div>
+            <div className="flex items-center gap-2.5 mb-4"><span className="w-5 h-px bg-[#e7212b]" /><span className="text-[#0891B2] text-[10px] font-semibold tracking-[3.5px] uppercase">Our Services</span></div>
             <h2 className="text-3xl sm:text-[2.2rem] font-bold text-[#0B0D26] leading-[1.15]">What We Offer</h2>
           </div>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5">
