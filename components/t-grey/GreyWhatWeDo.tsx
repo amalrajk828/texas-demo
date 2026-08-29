@@ -179,7 +179,7 @@ export default function GreyWhatWeDo() {
                     <div className="mt-auto pt-4 border-t border-black/[0.06]">
                       <Link
                         href="/services/"
-                        className="inline-flex items-center gap-2 text-[14px] font-semibold text-[#E53935] no-underline hover:underline transition-all duration-200"
+                        className="inline-flex items-center gap-2 text-[14px] font-semibold text-slate-600 hover:text-slate-900 no-underline whitespace-nowrap transition-all duration-200"
                       >
                         Learn more about our services{" "}
                         <ArrowRight className="w-4 h-4 transition-transform duration-200 group-hover:translate-x-1" />

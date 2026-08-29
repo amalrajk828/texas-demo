@@ -95,8 +95,7 @@ export default function GreySolutions() {
 
                   {/* CTA */}
                   <span
-                    className="inline-flex items-center gap-2 text-[13px] font-bold tracking-wide group-hover:gap-3 transition-all mt-auto"
-                    style={{ color: "#B71C1C" }}
+                    className="inline-flex items-center gap-2 text-[13px] font-bold tracking-wide text-slate-600 hover:text-slate-900 group-hover:gap-3 transition-all mt-auto whitespace-nowrap"
                   >
                     Learn more about {s.label}
                     <ArrowRight className="w-4 h-4" />

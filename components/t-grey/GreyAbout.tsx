@@ -40,7 +40,7 @@ export default function GreyAbout() {
               Texas Technical Service Company is an ISO 9001:2015 certified company established in 2008. Primarily focused
               on flow measurement, inspection & testing, and industrial automation for oil & gas, power plants, manufacturing and commercial sectors.
             </p>
-            <Link href="/about-us/" className="inline-flex items-center gap-2 text-[16px] font-bold hover:gap-3 transition-all duration-200" style={{ color: "var(--color-brand-red)" }}>
+            <Link href="/about-us/" className="inline-flex items-center gap-2 text-[16px] font-bold text-slate-600 hover:text-slate-900 hover:gap-3 transition-all duration-200">
               Learn more about Texas Technical Services <ArrowRight className="w-4 h-4" />
             </Link>
           </div>

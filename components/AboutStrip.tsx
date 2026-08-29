@@ -35,8 +35,7 @@ export default function AboutStrip() {
             </p>
             <Link
               href="/about-us/"
-              className="inline-flex items-center gap-2 text-[14px] font-semibold transition-colors hover:text-white"
-              style={{ color: "var(--color-brand-red)" }}
+              className="inline-flex items-center gap-2 text-[14px] font-semibold text-slate-300 hover:text-white transition-colors"
             >
               Learn more about us <ArrowRight className="w-4 h-4" />
             </Link>

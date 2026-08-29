@@ -116,8 +116,9 @@ export default function GreyServices() {
                   </p>
 
                   {/* Learn More link */}
-                  <Link href={svc.href} className="inline-flex flex-wrap items-center gap-1.5 text-xs sm:text-sm font-bold text-[#E53935] hover:gap-2.5 transition-all duration-200 mt-auto relative z-10">
-                    Learn more about {svc.title} <ArrowRight className="w-3.5 h-3.5" />
+                  <Link href={svc.href} className="text-xs sm:text-sm font-bold text-slate-300 hover:text-white transition-all duration-200 mt-auto relative z-10">
+                    <span className="inline">Learn more about {svc.title}</span>{" "}
+                    <ArrowRight className="inline w-3.5 h-3.5 ml-0.5" />
                   </Link>
                 </div>
               </div>
