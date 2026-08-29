@@ -4,8 +4,8 @@ import dynamic from "next/dynamic";
 import Link from "next/link";
 import { ArrowRight } from "lucide-react";
 
-const IridescentGlassSphere = dynamic(
-  () => import("@/components/blog/IridescentGlassSphere"),
+const RedIridescentGlassSphere = dynamic(
+  () => import("./RedIridescentGlassSphere"),
   { ssr: false }
 );
 
@@ -29,12 +29,12 @@ export default function HomeV3Hero() {
         overflow: "hidden",
       }}
     >
-      {/* Layer 1: Real-time 3D Raymarched Iridescent Glass Sphere */}
+      {/* Layer 1: Real-time 3D Raymarched Red/Orange/White-Hot Iridescent Glass Sphere */}
       <div
         className="absolute inset-0 w-full h-full pointer-events-none z-0"
         style={{ position: "absolute", inset: 0, width: "100%", height: "100%", zIndex: 0 }}
       >
-        <IridescentGlassSphere overlayOpacity={0.0} />
+        <RedIridescentGlassSphere overlayOpacity={0.0} />
       </div>
 
       {/* Subtle contrast gradient vignette scrim */}
