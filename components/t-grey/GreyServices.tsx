@@ -60,7 +60,7 @@ export default function GreyServices() {
               What services do we offer for industrial automation and flow measurement?
             </h2>
           </div>
-          <p className="max-w-md text-[17px] leading-[1.85]" style={{ color: "var(--g-muted)" }}>
+          <p className="text-[17px] leading-[1.85]" style={{ color: "var(--g-muted)" }}>
             Extensive expertise in custody metering, industrial automation, and inspection & testing — since 2008.
           </p>
         </div>
