@@ -48,9 +48,9 @@ export default function HoseTestContent() {
         <div className="fade-up d1">
           <div className="rounded-2xl bg-[#0B0D26] p-8 sm:p-10 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-6">
             <div>
-              <p className="text-white/40 text-[10px] tracking-[2px] uppercase mb-2">Standards &amp; Codes</p>
+              <p className="text-white/70 text-[10px] tracking-[2px] uppercase mb-2">Standards &amp; Codes</p>
               <p className="text-white font-semibold text-lg">AAMA 501.2 · ASTM E1105 · BS 8200 · EN 12208</p>
-              <p className="text-white/45 text-sm mt-1">Building envelope testing specialists — Kuwait &amp; Dubai</p>
+              <p className="text-white/70 text-sm mt-1">Building envelope testing specialists — Kuwait &amp; Dubai</p>
             </div>
             <Link href="#contact" className="inline-flex items-center gap-2 bg-[#e7212b] hover:bg-[#aa0b1b] text-white font-semibold px-6 py-3 rounded-lg transition-colors duration-200 text-sm shrink-0">
               Request Hose Test

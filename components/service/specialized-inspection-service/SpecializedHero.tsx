@@ -49,7 +49,7 @@ export default function SpecializedHero() {
           </div>
 
           <div className="fade-up d2">
-            <p className="text-white/55 text-lg leading-relaxed max-w-none mb-10">
+            <p className="text-white/70 text-lg leading-relaxed max-w-none mb-10">
               From Phased Array Ultrasonic Testing and Eddy Current Testing to Corrosion Control, Metallurgical Analysis, and Lifting Equipment Inspection — TTS delivers advanced specialist services for the oil &amp; gas, petrochemical, and construction industries in Kuwait and Dubai.
             </p>
           </div>

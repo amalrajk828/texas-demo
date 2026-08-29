@@ -96,7 +96,7 @@ export default function BlogPage() {
               </h1>
 
               {/* Sub-text */}
-              <p className="text-white/50 text-[15.5px] leading-[1.85] max-w-2xl mb-10">
+              <p className="text-white/70 text-[15.5px] leading-[1.85] max-w-2xl mb-10">
                 Technical guides, compliance references, and strategic engineering insights
                 for plant managers and automation engineers across the GCC.
               </p>

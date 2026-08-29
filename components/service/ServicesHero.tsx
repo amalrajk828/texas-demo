@@ -79,7 +79,7 @@ export default function ServicesHero() {
             </h1>
 
             <p
-              className="text-white/50 text-base sm:text-[17px] leading-relaxed mb-8 max-w-none"
+              className="text-white/70 text-base sm:text-[17px] leading-relaxed mb-8 max-w-none"
             >
               At Texas Technical Services, we deliver end-to-end industrial solutions — from
               flow measurement and custody metering to industrial automation, inspection &amp;
@@ -119,7 +119,7 @@ export default function ServicesHero() {
                 <div className="w-8 h-8 rounded-lg bg-[#e7212b]/10 border border-[#e7212b]/20 flex items-center justify-center shrink-0 group-hover:bg-[#e7212b]/20 transition-colors duration-200">
                   <Icon className="w-4 h-4 text-[#e7212b]" strokeWidth={1.8} />
                 </div>
-                <span className="text-white/50 text-[13px] font-medium group-hover:text-white transition-colors duration-200">
+                <span className="text-white/70 text-[13px] font-medium group-hover:text-white transition-colors duration-200">
                   {label}
                 </span>
               </a>

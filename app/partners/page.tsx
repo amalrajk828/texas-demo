@@ -93,7 +93,7 @@ export default function PartnersPage() {
           <h1 className="text-4xl sm:text-5xl font-medium text-white leading-tight mb-4 max-w-3xl">
             Authorized Partnerships &amp; Dealerships
           </h1>
-          <p className="text-white/60 text-base max-w-2xl">
+          <p className="text-white/70 text-base max-w-2xl">
             16+ approved global vendors delivering world-class flow
             measurement, industrial automation, and instrumentation solutions
             across Kuwait, UAE, and the GCC. From field devices to enterprise

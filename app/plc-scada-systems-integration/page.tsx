@@ -178,7 +178,7 @@ export default function PlcScadaPage() {
               <em className="not-italic text-current">System Integration</em>
             </h1>
 
-            <p className="text-white/50 text-base sm:text-[16px] leading-relaxed mb-8 max-w-2xl">
+            <p className="text-white/70 text-base sm:text-[16px] leading-relaxed mb-8 max-w-2xl">
             We are trusted PLC and SCADA system integrators in Kuwait, Dubai, and across
             the GCC — delivering expert PLC programming, SCADA system development, HMI
             engineering, and control system upgrades. As experienced industrial automation
@@ -322,7 +322,7 @@ export default function PlcScadaPage() {
                   <h3 className="text-white font-bold text-[22px] leading-snug mb-3">
                     What We Integrate &amp; Deliver
                   </h3>
-                  <p className="text-white/40 text-[15px] leading-[1.8]">
+                  <p className="text-white/70 text-[15px] leading-[1.8]">
                     From multi-brand PLC programming to plant-wide SCADA migration — our
                     automation team covers every layer of the industrial control stack, delivering
                     industrial automation PLC SCADA solutions across Kuwait and the GCC.
@@ -485,7 +485,7 @@ export default function PlcScadaPage() {
           <h2 className="text-3xl sm:text-4xl font-medium text-white mb-3">
             Need PLC &amp; SCADA integration?
           </h2>
-          <p className="text-white/50 text-base mb-8 max-w-md mx-auto">
+          <p className="text-white/70 text-base mb-8 max-w-md mx-auto">
             Talk to our automation specialists about your PLC programming, SCADA system
             development, or control system upgrade requirements.
           </p>

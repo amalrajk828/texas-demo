@@ -78,7 +78,7 @@ export default function ProductPageHero({
                 {stats.map((s) => (
                   <div key={s.label} className="px-4 text-center first:pl-0 last:pr-0">
                     <p className="text-xl sm:text-2xl font-medium text-[#e7212b]">{s.num}</p>
-                    <p className="text-[10px] sm:text-[11px] text-white/50 tracking-wide mt-1 uppercase">{s.label}</p>
+                    <p className="text-[10px] sm:text-[11px] text-white/70 tracking-wide mt-1 uppercase">{s.label}</p>
                   </div>
                 ))}
               </div>
@@ -125,7 +125,7 @@ export default function ProductPageHero({
           {title}
         </h1>
         {subtitle && (
-          <p className="text-white/60 text-base max-w-xl">
+          <p className="text-white/70 text-base max-w-xl">
             {subtitle}
           </p>
         )}
@@ -138,7 +138,7 @@ export default function ProductPageHero({
                 className="rounded-lg border border-white/[0.12] bg-white/[0.06] px-4 py-3 text-center"
               >
                 <p className="text-white text-[1.4rem] font-black leading-none">{s.num}</p>
-                <p className="text-white/50 text-[10px] mt-1.5 font-semibold tracking-[1.5px] uppercase">
+                <p className="text-white/70 text-[10px] mt-1.5 font-semibold tracking-[1.5px] uppercase">
                   {s.label}
                 </p>
               </div>

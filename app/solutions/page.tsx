@@ -122,7 +122,7 @@ export default function SolutionsPage() {
             Proprietary Platforms &amp;{" "}
             <span className="text-current">Strategic Partnerships</span>
           </h1>
-          <p className="text-white/60 text-base max-w-2xl">
+          <p className="text-white/70 text-base max-w-2xl">
             From proprietary custody metering systems to industrial AI and factory
             automation — we deliver complete, integrated solutions backed by
             world-class OEM partnerships.

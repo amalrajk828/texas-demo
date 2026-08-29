@@ -34,7 +34,7 @@ export default function MagneticParticleHero() {
             Magnetic Particle{" "}
             <em className="not-italic text-white">Inspection (MT)</em>
           </h1>
-          <p className="text-white/50 text-[16px] leading-[1.85] mb-10 max-w-none">
+          <p className="text-white/70 text-[16px] leading-[1.85] mb-10 max-w-none">
             Detecting surface and near-surface defects in ferromagnetic materials — iron, steel, nickel, and cobalt. Fast and easy to conduct with minimal surface preparation, MPI is among the most widely used NDT methods for weld and structural inspection.
           </p>
           <div className="flex flex-wrap gap-3">

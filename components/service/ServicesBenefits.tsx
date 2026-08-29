@@ -96,7 +96,7 @@ export default function ServicesBenefits() {
                 </div>
                 <div>
                   <p className="text-white font-semibold text-[15px]">ISO 9001:2015 &amp; ISO 14001:2015 Certified</p>
-                  <p className="text-white/40 text-[13px] mt-0.5">Certified quality and environmental management · Est. 2008</p>
+                  <p className="text-white/70 text-[13px] mt-0.5">Certified quality and environmental management · Est. 2008</p>
                 </div>
               </div>
               <div className="flex flex-wrap gap-3">

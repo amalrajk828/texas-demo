@@ -44,7 +44,7 @@ export default function SteelErectionHero() {
             </h1>
           </div>
           <div className="fade-up d2">
-            <p className="text-white/55 text-lg leading-relaxed max-w-2xl mb-10">
+            <p className="text-white/70 text-lg leading-relaxed max-w-2xl mb-10">
               Pre-fabricated steel component assembly creating skeletal frameworks for buildings, bridges, and large industrial structures — executed with precision, safety, and adherence to schedule.
             </p>
           </div>

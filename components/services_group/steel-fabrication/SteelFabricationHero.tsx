@@ -44,7 +44,7 @@ export default function SteelFabricationHero() {
             </h1>
           </div>
           <div className="fade-up d2">
-            <p className="text-white/55 text-lg leading-relaxed max-w-2xl mb-10">
+            <p className="text-white/70 text-lg leading-relaxed max-w-2xl mb-10">
               Transforming raw steel into finished structures through cutting, bending, welding, and assembling — producing skids, pipework, and structural components for demanding industrial applications.
             </p>
           </div>

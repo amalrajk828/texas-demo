@@ -110,7 +110,7 @@ export default function HelicalContent() {
                   </div>
                   <div>
                     <p className="text-white font-bold text-[15px]">Minimise Downtime with Expert Helical Meter Maintenance</p>
-                    <p className="text-white/40 text-[13px] mt-0.5">Talk to our specialists about your meter model and service requirements.</p>
+                    <p className="text-white/70 text-[13px] mt-0.5">Talk to our specialists about your meter model and service requirements.</p>
                   </div>
                 </div>
                 <div className="flex flex-wrap gap-3 shrink-0">

@@ -48,7 +48,7 @@ export default function PhasedArrayHero() {
             </h1>
           </div>
           <div className="fade-up d2">
-            <p className="text-white/55 text-lg leading-relaxed max-w-none mb-10">
+            <p className="text-white/70 text-lg leading-relaxed max-w-none mb-10">
               Phased arrays are used to detect image defects including cracks, voids, and pits caused by corrosion. They measure material and coating thickness and detect changes in material properties, delivering high-resolution imaging far beyond conventional UT techniques.
             </p>
           </div>

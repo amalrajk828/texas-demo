@@ -40,7 +40,7 @@ export default function ValidationHero() {
             <em className="not-italic text-white">Uncertainty Calculations</em>
           </h1>
 
-          <p className="text-white/50 text-[16px] leading-[1.85] mb-10 max-w-none">
+          <p className="text-white/70 text-[16px] leading-[1.85] mb-10 max-w-none">
             Advanced GUM-compliant measurement uncertainty calculations and comprehensive validation services for custody metering skids, flow computers, and metering systems — ensuring compliance with API MPMS, ISO, and OIML standards.
           </p>
 

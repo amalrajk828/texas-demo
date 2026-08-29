@@ -30,7 +30,7 @@ export default function ConstructionHero() {
             Industrial Construction &amp; <em className="not-italic text-white">Project Delivery</em>
           </h1>
 
-          <p className="text-white/50 text-base sm:text-[17px] leading-relaxed mb-8 max-w-none">
+          <p className="text-white/70 text-base sm:text-[17px] leading-relaxed mb-8 max-w-none">
             Gantry and structural fabrication, industrial facility design and build, piping, structural steel, modular skid fabrication, and civil &amp; mechanical construction for oil &amp; gas plants across the GCC. We deliver turnkey EPC project execution with rigorous quality assurance.
           </p>
 

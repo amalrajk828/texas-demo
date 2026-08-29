@@ -51,7 +51,7 @@ export default function FlowMetersFhLabSection() {
           <h2 className="mt-3 text-white text-2xl sm:text-3xl font-bold">
             FH Lab Services
           </h2>
-          <p className="text-white/60 text-[15px] mt-2 max-w-2xl mx-auto">
+          <p className="text-white/70 text-[15px] mt-2 max-w-2xl mx-auto">
             ISO 17025 Accredited Laboratory · Real Conditions Calibration ·
             Global Support
           </p>

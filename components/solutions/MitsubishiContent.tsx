@@ -117,7 +117,7 @@ export default function MitsubishiContent() {
               <em className="not-italic text-current">Factory Automation</em> Solutions
             </h1>
 
-            <p className="text-white/50 text-base sm:text-[16px] leading-relaxed mb-8 max-w-2xl">
+            <p className="text-white/70 text-base sm:text-[16px] leading-relaxed mb-8 max-w-2xl">
               Texas Technical Services is your trusted Mitsubishi system integrator in Kuwait, UAE, and Dubai
               and the GCC. We deliver Mitsubishi electric factory automation solutions including
               PLC Mitsubishi electric programming, GOT HMI integration, AC servo drives,
@@ -260,7 +260,7 @@ export default function MitsubishiContent() {
                   <h3 className="text-white font-bold text-[22px] leading-snug mb-3">
                     Our Mitsubishi Ecosystem Expertise
                   </h3>
-                  <p className="text-white/40 text-[15px] leading-[1.8]">
+                  <p className="text-white/70 text-[15px] leading-[1.8]">
                     From Mitsubishi electric factory automation PLCs to Iconics SCADA
                     integration — our team delivers complete Mitsubishi electric industrial
                     automation solutions for clients across Kuwait and the GCC.
@@ -423,7 +423,7 @@ export default function MitsubishiContent() {
           <h2 className="text-3xl sm:text-4xl font-medium text-white mb-3">
             Looking for Mitsubishi automation solutions?
           </h2>
-          <p className="text-white/50 text-base mb-8 max-w-md mx-auto">
+          <p className="text-white/70 text-base mb-8 max-w-md mx-auto">
             Talk to our Mitsubishi-certified team about PLC, HMI, servo, VFD, or Iconics
             SCADA integration for your next project.
           </p>

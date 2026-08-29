@@ -40,7 +40,7 @@ export default function SparePartsHero() {
             <em className="not-italic text-white">Spare Parts</em>
           </h1>
 
-          <p className="text-white/50 text-[16px] leading-[1.85] mb-10 max-w-none">
+          <p className="text-white/70 text-[16px] leading-[1.85] mb-10 max-w-none">
             As an authorised Faure Herman OEM Representative, TTS supplies genuine spare parts for helical flow meters and associated metering equipment — ensuring authenticity, compatibility, and the performance your custody transfer operations demand.
           </p>
 

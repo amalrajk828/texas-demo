@@ -20,7 +20,7 @@ export default function CtaBanner() {
         <h2 className="text-3xl sm:text-4xl font-bold text-white mb-3 max-w-2xl">
           Have a project in mind?
         </h2>
-        <p className="text-white/60 text-base leading-relaxed mb-8 max-w-2xl">
+        <p className="text-white/70 text-base leading-relaxed mb-8 max-w-2xl">
           Talk to our team about your requirements. Kuwait and Dubai offices ready to help.
         </p>
         <ThemeCTALink href="/contacts/">

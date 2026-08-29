@@ -73,7 +73,7 @@ export default function IndustryHero({
               <em className="not-italic text-white">Industry</em>
             </h1>
 
-            <p className="text-white/60 text-base sm:text-lg leading-relaxed mb-5 max-w-xl">
+            <p className="text-white/70 text-base sm:text-lg leading-relaxed mb-5 max-w-xl">
               {description}
             </p>
 

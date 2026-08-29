@@ -532,7 +532,7 @@ export default async function ProductPage({ params }: Props) {
           <h2 className="text-3xl sm:text-4xl font-medium text-white mb-3">
             Interested in {product.name}?
           </h2>
-          <p className="text-white/50 text-base mb-8 max-w-md mx-auto">
+          <p className="text-white/70 text-base mb-8 max-w-md mx-auto">
             Talk to our specialists about your requirements. Kuwait and Dubai offices ready to help.
           </p>
           <div className="flex flex-wrap items-center justify-center gap-3">

@@ -27,7 +27,7 @@ export default function AboutStrip() {
             <h2 className="text-2xl sm:text-3xl font-bold text-white mb-4">
               Established 2008. Built on precision.
             </h2>
-            <p className="text-white/50 text-[15px] leading-relaxed mb-6">
+            <p className="text-white/70 text-[15px] leading-relaxed mb-6">
               Texas Technical Service Company is an ISO 9001:2015 certified company established
               in 2008. We are primarily focused on Flow measurement solutions, Inspection and
               testing, and industrial automation requirements for the oil and gas, power plants,

@@ -67,7 +67,7 @@ export default function ControlRoomServicesSection() {
           <h2 className="mt-3 text-white text-2xl sm:text-3xl font-bold">
             Turnkey Control Room Services
           </h2>
-          <p className="text-white/60 text-[15px] mt-3 max-w-2xl mx-auto">
+          <p className="text-white/70 text-[15px] mt-3 max-w-2xl mx-auto">
             Design, build, and maintain your mission-critical control room — from concept to commissioning and beyond.
           </p>
         </div>

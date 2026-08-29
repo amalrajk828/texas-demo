@@ -48,7 +48,7 @@ export default function TOFDHero() {
             </h1>
           </div>
           <div className="fade-up d2">
-            <p className="text-white/55 text-lg leading-relaxed max-w-none mb-10">
+            <p className="text-white/70 text-lg leading-relaxed max-w-none mb-10">
               TOFD uses the time of flight of an ultrasonic pulse to determine the position and size of a reflector. When a crack is present, ultrasonic waves diffract from the crack tip — the measured flight time allows the depth of crack tips to be calculated automatically by simple trigonometry.
             </p>
           </div>

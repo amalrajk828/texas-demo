@@ -118,13 +118,13 @@ export default function ServicesConstruction() {
               </div>
 
               <div className="space-y-4 mb-8">
-                <p className="text-white/50 text-[15px] leading-[1.85]">
+                <p className="text-white/70 text-[15px] leading-[1.85]">
                   Our Industrial Automation services focus on optimizing your industrial processes
                   for improved efficiency and productivity. We specialize in control system design,
                   implementation, and upgrades, offering expertise in PLC programming, SCADA
                   integration, and HMI development.
                 </p>
-                <p className="text-white/50 text-[15px] leading-[1.85]">
+                <p className="text-white/70 text-[15px] leading-[1.85]">
                   With our solutions, you can streamline your operations, reduce downtime, and
                   achieve better control over your production processes — from structural gantry
                   fabrication to complete turnkey EPC project execution.

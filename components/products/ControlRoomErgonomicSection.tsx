@@ -53,7 +53,7 @@ export default function ControlRoomErgonomicSection() {
           <h2 className="mt-3 text-white text-2xl sm:text-3xl font-bold">
             Built for 24/7 Mission-Critical Operators
           </h2>
-          <p className="text-white/60 text-[15px] mt-3 max-w-2xl mx-auto">
+          <p className="text-white/70 text-[15px] mt-3 max-w-2xl mx-auto">
             Operator comfort and ergonomic excellence are at the core of every Pyrotech console design — reducing fatigue, sharpening alertness, and ensuring sustainable performance during long shifts.
           </p>
         </div>

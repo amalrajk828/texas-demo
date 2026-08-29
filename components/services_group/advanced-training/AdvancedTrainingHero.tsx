@@ -44,7 +44,7 @@ export default function AdvancedTrainingHero() {
             </h1>
           </div>
           <div className="fade-up d2">
-            <p className="text-white/55 text-lg leading-relaxed max-w-2xl mb-10">
+            <p className="text-white/70 text-lg leading-relaxed max-w-2xl mb-10">
               We regularly offer on-demand training courses in our OEM premises, through videoconferencing, or at customer sites — covering metering installation, commissioning, and operation to ensure your team operates at peak proficiency.
             </p>
           </div>

@@ -68,7 +68,7 @@ export default function PartnerHero({ name, logo, country, relationship, product
               {name}
             </h1>
 
-            <p className="text-white/60 text-base max-w-2xl mb-6">
+            <p className="text-white/70 text-base max-w-2xl mb-6">
               {product}
             </p>
 

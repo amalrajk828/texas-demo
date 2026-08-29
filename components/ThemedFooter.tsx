@@ -67,7 +67,7 @@ export default function ThemedFooter() {
                 <p className="text-white/50 text-[10px] tracking-[3px] leading-none mt-1 font-medium">TECHNICAL SERVICES</p>
               </div>
             </Link>
-            <p className="text-white/40 text-sm leading-relaxed mb-4">
+            <p className="text-white/70 text-sm leading-relaxed mb-4">
               ISO 9001:2015 certified company established in 2008. Flow measurement,
               automation &amp; inspection for oil &amp; gas and industrial sectors.
             </p>

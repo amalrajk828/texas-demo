@@ -78,14 +78,14 @@ export default function PortfolioGroupHero({
 
             {/* Description */}
             <p
-              className="text-white/50 text-base sm:text-[17px] leading-relaxed mb-3 max-w-xl"
+              className="text-white/70 text-base sm:text-[17px] leading-relaxed mb-3 max-w-xl"
             >
               {description}
             </p>
 
             {/* Extended description */}
             <p
-              className="text-white/35 text-sm sm:text-[15px] leading-relaxed mb-8 max-w-xl"
+              className="text-white/70 text-sm sm:text-[15px] leading-relaxed mb-8 max-w-xl"
             >
               From industrial sensors and flow meters to PLCs, automation systems, and
               control room solutions — we partner with world-class manufacturers to deliver
@@ -126,7 +126,7 @@ export default function PortfolioGroupHero({
                   <p className="text-3xl font-bold text-[#e7212b] leading-none">
                     {s.num}
                   </p>
-                  <p className="text-[12px] text-white/50 tracking-wide uppercase mt-2">
+                  <p className="text-[12px] text-white/70 tracking-wide uppercase mt-2">
                     {s.label}
                   </p>
                 </div>

@@ -48,7 +48,7 @@ export default function VideoscopeHero() {
             </h1>
           </div>
           <div className="fade-up d2">
-            <p className="text-white/55 text-lg leading-relaxed max-w-none mb-10">
+            <p className="text-white/70 text-lg leading-relaxed max-w-none mb-10">
               Videoscope is a specialised inspection method for visual inspection used when the area to be examined can only be accessed via a series of bends or turns. It delivers excellent image quality and image recording functionality in a portable, integrated product — essential for internal inspection of confined spaces and inaccessible areas.
             </p>
           </div>

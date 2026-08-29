@@ -67,7 +67,7 @@ export default function ServiceGroupHero() {
             </h1>
 
             <p
-              className="text-white/50 text-base sm:text-[17px] leading-relaxed mb-8 max-w-xl"
+              className="text-white/70 text-base sm:text-[17px] leading-relaxed mb-8 max-w-xl"
             >
               Browse our full range of industrial services — from flow measurement and
               inspection &amp; testing to process automation and construction — delivered

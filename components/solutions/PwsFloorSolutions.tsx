@@ -141,7 +141,7 @@ export default function PwsFloorSolutions() {
               for Critical Environments
             </h1>
 
-            <p className="text-white/55 text-base sm:text-[16px] leading-relaxed mb-8 max-w-2xl">
+            <p className="text-white/70 text-base sm:text-[16px] leading-relaxed mb-8 max-w-2xl">
               PWS Floor Solutions is India&apos;s most trusted raised access floor
               manufacturer. Calcium sulphate panels with steel or aluminum
               encapsulation — purpose-built for data centers, control rooms,

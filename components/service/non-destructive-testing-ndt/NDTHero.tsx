@@ -40,7 +40,7 @@ export default function NDTHero() {
             <em className="not-italic text-white">Testing (NDT)</em>
           </h1>
 
-          <p className="text-white/50 text-[16px] leading-[1.85] mb-10 max-w-none">
+          <p className="text-white/70 text-[16px] leading-[1.85] mb-10 max-w-none">
             TTS provides a full range of non-destructive examination services with qualified, experienced technicians and modern equipment — including Visual Inspection (VI), Liquid/Dye Penetrant (PT), Magnetic Particle (MT), Radiographic Testing (RT), and Ultrasonic Testing (UT).
           </p>
 

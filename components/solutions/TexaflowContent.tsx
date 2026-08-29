@@ -136,7 +136,7 @@ export default function TexaflowContent() {
               Integrated Control System
             </h1>
 
-            <p className="text-white/55 text-base sm:text-[16px] leading-relaxed mb-8 max-w-2xl">
+            <p className="text-white/70 text-base sm:text-[16px] leading-relaxed mb-8 max-w-2xl">
               Our proprietary custody metering integrated control system.
               Advanced fiscal metering &amp; SCADA solution for oil &amp; gas
               terminals, refineries, pipeline metering stations, loading
@@ -271,7 +271,7 @@ export default function TexaflowContent() {
                   Key{" "}
                   <em className="not-italic text-current">Applications</em>
                 </h2>
-                <p className="text-white/55 text-[15px] leading-relaxed max-w-md">
+                <p className="text-white/70 text-[15px] leading-relaxed max-w-md">
                   Texaflow is trusted across the most demanding custody
                   transfer environments — from high-throughput terminals to
                   aviation fuel depots.

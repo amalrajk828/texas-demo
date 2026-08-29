@@ -42,7 +42,7 @@ export default function HeroSection() {
               <br />
               Refinery &amp; Beyond
             </h1>
-            <p className="text-white/55 text-base sm:text-lg leading-relaxed mb-8 max-w-lg">
+            <p className="text-white/70 text-base sm:text-lg leading-relaxed mb-8 max-w-lg">
               Flow measurement, industrial automation, inspection &amp; testing
               for the world&apos;s most demanding environments.
             </p>

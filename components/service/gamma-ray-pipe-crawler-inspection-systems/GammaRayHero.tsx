@@ -48,7 +48,7 @@ export default function GammaRayHero() {
             </h1>
           </div>
           <div className="fade-up d2">
-            <p className="text-white/55 text-lg leading-relaxed max-w-none mb-10">
+            <p className="text-white/70 text-lg leading-relaxed max-w-none mb-10">
               The X-ray/gamma ray pipe crawler is similar to conventional radiography — a battery-powered, remote-controlled mobile radiographic machine designed to produce single wall single image (SWSI) radiographs of circumferential welds in pipelines, enabling internal weld inspection from within the pipe.
             </p>
           </div>

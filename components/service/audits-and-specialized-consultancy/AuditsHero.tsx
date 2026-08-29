@@ -40,7 +40,7 @@ export default function AuditsHero() {
             <em className="not-italic text-white">Specialized Consultancy</em>
           </h1>
 
-          <p className="text-white/50 text-[16px] leading-[1.85] mb-10 max-w-none">
+          <p className="text-white/70 text-[16px] leading-[1.85] mb-10 max-w-none">
             Comprehensive custody metering audits, compliance assessments, and expert consultancy — delivering data-driven insights and strategic guidance to optimize your operations and ensure regulatory conformity across API, AGA, ISO, and OIML standards.
           </p>
 

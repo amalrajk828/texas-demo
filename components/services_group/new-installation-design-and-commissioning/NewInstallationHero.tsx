@@ -44,7 +44,7 @@ export default function NewInstallationHero() {
             </h1>
           </div>
           <div className="fade-up d2">
-            <p className="text-white/55 text-lg leading-relaxed max-w-2xl mb-10">
+            <p className="text-white/70 text-lg leading-relaxed max-w-2xl mb-10">
               Being an authorized OEM Representative, we assist in the specification, design, sizing and operation of future metering systems — from general arrangement and P&amp;ID to electrical SLD, cable schedule, and instrument index.
             </p>
           </div>

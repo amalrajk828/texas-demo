@@ -157,7 +157,7 @@ export default function PredictiveMaintenanceGccPage() {
               Across the GCC
             </h1>
 
-            <p className="text-white/50 text-base sm:text-[16px] leading-relaxed mb-8 max-w-2xl">
+            <p className="text-white/70 text-base sm:text-[16px] leading-relaxed mb-8 max-w-2xl">
               Texas Technical Services provides predictive maintenance and condition monitoring
               services across Kuwait and the GCC. From vibration analysis and ABB monitoring
               platforms to FactoryTalk integration, we help you predict equipment failures
@@ -275,7 +275,7 @@ export default function PredictiveMaintenanceGccPage() {
                   <h3 className="text-white font-bold text-[22px] leading-snug mb-3">
                     Monitoring &amp; Analytics Capabilities
                   </h3>
-                  <p className="text-white/40 text-[14px] leading-[1.8]">
+                  <p className="text-white/70 text-[14px] leading-[1.8]">
                     From vibration sensor deployment to enterprise asset performance
                     management, our GCC-based team delivers end-to-end predictive
                     maintenance solutions for critical rotating equipment.
@@ -345,7 +345,7 @@ export default function PredictiveMaintenanceGccPage() {
           <h2 className="text-3xl sm:text-4xl font-medium text-white mb-3">
             Ready to reduce unplanned downtime?
           </h2>
-          <p className="text-white/50 text-base mb-8 max-w-md mx-auto">
+          <p className="text-white/70 text-base mb-8 max-w-md mx-auto">
             Talk to our engineers about implementing predictive maintenance
             and condition monitoring for your critical rotating equipment.
           </p>

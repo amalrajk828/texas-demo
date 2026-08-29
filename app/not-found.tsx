@@ -62,7 +62,7 @@ export default function NotFound() {
           <h1 className="text-6xl sm:text-7xl lg:text-8xl font-bold text-white leading-none mb-6">
             4<span className="text-[#e7212b]">0</span>4
           </h1>
-          <p className="text-white/50 text-lg max-w-md mx-auto mb-10">
+          <p className="text-white/70 text-lg max-w-md mx-auto mb-10">
             The page you&apos;re looking for doesn&apos;t exist or has been moved.
           </p>
           <div className="flex flex-wrap justify-center gap-3">

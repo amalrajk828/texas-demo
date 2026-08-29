@@ -56,7 +56,7 @@ export default function FlowHero() {
 
           {/* Body */}
           <p
-            className="text-white/60 text-base sm:text-[17px] leading-relaxed max-w-none"
+            className="text-white/70 text-base sm:text-[17px] leading-relaxed max-w-none"
           >
             We provide metering control system upgrades, maintenance, and validation services for custody metering systems. Our experienced team ensures that your metering systems operate efficiently and accurately, meeting industry standards and compliance requirements. Additionally, we offer specialized consultancy services to optimize your custody metering processes and enhance productivity.
           </p>

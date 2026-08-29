@@ -305,7 +305,7 @@ export default function HeroSlider() {
 
               <p
                 className="text-[15px] sm:text-base leading-[1.8] mb-9 max-w-[480px]"
-                style={{ color: isLight ? "rgba(0,0,0,0.55)" : "rgba(255,255,255,0.45)" }}
+                style={{ color: isLight ? "rgba(0,0,0,0.70)" : "rgba(255,255,255,0.70)" }}
               >
                 {slide.sub}
               </p>

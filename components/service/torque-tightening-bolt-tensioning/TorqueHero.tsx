@@ -48,7 +48,7 @@ export default function TorqueHero() {
             </h1>
           </div>
           <div className="fade-up d2">
-            <p className="text-white/55 text-lg leading-relaxed max-w-none mb-10">
+            <p className="text-white/70 text-lg leading-relaxed max-w-none mb-10">
               Torque tightening and bolt tensioning services using calibrated standard-range torque sensors and fasteners to ensure proper bolt preload and connection integrity. Essential for quality, safety, and reliability in construction, manufacturing, automotive, and aerospace applications.
             </p>
           </div>

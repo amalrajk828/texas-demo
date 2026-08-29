@@ -186,7 +186,7 @@ export default function FlowComputerContent() {
               />
               <div className="relative z-10">
                 <p className="text-white font-semibold text-[15px]">Ready to configure your flow computer?</p>
-                <p className="text-white/40 text-[13px] mt-0.5">Talk to our specialists about your application and standards requirements.</p>
+                <p className="text-white/70 text-[13px] mt-0.5">Talk to our specialists about your application and standards requirements.</p>
               </div>
               <div className="relative z-10 flex flex-wrap gap-3 shrink-0">
                 <a

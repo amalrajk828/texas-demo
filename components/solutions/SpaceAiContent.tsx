@@ -127,7 +127,7 @@ export default function SpaceAiContent() {
               &amp; Machine Learning for Industry
             </h1>
 
-            <p className="text-white/55 text-base sm:text-[16px] leading-relaxed mb-8 max-w-2xl">
+            <p className="text-white/70 text-base sm:text-[16px] leading-relaxed mb-8 max-w-2xl">
               From field devices to enterprise analytics — Space AI brings deep
               learning, edge computing, and big data to your plant floor.
               Reduce unplanned downtime, increase yield, and unlock autonomous
@@ -165,7 +165,7 @@ export default function SpaceAiContent() {
                 <p className="text-[12px] text-white mt-1.5 font-semibold tracking-wide">
                   {o.label}
                 </p>
-                <p className="text-[10px] text-white/40 mt-1.5 leading-tight">
+                <p className="text-[10px] text-white/70 mt-1.5 leading-tight">
                   {o.desc}
                 </p>
               </div>
@@ -345,7 +345,7 @@ export default function SpaceAiContent() {
                     <h3 className="text-white font-bold text-[16px] mb-2">
                       {s.t}
                     </h3>
-                    <p className="text-white/55 text-[13.5px] leading-[1.7]">
+                    <p className="text-white/70 text-[13.5px] leading-[1.7]">
                       {s.d}
                     </p>
                   </div>

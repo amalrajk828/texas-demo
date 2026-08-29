@@ -159,7 +159,7 @@ export default function FlowMeterCalibrationKuwaitPage() {
               in Kuwait &amp; the GCC
             </h1>
 
-            <p className="text-white/50 text-base sm:text-[16px] leading-relaxed mb-8 max-w-2xl">
+            <p className="text-white/70 text-base sm:text-[16px] leading-relaxed mb-8 max-w-2xl">
               Texas Technical Services provides professional flow meter calibration services
               across Kuwait and the GCC. From Coriolis and ultrasonic meters to turbine and PD
               technologies, our ISO 17025 accredited laboratory delivers calibration to OIML R117,
@@ -277,7 +277,7 @@ export default function FlowMeterCalibrationKuwaitPage() {
                   <h3 className="text-white font-bold text-[22px] leading-snug mb-3">
                     Calibration Capabilities in Kuwait
                   </h3>
-                  <p className="text-white/40 text-[14px] leading-[1.8]">
+                  <p className="text-white/70 text-[14px] leading-[1.8]">
                     From ISO 17025 accredited laboratory calibration to on-site mobile rigs,
                     our Fahaheel-based team delivers comprehensive flow meter calibration
                     across Kuwait and the wider GCC region.
@@ -347,7 +347,7 @@ export default function FlowMeterCalibrationKuwaitPage() {
           <h2 className="text-3xl sm:text-4xl font-medium text-white mb-3">
             Need flow meter calibration in Kuwait?
           </h2>
-          <p className="text-white/50 text-base mb-8 max-w-md mx-auto">
+          <p className="text-white/70 text-base mb-8 max-w-md mx-auto">
             Talk to our Fahaheel-based team about your calibration requirements.
             We serve clients across Kuwait and the GCC with ISO 17025 accredited services.
           </p>

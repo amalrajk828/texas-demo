@@ -48,7 +48,7 @@ export default function AirPermeabilityHero() {
             </h1>
           </div>
           <div className="fade-up d2">
-            <p className="text-white/55 text-lg leading-relaxed max-w-none mb-10">
+            <p className="text-white/70 text-lg leading-relaxed max-w-none mb-10">
               Air permeability testing measures air infiltration through windows, doors, and curtain wall systems from exterior to interior through gaskets, imperfect joinery, weep holes, and imperfect sealing. TTS performs air leak tests per ASTM E783, and the test can be combined with visualisation techniques to locate air leakage paths.
             </p>
           </div>

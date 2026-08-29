@@ -40,7 +40,7 @@ export default function ExpertServicesHero() {
             <em className="not-italic text-white">Expert Services</em>
           </h1>
 
-          <p className="text-white/50 text-[16px] leading-[1.85] mb-10 max-w-none">
+          <p className="text-white/70 text-[16px] leading-[1.85] mb-10 max-w-none">
             Access TTS's specialist metering engineers for on-site assignments, project support, and field expertise — bringing deep technical knowledge of custody transfer measurement to your operations in Kuwait, Dubai, and the wider region.
           </p>
 

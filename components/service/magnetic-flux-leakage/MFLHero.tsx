@@ -48,7 +48,7 @@ export default function MFLHero() {
             </h1>
           </div>
           <div className="fade-up d2">
-            <p className="text-white/55 text-lg leading-relaxed max-w-none mb-10">
+            <p className="text-white/70 text-lg leading-relaxed max-w-none mb-10">
               Magnetic Flux Leakage (MFL) is a magnetic NDT method used to detect corrosion and pitting in steel structures — most commonly pipelines and storage tanks. A powerful magnet magnetises the steel and at areas of corrosion or missing metal, the magnetic field leaks from the steel and is detected by sensors.
             </p>
           </div>

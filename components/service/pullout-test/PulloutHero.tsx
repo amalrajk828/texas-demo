@@ -48,7 +48,7 @@ export default function PulloutHero() {
             </h1>
           </div>
           <div className="fade-up d2">
-            <p className="text-white/55 text-lg leading-relaxed max-w-none mb-10">
+            <p className="text-white/70 text-lg leading-relaxed max-w-none mb-10">
               The pullout test determines the strength and integrity of the bond between a bolt and the material in which it is embedded — concrete or masonry. The test measures the force required to pull out a previously cast-in steel insert with an embedded enlarged end, providing critical data for structural anchorage design verification.
             </p>
           </div>

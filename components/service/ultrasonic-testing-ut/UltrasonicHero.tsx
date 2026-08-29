@@ -34,7 +34,7 @@ export default function UltrasonicHero() {
             Ultrasonic{" "}
             <em className="not-italic text-white">Testing (UT)</em>
           </h1>
-          <p className="text-white/50 text-[16px] leading-[1.85] mb-10 max-w-none">
+          <p className="text-white/70 text-[16px] leading-[1.85] mb-10 max-w-none">
             Utilising high-frequency sound waves to inspect the internal structure of materials and detect defects and flaws — particularly effective for inspecting welds, forgings, castings, and manufactured components in both metals and non-metallic materials.
           </p>
           <div className="flex flex-wrap gap-3">

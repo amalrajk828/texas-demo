@@ -34,7 +34,7 @@ export default function RadiographicHero() {
             Radiographic{" "}
             <em className="not-italic text-white">Testing (RT)</em>
           </h1>
-          <p className="text-white/50 text-[16px] leading-[1.85] mb-10 max-w-none">
+          <p className="text-white/70 text-[16px] leading-[1.85] mb-10 max-w-none">
             A powerful NDT method using X-rays or gamma rays to examine the internal structure of materials and detect flaws not visible on the surface — particularly useful for inspecting thick sections of materials, welds, castings, and complex structures.
           </p>
           <div className="flex flex-wrap gap-3">

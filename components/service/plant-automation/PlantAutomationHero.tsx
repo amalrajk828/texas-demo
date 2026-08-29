@@ -41,7 +41,7 @@ export default function PlantAutomationHero() {
             </h1>
           </div>
           <div className="fade-up d2">
-            <p className="text-white/55 text-lg leading-relaxed max-w-none mb-10">
+            <p className="text-white/70 text-lg leading-relaxed max-w-none mb-10">
               TTS specialises in delivering top-tier Plant Automation solutions that streamline industrial processes. Our cutting-edge automation systems boost efficiency, reduce operational costs, and enhance productivity — with customised solutions for process optimisation, remote monitoring, and safety enhancements, backed by continuous expert support.
             </p>
           </div>

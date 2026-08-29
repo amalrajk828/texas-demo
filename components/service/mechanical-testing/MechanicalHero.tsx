@@ -40,7 +40,7 @@ export default function MechanicalHero() {
             <em className="not-italic text-white">Testing</em>
           </h1>
 
-          <p className="text-white/50 text-[16px] leading-[1.85] mb-10 max-w-none">
+          <p className="text-white/70 text-[16px] leading-[1.85] mb-10 max-w-none">
             Comprehensive mechanical testing services for metals, plastics, ceramics, and composites — including tensile, hardness, impact, bend, fracture, and macro/micro testing to determine material properties and ensure structural integrity.
           </p>
 

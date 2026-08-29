@@ -74,7 +74,7 @@ export default function UpgradeHero() {
 
           {/* Body */}
           <p
-            className="text-white/50 text-base sm:text-[16px] leading-relaxed mb-8 max-w-none"
+            className="text-white/70 text-base sm:text-[16px] leading-relaxed mb-8 max-w-none"
           >
             Elevate your industrial operations with our expert Metering Control System Upgradation
             service. At TTS, we specialize in optimizing your existing control systems, ensuring

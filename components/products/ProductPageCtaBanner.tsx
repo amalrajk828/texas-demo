@@ -19,7 +19,7 @@ export default function ProductPageCtaBanner({
             <p className="text-white font-bold text-[22px] mb-1">
               {title}
             </p>
-            <p className="text-white/60 text-sm">
+            <p className="text-white/70 text-sm">
               {description}
             </p>
           </div>

@@ -44,7 +44,7 @@ export default function CableSupportsHero() {
             </h1>
           </div>
           <div className="fade-up d2">
-            <p className="text-white/55 text-lg leading-relaxed max-w-2xl mb-10">
+            <p className="text-white/70 text-lg leading-relaxed max-w-2xl mb-10">
               Design, fabrication, and erection of high and low voltage cable support structures, pathways, and steel structural supports — delivering robust electrical infrastructure for industrial facilities.
             </p>
           </div>

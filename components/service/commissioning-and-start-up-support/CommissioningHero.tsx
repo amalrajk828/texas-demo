@@ -41,7 +41,7 @@ export default function CommissioningHero() {
             </h1>
           </div>
           <div className="fade-up d2">
-            <p className="text-white/55 text-lg leading-relaxed max-w-none mb-10">
+            <p className="text-white/70 text-lg leading-relaxed max-w-none mb-10">
               From pre-commissioning through hot commissioning, start-up, and post-commissioning handover — TTS guides every stage of your automation project lifecycle. We validate and fine-tune automation systems against predefined specifications, ensure a seamless transition to automated control, and provide maintenance services to sustain peak performance.
             </p>
           </div>

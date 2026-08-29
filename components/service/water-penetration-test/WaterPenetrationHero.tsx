@@ -48,7 +48,7 @@ export default function WaterPenetrationHero() {
             </h1>
           </div>
           <div className="fade-up d2">
-            <p className="text-white/55 text-lg leading-relaxed max-w-none mb-10">
+            <p className="text-white/70 text-lg leading-relaxed max-w-none mb-10">
               Water penetration testing determines whether leakage is present through windows, doors, and curtain wall systems from the exterior to the interior. The test identifies gaps in weatherproofing and identifies areas where the building envelope is compromised, ensuring facade performance and building envelope integrity.
             </p>
           </div>

@@ -74,7 +74,7 @@ export default function McsiHero() {
 
           {/* Body */}
           <p
-            className="text-white/50 text-base sm:text-[16px] leading-relaxed mb-8 max-w-none"
+            className="text-white/70 text-base sm:text-[16px] leading-relaxed mb-8 max-w-none"
           >
             Welcome to TTS, where we specialize in Custody Transfer Flow Metering Control System
             Development and Integration. With an unwavering commitment to precision, accuracy, and

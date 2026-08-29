@@ -44,7 +44,7 @@ export default function HandRailHero() {
             </h1>
           </div>
           <div className="fade-up d2">
-            <p className="text-white/55 text-lg leading-relaxed max-w-2xl mb-10">
+            <p className="text-white/70 text-lg leading-relaxed max-w-2xl mb-10">
               Skilled creation of safety handrails and support structures using steel, aluminum, and durable materials — fully compliant with safety regulations for industrial and commercial applications.
             </p>
           </div>

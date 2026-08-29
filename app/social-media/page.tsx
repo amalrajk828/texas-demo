@@ -318,7 +318,7 @@ export default function SocialMediaPage() {
               Home
             </Link>
             <ChevronRight className="w-3 h-3" />
-            <span className="text-white/55">Social Media</span>
+            <span className="text-white/70">Social Media</span>
           </nav>
 
           <div className="flex flex-col lg:flex-row lg:items-end gap-10 lg:gap-16">
@@ -335,7 +335,7 @@ export default function SocialMediaPage() {
                 <br />
                 <em className="not-italic text-current">Us</em>
               </h1>
-              <p className="text-white/55 text-base sm:text-lg leading-relaxed">
+              <p className="text-white/70 text-base sm:text-lg leading-relaxed">
                 One place to find every account we use. Follow us on social media
                 for industry insights, project updates, and automation expertise
                 from the GCC&apos;s trusted technical service partner.
@@ -526,7 +526,7 @@ export default function SocialMediaPage() {
           <h2 className="text-3xl sm:text-4xl font-medium text-white mb-3">
             Ready to Achieve More?
           </h2>
-          <p className="text-white/50 text-base mb-8 max-w-md mx-auto">
+          <p className="text-white/70 text-base mb-8 max-w-md mx-auto">
             We partner with ambitious companies to solve complex challenges,
             improve operations and deliver real results using tailored industrial
             automation solutions.

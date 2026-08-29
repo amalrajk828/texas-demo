@@ -204,7 +204,7 @@ export default function CalibrationContent() {
                   </div>
                   <div>
                     <p className="text-white font-bold text-[16px]">2-Week Emergency Calibration Service</p>
-                    <p className="text-white/40 text-[13px] mt-0.5">
+                    <p className="text-white/70 text-[13px] mt-0.5">
                       Time-critical calibration with full ILAC/COFRAC ISO 17025 accreditation. Contact us today.
                     </p>
                   </div>

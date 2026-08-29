@@ -72,7 +72,7 @@ export default function FlowComputerHero() {
 
           {/* Body */}
           <p
-            className="text-white/50 text-base sm:text-[16px] leading-relaxed mb-8 max-w-none"
+            className="text-white/70 text-base sm:text-[16px] leading-relaxed mb-8 max-w-none"
           >
             Our dedicated team customizes solutions to your specific flow computational and
             configuration needs in compliance with global standards (API MPMS, AGA, ISO, NTEP

@@ -120,7 +120,7 @@ export default function VideosPage() {
               Home
             </Link>
             <ChevronRight className="w-3 h-3" />
-            <span className="text-white/55">Videos</span>
+            <span className="text-white/70">Videos</span>
           </nav>
 
           <div className="flex flex-col lg:flex-row lg:items-end gap-10 lg:gap-16">
@@ -136,7 +136,7 @@ export default function VideosPage() {
                 <br />
                 <em className="not-italic text-current">Videos</em>
               </h1>
-              <p className="text-white/55 text-base sm:text-lg leading-relaxed">
+              <p className="text-white/70 text-base sm:text-lg leading-relaxed">
                 Watch walkthroughs, equipment demos, and project highlights
                 from the field — covering industrial automation, flow
                 measurement, control room design, and inspection services
@@ -204,7 +204,7 @@ export default function VideosPage() {
           <h2 className="text-3xl sm:text-4xl font-medium text-white mb-3">
             Ready to Achieve More?
           </h2>
-          <p className="text-white/50 text-base mb-8 max-w-md mx-auto">
+          <p className="text-white/70 text-base mb-8 max-w-md mx-auto">
             We partner with ambitious companies to solve complex challenges,
             improve operations and deliver real results using tailored industrial
             automation solutions.

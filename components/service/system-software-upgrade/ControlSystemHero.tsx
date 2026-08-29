@@ -41,7 +41,7 @@ export default function ControlSystemHero() {
             </h1>
           </div>
           <div className="fade-up d2">
-            <p className="text-white/55 text-lg leading-relaxed max-w-none mb-10">
+            <p className="text-white/70 text-lg leading-relaxed max-w-none mb-10">
               TTS is your trusted partner for PLC and SCADA-based automation and system integration. Our expertise empowers industries across the spectrum to enhance operational efficiency, improve control, and optimise processes — from legacy system migrations to full greenfield automation builds.
             </p>
           </div>

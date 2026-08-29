@@ -48,7 +48,7 @@ export default function MetallurgicalHero() {
             </h1>
           </div>
           <div className="fade-up d2">
-            <p className="text-white/55 text-lg leading-relaxed max-w-none mb-10">
+            <p className="text-white/70 text-lg leading-relaxed max-w-none mb-10">
               Positive Material Identification (PMI) is a fast and non-destructive method for verifying the chemical composition of metals and alloys. PMI confirms that supplied materials conform to the proper standards and specifications — critical for material traceability in safety-critical applications.
             </p>
           </div>

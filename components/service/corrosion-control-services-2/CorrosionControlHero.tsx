@@ -48,7 +48,7 @@ export default function CorrosionControlHero() {
             </h1>
           </div>
           <div className="fade-up d2">
-            <p className="text-white/55 text-lg leading-relaxed max-w-none mb-10">
+            <p className="text-white/70 text-lg leading-relaxed max-w-none mb-10">
               Corrosion control services encompass a range of techniques, practices, and strategies to prevent, mitigate, and manage corrosion in metals. Particularly important for oil &amp; gas, construction, transportation, marine, and manufacturing industries where metal assets face accelerated environmental degradation.
             </p>
           </div>

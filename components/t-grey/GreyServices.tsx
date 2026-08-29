@@ -111,7 +111,7 @@ export default function GreyServices() {
                   </h3>
 
                   {/* Body paragraph */}
-                  <p className="text-white/60 text-xs sm:text-sm leading-relaxed mb-6 flex-1 font-medium relative z-10">
+                  <p className="text-white/70 text-xs sm:text-sm leading-relaxed mb-6 flex-1 font-medium relative z-10">
                     {svc.body}
                   </p>
 

@@ -89,7 +89,7 @@ export default function WhatWeDo() {
 
                   <div className="w-8 h-px mb-4" style={{ background: "color-mix(in srgb, var(--color-brand-red) 40%, transparent)" }} />
 
-                  <p className="text-white/50 text-[15px] leading-relaxed flex-1">{svc.desc}</p>
+                  <p className="text-white/70 text-[15px] leading-relaxed flex-1">{svc.desc}</p>
 
                   <div className="mt-6 pt-5 border-t border-white/[0.07]">
                     <Link

@@ -156,7 +156,7 @@ export default function IndustrialAutomationDubaiPage() {
               <em className="not-italic text-current">Services in Dubai, UAE</em>
             </h1>
 
-            <p className="text-white/50 text-base sm:text-[16px] leading-relaxed mb-8 max-w-2xl">
+            <p className="text-white/70 text-base sm:text-[16px] leading-relaxed mb-8 max-w-2xl">
               Texas Technical Services Co. is a leading industrial automation company in Dubai
               and across the UAE — providing PLC and SCADA system integration, flow measurement
               services, and industrial inspection and testing for oil &amp; gas, power, and
@@ -298,7 +298,7 @@ export default function IndustrialAutomationDubaiPage() {
                   <h3 className="text-white font-bold text-[22px] leading-snug mb-3">
                     Automation &amp; Engineering Capabilities in Dubai, UAE
                   </h3>
-                  <p className="text-white/40 text-[14px] leading-[1.8]">
+                  <p className="text-white/70 text-[14px] leading-[1.8]">
                     From PLC and SCADA system integration to custody flow metering and NDT
                     inspection — our Dubai-based team delivers end-to-end industrial solutions
                     across the United Arab Emirates and the wider GCC region.
@@ -491,7 +491,7 @@ export default function IndustrialAutomationDubaiPage() {
           <h2 className="text-3xl sm:text-4xl font-medium text-white mb-3">
             Need industrial automation services in Dubai, UAE?
           </h2>
-          <p className="text-white/50 text-base mb-8 max-w-md mx-auto">
+          <p className="text-white/70 text-base mb-8 max-w-md mx-auto">
             Talk to our Dubai-based team about your PLC &amp; SCADA integration, flow
             measurement, or inspection requirements. We serve clients across the UAE and GCC.
           </p>

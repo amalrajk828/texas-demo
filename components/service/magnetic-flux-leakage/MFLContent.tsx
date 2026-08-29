@@ -48,9 +48,9 @@ export default function MFLContent() {
         <div className="fade-up d1">
           <div className="rounded-2xl bg-[#000000] blueprint-grid blueprint-dot-grid p-8 sm:p-10 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-6">
             <div>
-              <p className="text-white/40 text-[10px] tracking-[2px] uppercase mb-2">Standards &amp; Codes</p>
+              <p className="text-white/70 text-[10px] tracking-[2px] uppercase mb-2">Standards &amp; Codes</p>
               <p className="text-white font-semibold text-lg">API 653 · API 1163 · NACE SP0188 · ASTM E570</p>
-              <p className="text-white/45 text-sm mt-1">Qualified MFL inspection teams — Kuwait &amp; Dubai</p>
+              <p className="text-white/70 text-sm mt-1">Qualified MFL inspection teams — Kuwait &amp; Dubai</p>
             </div>
             <Link href="#contact" className="inline-flex items-center gap-2 bg-[#e7212b] hover:bg-[#aa0b1b] text-white font-semibold px-6 py-3 rounded-lg transition-colors duration-200 text-sm shrink-0">
               Request MFL Inspection

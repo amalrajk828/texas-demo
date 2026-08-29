@@ -76,7 +76,7 @@ export default function FlowMetersTechnologiesSection() {
           <h2 className="mt-3 text-white text-2xl sm:text-3xl font-bold">
             Flow Measurement Technologies
           </h2>
-          <p className="text-white/60 text-[15px] mt-3 max-w-2xl mx-auto">
+          <p className="text-white/70 text-[15px] mt-3 max-w-2xl mx-auto">
             Comprehensive flow technologies &amp; applications — eight
             measurement principles covering every custody transfer and
             process application.

@@ -20,7 +20,7 @@ export default function ControlRoomStandardsSection() {
             <h3 className="text-white text-xl sm:text-2xl font-bold leading-tight">
               Globally Certified — Built to the World&apos;s Strictest Standards
             </h3>
-            <p className="text-white/60 text-[14px] mt-2">
+            <p className="text-white/70 text-[14px] mt-2">
               Compliance with BIFMA, SEFA, and ASTM standards
             </p>
           </div>

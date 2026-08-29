@@ -48,7 +48,7 @@ export default function LiftingInspectionHero() {
             </h1>
           </div>
           <div className="fade-up d2">
-            <p className="text-white/55 text-lg leading-relaxed max-w-none mb-10">
+            <p className="text-white/70 text-lg leading-relaxed max-w-none mb-10">
               Lifting equipment inspection is a systematic and detailed examination carried out at specified intervals by certified competent persons. Covering cranes, hoists, forklifts, and elevators — the inspection identifies defects, wear, and deviations from safety standards, with a written report issued upon completion.
             </p>
           </div>

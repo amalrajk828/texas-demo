@@ -40,7 +40,7 @@ export default function HelicalHero() {
             <em className="not-italic text-white">Helical Flow Meters</em>
           </h1>
 
-          <p className="text-white/50 text-[16px] leading-[1.85] mb-10 max-w-none">
+          <p className="text-white/70 text-[16px] leading-[1.85] mb-10 max-w-none">
             As an authorised Faure Herman OEM Representative, TTS delivers expert preventive and corrective maintenance, performance analysis, and failure investigations for helical flow meters — restoring your assets to full operational specification.
           </p>
 

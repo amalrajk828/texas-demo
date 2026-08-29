@@ -40,7 +40,7 @@ export default function ServicesCtaBanner() {
               <h2 className="text-4xl sm:text-[2.8rem] font-bold text-white leading-[1.12] mb-5">
                 Have a Project in Mind?
               </h2>
-              <p className="text-white/50 text-[15px] leading-relaxed max-w-xl mb-8">
+              <p className="text-white/70 text-[15px] leading-relaxed max-w-xl mb-8">
                 Talk to our team about your requirements. Our Kuwait and Dubai offices are ready
                 to help with flow measurement, automation, inspection, and construction projects
                 of any scale.

@@ -48,7 +48,7 @@ export default function EddyCurrentHero() {
             </h1>
           </div>
           <div className="fade-up d2">
-            <p className="text-white/55 text-lg leading-relaxed max-w-none mb-10">
+            <p className="text-white/70 text-lg leading-relaxed max-w-none mb-10">
               Eddy Current Testing is the process of running electronic probes through the length of various types of tubes or along the surfaces of materials to find flaws. An eddy current runs opposite to the current introduced by a probe into a conductive material, revealing defects through impedance changes.
             </p>
           </div>

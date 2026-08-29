@@ -82,7 +82,7 @@ export default function CertificationsPage() {
         <div className="absolute inset-0 pointer-events-none" style={{ backgroundImage: "repeating-linear-gradient(0deg,transparent,transparent 39px,rgba(255,255,255,0.02) 40px),repeating-linear-gradient(90deg,transparent,transparent 39px,rgba(255,255,255,0.02) 40px)" }} />
         <div className="absolute top-0 right-0 w-[600px] h-[400px] pointer-events-none" style={{ background: "radial-gradient(ellipse at top right, rgba(231,33,43,0.12) 0%, transparent 65%)" }} />
         <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6">
-          <nav className="flex items-center gap-2 text-[14px] text-white/50 mb-8">
+          <nav className="flex items-center gap-2 text-[14px] text-white/70 mb-8">
             <Link href="/" className="hover:text-white transition-colors">Home</Link>
             <ChevronRight className="w-3.5 h-3.5 text-white/30" />
             <span className="text-white/70">Certifications</span>
@@ -94,7 +94,7 @@ export default function CertificationsPage() {
           <h1 className="text-2xl sm:text-3xl lg:text-[2.2rem] font-bold text-white leading-tight mb-5">
             Certifications &amp; Quality Management
           </h1>
-          <p className="text-white/50 text-[16px] leading-relaxed max-w-2xl">
+          <p className="text-white/70 text-[16px] leading-relaxed max-w-2xl">
             Our integrated management system is certified to international standards, demonstrating our commitment to quality, environmental responsibility, and workplace safety.
           </p>
         </div>

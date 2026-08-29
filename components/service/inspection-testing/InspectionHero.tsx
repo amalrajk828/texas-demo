@@ -53,10 +53,10 @@ export default function InspectionHero() {
           <div
             className="space-y-4 max-w-none"
           >
-            <p className="text-white/60 text-base sm:text-[16px] leading-relaxed">
+            <p className="text-white/70 text-base sm:text-[16px] leading-relaxed">
               Texas Technical Services Co. (TTS) is a highly diversified independent service provider in the industry mainly as a Third Party Inspection &amp; Testing Company. Since it was founded, TTS has participated in supporting our clients in ensuring quality and safety of their products and our inspectors are committed to providing objective, independent assessments of product compliance and conformity, contributing to production and distribution processes that safeguard consumer health and providing businesses that demonstrate good practices with the tools they need to promote their companies and products, thereby building long-lasting trust-based relationships with their clients.
             </p>
-            <p className="text-white/50 text-[15px] leading-relaxed">
+            <p className="text-white/70 text-[15px] leading-relaxed">
               TTS led by a strong management, technical expertise, engineers and well trained technicians are on a mission to deliver on-time top quality client focused service. We know that a successful company is the result of intelligent planning, capable leadership and active participation by all company members. TTS in that matter respects the talents and experiences of its employees and give the best training possible to keep them in touch with latest technologies.
             </p>
           </div>

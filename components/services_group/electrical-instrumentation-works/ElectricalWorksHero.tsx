@@ -44,7 +44,7 @@ export default function ElectricalWorksHero() {
             </h1>
           </div>
           <div className="fade-up d2">
-            <p className="text-white/55 text-lg leading-relaxed max-w-2xl mb-10">
+            <p className="text-white/70 text-lg leading-relaxed max-w-2xl mb-10">
               Comprehensive electrical and instrumentation works encompassing installation, maintenance, and optimization of electrical systems and instrumentation equipment for industrial facilities across Kuwait and Dubai.
             </p>
           </div>

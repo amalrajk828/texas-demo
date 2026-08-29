@@ -48,7 +48,7 @@ export default function FlowMetersCustodyTransferSection() {
           <h2 className="mt-3 text-white text-2xl sm:text-3xl font-bold">
             Custody Transfer Metering
           </h2>
-          <p className="text-white/60 text-[15px] mt-3 max-w-2xl mx-auto">
+          <p className="text-white/70 text-[15px] mt-3 max-w-2xl mx-auto">
             Fiscal metering, calibration &amp; verification systems — built
             to API MPMS and OIML standards for oil &amp; gas, refinery, and
             pipeline applications.

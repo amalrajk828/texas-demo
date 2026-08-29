@@ -48,7 +48,7 @@ export default function HoseTestHero() {
             </h1>
           </div>
           <div className="fade-up d2">
-            <p className="text-white/55 text-lg leading-relaxed max-w-none mb-10">
+            <p className="text-white/70 text-lg leading-relaxed max-w-none mb-10">
               The hose test provides quality assurance and diagnostic field water checking for installed curtain walls, exterior windows, and doors. Spraying water in a specified pattern is a quick and effective method to check whether the installed system is vulnerable to leakage — providing immediate on-site results during or after construction.
             </p>
           </div>

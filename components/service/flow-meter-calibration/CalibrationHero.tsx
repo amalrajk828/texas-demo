@@ -72,7 +72,7 @@ export default function CalibrationHero() {
 
           {/* Body */}
           <p
-            className="text-white/50 text-base sm:text-[16px] leading-relaxed mb-8 max-w-none"
+            className="text-white/70 text-base sm:text-[16px] leading-relaxed mb-8 max-w-none"
           >
             Faure Herman offers calibration services in our world class ILAC/COFRAC ISO 17025
             accredited facility located in France — handling your range of flowmeters and

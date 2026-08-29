@@ -40,7 +40,7 @@ export default function CommissioningHero() {
             <em className="not-italic text-white">After Sales Support</em>
           </h1>
 
-          <p className="text-white/50 text-[16px] leading-[1.85] mb-10 max-w-none">
+          <p className="text-white/70 text-[16px] leading-[1.85] mb-10 max-w-none">
             Expert commissioning and 24/7 after-sales support for flow meters, metering control systems, metering skids, analyzers, and CEMS — ensuring seamless integration, peak performance, and minimal downtime throughout your equipment lifecycle.
           </p>
 

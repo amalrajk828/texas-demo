@@ -48,7 +48,7 @@ export default function HeatTreatmentHero() {
             </h1>
           </div>
           <div className="fade-up d2">
-            <p className="text-white/55 text-lg leading-relaxed max-w-none mb-10">
+            <p className="text-white/70 text-lg leading-relaxed max-w-none mb-10">
               Heating services covering low, mid, and high range temperature processes using both electrical and fuel-fired methods. Specialised in on-site heat treatment by oil and gas with high-velocity burners that ensure excellent temperature distribution and uniformity at all times through intense scrubbing action.
             </p>
           </div>

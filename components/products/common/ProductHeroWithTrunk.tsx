@@ -122,7 +122,7 @@ export default function ProductHeroWithTrunk({
 
         {/* Subtitle */}
         {subtitle && (
-          <p className="text-white/60 text-base max-w-xl">{subtitle}</p>
+          <p className="text-white/70 text-base max-w-xl">{subtitle}</p>
         )}
       </div>
     </section>

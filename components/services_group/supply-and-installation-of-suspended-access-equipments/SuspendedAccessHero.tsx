@@ -44,7 +44,7 @@ export default function SuspendedAccessHero() {
             </h1>
           </div>
           <div className="fade-up d2">
-            <p className="text-white/55 text-lg leading-relaxed max-w-2xl mb-10">
+            <p className="text-white/70 text-lg leading-relaxed max-w-2xl mb-10">
               Supply and installation of telescopic roof machines, twin track roof machines, powered cradles, recess cradles, monorails, parapet track roof machines, parapet traversing davits, parking davits, and parapet mounted davits for safe building facade access.
             </p>
           </div>

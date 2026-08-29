@@ -94,7 +94,7 @@ export default function ExpertServicesContent() {
               <div className="relative z-10 px-8 py-7 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-5">
                 <div>
                   <p className="text-white font-bold text-[15px]">Need a Specialist Metering Engineer for Your Project?</p>
-                  <p className="text-white/40 text-[13px] mt-0.5">Tell us about your project and we'll match you with the right expertise.</p>
+                  <p className="text-white/70 text-[13px] mt-0.5">Tell us about your project and we'll match you with the right expertise.</p>
                 </div>
                 <div className="flex flex-wrap gap-3 shrink-0">
                   <a href="#contact" className="inline-flex items-center gap-2 bg-[#e7212b] hover:bg-[#aa0b1b] text-white font-semibold px-6 py-3 rounded-lg transition-colors duration-200 text-[13px] shadow-lg shadow-[#e7212b]/20">Contact Us <ArrowRight className="w-3.5 h-3.5" /></a>

@@ -113,7 +113,7 @@ export default function ContactPage() {
               <em className="not-italic text-current">Your Project</em>
             </h1>
 
-            <p className="text-white/50 text-base sm:text-[17px] leading-relaxed mb-8 max-w-xl">
+            <p className="text-white/70 text-base sm:text-[17px] leading-relaxed mb-8 max-w-xl">
               Whether you need flow measurement solutions, industrial automation,
               or inspection services — our team across Kuwait and Dubai is ready
               to help.
@@ -460,7 +460,7 @@ export default function ContactPage() {
           <h2 className="text-3xl sm:text-4xl font-bold text-white mb-3">
             Ready to Start Your Project?
           </h2>
-          <p className="text-white/50 text-[15px] mb-8 max-w-md mx-auto">
+          <p className="text-white/70 text-[15px] mb-8 max-w-md mx-auto">
             Talk to our team about your requirements. Our offices in Kuwait and
             Dubai are ready to help.
           </p>

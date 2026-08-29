@@ -178,7 +178,7 @@ export default function ClientsPage() {
                   className="bg-white/[0.05] border border-white/[0.10] hover:border-[#e7212b]/40 rounded-xl px-5 py-4 text-center transition-colors duration-200"
                 >
                   <p className="text-2xl font-semibold text-[#e7212b]">{s.num}</p>
-                  <p className="text-[10.5px] text-white/50 mt-1 tracking-wide uppercase font-medium">{s.label}</p>
+                  <p className="text-[10.5px] text-white/70 mt-1 tracking-wide uppercase font-medium">{s.label}</p>
                 </div>
               ))}
             </div>
@@ -274,7 +274,7 @@ export default function ClientsPage() {
               <div key={item.heading} className="px-4">
                 <div className="w-8 h-px bg-[#e7212b] mx-auto mb-4" />
                 <h3 className="text-white text-sm font-medium mb-2">{item.heading}</h3>
-                <p className="text-white/40 text-[12px] leading-relaxed">{item.body}</p>
+                <p className="text-white/70 text-[12px] leading-relaxed">{item.body}</p>
               </div>
             ))}
           </div>
@@ -299,7 +299,7 @@ export default function ClientsPage() {
           <h2 className="text-3xl sm:text-4xl font-medium text-white mb-3">
             Ready to work with us?
           </h2>
-          <p className="text-white/50 text-base mb-8 max-w-md mx-auto">
+          <p className="text-white/70 text-base mb-8 max-w-md mx-auto">
             Talk to our team about your flow measurement, automation, or inspection
             requirements. Kuwait and Dubai offices ready to help.
           </p>

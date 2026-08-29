@@ -53,7 +53,7 @@ export default function AutomationHero() {
 
           {/* Body */}
           <p
-            className="text-white/50 text-base sm:text-[16px] leading-relaxed mb-8 max-w-none"
+            className="text-white/70 text-base sm:text-[16px] leading-relaxed mb-8 max-w-none"
           >
             As a leading PLC and SCADA system integrator in Kuwait and the GCC, we provide
             total industrial automation &amp; control systems using various brands of PLCs, SCADA,
