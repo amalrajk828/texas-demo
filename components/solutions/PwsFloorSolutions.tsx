@@ -202,7 +202,7 @@ export default function PwsFloorSolutions() {
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6">
           <div className="mb-14">
             <div className="flex items-center gap-2.5 mb-4">
-              <span className="w-5 h-px bg-[#e7212b]" />
+              <span className="w-5 h-px bg-[#0891B2]" />
               <span className="text-[#0891B2] text-[10px] font-semibold tracking-[3.5px] uppercase">
                 PWS Solutions
               </span>
@@ -263,7 +263,7 @@ export default function PwsFloorSolutions() {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             <div>
               <div className="flex items-center gap-2.5 mb-4">
-                <span className="w-5 h-px bg-[#e7212b]" />
+                <span className="w-5 h-px bg-[#0891B2]" />
                 <span className="text-[#0891B2] text-[10px] font-semibold tracking-[3.5px] uppercase">
                   Construction Quality
                 </span>

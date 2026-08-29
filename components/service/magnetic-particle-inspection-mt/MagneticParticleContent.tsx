@@ -41,7 +41,7 @@ export default function MagneticParticleContent() {
           </div>
           <div>
             <div className="fade-up d1">
-              <div className="flex items-center gap-2.5 mb-4"><span className="w-5 h-px bg-[#e7212b]" /><span className="text-[#0891B2] text-[10px] font-semibold tracking-[3.5px] uppercase">What We Do</span></div>
+              <div className="flex items-center gap-2.5 mb-4"><span className="w-5 h-px bg-[#0891B2]" /><span className="text-[#0891B2] text-[10px] font-semibold tracking-[3.5px] uppercase">What We Do</span></div>
               <h2 className="text-3xl sm:text-[2.2rem] font-bold text-[#0B0D26] leading-[1.15] mb-5">Magnetic Particle Testing for Ferromagnetic Material Inspection</h2>
               <p className="text-gray-500 text-[15px] leading-[1.85] mb-4">Magnetic Particle Testing (MPT), also known as Magnetic Particle Inspection (MPI), is a widely used non-destructive testing (NDT) method for detecting surface and near-surface defects in ferromagnetic materials. This technique is particularly effective in inspecting materials like iron, steel, nickel, and cobalt, where the magnetic field can penetrate and interact with the material's structure.</p>
               <p className="text-gray-500 text-[15px] leading-[1.85] mb-8">MPI technique is used to detect surface and slightly subsurface flaws in most ferromagnetic materials such as iron, nickel, and cobalt, and some of their alloys — because it does not necessitate the degree of surface preparation required by other nondestructive test methods, conducting MPI is relatively fast and easy.</p>
@@ -63,7 +63,7 @@ export default function MagneticParticleContent() {
         </div>
         <div>
           <div className="fade-up mb-12">
-            <div className="flex items-center gap-2.5 mb-4"><span className="w-5 h-px bg-[#e7212b]" /><span className="text-[#0891B2] text-[10px] font-semibold tracking-[3.5px] uppercase">MT Methods</span></div>
+            <div className="flex items-center gap-2.5 mb-4"><span className="w-5 h-px bg-[#0891B2]" /><span className="text-[#0891B2] text-[10px] font-semibold tracking-[3.5px] uppercase">MT Methods</span></div>
             <h2 className="text-3xl sm:text-[2.2rem] font-bold text-[#0B0D26] leading-[1.15]">Magnetic Particle Testing Methods</h2>
           </div>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5">

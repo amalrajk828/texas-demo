@@ -57,7 +57,7 @@ export default function BlogGrid({ posts }) {
               readMoreText="Read Article"
               href={`/blog/${post.slug}/`}
               priority={index < 3}
-              badgeClassName="bg-white/80 text-[#0891B2] border-[#e7212b]/20 backdrop-blur-md px-2.5 py-1 rounded-full border text-[9px] font-medium tracking-[1.5px] uppercase"
+              badgeClassName="bg-white/80 text-[#0891B2] border-[#e7212b]/20 backdrop-blur-md px-2.5 py-1 rounded-full border text-[11px] font-medium tracking-[1.5px] uppercase"
             />
           );
         })}

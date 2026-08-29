@@ -15,7 +15,7 @@ export default function MetallurgicalContent() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6">
         <div className="fade-up mb-14">
           <div className="flex items-center gap-2.5 mb-4">
-            <span className="w-5 h-px bg-[#e7212b]" />
+            <span className="w-5 h-px bg-[#0891B2]" />
             <span className="text-[#0891B2] text-[10px] font-semibold tracking-[3.5px] uppercase">Capabilities</span>
           </div>
           <h2 className="text-3xl sm:text-[2.4rem] font-bold text-[#0B0D26] leading-[1.15] max-w-2xl">
@@ -24,7 +24,7 @@ export default function MetallurgicalContent() {
         </div>
         <div className="fade-up mb-12">
           <div className="max-w-3xl">
-            <div className="flex items-center gap-2.5 mb-4"><span className="w-5 h-px bg-[#e7212b]" /><span className="text-[#0891B2] text-[10px] font-semibold tracking-[3.5px] uppercase">What We Do</span></div>
+            <div className="flex items-center gap-2.5 mb-4"><span className="w-5 h-px bg-[#0891B2]" /><span className="text-[#0891B2] text-[10px] font-semibold tracking-[3.5px] uppercase">What We Do</span></div>
             <h2 className="text-3xl sm:text-[2.2rem] font-bold text-[#0B0D26] leading-[1.15] mb-5">Material Identification and Metallurgical Analysis</h2>
             <p className="text-gray-500 text-[15px] leading-[1.85] mb-4">Positive material identification (PMI) is essential for verifying that the correct alloys have been installed — particularly in high-pressure, high-temperature, and sour service environments where material substitution can have catastrophic consequences. Our handheld XRF analysers and optical emission spectrometers (OES) provide rapid, non-destructive elemental analysis of ferrous and non-ferrous metals.</p>
             <p className="text-gray-500 text-[15px] leading-[1.85] mb-8">TTS supports clients across the oil and gas, petrochemical, and power generation sectors with PMI programmes that comply with API 578 and ASME BPVC requirements. Our metallurgical services also include microstructure examination, hardness testing, and corrosion resistance evaluation — providing comprehensive material characterisation for new installations, in-service assets, and failure investigations.</p>

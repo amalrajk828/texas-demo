@@ -41,7 +41,7 @@ export default function MacroMicroContent() {
           </div>
           <div>
             <div className="fade-up d1">
-              <div className="flex items-center gap-2.5 mb-4"><span className="w-5 h-px bg-[#e7212b]" /><span className="text-[#0891B2] text-[10px] font-semibold tracking-[3.5px] uppercase">What We Do</span></div>
+              <div className="flex items-center gap-2.5 mb-4"><span className="w-5 h-px bg-[#0891B2]" /><span className="text-[#0891B2] text-[10px] font-semibold tracking-[3.5px] uppercase">What We Do</span></div>
               <h2 className="text-3xl sm:text-[2.2rem] font-bold text-[#0B0D26] leading-[1.15] mb-5">Macro &amp; Micro Testing for Multi-Scale Material Characterisation</h2>
               <p className="text-gray-500 text-[15px] leading-[1.85] mb-4">Micro and macro mechanical tests are two categories of experiments conducted to study the mechanical properties of materials at different length scales. These tests provide valuable insights into the behaviour of materials under various loading conditions.</p>
               <p className="text-gray-500 text-[15px] leading-[1.85] mb-8">Macro and micro examination aids in material characterisation, design optimisation, and quality control in different industries — from weld procedure qualification and incoming material inspection, to failure investigation and process verification for oil & gas, construction, and manufacturing sectors.</p>
@@ -63,7 +63,7 @@ export default function MacroMicroContent() {
         </div>
         <div>
           <div className="fade-up mb-12">
-            <div className="flex items-center gap-2.5 mb-4"><span className="w-5 h-px bg-[#e7212b]" /><span className="text-[#0891B2] text-[10px] font-semibold tracking-[3.5px] uppercase">What We Examine</span></div>
+            <div className="flex items-center gap-2.5 mb-4"><span className="w-5 h-px bg-[#0891B2]" /><span className="text-[#0891B2] text-[10px] font-semibold tracking-[3.5px] uppercase">What We Examine</span></div>
             <h2 className="text-3xl sm:text-[2.2rem] font-bold text-[#0B0D26] leading-[1.15]">Macro &amp; Micro Examination Methods</h2>
           </div>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5">

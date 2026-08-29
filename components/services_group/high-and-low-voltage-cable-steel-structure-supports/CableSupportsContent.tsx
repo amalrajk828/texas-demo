@@ -15,7 +15,7 @@ export default function CableSupportsContent() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6">
         <div className="fade-up mb-14">
           <div className="flex items-center gap-2.5 mb-4">
-            <span className="w-5 h-px bg-[#e7212b]" />
+            <span className="w-5 h-px bg-[#0891B2]" />
             <span className="text-[#0891B2] text-[10px] font-semibold tracking-[3.5px] uppercase">Structural Solutions</span>
           </div>
           <h2 className="text-3xl sm:text-[2.4rem] font-bold text-[#0B0D26] leading-[1.15] max-w-2xl">
@@ -24,7 +24,7 @@ export default function CableSupportsContent() {
         </div>
         <div className="fade-up mb-12">
           <div className="max-w-3xl">
-            <div className="flex items-center gap-2.5 mb-4"><span className="w-5 h-px bg-[#e7212b]" /><span className="text-[#0891B2] text-[10px] font-semibold tracking-[3.5px] uppercase">What We Do</span></div>
+            <div className="flex items-center gap-2.5 mb-4"><span className="w-5 h-px bg-[#0891B2]" /><span className="text-[#0891B2] text-[10px] font-semibold tracking-[3.5px] uppercase">What We Do</span></div>
             <h2 className="text-3xl sm:text-[2.2rem] font-bold text-[#0B0D26] leading-[1.15] mb-5">Cable Tray, Ladder, and Support Structure Installation</h2>
             <p className="text-gray-500 text-[15px] leading-[1.85] mb-4">Cable support systems are the backbone of electrical distribution in industrial and commercial facilities. TTS designs, supplies, and installs cable tray, cable ladder, perforated tray, and solid-bottom trough systems for power cables, control cables, and fibre optic routes — engineered to support the cable weights, bend radii, and environmental conditions of your project.</p>
             <p className="text-gray-500 text-[15px] leading-[1.85] mb-4">Our installation teams ensure proper support spacing, seismic bracing, thermal expansion provisions, and fire barrier penetrations in accordance with IEC 61537, NEC Article 392, and project specifications. We also provide heat tracing installation for freeze protection and process temperature maintenance, with complete electrical testing and certification of all installed cable support infrastructure.</p>

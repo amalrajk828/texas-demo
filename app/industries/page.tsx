@@ -171,7 +171,7 @@ export default function IndustriesPage() {
           <div className="flex items-start gap-8 lg:gap-10 mb-8">
             <div className="min-w-0">
               <div className="flex items-center gap-2 mb-5">
-                <span className="w-5 h-px bg-[#e7212b]" />
+                <span className="w-5 h-px bg-[#0891B2]" />
                 <span className="text-[#0891B2] text-[10px] font-medium tracking-[2.5px] uppercase">
                   ISO 9001:2015 Certified · Est. 2008
                 </span>
@@ -241,8 +241,8 @@ export default function IndustriesPage() {
         <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6">
           <div className="flex items-center justify-between mb-10">
             <div className="flex items-center gap-3">
-              <span className="w-8 h-px bg-[#e7212b]" />
-              <span className="text-[#0891B2] text-[9px] font-medium tracking-[2.5px] uppercase">
+              <span className="w-8 h-px bg-[#0891B2]" />
+              <span className="text-[#0891B2] text-[11px] font-medium tracking-[2.5px] uppercase">
                 Our Coverage
               </span>
             </div>

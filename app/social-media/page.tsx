@@ -325,7 +325,7 @@ export default function SocialMediaPage() {
             {/* Left — headline */}
             <div className="flex-1 max-w-2xl">
               <div className="flex items-center gap-2 mb-5">
-                <span className="w-5 h-px bg-[#e7212b]" />
+                <span className="w-5 h-px bg-[#0891B2]" />
                 <span className="text-[#0891B2] text-[10px] font-medium tracking-[2.5px] uppercase">
                   ISO 9001:2015 Certified · Est. 2008
                 </span>
@@ -363,8 +363,8 @@ export default function SocialMediaPage() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6">
           {/* Section label */}
           <div className="flex items-center gap-3 mb-4">
-            <span className="w-8 h-px bg-[#e7212b]/40" />
-            <span className="text-[#0891B2] text-[9px] font-medium tracking-[2.5px] uppercase">
+            <span className="w-8 h-px bg-[#0891B2]/40" />
+            <span className="text-[#0891B2] text-[11px] font-medium tracking-[2.5px] uppercase">
               Verified Accounts
             </span>
           </div>
@@ -423,8 +423,8 @@ export default function SocialMediaPage() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6">
           {/* Section label */}
           <div className="flex items-center gap-3 mb-4">
-            <span className="w-8 h-px bg-[#e7212b]/40" />
-            <span className="text-[#0891B2] text-[9px] font-medium tracking-[2.5px] uppercase">
+            <span className="w-8 h-px bg-[#0891B2]/40" />
+            <span className="text-[#0891B2] text-[11px] font-medium tracking-[2.5px] uppercase">
               Also On
             </span>
           </div>
@@ -478,11 +478,11 @@ export default function SocialMediaPage() {
       <section className="bg-white py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 text-center">
           <div className="flex items-center justify-center gap-3 mb-4">
-            <span className="w-8 h-px bg-[#e7212b]/40" />
-            <span className="text-[#0891B2] text-[9px] font-medium tracking-[2.5px] uppercase">
+            <span className="w-8 h-px bg-[#0891B2]/40" />
+            <span className="text-[#0891B2] text-[11px] font-medium tracking-[2.5px] uppercase">
               Get in Touch
             </span>
-            <span className="w-8 h-px bg-[#e7212b]/40" />
+            <span className="w-8 h-px bg-[#0891B2]/40" />
           </div>
           <h2 className="text-[1.75rem] sm:text-[2rem] font-semibold text-[#181D4E] mb-4">
             Don&apos;t see your favourite platform?
@@ -517,11 +517,11 @@ export default function SocialMediaPage() {
       <section className="bg-[#000000] blueprint-grid blueprint-dot-grid py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 text-center">
           <div className="flex items-center justify-center gap-3 mb-4">
-            <span className="w-8 h-px bg-[#e7212b]/40" />
-            <span className="text-[#0891B2] text-[9px] font-medium tracking-[2.5px] uppercase">
+            <span className="w-8 h-px bg-[#0891B2]/40" />
+            <span className="text-[#0891B2] text-[11px] font-medium tracking-[2.5px] uppercase">
               Have a project in mind?
             </span>
-            <span className="w-8 h-px bg-[#e7212b]/40" />
+            <span className="w-8 h-px bg-[#0891B2]/40" />
           </div>
           <h2 className="text-3xl sm:text-4xl font-medium text-white mb-3">
             Ready to Achieve More?

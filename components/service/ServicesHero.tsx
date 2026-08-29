@@ -63,7 +63,7 @@ export default function ServicesHero() {
             <div
               className="flex items-center gap-2.5 mb-5"
             >
-              <span className="w-5 h-px bg-[#e7212b]" />
+              <span className="w-5 h-px bg-[#0891B2]" />
               <span className="text-[#0891B2] text-[11px] font-semibold tracking-[3px] uppercase">
                 What We Offer
               </span>

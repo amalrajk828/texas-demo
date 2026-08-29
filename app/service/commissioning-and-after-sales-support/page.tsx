@@ -71,7 +71,7 @@ export default function CommissioningAfterSalesPage() {
         <section className="py-16 lg:py-20 bg-white">
           <div className="max-w-7xl mx-auto px-4 sm:px-6">
             <div className="flex items-center gap-2.5 mb-4">
-              <span className="w-5 h-px bg-[#e7212b]" />
+              <span className="w-5 h-px bg-[#0891B2]" />
               <span className="text-[#0891B2] text-[10px] font-semibold tracking-[3.5px] uppercase">
                 Related Services
               </span>
@@ -109,7 +109,7 @@ export default function CommissioningAfterSalesPage() {
       <section className="bg-[#f4f5f8] py-20 lg:py-24">
         <div className="max-w-7xl mx-auto px-4 sm:px-6">
           <div className="flex items-center gap-2.5 mb-4">
-            <span className="w-5 h-px bg-[#e7212b]" />
+            <span className="w-5 h-px bg-[#0891B2]" />
             <span className="text-[#0891B2] text-[10px] font-semibold tracking-[3.5px] uppercase">
               FAQ
             </span>

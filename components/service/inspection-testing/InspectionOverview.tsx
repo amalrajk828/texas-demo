@@ -58,7 +58,7 @@ export default function InspectionOverview({ hideHeading = false }: { hideHeadin
           {/* ── 4. Our Commitment Section ── */}
           <div className="fade-up">
             <div className="flex items-center gap-2.5 mb-4">
-              <span className="w-5 h-px bg-[#e7212b]" />
+              <span className="w-5 h-px bg-[#0891B2]" />
               <span className="text-[#0891B2] text-[10px] font-semibold tracking-[3.5px] uppercase">
                 Our Commitment
               </span>
@@ -113,7 +113,7 @@ export default function InspectionOverview({ hideHeading = false }: { hideHeadin
               >
                 <div>
                   <div className="flex items-center gap-2.5 mb-4">
-                    <span className="w-5 h-px bg-[#e7212b]" />
+                    <span className="w-5 h-px bg-[#0891B2]" />
                     <span className="text-[#0891B2] text-[10px] font-semibold tracking-[3.5px] uppercase">
                       NDT Examinations
                     </span>
@@ -154,7 +154,7 @@ export default function InspectionOverview({ hideHeading = false }: { hideHeadin
             {!hideHeading && (
               <>
                 <div className="flex items-center gap-2.5 mb-3">
-                  <span className="w-5 h-px bg-[#e7212b]" />
+                  <span className="w-5 h-px bg-[#0891B2]" />
                   <span className="text-[#0891B2] text-[10px] font-semibold tracking-[3.5px] uppercase">
                     Explore More
                   </span>

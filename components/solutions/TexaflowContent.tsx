@@ -198,7 +198,7 @@ export default function TexaflowContent() {
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6">
           <div className="mb-14">
             <div className="flex items-center gap-2.5 mb-4">
-              <span className="w-5 h-px bg-[#e7212b]" />
+              <span className="w-5 h-px bg-[#0891B2]" />
               <span className="text-[#0891B2] text-[10px] font-semibold tracking-[3.5px] uppercase">
                 System Capabilities
               </span>
@@ -262,7 +262,7 @@ export default function TexaflowContent() {
             <div className="relative grid grid-cols-1 lg:grid-cols-[1fr_1.4fr] gap-10 p-10 lg:p-14">
               <div>
                 <div className="flex items-center gap-2.5 mb-4">
-                  <span className="w-5 h-px bg-[#e7212b]" />
+                  <span className="w-5 h-px bg-[#0891B2]" />
                   <span className="text-[#0891B2] text-[10px] font-semibold tracking-[3.5px] uppercase">
                     Where Texaflow Excels
                   </span>
@@ -302,7 +302,7 @@ export default function TexaflowContent() {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             <div>
               <div className="flex items-center gap-2.5 mb-4">
-                <span className="w-5 h-px bg-[#e7212b]" />
+                <span className="w-5 h-px bg-[#0891B2]" />
                 <span className="text-[#0891B2] text-[10px] font-semibold tracking-[3.5px] uppercase">
                   Full Capability Set
                 </span>

@@ -41,7 +41,7 @@ export default function UltrasonicContent() {
           </div>
           <div>
             <div className="fade-up d1">
-              <div className="flex items-center gap-2.5 mb-4"><span className="w-5 h-px bg-[#e7212b]" /><span className="text-[#0891B2] text-[10px] font-semibold tracking-[3.5px] uppercase">What We Do</span></div>
+              <div className="flex items-center gap-2.5 mb-4"><span className="w-5 h-px bg-[#0891B2]" /><span className="text-[#0891B2] text-[10px] font-semibold tracking-[3.5px] uppercase">What We Do</span></div>
               <h2 className="text-3xl sm:text-[2.2rem] font-bold text-[#0B0D26] leading-[1.15] mb-5">Ultrasonic Testing for Internal Defect Detection &amp; Thickness Measurement</h2>
               <p className="text-gray-500 text-[15px] leading-[1.85] mb-4">Ultrasonic Testing (UT) is a widely used non-destructive testing (NDT) method that utilizes high-frequency sound waves to inspect the internal structure of materials and detect defects and flaws. It is particularly effective for inspecting welds, forgings, castings, and other manufactured components made of metals and some non-metallic materials.</p>
               <p className="text-gray-500 text-[15px] leading-[1.85] mb-8">TTS provides conventional UT, TOFD, and thickness measurement services with qualified Level II and Level III personnel — delivering accurate, documented results for weld quality verification, in-service inspection, fitness-for-service assessments, and volumetric examination to all applicable industry codes and standards.</p>
@@ -63,7 +63,7 @@ export default function UltrasonicContent() {
         </div>
         <div>
           <div className="fade-up mb-12">
-            <div className="flex items-center gap-2.5 mb-4"><span className="w-5 h-px bg-[#e7212b]" /><span className="text-[#0891B2] text-[10px] font-semibold tracking-[3.5px] uppercase">UT Methods</span></div>
+            <div className="flex items-center gap-2.5 mb-4"><span className="w-5 h-px bg-[#0891B2]" /><span className="text-[#0891B2] text-[10px] font-semibold tracking-[3.5px] uppercase">UT Methods</span></div>
             <h2 className="text-3xl sm:text-[2.2rem] font-bold text-[#0B0D26] leading-[1.15]">Ultrasonic Testing Methods &amp; Applications</h2>
           </div>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5">

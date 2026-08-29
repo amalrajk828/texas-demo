@@ -58,7 +58,7 @@ export default function PartnerHero({ name, logo, country, relationship, product
           {/* Content */}
           <div>
             <div className="flex items-center gap-2 mb-4">
-              <span className="w-5 h-px bg-[#e7212b]" />
+              <span className="w-5 h-px bg-[#0891B2]" />
               <span className="text-[#0891B2] text-[10px] font-medium tracking-[2.5px] uppercase">
                 {relationship}
               </span>

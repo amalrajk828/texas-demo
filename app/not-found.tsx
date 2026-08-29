@@ -89,7 +89,7 @@ export default function NotFound() {
           {/* Services */}
           <div className="mb-12">
             <div className="flex items-center gap-2.5 mb-6">
-              <span className="w-5 h-px bg-[#e7212b]" />
+              <span className="w-5 h-px bg-[#0891B2]" />
               <span className="text-[#0891B2] text-[10px] font-semibold tracking-[3.5px] uppercase">
                 Popular Services
               </span>
@@ -117,7 +117,7 @@ export default function NotFound() {
             {/* Products */}
             <div>
               <div className="flex items-center gap-2.5 mb-6">
-                <span className="w-5 h-px bg-[#e7212b]" />
+                <span className="w-5 h-px bg-[#0891B2]" />
                 <span className="text-[#0891B2] text-[10px] font-semibold tracking-[3.5px] uppercase">
                   Products
                 </span>
@@ -143,7 +143,7 @@ export default function NotFound() {
             {/* Industries */}
             <div>
               <div className="flex items-center gap-2.5 mb-6">
-                <span className="w-5 h-px bg-[#e7212b]" />
+                <span className="w-5 h-px bg-[#0891B2]" />
                 <span className="text-[#0891B2] text-[10px] font-semibold tracking-[3.5px] uppercase">
                   Industries
                 </span>
@@ -171,7 +171,7 @@ export default function NotFound() {
           {latestArticles.length > 0 && (
             <div>
               <div className="flex items-center gap-2.5 mb-6">
-                <span className="w-5 h-px bg-[#e7212b]" />
+                <span className="w-5 h-px bg-[#0891B2]" />
                 <span className="text-[#0891B2] text-[10px] font-semibold tracking-[3.5px] uppercase">
                   From Our Blog
                 </span>

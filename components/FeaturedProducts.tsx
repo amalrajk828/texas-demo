@@ -26,7 +26,7 @@ export default function FeaturedProducts() {
         >
           <div>
             <div className="flex items-center gap-2 mb-2">
-              <span className="w-5 h-px bg-[#e7212b]/40" />
+              <span className="w-5 h-px bg-[#0891B2]/40" />
               <span className="text-[#0891B2] text-[11px] font-semibold tracking-[3px] uppercase">
                 Our Products
               </span>

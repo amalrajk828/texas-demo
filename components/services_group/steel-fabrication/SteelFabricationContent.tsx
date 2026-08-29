@@ -15,7 +15,7 @@ export default function SteelFabricationContent() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6">
         <div className="fade-up mb-14">
           <div className="flex items-center gap-2.5 mb-4">
-            <span className="w-5 h-px bg-[#e7212b]" />
+            <span className="w-5 h-px bg-[#0891B2]" />
             <span className="text-[#0891B2] text-[10px] font-semibold tracking-[3.5px] uppercase">Fabrication Services</span>
           </div>
           <h2 className="text-3xl sm:text-[2.4rem] font-bold text-[#0B0D26] leading-[1.15] max-w-2xl">
@@ -24,7 +24,7 @@ export default function SteelFabricationContent() {
         </div>
         <div className="fade-up mb-12">
           <div className="max-w-3xl">
-            <div className="flex items-center gap-2.5 mb-4"><span className="w-5 h-px bg-[#e7212b]" /><span className="text-[#0891B2] text-[10px] font-semibold tracking-[3.5px] uppercase">What We Do</span></div>
+            <div className="flex items-center gap-2.5 mb-4"><span className="w-5 h-px bg-[#0891B2]" /><span className="text-[#0891B2] text-[10px] font-semibold tracking-[3.5px] uppercase">What We Do</span></div>
             <h2 className="text-3xl sm:text-[2.2rem] font-bold text-[#0B0D26] leading-[1.15] mb-5">Precision Steel Fabrication for Industrial Applications</h2>
             <p className="text-gray-500 text-[15px] leading-[1.85] mb-4">TTS provides comprehensive steel fabrication services for oil and gas, petrochemical, infrastructure, and industrial projects. Our fabrication capabilities encompass CNC plasma and flame cutting, MIG/TIG and submerged arc welding, press brake forming, rolling, and assembly — producing components and assemblies from carbon steel, stainless steel, and alloy materials to engineering specifications.</p>
             <p className="text-gray-500 text-[15px] leading-[1.85] mb-4">Quality control is embedded throughout our fabrication process — from incoming material verification and welder qualification through to in-process dimensional inspection, non-destructive testing of welds, and final dimensional verification. Our quality management system complies with ISO 9001, ISO 3834, and EN 1090 — ensuring fabricated components meet the structural, pressure, and corrosion resistance requirements of your project.</p>

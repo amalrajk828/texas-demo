@@ -31,7 +31,7 @@ export default function CommissioningContent() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6">
         <div className="fade-up mb-14">
           <div className="flex items-center gap-2.5 mb-4">
-            <span className="w-5 h-px bg-[#e7212b]" />
+            <span className="w-5 h-px bg-[#0891B2]" />
             <span className="text-[#0891B2] text-[10px] font-semibold tracking-[3.5px] uppercase">Service Phases</span>
           </div>
           <h2 className="text-3xl sm:text-[2.4rem] font-bold text-[#0B0D26] leading-[1.15] max-w-2xl">
@@ -40,7 +40,7 @@ export default function CommissioningContent() {
         </div>
         <div className="fade-up mb-12">
           <div className="max-w-3xl">
-            <div className="flex items-center gap-2.5 mb-4"><span className="w-5 h-px bg-[#e7212b]" /><span className="text-[#0891B2] text-[10px] font-semibold tracking-[3.5px] uppercase">What We Do</span></div>
+            <div className="flex items-center gap-2.5 mb-4"><span className="w-5 h-px bg-[#0891B2]" /><span className="text-[#0891B2] text-[10px] font-semibold tracking-[3.5px] uppercase">What We Do</span></div>
             <h2 className="text-3xl sm:text-[2.2rem] font-bold text-[#0B0D26] leading-[1.15] mb-5">End-to-End Commissioning and Start-Up Support</h2>
             <p className="text-gray-500 text-[15px] leading-[1.85] mb-4">Commissioning is the systematic process of verifying that all systems, subsystems, and components are installed, tested, and functioning in accordance with design intent and operational requirements. From individual instrument loop checking to integrated system testing, commissioning provides the bridge between construction completion and operational handover.</p>
             <p className="text-gray-500 text-[15px] leading-[1.85] mb-8">TTS provides commissioning engineers and technicians for factory acceptance testing (FAT), site acceptance testing (SAT), loop checking, instrument calibration, and integrated system testing. We deliver comprehensive handover documentation including test pack compilation, punch list resolution, as-built verification, and operator training — ensuring your facility starts up safely, on schedule, and to specification.</p>

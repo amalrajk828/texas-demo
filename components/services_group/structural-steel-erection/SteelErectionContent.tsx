@@ -15,7 +15,7 @@ export default function SteelErectionContent() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6">
         <div className="fade-up mb-14">
           <div className="flex items-center gap-2.5 mb-4">
-            <span className="w-5 h-px bg-[#e7212b]" />
+            <span className="w-5 h-px bg-[#0891B2]" />
             <span className="text-[#0891B2] text-[10px] font-semibold tracking-[3.5px] uppercase">Steel Erection</span>
           </div>
           <h2 className="text-3xl sm:text-[2.4rem] font-bold text-[#0B0D26] leading-[1.15] max-w-2xl">
@@ -24,7 +24,7 @@ export default function SteelErectionContent() {
         </div>
         <div className="fade-up mb-12">
           <div className="max-w-3xl">
-            <div className="flex items-center gap-2.5 mb-4"><span className="w-5 h-px bg-[#e7212b]" /><span className="text-[#0891B2] text-[10px] font-semibold tracking-[3.5px] uppercase">What We Do</span></div>
+            <div className="flex items-center gap-2.5 mb-4"><span className="w-5 h-px bg-[#0891B2]" /><span className="text-[#0891B2] text-[10px] font-semibold tracking-[3.5px] uppercase">What We Do</span></div>
             <h2 className="text-3xl sm:text-[2.2rem] font-bold text-[#0B0D26] leading-[1.15] mb-5">Structural Steel Erection and On-Site Assembly</h2>
             <p className="text-gray-500 text-[15px] leading-[1.85] mb-4">Structural steel erection requires careful planning, skilled labour, and rigorous safety management. TTS provides experienced steel erection crews supported by lift planning engineers, rigging specialists, and site safety supervisors — delivering structural steel frameworks for industrial buildings, platforms, pipe racks, and equipment support structures.</p>
             <p className="text-gray-500 text-[15px] leading-[1.85] mb-4">Our erection methods include crane-assisted lifting, scaffolding-supported manual positioning, and temporary works design for complex lifts. All bolting is performed to ASTM A325 and A490 specifications with calibrated torque equipment, and alignment verification is conducted to project tolerances. Our site teams follow comprehensive method statements and risk assessments, ensuring safe and efficient erection campaigns across Kuwait and the GCC.</p>

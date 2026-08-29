@@ -15,7 +15,7 @@ export default function LiftingInspectionContent() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6">
         <div className="fade-up mb-14">
           <div className="flex items-center gap-2.5 mb-4">
-            <span className="w-5 h-px bg-[#e7212b]" />
+            <span className="w-5 h-px bg-[#0891B2]" />
             <span className="text-[#0891B2] text-[10px] font-semibold tracking-[3.5px] uppercase">Capabilities</span>
           </div>
           <h2 className="text-3xl sm:text-[2.4rem] font-bold text-[#0B0D26] leading-[1.15] max-w-2xl">
@@ -24,7 +24,7 @@ export default function LiftingInspectionContent() {
         </div>
         <div className="fade-up mb-12">
           <div className="max-w-3xl">
-            <div className="flex items-center gap-2.5 mb-4"><span className="w-5 h-px bg-[#e7212b]" /><span className="text-[#0891B2] text-[10px] font-semibold tracking-[3.5px] uppercase">What We Do</span></div>
+            <div className="flex items-center gap-2.5 mb-4"><span className="w-5 h-px bg-[#0891B2]" /><span className="text-[#0891B2] text-[10px] font-semibold tracking-[3.5px] uppercase">What We Do</span></div>
             <h2 className="text-3xl sm:text-[2.2rem] font-bold text-[#0B0D26] leading-[1.15] mb-5">Periodic Examination and Load Testing of Lifting Equipment</h2>
             <p className="text-gray-500 text-[15px] leading-[1.85] mb-4">Lifting equipment — including overhead cranes, jib cranes, hoists, slings, shackles, and lifting beams — requires periodic statutory examination to verify continued safe operation. Our inspections cover visual examination, dimensional checks, functional testing, and load testing to prove the equipment's safe working load capacity in accordance with applicable regulations.</p>
             <p className="text-gray-500 text-[15px] leading-[1.85] mb-8">TTS provides comprehensive lifting equipment inspection programmes compliant with LOLER, OSHA 1910.179, and BS EN 13015. Our certified inspectors deliver examination reports with deficiency grading, recommended remedial actions, and re-examination intervals — ensuring your lifting operations remain legally compliant and your workforce is protected from lifting-related hazards.</p>

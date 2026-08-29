@@ -82,7 +82,7 @@ export default function BlogPage() {
             <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
               {/* Eyebrow */}
               <div className="flex items-center gap-2.5 mb-5">
-                <span className="w-4 h-px bg-[#e7212b]" />
+                <span className="w-4 h-px bg-[#0891B2]" />
                 <span className="text-[#0891B2] text-[10.5px] font-bold tracking-[3.5px] uppercase">
                   Technical Resource Hub
                 </span>
@@ -134,7 +134,7 @@ export default function BlogPage() {
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-8">
               {/* Section eyebrow */}
               <div className="flex items-center gap-2.5">
-                <span className="w-4 h-px bg-[#e7212b]" />
+                <span className="w-4 h-px bg-[#0891B2]" />
                 <span className="text-[#0891B2] text-[10.5px] font-bold tracking-[3.5px] uppercase">
                   — All Articles
                 </span>

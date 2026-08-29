@@ -153,7 +153,7 @@ function ServiceBlock({
           <div className="fade-up d1">
             {/* Eyebrow */}
             <div className="flex items-center gap-2.5 mb-4">
-              <span className="w-5 h-px bg-[#e7212b]" />
+              <span className="w-5 h-px bg-[#0891B2]" />
               <span className="text-[#0891B2] text-[10px] font-semibold tracking-[3px] uppercase">
                 {service.eyebrow}
               </span>
@@ -231,11 +231,11 @@ export default function ServicesDetail() {
         {/* ── Section header ── */}
         <div className="fade-up text-center mb-20 lg:mb-28">
           <div className="inline-flex items-center gap-2.5 mb-5">
-            <span className="w-6 h-px bg-[#e7212b]" />
+            <span className="w-6 h-px bg-[#0891B2]" />
             <span className="text-[#0891B2] text-[10px] font-semibold tracking-[3.5px] uppercase">
               Our Core Services
             </span>
-            <span className="w-6 h-px bg-[#e7212b]" />
+            <span className="w-6 h-px bg-[#0891B2]" />
           </div>
           <h2 className="text-4xl sm:text-[2.8rem] font-bold text-[#0B0D26] leading-[1.12] mb-4">
             What We Do Best

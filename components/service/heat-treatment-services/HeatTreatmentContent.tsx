@@ -15,7 +15,7 @@ export default function HeatTreatmentContent() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6">
         <div className="fade-up mb-14">
           <div className="flex items-center gap-2.5 mb-4">
-            <span className="w-5 h-px bg-[#e7212b]" />
+            <span className="w-5 h-px bg-[#0891B2]" />
             <span className="text-[#0891B2] text-[10px] font-semibold tracking-[3.5px] uppercase">Capabilities</span>
           </div>
           <h2 className="text-3xl sm:text-[2.4rem] font-bold text-[#0B0D26] leading-[1.15] max-w-2xl">
@@ -24,7 +24,7 @@ export default function HeatTreatmentContent() {
         </div>
         <div className="fade-up mb-12">
           <div className="max-w-3xl">
-            <div className="flex items-center gap-2.5 mb-4"><span className="w-5 h-px bg-[#e7212b]" /><span className="text-[#0891B2] text-[10px] font-semibold tracking-[3.5px] uppercase">What We Do</span></div>
+            <div className="flex items-center gap-2.5 mb-4"><span className="w-5 h-px bg-[#0891B2]" /><span className="text-[#0891B2] text-[10px] font-semibold tracking-[3.5px] uppercase">What We Do</span></div>
             <h2 className="text-3xl sm:text-[2.2rem] font-bold text-[#0B0D26] leading-[1.15] mb-5">Post-Weld Heat Treatment and Stress Relief Services</h2>
             <p className="text-gray-500 text-[15px] leading-[1.85] mb-4">Post-weld heat treatment (PWHT) is essential for relieving residual stresses introduced during welding — reducing the risk of stress corrosion cracking, hydrogen-induced cracking, and brittle fracture in welded components. PWHT involves controlled heating to a specified temperature, holding for a defined period, and controlled cooling at a rate that prevents thermal shock.</p>
             <p className="text-gray-500 text-[15px] leading-[1.85] mb-8">TTS provides electric resistance heating blanket PWHT with multi-zone thermocouple monitoring and automated temperature recording — compliant with ASME VIII, AWS D1.1, and BS EN 13445. Our services cover pressure vessels, piping, structural welds, and repair welds, with full thermal documentation including time-temperature charts, thermocouple maps, and heat treatment certificates for your quality records.</p>

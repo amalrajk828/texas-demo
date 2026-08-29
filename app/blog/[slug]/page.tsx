@@ -151,7 +151,7 @@ export default async function BlogArticlePage({ params }: PageProps) {
         {faqItems.length > 0 && (
           <section className="mt-16 pt-12 border-t border-gray-200">
             <div className="flex items-center gap-2.5 mb-6">
-              <span className="w-5 h-px bg-[#e7212b]" />
+              <span className="w-5 h-px bg-[#0891B2]" />
               <span className="text-[#0891B2] text-[12px] font-semibold tracking-[3px] uppercase">FAQ</span>
             </div>
             <h2 className="text-2xl font-bold text-[#0B0D26] mb-8">Frequently Asked Questions</h2>
@@ -167,7 +167,7 @@ export default async function BlogArticlePage({ params }: PageProps) {
           return (
             <section className="mt-16 pt-12 border-t border-gray-200">
               <div className="flex items-center gap-2.5 mb-6">
-                <span className="w-5 h-px bg-[#e7212b]" />
+                <span className="w-5 h-px bg-[#0891B2]" />
                 <span className="text-[#0891B2] text-[12px] font-semibold tracking-[3px] uppercase">Related</span>
               </div>
               <h2 className="text-2xl font-bold text-[#0B0D26] mb-8">Related Articles</h2>

@@ -88,7 +88,7 @@ export default function CertificationsPage() {
             <span className="text-white/70">Certifications</span>
           </nav>
           <div className="flex items-center gap-2 mb-4">
-            <span className="w-5 h-px bg-[#e7212b]" />
+            <span className="w-5 h-px bg-[#0891B2]" />
             <span className="text-[#0891B2] text-[12px] font-semibold tracking-[3px] uppercase">Quality Assurance</span>
           </div>
           <h1 className="text-2xl sm:text-3xl lg:text-[2.2rem] font-bold text-white leading-tight mb-5">

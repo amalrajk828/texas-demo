@@ -92,8 +92,8 @@ function SubBlockSection({ block, index }: { block: SubBlock; index: number }) {
           {/* Text */}
           <div className={isEven ? "order-1" : "order-1 lg:order-2"}>
             <div className="flex items-center gap-2 mb-3">
-              <span className="w-5 h-px bg-[#e7212b]/40" />
-              <span className="text-[#0891B2] text-[9px] font-medium tracking-[2.5px] uppercase">
+              <span className="w-5 h-px bg-[#0891B2]/40" />
+              <span className="text-[#0891B2] text-[11px] font-medium tracking-[2.5px] uppercase">
                 {block.id.replace("-", " ").toUpperCase()}
               </span>
             </div>
@@ -377,8 +377,8 @@ export default async function ProductPage({ params }: Props) {
         <section className="bg-[#f4f5f8] py-14">
           <div className="max-w-7xl mx-auto px-4 sm:px-6">
             <div className="flex items-center gap-3 mb-8">
-              <span className="w-8 h-px bg-[#e7212b]/40" />
-              <span className="text-[#0891B2] text-[9px] font-medium tracking-[2.5px] uppercase">
+              <span className="w-8 h-px bg-[#0891B2]/40" />
+              <span className="text-[#0891B2] text-[11px] font-medium tracking-[2.5px] uppercase">
                 Product Gallery
               </span>
             </div>
@@ -421,8 +421,8 @@ export default async function ProductPage({ params }: Props) {
         <section className="bg-white py-14">
           <div className="max-w-4xl mx-auto px-4 sm:px-6">
             <div className="flex items-center gap-3 mb-8">
-              <span className="w-8 h-px bg-[#e7212b]/40" />
-              <span className="text-[#0891B2] text-[9px] font-medium tracking-[2.5px] uppercase">
+              <span className="w-8 h-px bg-[#0891B2]/40" />
+              <span className="text-[#0891B2] text-[11px] font-medium tracking-[2.5px] uppercase">
                 Product Video
               </span>
             </div>
@@ -443,8 +443,8 @@ export default async function ProductPage({ params }: Props) {
         <section className="bg-[#f4f5f8] py-14">
           <div className="max-w-7xl mx-auto px-4 sm:px-6">
             <div className="flex items-center gap-3 mb-8">
-              <span className="w-8 h-px bg-[#e7212b]/40" />
-              <span className="text-[#0891B2] text-[9px] font-medium tracking-[2.5px] uppercase">
+              <span className="w-8 h-px bg-[#0891B2]/40" />
+              <span className="text-[#0891B2] text-[11px] font-medium tracking-[2.5px] uppercase">
                 Available Models
               </span>
             </div>
@@ -468,8 +468,8 @@ export default async function ProductPage({ params }: Props) {
         <section className="bg-white py-12">
           <div className="max-w-7xl mx-auto px-4 sm:px-6">
             <div className="flex items-center gap-3 mb-6">
-              <span className="w-8 h-px bg-[#e7212b]/40" />
-              <span className="text-[#0891B2] text-[9px] font-medium tracking-[2.5px] uppercase">
+              <span className="w-8 h-px bg-[#0891B2]/40" />
+              <span className="text-[#0891B2] text-[11px] font-medium tracking-[2.5px] uppercase">
                 Resources
               </span>
             </div>
@@ -523,11 +523,11 @@ export default async function ProductPage({ params }: Props) {
       <section className="bg-[#000000] blueprint-grid blueprint-dot-grid py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 text-center">
           <div className="flex items-center justify-center gap-3 mb-4">
-            <span className="w-8 h-px bg-[#e7212b]/40" />
-            <span className="text-[#0891B2] text-[9px] font-medium tracking-[2.5px] uppercase">
+            <span className="w-8 h-px bg-[#0891B2]/40" />
+            <span className="text-[#0891B2] text-[11px] font-medium tracking-[2.5px] uppercase">
               Get in touch
             </span>
-            <span className="w-8 h-px bg-[#e7212b]/40" />
+            <span className="w-8 h-px bg-[#0891B2]/40" />
           </div>
           <h2 className="text-3xl sm:text-4xl font-medium text-white mb-3">
             Interested in {product.name}?

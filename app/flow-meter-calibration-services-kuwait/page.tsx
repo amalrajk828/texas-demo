@@ -207,7 +207,7 @@ export default function FlowMeterCalibrationKuwaitPage() {
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6">
           <div className="mb-14">
             <div className="flex items-center gap-2.5 mb-4">
-              <span className="w-5 h-px bg-[#e7212b]" />
+              <span className="w-5 h-px bg-[#0891B2]" />
               <span className="text-[#0891B2] text-[10px] font-semibold tracking-[3.5px] uppercase">
                 Calibration Services
               </span>
@@ -269,7 +269,7 @@ export default function FlowMeterCalibrationKuwaitPage() {
               <div className="grid grid-cols-1 lg:grid-cols-[1fr_2fr] gap-10 items-start">
                 <div>
                   <div className="flex items-center gap-2.5 mb-4">
-                    <span className="w-5 h-px bg-[#e7212b]" />
+                    <span className="w-5 h-px bg-[#0891B2]" />
                     <span className="text-[#0891B2] text-[10px] font-semibold tracking-[3.5px] uppercase">
                       Capabilities
                     </span>
@@ -302,7 +302,7 @@ export default function FlowMeterCalibrationKuwaitPage() {
       <section className="bg-[#f4f5f8] py-20 lg:py-24">
         <div className="max-w-7xl mx-auto px-4 sm:px-6">
           <div className="flex items-center gap-2.5 mb-4">
-            <span className="w-5 h-px bg-[#e7212b]" />
+            <span className="w-5 h-px bg-[#0891B2]" />
             <span className="text-[#0891B2] text-[10px] font-semibold tracking-[3.5px] uppercase">
               FAQ
             </span>
@@ -338,11 +338,11 @@ export default function FlowMeterCalibrationKuwaitPage() {
       <section className="bg-[#0B0D26] py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 text-center">
           <div className="flex items-center justify-center gap-3 mb-4">
-            <span className="w-8 h-px bg-[#e7212b]/40" />
-            <span className="text-[#0891B2] text-[9px] font-medium tracking-[2.5px] uppercase">
+            <span className="w-8 h-px bg-[#0891B2]/40" />
+            <span className="text-[#0891B2] text-[11px] font-medium tracking-[2.5px] uppercase">
               Get in touch
             </span>
-            <span className="w-8 h-px bg-[#e7212b]/40" />
+            <span className="w-8 h-px bg-[#0891B2]/40" />
           </div>
           <h2 className="text-3xl sm:text-4xl font-medium text-white mb-3">
             Need flow meter calibration in Kuwait?

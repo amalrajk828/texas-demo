@@ -28,8 +28,8 @@ export default function VideoGrid({ videos }: { videos: Video[] }) {
       <section className="bg-white py-20 lg:py-24">
         <div className="max-w-7xl mx-auto px-4 sm:px-6">
           <div className="flex items-center gap-3 mb-4">
-            <span className="w-8 h-px bg-[#e7212b]/40" />
-            <span className="text-[#0891B2] text-[9px] font-medium tracking-[2.5px] uppercase">
+            <span className="w-8 h-px bg-[#0891B2]/40" />
+            <span className="text-[#0891B2] text-[11px] font-medium tracking-[2.5px] uppercase">
               Video Library
             </span>
           </div>

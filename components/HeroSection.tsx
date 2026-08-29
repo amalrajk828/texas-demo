@@ -29,7 +29,7 @@ export default function HeroSection() {
 
           <div className="max-w-2xl">
             <div className="flex items-center gap-2 mb-5">
-              <span className="w-5 h-px bg-[#e7212b]" />
+              <span className="w-5 h-px bg-[#0891B2]" />
               <span className="text-[#0891B2] text-[11px] font-semibold tracking-[2.5px] uppercase">
                 ISO 9001:2015 Certified · Est. 2008
               </span>

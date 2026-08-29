@@ -115,7 +115,7 @@ export default function BlogPageContent({ allPosts }: Props) {
         <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6">
           {/* Eyebrow */}
           <div className="flex items-center gap-2.5 mb-5">
-            <span className="w-4 h-px bg-[#e7212b]" />
+            <span className="w-4 h-px bg-[#0891B2]" />
             <span className="text-[#0891B2] text-[10.5px] font-bold tracking-[3.5px] uppercase">
               Technical Resource Hub
             </span>
@@ -164,7 +164,7 @@ export default function BlogPageContent({ allPosts }: Props) {
         <section className="py-16 lg:py-20 bg-white border-b border-gray-100">
           <div className="max-w-7xl mx-auto px-4 sm:px-6">
             <div className="flex items-center gap-2.5 mb-8">
-              <span className="w-4 h-px bg-[#e7212b]" />
+              <span className="w-4 h-px bg-[#0891B2]" />
               <span className="text-[#0891B2] text-[10.5px] font-bold tracking-[3.5px] uppercase">
                 Featured Article
               </span>
@@ -234,7 +234,7 @@ export default function BlogPageContent({ allPosts }: Props) {
       <section ref={articlesSectionRef} id="articles" className="py-16 lg:py-24">
         <div className="max-w-7xl mx-auto px-4 sm:px-6">
           <div className="flex items-center gap-2.5 mb-8">
-            <span className="w-4 h-px bg-[#e7212b]" />
+            <span className="w-4 h-px bg-[#0891B2]" />
             <span className="text-[#0891B2] text-[10.5px] font-bold tracking-[3.5px] uppercase">
               All Articles
             </span>
