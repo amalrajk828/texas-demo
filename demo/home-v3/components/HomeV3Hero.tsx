@@ -4,6 +4,11 @@ import dynamic from "next/dynamic";
 import Link from "next/link";
 import { ArrowRight } from "lucide-react";
 
+const MoltenMetal = dynamic(
+  () => import("@/components/MoltenMetal/MoltenMetal"),
+  { ssr: false }
+);
+
 const RedIridescentGlassSphere = dynamic(
   () => import("./RedIridescentGlassSphere"),
   { ssr: false }
@@ -29,17 +34,51 @@ export default function HomeV3Hero() {
         overflow: "hidden",
       }}
     >
-      {/* Layer 1: Real-time 3D Raymarched Red/Orange/White-Hot Iridescent Glass Sphere */}
+      {/* 1. New Sibling Background Layer: MoltenMetal from /service/flow-measurement-solutions/ */}
       <div
         className="absolute inset-0 w-full h-full pointer-events-none z-0"
         style={{ position: "absolute", inset: 0, width: "100%", height: "100%", zIndex: 0 }}
       >
+        <MoltenMetal
+          color1="#3D0A0A"
+          color2="#E63329"
+          color3="#FFD9A0"
+          speed={0.25}
+          scale={3}
+          detail={4}
+          glow={1.6}
+          coreSize={0.09}
+          swirl={0.8}
+          fold={-0.2}
+          blackPoint={0.08}
+          brightness={1.1}
+          colorMode="ember"
+          grain={true}
+          grainIntensity={0.04}
+          mouseInteraction={true}
+          mouseStrength={0.25}
+          opacity={0.85}
+        />
+      </div>
+
+      {/* 2. Untouched Bubble Element Layer */}
+      <div
+        className="absolute inset-0 w-full h-full pointer-events-none z-[1]"
+        style={{
+          position: "absolute",
+          inset: 0,
+          width: "100%",
+          height: "100%",
+          zIndex: 1,
+          mixBlendMode: "screen",
+        }}
+      >
         <RedIridescentGlassSphere overlayOpacity={0.0} />
       </div>
 
-      {/* Subtle contrast gradient vignette scrim */}
+      {/* 3. Subtle contrast gradient vignette scrim */}
       <div
-        className="absolute inset-0 pointer-events-none z-[1]"
+        className="absolute inset-0 pointer-events-none z-[2]"
         style={{
           background:
             "radial-gradient(ellipse at center, rgba(10,10,15,0.1) 0%, rgba(10,10,15,0.45) 65%, rgba(10,10,15,0.85) 100%)",
@@ -47,8 +86,8 @@ export default function HomeV3Hero() {
       />
 
       {/* Hairline subtle top and bottom borders */}
-      <div className="absolute top-0 inset-x-0 h-px bg-white/[0.08] pointer-events-none z-[2]" />
-      <div className="absolute bottom-0 inset-x-0 h-px bg-white/[0.08] pointer-events-none z-[2]" />
+      <div className="absolute top-0 inset-x-0 h-px bg-white/[0.08] pointer-events-none z-[3]" />
+      <div className="absolute bottom-0 inset-x-0 h-px bg-white/[0.08] pointer-events-none z-[3]" />
 
       {/* Hero content (position: relative; z-index: 10) */}
       <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 w-full">
