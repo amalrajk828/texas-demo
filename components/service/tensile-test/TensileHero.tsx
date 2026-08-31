@@ -1,6 +1,6 @@
 "use client";
 import Link from "next/link";
-import { MoveHorizontal } from "lucide-react";
+import { ChevronRight,MoveHorizontal } from "lucide-react";
 
 const STATS = [
   { value: "Tensile", label: "Strength Measurement" },
@@ -16,17 +16,17 @@ export default function TensileHero() {
       <div className="absolute top-1/3 -left-32 w-[420px] h-[420px] rounded-full pointer-events-none" style={{ background: "radial-gradient(circle, rgba(231,33,43,0.13) 0%, transparent 70%)" }} />
       <div className="absolute bottom-0 right-0 w-[320px] h-[320px] rounded-full pointer-events-none" style={{ background: "radial-gradient(circle, rgba(231,33,43,0.07) 0%, transparent 70%)" }} />
       <div className="relative max-w-7xl mx-auto px-4 sm:px-6">
-        <div className="flex items-center gap-2 mb-8 text-[11px] text-white/30 tracking-wide">
-          <Link href="/" className="hover:text-white/60 transition-colors">Home</Link>
-          <span>/</span>
-          <Link href="/services/" className="hover:text-white/60 transition-colors">Services</Link>
-          <span>/</span>
-          <Link href="/service/inspection-testing/" className="hover:text-white/60 transition-colors">Inspection &amp; Testing</Link>
-          <span>/</span>
-          <Link href="/service/mechanical-testing/" className="hover:text-white/60 transition-colors">Mechanical Testing</Link>
-          <span>/</span>
+        <nav className="flex items-center gap-2 mb-8 text-[14px] text-white/50">
+          <Link href="/" className="hover:text-white transition-colors">Home</Link>
+          <ChevronRight className="w-3.5 h-3.5 text-white/30" />
+          <Link href="/services/" className="hover:text-white transition-colors">Services</Link>
+          <ChevronRight className="w-3.5 h-3.5 text-white/30" />
+          <Link href="/service/inspection-testing/" className="hover:text-white transition-colors">Inspection &amp; Testing</Link>
+          <ChevronRight className="w-3.5 h-3.5 text-white/30" />
+          <Link href="/service/mechanical-testing/" className="hover:text-white transition-colors">Mechanical Testing</Link>
+          <ChevronRight className="w-3.5 h-3.5 text-white/30" />
           <span className="text-white/50">Tensile Test</span>
-        </div>
+        </nav>
         <div className="max-w-full">
           <div className="flex items-center gap-2.5 mb-5">
             <div className="w-8 h-8 rounded-lg bg-[#e7212b]/15 border border-[#e7212b]/25 flex items-center justify-center">

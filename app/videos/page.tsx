@@ -115,11 +115,11 @@ export default function VideosPage() {
         />
 
         <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 py-16 lg:py-24">
-          <nav className="flex items-center gap-1.5 mb-8 text-[11px] text-white/30">
+          <nav className="flex items-center gap-2 mb-8 text-[14px] text-white/50">
             <Link href="/" className="hover:text-white/60 transition-colors">
               Home
             </Link>
-            <ChevronRight className="w-3 h-3" />
+            <ChevronRight className="w-3.5 h-3.5" />
             <span className="text-white/70">Videos</span>
           </nav>
 
@@ -149,7 +149,7 @@ export default function VideosPage() {
                 <p className="text-2xl font-medium text-[#e7212b]">
                   {videos.length}
                 </p>
-                <p className="text-[10px] text-white/30 mt-1 tracking-wide">
+                <p className="text-[10px] text-white/50 mt-1 tracking-wide">
                   Videos
                 </p>
               </div>
@@ -157,7 +157,7 @@ export default function VideosPage() {
                 <p className="text-2xl font-medium text-[#e7212b]">
                   <Play className="w-5 h-5 inline" />
                 </p>
-                <p className="text-[10px] text-white/30 mt-1 tracking-wide">
+                <p className="text-[10px] text-white/50 mt-1 tracking-wide">
                   Watch Now
                 </p>
               </div>
@@ -196,7 +196,7 @@ export default function VideosPage() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 text-center">
           <div className="flex items-center justify-center gap-3 mb-4">
             <span className="w-8 h-px bg-[#0891B2]/40" />
-            <span className="text-[#0891B2] text-[11px] font-medium tracking-[2.5px] uppercase">
+            <span className="text-[#0891B2] text-[14px] font-medium tracking-[2.5px] uppercase">
               Have a project in mind?
             </span>
             <span className="w-8 h-px bg-[#0891B2]/40" />

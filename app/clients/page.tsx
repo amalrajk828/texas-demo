@@ -145,9 +145,9 @@ export default function ClientsPage() {
 
         <div className="relative z-20 max-w-7xl mx-auto px-4 sm:px-6 pb-16 lg:pb-24 pt-4">
           {/* Breadcrumb */}
-          <nav className="flex items-center gap-1.5 mb-10 text-[11px] text-white/30">
+          <nav className="flex items-center gap-2 mb-10 text-[14px] text-white/50">
             <Link href="/" className="hover:text-white/60 transition-colors">Home</Link>
-            <ChevronRight className="w-3 h-3" />
+            <ChevronRight className="w-3.5 h-3.5" />
             <span className="text-white/55">Clients</span>
           </nav>
 
@@ -293,7 +293,7 @@ export default function ClientsPage() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 text-center">
           <div className="flex items-center justify-center gap-3 mb-4">
             <span className="w-8 h-px bg-[#0891B2]/40" />
-            <span className="text-[#0891B2] text-[11px] font-medium tracking-[2.5px] uppercase">
+            <span className="text-[#0891B2] text-[14px] font-medium tracking-[2.5px] uppercase">
               Join our clients
             </span>
             <span className="w-8 h-px bg-[#0891B2]/40" />

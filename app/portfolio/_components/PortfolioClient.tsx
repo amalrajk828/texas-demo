@@ -66,11 +66,11 @@ export default function PortfolioClient() {
         />
 
         <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 py-16 lg:py-20">
-          <nav className="flex items-center gap-1.5 text-[11px] text-white/50 mb-6">
+          <nav className="flex items-center gap-2 text-[14px] text-white/50 mb-6">
             <Link href="/" className="hover:text-white transition-colors">
               Home
             </Link>
-            <ChevronRight className="w-3 h-3 text-white/30" />
+            <ChevronRight className="w-3.5 h-3.5 text-white/30" />
             <span className="text-white">Portfolio</span>
           </nav>
 

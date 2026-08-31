@@ -18,11 +18,11 @@ export default function SuspendedAccessHero() {
       <div className="absolute bottom-0 right-0 w-[500px] h-[500px] rounded-full bg-[#e7212b]/4 blur-[100px] translate-x-1/4 translate-y-1/4 pointer-events-none" />
       <div className="relative max-w-7xl mx-auto px-4 sm:px-6">
         <div className="fade-up">
-          <nav className="flex items-center gap-1.5 text-[11px] text-white/35 tracking-[1.5px] uppercase mb-10 flex-wrap">
+          <nav className="flex items-center gap-2 text-[14px] text-white/50 tracking-[1.5px] uppercase mb-10 flex-wrap">
             <Link href="/" className="hover:text-white/60 transition-colors">Home</Link>
-            <ChevronRight className="w-3 h-3" />
+            <ChevronRight className="w-3.5 h-3.5" />
             <Link href="/services_group/services/" className="hover:text-white/60 transition-colors">Main Services</Link>
-            <ChevronRight className="w-3 h-3" />
+            <ChevronRight className="w-3.5 h-3.5" />
             <span className="text-white/60">Suspended Access Equipment</span>
           </nav>
         </div>
@@ -34,7 +34,7 @@ export default function SuspendedAccessHero() {
           <div className="fade-up d1">
             <div className="inline-flex items-center gap-2.5 bg-[#e7212b]/10 border border-[#e7212b]/20 rounded-full px-4 py-2 mb-6">
               <Building2 className="w-3.5 h-3.5 text-[#e7212b]" strokeWidth={2} />
-              <span className="text-[#0891B2] text-[11px] font-semibold tracking-[2.5px] uppercase">Construction</span>
+              <span className="text-[#0891B2] text-[14px] font-semibold tracking-[2.5px] uppercase">Construction</span>
             </div>
           </div>
           <div className="fade-up d1">
@@ -64,7 +64,7 @@ export default function SuspendedAccessHero() {
               {STATS.map((s) => (
                 <div key={s.label} className="bg-[#000000] blueprint-grid blueprint-dot-grid px-5 py-5 flex flex-col gap-1">
                   <span className="text-white font-bold text-lg leading-tight">{s.value}</span>
-                  <span className="text-white/35 text-[11px] tracking-[1px] uppercase">{s.label}</span>
+                  <span className="text-white/50 text-[14px] tracking-[1px] uppercase">{s.label}</span>
                 </div>
               ))}
             </div>

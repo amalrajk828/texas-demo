@@ -104,11 +104,11 @@ export default function SolutionsPage() {
         />
 
         <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 py-16 lg:py-20">
-          <nav className="flex items-center gap-1.5 text-[11px] text-white/50 mb-6">
+          <nav className="flex items-center gap-2 text-[14px] text-white/50 mb-6">
             <Link href="/" className="hover:text-white transition-colors">
               Home
             </Link>
-            <ChevronRight className="w-3 h-3 text-white/30" />
+            <ChevronRight className="w-3.5 h-3.5 text-white/30" />
             <span className="text-white">Solutions</span>
           </nav>
 
@@ -171,7 +171,7 @@ export default function SolutionsPage() {
                 <p className="text-gray-600 text-[14.5px] leading-[1.7]">
                   {s.description}
                 </p>
-                <span className="mt-auto inline-flex items-center gap-1.5 text-[12px] font-semibold text-[#e7212b] group-hover:gap-2.5 transition-all">
+                <span className="mt-auto inline-flex items-center gap-2 text-[12px] font-semibold text-[#e7212b] group-hover:gap-2.5 transition-all">
                   Learn more <ChevronRight className="w-3.5 h-3.5" />
                 </span>
               </Link>

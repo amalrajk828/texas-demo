@@ -160,11 +160,11 @@ export default function IndustriesPage() {
         />
 
         <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 pt-24 pb-8 w-full">
-          <nav className="flex items-center gap-1.5 mb-6 text-[11px] text-white/35 flex-wrap">
+          <nav className="flex items-center gap-2 mb-6 text-[14px] text-white/50 flex-wrap">
             <Link href="/" className="hover:text-white/70 transition-colors">
               Home
             </Link>
-            <ChevronRight className="w-3 h-3 shrink-0" />
+            <ChevronRight className="w-3.5 h-3.5 shrink-0" />
             <span className="text-white/60">Industries</span>
           </nav>
 
@@ -213,7 +213,7 @@ export default function IndustriesPage() {
             {stats.map((s) => (
               <div key={s.label} className="px-6 py-5 text-center">
                 <p className="text-2xl font-medium text-[#e7212b]">{s.num}</p>
-                <p className="text-[11px] text-white/40 tracking-wide mt-1">
+                <p className="text-[14px] text-white/40 tracking-wide mt-1">
                   {s.label}
                 </p>
               </div>
@@ -242,7 +242,7 @@ export default function IndustriesPage() {
           <div className="flex items-center justify-between mb-10">
             <div className="flex items-center gap-3">
               <span className="w-8 h-px bg-[#0891B2]" />
-              <span className="text-[#0891B2] text-[11px] font-medium tracking-[2.5px] uppercase">
+              <span className="text-[#0891B2] text-[14px] font-medium tracking-[2.5px] uppercase">
                 Our Coverage
               </span>
             </div>

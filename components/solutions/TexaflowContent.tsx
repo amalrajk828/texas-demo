@@ -106,7 +106,7 @@ export default function TexaflowContent() {
         />
 
         <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6">
-          <nav className="flex items-center gap-1.5 mb-8 text-[11px] text-white/35 flex-wrap">
+          <nav className="flex items-center gap-2 mb-8 text-[14px] text-white/50 flex-wrap">
             <Link href="/" className="hover:text-white/70 transition-colors">
               Home
             </Link>
@@ -123,7 +123,7 @@ export default function TexaflowContent() {
               <div className="w-9 h-9 rounded-xl bg-[#e7212b]/10 border border-[#e7212b]/25 flex items-center justify-center">
                 <Scale className="w-4 h-4 text-[#e7212b]" strokeWidth={1.8} />
               </div>
-              <span className="text-[#0891B2] text-[11px] font-semibold tracking-[3px] uppercase">
+              <span className="text-[#0891B2] text-[14px] font-semibold tracking-[3px] uppercase">
                 Our Proprietary Solution
               </span>
             </div>

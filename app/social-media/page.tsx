@@ -313,11 +313,11 @@ export default function SocialMediaPage() {
 
         <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 py-16 lg:py-24">
           {/* Breadcrumb */}
-          <nav className="flex items-center gap-1.5 mb-8 text-[11px] text-white/30">
+          <nav className="flex items-center gap-2 mb-8 text-[14px] text-white/50">
             <Link href="/" className="hover:text-white/60 transition-colors">
               Home
             </Link>
-            <ChevronRight className="w-3 h-3" />
+            <ChevronRight className="w-3.5 h-3.5" />
             <span className="text-white/70">Social Media</span>
           </nav>
 
@@ -350,7 +350,7 @@ export default function SocialMediaPage() {
                   className="bg-white/[0.04] border border-white/[0.08] hover:border-[#e7212b]/30 rounded-xl px-5 py-4 text-center min-w-[88px] transition-colors duration-200"
                 >
                   <p className="text-2xl font-medium text-[#e7212b]">{s.num}</p>
-                  <p className="text-[10px] text-white/30 mt-1 tracking-wide">{s.label}</p>
+                  <p className="text-[10px] text-white/50 mt-1 tracking-wide">{s.label}</p>
                 </div>
               ))}
             </div>
@@ -364,7 +364,7 @@ export default function SocialMediaPage() {
           {/* Section label */}
           <div className="flex items-center gap-3 mb-4">
             <span className="w-8 h-px bg-[#0891B2]/40" />
-            <span className="text-[#0891B2] text-[11px] font-medium tracking-[2.5px] uppercase">
+            <span className="text-[#0891B2] text-[14px] font-medium tracking-[2.5px] uppercase">
               Verified Accounts
             </span>
           </div>
@@ -424,7 +424,7 @@ export default function SocialMediaPage() {
           {/* Section label */}
           <div className="flex items-center gap-3 mb-4">
             <span className="w-8 h-px bg-[#0891B2]/40" />
-            <span className="text-[#0891B2] text-[11px] font-medium tracking-[2.5px] uppercase">
+            <span className="text-[#0891B2] text-[14px] font-medium tracking-[2.5px] uppercase">
               Also On
             </span>
           </div>
@@ -453,7 +453,7 @@ export default function SocialMediaPage() {
                     </svg>
                   </div>
                   <div className="flex-1 min-w-0">
-                    <p className="text-[11px] text-gray-400 font-medium uppercase tracking-wide">
+                    <p className="text-[14px] text-gray-400 font-medium uppercase tracking-wide">
                       Registered
                     </p>
                     <h3 className="text-[#181D4E] font-semibold text-sm">
@@ -464,7 +464,7 @@ export default function SocialMediaPage() {
                 <p className="text-gray-500 text-[12px] leading-relaxed line-clamp-2 mb-3">
                   {platform.description}
                 </p>
-                <div className="flex items-center gap-1 text-[#181D4E] text-[11px] font-medium group-hover:text-[#e7212b] transition-colors">
+                <div className="flex items-center gap-1 text-[#181D4E] text-[14px] font-medium group-hover:text-[#e7212b] transition-colors">
                   Open Profile
                   <ExternalLink className="w-3 h-3" />
                 </div>
@@ -479,7 +479,7 @@ export default function SocialMediaPage() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 text-center">
           <div className="flex items-center justify-center gap-3 mb-4">
             <span className="w-8 h-px bg-[#0891B2]/40" />
-            <span className="text-[#0891B2] text-[11px] font-medium tracking-[2.5px] uppercase">
+            <span className="text-[#0891B2] text-[14px] font-medium tracking-[2.5px] uppercase">
               Get in Touch
             </span>
             <span className="w-8 h-px bg-[#0891B2]/40" />
@@ -518,7 +518,7 @@ export default function SocialMediaPage() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 text-center">
           <div className="flex items-center justify-center gap-3 mb-4">
             <span className="w-8 h-px bg-[#0891B2]/40" />
-            <span className="text-[#0891B2] text-[11px] font-medium tracking-[2.5px] uppercase">
+            <span className="text-[#0891B2] text-[14px] font-medium tracking-[2.5px] uppercase">
               Have a project in mind?
             </span>
             <span className="w-8 h-px bg-[#0891B2]/40" />

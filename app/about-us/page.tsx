@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
-import { Gauge, ClipboardCheck, Cpu } from "lucide-react";
+import { Gauge, ClipboardCheck, Cpu, ChevronRight } from "lucide-react";
 import { BreadcrumbJsonLd } from "@/components/schema/BreadcrumbJsonLd";
 import {
   ReviewJsonLd,
@@ -309,6 +309,13 @@ export default function AboutPage() {
             "radial-gradient(circle, rgba(150,168,190,0.5) 0%, rgba(130,148,172,0.2) 55%, transparent 70%)",
         }}
       />
+
+      {/* ═══ BREADCRUMB ═══════════════════════════════════════════ */}
+      <nav className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 pt-28 pb-4 flex items-center gap-2 text-[14px] text-black/50">
+        <Link href="/" className="hover:text-black transition-colors">Home</Link>
+        <ChevronRight className="w-3.5 h-3.5 text-black/30" />
+        <span className="text-black/70">About Us</span>
+      </nav>
 
       {/* ═══ COMMITMENT ═══════════════════════════════════════════ */}
       <section className="relative z-10 bg-transparent pt-[108px] lg:pt-[116px] pb-16 lg:pb-24">

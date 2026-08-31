@@ -48,11 +48,11 @@ export default function ProductPageHero({
 
         <div className="relative z-10 w-full max-w-3xl mx-auto px-4 sm:px-6 py-16 lg:py-20">
           <div className="bg-white/[0.07] backdrop-blur-xl border border-white/[0.12] rounded-2xl shadow-2xl p-8 lg:p-10">
-            <nav className="flex items-center gap-1.5 mb-6 text-[11px] text-white/55 flex-wrap">
+            <nav className="flex items-center gap-2 mb-6 text-[14px] text-white/55 flex-wrap">
               <Link href="/" className="hover:text-white/90 transition-colors">Home</Link>
-              <ChevronRight className="w-3 h-3 shrink-0" />
+              <ChevronRight className="w-3.5 h-3.5 shrink-0" />
               <Link href="/products" className="hover:text-white/90 transition-colors">Products</Link>
-              <ChevronRight className="w-3 h-3 shrink-0" />
+              <ChevronRight className="w-3.5 h-3.5 shrink-0" />
               <span className="text-white/80">{breadcrumbLabel}</span>
             </nav>
 
@@ -78,7 +78,7 @@ export default function ProductPageHero({
                 {stats.map((s) => (
                   <div key={s.label} className="px-4 text-center first:pl-0 last:pr-0">
                     <p className="text-xl sm:text-2xl font-medium text-[#e7212b]">{s.num}</p>
-                    <p className="text-[10px] sm:text-[11px] text-white/70 tracking-wide mt-1 uppercase">{s.label}</p>
+                    <p className="text-[10px] sm:text-[14px] text-white/70 tracking-wide mt-1 uppercase">{s.label}</p>
                   </div>
                 ))}
               </div>
@@ -107,17 +107,17 @@ export default function ProductPageHero({
       />
 
       <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 py-16 lg:py-20">
-        <nav className="flex items-center gap-1.5 text-[11px] text-white/50 mb-6">
+        <nav className="flex items-center gap-2 text-[14px] text-white/50 mb-6">
           <Link href="/" className="hover:text-white transition-colors">Home</Link>
-          <ChevronRight className="w-3 h-3 text-white/30" />
+          <ChevronRight className="w-3.5 h-3.5 text-white/30" />
           <Link href="/products" className="hover:text-white transition-colors">Products</Link>
-          <ChevronRight className="w-3 h-3 text-white/30" />
+          <ChevronRight className="w-3.5 h-3.5 text-white/30" />
           <span className="text-white">{breadcrumbLabel}</span>
         </nav>
 
         <div className="flex items-center gap-2 mb-4">
           <span className="w-5 h-px bg-[#0891B2]" />
-          <span className="text-[#0891B2] text-[11px] font-medium tracking-[2.5px] uppercase">
+          <span className="text-[#0891B2] text-[14px] font-medium tracking-[2.5px] uppercase">
             {eyebrow}
           </span>
         </div>

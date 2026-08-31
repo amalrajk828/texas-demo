@@ -1,6 +1,6 @@
 "use client";
 import Link from "next/link";
-import { ArrowRight, Settings2 } from "lucide-react";
+import { ChevronRight,ArrowRight, Settings2 } from "lucide-react";
 
 export default function FlowComputerHero() {
   return (
@@ -36,17 +36,17 @@ export default function FlowComputerHero() {
       <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6">
 
         {/* Breadcrumb */}
-        <div
-          className="flex items-center gap-2 mb-8 text-[12px] text-white/30 flex-wrap"
+        <nav
+          className="flex items-center gap-2 mb-8 text-[14px] text-white/50 flex-wrap"
         >
-          <Link href="/" className="hover:text-white/60 transition-colors">Home</Link>
-          <span>/</span>
-          <Link href="/services/" className="hover:text-white/60 transition-colors">Services</Link>
-          <span>/</span>
-          <Link href="/service/flow-measurement-solutions/" className="hover:text-white/60 transition-colors">Flow Measurement</Link>
-          <span>/</span>
+          <Link href="/" className="hover:text-white transition-colors">Home</Link>
+          <ChevronRight className="w-3.5 h-3.5 text-white/30" />
+          <Link href="/services/" className="hover:text-white transition-colors">Services</Link>
+          <ChevronRight className="w-3.5 h-3.5 text-white/30" />
+          <Link href="/service/flow-measurement-solutions/" className="hover:text-white transition-colors">Flow Measurement</Link>
+          <ChevronRight className="w-3.5 h-3.5 text-white/30" />
           <span className="text-white/60">Flow Computer Configuration</span>
-        </div>
+        </nav>
 
         <div className="max-w-full">
 
@@ -116,7 +116,7 @@ export default function FlowComputerHero() {
               className="bg-white/[0.03] border border-white/[0.07] rounded-xl px-4 py-4 text-center"
             >
               <p className="text-xl font-bold text-[#e7212b] leading-none">{stat.num}</p>
-              <p className="text-[11px] text-white/30 mt-1.5 tracking-wide">{stat.label}</p>
+              <p className="text-[14px] text-white/50 mt-1.5 tracking-wide">{stat.label}</p>
             </div>
           ))}
         </div>

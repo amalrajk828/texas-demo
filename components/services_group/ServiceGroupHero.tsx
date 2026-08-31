@@ -1,6 +1,6 @@
 "use client";
 import Link from "next/link";
-import { ArrowRight, LayoutGrid, Settings } from "lucide-react";
+import { ChevronRight,ArrowRight, LayoutGrid, Settings } from "lucide-react";
 
 export default function ServiceGroupHero() {
   return (
@@ -28,13 +28,13 @@ export default function ServiceGroupHero() {
       />
 
       <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6">
-        <div
-          className="flex items-center gap-2 mb-8 text-[12px] text-white/30"
+        <nav
+          className="flex items-center gap-2 mb-8 text-[14px] text-white/50"
         >
-          <Link href="/" className="hover:text-white/60 transition-colors">Home</Link>
-          <span>/</span>
+          <Link href="/" className="hover:text-white transition-colors">Home</Link>
+          <ChevronRight className="w-3.5 h-3.5 text-white/30" />
           <span className="text-white/60">Main Services</span>
-        </div>
+        </nav>
 
         <div className="flex items-start gap-12 lg:gap-16">
           <div
@@ -109,7 +109,7 @@ export default function ServiceGroupHero() {
               className="bg-white/[0.03] border border-white/[0.07] rounded-xl px-5 py-4 text-center"
             >
               <p className="text-2xl font-bold text-[#e7212b] leading-none">{stat.num}</p>
-              <p className="text-[12px] text-white/30 mt-1.5 tracking-wide">{stat.label}</p>
+              <p className="text-[14px] text-white/50 mt-1.5 tracking-wide">{stat.label}</p>
             </div>
           ))}
         </div>

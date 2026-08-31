@@ -48,11 +48,11 @@ export default function IndustryHero({
       </div>
 
       <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 pt-24 pb-8 w-full">
-        <nav className="flex items-center gap-1.5 mb-6 text-[11px] text-white/35 flex-wrap">
+        <nav className="flex items-center gap-2 mb-6 text-[14px] text-white/50 flex-wrap">
           <Link href="/" className="hover:text-white/70 transition-colors">Home</Link>
-          <ChevronRight className="w-3 h-3 shrink-0" />
+          <ChevronRight className="w-3.5 h-3.5 shrink-0" />
           <Link href="/industries/" className="hover:text-white/70 transition-colors">Industries</Link>
-          <ChevronRight className="w-3 h-3 shrink-0" />
+          <ChevronRight className="w-3.5 h-3.5 shrink-0" />
           <span className="text-white/60">{breadcrumbLabel}</span>
         </nav>
 
@@ -81,7 +81,7 @@ export default function IndustryHero({
               {tags.map((tag) => (
                 <span
                   key={tag}
-                  className="text-[11px] text-white/55 tracking-wide border border-white/15 rounded-full px-3 py-1"
+                  className="text-[14px] text-white/55 tracking-wide border border-white/15 rounded-full px-3 py-1"
                 >
                   {tag}
                 </span>
@@ -108,7 +108,7 @@ export default function IndustryHero({
           {stats.map((s) => (
             <div key={s.label} className="px-6 py-5 text-center">
               <p className="text-2xl font-medium text-[#e7212b]">{s.num}</p>
-              <p className="text-[11px] text-white/40 tracking-wide mt-1">{s.label}</p>
+              <p className="text-[14px] text-white/40 tracking-wide mt-1">{s.label}</p>
             </div>
           ))}
         </div>

@@ -1,6 +1,6 @@
 "use client";
 import Link from "next/link";
-import { ArrowRight, Layers, Shield, Globe, Wrench, Clock } from "lucide-react";
+import { ChevronRight,ArrowRight, Layers, Shield, Globe, Wrench, Clock } from "lucide-react";
 
 const HIGHLIGHTS = [
   { icon: Shield, text: "Quality Certified" },
@@ -40,16 +40,16 @@ export default function PortfolioGroupHero({
           <div className="flex-1 min-w-0">
             {/* Breadcrumb */}
             <nav
-              className="flex items-center gap-2 mb-8 text-[11px] text-white/30"
+              className="flex items-center gap-2 mb-8 text-[14px] text-white/50"
             >
-              <Link href="/" className="hover:text-white/60 transition-colors">
+              <Link href="/" className="hover:text-white transition-colors">
                 Home
               </Link>
-              <span>/</span>
+              <ChevronRight className="w-3.5 h-3.5 text-white/30" />
               {breadcrumbHref ? (
                 <Link
                   href={breadcrumbHref}
-                  className="hover:text-white/60 transition-colors"
+                  className="hover:text-white transition-colors"
                 >
                   {breadcrumb}
                 </Link>

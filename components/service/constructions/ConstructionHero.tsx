@@ -1,6 +1,6 @@
 "use client";
 import Link from "next/link";
-import { ArrowRight, HardHat } from "lucide-react";
+import { ChevronRight,ArrowRight, HardHat } from "lucide-react";
 
 export default function ConstructionHero() {
   return (
@@ -10,13 +10,13 @@ export default function ConstructionHero() {
       <div className="absolute bottom-0 inset-x-0 h-px bg-white/[0.08] pointer-events-none z-0" />
 
       <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6">
-        <div className="flex items-center gap-2 mb-8 text-[12px] text-white/30">
-          <Link href="/" className="hover:text-white/60 transition-colors">Home</Link>
-          <span>/</span>
-          <Link href="/services/" className="hover:text-white/60 transition-colors">Services</Link>
-          <span>/</span>
+        <nav className="flex items-center gap-2 mb-8 text-[14px] text-white/50">
+          <Link href="/" className="hover:text-white transition-colors">Home</Link>
+          <ChevronRight className="w-3.5 h-3.5 text-white/30" />
+          <Link href="/services/" className="hover:text-white transition-colors">Services</Link>
+          <ChevronRight className="w-3.5 h-3.5 text-white/30" />
           <span className="text-white/60">Constructions</span>
-        </div>
+        </nav>
 
         <div className="max-w-full">
           <div className="flex items-center gap-2.5 mb-5">
@@ -53,7 +53,7 @@ export default function ConstructionHero() {
           ].map((stat) => (
             <div key={stat.label} className="bg-white/[0.03] border border-white/[0.07] rounded-xl px-5 py-4 text-center">
               <p className="text-2xl font-bold text-[#e7212b] leading-none">{stat.num}</p>
-              <p className="text-[12px] text-white/30 mt-1.5 tracking-wide">{stat.label}</p>
+              <p className="text-[14px] text-white/50 mt-1.5 tracking-wide">{stat.label}</p>
             </div>
           ))}
         </div>

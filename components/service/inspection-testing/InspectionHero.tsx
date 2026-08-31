@@ -1,7 +1,7 @@
 "use client";
 import { useRef } from "react";
 import Link from "next/link";
-import { ArrowRight, FlaskConical } from "lucide-react";
+import { ChevronRight,ArrowRight, FlaskConical } from "lucide-react";
 import VantaTopology from "@/components/service/common/VantaTopology";
 
 export default function InspectionHero() {
@@ -17,15 +17,15 @@ export default function InspectionHero() {
       <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6">
 
         {/* Breadcrumb */}
-        <div
-          className="flex items-center gap-2 mb-8 text-[12px] text-white/30"
+        <nav
+          className="flex items-center gap-2 mb-8 text-[14px] text-white/50"
         >
-          <Link href="/" className="hover:text-white/60 transition-colors">Home</Link>
-          <span>/</span>
-          <Link href="/services/" className="hover:text-white/60 transition-colors">Services</Link>
-          <span>/</span>
+          <Link href="/" className="hover:text-white transition-colors">Home</Link>
+          <ChevronRight className="w-3.5 h-3.5 text-white/30" />
+          <Link href="/services/" className="hover:text-white transition-colors">Services</Link>
+          <ChevronRight className="w-3.5 h-3.5 text-white/30" />
           <span className="text-white/60">Inspection &amp; Testing</span>
-        </div>
+        </nav>
 
         <div className="max-w-full">
 

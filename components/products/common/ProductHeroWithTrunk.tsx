@@ -87,11 +87,11 @@ export default function ProductHeroWithTrunk({
         style={{ zIndex: 10 }}
       >
         {/* Breadcrumb */}
-        <nav className="flex items-center gap-1.5 text-[11px] text-white/50 mb-6 flex-wrap">
+        <nav className="flex items-center gap-2 text-[14px] text-white/50 mb-6 flex-wrap">
           {breadcrumbs.map((crumb, i) => (
-            <span key={i} className="flex items-center gap-1.5">
+            <span key={i} className="flex items-center gap-2">
               {i > 0 && (
-                <ChevronRight className="w-3 h-3 text-white/30 shrink-0" />
+                <ChevronRight className="w-3.5 h-3.5 text-white/30 shrink-0" />
               )}
               {crumb.href ? (
                 <Link

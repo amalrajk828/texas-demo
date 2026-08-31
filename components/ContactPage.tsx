@@ -12,6 +12,7 @@ import {
   Clock,
   Building2,
   CheckCircle,
+  ChevronRight,
 } from "lucide-react";
 import { SITE_EMAIL } from "@/lib/site";
 import { useFormSubmit } from "@/lib/useFormSubmit";
@@ -92,13 +93,13 @@ export default function ContactPage() {
 
         <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6">
           {/* Breadcrumb */}
-          <div className="flex items-center gap-2 mb-8 text-[12px] text-white/30">
-            <Link href="/" className="hover:text-white/60 transition-colors">
+          <nav className="flex items-center gap-2 mb-8 text-[14px] text-white/50">
+            <Link href="/" className="hover:text-white transition-colors">
               Home
             </Link>
-            <span>/</span>
+            <ChevronRight className="w-3.5 h-3.5 text-white/30" />
             <span className="text-white/60">Contact Us</span>
-          </div>
+          </nav>
 
           <div className="max-w-3xl">
             <div className="flex items-center gap-2.5 mb-5">

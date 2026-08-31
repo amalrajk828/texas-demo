@@ -76,11 +76,11 @@ export default function PartnersPage() {
         />
 
         <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 py-16 lg:py-20">
-          <nav className="flex items-center gap-1.5 text-[11px] text-white/50 mb-6">
+          <nav className="flex items-center gap-2 text-[14px] text-white/50 mb-6">
             <Link href="/" className="hover:text-white transition-colors">
               Home
             </Link>
-            <ChevronRight className="w-3 h-3 text-white/30" />
+            <ChevronRight className="w-3.5 h-3.5 text-white/30" />
             <span className="text-white">Global Network</span>
           </nav>
 
@@ -141,7 +141,7 @@ export default function PartnersPage() {
       <section className="bg-white py-16 lg:py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6">
           <div className="text-center mb-12">
-            <span className="text-[11px] font-bold tracking-[0.28em] uppercase text-[#0891B2]">
+            <span className="text-[14px] font-bold tracking-[0.28em] uppercase text-[#0891B2]">
               Worldwide Partnerships
             </span>
             <h2 className="mt-3 text-3xl lg:text-4xl font-bold text-[#181D4E]">
@@ -191,7 +191,7 @@ export default function PartnersPage() {
                 <p className="text-gray-600 text-[14.5px] leading-[1.7]">
                   {p.description}
                 </p>
-                <span className="mt-auto inline-flex items-center gap-1.5 text-[12px] font-semibold text-[#e7212b] group-hover:gap-2.5 transition-all">
+                <span className="mt-auto inline-flex items-center gap-2 text-[12px] font-semibold text-[#e7212b] group-hover:gap-2.5 transition-all">
                   Explore{" "}
                   <ChevronRight className="w-3.5 h-3.5" />
                 </span>
@@ -205,7 +205,7 @@ export default function PartnersPage() {
       <section className="bg-[#F8F9FA] py-16 lg:py-20 border-t border-gray-100">
         <div className="max-w-7xl mx-auto px-4 sm:px-6">
           <div className="text-center mb-12">
-            <span className="text-[11px] font-bold tracking-[0.28em] uppercase text-[#0891B2]">
+            <span className="text-[14px] font-bold tracking-[0.28em] uppercase text-[#0891B2]">
               Proprietary & Strategic
             </span>
             <h2 className="mt-3 text-3xl lg:text-4xl font-bold text-[#181D4E]">
@@ -248,14 +248,14 @@ export default function PartnersPage() {
                   <h3 className="text-[#181D4E] text-[18px] font-bold leading-snug">
                     {p.name}
                   </h3>
-                  <p className="text-[11px] font-semibold tracking-wide text-[#0891B2] uppercase mt-1">
+                  <p className="text-[14px] font-semibold tracking-wide text-[#0891B2] uppercase mt-1">
                     {p.product}
                   </p>
                 </div>
                 <p className="text-gray-500 text-[14px] leading-relaxed">
                   {p.description}
                 </p>
-                <span className="mt-auto inline-flex items-center gap-1.5 text-[13px] font-semibold text-[#e7212b] group-hover:gap-2.5 transition-all">
+                <span className="mt-auto inline-flex items-center gap-2 text-[13px] font-semibold text-[#e7212b] group-hover:gap-2.5 transition-all">
                   Learn more{" "}
                   <ChevronRight className="w-4 h-4" />
                 </span>
