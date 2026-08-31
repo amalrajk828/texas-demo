@@ -28,7 +28,7 @@ export default function AboutStrip() {
               Established 2008. Built on precision.
             </h2>
             <p className="text-white/70 text-[15px] leading-relaxed mb-6">
-              Texas Technical Service Company is an ISO 9001:2015 certified company established
+              Texas Technical Service Company is an ISO 9001, ISO 14001, ISO 45001, UASL &amp; Accurate certified company established
               in 2008. We are primarily focused on Flow measurement solutions, Inspection and
               testing, and industrial automation requirements for the oil and gas, power plants,
               manufacturing and commercial sectors.
@@ -52,12 +52,24 @@ export default function AboutStrip() {
                 borderColor: "color-mix(in srgb, var(--color-brand-red) 25%, transparent)",
               }}
             >
-              <p className="text-[15px] font-bold" style={{ color: "var(--color-brand-red)" }}>ISO 9001:2015</p>
+              <p className="text-[15px] font-bold" style={{ color: "var(--color-brand-red)" }}>ISO 9001</p>
               <p className="text-white/40 text-[12px] mt-1 font-medium">Certified</p>
             </div>
             <div className="bg-white/[0.04] border border-white/[0.08] rounded-xl px-8 py-5 text-center">
-              <p className="text-white text-[15px] font-bold">ISO 14001:2015</p>
+              <p className="text-white text-[15px] font-bold">ISO 14001</p>
               <p className="text-white/40 text-[12px] mt-1 font-medium">Environmental</p>
+            </div>
+            <div className="bg-white/[0.04] border border-white/[0.08] rounded-xl px-8 py-5 text-center">
+              <p className="text-white text-[15px] font-bold">ISO 45001</p>
+              <p className="text-white/40 text-[12px] mt-1 font-medium">Safety</p>
+            </div>
+            <div className="bg-white/[0.04] border border-white/[0.08] rounded-xl px-8 py-5 text-center">
+              <p className="text-white text-[15px] font-bold">UASL</p>
+              <p className="text-white/40 text-[12px] mt-1 font-medium">Accredited</p>
+            </div>
+            <div className="bg-white/[0.04] border border-white/[0.08] rounded-xl px-8 py-5 text-center">
+              <p className="text-white text-[15px] font-bold">Accurate</p>
+              <p className="text-white/40 text-[12px] mt-1 font-medium">Certified</p>
             </div>
           </div>
 

@@ -23,7 +23,7 @@ export const aboutUsFaq: FaqItem[] = [
   },
   {
     q: "What certifications does Texas Technical Services hold?",
-    a: "We hold ISO 9001:2015 for quality management, ISO 14001:2015 for environmental management, and ISO 45001:2018 for occupational health and safety. These certifications apply to our engineering, supply, installation, and service operations.",
+    a: "We hold ISO 9001:2015 for quality management, ISO 14001:2015 for environmental management, ISO 45001:2018 for occupational health and safety, UASL Accredited for independent verification, and Accurate Certified for international accreditation. These certifications apply to our engineering, supply, installation, and service operations.",
   },
 ];
 
@@ -53,7 +53,7 @@ export const blogIndexFaq: FaqItem[] = [
 export const certificationsFaq: FaqItem[] = [
   {
     q: "Which ISO certifications does Texas Technical Services hold?",
-    a: "We hold ISO 9001:2015 for quality management, ISO 14001:2015 for environmental management, and ISO 45001:2018 for occupational health and safety.",
+    a: "We hold ISO 9001:2015 for quality management, ISO 14001:2015 for environmental management, ISO 45001:2018 for occupational health and safety, UASL Accredited for independent verification, and Accurate Certified for international accreditation.",
   },
   {
     q: "Why are ISO certifications important for an industrial services company?",
@@ -80,7 +80,7 @@ export const clientsFaq: FaqItem[] = [
   },
   {
     q: "How many clients have you served in the GCC?",
-    a: "We have served more than 49 industrial clients across Kuwait, UAE, Saudi Arabia, Qatar, Bahrain, and Oman, including major operators, government entities, and international partners.",
+    a: "We have served more than 46 industrial clients across Kuwait, UAE, Saudi Arabia, Qatar, Bahrain, and Oman, including major operators, government entities, and international partners.",
   },
   {
     q: "Can you provide references or case studies?",

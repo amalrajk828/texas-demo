@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import Image from "next/image";
 import { ArrowRight, ChevronRight, MapPin, Cpu, Thermometer, ShieldCheck } from "lucide-react";
 import { BreadcrumbJsonLd } from "@/components/schema/BreadcrumbJsonLd";
 import { ServiceJsonLd } from "@/components/schema/ServiceJsonLd";
@@ -9,21 +10,21 @@ import { SpeakableJsonLd } from "@/components/schema/SpeakableJsonLd";
 export const metadata: Metadata = {
   title: "Industrial Automation Services Dubai, UAE | PLC, SCADA & Flow Measurement",
   description:
-    "Texas Technical Services Co. is a leading industrial automation company in Dubai, UAE — PLC and SCADA system integrators, flow measurement, and industrial inspection & testing serving oil & gas and industrial sectors across the United Arab Emirates.",
+    "Texas Technical Services Co. is a leading industrial automation company in Dubai, UAE — ISO 9001, ISO 14001, ISO 45001, UASL & Accurate certified. PLC and SCADA system integrators, flow measurement, and industrial inspection & testing serving oil & gas and industrial sectors across the United Arab Emirates.",
   alternates: {
     canonical: "/industrial-automation-services-dubai/",
   },
   openGraph: {
     title: "Industrial Automation Services Dubai, UAE | Texas Technical Services",
     description:
-      "Industrial automation company in Dubai, UAE — PLC & SCADA integration, flow measurement, and inspection & testing services serving oil & gas, power, and industrial sectors across the United Arab Emirates and GCC.",
+      "Industrial automation company in Dubai, UAE — PLC & SCADA integration, flow measurement, and inspection & testing services — ISO 9001, ISO 14001, ISO 45001, UASL & Accurate certified — serving oil & gas, power, and industrial sectors across the United Arab Emirates and GCC.",
     url: "/industrial-automation-services-dubai/",
   },
   twitter: {
     card: "summary_large_image",
     title: "Industrial Automation Services Dubai, UAE | Texas Technical Services",
     description:
-      "Industrial automation, PLC & SCADA integration, and inspection services in Dubai and across the UAE — Texas Technical Services.",
+      "Industrial automation, PLC & SCADA integration, and inspection services in Dubai and across the UAE — ISO 9001, ISO 14001, ISO 45001, UASL & Accurate certified — Texas Technical Services.",
   },
   keywords: [
     "industrial automation companies in Dubai",
@@ -37,6 +38,11 @@ export const metadata: Metadata = {
     "automation and engineering services Dubai",
     "industrial automation UAE",
     "automation company Dubai",
+    "ISO 9001 certified company Dubai",
+    "ISO 14001 environmental management UAE",
+    "ISO 45001 occupational safety UAE",
+    "UASL accredited certification UAE",
+    "Accurate certified industrial company UAE",
   ],
 };
 
@@ -56,7 +62,7 @@ const services = [
   {
     Icon: ShieldCheck,
     title: "Inspection & Testing Services",
-    body: "As a leading industrial inspection and testing company serving Dubai and the UAE, we offer NDT (UT, MT, PT, RT, VI), mechanical testing, phased array ultrasonic inspection, and QA consultancy. Our ISO 9001:2015 certified processes ensure the highest quality standards for your critical assets across the United Arab Emirates.",
+    body: "As a leading industrial inspection and testing company serving Dubai and the UAE, we offer NDT (UT, MT, PT, RT, VI), mechanical testing, phased array ultrasonic inspection, and QA consultancy. Our ISO 9001, ISO 14001, ISO 45001, UASL & Accurate certified processes ensure the highest quality standards for your critical assets across the United Arab Emirates.",
     href: "/service/inspection-testing/",
   },
 ];
@@ -85,7 +91,7 @@ const faqItems = [
   },
   {
     q: "Which industries do you serve in the UAE?",
-    a: "We serve oil and gas (upstream, midstream, downstream), refinery and petrochemical plants, power generation and water desalination, LNG terminals, and industrial manufacturing sectors across the UAE. Our ISO 9001:2015, ISO 14001:2015, and ISO 45001:2018 certifications demonstrate our commitment to quality, environment, and occupational health and safety.",
+    a: "We serve oil and gas (upstream, midstream, downstream), refinery and petrochemical plants, power generation and water desalination, LNG terminals, and industrial manufacturing sectors across the UAE. Our ISO 9001, ISO 14001, ISO 45001, UASL & Accurate certifications demonstrate our commitment to quality, environment, and occupational health and safety.",
   },
   {
     q: "What is the scope of your services across the UAE?",
@@ -195,6 +201,21 @@ export default function IndustrialAutomationDubaiPage() {
                 <p className="text-2xl font-bold text-[#e7212b] leading-none">{stat.num}</p>
                 <p className="text-[12px] text-white/30 mt-1.5 tracking-wide">{stat.label}</p>
               </div>
+            ))}
+          </div>
+
+          {/* Certification Badges */}
+          <div className="mt-12 flex items-center justify-center gap-6 flex-wrap">
+            {[
+              { src: "/about/cert-iso9001.png", alt: "ISO 9001:2015 Certified" },
+              { src: "/about/cert-iso14001.png", alt: "ISO 14001:2015 Certified" },
+              { src: "/about/cert-iso45001.png", alt: "ISO 45001:2018 Certified" },
+              { src: "/about/cert-uasl.png", alt: "UASL Accredited" },
+              { src: "/about/cert-accurate-white.png", alt: "Accurate Certified" },
+            ].map((badge) => (
+              <Link key={badge.alt} href="/certifications/" className="shrink-0 hover:scale-110 transition-transform duration-200">
+                <Image src={badge.src} alt={badge.alt} width={40} height={40} className="h-10 w-10 object-contain" />
+              </Link>
             ))}
           </div>
         </div>

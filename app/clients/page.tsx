@@ -7,13 +7,14 @@ import TestimonialsSection from "@/components/clients/TestimonialsSection";
 import ClientsHeroFlowLottie from "@/components/clients/ClientsHeroFlowLottie";
 import { BreadcrumbJsonLd } from "@/components/schema/BreadcrumbJsonLd";
 import { FaqPageJsonLd } from "@/components/schema/FaqPageJsonLd";
+import { SpeakableJsonLd } from "@/components/schema/SpeakableJsonLd";
 import PageFaqSection from "@/components/PageFaqSection";
 import { clientsFaq } from "@/lib/pageFaqData";
 
 export const metadata: Metadata = {
   title: "Our Clients",
   description:
-    "Texas Technical Services proudly serves 49+ clients across Kuwait and Dubai — from national oil companies and government bodies to international engineering groups.",
+    "Texas Technical Services proudly serves 46+ clients across Kuwait and Dubai — from national oil companies and government bodies to international engineering groups.",
   alternates: { canonical: "/clients/" },
   openGraph: {
     title: "Our Clients",
@@ -25,7 +26,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "Our Clients",
     description:
-      "49+ clients across oil & gas, power, water, and industrial sectors — trusted by KOC, KNPC, Chevron, Siemens, Honeywell and more.",
+      "46+ clients across oil & gas, power, water, and industrial sectors — trusted by KOC, KNPC, Chevron, Siemens, Honeywell and more.",
   },
   keywords: [
     "oil and gas clients Kuwait",
@@ -120,6 +121,7 @@ export default function ClientsPage() {
   return (
     <>
       <BreadcrumbJsonLd items={[{ name: "Home", href: "/" }, { name: "Clients", href: "/clients/" }]} />
+      <SpeakableJsonLd headline="Our Clients — 46+ Industrial Companies Across Kuwait & UAE" />
       {/* ══ HERO ══════════════════════════════════════════════════ */}
       <section className="bg-[#000000] blueprint-grid blueprint-dot-grid relative overflow-hidden pt-[108px] lg:pt-[116px]">
         {/* Polygon Flow Lottie background */}

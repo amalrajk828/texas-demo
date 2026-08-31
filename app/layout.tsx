@@ -168,6 +168,13 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
                 "Mitsubishi Factory Automation",
                 "Process Control Automation",
               ],
+              hasCredential: [
+                { "@type": "EducationalOccupationalCredential", "credentialCategory": "ISO 9001:2015 Quality Management" },
+                { "@type": "EducationalOccupationalCredential", "credentialCategory": "ISO 14001:2015 Environmental Management" },
+                { "@type": "EducationalOccupationalCredential", "credentialCategory": "ISO 45001:2018 Occupational Health & Safety" },
+                { "@type": "EducationalOccupationalCredential", "credentialCategory": "UASL Accredited Certification" },
+                { "@type": "EducationalOccupationalCredential", "credentialCategory": "Accurate Certified" },
+              ],
               aggregateRating: {
                 "@type": "AggregateRating",
                 ratingValue: 4.8,

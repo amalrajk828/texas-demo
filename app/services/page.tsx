@@ -12,7 +12,7 @@ import PageFaqSection from "@/components/PageFaqSection";
 import { servicesListingFaq } from "@/lib/pageFaqData";
 export const metadata: Metadata = {
   title: "Industrial Services in Kuwait & UAE",
-  description: "PLC SCADA integration, flow measurement, inspection & testing, and process automation for oil & gas and industrial sectors in Kuwait and the GCC.",
+  description: "PLC SCADA integration, flow measurement, inspection & testing, and process automation for oil & gas and industrial sectors in Kuwait and the GCC. ISO 9001, ISO 14001, ISO 45001, UASL & Accurate certified.",
   alternates: { canonical: "/services/" },
   openGraph: {
     title: "Industrial Services — PLC SCADA, Flow Measurement & Inspection",

@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import Image from "next/image";
 import { ArrowRight, ChevronRight, MapPin, Cpu, Thermometer, ShieldCheck } from "lucide-react";
 import { BreadcrumbJsonLd } from "@/components/schema/BreadcrumbJsonLd";
 import { ServiceJsonLd } from "@/components/schema/ServiceJsonLd";
@@ -9,21 +10,21 @@ import { SpeakableJsonLd } from "@/components/schema/SpeakableJsonLd";
 export const metadata: Metadata = {
   title: "Industrial Automation Services Kuwait | PLC, SCADA & Flow Measurement",
   description:
-    "Texas Technical Services Co. is a leading industrial automation company in Kuwait — PLC & SCADA system integrators, flow measurement services in Ahmadi, and industrial inspection & testing across Fahaheel and the GCC.",
+    "Texas Technical Services Co. is a leading industrial automation company in Kuwait — ISO 9001, ISO 14001, ISO 45001, UASL & Accurate certified. PLC & SCADA system integrators, flow measurement services in Ahmadi, and industrial inspection & testing across Fahaheel and the GCC.",
   alternates: {
     canonical: "/industrial-automation-services-kuwait/",
   },
   openGraph: {
     title: "Industrial Automation Services Kuwait | Texas Technical Services",
     description:
-      "Premier industrial automation, PLC & SCADA integration, flow measurement, and inspection & testing services in Fahaheel, Kuwait — serving oil & gas, power, and industrial sectors across the GCC.",
+      "Premier industrial automation, PLC & SCADA integration, flow measurement, and inspection & testing services in Fahaheel, Kuwait — ISO 9001, ISO 14001, ISO 45001, UASL & Accurate certified — serving oil & gas, power, and industrial sectors across the GCC.",
     url: "/industrial-automation-services-kuwait/",
   },
   twitter: {
     card: "summary_large_image",
     title: "Industrial Automation Services Kuwait | Texas Technical Services",
     description:
-      "Industrial automation, PLC & SCADA integration, flow measurement, and inspection services in Kuwait — Texas Technical Services, Fahaheel.",
+      "Industrial automation, PLC & SCADA integration, flow measurement, and inspection services in Kuwait — ISO 9001, ISO 14001, ISO 45001, UASL & Accurate certified — Texas Technical Services, Fahaheel.",
   },
   keywords: [
     "industrial automation companies in Kuwait",
@@ -34,6 +35,11 @@ export const metadata: Metadata = {
     "automation and engineering services Fahaheel",
     "industrial automation Kuwait",
     "automation company Kuwait",
+    "ISO 9001 certified company Kuwait",
+    "ISO 14001 environmental management Kuwait",
+    "ISO 45001 occupational safety Kuwait",
+    "UASL accredited certification Kuwait",
+    "Accurate certified industrial company Kuwait",
   ],
 };
 
@@ -53,7 +59,7 @@ const services = [
   {
     Icon: ShieldCheck,
     title: "Inspection & Testing Services",
-    body: "As a leading industrial inspection and testing company in Kuwait, we offer NDT (UT, MT, PT, RT, VI), mechanical testing, phased array ultrasonic inspection, and QA consultancy. Our ISO 9001:2015 certified processes ensure the highest quality standards for your critical assets.",
+    body: "As a leading industrial inspection and testing company in Kuwait, we offer NDT (UT, MT, PT, RT, VI), mechanical testing, phased array ultrasonic inspection, and QA consultancy. Our ISO 9001, ISO 14001, ISO 45001, UASL & Accurate certified processes ensure the highest quality standards for your critical assets.",
     href: "/service/inspection-testing/",
   },
 ];
@@ -82,7 +88,7 @@ const faqItems = [
   },
   {
     q: "Which industries do you serve in Kuwait?",
-    a: "We serve oil and gas (upstream, midstream, downstream), refinery and petrochemical plants, power generation and distribution, LNG terminals, water and wastewater treatment facilities, cement and metal production, and industrial manufacturing sectors across Kuwait. Our ISO 9001:2015, ISO 14001:2015, and ISO 45001:2018 certifications ensure compliance with the highest industry standards.",
+    a: "We serve oil and gas (upstream, midstream, downstream), refinery and petrochemical plants, power generation and distribution, LNG terminals, water and wastewater treatment facilities, cement and metal production, and industrial manufacturing sectors across Kuwait. Our ISO 9001, ISO 14001, ISO 45001, UASL & Accurate certifications ensure compliance with the highest industry standards.",
   },
   {
     q: "What PLC and SCADA systems do you work with?",
@@ -193,6 +199,21 @@ export default function IndustrialAutomationKuwaitPage() {
                 <p className="text-2xl font-bold text-[#e7212b] leading-none">{stat.num}</p>
                 <p className="text-[12px] text-white/30 mt-1.5 tracking-wide">{stat.label}</p>
               </div>
+            ))}
+          </div>
+
+          {/* Certification Badges */}
+          <div className="mt-12 flex items-center justify-center gap-6 flex-wrap">
+            {[
+              { src: "/about/cert-iso9001.png", alt: "ISO 9001:2015 Certified" },
+              { src: "/about/cert-iso14001.png", alt: "ISO 14001:2015 Certified" },
+              { src: "/about/cert-iso45001.png", alt: "ISO 45001:2018 Certified" },
+              { src: "/about/cert-uasl.png", alt: "UASL Accredited" },
+              { src: "/about/cert-accurate-white.png", alt: "Accurate Certified" },
+            ].map((badge) => (
+              <Link key={badge.alt} href="/certifications/" className="shrink-0 hover:scale-110 transition-transform duration-200">
+                <Image src={badge.src} alt={badge.alt} width={40} height={40} className="h-10 w-10 object-contain" />
+              </Link>
             ))}
           </div>
         </div>

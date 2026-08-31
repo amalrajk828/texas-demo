@@ -33,7 +33,7 @@ export default function G4WhatWeDo() {
               <Image src="/our-team/Oil-Gas.jpg" alt="Oil & Gas" fill sizes="(max-width: 1024px) 100vw, 400px" className="object-cover" quality={85} />
               <div className="absolute inset-0" style={{ background: "linear-gradient(to top, rgba(0,0,0,0.5), transparent 60%)" }} />
               <div className="absolute bottom-5 left-5 right-5">
-                <p className="text-white text-[10px] font-bold tracking-[3px] uppercase mb-1">ISO 9001:2015 Certified</p>
+                <p className="text-white text-[10px] font-bold tracking-[3px] uppercase mb-1">ISO 9001 · 14001 · 45001 · UASL · Accurate Certified</p>
                 <p className="text-white/60 text-[12px]">Established 2008 · Kuwait & Dubai</p>
               </div>
               <div className="absolute top-0 left-0 right-0 h-[4px]" style={{ background: "var(--color-brand-red)" }} />

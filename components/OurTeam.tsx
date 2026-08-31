@@ -6,8 +6,8 @@ import { ThemePrimaryLink } from "@/components/ThemeButton";
 
 const HIGHLIGHTS = [
   { Icon: Users,       label: "Expert Engineers"        },
-  { Icon: Award,       label: "ISO 9001:2015 Certified" },
-  { Icon: ShieldCheck, label: "Industry Compliance"     },
+  { Icon: Award,       label: "ISO 9001 · 14001 · 45001 Certified" },
+  { Icon: ShieldCheck, label: "UASL & Accurate Certified" },
 ];
 
 export default function OurTeam() {

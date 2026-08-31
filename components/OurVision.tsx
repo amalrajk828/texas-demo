@@ -241,7 +241,7 @@ export default function OurVision() {
             className="text-[13px] font-medium tracking-[2px] uppercase"
             style={{ color: "color-mix(in srgb, var(--color-brand-navy) 30%, transparent)" }}
           >
-            ISO 9001:2015 Certified · Established 2008 · Kuwait &amp; Dubai
+            ISO 9001 · ISO 14001 · ISO 45001 · UASL · Accurate Certified · Est. 2008 · Kuwait &amp; Dubai
           </p>
         </motion.div>
 

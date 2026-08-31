@@ -151,7 +151,7 @@ export default function ServicesConstruction() {
                   <span className="text-white text-[9px] font-bold tracking-[0.5px] text-center leading-tight">ISO<br/>9001</span>
                 </div>
                 <div>
-                  <p className="text-white text-[13px] font-semibold">ISO 9001:2015 &amp; ISO 14001:2015 Certified</p>
+                  <p className="text-white text-[13px] font-semibold">ISO 9001 · ISO 14001 · ISO 45001 · UASL · Accurate Certified</p>
                   <p className="text-white/35 text-[12px] mt-0.5">All construction work delivered under certified quality management systems.</p>
                 </div>
               </div>
