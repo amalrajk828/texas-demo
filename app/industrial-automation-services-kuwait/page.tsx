@@ -114,7 +114,7 @@ export default function IndustrialAutomationKuwaitPage() {
       <FaqPageJsonLd items={faqItems} />
       <SpeakableJsonLd headline="Industrial Automation Services Kuwait — PLC, SCADA & Flow Measurement" />
       {/* ══ HERO ════════════════════════════════════════════ */}
-      <section className="relative bg-[#000000] blueprint-grid blueprint-dot-grid overflow-hidden pt-32 pb-20 lg:pb-28">
+      <section className="relative bg-[#000000] blueprint-grid blueprint-dot-grid overflow-hidden pt-32 pb-8 lg:pb-10">
         <div
           className="absolute inset-0 pointer-events-none"
           style={{
@@ -203,7 +203,7 @@ export default function IndustrialAutomationKuwaitPage() {
           </div>
 
           {/* Certification Badges */}
-          <div className="mt-12 flex items-center justify-center gap-6 flex-wrap">
+          <div className="mt-6 flex items-center justify-center gap-5 flex-wrap">
             {[
               { src: "/about/cert-iso9001.png", alt: "ISO 9001:2015 Certified" },
               { src: "/about/cert-iso14001.png", alt: "ISO 14001:2015 Certified" },
@@ -211,8 +211,8 @@ export default function IndustrialAutomationKuwaitPage() {
               { src: "/about/cert-uasl.png", alt: "UASL Accredited" },
               { src: "/about/cert-accurate-white.png", alt: "Accurate Certified" },
             ].map((badge) => (
-              <Link key={badge.alt} href="/certifications/" className="shrink-0 hover:scale-110 transition-transform duration-200">
-                <Image src={badge.src} alt={badge.alt} width={40} height={40} className="h-10 w-10 object-contain" />
+              <Link key={badge.alt} href="/certifications/" className="relative w-16 h-16 block hover:scale-110 transition-transform duration-200">
+                <Image src={badge.src} alt={badge.alt} fill className="object-contain" sizes="64px" />
               </Link>
             ))}
           </div>
@@ -220,7 +220,7 @@ export default function IndustrialAutomationKuwaitPage() {
       </section>
 
       {/* ══ OUR SERVICES IN KUWAIT ═══════════════════════════ */}
-      <section className="relative bg-[#f4f5f8] py-24 lg:py-32 overflow-hidden">
+      <section className="relative bg-[#f4f5f8] pt-12 pb-24 lg:pt-16 lg:pb-32 overflow-hidden">
         <div
           className="absolute top-0 left-1/2 -translate-x-1/2 w-[600px] h-[1px] pointer-events-none"
           style={{
