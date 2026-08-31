@@ -24,7 +24,7 @@ export default function G4WhatWeDo() {
               <span className="text-[11px] font-bold tracking-[3.5px] uppercase" style={{ color: "#0E7490" }}>What We Do</span>
             </div>
             <h2 className="text-[2.8rem] sm:text-[3.4rem] font-black leading-[1.05] tracking-tight mb-6" style={{ color: "var(--g-heading)" }}>
-              Precision<br />Solutions
+              Precision Solutions
             </h2>
             <p className="text-[17px] leading-[1.9] mb-8" style={{ color: "var(--g-muted)" }}>
               Texas Technical Services delivers precision-engineered solutions across flow measurement, inspection, and industrial automation — trusted by leading operators since 2008.

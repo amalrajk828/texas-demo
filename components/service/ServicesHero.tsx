@@ -73,8 +73,7 @@ export default function ServicesHero() {
               className="text-4xl sm:text-5xl lg:text-[3.4rem] font-bold text-white leading-[1.12] mb-6"
             >
               Precision Services for{" "}
-              <em className="not-italic text-white">Industrial</em>
-              <br />
+              <em className="not-italic text-white">Industrial</em>{" "}
               Excellence
             </h1>
 

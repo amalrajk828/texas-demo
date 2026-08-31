@@ -373,9 +373,7 @@ export default function AboutPage() {
                 COMPANY OVERVIEW
               </span>
               <h1 className="mt-3 text-[2rem] lg:text-[2.5rem] font-bold text-[#181D4E] leading-tight">
-                In Quality
-                <br />
-                We Believe
+                In Quality We Believe
               </h1>
               <div className="mt-6 space-y-4 text-[15px] text-gray-600 leading-[1.75]">
                 <p>
@@ -534,9 +532,7 @@ export default function AboutPage() {
                 What we offer
               </span>
               <h2 className="mt-3 text-3xl lg:text-4xl font-bold text-white leading-tight">
-                Innovative Solutions for
-                <br />
-                Business Excellence
+                Innovative Solutions for Business Excellence
               </h2>
             </div>
             <div className="flex items-center">

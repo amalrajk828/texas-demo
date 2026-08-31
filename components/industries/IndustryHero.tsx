@@ -68,8 +68,7 @@ export default function IndustryHero({
             </div>
 
             <h1 className="text-3xl sm:text-4xl lg:text-[2.75rem] font-medium text-white leading-[1.15] mb-5">
-              {name}
-              <br />
+              {name}{" "}
               <em className="not-italic text-white">Industry</em>
             </h1>
 

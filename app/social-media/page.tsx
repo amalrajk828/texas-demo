@@ -331,8 +331,7 @@ export default function SocialMediaPage() {
                 </span>
               </div>
               <h1 className="text-4xl sm:text-5xl lg:text-[3.5rem] font-medium text-white leading-[1.15] mb-5">
-                Connect With
-                <br />
+                Connect With{" "}
                 <em className="not-italic text-current">Us</em>
               </h1>
               <p className="text-white/70 text-base sm:text-lg leading-relaxed">

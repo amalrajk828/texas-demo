@@ -161,8 +161,7 @@ export default function ClientsPage() {
                 </span>
               </div>
               <h1 className="text-4xl sm:text-5xl lg:text-[3.5rem] font-medium text-white leading-[1.15] mb-5">
-                Companies That
-                <br />
+                Companies That{" "}
                 <em className="not-italic text-white">Trust Us</em>
               </h1>
               <p className="text-white/70 text-base sm:text-lg leading-relaxed max-w-lg">

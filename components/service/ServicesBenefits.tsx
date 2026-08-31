@@ -50,9 +50,7 @@ export default function ServicesBenefits() {
             </span>
           </div>
           <h2 className="text-4xl sm:text-[2.8rem] font-bold text-[#0B0D26] leading-[1.12] mb-4">
-            Why We Are the Best
-            <br />
-            to Do Your Next Job
+            Why We Are the Best to Do Your Next Job
           </h2>
           <p className="text-gray-500 text-[15px] leading-relaxed">
             We blend technology and quality workmanship with personal, one-on-one service.
