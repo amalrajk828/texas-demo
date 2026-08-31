@@ -8,7 +8,7 @@ import { FaqPageJsonLd } from "@/components/schema/FaqPageJsonLd";
 import PageFaqSection from "@/components/PageFaqSection";
 import { certificationsFaq } from "@/lib/pageFaqData";
 export const metadata: Metadata = {
-  title: "Certifications — ISO 9001, 14001, 45001",
+  title: "Certifications — ISO 9001, 14001, 45001, Accurate",
   description:
     "Texas Technical Services holds ISO 9001:2015, ISO 14001:2015, and ISO 45001:2018 certifications — demonstrating our commitment to quality, environmental responsibility, and workplace safety across Kuwait and the GCC.",
   alternates: { canonical: "/certifications/" },
@@ -21,18 +21,19 @@ export const metadata: Metadata = {
     "Texas Technical Services certifications",
     "UASL accredited certification Kuwait",
     "ISO certified industrial company GCC",
+    "International Accurate certification",
   ],
   openGraph: {
-    title: "Certifications | ISO 9001, ISO 14001, ISO 45001 | TTS",
+    title: "Certifications | ISO 9001, ISO 14001, ISO 45001, Accurate | TTS",
     description:
-      "ISO 9001:2015, ISO 14001:2015, and ISO 45001:2018 certifications — quality, environmental, and safety management systems.",
+      "ISO 9001:2015, ISO 14001:2015, ISO 45001:2018, and International Accurate certifications — quality, environmental, safety, and precision management systems.",
     url: "/certifications/",
   },
   twitter: {
     card: "summary_large_image",
-    title: "Certifications | ISO 9001, ISO 14001, ISO 45001 | TTS",
+    title: "Certifications | ISO 9001, ISO 14001, ISO 45001, Accurate | TTS",
     description:
-      "ISO 9001:2015, ISO 14001:2015, and ISO 45001:2018 certifications — quality, environmental, and safety management systems.",
+      "ISO 9001:2015, ISO 14001:2015, ISO 45001:2018, and International Accurate certifications — quality, environmental, safety, and precision management systems.",
   },
 };
 
@@ -69,13 +70,21 @@ const certifications = [
     description:
       "All certifications verified by a UASL accredited certification body, ensuring independent and internationally recognized validation of our management systems.",
   },
+  {
+    src: "/about/cert-accurate.png",
+    alt: "International Accurate Certification",
+    title: "Accurate Certified",
+    subtitle: "International Accreditation",
+    description:
+      "Internationally recognized accreditation validating our commitment to precision, reliability, and globally accepted quality standards.",
+  },
 ];
 
 export default function CertificationsPage() {
   return (
     <div className="min-h-screen bg-white text-[#333]">
       <BreadcrumbJsonLd items={[{ name: "Home", href: "/" }, { name: "Certifications", href: "/certifications/" }]} />
-      <SpeakableJsonLd headline="Certifications — ISO 9001, ISO 14001, ISO 45001 | Texas Technical Services" />
+      <SpeakableJsonLd headline="Certifications — ISO 9001, ISO 14001, ISO 45001, Accurate | Texas Technical Services" />
 
       {/* Hero */}
       <section className="relative bg-[#0B0D26] overflow-hidden pt-32 pb-16 border-b border-white/10">
@@ -140,6 +149,37 @@ export default function CertificationsPage() {
                   </div>
                 </div>
               </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Certificate Documents */}
+      <section className="py-16 lg:py-20 border-t border-gray-100">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6">
+          <div className="flex items-center gap-2 mb-6">
+            <span className="w-5 h-1 bg-[#e7212b]" />
+            <span className="text-[#0891B2] text-[12px] font-semibold tracking-[3px] uppercase">Official Documents</span>
+          </div>
+          <h2 className="text-2xl sm:text-3xl font-bold text-[#0B0D26] mb-8">
+            View Our Certificates
+          </h2>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+            {[
+              { src: "/about/iso_9001.jpeg", alt: "ISO 9001:2015 Certificate", title: "ISO 9001:2015" },
+              { src: "/about/iso_14001.jpeg", alt: "ISO 14001:2015 Certificate", title: "ISO 14001:2015" },
+              { src: "/about/iso_45001.jpeg", alt: "ISO 45001:2018 Certificate", title: "ISO 45001:2018" },
+            ].map((cert) => (
+              <a key={cert.src} href={cert.src} target="_blank" rel="noopener noreferrer"
+                 className="group block border border-gray-200 rounded-2xl overflow-hidden hover:shadow-lg transition-all duration-300">
+                <div className="relative aspect-[3/4]">
+                  <Image src={cert.src} alt={cert.alt} fill className="object-contain" sizes="(max-width: 768px) 100vw, 33vw" />
+                </div>
+                <div className="p-4 text-center">
+                  <p className="font-semibold text-[#0B0D26] group-hover:text-[#e7212b] transition-colors">{cert.title}</p>
+                  <p className="text-gray-400 text-[13px] mt-1">Click to view full certificate</p>
+                </div>
+              </a>
             ))}
           </div>
         </div>

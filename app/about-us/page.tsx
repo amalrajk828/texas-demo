@@ -211,6 +211,7 @@ const certifications = [
   { src: "/about/cert-iso9001.png", alt: "ISO 9001:2015" },
   { src: "/about/cert-iso45001.png", alt: "ISO 45001:2018" },
   { src: "/about/cert-uasl.png", alt: "UASL Accredited" },
+  { src: "/about/cert-accurate.png", alt: "International Accurate Certification" },
 ];
 
 export default function AboutPage() {
@@ -622,7 +623,7 @@ export default function AboutPage() {
       {/* ═══ CERTIFICATIONS ═══════════════════════════════════════ */}
       <section className="relative z-10 py-12 border-t border-black/5 bg-transparent">
         <div className="max-w-5xl mx-auto px-4 sm:px-6">
-          <div className="grid grid-cols-2 sm:grid-cols-4 gap-8 items-center">
+          <div className="grid grid-cols-2 sm:grid-cols-5 gap-8 items-center">
             {certifications.map((c) => (
               <div key={c.alt} className="flex justify-center">
                 <div className="relative h-20 w-28">
