@@ -1,11 +1,11 @@
 "use client";
 
-import { useEffect } from "react";
+import { useEffect, useLayoutEffect } from "react";
 import { usePathname } from "next/navigation";
 
 function ScrollReset() {
   const pathname = usePathname();
-  useEffect(() => {
+  useLayoutEffect(() => {
     if (typeof window === "undefined") return;
     window.scrollTo(0, 0);
     const lenis = (window as any).lenis;

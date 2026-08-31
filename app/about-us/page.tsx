@@ -382,7 +382,8 @@ export default function AboutPage() {
                   exceeding expectations and building lasting partnerships
                   through trust and reliability. Our integrated management
                   system is certified to ISO 9001:2015, ISO 14001:2015, and ISO
-                  45001:2018 by a UASL accredited certification body.
+                  45001:2018 by a UASL accredited certification body, and also
+                  Accurate certified.
                 </p>
                 <p>
                   We deliver comprehensive end-to-end solutions through our
@@ -636,6 +637,37 @@ export default function AboutPage() {
                   />
                 </div>
               </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* ═══ CERTIFICATE DOCUMENTS ═══════════════════════════════════════ */}
+      <section className="relative z-10 py-16 border-t border-black/5 bg-transparent">
+        <div className="max-w-5xl mx-auto px-4 sm:px-6">
+          <div className="flex items-center gap-2 mb-8">
+            <span className="w-5 h-1 bg-[#e7212b]" />
+            <span className="text-[#0891B2] text-[12px] font-semibold tracking-[3px] uppercase">Official Documents</span>
+          </div>
+          <h2 className="text-2xl sm:text-3xl font-bold text-[#0B0D26] mb-8">
+            View Our Certificates
+          </h2>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+            {[
+              { src: "/about/iso_9001.jpeg", alt: "ISO 9001:2015 Certificate", title: "ISO 9001:2015" },
+              { src: "/about/iso_14001.jpeg", alt: "ISO 14001:2015 Certificate", title: "ISO 14001:2015" },
+              { src: "/about/iso_45001.jpeg", alt: "ISO 45001:2018 Certificate", title: "ISO 45001:2018" },
+            ].map((cert) => (
+              <a key={cert.src} href={cert.src} target="_blank" rel="noopener noreferrer"
+                 className="group block border border-gray-200 rounded-2xl overflow-hidden hover:shadow-lg transition-all duration-300">
+                <div className="relative aspect-[3/4]">
+                  <Image src={cert.src} alt={cert.alt} fill className="object-contain" sizes="(max-width: 768px) 100vw, 33vw" />
+                </div>
+                <div className="p-4 text-center">
+                  <p className="font-semibold text-[#0B0D26] group-hover:text-[#e7212b] transition-colors">{cert.title}</p>
+                  <p className="text-gray-400 text-[13px] mt-1">Click to view full certificate</p>
+                </div>
+              </a>
             ))}
           </div>
         </div>

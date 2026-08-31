@@ -15,7 +15,7 @@ const SLIDES = [
     type: "image" as const,
     src: "/homevideos/homebannerimage.jpg",
     alt: "Texas Technical Services — industrial flow measurement and control systems facility",
-    eyebrow: "ISO 9001:2015 Certified · Est. 2008",
+    eyebrow: "ISO 9001 · ISO 14001 · ISO 45001 · UASL · Accurate Certified · Est. 2008",
     heading: ["Welcome to", "Texas Technical", "Services"],
     sub: "In quality, we believe. Providing flow measurement, inspection, and automation solutions for the world's most demanding industrial environments.",
     tag: "Industrial Services",
@@ -410,6 +410,15 @@ export default function HeroSlider() {
               {/* Red corner accent */}
               <div className="absolute top-0 left-0 w-12 h-[2px]" style={{ background: "var(--color-brand-red)" }} />
               <div className="absolute top-0 left-0 w-[2px] h-12" style={{ background: "var(--color-brand-red)" }} />
+
+              {/* ISO Badge overlay */}
+              <div className="absolute bottom-3 left-3 flex items-center gap-2">
+                {["/about/cert-iso9001.png", "/about/cert-iso14001.png", "/about/cert-iso45001.png", "/about/cert-uasl.png", "/about/cert-accurate-white.png"].map((src) => (
+                  <Link key={src} href="/certifications/" className="relative w-16 h-16 block">
+                    <Image src={src} alt="" fill className="object-contain" sizes="64px" />
+                  </Link>
+                ))}
+              </div>
             </motion.div>
           </AnimatePresence>
 

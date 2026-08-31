@@ -119,8 +119,9 @@ export default function Footer() {
           </Link>
           <div className="flex-1 min-w-0">
             <p className="text-white/70 text-[14px] leading-[1.8] mb-5 font-medium">
-              ISO 9001:2015 certified company established in 2008. Flow measurement,
-              automation &amp; inspection for oil &amp; gas and industrial sectors.
+              ISO 9001, ISO 14001, ISO 45001, UASL &amp; Accurate certified company
+              established in 2008. Flow measurement, automation &amp; inspection
+              for oil &amp; gas and industrial sectors.
             </p>
             <a
               href={`mailto:${SITE_EMAIL}`}
@@ -333,7 +334,7 @@ export default function Footer() {
               { src: "/about/cert-uasl.png", alt: "UASL Certification" },
               { src: "/about/cert-accurate-white.png", alt: "International Accurate Certification" },
             ].map((cert) => (
-              <div key={cert.src} className="relative h-16 w-16 sm:h-20 sm:w-20">
+              <div key={cert.src} className="relative h-[72px] w-[72px] sm:h-20 sm:w-20">
                 <Image src={cert.src} alt={cert.alt} fill className="object-contain" sizes="80px" />
               </div>
             ))}
@@ -348,7 +349,7 @@ export default function Footer() {
             TEXAS TECHNICAL SERVICE COMPANY W.L.L. © {new Date().getFullYear()}. All Rights Reserved.
           </p>
           <div className="flex items-center gap-4">
-            <span className="text-[11px] font-medium" style={{ color: "#FF5252" }}>ISO 9001:2015 Certified</span>
+            <span className="text-[11px] font-medium" style={{ color: "#FF5252" }}>ISO 9001 · ISO 14001 · ISO 45001 · UASL · Accurate Certified</span>
           </div>
         </div>
       </div>

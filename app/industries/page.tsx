@@ -173,7 +173,7 @@ export default function IndustriesPage() {
               <div className="flex items-center gap-2 mb-5">
                 <span className="w-5 h-px bg-[#0891B2]" />
                 <span className="text-[#0891B2] text-[10px] font-medium tracking-[2.5px] uppercase">
-                  ISO 9001:2015 Certified · Est. 2008
+                  ISO 9001 · ISO 14001 · ISO 45001 · UASL · Accurate Certified · Est. 2008
                 </span>
               </div>
 

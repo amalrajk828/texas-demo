@@ -1,5 +1,7 @@
 "use client";
 /* Kit D — Grey: light glassmorphic stat cards on soft light gradient */
+import Image from "next/image";
+import Link from "next/link";
 import { useRef, useEffect, useState } from "react";
 import { motion, useInView, useSpring, useTransform, useMotionValue } from "framer-motion";
 import { useIsMobile } from "@/hooks/useIsMobile";
@@ -86,8 +88,15 @@ export default function GreyVision() {
         <motion.div initial={{ opacity: 0, y: 10 }} animate={inView ? { opacity: 1, y: 0 } : {}} transition={{ duration: 0.8, delay: 0.9 }}
           className="text-center mt-14 pt-10 border-t" style={{ borderColor: "rgba(0,0,0,0.08)" }}>
           <p className="text-[12px] font-semibold tracking-[2.5px] uppercase text-[#4B5563]">
-            ISO 9001:2015 Certified · Established 2008 · Kuwait & Dubai
+            ISO 9001 · ISO 14001 · ISO 45001 · UASL · Accurate Certified · Est. 2008 · Kuwait & Dubai
           </p>
+          <div className="flex items-center justify-center gap-5 mt-4">
+            {["/about/cert-iso9001.png", "/about/cert-iso14001.png", "/about/cert-iso45001.png", "/about/cert-uasl.png", "/about/cert-accurate.png"].map((src) => (
+              <Link key={src} href="/certifications/" className="relative w-16 h-16 block">
+                <Image src={src} alt="" fill className="object-contain" sizes="64px" />
+              </Link>
+            ))}
+          </div>
         </motion.div>
       </div>
     </section>

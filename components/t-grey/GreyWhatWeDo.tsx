@@ -236,14 +236,19 @@ export default function GreyWhatWeDo() {
 
               {/* Red Badge - ISO 9001:2015 */}
               <div 
-                className="absolute top-4 left-4 rounded-xl px-4 py-3 shadow-lg z-10" 
+                className="absolute top-4 left-4 rounded-xl px-4 py-3 shadow-lg z-10 flex items-center gap-3" 
                 style={{ 
                   background: "var(--color-brand-red)", 
                   boxShadow: "0 8px 24px color-mix(in srgb, var(--color-brand-red) 40%, transparent)" 
                 }}
               >
-                <p className="text-white text-[10px] font-bold tracking-[2px] uppercase leading-none">ISO 9001:2015</p>
-                <p className="text-white/70 text-[11px] mt-1 leading-none">Certified · Est. 2008</p>
+                <Link href="/certifications/" className="relative w-16 h-16 shrink-0 block">
+                  <Image src="/about/cert-iso9001.png" alt="ISO 9001:2015" fill className="object-contain" sizes="64px" />
+                </Link>
+                <div>
+                  <p className="text-white text-[10px] font-bold tracking-[2px] uppercase leading-none">5 Certifications</p>
+                  <p className="text-white/70 text-[11px] mt-1 leading-none">ISO · UASL · Accurate</p>
+                </div>
               </div>
 
             </div>

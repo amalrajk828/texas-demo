@@ -105,6 +105,22 @@ export default async function BlogArticlePage({ params }: PageProps) {
         slug={slug}
       />
 
+      {/* Certification Trust Strip */}
+      <section className="py-3 border-b border-gray-100 bg-white">
+        <div className="max-w-4xl mx-auto px-4 sm:px-6">
+          <div className="flex items-center justify-center gap-4">
+            <div className="flex items-center gap-3">
+              {["/about/cert-iso9001.png", "/about/cert-iso14001.png", "/about/cert-iso45001.png", "/about/cert-uasl.png", "/about/cert-accurate.png"].map((src) => (
+                <Link key={src} href="/certifications/" className="relative w-16 h-16 block">
+                  <Image src={src} alt="" fill className="object-contain" sizes="64px" />
+                </Link>
+              ))}
+            </div>
+            <p className="text-[11px] text-gray-400 font-medium">ISO 9001 · ISO 14001 · ISO 45001 · UASL · Accurate Certified</p>
+          </div>
+        </div>
+      </section>
+
       {/* Article Body */}
       <main className="max-w-7xl mx-auto px-4 sm:px-6 py-16 lg:py-24">
         {/* Featured Hero Image */}

@@ -1,4 +1,6 @@
 import type { Metadata } from "next";
+import Image from "next/image";
+import Link from "next/link";
 import ServicesHero from "@/components/service/ServicesHero";
 import ServicesAllGrid from "@/components/service/ServicesAllGrid";
 import ServicesCtaBanner from "@/components/service/ServicesCtaBanner";
@@ -75,6 +77,32 @@ export default function ServicesPage() {
         areaServed={["Kuwait", "UAE", "Saudi Arabia", "Bahrain", "Qatar", "Oman"]}
       />
       <ServicesHero />
+
+      {/* Certification Trust Strip */}
+      <section className="py-8 border-b border-gray-100 bg-white">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6">
+          <div className="flex flex-col sm:flex-row items-center justify-center gap-6 sm:gap-10">
+            <div className="flex items-center gap-5">
+              {[
+                { src: "/about/cert-iso9001.png", alt: "ISO 9001:2015" },
+                { src: "/about/cert-iso14001.png", alt: "ISO 14001:2015" },
+                { src: "/about/cert-iso45001.png", alt: "ISO 45001:2018" },
+                { src: "/about/cert-uasl.png", alt: "UASL Accredited" },
+                { src: "/about/cert-accurate.png", alt: "Accurate Certified" },
+              ].map((cert) => (
+                <Link key={cert.src} href="/certifications/" className="relative w-16 h-16 block">
+                  <Image src={cert.src} alt={cert.alt} fill className="object-contain" sizes="64px" />
+                </Link>
+              ))}
+            </div>
+            <div className="text-center sm:text-left">
+              <p className="text-[13px] font-semibold text-[#0B0D26]">ISO Certified Services</p>
+              <p className="text-[12px] text-gray-400 mt-0.5">Quality · Environmental · Safety Management</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
       <ServicesAllGrid />
       <FaqPageJsonLd items={servicesListingFaq} />
       <PageFaqSection items={servicesListingFaq} title="Questions About" highlight="Our Services" />

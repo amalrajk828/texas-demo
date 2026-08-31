@@ -44,7 +44,7 @@ const HERO_STATS = [
   { value: "50+",  label: "Technical Articles" },
   { value: "3",    label: "Engineering Pillars" },
   { value: "2008", label: "Est. Year" },
-  { value: "ISO",  label: "9001:2015 Certified" },
+  { value: "5",  label: "Industry Certifications" },
 ];
 
 const ALL = "All";
@@ -63,6 +63,7 @@ export default function BlogPageContent({ allPosts }: Props) {
   const [activeFilter, setActiveFilter] = useState(ALL);
   const [searchQuery, setSearchQuery] = useState("");
   const [currentPage, setCurrentPage] = useState(1);
+  const isFirstRender = useRef(true);
 
   const categories = [ALL, ...Array.from(new Set(gridPosts.map((p) => p.category)))];
 
@@ -87,8 +88,12 @@ export default function BlogPageContent({ allPosts }: Props) {
     setCurrentPage(1);
   }, [activeFilter, searchQuery]);
 
-  // Scroll to article grid on every page change
+  // Scroll to article grid on every page change (skip initial render)
   useLayoutEffect(() => {
+    if (isFirstRender.current) {
+      isFirstRender.current = false;
+      return;
+    }
     if (articlesSectionRef.current) {
       const y = articlesSectionRef.current.getBoundingClientRect().top + window.scrollY - 20;
       window.scrollTo({ top: y, behavior: "smooth" });
@@ -153,6 +158,22 @@ export default function BlogPageContent({ allPosts }: Props) {
                 </span>
               </div>
             ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Certification Trust Strip */}
+      <section className="py-3 border-b border-gray-100 bg-white">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6">
+          <div className="flex items-center justify-center gap-5">
+            <div className="flex items-center gap-4">
+              {["/about/cert-iso9001.png", "/about/cert-iso14001.png", "/about/cert-iso45001.png", "/about/cert-uasl.png", "/about/cert-accurate.png"].map((src) => (
+<Link key={src} href="/certifications/" className="relative w-16 h-16 block">
+                <Image src={src} alt="" fill className="object-contain" sizes="64px" />
+                </Link>
+              ))}
+            </div>
+            <p className="text-[12px] text-gray-400 font-medium">ISO 9001 · ISO 14001 · ISO 45001 · UASL · Accurate Certified</p>
           </div>
         </div>
       </section>

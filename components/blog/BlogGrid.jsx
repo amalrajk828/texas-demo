@@ -8,6 +8,7 @@ const POSTS_PER_PAGE = 6;
 
 export default function BlogGrid({ posts }) {
   const [currentPage, setCurrentPage] = useState(1);
+  const isFirstRender = React.useRef(true);
 
   const totalPages = Math.ceil(posts.length / POSTS_PER_PAGE);
   const startIndex = (currentPage - 1) * POSTS_PER_PAGE;
@@ -32,6 +33,10 @@ export default function BlogGrid({ posts }) {
   };
 
   useEffect(() => {
+    if (isFirstRender.current) {
+      isFirstRender.current = false;
+      return;
+    }
     scrollToSection();
   }, [currentPage]);
 
