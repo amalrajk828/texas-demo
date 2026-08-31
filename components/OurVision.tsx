@@ -210,10 +210,7 @@ export default function OurVision() {
             className="text-[clamp(1.75rem,4vw,2.9rem)] font-bold leading-[1.2] max-w-2xl mx-auto"
             style={{ color: "var(--color-brand-navy)" }}
           >
-            To be a prominent market leader and a{" "}
-            <span style={{ color: "var(--color-brand-red)" }}>
-              complete solution provider.
-            </span>
+            To be a prominent market leader and a complete solution provider.
           </motion.h2>
         </div>
 

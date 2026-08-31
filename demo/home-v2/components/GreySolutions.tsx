@@ -45,8 +45,7 @@ export default function GreySolutions() {
             className="text-[clamp(2.2rem,4.5vw,3.4rem)] font-black leading-[1.15] max-w-2xl mx-auto tracking-tight fade-up"
             style={{ color: "var(--g-heading)" }}
           >
-            Which proprietary platforms deliver{" "}
-            <span style={{ color: "var(--color-brand-red)" }}>proven results?</span>
+            Which proprietary platforms deliver proven results?
           </h2>
         </div>
 

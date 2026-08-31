@@ -12,18 +12,22 @@ export default function GreyCta() {
     >
       <div className="max-w-3xl mx-auto px-4 sm:px-6 text-center">
         <FadeSection delay={0}>
-          <p
-            className="text-[11px] font-bold tracking-[4px] uppercase mb-5"
-            style={{ color: "var(--g-muted)" }}
-          >
-            GET IN TOUCH
-          </p>
+          <div className="inline-flex items-center gap-3 mb-5">
+            <span className="w-6 h-px" style={{ background: "var(--color-brand-red)" }} />
+            <span
+              className="text-[11px] font-bold tracking-[4px] uppercase"
+              style={{ color: "var(--color-brand-red)" }}
+            >
+              GET IN TOUCH
+            </span>
+            <span className="w-6 h-px" style={{ background: "var(--color-brand-red)" }} />
+          </div>
         </FadeSection>
 
         <FadeSection delay={0.1}>
           <h2
             className="text-[2.6rem] sm:text-[3.2rem] font-black leading-[1.08] tracking-tight mb-5"
-            style={{ color: "var(--color-brand-red)" }}
+            style={{ color: "var(--g-heading)" }}
           >
             How can we solve your flow measurement challenge?
           </h2>

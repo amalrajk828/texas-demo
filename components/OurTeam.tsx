@@ -100,10 +100,7 @@ export default function OurTeam() {
               <h2
                 className="text-[clamp(2rem,4vw,2.8rem)] font-bold leading-[1.12] mb-6 text-white"
               >
-                Meet the people{" "}
-                <span style={{ color: "var(--color-brand-red)" }}>
-                  behind the scenes
-                </span>
+                Meet the people behind the scenes
               </h2>
             </div>
 
