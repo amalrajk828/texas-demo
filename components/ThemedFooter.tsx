@@ -67,8 +67,8 @@ export default function ThemedFooter() {
                 <p className="text-white/50 text-[10px] tracking-[3px] leading-none mt-1 font-medium">TECHNICAL SERVICES</p>
               </div>
             </Link>
-            <p className="text-white/40 text-sm leading-relaxed mb-4">
-              ISO 9001:2015 certified company established in 2008. Flow measurement,
+            <p className="text-white/70 text-sm leading-relaxed mb-4">
+              ISO 9001, ISO 14001, ISO 45001, UASL &amp; Accurate certified company established in 2008. Flow measurement,
               automation &amp; inspection for oil &amp; gas and industrial sectors.
             </p>
             <a href={`mailto:${SITE_EMAIL}`}
@@ -169,7 +169,7 @@ export default function ThemedFooter() {
       <div className="border-t border-white/[0.06]">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 py-4 flex flex-col sm:flex-row items-center justify-between gap-2">
           <p className="text-white/20 text-[11px]">TEXAS TECHNICAL SERVICE COMPANY W.L.L. © 2026. All Rights Reserved.</p>
-          <span className="text-[11px] font-medium" style={{ color: "var(--color-brand-red)" }}>ISO 9001:2015 Certified</span>
+          <span className="text-[11px] font-medium" style={{ color: "var(--color-brand-red)" }}>ISO 9001 · ISO 14001 · ISO 45001 · UASL · Accurate Certified</span>
         </div>
       </div>
     </footer>

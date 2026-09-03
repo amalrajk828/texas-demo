@@ -44,15 +44,13 @@ export default function ServicesBenefits() {
         {/* ── Header ── */}
         <div className="fade-up max-w-2xl mb-16">
           <div className="flex items-center gap-2.5 mb-4">
-            <span className="w-5 h-px bg-[#e7212b]" />
-            <span className="text-[#e7212b] text-[10px] font-semibold tracking-[3.5px] uppercase">
+            <span className="w-5 h-px bg-[#0891B2]" />
+            <span className="text-[#0891B2] text-[10px] font-semibold tracking-[3.5px] uppercase">
               Our Benefits
             </span>
           </div>
           <h2 className="text-4xl sm:text-[2.8rem] font-bold text-[#0B0D26] leading-[1.12] mb-4">
-            Why We Are the Best
-            <br />
-            to Do Your Next Job
+            Why We Are the Best to Do Your Next Job
           </h2>
           <p className="text-gray-500 text-[15px] leading-relaxed">
             We blend technology and quality workmanship with personal, one-on-one service.
@@ -96,7 +94,7 @@ export default function ServicesBenefits() {
                 </div>
                 <div>
                   <p className="text-white font-semibold text-[15px]">ISO 9001:2015 &amp; ISO 14001:2015 Certified</p>
-                  <p className="text-white/40 text-[13px] mt-0.5">Certified quality and environmental management · Est. 2008</p>
+                  <p className="text-white/70 text-[13px] mt-0.5">Certified quality and environmental management · Est. 2008</p>
                 </div>
               </div>
               <div className="flex flex-wrap gap-3">

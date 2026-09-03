@@ -15,8 +15,8 @@ export default function MetallurgicalContent() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6">
         <div className="fade-up mb-14">
           <div className="flex items-center gap-2.5 mb-4">
-            <span className="w-5 h-px bg-[#e7212b]" />
-            <span className="text-[#e7212b] text-[10px] font-semibold tracking-[3.5px] uppercase">Capabilities</span>
+            <span className="w-5 h-px bg-[#0891B2]" />
+            <span className="text-[#0891B2] text-[10px] font-semibold tracking-[3.5px] uppercase">Capabilities</span>
           </div>
           <h2 className="text-3xl sm:text-[2.4rem] font-bold text-[#0B0D26] leading-[1.15] max-w-2xl">
             PMI &amp; Metallurgical Analysis Capabilities
@@ -24,7 +24,7 @@ export default function MetallurgicalContent() {
         </div>
         <div className="fade-up mb-12">
           <div className="max-w-3xl">
-            <div className="flex items-center gap-2.5 mb-4"><span className="w-5 h-px bg-[#e7212b]" /><span className="text-[#e7212b] text-[10px] font-semibold tracking-[3.5px] uppercase">What We Do</span></div>
+            <div className="flex items-center gap-2.5 mb-4"><span className="w-5 h-px bg-[#0891B2]" /><span className="text-[#0891B2] text-[10px] font-semibold tracking-[3.5px] uppercase">What We Do</span></div>
             <h2 className="text-3xl sm:text-[2.2rem] font-bold text-[#0B0D26] leading-[1.15] mb-5">Material Identification and Metallurgical Analysis</h2>
             <p className="text-gray-500 text-[15px] leading-[1.85] mb-4">Positive material identification (PMI) is essential for verifying that the correct alloys have been installed — particularly in high-pressure, high-temperature, and sour service environments where material substitution can have catastrophic consequences. Our handheld XRF analysers and optical emission spectrometers (OES) provide rapid, non-destructive elemental analysis of ferrous and non-ferrous metals.</p>
             <p className="text-gray-500 text-[15px] leading-[1.85] mb-8">TTS supports clients across the oil and gas, petrochemical, and power generation sectors with PMI programmes that comply with API 578 and ASME BPVC requirements. Our metallurgical services also include microstructure examination, hardness testing, and corrosion resistance evaluation — providing comprehensive material characterisation for new installations, in-service assets, and failure investigations.</p>
@@ -48,9 +48,9 @@ export default function MetallurgicalContent() {
         <div className="fade-up d1">
           <div className="rounded-2xl bg-[#000000] blueprint-grid blueprint-dot-grid p-8 sm:p-10 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-6">
             <div>
-              <p className="text-white/40 text-[10px] tracking-[2px] uppercase mb-2">Standards &amp; Codes</p>
+              <p className="text-white/70 text-[10px] tracking-[2px] uppercase mb-2">Standards &amp; Codes</p>
               <p className="text-white font-semibold text-lg">ASME B31.3 · API 578 · ASTM E1476 · ISO 14284</p>
-              <p className="text-white/45 text-sm mt-1">Certified PMI technicians — Kuwait &amp; Dubai</p>
+              <p className="text-white/70 text-sm mt-1">Certified PMI technicians — Kuwait &amp; Dubai</p>
             </div>
             <Link href="#contact" className="inline-flex items-center gap-2 bg-[#e7212b] hover:bg-[#aa0b1b] text-white font-semibold px-6 py-3 rounded-lg transition-colors duration-200 text-sm shrink-0">
               Request PMI Services

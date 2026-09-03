@@ -32,15 +32,15 @@ export default function ServicesCtaBanner() {
           <div>
             <div className="fade-up">
               <div className="flex items-center gap-2.5 mb-5">
-                <span className="w-5 h-px bg-[#e7212b]" />
-                <span className="text-[#e7212b] text-[10px] font-semibold tracking-[3.5px] uppercase">
+                <span className="w-5 h-px bg-[#0891B2]" />
+                <span className="text-[#0891B2] text-[10px] font-semibold tracking-[3.5px] uppercase">
                   Get in Touch
                 </span>
               </div>
               <h2 className="text-4xl sm:text-[2.8rem] font-bold text-white leading-[1.12] mb-5">
                 Have a Project in Mind?
               </h2>
-              <p className="text-white/50 text-[15px] leading-relaxed max-w-xl mb-8">
+              <p className="text-white/70 text-[15px] leading-relaxed max-w-xl mb-8">
                 Talk to our team about your requirements. Our Kuwait and Dubai offices are ready
                 to help with flow measurement, automation, inspection, and construction projects
                 of any scale.

@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
-import { Gauge, ClipboardCheck, Cpu } from "lucide-react";
+import { Gauge, ClipboardCheck, Cpu, ChevronRight } from "lucide-react";
 import { BreadcrumbJsonLd } from "@/components/schema/BreadcrumbJsonLd";
 import {
   ReviewJsonLd,
@@ -108,6 +108,7 @@ const certifications = [
   { src: "/about/cert-iso9001.png", alt: "ISO 9001:2015" },
   { src: "/about/cert-iso45001.png", alt: "ISO 45001:2018" },
   { src: "/about/cert-uasl.png", alt: "UASL Accredited" },
+  { src: "/about/cert-accurate.png", alt: "International Accurate Certification" },
 ];
 
 export default function AboutPage() {
@@ -206,6 +207,13 @@ export default function AboutPage() {
         }}
       />
 
+      {/* ═══ BREADCRUMB ═══════════════════════════════════════════ */}
+      <nav className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 pt-28 pb-4 flex items-center gap-2 text-[14px] text-black/50">
+        <Link href="/" className="hover:text-black transition-colors">Home</Link>
+        <ChevronRight className="w-3.5 h-3.5 text-black/30" />
+        <span className="text-black/70">About Us</span>
+      </nav>
+
       {/* ═══ COMMITMENT ═══════════════════════════════════════════ */}
       <section className="relative z-10 bg-transparent pt-[108px] lg:pt-[116px] pb-16 lg:pb-24">
         <div className="max-w-7xl mx-auto px-4 sm:px-6">
@@ -224,7 +232,7 @@ export default function AboutPage() {
                   >
                     2008
                   </p>
-                  <p className="text-[#e7212b] text-xs font-bold tracking-[0.45em] uppercase mt-1 pr-1">
+                  <p className="text-[#0891B2] text-xs font-bold tracking-[0.45em] uppercase mt-1 pr-1">
                     ESTD
                   </p>
                 </div>
@@ -262,9 +270,7 @@ export default function AboutPage() {
                 COMPANY OVERVIEW
               </span>
               <h1 className="mt-3 text-[2rem] lg:text-[2.5rem] font-bold text-[#181D4E] leading-tight">
-                In Quality
-                <br />
-                We Believe
+                In Quality We Believe
               </h1>
               <div className="mt-6 space-y-4 text-[15px] text-gray-600 leading-[1.75]">
                 <p>
@@ -278,7 +284,8 @@ export default function AboutPage() {
                   exceeding expectations and building lasting partnerships
                   through trust and reliability. Our integrated management
                   system is certified to ISO 9001:2015, ISO 14001:2015, and ISO
-                  45001:2018 by a UASL accredited certification body.
+                  45001:2018 by a UASL accredited certification body, and also
+                  Accurate certified.
                 </p>
                 <p>
                   We deliver comprehensive end-to-end solutions through our
@@ -310,7 +317,7 @@ export default function AboutPage() {
       <section className="relative z-10 py-16 lg:py-20 bg-transparent">
         <div className="max-w-7xl mx-auto px-4 sm:px-6">
           <div className="text-center mb-14">
-            <span className="text-[11px] font-bold tracking-[0.28em] uppercase text-[#e7212b]">
+            <span className="text-[11px] font-bold tracking-[0.28em] uppercase text-[#0891B2]">
               Authorized Partnerships &amp; Dealerships
             </span>
             <h2 className="mt-3 text-3xl lg:text-4xl font-bold text-[#181D4E]">
@@ -362,7 +369,7 @@ export default function AboutPage() {
 
         <div className="relative z-10 max-w-5xl mx-auto px-4 sm:px-6">
           <div className="text-center mb-10">
-            <span className="text-[11px] font-bold tracking-[0.28em] uppercase text-[#e7212b]">
+            <span className="text-[11px] font-bold tracking-[0.28em] uppercase text-[#0891B2]">
               OUR MISSION
             </span>
             <h2 className="mt-3 text-3xl lg:text-4xl font-bold text-white">
@@ -418,13 +425,11 @@ export default function AboutPage() {
           {/* Heading row */}
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 mb-14">
             <div>
-              <span className="text-[11px] font-bold tracking-[0.28em] uppercase text-[#e7212b]">
+              <span className="text-[11px] font-bold tracking-[0.28em] uppercase text-[#0891B2]">
                 What we offer
               </span>
               <h2 className="mt-3 text-3xl lg:text-4xl font-bold text-white leading-tight">
-                Innovative Solutions for
-                <br />
-                Business Excellence
+                Innovative Solutions for Business Excellence
               </h2>
             </div>
             <div className="flex items-center">
@@ -471,7 +476,7 @@ export default function AboutPage() {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center">
             {/* Left — text + skill bars */}
             <FadeSection delay={0}>
-              <span className="text-[11px] font-bold tracking-[0.28em] uppercase text-[#e7212b]">
+              <span className="text-[11px] font-bold tracking-[0.28em] uppercase text-[#0891B2]">
                 quality work
               </span>
               <h2 className="mt-3 text-3xl lg:text-4xl font-bold text-[#181D4E] leading-tight">
@@ -519,7 +524,7 @@ export default function AboutPage() {
       {/* ═══ CERTIFICATIONS ═══════════════════════════════════════ */}
       <section className="relative z-10 py-12 border-t border-black/5 bg-transparent">
         <div className="max-w-5xl mx-auto px-4 sm:px-6">
-          <div className="grid grid-cols-2 sm:grid-cols-4 gap-8 items-center">
+          <div className="grid grid-cols-2 sm:grid-cols-5 gap-8 items-center">
             {certifications.map((c) => (
               <div key={c.alt} className="flex justify-center">
                 <div className="relative h-20 w-28">
@@ -537,11 +542,42 @@ export default function AboutPage() {
         </div>
       </section>
 
+      {/* ═══ CERTIFICATE DOCUMENTS ═══════════════════════════════════════ */}
+      <section className="relative z-10 py-16 border-t border-black/5 bg-transparent">
+        <div className="max-w-5xl mx-auto px-4 sm:px-6">
+          <div className="flex items-center gap-2 mb-8">
+            <span className="w-5 h-1 bg-[#e7212b]" />
+            <span className="text-[#0891B2] text-[12px] font-semibold tracking-[3px] uppercase">Official Documents</span>
+          </div>
+          <h2 className="text-2xl sm:text-3xl font-bold text-[#0B0D26] mb-8">
+            View Our Certificates
+          </h2>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+            {[
+              { src: "/about/iso_9001.jpeg", alt: "ISO 9001:2015 Certificate", title: "ISO 9001:2015" },
+              { src: "/about/iso_14001.jpeg", alt: "ISO 14001:2015 Certificate", title: "ISO 14001:2015" },
+              { src: "/about/iso_45001.jpeg", alt: "ISO 45001:2018 Certificate", title: "ISO 45001:2018" },
+            ].map((cert) => (
+              <a key={cert.src} href={cert.src} target="_blank" rel="noopener noreferrer"
+                 className="group block border border-gray-200 rounded-2xl overflow-hidden hover:shadow-lg transition-all duration-300">
+                <div className="relative aspect-[3/4]">
+                  <Image src={cert.src} alt={cert.alt} fill className="object-contain" sizes="(max-width: 768px) 100vw, 33vw" />
+                </div>
+                <div className="p-4 text-center">
+                  <p className="font-semibold text-[#0B0D26] group-hover:text-[#e7212b] transition-colors">{cert.title}</p>
+                  <p className="text-gray-400 text-[13px] mt-1">Click to view full certificate</p>
+                </div>
+              </a>
+            ))}
+          </div>
+        </div>
+      </section>
+
       {/* ═══ TESTIMONIALS (dark) ══════════════════════════════════ */}
       <section className="relative z-10 bg-[#000000] blueprint-grid blueprint-dot-grid py-16 lg:py-20">
         <div className="max-w-6xl mx-auto px-4 sm:px-6">
           <div className="text-center mb-12">
-            <span className="text-[11px] font-bold tracking-[0.28em] uppercase text-[#e7212b]">
+            <span className="text-[11px] font-bold tracking-[0.28em] uppercase text-[#0891B2]">
               testimonials
             </span>
             <h2 className="mt-3 text-3xl lg:text-4xl font-bold text-white">

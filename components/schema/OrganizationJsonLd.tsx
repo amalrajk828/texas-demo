@@ -8,6 +8,7 @@ export function OrganizationJsonLd({
   telephone,
   email,
   address,
+  credentials,
 }: {
   name?: string;
   url?: string;
@@ -21,6 +22,7 @@ export function OrganizationJsonLd({
     addressRegion?: string;
     addressCountry: string;
   };
+  credentials?: string[];
 }) {
   const jsonLd: Record<string, unknown> = {
     "@context": "https://schema.org",
@@ -37,6 +39,12 @@ export function OrganizationJsonLd({
       },
     }),
     ...(sameAs && sameAs.length > 0 && { sameAs }),
+    ...(credentials && credentials.length > 0 && {
+      hasCredential: credentials.map((c) => ({
+        "@type": "EducationalOccupationalCredential",
+        credentialCategory: c,
+      })),
+    }),
   };
 
   return (

@@ -1,6 +1,6 @@
 "use client";
 import Link from "next/link";
-import { ArrowRight, Layers, Shield, Globe, Wrench, Clock } from "lucide-react";
+import { ChevronRight,ArrowRight, Layers, Shield, Globe, Wrench, Clock } from "lucide-react";
 
 const HIGHLIGHTS = [
   { icon: Shield, text: "Quality Certified" },
@@ -40,16 +40,16 @@ export default function PortfolioGroupHero({
           <div className="flex-1 min-w-0">
             {/* Breadcrumb */}
             <nav
-              className="flex items-center gap-2 mb-8 text-[11px] text-white/30"
+              className="flex items-center gap-2 mb-8 text-[14px] text-white/50"
             >
-              <Link href="/" className="hover:text-white/60 transition-colors">
+              <Link href="/" className="hover:text-white transition-colors">
                 Home
               </Link>
-              <span>/</span>
+              <ChevronRight className="w-3.5 h-3.5 text-white/30" />
               {breadcrumbHref ? (
                 <Link
                   href={breadcrumbHref}
-                  className="hover:text-white/60 transition-colors"
+                  className="hover:text-white transition-colors"
                 >
                   {breadcrumb}
                 </Link>
@@ -62,8 +62,8 @@ export default function PortfolioGroupHero({
             <div
               className="flex items-center gap-2 mb-5"
             >
-              <span className="w-5 h-px bg-[#e7212b]" />
-              <span className="text-[#e7212b] text-[10px] font-semibold tracking-[2.5px] uppercase">
+              <span className="w-5 h-px bg-[#0891B2]" />
+              <span className="text-[#0891B2] text-[10px] font-semibold tracking-[2.5px] uppercase">
                 {eyebrow}
               </span>
             </div>
@@ -73,19 +73,19 @@ export default function PortfolioGroupHero({
               className="text-4xl sm:text-5xl lg:text-[3.5rem] font-bold text-white leading-[1.1] mb-5"
             >
               {titleHighlight}
-              <em className="not-italic text-[#e7212b]">{titleSuffix}</em>
+              <em className="not-italic text-current">{titleSuffix}</em>
             </h1>
 
             {/* Description */}
             <p
-              className="text-white/50 text-base sm:text-[17px] leading-relaxed mb-3 max-w-xl"
+              className="text-white/70 text-base sm:text-[17px] leading-relaxed mb-3 max-w-xl"
             >
               {description}
             </p>
 
             {/* Extended description */}
             <p
-              className="text-white/35 text-sm sm:text-[15px] leading-relaxed mb-8 max-w-xl"
+              className="text-white/70 text-sm sm:text-[15px] leading-relaxed mb-8 max-w-xl"
             >
               From industrial sensors and flow meters to PLCs, automation systems, and
               control room solutions — we partner with world-class manufacturers to deliver
@@ -126,7 +126,7 @@ export default function PortfolioGroupHero({
                   <p className="text-3xl font-bold text-[#e7212b] leading-none">
                     {s.num}
                   </p>
-                  <p className="text-[12px] text-white/50 tracking-wide uppercase mt-2">
+                  <p className="text-[12px] text-white/70 tracking-wide uppercase mt-2">
                     {s.label}
                   </p>
                 </div>

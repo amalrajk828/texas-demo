@@ -14,13 +14,13 @@ export default function ControlRoomStandardsSection() {
       <div className="max-w-6xl mx-auto px-4 sm:px-6">
         <div className="flex flex-col md:flex-row items-center justify-between gap-8">
           <div>
-            <p className="text-[#e7212b] text-[11px] font-semibold tracking-[3px] uppercase mb-2">
+            <p className="text-[#0891B2] text-[11px] font-semibold tracking-[3px] uppercase mb-2">
               International Quality Standards
             </p>
             <h3 className="text-white text-xl sm:text-2xl font-bold leading-tight">
               Globally Certified — Built to the World&apos;s Strictest Standards
             </h3>
-            <p className="text-white/60 text-[14px] mt-2">
+            <p className="text-white/70 text-[14px] mt-2">
               Compliance with BIFMA, SEFA, and ASTM standards
             </p>
           </div>

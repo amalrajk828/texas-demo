@@ -160,27 +160,26 @@ export default function IndustriesPage() {
         />
 
         <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 pt-24 pb-8 w-full">
-          <nav className="flex items-center gap-1.5 mb-6 text-[11px] text-white/35 flex-wrap">
+          <nav className="flex items-center gap-2 mb-6 text-[14px] text-white/50 flex-wrap">
             <Link href="/" className="hover:text-white/70 transition-colors">
               Home
             </Link>
-            <ChevronRight className="w-3 h-3 shrink-0" />
+            <ChevronRight className="w-3.5 h-3.5 shrink-0" />
             <span className="text-white/60">Industries</span>
           </nav>
 
           <div className="flex items-start gap-8 lg:gap-10 mb-8">
             <div className="min-w-0">
               <div className="flex items-center gap-2 mb-5">
-                <span className="w-5 h-px bg-[#e7212b]" />
-                <span className="text-[#e7212b] text-[10px] font-medium tracking-[2.5px] uppercase">
-                  ISO 9001:2015 Certified · Est. 2008
+                <span className="w-5 h-px bg-[#0891B2]" />
+                <span className="text-[#0891B2] text-[10px] font-medium tracking-[2.5px] uppercase">
+                  ISO 9001 · ISO 14001 · ISO 45001 · UASL · Accurate Certified · Est. 2008
                 </span>
               </div>
 
               <h1 className="text-3xl sm:text-4xl lg:text-[2.75rem] font-medium text-white leading-[1.15] mb-5">
-                Industries
-                <br />
-                <em className="not-italic text-[#e7212b]">We Serve</em>
+                Industries{" "}
+                <em className="not-italic text-current">We Serve</em>
               </h1>
 
               <p className="text-white/60 text-base sm:text-lg leading-relaxed max-w-xl">
@@ -213,7 +212,7 @@ export default function IndustriesPage() {
             {stats.map((s) => (
               <div key={s.label} className="px-6 py-5 text-center">
                 <p className="text-2xl font-medium text-[#e7212b]">{s.num}</p>
-                <p className="text-[11px] text-white/40 tracking-wide mt-1">
+                <p className="text-[14px] text-white/40 tracking-wide mt-1">
                   {s.label}
                 </p>
               </div>
@@ -241,8 +240,8 @@ export default function IndustriesPage() {
         <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6">
           <div className="flex items-center justify-between mb-10">
             <div className="flex items-center gap-3">
-              <span className="w-8 h-px bg-[#e7212b]" />
-              <span className="text-[#e7212b] text-[9px] font-medium tracking-[2.5px] uppercase">
+              <span className="w-8 h-px bg-[#0891B2]" />
+              <span className="text-[#0891B2] text-[14px] font-medium tracking-[2.5px] uppercase">
                 Our Coverage
               </span>
             </div>

@@ -6,8 +6,8 @@ import { ThemePrimaryLink } from "@/components/ThemeButton";
 
 const HIGHLIGHTS = [
   { Icon: Users,       label: "Expert Engineers"        },
-  { Icon: Award,       label: "ISO 9001:2015 Certified" },
-  { Icon: ShieldCheck, label: "Industry Compliance"     },
+  { Icon: Award,       label: "ISO 9001 · 14001 · 45001 Certified" },
+  { Icon: ShieldCheck, label: "UASL & Accurate Certified" },
 ];
 
 export default function OurTeam() {
@@ -68,7 +68,7 @@ export default function OurTeam() {
               </div>
               <div>
                 <p className="text-[1.4rem] font-black leading-none text-white">50+</p>
-                <p className="text-[13px] text-white/40 font-medium mt-0.5 tracking-wide">Certified Engineers</p>
+                <p className="text-[13px] text-white/70 font-medium mt-0.5 tracking-wide">Certified Engineers</p>
               </div>
             </div>
 
@@ -89,8 +89,8 @@ export default function OurTeam() {
           <div className="lg:pl-4 pb-6 lg:pb-0">
             <div className="fade-up d1">
               <div className="flex items-center gap-2.5 mb-5">
-                <span className="w-6 h-px" style={{ background: "var(--color-brand-red)" }} />
-                <span className="text-[10px] font-bold tracking-[3.5px] uppercase" style={{ color: "var(--color-brand-red)" }}>
+                <span className="w-6 h-px" style={{ background: "#0891B2" }} />
+                <span className="text-[10px] font-bold tracking-[3.5px] uppercase" style={{ color: "#0891B2" }}>
                   Our Team
                 </span>
               </div>
@@ -105,7 +105,7 @@ export default function OurTeam() {
             </div>
 
             <div className="fade-up d2">
-              <p className="text-white/55 text-[15px] leading-[1.85] mb-8">
+              <p className="text-white/70 text-[15px] leading-[1.85] mb-8">
                 Our team comprises highly trained engineers with specialized knowledge in
                 Custody Metering Systems, Industrial Automation, and Inspection &amp; Testing.
                 They possess deep understanding of industry standards, regulations, and best

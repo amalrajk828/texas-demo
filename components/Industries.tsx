@@ -30,11 +30,11 @@ export default function Industries() {
           className="text-center mb-12"
         >
           <div className="flex items-center justify-center gap-3 mb-3">
-            <span className="w-8 h-px bg-[#e7212b]/40" />
-            <span className="text-[#e7212b] text-[11px] font-semibold tracking-[3px] uppercase">
+            <span className="w-8 h-px bg-[#0891B2]/40" />
+            <span className="text-[#0891B2] text-[11px] font-semibold tracking-[3px] uppercase">
               Industries we serve
             </span>
-            <span className="w-8 h-px bg-[#e7212b]/40" />
+            <span className="w-8 h-px bg-[#0891B2]/40" />
           </div>
           <h2 className="text-3xl sm:text-4xl font-bold text-[#0B0D26]">
             Built for the world&apos;s most demanding sectors

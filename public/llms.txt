@@ -116,6 +116,8 @@ Texas Technical Services (TTS) provides engineering, commissioning, calibration,
 
 ## Blog
 
+All articles authored by [Texas Technical Services](https://www.linkedin.com/company/texas-technical-service-company).
+
 - [What is Custody Transfer Metering? A Complete Guide to Standards and Accuracy](https://texastechserv.com/blog/custody-transfer-metering-guide/): Learn the critical principles of custody transfer metering, including API and AGA compliance, flow meter selection, a...
 - [SCADA System Upgrades: Modernizing Legacy Control Architectures](https://texastechserv.com/blog/scada-system-upgrade-guide/): Learn when to upgrade your legacy SCADA system. Explore the 5 critical signs of obsolescence, cybersecurity requireme...
 - [Continuous Emissions Monitoring Systems (CEMS): The Ultimate Compliance Guide](https://texastechserv.com/blog/cems-continuous-emissions-monitoring-guide/): Continuous Emissions Monitoring Systems (CEMS) compliance guide for industrial plants — covering extractive, in-situ,...
@@ -231,10 +233,19 @@ Texas Technical Services (TTS) provides engineering, commissioning, calibration,
 - [Industrial Inspection & Testing: NDT, Functional Testing, Certification](https://texastechserv.com/blog/comprehensive-inspection-testing-industrial-assets/): Comprehensive guide to NDT methods, functional testing, ISO certification, and proactive maintenance for industrial assets...
 - [Why Upgrade Your Custody Metering System | Strategic Necessity](https://texastechserv.com/blog/custody-metering-upgrade-strategic-necessity/): The financial impact of measurement inaccuracy and why upgrading custody metering is a strategic investment in revenue protection...
 
+## Videos
+
+- [Video Library](https://texastechserv.com/videos/): Watch video walkthroughs, equipment demos, and project highlights from Texas Technical Services.
+- [ICONICS Connected Field Service](https://texastechserv.com/videos/#lWltOmwAWBU): Real-time industrial monitoring, diagnostics, and predictive maintenance using ICONICS Connected Field Service — integrated by Texas Technical Services. (Feb 2025)
+- [WJO Project Highlights 2024](https://texastechserv.com/videos/#2Cw3-vN_jvI): Project highlights from our WJO assignment showcasing flow metering, automation, and inspection services for oil and gas operations in the GCC. (May 2024)
+- [One-Stop Solution for a Comprehensive Control Room](https://texastechserv.com/videos/#y_SweiqTTg4): End-to-end control room solutions — ergonomic console design, HMI integration, and SCADA software deployment built by Texas Technical Services and partners. (May 2024)
+- [Iconic Control Room Built by Pyrotech Workspace Solutions](https://texastechserv.com/videos/#lRQxYua6hjo): Walkthrough of an industrial control room built in partnership with Pyrotech Workspace Solutions, featuring ICONICS SCADA and Mitsubishi GOT HMI panels. (Mar 2024)
+- [Supply of 48" FLOWSIC600 Gas Flow Meter — Kuwait](https://texastechserv.com/videos/#QpBIh4SOERo): Supply and commissioning of a 48-inch FLOWSIC600 ultrasonic gas flow meter for custody transfer measurement in Kuwait. (Mar 2024)
+
 ## Optional
 
 - [About Texas Technical Services](https://texastechserv.com/about-us/): Company history, team, and operational overview.
-- [Certifications](https://texastechserv.com/certifications/): ISO 9001:2015, ISO 14001:2015, and ISO 45001:2018 certifications — quality, environmental, and safety management systems.
+- [Certifications](https://texastechserv.com/certifications/): ISO 9001:2015, ISO 14001:2015, ISO 45001:2018, UASL Accredited, and Accurate Certified — quality, environmental, safety management systems, independent verification, and international accreditation.
 - [Partners](https://texastechserv.com/partners/): Global technology partners and principal representations.
 - [Contact](https://texastechserv.com/contacts/): Office locations in Fahaheel (Kuwait) and Dubai (UAE), phone numbers, and email.
 - [YouTube](https://www.youtube.com/@TEXASTECHNICALSERVICES): Video walkthroughs, equipment demos, and project highlights from the field.

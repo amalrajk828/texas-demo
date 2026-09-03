@@ -45,13 +45,13 @@ export default function FlowMetersFhLabSection() {
       />
       <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6">
         <div className="text-center mb-10">
-          <span className="text-[#e7212b] text-[11px] font-semibold tracking-[3px] uppercase">
+          <span className="text-[#0891B2] text-[11px] font-semibold tracking-[3px] uppercase">
             Calibration Excellence · Faure Herman
           </span>
           <h2 className="mt-3 text-white text-2xl sm:text-3xl font-bold">
             FH Lab Services
           </h2>
-          <p className="text-white/60 text-[15px] mt-2 max-w-2xl mx-auto">
+          <p className="text-white/70 text-[15px] mt-2 max-w-2xl mx-auto">
             ISO 17025 Accredited Laboratory · Real Conditions Calibration ·
             Global Support
           </p>

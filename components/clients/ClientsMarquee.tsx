@@ -29,11 +29,11 @@ export default function ClientsMarquee({ clients }: { clients: Client[] }) {
   return (
     <div className="mb-16">
       <div className="flex items-center gap-3 mb-8">
-        <span className="w-8 h-px bg-[#e7212b]/40" />
-        <span className="text-[#e7212b] text-xs font-semibold tracking-[2px] uppercase">
+        <span className="w-8 h-px bg-[#0891B2]/40" />
+        <span className="text-[#0891B2] text-xs font-semibold tracking-[2px] uppercase">
           Featured Clients
         </span>
-        <span className="w-8 h-px bg-[#e7212b]/40 flex-1" />
+        <span className="w-8 h-px bg-[#0891B2]/40 flex-1" />
       </div>
 
       <div className="relative marquee-container">

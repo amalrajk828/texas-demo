@@ -15,7 +15,7 @@ const SLIDES = [
     type: "image" as const,
     src: "/homevideos/homebannerimage.jpg",
     alt: "Texas Technical Services — industrial flow measurement and control systems facility",
-    eyebrow: "ISO 9001:2015 Certified · Est. 2008",
+    eyebrow: "ISO 9001 · ISO 14001 · ISO 45001 · UASL · Accurate Certified · Est. 2008",
     heading: ["Welcome to", "Texas Technical", "Services"],
     sub: "In quality, we believe. Providing flow measurement, inspection, and automation solutions for the world's most demanding industrial environments.",
     tag: "Industrial Services",
@@ -277,10 +277,10 @@ export default function HeroSlider() {
 
               {/* Eyebrow */}
               <div className="flex items-center gap-3 mb-6">
-                <span className="w-6 h-[2px] rounded-full" style={{ background: "var(--color-brand-red)" }} />
+                <span className="w-6 h-[2px] rounded-full" style={{ background: "#0891B2" }} />
                 <span
                   className="text-[10px] font-bold tracking-[3px] uppercase"
-                  style={{ color: "var(--color-brand-red)" }}
+                  style={{ color: "#0891B2" }}
                 >
                   {slide.eyebrow}
                 </span>
@@ -305,7 +305,7 @@ export default function HeroSlider() {
 
               <p
                 className="text-[15px] sm:text-base leading-[1.8] mb-9 max-w-[480px]"
-                style={{ color: isLight ? "rgba(0,0,0,0.55)" : "rgba(255,255,255,0.45)" }}
+                style={{ color: isLight ? "rgba(0,0,0,0.70)" : "rgba(255,255,255,0.70)" }}
               >
                 {slide.sub}
               </p>
@@ -410,6 +410,15 @@ export default function HeroSlider() {
               {/* Red corner accent */}
               <div className="absolute top-0 left-0 w-12 h-[2px]" style={{ background: "var(--color-brand-red)" }} />
               <div className="absolute top-0 left-0 w-[2px] h-12" style={{ background: "var(--color-brand-red)" }} />
+
+              {/* ISO Badge overlay */}
+              <div className="absolute bottom-3 left-3 flex items-center gap-2">
+                {["/about/cert-iso9001.png", "/about/cert-iso14001.png", "/about/cert-iso45001.png", "/about/cert-uasl.png", "/about/cert-accurate-white.png"].map((src) => (
+                  <Link key={src} href="/certifications/" className="relative w-16 h-16 block">
+                    <Image src={src} alt="" fill className="object-contain" sizes="64px" />
+                  </Link>
+                ))}
+              </div>
             </motion.div>
           </AnimatePresence>
 

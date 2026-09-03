@@ -47,11 +47,11 @@ export default function ServicesConstruction() {
         {/* ── Section header ── */}
         <div className="fade-up text-center mb-16">
           <div className="inline-flex items-center gap-2.5 mb-5">
-            <span className="w-6 h-px bg-[#e7212b]" />
-            <span className="text-[#e7212b] text-[10px] font-semibold tracking-[3.5px] uppercase">
+            <span className="w-6 h-px bg-[#0891B2]" />
+            <span className="text-[#0891B2] text-[10px] font-semibold tracking-[3.5px] uppercase">
               Main Services
             </span>
-            <span className="w-6 h-px bg-[#e7212b]" />
+            <span className="w-6 h-px bg-[#0891B2]" />
           </div>
           <h2 className="text-4xl sm:text-[2.8rem] font-bold text-white leading-[1.12]">
             Constructions
@@ -118,13 +118,13 @@ export default function ServicesConstruction() {
               </div>
 
               <div className="space-y-4 mb-8">
-                <p className="text-white/50 text-[15px] leading-[1.85]">
+                <p className="text-white/70 text-[15px] leading-[1.85]">
                   Our Industrial Automation services focus on optimizing your industrial processes
                   for improved efficiency and productivity. We specialize in control system design,
                   implementation, and upgrades, offering expertise in PLC programming, SCADA
                   integration, and HMI development.
                 </p>
-                <p className="text-white/50 text-[15px] leading-[1.85]">
+                <p className="text-white/70 text-[15px] leading-[1.85]">
                   With our solutions, you can streamline your operations, reduce downtime, and
                   achieve better control over your production processes — from structural gantry
                   fabrication to complete turnkey EPC project execution.
@@ -151,7 +151,7 @@ export default function ServicesConstruction() {
                   <span className="text-white text-[9px] font-bold tracking-[0.5px] text-center leading-tight">ISO<br/>9001</span>
                 </div>
                 <div>
-                  <p className="text-white text-[13px] font-semibold">ISO 9001:2015 &amp; ISO 14001:2015 Certified</p>
+                  <p className="text-white text-[13px] font-semibold">ISO 9001 · ISO 14001 · ISO 45001 · UASL · Accurate Certified</p>
                   <p className="text-white/35 text-[12px] mt-0.5">All construction work delivered under certified quality management systems.</p>
                 </div>
               </div>

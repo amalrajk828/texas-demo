@@ -104,25 +104,25 @@ export default function SolutionsPage() {
         />
 
         <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 py-16 lg:py-20">
-          <nav className="flex items-center gap-1.5 text-[11px] text-white/50 mb-6">
+          <nav className="flex items-center gap-2 text-[14px] text-white/50 mb-6">
             <Link href="/" className="hover:text-white transition-colors">
               Home
             </Link>
-            <ChevronRight className="w-3 h-3 text-white/30" />
+            <ChevronRight className="w-3.5 h-3.5 text-white/30" />
             <span className="text-white">Solutions</span>
           </nav>
 
           <div className="flex items-center gap-2 mb-4">
-            <span className="w-5 h-px bg-[#e7212b]" />
-            <span className="text-[#e7212b] text-[10px] font-medium tracking-[2.5px] uppercase">
+            <span className="w-5 h-px bg-[#0891B2]" />
+            <span className="text-[#0891B2] text-[10px] font-medium tracking-[2.5px] uppercase">
               Our Solutions
             </span>
           </div>
           <h1 className="text-4xl sm:text-5xl font-medium text-white leading-tight mb-4 max-w-3xl">
             Proprietary Platforms &amp;{" "}
-            <span className="text-[#e7212b]">Strategic Partnerships</span>
+            <span className="text-current">Strategic Partnerships</span>
           </h1>
-          <p className="text-white/60 text-base max-w-2xl">
+          <p className="text-white/70 text-base max-w-2xl">
             From proprietary custody metering systems to industrial AI and factory
             automation — we deliver complete, integrated solutions backed by
             world-class OEM partnerships.
@@ -163,7 +163,7 @@ export default function SolutionsPage() {
                     <h3 className="text-[#181D4E] text-[18px] font-bold leading-snug">
                       {s.name}
                     </h3>
-                    <p className="text-[12px] font-semibold tracking-wide text-[#e7212b] uppercase mt-0.5">
+                    <p className="text-[12px] font-semibold tracking-wide text-[#0891B2] uppercase mt-0.5">
                       {s.tagline}
                     </p>
                   </div>
@@ -171,7 +171,7 @@ export default function SolutionsPage() {
                 <p className="text-gray-600 text-[14.5px] leading-[1.7]">
                   {s.description}
                 </p>
-                <span className="mt-auto inline-flex items-center gap-1.5 text-[12px] font-semibold text-[#e7212b] group-hover:gap-2.5 transition-all">
+                <span className="mt-auto inline-flex items-center gap-2 text-[12px] font-semibold text-[#e7212b] group-hover:gap-2.5 transition-all">
                   Learn more <ChevronRight className="w-3.5 h-3.5" />
                 </span>
               </Link>

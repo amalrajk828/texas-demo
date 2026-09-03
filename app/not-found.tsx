@@ -56,13 +56,13 @@ export default function NotFound() {
           }}
         />
         <div className="relative z-10 text-center px-4">
-          <p className="text-[#e7212b] text-[11px] font-semibold tracking-[4px] uppercase mb-4">
+          <p className="text-[#0891B2] text-[11px] font-semibold tracking-[4px] uppercase mb-4">
             Page Not Found
           </p>
           <h1 className="text-6xl sm:text-7xl lg:text-8xl font-bold text-white leading-none mb-6">
             4<span className="text-[#e7212b]">0</span>4
           </h1>
-          <p className="text-white/50 text-lg max-w-md mx-auto mb-10">
+          <p className="text-white/70 text-lg max-w-md mx-auto mb-10">
             The page you&apos;re looking for doesn&apos;t exist or has been moved.
           </p>
           <div className="flex flex-wrap justify-center gap-3">
@@ -89,8 +89,8 @@ export default function NotFound() {
           {/* Services */}
           <div className="mb-12">
             <div className="flex items-center gap-2.5 mb-6">
-              <span className="w-5 h-px bg-[#e7212b]" />
-              <span className="text-[#e7212b] text-[10px] font-semibold tracking-[3.5px] uppercase">
+              <span className="w-5 h-px bg-[#0891B2]" />
+              <span className="text-[#0891B2] text-[10px] font-semibold tracking-[3.5px] uppercase">
                 Popular Services
               </span>
             </div>
@@ -117,8 +117,8 @@ export default function NotFound() {
             {/* Products */}
             <div>
               <div className="flex items-center gap-2.5 mb-6">
-                <span className="w-5 h-px bg-[#e7212b]" />
-                <span className="text-[#e7212b] text-[10px] font-semibold tracking-[3.5px] uppercase">
+                <span className="w-5 h-px bg-[#0891B2]" />
+                <span className="text-[#0891B2] text-[10px] font-semibold tracking-[3.5px] uppercase">
                   Products
                 </span>
               </div>
@@ -143,8 +143,8 @@ export default function NotFound() {
             {/* Industries */}
             <div>
               <div className="flex items-center gap-2.5 mb-6">
-                <span className="w-5 h-px bg-[#e7212b]" />
-                <span className="text-[#e7212b] text-[10px] font-semibold tracking-[3.5px] uppercase">
+                <span className="w-5 h-px bg-[#0891B2]" />
+                <span className="text-[#0891B2] text-[10px] font-semibold tracking-[3.5px] uppercase">
                   Industries
                 </span>
               </div>
@@ -171,8 +171,8 @@ export default function NotFound() {
           {latestArticles.length > 0 && (
             <div>
               <div className="flex items-center gap-2.5 mb-6">
-                <span className="w-5 h-px bg-[#e7212b]" />
-                <span className="text-[#e7212b] text-[10px] font-semibold tracking-[3.5px] uppercase">
+                <span className="w-5 h-px bg-[#0891B2]" />
+                <span className="text-[#0891B2] text-[10px] font-semibold tracking-[3.5px] uppercase">
                   From Our Blog
                 </span>
               </div>
@@ -183,7 +183,7 @@ export default function NotFound() {
                     href={`/blog/${article.slug}/`}
                     className="group bg-white border border-[#e8eaf0] rounded-xl p-5 hover:border-[#e7212b]/25 hover:shadow-lg transition-all duration-200"
                   >
-                    <span className="text-[10px] font-semibold text-[#e7212b] tracking-[2px] uppercase mb-2 block">
+                    <span className="text-[10px] font-semibold text-[#0891B2] tracking-[2px] uppercase mb-2 block">
                       {article.category}
                     </span>
                     <h3 className="text-[14px] font-semibold text-[#0B0D26] leading-snug group-hover:text-[#e7212b] transition-colors line-clamp-2">

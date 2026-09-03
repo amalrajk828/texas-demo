@@ -1,6 +1,6 @@
 "use client";
 import Link from "next/link";
-import { ArrowRight, Cpu } from "lucide-react";
+import { ChevronRight,ArrowRight, Cpu } from "lucide-react";
 
 export default function McsiHero() {
   return (
@@ -36,17 +36,17 @@ export default function McsiHero() {
       <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6">
 
         {/* Breadcrumb */}
-        <div
-          className="flex items-center gap-2 mb-8 text-[12px] text-white/30 flex-wrap"
+        <nav
+          className="flex items-center gap-2 mb-8 text-[14px] text-white/50 flex-wrap"
         >
-          <Link href="/" className="hover:text-white/60 transition-colors">Home</Link>
-          <span>/</span>
-          <Link href="/services/" className="hover:text-white/60 transition-colors">Services</Link>
-          <span>/</span>
-          <Link href="/service/flow-measurement-solutions/" className="hover:text-white/60 transition-colors">Flow Measurement</Link>
-          <span>/</span>
+          <Link href="/" className="hover:text-white transition-colors">Home</Link>
+          <ChevronRight className="w-3.5 h-3.5 text-white/30" />
+          <Link href="/services/" className="hover:text-white transition-colors">Services</Link>
+          <ChevronRight className="w-3.5 h-3.5 text-white/30" />
+          <Link href="/service/flow-measurement-solutions/" className="hover:text-white transition-colors">Flow Measurement</Link>
+          <ChevronRight className="w-3.5 h-3.5 text-white/30" />
           <span className="text-white/60">Metering Control System Integration</span>
-        </div>
+        </nav>
 
         <div className="max-w-full">
 
@@ -57,7 +57,7 @@ export default function McsiHero() {
             <div className="w-9 h-9 rounded-xl bg-[#e7212b]/10 border border-[#e7212b]/25 flex items-center justify-center">
               <Cpu className="w-4 h-4 text-[#e7212b]" strokeWidth={1.8} />
             </div>
-            <span className="text-[#e7212b] text-[11px] font-semibold tracking-[3px] uppercase">
+            <span className="text-[#0891B2] text-[11px] font-semibold tracking-[3px] uppercase">
               Flow Measurement Solutions
             </span>
           </div>
@@ -74,7 +74,7 @@ export default function McsiHero() {
 
           {/* Body */}
           <p
-            className="text-white/50 text-base sm:text-[16px] leading-relaxed mb-8 max-w-none"
+            className="text-white/70 text-base sm:text-[16px] leading-relaxed mb-8 max-w-none"
           >
             Welcome to TTS, where we specialize in Custody Transfer Flow Metering Control System
             Development and Integration. With an unwavering commitment to precision, accuracy, and
@@ -118,7 +118,7 @@ export default function McsiHero() {
               className="bg-white/[0.03] border border-white/[0.07] rounded-xl px-5 py-4 text-center"
             >
               <p className="text-2xl font-bold text-[#e7212b] leading-none">{stat.num}</p>
-              <p className="text-[12px] text-white/30 mt-1.5 tracking-wide">{stat.label}</p>
+              <p className="text-[14px] text-white/50 mt-1.5 tracking-wide">{stat.label}</p>
             </div>
           ))}
         </div>

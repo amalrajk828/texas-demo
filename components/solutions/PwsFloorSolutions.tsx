@@ -113,15 +113,15 @@ export default function PwsFloorSolutions() {
         />
 
         <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6">
-          <nav className="flex items-center gap-1.5 mb-8 text-[11px] text-white/35 flex-wrap">
+          <nav className="flex items-center gap-2 mb-8 text-[14px] text-white/50 flex-wrap">
             <Link href="/" className="hover:text-white/70 transition-colors">
               Home
             </Link>
-            <ChevronRight className="w-3 h-3 shrink-0" />
+            <ChevronRight className="w-3.5 h-3.5 shrink-0" />
             <Link href="/solutions/" className="hover:text-white/70 transition-colors">
               Solutions
             </Link>
-            <ChevronRight className="w-3 h-3 shrink-0" />
+            <ChevronRight className="w-3.5 h-3.5 shrink-0" />
             <span className="text-white/60">PWS Floor Solutions</span>
           </nav>
 
@@ -130,18 +130,18 @@ export default function PwsFloorSolutions() {
               <div className="w-9 h-9 rounded-xl bg-[#e7212b]/10 border border-[#e7212b]/25 flex items-center justify-center">
                 <Layers className="w-4 h-4 text-[#e7212b]" strokeWidth={1.8} />
               </div>
-              <span className="text-[#e7212b] text-[11px] font-semibold tracking-[3px] uppercase">
+              <span className="text-[#0891B2] text-[14px] font-semibold tracking-[3px] uppercase">
                 Authorized Dealer · PWS Floor Solutions
               </span>
             </div>
 
             <h1 className="text-4xl sm:text-5xl lg:text-[3.2rem] font-bold text-white leading-[1.12] mb-6">
               Raised Access{" "}
-              <em className="not-italic text-[#e7212b]">Flooring Systems</em>{" "}
+              <em className="not-italic text-current">Flooring Systems</em>{" "}
               for Critical Environments
             </h1>
 
-            <p className="text-white/55 text-base sm:text-[16px] leading-relaxed mb-8 max-w-2xl">
+            <p className="text-white/70 text-base sm:text-[16px] leading-relaxed mb-8 max-w-2xl">
               PWS Floor Solutions is India&apos;s most trusted raised access floor
               manufacturer. Calcium sulphate panels with steel or aluminum
               encapsulation — purpose-built for data centers, control rooms,
@@ -202,14 +202,14 @@ export default function PwsFloorSolutions() {
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6">
           <div className="mb-14">
             <div className="flex items-center gap-2.5 mb-4">
-              <span className="w-5 h-px bg-[#e7212b]" />
-              <span className="text-[#e7212b] text-[10px] font-semibold tracking-[3.5px] uppercase">
+              <span className="w-5 h-px bg-[#0891B2]" />
+              <span className="text-[#0891B2] text-[10px] font-semibold tracking-[3.5px] uppercase">
                 PWS Solutions
               </span>
             </div>
             <h2 className="text-3xl sm:text-[2.4rem] font-bold text-[#0B0D26] leading-[1.15] max-w-3xl">
               Engineered for{" "}
-              <em className="not-italic text-[#e7212b]">every critical space</em>
+              <em className="not-italic text-current">every critical space</em>
             </h2>
           </div>
 
@@ -230,7 +230,7 @@ export default function PwsFloorSolutions() {
                     {cat.sectors.map((s) => (
                       <span
                         key={s}
-                        className="text-[10px] font-semibold tracking-wide uppercase text-[#e7212b] bg-[#e7212b]/8 px-2 py-1 rounded"
+                        className="text-[10px] font-semibold tracking-wide uppercase text-[#0891B2] bg-[#e7212b]/8 px-2 py-1 rounded"
                       >
                         {s}
                       </span>
@@ -263,14 +263,14 @@ export default function PwsFloorSolutions() {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             <div>
               <div className="flex items-center gap-2.5 mb-4">
-                <span className="w-5 h-px bg-[#e7212b]" />
-                <span className="text-[#e7212b] text-[10px] font-semibold tracking-[3.5px] uppercase">
+                <span className="w-5 h-px bg-[#0891B2]" />
+                <span className="text-[#0891B2] text-[10px] font-semibold tracking-[3.5px] uppercase">
                   Construction Quality
                 </span>
               </div>
               <h2 className="text-3xl lg:text-4xl font-bold text-[#0B0D26] leading-[1.15] mb-5">
                 Built to last{" "}
-                <em className="not-italic text-[#e7212b]">15-25+ years</em>
+                <em className="not-italic text-current">15-25+ years</em>
               </h2>
               <p className="text-gray-500 text-[15px] leading-relaxed mb-7 max-w-xl">
                 PWS panels are built around a high-density calcium sulphate
@@ -284,7 +284,7 @@ export default function PwsFloorSolutions() {
                     key={s.label}
                     className="rounded-xl border border-gray-100 bg-[#f8f9fa] p-4"
                   >
-                    <p className="text-[10px] font-semibold tracking-[1.5px] uppercase text-[#e7212b]">
+                    <p className="text-[10px] font-semibold tracking-[1.5px] uppercase text-[#0891B2]">
                       {s.label}
                     </p>
                     <p className="text-[14px] font-semibold text-[#0B0D26] mt-1.5">
@@ -298,7 +298,7 @@ export default function PwsFloorSolutions() {
             <div className="rounded-2xl border border-[#e8eaf0] bg-[#f8f9fa] p-8">
               <div className="flex items-center gap-2.5 mb-4">
                 <Award className="w-4 h-4 text-[#e7212b]" strokeWidth={1.8} />
-                <span className="text-[#e7212b] text-[10px] font-semibold tracking-[3.5px] uppercase">
+                <span className="text-[#0891B2] text-[10px] font-semibold tracking-[3.5px] uppercase">
                   Certifications
                 </span>
               </div>

@@ -5,7 +5,7 @@ import { Gauge, FlaskConical, Cpu, ArrowRight } from "lucide-react";
 
 const SERVICES = [
   { Icon: Gauge,        title: "Flow Measurement & Control", body: "Metering control system upgrades, maintenance, and validation for custody metering systems. Ensuring accuracy to API, AGA, and ISO standards.", href: "/service/flow-measurement-solutions/", tag: "Metering",   col: "color-mix(in srgb, var(--color-brand-red) 6%, white)" },
-  { Icon: FlaskConical, title: "Inspection & Testing",       body: "Comprehensive inspection, NDT, functional testing and certification across all industrial sectors. ISO 14001 and ISO 45001 compliance.",           href: "/service/inspection-testing/",          tag: "NDT & QA",   col: "color-mix(in srgb, var(--color-brand-red) 4%, white)" },
+  { Icon: FlaskConical, title: "Inspection & Testing",       body: "Comprehensive inspection, NDT, functional testing and certification across all industrial sectors. ISO 9001, ISO 14001, ISO 45001, UASL and Accurate compliance.",           href: "/service/inspection-testing/",          tag: "NDT & QA",   col: "color-mix(in srgb, var(--color-brand-red) 4%, white)" },
   { Icon: Cpu,          title: "Industrial Automation",      body: "Control system design, PLC programming, SCADA integration and HMI engineering — optimising operations across oil & gas and manufacturing.",        href: "/service/industrial-automation/",        tag: "Automation", col: "color-mix(in srgb, var(--color-brand-red) 5%, white)" },
 ];
 
@@ -17,8 +17,8 @@ export default function G4Services() {
         <div className="fade-up flex flex-col lg:flex-row lg:items-end lg:justify-between gap-6 mb-14">
           <div>
             <div className="flex items-center gap-3 mb-4">
-              <span className="w-10 h-[3px] rounded-full" style={{ background: "var(--color-brand-red)" }} />
-              <span className="text-[11px] font-bold tracking-[3.5px] uppercase" style={{ color: "var(--color-brand-red)" }}>Our Services</span>
+              <span className="w-10 h-[3px] rounded-full" style={{ background: "#0E7490" }} />
+              <span className="text-[11px] font-bold tracking-[3.5px] uppercase" style={{ color: "#0E7490" }}>Our Services</span>
             </div>
             <h2 className="text-[2.8rem] sm:text-[3.4rem] font-black leading-[1.05] tracking-tight" style={{ color: "var(--g-heading)" }}>What We Offer</h2>
           </div>

@@ -30,7 +30,6 @@ const solutions = [
   { label: "Space AI Industrial AI", href: "/solutions/space-ai/" },
   { label: "Mitsubishi Electric", href: "/solutions/mitsubishi-electric/" },
   { label: "PWS Floor Solutions", href: "/solutions/pws-floor-solutions/" },
-  { label: "Certifications", href: "/certifications/" },
 ];
 
 const socials = [
@@ -64,10 +63,9 @@ function FooterTrack() {
             <Image
               src={p.logo}
               alt={p.name}
-              width={160}
-              height={60}
-              className="object-contain h-7 w-auto opacity-40 hover:opacity-100 transition-opacity duration-300"
-              style={{ mixBlendMode: "screen" }}
+              width={240}
+              height={96}
+              className="object-contain h-12 w-auto opacity-90 hover:opacity-100 transition-opacity duration-300"
             />
           </Link>
         </div>
@@ -121,8 +119,9 @@ export default function Footer() {
           </Link>
           <div className="flex-1 min-w-0">
             <p className="text-white/70 text-[14px] leading-[1.8] mb-5 font-medium">
-              ISO 9001:2015 certified company established in 2008. Flow measurement,
-              automation &amp; inspection for oil &amp; gas and industrial sectors.
+              ISO 9001, ISO 14001, ISO 45001, UASL &amp; Accurate certified company
+              established in 2008. Flow measurement, automation &amp; inspection
+              for oil &amp; gas and industrial sectors.
             </p>
             <a
               href={`mailto:${SITE_EMAIL}`}
@@ -333,6 +332,7 @@ export default function Footer() {
               { src: "/about/cert-iso14001.png", alt: "ISO 14001 Environmental Management" },
               { src: "/about/cert-iso45001.png", alt: "ISO 45001 Occupational Health & Safety" },
               { src: "/about/cert-uasl.png", alt: "UASL Certification" },
+              { src: "/about/cert-accurate-white.png", alt: "International Accurate Certification" },
             ].map((cert) => (
               <div key={cert.src} className="relative h-20 w-20 sm:h-24 sm:w-24 transition-transform duration-300 hover:scale-105">
                 <Image src={cert.src} alt={cert.alt} fill className="object-contain" sizes="(max-width: 640px) 80px, 96px" />
@@ -349,7 +349,7 @@ export default function Footer() {
             TEXAS TECHNICAL SERVICE COMPANY W.L.L. © {new Date().getFullYear()}. All Rights Reserved.
           </p>
           <div className="flex items-center gap-4">
-            <span className="text-[11px] font-medium" style={{ color: "#FF5252" }}>ISO 9001:2015 Certified</span>
+            <span className="text-[11px] font-medium" style={{ color: "#FF5252" }}>ISO 9001 · ISO 14001 · ISO 45001 · UASL · Accurate Certified</span>
           </div>
         </div>
       </div>

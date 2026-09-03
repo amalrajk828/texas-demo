@@ -1,6 +1,6 @@
 "use client";
 import Link from "next/link";
-import { Radiation } from "lucide-react";
+import { ChevronRight,Radiation } from "lucide-react";
 
 const STATS = [
   { value: "X-Ray", label: "& Gamma Ray" },
@@ -16,25 +16,25 @@ export default function RadiographicHero() {
       <div className="absolute top-1/3 -left-32 w-[420px] h-[420px] rounded-full pointer-events-none" style={{ background: "radial-gradient(circle, rgba(231,33,43,0.13) 0%, transparent 70%)" }} />
       <div className="absolute bottom-0 right-0 w-[320px] h-[320px] rounded-full pointer-events-none" style={{ background: "radial-gradient(circle, rgba(231,33,43,0.07) 0%, transparent 70%)" }} />
       <div className="relative max-w-7xl mx-auto px-4 sm:px-6">
-        <div className="flex items-center gap-2 mb-8 text-[11px] text-white/30 tracking-wide">
-          <Link href="/" className="hover:text-white/60 transition-colors">Home</Link><span>/</span>
-          <Link href="/services/" className="hover:text-white/60 transition-colors">Services</Link><span>/</span>
-          <Link href="/service/inspection-testing/" className="hover:text-white/60 transition-colors">Inspection &amp; Testing</Link><span>/</span>
-          <Link href="/service/non-destructive-testing-ndt/" className="hover:text-white/60 transition-colors">NDT</Link><span>/</span>
+        <nav className="flex items-center gap-2 mb-8 text-[14px] text-white/50">
+          <Link href="/" className="hover:text-white transition-colors">Home</Link><ChevronRight className="w-3.5 h-3.5 text-white/30" />
+          <Link href="/services/" className="hover:text-white transition-colors">Services</Link><ChevronRight className="w-3.5 h-3.5 text-white/30" />
+          <Link href="/service/inspection-testing/" className="hover:text-white transition-colors">Inspection &amp; Testing</Link><ChevronRight className="w-3.5 h-3.5 text-white/30" />
+          <Link href="/service/non-destructive-testing-ndt/" className="hover:text-white transition-colors">NDT</Link><ChevronRight className="w-3.5 h-3.5 text-white/30" />
           <span className="text-white/50">Radiographic Testing (RT)</span>
-        </div>
+        </nav>
         <div className="max-w-full">
           <div className="flex items-center gap-2.5 mb-5">
             <div className="w-8 h-8 rounded-lg bg-[#e7212b]/15 border border-[#e7212b]/25 flex items-center justify-center">
               <Radiation className="w-4 h-4 text-[#e7212b]" strokeWidth={1.8} />
             </div>
-            <span className="text-[#e7212b] text-[10px] font-semibold tracking-[3.5px] uppercase">Non Destructive Testing</span>
+            <span className="text-[#0891B2] text-[10px] font-semibold tracking-[3.5px] uppercase">Non Destructive Testing</span>
           </div>
           <h1 className="text-4xl sm:text-5xl lg:text-[3.4rem] font-bold text-white leading-[1.08] mb-6">
             Radiographic{" "}
             <em className="not-italic text-white">Testing (RT)</em>
           </h1>
-          <p className="text-white/50 text-[16px] leading-[1.85] mb-10 max-w-none">
+          <p className="text-white/70 text-[16px] leading-[1.85] mb-10 max-w-none">
             A powerful NDT method using X-rays or gamma rays to examine the internal structure of materials and detect flaws not visible on the surface — particularly useful for inspecting thick sections of materials, welds, castings, and complex structures.
           </p>
           <div className="flex flex-wrap gap-3">

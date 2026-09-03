@@ -39,7 +39,7 @@ export function BlogPostingJsonLd({
     author: {
       "@type": "Organization",
       name: "Texas Technical Service Company W.L.L.",
-      url: SITE_URL,
+      url: "https://www.linkedin.com/company/texas-technical-service-company",
     },
     publisher: {
       "@type": "Organization",

@@ -61,7 +61,7 @@ export default function IndustryProductCard({
             <span className="inline-flex items-center gap-1.5 text-[#e7212b] text-[12px] font-semibold group-hover:gap-2.5 transition-all duration-200">
               Read More <ArrowRight className="w-3 h-3" />
             </span>
-            <span className="w-4 h-px bg-[#e7212b]/30 group-hover:w-10 transition-all duration-300" />
+            <span className="w-4 h-px bg-[#0891B2]/30 group-hover:w-10 transition-all duration-300" />
           </div>
         </div>
 

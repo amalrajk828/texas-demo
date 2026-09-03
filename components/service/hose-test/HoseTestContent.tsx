@@ -15,8 +15,8 @@ export default function HoseTestContent() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6">
         <div className="fade-up mb-14">
           <div className="flex items-center gap-2.5 mb-4">
-            <span className="w-5 h-px bg-[#e7212b]" />
-            <span className="text-[#e7212b] text-[10px] font-semibold tracking-[3.5px] uppercase">Capabilities</span>
+            <span className="w-5 h-px bg-[#0891B2]" />
+            <span className="text-[#0891B2] text-[10px] font-semibold tracking-[3.5px] uppercase">Capabilities</span>
           </div>
           <h2 className="text-3xl sm:text-[2.4rem] font-bold text-[#0B0D26] leading-[1.15] max-w-2xl">
             Hose Test Capabilities &amp; Applications
@@ -24,7 +24,7 @@ export default function HoseTestContent() {
         </div>
         <div className="fade-up mb-12">
           <div className="max-w-3xl">
-            <div className="flex items-center gap-2.5 mb-4"><span className="w-5 h-px bg-[#e7212b]" /><span className="text-[#e7212b] text-[10px] font-semibold tracking-[3.5px] uppercase">What We Do</span></div>
+            <div className="flex items-center gap-2.5 mb-4"><span className="w-5 h-px bg-[#0891B2]" /><span className="text-[#0891B2] text-[10px] font-semibold tracking-[3.5px] uppercase">What We Do</span></div>
             <h2 className="text-3xl sm:text-[2.2rem] font-bold text-[#0B0D26] leading-[1.15] mb-5">Field Water Hose Testing for Building Envelope Verification</h2>
             <p className="text-gray-500 text-[15px] leading-[1.85] mb-4">The hose test is a field method for evaluating the water resistance of installed curtain wall systems, windows, and doors under simulated wind-driven rain conditions. A calibrated spray nozzle directs water at the test specimen while an observer inside the building identifies any leakage paths — providing immediate, real-world verification of installed weatherseal performance.</p>
             <p className="text-gray-500 text-[15px] leading-[1.85] mb-8">TTS performs hose tests in accordance with AAMA 501.2, ASTM E1105, and BS 8200 — covering curtain wall joints, window perimeters, door seals, and panel interfaces. Our test reports document leakage observations with locations, severity ratings, and recommended remedial actions — enabling targeted corrective work before building handover and providing permanent records for facility management.</p>
@@ -48,9 +48,9 @@ export default function HoseTestContent() {
         <div className="fade-up d1">
           <div className="rounded-2xl bg-[#0B0D26] p-8 sm:p-10 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-6">
             <div>
-              <p className="text-white/40 text-[10px] tracking-[2px] uppercase mb-2">Standards &amp; Codes</p>
+              <p className="text-white/70 text-[10px] tracking-[2px] uppercase mb-2">Standards &amp; Codes</p>
               <p className="text-white font-semibold text-lg">AAMA 501.2 · ASTM E1105 · BS 8200 · EN 12208</p>
-              <p className="text-white/45 text-sm mt-1">Building envelope testing specialists — Kuwait &amp; Dubai</p>
+              <p className="text-white/70 text-sm mt-1">Building envelope testing specialists — Kuwait &amp; Dubai</p>
             </div>
             <Link href="#contact" className="inline-flex items-center gap-2 bg-[#e7212b] hover:bg-[#aa0b1b] text-white font-semibold px-6 py-3 rounded-lg transition-colors duration-200 text-sm shrink-0">
               Request Hose Test

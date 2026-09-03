@@ -100,7 +100,7 @@ export default function ComponentDemo() {
         <div className="absolute inset-0 blueprint-dot-grid opacity-20 pointer-events-none" />
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 flex flex-col md:flex-row md:items-center md:justify-between gap-6">
           <div className="space-y-2">
-            <span className="text-[10px] uppercase font-bold tracking-[0.2em] text-[#e7212b]">
+            <span className="text-[10px] uppercase font-bold tracking-[0.2em] text-[#0891B2]">
               Architecture Showcase
             </span>
             <h1 className="text-2xl sm:text-3xl font-extrabold tracking-tight">

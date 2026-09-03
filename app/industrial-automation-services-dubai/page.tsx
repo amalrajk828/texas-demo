@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import Image from "next/image";
 import { ArrowRight, ChevronRight, MapPin, Cpu, Thermometer, ShieldCheck } from "lucide-react";
 import { BreadcrumbJsonLd } from "@/components/schema/BreadcrumbJsonLd";
 import { ServiceJsonLd } from "@/components/schema/ServiceJsonLd";
@@ -9,21 +10,21 @@ import { SpeakableJsonLd } from "@/components/schema/SpeakableJsonLd";
 export const metadata: Metadata = {
   title: "Industrial Automation Services Dubai, UAE | PLC, SCADA & Flow Measurement",
   description:
-    "Texas Technical Services Co. is a leading industrial automation company in Dubai, UAE — PLC and SCADA system integrators, flow measurement, and industrial inspection & testing serving oil & gas and industrial sectors across the United Arab Emirates.",
+    "Texas Technical Services Co. is a leading industrial automation company in Dubai, UAE — ISO 9001, ISO 14001, ISO 45001, UASL & Accurate certified. PLC and SCADA system integrators, flow measurement, and industrial inspection & testing serving oil & gas and industrial sectors across the United Arab Emirates.",
   alternates: {
     canonical: "/industrial-automation-services-dubai/",
   },
   openGraph: {
     title: "Industrial Automation Services Dubai, UAE | Texas Technical Services",
     description:
-      "Industrial automation company in Dubai, UAE — PLC & SCADA integration, flow measurement, and inspection & testing services serving oil & gas, power, and industrial sectors across the United Arab Emirates and GCC.",
+      "Industrial automation company in Dubai, UAE — PLC & SCADA integration, flow measurement, and inspection & testing services — ISO 9001, ISO 14001, ISO 45001, UASL & Accurate certified — serving oil & gas, power, and industrial sectors across the United Arab Emirates and GCC.",
     url: "/industrial-automation-services-dubai/",
   },
   twitter: {
     card: "summary_large_image",
     title: "Industrial Automation Services Dubai, UAE | Texas Technical Services",
     description:
-      "Industrial automation, PLC & SCADA integration, and inspection services in Dubai and across the UAE — Texas Technical Services.",
+      "Industrial automation, PLC & SCADA integration, and inspection services in Dubai and across the UAE — ISO 9001, ISO 14001, ISO 45001, UASL & Accurate certified — Texas Technical Services.",
   },
   keywords: [
     "industrial automation companies in Dubai",
@@ -37,6 +38,11 @@ export const metadata: Metadata = {
     "automation and engineering services Dubai",
     "industrial automation UAE",
     "automation company Dubai",
+    "ISO 9001 certified company Dubai",
+    "ISO 14001 environmental management UAE",
+    "ISO 45001 occupational safety UAE",
+    "UASL accredited certification UAE",
+    "Accurate certified industrial company UAE",
   ],
 };
 
@@ -56,7 +62,7 @@ const services = [
   {
     Icon: ShieldCheck,
     title: "Inspection & Testing Services",
-    body: "As a leading industrial inspection and testing company serving Dubai and the UAE, we offer NDT (UT, MT, PT, RT, VI), mechanical testing, phased array ultrasonic inspection, and QA consultancy. Our ISO 9001:2015 certified processes ensure the highest quality standards for your critical assets across the United Arab Emirates.",
+    body: "As a leading industrial inspection and testing company serving Dubai and the UAE, we offer NDT (UT, MT, PT, RT, VI), mechanical testing, phased array ultrasonic inspection, and QA consultancy. Our ISO 9001, ISO 14001, ISO 45001, UASL & Accurate certified processes ensure the highest quality standards for your critical assets across the United Arab Emirates.",
     href: "/service/inspection-testing/",
   },
 ];
@@ -85,7 +91,7 @@ const faqItems = [
   },
   {
     q: "Which industries do you serve in the UAE?",
-    a: "We serve oil and gas (upstream, midstream, downstream), refinery and petrochemical plants, power generation and water desalination, LNG terminals, and industrial manufacturing sectors across the UAE. Our ISO 9001:2015, ISO 14001:2015, and ISO 45001:2018 certifications demonstrate our commitment to quality, environment, and occupational health and safety.",
+    a: "We serve oil and gas (upstream, midstream, downstream), refinery and petrochemical plants, power generation and water desalination, LNG terminals, and industrial manufacturing sectors across the UAE. Our ISO 9001, ISO 14001, ISO 45001, UASL & Accurate certifications demonstrate our commitment to quality, environment, and occupational health and safety.",
   },
   {
     q: "What is the scope of your services across the UAE?",
@@ -111,7 +117,7 @@ export default function IndustrialAutomationDubaiPage() {
       <FaqPageJsonLd items={faqItems} />
       <SpeakableJsonLd headline="Industrial Automation Services Dubai — PLC, SCADA & Flow Measurement" />
       {/* ══ HERO ════════════════════════════════════════════ */}
-      <section className="relative bg-[#000000] blueprint-grid blueprint-dot-grid overflow-hidden pt-32 pb-20 lg:pb-28">
+      <section className="relative bg-[#000000] blueprint-grid blueprint-dot-grid overflow-hidden pt-32 pb-8 lg:pb-10">
         <div
           className="absolute inset-0 pointer-events-none"
           style={{
@@ -135,9 +141,9 @@ export default function IndustrialAutomationDubaiPage() {
         />
 
         <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6">
-          <nav className="flex items-center gap-1.5 mb-8 text-[11px] text-white/35 flex-wrap">
+          <nav className="flex items-center gap-2 mb-8 text-[14px] text-white/50 flex-wrap">
             <Link href="/" className="hover:text-white/70 transition-colors">Home</Link>
-            <ChevronRight className="w-3 h-3 shrink-0" />
+            <ChevronRight className="w-3.5 h-3.5 shrink-0" />
             <span className="text-white/60">Industrial Automation Dubai, UAE</span>
           </nav>
 
@@ -146,17 +152,17 @@ export default function IndustrialAutomationDubaiPage() {
               <div className="w-9 h-9 rounded-xl bg-[#e7212b]/10 border border-[#e7212b]/25 flex items-center justify-center">
                 <MapPin className="w-4 h-4 text-[#e7212b]" strokeWidth={1.8} />
               </div>
-              <span className="text-[#e7212b] text-[11px] font-semibold tracking-[3px] uppercase">
+              <span className="text-[#0891B2] text-[14px] font-semibold tracking-[3px] uppercase">
                 Dubai — UAE
               </span>
             </div>
 
             <h1 className="text-4xl sm:text-5xl lg:text-[3.2rem] font-bold text-white leading-[1.12] mb-6">
               Premier Industrial Automation &amp; Engineering{" "}
-              <em className="not-italic text-[#e7212b]">Services in Dubai, UAE</em>
+              <em className="not-italic text-current">Services in Dubai, UAE</em>
             </h1>
 
-            <p className="text-white/50 text-base sm:text-[16px] leading-relaxed mb-8 max-w-2xl">
+            <p className="text-white/70 text-base sm:text-[16px] leading-relaxed mb-8 max-w-2xl">
               Texas Technical Services Co. is a leading industrial automation company in Dubai
               and across the UAE — providing PLC and SCADA system integration, flow measurement
               services, and industrial inspection and testing for oil &amp; gas, power, and
@@ -197,11 +203,26 @@ export default function IndustrialAutomationDubaiPage() {
               </div>
             ))}
           </div>
+
+          {/* Certification Badges */}
+          <div className="mt-6 flex items-center justify-center gap-5 flex-wrap">
+            {[
+              { src: "/about/cert-iso9001.png", alt: "ISO 9001:2015 Certified" },
+              { src: "/about/cert-iso14001.png", alt: "ISO 14001:2015 Certified" },
+              { src: "/about/cert-iso45001.png", alt: "ISO 45001:2018 Certified" },
+              { src: "/about/cert-uasl.png", alt: "UASL Accredited" },
+              { src: "/about/cert-accurate-white.png", alt: "Accurate Certified" },
+            ].map((badge) => (
+              <Link key={badge.alt} href="/certifications/" className="relative w-16 h-16 block hover:scale-110 transition-transform duration-200">
+                <Image src={badge.src} alt={badge.alt} fill className="object-contain" sizes="64px" />
+              </Link>
+            ))}
+          </div>
         </div>
       </section>
 
       {/* ══ OUR SERVICES IN DUBAI, UAE ═══════════════════════ */}
-      <section className="relative bg-[#f4f5f8] py-24 lg:py-32 overflow-hidden">
+      <section className="relative bg-[#f4f5f8] pt-12 pb-24 lg:pt-16 lg:pb-32 overflow-hidden">
         <div
           className="absolute top-0 left-1/2 -translate-x-1/2 w-[600px] h-[1px] pointer-events-none"
           style={{
@@ -212,15 +233,15 @@ export default function IndustrialAutomationDubaiPage() {
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6">
           <div className="mb-14">
             <div className="flex items-center gap-2.5 mb-4">
-              <span className="w-5 h-px bg-[#e7212b]" />
-              <span className="text-[#e7212b] text-[10px] font-semibold tracking-[3.5px] uppercase">
+              <span className="w-5 h-px bg-[#0891B2]" />
+              <span className="text-[#0891B2] text-[10px] font-semibold tracking-[3.5px] uppercase">
                 Our Services
               </span>
             </div>
             <div className="flex flex-col sm:flex-row sm:items-end justify-between gap-4">
               <h2 className="text-3xl sm:text-[2.4rem] font-bold text-[#0B0D26] leading-[1.15]">
                 Industrial Automation &amp; Engineering{" "}
-                <em className="not-italic text-[#e7212b]">in Dubai, UAE</em>
+                <em className="not-italic text-current">in Dubai, UAE</em>
               </h2>
               <Link
                 href="/contacts/"
@@ -255,7 +276,7 @@ export default function IndustrialAutomationDubaiPage() {
                   <p className="text-gray-500 text-[13.5px] leading-[1.75] flex-1">
                     {svc.body}
                   </p>
-                  <div className="mt-5 pt-4 border-t border-[#e8eaf0] flex items-center gap-1.5 text-[#e7212b] text-[13px] font-semibold">
+                  <div className="mt-5 pt-4 border-t border-[#e8eaf0] flex items-center gap-2 text-[#e7212b] text-[13px] font-semibold">
                     <span>Learn more</span>
                     <ArrowRight className="w-3.5 h-3.5 group-hover:translate-x-1 transition-transform duration-200" />
                   </div>
@@ -290,15 +311,15 @@ export default function IndustrialAutomationDubaiPage() {
               <div className="grid grid-cols-1 lg:grid-cols-[1fr_2fr] gap-10 items-start">
                 <div>
                   <div className="flex items-center gap-2.5 mb-4">
-                    <span className="w-5 h-px bg-[#e7212b]" />
-                    <span className="text-[#e7212b] text-[10px] font-semibold tracking-[3.5px] uppercase">
+                    <span className="w-5 h-px bg-[#0891B2]" />
+                    <span className="text-[#0891B2] text-[10px] font-semibold tracking-[3.5px] uppercase">
                       Capabilities
                     </span>
                   </div>
                   <h3 className="text-white font-bold text-[22px] leading-snug mb-3">
                     Automation &amp; Engineering Capabilities in Dubai, UAE
                   </h3>
-                  <p className="text-white/40 text-[14px] leading-[1.8]">
+                  <p className="text-white/70 text-[14px] leading-[1.8]">
                     From PLC and SCADA system integration to custody flow metering and NDT
                     inspection — our Dubai-based team delivers end-to-end industrial solutions
                     across the United Arab Emirates and the wider GCC region.
@@ -323,8 +344,8 @@ export default function IndustrialAutomationDubaiPage() {
       <section className="py-20 lg:py-24 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6">
           <div className="flex items-center gap-2.5 mb-4">
-            <span className="w-5 h-px bg-[#e7212b]" />
-            <span className="text-[#e7212b] text-[10px] font-semibold tracking-[3.5px] uppercase">
+            <span className="w-5 h-px bg-[#0891B2]" />
+            <span className="text-[#0891B2] text-[10px] font-semibold tracking-[3.5px] uppercase">
               How We Deliver
             </span>
           </div>
@@ -378,8 +399,8 @@ export default function IndustrialAutomationDubaiPage() {
       <section className="py-20 lg:py-24 bg-[#f4f5f8]">
         <div className="max-w-7xl mx-auto px-4 sm:px-6">
           <div className="flex items-center gap-2.5 mb-4">
-            <span className="w-5 h-px bg-[#e7212b]" />
-            <span className="text-[#e7212b] text-[10px] font-semibold tracking-[3.5px] uppercase">
+            <span className="w-5 h-px bg-[#0891B2]" />
+            <span className="text-[#0891B2] text-[10px] font-semibold tracking-[3.5px] uppercase">
               Industries
             </span>
           </div>
@@ -416,8 +437,8 @@ export default function IndustrialAutomationDubaiPage() {
       <section className="bg-[#f4f5f8] py-16 lg:py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6">
           <div className="flex items-center gap-2.5 mb-4">
-            <span className="w-5 h-px bg-[#e7212b]" />
-            <span className="text-[#e7212b] text-[10px] font-semibold tracking-[3.5px] uppercase">
+            <span className="w-5 h-px bg-[#0891B2]" />
+            <span className="text-[#0891B2] text-[10px] font-semibold tracking-[3.5px] uppercase">
               Our Location
             </span>
           </div>
@@ -446,14 +467,14 @@ export default function IndustrialAutomationDubaiPage() {
       <section className="bg-[#f4f5f8] py-20 lg:py-24">
         <div className="max-w-7xl mx-auto px-4 sm:px-6">
           <div className="flex items-center gap-2.5 mb-4">
-            <span className="w-5 h-px bg-[#e7212b]" />
-            <span className="text-[#e7212b] text-[10px] font-semibold tracking-[3.5px] uppercase">
+            <span className="w-5 h-px bg-[#0891B2]" />
+            <span className="text-[#0891B2] text-[10px] font-semibold tracking-[3.5px] uppercase">
               FAQ
             </span>
           </div>
           <h2 className="text-3xl sm:text-[2.4rem] font-bold text-[#0B0D26] leading-[1.15] mb-12">
             Questions About Industrial Automation in{" "}
-            <em className="not-italic text-[#e7212b]">Dubai &amp; the UAE</em>
+            <em className="not-italic text-current">Dubai &amp; the UAE</em>
           </h2>
           <div className="max-w-4xl mx-auto space-y-4">
             {faqItems.map((item) => (
@@ -482,16 +503,16 @@ export default function IndustrialAutomationDubaiPage() {
       <section className="bg-[#000000] blueprint-grid blueprint-dot-grid py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 text-center">
           <div className="flex items-center justify-center gap-3 mb-4">
-            <span className="w-8 h-px bg-[#e7212b]/40" />
-            <span className="text-[#e7212b] text-[9px] font-medium tracking-[2.5px] uppercase">
+            <span className="w-8 h-px bg-[#0891B2]/40" />
+            <span className="text-[#0891B2] text-[14px] font-medium tracking-[2.5px] uppercase">
               Get in touch
             </span>
-            <span className="w-8 h-px bg-[#e7212b]/40" />
+            <span className="w-8 h-px bg-[#0891B2]/40" />
           </div>
           <h2 className="text-3xl sm:text-4xl font-medium text-white mb-3">
             Need industrial automation services in Dubai, UAE?
           </h2>
-          <p className="text-white/50 text-base mb-8 max-w-md mx-auto">
+          <p className="text-white/70 text-base mb-8 max-w-md mx-auto">
             Talk to our Dubai-based team about your PLC &amp; SCADA integration, flow
             measurement, or inspection requirements. We serve clients across the UAE and GCC.
           </p>

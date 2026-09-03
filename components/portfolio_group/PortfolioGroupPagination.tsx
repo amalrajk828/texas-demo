@@ -14,7 +14,7 @@ export default function PortfolioGroupPagination({
 }) {
   if (totalPages <= 1) {
     return (
-      <p className="text-center text-[13px] text-white/60 mt-6">
+      <p className="text-center text-[13px] text-white/70 mt-6">
         {totalItems} portfolio item{totalItems !== 1 ? "s" : ""}
       </p>
     );
@@ -78,7 +78,7 @@ export default function PortfolioGroupPagination({
         )}
       </div>
 
-      <p className="text-center text-[13px] text-white/60 mt-6">
+      <p className="text-center text-[13px] text-white/70 mt-6">
         {totalItems} portfolio item{totalItems !== 1 ? "s" : ""}
         {totalPages > 1 ? ` — Page ${currentPage} of ${totalPages}` : ""}
       </p>

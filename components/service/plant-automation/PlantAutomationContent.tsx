@@ -15,8 +15,8 @@ export default function PlantAutomationContent() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6">
         <div className="fade-up mb-14">
           <div className="flex items-center gap-2.5 mb-4">
-            <span className="w-5 h-px bg-[#e7212b]" />
-            <span className="text-[#e7212b] text-[10px] font-semibold tracking-[3.5px] uppercase">Capabilities</span>
+            <span className="w-5 h-px bg-[#0891B2]" />
+            <span className="text-[#0891B2] text-[10px] font-semibold tracking-[3.5px] uppercase">Capabilities</span>
           </div>
           <h2 className="text-3xl sm:text-[2.4rem] font-bold text-[#0B0D26] leading-[1.15] max-w-2xl">
             Plant Automation Capabilities
@@ -39,9 +39,9 @@ export default function PlantAutomationContent() {
         <div className="fade-up d1">
           <div className="rounded-2xl bg-[#000000] blueprint-grid blueprint-dot-grid p-8 sm:p-10 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-6">
             <div>
-              <p className="text-white/40 text-[10px] tracking-[2px] uppercase mb-2">Technologies &amp; Standards</p>
+              <p className="text-white/70 text-[10px] tracking-[2px] uppercase mb-2">Technologies &amp; Standards</p>
               <p className="text-white font-semibold text-lg">Siemens · Allen-Bradley · Schneider · DCS · IEC 61508</p>
-              <p className="text-white/45 text-sm mt-1">Experienced automation engineers — Kuwait &amp; Dubai</p>
+              <p className="text-white/70 text-sm mt-1">Experienced automation engineers — Kuwait &amp; Dubai</p>
             </div>
             <Link href="#contact" className="inline-flex items-center gap-2 bg-[#e7212b] hover:bg-[#aa0b1b] text-white font-semibold px-6 py-3 rounded-lg transition-colors duration-200 text-sm shrink-0">
               Discuss Your Project

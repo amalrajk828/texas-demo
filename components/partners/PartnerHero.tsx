@@ -29,15 +29,15 @@ export default function PartnerHero({ name, logo, country, relationship, product
 
       <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 py-16 lg:py-20">
         {/* Breadcrumbs */}
-        <nav className="flex items-center gap-1.5 text-[11px] text-white/50 mb-6">
+        <nav className="flex items-center gap-2 text-[14px] text-white/50 mb-6">
           <Link href="/" className="hover:text-white transition-colors">
             Home
           </Link>
-          <ChevronRight className="w-3 h-3 text-white/30" />
+          <ChevronRight className="w-3.5 h-3.5 text-white/30" />
           <Link href="/partners/" className="hover:text-white transition-colors">
             Global Network
           </Link>
-          <ChevronRight className="w-3 h-3 text-white/30" />
+          <ChevronRight className="w-3.5 h-3.5 text-white/30" />
           <span className="text-white">{name}</span>
         </nav>
 
@@ -58,8 +58,8 @@ export default function PartnerHero({ name, logo, country, relationship, product
           {/* Content */}
           <div>
             <div className="flex items-center gap-2 mb-4">
-              <span className="w-5 h-px bg-[#e7212b]" />
-              <span className="text-[#e7212b] text-[10px] font-medium tracking-[2.5px] uppercase">
+              <span className="w-5 h-px bg-[#0891B2]" />
+              <span className="text-[#0891B2] text-[10px] font-medium tracking-[2.5px] uppercase">
                 {relationship}
               </span>
             </div>
@@ -68,13 +68,13 @@ export default function PartnerHero({ name, logo, country, relationship, product
               {name}
             </h1>
 
-            <p className="text-white/60 text-base max-w-2xl mb-6">
+            <p className="text-white/70 text-base max-w-2xl mb-6">
               {product}
             </p>
 
             {/* Badges */}
             <div className="flex flex-wrap gap-3">
-              <span className="inline-flex items-center gap-1.5 rounded-lg border border-white/10 bg-white/[0.03] px-4 py-2 text-[13px] font-medium text-white/70">
+              <span className="inline-flex items-center gap-2 rounded-lg border border-white/10 bg-white/[0.03] px-4 py-2 text-[13px] font-medium text-white/70">
                 <span className="text-[10px] font-bold tracking-[1.5px] text-[#e7212b]">
                   {country}
                 </span>

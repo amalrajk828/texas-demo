@@ -97,7 +97,7 @@ export default function SpaceAiContent() {
         />
 
         <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6">
-          <nav className="flex items-center gap-1.5 mb-8 text-[11px] text-white/35 flex-wrap">
+          <nav className="flex items-center gap-2 mb-8 text-[14px] text-white/50 flex-wrap">
             <Link href="/" className="hover:text-white/70 transition-colors">
               Home
             </Link>
@@ -114,20 +114,20 @@ export default function SpaceAiContent() {
               <div className="w-9 h-9 rounded-xl bg-[#e7212b]/10 border border-[#e7212b]/25 flex items-center justify-center">
                 <Brain className="w-4 h-4 text-[#e7212b]" strokeWidth={1.8} />
               </div>
-              <span className="text-[#e7212b] text-[11px] font-semibold tracking-[3px] uppercase">
+              <span className="text-[#0891B2] text-[14px] font-semibold tracking-[3px] uppercase">
                 Strategic Partner — Industrial AI
               </span>
             </div>
 
             <h1 className="text-4xl sm:text-5xl lg:text-[3.2rem] font-bold text-white leading-[1.12] mb-6">
               Space AI —{" "}
-              <em className="not-italic text-[#e7212b]">
+              <em className="not-italic text-current">
                 Next-Generation AI
               </em>{" "}
               &amp; Machine Learning for Industry
             </h1>
 
-            <p className="text-white/55 text-base sm:text-[16px] leading-relaxed mb-8 max-w-2xl">
+            <p className="text-white/70 text-base sm:text-[16px] leading-relaxed mb-8 max-w-2xl">
               From field devices to enterprise analytics — Space AI brings deep
               learning, edge computing, and big data to your plant floor.
               Reduce unplanned downtime, increase yield, and unlock autonomous
@@ -165,7 +165,7 @@ export default function SpaceAiContent() {
                 <p className="text-[12px] text-white mt-1.5 font-semibold tracking-wide">
                   {o.label}
                 </p>
-                <p className="text-[10px] text-white/40 mt-1.5 leading-tight">
+                <p className="text-[10px] text-white/70 mt-1.5 leading-tight">
                   {o.desc}
                 </p>
               </div>
@@ -180,7 +180,7 @@ export default function SpaceAiContent() {
           <div className="flex flex-col sm:flex-row items-center justify-between gap-6">
             <div className="flex items-center gap-2.5">
               <Rocket className="w-4 h-4 text-[#e7212b]" strokeWidth={1.8} />
-              <span className="text-[#e7212b] text-[10px] font-semibold tracking-[3.5px] uppercase">
+              <span className="text-[#0891B2] text-[10px] font-semibold tracking-[3.5px] uppercase">
                 Core Technologies
               </span>
             </div>
@@ -214,14 +214,14 @@ export default function SpaceAiContent() {
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6">
           <div className="mb-14">
             <div className="flex items-center gap-2.5 mb-4">
-              <span className="w-5 h-px bg-[#e7212b]" />
-              <span className="text-[#e7212b] text-[10px] font-semibold tracking-[3.5px] uppercase">
+              <span className="w-5 h-px bg-[#0891B2]" />
+              <span className="text-[#0891B2] text-[10px] font-semibold tracking-[3.5px] uppercase">
                 Industrial AI Solutions
               </span>
             </div>
             <h2 className="text-3xl sm:text-[2.4rem] font-bold text-[#0B0D26] leading-[1.15] max-w-3xl">
               Three categories of AI that{" "}
-              <em className="not-italic text-[#e7212b]">
+              <em className="not-italic text-current">
                 transform industrial operations
               </em>
             </h2>
@@ -302,15 +302,15 @@ export default function SpaceAiContent() {
             <div className="relative p-10 lg:p-14">
               <div className="text-center mb-12 max-w-2xl mx-auto">
                 <div className="inline-flex items-center gap-2.5 mb-4">
-                  <span className="w-5 h-px bg-[#e7212b]" />
-                  <span className="text-[#e7212b] text-[10px] font-semibold tracking-[3.5px] uppercase">
+                  <span className="w-5 h-px bg-[#0891B2]" />
+                  <span className="text-[#0891B2] text-[10px] font-semibold tracking-[3.5px] uppercase">
                     How It Works
                   </span>
-                  <span className="w-5 h-px bg-[#e7212b]" />
+                  <span className="w-5 h-px bg-[#0891B2]" />
                 </div>
                 <h2 className="text-3xl lg:text-4xl font-bold text-white leading-[1.15]">
                   From data to decisions in{" "}
-                  <em className="not-italic text-[#e7212b]">three steps</em>
+                  <em className="not-italic text-current">three steps</em>
                 </h2>
               </div>
 
@@ -345,7 +345,7 @@ export default function SpaceAiContent() {
                     <h3 className="text-white font-bold text-[16px] mb-2">
                       {s.t}
                     </h3>
-                    <p className="text-white/55 text-[13.5px] leading-[1.7]">
+                    <p className="text-white/70 text-[13.5px] leading-[1.7]">
                       {s.d}
                     </p>
                   </div>

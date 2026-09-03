@@ -3,6 +3,7 @@ import ServiceGroupHero from "@/components/services_group/ServiceGroupHero";
 import ServiceGroupGrid from "@/components/services_group/ServiceGroupGrid";
 import { BreadcrumbJsonLd } from "@/components/schema/BreadcrumbJsonLd";
 import { FaqPageJsonLd } from "@/components/schema/FaqPageJsonLd";
+import { SpeakableJsonLd } from "@/components/schema/SpeakableJsonLd";
 import { servicesListingFaq } from "@/lib/pageFaqData";
 
 export const metadata: Metadata = {
@@ -35,6 +36,7 @@ export default function ServicesGroupPage() {
   return (
     <>
       <BreadcrumbJsonLd items={[{ name: "Home", href: "/" }, { name: "Services", href: "/services/" }, { name: "All Services", href: "/services_group/services/" }]} />
+      <SpeakableJsonLd headline="All Industrial Services — Flow Measurement, Inspection & Automation" />
       <ServiceGroupHero />
       <ServiceGroupGrid page={1} />
       <FaqPageJsonLd items={servicesListingFaq} />

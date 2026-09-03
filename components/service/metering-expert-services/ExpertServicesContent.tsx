@@ -43,7 +43,7 @@ export default function ExpertServicesContent() {
 
           <div>
             <div className="fade-up d1">
-              <div className="flex items-center gap-2.5 mb-4"><span className="w-5 h-px bg-[#e7212b]" /><span className="text-[#e7212b] text-[10px] font-semibold tracking-[3.5px] uppercase">What We Do</span></div>
+              <div className="flex items-center gap-2.5 mb-4"><span className="w-5 h-px bg-[#0891B2]" /><span className="text-[#0891B2] text-[10px] font-semibold tracking-[3.5px] uppercase">What We Do</span></div>
               <h2 className="text-3xl sm:text-[2.2rem] font-bold text-[#0B0D26] leading-[1.15] mb-5">Specialist Metering Engineering Expertise, On Demand</h2>
               <p className="text-gray-500 text-[15px] leading-[1.85] mb-4">TTS provides specialist metering engineer services for clients requiring expert technical support on custody transfer projects, metering system deployments, and ongoing operations. Our engineers bring deep, hands-on expertise across the full range of custody metering equipment and software.</p>
               <p className="text-gray-500 text-[15px] leading-[1.85] mb-8">Whether you need short-term project support, long-term technical secondment, or structured training for your team, TTS delivers the metering expertise that helps you operate with confidence, accuracy, and compliance in Kuwait, Dubai, and across the region.</p>
@@ -68,7 +68,7 @@ export default function ExpertServicesContent() {
 
         <div>
           <div className="fade-up mb-12">
-            <div className="flex items-center gap-2.5 mb-4"><span className="w-5 h-px bg-[#e7212b]" /><span className="text-[#e7212b] text-[10px] font-semibold tracking-[3.5px] uppercase">Our Services</span></div>
+            <div className="flex items-center gap-2.5 mb-4"><span className="w-5 h-px bg-[#0891B2]" /><span className="text-[#0891B2] text-[10px] font-semibold tracking-[3.5px] uppercase">Our Services</span></div>
             <h2 className="text-3xl sm:text-[2.2rem] font-bold text-[#0B0D26] leading-[1.15]">What We Offer</h2>
           </div>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5">
@@ -94,7 +94,7 @@ export default function ExpertServicesContent() {
               <div className="relative z-10 px-8 py-7 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-5">
                 <div>
                   <p className="text-white font-bold text-[15px]">Need a Specialist Metering Engineer for Your Project?</p>
-                  <p className="text-white/40 text-[13px] mt-0.5">Tell us about your project and we'll match you with the right expertise.</p>
+                  <p className="text-white/70 text-[13px] mt-0.5">Tell us about your project and we'll match you with the right expertise.</p>
                 </div>
                 <div className="flex flex-wrap gap-3 shrink-0">
                   <a href="#contact" className="inline-flex items-center gap-2 bg-[#e7212b] hover:bg-[#aa0b1b] text-white font-semibold px-6 py-3 rounded-lg transition-colors duration-200 text-[13px] shadow-lg shadow-[#e7212b]/20">Contact Us <ArrowRight className="w-3.5 h-3.5" /></a>

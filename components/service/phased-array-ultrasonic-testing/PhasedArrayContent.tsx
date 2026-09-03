@@ -15,8 +15,8 @@ export default function PhasedArrayContent() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6">
         <div className="fade-up mb-14">
           <div className="flex items-center gap-2.5 mb-4">
-            <span className="w-5 h-px bg-[#e7212b]" />
-            <span className="text-[#e7212b] text-[10px] font-semibold tracking-[3.5px] uppercase">Capabilities</span>
+            <span className="w-5 h-px bg-[#0891B2]" />
+            <span className="text-[#0891B2] text-[10px] font-semibold tracking-[3.5px] uppercase">Capabilities</span>
           </div>
           <h2 className="text-3xl sm:text-[2.4rem] font-bold text-[#0B0D26] leading-[1.15] max-w-2xl">
             What PAUT Detects &amp; Measures
@@ -24,7 +24,7 @@ export default function PhasedArrayContent() {
         </div>
         <div className="fade-up mb-12">
           <div className="max-w-3xl">
-            <div className="flex items-center gap-2.5 mb-4"><span className="w-5 h-px bg-[#e7212b]" /><span className="text-[#e7212b] text-[10px] font-semibold tracking-[3.5px] uppercase">What We Do</span></div>
+            <div className="flex items-center gap-2.5 mb-4"><span className="w-5 h-px bg-[#0891B2]" /><span className="text-[#0891B2] text-[10px] font-semibold tracking-[3.5px] uppercase">What We Do</span></div>
             <h2 className="text-3xl sm:text-[2.2rem] font-bold text-[#0B0D26] leading-[1.15] mb-5">Phased Array UT for Advanced Weld and Material Inspection</h2>
             <p className="text-gray-500 text-[15px] leading-[1.85] mb-4">Phased array ultrasonic testing (PAUT) uses multiple piezoelectric elements that are pulsed independently with calculated time delays — producing steerable, focused, and swept sound beams without moving the probe. This enables sectorial scanning (S-scan) through the full weld volume in a single pass, significantly improving defect detection probability and sizing accuracy compared to conventional single-element UT.</p>
             <p className="text-gray-500 text-[15px] leading-[1.85] mb-8">Our PAUT capabilities cover weld inspection for ferritic and austenitic materials, corrosion mapping, and composite laminate assessment. We perform PAUT in accordance with ASME V, ISO 17640, and ISO 13588 — providing fully digitised data with A-scan, B-scan, C-scan, and S-scan imaging for comprehensive defect characterisation and reporting.</p>
@@ -48,9 +48,9 @@ export default function PhasedArrayContent() {
         <div className="fade-up d1">
           <div className="rounded-2xl bg-[#000000] blueprint-grid blueprint-dot-grid p-8 sm:p-10 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-6">
             <div>
-              <p className="text-white/40 text-[10px] tracking-[2px] uppercase mb-2">Standards &amp; Codes</p>
+              <p className="text-white/70 text-[10px] tracking-[2px] uppercase mb-2">Standards &amp; Codes</p>
               <p className="text-white font-semibold text-lg">ASME V · API 1104 · EN ISO 13588 · ASTM E2700</p>
-              <p className="text-white/45 text-sm mt-1">Qualified PAUT technicians — Kuwait &amp; Dubai</p>
+              <p className="text-white/70 text-sm mt-1">Qualified PAUT technicians — Kuwait &amp; Dubai</p>
             </div>
             <Link href="#contact" className="inline-flex items-center gap-2 bg-[#e7212b] hover:bg-[#aa0b1b] text-white font-semibold px-6 py-3 rounded-lg transition-colors duration-200 text-sm shrink-0">
               Request PAUT Inspection
