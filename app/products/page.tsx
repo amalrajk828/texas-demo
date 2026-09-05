@@ -21,6 +21,7 @@ import {
   Zap,
   RotateCcw,
   ArrowRight,
+  type LucideIcon,
 } from "lucide-react";
 
 export const metadata: Metadata = {
@@ -60,7 +61,7 @@ type ProductCategory = {
   title: string;
   description: string;
   href: string;
-  Icon: React.ElementType;
+  Icon: LucideIcon;
   sub?: string[];
 };
 
