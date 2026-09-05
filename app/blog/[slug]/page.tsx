@@ -10,6 +10,7 @@ import { BlogPostingJsonLd } from "@/components/schema/BlogPostingJsonLd";
 import { FaqPageJsonLd } from "@/components/schema/FaqPageJsonLd";
 import { SpeakableJsonLd } from "@/components/schema/SpeakableJsonLd";
 import FaqAccordion from "@/components/FaqAccordion";
+import BlogArticleHero from "@/components/blocks/hero-section-blog";
 
 type PageProps = {
   params: Promise<{
@@ -96,26 +97,26 @@ export default async function BlogArticlePage({ params }: PageProps) {
       {faqItems.length > 0 && <FaqPageJsonLd items={faqItems} />}
       <SpeakableJsonLd headline={article.title} />
       {/* Hero */}
-      <section className="relative bg-[#0B0D26] overflow-hidden pt-32 pb-16 border-b border-white/10">
-        <div className="absolute inset-0 pointer-events-none" style={{ backgroundImage: "repeating-linear-gradient(0deg,transparent,transparent 39px,rgba(255,255,255,0.02) 40px),repeating-linear-gradient(90deg,transparent,transparent 39px,rgba(255,255,255,0.02) 40px)" }} />
-        <div className="absolute top-0 right-0 w-[600px] h-[400px] pointer-events-none" style={{ background: "radial-gradient(ellipse at top right, rgba(231,33,43,0.12) 0%, transparent 65%)" }} />
-        <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6">
-          <nav className="flex items-center gap-2 text-[14px] text-white/50 mb-8 flex-wrap">
-            <Link href="/" className="hover:text-white transition-colors">Home</Link>
-            <ChevronRight className="w-3.5 h-3.5 text-white/30" />
-            <Link href="/blog/" className="hover:text-white transition-colors">Blog</Link>
-            <ChevronRight className="w-3.5 h-3.5 text-white/30" />
-            <span className="text-white/70">{article.category}</span>
-          </nav>
-          <div className="flex items-center gap-2 mb-4">
-            <span className="w-5 h-px bg-[#e7212b]" />
-            <span className="text-[#e7212b] text-[12px] font-semibold tracking-[3px] uppercase">{article.category}</span>
-          </div>
-          <h1 className="article-title text-2xl sm:text-3xl lg:text-[2.2rem] font-bold text-white leading-tight mb-5">{article.title}</h1>
-          <div className="flex items-center gap-4 text-[14px] text-white/40">
-            <span className="flex items-center gap-1.5"><Calendar className="w-3.5 h-3.5" />{article.date}</span>
-            <span className="w-1 h-1 rounded-full bg-white/20" />
-            <span className="flex items-center gap-1.5"><Clock className="w-3.5 h-3.5" />{article.readTime}</span>
+      <BlogArticleHero
+        title={article.title}
+        category={article.category}
+        date={article.date}
+        readTime={article.readTime}
+        slug={slug}
+      />
+
+      {/* Certification Trust Strip */}
+      <section className="py-3 border-b border-gray-100 bg-white">
+        <div className="max-w-4xl mx-auto px-4 sm:px-6">
+          <div className="flex items-center justify-center gap-4">
+            <div className="flex items-center gap-3">
+              {["/about/cert-iso9001.png", "/about/cert-iso14001.png", "/about/cert-iso45001.png", "/about/cert-uasl.png", "/about/cert-accurate.png"].map((src) => (
+                <Link key={src} href="/certifications/" className="relative w-16 h-16 block">
+                  <Image src={src} alt="" fill className="object-contain" sizes="64px" />
+                </Link>
+              ))}
+            </div>
+            <p className="text-[11px] text-gray-400 font-medium">ISO 9001 · ISO 14001 · ISO 45001 · UASL · Accurate Certified</p>
           </div>
         </div>
       </section>
@@ -166,8 +167,8 @@ export default async function BlogArticlePage({ params }: PageProps) {
         {faqItems.length > 0 && (
           <section className="mt-16 pt-12 border-t border-gray-200">
             <div className="flex items-center gap-2.5 mb-6">
-              <span className="w-5 h-px bg-[#e7212b]" />
-              <span className="text-[#e7212b] text-[12px] font-semibold tracking-[3px] uppercase">FAQ</span>
+              <span className="w-5 h-px bg-[#0891B2]" />
+              <span className="text-[#0891B2] text-[12px] font-semibold tracking-[3px] uppercase">FAQ</span>
             </div>
             <h2 className="text-2xl font-bold text-[#0B0D26] mb-8">Frequently Asked Questions</h2>
             <FaqAccordion items={faqItems} />
@@ -182,8 +183,8 @@ export default async function BlogArticlePage({ params }: PageProps) {
           return (
             <section className="mt-16 pt-12 border-t border-gray-200">
               <div className="flex items-center gap-2.5 mb-6">
-                <span className="w-5 h-px bg-[#e7212b]" />
-                <span className="text-[#e7212b] text-[12px] font-semibold tracking-[3px] uppercase">Related</span>
+                <span className="w-5 h-px bg-[#0891B2]" />
+                <span className="text-[#0891B2] text-[12px] font-semibold tracking-[3px] uppercase">Related</span>
               </div>
               <h2 className="text-2xl font-bold text-[#0B0D26] mb-8">Related Articles</h2>
               <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
@@ -193,7 +194,7 @@ export default async function BlogArticlePage({ params }: PageProps) {
                       <Image src={a.image} alt={a.imageAlt} fill className="object-cover group-hover:scale-105 transition-transform duration-500" sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw" />
                     </div>
                     <div className="p-5">
-                      <span className="text-[11px] font-semibold text-[#e7212b] tracking-[2px] uppercase">{a.category}</span>
+                      <span className="text-[11px] font-semibold text-[#0891B2] tracking-[2px] uppercase">{a.category}</span>
                       <h3 className="text-[16px] font-semibold text-[#0B0D26] mt-2 mb-2 group-hover:text-[#e7212b] transition-colors line-clamp-2">{a.title}</h3>
                       <div className="flex items-center gap-2 text-[13px] text-gray-400">
                         <Calendar className="w-3 h-3" />
@@ -225,7 +226,7 @@ export default async function BlogArticlePage({ params }: PageProps) {
             <div className="absolute top-0 right-0 w-[400px] h-full pointer-events-none" style={{ background: "radial-gradient(ellipse at right, rgba(231,33,43,0.10) 0%, transparent 70%)" }} />
             <div className="relative z-10 flex flex-col md:flex-row items-center justify-between gap-8">
               <div className="max-w-xl">
-                <span className="text-[#e7212b] text-[11px] font-bold tracking-[3px] uppercase block mb-2">ENGINEERING SERVICES</span>
+                <span className="text-[#0891B2] text-[11px] font-bold tracking-[3px] uppercase block mb-2">ENGINEERING SERVICES</span>
                 <h3 className="text-xl sm:text-2xl font-bold mb-3">Discuss Your Requirements with TTS Engineers</h3>
                 <p className="text-white/60 text-[15px] leading-relaxed">Our certified instrumentation engineers are available to review your facility metering, SCADA upgrades, environmental analyzers, and inspection testing needs.</p>
               </div>

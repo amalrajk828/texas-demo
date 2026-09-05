@@ -50,15 +50,15 @@ export default function ProductDetailHero({
 
       <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6">
         {/* Breadcrumb */}
-        <nav className="flex items-center gap-1.5 text-[11px] text-white/50 mb-6">
+        <nav className="flex items-center gap-2 text-[14px] text-white/50 mb-6">
           <Link href="/" className="hover:text-white transition-colors">Home</Link>
-          <ChevronRight className="w-3 h-3 text-white/30" />
+          <ChevronRight className="w-3.5 h-3.5 text-white/30" />
           <Link href="/products" className="hover:text-white transition-colors">Products</Link>
-          <ChevronRight className="w-3 h-3 text-white/30" />
+          <ChevronRight className="w-3.5 h-3.5 text-white/30" />
           <Link href={`/products/${category}`} className="hover:text-white transition-colors">
             {categoryLabel}
           </Link>
-          <ChevronRight className="w-3 h-3 text-white/30" />
+          <ChevronRight className="w-3.5 h-3.5 text-white/30" />
           <span className="text-white">{product.name}</span>
         </nav>
 
@@ -66,7 +66,7 @@ export default function ProductDetailHero({
         <div className="grid grid-cols-1 min-[769px]:grid-cols-2 gap-10 items-center">
           {/* Left Text Column */}
           <div className="flex flex-col items-start">
-            <span className="text-[#e7212b] text-[11px] font-bold tracking-wider uppercase mb-2">
+            <span className="text-[#0891B2] text-[14px] font-bold tracking-wider uppercase mb-2">
               {product.tag}
             </span>
             {seriesBadge && (

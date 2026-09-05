@@ -137,9 +137,9 @@ export default function FlowMeterCalibrationKuwaitPage() {
         />
 
         <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6">
-          <nav className="flex items-center gap-1.5 mb-8 text-[11px] text-white/35 flex-wrap">
+          <nav className="flex items-center gap-2 mb-8 text-[14px] text-white/50 flex-wrap">
             <Link href="/" className="hover:text-white/70 transition-colors">Home</Link>
-            <ChevronRight className="w-3 h-3 shrink-0" />
+            <ChevronRight className="w-3.5 h-3.5 shrink-0" />
             <span className="text-white/60">Flow Meter Calibration Kuwait</span>
           </nav>
 
@@ -148,18 +148,18 @@ export default function FlowMeterCalibrationKuwaitPage() {
               <div className="w-9 h-9 rounded-xl bg-[#e7212b]/10 border border-[#e7212b]/25 flex items-center justify-center">
                 <MapPin className="w-4 h-4 text-[#e7212b]" strokeWidth={1.8} />
               </div>
-              <span className="text-[#e7212b] text-[11px] font-semibold tracking-[3px] uppercase">
+              <span className="text-[#0891B2] text-[14px] font-semibold tracking-[3px] uppercase">
                 Fahaheel — Kuwait
               </span>
             </div>
 
             <h1 className="text-4xl sm:text-5xl lg:text-[3.2rem] font-bold text-white leading-[1.12] mb-6">
               ISO 17025 Accredited{" "}
-              <em className="not-italic text-[#e7212b]">Flow Meter Calibration</em>{" "}
+              <em className="not-italic text-current">Flow Meter Calibration</em>{" "}
               in Kuwait &amp; the GCC
             </h1>
 
-            <p className="text-white/50 text-base sm:text-[16px] leading-relaxed mb-8 max-w-2xl">
+            <p className="text-white/70 text-base sm:text-[16px] leading-relaxed mb-8 max-w-2xl">
               Texas Technical Services provides professional flow meter calibration services
               across Kuwait and the GCC. From Coriolis and ultrasonic meters to turbine and PD
               technologies, our ISO 17025 accredited laboratory delivers calibration to OIML R117,
@@ -207,15 +207,15 @@ export default function FlowMeterCalibrationKuwaitPage() {
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6">
           <div className="mb-14">
             <div className="flex items-center gap-2.5 mb-4">
-              <span className="w-5 h-px bg-[#e7212b]" />
-              <span className="text-[#e7212b] text-[10px] font-semibold tracking-[3.5px] uppercase">
+              <span className="w-5 h-px bg-[#0891B2]" />
+              <span className="text-[#0891B2] text-[10px] font-semibold tracking-[3.5px] uppercase">
                 Calibration Services
               </span>
             </div>
             <div className="flex flex-col sm:flex-row sm:items-end justify-between gap-4">
               <h2 className="text-3xl sm:text-[2.4rem] font-bold text-[#0B0D26] leading-[1.15]">
                 Flow Meter Calibration{" "}
-                <em className="not-italic text-[#e7212b]">Services in Kuwait</em>
+                <em className="not-italic text-current">Services in Kuwait</em>
               </h2>
               <Link
                 href="/contacts/"
@@ -250,7 +250,7 @@ export default function FlowMeterCalibrationKuwaitPage() {
                   <p className="text-gray-500 text-[13.5px] leading-[1.75] flex-1">
                     {svc.body}
                   </p>
-                  <div className="mt-5 pt-4 border-t border-[#e8eaf0] flex items-center gap-1.5 text-[#e7212b] text-[13px] font-semibold">
+                  <div className="mt-5 pt-4 border-t border-[#e8eaf0] flex items-center gap-2 text-[#e7212b] text-[13px] font-semibold">
                     <span>Learn more</span>
                     <ArrowRight className="w-3.5 h-3.5 group-hover:translate-x-1 transition-transform duration-200" />
                   </div>
@@ -269,15 +269,15 @@ export default function FlowMeterCalibrationKuwaitPage() {
               <div className="grid grid-cols-1 lg:grid-cols-[1fr_2fr] gap-10 items-start">
                 <div>
                   <div className="flex items-center gap-2.5 mb-4">
-                    <span className="w-5 h-px bg-[#e7212b]" />
-                    <span className="text-[#e7212b] text-[10px] font-semibold tracking-[3.5px] uppercase">
+                    <span className="w-5 h-px bg-[#0891B2]" />
+                    <span className="text-[#0891B2] text-[10px] font-semibold tracking-[3.5px] uppercase">
                       Capabilities
                     </span>
                   </div>
                   <h3 className="text-white font-bold text-[22px] leading-snug mb-3">
                     Calibration Capabilities in Kuwait
                   </h3>
-                  <p className="text-white/40 text-[14px] leading-[1.8]">
+                  <p className="text-white/70 text-[14px] leading-[1.8]">
                     From ISO 17025 accredited laboratory calibration to on-site mobile rigs,
                     our Fahaheel-based team delivers comprehensive flow meter calibration
                     across Kuwait and the wider GCC region.
@@ -302,14 +302,14 @@ export default function FlowMeterCalibrationKuwaitPage() {
       <section className="bg-[#f4f5f8] py-20 lg:py-24">
         <div className="max-w-7xl mx-auto px-4 sm:px-6">
           <div className="flex items-center gap-2.5 mb-4">
-            <span className="w-5 h-px bg-[#e7212b]" />
-            <span className="text-[#e7212b] text-[10px] font-semibold tracking-[3.5px] uppercase">
+            <span className="w-5 h-px bg-[#0891B2]" />
+            <span className="text-[#0891B2] text-[10px] font-semibold tracking-[3.5px] uppercase">
               FAQ
             </span>
           </div>
           <h2 className="text-3xl sm:text-[2.4rem] font-bold text-[#0B0D26] leading-[1.15] mb-12">
             Questions About Flow Meter Calibration{" "}
-            <em className="not-italic text-[#e7212b]">in Kuwait</em>
+            <em className="not-italic text-current">in Kuwait</em>
           </h2>
           <div className="max-w-4xl mx-auto space-y-4">
             {faqItems.map((item) => (
@@ -338,16 +338,16 @@ export default function FlowMeterCalibrationKuwaitPage() {
       <section className="bg-[#0B0D26] py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 text-center">
           <div className="flex items-center justify-center gap-3 mb-4">
-            <span className="w-8 h-px bg-[#e7212b]/40" />
-            <span className="text-[#e7212b] text-[9px] font-medium tracking-[2.5px] uppercase">
+            <span className="w-8 h-px bg-[#0891B2]/40" />
+            <span className="text-[#0891B2] text-[14px] font-medium tracking-[2.5px] uppercase">
               Get in touch
             </span>
-            <span className="w-8 h-px bg-[#e7212b]/40" />
+            <span className="w-8 h-px bg-[#0891B2]/40" />
           </div>
           <h2 className="text-3xl sm:text-4xl font-medium text-white mb-3">
             Need flow meter calibration in Kuwait?
           </h2>
-          <p className="text-white/50 text-base mb-8 max-w-md mx-auto">
+          <p className="text-white/70 text-base mb-8 max-w-md mx-auto">
             Talk to our Fahaheel-based team about your calibration requirements.
             We serve clients across Kuwait and the GCC with ISO 17025 accredited services.
           </p>

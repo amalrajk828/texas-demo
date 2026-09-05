@@ -39,8 +39,7 @@ export default function SteelFabricationHero() {
           </div>
           <div className="fade-up d1">
             <h1 className="text-4xl sm:text-5xl lg:text-[3.5rem] font-bold text-white leading-[1.08] tracking-tight mb-6">
-              Steel{" "}
-              <span className="text-[#e7212b]">Fabrication</span>
+              Steel Fabrication
             </h1>
           </div>
           <div className="fade-up d2">

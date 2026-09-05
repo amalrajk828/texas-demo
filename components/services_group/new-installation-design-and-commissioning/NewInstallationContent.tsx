@@ -15,8 +15,8 @@ export default function NewInstallationContent() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6">
         <div className="fade-up mb-14">
           <div className="flex items-center gap-2.5 mb-4">
-            <span className="w-5 h-px bg-[#e7212b]" />
-            <span className="text-[#e7212b] text-[10px] font-semibold tracking-[3.5px] uppercase">Engineering Services</span>
+            <span className="w-5 h-px bg-[#0891B2]" />
+            <span className="text-[#0891B2] text-[10px] font-semibold tracking-[3.5px] uppercase">Engineering Services</span>
           </div>
           <h2 className="text-3xl sm:text-[2.4rem] font-bold text-[#0B0D26] leading-[1.15] max-w-2xl">
             Design &amp; Commissioning Capabilities
@@ -24,7 +24,7 @@ export default function NewInstallationContent() {
         </div>
         <div className="fade-up mb-12">
           <div className="max-w-3xl">
-            <div className="flex items-center gap-2.5 mb-4"><span className="w-5 h-px bg-[#e7212b]" /><span className="text-[#e7212b] text-[10px] font-semibold tracking-[3.5px] uppercase">What We Do</span></div>
+            <div className="flex items-center gap-2.5 mb-4"><span className="w-5 h-px bg-[#0891B2]" /><span className="text-[#0891B2] text-[10px] font-semibold tracking-[3.5px] uppercase">What We Do</span></div>
             <h2 className="text-3xl sm:text-[2.2rem] font-bold text-[#0B0D26] leading-[1.15] mb-5">Design, Installation Supervision, and Commissioning of New Systems</h2>
             <p className="text-gray-500 text-[15px] leading-[1.85] mb-4">TTS supports clients through the complete lifecycle of new system installation — from concept design and detailed engineering through installation supervision, testing, and commissioning. Our engineering team develops functional specifications, P&IDs, electrical schematics, and control system architectures that meet your operational requirements and comply with applicable codes and standards.</p>
             <p className="text-gray-500 text-[15px] leading-[1.85] mb-4">During construction, our site engineers supervise installation quality, manage vendor interfaces, and coordinate testing activities including loop checking, pressure testing, and integrated system testing. Commissioning support covers factory acceptance testing (FAT), site acceptance testing (SAT), pre-commissioning checks, and operational handover — with comprehensive documentation packages that satisfy regulatory and owner-operator requirements.</p>
@@ -48,9 +48,9 @@ export default function NewInstallationContent() {
         <div className="fade-up d1">
           <div className="rounded-2xl bg-[#000000] blueprint-grid blueprint-dot-grid p-8 sm:p-10 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-6">
             <div>
-              <p className="text-white/40 text-[10px] tracking-[2px] uppercase mb-2">Authorized OEM Representative</p>
+              <p className="text-white/70 text-[10px] tracking-[2px] uppercase mb-2">Authorized OEM Representative</p>
               <p className="text-white font-semibold text-lg">Expert Design &amp; Commissioning Services</p>
-              <p className="text-white/45 text-sm mt-1">Kuwait &amp; Dubai — full metering system lifecycle support</p>
+              <p className="text-white/70 text-sm mt-1">Kuwait &amp; Dubai — full metering system lifecycle support</p>
             </div>
             <Link href="/contacts/" className="inline-flex items-center gap-2 bg-[#e7212b] hover:bg-[#aa0b1b] text-white font-semibold px-6 py-3 rounded-lg transition-colors duration-200 text-sm shrink-0">
               Request Consultation

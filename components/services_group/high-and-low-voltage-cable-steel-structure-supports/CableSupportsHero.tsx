@@ -39,8 +39,7 @@ export default function CableSupportsHero() {
           </div>
           <div className="fade-up d1">
             <h1 className="text-4xl sm:text-5xl lg:text-[3.5rem] font-bold text-white leading-[1.08] tracking-tight mb-6">
-              High and Low Voltage Cable{" "}
-              <span className="text-[#e7212b]">Steel Structure</span> Supports
+              High and Low Voltage Cable Steel Structure Supports
             </h1>
           </div>
           <div className="fade-up d2">

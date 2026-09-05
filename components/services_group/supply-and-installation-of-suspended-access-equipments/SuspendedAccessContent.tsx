@@ -15,8 +15,8 @@ export default function SuspendedAccessContent() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6">
         <div className="fade-up mb-14">
           <div className="flex items-center gap-2.5 mb-4">
-            <span className="w-5 h-px bg-[#e7212b]" />
-            <span className="text-[#e7212b] text-[10px] font-semibold tracking-[3.5px] uppercase">Access Systems</span>
+            <span className="w-5 h-px bg-[#0891B2]" />
+            <span className="text-[#0891B2] text-[10px] font-semibold tracking-[3.5px] uppercase">Access Systems</span>
           </div>
           <h2 className="text-3xl sm:text-[2.4rem] font-bold text-[#0B0D26] leading-[1.15] max-w-2xl">
             Suspended Access Equipment Solutions
@@ -24,7 +24,7 @@ export default function SuspendedAccessContent() {
         </div>
         <div className="fade-up mb-12">
           <div className="max-w-3xl">
-            <div className="flex items-center gap-2.5 mb-4"><span className="w-5 h-px bg-[#e7212b]" /><span className="text-[#e7212b] text-[10px] font-semibold tracking-[3.5px] uppercase">What We Do</span></div>
+            <div className="flex items-center gap-2.5 mb-4"><span className="w-5 h-px bg-[#0891B2]" /><span className="text-[#0891B2] text-[10px] font-semibold tracking-[3.5px] uppercase">What We Do</span></div>
             <h2 className="text-3xl sm:text-[2.2rem] font-bold text-[#0B0D26] leading-[1.15] mb-5">Permanent and Temporary Suspended Access Systems</h2>
             <p className="text-gray-500 text-[15px] leading-[1.85] mb-4">Suspended access equipment — including building maintenance units (BMUs), cradles, and rope access systems — provides safe access to building facades, curtain walls, and external structures for cleaning, maintenance, inspection, and repair. TTS supplies, installs, and maintains permanent and temporary suspended access solutions for commercial, residential, and industrial buildings.</p>
             <p className="text-gray-500 text-[15px] leading-[1.85] mb-4">Our services cover system design, structural anchor installation, guide rail and track systems, and commissioning of powered access equipment to EN 1808 and local regulatory requirements. We also provide periodic examination, load testing, and maintenance programmes that keep your suspended access equipment in safe, compliant, and operational condition throughout its service life.</p>
@@ -48,9 +48,9 @@ export default function SuspendedAccessContent() {
         <div className="fade-up d1">
           <div className="rounded-2xl bg-[#000000] blueprint-grid blueprint-dot-grid p-8 sm:p-10 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-6">
             <div>
-              <p className="text-white/40 text-[10px] tracking-[2px] uppercase mb-2">Building Maintenance Solutions</p>
+              <p className="text-white/70 text-[10px] tracking-[2px] uppercase mb-2">Building Maintenance Solutions</p>
               <p className="text-white font-semibold text-lg">Complete Suspended Access Systems</p>
-              <p className="text-white/45 text-sm mt-1">Supply, installation, and maintenance — Kuwait &amp; Dubai</p>
+              <p className="text-white/70 text-sm mt-1">Supply, installation, and maintenance — Kuwait &amp; Dubai</p>
             </div>
             <Link href="/contacts/" className="inline-flex items-center gap-2 bg-[#e7212b] hover:bg-[#aa0b1b] text-white font-semibold px-6 py-3 rounded-lg transition-colors duration-200 text-sm shrink-0">
               Request Quote

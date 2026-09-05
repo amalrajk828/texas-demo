@@ -38,8 +38,8 @@ export default function IndustryProductsGrid({
         <div className="flex flex-col sm:flex-row sm:items-end justify-between gap-4 mb-12">
           <div>
             <div className="flex items-center gap-2 mb-2">
-              <span className="w-5 h-px bg-[#e7212b]" />
-              <span className="text-[#e7212b] text-[9px] font-semibold tracking-[2.5px] uppercase">
+              <span className="w-5 h-px bg-[#0891B2]" />
+              <span className="text-[#0891B2] text-[11px] font-semibold tracking-[2.5px] uppercase">
                 Our Product Range
               </span>
             </div>

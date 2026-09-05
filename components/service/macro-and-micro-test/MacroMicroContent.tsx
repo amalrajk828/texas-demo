@@ -41,7 +41,7 @@ export default function MacroMicroContent() {
           </div>
           <div>
             <div className="fade-up d1">
-              <div className="flex items-center gap-2.5 mb-4"><span className="w-5 h-px bg-[#e7212b]" /><span className="text-[#e7212b] text-[10px] font-semibold tracking-[3.5px] uppercase">What We Do</span></div>
+              <div className="flex items-center gap-2.5 mb-4"><span className="w-5 h-px bg-[#0891B2]" /><span className="text-[#0891B2] text-[10px] font-semibold tracking-[3.5px] uppercase">What We Do</span></div>
               <h2 className="text-3xl sm:text-[2.2rem] font-bold text-[#0B0D26] leading-[1.15] mb-5">Macro &amp; Micro Testing for Multi-Scale Material Characterisation</h2>
               <p className="text-gray-500 text-[15px] leading-[1.85] mb-4">Micro and macro mechanical tests are two categories of experiments conducted to study the mechanical properties of materials at different length scales. These tests provide valuable insights into the behaviour of materials under various loading conditions.</p>
               <p className="text-gray-500 text-[15px] leading-[1.85] mb-8">Macro and micro examination aids in material characterisation, design optimisation, and quality control in different industries — from weld procedure qualification and incoming material inspection, to failure investigation and process verification for oil & gas, construction, and manufacturing sectors.</p>
@@ -63,7 +63,7 @@ export default function MacroMicroContent() {
         </div>
         <div>
           <div className="fade-up mb-12">
-            <div className="flex items-center gap-2.5 mb-4"><span className="w-5 h-px bg-[#e7212b]" /><span className="text-[#e7212b] text-[10px] font-semibold tracking-[3.5px] uppercase">What We Examine</span></div>
+            <div className="flex items-center gap-2.5 mb-4"><span className="w-5 h-px bg-[#0891B2]" /><span className="text-[#0891B2] text-[10px] font-semibold tracking-[3.5px] uppercase">What We Examine</span></div>
             <h2 className="text-3xl sm:text-[2.2rem] font-bold text-[#0B0D26] leading-[1.15]">Macro &amp; Micro Examination Methods</h2>
           </div>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5">
@@ -89,7 +89,7 @@ export default function MacroMicroContent() {
               <div className="relative z-10 px-8 py-7 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-5">
                 <div>
                   <p className="text-white font-bold text-[15px]">Need Macro or Micro Examination for Your Materials?</p>
-                  <p className="text-white/40 text-[13px] mt-0.5">Contact our team about metallographic testing, weld macro, or grain structure analysis.</p>
+                  <p className="text-white/70 text-[13px] mt-0.5">Contact our team about metallographic testing, weld macro, or grain structure analysis.</p>
                 </div>
                 <div className="flex flex-wrap gap-3 shrink-0">
                   <a href="#contact" className="inline-flex items-center gap-2 bg-[#e7212b] hover:bg-[#aa0b1b] text-white font-semibold px-6 py-3 rounded-lg transition-colors duration-200 text-[13px] shadow-lg shadow-[#e7212b]/20">Contact Us <ArrowRight className="w-3.5 h-3.5" /></a>

@@ -189,9 +189,9 @@ export default function OurVision() {
               animate={inView ? { scaleX: 1 } : {}}
               transition={{ duration: 0.7, ease: [0.16, 1, 0.3, 1] }}
               className="block w-6 h-px origin-right"
-              style={{ background: "var(--color-brand-red)" }}
+              style={{ background: "#0E7490" }}
             />
-            <span className="text-[10px] font-bold tracking-[4px] uppercase" style={{ color: "var(--color-brand-red)" }}>
+            <span className="text-[10px] font-bold tracking-[4px] uppercase" style={{ color: "#0E7490" }}>
               Our Vision
             </span>
             <motion.span
@@ -199,7 +199,7 @@ export default function OurVision() {
               animate={inView ? { scaleX: 1 } : {}}
               transition={{ duration: 0.7, ease: [0.16, 1, 0.3, 1] }}
               className="block w-6 h-px origin-left"
-              style={{ background: "var(--color-brand-red)" }}
+              style={{ background: "#0E7490" }}
             />
           </motion.div>
 
@@ -210,10 +210,7 @@ export default function OurVision() {
             className="text-[clamp(1.75rem,4vw,2.9rem)] font-bold leading-[1.2] max-w-2xl mx-auto"
             style={{ color: "var(--color-brand-navy)" }}
           >
-            To be a prominent market leader and a{" "}
-            <span style={{ color: "var(--color-brand-red)" }}>
-              complete solution provider.
-            </span>
+            To be a prominent market leader and a complete solution provider.
           </motion.h2>
         </div>
 
@@ -244,7 +241,7 @@ export default function OurVision() {
             className="text-[13px] font-medium tracking-[2px] uppercase"
             style={{ color: "color-mix(in srgb, var(--color-brand-navy) 30%, transparent)" }}
           >
-            ISO 9001:2015 Certified · Established 2008 · Kuwait &amp; Dubai
+            ISO 9001 · ISO 14001 · ISO 45001 · UASL · Accurate Certified · Est. 2008 · Kuwait &amp; Dubai
           </p>
         </motion.div>
 

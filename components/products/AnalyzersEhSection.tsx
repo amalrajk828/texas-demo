@@ -63,13 +63,13 @@ export default function AnalyzersEhSection() {
     <section className="bg-[#0B0D26] py-16 lg:py-20">
       <div className="max-w-7xl mx-auto px-4 sm:px-6">
         <div className="text-center mb-12">
-          <span className="text-[#e7212b] text-[11px] font-semibold tracking-[3px] uppercase">
+          <span className="text-[#0891B2] text-[11px] font-semibold tracking-[3px] uppercase">
             Authorized Agent · Endress+Hauser
           </span>
           <h2 className="mt-3 text-white text-2xl sm:text-3xl font-bold">
             Gas Flow Meter, Analyzers &amp; CEMS
           </h2>
-          <p className="text-white/60 text-[15px] mt-3 max-w-2xl mx-auto">
+          <p className="text-white/70 text-[15px] mt-3 max-w-2xl mx-auto">
             Precision measurement for process &amp; environmental compliance —
             with QAL1/MCERTS certified solutions.
           </p>
@@ -113,7 +113,7 @@ function EhCard({ category }: { category: EhCategory }) {
         ))}
       </div>
       <div className="mt-auto pt-4 border-t border-white/10">
-        <p className="text-[11px] font-semibold tracking-[2px] uppercase text-[#e7212b]">
+        <p className="text-[11px] font-semibold tracking-[2px] uppercase text-[#0891B2]">
           Key Benefit
         </p>
         <p className="text-white/70 text-[13px] mt-1.5 leading-relaxed">

@@ -35,19 +35,18 @@ export default function GreySolutions() {
           <div
             className="inline-flex items-center gap-3 mb-5"
           >
-            <span className="w-6 h-px" style={{ background: "var(--color-brand-red)" }} />
-            <span className="text-[11px] font-bold tracking-[4px] uppercase" style={{ color: "var(--color-brand-red)" }}>
+            <span className="w-6 h-px" style={{ background: "#0E7490" }} />
+            <span className="text-[11px] font-bold tracking-[4px] uppercase" style={{ color: "#0E7490" }}>
               Solutions & Partners
             </span>
-            <span className="w-6 h-px" style={{ background: "var(--color-brand-red)" }} />
+            <span className="w-6 h-px" style={{ background: "#0E7490" }} />
           </div>
 
           <h2
             className="text-[clamp(2.2rem,4.5vw,3.4rem)] font-black leading-[1.15] max-w-2xl mx-auto tracking-tight fade-up"
             style={{ color: "var(--g-heading)" }}
           >
-            Which proprietary platforms deliver{" "}
-            <span style={{ color: "var(--color-brand-red)" }}>proven results?</span>
+            Which proprietary platforms deliver proven results?
           </h2>
         </div>
 
@@ -96,8 +95,7 @@ export default function GreySolutions() {
 
                   {/* CTA */}
                   <span
-                    className="inline-flex items-center gap-2 text-[13px] font-bold tracking-wide group-hover:gap-3 transition-all mt-auto"
-                    style={{ color: "#B71C1C" }}
+                    className="inline-flex items-center gap-2 text-[13px] font-bold tracking-wide text-slate-600 hover:text-slate-900 group-hover:gap-3 transition-all mt-auto whitespace-nowrap"
                   >
                     Learn more about {s.label}
                     <ArrowRight className="w-4 h-4" />

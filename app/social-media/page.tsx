@@ -313,29 +313,28 @@ export default function SocialMediaPage() {
 
         <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 py-16 lg:py-24">
           {/* Breadcrumb */}
-          <nav className="flex items-center gap-1.5 mb-8 text-[11px] text-white/30">
+          <nav className="flex items-center gap-2 mb-8 text-[14px] text-white/50">
             <Link href="/" className="hover:text-white/60 transition-colors">
               Home
             </Link>
-            <ChevronRight className="w-3 h-3" />
-            <span className="text-white/55">Social Media</span>
+            <ChevronRight className="w-3.5 h-3.5" />
+            <span className="text-white/70">Social Media</span>
           </nav>
 
           <div className="flex flex-col lg:flex-row lg:items-end gap-10 lg:gap-16">
             {/* Left — headline */}
             <div className="flex-1 max-w-2xl">
               <div className="flex items-center gap-2 mb-5">
-                <span className="w-5 h-px bg-[#e7212b]" />
-                <span className="text-[#e7212b] text-[10px] font-medium tracking-[2.5px] uppercase">
-                  ISO 9001:2015 Certified · Est. 2008
+                <span className="w-5 h-px bg-[#0891B2]" />
+                <span className="text-[#0891B2] text-[10px] font-medium tracking-[2.5px] uppercase">
+                  ISO 9001 · ISO 14001 · ISO 45001 · UASL · Accurate Certified · Est. 2008
                 </span>
               </div>
               <h1 className="text-4xl sm:text-5xl lg:text-[3.5rem] font-medium text-white leading-[1.15] mb-5">
-                Connect With
-                <br />
-                <em className="not-italic text-[#e7212b]">Us</em>
+                Connect With{" "}
+                <em className="not-italic text-current">Us</em>
               </h1>
-              <p className="text-white/55 text-base sm:text-lg leading-relaxed">
+              <p className="text-white/70 text-base sm:text-lg leading-relaxed">
                 One place to find every account we use. Follow us on social media
                 for industry insights, project updates, and automation expertise
                 from the GCC&apos;s trusted technical service partner.
@@ -350,7 +349,7 @@ export default function SocialMediaPage() {
                   className="bg-white/[0.04] border border-white/[0.08] hover:border-[#e7212b]/30 rounded-xl px-5 py-4 text-center min-w-[88px] transition-colors duration-200"
                 >
                   <p className="text-2xl font-medium text-[#e7212b]">{s.num}</p>
-                  <p className="text-[10px] text-white/30 mt-1 tracking-wide">{s.label}</p>
+                  <p className="text-[10px] text-white/50 mt-1 tracking-wide">{s.label}</p>
                 </div>
               ))}
             </div>
@@ -363,8 +362,8 @@ export default function SocialMediaPage() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6">
           {/* Section label */}
           <div className="flex items-center gap-3 mb-4">
-            <span className="w-8 h-px bg-[#e7212b]/40" />
-            <span className="text-[#e7212b] text-[9px] font-medium tracking-[2.5px] uppercase">
+            <span className="w-8 h-px bg-[#0891B2]/40" />
+            <span className="text-[#0891B2] text-[14px] font-medium tracking-[2.5px] uppercase">
               Verified Accounts
             </span>
           </div>
@@ -423,8 +422,8 @@ export default function SocialMediaPage() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6">
           {/* Section label */}
           <div className="flex items-center gap-3 mb-4">
-            <span className="w-8 h-px bg-[#e7212b]/40" />
-            <span className="text-[#e7212b] text-[9px] font-medium tracking-[2.5px] uppercase">
+            <span className="w-8 h-px bg-[#0891B2]/40" />
+            <span className="text-[#0891B2] text-[14px] font-medium tracking-[2.5px] uppercase">
               Also On
             </span>
           </div>
@@ -453,7 +452,7 @@ export default function SocialMediaPage() {
                     </svg>
                   </div>
                   <div className="flex-1 min-w-0">
-                    <p className="text-[11px] text-gray-400 font-medium uppercase tracking-wide">
+                    <p className="text-[14px] text-gray-400 font-medium uppercase tracking-wide">
                       Registered
                     </p>
                     <h3 className="text-[#181D4E] font-semibold text-sm">
@@ -464,7 +463,7 @@ export default function SocialMediaPage() {
                 <p className="text-gray-500 text-[12px] leading-relaxed line-clamp-2 mb-3">
                   {platform.description}
                 </p>
-                <div className="flex items-center gap-1 text-[#181D4E] text-[11px] font-medium group-hover:text-[#e7212b] transition-colors">
+                <div className="flex items-center gap-1 text-[#181D4E] text-[14px] font-medium group-hover:text-[#e7212b] transition-colors">
                   Open Profile
                   <ExternalLink className="w-3 h-3" />
                 </div>
@@ -478,11 +477,11 @@ export default function SocialMediaPage() {
       <section className="bg-white py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 text-center">
           <div className="flex items-center justify-center gap-3 mb-4">
-            <span className="w-8 h-px bg-[#e7212b]/40" />
-            <span className="text-[#e7212b] text-[9px] font-medium tracking-[2.5px] uppercase">
+            <span className="w-8 h-px bg-[#0891B2]/40" />
+            <span className="text-[#0891B2] text-[14px] font-medium tracking-[2.5px] uppercase">
               Get in Touch
             </span>
-            <span className="w-8 h-px bg-[#e7212b]/40" />
+            <span className="w-8 h-px bg-[#0891B2]/40" />
           </div>
           <h2 className="text-[1.75rem] sm:text-[2rem] font-semibold text-[#181D4E] mb-4">
             Don&apos;t see your favourite platform?
@@ -517,16 +516,16 @@ export default function SocialMediaPage() {
       <section className="bg-[#000000] blueprint-grid blueprint-dot-grid py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 text-center">
           <div className="flex items-center justify-center gap-3 mb-4">
-            <span className="w-8 h-px bg-[#e7212b]/40" />
-            <span className="text-[#e7212b] text-[9px] font-medium tracking-[2.5px] uppercase">
+            <span className="w-8 h-px bg-[#0891B2]/40" />
+            <span className="text-[#0891B2] text-[14px] font-medium tracking-[2.5px] uppercase">
               Have a project in mind?
             </span>
-            <span className="w-8 h-px bg-[#e7212b]/40" />
+            <span className="w-8 h-px bg-[#0891B2]/40" />
           </div>
           <h2 className="text-3xl sm:text-4xl font-medium text-white mb-3">
             Ready to Achieve More?
           </h2>
-          <p className="text-white/50 text-base mb-8 max-w-md mx-auto">
+          <p className="text-white/70 text-base mb-8 max-w-md mx-auto">
             We partner with ambitious companies to solve complex challenges,
             improve operations and deliver real results using tailored industrial
             automation solutions.

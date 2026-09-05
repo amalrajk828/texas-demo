@@ -20,11 +20,11 @@ export default function G4WhatWeDo() {
           {/* Left column */}
           <div className="fade-up">
             <div className="flex items-center gap-3 mb-5">
-              <span className="w-10 h-[3px] rounded-full" style={{ background: "var(--color-brand-red)" }} />
-              <span className="text-[11px] font-bold tracking-[3.5px] uppercase" style={{ color: "var(--color-brand-red)" }}>What We Do</span>
+              <span className="w-10 h-[3px] rounded-full" style={{ background: "#0E7490" }} />
+              <span className="text-[11px] font-bold tracking-[3.5px] uppercase" style={{ color: "#0E7490" }}>What We Do</span>
             </div>
             <h2 className="text-[2.8rem] sm:text-[3.4rem] font-black leading-[1.05] tracking-tight mb-6" style={{ color: "var(--g-heading)" }}>
-              Precision<br />Solutions
+              Precision Solutions
             </h2>
             <p className="text-[17px] leading-[1.9] mb-8" style={{ color: "var(--g-muted)" }}>
               Texas Technical Services delivers precision-engineered solutions across flow measurement, inspection, and industrial automation — trusted by leading operators since 2008.
@@ -33,7 +33,7 @@ export default function G4WhatWeDo() {
               <Image src="/our-team/Oil-Gas.jpg" alt="Oil & Gas" fill sizes="(max-width: 1024px) 100vw, 400px" className="object-cover" quality={85} />
               <div className="absolute inset-0" style={{ background: "linear-gradient(to top, rgba(0,0,0,0.5), transparent 60%)" }} />
               <div className="absolute bottom-5 left-5 right-5">
-                <p className="text-white text-[10px] font-bold tracking-[3px] uppercase mb-1">ISO 9001:2015 Certified</p>
+                <p className="text-white text-[10px] font-bold tracking-[3px] uppercase mb-1">ISO 9001 · 14001 · 45001 · UASL · Accurate Certified</p>
                 <p className="text-white/60 text-[12px]">Established 2008 · Kuwait & Dubai</p>
               </div>
               <div className="absolute top-0 left-0 right-0 h-[4px]" style={{ background: "var(--color-brand-red)" }} />

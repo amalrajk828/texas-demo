@@ -115,13 +115,13 @@ export default function ServicePageFaqSection({
           transition={{ duration: 0.5, ease: "easeOut" }}
         >
           <div className="flex items-center gap-2.5 mb-4">
-            <span className="w-5 h-px bg-[#e7212b]" />
-            <span className="text-[#e7212b] text-[10px] font-semibold tracking-[3.5px] uppercase">
+            <span className="w-5 h-px bg-[#0891B2]" />
+            <span className="text-[#0891B2] text-[10px] font-semibold tracking-[3.5px] uppercase">
               FAQ
             </span>
           </div>
           <h2 className="text-3xl sm:text-[2.4rem] font-bold text-white leading-[1.15] mb-12">
-            Questions About <em className="not-italic text-[#e7212b]">{highlightWord}</em>
+            Questions About <em className="not-italic text-current">{highlightWord}</em>
           </h2>
         </motion.div>
 

@@ -1,6 +1,9 @@
 import type { Metadata } from "next";
 import PortfolioClient from "./_components/PortfolioClient";
 import { BreadcrumbJsonLd } from "@/components/schema/BreadcrumbJsonLd";
+import { FaqPageJsonLd } from "@/components/schema/FaqPageJsonLd";
+import { SpeakableJsonLd } from "@/components/schema/SpeakableJsonLd";
+import { productsListingFaq } from "@/lib/pageFaqData";
 
 export const metadata: Metadata = {
   title: "Product Portfolio",
@@ -36,6 +39,8 @@ export default function PortfolioPage() {
   return (
     <>
       <BreadcrumbJsonLd items={[{ name: "Home", href: "/" }, { name: "Portfolio", href: "/portfolio/" }]} />
+      <FaqPageJsonLd items={productsListingFaq} />
+      <SpeakableJsonLd headline="Product Portfolio — Industrial Automation Hardware & Sensors" />
       <PortfolioClient />
     </>
   );

@@ -1,5 +1,7 @@
 "use client";
 /* Kit D — Grey: light glassmorphic stat cards on soft light gradient */
+import Image from "next/image";
+import Link from "next/link";
 import { useRef, useEffect, useState } from "react";
 import { motion, useInView, useSpring, useTransform, useMotionValue } from "framer-motion";
 import { useIsMobile } from "@/hooks/useIsMobile";
@@ -71,14 +73,13 @@ export default function GreyVision() {
       <div ref={ref} className="relative max-w-7xl mx-auto px-4 sm:px-6 z-10">
         <div className="text-center mb-16">
           <motion.div initial={{ opacity: 0, y: 12 }} animate={inView ? { opacity: 1, y: 0 } : {}} transition={{ duration: 0.6 }} className="inline-flex items-center gap-3 mb-5">
-            <span className="w-6 h-px" style={{ background: "var(--color-brand-red)" }} />
-            <span className="text-[11px] font-bold tracking-[4px] uppercase" style={{ color: "var(--color-brand-red)" }}>Our Vision</span>
-            <span className="w-6 h-px" style={{ background: "var(--color-brand-red)" }} />
+            <span className="w-6 h-px" style={{ background: "#0E7490" }} />
+            <span className="text-[11px] font-bold tracking-[4px] uppercase" style={{ color: "#0E7490" }}>Our Vision</span>
+            <span className="w-6 h-px" style={{ background: "#0E7490" }} />
           </motion.div>
           <motion.h2 initial={{ opacity: 0, y: 24 }} animate={inView ? { opacity: 1, y: 0 } : {}} transition={{ duration: 0.9, delay: 0.1 }}
             className="text-[clamp(2.2rem,4.5vw,3.4rem)] font-black leading-[1.15] max-w-2xl mx-auto tracking-tight text-[#111827]">
-            What is our vision for industrial automation{" "}
-            <span style={{ color: "var(--color-brand-red)" }}>in the GCC?</span>
+            What is our vision for industrial automation in the GCC?
           </motion.h2>
         </div>
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
@@ -87,8 +88,15 @@ export default function GreyVision() {
         <motion.div initial={{ opacity: 0, y: 10 }} animate={inView ? { opacity: 1, y: 0 } : {}} transition={{ duration: 0.8, delay: 0.9 }}
           className="text-center mt-14 pt-10 border-t" style={{ borderColor: "rgba(0,0,0,0.08)" }}>
           <p className="text-[12px] font-semibold tracking-[2.5px] uppercase text-[#4B5563]">
-            ISO 9001:2015 Certified · Established 2008 · Kuwait & Dubai
+            ISO 9001 · ISO 14001 · ISO 45001 · UASL · Accurate Certified · Est. 2008 · Kuwait & Dubai
           </p>
+          <div className="flex items-center justify-center gap-5 mt-4">
+            {["/about/cert-iso9001.png", "/about/cert-iso14001.png", "/about/cert-iso45001.png", "/about/cert-uasl.png", "/about/cert-accurate.png"].map((src) => (
+              <Link key={src} href="/certifications/" className="relative w-16 h-16 block">
+                <Image src={src} alt="" fill className="object-contain" sizes="64px" />
+              </Link>
+            ))}
+          </div>
         </motion.div>
       </div>
     </section>

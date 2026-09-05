@@ -173,7 +173,7 @@ export default function ProductCard({
               )}
             </div>
           ) : (
-            <span className="w-4 h-px bg-[#e7212b]/20 group-hover:w-10 transition-all duration-300" />
+            <span className="w-4 h-px bg-[#0891B2]/20 group-hover:w-10 transition-all duration-300" />
           )}
 
           <Link

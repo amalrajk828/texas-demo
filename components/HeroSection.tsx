@@ -29,8 +29,8 @@ export default function HeroSection() {
 
           <div className="max-w-2xl">
             <div className="flex items-center gap-2 mb-5">
-              <span className="w-5 h-px bg-[#e7212b]" />
-              <span className="text-[#e7212b] text-[11px] font-semibold tracking-[2.5px] uppercase">
+              <span className="w-5 h-px bg-[#0891B2]" />
+              <span className="text-[#0891B2] text-[11px] font-semibold tracking-[2.5px] uppercase">
                 ISO 9001:2015 Certified · Est. 2008
               </span>
             </div>
@@ -38,11 +38,11 @@ export default function HeroSection() {
               Industrial Solutions
               <br />
               for{" "}
-              <em className="not-italic text-[#e7212b]">Oil &amp; Gas,</em>
+              <em className="not-italic text-current">Oil &amp; Gas,</em>
               <br />
               Refinery &amp; Beyond
             </h1>
-            <p className="text-white/55 text-base sm:text-lg leading-relaxed mb-8 max-w-lg">
+            <p className="text-white/70 text-base sm:text-lg leading-relaxed mb-8 max-w-lg">
               Flow measurement, industrial automation, inspection &amp; testing
               for the world&apos;s most demanding environments.
             </p>

@@ -15,8 +15,8 @@ export default function HeatTreatmentContent() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6">
         <div className="fade-up mb-14">
           <div className="flex items-center gap-2.5 mb-4">
-            <span className="w-5 h-px bg-[#e7212b]" />
-            <span className="text-[#e7212b] text-[10px] font-semibold tracking-[3.5px] uppercase">Capabilities</span>
+            <span className="w-5 h-px bg-[#0891B2]" />
+            <span className="text-[#0891B2] text-[10px] font-semibold tracking-[3.5px] uppercase">Capabilities</span>
           </div>
           <h2 className="text-3xl sm:text-[2.4rem] font-bold text-[#0B0D26] leading-[1.15] max-w-2xl">
             Heat Treatment Capabilities
@@ -24,7 +24,7 @@ export default function HeatTreatmentContent() {
         </div>
         <div className="fade-up mb-12">
           <div className="max-w-3xl">
-            <div className="flex items-center gap-2.5 mb-4"><span className="w-5 h-px bg-[#e7212b]" /><span className="text-[#e7212b] text-[10px] font-semibold tracking-[3.5px] uppercase">What We Do</span></div>
+            <div className="flex items-center gap-2.5 mb-4"><span className="w-5 h-px bg-[#0891B2]" /><span className="text-[#0891B2] text-[10px] font-semibold tracking-[3.5px] uppercase">What We Do</span></div>
             <h2 className="text-3xl sm:text-[2.2rem] font-bold text-[#0B0D26] leading-[1.15] mb-5">Post-Weld Heat Treatment and Stress Relief Services</h2>
             <p className="text-gray-500 text-[15px] leading-[1.85] mb-4">Post-weld heat treatment (PWHT) is essential for relieving residual stresses introduced during welding — reducing the risk of stress corrosion cracking, hydrogen-induced cracking, and brittle fracture in welded components. PWHT involves controlled heating to a specified temperature, holding for a defined period, and controlled cooling at a rate that prevents thermal shock.</p>
             <p className="text-gray-500 text-[15px] leading-[1.85] mb-8">TTS provides electric resistance heating blanket PWHT with multi-zone thermocouple monitoring and automated temperature recording — compliant with ASME VIII, AWS D1.1, and BS EN 13445. Our services cover pressure vessels, piping, structural welds, and repair welds, with full thermal documentation including time-temperature charts, thermocouple maps, and heat treatment certificates for your quality records.</p>
@@ -47,9 +47,9 @@ export default function HeatTreatmentContent() {
         <div className="fade-up d1">
           <div className="rounded-2xl bg-[#000000] blueprint-grid blueprint-dot-grid p-8 sm:p-10 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-6">
             <div>
-              <p className="text-white/40 text-[10px] tracking-[2px] uppercase mb-2">Standards &amp; Codes</p>
+              <p className="text-white/70 text-[10px] tracking-[2px] uppercase mb-2">Standards &amp; Codes</p>
               <p className="text-white font-semibold text-lg">ASME VIII · AWS D1.1 · ASME B31.3 · BS EN ISO 17663</p>
-              <p className="text-white/45 text-sm mt-1">Certified heat treatment engineers — Kuwait &amp; Dubai</p>
+              <p className="text-white/70 text-sm mt-1">Certified heat treatment engineers — Kuwait &amp; Dubai</p>
             </div>
             <Link href="#contact" className="inline-flex items-center gap-2 bg-[#e7212b] hover:bg-[#aa0b1b] text-white font-semibold px-6 py-3 rounded-lg transition-colors duration-200 text-sm shrink-0">
               Request Heat Treatment

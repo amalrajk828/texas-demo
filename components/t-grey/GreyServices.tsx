@@ -10,7 +10,7 @@ const PixelSnow = dynamic(() => import("@/components/PixelSnow"), { ssr: false }
 
 const SERVICES = [
   { Icon: Gauge,        title: "Flow Measurement & Control System Solutions", body: "Metering control system upgrades, maintenance, and validation for custody metering systems. Ensuring your metering operates accurately to API, AGA, and ISO standards.", href: "/service/flow-measurement-solutions/", tag: "Metering" },
-  { Icon: FlaskConical, title: "Inspection & Testing",                        body: "Comprehensive inspection, non-destructive testing, functional testing and certification across all industrial sectors. Full ISO 14001:2015 and 45001:2018 compliance.", href: "/service/inspection-testing/",          tag: "NDT & QA" },
+  { Icon: FlaskConical, title: "Inspection & Testing",                        body: "Comprehensive inspection, non-destructive testing, functional testing and certification across all industrial sectors. Full ISO 9001, ISO 14001, ISO 45001, UASL and Accurate compliance.", href: "/service/inspection-testing/",          tag: "NDT & QA" },
   { Icon: Cpu,          title: "Industrial Process Automation Solutions",     body: "Control system design, PLC programming, SCADA integration, and HMI development — optimising operations across oil & gas, power, and manufacturing plants.", href: "/service/industrial-automation/",        tag: "Automation" },
 ];
 
@@ -50,17 +50,18 @@ export default function GreyServices() {
       <div className="absolute bottom-0 inset-x-0 h-px bg-white/[0.08]" />
 
       <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6">
-        <div className="fade-up flex flex-col lg:flex-row lg:items-end lg:justify-between gap-6 mb-14">
+        <div className="fade-up flex flex-col text-center items-center gap-6 mb-14">
           <div>
-            <div className="flex items-center gap-3 mb-4">
-              <span className="w-10 h-[3px] rounded-full" style={{ background: "var(--color-brand-red)" }} />
-              <span className="text-[11px] font-bold tracking-[3.5px] uppercase" style={{ color: "var(--color-brand-red)" }}>Our Services</span>
+            <div className="inline-flex items-center justify-center gap-3 mb-4">
+              <span className="w-6 h-px" style={{ background: "#0891B2" }} />
+              <span className="text-[11px] font-bold tracking-[4px] uppercase" style={{ color: "#0891B2" }}>Our Services</span>
+              <span className="w-6 h-px" style={{ background: "#0891B2" }} />
             </div>
             <h2 className="text-[1.8rem] sm:text-[2.8rem] lg:text-[3.4rem] font-black leading-[1.05] tracking-tight" style={{ color: "var(--g-heading)" }}>
               What services do we offer for industrial automation and flow measurement?
             </h2>
           </div>
-          <p className="max-w-md text-[17px] leading-[1.85]" style={{ color: "var(--g-muted)" }}>
+          <p className="text-[17px] leading-[1.85] mx-auto" style={{ color: "var(--g-muted)" }}>
             Extensive expertise in custody metering, industrial automation, and inspection & testing — since 2008.
           </p>
         </div>
@@ -111,13 +112,14 @@ export default function GreyServices() {
                   </h3>
 
                   {/* Body paragraph */}
-                  <p className="text-white/60 text-xs sm:text-sm leading-relaxed mb-6 flex-1 font-medium relative z-10">
+                  <p className="text-white/70 text-xs sm:text-sm leading-relaxed mb-6 flex-1 font-medium relative z-10">
                     {svc.body}
                   </p>
 
                   {/* Learn More link */}
-                  <Link href={svc.href} className="inline-flex flex-wrap items-center gap-1.5 text-xs sm:text-sm font-bold text-[#E53935] hover:gap-2.5 transition-all duration-200 mt-auto relative z-10">
-                    Learn more about {svc.title} <ArrowRight className="w-3.5 h-3.5" />
+                  <Link href={svc.href} className="text-xs sm:text-sm font-bold text-slate-300 hover:text-white transition-all duration-200 mt-auto relative z-10">
+                    <span className="inline">Learn more about {svc.title}</span>{" "}
+                    <ArrowRight className="inline w-3.5 h-3.5 ml-0.5" />
                   </Link>
                 </div>
               </div>

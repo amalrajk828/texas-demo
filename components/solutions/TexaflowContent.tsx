@@ -106,7 +106,7 @@ export default function TexaflowContent() {
         />
 
         <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6">
-          <nav className="flex items-center gap-1.5 mb-8 text-[11px] text-white/35 flex-wrap">
+          <nav className="flex items-center gap-2 mb-8 text-[14px] text-white/50 flex-wrap">
             <Link href="/" className="hover:text-white/70 transition-colors">
               Home
             </Link>
@@ -123,20 +123,20 @@ export default function TexaflowContent() {
               <div className="w-9 h-9 rounded-xl bg-[#e7212b]/10 border border-[#e7212b]/25 flex items-center justify-center">
                 <Scale className="w-4 h-4 text-[#e7212b]" strokeWidth={1.8} />
               </div>
-              <span className="text-[#e7212b] text-[11px] font-semibold tracking-[3px] uppercase">
+              <span className="text-[#0891B2] text-[14px] font-semibold tracking-[3px] uppercase">
                 Our Proprietary Solution
               </span>
             </div>
 
             <h1 className="text-4xl sm:text-5xl lg:text-[3.2rem] font-bold text-white leading-[1.12] mb-6">
               Texaflow —{" "}
-              <em className="not-italic text-[#e7212b]">
+              <em className="not-italic text-current">
                 Custody Metering
               </em>{" "}
               Integrated Control System
             </h1>
 
-            <p className="text-white/55 text-base sm:text-[16px] leading-relaxed mb-8 max-w-2xl">
+            <p className="text-white/70 text-base sm:text-[16px] leading-relaxed mb-8 max-w-2xl">
               Our proprietary custody metering integrated control system.
               Advanced fiscal metering &amp; SCADA solution for oil &amp; gas
               terminals, refineries, pipeline metering stations, loading
@@ -198,15 +198,15 @@ export default function TexaflowContent() {
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6">
           <div className="mb-14">
             <div className="flex items-center gap-2.5 mb-4">
-              <span className="w-5 h-px bg-[#e7212b]" />
-              <span className="text-[#e7212b] text-[10px] font-semibold tracking-[3.5px] uppercase">
+              <span className="w-5 h-px bg-[#0891B2]" />
+              <span className="text-[#0891B2] text-[10px] font-semibold tracking-[3.5px] uppercase">
                 System Capabilities
               </span>
             </div>
             <div className="flex flex-col sm:flex-row sm:items-end justify-between gap-4">
               <h2 className="text-3xl sm:text-[2.4rem] font-bold text-[#0B0D26] leading-[1.15]">
                 System Capabilities &amp;{" "}
-                <em className="not-italic text-[#e7212b]">Key Features</em>
+                <em className="not-italic text-current">Key Features</em>
               </h2>
             </div>
           </div>
@@ -262,16 +262,16 @@ export default function TexaflowContent() {
             <div className="relative grid grid-cols-1 lg:grid-cols-[1fr_1.4fr] gap-10 p-10 lg:p-14">
               <div>
                 <div className="flex items-center gap-2.5 mb-4">
-                  <span className="w-5 h-px bg-[#e7212b]" />
-                  <span className="text-[#e7212b] text-[10px] font-semibold tracking-[3.5px] uppercase">
+                  <span className="w-5 h-px bg-[#0891B2]" />
+                  <span className="text-[#0891B2] text-[10px] font-semibold tracking-[3.5px] uppercase">
                     Where Texaflow Excels
                   </span>
                 </div>
                 <h2 className="text-3xl lg:text-4xl font-bold text-white leading-[1.15] mb-5">
                   Key{" "}
-                  <em className="not-italic text-[#e7212b]">Applications</em>
+                  <em className="not-italic text-current">Applications</em>
                 </h2>
-                <p className="text-white/55 text-[15px] leading-relaxed max-w-md">
+                <p className="text-white/70 text-[15px] leading-relaxed max-w-md">
                   Texaflow is trusted across the most demanding custody
                   transfer environments — from high-throughput terminals to
                   aviation fuel depots.
@@ -302,14 +302,14 @@ export default function TexaflowContent() {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             <div>
               <div className="flex items-center gap-2.5 mb-4">
-                <span className="w-5 h-px bg-[#e7212b]" />
-                <span className="text-[#e7212b] text-[10px] font-semibold tracking-[3.5px] uppercase">
+                <span className="w-5 h-px bg-[#0891B2]" />
+                <span className="text-[#0891B2] text-[10px] font-semibold tracking-[3.5px] uppercase">
                   Full Capability Set
                 </span>
               </div>
               <h2 className="text-3xl lg:text-4xl font-bold text-[#0B0D26] leading-[1.15] mb-5">
                 Engineered for{" "}
-                <em className="not-italic text-[#e7212b]">fiscal accuracy</em>{" "}
+                <em className="not-italic text-current">fiscal accuracy</em>{" "}
                 and operational confidence
               </h2>
               <p className="text-gray-500 text-[15px] leading-relaxed mb-7 max-w-xl">

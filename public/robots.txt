@@ -1,5 +1,6 @@
 User-agent: *
 Allow: /
+Allow: /videos/
 Disallow: /component-demo/
 Disallow: /_next/
 

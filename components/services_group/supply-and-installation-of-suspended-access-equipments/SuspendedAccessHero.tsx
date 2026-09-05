@@ -39,8 +39,7 @@ export default function SuspendedAccessHero() {
           </div>
           <div className="fade-up d1">
             <h1 className="text-4xl sm:text-5xl lg:text-[3.5rem] font-bold text-white leading-[1.08] tracking-tight mb-6">
-              Supply and Installation of{" "}
-              <span className="text-[#e7212b]">Suspended Access</span> Equipment
+              Supply and Installation of Suspended Access Equipment
             </h1>
           </div>
           <div className="fade-up d2">

@@ -5,9 +5,12 @@ import Link from "next/link";
 import { ArrowRight, Users, Award, ShieldCheck } from "lucide-react";
 
 const HIGHLIGHTS = [
-  { Icon: Users,       label: "Expert Engineers" },
-  { Icon: Award,       label: "ISO 9001:2015 Certified" },
-  { Icon: ShieldCheck, label: "Industry Compliance" },
+  { Icon: Users,       label: "Expert Engineers", badge: null },
+  { Icon: Award,       label: "ISO 9001:2015 Certified", badge: "/about/cert-iso9001.png" },
+  { Icon: ShieldCheck, label: "ISO 14001:2015", badge: "/about/cert-iso14001.png" },
+  { Icon: ShieldCheck, label: "ISO 45001:2018", badge: "/about/cert-iso45001.png" },
+  { Icon: ShieldCheck, label: "UASL Accredited", badge: "/about/cert-uasl.png" },
+  { Icon: ShieldCheck, label: "Accurate Certified", badge: "/about/cert-accurate-white.png" },
 ];
 
 export default function GreyTeam() {
@@ -50,14 +53,13 @@ export default function GreyTeam() {
           <div className="lg:pl-4">
             <div className="fade-up d1">
               <div className="flex items-center gap-3 mb-4">
-                <span className="w-10 h-[3px] rounded-full" style={{ background: "var(--color-brand-red)" }} />
-                <span className="text-[11px] font-bold tracking-[3.5px] uppercase" style={{ color: "var(--color-brand-red)" }}>Our Team</span>
+                <span className="w-10 h-[3px] rounded-full" style={{ background: "#0891B2" }} />
+                <span className="text-[11px] font-bold tracking-[3.5px] uppercase" style={{ color: "#0891B2" }}>Our Team</span>
               </div>
             </div>
             <div className="fade-up d1">
               <h2 className="text-[clamp(2.2rem,4.5vw,3.2rem)] font-black leading-[1.08] mb-5 tracking-tight" style={{ color: "#F9FAFB" }}>
-                Who are the specialists{" "}
-                <span style={{ color: "var(--color-brand-red)" }}>behind every project?</span>
+                Who are the specialists behind every project?
               </h2>
             </div>
             <div className="fade-up d2">
@@ -68,13 +70,31 @@ export default function GreyTeam() {
             </div>
             <div className="fade-up d2">
               <div className="flex flex-wrap gap-3 mb-9">
-                {HIGHLIGHTS.map(({ Icon, label }) => (
-                  <div key={label} className="flex items-center gap-2.5 rounded-lg px-4 py-2.5"
-                    style={{ background: "var(--g-card-bg)", border: "1px solid var(--g-card-border)", boxShadow: "var(--g-card-shadow)" }}>
-                    <Icon className="w-4 h-4" strokeWidth={2} style={{ color: "var(--color-brand-red)" }} />
-                    <span className="text-[14px] font-semibold" style={{ color: "var(--g-heading)" }}>{label}</span>
-                  </div>
-                ))}
+                {HIGHLIGHTS.map(({ Icon, label, badge }) => {
+                  const pill = (
+                    <>
+                      {badge ? (
+                        <div className="relative w-8 h-8 shrink-0">
+                          <Image src={badge} alt={label} fill className="object-contain" sizes="32px" />
+                        </div>
+                      ) : (
+                        <Icon className="w-4 h-4" strokeWidth={2} style={{ color: "var(--color-brand-red)" }} />
+                      )}
+                      <span className="text-[14px] font-semibold" style={{ color: "var(--g-heading)" }}>{label}</span>
+                    </>
+                  );
+                  const wrapperClass = "flex items-center gap-2.5 rounded-lg px-4 py-2.5";
+                  const wrapperStyle = { background: "var(--g-card-bg)", border: "1px solid var(--g-card-border)", boxShadow: "var(--g-card-shadow)" };
+                  return badge ? (
+                    <Link key={label} href="/certifications/" className={wrapperClass} style={wrapperStyle}>
+                      {pill}
+                    </Link>
+                  ) : (
+                    <div key={label} className={wrapperClass} style={wrapperStyle}>
+                      {pill}
+                    </div>
+                  );
+                })}
               </div>
             </div>
             <div className="fade-up d3">

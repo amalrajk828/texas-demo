@@ -4,28 +4,29 @@ import Image from "next/image";
 import { ChevronRight, ExternalLink, ArrowRight } from "lucide-react";
 import ClientsMarquee from "@/components/clients/ClientsMarquee";
 import TestimonialsSection from "@/components/clients/TestimonialsSection";
-import ClientsHeroFlowLottie from "@/components/clients/ClientsHeroFlowLottie";
+import MoltenHero from "@/components/common/MoltenHero";
 import { BreadcrumbJsonLd } from "@/components/schema/BreadcrumbJsonLd";
 import { FaqPageJsonLd } from "@/components/schema/FaqPageJsonLd";
+import { SpeakableJsonLd } from "@/components/schema/SpeakableJsonLd";
 import PageFaqSection from "@/components/PageFaqSection";
 import { clientsFaq } from "@/lib/pageFaqData";
 
 export const metadata: Metadata = {
   title: "Our Clients",
   description:
-    "Texas Technical Services proudly serves 49+ clients across Kuwait and Dubai — from national oil companies and government bodies to international engineering groups.",
+    "Texas Technical Services proudly serves 46+ clients across Kuwait and Dubai — from national oil companies and government bodies to international engineering groups.",
   alternates: { canonical: "/clients/" },
   openGraph: {
     title: "Our Clients",
     description:
-      "49+ clients across oil & gas, power, water, and industrial sectors — trusted by Kuwait Oil Company, KNPC, KIPIC, Chevron, Siemens, Honeywell and many more.",
+      "46+ clients across oil & gas, power, water, and industrial sectors — trusted by Kuwait Oil Company, KNPC, Chevron, Siemens, Honeywell and many more.",
     url: "/clients/",
   },
   twitter: {
     card: "summary_large_image",
     title: "Our Clients",
     description:
-      "49+ clients across oil & gas, power, water, and industrial sectors — trusted by KOC, KNPC, Chevron, Siemens, Honeywell and more.",
+      "46+ clients across oil & gas, power, water, and industrial sectors — trusted by KOC, KNPC, Chevron, Siemens, Honeywell and more.",
   },
   keywords: [
     "oil and gas clients Kuwait",
@@ -49,66 +50,65 @@ type Client = {
 };
 
 const clients: Client[] = [
-  { name: "Kuwait Oil Company (KOC)",                                  logo: "/koc.png",          url: "https://www.kockw.com/",                        external: true  },
-  { name: "Kuwait National Petroleum Company (KNPC)",                  logo: "/knpc.png",         url: "https://www.knpc.com/",                         external: true  },
-  { name: "Kuwait Integrated Petroleum Industries Company (KIPIC)",    logo: "/kipic.png",        url: "https://kipic.com.kw/",                         external: true  },
-  { name: "Ministry of Electricity & Water & Renewable Energy",        logo: "/mew.jpg",          url: "https://www.mew.gov.kw/",                       external: true  },
-  { name: "Ministry of Public Works",                                  logo: "/mpw.png",          url: "https://www.mpw.gov.kw/",                       external: true  },
-  { name: "Public Authority for Applied Education and Training",        logo: "/paaet.png",        url: "https://www.paaet.edu.kw/",                     external: true  },
-  { name: "Almeer",                                                    logo: "/almeer.png",       url: "https://www.almeer.com.kw/",                    external: true  },
-  { name: "Saipem",                                                    logo: "/saipem.png",       url: "https://www.saipem.com/",                       external: true  },
-  { name: "Petroleum Services Co. W.L.L.",                             logo: "/psc.jpg",          url: "https://www.psc-kuwait.com/",                   external: true  },
-  { name: "Chevron",                                                   logo: "/chevron.jpg",      url: "https://www.chevron.com/",                      external: true  },
-  { name: "SGS",                                                       logo: "/sgs.png",          url: "https://www.sgs.com/",                          external: true  },
-  { name: "Mark Technologies Company W.L.L.",                          logo: "/marktc.jpg",       url: "https://www.marktc.com/",                       external: true  },
-  { name: "Heavy Engineering Industries & Shipbuilding Co. (HEISCO)",  logo: "/heisco.png",       url: "https://www.heisco.com/",                       external: true  },
-  { name: "SIEMENS",                                                   logo: "/siemens.png",      url: "https://www.siemens.com/",                      external: true  },
-  { name: "Kuwait Cement Company",                                     logo: "/kuwaitcement.png", url: "https://kuwaitcement.com/",                     external: true  },
-  { name: "Honeywell",                                                 logo: "/honeywell.png",    url: "https://www.honeywell.com/",                    external: true  },
-  { name: "NBTC Group",                                                logo: "/nbtc.png",         url: "https://www.nbtcgroup.com/",                    external: true  },
-  { name: "AZN O&M Company W.L.L. (AZN)",                             logo: "/azn.jpeg",         url: "/clients/",                                     external: false },
-  { name: "KCC Engineering & Contracting Company (KCCEC)",             logo: "/kccec.png",        url: "https://kccec.com.kw/",                         external: true  },
-  { name: "Alkhorayef Group",                                          logo: "/alkhorayef.png",   url: "https://www.alkhorayef.com/",                   external: true  },
-  { name: "ASLAA General Trading and Contracting Co. W.L.L.",          logo: "/aslaa.jpeg",       url: "https://aslaa.com/",                            external: true  },
-  { name: "Industrial Metal Center Co. W.L.L. (IMCCK)",               logo: "/imcck.jpeg",       url: "https://www.imcck.com/",                        external: true  },
-  { name: "Impresa Pizzarotti & C. S.p.A.",                            logo: "/pizzarotti.jpeg",  url: "https://www.pizzarotti.it/",                    external: true  },
-  { name: "Kuwaiti Danish Dairy Company (KDD)",                        logo: "/kddc.png",         url: "https://www.kddc.com/",                         external: true  },
-  { name: "Société d'Entreprise et de Gestion (SEG)",                  logo: "/seg.jpeg",         url: "https://seglebanon.com/",                       external: true  },
-  { name: "Al-Essa & Haddad Trading and Decorating Co.",               logo: "/haddads.png",      url: "https://www.haddads-group.com/",                external: true  },
-  { name: "IMAR",                                                      logo: "/imar.png",         url: "https://imar.com/",                             external: true  },
-  { name: "MJW International Trading Co. LLC",                         logo: "/mjw.png",          url: "/clients/",                                     external: false },
-  { name: "FIRSTGROUP",                                                logo: "/first_group.jpeg", url: "https://firstgroupkw.com/",                     external: true  },
+  { name: "Kuwait Oil Company (KOC)",                                  logo: "/clients/koc.svg",          url: "https://www.kockw.com/",                        external: true  },
+  { name: "Kuwait National Petroleum Company (KNPC)",                  logo: "/clients/knpc.svg",         url: "https://www.knpc.com/",                         external: true  },
+  { name: "Ministry of Electricity & Water & Renewable Energy",        logo: "/clients/mew.svg",          url: "https://www.mew.gov.kw/",                       external: true  },
+  { name: "Ministry of Public Works",                                  logo: "/clients/mpw.svg",          url: "https://www.mpw.gov.kw/",                       external: true  },
+  { name: "Public Authority for Applied Education and Training",        logo: "/clients/paaet.svg",        url: "https://www.paaet.edu.kw/",                     external: true  },
+  { name: "Almeer",                                                    logo: "/clients/almeer.svg",       url: "https://www.almeer.com.kw/",                    external: true  },
+  { name: "Saipem",                                                    logo: "/clients/saipem.svg",       url: "https://www.saipem.com/",                       external: true  },
+  { name: "Petroleum Services Co. W.L.L.",                             logo: "/clients/psc.svg",          url: "https://www.psc-kuwait.com/",                   external: true  },
+  { name: "Chevron",                                                   logo: "/clients/chevron.svg",      url: "https://www.chevron.com/",                      external: true  },
+  { name: "SGS",                                                       logo: "/clients/sgs.svg",          url: "https://www.sgs.com/",                          external: true  },
+  { name: "Mark Technologies Company W.L.L.",                          logo: "/clients/marktc.svg",       url: "https://www.marktc.com/",                       external: true  },
+  { name: "Heavy Engineering Industries & Shipbuilding Co. (HEISCO)",  logo: "/clients/heisco.svg",       url: "https://www.heisco.com/",                       external: true  },
+  { name: "SIEMENS",                                                   logo: "/clients/siemens.svg",      url: "https://www.siemens.com/",                      external: true  },
+  { name: "Kuwait Cement Company",                                     logo: "/clients/kuwaitcement.svg", url: "https://kuwaitcement.com/",                     external: true  },
+  { name: "Honeywell",                                                 logo: "/clients/honeywell.svg",    url: "https://www.honeywell.com/",                    external: true  },
+  { name: "NBTC Group",                                                logo: "/clients/nbtc.svg",         url: "https://www.nbtcgroup.com/",                    external: true  },
+  { name: "AZN O&M Company W.L.L. (AZN)",                             logo: "/clients/azn.svg",          url: "/clients/",                                     external: false },
+  { name: "KCC Engineering & Contracting Company (KCCEC)",             logo: "/clients/kccec.svg",        url: "https://kccec.com.kw/",                         external: true  },
+  { name: "Alkhorayef Group",                                          logo: "/clients/alkhorayef.svg",   url: "https://www.alkhorayef.com/",                   external: true  },
+  { name: "ASLAA General Trading and Contracting Co. W.L.L.",          logo: "/clients/aslaa.svg",        url: "https://aslaa.com/",                            external: true  },
+  { name: "Industrial Metal Center Co. W.L.L. (IMCCK)",               logo: "/clients/imcck.svg",        url: "https://www.imcck.com/",                        external: true  },
+  { name: "Impresa Pizzarotti & C. S.p.A.",                            logo: "/clients/pizzarotti.svg",   url: "https://www.pizzarotti.it/",                    external: true  },
+  { name: "Kuwaiti Danish Dairy Company (KDD)",                        logo: "/clients/kdd.svg",          url: "https://www.kddc.com/",                         external: true  },
+  { name: "Société d'Entreprise et de Gestion (SEG)",                  logo: "/clients/seg.svg",          url: "https://seglebanon.com/",                       external: true  },
+  { name: "Al-Essa & Haddad Trading and Decorating Co.",               logo: "/clients/haddads.png",      url: "https://www.haddads-group.com/",                external: true  },
+  { name: "IMAR",                                                      logo: "/clients/imar.png",         url: "https://imar.com/",                             external: true  },
+  { name: "MJW International Trading Co. LLC",                         logo: "/clients/mjw.svg",          url: "/clients/",                                     external: false },
+  { name: "FIRSTGROUP",                                                logo: "/clients/first_group.svg",  url: "https://firstgroupkw.com/",                     external: true  },
 
-  { name: "Rezayat Group",                                             logo: "/rezayat.svg",      url: "https://www.rezayat.com/",                      external: true  },
-  { name: "Combined Group Contracting Co.",                            logo: "/cgc.png",          url: "https://www.cgc-kw.com/",                       external: true  },
-  { name: "Ducting & Servicing Company (DASCO)",                       logo: "/dasco.png",        url: "https://dasco.com.kw/",                         external: true  },
-  { name: "Hassan Abul Company",                                       logo: "/hassanabul.png",   url: "https://www.hassanabul.com/",                   external: true  },
-  { name: "China State Construction Engineering Corporation (CSCEC)",  logo: "/cscec.png",        url: "https://www.cscec.com/",                        external: true  },
+  { name: "Rezayat Group",                                             logo: "/clients/rezayat.svg",      url: "https://www.rezayat.com/",                      external: true  },
+  { name: "Combined Group Contracting Co.",                            logo: "/clients/cgc.png",          url: "https://www.cgc-kw.com/",                       external: true  },
+  { name: "Ducting & Servicing Company (DASCO)",                       logo: "/clients/dasco.png",        url: "https://dasco.com.kw/",                         external: true  },
+  { name: "Hassan Abul Company",                                       logo: "/clients/hassanabul.svg",   url: "https://www.hassanabul.com/",                   external: true  },
+  { name: "China State Construction Engineering Corporation (CSCEC)",  logo: "/clients/cscec.svg",        url: "https://www.cscec.com/",                        external: true  },
 
-  { name: "Green Spring Group Co.",                                    logo: "/gsgc.jpeg",        url: "https://gsgckwt.com/",                          external: true  },
-  { name: "Sadeem Al-Kuwait for General Trading & Contracting",        logo: "/sadeem.png",       url: "https://www.sadeemalkuwait.com/",               external: true  },
-  { name: "Hydrotek Engineering Company",                              logo: "/hydrotek.jpeg",    url: "https://hydrotek.com/",                         external: true  },
-  { name: "Lingyun Technology Group",                                  logo: "/lingyun.jpeg",     url: "https://www.lingyun.com/",                      external: true  },
-  { name: "Advanced Technology Company K.S.C.P. (ATC)",               logo: "/atc.png",          url: "https://www.atc.com.kw/",                       external: true  },
-  { name: "Al-Bahar Industries Group",                                 logo: "/albahar.jpeg",     url: "https://www.albahar-industries.com/",            external: true  },
-  { name: "WTE Group",                                                 logo: "/wte.png",          url: "https://www.wte.de/",                           external: true  },
-  { name: "Limak Group",                                               logo: "/limak.jpeg",       url: "https://www.limak.com.tr/",                     external: true  },
-  { name: "SSH",                                                       logo: "/ssh.png",          url: "https://www.sshic.com/",                        external: true  },
-  { name: "Kuwait Gulf Oil Company K.S.C.C. (KGOC)",                  logo: "/kgoc.png",         url: "https://www.kgoc.com/",                         external: true  },
-  { name: "Parsons Corporation",                                       logo: "/parsons.jpeg",     url: "https://www.parsons.com/",                      external: true  },
-  { name: "HOT Engineering & Construction Co.-KSCC (HOTECC)",          logo: "/hotecc.png",       url: "https://www.hotecc.com/",                       external: true  },
-  { name: "KEO",                                                       logo: "/keo.png",          url: "https://www.keo.com/",                          external: true  },
+  { name: "Green Spring Group Co.",                                    logo: "/clients/gsgc.svg",         url: "https://gsgckwt.com/",                          external: true  },
+  { name: "Sadeem Al-Kuwait for General Trading & Contracting",        logo: "/clients/sadeem.svg",       url: "https://www.sadeemalkuwait.com/",               external: true  },
+  { name: "Hydrotek Engineering Company",                              logo: "/clients/hydrotek.svg",     url: "https://hydrotek.com/",                         external: true  },
+  { name: "Lingyun Technology Group",                                  logo: "/clients/lingyun.svg",      url: "https://www.lingyun.com/",                      external: true  },
+  { name: "Advanced Technology Company K.S.C.P. (ATC)",               logo: "/clients/atc.svg",          url: "https://www.atc.com.kw/",                       external: true  },
+  { name: "Al-Bahar Industries Group",                                 logo: "/clients/al_bahar.svg",     url: "https://www.albahar-industries.com/",            external: true  },
+  { name: "WTE Group",                                                 logo: "/clients/wte.svg",          url: "https://www.wte.de/",                           external: true  },
+  { name: "Limak Group",                                               logo: "/clients/limak.svg",        url: "https://www.limak.com.tr/",                     external: true  },
+  { name: "SSH",                                                       logo: "/clients/ssh.png",          url: "https://www.sshic.com/",                        external: true  },
+  { name: "Kuwait Gulf Oil Company K.S.C.C. (KGOC)",                  logo: "/clients/kgoc.png",         url: "https://www.kgoc.com/",                         external: true  },
+  { name: "Parsons Corporation",                                       logo: "/clients/parsons.jpeg",     url: "https://www.parsons.com/",                      external: true  },
+  { name: "HOT Engineering & Construction Co.-KSCC (HOTECC)",          logo: "/clients/hotecc.svg",       url: "https://www.hotecc.com/",                       external: true  },
+  { name: "KEO",                                                       logo: "/clients/keo.svg",          url: "https://www.keo.com/",                          external: true  },
 ];
 
 const stats = [
-  { num: "49+", label: "Clients Served" },
+  { num: "46+", label: "Clients Served" },
   { num: "100%", label: "Satisfaction" },
   { num: "18+", label: "Years" },
   { num: "2",                  label: "Countries" },
 ];
 
 const featuredClients = clients.filter(c =>
-  ["Kuwait Oil Company (KOC)", "Kuwait National Petroleum Company (KNPC)", "Kuwait Integrated Petroleum Industries Company (KIPIC)",
+  ["Kuwait Oil Company (KOC)", "Kuwait National Petroleum Company (KNPC)",
    "Chevron", "SIEMENS", "Honeywell", "Saipem", "SGS",
    "Kuwait Cement Company", "Heavy Engineering Industries & Shipbuilding Co. (HEISCO)",
    "NBTC Group", "KCC Engineering & Contracting Company (KCCEC)",
@@ -120,71 +120,32 @@ export default function ClientsPage() {
   return (
     <>
       <BreadcrumbJsonLd items={[{ name: "Home", href: "/" }, { name: "Clients", href: "/clients/" }]} />
+      <SpeakableJsonLd headline="Our Clients — 46+ Industrial Companies Across Kuwait & UAE" />
+
       {/* ══ HERO ══════════════════════════════════════════════════ */}
-      <section className="bg-[#000000] blueprint-grid blueprint-dot-grid relative overflow-hidden pt-[108px] lg:pt-[116px]">
-        {/* Polygon Flow Lottie background */}
-        <ClientsHeroFlowLottie />
-
-        {/* Grid texture */}
-        <div
-          className="absolute inset-0 pointer-events-none"
-          style={{
-            backgroundImage:
-              "repeating-linear-gradient(0deg,transparent,transparent 39px,rgba(255,255,255,0.03) 40px),repeating-linear-gradient(90deg,transparent,transparent 39px,rgba(255,255,255,0.03) 40px)",
-          }}
-        />
-        {/* Red glow */}
-        <div
-          className="absolute top-0 right-0 w-[520px] h-[520px] pointer-events-none"
-          style={{
-            background: "radial-gradient(circle, rgba(231,33,43,0.12) 0%, transparent 70%)",
-          }}
-        />
-
-        <div className="relative z-20 max-w-7xl mx-auto px-4 sm:px-6 pb-16 lg:pb-24 pt-4">
-          {/* Breadcrumb */}
-          <nav className="flex items-center gap-1.5 mb-10 text-[11px] text-white/30">
-            <Link href="/" className="hover:text-white/60 transition-colors">Home</Link>
-            <ChevronRight className="w-3 h-3" />
-            <span className="text-white/55">Clients</span>
-          </nav>
-
-          <div className="flex flex-col lg:flex-row lg:items-end gap-10 lg:gap-16">
-            {/* Left — headline */}
-            <div className="flex-1 max-w-2xl">
-              <div className="flex items-center gap-2 mb-5">
-                <span className="w-5 h-px bg-[#e7212b]" />
-                <span className="text-[#e7212b] text-[10px] font-medium tracking-[2.5px] uppercase">
-                  Trusted Partners
-                </span>
-              </div>
-              <h1 className="text-4xl sm:text-5xl lg:text-[3.5rem] font-medium text-white leading-[1.15] mb-5">
-                Companies That
-                <br />
-                <em className="not-italic text-white">Trust Us</em>
-              </h1>
-              <p className="text-white/70 text-base sm:text-lg leading-relaxed max-w-lg">
-                From national oil companies and government ministries to international
-                engineering groups — our clients span the full spectrum of Kuwait and
-                the Gulf region&apos;s most demanding industries.
-              </p>
+      <MoltenHero
+        breadcrumbs={[
+          { label: "Home", href: "/" },
+          { label: "Clients" },
+        ]}
+        eyebrow="Trusted Partners"
+        title="Companies That Trust Us"
+        subtitle="From national oil companies and government ministries to international engineering groups — our clients span the full spectrum of Kuwait and the Gulf region's most demanding industries."
+        accentColor="#e7212b"
+      >
+        {/* Stat grid — passed as children to render inside the content area */}
+        <div className="grid grid-cols-2 sm:grid-cols-4 gap-3 mt-10">
+          {stats.map((s) => (
+            <div
+              key={s.label}
+              className="bg-white/[0.05] border border-white/[0.10] hover:border-[#e7212b]/40 rounded-xl px-5 py-4 text-center transition-colors duration-200"
+            >
+              <p className="text-2xl font-semibold text-[#e7212b]">{s.num}</p>
+              <p className="text-[10.5px] text-white/70 mt-1 tracking-wide uppercase font-medium">{s.label}</p>
             </div>
-
-            {/* Right — stats */}
-            <div className="grid grid-cols-2 sm:grid-cols-4 lg:grid-cols-2 xl:grid-cols-4 gap-3 shrink-0">
-              {stats.map((s) => (
-                <div
-                  key={s.label}
-                  className="bg-white/[0.05] border border-white/[0.10] hover:border-[#e7212b]/40 rounded-xl px-5 py-4 text-center transition-colors duration-200"
-                >
-                  <p className="text-2xl font-semibold text-[#e7212b]">{s.num}</p>
-                  <p className="text-[10.5px] text-white/50 mt-1 tracking-wide uppercase font-medium">{s.label}</p>
-                </div>
-              ))}
-            </div>
-          </div>
+          ))}
         </div>
-      </section>
+      </MoltenHero>
 
       {/* ══ CLIENT GRID ═══════════════════════════════════════════ */}
       <section className="bg-white py-20 lg:py-24 overflow-hidden">
@@ -195,8 +156,8 @@ export default function ClientsPage() {
           {/* Section label */}
           <div className="flex items-center justify-between mb-10">
             <div className="flex items-center gap-3">
-              <span className="w-8 h-px bg-[#e7212b]/40" />
-              <span className="text-[#e7212b] text-xs font-semibold tracking-[2px] uppercase">
+              <span className="w-8 h-px bg-[#0891B2]/40" />
+              <span className="text-[#0891B2] text-xs font-semibold tracking-[2px] uppercase">
                 All Clients
               </span>
             </div>
@@ -207,7 +168,7 @@ export default function ClientsPage() {
           <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 xl:grid-cols-5 gap-4">
             {clients.map((client) => {
               const cardClass =
-                "group relative bg-gray-100 border border-gray-200 hover:border-[#e7212b]/50 rounded-2xl p-5 flex flex-col items-center gap-4 transition-all duration-200 hover:shadow-lg cursor-pointer";
+                "group relative bg-white border border-gray-200 hover:border-[#e7212b]/50 rounded-2xl p-5 flex flex-col items-center gap-4 transition-all duration-200 hover:shadow-lg shadow-sm cursor-pointer";
 
               const inner = (
                 <>
@@ -223,10 +184,10 @@ export default function ClientsPage() {
                       fill
                       className="object-contain"
                       sizes="(max-width: 640px) 45vw, (max-width: 1024px) 30vw, (max-width: 1280px) 25vw, 20vw"
-                      style={{ filter: "drop-shadow(0 0 3px rgba(0,0,0,0.45))" }}
+                      style={{ filter: "drop-shadow(0 0 3px rgba(0,0,0,0.35))", mixBlendMode: client.logo.includes("alkhorayef") ? "multiply" : undefined }}
                     />
                   </div>
-                  <p className="text-xs text-gray-500 text-center leading-snug group-hover:text-[#e7212b] transition-colors duration-200 font-medium">
+                  <p className="text-xs text-gray-600 text-center leading-snug group-hover:text-[#e7212b] transition-colors duration-200 font-medium">
                     {client.name}
                   </p>
                   <div className="absolute bottom-0 left-0 right-0 h-[2px] bg-[#e7212b] scale-x-0 group-hover:scale-x-100 transition-transform duration-300 origin-left rounded-b-2xl" />
@@ -260,7 +221,7 @@ export default function ClientsPage() {
             {[
               {
                 heading: "Government & National Entities",
-                body: "KOC, KNPC, KIPIC, KGOC, Ministry of Electricity & Water, Ministry of Public Works and more.",
+                body: "KOC, KNPC, KGOC, Ministry of Electricity & Water, Ministry of Public Works and more.",
               },
               {
                 heading: "International Blue-Chips",
@@ -272,9 +233,9 @@ export default function ClientsPage() {
               },
             ].map((item) => (
               <div key={item.heading} className="px-4">
-                <div className="w-8 h-px bg-[#e7212b] mx-auto mb-4" />
+                <div className="w-8 h-px bg-[#0891B2] mx-auto mb-4" />
                 <h3 className="text-white text-sm font-medium mb-2">{item.heading}</h3>
-                <p className="text-white/40 text-[12px] leading-relaxed">{item.body}</p>
+                <p className="text-white/70 text-[12px] leading-relaxed">{item.body}</p>
               </div>
             ))}
           </div>
@@ -290,16 +251,16 @@ export default function ClientsPage() {
       <section className="bg-[#000000] blueprint-grid blueprint-dot-grid py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 text-center">
           <div className="flex items-center justify-center gap-3 mb-4">
-            <span className="w-8 h-px bg-[#e7212b]/40" />
-            <span className="text-[#e7212b] text-[9px] font-medium tracking-[2.5px] uppercase">
+            <span className="w-8 h-px bg-[#0891B2]/40" />
+            <span className="text-[#0891B2] text-[14px] font-medium tracking-[2.5px] uppercase">
               Join our clients
             </span>
-            <span className="w-8 h-px bg-[#e7212b]/40" />
+            <span className="w-8 h-px bg-[#0891B2]/40" />
           </div>
           <h2 className="text-3xl sm:text-4xl font-medium text-white mb-3">
             Ready to work with us?
           </h2>
-          <p className="text-white/50 text-base mb-8 max-w-md mx-auto">
+          <p className="text-white/70 text-base mb-8 max-w-md mx-auto">
             Talk to our team about your flow measurement, automation, or inspection
             requirements. Kuwait and Dubai offices ready to help.
           </p>

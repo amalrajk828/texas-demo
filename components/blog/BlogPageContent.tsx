@@ -1,6 +1,7 @@
 "use client";
 
 import { useState, useRef, useEffect, useLayoutEffect } from "react";
+
 import Link from "next/link";
 import Image from "next/image";
 import {
@@ -14,7 +15,7 @@ import {
 } from "lucide-react";
 import BlogPagination from "./BlogPagination";
 
-import BlogHeroFlowLottie from "./BlogHeroFlowLottie";
+import MoltenHero from "@/components/common/MoltenHero";
 
 /* ─── Types ─────────────────────────────────────────────────────────── */
 export interface BlogPost {
@@ -98,64 +99,40 @@ export default function BlogPageContent({ allPosts }: Props) {
   return (
     <div className="min-h-screen bg-[#f8f9fb] font-sans antialiased text-[#0B0D26]">
       {/* ══════════════════════════════════════════════════════════════
-          1. HERO SECTION
+          1. HERO SECTION — MoltenHero (shared WebGL canvas)
       ══════════════════════════════════════════════════════════════ */}
-      <section
-        id="hero-vanta"
-        className="relative bg-[#000000] blueprint-grid blueprint-dot-grid overflow-hidden pt-32 pb-16 lg:pb-24 min-h-[400px]"
+      <MoltenHero
+        id="hero-blog"
+        breadcrumbs={[
+          { label: "Home", href: "/" },
+          { label: "Blog" },
+        ]}
+        eyebrow="Technical Resource Hub"
+        title="Engineering Insights Hub"
+        subtitle="Technical guides, compliance references, and strategic engineering insights for plant managers and automation engineers across the GCC."
+        accentColor="#e7212b"
       >
-        {/* Blog Hero Lottie animated background */}
-        <BlogHeroFlowLottie />
-        {/* Red radial glow top-right */}
-        <div
-          className="absolute -top-24 -right-24 w-[600px] h-[600px] rounded-full pointer-events-none"
-          style={{ background: "radial-gradient(circle, rgba(231,33,43,0.10) 0%, transparent 65%)" }}
-        />
-
-        <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6">
-          {/* Eyebrow */}
-          <div className="flex items-center gap-2.5 mb-5">
-            <span className="w-4 h-px bg-[#e7212b]" />
-            <span className="text-[#e7212b] text-[10.5px] font-bold tracking-[3.5px] uppercase">
-              Technical Resource Hub
-            </span>
-          </div>
-
-          {/* Heading — "Engineering Insights Hub" */}
-          <h1 className="text-4xl sm:text-5xl lg:text-[3.4rem] font-black leading-[1.08] tracking-tight mb-5 text-white max-w-3xl">
-            Engineering{" "}
-            <em className="not-italic text-white">Insights</em>{" "}
-            Hub
-          </h1>
-
-          {/* Sub-text */}
-          <p className="text-white/50 text-[15.5px] leading-[1.85] max-w-2xl mb-12">
-            Technical guides, compliance references, and strategic engineering insights for
-            plant managers and automation engineers across the GCC.
-          </p>
-
-          {/* 4 stat boxes */}
-          <div className="grid grid-cols-2 sm:grid-cols-4 gap-3 sm:gap-4">
-            {HERO_STATS.map((s) => (
-              <div
-                key={s.label}
-                className="rounded-xl px-5 py-4 border flex flex-col gap-1"
-                style={{
-                  background: "rgba(14, 14, 18, 0.90)",
-                  borderColor: "rgba(231,33,43,0.22)",
-                }}
-              >
-                <span className="text-[#e7212b] text-2xl sm:text-3xl font-black leading-none">
-                  {s.value}
-                </span>
-                <span className="text-white/45 text-[11px] font-medium tracking-wide uppercase">
-                  {s.label}
-                </span>
-              </div>
-            ))}
-          </div>
+        {/* 4 stat boxes — passed as children so they render inside the content area */}
+        <div className="grid grid-cols-2 sm:grid-cols-4 gap-3 sm:gap-4 mt-10">
+          {HERO_STATS.map((s) => (
+            <div
+              key={s.label}
+              className="rounded-xl px-5 py-4 border flex flex-col gap-1 backdrop-blur-md"
+              style={{
+                background: "rgba(14, 14, 20, 0.75)",
+                borderColor: "rgba(255, 255, 255, 0.12)",
+              }}
+            >
+              <span className="text-[#e7212b] text-2xl sm:text-3xl font-black leading-none">
+                {s.value}
+              </span>
+              <span className="text-white/60 text-[11px] font-medium tracking-wide uppercase">
+                {s.label}
+              </span>
+            </div>
+          ))}
         </div>
-      </section>
+      </MoltenHero>
 
       {/* ══════════════════════════════════════════════════════════════
           2. FEATURED ARTICLE

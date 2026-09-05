@@ -169,7 +169,7 @@ export default function HomePage() {
           <GreyVision />
         </ThemeWrapper>
 
-        <ThemeWrapper vars={LIGHT_GREY_VARS}>
+        <ThemeWrapper vars={DARK_GREY_VARS}>
           <GreyTeam />
         </ThemeWrapper>
 

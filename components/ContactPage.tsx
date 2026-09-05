@@ -2,6 +2,7 @@
 
 import React, { useState } from "react";
 import Link from "next/link";
+import Image from "next/image";
 import {
   MapPin,
   Phone,
@@ -11,6 +12,7 @@ import {
   Clock,
   Building2,
   CheckCircle,
+  ChevronRight,
 } from "lucide-react";
 import { SITE_EMAIL } from "@/lib/site";
 import { useFormSubmit } from "@/lib/useFormSubmit";
@@ -91,29 +93,28 @@ export default function ContactPage() {
 
         <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6">
           {/* Breadcrumb */}
-          <div className="flex items-center gap-2 mb-8 text-[12px] text-white/30">
-            <Link href="/" className="hover:text-white/60 transition-colors">
+          <nav className="flex items-center gap-2 mb-8 text-[14px] text-white/50">
+            <Link href="/" className="hover:text-white transition-colors">
               Home
             </Link>
-            <span>/</span>
+            <ChevronRight className="w-3.5 h-3.5 text-white/30" />
             <span className="text-white/60">Contact Us</span>
-          </div>
+          </nav>
 
           <div className="max-w-3xl">
             <div className="flex items-center gap-2.5 mb-5">
-              <span className="w-5 h-px bg-[#e7212b]" />
-              <span className="text-[#e7212b] text-[11px] font-semibold tracking-[3px] uppercase">
+              <span className="w-5 h-px bg-[#0891B2]" />
+              <span className="text-[#0891B2] text-[11px] font-semibold tracking-[3px] uppercase">
                 Get in Touch
               </span>
             </div>
 
             <h1 className="text-4xl sm:text-5xl lg:text-[3.4rem] font-bold text-white leading-[1.12] mb-6">
-              Let&apos;s Talk About
-              <br />
-              <em className="not-italic text-[#e7212b]">Your Project</em>
+              Let&apos;s Talk About{" "}
+              <em className="not-italic text-current">Your Project</em>
             </h1>
 
-            <p className="text-white/50 text-base sm:text-[17px] leading-relaxed mb-8 max-w-xl">
+            <p className="text-white/70 text-base sm:text-[17px] leading-relaxed mb-8 max-w-xl">
               Whether you need flow measurement solutions, industrial automation,
               or inspection services — our team across Kuwait and Dubai is ready
               to help.
@@ -140,7 +141,7 @@ export default function ContactPage() {
             {/* Left — info cards */}
             <div className="space-y-8">
               <div>
-                <span className="text-[11px] font-bold tracking-[0.28em] uppercase text-[#e7212b]">
+                <span className="text-[11px] font-bold tracking-[0.28em] uppercase text-[#0E7490]">
                   Contact Info
                 </span>
                 <h2 className="mt-3 text-3xl lg:text-4xl font-bold text-[#181D4E] leading-tight">
@@ -362,7 +363,7 @@ export default function ContactPage() {
       <section className="py-16 lg:py-24 bg-[#F8F9FA]">
         <div className="max-w-7xl mx-auto px-4 sm:px-6">
           <div className="text-center mb-14">
-            <span className="text-[11px] font-bold tracking-[0.28em] uppercase text-[#e7212b]">
+            <span className="text-[11px] font-bold tracking-[0.28em] uppercase text-[#0E7490]">
               Our Offices
             </span>
             <h2 className="mt-3 text-3xl lg:text-4xl font-bold text-[#181D4E]">
@@ -429,6 +430,31 @@ export default function ContactPage() {
         </div>
       </section>
 
+      {/* ═══ CERTIFICATION TRUST STRIP ═══════════════════════════════════ */}
+      <section className="py-10 border-t border-gray-100 bg-gray-50">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6">
+          <div className="flex flex-col sm:flex-row items-center justify-center gap-6 sm:gap-10">
+            <div className="flex items-center gap-5">
+              {[
+                { src: "/about/cert-iso9001.png", alt: "ISO 9001:2015" },
+                { src: "/about/cert-iso14001.png", alt: "ISO 14001:2015" },
+                { src: "/about/cert-iso45001.png", alt: "ISO 45001:2018" },
+                { src: "/about/cert-uasl.png", alt: "UASL Accredited" },
+                { src: "/about/cert-accurate.png", alt: "Accurate Certified" },
+              ].map((cert) => (
+                <Link key={cert.src} href="/certifications/" className="relative w-16 h-16 block">
+                  <Image src={cert.src} alt={cert.alt} fill className="object-contain" sizes="64px" />
+                </Link>
+              ))}
+            </div>
+            <div className="text-center sm:text-left">
+              <p className="text-[13px] font-semibold text-[#181D4E]">ISO 9001 · ISO 14001 · ISO 45001 · UASL · Accurate Certified</p>
+              <p className="text-[12px] text-gray-400 mt-0.5">Quality · Environmental · Safety Management Systems</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* ═══ CTA BANNER ═══════════════════════════════════════════ */}
       <section
         className="py-20"
@@ -440,12 +466,12 @@ export default function ContactPage() {
               className="w-8 h-px"
               style={{
                 background:
-                  "color-mix(in srgb, var(--color-brand-red) 40%, transparent)",
+                  "color-mix(in srgb, #0891B2 40%, transparent)",
               }}
             />
             <span
               className="text-[11px] font-semibold tracking-[2.5px] uppercase"
-              style={{ color: "var(--color-brand-red)" }}
+              style={{ color: "#0891B2" }}
             >
               Let&apos;s Work Together
             </span>
@@ -453,14 +479,14 @@ export default function ContactPage() {
               className="w-8 h-px"
               style={{
                 background:
-                  "color-mix(in srgb, var(--color-brand-red) 40%, transparent)",
+                  "color-mix(in srgb, #0891B2 40%, transparent)",
               }}
             />
           </div>
           <h2 className="text-3xl sm:text-4xl font-bold text-white mb-3">
             Ready to Start Your Project?
           </h2>
-          <p className="text-white/50 text-[15px] mb-8 max-w-md mx-auto">
+          <p className="text-white/70 text-[15px] mb-8 max-w-md mx-auto">
             Talk to our team about your requirements. Our offices in Kuwait and
             Dubai are ready to help.
           </p>

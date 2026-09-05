@@ -164,7 +164,7 @@ function ProductCard({ item, index }: { item: ProductCategory; index: number }) 
         <h3 className="text-white font-medium text-[15px] leading-snug mb-2 group-hover:text-[#e7212b] transition-colors duration-200">
           {item.title}
         </h3>
-        <p className="text-white/40 text-[12px] leading-relaxed">{item.description}</p>
+        <p className="text-white/70 text-[12px] leading-relaxed">{item.description}</p>
 
         {/* Sub-items */}
         {item.sub && (
@@ -238,7 +238,7 @@ export default function ProductsPage() {
               <p className="text-white font-medium text-xl mb-1">
                 Not sure which product fits your application?
               </p>
-              <p className="text-white/45 text-sm">
+              <p className="text-white/70 text-sm">
                 Our engineers will help you select the right solution for your process requirements.
               </p>
             </div>

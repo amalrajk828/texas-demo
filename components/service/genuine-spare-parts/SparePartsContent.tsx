@@ -46,8 +46,8 @@ export default function SparePartsContent() {
         <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6">
           <div className="fade-up mb-12">
             <div className="flex items-center gap-2.5 mb-4">
-              <span className="w-5 h-px bg-[#e7212b]" />
-              <span className="text-[#e7212b] text-[10px] font-semibold tracking-[3.5px] uppercase">
+              <span className="w-5 h-px bg-[#0891B2]" />
+              <span className="text-[#0891B2] text-[10px] font-semibold tracking-[3.5px] uppercase">
                 Our Services
               </span>
             </div>
@@ -72,7 +72,7 @@ export default function SparePartsContent() {
               <div className="relative z-10 px-8 py-7 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-5">
                 <div>
                   <p className="text-white font-bold text-[15px]">Need Genuine Spare Parts for Your Flow Meters?</p>
-                  <p className="text-white/40 text-[13px] mt-0.5">Contact us with your meter model and part requirements — we'll source the right components fast.</p>
+                  <p className="text-white/70 text-[13px] mt-0.5">Contact us with your meter model and part requirements — we'll source the right components fast.</p>
                 </div>
                 <div className="flex flex-wrap gap-3 shrink-0">
                   <a href="#contact" className="inline-flex items-center gap-2 bg-[#e7212b] hover:bg-[#aa0b1b] text-white font-semibold px-6 py-3 rounded-lg transition-colors duration-200 text-[13px] shadow-lg shadow-[#e7212b]/20">Contact Us <ArrowRight className="w-3.5 h-3.5" /></a>

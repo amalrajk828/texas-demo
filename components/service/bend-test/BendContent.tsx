@@ -41,7 +41,7 @@ export default function BendContent() {
           </div>
           <div>
             <div className="fade-up d1">
-              <div className="flex items-center gap-2.5 mb-4"><span className="w-5 h-px bg-[#e7212b]" /><span className="text-[#e7212b] text-[10px] font-semibold tracking-[3.5px] uppercase">What We Do</span></div>
+              <div className="flex items-center gap-2.5 mb-4"><span className="w-5 h-px bg-[#0891B2]" /><span className="text-[#0891B2] text-[10px] font-semibold tracking-[3.5px] uppercase">What We Do</span></div>
               <h2 className="text-3xl sm:text-[2.2rem] font-bold text-[#0B0D26] leading-[1.15] mb-5">Bend &amp; Flexural Testing for Ductility &amp; Structural Integrity</h2>
               <p className="text-gray-500 text-[15px] leading-[1.85] mb-4">Bend testing, or flexural testing, is a crucial mechanical test used to assess a material's ability to withstand bending forces without breaking. This testing method is particularly important for materials used in structural applications, such as construction, aerospace, and engineering, where flexibility and resilience are critical factors.</p>
               <p className="text-gray-500 text-[15px] leading-[1.85] mb-8">The bend test is a qualitative test that can be used to evaluate both the ductility and soundness of a material — providing essential data for weld procedure qualification, material acceptance, and structural design verification to recognised international standards.</p>
@@ -63,7 +63,7 @@ export default function BendContent() {
         </div>
         <div>
           <div className="fade-up mb-12">
-            <div className="flex items-center gap-2.5 mb-4"><span className="w-5 h-px bg-[#e7212b]" /><span className="text-[#e7212b] text-[10px] font-semibold tracking-[3.5px] uppercase">Test Methods</span></div>
+            <div className="flex items-center gap-2.5 mb-4"><span className="w-5 h-px bg-[#0891B2]" /><span className="text-[#0891B2] text-[10px] font-semibold tracking-[3.5px] uppercase">Test Methods</span></div>
             <h2 className="text-3xl sm:text-[2.2rem] font-bold text-[#0B0D26] leading-[1.15]">Bend Testing Methods &amp; Applications</h2>
           </div>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5">
@@ -89,7 +89,7 @@ export default function BendContent() {
               <div className="relative z-10 px-8 py-7 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-5">
                 <div>
                   <p className="text-white font-bold text-[15px]">Need Bend Testing for Your Materials or Welds?</p>
-                  <p className="text-white/40 text-[13px] mt-0.5">Contact our team about guided bend, flexural, or weld procedure qualification testing.</p>
+                  <p className="text-white/70 text-[13px] mt-0.5">Contact our team about guided bend, flexural, or weld procedure qualification testing.</p>
                 </div>
                 <div className="flex flex-wrap gap-3 shrink-0">
                   <a href="#contact" className="inline-flex items-center gap-2 bg-[#e7212b] hover:bg-[#aa0b1b] text-white font-semibold px-6 py-3 rounded-lg transition-colors duration-200 text-[13px] shadow-lg shadow-[#e7212b]/20">Contact Us <ArrowRight className="w-3.5 h-3.5" /></a>

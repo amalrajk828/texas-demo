@@ -12,7 +12,7 @@ export default function ProductPageIntro({
           {title}
         </h2>
         <div className="w-[60px] h-[3px] bg-[#e7212b] mx-auto mt-3 mb-4" />
-        <p className="text-white/60 text-lg leading-relaxed">
+        <p className="text-white/70 text-lg leading-relaxed">
           {description}
         </p>
       </div>

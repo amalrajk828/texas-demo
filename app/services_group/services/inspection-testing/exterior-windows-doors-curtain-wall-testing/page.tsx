@@ -61,12 +61,12 @@ export default function ExteriorWindowsGroupPage() {
       <section className="relative bg-[#0B0D26] pt-32 pb-20 lg:pt-40 lg:pb-28 overflow-hidden">
         <div className="absolute inset-0 bg-[url('/images/hero-pattern.svg')] bg-cover bg-center opacity-5" />
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 text-center">
-          <span className="inline-block text-[#e7212b] text-[10px] font-semibold tracking-[3.5px] uppercase mb-6 border border-[#e7212b]/20 rounded-full px-4 py-1.5">
+          <span className="inline-block text-[#0891B2] text-[10px] font-semibold tracking-[3.5px] uppercase mb-6 border border-[#e7212b]/20 rounded-full px-4 py-1.5">
             Inspection & Testing
           </span>
           <h1 className="text-3xl sm:text-5xl lg:text-[3.8rem] font-black text-white leading-[1.08] max-w-4xl mx-auto">
             Exterior Windows, Doors &amp;<br className="hidden sm:block" />
-            <span className="text-[#e7212b]">Curtain Wall Testing</span>
+            <span className="text-current">Curtain Wall Testing</span>
           </h1>
           <p className="text-gray-400 text-[15px] lg:text-[16px] leading-[1.8] max-w-3xl mx-auto mt-6">
             Comprehensive performance testing of building envelope systems — water penetration, air permeability,
@@ -78,8 +78,8 @@ export default function ExteriorWindowsGroupPage() {
       <section className="bg-[#0B0D26] py-24 lg:py-32">
         <div className="max-w-7xl mx-auto px-4 sm:px-6">
           <div className="flex items-center gap-2.5 mb-4">
-            <span className="w-5 h-px bg-[#e7212b]" />
-            <span className="text-[#e7212b] text-[10px] font-semibold tracking-[3.5px] uppercase">Testing Services</span>
+            <span className="w-5 h-px bg-[#0891B2]" />
+            <span className="text-[#0891B2] text-[10px] font-semibold tracking-[3.5px] uppercase">Testing Services</span>
           </div>
           <h2 className="text-3xl sm:text-[2.4rem] font-bold text-white leading-[1.15] mb-14">
             Curtain Wall &amp; Fenestration Testing

@@ -132,6 +132,30 @@ export const PARTNERS: Partner[] = [
     ],
   },
   {
+    slug: "bis",
+    name: "BIS",
+    logo: "/about/bis.png",
+    country: "IND",
+    relationship: "Distributor & Service Partner",
+    product: "Industrial Automation & SCADA",
+    description:
+      "Balaji Industrial Services, established in 1978 — a leading service provider in SCADA, PLC, and specialized process industries automation solutions.",
+    href: "/service/industrial-automation/",
+    features: [
+      "SCADA & PLC automation systems",
+      "Process control engineering",
+      "Turnkey industrial automation",
+      "Field instrumentation services",
+      "Established industry expertise since 1978",
+    ],
+    applications: [
+      "Process industries automation",
+      "Water & wastewater control",
+      "Manufacturing & batching plants",
+      "Energy & utility monitoring",
+    ],
+  },
+  {
     slug: "omni",
     name: "OMNI Flow Computer",
     logo: "/about/omni.png",

@@ -89,8 +89,8 @@ export default function FlowComputerContent() {
           <div>
             <div className="fade-up d1">
               <div className="flex items-center gap-2.5 mb-4">
-                <span className="w-5 h-px bg-[#e7212b]" />
-                <span className="text-[#e7212b] text-[10px] font-semibold tracking-[3.5px] uppercase">
+                <span className="w-5 h-px bg-[#0891B2]" />
+                <span className="text-[#0891B2] text-[10px] font-semibold tracking-[3.5px] uppercase">
                   What We Do
                 </span>
               </div>
@@ -139,8 +139,8 @@ export default function FlowComputerContent() {
         <div>
           <div className="fade-up mb-12">
             <div className="flex items-center gap-2.5 mb-4">
-              <span className="w-5 h-px bg-[#e7212b]" />
-              <span className="text-[#e7212b] text-[10px] font-semibold tracking-[3.5px] uppercase">
+              <span className="w-5 h-px bg-[#0891B2]" />
+              <span className="text-[#0891B2] text-[10px] font-semibold tracking-[3.5px] uppercase">
                 Our Approach
               </span>
             </div>
@@ -186,7 +186,7 @@ export default function FlowComputerContent() {
               />
               <div className="relative z-10">
                 <p className="text-white font-semibold text-[15px]">Ready to configure your flow computer?</p>
-                <p className="text-white/40 text-[13px] mt-0.5">Talk to our specialists about your application and standards requirements.</p>
+                <p className="text-white/70 text-[13px] mt-0.5">Talk to our specialists about your application and standards requirements.</p>
               </div>
               <div className="relative z-10 flex flex-wrap gap-3 shrink-0">
                 <a

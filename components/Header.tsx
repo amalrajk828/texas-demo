@@ -316,7 +316,7 @@ function NestedDropdown({ menuLabel, data, viewAll, isOpen, onClose, pathname, o
           {hasSubmenu && activeParent && (
             <div className="w-[300px] px-6 py-1.5 bg-black/20 flex flex-col gap-0.5 border-l border-white/10 animate-slide-right shrink-0 overflow-visible">
               <div className="px-6 mb-1">
-                <span className="text-[10px] uppercase font-bold tracking-[0.15em] text-[#E53935] block">
+                <span className="text-[10px] uppercase font-bold tracking-[0.15em] text-[#0891B2] block">
                   Specifications
                 </span>
               </div>
@@ -540,7 +540,7 @@ export default function Header() {
                 <span className="text-white font-black tracking-[6px] lg:tracking-[0px] xl:tracking-[6px] text-[18px] leading-none">
                   TEXAS
                 </span>
-                <span className="text-[#E53935] text-[11px] tracking-[3px] lg:tracking-[0px] xl:tracking-[3px] leading-none font-semibold mt-0.5">
+                <span className="text-white/60 text-[11px] tracking-[3px] lg:tracking-[0px] xl:tracking-[3px] leading-none font-semibold mt-0.5">
                   TECHNICAL SERVICES
                 </span>
               </div>
@@ -736,10 +736,10 @@ export default function Header() {
                   {/* Logo */}
                   <div className="px-5 pt-5 pb-4 border-b" style={{ borderColor: "rgba(255,255,255,0.08)" }}>
                     <Link href="/" onClick={() => setMobileOpen(false)} className="flex items-center gap-3">
-                      <Image src="/logo.svg" alt="Texas" width={38} height={38} />
+                      <Image src="/logo.svg" alt="Texas Technical Services" width={38} height={38} loading="eager" />
                       <div>
                         <span className="text-white font-black tracking-[5px] text-[15px] block leading-none">TEXAS</span>
-                        <span className="text-[#E53935] text-[10px] tracking-[2.5px] font-semibold block leading-none mt-1">TECHNICAL SERVICES</span>
+                        <span className="text-white/60 text-[10px] tracking-[2.5px] font-semibold block leading-none mt-1">TECHNICAL SERVICES</span>
                       </div>
                     </Link>
                   </div>

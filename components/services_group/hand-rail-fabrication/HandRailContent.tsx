@@ -15,8 +15,8 @@ export default function HandRailContent() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6">
         <div className="fade-up mb-14">
           <div className="flex items-center gap-2.5 mb-4">
-            <span className="w-5 h-px bg-[#e7212b]" />
-            <span className="text-[#e7212b] text-[10px] font-semibold tracking-[3.5px] uppercase">Fabrication Services</span>
+            <span className="w-5 h-px bg-[#0891B2]" />
+            <span className="text-[#0891B2] text-[10px] font-semibold tracking-[3.5px] uppercase">Fabrication Services</span>
           </div>
           <h2 className="text-3xl sm:text-[2.4rem] font-bold text-[#0B0D26] leading-[1.15] max-w-2xl">
             Hand Rail Fabrication Capabilities
@@ -24,7 +24,7 @@ export default function HandRailContent() {
         </div>
         <div className="fade-up mb-12">
           <div className="max-w-3xl">
-            <div className="flex items-center gap-2.5 mb-4"><span className="w-5 h-px bg-[#e7212b]" /><span className="text-[#e7212b] text-[10px] font-semibold tracking-[3.5px] uppercase">What We Do</span></div>
+            <div className="flex items-center gap-2.5 mb-4"><span className="w-5 h-px bg-[#0891B2]" /><span className="text-[#0891B2] text-[10px] font-semibold tracking-[3.5px] uppercase">What We Do</span></div>
             <h2 className="text-3xl sm:text-[2.2rem] font-bold text-[#0B0D26] leading-[1.15] mb-5">Custom Handrail Fabrication for Safety and Accessibility</h2>
             <p className="text-gray-500 text-[15px] leading-[1.85] mb-4">Handrails and guardrails are critical safety elements for industrial platforms, stairways, walkways, mezzanines, and loading areas. TTS fabricates handrail systems in mild steel, stainless steel, and aluminium — designed to meet the structural loading requirements and safety regulations applicable to your facility and jurisdiction.</p>
             <p className="text-gray-500 text-[15px] leading-[1.85] mb-4">Our fabrication workshop produces standard straight sections, curved configurations, and bespoke architectural designs with a range of finish options including hot-dip galvanising, powder coating, and industrial paint systems. All handrails are manufactured to relevant safety standards including OSHA 1910.23, BS 6180, and local building codes — with installation services available for complete turnkey delivery across Kuwait and the GCC.</p>
@@ -48,9 +48,9 @@ export default function HandRailContent() {
         <div className="fade-up d1">
           <div className="rounded-2xl bg-[#000000] blueprint-grid blueprint-dot-grid p-8 sm:p-10 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-6">
             <div>
-              <p className="text-white/40 text-[10px] tracking-[2px] uppercase mb-2">Safety First</p>
+              <p className="text-white/70 text-[10px] tracking-[2px] uppercase mb-2">Safety First</p>
               <p className="text-white font-semibold text-lg">Quality Handrail Solutions</p>
-              <p className="text-white/45 text-sm mt-1">Steel · Aluminum · Custom Design — Kuwait &amp; Dubai</p>
+              <p className="text-white/70 text-sm mt-1">Steel · Aluminum · Custom Design — Kuwait &amp; Dubai</p>
             </div>
             <Link href="/contacts/" className="inline-flex items-center gap-2 bg-[#e7212b] hover:bg-[#aa0b1b] text-white font-semibold px-6 py-3 rounded-lg transition-colors duration-200 text-sm shrink-0">
               Request Quote

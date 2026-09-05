@@ -65,8 +65,15 @@
     linear-gradient(to bottom, rgba(255, 255, 255, 0.15) 1px, transparent 1px);
 }
 
-body, .page-wrapper {
-  background-color: #FFFFFF;
+/*
+ * Global base background — black.
+ * This is the colour visible during page load before any content renders.
+ * Individual sections/pages override with explicit bg- classes as needed.
+ */
+html,
+body,
+.page-wrapper {
+  background-color: #000000;
 }
 
 :root {
@@ -561,3 +568,266 @@ a, button, [role="button"], label, select,
   transform: scale(0.94);
   color: #e7212b;
 }
+
+/* ─── Glossy Liquid Morphing Sphere ────────────────────────────── */
+@keyframes glossyBlobMorph {
+  0% {
+    border-radius: 60% 40% 30% 70% / 60% 30% 70% 40%;
+  }
+  20% {
+    border-radius: 30% 60% 70% 40% / 50% 60% 30% 60%;
+  }
+  40% {
+    border-radius: 50% 30% 60% 40% / 30% 60% 40% 70%;
+  }
+  60% {
+    border-radius: 45% 55% 65% 35% / 55% 35% 55% 45%;
+  }
+  80% {
+    border-radius: 65% 35% 40% 60% / 40% 65% 35% 60%;
+  }
+  100% {
+    border-radius: 60% 40% 30% 70% / 60% 30% 70% 40%;
+  }
+}
+
+@keyframes glossyAuraPulse {
+  0%, 100% {
+    transform: scale(1);
+    opacity: 0.4;
+  }
+  50% {
+    transform: scale(1.1);
+    opacity: 0.65;
+  }
+}
+
+.glossy-blob-body {
+  animation: glossyBlobMorph 10s ease-in-out infinite;
+  will-change: border-radius;
+}
+
+.glossy-aura {
+  animation: glossyAuraPulse 6s ease-in-out infinite;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .glossy-blob-body,
+  .glossy-aura {
+    animation: none !important;
+  }
+}
+
+/* ---- Google Fonts for Glassy Hero ---- */
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Space+Grotesk:wght@300..700&display=swap');
+
+/* ---- Hero design system (Dark Glassy 3D) ---- */
+:root {
+  --hero-bg: #07080c;
+  --hero-bg-deep: #030407;
+  --hero-foreground: #ffffff;
+  --hero-muted: rgba(255, 255, 255, 0.65);
+  --hero-accent: oklch(0.78 0.14 210);
+  --hero-accent-blue: #00d4ff;
+  --hero-accent-2: oklch(0.7 0.19 45);
+  --hero-accent-orange: #ff6a2a;
+  --font-display: "Space Grotesk", sans-serif;
+  --font-body: "DM Sans", sans-serif;
+}
+
+@keyframes hero-breathe {
+  0%, 100% {
+    transform: scale(1);
+    opacity: 0.55;
+  }
+  50% {
+    transform: scale(1.12);
+    opacity: 0.85;
+  }
+}
+
+.hero-shell {
+  background-color: var(--hero-bg);
+  color: var(--hero-foreground);
+  font-family: var(--font-body);
+}
+
+.hero-glow {
+  position: absolute;
+  top: 15%;
+  right: 5%;
+  width: 550px;
+  height: 550px;
+  border-radius: 9999px;
+  background: radial-gradient(
+    circle at center,
+    rgba(0, 212, 255, 0.22) 0%,
+    rgba(255, 106, 42, 0.20) 45%,
+    transparent 70%
+  );
+  filter: blur(65px);
+  animation: hero-breathe 8s ease-in-out infinite;
+  pointer-events: none;
+}
+
+.hero-gradient-text {
+  background: linear-gradient(135deg, #00d4ff 0%, #ff9f43 50%, #ff6a2a 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  display: inline-block;
+}
+
+.hero-eyebrow {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.35rem 1rem;
+  border-radius: 9999px;
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  color: #00d4ff;
+  backdrop-filter: blur(12px);
+}
+
+.hero-cta {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  padding: 0.75rem 1.75rem;
+  border-radius: 9999px;
+  font-size: 0.875rem;
+  font-weight: 700;
+  color: #ffffff;
+  background: linear-gradient(135deg, #00d4ff 0%, #ff6a2a 100%);
+  box-shadow: 0 0 24px rgba(0, 212, 255, 0.35), 0 4px 14px rgba(255, 106, 42, 0.25);
+  transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.hero-cta:hover {
+  transform: translateY(-2px) scale(1.02);
+  box-shadow: 0 0 32px rgba(0, 212, 255, 0.5), 0 6px 20px rgba(255, 106, 42, 0.4);
+}
+
+.hero-cta-lg {
+  padding: 0.95rem 2.25rem;
+  font-size: 1rem;
+}
+
+.hero-ghost {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  padding: 0.95rem 2rem;
+  border-radius: 9999px;
+  font-size: 1rem;
+  font-weight: 600;
+  color: rgba(255, 255, 255, 0.9);
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  backdrop-filter: blur(12px);
+  transition: all 0.25s ease;
+}
+
+.hero-ghost:hover {
+  background: rgba(255, 255, 255, 0.1);
+  border-color: rgba(255, 255, 255, 0.3);
+  color: #ffffff;
+  transform: translateY(-2px);
+}
+
+.hero-stat {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+  text-shadow: 0 2px 20px rgba(0, 0, 0, 0.6);
+}
+
+.hero-marquee {
+  position: relative;
+  z-index: 10;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 2rem;
+  padding: 1.25rem 2rem;
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
+  background: rgba(7, 8, 12, 0.6);
+  backdrop-filter: blur(16px);
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.15em;
+  color: rgba(255, 255, 255, 0.55);
+}
+
+.nav-link {
+  color: rgba(255, 255, 255, 0.75);
+  font-size: 0.875rem;
+  font-weight: 500;
+  transition: color 0.2s ease;
+}
+
+.nav-link:hover {
+  color: #ffffff;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .hero-glow,
+  .glare-streak {
+    animation: none !important;
+  }
+}
+
+/* Glare Pass-Through Effect */
+@keyframes glare-sweep {
+  0% {
+    transform: translateX(-150%) skewX(-25deg);
+    opacity: 0;
+  }
+  15% {
+    opacity: 0.65;
+  }
+  50% {
+    opacity: 0.65;
+  }
+  65%, 100% {
+    transform: translateX(250%) skewX(-25deg);
+    opacity: 0;
+  }
+}
+
+.glare-streak {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  width: 45%;
+  background: linear-gradient(
+    90deg,
+    transparent 0%,
+    rgba(255, 255, 255, 0.02) 20%,
+    rgba(255, 255, 255, 0.25) 50%,
+    rgba(255, 217, 160, 0.35) 60%,
+    rgba(255, 255, 255, 0.05) 80%,
+    transparent 100%
+  );
+  filter: blur(12px);
+  pointer-events: none;
+  animation: glare-sweep 7.5s cubic-bezier(0.4, 0, 0.2, 1) infinite;
+  will-change: transform, opacity;
+}
+
+
+
+
+
+
+
+

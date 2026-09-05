@@ -30,7 +30,6 @@ const solutions = [
   { label: "Space AI Industrial AI", href: "/solutions/space-ai/" },
   { label: "Mitsubishi Electric", href: "/solutions/mitsubishi-electric/" },
   { label: "PWS Floor Solutions", href: "/solutions/pws-floor-solutions/" },
-  { label: "Certifications", href: "/certifications/" },
 ];
 
 const socials = [
@@ -64,10 +63,9 @@ function FooterTrack() {
             <Image
               src={p.logo}
               alt={p.name}
-              width={160}
-              height={60}
-              className="object-contain h-7 w-auto opacity-40 hover:opacity-100 transition-opacity duration-300"
-              style={{ mixBlendMode: "screen" }}
+              width={240}
+              height={96}
+              className="object-contain h-12 w-auto opacity-90 hover:opacity-100 transition-opacity duration-300"
             />
           </Link>
         </div>
@@ -106,32 +104,46 @@ export default function Footer() {
 
       {/* Main footer */}
       <div className="max-w-7xl mx-auto px-4 sm:px-6 py-14">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-10">
-
-          {/* ── Brand Column ──────────────── */}
-          <div>
-            <Link href="/" className="flex flex-col items-center gap-3 mb-7 w-fit">
-              <Image src="/logo.svg" alt="Texas Technical Services" width={90} height={90} loading="lazy" />
-              <div className="text-center">
-                <p className="text-white font-black tracking-[7px] text-[20px] leading-none">
-                  TEXAS
-                </p>
-                <p className="text-[#E53935] text-[11px] tracking-[3px] leading-none mt-1.5 font-semibold">
-                  TECHNICAL SERVICES
-                </p>
-              </div>
-            </Link>
+        {/* ── Brand Row (Top) ──────────────── */}
+        <div className="flex flex-col lg:flex-row items-start lg:items-center justify-between gap-8 pb-12 mb-12 border-b border-white/[0.08]">
+          <Link href="/" className="shrink-0 flex flex-col items-center gap-3">
+            <Image src="/logo.svg" alt="Texas Technical Services" width={90} height={90} loading="lazy" />
+            <div className="text-center">
+              <p className="text-white font-black tracking-[7px] text-[20px] leading-none">
+                TEXAS
+              </p>
+              <p className="text-white/60 text-[11px] tracking-[3px] leading-none mt-1.5 font-semibold">
+                TECHNICAL SERVICES
+              </p>
+            </div>
+          </Link>
+          <div className="flex-1 min-w-0">
             <p className="text-white/70 text-[14px] leading-[1.8] mb-5 font-medium">
-              ISO 9001:2015 certified company established in 2008. Flow measurement,
-              automation &amp; inspection for oil &amp; gas and industrial sectors.
+              ISO 9001, ISO 14001, ISO 45001, UASL &amp; Accurate certified company
+              established in 2008. Flow measurement, automation &amp; inspection
+              for oil &amp; gas and industrial sectors.
             </p>
             <a
               href={`mailto:${SITE_EMAIL}`}
-              className="flex items-start gap-2 text-white/50 text-sm hover:text-brand-red transition-colors mb-4"
+              className="flex items-start gap-2 text-white/70 text-sm hover:text-brand-red transition-colors mb-3"
             >
               <Mail className="w-3.5 h-3.5 shrink-0 mt-0.5" />
               <span className="min-w-0 break-all">{SITE_EMAIL}</span>
             </a>
+            <div className="flex flex-wrap gap-x-6 gap-y-1 mb-4">
+              <a href="tel:+96597243755" className="flex items-center gap-2 text-white/70 text-sm hover:text-brand-red transition-colors">
+                <Phone className="w-3.5 h-3.5" /> +965 97243755
+              </a>
+              <a href="tel:+96566347267" className="flex items-center gap-2 text-white/70 text-sm hover:text-brand-red transition-colors">
+                <Phone className="w-3.5 h-3.5" /> +965 66347267
+              </a>
+              <a href="tel:+971569553747" className="flex items-center gap-2 text-white/70 text-sm hover:text-brand-red transition-colors">
+                <Phone className="w-3.5 h-3.5" /> +971 569553747
+              </a>
+              <a href="tel:+971567793973" className="flex items-center gap-2 text-white/70 text-sm hover:text-brand-red transition-colors">
+                <Phone className="w-3.5 h-3.5" /> +971 567793973
+              </a>
+            </div>
             <div className="flex flex-wrap gap-2">
               {socials.map(({ href, label, path }) => (
                 <a
@@ -140,7 +152,7 @@ export default function Footer() {
                   target="_blank"
                   rel="noopener noreferrer"
                   aria-label={label}
-                   className="w-11 h-11 rounded-full border border-white/10 flex items-center justify-center text-white/70 hover:text-white hover:border-[#E53935]/40 hover:bg-[#E53935]/10 transition-all"
+                  className="w-10 h-10 rounded-full border border-white/10 flex items-center justify-center text-white/70 hover:text-white hover:border-[#E53935]/40 hover:bg-[#E53935]/10 transition-all"
                 >
                   <svg viewBox="0 0 24 24" className="w-4 h-4" fill="none" stroke="currentColor" strokeWidth={2} strokeLinecap="round" strokeLinejoin="round">
                     <path d={path} />
@@ -148,14 +160,18 @@ export default function Footer() {
                 </a>
               ))}
             </div>
-                <Link
-                href="/social-media/"
-                className="text-white/70 text-[13px] font-medium hover:text-white transition-colors flex items-center gap-2 mt-3"
-              >
-                <LayoutGrid className="w-4 h-4" />
-                View all platforms
-              </Link>
+            <Link
+              href="/social-media/"
+              className="text-white/70 text-[13px] font-medium hover:text-white transition-colors flex items-center gap-2 mt-3"
+            >
+              <LayoutGrid className="w-4 h-4" />
+              View all platforms
+            </Link>
           </div>
+        </div>
+
+        {/* ── Columns row ── */}
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10">
 
           {/* ── Locations Column ───────────── */}
           <div>
@@ -169,31 +185,20 @@ export default function Footer() {
                   city: "Kuwait",
                   address:
                     "Munira Tower Office No. 30, 9th Floor – Building No.6702, Block 7 – Makkah Street Fahaheel, Kuwait",
-                  phones: ["+965 97243755", "+965 66347267"],
                 },
                 {
                   city: "Dubai",
                   address:
                     "Amna Naseer Building, Al Marar Area 20th Street #529 Plot #302 Office #201-19, Deira, Dubai",
-                  phones: ["+971 569553747", "+971 567793973"],
                 },
               ].map((office) => (
                 <div key={office.city}>
                   <p className="text-white text-[15px] font-bold mb-2 flex items-center gap-2">
                     <MapPin className="w-3.5 h-3.5 text-[#E53935]" /> {office.city}
                   </p>
-                  <p className="text-white/70 text-[13px] leading-relaxed mb-2 font-medium">
+                  <p className="text-white/70 text-[13px] leading-relaxed font-medium">
                     {office.address}
                   </p>
-                  {office.phones.map((p) => (
-                    <a
-                      key={p}
-                      href={`tel:${p.replace(/\s/g, "")}`}
-                      className="flex items-center gap-2 py-1.5 text-white/70 text-[13px] font-medium hover:text-[#E53935] transition-colors"
-                    >
-                      <Phone className="w-3 h-3" /> {p}
-                    </a>
-                  ))}
                 </div>
               ))}
             </div>
@@ -275,7 +280,7 @@ export default function Footer() {
         </div>
 
         {/* Marquee */}
-        <div className="overflow-hidden select-none">
+        <div className="overflow-hidden select-none bg-white py-6">
           <div className="footer-partners-wrapper flex w-full" style={{ willChange: "transform" }}>
             <FooterTrack />
             <FooterTrack />
@@ -283,12 +288,21 @@ export default function Footer() {
         </div>
 
         <div className="max-w-7xl mx-auto px-4 sm:px-6 pt-4 pb-2">
-          <Link
-            href="/partners/"
-            className="inline-flex items-center gap-2 text-white/70 text-[13px] font-medium hover:text-white transition-colors"
-          >
-            View all partners <ArrowRight className="w-3.5 h-3.5" />
-          </Link>
+          <div className="flex items-center gap-4">
+            <Link
+              href="/partners/"
+              className="inline-flex items-center gap-2 text-white/70 text-[13px] font-medium hover:text-white transition-colors"
+            >
+              View all partners <ArrowRight className="w-3.5 h-3.5" />
+            </Link>
+            <span className="text-white/20">·</span>
+            <Link
+              href="/videos/"
+              className="inline-flex items-center gap-2 text-white/70 text-[13px] font-medium hover:text-white transition-colors"
+            >
+              Watch our videos <ArrowRight className="w-3.5 h-3.5" />
+            </Link>
+          </div>
         </div>
 
         <style>{`
@@ -311,20 +325,21 @@ export default function Footer() {
 
       {/* Certifications */}
       <div className="border-t" style={{ borderColor: "rgba(255,255,255,0.06)" }}>
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 py-6">
-          <div className="flex flex-wrap items-center justify-center gap-6 sm:gap-10">
+        <Link href="/certifications/" className="block max-w-7xl mx-auto px-4 sm:px-6 py-8 hover:opacity-100 transition-opacity duration-300">
+          <div className="flex flex-wrap items-center justify-center gap-8 sm:gap-14">
             {[
               { src: "/about/cert-iso9001.png", alt: "ISO 9001:2015 Quality Management" },
               { src: "/about/cert-iso14001.png", alt: "ISO 14001 Environmental Management" },
               { src: "/about/cert-iso45001.png", alt: "ISO 45001 Occupational Health & Safety" },
               { src: "/about/cert-uasl.png", alt: "UASL Certification" },
+              { src: "/about/cert-accurate-white.png", alt: "International Accurate Certification" },
             ].map((cert) => (
-              <div key={cert.src} className="relative h-12 w-12 sm:h-14 sm:w-14 opacity-50 hover:opacity-100 transition-opacity duration-300">
-                <Image src={cert.src} alt={cert.alt} fill className="object-contain" sizes="56px" />
+              <div key={cert.src} className="relative h-20 w-20 sm:h-24 sm:w-24 transition-transform duration-300 hover:scale-105">
+                <Image src={cert.src} alt={cert.alt} fill className="object-contain" sizes="(max-width: 640px) 80px, 96px" />
               </div>
             ))}
           </div>
-        </div>
+        </Link>
       </div>
 
       {/* Bottom bar */}
@@ -334,7 +349,7 @@ export default function Footer() {
             TEXAS TECHNICAL SERVICE COMPANY W.L.L. © {new Date().getFullYear()}. All Rights Reserved.
           </p>
           <div className="flex items-center gap-4">
-            <span className="text-[11px] font-medium" style={{ color: "#FF5252" }}>ISO 9001:2015 Certified</span>
+            <span className="text-[11px] font-medium" style={{ color: "#FF5252" }}>ISO 9001 · ISO 14001 · ISO 45001 · UASL · Accurate Certified</span>
           </div>
         </div>
       </div>

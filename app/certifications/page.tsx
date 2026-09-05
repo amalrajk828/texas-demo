@@ -8,7 +8,7 @@ import { FaqPageJsonLd } from "@/components/schema/FaqPageJsonLd";
 import PageFaqSection from "@/components/PageFaqSection";
 import { certificationsFaq } from "@/lib/pageFaqData";
 export const metadata: Metadata = {
-  title: "Certifications — ISO 9001, 14001, 45001",
+  title: "Certifications — ISO 9001, 14001, 45001, Accurate",
   description:
     "Texas Technical Services holds ISO 9001:2015, ISO 14001:2015, and ISO 45001:2018 certifications — demonstrating our commitment to quality, environmental responsibility, and workplace safety across Kuwait and the GCC.",
   alternates: { canonical: "/certifications/" },
@@ -21,18 +21,19 @@ export const metadata: Metadata = {
     "Texas Technical Services certifications",
     "UASL accredited certification Kuwait",
     "ISO certified industrial company GCC",
+    "International Accurate certification",
   ],
   openGraph: {
-    title: "Certifications | ISO 9001, ISO 14001, ISO 45001 | TTS",
+    title: "Certifications | ISO 9001, ISO 14001, ISO 45001, Accurate | TTS",
     description:
-      "ISO 9001:2015, ISO 14001:2015, and ISO 45001:2018 certifications — quality, environmental, and safety management systems.",
+      "ISO 9001:2015, ISO 14001:2015, ISO 45001:2018, and International Accurate certifications — quality, environmental, safety, and precision management systems.",
     url: "/certifications/",
   },
   twitter: {
     card: "summary_large_image",
-    title: "Certifications | ISO 9001, ISO 14001, ISO 45001 | TTS",
+    title: "Certifications | ISO 9001, ISO 14001, ISO 45001, Accurate | TTS",
     description:
-      "ISO 9001:2015, ISO 14001:2015, and ISO 45001:2018 certifications — quality, environmental, and safety management systems.",
+      "ISO 9001:2015, ISO 14001:2015, ISO 45001:2018, and International Accurate certifications — quality, environmental, safety, and precision management systems.",
   },
 };
 
@@ -69,32 +70,40 @@ const certifications = [
     description:
       "All certifications verified by a UASL accredited certification body, ensuring independent and internationally recognized validation of our management systems.",
   },
+  {
+    src: "/about/cert-accurate.png",
+    alt: "International Accurate Certification",
+    title: "Accurate Certified",
+    subtitle: "International Accreditation",
+    description:
+      "Internationally recognized accreditation validating our commitment to precision, reliability, and globally accepted quality standards.",
+  },
 ];
 
 export default function CertificationsPage() {
   return (
     <div className="min-h-screen bg-white text-[#333]">
       <BreadcrumbJsonLd items={[{ name: "Home", href: "/" }, { name: "Certifications", href: "/certifications/" }]} />
-      <SpeakableJsonLd headline="Certifications — ISO 9001, ISO 14001, ISO 45001 | Texas Technical Services" />
+      <SpeakableJsonLd headline="Certifications — ISO 9001, ISO 14001, ISO 45001, Accurate | Texas Technical Services" />
 
       {/* Hero */}
       <section className="relative bg-[#0B0D26] overflow-hidden pt-32 pb-16 border-b border-white/10">
         <div className="absolute inset-0 pointer-events-none" style={{ backgroundImage: "repeating-linear-gradient(0deg,transparent,transparent 39px,rgba(255,255,255,0.02) 40px),repeating-linear-gradient(90deg,transparent,transparent 39px,rgba(255,255,255,0.02) 40px)" }} />
         <div className="absolute top-0 right-0 w-[600px] h-[400px] pointer-events-none" style={{ background: "radial-gradient(ellipse at top right, rgba(231,33,43,0.12) 0%, transparent 65%)" }} />
         <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6">
-          <nav className="flex items-center gap-2 text-[14px] text-white/50 mb-8">
+          <nav className="flex items-center gap-2 text-[14px] text-white/70 mb-8">
             <Link href="/" className="hover:text-white transition-colors">Home</Link>
             <ChevronRight className="w-3.5 h-3.5 text-white/30" />
             <span className="text-white/70">Certifications</span>
           </nav>
           <div className="flex items-center gap-2 mb-4">
-            <span className="w-5 h-px bg-[#e7212b]" />
-            <span className="text-[#e7212b] text-[12px] font-semibold tracking-[3px] uppercase">Quality Assurance</span>
+            <span className="w-5 h-px bg-[#0891B2]" />
+            <span className="text-[#0891B2] text-[12px] font-semibold tracking-[3px] uppercase">Quality Assurance</span>
           </div>
           <h1 className="text-2xl sm:text-3xl lg:text-[2.2rem] font-bold text-white leading-tight mb-5">
             Certifications &amp; Quality Management
           </h1>
-          <p className="text-white/50 text-[16px] leading-relaxed max-w-2xl">
+          <p className="text-white/70 text-[16px] leading-relaxed max-w-2xl">
             Our integrated management system is certified to international standards, demonstrating our commitment to quality, environmental responsibility, and workplace safety.
           </p>
         </div>
@@ -131,7 +140,7 @@ export default function CertificationsPage() {
                     <h2 className="text-xl font-bold text-[#0B0D26] mb-1 group-hover:text-[#e7212b] transition-colors">
                       {cert.title}
                     </h2>
-                    <p className="text-[#e7212b] text-[13px] font-semibold tracking-wide uppercase mb-3">
+                    <p className="text-[#0891B2] text-[13px] font-semibold tracking-wide uppercase mb-3">
                       {cert.subtitle}
                     </p>
                     <p className="text-gray-500 text-[15px] leading-[1.75]">
@@ -145,13 +154,44 @@ export default function CertificationsPage() {
         </div>
       </section>
 
+      {/* Certificate Documents */}
+      <section className="py-16 lg:py-20 border-t border-gray-100">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6">
+          <div className="flex items-center gap-2 mb-6">
+            <span className="w-5 h-1 bg-[#e7212b]" />
+            <span className="text-[#0891B2] text-[12px] font-semibold tracking-[3px] uppercase">Official Documents</span>
+          </div>
+          <h2 className="text-2xl sm:text-3xl font-bold text-[#0B0D26] mb-8">
+            View Our Certificates
+          </h2>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+            {[
+              { src: "/about/iso_9001.jpeg", alt: "ISO 9001:2015 Certificate", title: "ISO 9001:2015" },
+              { src: "/about/iso_14001.jpeg", alt: "ISO 14001:2015 Certificate", title: "ISO 14001:2015" },
+              { src: "/about/iso_45001.jpeg", alt: "ISO 45001:2018 Certificate", title: "ISO 45001:2018" },
+            ].map((cert) => (
+              <a key={cert.src} href={cert.src} target="_blank" rel="noopener noreferrer"
+                 className="group block border border-gray-200 rounded-2xl overflow-hidden hover:shadow-lg transition-all duration-300">
+                <div className="relative aspect-[3/4]">
+                  <Image src={cert.src} alt={cert.alt} fill className="object-contain" sizes="(max-width: 768px) 100vw, 33vw" />
+                </div>
+                <div className="p-4 text-center">
+                  <p className="font-semibold text-[#0B0D26] group-hover:text-[#e7212b] transition-colors">{cert.title}</p>
+                  <p className="text-gray-400 text-[13px] mt-1">Click to view full certificate</p>
+                </div>
+              </a>
+            ))}
+          </div>
+        </div>
+      </section>
+
       {/* Why It Matters */}
       <section className="py-16 lg:py-20 bg-gray-50 border-t border-gray-100">
         <div className="max-w-7xl mx-auto px-4 sm:px-6">
           <div className="max-w-3xl">
             <div className="flex items-center gap-2 mb-6">
               <span className="w-5 h-1 bg-[#e7212b]" />
-              <span className="text-[#e7212b] text-[12px] font-semibold tracking-[3px] uppercase">Why It Matters</span>
+              <span className="text-[#0891B2] text-[12px] font-semibold tracking-[3px] uppercase">Why It Matters</span>
             </div>
             <h2 className="text-2xl sm:text-3xl font-bold text-[#0B0D26] mb-6">
               What Our Certifications Mean for You
@@ -178,7 +218,7 @@ export default function CertificationsPage() {
             <div className="absolute top-0 right-0 w-[400px] h-full pointer-events-none" style={{ background: "radial-gradient(ellipse at right, rgba(231,33,43,0.10) 0%, transparent 70%)" }} />
             <div className="relative z-10 flex flex-col md:flex-row items-center justify-between gap-8">
               <div className="max-w-xl">
-                <span className="text-[#e7212b] text-[11px] font-bold tracking-[3px] uppercase block mb-2">CERTIFIED PARTNER</span>
+                <span className="text-[#0891B2] text-[11px] font-bold tracking-[3px] uppercase block mb-2">CERTIFIED PARTNER</span>
                 <h3 className="text-xl sm:text-2xl font-bold mb-3">Work With a Certified Team</h3>
                 <p className="text-white/60 text-[15px] leading-relaxed">
                   Our ISO-certified management systems ensure your projects are delivered with consistent quality, environmental responsibility, and the highest safety standards.

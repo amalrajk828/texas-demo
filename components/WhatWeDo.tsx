@@ -32,8 +32,8 @@ export default function WhatWeDo() {
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 lg:gap-16 items-end mb-16">
           <div className="fade-up">
             <div className="flex items-center gap-2.5 mb-4">
-              <span className="w-6 h-px" style={{ background: "var(--color-brand-red)" }} />
-              <span className="text-[11px] font-semibold tracking-[3px] uppercase" style={{ color: "var(--color-brand-red)" }}>
+              <span className="w-6 h-px" style={{ background: "#0E7490" }} />
+              <span className="text-[11px] font-semibold tracking-[3px] uppercase" style={{ color: "#0E7490" }}>
                 Get to Know Us
               </span>
             </div>
@@ -89,7 +89,7 @@ export default function WhatWeDo() {
 
                   <div className="w-8 h-px mb-4" style={{ background: "color-mix(in srgb, var(--color-brand-red) 40%, transparent)" }} />
 
-                  <p className="text-white/50 text-[15px] leading-relaxed flex-1">{svc.desc}</p>
+                  <p className="text-white/70 text-[15px] leading-relaxed flex-1">{svc.desc}</p>
 
                   <div className="mt-6 pt-5 border-t border-white/[0.07]">
                     <Link

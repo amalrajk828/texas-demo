@@ -89,8 +89,8 @@ export default function CalibrationContent() {
           <div>
             <div className="fade-up d1">
               <div className="flex items-center gap-2.5 mb-4">
-                <span className="w-5 h-px bg-[#e7212b]" />
-                <span className="text-[#e7212b] text-[10px] font-semibold tracking-[3.5px] uppercase">
+                <span className="w-5 h-px bg-[#0891B2]" />
+                <span className="text-[#0891B2] text-[10px] font-semibold tracking-[3.5px] uppercase">
                   World-Class Calibration
                 </span>
               </div>
@@ -140,8 +140,8 @@ export default function CalibrationContent() {
         <div>
           <div className="fade-up mb-12">
             <div className="flex items-center gap-2.5 mb-4">
-              <span className="w-5 h-px bg-[#e7212b]" />
-              <span className="text-[#e7212b] text-[10px] font-semibold tracking-[3.5px] uppercase">
+              <span className="w-5 h-px bg-[#0891B2]" />
+              <span className="text-[#0891B2] text-[10px] font-semibold tracking-[3.5px] uppercase">
                 Calibration Services
               </span>
             </div>
@@ -204,7 +204,7 @@ export default function CalibrationContent() {
                   </div>
                   <div>
                     <p className="text-white font-bold text-[16px]">2-Week Emergency Calibration Service</p>
-                    <p className="text-white/40 text-[13px] mt-0.5">
+                    <p className="text-white/70 text-[13px] mt-0.5">
                       Time-critical calibration with full ILAC/COFRAC ISO 17025 accreditation. Contact us today.
                     </p>
                   </div>

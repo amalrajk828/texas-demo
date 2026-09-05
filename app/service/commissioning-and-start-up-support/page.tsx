@@ -77,14 +77,14 @@ export default function CommissioningPage() {
         <section className="py-16 lg:py-20 bg-white">
           <div className="max-w-7xl mx-auto px-4 sm:px-6">
             <div className="flex items-center gap-2.5 mb-4">
-              <span className="w-5 h-px bg-[#e7212b]" />
-              <span className="text-[#e7212b] text-[10px] font-semibold tracking-[3.5px] uppercase">
+              <span className="w-5 h-px bg-[#0891B2]" />
+              <span className="text-[#0891B2] text-[10px] font-semibold tracking-[3.5px] uppercase">
                 Related Services
               </span>
             </div>
             <h2 className="text-3xl sm:text-[2.4rem] font-bold text-[#0B0D26] leading-[1.15] mb-12">
               Explore{" "}
-              <em className="not-italic text-[#e7212b]">More Services</em>
+              <em className="not-italic text-current">More Services</em>
             </h2>
             <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
               {serviceCrossLinks["commissioning-and-start-up-support"]?.map((link) => (
@@ -115,14 +115,14 @@ export default function CommissioningPage() {
       <section className="bg-[#f4f5f8] py-20 lg:py-24">
         <div className="max-w-7xl mx-auto px-4 sm:px-6">
           <div className="flex items-center gap-2.5 mb-4">
-            <span className="w-5 h-px bg-[#e7212b]" />
-            <span className="text-[#e7212b] text-[10px] font-semibold tracking-[3.5px] uppercase">
+            <span className="w-5 h-px bg-[#0891B2]" />
+            <span className="text-[#0891B2] text-[10px] font-semibold tracking-[3.5px] uppercase">
               FAQ
             </span>
           </div>
           <h2 className="text-3xl sm:text-[2.4rem] font-bold text-[#0B0D26] leading-[1.15] mb-12">
             Questions About{" "}
-            <em className="not-italic text-[#e7212b]">Commissioning & Start-up Support</em>
+            <em className="not-italic text-current">Commissioning & Start-up Support</em>
           </h2>
           <div className="max-w-4xl mx-auto space-y-4">
             {serviceFaqData["commissioning-and-start-up-support"]?.map((item) => (

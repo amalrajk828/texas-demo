@@ -41,7 +41,7 @@ export default function RadiographicContent() {
           </div>
           <div>
             <div className="fade-up d1">
-              <div className="flex items-center gap-2.5 mb-4"><span className="w-5 h-px bg-[#e7212b]" /><span className="text-[#e7212b] text-[10px] font-semibold tracking-[3.5px] uppercase">What We Do</span></div>
+              <div className="flex items-center gap-2.5 mb-4"><span className="w-5 h-px bg-[#0891B2]" /><span className="text-[#0891B2] text-[10px] font-semibold tracking-[3.5px] uppercase">What We Do</span></div>
               <h2 className="text-3xl sm:text-[2.2rem] font-bold text-[#0B0D26] leading-[1.15] mb-5">Radiographic Testing for Internal Structure Examination</h2>
               <p className="text-gray-500 text-[15px] leading-[1.85] mb-4">Radiographic Testing (RT), also known as Radiography or X-ray Testing, is a powerful non-destructive testing (NDT) method used to examine the internal structure of materials and detect flaws and defects that may not be visible on the surface. RT is particularly useful for inspecting thick sections of materials, welds, and complex structures.</p>
               <p className="text-gray-500 text-[15px] leading-[1.85] mb-8">Radiographic Testing method uses either X-rays or gamma rays to examine the internal structure of manufactured components — identifying any flaws or defects including porosity, lack of fusion, cracks, inclusions, and other volumetric discontinuities with a permanent radiographic record.</p>
@@ -63,7 +63,7 @@ export default function RadiographicContent() {
         </div>
         <div>
           <div className="fade-up mb-12">
-            <div className="flex items-center gap-2.5 mb-4"><span className="w-5 h-px bg-[#e7212b]" /><span className="text-[#e7212b] text-[10px] font-semibold tracking-[3.5px] uppercase">RT Methods</span></div>
+            <div className="flex items-center gap-2.5 mb-4"><span className="w-5 h-px bg-[#0891B2]" /><span className="text-[#0891B2] text-[10px] font-semibold tracking-[3.5px] uppercase">RT Methods</span></div>
             <h2 className="text-3xl sm:text-[2.2rem] font-bold text-[#0B0D26] leading-[1.15]">Radiographic Testing Methods &amp; Applications</h2>
           </div>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5">
@@ -89,7 +89,7 @@ export default function RadiographicContent() {
               <div className="relative z-10 px-8 py-7 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-5">
                 <div>
                   <p className="text-white font-bold text-[15px]">Need Radiographic Testing (RT) Services?</p>
-                  <p className="text-white/40 text-[13px] mt-0.5">Contact our team about X-ray, gamma ray, or digital radiography for your project.</p>
+                  <p className="text-white/70 text-[13px] mt-0.5">Contact our team about X-ray, gamma ray, or digital radiography for your project.</p>
                 </div>
                 <div className="flex flex-wrap gap-3 shrink-0">
                   <a href="#contact" className="inline-flex items-center gap-2 bg-[#e7212b] hover:bg-[#aa0b1b] text-white font-semibold px-6 py-3 rounded-lg transition-colors duration-200 text-[13px] shadow-lg shadow-[#e7212b]/20">Contact Us <ArrowRight className="w-3.5 h-3.5" /></a>

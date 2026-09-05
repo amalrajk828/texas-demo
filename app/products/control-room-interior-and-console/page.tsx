@@ -123,7 +123,7 @@ export default function ControlRoomPage() {
         <div className="max-w-5xl mx-auto px-4 sm:px-6">
           <div className="rounded-2xl border border-gray-200 bg-gray-50 p-8 flex flex-col sm:flex-row items-center justify-between gap-6">
             <div>
-              <span className="text-[#e7212b] text-[10px] font-semibold tracking-[3px] uppercase">
+              <span className="text-[#0891B2] text-[10px] font-semibold tracking-[3px] uppercase">
                 Complete the Package
               </span>
               <h3 className="mt-2 text-[#1A1A2E] text-xl font-bold">

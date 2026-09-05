@@ -35,7 +35,7 @@ export default function TestimonialsSection() {
       <div className="relative z-10 max-w-6xl mx-auto px-4 sm:px-6 py-20 lg:py-28">
         <div className="text-center mb-14">
           <div className="fade-up">
-            <span className="text-[11px] font-bold tracking-[0.28em] uppercase text-[#e7212b]">
+            <span className="text-[11px] font-bold tracking-[0.28em] uppercase text-[#0891B2]">
               testimonials
             </span>
           </div>

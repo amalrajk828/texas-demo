@@ -1,6 +1,6 @@
 "use client";
 import Link from "next/link";
-import { Users } from "lucide-react";
+import { ChevronRight,Users } from "lucide-react";
 
 const STATS = [
   { value: "Expert", label: "Metering Engineers" },
@@ -17,22 +17,22 @@ export default function ExpertServicesHero() {
       <div className="absolute bottom-0 right-0 w-[320px] h-[320px] rounded-full pointer-events-none" style={{ background: "radial-gradient(circle, rgba(231,33,43,0.07) 0%, transparent 70%)" }} />
 
       <div className="relative max-w-7xl mx-auto px-4 sm:px-6">
-        <div className="flex items-center gap-2 mb-8 text-[11px] text-white/30 tracking-wide">
-          <Link href="/" className="hover:text-white/60 transition-colors">Home</Link>
-          <span>/</span>
-          <Link href="/services/" className="hover:text-white/60 transition-colors">Services</Link>
-          <span>/</span>
-          <Link href="/service/flow-measurement-solutions/" className="hover:text-white/60 transition-colors">Flow Measurement</Link>
-          <span>/</span>
+        <nav className="flex items-center gap-2 mb-8 text-[14px] text-white/50">
+          <Link href="/" className="hover:text-white transition-colors">Home</Link>
+          <ChevronRight className="w-3.5 h-3.5 text-white/30" />
+          <Link href="/services/" className="hover:text-white transition-colors">Services</Link>
+          <ChevronRight className="w-3.5 h-3.5 text-white/30" />
+          <Link href="/service/flow-measurement-solutions/" className="hover:text-white transition-colors">Flow Measurement</Link>
+          <ChevronRight className="w-3.5 h-3.5 text-white/30" />
           <span className="text-white/50">Metering Expert Services</span>
-        </div>
+        </nav>
 
         <div className="max-w-full">
           <div className="flex items-center gap-2.5 mb-5">
             <div className="w-8 h-8 rounded-lg bg-[#e7212b]/15 border border-[#e7212b]/25 flex items-center justify-center">
               <Users className="w-4 h-4 text-[#e7212b]" strokeWidth={1.8} />
             </div>
-            <span className="text-[#e7212b] text-[10px] font-semibold tracking-[3.5px] uppercase">Flow Measurement Services</span>
+            <span className="text-[#0891B2] text-[10px] font-semibold tracking-[3.5px] uppercase">Flow Measurement Services</span>
           </div>
 
           <h1 className="text-4xl sm:text-5xl lg:text-[3.4rem] font-bold text-white leading-[1.08] mb-6">
@@ -40,7 +40,7 @@ export default function ExpertServicesHero() {
             <em className="not-italic text-white">Expert Services</em>
           </h1>
 
-          <p className="text-white/50 text-[16px] leading-[1.85] mb-10 max-w-none">
+          <p className="text-white/70 text-[16px] leading-[1.85] mb-10 max-w-none">
             Access TTS's specialist metering engineers for on-site assignments, project support, and field expertise — bringing deep technical knowledge of custody transfer measurement to your operations in Kuwait, Dubai, and the wider region.
           </p>
 

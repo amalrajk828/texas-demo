@@ -77,7 +77,7 @@ const GTM = "GTM-W776KVLW";
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
-    <html lang="en" data-scroll-behavior="smooth" className={`${plusJakarta.variable} ${inter.variable} ${jetbrainsMono.variable}`}>
+    <html lang="en" data-scroll-behavior="smooth" className={`${plusJakarta.variable} ${inter.variable} ${jetbrainsMono.variable}`} style={{ backgroundColor: '#000000' }}>
       <head>
         <meta charSet="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
@@ -167,6 +167,13 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
                 "Inspection & Testing",
                 "Mitsubishi Factory Automation",
                 "Process Control Automation",
+              ],
+              hasCredential: [
+                { "@type": "EducationalOccupationalCredential", "credentialCategory": "ISO 9001:2015 Quality Management" },
+                { "@type": "EducationalOccupationalCredential", "credentialCategory": "ISO 14001:2015 Environmental Management" },
+                { "@type": "EducationalOccupationalCredential", "credentialCategory": "ISO 45001:2018 Occupational Health & Safety" },
+                { "@type": "EducationalOccupationalCredential", "credentialCategory": "UASL Accredited Certification" },
+                { "@type": "EducationalOccupationalCredential", "credentialCategory": "Accurate Certified" },
               ],
               aggregateRating: {
                 "@type": "AggregateRating",

@@ -1,6 +1,6 @@
 "use client";
 import Link from "next/link";
-import { Zap } from "lucide-react";
+import { ChevronRight,Zap } from "lucide-react";
 
 const STATS = [
   { value: "Charpy", label: "& Izod Methods" },
@@ -16,24 +16,24 @@ export default function ImpactHero() {
       <div className="absolute top-1/3 -left-32 w-[420px] h-[420px] rounded-full pointer-events-none" style={{ background: "radial-gradient(circle, rgba(231,33,43,0.13) 0%, transparent 70%)" }} />
       <div className="absolute bottom-0 right-0 w-[320px] h-[320px] rounded-full pointer-events-none" style={{ background: "radial-gradient(circle, rgba(231,33,43,0.07) 0%, transparent 70%)" }} />
       <div className="relative max-w-7xl mx-auto px-4 sm:px-6">
-        <div className="flex items-center gap-2 mb-8 text-[11px] text-white/30 tracking-wide">
-          <Link href="/" className="hover:text-white/60 transition-colors">Home</Link><span>/</span>
-          <Link href="/services/" className="hover:text-white/60 transition-colors">Services</Link><span>/</span>
-          <Link href="/service/inspection-testing/" className="hover:text-white/60 transition-colors">Inspection &amp; Testing</Link><span>/</span>
-          <Link href="/service/mechanical-testing/" className="hover:text-white/60 transition-colors">Mechanical Testing</Link><span>/</span>
+        <nav className="flex items-center gap-2 mb-8 text-[14px] text-white/50">
+          <Link href="/" className="hover:text-white transition-colors">Home</Link><ChevronRight className="w-3.5 h-3.5 text-white/30" />
+          <Link href="/services/" className="hover:text-white transition-colors">Services</Link><ChevronRight className="w-3.5 h-3.5 text-white/30" />
+          <Link href="/service/inspection-testing/" className="hover:text-white transition-colors">Inspection &amp; Testing</Link><ChevronRight className="w-3.5 h-3.5 text-white/30" />
+          <Link href="/service/mechanical-testing/" className="hover:text-white transition-colors">Mechanical Testing</Link><ChevronRight className="w-3.5 h-3.5 text-white/30" />
           <span className="text-white/50">Impact Test</span>
-        </div>
+        </nav>
         <div className="max-w-full">
           <div className="flex items-center gap-2.5 mb-5">
             <div className="w-8 h-8 rounded-lg bg-[#e7212b]/15 border border-[#e7212b]/25 flex items-center justify-center">
               <Zap className="w-4 h-4 text-[#e7212b]" strokeWidth={1.8} />
             </div>
-            <span className="text-[#e7212b] text-[10px] font-semibold tracking-[3.5px] uppercase">Mechanical Testing</span>
+            <span className="text-[#0891B2] text-[10px] font-semibold tracking-[3.5px] uppercase">Mechanical Testing</span>
           </div>
           <h1 className="text-4xl sm:text-5xl lg:text-[3.4rem] font-bold text-white leading-[1.08] mb-6">
             <em className="not-italic text-white">Impact</em> Test
           </h1>
-          <p className="text-white/50 text-[16px] leading-[1.85] mb-10 max-w-none">
+          <p className="text-white/70 text-[16px] leading-[1.85] mb-10 max-w-none">
             Measuring a material's resistance to sudden shock loading — simulating real-world impact scenarios to determine how a specimen will deform, fracture, or rupture under rapid and forceful impacts. Critical for construction, automotive, and aerospace applications.
           </p>
           <div className="flex flex-wrap gap-3">

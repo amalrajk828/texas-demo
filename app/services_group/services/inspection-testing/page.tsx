@@ -8,7 +8,7 @@ import { ServiceJsonLd } from "@/components/schema/ServiceJsonLd";
 export const metadata: Metadata = {
   title: "Inspection & Testing Services",
   description:
-    "Texas Technical Services Co. (TTS) is a leading industrial inspection and testing company in Kuwait — offering NDT (UT, MT, PT, RT, VI) and QA consultancy services compliant with ISO 9001:2015, ISO 14001:2015, and ISO 45001:2018 across Kuwait and the GCC.",
+    "Texas Technical Services Co. (TTS) is a leading industrial inspection and testing company in Kuwait — offering NDT (UT, MT, PT, RT, VI) and QA consultancy services compliant with ISO 9001, ISO 14001, ISO 45001, UASL & Accurate certifications across Kuwait and the GCC.",
   alternates: {
     canonical: "/services_group/services/inspection-testing/",
   },
@@ -22,7 +22,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "Inspection & Testing Services",
     description:
-      "Industrial inspection and testing company in Kuwait — NDT, ISO 9001/14001/45001 certified.",
+      "Industrial inspection and testing company in Kuwait — NDT, ISO 9001, ISO 14001, ISO 45001, UASL & Accurate certified.",
   },
   keywords: [
     "industrial inspection and testing companies Kuwait",
@@ -33,6 +33,10 @@ export const metadata: Metadata = {
     "ISO 9001 inspection company Kuwait",
     "Texas Technical Services inspection",
     "QA consultancy Kuwait",
+    "ISO 14001 environmental management inspection",
+    "ISO 45001 occupational safety inspection",
+    "UASL accredited inspection Kuwait",
+    "Accurate certified inspection company",
   ],
 };
 
@@ -42,7 +46,7 @@ export default function InspectionTestingPage() {
       <BreadcrumbJsonLd items={[{ name: "Home", href: "/" }, { name: "Services", href: "/services/" }, { name: "Inspection & Testing", href: "/services_group/services/inspection-testing/" }]} />
       <ServiceJsonLd
         name="Inspection & Testing Services"
-        description="Industrial inspection and testing company in Kuwait — NDT (UT, MT, PT, RT, VI) and QA consultancy services compliant with ISO 9001:2015, ISO 14001:2015, and ISO 45001:2018 across Kuwait and the GCC."
+        description="Industrial inspection and testing company in Kuwait — NDT (UT, MT, PT, RT, VI) and QA consultancy services compliant with ISO 9001, ISO 14001, ISO 45001, UASL & Accurate certifications across Kuwait and the GCC."
         url="/services_group/services/inspection-testing/"
         serviceType="Inspection & Testing"
         areaServed={["Kuwait", "United Arab Emirates", "Saudi Arabia", "Bahrain", "Qatar", "Oman"]}

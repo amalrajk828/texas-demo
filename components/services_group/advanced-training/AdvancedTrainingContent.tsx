@@ -15,8 +15,8 @@ export default function AdvancedTrainingContent() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6">
         <div className="fade-up mb-14">
           <div className="flex items-center gap-2.5 mb-4">
-            <span className="w-5 h-px bg-[#e7212b]" />
-            <span className="text-[#e7212b] text-[10px] font-semibold tracking-[3.5px] uppercase">Training Programs</span>
+            <span className="w-5 h-px bg-[#0891B2]" />
+            <span className="text-[#0891B2] text-[10px] font-semibold tracking-[3.5px] uppercase">Training Programs</span>
           </div>
           <h2 className="text-3xl sm:text-[2.4rem] font-bold text-[#0B0D26] leading-[1.15] max-w-2xl">
             Advanced Training Programs
@@ -24,7 +24,7 @@ export default function AdvancedTrainingContent() {
         </div>
         <div className="fade-up mb-12">
           <div className="max-w-3xl">
-            <div className="flex items-center gap-2.5 mb-4"><span className="w-5 h-px bg-[#e7212b]" /><span className="text-[#e7212b] text-[10px] font-semibold tracking-[3.5px] uppercase">What We Do</span></div>
+            <div className="flex items-center gap-2.5 mb-4"><span className="w-5 h-px bg-[#0891B2]" /><span className="text-[#0891B2] text-[10px] font-semibold tracking-[3.5px] uppercase">What We Do</span></div>
             <h2 className="text-3xl sm:text-[2.2rem] font-bold text-[#0B0D26] leading-[1.15] mb-5">Tailored Training for Metering and Industrial Operations</h2>
             <p className="text-gray-500 text-[15px] leading-[1.85] mb-4">Effective training is the foundation of safe, efficient, and compliant industrial operations. TTS delivers specialised training programmes for metering system personnel, covering the principles of flow measurement, custody transfer operations, flow computer configuration, and routine system maintenance. Our courses are designed for operators, technicians, and engineers who require practical, hands-on competency.</p>
             <p className="text-gray-500 text-[15px] leading-[1.85] mb-4">Training is available at our OEM premises with access to live metering systems, at your facility using your own equipment, or via videoconference for remote teams. Our instructors hold OEM certifications and have direct field experience across oil and gas, petrochemical, and power generation sectors — ensuring training content is technically accurate, practically relevant, and immediately applicable to your operations in Kuwait, the UAE, and the GCC.</p>
@@ -48,9 +48,9 @@ export default function AdvancedTrainingContent() {
         <div className="fade-up d1">
           <div className="rounded-2xl bg-[#000000] blueprint-grid blueprint-dot-grid p-8 sm:p-10 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-6">
             <div>
-              <p className="text-white/40 text-[10px] tracking-[2px] uppercase mb-2">Get Started</p>
+              <p className="text-white/70 text-[10px] tracking-[2px] uppercase mb-2">Get Started</p>
               <p className="text-white font-semibold text-lg">Schedule Your Training Program Today</p>
-              <p className="text-white/45 text-sm mt-1">OEM premises · On-site · Videoconferencing — Kuwait &amp; Dubai</p>
+              <p className="text-white/70 text-sm mt-1">OEM premises · On-site · Videoconferencing — Kuwait &amp; Dubai</p>
             </div>
             <Link href="/contacts/" className="inline-flex items-center gap-2 bg-[#e7212b] hover:bg-[#aa0b1b] text-white font-semibold px-6 py-3 rounded-lg transition-colors duration-200 text-sm shrink-0">
               Request Training

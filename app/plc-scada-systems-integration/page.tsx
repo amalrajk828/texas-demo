@@ -155,11 +155,11 @@ export default function PlcScadaPage() {
         />
 
         <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6">
-          <nav className="flex items-center gap-1.5 mb-8 text-[11px] text-white/35 flex-wrap">
+          <nav className="flex items-center gap-2 mb-8 text-[14px] text-white/50 flex-wrap">
             <Link href="/" className="hover:text-white/70 transition-colors">Home</Link>
-            <ChevronRight className="w-3 h-3 shrink-0" />
+            <ChevronRight className="w-3.5 h-3.5 shrink-0" />
             <Link href="/services/" className="hover:text-white/70 transition-colors">Services</Link>
-            <ChevronRight className="w-3 h-3 shrink-0" />
+            <ChevronRight className="w-3.5 h-3.5 shrink-0" />
             <span className="text-white/60">PLC &amp; SCADA Integration</span>
           </nav>
 
@@ -168,17 +168,17 @@ export default function PlcScadaPage() {
               <div className="w-9 h-9 rounded-xl bg-[#e7212b]/10 border border-[#e7212b]/25 flex items-center justify-center">
                 <Cpu className="w-4 h-4 text-[#e7212b]" strokeWidth={1.8} />
               </div>
-              <span className="text-[#e7212b] text-[11px] font-semibold tracking-[3px] uppercase">
+              <span className="text-[#0891B2] text-[14px] font-semibold tracking-[3px] uppercase">
                 PLC &amp; SCADA Integration
               </span>
             </div>
 
             <h1 className="text-4xl sm:text-5xl lg:text-[3.2rem] font-bold text-white leading-[1.12] mb-6">
               Advanced PLC &amp; SCADA{" "}
-              <em className="not-italic text-[#e7212b]">System Integration</em>
+              <em className="not-italic text-current">System Integration</em>
             </h1>
 
-            <p className="text-white/50 text-base sm:text-[16px] leading-relaxed mb-8 max-w-2xl">
+            <p className="text-white/70 text-base sm:text-[16px] leading-relaxed mb-8 max-w-2xl">
             We are trusted PLC and SCADA system integrators in Kuwait, Dubai, and across
             the GCC — delivering expert PLC programming, SCADA system development, HMI
             engineering, and control system upgrades. As experienced industrial automation
@@ -236,15 +236,15 @@ export default function PlcScadaPage() {
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6">
           <div className="mb-14">
             <div className="flex items-center gap-2.5 mb-4">
-              <span className="w-5 h-px bg-[#e7212b]" />
-              <span className="text-[#e7212b] text-[10px] font-semibold tracking-[3.5px] uppercase">
+              <span className="w-5 h-px bg-[#0891B2]" />
+              <span className="text-[#0891B2] text-[10px] font-semibold tracking-[3.5px] uppercase">
                 PLC &amp; SCADA Services
               </span>
             </div>
             <div className="flex flex-col sm:flex-row sm:items-end justify-between gap-4">
               <h2 className="text-3xl sm:text-[2.4rem] font-bold text-[#0B0D26] leading-[1.15]">
                 Our PLC &amp; SCADA{" "}
-                <em className="not-italic text-[#e7212b]">Integration Services</em>
+                <em className="not-italic text-current">Integration Services</em>
               </h2>
               <Link
                 href="/contacts/"
@@ -279,7 +279,7 @@ export default function PlcScadaPage() {
                   <p className="text-gray-500 text-[15px] leading-[1.75] flex-1">
                     {svc.body}
                   </p>
-                  <div className="mt-5 pt-4 border-t border-[#e8eaf0] flex items-center gap-1.5 text-[#e7212b] text-[14px] font-semibold">
+                  <div className="mt-5 pt-4 border-t border-[#e8eaf0] flex items-center gap-2 text-[#e7212b] text-[14px] font-semibold">
                     <span>Learn more</span>
                     <ArrowRight className="w-3.5 h-3.5 group-hover:translate-x-1 transition-transform duration-200" />
                   </div>
@@ -314,15 +314,15 @@ export default function PlcScadaPage() {
               <div className="grid grid-cols-1 lg:grid-cols-[1fr_2fr] gap-10 items-start">
                 <div>
                   <div className="flex items-center gap-2.5 mb-4">
-                    <span className="w-5 h-px bg-[#e7212b]" />
-                    <span className="text-[#e7212b] text-[10px] font-semibold tracking-[3.5px] uppercase">
+                    <span className="w-5 h-px bg-[#0891B2]" />
+                    <span className="text-[#0891B2] text-[10px] font-semibold tracking-[3.5px] uppercase">
                       Capabilities
                     </span>
                   </div>
                   <h3 className="text-white font-bold text-[22px] leading-snug mb-3">
                     What We Integrate &amp; Deliver
                   </h3>
-                  <p className="text-white/40 text-[15px] leading-[1.8]">
+                  <p className="text-white/70 text-[15px] leading-[1.8]">
                     From multi-brand PLC programming to plant-wide SCADA migration — our
                     automation team covers every layer of the industrial control stack, delivering
                     industrial automation PLC SCADA solutions across Kuwait and the GCC.
@@ -347,8 +347,8 @@ export default function PlcScadaPage() {
       <section className="py-20 lg:py-24 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6">
           <div className="flex items-center gap-2.5 mb-4">
-            <span className="w-5 h-px bg-[#e7212b]" />
-            <span className="text-[#e7212b] text-[10px] font-semibold tracking-[3.5px] uppercase">
+            <span className="w-5 h-px bg-[#0891B2]" />
+            <span className="text-[#0891B2] text-[10px] font-semibold tracking-[3.5px] uppercase">
               How We Deliver
             </span>
           </div>
@@ -402,8 +402,8 @@ export default function PlcScadaPage() {
       <section className="py-20 lg:py-24 bg-[#f4f5f8]">
         <div className="max-w-7xl mx-auto px-4 sm:px-6">
           <div className="flex items-center gap-2.5 mb-4">
-            <span className="w-5 h-px bg-[#e7212b]" />
-            <span className="text-[#e7212b] text-[10px] font-semibold tracking-[3.5px] uppercase">
+            <span className="w-5 h-px bg-[#0891B2]" />
+            <span className="text-[#0891B2] text-[10px] font-semibold tracking-[3.5px] uppercase">
               Industries
             </span>
           </div>
@@ -439,14 +439,14 @@ export default function PlcScadaPage() {
       <section className="bg-[#f4f5f8] py-20 lg:py-24">
         <div className="max-w-7xl mx-auto px-4 sm:px-6">
           <div className="flex items-center gap-2.5 mb-4">
-            <span className="w-5 h-px bg-[#e7212b]" />
-            <span className="text-[#e7212b] text-[10px] font-semibold tracking-[3.5px] uppercase">
+            <span className="w-5 h-px bg-[#0891B2]" />
+            <span className="text-[#0891B2] text-[10px] font-semibold tracking-[3.5px] uppercase">
               FAQ
             </span>
           </div>
           <h2 className="text-3xl sm:text-[2.4rem] font-bold text-[#0B0D26] leading-[1.15] mb-12">
             Frequently Asked Questions About{" "}
-            <em className="not-italic text-[#e7212b]">PLC &amp; SCADA Systems</em>
+            <em className="not-italic text-current">PLC &amp; SCADA Systems</em>
           </h2>
 
           <div className="max-w-4xl mx-auto space-y-4">
@@ -476,16 +476,16 @@ export default function PlcScadaPage() {
       <section className="bg-[#000000] blueprint-grid blueprint-dot-grid py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 text-center">
           <div className="flex items-center justify-center gap-3 mb-4">
-            <span className="w-8 h-px bg-[#e7212b]/40" />
-            <span className="text-[#e7212b] text-[9px] font-medium tracking-[2.5px] uppercase">
+            <span className="w-8 h-px bg-[#0891B2]/40" />
+            <span className="text-[#0891B2] text-[14px] font-medium tracking-[2.5px] uppercase">
               Get in touch
             </span>
-            <span className="w-8 h-px bg-[#e7212b]/40" />
+            <span className="w-8 h-px bg-[#0891B2]/40" />
           </div>
           <h2 className="text-3xl sm:text-4xl font-medium text-white mb-3">
             Need PLC &amp; SCADA integration?
           </h2>
-          <p className="text-white/50 text-base mb-8 max-w-md mx-auto">
+          <p className="text-white/70 text-base mb-8 max-w-md mx-auto">
             Talk to our automation specialists about your PLC programming, SCADA system
             development, or control system upgrade requirements.
           </p>

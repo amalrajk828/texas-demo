@@ -84,16 +84,17 @@ export default function GreyWhatWeDo() {
   return (
     <section className="relative py-24 lg:py-32 overflow-hidden" style={{ background: "linear-gradient(135deg, #f5f7fa 0%, #e2e7ee 45%, #c9d2dc 100%)" }}>
       <div className="relative max-w-7xl mx-auto px-4 sm:px-6 z-10">
-        <div className="flex flex-col lg:flex-row lg:items-end lg:justify-between gap-6 mb-10 sm:mb-12 lg:mb-14">
-          <div className="flex flex-col max-w-2xl">
+        <div className="flex flex-col text-center items-center gap-6 mb-10 sm:mb-12 lg:mb-14">
+          <div className="flex flex-col items-center">
             <motion.div
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.7, ease: "easeOut" }}
-              className="flex items-center gap-3 mb-4"
+              className="inline-flex items-center gap-3 mb-4"
             >
-              <span className="w-10 h-[3px] rounded-full" style={{ background: "var(--color-brand-red)" }} />
-              <span className="text-[11px] font-bold tracking-[3.5px] uppercase" style={{ color: "var(--color-brand-red)" }}>What We Do</span>
+              <span className="w-6 h-px" style={{ background: "#0E7490" }} />
+              <span className="text-[11px] font-bold tracking-[4px] uppercase" style={{ color: "#0E7490" }}>What We Do</span>
+              <span className="w-6 h-px" style={{ background: "#0E7490" }} />
             </motion.div>
 
             <motion.h2
@@ -110,7 +111,7 @@ export default function GreyWhatWeDo() {
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.7, ease: "easeOut", delay: 0.3 }}
-            className="max-w-md lg:pb-1"
+            className="lg:pb-1 mx-auto"
           >
             <p className="text-[16px] sm:text-[17px] leading-[1.85] text-[#4B5563]">
               Texas Technical Services delivers precision-engineered solutions across flow measurement,
@@ -179,7 +180,7 @@ export default function GreyWhatWeDo() {
                     <div className="mt-auto pt-4 border-t border-black/[0.06]">
                       <Link
                         href="/services/"
-                        className="inline-flex items-center gap-2 text-[14px] font-semibold text-[#E53935] no-underline hover:underline transition-all duration-200"
+                        className="inline-flex items-center gap-2 text-[14px] font-semibold text-slate-600 hover:text-slate-900 no-underline whitespace-nowrap transition-all duration-200"
                       >
                         Learn more about our services{" "}
                         <ArrowRight className="w-4 h-4 transition-transform duration-200 group-hover:translate-x-1" />
@@ -235,14 +236,19 @@ export default function GreyWhatWeDo() {
 
               {/* Red Badge - ISO 9001:2015 */}
               <div 
-                className="absolute top-4 left-4 rounded-xl px-4 py-3 shadow-lg z-10" 
+                className="absolute top-4 left-4 rounded-xl px-4 py-3 shadow-lg z-10 flex items-center gap-3" 
                 style={{ 
                   background: "var(--color-brand-red)", 
                   boxShadow: "0 8px 24px color-mix(in srgb, var(--color-brand-red) 40%, transparent)" 
                 }}
               >
-                <p className="text-white text-[10px] font-bold tracking-[2px] uppercase leading-none">ISO 9001:2015</p>
-                <p className="text-white/70 text-[11px] mt-1 leading-none">Certified · Est. 2008</p>
+                <Link href="/certifications/" className="relative w-16 h-16 shrink-0 block">
+                  <Image src="/about/cert-iso9001.png" alt="ISO 9001:2015" fill className="object-contain" sizes="64px" />
+                </Link>
+                <div>
+                  <p className="text-white text-[10px] font-bold tracking-[2px] uppercase leading-none">5 Certifications</p>
+                  <p className="text-white/70 text-[11px] mt-1 leading-none">ISO · UASL · Accurate</p>
+                </div>
               </div>
 
             </div>
