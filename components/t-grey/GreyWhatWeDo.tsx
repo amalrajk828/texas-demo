@@ -255,8 +255,8 @@ export default function GreyWhatWeDo() {
           </FadeUp>
           <div>
             <FadeUp delay={0.08}>
-              <div className="space-y-4 mb-8">
-                {BODY.map((p, i) => <p key={i} className="text-[17px] leading-[1.85]" style={{ color: "var(--g-muted)" }}>{p}</p>)}
+              <div className="space-y-4 mb-8" style={{ color: "#5C6270" }}>
+                {BODY.map((p, i) => <p key={i} className="text-[17px] leading-[1.85]" style={{ color: "#5C6270" }}>{p}</p>)}
               </div>
             </FadeUp>
             <FadeUp delay={0.14}>

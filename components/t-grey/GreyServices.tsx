@@ -107,20 +107,34 @@ export default function GreyServices() {
                   </div>
 
                   {/* Heading */}
-                  <h3 className="text-[17px] sm:text-[19px] font-black leading-snug text-white mb-2.5 pr-4 tracking-tight relative z-10 break-words">
+                  {/* Card Title */}
+                  <h3 className="text-[18px] sm:text-[20px] font-black leading-snug text-white mb-3 tracking-tight group-hover:text-white transition-colors relative z-10 break-words">
                     {svc.title}
                   </h3>
 
                   {/* Body paragraph */}
-                  <p className="text-white/70 text-xs sm:text-sm leading-relaxed mb-6 flex-1 font-medium relative z-10">
+                  <p className="text-white/70 text-[13px] sm:text-[14px] leading-relaxed mb-6 flex-1 font-medium relative z-10">
                     {svc.body}
                   </p>
 
-                  {/* Learn More link */}
-                  <Link href={svc.href} className="text-xs sm:text-sm font-bold text-slate-300 hover:text-white transition-all duration-200 mt-auto relative z-10">
-                    <span className="inline">Learn more about {svc.title}</span>{" "}
-                    <ArrowRight className="inline w-3.5 h-3.5 ml-0.5" />
-                  </Link>
+                  {/* Bottom CTA with circular indicator */}
+                  <div
+                    className="mt-auto pt-5 border-t flex items-center justify-between relative z-10 transition-all duration-200"
+                    style={{ borderColor: "rgba(255, 255, 255, 0.08)" }}
+                  >
+                    <Link
+                      href={svc.href}
+                      className="text-[13px] sm:text-[14px] font-bold text-slate-300 group-hover:text-white transition-colors duration-200"
+                    >
+                      Learn more
+                    </Link>
+                    {/* Circular arrow indicator */}
+                    <div
+                      className="w-8 h-8 rounded-full flex items-center justify-center border border-white/15 bg-white/[0.06] text-white/70 group-hover:text-white group-hover:bg-[#e53935] group-hover:border-[#e53935] group-hover:translate-x-1 transition-all duration-300 shadow-sm shrink-0"
+                    >
+                      <ArrowRight className="w-3.5 h-3.5" />
+                    </div>
+                  </div>
                 </div>
               </div>
             </div>
