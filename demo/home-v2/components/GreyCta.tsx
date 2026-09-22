@@ -63,7 +63,7 @@ export default function GreyCta() {
           <div className="hover:scale-105 transition-transform">
             <Link
               href="/contacts/"
-              className="v2-btn-primary text-[15px] px-8 py-4 rounded-xl"
+              className="v2-btn-primary text-[13px] px-8 py-3.5 rounded-full tracking-[0.12em] uppercase font-bold"
             >
               Contact Us <ArrowRight className="w-4 h-4" />
             </Link>
@@ -71,14 +71,9 @@ export default function GreyCta() {
           <div className="hover:scale-105 transition-transform">
             <Link
               href="/services/"
-              className="inline-flex items-center gap-2 font-semibold text-[15px] px-8 py-4 rounded-xl border transition-colors"
-              style={{
-                borderColor: "var(--g-border)",
-                color: "var(--g-heading)",
-                background: "var(--g-card-bg)",
-              }}
+              className="v2-btn-primary text-[13px] px-8 py-3.5 rounded-full tracking-[0.12em] uppercase font-bold"
             >
-              Our Services <ArrowRight className="w-4 h-4 opacity-50" />
+              Our Services <ArrowRight className="w-4 h-4" />
             </Link>
           </div>
         </div>

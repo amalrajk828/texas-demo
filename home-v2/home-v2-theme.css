@@ -10,23 +10,28 @@
   align-items: center;
   justify-content: center;
   gap: 8px;
-  color: #ffffff;
-  font-weight: 700;
-  text-decoration: none;
+  padding: 12px 28px !important;
+  color: #ffffff !important;
+  font-weight: 700 !important;
+  font-size: 0.85rem !important;
+  letter-spacing: 0.12em !important;
+  text-transform: uppercase !important;
+  text-decoration: none !important;
+  border-radius: 9999px !important;
   background: linear-gradient(
     180deg,
     var(--color-brand-red, #E53935) 0%,
     var(--color-brand-red-dark, #B71C1C) 100%
-  );
-  /* No border — the gradient stops create enough depth; a semi-transparent border
-     at a different border-radius than the inline style creates a hard bottom edge. */
-  box-shadow: 0 4px 20px rgba(229, 57, 53, 0.35);
+  ) !important;
+  box-shadow: 0 4px 20px rgba(229, 57, 53, 0.35) !important;
   transition: filter 0.2s ease, transform 0.2s ease, box-shadow 0.2s ease, gap 0.2s ease;
+  cursor: pointer;
+  white-space: nowrap;
 }
 .v2-btn-primary:hover {
   filter: brightness(1.12);
   transform: translateY(-2px);
-  box-shadow: 0 8px 28px rgba(229, 57, 53, 0.50);
+  box-shadow: 0 8px 28px rgba(229, 57, 53, 0.50) !important;
 }
 
 /* Faint grid background motif */

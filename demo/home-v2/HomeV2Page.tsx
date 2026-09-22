@@ -1,5 +1,6 @@
 "use client";
 
+import "./home-v2-theme.css";
 import dynamic from "next/dynamic";
 import ThemeWrapper from "./components/ThemeWrapper";
 import HomeV2Hero from "./components/HomeV2Hero";

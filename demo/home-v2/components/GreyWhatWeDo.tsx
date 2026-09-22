@@ -296,11 +296,10 @@ export default function GreyWhatWeDo() {
 
             <FadeUp delay={0.2}>
               <div className="flex flex-wrap gap-3">
-                <Link href="/contacts/" className="v2-btn-primary px-6 py-3.5 rounded-xl text-[14.5px]">
+                <Link href="/contacts/" className="v2-btn-primary px-7 py-3.5 rounded-full text-[13px] tracking-[0.12em] uppercase font-bold">
                   Contact Us <ArrowRight className="w-4 h-4" />
                 </Link>
-                <Link href="/services/" className="inline-flex items-center gap-2 font-bold text-[14.5px] px-6 py-3.5 rounded-xl border transition-all duration-200 hover:gap-3 hover:scale-105"
-                  style={{ borderColor: "rgba(0,0,0,0.12)", color: "#111827", background: "rgba(255,255,255,0.45)" }}>
+                <Link href="/services/" className="v2-btn-primary px-7 py-3.5 rounded-full text-[13px] tracking-[0.12em] uppercase font-bold">
                   Our Services <ChevronRight className="w-4 h-4" />
                 </Link>
               </div>

@@ -253,8 +253,8 @@ export default function HomeV2Hero() {
                 href="/service/flow-measurement-solutions/"
                 className="v2-btn-primary hover:-translate-y-0.5"
                 style={{
-                  padding: "14px 28px",
-                  borderRadius: 12,
+                  padding: "14px 32px",
+                  borderRadius: 9999,
                   fontSize: "0.85rem",
                   letterSpacing: "0.12em",
                   textTransform: "uppercase",
@@ -268,21 +268,19 @@ export default function HomeV2Hero() {
 
               <Link
                 href="/products/"
-                className="inline-flex items-center justify-center gap-2.5 hover:-translate-y-0.5 transition-all duration-200 backdrop-blur-md"
+                className="v2-btn-primary hover:-translate-y-0.5"
                 style={{
-                  padding: "14px 28px",
-                  borderRadius: 12,
-                  background: "rgba(255, 255, 255, 0.05)",
-                  border: "1px solid rgba(255, 255, 255, 0.15)",
-                  color: "rgba(255, 255, 255, 0.85)",
-                  fontWeight: 600,
+                  padding: "14px 32px",
+                  borderRadius: 9999,
                   fontSize: "0.85rem",
                   letterSpacing: "0.12em",
                   textTransform: "uppercase",
                   textDecoration: "none",
+                  overflow: "hidden",
                 }}
               >
                 <span>Our Products</span>
+                <ArrowRight className="w-4 h-4" />
               </Link>
             </div>
 

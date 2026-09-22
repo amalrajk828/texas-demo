@@ -108,6 +108,8 @@ export default function Footer() {
             className={`shrink-0 inline-flex items-center gap-2 bg-white font-bold text-[14px] px-8 py-3.5 transition-all hover:-translate-y-0.5 shadow-lg shadow-black/20 ${
               isHomeV5
                 ? "rounded-[5px] uppercase tracking-[0.12em] font-mono text-[#832429] hover:bg-white/95"
+                : pathname?.startsWith("/demo/home-v2")
+                ? "rounded-full uppercase tracking-[0.12em] font-bold text-[#E53935] hover:bg-white/95 shadow-xl shadow-black/30"
                 : "rounded-xl text-[#E53935] hover:bg-white/90"
             }`}
           >

@@ -154,7 +154,7 @@ export default function GreyTeam() {
             <div className="fade-up d3">
               <Link
                 href="/about-us/"
-                className="v2-btn-primary px-6 py-3.5 rounded-xl text-[14.5px] font-bold"
+                className="v2-btn-primary px-7 py-3.5 rounded-full text-[13px] tracking-[0.12em] uppercase font-bold"
               >
                 Know More <ArrowRight className="w-4 h-4" />
               </Link>

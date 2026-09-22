@@ -397,6 +397,8 @@ export default function Header() {
   const isAboutUs = pathname.startsWith("/about-us");
   const isHomeV5 = pathname?.startsWith("/demo/home-v1");
   const isHomeV2 = pathname?.startsWith("/demo/home-v2");
+  const isHomeV3 = pathname === "/demo/home-v3";
+  const isHomeV4 = pathname === "/demo/home-v4";
   const [open, setOpen]               = useState<string | null>(null);
   const [mobileOpen, setMobileOpen]   = useState(false);
   const [scrolled, setScrolled]       = useState(false);
@@ -745,13 +747,28 @@ export default function Header() {
                         background: "linear-gradient(180deg, #a83d3c 0%, #8a302f 60%, #6e2624 100%)",
                         boxShadow: "0 8px 20px rgba(138, 48, 47, 0.5)",
                       }
+                    : isHomeV2
+                    ? {
+                        background: "linear-gradient(135deg, rgba(255,255,255,0.32) 0%, rgba(255,255,255,0.10) 45%, transparent 68%), linear-gradient(180deg, #E53935 0%, #B71C1C 100%)",
+                        boxShadow: "inset 0 1px 0 rgba(255,255,255,0.36), 0 4px 20px rgba(229,57,53,0.35)",
+                      }
+                    : isHomeV3
+                    ? {
+                        background: "linear-gradient(180deg, #17707E 0%, #0F5260 100%)",
+                        boxShadow: "0 4px 20px rgba(23,112,126,0.35)",
+                      }
+                    : isHomeV4
+                    ? {
+                        background: "linear-gradient(to right, #F0A868, #E8935A)",
+                        boxShadow: "0 4px 20px rgba(232, 147, 90, 0.35)",
+                      }
                     : undefined
                 }
                 className={`whitespace-nowrap hidden lg:inline-flex items-center gap-2 text-[13px] tracking-[0.12em] uppercase px-3 xl:px-6 py-2.5 transition-all duration-200 ${
-                  isHomeV5
-                    ? "rounded-full text-white font-bold hover:brightness-110 hover:-translate-y-0.5"
-                    : isHomeV2
-                    ? "rounded-xl bg-gradient-to-r from-[#f87171] via-[#dc2626] to-[#b91c1c] hover:brightness-110 text-white font-medium shadow-lg shadow-[#dc2626]/30 hover:shadow-xl hover:shadow-[#dc2626]/40"
+                  isHomeV5 || isHomeV2 || isHomeV4
+                    ? `rounded-full text-white font-bold hover:brightness-110 hover:-translate-y-0.5 ${isHomeV4 ? "hover:shadow-[0_8px_24px_rgba(232,147,90,0.45)]" : "shadow-lg shadow-[#E53935]/35"}`
+                    : isHomeV3
+                    ? "rounded-md text-white font-bold hover:brightness-110 hover:-translate-y-0.5 hover:shadow-[0_8px_28px_rgba(23,112,126,0.50)]"
                     : "rounded-xl bg-[#E53935] hover:bg-[#B71C1C] text-white shadow-lg shadow-[#E53935]/20 font-medium"
                 }`}
               >
@@ -906,13 +923,28 @@ export default function Header() {
                               background: "linear-gradient(180deg, #a83d3c 0%, #8a302f 60%, #6e2624 100%)",
                               boxShadow: "0 8px 20px rgba(138, 48, 47, 0.5)",
                             }
+                          : isHomeV2
+                          ? {
+                              background: "linear-gradient(135deg, rgba(255,255,255,0.32) 0%, rgba(255,255,255,0.10) 45%, transparent 68%), linear-gradient(180deg, #E53935 0%, #B71C1C 100%)",
+                              boxShadow: "inset 0 1px 0 rgba(255,255,255,0.36), 0 4px 20px rgba(229,57,53,0.35)",
+                            }
+                          : isHomeV3
+                          ? {
+                              background: "linear-gradient(180deg, #17707E 0%, #0F5260 100%)",
+                              boxShadow: "0 4px 20px rgba(23,112,126,0.35)",
+                            }
+                          : isHomeV4
+                          ? {
+                              background: "linear-gradient(to right, #F0A868, #E8935A)",
+                              boxShadow: "0 4px 20px rgba(232, 147, 90, 0.35)",
+                            }
                           : undefined
                       }
                       className={`block text-center text-[13px] font-mono tracking-[0.12em] uppercase px-4 py-3.5 transition-all duration-200 ${
-                        isHomeV5
-                          ? "rounded-full text-white font-bold hover:brightness-110"
-                          : isHomeV2
-                          ? "rounded-xl bg-gradient-to-r from-[#f87171] via-[#dc2626] to-[#b91c1c] hover:brightness-110 text-white font-medium shadow-lg shadow-[#dc2626]/30"
+                        isHomeV5 || isHomeV2 || isHomeV4
+                          ? `rounded-full text-white font-bold hover:brightness-110 ${isHomeV4 ? "" : "shadow-lg shadow-[#E53935]/35"}`
+                          : isHomeV3
+                          ? "rounded-md text-white font-bold hover:brightness-110"
                           : "rounded-xl bg-[#E53935] hover:bg-[#B71C1C] text-white font-medium"
                       }`}
                     >
@@ -935,6 +967,15 @@ export default function Header() {
             opacity: scrolled ? 1 : 0,
           }}
         />
+
+        {isHomeV2 && (
+          <style>{`
+            .v2-btn-primary {
+              background: linear-gradient(135deg, rgba(255,255,255,0.32) 0%, rgba(255,255,255,0.10) 45%, transparent 68%), linear-gradient(180deg, #E53935 0%, #B71C1C 100%) !important;
+              box-shadow: inset 0 1px 0 rgba(255,255,255,0.36), 0 4px 20px rgba(229,57,53,0.35) !important;
+            }
+          `}</style>
+        )}
 
         <style>{`
           @keyframes fadeIn {

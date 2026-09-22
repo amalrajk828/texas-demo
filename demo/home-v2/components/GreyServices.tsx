@@ -152,15 +152,10 @@ export default function GreyServices() {
         <div className="text-center mt-12">
           <Link
             href="/services/"
-            className="inline-flex items-center gap-2 font-semibold text-[15px] px-8 py-4 rounded-xl border transition-all duration-200 hover:scale-105"
-            style={{
-              borderColor: "rgba(255, 255, 255, 0.15)",
-              color: "var(--g-heading)",
-              background: "rgba(255, 255, 255, 0.05)",
-            }}
+            className="v2-btn-primary px-8 py-3.5 rounded-full text-[13px] tracking-[0.12em] uppercase font-bold"
           >
-            <span>View all services</span>
-            <ArrowRight className="w-4 h-4 opacity-70" />
+            <span>View All Services</span>
+            <ArrowRight className="w-4 h-4" />
           </Link>
         </div>
       </div>
