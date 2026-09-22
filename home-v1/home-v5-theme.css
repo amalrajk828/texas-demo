@@ -1,0 +1,150 @@
+/* ── Design Tokens adapted from Home V2 ── */
+:root, .theme-v5, [data-theme="v5"] {
+  --bg:              #0F1117;
+  --bg-alt:          #141820;
+  --accent:          #E53935;
+  --accent-hover:    #dc2626;
+  --accent-light:    #ff6b6b;
+  --text-heading:    #F9FAFB;
+  --text-body:       #F9FAFB;
+  --text-muted:      #9CA3AF;
+  --border-default:  rgba(255, 255, 255, 0.08);
+  --border-active:   #E53935;
+
+  /* ── Target project variable mappings ── */
+  --background:              var(--bg);
+  --foreground:              var(--text-body);
+  --primary:                 var(--accent);
+  --primary-foreground:      #ffffff;
+  --primary-hover:           var(--accent-hover);
+  --accent-color:            var(--accent);
+  --border:                  var(--border-default);
+  --card:                    #1E2330;
+  --card-foreground:         var(--text-body);
+  --card-border:             rgba(255, 255, 255, 0.09);
+  --muted:                   #181C26;
+  --muted-foreground:        var(--text-muted);
+
+  /* Legacy brand tokens mapped for components (matching Home V2 VARS) */
+  --color-brand-red:         #E53935;
+  --color-brand-red-dark:    #B71C1C;
+  --color-brand-red-light:   #FFCDD2;
+  --color-brand-navy:        #0F1117;
+  --color-brand-navy-mid:    #181C26;
+  --color-brand-gray:        #1E2330;
+  --color-footer-bg:         #0A0C11;
+  --color-footer-text:       #FFFFFF;
+  --color-footer-muted:      rgba(156, 163, 175, 0.70);
+  --color-bg-hero-from:      #0F1117;
+  --color-bg-hero-to:        #1A1F2E;
+  --color-bg-hero-mask:      rgba(8, 10, 18, 0.78);
+  --color-bg-hero-mask-mid:  rgba(20, 25, 40, 0.50);
+  --color-text-hero:         #FFFFFF;
+  --color-surface:           #181C26;
+  --color-section-alt:       #0F1117;
+  --color-border:            rgba(255, 255, 255, 0.08);
+  --color-border-accent:     rgba(229, 57, 53, 0.25);
+  --color-text-primary:      #F9FAFB;
+  --color-text-muted:        #9CA3AF;
+
+  /* Kit D tokens mapped (matching Home V2 DARK_GREY_VARS) */
+  --g-section-a:             #141820;
+  --g-section-b:             #0F1117;
+  --g-heading:               #F9FAFB;
+  --g-muted:                 #9CA3AF;
+  --g-border:                rgba(255, 255, 255, 0.08);
+  --g-card-bg:               #1E2330;
+  --g-card-border:           rgba(255, 255, 255, 0.09);
+  --g-card-shadow:           0 4px 24px rgba(0, 0, 0, 0.40);
+  --g-stat-bg:               #252B3B;
+}
+
+/* Faint grid background motif */
+.v5-grid-bg {
+  background-image:
+    linear-gradient(to right, rgba(255, 255, 255, 0.035) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(255, 255, 255, 0.035) 1px, transparent 1px);
+  background-size: 56px 56px;
+}
+
+/* Corner square red indicator motif */
+.v5-corner-indicator {
+  position: absolute;
+  top: 12px;
+  right: 12px;
+  width: 6px;
+  height: 6px;
+  background-color: var(--accent);
+  pointer-events: none;
+  transition: transform 0.2s ease, background-color 0.2s ease;
+}
+
+/* Numbered prefix motif: red /01 in monospace */
+.v5-num-prefix {
+  font-family: var(--font-mono, monospace);
+  color: var(--accent);
+  font-weight: 700;
+  letter-spacing: 0.06em;
+}
+
+/* Button style */
+.v5-btn-primary {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  padding: 12px 24px;
+  border-radius: 8px;
+  background: linear-gradient(to right, #f87171, #dc2626, #b91c1c);
+  color: #ffffff;
+  font-weight: 700;
+  font-size: 0.85rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  transition: all 0.2s ease;
+  text-decoration: none;
+  border: 1px solid transparent;
+  box-shadow: 0 10px 25px -5px rgba(220, 38, 38, 0.35);
+}
+.v5-btn-primary:hover {
+  filter: brightness(1.1);
+  transform: translateY(-2px);
+  box-shadow: 0 14px 28px -4px rgba(220, 38, 38, 0.45);
+}
+
+.v5-btn-secondary {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  padding: 12px 24px;
+  border-radius: 8px;
+  background-color: rgba(255, 255, 255, 0.05);
+  color: var(--text-body);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  font-weight: 600;
+  font-size: 0.85rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  transition: all 0.2s ease;
+  text-decoration: none;
+  backdrop-filter: blur(4px);
+}
+.v5-btn-secondary:hover {
+  border-color: rgba(255, 255, 255, 0.3);
+  color: #ffffff;
+  background-color: rgba(255, 255, 255, 0.1);
+  transform: translateY(-2px);
+}
+
+/* Card hover border shift */
+.v5-card {
+  background-color: var(--card, #1E2330);
+  border: 1px solid var(--border-default);
+  border-radius: 8px;
+  transition: border-color 0.2s ease, transform 0.2s ease;
+  position: relative;
+}
+.v5-card:hover {
+  border-color: var(--border-active);
+}

@@ -1,0 +1,101 @@
+/* ── Home V2: V5 motif utility classes ──
+   These classes mirror the structural motifs from home-v5-theme.css.
+   Colors intentionally reference var(--accent) / var(--text-body) so they
+   resolve to home-v2's existing palette set by ThemeWrapper.
+*/
+
+/* ─── Primary button — red gradient matching the navbar "CONTACT US" button ─── */
+.v2-btn-primary {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  color: #ffffff;
+  font-weight: 700;
+  text-decoration: none;
+  background: linear-gradient(
+    180deg,
+    var(--color-brand-red, #E53935) 0%,
+    var(--color-brand-red-dark, #B71C1C) 100%
+  );
+  /* No border — the gradient stops create enough depth; a semi-transparent border
+     at a different border-radius than the inline style creates a hard bottom edge. */
+  box-shadow: 0 4px 20px rgba(229, 57, 53, 0.35);
+  transition: filter 0.2s ease, transform 0.2s ease, box-shadow 0.2s ease, gap 0.2s ease;
+}
+.v2-btn-primary:hover {
+  filter: brightness(1.12);
+  transform: translateY(-2px);
+  box-shadow: 0 8px 28px rgba(229, 57, 53, 0.50);
+}
+
+/* Faint grid background motif */
+.v5-grid-bg {
+  background-image:
+    linear-gradient(to right, rgba(255, 255, 255, 0.035) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(255, 255, 255, 0.035) 1px, transparent 1px);
+  background-size: 56px 56px;
+}
+
+/* Corner square red indicator motif */
+.v5-corner-indicator {
+  position: absolute;
+  top: 12px;
+  right: 12px;
+  width: 6px;
+  height: 6px;
+  background-color: var(--accent, #E53935);
+  pointer-events: none;
+  transition: transform 0.2s ease, background-color 0.2s ease;
+}
+
+/* Primary CTA button */
+.v5-btn-primary {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  padding: 12px 24px;
+  border-radius: 8px;
+  background: linear-gradient(to right, #f87171, #dc2626, #b91c1c);
+  color: #ffffff;
+  font-weight: 700;
+  font-size: 0.85rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  transition: all 0.2s ease;
+  text-decoration: none;
+  border: 1px solid transparent;
+  box-shadow: 0 10px 25px -5px rgba(220, 38, 38, 0.35);
+}
+.v5-btn-primary:hover {
+  filter: brightness(1.1);
+  transform: translateY(-2px);
+  box-shadow: 0 14px 28px -4px rgba(220, 38, 38, 0.45);
+}
+
+/* Secondary ghost button */
+.v5-btn-secondary {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  padding: 12px 24px;
+  border-radius: 8px;
+  background-color: rgba(255, 255, 255, 0.05);
+  color: var(--color-text-primary, #F9FAFB);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  font-weight: 600;
+  font-size: 0.85rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  transition: all 0.2s ease;
+  text-decoration: none;
+  backdrop-filter: blur(4px);
+}
+.v5-btn-secondary:hover {
+  border-color: rgba(255, 255, 255, 0.3);
+  color: #ffffff;
+  background-color: rgba(255, 255, 255, 0.1);
+  transform: translateY(-2px);
+}

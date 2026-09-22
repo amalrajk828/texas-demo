@@ -1,0 +1,404 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Texas Technical Services — Demo Variations Hub</title>
+  <style>
+    :root {
+      --bg: #07090e;
+      --card-bg: #0e111a;
+      --border: rgba(255, 255, 255, 0.08);
+      --red: #E53935;
+      --red-hover: #c62828;
+      --text: #ffffff;
+      --muted: rgba(255, 255, 255, 0.6);
+    }
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    }
+    body {
+      background-color: var(--bg);
+      color: var(--text);
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+    }
+    header {
+      background: rgba(12, 15, 23, 0.8);
+      backdrop-filter: blur(12px);
+      border-bottom: 1px solid var(--border);
+      padding: 16px 24px;
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+    .logo-badge {
+      width: 32px;
+      height: 32px;
+      background: var(--red);
+      border-radius: 8px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: 900;
+      color: white;
+      box-shadow: 0 4px 12px rgba(229, 57, 53, 0.3);
+    }
+    .brand-text h1 {
+      font-size: 14px;
+      font-weight: 700;
+      letter-spacing: 0.5px;
+      text-transform: uppercase;
+    }
+    .brand-text p {
+      font-size: 11px;
+      color: rgba(255, 255, 255, 0.4);
+      font-family: monospace;
+    }
+    .back-link {
+      font-size: 12px;
+      font-weight: 600;
+      color: var(--muted);
+      text-decoration: none;
+      padding: 6px 12px;
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      transition: all 0.2s;
+    }
+    .back-link:hover {
+      color: white;
+      border-color: rgba(255, 255, 255, 0.2);
+      background: rgba(255, 255, 255, 0.05);
+    }
+    main {
+      max-width: 1200px;
+      width: 100%;
+      margin: 0 auto;
+      padding: 64px 24px;
+      flex: 1;
+    }
+    .eyebrow {
+      display: inline-block;
+      padding: 4px 12px;
+      border-radius: 999px;
+      background: rgba(229, 57, 53, 0.1);
+      border: 1px solid rgba(229, 57, 53, 0.2);
+      color: var(--red);
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      margin-bottom: 20px;
+    }
+    .title {
+      font-size: 44px;
+      font-weight: 900;
+      letter-spacing: -0.5px;
+      margin-bottom: 16px;
+      line-height: 1.1;
+    }
+    .subtitle {
+      font-size: 17px;
+      color: var(--muted);
+      max-width: 680px;
+      line-height: 1.6;
+      margin-bottom: 48px;
+    }
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+      gap: 24px;
+      margin-bottom: 48px;
+    }
+    .card {
+      background: var(--card-bg);
+      border: 1px solid var(--border);
+      border-radius: 16px;
+      padding: 28px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      transition: transform 0.3s, border-color 0.3s, box-shadow 0.3s;
+    }
+    .card:hover {
+      transform: translateY(-4px);
+      border-color: rgba(255, 255, 255, 0.2);
+      box-shadow: 0 16px 32px rgba(0, 0, 0, 0.4);
+    }
+    .card-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 18px;
+    }
+    .badge {
+      font-size: 11px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+      padding: 4px 10px;
+      border-radius: 999px;
+      background: rgba(16, 185, 129, 0.1);
+      color: #34d399;
+      border: 1px solid rgba(16, 185, 129, 0.2);
+    }
+    .version {
+      font-size: 11px;
+      color: rgba(255, 255, 255, 0.4);
+      font-family: monospace;
+    }
+    .card-title {
+      font-size: 20px;
+      font-weight: 800;
+      margin-bottom: 10px;
+    }
+    .card-desc {
+      font-size: 13.5px;
+      color: var(--muted);
+      line-height: 1.55;
+      margin-bottom: 24px;
+    }
+    .features {
+      border-top: 1px solid rgba(255, 255, 255, 0.06);
+      padding-top: 16px;
+      margin-bottom: 24px;
+    }
+    .features-title {
+      font-size: 11px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+      color: rgba(255, 255, 255, 0.4);
+      margin-bottom: 10px;
+    }
+    .feature-item {
+      font-size: 12.5px;
+      color: rgba(255, 255, 255, 0.8);
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      margin-bottom: 6px;
+    }
+    .feature-item::before {
+      content: "✓";
+      color: var(--red);
+      font-weight: 900;
+    }
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      width: 100%;
+      padding: 14px 20px;
+      background: var(--red);
+      color: white;
+      font-weight: 700;
+      font-size: 14px;
+      text-decoration: none;
+      border-radius: 12px;
+      transition: background 0.2s, box-shadow 0.2s;
+      box-shadow: 0 4px 16px rgba(229, 57, 53, 0.3);
+    }
+    .btn:hover {
+      background: var(--red-hover);
+      box-shadow: 0 6px 20px rgba(229, 57, 53, 0.45);
+    }
+    .card-placeholder {
+      border: 1px dashed rgba(255, 255, 255, 0.15);
+      border-radius: 16px;
+      padding: 32px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      background: rgba(255, 255, 255, 0.01);
+    }
+    .placeholder-icon {
+      font-size: 28px;
+      color: rgba(255, 255, 255, 0.3);
+      margin-bottom: 12px;
+    }
+    .placeholder-title {
+      font-size: 17px;
+      font-weight: 700;
+      margin-bottom: 6px;
+    }
+    .placeholder-desc {
+      font-size: 12px;
+      color: rgba(255, 255, 255, 0.4);
+      max-width: 240px;
+      line-height: 1.5;
+    }
+    code {
+      background: rgba(229, 57, 53, 0.1);
+      color: var(--red);
+      padding: 2px 6px;
+      border-radius: 4px;
+      font-size: 12px;
+      font-family: monospace;
+    }
+    .info-box {
+      background: #0c0f17;
+      border: 1px solid var(--border);
+      border-radius: 16px;
+      padding: 28px;
+    }
+    .info-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      gap: 20px;
+      margin-top: 16px;
+    }
+    .info-col h4 {
+      font-size: 13.5px;
+      font-weight: 700;
+      margin-bottom: 6px;
+    }
+    .info-col p {
+      font-size: 12.5px;
+      color: var(--muted);
+      line-height: 1.5;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="brand">
+      <div class="logo-badge">T</div>
+      <div class="brand-text">
+        <h1>Texas Tech Serv — Demo Lab</h1>
+        <p>Homepage Design Variations</p>
+      </div>
+    </div>
+    <a href="/" class="back-link">← Back to Live Site</a>
+  </header>
+
+  <main>
+    <div class="eyebrow">Design Sandbox</div>
+    <h2 class="title">Homepage Style Variations</h2>
+    <p class="subtitle">Test, restyle, and prototype multiple homepage concepts in completely isolated environments without touching or affecting the live production site.</p>
+
+    <div class="grid">
+      <!-- Variant 1 -->
+      <div class="card">
+        <div>
+          <div class="card-header">
+            <span class="badge">Active</span>
+            <span class="version">home-v1</span>
+          </div>
+          <h3 class="card-title">Home V1 — Finalized Design</h3>
+          <p class="card-desc">Finalized homepage design, moved from the former Home V5 route.</p>
+          <div class="features">
+            <div class="features-title">Features Included</div>
+            <div class="feature-item">Cinematic HD Silk Ripple Video Background</div>
+            <div class="feature-item">CSS Green-to-Bronze Duo-Tone Color Grade</div>
+            <div class="feature-item">Staggered Animated Slide Typography & Progress Bar</div>
+            <div class="feature-item">Frosted Backdrop-Blur Floating Nav Pill</div>
+          </div>
+        </div>
+        <a href="/demo/home-v1/" class="btn">Launch Preview →</a>
+      </div>
+
+      <!-- Variant 2 -->
+      <div class="card">
+        <div>
+          <div class="card-header">
+            <span class="badge" style="background: rgba(229,57,53,0.15); color: #ff6b6b; border-color: rgba(229,57,53,0.3);">Active</span>
+            <span class="version">home-v2</span>
+          </div>
+          <h3 class="card-title">Home V2 — Flow Measurement Hero</h3>
+          <p class="card-desc">Hero section replaced with the exact design, layout, and MoltenMetal shader from /service/flow-measurement-solutions/. Rest of the page remains identical.</p>
+          <div class="features">
+            <div class="features-title">Features Included</div>
+            <div class="feature-item">Flow Measurement MoltenMetal Shader Hero</div>
+            <div class="feature-item">Pill Badges, CTAs & Metric Highlight Cards</div>
+            <div class="feature-item">Partners Marquee & Ticker Banner</div>
+            <div class="feature-item">Identical Kit D Sections Below Hero</div>
+          </div>
+        </div>
+        <a href="/demo/home-v2/" class="btn">Launch Preview →</a>
+      </div>
+
+      <!-- Variant 3 -->
+      <div class="card">
+        <div>
+          <div class="card-header">
+            <span class="badge" style="background: rgba(229,57,53,0.15); color: #ff6b6b; border-color: rgba(229,57,53,0.3);">New</span>
+            <span class="version">home-v3</span>
+          </div>
+          <h3 class="card-title">Home V3 — Blog Hero & Liquid Gel Blob</h3>
+          <p class="card-desc">Hero section matching /blog/ with layered MoltenMetal ember shader, photorealistic 12-point SVG liquid gel blob, and dark glass stat cards.</p>
+          <div class="features">
+            <div class="features-title">Features Included</div>
+            <div class="feature-item">Layered MoltenMetal + SVG Liquid Gel Blob</div>
+            <div class="feature-item">Breathing 12-Point Ambient Wobble & Reach</div>
+            <div class="feature-item">Blog Hero Eyebrow, CTAs & Glass Stat Cards</div>
+            <div class="feature-item">Identical Kit D Sections Below Hero</div>
+          </div>
+        </div>
+        <a href="/demo/home-v3/" class="btn">Launch Preview →</a>
+      </div>
+
+      <!-- Variant 6 -->
+      <div class="card">
+        <div>
+          <div class="card-header">
+            <span class="badge" style="background: rgba(229,57,53,0.15); color: #ff6b6b; border-color: rgba(229,57,53,0.3);">New</span>
+            <span class="version">home-v6</span>
+          </div>
+          <h3 class="card-title">Home V6 — Parallax &amp; Zoom-Fade Video</h3>
+          <p class="card-desc">Hero section featuring scroll-linked parallax translation, receding scale-down (1 to 0.93), and exit opacity fade mapped to scroll progress.</p>
+          <div class="features">
+            <div class="features-title">Features Included</div>
+            <div class="feature-item">Scroll-Linked Parallax (~35% depth lag)</div>
+            <div class="feature-item">Subtle Receding Scale (1 → 0.93) & Fade-Out</div>
+            <div class="feature-item">Dual-Video Seamless Crossfade Loop</div>
+            <div class="feature-item">IntersectionObserver Pause & Reduced-Motion</div>
+          </div>
+        </div>
+        <a href="/demo/home-v6/" class="btn">Launch Preview →</a>
+      </div>
+
+      <!-- Add Next Variant Placeholder -->
+      <div class="card-placeholder">
+        <div class="placeholder-icon">+</div>
+        <div class="placeholder-title">Add Next Variation</div>
+        <p class="placeholder-desc">Create <code>demo/home-v7/</code> to start a new isolated prototype.</p>
+      </div>
+    </div>
+
+    <!-- Instructions Box -->
+    <div class="info-box">
+      <h3 style="font-size: 15px; font-weight: 800; margin-bottom: 4px;">How This Sandbox Works</h3>
+      <div class="info-grid">
+        <div class="info-col">
+          <h4>1. Isolated Components</h4>
+          <p>Each variant inside <code>demo/home-vX/components/</code> is completely decoupled from the live website.</p>
+        </div>
+        <div class="info-col">
+          <h4>2. Zero Production Impact</h4>
+          <p>Edits, experiments, and styling changes made in <code>demo/</code> will never alter the live <code>/</code> homepage.</p>
+        </div>
+        <div class="info-col">
+          <h4>3. Instant Routing</h4>
+          <p>Navigate directly to <code>/demo/home-v1/</code> in your browser to preview changes in real time with Next.js HMR.</p>
+        </div>
+      </div>
+    </div>
+  </main>
+</body>
+</html>

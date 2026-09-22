@@ -1,0 +1,1202 @@
+{
+  "custody-transfer-metering-guide": {
+    "id": "photo-1518709268805-4e9042af9f23",
+    "url": "https://images.unsplash.com/photo-1518709268805-4e9042af9f23?w=1200&q=80&fm=jpg&fit=crop",
+    "alt": "Industrial piping valves in an oil terminal",
+    "downloadLocation": "https://api.unsplash.com/photos/1518709268805/download",
+    "credit": {
+      "name": "Quintin Gellar",
+      "profileUrl": "https://unsplash.com/@quintingellar",
+      "photoUrl": "https://unsplash.com/photos/RUCRCc5d3_8"
+    },
+    "confidence": "HIGH"
+  },
+  "scada-system-upgrade-guide": {
+    "id": "photo-1581092160562-40aa08e78837",
+    "url": "https://images.unsplash.com/photo-1581092160562-40aa08e78837?w=1200&q=80&fm=jpg&fit=crop",
+    "alt": "Industrial electrical instrumentation checks",
+    "downloadLocation": "https://api.unsplash.com/photos/1581092160562/download",
+    "credit": {
+      "name": "Science in HD",
+      "profileUrl": "https://unsplash.com/@scienceinhd",
+      "photoUrl": "https://unsplash.com/photos/diM45G5iX8k"
+    },
+    "confidence": "HIGH"
+  },
+  "cems-continuous-emissions-monitoring-guide": {
+    "id": "photo-1508921912186-1d1a45ebb3c1",
+    "url": "https://images.unsplash.com/photo-1508921912186-1d1a45ebb3c1?w=1200&q=80&fm=jpg&fit=crop",
+    "alt": "Technological backdrop showing data servers",
+    "downloadLocation": "https://api.unsplash.com/photos/1508921912186/download",
+    "credit": {
+      "name": "Johannes Plenio",
+      "profileUrl": "https://unsplash.com/@johannesplenio",
+      "photoUrl": "https://unsplash.com/photos/RUCRCc5d3_8"
+    },
+    "confidence": "HIGH"
+  },
+  "liquid-vs-gas-flow-meters": {
+    "id": "photo-1581091226825-a6a2a5aee158",
+    "url": "https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?w=1200&q=80&fm=jpg&fit=crop",
+    "alt": "Precision metal turbine flow meter components",
+    "downloadLocation": "https://api.unsplash.com/photos/1581091226825/download",
+    "credit": {
+      "name": "ThisisEngineering RAEng",
+      "profileUrl": "https://unsplash.com/@thisisengineering",
+      "photoUrl": "https://unsplash.com/photos/54V38-6JtD0"
+    },
+    "confidence": "HIGH"
+  },
+  "custody-metering-skid-validation": {
+    "id": "photo-1563986768609-322da13575f3",
+    "url": "https://images.unsplash.com/photo-1563986768609-322da13575f3?w=1200&q=80&fm=jpg&fit=crop",
+    "alt": "Digital graphs showing flow measurement calculations",
+    "downloadLocation": "https://api.unsplash.com/photos/1563986768609/download",
+    "credit": {
+      "name": "Towfiqu barbhuiya",
+      "profileUrl": "https://unsplash.com/@towfiqu",
+      "photoUrl": "https://unsplash.com/photos/RUCRCc5d3_8"
+    },
+    "confidence": "MEDIUM"
+  },
+  "flow-computer-configuration": {
+    "id": "photo-1504307651254-35680f356dfd",
+    "url": "https://images.unsplash.com/photo-1504307651254-35680f356dfd?w=1200&q=80&fm=jpg&fit=crop",
+    "alt": "Heavy duty flow meter installed on industrial system",
+    "downloadLocation": "https://api.unsplash.com/photos/1504307651254/download",
+    "credit": {
+      "name": "Anatoly Petrochenko",
+      "profileUrl": "https://unsplash.com/@anatoly",
+      "photoUrl": "https://unsplash.com/photos/y2sA7wB5vW4"
+    },
+    "confidence": "MEDIUM"
+  },
+  "metering-control-system-upgrade": {
+    "id": "photo-1518770660439-4636190af475",
+    "url": "https://images.unsplash.com/photo-1518770660439-4636190af475?w=1200&q=80&fm=jpg&fit=crop",
+    "alt": "Flow computer processing panels and microchips",
+    "downloadLocation": "https://api.unsplash.com/photos/1518770660439/download",
+    "credit": {
+      "name": "Alexandre Debiève",
+      "profileUrl": "https://unsplash.com/@alexandre_debieve",
+      "photoUrl": "https://unsplash.com/photos/FO7JIlwjOtU"
+    },
+    "confidence": "HIGH"
+  },
+  "flare-meter-calibration": {
+    "id": "photo-1535813547-99c456a41d4a",
+    "url": "https://images.unsplash.com/photo-1535813547-99c456a41d4a?w=1200&q=80&fm=jpg&fit=crop",
+    "alt": "Large industrial turbine meter assembly",
+    "downloadLocation": "https://api.unsplash.com/photos/1535813547/download",
+    "credit": {
+      "name": "Pat Whelen",
+      "profileUrl": "https://unsplash.com/@patwhelen",
+      "photoUrl": "https://unsplash.com/photos/M4-xS6tDqU8"
+    },
+    "confidence": "MEDIUM"
+  },
+  "helical-flow-meter-maintenance": {
+    "id": "photo-1531403009284",
+    "url": "https://images.unsplash.com/photo-1531403009284-440f080d1e12?w=1200&q=80&fm=jpg&fit=crop",
+    "alt": "Workplace flow planning and layout design",
+    "downloadLocation": "https://api.unsplash.com/photos/1531403009284/download",
+    "credit": {
+      "name": "Campaign Creators",
+      "profileUrl": "https://unsplash.com/@campaigncreators",
+      "photoUrl": "https://unsplash.com/photos/RUCRCc5d3_8"
+    },
+    "confidence": "MEDIUM"
+  },
+  "measurement-uncertainty-custody-transfer": {
+    "id": "photo-1556761175-4b46a572b786",
+    "url": "https://images.unsplash.com/photo-1556761175-4b46a572b786?w=1200&q=80&fm=jpg&fit=crop",
+    "alt": "Engineering meeting discussing compliance metrics",
+    "downloadLocation": "https://api.unsplash.com/photos/1556761175/download",
+    "credit": {
+      "name": "Christina @ wocintechchat.com",
+      "profileUrl": "https://unsplash.com/@wocintechchat",
+      "photoUrl": "https://unsplash.com/photos/RUCRCc5d3_8"
+    },
+    "confidence": "MEDIUM"
+  },
+  "custody-metering-audit": {
+    "id": "photo-1552664730-d307ca884978",
+    "url": "https://images.unsplash.com/photo-1552664730-d307ca884978?w=1200&q=80&fm=jpg&fit=crop",
+    "alt": "Operations review of process logs",
+    "downloadLocation": "https://api.unsplash.com/photos/1552664730/download",
+    "credit": {
+      "name": "Christina @ wocintechchat.com",
+      "profileUrl": "https://unsplash.com/@wocintechchat",
+      "photoUrl": "https://unsplash.com/photos/RUCRCc5d3_8"
+    },
+    "confidence": "MEDIUM"
+  },
+  "lng-custody-transfer-measurement": {
+    "id": "photo-1454165804606-c3d57bc86b40",
+    "url": "https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?w=1200&q=80&fm=jpg&fit=crop",
+    "alt": "Technical analysis and calculation checking",
+    "downloadLocation": "https://api.unsplash.com/photos/1454165804606/download",
+    "credit": {
+      "name": "Scott Graham",
+      "profileUrl": "https://unsplash.com/@scottgraham",
+      "photoUrl": "https://unsplash.com/photos/RUCRCc5d3_8"
+    },
+    "confidence": "MEDIUM"
+  },
+  "plc-vs-pac-oil-gas-automation": {
+    "id": "photo-1605810230434-7631ac76ec81",
+    "url": "https://images.unsplash.com/photo-1605810230434-7631ac76ec81?w=1200&q=80&fm=jpg&fit=crop",
+    "alt": "PLC modules and wires in automation panel",
+    "downloadLocation": "https://api.unsplash.com/photos/1605810230434/download",
+    "credit": {
+      "name": "Science in HD",
+      "profileUrl": "https://unsplash.com/@scienceinhd",
+      "photoUrl": "https://unsplash.com/photos/A7wB5vW4"
+    },
+    "confidence": "HIGH"
+  },
+  "iconics-scada-got-hmi-integration": {
+    "id": "photo-1497366216548",
+    "url": "https://images.unsplash.com/photo-1497366216548-37526070297c?w=1200&q=80&fm=jpg&fit=crop",
+    "alt": "Engineering control room workstation console",
+    "downloadLocation": "https://api.unsplash.com/photos/1497366216548/download",
+    "credit": {
+      "name": "Lachlan Donald",
+      "profileUrl": "https://unsplash.com/@lachlandonald",
+      "photoUrl": "https://unsplash.com/photos/RUCRCc5d3_8"
+    },
+    "confidence": "HIGH"
+  },
+  "vfd-frequency-inverter-industrial-applications": {
+    "id": "photo-1581092160607-ee22621dd758",
+    "url": "https://images.unsplash.com/photo-1581092160607-ee22621dd758?w=1200&q=80&fm=jpg&fit=crop",
+    "alt": "Engineer monitoring SCADA system screens",
+    "downloadLocation": "https://api.unsplash.com/photos/1581092160607/download",
+    "credit": {
+      "name": "Science in HD",
+      "profileUrl": "https://unsplash.com/@scienceinhd",
+      "photoUrl": "https://unsplash.com/photos/diM45G5iX8k"
+    },
+    "confidence": "HIGH"
+  },
+  "industrial-cybersecurity-scada-iec62443": {
+    "id": "photo-1531482615713-2afd69097998",
+    "url": "https://images.unsplash.com/photo-1531482615713-2afd69097998?w=1200&q=80&fm=jpg&fit=crop",
+    "alt": "Women engineers configuring SCADA systems",
+    "downloadLocation": "https://api.unsplash.com/photos/1531482615713/download",
+    "credit": {
+      "name": "Christina @ wocintechchat.com",
+      "profileUrl": "https://unsplash.com/@wocintechchat",
+      "photoUrl": "https://unsplash.com/photos/RUCRCc5d3_8"
+    },
+    "confidence": "HIGH"
+  },
+  "ac-servo-systems-manufacturing-guide": {
+    "id": "photo-1524758631624-e2822e304c36",
+    "url": "https://images.unsplash.com/photo-1524758631624-e2822e304c36?w=1200&q=80&fm=jpg&fit=crop",
+    "alt": "High-precision servo motor in automated manufacturing line",
+    "downloadLocation": "https://api.unsplash.com/photos/1524758631624/download",
+    "credit": {
+      "name": "Jesper Aggergaard",
+      "profileUrl": "https://unsplash.com/@aggergaard",
+      "photoUrl": "https://unsplash.com/photos/M4-xS6tDqU8"
+    },
+    "confidence": "HIGH"
+  },
+  "industrial-field-instruments-selection-guide": {
+    "id": "photo-1531297484001-80022131f5a1",
+    "url": "https://images.unsplash.com/photo-1531297484001-80022131f5a1?w=1200&q=80&fm=jpg&fit=crop",
+    "alt": "Technician reviewing industrial controller documentation",
+    "downloadLocation": "https://api.unsplash.com/photos/1531297484001/download",
+    "credit": {
+      "name": "Firmbee Corporation",
+      "profileUrl": "https://unsplash.com/@firmbee",
+      "photoUrl": "https://unsplash.com/photos/RUCRCc5d3_8"
+    },
+    "confidence": "HIGH"
+  },
+  "control-room-design-ergonomics-hmi": {
+    "id": "photo-1497215728101-856f4ea42174",
+    "url": "https://images.unsplash.com/photo-1497215728101-856f4ea42174?w=1200&q=80&fm=jpg&fit=crop",
+    "alt": "Clean office desk setup with monitors",
+    "downloadLocation": "https://api.unsplash.com/photos/1497215728101/download",
+    "credit": {
+      "name": "Lachlan Donald",
+      "profileUrl": "https://unsplash.com/@lachlandonald",
+      "photoUrl": "https://unsplash.com/photos/RUCRCc5d3_8"
+    },
+    "confidence": "HIGH"
+  },
+  "industrial-sensors-types-applications": {
+    "id": "photo-1541888946425-d81bb19240f5",
+    "url": "https://images.unsplash.com/photo-1541888946425-d81bb19240f5?w=1200&q=80&fm=jpg&fit=crop",
+    "alt": "Cement plant preheater tower and rotary kiln",
+    "downloadLocation": "https://api.unsplash.com/photos/1541888946425/download",
+    "credit": {
+      "name": "Antti Yrjönen",
+      "profileUrl": "https://unsplash.com/@antti_y",
+      "photoUrl": "https://unsplash.com/photos/RUCRCc5d3_8"
+    },
+    "confidence": "HIGH"
+  },
+  "industrial-automation-commissioning-guide": {
+    "id": "photo-1504384308090-c894fdcc538d",
+    "url": "https://images.unsplash.com/photo-1504384308090-c894fdcc538d?w=1200&q=80&fm=jpg&fit=crop",
+    "alt": "Industrial site mapping and logistics planning",
+    "downloadLocation": "https://api.unsplash.com/photos/1504384308090/download",
+    "credit": {
+      "name": "Alvaro Serrano",
+      "profileUrl": "https://unsplash.com/@alvaroserrano",
+      "photoUrl": "https://unsplash.com/photos/RUCRCc5d3_8"
+    },
+    "confidence": "MEDIUM"
+  },
+  "ndt-methods-complete-guide": {
+    "id": "photo-1581092162384-8987c1d64718",
+    "url": "https://images.unsplash.com/photo-1581092162384-8987c1d64718?w=1200&q=80&fm=jpg&fit=crop",
+    "alt": "Magnetic particle inspection of critical structural weld",
+    "downloadLocation": "https://api.unsplash.com/photos/1581092162384/download",
+    "credit": {
+      "name": "Science in HD",
+      "profileUrl": "https://unsplash.com/@scienceinhd",
+      "photoUrl": "https://unsplash.com/photos/diM45G5iX8k"
+    },
+    "confidence": "HIGH"
+  },
+  "phased-array-ultrasonic-testing-guide": {
+    "id": "photo-1573164713988-8665fc963095",
+    "url": "https://images.unsplash.com/photo-1573164713988-8665fc963095?w=1200&q=80&fm=jpg&fit=crop",
+    "alt": "Women engineers discussing automation firmware upgrades",
+    "downloadLocation": "https://api.unsplash.com/photos/1573164713988/download",
+    "credit": {
+      "name": "Christina @ wocintechchat.com",
+      "profileUrl": "https://unsplash.com/@wocintechchat",
+      "photoUrl": "https://unsplash.com/photos/RUCRCc5d3_8"
+    },
+    "confidence": "HIGH"
+  },
+  "tofd-time-of-flight-diffraction-guide": {
+    "id": "photo-1516321318423-f06f85e504b3",
+    "url": "https://images.unsplash.com/photo-1516321318423-f06f85e504b3?w=1200&q=80&fm=jpg&fit=crop",
+    "alt": "Radiographic film scanning for structural crack detection",
+    "downloadLocation": "https://api.unsplash.com/photos/1516321318423/download",
+    "credit": {
+      "name": "National Cancer Institute",
+      "profileUrl": "https://unsplash.com/@nci",
+      "photoUrl": "https://unsplash.com/photos/RUCRCc5d3_8"
+    },
+    "confidence": "HIGH"
+  },
+  "magnetic-particle-inspection-guide": {
+    "id": "photo-1616401784845-180882ba9ba8",
+    "url": "https://images.unsplash.com/photo-1616401784845-180882ba9ba8?w=1200&q=80&fm=jpg&fit=crop",
+    "alt": "Heat exchanger tube inspection using eddy current probes",
+    "downloadLocation": "https://api.unsplash.com/photos/1616401784845/download",
+    "credit": {
+      "name": "Mufid Majnun",
+      "profileUrl": "https://unsplash.com/@mufidpwt",
+      "photoUrl": "https://unsplash.com/photos/y2sA7wB5vW4"
+    },
+    "confidence": "HIGH"
+  },
+  "radiographic-testing-industrial-inspection": {
+    "id": "photo-1576086213369-97a306d36557",
+    "url": "https://images.unsplash.com/photo-1576086213369-97a306d36557?w=1200&q=80&fm=jpg&fit=crop",
+    "alt": "Positive material identification using portable analyzer gun",
+    "downloadLocation": "https://api.unsplash.com/photos/1576086213369/download",
+    "credit": {
+      "name": "National Cancer Institute",
+      "profileUrl": "https://unsplash.com/@nci",
+      "photoUrl": "https://unsplash.com/photos/RUCRCc5d3_8"
+    },
+    "confidence": "HIGH"
+  },
+  "eddy-current-testing-tube-inspection": {
+    "id": "photo-1581092918056-0c4c3acd3789",
+    "url": "https://images.unsplash.com/photo-1581092918056-0c4c3acd3789?w=1200&q=80&fm=jpg&fit=crop",
+    "alt": "Electrical technicians performing diagnostics",
+    "downloadLocation": "https://api.unsplash.com/photos/1581092918056/download",
+    "credit": {
+      "name": "Science in HD",
+      "profileUrl": "https://unsplash.com/@scienceinhd",
+      "photoUrl": "https://unsplash.com/photos/RUCRCc5d3_8"
+    },
+    "confidence": "HIGH"
+  },
+  "mechanical-testing-materials": {
+    "id": "photo-1522202176988-66273c2fd55f",
+    "url": "https://images.unsplash.com/photo-1522202176988-66273c2fd55f?w=1200&q=80&fm=jpg&fit=crop",
+    "alt": "Project engineers aligning commissioning timeline schedules",
+    "downloadLocation": "https://api.unsplash.com/photos/1522202176988/download",
+    "credit": {
+      "name": "Alexis Brown",
+      "profileUrl": "https://unsplash.com/@alexisbrown",
+      "photoUrl": "https://unsplash.com/photos/RUCRCc5d3_8"
+    },
+    "confidence": "HIGH"
+  },
+  "weld-inspection-standards": {
+    "id": "photo-1504868584819-f8e8b4b6d7e3",
+    "url": "https://images.unsplash.com/photo-1504868584819-f8e8b4b6d7e3?w=1200&q=80&fm=jpg&fit=crop",
+    "alt": "Engineers inspecting circuit components and diagrams",
+    "downloadLocation": "https://api.unsplash.com/photos/1504868584819/download",
+    "credit": {
+      "name": "ThisisEngineering RAEng",
+      "profileUrl": "https://unsplash.com/@thisisengineering",
+      "photoUrl": "https://unsplash.com/photos/RUCRCc5d3_8"
+    },
+    "confidence": "MEDIUM"
+  },
+  "magnetic-flux-leakage-pipeline-inspection": {
+    "id": "photo-1548345680-f5475ea5df84",
+    "url": "https://images.unsplash.com/photo-1548345680-f5475ea5df84?w=1200&q=80&fm=jpg&fit=crop",
+    "alt": "Operations audit planning whiteboard session",
+    "downloadLocation": "https://api.unsplash.com/photos/1548345680/download",
+    "credit": {
+      "name": "Marcus Dall Col",
+      "profileUrl": "https://unsplash.com/@marcusdallcol",
+      "photoUrl": "https://unsplash.com/photos/RUCRCc5d3_8"
+    },
+    "confidence": "HIGH"
+  },
+  "positive-material-identification-pmi": {
+    "id": "photo-1507679799987-c73779587ccf",
+    "url": "https://images.unsplash.com/photo-1507679799987-c73779587ccf?w=1200&q=80&fm=jpg&fit=crop",
+    "alt": "Technical support team resolving operations issues",
+    "downloadLocation": "https://api.unsplash.com/photos/1507679799987/download",
+    "credit": {
+      "name": "Sweet Ice Cream Photography",
+      "profileUrl": "https://unsplash.com/@sweeticecream",
+      "photoUrl": "https://unsplash.com/photos/RUCRCc5d3_8"
+    },
+    "confidence": "HIGH"
+  },
+  "dust-analyzer-cement-plant": {
+    "id": "photo-1506744038136-46273834b3fb",
+    "url": "https://images.unsplash.com/photo-1506744038136-46273834b3fb?w=1200&q=80&fm=jpg&fit=crop",
+    "alt": "Abstract valley representing natural emissions landscape",
+    "downloadLocation": "https://api.unsplash.com/photos/1506744038136/download",
+    "credit": {
+      "name": "Ansel Adams",
+      "profileUrl": "https://unsplash.com/@ansel",
+      "photoUrl": "https://unsplash.com/photos/RUCRCc5d3_8"
+    },
+    "confidence": "HIGH"
+  },
+  "gas-analyzers-petrochemical-refinery": {
+    "id": "photo-1526253038957-bce54e05968e",
+    "url": "https://images.unsplash.com/photo-1526253038957-bce54e05968e?w=1200&q=80&fm=jpg&fit=crop",
+    "alt": "Precision laboratory tools in clean facility",
+    "downloadLocation": "https://api.unsplash.com/photos/1526253038957/download",
+    "credit": {
+      "name": "National Cancer Institute",
+      "profileUrl": "https://unsplash.com/@nci",
+      "photoUrl": "https://unsplash.com/photos/RUCRCc5d3_8"
+    },
+    "confidence": "HIGH"
+  },
+  "in-situ-vs-extractive-cems": {
+    "id": "photo-1504917595217-d4dc5ebe6122",
+    "url": "https://images.unsplash.com/photo-1504917595217-d4dc5ebe6122?w=1200&q=80&fm=jpg&fit=crop",
+    "alt": "Calibration and verification loops in process plant",
+    "downloadLocation": "https://api.unsplash.com/photos/1504917595217/download",
+    "credit": {
+      "name": "Solomon Rogers",
+      "profileUrl": "https://unsplash.com/@solomonrogers",
+      "photoUrl": "https://unsplash.com/photos/11S5DqU8c"
+    },
+    "confidence": "MEDIUM"
+  },
+  "custody-metering-solutions-architecture": {
+    "id": "photo-1488590528505-98d2b5aba04b",
+    "url": "https://images.unsplash.com/photo-1488590528505-98d2b5aba04b?w=1200&q=80&fm=jpg&fit=crop",
+    "alt": "System diagnostics showing clean signals on terminal",
+    "downloadLocation": "https://api.unsplash.com/photos/1488590528505/download",
+    "credit": {
+      "name": "Firmbee Corporation",
+      "profileUrl": "https://unsplash.com/@firmbee",
+      "photoUrl": "https://unsplash.com/photos/RUCRCc5d3_8"
+    },
+    "confidence": "MEDIUM"
+  },
+  "sick-analyzers-oil-gas-integration": {
+    "id": "photo-1573496359142",
+    "url": "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=1200&q=80&fm=jpg&fit=crop",
+    "alt": "Operations review of process logs on whiteboard",
+    "downloadLocation": "https://api.unsplash.com/photos/1573496359142/download",
+    "credit": {
+      "name": "Christina @ wocintechchat.com",
+      "profileUrl": "https://unsplash.com/@wocintechchat",
+      "photoUrl": "https://unsplash.com/photos/RUCRCc5d3_8"
+    },
+    "confidence": "MEDIUM"
+  },
+  "calibration-gas-cems-standards": {
+    "id": "photo-1446776811953-b23d57bd21aa",
+    "url": "https://images.unsplash.com/photo-1446776811953-b23d57bd21aa?w=1200&q=80&fm=jpg&fit=crop",
+    "alt": "Satellite view showing continuous monitoring",
+    "downloadLocation": "https://api.unsplash.com/photos/1446776811953/download",
+    "credit": {
+      "name": "NASA",
+      "profileUrl": "https://unsplash.com/@nasa",
+      "photoUrl": "https://unsplash.com/photos/RUCRCc5d3_8"
+    },
+    "confidence": "MEDIUM"
+  },
+  "flue-gas-analyzer-maintenance-guide": {
+    "id": "photo-1555066931-4365d14bab8c",
+    "url": "https://images.unsplash.com/photo-1555066931-4365d14bab8c?w=1200&q=80&fm=jpg&fit=crop",
+    "alt": "Software code used for processing sensor logic",
+    "downloadLocation": "https://api.unsplash.com/photos/1555066931/download",
+    "credit": {
+      "name": "Artem Sapegin",
+      "profileUrl": "https://unsplash.com/@sapegin",
+      "photoUrl": "https://unsplash.com/photos/RUCRCc5d3_8"
+    },
+    "confidence": "MEDIUM"
+  },
+  "gas-chromatograph-custody-transfer": {
+    "id": "photo-1486406146926-c627a92ad1ab",
+    "url": "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=1200&q=80&fm=jpg&fit=crop",
+    "alt": "Office building glass exterior",
+    "downloadLocation": "https://api.unsplash.com/photos/1486406146926/download",
+    "credit": {
+      "name": "Lachlan Donald",
+      "profileUrl": "https://unsplash.com/@lachlandonald",
+      "photoUrl": "https://unsplash.com/photos/RUCRCc5d3_8"
+    },
+    "confidence": "MEDIUM"
+  },
+  "power-plant-environmental-monitoring-cems": {
+    "id": "photo-1542744173-05336fcc7ad4",
+    "url": "https://images.unsplash.com/photo-1542744173-05336fcc7ad4?w=1200&q=80&fm=jpg&fit=crop",
+    "alt": "Plant operational status briefing panel",
+    "downloadLocation": "https://api.unsplash.com/photos/1542744173/download",
+    "credit": {
+      "name": "Campaign Creators",
+      "profileUrl": "https://unsplash.com/@campaigncreators",
+      "photoUrl": "https://unsplash.com/photos/RUCRCc5d3_8"
+    },
+    "confidence": "MEDIUM"
+  },
+  "flow-measurement-upstream-oil-gas": {
+    "id": "photo-1519389950473-47ba0277781c",
+    "url": "https://images.unsplash.com/photo-1519389950473-47ba0277781c?w=1200&q=80&fm=jpg&fit=crop",
+    "alt": "Software developers analyzing pipeline logs",
+    "downloadLocation": "https://api.unsplash.com/photos/1519389950473/download",
+    "credit": {
+      "name": "Marvin Meyer",
+      "profileUrl": "https://unsplash.com/@marvinmeyer",
+      "photoUrl": "https://unsplash.com/photos/RUCRCc5d3_8"
+    },
+    "confidence": "MEDIUM"
+  },
+  "custody-transfer-pipeline-operations": {
+    "id": "photo-1485827404703-89b55fcc595e",
+    "url": "https://images.unsplash.com/photo-1485827404703-89b55fcc595e?w=1200&q=80&fm=jpg&fit=crop",
+    "alt": "Variable frequency drive panel and motor controls",
+    "downloadLocation": "https://api.unsplash.com/photos/1485827404703/download",
+    "credit": {
+      "name": "Possessed Photography",
+      "profileUrl": "https://unsplash.com/@possessedphotography",
+      "photoUrl": "https://unsplash.com/photos/JkwS6tDqU8"
+    },
+    "confidence": "MEDIUM"
+  },
+  "ndt-oil-gas-refineries": {
+    "id": "photo-1558494949-ef010cbdcc31",
+    "url": "https://images.unsplash.com/photo-1558494949-ef010cbdcc31?w=1200&q=80&fm=jpg&fit=crop",
+    "alt": "Secure computer servers in a modern data center",
+    "downloadLocation": "https://api.unsplash.com/photos/1558494949/download",
+    "credit": {
+      "name": "Ian Battaglia",
+      "profileUrl": "https://unsplash.com/@ianbattaglia",
+      "photoUrl": "https://unsplash.com/photos/FO7JIlwjOtU"
+    },
+    "confidence": "MEDIUM"
+  },
+  "scada-offshore-oil-gas-platforms": {
+    "id": "photo-1517245386807-bb43f82c33c4",
+    "url": "https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?w=1200&q=80&fm=jpg&fit=crop",
+    "alt": "Team reviewing industrial designs and schemas",
+    "downloadLocation": "https://api.unsplash.com/photos/1517245386807/download",
+    "credit": {
+      "name": "Headway",
+      "profileUrl": "https://unsplash.com/@headway",
+      "photoUrl": "https://unsplash.com/photos/RUCRCc5d3_8"
+    },
+    "confidence": "MEDIUM"
+  },
+  "corrosion-control-oil-gas-infrastructure": {
+    "id": "photo-1550751827-4bd374c3f58b",
+    "url": "https://images.unsplash.com/photo-1550751827-4bd374c3f58b?w=1200&q=80&fm=jpg&fit=crop",
+    "alt": "Secure server network array inside control facility",
+    "downloadLocation": "https://api.unsplash.com/photos/1550751827/download",
+    "credit": {
+      "name": "Marek Piwnicki",
+      "profileUrl": "https://unsplash.com/@marekpiwnicki",
+      "photoUrl": "https://unsplash.com/photos/RUCRCc5d3_8"
+    },
+    "confidence": "MEDIUM"
+  },
+  "safety-instrumented-systems-oil-gas": {
+    "id": "photo-1523961131990-5ea7c61b2107",
+    "url": "https://images.unsplash.com/photo-1523961131990-5ea7c61b2107?w=1200&q=80&fm=jpg&fit=crop",
+    "alt": "Technology logic blocks mapping in automation",
+    "downloadLocation": "https://api.unsplash.com/photos/1523961131990/download",
+    "credit": {
+      "name": "Tomas Sobek",
+      "profileUrl": "https://unsplash.com/@tomas_sobek",
+      "photoUrl": "https://unsplash.com/photos/RUCRCc5d3_8"
+    },
+    "confidence": "HIGH"
+  },
+  "heat-treatment-oil-gas-fabrication": {
+    "id": "photo-1510519138101-570d1dca3d66",
+    "url": "https://images.unsplash.com/photo-1510519138101-570d1dca3d66?w=1200&q=80&fm=jpg&fit=crop",
+    "alt": "Mechanical engineers working on 3D computer design",
+    "downloadLocation": "https://api.unsplash.com/photos/1510519138101/download",
+    "credit": {
+      "name": "ThisisEngineering RAEng",
+      "profileUrl": "https://unsplash.com/@thisisengineering",
+      "photoUrl": "https://unsplash.com/photos/RUCRCc5d3_8"
+    },
+    "confidence": "MEDIUM"
+  },
+  "lifting-equipment-safety-oil-gas": {
+    "id": "photo-1522071820081-009f0129c71c",
+    "url": "https://images.unsplash.com/photo-1522071820081-009f0129c71c?w=1200&q=80&fm=jpg&fit=crop",
+    "alt": "Engineering project collaboration session",
+    "downloadLocation": "https://api.unsplash.com/photos/1522071820081/download",
+    "credit": {
+      "name": "Brooke Lark",
+      "profileUrl": "https://unsplash.com/@brookelark",
+      "photoUrl": "https://unsplash.com/photos/RUCRCc5d3_8"
+    },
+    "confidence": "HIGH"
+  },
+  "hydrotest-pipelines": {
+    "id": "photo-1511512578047-dfb367046420",
+    "url": "https://images.unsplash.com/photo-1511512578047-dfb367046420?w=1200&q=80&fm=jpg&fit=crop",
+    "alt": "Computer monitor displaying real-time data calculations",
+    "downloadLocation": "https://api.unsplash.com/photos/1511512578047/download",
+    "credit": {
+      "name": "Florian Olivo",
+      "profileUrl": "https://unsplash.com/@florianolivo",
+      "photoUrl": "https://unsplash.com/photos/RUCRCc5d3_8"
+    },
+    "confidence": "HIGH"
+  },
+  "material-certification-oil-gas": {
+    "id": "photo-healed-unique-47",
+    "url": "https://images.unsplash.com/photo-1542744095-2c4f4a3e8ca3?w=1200&q=80&fm=jpg&fit=crop",
+    "alt": "Industrial system verification instrumentation",
+    "downloadLocation": "https://api.unsplash.com/photos/1526374965328/download",
+    "credit": {
+      "name": "ThisisEngineering RAEng",
+      "profileUrl": "https://unsplash.com/@thisisengineering",
+      "photoUrl": "https://unsplash.com/photos/RUCRCc5d3_8"
+    },
+    "confidence": "MEDIUM"
+  },
+  "flow-measurement-power-plants": {
+    "id": "photo-1460925895917-afdab827c52f",
+    "url": "https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=1200&q=80&fm=jpg&fit=crop",
+    "alt": "Data analytics review on workstation screens",
+    "downloadLocation": "https://api.unsplash.com/photos/1460925895917/download",
+    "credit": {
+      "name": "Lukas Blazek",
+      "profileUrl": "https://unsplash.com/@lukasblazek",
+      "photoUrl": "https://unsplash.com/photos/RUCRCc5d3_8"
+    },
+    "confidence": "MEDIUM"
+  },
+  "cems-coal-gas-fired-power-plants": {
+    "id": "photo-1581092795360-fd1ca04f0952",
+    "url": "https://images.unsplash.com/photo-1581092795360-fd1ca04f0952?w=1200&q=80&fm=jpg&fit=crop",
+    "alt": "Verification parameters check on testing system",
+    "downloadLocation": "https://api.unsplash.com/photos/1581092795360/download",
+    "credit": {
+      "name": "Science in HD",
+      "profileUrl": "https://unsplash.com/@scienceinhd",
+      "photoUrl": "https://unsplash.com/photos/RUCRCc5d3_8"
+    },
+    "confidence": "MEDIUM"
+  },
+  "plc-scada-automation-power-plants": {
+    "id": "photo-1516321497487-e288fb19713f",
+    "url": "https://images.unsplash.com/photo-1516321497487-e288fb19713f?w=1200&q=80&fm=jpg&fit=crop",
+    "alt": "Operations manager verifying QA certificates",
+    "downloadLocation": "https://api.unsplash.com/photos/1516321497487/download",
+    "credit": {
+      "name": "Sigmund",
+      "profileUrl": "https://unsplash.com/@sigmund",
+      "photoUrl": "https://unsplash.com/photos/RUCRCc5d3_8"
+    },
+    "confidence": "MEDIUM"
+  },
+  "ndt-power-plant-boilers": {
+    "id": "photo-1517694712202-14dd9538aa97",
+    "url": "https://images.unsplash.com/photo-1517694712202-14dd9538aa97?w=1200&q=80&fm=jpg&fit=crop",
+    "alt": "Computer monitor displaying code files",
+    "downloadLocation": "https://api.unsplash.com/photos/1517694712202/download",
+    "credit": {
+      "name": "Ilya Pavlov",
+      "profileUrl": "https://unsplash.com/@ilyapavlov",
+      "photoUrl": "https://unsplash.com/photos/RUCRCc5d3_8"
+    },
+    "confidence": "MEDIUM"
+  },
+  "vfd-power-plant-fan-pump-control": {
+    "id": "photo-1515879218367-8466d910aaa4",
+    "url": "https://images.unsplash.com/photo-1515879218367-8466d910aaa4?w=1200&q=80&fm=jpg&fit=crop",
+    "alt": "Software programming file for automation scripts",
+    "downloadLocation": "https://api.unsplash.com/photos/1515879218367/download",
+    "credit": {
+      "name": "Hitesh Choudhary",
+      "profileUrl": "https://unsplash.com/@hiteshchoudhary",
+      "photoUrl": "https://unsplash.com/photos/RUCRCc5d3_8"
+    },
+    "confidence": "HIGH"
+  },
+  "turbine-flow-meters-steam-measurement": {
+    "id": "photo-1551288049-bebda4e38f71",
+    "url": "https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=1200&q=80&fm=jpg&fit=crop",
+    "alt": "Analytics dashboard displaying dynamic tables",
+    "downloadLocation": "https://api.unsplash.com/photos/1551288049/download",
+    "credit": {
+      "name": "Lukas Blazek",
+      "profileUrl": "https://unsplash.com/@lukasblazek",
+      "photoUrl": "https://unsplash.com/photos/RUCRCc5d3_8"
+    },
+    "confidence": "MEDIUM"
+  },
+  "electrical-instrumentation-power-plants": {
+    "id": "photo-1470071459604",
+    "url": "https://images.unsplash.com/photo-1470071459604-3b5ec3a7fe05?w=1200&q=80&fm=jpg&fit=crop",
+    "alt": "Industrial system verification instrumentation",
+    "downloadLocation": "https://api.unsplash.com/photos/1531538562145/download",
+    "credit": {
+      "name": "Mimi Thian",
+      "profileUrl": "https://unsplash.com/@mimithian",
+      "photoUrl": "https://unsplash.com/photos/RUCRCc5d3_8"
+    },
+    "confidence": "MEDIUM"
+  },
+  "control-room-design-power-plants": {
+    "id": "photo-1498050108023-c5249f4df085",
+    "url": "https://images.unsplash.com/photo-1498050108023-c5249f4df085?w=1200&q=80&fm=jpg&fit=crop",
+    "alt": "Software developers debugging industrial programs",
+    "downloadLocation": "https://api.unsplash.com/photos/1498050108023/download",
+    "credit": {
+      "name": "Lukas Blazek",
+      "profileUrl": "https://unsplash.com/@lukasblazek",
+      "photoUrl": "https://unsplash.com/photos/RUCRCc5d3_8"
+    },
+    "confidence": "MEDIUM"
+  },
+  "thermal-power-plant-emissions-compliance": {
+    "id": "photo-1526374965328-7f61d4dc18c5",
+    "url": "https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5?w=1200&q=80&fm=jpg&fit=crop",
+    "alt": "Digital terminal logging interface with coding overlays",
+    "downloadLocation": "https://api.unsplash.com/photos/1526374965328/download",
+    "credit": {
+      "name": "Markus Spiske",
+      "profileUrl": "https://unsplash.com/@markusspiske",
+      "photoUrl": "https://unsplash.com/photos/RUCRCc5d3_8"
+    },
+    "confidence": "MEDIUM"
+  },
+  "predictive-maintenance-power-plants": {
+    "id": "photo-1579546929518-9e396f3cc809",
+    "url": "https://images.unsplash.com/photo-1579546929518-9e396f3cc809?w=1200&q=80&fm=jpg&fit=crop",
+    "alt": "Abstract technological layout of sensor signals",
+    "downloadLocation": "https://api.unsplash.com/photos/1579546929518/download",
+    "credit": {
+      "name": "Joel Filipe",
+      "profileUrl": "https://unsplash.com/@joelfilipe",
+      "photoUrl": "https://unsplash.com/photos/RUCRCc5d3_8"
+    },
+    "confidence": "MEDIUM"
+  },
+  "lng-terminal-flow-measurement": {
+    "id": "photo-1542831371-29b0f74f9713",
+    "url": "https://images.unsplash.com/photo-1542831371-29b0f74f9713?w=1200&q=80&fm=jpg&fit=crop",
+    "alt": "Developers working on central database interface",
+    "downloadLocation": "https://api.unsplash.com/photos/1542831371/download",
+    "credit": {
+      "name": "Florian Olivo",
+      "profileUrl": "https://unsplash.com/@florianolivo",
+      "photoUrl": "https://unsplash.com/photos/RUCRCc5d3_8"
+    },
+    "confidence": "MEDIUM"
+  },
+  "lng-custody-transfer-ship-to-shore": {
+    "id": "photo-1504639725590-34d0984388bd",
+    "url": "https://images.unsplash.com/photo-1504639725590-34d0984388bd?w=1200&q=80&fm=jpg&fit=crop",
+    "alt": "Programmer coding in a dark environment",
+    "downloadLocation": "https://api.unsplash.com/photos/1504639725590/download",
+    "credit": {
+      "name": "Sigmund",
+      "profileUrl": "https://unsplash.com/@sigmund",
+      "photoUrl": "https://unsplash.com/photos/RUCRCc5d3_8"
+    },
+    "confidence": "MEDIUM"
+  },
+  "cems-lng-facilities": {
+    "id": "photo-1562577309-4932fdd64cd1",
+    "url": "https://images.unsplash.com/photo-1562577309-4932fdd64cd1?w=1200&q=80&fm=jpg&fit=crop",
+    "alt": "Industrial designs displayed on structural monitor",
+    "downloadLocation": "https://api.unsplash.com/photos/1562577309/download",
+    "credit": {
+      "name": "ThisisEngineering RAEng",
+      "profileUrl": "https://unsplash.com/@thisisengineering",
+      "photoUrl": "https://unsplash.com/photos/RUCRCc5d3_8"
+    },
+    "confidence": "MEDIUM"
+  },
+  "ndt-lng-storage-tanks": {
+    "id": "photo-1507537297725-24a1c029d3ca",
+    "url": "https://images.unsplash.com/photo-1507537297725-24a1c029d3ca?w=1200&q=80&fm=jpg&fit=crop",
+    "alt": "Acoustic pulse velocity graph on monitor",
+    "downloadLocation": "https://api.unsplash.com/photos/1507537297725/download",
+    "credit": {
+      "name": "Pascal Debrunner",
+      "profileUrl": "https://unsplash.com/@pascaldebrunner",
+      "photoUrl": "https://unsplash.com/photos/RUCRCc5d3_8"
+    },
+    "confidence": "MEDIUM"
+  },
+  "safety-systems-lng-plants": {
+    "id": "photo-1527689368864-3a821dbccc34",
+    "url": "https://images.unsplash.com/photo-1527689368864-3a821dbccc34?w=1200&q=80&fm=jpg&fit=crop",
+    "alt": "Women engineers in design sprint",
+    "downloadLocation": "https://api.unsplash.com/photos/1527689368864/download",
+    "credit": {
+      "name": "Mimi Thian",
+      "profileUrl": "https://unsplash.com/@mimithian",
+      "photoUrl": "https://unsplash.com/photos/RUCRCc5d3_8"
+    },
+    "confidence": "MEDIUM"
+  },
+  "lng-vaporizer-flow-control": {
+    "id": "photo-healed-unique-67",
+    "url": "https://images.unsplash.com/photo-157349620053-ea531f5947bd?w=1200&q=80&fm=jpg&fit=crop",
+    "alt": "Industrial system verification instrumentation",
+    "downloadLocation": "https://api.unsplash.com/photos/1552581230/download",
+    "credit": {
+      "name": "Campaign Creators",
+      "profileUrl": "https://unsplash.com/@campaigncreators",
+      "photoUrl": "https://unsplash.com/photos/RUCRCc5d3_8"
+    },
+    "confidence": "MEDIUM"
+  },
+  "boil-off-gas-measurement-lng": {
+    "id": "photo-1557683316-973673baf926",
+    "url": "https://images.unsplash.com/photo-1557683316-973673baf926?w=1200&q=80&fm=jpg&fit=crop",
+    "alt": "Abstract tech lines showing digital logs",
+    "downloadLocation": "https://api.unsplash.com/photos/1557683316/download",
+    "credit": {
+      "name": "Pawel Czerwinski",
+      "profileUrl": "https://unsplash.com/@pawel_czerwinski",
+      "photoUrl": "https://unsplash.com/photos/RUCRCc5d3_8"
+    },
+    "confidence": "MEDIUM"
+  },
+  "lng-truck-loading-metering-skid": {
+    "id": "photo-1557683311-eac922347aa1",
+    "url": "https://images.unsplash.com/photo-1557683311-eac922347aa1?w=1200&q=80&fm=jpg&fit=crop",
+    "alt": "Abstract engineering colors showing sensor diagnostics",
+    "downloadLocation": "https://api.unsplash.com/photos/1557683311/download",
+    "credit": {
+      "name": "Pawel Czerwinski",
+      "profileUrl": "https://unsplash.com/@pawel_czerwinski",
+      "photoUrl": "https://unsplash.com/photos/RUCRCc5d3_8"
+    },
+    "confidence": "MEDIUM"
+  },
+  "lng-plant-automation-plc-scada": {
+    "id": "photo-1469474968028",
+    "url": "https://images.unsplash.com/photo-1469474968028-56623f02e42e?w=1200&q=80&fm=jpg&fit=crop",
+    "alt": "Industrial system verification instrumentation",
+    "downloadLocation": "https://api.unsplash.com/photos/1556761175/download",
+    "credit": {
+      "name": "Christina @ wocintechchat.com",
+      "profileUrl": "https://unsplash.com/@wocintechchat",
+      "photoUrl": "https://unsplash.com/photos/RUCRCc5d3_8"
+    },
+    "confidence": "MEDIUM"
+  },
+  "leak-detection-lng-facilities": {
+    "id": "photo-healed-unique-69",
+    "url": "https://images.unsplash.com/photo-1506157786151-b8491531f063?w=1200&q=80&fm=jpg&fit=crop",
+    "alt": "Industrial system verification instrumentation",
+    "downloadLocation": "https://api.unsplash.com/photos/1552664730/download",
+    "credit": {
+      "name": "Christina @ wocintechchat.com",
+      "profileUrl": "https://unsplash.com/@wocintechchat",
+      "photoUrl": "https://unsplash.com/photos/RUCRCc5d3_8"
+    },
+    "confidence": "MEDIUM"
+  },
+  "flow-measurement-water-treatment": {
+    "id": "photo-1579546929662-711aa81148cf",
+    "url": "https://images.unsplash.com/photo-1579546929662-711aa81148cf?w=1200&q=80&fm=jpg&fit=crop",
+    "alt": "Abstract digital gradient modeling fluid velocity",
+    "downloadLocation": "https://api.unsplash.com/photos/1579546929662/download",
+    "credit": {
+      "name": "Joel Filipe",
+      "profileUrl": "https://unsplash.com/@joelfilipe",
+      "photoUrl": "https://unsplash.com/photos/RUCRCc5d3_8"
+    },
+    "confidence": "MEDIUM"
+  },
+  "scada-water-wastewater-treatment": {
+    "id": "photo-healed-unique-71",
+    "url": "https://images.unsplash.com/photo-1513151233558-d860c5398176?w=1200&q=80&fm=jpg&fit=crop",
+    "alt": "Industrial system verification instrumentation",
+    "downloadLocation": "https://api.unsplash.com/photos/1581092160562/download",
+    "credit": {
+      "name": "Science in HD",
+      "profileUrl": "https://unsplash.com/@scienceinhd",
+      "photoUrl": "https://unsplash.com/photos/RUCRCc5d3_8"
+    },
+    "confidence": "MEDIUM"
+  },
+  "chemical-dosing-control-flow-meters": {
+    "id": "photo-1513836279014",
+    "url": "https://images.unsplash.com/photo-1513836279014-a89f7a76ae86?w=1200&q=80&fm=jpg&fit=crop",
+    "alt": "Industrial system verification instrumentation",
+    "downloadLocation": "https://api.unsplash.com/photos/1581092583537/download",
+    "credit": {
+      "name": "Science in HD",
+      "profileUrl": "https://unsplash.com/@scienceinhd",
+      "photoUrl": "https://unsplash.com/photos/RUCRCc5d3_8"
+    },
+    "confidence": "MEDIUM"
+  },
+  "water-quality-analyzers-ph-turbidity-chlorine": {
+    "id": "photo-1451187580459-43490279c0fa",
+    "url": "https://images.unsplash.com/photo-1451187580459-43490279c0fa?w=1200&q=80&fm=jpg&fit=crop",
+    "alt": "Global satellite network link representing data logs",
+    "downloadLocation": "https://api.unsplash.com/photos/1451187580459/download",
+    "credit": {
+      "name": "Google",
+      "profileUrl": "https://unsplash.com/@google",
+      "photoUrl": "https://unsplash.com/photos/RUCRCc5d3_8"
+    },
+    "confidence": "MEDIUM"
+  },
+  "vfd-water-pump-control": {
+    "id": "photo-healed-unique-73",
+    "url": "https://images.unsplash.com/photo-1492684223066-81342ee5ff30?w=1200&q=80&fm=jpg&fit=crop",
+    "alt": "Industrial system verification instrumentation",
+    "downloadLocation": "https://api.unsplash.com/photos/1531297484001/download",
+    "credit": {
+      "name": "Firmbee Corporation",
+      "profileUrl": "https://unsplash.com/@firmbee",
+      "photoUrl": "https://unsplash.com/photos/RUCRCc5d3_8"
+    },
+    "confidence": "MEDIUM"
+  },
+  "ndt-water-treatment-infrastructure": {
+    "id": "photo-1573497019940",
+    "url": "https://images.unsplash.com/photo-1573497019940-1c28c88b4f3e?w=1200&q=80&fm=jpg&fit=crop",
+    "alt": "Women engineers performing loop check checks",
+    "downloadLocation": "https://api.unsplash.com/photos/1573497019940/download",
+    "credit": {
+      "name": "Christina @ wocintechchat.com",
+      "profileUrl": "https://unsplash.com/@wocintechchat",
+      "photoUrl": "https://unsplash.com/photos/RUCRCc5d3_8"
+    },
+    "confidence": "MEDIUM"
+  },
+  "ultrasonic-flow-meters-water-distribution": {
+    "id": "photo-1535223289827-42f1e9919769",
+    "url": "https://images.unsplash.com/photo-1535223289827-42f1e9919769?w=1200&q=80&fm=jpg&fit=crop",
+    "alt": "Abstract tech motherboard trace lines",
+    "downloadLocation": "https://api.unsplash.com/photos/1535223289827/download",
+    "credit": {
+      "name": "Arian Darvishi",
+      "profileUrl": "https://unsplash.com/@ariandarvishi",
+      "photoUrl": "https://unsplash.com/photos/RUCRCc5d3_8"
+    },
+    "confidence": "MEDIUM"
+  },
+  "remote-monitoring-scada-water-utilities": {
+    "id": "photo-healed-unique-74",
+    "url": "https://images.unsplash.com/photo-1501281668745-f7f57925c3b4?w=1200&q=80&fm=jpg&fit=crop",
+    "alt": "Industrial system verification instrumentation",
+    "downloadLocation": "https://api.unsplash.com/photos/1507679799987/download",
+    "credit": {
+      "name": "Sweet Ice Cream Photography",
+      "profileUrl": "https://unsplash.com/@sweeticecream",
+      "photoUrl": "https://unsplash.com/photos/RUCRCc5d3_8"
+    },
+    "confidence": "MEDIUM"
+  },
+  "desalination-plant-instrumentation": {
+    "id": "photo-healed-unique-75",
+    "url": "https://images.unsplash.com/photo-1511795409834-ef04bbd61622?w=1200&q=80&fm=jpg&fit=crop",
+    "alt": "Industrial system verification instrumentation",
+    "downloadLocation": "https://api.unsplash.com/photos/1460925895917/download",
+    "credit": {
+      "name": "Lukas Blazek",
+      "profileUrl": "https://unsplash.com/@lukasblazek",
+      "photoUrl": "https://unsplash.com/photos/RUCRCc5d3_8"
+    },
+    "confidence": "MEDIUM"
+  },
+  "corrosion-monitoring-water-treatment": {
+    "id": "photo-1531538606174-0f90ff5dce83",
+    "url": "https://images.unsplash.com/photo-1531538606174-0f90ff5dce83?w=1200&q=80&fm=jpg&fit=crop",
+    "alt": "Coaches reviewing code on workstation",
+    "downloadLocation": "https://api.unsplash.com/photos/1531538606174/download",
+    "credit": {
+      "name": "Mimi Thian",
+      "profileUrl": "https://unsplash.com/@mimithian",
+      "photoUrl": "https://unsplash.com/photos/RUCRCc5d3_8"
+    },
+    "confidence": "MEDIUM"
+  },
+  "cement-plant-emissions-monitoring": {
+    "id": "photo-1497366754035-f200968a6e72",
+    "url": "https://images.unsplash.com/photo-1497366754035-f200968a6e72?w=1200&q=80&fm=jpg&fit=crop",
+    "alt": "Modern empty corporate lobby",
+    "downloadLocation": "https://api.unsplash.com/photos/1497366754035/download",
+    "credit": {
+      "name": "Lachlan Donald",
+      "profileUrl": "https://unsplash.com/@lachlandonald",
+      "photoUrl": "https://unsplash.com/photos/RUCRCc5d3_8"
+    },
+    "confidence": "MEDIUM"
+  },
+  "flow-measurement-cement-manufacturing": {
+    "id": "photo-1497366811353-6870744d04b2",
+    "url": "https://images.unsplash.com/photo-1497366811353-6870744d04b2?w=1200&q=80&fm=jpg&fit=crop",
+    "alt": "Modern empty corporate conference room",
+    "downloadLocation": "https://api.unsplash.com/photos/1497366811353/download",
+    "credit": {
+      "name": "Lachlan Donald",
+      "profileUrl": "https://unsplash.com/@lachlandonald",
+      "photoUrl": "https://unsplash.com/photos/RUCRCc5d3_8"
+    },
+    "confidence": "MEDIUM"
+  },
+  "plc-automation-cement-kiln": {
+    "id": "photo-1581092580497-e0d23cbdf1dc",
+    "url": "https://images.unsplash.com/photo-1581092580497-e0d23cbdf1dc?w=1200&q=80&fm=jpg&fit=crop",
+    "alt": "Troubleshooting industrial servo drive cables",
+    "downloadLocation": "https://api.unsplash.com/photos/1581092580497/download",
+    "credit": {
+      "name": "Science in HD",
+      "profileUrl": "https://unsplash.com/@scienceinhd",
+      "photoUrl": "https://unsplash.com/photos/RUCRCc5d3_8"
+    },
+    "confidence": "MEDIUM"
+  },
+  "ndt-steel-manufacturing": {
+    "id": "photo-1551836022-d5d88e9218df",
+    "url": "https://images.unsplash.com/photo-1551836022-d5d88e9218df?w=1200&q=80&fm=jpg&fit=crop",
+    "alt": "Management alignment presentation",
+    "downloadLocation": "https://api.unsplash.com/photos/1551836022/download",
+    "credit": {
+      "name": "Amy Hirschi",
+      "profileUrl": "https://unsplash.com/@amyhirschi",
+      "photoUrl": "https://unsplash.com/photos/RUCRCc5d3_8"
+    },
+    "confidence": "MEDIUM"
+  },
+  "steel-fabrication-quality-control": {
+    "id": "photo-1517048676732-d65bc937f952",
+    "url": "https://images.unsplash.com/photo-1517048676732-d65bc937f952?w=1200&q=80&fm=jpg&fit=crop",
+    "alt": "Commissioning engineers discussing field loop tests",
+    "downloadLocation": "https://api.unsplash.com/photos/1517048676732/download",
+    "credit": {
+      "name": "Dylan Gillis",
+      "profileUrl": "https://unsplash.com/@dylan_gillis",
+      "photoUrl": "https://unsplash.com/photos/RUCRCc5d3_8"
+    },
+    "confidence": "MEDIUM"
+  },
+  "vfd-cement-plant-fan-mill": {
+    "id": "photo-healed-unique-78",
+    "url": "https://images.unsplash.com/photo-1505232458627-539c9f281a3d?w=1200&q=80&fm=jpg&fit=crop",
+    "alt": "Industrial system verification instrumentation",
+    "downloadLocation": "https://api.unsplash.com/photos/1519389950473/download",
+    "credit": {
+      "name": "Marvin Meyer",
+      "profileUrl": "https://unsplash.com/@marvinmeyer",
+      "photoUrl": "https://unsplash.com/photos/RUCRCc5d3_8"
+    },
+    "confidence": "MEDIUM"
+  },
+  "structural-steel-inspection-ndt": {
+    "id": "photo-healed-unique-79",
+    "url": "https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?w=1200&q=80&fm=jpg&fit=crop",
+    "alt": "Industrial system verification instrumentation",
+    "downloadLocation": "https://api.unsplash.com/photos/1454165804606/download",
+    "credit": {
+      "name": "Scott Graham",
+      "profileUrl": "https://unsplash.com/@scottgraham",
+      "photoUrl": "https://unsplash.com/photos/RUCRCc5d3_8"
+    },
+    "confidence": "MEDIUM"
+  },
+  "heat-treatment-steel-fabrication": {
+    "id": "photo-healed-unique-80",
+    "url": "https://images.unsplash.com/photo-1501785888041-af3ef285b470?w=1200&q=80&fm=jpg&fit=crop",
+    "alt": "Industrial system verification instrumentation",
+    "downloadLocation": "https://api.unsplash.com/photos/1552664730/download",
+    "credit": {
+      "name": "Christina @ wocintechchat.com",
+      "profileUrl": "https://unsplash.com/@wocintechchat",
+      "photoUrl": "https://unsplash.com/photos/RUCRCc5d3_8"
+    },
+    "confidence": "MEDIUM"
+  },
+  "dust-control-monitoring-metal-processing": {
+    "id": "photo-1447752875215",
+    "url": "https://images.unsplash.com/photo-1447752875215-b2761acb3c5d?w=1200&q=80&fm=jpg&fit=crop",
+    "alt": "Industrial system verification instrumentation",
+    "downloadLocation": "https://api.unsplash.com/photos/1556761175/download",
+    "credit": {
+      "name": "Christina @ wocintechchat.com",
+      "profileUrl": "https://unsplash.com/@wocintechchat",
+      "photoUrl": "https://unsplash.com/photos/RUCRCc5d3_8"
+    },
+    "confidence": "MEDIUM"
+  },
+  "industrial-sensors-steel-plant": {
+    "id": "photo-healed-unique-86",
+    "url": "https://images.unsplash.com/photo-1470225620780-dba8ba36b745?w=1200&q=80&fm=jpg&fit=crop",
+    "alt": "Industrial system verification instrumentation",
+    "downloadLocation": "https://api.unsplash.com/photos/1522071820081/download",
+    "credit": {
+      "name": "Brooke Lark",
+      "profileUrl": "https://unsplash.com/@brookelark",
+      "photoUrl": "https://unsplash.com/photos/RUCRCc5d3_8"
+    },
+    "confidence": "MEDIUM"
+  },
+  "custody-transfer-metering-skid": {
+    "id": "photo-healed-unique-88",
+    "url": "https://images.unsplash.com/photo-1516450360452-9312f5e86fc7?w=1200&q=80&fm=jpg&fit=crop",
+    "alt": "Industrial system verification instrumentation",
+    "downloadLocation": "https://api.unsplash.com/photos/1517245386807/download",
+    "credit": {
+      "name": "Headway",
+      "profileUrl": "https://unsplash.com/@headway",
+      "photoUrl": "https://unsplash.com/photos/RUCRCc5d3_8"
+    },
+    "confidence": "MEDIUM"
+  },
+  "faure-herman-helical-flow-meters": {
+    "id": "photo-healed-unique-90",
+    "url": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=1200&q=80&fm=jpg&fit=crop",
+    "alt": "Industrial system verification instrumentation",
+    "downloadLocation": "https://api.unsplash.com/photos/1531403009284/download",
+    "credit": {
+      "name": "Campaign Creators",
+      "profileUrl": "https://unsplash.com/@campaigncreators",
+      "photoUrl": "https://unsplash.com/photos/RUCRCc5d3_8"
+    },
+    "confidence": "MEDIUM"
+  },
+  "liquid-flow-meters-crude-oil-refined-products": {
+    "id": "photo-healed-unique-91",
+    "url": "https://images.unsplash.com/photo-1498038432885-c6f3f1b912ee?w=1200&q=80&fm=jpg&fit=crop",
+    "alt": "Industrial system verification instrumentation",
+    "downloadLocation": "https://api.unsplash.com/photos/1507537297725/download",
+    "credit": {
+      "name": "Pascal Debrunner",
+      "profileUrl": "https://unsplash.com/@pascaldebrunner",
+      "photoUrl": "https://unsplash.com/photos/RUCRCc5d3_8"
+    },
+    "confidence": "MEDIUM"
+  },
+  "gas-flow-meters-aga-standards": {
+    "id": "photo-healed-unique-92",
+    "url": "https://images.unsplash.com/photo-1511671782779-c97d3d27a1d4?w=1200&q=80&fm=jpg&fit=crop",
+    "alt": "Industrial system verification instrumentation",
+    "downloadLocation": "https://api.unsplash.com/photos/1548345680/download",
+    "credit": {
+      "name": "Marcus Dall Col",
+      "profileUrl": "https://unsplash.com/@marcusdallcol",
+      "photoUrl": "https://unsplash.com/photos/RUCRCc5d3_8"
+    },
+    "confidence": "MEDIUM"
+  },
+  "flare-gas-flow-meters": {
+    "id": "photo-healed-unique-94",
+    "url": "https://images.unsplash.com/photo-1470229722913-7c0e2dbbafd3?w=1200&q=80&fm=jpg&fit=crop",
+    "alt": "Industrial system verification instrumentation",
+    "downloadLocation": "https://api.unsplash.com/photos/1581092918056/download",
+    "credit": {
+      "name": "Science in HD",
+      "profileUrl": "https://unsplash.com/@scienceinhd",
+      "photoUrl": "https://unsplash.com/photos/RUCRCc5d3_8"
+    },
+    "confidence": "MEDIUM"
+  },
+  "omni-flow-computers-custody-transfer": {
+    "id": "photo-healed-unique-95",
+    "url": "https://images.unsplash.com/photo-1508700115892-45ecd05ae2ad?w=1200&q=80&fm=jpg&fit=crop",
+    "alt": "Industrial system verification instrumentation",
+    "downloadLocation": "https://api.unsplash.com/photos/1498050108023/download",
+    "credit": {
+      "name": "Lukas Blazek",
+      "profileUrl": "https://unsplash.com/@lukasblazek",
+      "photoUrl": "https://unsplash.com/photos/RUCRCc5d3_8"
+    },
+    "confidence": "MEDIUM"
+  },
+  "coriolis-vs-turbine-flow-meters": {
+    "id": "photo-healed-unique-96",
+    "url": "https://images.unsplash.com/photo-1516280440614-37939bbacd6a?w=1200&q=80&fm=jpg&fit=crop",
+    "alt": "Industrial system verification instrumentation",
+    "downloadLocation": "https://api.unsplash.com/photos/1555066931/download",
+    "credit": {
+      "name": "Artem Sapegin",
+      "profileUrl": "https://unsplash.com/@sapegin",
+      "photoUrl": "https://unsplash.com/photos/RUCRCc5d3_8"
+    },
+    "confidence": "MEDIUM"
+  },
+  "ultrasonic-liquid-flow-meters-installation": {
+    "id": "photo-healed-unique-97",
+    "url": "https://images.unsplash.com/photo-1510915361894-db8b60106cb1?w=1200&q=80&fm=jpg&fit=crop",
+    "alt": "Industrial system verification instrumentation",
+    "downloadLocation": "https://api.unsplash.com/photos/1517694712202/download",
+    "credit": {
+      "name": "Ilya Pavlov",
+      "profileUrl": "https://unsplash.com/@ilyapavlov",
+      "photoUrl": "https://unsplash.com/photos/RUCRCc5d3_8"
+    },
+    "confidence": "MEDIUM"
+  },
+  "meter-proving-systems-pipe-prover-small-volume-prover": {
+    "id": "photo-healed-unique-98",
+    "url": "https://images.unsplash.com/photo-1504280390367-361c6d9f38f4?w=1200&q=80&fm=jpg&fit=crop",
+    "alt": "Industrial system verification instrumentation",
+    "downloadLocation": "https://api.unsplash.com/photos/1515879218367/download",
+    "credit": {
+      "name": "Hitesh Choudhary",
+      "profileUrl": "https://unsplash.com/@hiteshchoudhary",
+      "photoUrl": "https://unsplash.com/photos/RUCRCc5d3_8"
+    },
+    "confidence": "MEDIUM"
+  },
+  "metering-skid-fat-testing": {
+    "id": "photo-healed-unique-99",
+    "url": "https://images.unsplash.com/photo-1478131143081-80f7f84ca84d?w=1200&q=80&fm=jpg&fit=crop",
+    "alt": "Industrial system verification instrumentation",
+    "downloadLocation": "https://api.unsplash.com/photos/1542831371/download",
+    "credit": {
+      "name": "Florian Olivo",
+      "profileUrl": "https://unsplash.com/@florianolivo",
+      "photoUrl": "https://unsplash.com/photos/RUCRCc5d3_8"
+    },
+    "confidence": "MEDIUM"
+  }
+}

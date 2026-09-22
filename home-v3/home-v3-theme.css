@@ -1,0 +1,74 @@
+/* ── Home V3: V5 motif utility classes (Industrial Teal theme) ──
+   Maps v5's red accent to v3's teal primary.
+   Colors reference var(--primary, #17707E) and var(--color-brand-red-dark, #0F5260)
+   which resolve to home-v3's existing palette set by ThemeWrapper.
+*/
+
+/* ─── Primary button — teal gradient (mirrors v3's "Contact Us" button style) ─── */
+.v3-btn-primary {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  color: #ffffff;
+  font-weight: 700;
+  font-size: 0.85rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  text-decoration: none;
+  padding: 12px 24px;
+  border-radius: 6px;
+  background: linear-gradient(
+    180deg,
+    var(--primary, #17707E) 0%,
+    var(--color-brand-red-dark, #0F5260) 100%
+  );
+  /* No border — gradient provides depth; mismatched border-radius + border creates hard edge artifact */
+  box-shadow: 0 4px 20px rgba(23, 112, 126, 0.35);
+  transition: filter 0.2s ease, transform 0.2s ease, box-shadow 0.2s ease, gap 0.2s ease;
+  overflow: hidden;
+}
+.v3-btn-primary:hover {
+  filter: brightness(1.12);
+  transform: translateY(-2px);
+  box-shadow: 0 8px 28px rgba(23, 112, 126, 0.50);
+}
+
+/* ─── Secondary ghost button — for dark sections ─── */
+.v3-btn-secondary {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  color: var(--soft-light, #F4F9F9);
+  font-weight: 600;
+  font-size: 0.85rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  text-decoration: none;
+  padding: 12px 24px;
+  border-radius: 6px;
+  background-color: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  transition: all 0.2s ease;
+  backdrop-filter: blur(4px);
+}
+.v3-btn-secondary:hover {
+  border-color: rgba(255, 255, 255, 0.30);
+  color: #ffffff;
+  background-color: rgba(255, 255, 255, 0.10);
+  transform: translateY(-2px);
+}
+
+/* ─── Teal corner dot indicator (replaces v5's red square) ─── */
+.v3-corner-indicator {
+  position: absolute;
+  top: 12px;
+  right: 12px;
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background-color: var(--primary, #17707E);
+  pointer-events: none;
+  transition: transform 0.2s ease, opacity 0.2s ease;
+}
