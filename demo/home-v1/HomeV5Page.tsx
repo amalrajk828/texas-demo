@@ -86,6 +86,13 @@ const LIGHT_GREY_VARS: Record<string, string> = {
   "--color-brand-red-light": "#e4b4b4",
 };
 
+const VISION_VARS: Record<string, string> = {
+  ...DARK_GREY_VARS,
+  "--color-brand-red":       "#8a302f",
+  "--color-brand-red-dark":  "#6e2624",
+  "--color-brand-red-light": "#e4b4b4",
+};
+
 export default function HomeV5Page() {
   return (
     <ThemeWrapper vars={VARS}>
@@ -110,7 +117,7 @@ export default function HomeV5Page() {
           <GreySolutions />
         </ThemeWrapper>
 
-        <ThemeWrapper vars={DARK_GREY_VARS}>
+        <ThemeWrapper vars={VISION_VARS}>
           <GreyVision />
         </ThemeWrapper>
 
