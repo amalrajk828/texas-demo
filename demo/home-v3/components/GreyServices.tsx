@@ -178,7 +178,7 @@ export default function GreyServices() {
         <div className="text-center mt-12">
           <Link
             href="/services/"
-            className="inline-flex items-center gap-2 font-semibold text-[15px] px-8 py-4 rounded-xl border transition-all duration-200 hover:scale-105"
+            className="inline-flex items-center gap-2 font-semibold text-[15px] px-8 py-4 rounded-full border transition-all duration-200 hover:scale-105"
             style={{
               borderColor: "rgba(255, 255, 255, 0.15)",
               color: "var(--g-heading, #F4F9F9)",

@@ -142,7 +142,7 @@ export default function GreySolutions() {
         <div className="text-center mt-12 pt-8 border-t" style={{ borderColor: "var(--g-border, rgba(0,0,0,0.07))" }}>
           <Link
             href="/partners/"
-            className="inline-flex items-center gap-2 font-mono text-[12px] font-bold uppercase tracking-[0.12em] px-8 py-3.5 rounded-md border transition-all duration-200 hover:gap-3 hover:scale-105"
+            className="inline-flex items-center gap-2 font-mono text-[12px] font-bold uppercase tracking-[0.12em] px-8 py-3.5 rounded-full border transition-all duration-200 hover:gap-3 hover:scale-105"
             style={{
               borderColor: "var(--border, #D5DEDE)",
               color: "var(--g-heading, #26303A)",

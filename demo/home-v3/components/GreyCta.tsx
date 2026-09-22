@@ -74,7 +74,7 @@ export default function GreyCta() {
         <div className="flex flex-wrap gap-4 justify-center">
           <Link
             href="/contacts/"
-            className="inline-flex items-center gap-2 font-bold text-[14.5px] px-8 py-3.5 rounded-md transition-all duration-200 hover:-translate-y-0.5 hover:shadow-lg"
+            className="inline-flex items-center gap-2 font-bold text-[14.5px] px-8 py-3.5 rounded-full transition-all duration-200 hover:-translate-y-0.5 hover:shadow-lg"
             style={{
               background: "var(--primary, #17707E)",
               color: "#FFFFFF",
@@ -86,7 +86,7 @@ export default function GreyCta() {
           </Link>
           <Link
             href="/services/"
-            className="inline-flex items-center gap-2 font-semibold text-[14.5px] px-8 py-3.5 rounded-md border transition-all duration-200 hover:-translate-y-0.5"
+            className="inline-flex items-center gap-2 font-semibold text-[14.5px] px-8 py-3.5 rounded-full border transition-all duration-200 hover:-translate-y-0.5"
             style={{
               borderColor: "var(--border, #D5DEDE)",
               color: "var(--g-heading, #26303A)",

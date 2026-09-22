@@ -326,7 +326,7 @@ export default function GreyWhatWeDo() {
                 </Link>
                 <Link
                   href="/services/"
-                  className="inline-flex items-center gap-2 font-bold text-[14px] px-6 py-3.5 rounded-md border transition-all duration-200 hover:gap-3 hover:scale-105"
+                  className="inline-flex items-center gap-2 font-bold text-[14px] px-6 py-3.5 rounded-full border transition-all duration-200 hover:gap-3 hover:scale-105"
                   style={{
                     borderColor: "var(--border, #D5DEDE)",
                     color: "var(--g-heading, #26303A)",

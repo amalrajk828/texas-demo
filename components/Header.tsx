@@ -768,7 +768,7 @@ export default function Header() {
                   isHomeV5 || isHomeV2 || isHomeV4
                     ? `rounded-full text-white font-bold hover:brightness-110 hover:-translate-y-0.5 ${isHomeV4 ? "hover:shadow-[0_8px_24px_rgba(232,147,90,0.45)]" : "shadow-lg shadow-[#E53935]/35"}`
                     : isHomeV3
-                    ? "rounded-md text-white font-bold hover:brightness-110 hover:-translate-y-0.5 hover:shadow-[0_8px_28px_rgba(23,112,126,0.50)]"
+                    ? "rounded-full text-white font-bold hover:brightness-110 hover:-translate-y-0.5 hover:shadow-[0_8px_28px_rgba(23,112,126,0.50)]"
                     : "rounded-xl bg-[#E53935] hover:bg-[#B71C1C] text-white shadow-lg shadow-[#E53935]/20 font-medium"
                 }`}
               >
@@ -944,7 +944,7 @@ export default function Header() {
                         isHomeV5 || isHomeV2 || isHomeV4
                           ? `rounded-full text-white font-bold hover:brightness-110 ${isHomeV4 ? "" : "shadow-lg shadow-[#E53935]/35"}`
                           : isHomeV3
-                          ? "rounded-md text-white font-bold hover:brightness-110"
+                          ? "rounded-full text-white font-bold hover:brightness-110"
                           : "rounded-xl bg-[#E53935] hover:bg-[#B71C1C] text-white font-medium"
                       }`}
                     >

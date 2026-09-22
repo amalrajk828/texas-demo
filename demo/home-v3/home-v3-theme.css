@@ -17,7 +17,7 @@
   text-transform: uppercase;
   text-decoration: none;
   padding: 12px 24px;
-  border-radius: 6px;
+  border-radius: 9999px !important;
   background: linear-gradient(
     180deg,
     var(--primary, #17707E) 0%,
@@ -47,7 +47,7 @@
   text-transform: uppercase;
   text-decoration: none;
   padding: 12px 24px;
-  border-radius: 6px;
+  border-radius: 9999px !important;
   background-color: rgba(255, 255, 255, 0.05);
   border: 1px solid rgba(255, 255, 255, 0.15);
   transition: all 0.2s ease;

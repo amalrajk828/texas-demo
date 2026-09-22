@@ -226,7 +226,6 @@ export default function HomeV3Hero() {
             <Link
               href="/service/flow-measurement-solutions/"
               className="v3-btn-primary"
-              style={{ borderRadius: 8 }}
             >
               Know More
               <ArrowRight className="w-4 h-4" />
@@ -234,7 +233,6 @@ export default function HomeV3Hero() {
             <Link
               href="/products/"
               className="v3-btn-secondary"
-              style={{ borderRadius: 8 }}
             >
               Our Products
             </Link>
