@@ -73,9 +73,9 @@ export default function GreyVision() {
       <div ref={ref} className="relative max-w-7xl mx-auto px-4 sm:px-6 z-10">
         <div className="text-center mb-16">
           <motion.div initial={{ opacity: 0, y: 12 }} animate={inView ? { opacity: 1, y: 0 } : {}} transition={{ duration: 0.6 }} className="inline-flex items-center gap-3 mb-5">
-            <span className="w-6 h-px" style={{ background: "#0E7490" }} />
-            <span className="text-[11px] font-bold tracking-[4px] uppercase" style={{ color: "#0E7490" }}>Our Vision</span>
-            <span className="w-6 h-px" style={{ background: "#0E7490" }} />
+            <span className="w-6 h-px" style={{ background: "#8a302f" }} />
+            <span className="text-[11px] font-bold tracking-[4px] uppercase" style={{ color: "#8a302f" }}>Our Vision</span>
+            <span className="w-6 h-px" style={{ background: "#8a302f" }} />
           </motion.div>
           <motion.h2 initial={{ opacity: 0, y: 24 }} animate={inView ? { opacity: 1, y: 0 } : {}} transition={{ duration: 0.9, delay: 0.1 }}
             className="text-[clamp(2.2rem,4.5vw,3.4rem)] font-black leading-[1.15] max-w-2xl mx-auto tracking-tight text-[#111827]">

@@ -44,7 +44,7 @@ export default function GreyTeam() {
 
             <div
               className="absolute -top-5 -left-3 lg:-left-3 rounded-xl px-4 py-3 shadow-lg fade-up"
-              style={{ background: "var(--color-brand-red)", boxShadow: "0 8px 24px color-mix(in srgb, var(--color-brand-red) 35%, transparent)" }}>
+              style={{ background: "#8a302f", boxShadow: "0 8px 24px rgba(138, 48, 47, 0.35)" }}>
               <p className="text-white text-[10px] font-bold tracking-[2px] uppercase leading-none">Our Team</p>
               <p className="text-white/70 text-[11px] mt-1 leading-none">Est. 2008</p>
             </div>
@@ -53,8 +53,8 @@ export default function GreyTeam() {
           <div className="lg:pl-4">
             <div className="fade-up d1">
               <div className="flex items-center gap-3 mb-4">
-                <span className="w-10 h-[3px] rounded-full" style={{ background: "#0891B2" }} />
-                <span className="text-[11px] font-bold tracking-[3.5px] uppercase" style={{ color: "#0891B2" }}>Our Team</span>
+                <span className="w-10 h-[3px] rounded-full" style={{ background: "#8a302f" }} />
+                <span className="text-[11px] font-bold tracking-[3.5px] uppercase" style={{ color: "#8a302f" }}>Our Team</span>
               </div>
             </div>
             <div className="fade-up d1">
@@ -100,9 +100,9 @@ export default function GreyTeam() {
             <div className="fade-up d3">
               <div className="flex flex-wrap items-center gap-4">
                 <Link href="/about-us/" className="inline-flex items-center gap-2 text-white font-bold px-7 py-4 rounded-xl text-[15px] hover:-translate-y-0.5 transition-all"
-                  style={{ background: "var(--color-brand-red)", boxShadow: "0 4px 20px color-mix(in srgb, var(--color-brand-red) 35%, transparent)" }}
-                  onMouseEnter={e => (e.currentTarget.style.background = "var(--color-brand-red-dark)")}
-                  onMouseLeave={e => (e.currentTarget.style.background = "var(--color-brand-red)")}>
+                  style={{ background: "#8a302f", boxShadow: "0 4px 20px rgba(138, 48, 47, 0.35)" }}
+                  onMouseEnter={e => (e.currentTarget.style.background = "#6e2624")}
+                  onMouseLeave={e => (e.currentTarget.style.background = "#8a302f")}>
                   Know More <ArrowRight className="w-4 h-4" />
                 </Link>
               </div>

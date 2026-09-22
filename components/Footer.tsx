@@ -1,5 +1,8 @@
+"use client";
+
 import Link from "next/link";
 import Image from "next/image";
+import { usePathname } from "next/navigation";
 import { Mail, Phone, MapPin, LayoutGrid, ArrowRight } from "lucide-react";
 import { SITE_EMAIL } from "@/lib/site";
 import { ALL_PARTNERS } from "@/lib/partners";
@@ -75,13 +78,20 @@ function FooterTrack() {
 }
 
 export default function Footer() {
-  return (
-    <footer style={{ background: "#0A0C11" }}>
+  const pathname = usePathname();
+  const isHomeV5 = pathname?.startsWith("/demo/home-v1");
 
-      {/* CTA strip — gradient red */}
+  return (
+    <footer style={{ background: isHomeV5 ? "#0a0a08" : "#0A0C11" }}>
+
+      {/* CTA strip — gradient red or v5 theme */}
       <div
         className="relative overflow-hidden"
-        style={{ background: "linear-gradient(135deg, #B71C1C 0%, #E53935 50%, #C62828 100%)" }}
+        style={{
+          background: isHomeV5
+            ? "linear-gradient(135deg, #832429 0%, #9c2b31 100%)"
+            : "linear-gradient(135deg, #B71C1C 0%, #E53935 50%, #C62828 100%)",
+        }}
       >
         <div className="absolute inset-0 opacity-[0.07]" style={{ backgroundImage: "url(\"data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)'/%3E%3C/svg%3E\")", backgroundSize: "200px" }} />
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 py-10 flex flex-col sm:flex-row items-center justify-between gap-5">
@@ -95,9 +105,13 @@ export default function Footer() {
           </div>
           <Link
             href="/contacts/"
-            className="shrink-0 inline-flex items-center gap-2 bg-white text-[#E53935] font-bold text-[15px] px-8 py-3.5 rounded-xl hover:bg-white/90 transition-all hover:-translate-y-0.5 shadow-lg shadow-black/20"
+            className={`shrink-0 inline-flex items-center gap-2 bg-white font-bold text-[14px] px-8 py-3.5 transition-all hover:-translate-y-0.5 shadow-lg shadow-black/20 ${
+              isHomeV5
+                ? "rounded-[5px] uppercase tracking-[0.12em] font-mono text-[#832429] hover:bg-white/95"
+                : "rounded-xl text-[#E53935] hover:bg-white/90"
+            }`}
           >
-            Get in Touch <ArrowRight className="w-4 h-4" />
+            <span>Get in Touch</span> <ArrowRight className="w-4 h-4" />
           </Link>
         </div>
       </div>
@@ -349,7 +363,7 @@ export default function Footer() {
             TEXAS TECHNICAL SERVICE COMPANY W.L.L. © {new Date().getFullYear()}. All Rights Reserved.
           </p>
           <div className="flex items-center gap-4">
-            <span className="text-[11px] font-medium" style={{ color: "#FF5252" }}>ISO 9001 · ISO 14001 · ISO 45001 · UASL · Accurate Certified</span>
+            <span className="text-[11px] font-medium" style={{ color: isHomeV5 ? "#832429" : "#FF5252" }}>ISO 9001 · ISO 14001 · ISO 45001 · UASL · Accurate Certified</span>
           </div>
         </div>
       </div>

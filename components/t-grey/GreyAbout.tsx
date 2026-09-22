@@ -31,9 +31,9 @@ export default function GreyAbout() {
         <div ref={ref} className="flex flex-col gap-10">
           <div className="max-w-2xl mx-auto text-center">
             <div className="flex items-center justify-center gap-3 mb-4">
-              <span className="w-6 h-px" style={{ background: "#0E7490" }} />
-              <span className="text-[11px] font-bold tracking-[4px] uppercase" style={{ color: "#0E7490" }}>About Texas Technical Services</span>
-              <span className="w-6 h-px" style={{ background: "#0E7490" }} />
+              <span className="w-6 h-px" style={{ background: "#8a302f" }} />
+              <span className="text-[11px] font-bold tracking-[4px] uppercase" style={{ color: "#8a302f" }}>About Texas Technical Services</span>
+              <span className="w-6 h-px" style={{ background: "#8a302f" }} />
             </div>
             <h2 className="text-3xl sm:text-4xl font-black tracking-tight mb-4 text-[#111827]">
               Why was Texas Technical Services established in 2008?
