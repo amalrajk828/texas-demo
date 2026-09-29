@@ -1,12 +1,9 @@
 import type { Metadata } from "next";
 import { Plus_Jakarta_Sans, Inter, JetBrains_Mono } from "next/font/google";
 import Script from "next/script";
-import ScrollObserver from "@/components/ScrollObserver";
-import Header from "@/components/Header";
 import Footer from "@/components/Footer";
-import SmoothScroll from "@/components/SmoothScroll";
+import SiteFrame, { LegacyStyles, ProductionOnly } from "@/components/SiteFrame";
 import { SiteNavigationJsonLd } from "@/components/schema/SiteNavigationJsonLd";
-import WhatsAppButton from "@/components/WhatsAppButton";
 import { SITE_URL } from "@/lib/site";
 import "./globals.css";
 
@@ -81,6 +78,8 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
       <head>
         <meta charSet="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+        <LegacyStyles />
+        <ProductionOnly>
         <link rel="preconnect" href="https://cdnjs.cloudflare.com" crossOrigin="anonymous" />
         <link rel="preconnect" href="https://cdn.jsdelivr.net" crossOrigin="anonymous" />
         <Script
@@ -185,6 +184,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
           }}
         />
         <SiteNavigationJsonLd />
+        </ProductionOnly>
       </head>
       <body className="overflow-x-hidden">
         <a
@@ -193,23 +193,15 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         >
           Skip to main content
         </a>
-        <noscript>
+        <ProductionOnly><noscript>
           <iframe
             src={`https://www.googletagmanager.com/ns.html?id=${GTM}`}
             height="0"
             width="0"
             style={{ display: "none", visibility: "hidden" }}
           />
-        </noscript>
-        <ScrollObserver />
-        <SmoothScroll>
-          <Header />
-          <main id="main-content">
-            {children}
-          </main>
-          <Footer />
-        </SmoothScroll>
-        <WhatsAppButton />
+        </noscript></ProductionOnly>
+        <SiteFrame footer={<Footer />}>{children}</SiteFrame>
       </body>
     </html>
   );
