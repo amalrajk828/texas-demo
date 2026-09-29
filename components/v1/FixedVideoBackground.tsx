@@ -51,7 +51,7 @@ function ScrubbedVideo() {
 export default function FixedVideoBackground() {
   const [mounted, setMounted] = useState(false);
   const [activeSection, setActiveSection] = useState(0);
-  const isMobile = useMediaQuery("(max-width: 767px)");
+  const isMobile = useMediaQuery("(max-width: 1023px)");
   const reducedMotion = useReducedMotion();
 
   useEffect(() => setMounted(true), []);
@@ -80,23 +80,25 @@ export default function FixedVideoBackground() {
     return () => observer.disconnect();
   }, []);
 
+  // On mobile (<1024px) or reduced motion, strictly show static poster image (never fail video)
   const posterOnly = !mounted || isMobile || reducedMotion;
-  const [posterLoaded, setPosterLoaded] = useState(false);
 
   return (
     <>
-      <div className="v1-fixed-background" aria-hidden="true" style={{ backgroundColor: "#0f1115" }}>
-        <div className="v1-fixed-media" style={{ backgroundColor: "#0f1115" }}>
+      <div className="v1-fixed-background" aria-hidden="true" style={{ backgroundColor: "#ffffff" }}>
+        <div className="v1-fixed-media" style={{ backgroundColor: "#ffffff" }}>
+          {/* Static poster image: always present, full-viewport, object-cover, guaranteed visible on every mobile device */}
           <Image
             src={HERO_POSTER_PATH}
             alt=""
             fill
+            priority
             sizes="100vw"
-            onLoad={() => setPosterLoaded(true)}
-            className={`v1-fixed-poster ${posterLoaded ? "is-loaded" : ""}`}
+            className="v1-fixed-poster is-loaded"
             style={{
-              opacity: posterLoaded ? 1 : 0,
-              transition: "opacity 600ms ease",
+              objectFit: "cover",
+              objectPosition: "center",
+              opacity: 1,
             }}
           />
           {!posterOnly && <ScrubbedVideo />}
@@ -107,7 +109,6 @@ export default function FixedVideoBackground() {
             "--fixed-overlay": HERO_OVERLAY_COLOR,
             "--fixed-tint": HERO_TINT_COLOR,
             opacity: OVERLAY_OPACITY[activeSection] ?? 1,
-            backgroundColor: "rgba(15, 17, 21, 0.75)",
           } as CSSProperties}
         />
         <PipelineFlowLines />

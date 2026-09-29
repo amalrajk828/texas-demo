@@ -161,11 +161,11 @@ export default function HeroSlider({
         className="hero-slider-panel relative w-full overflow-hidden"
         style={{
           borderRadius: 24,
-          border: "1px solid rgba(255,255,255,0.08)",
-          backgroundColor: "#0f1115",
-          background: "#0f1115",
-          boxShadow: "0 24px 64px rgba(0,0,0,0.65), 0 0 1px rgba(255,255,255,0.12) inset",
-          minHeight: "clamp(340px, 46vh, 520px)",
+          border: "1px solid rgba(58, 110, 165, 0.16)",
+          backgroundColor: "#ffffff",
+          background: "#ffffff",
+          boxShadow: "0 20px 48px rgba(20, 50, 90, 0.10), 0 0 1px rgba(58, 110, 165, 0.12) inset",
+          minHeight: "clamp(220px, 30vh, 520px)",
           height: "100%",
         }}
       >
@@ -179,18 +179,18 @@ export default function HeroSlider({
             height: 7,
             borderRadius: "50%",
             background: "#8a302f",
-            boxShadow: "0 0 10px rgba(138,48,47,0.8)",
+            boxShadow: "0 0 10px rgba(138,48,47,0.6)",
           }}
         />
 
         {/* Slides stack with cross-fade and 1.04→1 scale */}
-        <div className="absolute inset-0 w-full h-full overflow-hidden bg-[#0f1115]" aria-live="polite">
+        <div className="absolute inset-0 w-full h-full overflow-hidden bg-[#ffffff]" aria-live="polite">
           {slides.map((s, idx) => {
             const isActive = idx === current;
             return (
               <div
                 key={s.src}
-                className="hero-slider-slide absolute inset-0 w-full h-full overflow-hidden bg-[#0f1115]"
+                className="hero-slider-slide absolute inset-0 w-full h-full overflow-hidden bg-[#ffffff]"
                 style={{
                   borderRadius: 24,
                   opacity: isActive ? 1 : 0,
@@ -240,37 +240,38 @@ export default function HeroSlider({
           })}
         </div>
 
-        {/* Gradient Scrims: Overlap left edge gradient so text is readable over image */}
+        {/* Gradient Scrims: Overlap left edge gradient for depth */}
         <div
           className="absolute inset-0 pointer-events-none z-10"
           style={{
             background:
-              "linear-gradient(90deg, rgba(15,17,21,0.92) 0%, rgba(15,17,21,0.40) 25%, transparent 60%)",
+              "linear-gradient(90deg, rgba(255,255,255,0.70) 0%, rgba(238,243,248,0.25) 25%, transparent 60%)",
           }}
         />
         <div
           className="absolute inset-0 pointer-events-none z-10"
           style={{
             background:
-              "linear-gradient(180deg, rgba(15,17,21,0.55) 0%, transparent 35%, rgba(15,17,21,0.75) 100%)",
+              "linear-gradient(180deg, rgba(20,50,90,0.15) 0%, transparent 35%, rgba(20,50,90,0.30) 100%)",
           }}
         />
 
         {/* ── Top-Left: Tag chip ── */}
         <div className="absolute top-4 left-4 z-20">
           <span
-            className="inline-flex items-center gap-1.5 text-white/95"
+            className="inline-flex items-center gap-1.5"
             style={{
-              background: "rgba(15,17,21,0.85)",
-              border: "1px solid rgba(255,255,255,0.12)",
+              background: "rgba(255,255,255,0.94)",
+              border: "1px solid rgba(58,110,165,0.16)",
               fontSize: "0.68rem",
               fontFamily: "var(--font-mono, monospace)",
-              fontWeight: 600,
+              fontWeight: 700,
               letterSpacing: "1.6px",
               textTransform: "uppercase",
               padding: "5px 12px",
               borderRadius: 8,
-              boxShadow: "0 4px 16px rgba(0,0,0,0.5)",
+              color: "#16202b",
+              boxShadow: "0 4px 16px rgba(20,50,90,0.08)",
             }}
           >
             {activeSlide.type === "video" && (
@@ -280,14 +281,14 @@ export default function HeroSlider({
           </span>
         </div>
 
-        {/* ── Top-Right: Certification badges strip (dark rounded strip) ── */}
+        {/* ── Top-Right: Certification badges strip ── */}
         <div className="absolute top-4 right-8 z-20 hidden sm:flex items-center">
           <div
             className="flex items-center gap-2 px-3 py-1.5 rounded-full"
             style={{
-              background: "rgba(15,17,21,0.80)",
-              border: "1px solid rgba(255,255,255,0.10)",
-              boxShadow: "0 4px 20px rgba(0,0,0,0.5)",
+              background: "rgba(255,255,255,0.92)",
+              border: "1px solid rgba(58,110,165,0.16)",
+              boxShadow: "0 4px 20px rgba(20,50,90,0.08)",
             }}
           >
             {HERO_CERT_BADGES.map((b) => (
@@ -295,7 +296,7 @@ export default function HeroSlider({
                 key={b.src}
                 href="/certifications/"
                 title={b.alt}
-                className="relative w-6 h-6 sm:w-7 sm:h-7 block opacity-75 hover:opacity-100 transition-opacity"
+                className="relative w-6 h-6 sm:w-7 sm:h-7 block opacity-85 hover:opacity-100 transition-opacity"
               >
                 <Image
                   src={b.src}
@@ -330,21 +331,21 @@ export default function HeroSlider({
                 className="group relative flex items-center gap-2.5 p-1.5 rounded-xl text-left cursor-pointer transition-all duration-200"
                 style={{
                   background: isActive
-                    ? "rgba(138,48,47,0.22)"
-                    : "rgba(15,17,21,0.78)",
+                    ? "#ffffff"
+                    : "rgba(255,255,255,0.90)",
                   border: isActive
-                    ? "1px solid #8a302f"
-                    : "1px solid rgba(255,255,255,0.08)",
+                    ? "1.5px solid #8a302f"
+                    : "1px solid rgba(58,110,165,0.14)",
                   boxShadow: isActive
-                    ? "0 0 16px rgba(138,48,47,0.45)"
-                    : "0 2px 8px rgba(0,0,0,0.4)",
+                    ? "0 4px 16px rgba(138,48,47,0.22)"
+                    : "0 2px 8px rgba(20,50,90,0.06)",
                   backdropFilter: "none",
                 }}
               >
                 {/* Thumbnail mini preview */}
                 <div
                   className="relative w-11 h-8 rounded-lg overflow-hidden shrink-0"
-                  style={{ border: "1px solid rgba(255,255,255,0.1)" }}
+                  style={{ border: "1px solid rgba(58,110,165,0.14)" }}
                 >
                   <Image
                     src={s.poster || s.src}
@@ -364,8 +365,8 @@ export default function HeroSlider({
                   <span
                     className="block text-[10px] font-mono tracking-wider truncate leading-tight transition-colors"
                     style={{
-                      color: isActive ? "#ffffff" : "rgba(255,255,255,0.65)",
-                      fontWeight: isActive ? 600 : 400,
+                      color: isActive ? "#8a302f" : "#16202b",
+                      fontWeight: isActive ? 700 : 500,
                     }}
                   >
                     {s.tag}
@@ -376,13 +377,13 @@ export default function HeroSlider({
           })}
         </div>
 
-        {/* ── Bottom-Right: Floating Dark Pill with Prev, Counter, and Next ── */}
+        {/* ── Bottom-Right: Floating Pill with Prev, Counter, and Next ── */}
         <div
-          className="absolute bottom-4 right-4 z-20 flex items-center gap-1.5 px-3 py-1.5 rounded-full"
+          className="absolute bottom-3 right-3 sm:bottom-4 sm:right-4 z-20 flex items-center gap-1 sm:gap-1.5 px-2.5 sm:px-3 py-1 rounded-full"
           style={{
-            background: "rgba(15,17,21,0.85)",
-            border: "1px solid rgba(255,255,255,0.12)",
-            boxShadow: "0 6px 20px rgba(0,0,0,0.5)",
+            background: "rgba(255,255,255,0.94)",
+            border: "1px solid rgba(58,110,165,0.16)",
+            boxShadow: "0 6px 20px rgba(20,50,90,0.10)",
           }}
         >
           {/* Previous button */}
@@ -390,16 +391,16 @@ export default function HeroSlider({
             type="button"
             onClick={prev}
             aria-label="Previous slide"
-            className="p-1 rounded-full text-white/60 hover:text-white transition-colors cursor-pointer"
+            className="min-w-[40px] min-h-[44px] flex items-center justify-center rounded-full text-[#4a5568] hover:text-[#16202b] transition-colors cursor-pointer"
             style={{ background: "transparent", border: "none" }}
           >
-            <ArrowLeft className="w-3.5 h-3.5" />
+            <ArrowLeft className="w-4 h-4" />
           </button>
 
           {/* Counter "01 / 04" */}
           <span
-            className="font-mono text-[11px] px-2 tracking-widest text-white/90 select-none"
-            style={{ borderLeft: "1px solid rgba(255,255,255,0.1)", borderRight: "1px solid rgba(255,255,255,0.1)" }}
+            className="font-mono text-[11px] px-2 tracking-widest text-[#16202b] select-none font-semibold"
+            style={{ borderLeft: "1px solid rgba(58,110,165,0.16)", borderRight: "1px solid rgba(58,110,165,0.16)" }}
           >
             {String(current + 1).padStart(2, "0")} / {String(total).padStart(2, "0")}
           </span>
@@ -409,7 +410,7 @@ export default function HeroSlider({
             type="button"
             onClick={next}
             aria-label="Next slide"
-            className="inline-flex items-center gap-1 px-1.5 py-0.5 rounded text-[11px] font-mono font-bold tracking-wider text-white/70 hover:text-[#e4b4b4] transition-colors cursor-pointer"
+            className="min-h-[44px] inline-flex items-center gap-1 px-2 py-1 rounded text-[11px] font-mono font-bold tracking-wider text-[#16202b] hover:text-[#8a302f] transition-colors cursor-pointer"
             style={{ background: "transparent", border: "none" }}
           >
             <span>NEXT</span>
@@ -418,9 +419,9 @@ export default function HeroSlider({
         </div>
       </div>
 
-      {/* ── Mobile / Tablet (<1024px): Horizontal Thumbnails Row ── */}
+      {/* ── Tablet (640px-1023px): Horizontal Thumbnails Row ── */}
       <div
-        className="flex lg:hidden items-center gap-2 mt-3 overflow-x-auto pb-1"
+        className="hidden sm:flex lg:hidden items-center gap-2 mt-3 overflow-x-auto pb-1"
         role="tablist"
         aria-label="Slider thumbnails mobile"
       >
@@ -437,11 +438,11 @@ export default function HeroSlider({
               onClick={() => goTo(i)}
               className="flex items-center gap-2 px-2.5 py-1.5 rounded-xl shrink-0 cursor-pointer transition-all"
               style={{
-                background: isActive ? "rgba(138,48,47,0.25)" : "rgba(15,17,21,0.70)",
+                background: isActive ? "#ffffff" : "rgba(255,255,255,0.90)",
                 border: isActive
-                  ? "1px solid #8a302f"
-                  : "1px solid rgba(255,255,255,0.08)",
-                boxShadow: isActive ? "0 0 12px rgba(138,48,47,0.4)" : "none",
+                  ? "1.5px solid #8a302f"
+                  : "1px solid rgba(58,110,165,0.14)",
+                boxShadow: isActive ? "0 0 12px rgba(138,48,47,0.20)" : "none",
               }}
             >
               <div className="relative w-6 h-5 rounded overflow-hidden shrink-0">

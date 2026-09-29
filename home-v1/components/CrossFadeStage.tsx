@@ -65,9 +65,15 @@ function smoothstep(min: number, max: number, value: number): number {
  * Plateau: opacity = 1 while |d| <= PLATEAU (0.10).
  * Sum of visible layers is never > 1.0; no overlapping text layers!
  */
-export function computeOpacity(active: number, index: number): number {
+export function computeOpacity(active: number, index: number, isLastSection = false): number {
   const d = active - index;
   const absD = Math.abs(d);
+
+  // If this is the last section and user has scrolled into the footer (d > 0),
+  // hold full opacity so the section stays solid as the static footer rolls over it
+  if (isLastSection && d > 0) {
+    return 1;
+  }
 
   // Plateau: full opacity while |d| <= PLATEAU
   if (absD <= PLATEAU) {
@@ -92,15 +98,18 @@ export function computeOpacity(active: number, index: number): number {
 function SectionLayer({
   section,
   index,
+  totalSections,
   smoothActive,
   isReducedMotion,
 }: {
   section: StageSectionDef;
   index: number;
+  totalSections: number;
   smoothActive: MotionValue<number>;
   isReducedMotion: boolean;
 }) {
   const divRef = useRef<HTMLDivElement>(null);
+  const isLastSection = index === totalSections - 1;
 
   // Derive opacity from the smoothed active float
   const opacity = useTransform(smoothActive, (active) => {
@@ -108,7 +117,7 @@ function SectionLayer({
       // Quick boundary switch in reduced motion
       return Math.abs(active - index) <= 0.5 ? 1 : 0;
     }
-    return computeOpacity(active, index);
+    return computeOpacity(active, index, isLastSection);
   });
 
   // Micro-scale: 0.985 when faded, 1 when fully visible — NO translateY
@@ -122,10 +131,10 @@ function SectionLayer({
     return smoothActive.on("change", (active) => {
       const op = isReducedMotion
         ? (Math.abs(active - index) <= 0.5 ? 1 : 0)
-        : computeOpacity(active, index);
+        : computeOpacity(active, index, isLastSection);
 
-      // Section with highest opacity (nearest center) is the active winner
-      const isWinner = Math.round(active) === index;
+      // Section with highest opacity (or last section held for footer) is the active winner
+      const isWinner = isLastSection && active >= index ? true : Math.round(active) === index;
       const isVisible = op >= 0.02;
 
       // Pointer events: only the active winner gets auto
@@ -137,8 +146,18 @@ function SectionLayer({
       // Inert & accessibility: only winner exposed to assistive tech
       (el as any).inert = !isWinner;
       el.setAttribute("aria-hidden", isWinner ? "false" : "true");
+      el.setAttribute("data-stage-active", isWinner ? "true" : "false");
+
+      if (el.dataset.prevWinner !== String(isWinner)) {
+        el.dataset.prevWinner = String(isWinner);
+        window.dispatchEvent(
+          new CustomEvent("v1-section-visibility", {
+            detail: { id: section.id, index, isWinner, isVisible: op >= 0.15 },
+          })
+        );
+      }
     });
-  }, [smoothActive, index, isReducedMotion]);
+  }, [smoothActive, index, isReducedMotion, isLastSection, section.id]);
 
   if (isReducedMotion) {
     // Static stacked layout fallback
@@ -211,7 +230,7 @@ function DotNav({
     /* Mobile/Tablet: slim horizontal progress bar at bottom */
     <div
       aria-hidden="true"
-      className="fixed bottom-0 left-0 right-0 h-[3px] bg-white/10 z-[60] lg:hidden"
+      className="fixed bottom-0 left-0 right-0 h-[3px] bg-[rgba(58,110,165,0.18)] z-[60] lg:hidden"
     >
       <motion.div
         className="h-full bg-[#8a302f]"
@@ -254,7 +273,7 @@ function DotNav({
             left: "50%",
             transform: "translateX(-50%)",
             width: 1,
-            background: "rgba(255, 255, 255, 0.08)",
+            background: "rgba(58, 110, 165, 0.22)",
             pointerEvents: "none",
             zIndex: 1,
           }}
@@ -274,7 +293,7 @@ function DotNav({
               width: 10,
               borderRadius: 9999,
               background: "#8a302f",
-              boxShadow: "0 0 8px rgba(138, 48, 47, 0.6)",
+              boxShadow: "0 0 10px rgba(138, 48, 47, 0.45)",
               pointerEvents: "none",
               zIndex: 3,
               marginTop: useTransform(pillHeight, (h) => 10 - h / 2),
@@ -314,17 +333,17 @@ function DotButton({
   const isCurrent = useTransform(smoothActive, (active) => Math.round(active) === index);
   const activeDotSize = useTransform(isCurrent, (curr) => (curr ? 10 : 6));
   const activeDotBg = useTransform(isCurrent, (curr) =>
-    curr ? "#8a302f" : "rgba(255, 255, 255, 0.25)"
+    curr ? "#8a302f" : "rgba(58, 110, 165, 0.35)"
   );
   const activeDotGlow = useTransform(isCurrent, (curr) =>
-    curr ? "0 0 8px rgba(138, 48, 47, 0.6)" : "none"
+    curr ? "0 0 8px rgba(138, 48, 47, 0.5)" : "none"
   );
 
   return (
     <button
       onClick={onClick}
       aria-label={`Go to ${label} section`}
-      className="group relative flex items-center justify-center rounded-full outline-none focus-visible:ring-2 focus-visible:ring-[#c0483f] focus-visible:ring-offset-2 focus-visible:ring-offset-[#080A0E]"
+      className="group relative flex items-center justify-center rounded-full outline-none focus-visible:ring-2 focus-visible:ring-[#8a302f] focus-visible:ring-offset-2 focus-visible:ring-offset-[#ffffff]"
       style={{
         width: 20,
         height: 20,
@@ -338,10 +357,10 @@ function DotButton({
       {/* Hover tooltip label (desktop) */}
       <span
         aria-hidden="true"
-        className="pointer-events-none absolute right-[calc(100%+10px)] top-1/2 -translate-y-1/2 px-2.5 py-1 rounded bg-[#0b0d12]/95 border border-white/10 text-[11px] font-medium tracking-wide text-white/90 whitespace-nowrap shadow-xl opacity-0 group-hover:opacity-100 group-focus-visible:opacity-100 transition-all duration-200 translate-x-1 group-hover:translate-x-0 group-focus-visible:translate-x-0"
+        className="pointer-events-none absolute right-[calc(100%+10px)] top-1/2 -translate-y-1/2 px-2.5 py-1 rounded bg-[#16202b]/95 border border-white/10 text-[11px] font-medium tracking-wide text-white whitespace-nowrap shadow-xl opacity-0 group-hover:opacity-100 group-focus-visible:opacity-100 transition-all duration-200 translate-x-1 group-hover:translate-x-0 group-focus-visible:translate-x-0"
         style={{
           backdropFilter: "blur(8px)",
-          boxShadow: "0 4px 16px rgba(0,0,0,0.6)",
+          boxShadow: "0 4px 16px rgba(20,50,90,0.25)",
         }}
       >
         {label}
@@ -369,7 +388,7 @@ function DotButton({
             width: 6,
             height: 6,
             borderRadius: "50%",
-            background: "rgba(255, 255, 255, 0.25)",
+            background: "rgba(58, 110, 165, 0.35)",
             zIndex: 2,
           }}
         />
@@ -461,6 +480,13 @@ export function CrossFadeStage({
   const triggerSnap = useCallback(() => {
     if (reduced || isSnappingRef.current || touchActiveRef.current) return;
 
+    const currentY = window.scrollY;
+    const sectionPx = getSectionPx();
+    const maxSectionY = (N - 1) * sectionPx;
+
+    // If user has scrolled into or past the last section (entering the static footer), do NOT snap back!
+    if (currentY >= maxSectionY - 10) return;
+
     const raw = rawActive.get();
     const baseIndex = Math.floor(raw);
     const frac = raw - baseIndex;
@@ -476,7 +502,7 @@ export function CrossFadeStage({
     targetIndex = Math.max(0, Math.min(N - 1, targetIndex));
 
     executeSnapToSection(targetIndex);
-  }, [reduced, rawActive, N, executeSnapToSection]);
+  }, [reduced, rawActive, N, executeSnapToSection, getSectionPx]);
 
   // Sync scroll → rawActive and handle idle snapping
   useEffect(() => {
@@ -647,6 +673,7 @@ export function CrossFadeStage({
             key={s.id}
             section={s}
             index={i}
+            totalSections={N}
             smoothActive={smoothActive}
             isReducedMotion
           />
@@ -665,7 +692,7 @@ export function CrossFadeStage({
 
   return (
     <>
-      {/* Invisible scroll track with fallback CSS scroll-snap points */}
+      {/* Invisible scroll track providing document scroll height */}
       <div
         aria-hidden="true"
         className="cross-fade-track"
@@ -675,23 +702,8 @@ export function CrossFadeStage({
           visibility: "hidden",
           position: "relative",
           zIndex: -1,
-          scrollSnapType: "y proximity",
         }}
-      >
-        {Array.from({ length: N }).map((_, i) => (
-          <div
-            key={i}
-            style={{
-              position: "absolute",
-              top: `${(i / Math.max(1, N - 1)) * 100}%`,
-              height: 1,
-              width: 1,
-              scrollSnapAlign: "center",
-              pointerEvents: "none",
-            }}
-          />
-        ))}
-      </div>
+      />
 
       {/* Fixed stage — all sections layered here */}
       <div
@@ -708,6 +720,7 @@ export function CrossFadeStage({
             key={s.id}
             section={s}
             index={i}
+            totalSections={N}
             smoothActive={smoothActive}
             isReducedMotion={false}
           />

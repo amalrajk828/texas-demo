@@ -23,7 +23,7 @@ function Track() {
               width={220}
               height={80}
               quality={100}
-              className="object-contain h-14 sm:h-16 w-auto brightness-0 invert opacity-60 group-hover:opacity-100 group-hover:scale-105 transition-all duration-300"
+              className="object-contain h-14 sm:h-16 w-auto brightness-0 opacity-70 group-hover:opacity-100 group-hover:scale-105 transition-all duration-300"
             />
           </Link>
         </div>
@@ -37,16 +37,16 @@ export default function PartnersTicker() {
     <section
       className="relative py-8 overflow-hidden select-none border-y"
       style={{
-        background: "var(--bg-alt, #070503)",
-        borderColor: "var(--border-default, rgba(255, 255, 255, 0.08))",
+        background: "var(--bg-alt, #eef3f8)",
+        borderColor: "var(--border-default, rgba(58, 110, 165, 0.12))",
       }}
     >
       <div className="flex justify-center mb-6">
         <Link
           href="/partners/"
-          className="inline-flex items-center gap-2.5 px-3.5 py-1.5 rounded-[4px] bg-white/[0.04] border border-white/[0.08] text-[11px] font-mono font-medium text-white/80 tracking-[2px] uppercase hover:border-[var(--border-active)] transition-all"
+          className="inline-flex items-center gap-2.5 px-3.5 py-1.5 rounded-full bg-white border border-[rgba(58,110,165,0.14)] shadow-sm text-[11px] font-mono font-medium text-[#16202b] tracking-[2px] uppercase hover:border-[#8a302f] transition-all"
         >
-          <span className="w-1.5 h-1.5 rounded-none bg-[var(--accent)]" />
+          <span className="w-1.5 h-1.5 rounded-full bg-[var(--accent)]" />
           <span>Trusted Technology Partners</span>
         </Link>
       </div>

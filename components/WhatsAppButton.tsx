@@ -44,15 +44,15 @@ export default function WhatsAppButton() {
 
   return (
     <div
-      className={`fixed bottom-6 right-6 z-[999] transition-all duration-500 ${
+      className={`fixed bottom-6 right-6 z-[999] transition-all duration-500 max-lg:bottom-[calc(5.75rem+env(safe-area-inset-bottom,0px))] max-lg:right-3 ${
         visible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-4 pointer-events-none"
       }`}
     >
       {/* Tooltip */}
       <div className="absolute bottom-full right-0 mb-3 opacity-0 group-hover:opacity-100 transition-opacity duration-200 pointer-events-none">
-        <div className="bg-white text-gray-800 text-sm font-medium px-3 py-2 rounded-lg shadow-lg whitespace-nowrap border border-gray-100">
+        <div className="bg-white text-[#16202b] text-sm font-medium px-3 py-2 rounded-lg shadow-xl whitespace-nowrap border border-[rgba(58,110,165,0.14)]" style={{ boxShadow: "0 8px 24px rgba(20,50,90,0.12)" }}>
           Chat with us on WhatsApp
-          <div className="absolute top-full right-5 -mt-1 w-2 h-2 bg-white border-r border-b border-gray-100 rotate-45" />
+          <div className="absolute top-full right-5 -mt-1 w-2 h-2 bg-white border-r border-b border-[rgba(58,110,165,0.14)] rotate-45" />
         </div>
       </div>
 
@@ -62,11 +62,11 @@ export default function WhatsAppButton() {
         target="_blank"
         rel="noopener noreferrer"
         aria-label="Chat with us on WhatsApp"
-        className="group flex items-center justify-center w-14 h-14 rounded-full shadow-lg hover:shadow-2xl hover:scale-110 transition-all duration-200"
+        className="group flex items-center justify-center w-14 h-14 max-lg:w-12 max-lg:h-12 rounded-full shadow-lg hover:shadow-2xl hover:scale-110 transition-all duration-200"
       >
         <svg
           viewBox="0 0 175.216 175.552"
-          className="w-14 h-14"
+          className="w-14 h-14 max-lg:w-12 max-lg:h-12"
           aria-hidden="true"
         >
           <defs>

@@ -8,7 +8,7 @@
   height: 100vh;
   overflow: hidden;
   pointer-events: none;
-  background: #0f1115;
+  background: #ffffff;
 }
 
 .v1-fixed-media,
@@ -47,8 +47,8 @@
   inset: 0;
   z-index: 10;
   background:
-    linear-gradient(90deg, var(--fixed-overlay) 0%, rgba(15, 17, 21, 0.54) 58%, rgba(15, 17, 21, 0.48) 100%),
-    linear-gradient(145deg, color-mix(in srgb, var(--fixed-tint) 28%, transparent), transparent 52%, color-mix(in srgb, var(--fixed-tint) 16%, transparent));
+    linear-gradient(135deg, rgba(255, 255, 255, 0.75) 0%, rgba(238, 243, 248, 0.65) 50%, rgba(220, 232, 245, 0.50) 100%),
+    linear-gradient(90deg, rgba(255, 255, 255, 0.85) 0%, rgba(238, 243, 248, 0.60) 60%, rgba(255, 255, 255, 0.40) 100%);
   transition: opacity 600ms ease;
 }
 
@@ -59,19 +59,19 @@
   width: 100%;
   height: 100%;
   fill: none;
-  stroke: rgba(255, 255, 255, 0.14);
+  stroke: rgba(58, 110, 165, 0.12);
   stroke-width: 1.2;
   stroke-dasharray: 10 18;
   animation: v1-flow 11s linear infinite;
 }
 
 .v1-fixed-flow-lines path:nth-child(2) {
-  stroke: rgba(138, 48, 47, 0.62);
+  stroke: rgba(138, 48, 47, 0.35);
   stroke-width: 1.6;
 }
 
 .v1-fixed-flow-lines path:nth-child(3) {
-  stroke: rgba(255, 255, 255, 0.08);
+  stroke: rgba(58, 110, 165, 0.08);
 }
 
 .v1-page-content {
@@ -113,10 +113,10 @@
   gap: 8px;
   margin-bottom: 26px;
   padding: 4.5px 12px;
-  border: 1px solid rgba(255, 255, 255, 0.11);
+  border: 1px solid rgba(58, 110, 165, 0.14);
   border-radius: 999px;
-  background: rgba(15, 17, 21, 0.55);
-  color: rgba(255, 255, 255, 0.84);
+  background: rgba(255, 255, 255, 0.92);
+  color: #4a5568;
   font-family: var(--font-mono, monospace);
   font-size: 0.69rem;
   font-weight: 700;
@@ -124,6 +124,7 @@
   text-transform: uppercase;
   backdrop-filter: blur(12px);
   -webkit-backdrop-filter: blur(12px);
+  box-shadow: 0 2px 10px rgba(20, 50, 90, 0.05);
 }
 
 .hero-v5-badge-dot {
@@ -131,8 +132,8 @@
   height: 6px;
   flex: none;
   border-radius: 50%;
-  background: #c95652;
-  box-shadow: 0 0 12px rgba(201, 86, 82, 0.7);
+  background: #8a302f;
+  box-shadow: 0 0 10px rgba(138, 48, 47, 0.45);
 }
 
 .hero-v5-heading {
@@ -141,7 +142,7 @@
   gap: 0 0.24em;
   max-width: 900px;
   margin: 0 0 24px;
-  color: #fff;
+  color: #16202b;
   font-size: clamp(3.1rem, 6vw, 6.4rem);
   font-weight: 800;
   line-height: 0.98;
@@ -159,7 +160,7 @@
 .hero-v5-paragraph {
   max-width: 620px;
   margin: 0 0 32px;
-  color: rgba(255, 255, 255, 0.74);
+  color: #4a5568;
   font-size: 1rem;
   line-height: 1.7;
 }
@@ -180,20 +181,29 @@
   gap: 10px;
   padding: 0 24px;
   border-radius: 8px;
-  color: #fff;
   font-size: 0.82rem;
   font-weight: 700;
   letter-spacing: 0.08em;
   text-decoration: none;
   text-transform: uppercase;
-  transition: background-color 180ms ease, border-color 180ms ease, transform 180ms ease;
+  transition: background-color 180ms ease, border-color 180ms ease, transform 180ms ease, box-shadow 180ms ease;
 }
 
-.hero-v5-btn-primary { border: 1px solid rgba(255,255,255,.16); background: #8a302f; }
-.hero-v5-btn-secondary { border: 1px solid rgba(255,255,255,.22); background: rgba(15,17,21,.42); backdrop-filter: blur(10px); }
+.hero-v5-btn-primary {
+  border: 1px solid transparent;
+  background: #8a302f;
+  color: #fff;
+  box-shadow: 0 4px 16px rgba(138, 48, 47, 0.30);
+}
+.hero-v5-btn-secondary {
+  border: 1px solid rgba(58, 110, 165, 0.16);
+  background: #ffffff;
+  color: #16202b;
+  box-shadow: 0 2px 8px rgba(20, 50, 90, 0.04);
+}
 .hero-v5-btn-primary:hover, .hero-v5-btn-secondary:hover { transform: translateY(-2px); }
-.hero-v5-btn-primary:hover { background: #a13d3b; }
-.hero-v5-btn-secondary:hover { border-color: rgba(255,255,255,.42); background: rgba(255,255,255,.1); }
+.hero-v5-btn-primary:hover { background: #c0483f; box-shadow: 0 8px 24px rgba(138, 48, 47, 0.40); }
+.hero-v5-btn-secondary:hover { border-color: #8a302f; color: #8a302f; background: rgba(138, 48, 47, 0.05); box-shadow: 0 4px 14px rgba(20, 50, 90, 0.08); }
 .hero-v5-btn-primary svg { width: 17px; height: 17px; }
 
 .hero-v5-stats {
@@ -201,15 +211,15 @@
   grid-template-columns: repeat(4, minmax(0, 1fr));
   max-width: 690px;
   padding-top: 20px;
-  border-top: 1px solid rgba(255,255,255,.14);
+  border-top: 1px solid rgba(58, 110, 165, 0.12);
 }
 
-.hero-v5-stat-item { display: grid; gap: 3px; padding-left: 16px; border-left: 1px solid rgba(255,255,255,.14); }
+.hero-v5-stat-item { display: grid; gap: 3px; padding-left: 16px; border-left: 1px solid rgba(58, 110, 165, 0.12); }
 .hero-v5-stat-item:first-child { padding-left: 0; border-left: 0; }
 .hero-v5-stat-prefix, .hero-v5-stat-label { font-family: var(--font-mono, monospace); font-size: .64rem; letter-spacing: .1em; text-transform: uppercase; }
-.hero-v5-stat-prefix { color: #cf6561; font-weight: 700; }
-.hero-v5-stat-num { color: #fff; font-size: 1.45rem; font-weight: 800; line-height: 1; }
-.hero-v5-stat-label { color: rgba(255,255,255,.54); }
+.hero-v5-stat-prefix { color: #8a302f; font-weight: 700; }
+.hero-v5-stat-num { color: #16202b; font-size: 1.45rem; font-weight: 800; line-height: 1; }
+.hero-v5-stat-label { color: #8a94a3; }
 
 .hero-v5-scroll-indicator {
   position: absolute;
@@ -218,7 +228,7 @@
   display: flex;
   align-items: center;
   gap: 9px;
-  color: rgba(255,255,255,.66);
+  color: #8a94a3;
   font-family: var(--font-mono, monospace);
   font-size: .64rem;
   font-weight: 700;
@@ -239,23 +249,21 @@
 
 .v1-section-reveal section {
   overflow: hidden;
-  border: 1px solid rgba(255,255,255,.12) !important;
+  border: 1px solid rgba(58, 110, 165, 0.12) !important;
   border-radius: 16px;
-  box-shadow: 0 22px 60px rgba(0,0,0,.18);
-  backdrop-filter: blur(24px);
-  -webkit-backdrop-filter: blur(24px);
+  box-shadow: 0 10px 30px rgba(20, 50, 90, 0.06);
+  background: #ffffff !important;
 }
 
-.v1-section-light section { background: rgba(239,243,248,.78) !important; }
-.v1-section-dark section { background: rgba(8,10,14,.66) !important; }
+.v1-section-light section { background: #ffffff !important; }
+.v1-section-dark section { background: #eef3f8 !important; }
 .v1-section-light section + section, .v1-section-dark section + section { margin-top: 12px; }
 
 .v1-section-reveal > div.overflow-hidden {
-  border: 1px solid rgba(255,255,255,.1);
+  border: 1px solid rgba(58, 110, 165, 0.12);
   border-radius: 16px;
-  background: rgba(8,10,14,.72) !important;
-  backdrop-filter: blur(24px);
-  -webkit-backdrop-filter: blur(24px);
+  background: #ffffff !important;
+  box-shadow: 0 8px 24px rgba(20, 50, 90, 0.06);
 }
 
 /* ── Pinned Scene layout ──────────────────────────────────────── */
@@ -301,12 +309,98 @@
 :root {
   --section-pt: calc(var(--navbar-height, 80px) + 26px);
   --section-pb: clamp(1.5rem, 3.5vh, 2.5rem);
+  /* Bottom dock safe-area height for mobile layout */
+  --mobile-dock-h: calc(70px + env(safe-area-inset-bottom, 0px));
 }
 
-@media (max-width: 767px) {
+/* ══ MOBILE/TABLET OVERRIDES (< 1024px) — Desktop ≥1024px is UNTOUCHED ══ */
+@media (max-width: 1023px) {
   :root {
-    --section-pt: calc(var(--navbar-height, 68px) + 20px);
-    --section-pb: 1.5rem;
+    --section-pt: clamp(10px, 1.8vh, 16px);
+    --section-pb: calc(var(--mobile-dock-h) + 12px);
+  }
+
+  /* Force poster visible on mobile (video may not autoplay) */
+  .v1-fixed-poster {
+    opacity: 1 !important;
+    display: block !important;
+  }
+
+  /* Prevent any section from creating horizontal scroll */
+  .dark-stage-section,
+  .dark-stage-inner {
+    overflow-x: hidden;
+  }
+
+  /* ── Hero section mobile: stack column, scale fonts ── */
+  /* The flex-col / lg:flex-row is already in JSX; these handle font/spacing overrides */
+  #hero-home-v1 h1 {
+    font-size: clamp(1.55rem, 7.5vw, 2.6rem) !important;
+    line-height: 1.1 !important;
+    margin-bottom: 0.6rem !important;
+  }
+  #hero-home-v1 p {
+    font-size: 0.8rem !important;
+    margin-bottom: 0.75rem !important;
+  }
+  /* Hero slider: on mobile limit its height so it doesn't overflow */
+  #hero-home-v1 .hero-v1-slider-wrapper {
+    max-height: 38vh;
+  }
+
+  /* ── WhatWeDoSectionA: prevent fanned cards from bleeding off-screen ── */
+  /* Desktop fan uses absolute GSAP transforms; mobile uses separate <640px stack (sm:hidden) */
+  /* Tablet 640-1023: the hidden sm:flex row is visible — clip overflow */
+  .whatwedo-a-fan-container {
+    overflow: visible !important;
+    max-width: 100%;
+  }
+
+  /* ── WhatWeDoSectionB: image collage overflow guard ── */
+  .whatwedo-b-collage-wrapper {
+    overflow: hidden;
+  }
+
+  /* ── GreySolutions: stacked cards, no negative overlap on mobile ── */
+  .solutions-card-stack-mobile {
+    margin-top: 1rem !important;
+  }
+
+  /* ── GreyCta: reduce extreme vertical padding for fixed viewport ── */
+  .grey-cta-section {
+    padding-top: 1.25rem !important;
+    padding-bottom: 1rem !important;
+  }
+
+  /* ── GreyAbout: reduce vertical padding ── */
+  .grey-about-section {
+    padding-top: 0.5rem !important;
+    padding-bottom: 0.5rem !important;
+  }
+
+  /* ── GreyVision: reduce padding ── */
+  .grey-vision-section {
+    padding-top: 0.5rem !important;
+    padding-bottom: 0.5rem !important;
+  }
+
+  /* Progress dots: hide on mobile (bottom bar takes the nav role) */
+  .v1-progress-dots {
+    display: none;
+  }
+}
+
+/* ══ PHONE-SIZE ONLY OVERRIDES (< 640px) ══ */
+@media (max-width: 639px) {
+  /* Hero title scaling for phones */
+  #hero-home-v1 h1 {
+    font-size: clamp(1.4rem, 6.5vw, 2.2rem) !important;
+  }
+
+  /* WhatWeDoSectionA mobile cards: tighten the overlap and reduce rotation */
+  /* These are applied via the .flex.sm\:hidden stack — ensure no width overflow */
+  .whatwedo-mobile-card {
+    max-width: 100%;
   }
 }
 
@@ -336,7 +430,7 @@ html:has(.cross-fade-track) {
 }
 
 @media (max-width: 767px) {
-  .hero-v5-content { width: min(100% - 32px, 1400px); padding-top: calc(var(--navbar-height, 92px) + 24px); }
+  .hero-v5-content { width: min(100% - 32px, 1400px); padding-top: clamp(8px, 2vh, 16px); }
   .hero-v5-copy { width: 100%; }
   .hero-v5-heading { font-size: clamp(2.4rem, 12vw, 4rem); }
   .hero-v5-paragraph { font-size: .92rem; }

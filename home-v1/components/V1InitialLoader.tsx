@@ -60,7 +60,7 @@ export default function V1InitialLoader() {
       aria-hidden="true"
       className="fixed inset-0 z-[9999] flex flex-col items-center justify-center pointer-events-none select-none transition-opacity duration-[360ms] ease-out"
       style={{
-        backgroundColor: "#0a0c10",
+        backgroundColor: "#faf9f8",
         opacity: fading ? 0 : 1,
         transition: "opacity 360ms cubic-bezier(0.16, 1, 0.3, 1)",
       }}
@@ -82,16 +82,16 @@ export default function V1InitialLoader() {
 
         {/* Brand Text */}
         <div className="flex flex-col items-center text-center">
-          <span className="text-white font-black tracking-[4px] text-[13px] leading-none uppercase">
+          <span className="text-[#16181c] font-black tracking-[4px] text-[13px] leading-none uppercase">
             TEXAS
           </span>
-          <span className="text-white/50 text-[9px] tracking-[2.5px] uppercase font-mono mt-1">
+          <span className="text-[#737373] text-[9px] tracking-[2.5px] uppercase font-mono mt-1">
             TECHNICAL SERVICES
           </span>
         </div>
 
         {/* Minimal progress shimmer track */}
-        <div className="w-28 h-[2px] bg-white/[0.08] rounded-full overflow-hidden mt-2 relative">
+        <div className="w-28 h-[2px] bg-black/[0.08] rounded-full overflow-hidden mt-2 relative">
           <div
             className="absolute inset-y-0 left-0 w-1/2 bg-[#8a302f] rounded-full"
             style={{

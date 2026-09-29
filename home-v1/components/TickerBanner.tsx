@@ -17,7 +17,7 @@ function MarqueeRow({ items, reverse = false }: { items: string[]; reverse?: boo
       {doubled.map((item, i) => (
         <span
           key={i}
-          className="inline-flex items-center gap-4 px-6 text-[12px] font-mono font-medium tracking-[0.15em] uppercase whitespace-nowrap text-[#e9eaef]/80"
+          className="inline-flex items-center gap-4 px-6 text-[12px] font-mono font-medium tracking-[0.15em] uppercase whitespace-nowrap text-[#16202b]/80"
         >
           {/* Small square red bullet */}
           <span
@@ -36,11 +36,11 @@ export default function TickerBanner() {
     <div
       className="overflow-hidden"
       style={{
-        background: "var(--bg-alt, #070503)",
-        borderBottom: "1px solid var(--border-default, rgba(255, 255, 255, 0.08))",
+        background: "var(--bg-alt, #eef3f8)",
+        borderBottom: "1px solid var(--border-default, rgba(58, 110, 165, 0.12))",
       }}
     >
-      <div className="py-3 border-b" style={{ borderColor: "var(--border-default, rgba(255, 255, 255, 0.08))" }}>
+      <div className="py-3 border-b" style={{ borderColor: "var(--border-default, rgba(58, 110, 165, 0.12))" }}>
         <MarqueeRow items={services} />
       </div>
 

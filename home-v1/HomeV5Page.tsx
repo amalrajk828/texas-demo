@@ -45,38 +45,41 @@ const GreyVision = dynamic(() => import("@/components/t-grey/GreyVision"), {
   loading: () => <div style={{ height: "100vh" }} />,
 });
 
-/* ── CSS variables (dark theme) ──────────────────────────────────── */
+/* ── CSS variables (light blue + white theme) ────────────────────────── */
 const VARS: Record<string, string> = {
   "--color-brand-red": "#8a302f",
   "--color-brand-red-dark": "#6e2624",
-  "--color-brand-red-light": "#e4b4b4",
-  "--color-brand-navy": "#0F1117",
-  "--color-brand-navy-mid": "#181C26",
-  "--color-brand-gray": "#1E2330",
+  "--color-brand-red-light": "#f9e8e7",
+  "--color-brand-navy": "#16202b",
+  "--color-brand-navy-mid": "#202c3a",
+  "--color-brand-blue": "#3a6ea5",
+  "--color-brand-blue-soft": "#eef3f8",
+  "--color-brand-gray": "#eef3f8",
+  /* Reverted to Dark Footer tokens */
   "--color-footer-bg": "#0A0C11",
   "--color-footer-text": "#FFFFFF",
-  "--color-footer-muted": "rgba(156,163,175,0.70)",
-  "--color-bg-hero-from": "#0F1117",
-  "--color-bg-hero-to": "#1A1F2E",
-  "--color-bg-hero-mask": "rgba(8,10,18,0.78)",
-  "--color-bg-hero-mask-mid": "rgba(20,25,40,0.50)",
-  "--color-text-hero": "#FFFFFF",
-  "--color-surface": "#181C26",
-  "--color-section-alt": "#0F1117",
-  "--color-border": "rgba(255,255,255,0.08)",
-  "--color-border-accent": "rgba(138,48,47,0.25)",
-  "--color-text-primary": "#F4F1EE",
-  "--color-text-muted": "#A8A29E",
-  /* Dark grey vars for t-grey components */
+  "--color-footer-muted": "rgba(255, 255, 255, 0.60)",
+  "--color-bg-hero-from": "#ffffff",
+  "--color-bg-hero-to": "#eef3f8",
+  "--color-bg-hero-mask": "rgba(255, 255, 255, 0.75)",
+  "--color-bg-hero-mask-mid": "rgba(238, 243, 248, 0.65)",
+  "--color-text-hero": "#16202b",
+  "--color-surface": "#ffffff",
+  "--color-section-alt": "#eef3f8",
+  "--color-border": "rgba(58, 110, 165, 0.12)",
+  "--color-border-accent": "rgba(138, 48, 47, 0.20)",
+  "--color-text-primary": "#16202b",
+  "--color-text-muted": "#8a94a3",
+  /* Light vars for t-grey components */
   "--g-section-a": "transparent",
   "--g-section-b": "transparent",
-  "--g-heading": "#F4F1EE",
-  "--g-muted": "#A8A29E",
-  "--g-border": "rgba(255,255,255,0.09)",
-  "--g-card-bg": "rgba(20,22,27,0.82)",
-  "--g-card-border": "rgba(255,255,255,0.09)",
-  "--g-card-shadow": "0 8px 32px rgba(0,0,0,0.32)",
-  "--g-stat-bg": "rgba(20,22,27,0.70)",
+  "--g-heading": "#16202b",
+  "--g-muted": "#4a5568",
+  "--g-border": "rgba(58, 110, 165, 0.12)",
+  "--g-card-bg": "#ffffff",
+  "--g-card-border": "rgba(58, 110, 165, 0.12)",
+  "--g-card-shadow": "0 4px 20px rgba(20, 50, 90, 0.06)",
+  "--g-stat-bg": "#ffffff",
   /* Shared section spacing tokens (navbar height + 26px breathing room) */
   "--section-pt": "calc(var(--navbar-height, 98px) + 26px)",
   "--section-pb": "clamp(1.5rem, 3.5vh, 2.5rem)",
@@ -106,7 +109,7 @@ const SECTIONS: StageSectionDef[] = [
     id: "section-whatwedo-b",
     label: "Capabilities",
     content: (
-      <DarkStageSection label="Specialised Capabilities" style={{ background: "transparent" }}>
+      <DarkStageSection label="Specialised Capabilities" style={{ background: "rgba(238, 243, 248, 0.75)", backdropFilter: "blur(8px)" }}>
         <WhatWeDoSectionB />
       </DarkStageSection>
     ),
@@ -115,7 +118,7 @@ const SECTIONS: StageSectionDef[] = [
     id: "section-solutions",
     label: "Solutions",
     content: (
-      <DarkStageSection label="Solutions & Partners">
+      <DarkStageSection label="Solutions & Partners" style={{ background: "rgba(255, 255, 255, 0.45)" }}>
         <GreySolutions />
       </DarkStageSection>
     ),
@@ -124,7 +127,7 @@ const SECTIONS: StageSectionDef[] = [
     id: "section-vision",
     label: "Our Vision",
     content: (
-      <DarkStageSection label="Our Vision">
+      <DarkStageSection label="Our Vision" style={{ background: "rgba(238, 243, 248, 0.75)", backdropFilter: "blur(8px)" }}>
         <GreyVision />
       </DarkStageSection>
     ),
@@ -133,7 +136,7 @@ const SECTIONS: StageSectionDef[] = [
     id: "section-team",
     label: "Our Team",
     content: (
-      <DarkStageSection label="Our Team">
+      <DarkStageSection label="Our Team" style={{ background: "rgba(255, 255, 255, 0.45)" }}>
         <GreyTeam />
       </DarkStageSection>
     ),
@@ -142,7 +145,7 @@ const SECTIONS: StageSectionDef[] = [
     id: "section-about",
     label: "About",
     content: (
-      <DarkStageSection label="About Us">
+      <DarkStageSection label="About Us" style={{ background: "rgba(238, 243, 248, 0.75)", backdropFilter: "blur(8px)" }}>
         <GreyAbout />
       </DarkStageSection>
     ),
@@ -151,7 +154,7 @@ const SECTIONS: StageSectionDef[] = [
     id: "section-cta",
     label: "Get In Touch",
     content: (
-      <DarkStageSection label="Get In Touch">
+      <DarkStageSection label="Get In Touch" style={{ background: "#eef3f8" }}>
         <GreyCta />
       </DarkStageSection>
     ),

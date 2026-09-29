@@ -30,54 +30,57 @@ export default function GreyAbout() {
         <div ref={ref} className="flex flex-col gap-10">
           {/* Header */}
           <div className="max-w-2xl mx-auto text-center">
-            <div className="flex items-center justify-center gap-3 mb-4">
+            <div className="flex items-center justify-center gap-3 mb-2 sm:mb-4">
               <span className="w-6 h-px" style={{ background: "#8a302f" }} />
               <span className="text-[11px] font-bold tracking-[4px] uppercase" style={{ color: "#8a302f" }}>About Texas Technical Services</span>
               <span className="w-6 h-px" style={{ background: "#8a302f" }} />
             </div>
-            <h2 className="text-3xl sm:text-4xl font-black tracking-tight mb-4" style={{ color: "#F4F1EE" }}>
+            <h2 className="text-[clamp(1.5rem,3.8vw,2.5rem)] font-black tracking-tight mb-3 sm:mb-4" style={{ color: "#16202b" }}>
               Why was Texas Technical Services established in 2008?
             </h2>
-            <p className="text-[17px] leading-relaxed mb-6" style={{ color: "#A8A29E" }}>
+            <p className="text-xs sm:text-[16px] leading-relaxed mb-4 sm:mb-6" style={{ color: "#4a5568" }}>
               Texas Technical Service Company is an ISO 9001:2015 certified company established in 2008. Primarily focused
               on flow measurement, inspection &amp; testing, and industrial automation for oil &amp; gas, power plants, manufacturing and commercial sectors.
             </p>
             <Link
               href="/about-us/"
-              className="inline-flex items-center gap-2 text-[16px] font-bold hover:gap-3 transition-all duration-200 mx-auto"
+              className="min-h-[44px] inline-flex items-center justify-center gap-2 text-sm sm:text-[16px] font-bold hover:gap-3 transition-all duration-200 mx-auto"
               style={{ color: "#8a302f" }}
             >
-              Learn more about Texas Technical Services <ArrowRight className="w-4 h-4" />
+              <span>Learn more about Texas Technical Services</span>
+              <ArrowRight className="w-4 h-4" />
             </Link>
           </div>
 
-          {/* Certification badge grid — dark glass cards */}
-          <div className="grid grid-cols-3 sm:grid-cols-5 gap-3 mx-auto max-w-3xl justify-items-center">
-            {CERTS.map((cert) => (
+          {/* Certification badge grid — light cards with soft blue border */}
+          <div className="grid grid-cols-2 sm:grid-cols-5 gap-2.5 sm:gap-3 mx-auto max-w-3xl justify-items-center w-full">
+            {CERTS.map((cert, idx) => (
               <Link
                 href="/certifications/"
                 key={cert.label}
-                className="relative rounded-xl px-4 py-4 text-center overflow-hidden transition-all duration-300 group block"
+                className={`relative rounded-xl px-3 py-3 sm:px-4 sm:py-4 text-center overflow-hidden transition-all duration-300 group block w-full min-h-[44px] ${
+                  idx === 4 ? "col-span-2 sm:col-span-1 max-w-[200px] sm:max-w-none" : ""
+                }`}
                 style={{
-                  background: "rgba(255,255,255,0.04)",
-                  border: "1px solid rgba(255,255,255,0.09)",
-                  boxShadow: "0 4px 16px rgba(0,0,0,0.20)",
+                  background: "#5a86ad",
+                  border: "1px solid rgba(255, 255, 255, 0.22)",
+                  boxShadow: "0 8px 24px rgba(20, 40, 60, 0.18)",
                 }}
               >
                 {/* Top edge glow */}
-                <div className="absolute top-0 inset-x-0 h-[1px] pointer-events-none" style={{ background: "linear-gradient(90deg, transparent, rgba(138,48,47,0.35), transparent)" }} />
+                <div className="absolute top-0 inset-x-0 h-[1px] pointer-events-none" style={{ background: "linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.5), transparent)" }} />
                 {/* Hover tint */}
-                <div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none" style={{ background: "rgba(138,48,47,0.06)" }} />
+                <div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none" style={{ background: "rgba(255, 255, 255, 0.08)" }} />
 
-                <div className="relative z-10 flex justify-center mb-2">
-                  <div className="relative w-14 h-14">
+                <div className="relative z-10 flex justify-center mb-1.5 sm:mb-2">
+                  <div className="relative w-10 h-10 sm:w-14 sm:h-14">
                     <Image src={cert.badge} alt={cert.label} fill className="object-contain" sizes="56px" />
                   </div>
                 </div>
-                <p className="relative z-10 text-[12px] font-bold leading-tight" style={{ color: "#F4F1EE" }}>
+                <p className="relative z-10 text-[11px] sm:text-[12px] font-bold leading-tight text-white">
                   {cert.label}
                 </p>
-                <p className="relative z-10 text-[10px] mt-1 font-medium" style={{ color: "#A8A29E" }}>
+                <p className="relative z-10 text-[9px] sm:text-[10px] mt-0.5 sm:mt-1 font-medium text-[#dce6f0]">
                   {cert.sub}
                 </p>
               </Link>

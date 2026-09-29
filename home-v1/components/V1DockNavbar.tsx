@@ -296,10 +296,10 @@ export default function V1DockNavbar({ activeSectionIndex = 0 }: V1DockNavbarPro
         <div
           className="relative flex items-center h-[74px] pl-5 pr-4 rounded-full border shadow-2xl transition-all duration-300 max-w-[calc(100vw-40px)]"
           style={{
-            background: "rgba(15, 17, 21, 0.88)",
-            borderColor: "rgba(255, 255, 255, 0.09)",
+            background: "rgba(15, 17, 21, 0.85)",
+            borderColor: "rgba(255, 255, 255, 0.08)",
             boxShadow:
-              "0 24px 48px -12px rgba(0, 0, 0, 0.8), inset 0 1px 1px rgba(255, 255, 255, 0.08)",
+              "0 24px 50px -10px rgba(0, 0, 0, 0.65), 0 8px 20px rgba(0, 0, 0, 0.40), inset 0 1px 1px rgba(255, 255, 255, 0.12)",
             backdropFilter: "blur(20px)",
             WebkitBackdropFilter: "blur(20px)",
           }}
@@ -321,13 +321,13 @@ export default function V1DockNavbar({ activeSectionIndex = 0 }: V1DockNavbarPro
               width={42}
               height={42}
               priority
-              className="drop-shadow-[0_2px_10px_rgba(0,0,0,0.6)] transition-transform duration-300 group-hover:scale-105 shrink-0"
+              className="drop-shadow-[0_2px_8px_rgba(0,0,0,0.5)] transition-transform duration-300 group-hover:scale-105 shrink-0"
             />
             <div className="flex flex-col gap-0.5 whitespace-nowrap">
-              <span className="text-white font-black tracking-[5px] text-[16px] leading-none transition-colors group-hover:text-[#f4f1ee]">
+              <span className="text-white font-black tracking-[5px] text-[16px] leading-none transition-colors group-hover:text-[#8a302f]">
                 TEXAS
               </span>
-              <span className="text-white/65 text-[10.5px] tracking-[2.6px] leading-none font-semibold mt-0.5 group-hover:text-white/90 transition-colors">
+              <span className="text-white/60 text-[10.5px] tracking-[2.6px] leading-none font-semibold mt-0.5 group-hover:text-white transition-colors">
                 TECHNICAL SERVICES
               </span>
             </div>
@@ -356,17 +356,17 @@ export default function V1DockNavbar({ activeSectionIndex = 0 }: V1DockNavbarPro
                 width: springW,
                 top: -12,
                 bottom: -12,
-                background: "linear-gradient(135deg, rgba(255, 255, 255, 0.10) 0%, rgba(255, 255, 255, 0.03) 60%, rgba(255, 255, 255, 0.05) 100%)",
+                background: "linear-gradient(135deg, rgba(255, 255, 255, 0.16) 0%, rgba(138, 48, 47, 0.22) 50%, rgba(255, 255, 255, 0.06) 100%)",
                 boxShadow: `
-                  0 16px 36px -4px rgba(0, 0, 0, 0.75),
-                  0 4px 12px rgba(0, 0, 0, 0.4),
-                  inset 0 1.5px 2px rgba(255, 255, 255, 0.65),
-                  inset 0 -1.5px 2px rgba(255, 255, 255, 0.2),
-                  inset 1px 0 2px rgba(255, 255, 255, 0.25),
-                  inset -1px 0 2px rgba(255, 255, 255, 0.25)
+                  0 16px 36px -4px rgba(0, 0, 0, 0.70),
+                  0 4px 12px rgba(138, 48, 47, 0.35),
+                  inset 0 1.5px 2px rgba(255, 255, 255, 0.55),
+                  inset 0 -1.5px 2px rgba(138, 48, 47, 0.40),
+                  inset 1px 0 2px rgba(255, 255, 255, 0.30),
+                  inset -1px 0 2px rgba(255, 255, 255, 0.15)
                 `,
-                backdropFilter: reducedMotion ? "blur(8px)" : "blur(14px) saturate(1.5)",
-                WebkitBackdropFilter: reducedMotion ? "blur(8px)" : "blur(14px) saturate(1.5)",
+                backdropFilter: reducedMotion ? "blur(8px)" : "blur(14px) saturate(1.4)",
+                WebkitBackdropFilter: reducedMotion ? "blur(8px)" : "blur(14px) saturate(1.4)",
               }}
             >
               {/* Outer 1.5px gradient rim light (bright top-left to softer bottom-right) */}
@@ -374,7 +374,7 @@ export default function V1DockNavbar({ activeSectionIndex = 0 }: V1DockNavbarPro
                 className="absolute inset-0 rounded-[24px] pointer-events-none p-[1.5px]"
                 style={{
                   background:
-                    "linear-gradient(140deg, rgba(255,255,255,0.7) 0%, rgba(255,255,255,0.2) 40%, rgba(255,255,255,0.08) 70%, rgba(255,255,255,0.3) 100%)",
+                    "linear-gradient(140deg, rgba(255,255,255,0.65) 0%, rgba(255,255,255,0.18) 35%, rgba(138,48,47,0.70) 70%, rgba(255,255,255,0.25) 100%)",
                   WebkitMask: "linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0)",
                   WebkitMaskComposite: "xor",
                   maskComposite: "exclude",
@@ -386,7 +386,7 @@ export default function V1DockNavbar({ activeSectionIndex = 0 }: V1DockNavbarPro
                 className="absolute top-1 inset-x-2.5 h-4 rounded-t-[20px] pointer-events-none"
                 style={{
                   background:
-                    "linear-gradient(180deg, rgba(255, 255, 255, 0.35) 0%, rgba(255, 255, 255, 0.08) 60%, transparent 100%)",
+                    "linear-gradient(180deg, rgba(255, 255, 255, 0.45) 0%, rgba(255, 255, 255, 0.08) 60%, transparent 100%)",
                   filter: "blur(1px)",
                 }}
               />
@@ -396,7 +396,7 @@ export default function V1DockNavbar({ activeSectionIndex = 0 }: V1DockNavbarPro
                 className="absolute -top-1 inset-x-2 h-4 rounded-t-[20px] pointer-events-none"
                 style={{
                   background:
-                    "radial-gradient(ellipse at 50% 0%, rgba(138, 48, 47, 0.55) 0%, rgba(138, 48, 47, 0.2) 50%, transparent 80%)",
+                    "radial-gradient(ellipse at 50% 0%, rgba(138, 48, 47, 0.75) 0%, rgba(138, 48, 47, 0.25) 50%, transparent 80%)",
                   filter: "blur(2px)",
                 }}
               />
@@ -406,7 +406,7 @@ export default function V1DockNavbar({ activeSectionIndex = 0 }: V1DockNavbarPro
                 className="absolute -bottom-1 inset-x-2 h-4 rounded-b-[20px] pointer-events-none"
                 style={{
                   background:
-                    "radial-gradient(ellipse at 50% 100%, rgba(138, 48, 47, 0.55) 0%, rgba(138, 48, 47, 0.2) 50%, transparent 80%)",
+                    "radial-gradient(ellipse at 50% 100%, rgba(138, 48, 47, 0.75) 0%, rgba(138, 48, 47, 0.25) 50%, transparent 80%)",
                   filter: "blur(2px)",
                 }}
               />
@@ -444,7 +444,7 @@ export default function V1DockNavbar({ activeSectionIndex = 0 }: V1DockNavbarPro
                       className="relative flex flex-col items-center justify-center min-w-[64px] xl:min-w-[70px] px-3.5 xl:px-4 h-[62px] rounded-2xl outline-none focus-visible:ring-2 focus-visible:ring-[#8a302f] transition-all select-none"
                     >
                       {isUnderLens ? (
-                        /* ACTIVE / UNDER LENS: Solid/filled white icon + text label underneath */
+                        /* ACTIVE / UNDER LENS: Solid accent icon + text label underneath */
                         <motion.div
                           key="active-content"
                           initial={reducedMotion ? false : { opacity: 0, scale: 0.88 }}
@@ -453,23 +453,23 @@ export default function V1DockNavbar({ activeSectionIndex = 0 }: V1DockNavbarPro
                           className="flex flex-col items-center justify-center leading-none"
                         >
                           <div className="flex items-center gap-1.5">
-                            <Icon className="w-[23px] h-[23px] text-[#F4F1EE] fill-[#F4F1EE]" strokeWidth={2.4} />
+                            <Icon className="w-[23px] h-[23px] text-[#8a302f] fill-[#8a302f]" strokeWidth={2.4} />
                             {item.hasDropdown && (
                               <ChevronDown
-                                className={`w-3 h-3 text-[#F4F1EE]/70 transition-transform duration-200 ${
+                                className={`w-3 h-3 text-[#8a302f] transition-transform duration-200 ${
                                   openDropdown === item.id ? "rotate-180" : ""
                                 }`}
                               />
                             )}
                           </div>
-                          <span className="text-[11.5px] font-bold tracking-tight text-[#F4F1EE] mt-1.5 whitespace-nowrap">
+                          <span className="text-[11.5px] font-bold tracking-tight text-white mt-1.5 whitespace-nowrap">
                             {item.label}
                           </span>
                         </motion.div>
                       ) : (
-                        /* INACTIVE: Outline-only icon in #c9c4bf, NO label, NO background */
+                        /* INACTIVE: Outline-only icon in white/65, NO label, NO background */
                         <Icon
-                          className="w-[23px] h-[23px] text-[#c9c4bf] hover:text-white transition-colors"
+                          className="w-[23px] h-[23px] text-white/65 hover:text-white transition-colors"
                           strokeWidth={1.8}
                         />
                       )}
@@ -489,9 +489,9 @@ export default function V1DockNavbar({ activeSectionIndex = 0 }: V1DockNavbarPro
                             onMouseLeave={handleDropdownLeave}
                             className="absolute top-full left-1/2 -translate-x-1/2 mt-5 z-[90] rounded-2xl border shadow-2xl overflow-hidden"
                             style={{
-                              background: "rgba(15, 17, 21, 0.94)",
+                              background: "rgba(15, 17, 21, 0.95)",
                               borderColor: "rgba(255, 255, 255, 0.10)",
-                              boxShadow: "0 24px 48px -12px rgba(0, 0, 0, 0.8)",
+                              boxShadow: "0 28px 60px -10px rgba(0, 0, 0, 0.75)",
                               backdropFilter: "blur(24px)",
                               WebkitBackdropFilter: "blur(24px)",
                               minWidth: item.id === "products" ? "460px" : "300px",
@@ -514,11 +514,11 @@ export default function V1DockNavbar({ activeSectionIndex = 0 }: V1DockNavbarPro
                                       <ArrowRight className="w-3.5 h-3.5 opacity-0 group-hover:opacity-100 transition-opacity text-[#8a302f]" />
                                     </Link>
                                   ))}
-                                  <div className="mt-2 pt-2 border-t border-white/10 px-4 pb-1">
+                                  <div className="mt-2 pt-2 border-t border-white/[0.08] px-4 pb-1">
                                     <Link
                                       href="/service/"
                                       onClick={() => setOpenDropdown(null)}
-                                      className="inline-flex items-center gap-1.5 text-[11.5px] font-bold uppercase tracking-wider text-[#e4b4b4] hover:text-white transition-colors"
+                                      className="inline-flex items-center gap-1.5 text-[11.5px] font-bold uppercase tracking-wider text-[#8a302f] hover:text-[#c0483f] transition-colors"
                                     >
                                       <span>View all services</span>
                                       <ArrowRight className="w-3.5 h-3.5" />
@@ -540,11 +540,11 @@ export default function V1DockNavbar({ activeSectionIndex = 0 }: V1DockNavbarPro
                                       <ArrowRight className="w-3 h-3 opacity-0 group-hover:opacity-100 transition-opacity text-[#8a302f]" />
                                     </Link>
                                   ))}
-                                  <div className="col-span-2 mt-2 pt-2 border-t border-white/10 px-3.5 pb-1">
+                                  <div className="col-span-2 mt-2 pt-2 border-t border-white/[0.08] px-3.5 pb-1">
                                     <Link
                                       href="/industries/"
                                       onClick={() => setOpenDropdown(null)}
-                                      className="inline-flex items-center gap-1.5 text-[11.5px] font-bold uppercase tracking-wider text-[#e4b4b4] hover:text-white transition-colors"
+                                      className="inline-flex items-center gap-1.5 text-[11.5px] font-bold uppercase tracking-wider text-[#8a302f] hover:text-[#c0483f] transition-colors"
                                     >
                                       <span>View all industries</span>
                                       <ArrowRight className="w-3.5 h-3.5" />
@@ -572,7 +572,7 @@ export default function V1DockNavbar({ activeSectionIndex = 0 }: V1DockNavbarPro
                                               key={child.link}
                                               href={child.link}
                                               onClick={() => setOpenDropdown(null)}
-                                              className="px-3.5 py-1.5 rounded-md text-[12px] text-white/65 hover:text-white hover:bg-white/[0.05] transition-colors"
+                                              className="px-3.5 py-1.5 rounded-md text-[12px] text-white/60 hover:text-white hover:bg-white/[0.05] transition-colors"
                                             >
                                               {child.label}
                                             </Link>
@@ -581,11 +581,11 @@ export default function V1DockNavbar({ activeSectionIndex = 0 }: V1DockNavbarPro
                                       )}
                                     </div>
                                   ))}
-                                  <div className="mt-2 pt-2 border-t border-white/10 px-3.5 pb-1">
+                                  <div className="mt-2 pt-2 border-t border-white/[0.08] px-3.5 pb-1">
                                     <Link
                                       href="/products/"
                                       onClick={() => setOpenDropdown(null)}
-                                      className="inline-flex items-center gap-1.5 text-[11.5px] font-bold uppercase tracking-wider text-[#e4b4b4] hover:text-white transition-colors"
+                                      className="inline-flex items-center gap-1.5 text-[11.5px] font-bold uppercase tracking-wider text-[#8a302f] hover:text-[#c0483f] transition-colors"
                                     >
                                       <span>View all products</span>
                                       <ArrowRight className="w-3.5 h-3.5" />
@@ -619,21 +619,25 @@ export default function V1DockNavbar({ activeSectionIndex = 0 }: V1DockNavbarPro
       </div>
 
       {/* ── RESPONSIVE MOBILE DOCK (< 1024px) ── */}
-      <div className="fixed bottom-3.5 inset-x-3.5 z-[70] block lg:hidden">
+      <div className="fixed top-[calc(0.875rem+env(safe-area-inset-top,0px))] inset-x-2 sm:inset-x-4 z-[70] block lg:hidden">
         <div
           role="tablist"
           aria-label="Mobile navigation dock"
-          className="relative flex items-center justify-around h-[62px] px-2.5 rounded-full border shadow-2xl"
+          className="relative flex items-center justify-between h-[58px] sm:h-[62px] px-2 sm:px-3 rounded-full border shadow-2xl max-w-[440px] mx-auto"
           style={{
-            background: "rgba(15, 17, 21, 0.94)",
+            background: "rgba(15, 17, 21, 0.90)",
             borderColor: "rgba(255, 255, 255, 0.10)",
             backdropFilter: "blur(20px)",
             WebkitBackdropFilter: "blur(20px)",
-            boxShadow: "0 16px 36px rgba(0, 0, 0, 0.85)",
+            boxShadow: "0 20px 48px rgba(0, 0, 0, 0.65)",
           }}
         >
-          {/* Primary mobile items */}
-          {V1_NAV_ITEMS.slice(0, 4).map((item) => {
+          {/* Primary mobile items: Home, Services, About Us */}
+          {[
+            V1_NAV_ITEMS.find((i) => i.id === "home")!,
+            V1_NAV_ITEMS.find((i) => i.id === "services")!,
+            V1_NAV_ITEMS.find((i) => i.id === "about")!,
+          ].map((item) => {
             const isActive = activeId === item.id;
             const Icon = item.icon;
 
@@ -643,12 +647,12 @@ export default function V1DockNavbar({ activeSectionIndex = 0 }: V1DockNavbarPro
                 role="tab"
                 aria-selected={isActive}
                 onClick={() => handleItemClick(item)}
-                className={`relative flex flex-col items-center justify-center min-w-[54px] h-[50px] rounded-2xl transition-all ${
-                  isActive ? "bg-white/[0.09] text-white" : "text-[#c9c4bf]"
+                className={`relative flex-1 flex flex-col items-center justify-center min-w-0 h-[48px] rounded-xl transition-all ${
+                  isActive ? "bg-white/[0.12] text-[#8a302f]" : "text-white/60 hover:text-white"
                 }`}
               >
-                <Icon className={`w-5 h-5 ${isActive ? "fill-white" : ""}`} strokeWidth={1.8} />
-                <span className="text-[10px] font-semibold mt-0.5">{item.label}</span>
+                <Icon className={`w-4 h-4 sm:w-5 sm:h-5 ${isActive ? "fill-[#8a302f]" : ""}`} strokeWidth={1.8} />
+                <span className="text-[9.5px] sm:text-[10px] font-semibold mt-0.5 truncate">{item.label}</span>
               </button>
             );
           })}
@@ -656,17 +660,17 @@ export default function V1DockNavbar({ activeSectionIndex = 0 }: V1DockNavbarPro
           {/* More Drawer Button */}
           <button
             onClick={() => setMobileDrawerOpen(true)}
-            className="flex flex-col items-center justify-center min-w-[54px] h-[50px] text-[#c9c4bf] hover:text-white"
+            className="flex-1 flex flex-col items-center justify-center min-w-0 h-[48px] text-white/60 hover:text-white rounded-xl"
             aria-label="More navigation links"
           >
-            <Menu className="w-5 h-5" />
-            <span className="text-[10px] font-semibold mt-0.5">More</span>
+            <Menu className="w-4 h-4 sm:w-5 sm:h-5" />
+            <span className="text-[9.5px] sm:text-[10px] font-semibold mt-0.5">More</span>
           </button>
 
           {/* Contact Button */}
           <Link
             href="/contacts/"
-            className="flex items-center justify-center px-4 h-[40px] rounded-full text-[11.5px] font-bold uppercase tracking-wider text-white shadow-md"
+            className="flex items-center justify-center px-3 sm:px-4 h-[38px] rounded-full text-[11px] font-bold uppercase tracking-wider text-white shadow-md shrink-0 ml-1"
             style={{ background: "#8a302f" }}
           >
             Contact
@@ -683,20 +687,21 @@ export default function V1DockNavbar({ activeSectionIndex = 0 }: V1DockNavbarPro
               animate={{ opacity: 1 }}
               exit={{ opacity: 0 }}
               onClick={() => setMobileDrawerOpen(false)}
-              className="fixed inset-0 bg-black/70 backdrop-blur-sm z-[80] lg:hidden"
+              className="fixed inset-0 bg-black/60 backdrop-blur-sm z-[80] lg:hidden"
             />
             <motion.div
               initial={{ y: "100%" }}
               animate={{ y: 0 }}
               exit={{ y: "100%" }}
               transition={{ type: "spring", stiffness: 300, damping: 30 }}
-              className="fixed bottom-0 inset-x-0 z-[85] max-h-[80vh] overflow-y-auto rounded-t-3xl border-t p-6 lg:hidden"
+              className="fixed bottom-0 inset-x-0 z-[85] max-h-[80dvh] overflow-y-auto overscroll-contain rounded-t-3xl border-t px-5 pt-5 pb-[calc(1.25rem+env(safe-area-inset-bottom,0px))] sm:p-6 sm:pb-[calc(1.5rem+env(safe-area-inset-bottom,0px))] lg:hidden"
               style={{
-                background: "#0F1117",
+                background: "rgba(15, 17, 21, 0.98)",
                 borderColor: "rgba(255, 255, 255, 0.12)",
+                boxShadow: "0 -20px 48px rgba(0, 0, 0, 0.75)",
               }}
             >
-              <div className="flex items-center justify-between mb-5 pb-3 border-b border-white/10">
+              <div className="flex items-center justify-between mb-5 pb-3 border-b border-white/[0.08]">
                 <Link
                   href="/"
                   onClick={() => setMobileDrawerOpen(false)}
@@ -729,14 +734,14 @@ export default function V1DockNavbar({ activeSectionIndex = 0 }: V1DockNavbarPro
               <div className="flex flex-col gap-2">
                 {V1_NAV_ITEMS.map((item) => (
                   <div key={item.id} className="flex flex-col">
-                    <div className="flex items-center justify-between py-2 border-b border-white/5">
+                    <div className="flex items-center justify-between py-2 border-b border-white/[0.06]">
                       <Link
                         href={item.href}
                         onClick={() => {
                           handleItemClick(item);
                           setMobileDrawerOpen(false);
                         }}
-                        className="text-[14px] font-medium text-white/90 hover:text-white"
+                        className="text-[14px] font-medium text-white/90 hover:text-[#8a302f]"
                       >
                         {item.label}
                       </Link>
@@ -745,7 +750,7 @@ export default function V1DockNavbar({ activeSectionIndex = 0 }: V1DockNavbarPro
                           onClick={() =>
                             setMobileExpandedGroup((prev) => (prev === item.id ? null : item.id))
                           }
-                          className="p-1.5 text-white/50 hover:text-white"
+                          className="p-1.5 text-white/60 hover:text-white"
                         >
                           <ChevronDown
                             className={`w-4 h-4 transition-transform ${
@@ -757,14 +762,14 @@ export default function V1DockNavbar({ activeSectionIndex = 0 }: V1DockNavbarPro
                     </div>
 
                     {item.hasDropdown && mobileExpandedGroup === item.id && (
-                      <div className="pl-4 py-2 flex flex-col gap-1 border-l border-white/10 ml-2">
+                      <div className="pl-4 py-2 flex flex-col gap-1 border-l border-white/[0.10] ml-2">
                         {item.id === "services" &&
                           SERVICES_MENU.map((s) => (
                             <Link
                               key={s.link}
                               href={s.link}
                               onClick={() => setMobileDrawerOpen(false)}
-                              className="py-1 text-[13px] text-white/70 hover:text-white"
+                              className="py-1 text-[13px] text-white/70 hover:text-[#8a302f]"
                             >
                               {s.label}
                             </Link>
@@ -775,7 +780,7 @@ export default function V1DockNavbar({ activeSectionIndex = 0 }: V1DockNavbarPro
                               key={s.link}
                               href={s.link}
                               onClick={() => setMobileDrawerOpen(false)}
-                              className="py-1 text-[13px] text-white/70 hover:text-white"
+                              className="py-1 text-[13px] text-white/70 hover:text-[#8a302f]"
                             >
                               {s.label}
                             </Link>
@@ -786,7 +791,7 @@ export default function V1DockNavbar({ activeSectionIndex = 0 }: V1DockNavbarPro
                               key={s.link}
                               href={s.link}
                               onClick={() => setMobileDrawerOpen(false)}
-                              className="py-1 text-[13px] text-white/70 hover:text-white"
+                              className="py-1 text-[13px] text-white/70 hover:text-[#8a302f]"
                             >
                               {s.label}
                             </Link>

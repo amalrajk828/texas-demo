@@ -67,10 +67,10 @@ export default function GreyTeam() {
         }}
       />
 
-      <div className="relative z-10 grid grid-cols-1 lg:grid-cols-[46%_54%] gap-8 lg:gap-14 items-center">
+      <div className="relative z-10 grid grid-cols-1 lg:grid-cols-[46%_54%] gap-4 sm:gap-8 lg:gap-14 items-center">
         {/* ══ LEFT COLUMN: Image Collage with Floating Badge & Inset Detail (~46%) ══ */}
         <div className="relative w-full flex items-center justify-center">
-          <div className="relative w-full max-w-[520px] mr-2 sm:mr-6 mb-3 sm:mb-5">
+          <div className="relative w-full max-w-[520px] mr-2 sm:mr-6 mb-2 sm:mb-5">
             {/* Floating Est. 2008 Pill Badge (overlapping TOP-LEFT) */}
             <motion.div
               initial={{
@@ -87,15 +87,15 @@ export default function GreyTeam() {
                 delay: reducedMotion ? 0 : 0.15,
                 ease: "easeOut",
               }}
-              className="absolute -top-3.5 -left-2.5 sm:-top-4 sm:-left-4 z-30 inline-flex items-center gap-2 px-3.5 sm:px-4 py-1.5 sm:py-2 rounded-full shadow-2xl backdrop-blur-md"
+              className="absolute -top-3 -left-2 sm:-top-4 sm:-left-4 z-30 inline-flex items-center gap-2 px-3 sm:px-4 py-1.5 sm:py-2 rounded-full shadow-lg backdrop-blur-md"
               style={{
-                background: "rgba(15,17,21,0.88)",
-                border: "1px solid rgba(138,48,47,0.65)",
-                boxShadow: "0 10px 24px rgba(0,0,0,0.6), 0 0 14px rgba(138,48,47,0.22)",
+                background: "rgba(255,255,255,0.95)",
+                border: "1.5px solid #8a302f",
+                boxShadow: "0 8px 24px rgba(20,50,90,0.12), 0 0 14px rgba(138,48,47,0.15)",
               }}
             >
               <span className="w-1.5 h-1.5 rounded-full bg-[#8a302f] animate-pulse" />
-              <span className="text-white text-[11px] sm:text-[12px] font-bold tracking-[1.5px] uppercase font-mono leading-none">
+              <span className="text-[#16202b] text-[10px] sm:text-[12px] font-bold tracking-[1.5px] uppercase font-mono leading-none">
                 Est. 2008
               </span>
             </motion.div>
@@ -109,13 +109,11 @@ export default function GreyTeam() {
                   : { opacity: 0, scale: reducedMotion ? 1 : 0.95 }
               }
               transition={{ duration: 0.65, ease: [0.16, 1, 0.3, 1] }}
-              className="relative w-full rounded-[32px] overflow-hidden group shadow-2xl"
+              className="relative w-full rounded-[24px] sm:rounded-[32px] overflow-hidden group shadow-xl aspect-[16/10] sm:aspect-[4/3.6] max-h-[min(26vh,220px)] sm:max-h-[min(48vh,430px)]"
               style={{
-                aspectRatio: "4/3.6",
-                maxHeight: "min(48vh, 430px)",
-                border: "1px solid rgba(255,255,255,0.09)",
-                background: "rgba(15,17,21,0.85)",
-                boxShadow: "0 24px 64px rgba(0,0,0,0.65)",
+                border: "1px solid rgba(58,110,165,0.16)",
+                background: "#ffffff",
+                boxShadow: "0 20px 48px rgba(20,50,90,0.10)",
               }}
             >
               <div
@@ -139,7 +137,7 @@ export default function GreyTeam() {
               {/* Gradient Scrim */}
               <div
                 aria-hidden="true"
-                className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-black/10 pointer-events-none"
+                className="absolute inset-0 bg-gradient-to-t from-slate-900/40 via-transparent to-transparent pointer-events-none"
               />
 
               {/* Subtle Red Corner Accent */}
@@ -176,7 +174,7 @@ export default function GreyTeam() {
               style={{
                 aspectRatio: "4/3",
                 border: "2px solid #8a302f",
-                boxShadow: "0 16px 40px rgba(0,0,0,0.75), 0 0 22px rgba(138,48,47,0.35)",
+                boxShadow: "0 12px 32px rgba(20,50,90,0.16), 0 0 16px rgba(138,48,47,0.25)",
               }}
             >
               <Image
@@ -189,7 +187,7 @@ export default function GreyTeam() {
               />
               <div
                 aria-hidden="true"
-                className="absolute inset-0 bg-gradient-to-t from-black/50 via-transparent to-transparent pointer-events-none"
+                className="absolute inset-0 bg-gradient-to-t from-slate-950/40 via-transparent to-transparent pointer-events-none"
               />
             </motion.div>
           </div>
@@ -215,7 +213,7 @@ export default function GreyTeam() {
             <span className="w-6 h-px bg-[#8a302f]" />
           </motion.div>
 
-          {/* Heading: Solid white #F4F1EE */}
+          {/* Heading: Navy #16202b */}
           <motion.h2
             initial={{ opacity: 0, scale: reducedMotion ? 1 : 0.98 }}
             animate={
@@ -228,12 +226,12 @@ export default function GreyTeam() {
               delay: reducedMotion ? 0 : 0.08,
               ease: "easeOut",
             }}
-            className="text-2xl sm:text-3xl lg:text-[clamp(1.9rem,2.7vw,2.6rem)] font-extrabold tracking-tight text-[#F4F1EE] leading-[1.12] mb-3"
+            className="text-[clamp(1.5rem,3.8vw,2.6rem)] font-extrabold tracking-tight text-[#16202b] leading-[1.12] mb-2 sm:mb-3"
           >
             Who are the specialists behind every project?
           </motion.h2>
 
-          {/* Paragraph (Exact text, tightened vertical rhythm) */}
+          {/* Paragraph */}
           <motion.p
             initial={{ opacity: 0, scale: reducedMotion ? 1 : 0.98 }}
             animate={
@@ -246,7 +244,7 @@ export default function GreyTeam() {
               delay: reducedMotion ? 0 : 0.15,
               ease: "easeOut",
             }}
-            className="text-[14px] sm:text-[15px] lg:text-[15.5px] leading-[1.68] text-[#A8A29E] max-w-xl mb-4 sm:mb-5"
+            className="text-xs sm:text-[15px] lg:text-[15.5px] leading-relaxed sm:leading-[1.68] text-[#4a5568] max-w-xl mb-3 sm:mb-5"
           >
             Highly trained engineers with specialised knowledge in Custody Metering Systems, Industrial Automation,
             and Inspection &amp; Testing — with deep understanding of industry standards and best practices.
@@ -265,25 +263,26 @@ export default function GreyTeam() {
               delay: reducedMotion ? 0 : 0.2,
               ease: "easeOut",
             }}
-            className="flex items-center gap-3 mb-2.5"
+            className="flex items-center gap-3 mb-2"
           >
             <span className="text-[10px] sm:text-[10.5px] font-mono font-bold tracking-[0.2em] text-[#8a302f] uppercase">
               CERTIFIED &amp; ACCREDITED
             </span>
-            <span className="flex-1 h-px bg-white/[0.08]" />
+            <span className="flex-1 h-px bg-[rgba(58,110,165,0.15)]" />
           </motion.div>
 
           {/* Redesigned Balanced 3+2 Certification Chips */}
-          <div className="grid grid-cols-2 sm:grid-cols-6 gap-2 sm:gap-2.5 mb-5 sm:mb-6">
+          <div className="grid grid-cols-2 sm:grid-cols-6 gap-2 sm:gap-2.5 mb-4 sm:mb-6">
             {HIGHLIGHT_CHIPS.map((chip, idx) => {
               const { label, badge, Icon, href, spanClass } = chip;
 
               const chipContent = (
                 <div
-                  className="flex items-center justify-center sm:justify-start gap-2.5 px-3 py-2 sm:px-3.5 sm:py-2.5 rounded-xl transition-all duration-200 group w-full h-full"
+                  className="flex items-center justify-center sm:justify-start gap-2.5 px-3 py-2 sm:px-3.5 sm:py-2.5 rounded-xl transition-all duration-200 group w-full h-full min-h-[44px]"
                   style={{
-                    background: "rgba(15,17,21,0.72)",
-                    border: "1px solid rgba(255,255,255,0.08)",
+                    background: "#ffffff",
+                    border: "1px solid rgba(58,110,165,0.14)",
+                    boxShadow: "0 4px 16px rgba(20,50,90,0.05)",
                   }}
                 >
                   {badge ? (
@@ -297,11 +296,11 @@ export default function GreyTeam() {
                       />
                     </div>
                   ) : (
-                    <div className="w-6 h-6 rounded-lg flex items-center justify-center shrink-0 bg-white/[0.04]">
+                    <div className="w-6 h-6 rounded-lg flex items-center justify-center shrink-0 bg-[#eef3f8]">
                       <Icon className="w-3.5 h-3.5 text-[#8a302f]" strokeWidth={2} />
                     </div>
                   )}
-                  <span className="text-[12px] sm:text-[12.5px] font-semibold text-[#F4F1EE] tracking-tight group-hover:text-white transition-colors truncate">
+                  <span className="text-[11px] sm:text-[12.5px] font-semibold text-[#16202b] tracking-tight group-hover:text-[#8a302f] transition-colors truncate">
                     {label}
                   </span>
                 </div>
@@ -329,12 +328,12 @@ export default function GreyTeam() {
                   {href ? (
                     <Link
                       href={href}
-                      className="block h-full [&>div]:hover:border-[#8a302f]/60 [&>div]:hover:bg-[#8a302f]/10 [&>div]:hover:shadow-[0_0_16px_rgba(138,48,47,0.25)]"
+                      className="block h-full [&>div]:hover:border-[#8a302f]/60 [&>div]:hover:bg-[#8a302f]/5 [&>div]:hover:shadow-[0_6px_20px_rgba(138,48,47,0.12)]"
                     >
                       {chipContent}
                     </Link>
                   ) : (
-                    <div className="h-full [&>div]:hover:border-[#8a302f]/60 [&>div]:hover:bg-[#8a302f]/10 [&>div]:hover:shadow-[0_0_16px_rgba(138,48,47,0.25)]">
+                    <div className="h-full [&>div]:hover:border-[#8a302f]/60 [&>div]:hover:bg-[#8a302f]/5 [&>div]:hover:shadow-[0_6px_20px_rgba(138,48,47,0.12)]">
                       {chipContent}
                     </div>
                   )}
@@ -360,7 +359,7 @@ export default function GreyTeam() {
           >
             <Link
               href="/about-us/"
-              className="inline-flex items-center gap-2 text-white font-bold px-6 py-3 rounded-xl text-[13.5px] uppercase tracking-wider transition-all duration-200 hover:-translate-y-0.5"
+              className="min-h-[44px] inline-flex items-center justify-center gap-2 text-white font-bold px-6 py-2.5 sm:py-3 rounded-xl text-[13px] sm:text-[13.5px] uppercase tracking-wider transition-all duration-200 hover:-translate-y-0.5"
               style={{
                 background: "#8a302f",
                 boxShadow: "0 6px 20px rgba(138,48,47,0.35)",

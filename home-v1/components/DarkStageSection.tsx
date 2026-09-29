@@ -33,7 +33,7 @@ const DARK_PANEL: CSSProperties = {
   position: "relative",
   width: "100%",
   height: "100%",
-  background: "rgba(8,10,14,0.72)",
+  background: "transparent",
   overflow: "hidden",
   display: "flex",
   flexDirection: "column",
@@ -77,7 +77,7 @@ export function DarkStageSection({
           position: "absolute",
           bottom: 0, left: 0, right: 0,
           height: 60,
-          background: "linear-gradient(to top, rgba(8,10,14,0.92) 0%, transparent 100%)",
+          background: "linear-gradient(to top, rgba(255, 255, 255, 0.95) 0%, transparent 100%)",
           pointerEvents: "none",
         }}
       />
