@@ -9,7 +9,7 @@ export default function GreyCta() {
   return (
     <section
       className="relative py-24"
-      style={{ background: "var(--g-section-b)", borderTop: "1px solid var(--g-border)" }}
+      style={{ background: "var(--g-section-b)" }}
     >
       <div className="max-w-3xl mx-auto px-4 sm:px-6 text-center">
         <FadeSection delay={0}>

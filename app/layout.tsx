@@ -77,7 +77,7 @@ const GTM = "GTM-W776KVLW";
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
-    <html lang="en" data-scroll-behavior="smooth" className={`${plusJakarta.variable} ${inter.variable} ${jetbrainsMono.variable}`} style={{ backgroundColor: '#000000' }}>
+    <html lang="en" data-scroll-behavior="smooth" className={`${plusJakarta.variable} ${inter.variable} ${jetbrainsMono.variable}`} style={{ backgroundColor: '#0f1115' }}>
       <head>
         <meta charSet="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
@@ -186,7 +186,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         />
         <SiteNavigationJsonLd />
       </head>
-      <body className="overflow-x-hidden">
+      <body className="overflow-x-hidden" style={{ backgroundColor: "#0f1115" }}>
         <a
           href="#main-content"
           className="sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 focus:z-[9999] focus:bg-white focus:px-4 focus:py-2 focus:rounded-lg focus:shadow-lg focus:text-[#e7212b] focus:font-semibold"

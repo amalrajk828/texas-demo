@@ -66,6 +66,11 @@ export default function PartnersTicker() {
         .partners-wrapper:hover {
           animation-play-state: paused;
         }
+        @media (prefers-reduced-motion: reduce) {
+          .partners-wrapper {
+            animation: none;
+          }
+        }
         @keyframes marquee {
           0%   { transform: translateX(0); }
           100% { transform: translateX(-50%); }

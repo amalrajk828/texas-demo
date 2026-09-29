@@ -52,7 +52,6 @@ export default function PartnersTicker() {
         <Track />
       </div>
 
-      {/* Fade edges with CSS mask for reliability */}
       <style>{`
         .partners-wrapper {
           animation: marquee 22s linear infinite;
@@ -60,13 +59,14 @@ export default function PartnersTicker() {
         .partners-wrapper:hover {
           animation-play-state: paused;
         }
+        @media (prefers-reduced-motion: reduce) {
+          .partners-wrapper {
+            animation: none;
+          }
+        }
         @keyframes marquee {
           0%   { transform: translate3d(0, 0, 0); }
           100% { transform: translate3d(-50%, 0, 0); }
-        }
-        section:has(.partners-wrapper) {
-          -webkit-mask-image: linear-gradient(to right, transparent 0%, black 6%, black 94%, transparent 100%);
-          mask-image: linear-gradient(to right, transparent 0%, black 6%, black 94%, transparent 100%);
         }
       `}</style>
     </section>

@@ -1,7 +1,5 @@
 import type { Metadata } from "next";
 import HomeV5Page from "@/demo/home-v1/HomeV5Page";
-import VersionSwitcherBar from "@/components/VersionSwitcherBar";
-
 export const metadata: Metadata = {
   title: "Demo Variant: Home V1 (Finalized Design) | Texas Technical Services",
   description: "Finalized home screen design served as the Home V1 preview.",
@@ -9,10 +7,5 @@ export const metadata: Metadata = {
 };
 
 export default function DemoHomeV1Page() {
-  return (
-    <>
-      <HomeV5Page />
-      <VersionSwitcherBar />
-    </>
-  );
+  return <HomeV5Page />;
 }

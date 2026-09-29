@@ -14,11 +14,13 @@ export default function ScrollObserver() {
 
     const prefersReduced = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
 
+    const getPendingElements = () =>
+      Array.from(document.querySelectorAll<HTMLElement>(".fade-up:not(.visible)"))
+        .filter((el) => !el.closest(".v1-page-content"));
+
     if (prefersReduced) {
       timeoutId = setTimeout(() => {
-        document
-          .querySelectorAll<HTMLElement>(".fade-up:not(.visible)")
-          .forEach((el) => el.classList.add("visible"));
+        getPendingElements().forEach((el) => el.classList.add("visible"));
       }, 50);
       return () => {
         if (timeoutId) clearTimeout(timeoutId);
@@ -26,7 +28,7 @@ export default function ScrollObserver() {
     }
 
     function observeElements() {
-      const els = document.querySelectorAll<HTMLElement>(".fade-up:not(.visible)");
+      const els = getPendingElements();
       if (!els.length) return;
 
       els.forEach((el) => {

@@ -393,6 +393,9 @@ const showDesc = (label: string) => label === "Services";
 /* ── Component ────────────────────────────────────────────────────── */
 export default function Header() {
   const pathname = usePathname();
+  const isHomeV1 = pathname === "/demo/home-v1" || pathname?.startsWith("/demo/home-v1/") || pathname === "/home-v1" || pathname?.startsWith("/home-v1/");
+  if (isHomeV1) return null;
+
   const isHome = pathname === "/";
   const isAboutUs = pathname.startsWith("/about-us");
   const isHomeV5 = pathname?.startsWith("/demo/home-v1");
@@ -555,7 +558,7 @@ export default function Header() {
         <div className="absolute inset-0 rounded-2xl overflow-hidden pointer-events-none">
           {/* Subtle top specular highlight sheen */}
           <div className="absolute top-0 inset-x-0 h-10 bg-gradient-to-b from-white/[0.05] to-transparent pointer-events-none rounded-t-2xl" />
-          <div className="absolute top-0 inset-x-0 h-[1px] bg-gradient-to-r from-transparent via-white/20 to-transparent pointer-events-none" />
+          
         </div>
 
         <div className="w-full px-4 sm:px-6">
@@ -957,16 +960,8 @@ export default function Header() {
           </div>
         </div>
 
-        {/* Bottom accent line — visible on scroll */}
-        <div
-          className="absolute bottom-0 inset-x-0 h-px transition-opacity duration-300 rounded-b-2xl overflow-hidden"
-          style={{
-            background: isHomeV5
-              ? "linear-gradient(90deg, transparent, rgba(131,36,41,0.5), transparent)"
-              : "linear-gradient(90deg, transparent, rgba(229,57,53,0.25), transparent)",
-            opacity: scrolled ? 1 : 0,
-          }}
-        />
+
+        
 
         {isHomeV2 && (
           <style>{`

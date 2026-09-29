@@ -66,14 +66,70 @@
 }
 
 /*
- * Global base background — black.
- * This is the colour visible during page load before any content renders.
- * Individual sections/pages override with explicit bg- classes as needed.
+ * Global base background — solid dark (#0f1115).
+ * This ensures there is NEVER a white or raw-image flash before any JS/React hydration happens.
  */
 html,
 body,
+#main-content,
 .page-wrapper {
-  background-color: #000000;
+  background-color: #0f1115 !important;
+  color: #F4F1EE;
+}
+
+/* Critical initial styles to prevent unstyled image flash (FOUC) on fixed background and hero slider */
+.v1-fixed-background {
+  position: fixed;
+  inset: 0;
+  z-index: 0;
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+  pointer-events: none;
+  background-color: #0f1115 !important;
+  contain: paint layout;
+}
+
+.v1-fixed-media {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #0f1115 !important;
+}
+
+.v1-fixed-poster {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  opacity: 0;
+  transition: opacity 600ms ease;
+}
+
+.v1-fixed-poster.is-loaded {
+  opacity: 1;
+}
+
+.hero-slider-panel {
+  position: relative !important;
+  overflow: hidden !important;
+  border-radius: 24px !important;
+  background-color: #0f1115 !important;
+  contain: paint;
+}
+
+.hero-slider-slide {
+  position: absolute !important;
+  inset: 0 !important;
+  width: 100% !important;
+  height: 100% !important;
+  overflow: hidden !important;
+  border-radius: 24px !important;
+  background-color: #0f1115 !important;
 }
 
 :root {

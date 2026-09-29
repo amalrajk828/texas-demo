@@ -22,8 +22,8 @@ function FadeUp({ children, delay = 0, className = "" }: { children: React.React
   const ref = useRef<HTMLDivElement>(null);
   const inView = useInView(ref, { once: true, margin: "-60px" });
   return (
-    <motion.div ref={ref} initial={{ opacity: 0, y: 24 }} animate={inView ? { opacity: 1, y: 0 } : {}}
-      transition={{ duration: 0.65, ease: [0.22, 1, 0.36, 1], delay }} className={className}>
+    <motion.div ref={ref} initial={{ opacity: 0 }} animate={inView ? { opacity: 1, scale: 1 } : { opacity: 0, scale: 0.97 }}
+      transition={{ duration: 0.6, ease: [0.22, 1, 0.36, 1], delay }} className={className}>
       {children}
     </motion.div>
   );
@@ -55,24 +55,20 @@ function StatCard({
   value, suffix, label, index, started,
 }: { value: number; suffix: string; label: string; index: number; started: boolean }) {
   const count = useLiquidCounter(value, started, index * 160);
-  const isMobile = useIsMobile();
   return (
     <div
       className="relative px-5 py-4 w-full h-full rounded-2xl overflow-hidden transition-all duration-300 group"
       style={{
-        background: "rgba(255, 255, 255, 0.35)",
-        backdropFilter: isMobile ? "none" : "blur(18px)",
-        WebkitBackdropFilter: isMobile ? "none" : "blur(18px)",
-        border: "1px solid rgba(255, 255, 255, 0.65)",
-        boxShadow: "0 8px 24px rgba(0, 0, 0, 0.06), inset 0 1px 1px rgba(255, 255, 255, 0.8)",
+        background: "rgba(20,22,27,0.82)",
+        border: "1px solid rgba(255,255,255,0.09)",
+        boxShadow: "0 8px 24px rgba(0,0,0,0.25)",
       }}
     >
-      <div className="absolute top-0 inset-x-0 h-[1px] bg-gradient-to-r from-transparent via-white/80 to-transparent pointer-events-none" />
-      <div className="absolute inset-0 bg-white/20 opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none" />
+      <div className="absolute top-0 inset-x-0 h-[1px] pointer-events-none" style={{ background: "linear-gradient(90deg, transparent, rgba(138,48,47,0.35), transparent)" }} />
       <p className="relative z-10 text-[1.7rem] font-black leading-none" style={{ color: "var(--color-brand-red)" }}>
         {count}{suffix}
       </p>
-      <p className="relative z-10 text-[13px] mt-1.5 font-semibold text-[#4B5563]">{label}</p>
+      <p className="relative z-10 text-[13px] mt-1.5 font-semibold" style={{ color: "#A8A29E" }}>{label}</p>
     </div>
   );
 }
@@ -82,7 +78,7 @@ export default function GreyWhatWeDo() {
   const statInView = useInView(statRef, { once: true, margin: "-60px" });
   const isMobile = useIsMobile();
   return (
-    <section className="relative py-24 lg:py-32 overflow-hidden" style={{ background: "linear-gradient(135deg, #f5f7fa 0%, #e2e7ee 45%, #c9d2dc 100%)" }}>
+    <section className="relative py-24 lg:py-32 overflow-hidden" style={{ background: "transparent" }}>
       <div className="relative max-w-7xl mx-auto px-4 sm:px-6 z-10">
         <div className="flex flex-col text-center items-center gap-6 mb-10 sm:mb-12 lg:mb-14">
           <div className="flex flex-col items-center">
@@ -98,22 +94,22 @@ export default function GreyWhatWeDo() {
             </motion.div>
 
             <motion.h2
-              initial={{ opacity: 0, y: 30 }}
-              animate={{ opacity: 1, y: 0 }}
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
               transition={{ duration: 0.7, ease: "easeOut", delay: 0.15 }}
-              className="text-[1.6rem] sm:text-[2.2rem] lg:text-[2.8rem] xl:text-[3.4rem] font-black leading-[1.08] tracking-tight block text-[#111827]"
+              className="text-[1.6rem] sm:text-[2.2rem] lg:text-[2.8rem] xl:text-[3.4rem] font-black leading-[1.08] tracking-tight block" style={{ color: "#F4F1EE" }}
             >
               What precision solutions do we deliver for critical industries?
             </motion.h2>
           </div>
 
           <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
             transition={{ duration: 0.7, ease: "easeOut", delay: 0.3 }}
             className="lg:pb-1 mx-auto"
           >
-            <p className="text-[16px] sm:text-[17px] leading-[1.85] text-[#4B5563]">
+            <p className="text-[16px] sm:text-[17px] leading-[1.85]" style={{ color: "#A8A29E" }}>
               Texas Technical Services delivers precision-engineered solutions across flow measurement,
               inspection, and industrial automation — trusted by leading operators since 2008.
             </p>
@@ -138,22 +134,16 @@ export default function GreyWhatWeDo() {
                 />
 
                 <motion.div
-                  whileHover={{ y: -6, scale: 1.02 }}
                   transition={{ duration: 0.3, ease: [0.22, 1, 0.36, 1] }}
-                  className="relative rounded-[24px] flex flex-col h-full overflow-hidden cursor-pointer transition-all duration-300 group-hover:border-white/95"
+                  className="relative rounded-[24px] flex flex-col h-full overflow-hidden cursor-pointer transition-all duration-300"
                   style={{
-                    background: "rgba(255, 255, 255, 0.28)",
-                    backdropFilter: isMobile ? "none" : "blur(22px)",
-                    WebkitBackdropFilter: isMobile ? "none" : "blur(22px)",
-                    border: "1px solid rgba(255, 255, 255, 0.65)",
-                    boxShadow: "0 8px 32px rgba(0, 0, 0, 0.08), inset 0 1px 1px rgba(255, 255, 255, 0.85)",
+                    background: "rgba(20,22,27,0.82)",
+                    border: "1px solid rgba(255,255,255,0.09)",
+                    boxShadow: "0 8px 32px rgba(0,0,0,0.28)",
                   }}
                 >
-                  {/* Subtle top edge light reflection strip */}
-                  <div className="absolute top-0 inset-x-0 h-[1px] bg-gradient-to-r from-transparent via-white/80 to-transparent pointer-events-none" />
-                  
-                  {/* Hover background brightening overlay */}
-                  <div className="absolute inset-0 bg-white/20 opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none" />
+                  {/* Top edge glow */}
+                  <div className="absolute top-0 inset-x-0 h-[1px] pointer-events-none" style={{ background: "linear-gradient(90deg, transparent, rgba(138,48,47,0.4), transparent)" }} />
 
                   <div className="relative z-10 p-8 flex flex-col flex-1">
                     {/* Top Header Row: Glassy Icon box top-left, Monospace Number top-right */}
@@ -167,20 +157,21 @@ export default function GreyWhatWeDo() {
                     </div>
 
                     {/* Card Title */}
-                    <h3 className="text-[22px] sm:text-[24px] font-bold text-[#111827] leading-tight mb-3 tracking-tight">
+                    <h3 className="text-[22px] sm:text-[24px] font-bold leading-tight mb-3 tracking-tight" style={{ color: "#F4F1EE" }}>
                       {svc.title}
                     </h3>
 
                     {/* Body text */}
-                    <p className="text-[15px] leading-[1.75] flex-1 font-normal text-[#4B5563] mb-8">
+                    <p className="text-[15px] leading-[1.75] flex-1 font-normal mb-8" style={{ color: "#A8A29E" }}>
                       {svc.desc}
                     </p>
 
                     {/* Learn More Link */}
-                    <div className="mt-auto pt-4 border-t border-black/[0.06]">
+                    <div className="mt-auto pt-4 border-t" style={{ borderColor: "rgba(255,255,255,0.08)" }}>
                       <Link
                         href="/services/"
-                        className="inline-flex items-center gap-2 text-[14px] font-semibold text-slate-600 hover:text-[#8a302f] no-underline whitespace-nowrap transition-all duration-200"
+                        className="inline-flex items-center gap-2 text-[14px] font-semibold no-underline whitespace-nowrap transition-all duration-200"
+                        style={{ color: "#A8A29E" }}
                       >
                         Learn more about our services{" "}
                         <ArrowRight className="w-4 h-4 text-[#8a302f] transition-transform duration-200 group-hover:translate-x-1" />
@@ -199,8 +190,8 @@ export default function GreyWhatWeDo() {
               
               {/* Large Image Frame (Refinery) */}
               <div 
-                className="relative rounded-3xl overflow-hidden shadow-2xl shadow-black/30 border border-black/[0.05]" 
-                style={{ aspectRatio: "16/11" }}
+                className="relative rounded-3xl overflow-hidden shadow-2xl shadow-black/30" 
+                style={{ aspectRatio: "16/11", border: "1px solid rgba(255,255,255,0.09)" }}
               >
                 <Image 
                   src="/our-team/Oil-Gas.jpg" 
@@ -221,8 +212,8 @@ export default function GreyWhatWeDo() {
 
               {/* Smaller Overlapping Image Frame (Worker in PPE) */}
               <div 
-                className="absolute bottom-[-10%] right-[-10%] w-[44%] rounded-2xl overflow-hidden shadow-2xl border-4 border-white"
-                style={{ aspectRatio: "4/3" }}
+                className="absolute bottom-[-10%] right-[-10%] w-[44%] rounded-2xl overflow-hidden shadow-2xl"
+                style={{ aspectRatio: "4/3", border: "1px solid rgba(255,255,255,0.12)" }}
               >
                 <Image 
                   src="/our-team/whatwedo.jpg" 
@@ -258,8 +249,8 @@ export default function GreyWhatWeDo() {
           </FadeUp>
           <div>
             <FadeUp delay={0.08}>
-              <div className="space-y-4 mb-8" style={{ color: "#5C6270" }}>
-                {BODY.map((p, i) => <p key={i} className="text-[17px] leading-[1.85]" style={{ color: "#5C6270" }}>{p}</p>)}
+              <div className="space-y-4 mb-8">
+                {BODY.map((p, i) => <p key={i} className="text-[17px] leading-[1.85]" style={{ color: "#A8A29E" }}>{p}</p>)}
               </div>
             </FadeUp>
             <FadeUp delay={0.14}>
@@ -282,7 +273,7 @@ export default function GreyWhatWeDo() {
                 </motion.div>
                 <motion.div whileHover={{ scale: 1.03 }} whileTap={{ scale: 0.97 }}>
                   <Link href="/services/" className="inline-flex items-center gap-2 font-semibold px-7 py-4 rounded-xl text-[15px] border transition-colors"
-                    style={{ color: "#111827", borderColor: "rgba(255,255,255,0.65)", background: "rgba(255,255,255,0.35)", backdropFilter: isMobile ? "none" : "blur(18px)", WebkitBackdropFilter: isMobile ? "none" : "blur(18px)" }}>
+                    style={{ color: "#F4F1EE", borderColor: "rgba(255,255,255,0.14)", background: "rgba(255,255,255,0.06)" }}>
                     Our Services <ChevronRight className="w-4 h-4" />
                   </Link>
                 </motion.div>

@@ -6,6 +6,8 @@ import { usePathname } from "next/navigation";
 import { Mail, Phone, MapPin, LayoutGrid, ArrowRight } from "lucide-react";
 import { SITE_EMAIL } from "@/lib/site";
 import { ALL_PARTNERS } from "@/lib/partners";
+import PartnersTicker from "@/components/PartnersTicker";
+import TickerBanner from "@/components/TickerBanner";
 
 const services = [
   { label: "Flow Measurement Solutions", href: "/service/flow-measurement-solutions/" },
@@ -79,10 +81,20 @@ function FooterTrack() {
 
 export default function Footer() {
   const pathname = usePathname();
-  const isHomeV5 = pathname?.startsWith("/demo/home-v1");
+  const isHomeV5 = pathname?.startsWith("/demo/home-v1") || pathname === "/home-v1" || pathname === "/";
 
   return (
-    <footer style={{ background: isHomeV5 ? "#0a0a08" : "#0A0C11" }}>
+    <footer
+      className="relative z-40"
+      style={{ background: isHomeV5 ? "#0a0a08" : "#0A0C11" }}
+    >
+      {/* V1: Trusted Technology Partners + Ticker Banner in footer section */}
+      {isHomeV5 && (
+        <div className="w-full">
+          <PartnersTicker />
+          <TickerBanner />
+        </div>
+      )}
 
       {/* CTA strip — gradient red or v5 theme */}
       <div
@@ -284,60 +296,62 @@ export default function Footer() {
         </div>
       </div>
 
-      {/* Partners — sliding marquee */}
-      <div className="border-t" style={{ borderColor: "rgba(255,255,255,0.06)" }}>
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 pt-8 pb-4">
-          <div className="flex items-center gap-2 mb-6">
-            <span className="w-[2px] h-4 rounded-full bg-[#E53935]" />
-            <h3 className="text-white/70 text-[12px] font-bold tracking-[2.5px] uppercase">
-              Our Partners
-            </h3>
+      {/* Partners — sliding marquee (hidden on V1 since V1 has PartnersTicker + TickerBanner at top of footer) */}
+      {!isHomeV5 && (
+        <div className="border-t" style={{ borderColor: "rgba(255,255,255,0.06)" }}>
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 pt-8 pb-4">
+            <div className="flex items-center gap-2 mb-6">
+              <span className="w-[2px] h-4 rounded-full bg-[#E53935]" />
+              <h3 className="text-white/70 text-[12px] font-bold tracking-[2.5px] uppercase">
+                Our Partners
+              </h3>
+            </div>
           </div>
-        </div>
 
-        {/* Marquee */}
-        <div className="overflow-hidden select-none bg-white py-6">
-          <div className="footer-partners-wrapper flex w-full" style={{ willChange: "transform" }}>
-            <FooterTrack />
-            <FooterTrack />
+          {/* Marquee */}
+          <div className="overflow-hidden select-none bg-white py-6">
+            <div className="footer-partners-wrapper flex w-full" style={{ willChange: "transform" }}>
+              <FooterTrack />
+              <FooterTrack />
+            </div>
           </div>
-        </div>
 
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 pt-4 pb-2">
-          <div className="flex items-center gap-4">
-            <Link
-              href="/partners/"
-              className="inline-flex items-center gap-2 text-white/70 text-[13px] font-medium hover:text-white transition-colors"
-            >
-              View all partners <ArrowRight className="w-3.5 h-3.5" />
-            </Link>
-            <span className="text-white/20">·</span>
-            <Link
-              href="/videos/"
-              className="inline-flex items-center gap-2 text-white/70 text-[13px] font-medium hover:text-white transition-colors"
-            >
-              Watch our videos <ArrowRight className="w-3.5 h-3.5" />
-            </Link>
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 pt-4 pb-2">
+            <div className="flex items-center gap-4">
+              <Link
+                href="/partners/"
+                className="inline-flex items-center gap-2 text-white/70 text-[13px] font-medium hover:text-white transition-colors"
+              >
+                View all partners <ArrowRight className="w-3.5 h-3.5" />
+              </Link>
+              <span className="text-white/20">·</span>
+              <Link
+                href="/videos/"
+                className="inline-flex items-center gap-2 text-white/70 text-[13px] font-medium hover:text-white transition-colors"
+              >
+                Watch our videos <ArrowRight className="w-3.5 h-3.5" />
+              </Link>
+            </div>
           </div>
-        </div>
 
-        <style>{`
-          .footer-partners-wrapper {
-            animation: footer-marquee 30s linear infinite;
-          }
-          .footer-partners-wrapper:hover {
-            animation-play-state: paused;
-          }
-          @keyframes footer-marquee {
-            0%   { transform: translate3d(0, 0, 0); }
-            100% { transform: translate3d(-50%, 0, 0); }
-          }
-          .footer-marquee-mask {
-            -webkit-mask-image: linear-gradient(to right, transparent 0%, black 4%, black 96%, transparent 100%);
-            mask-image: linear-gradient(to right, transparent 0%, black 4%, black 96%, transparent 100%);
-          }
-        `}</style>
-      </div>
+          <style>{`
+            .footer-partners-wrapper {
+              animation: footer-marquee 30s linear infinite;
+            }
+            .footer-partners-wrapper:hover {
+              animation-play-state: paused;
+            }
+            @keyframes footer-marquee {
+              0%   { transform: translate3d(0, 0, 0); }
+              100% { transform: translate3d(-50%, 0, 0); }
+            }
+            .footer-marquee-mask {
+              -webkit-mask-image: linear-gradient(to right, transparent 0%, black 4%, black 96%, transparent 100%);
+              mask-image: linear-gradient(to right, transparent 0%, black 4%, black 96%, transparent 100%);
+            }
+          `}</style>
+        </div>
+      )}
 
       {/* Certifications */}
       <div className="border-t" style={{ borderColor: "rgba(255,255,255,0.06)" }}>

@@ -15,9 +15,16 @@ const HIGHLIGHTS = [
 
 export default function GreyTeam() {
   return (
-    <section className="relative py-24 lg:py-32 overflow-hidden bg-[#000000]">
+    <section
+      className="relative py-24 lg:py-32 overflow-hidden"
+      style={{ background: "transparent" }}
+    >
+      {/* Subtle brand glow blob matching About section */}
+      <div
+        className="absolute top-[-10%] right-[-5%] w-[500px] h-[500px] rounded-full pointer-events-none blur-[80px] opacity-30"
+        style={{ background: "radial-gradient(circle, rgba(138,48,47,0.4) 0%, transparent 70%)" }}
+      />
 
-      <div className="absolute top-0 inset-x-0 h-px" style={{ background: "var(--g-border)" }} />
       <div className="absolute -top-48 right-0 w-[500px] h-[500px] rounded-full pointer-events-none" style={{ background: "radial-gradient(circle, color-mix(in srgb, var(--color-brand-red) 4%, transparent), transparent 70%)" }} />
 
       <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6">
@@ -33,7 +40,7 @@ export default function GreyTeam() {
               className="absolute -bottom-6 -right-4 lg:-right-8 rounded-2xl px-6 py-5 flex items-center gap-4 fade-up d4"
               style={{ background: "var(--g-card-bg)", border: "1px solid var(--g-card-border)", boxShadow: "0 16px 40px rgba(0,0,0,0.12)" }}>
               <div className="w-11 h-11 rounded-xl flex items-center justify-center"
-                style={{ background: "color-mix(in srgb, var(--color-brand-red) 8%, white)", border: "1px solid color-mix(in srgb, var(--color-brand-red) 16%, transparent)" }}>
+                style={{ background: "rgba(138,48,47,0.15)", border: "1px solid rgba(138,48,47,0.25)" }}>
                 <Users className="w-5 h-5" strokeWidth={1.8} style={{ color: "var(--color-brand-red)" }} />
               </div>
               <div>
