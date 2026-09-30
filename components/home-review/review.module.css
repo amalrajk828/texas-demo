@@ -1259,8 +1259,7 @@
   padding: 35px;
 }
 .glass .whatCard:nth-child(2) {
-  margin-top: 28px;
-  margin-bottom: -28px;
+  margin-block: 0;
 }
 .glass .icon {
   border-radius: 15px;
@@ -6324,4 +6323,107 @@
   .editorial .slidePanel {
     background: linear-gradient(145deg, #fffefa, #e8f1eb);
   }
+}
+
+/* Light2: let the welcome statement and the working video share the first view. */
+.glass .heroPreviews {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+.glass .heroCertificates {
+  width: 100%;
+}
+@media (min-width: 1180px) {
+  .glass .heroLayout {
+    display: grid;
+    grid-template-columns: minmax(0, 0.94fr) minmax(0, 1.06fr);
+    column-gap: clamp(28px, 3vw, 48px);
+    align-items: start;
+    padding-top: 52px;
+  }
+  .glass .heroCopy {
+    grid-column: 1;
+    grid-row: 1;
+    max-width: none;
+    text-align: left;
+  }
+  .glass .heroDeck {
+    grid-column: 2;
+    grid-row: 1 / span 2;
+  }
+  .glass .heroCopy .eyebrow,
+  .glass .heroCopy .actions {
+    justify-content: flex-start;
+  }
+  .glass .heroCopy h1 {
+    font-size: clamp(46px, 4.05vw, 62px);
+    letter-spacing: -2.5px;
+  }
+  .glass .heroCopy h1 br {
+    display: initial;
+  }
+  .glass .heroCopy h1 span:before {
+    content: none;
+  }
+  .glass .heroLead {
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+  }
+  .glass .heroCertificates {
+    grid-column: 1;
+    grid-row: 2;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    max-width: none;
+    margin: 0;
+  }
+  .glass .heroScreen {
+    height: 360px;
+  }
+  .glass .slidePanel {
+    position: relative;
+    left: auto;
+    bottom: auto;
+    width: calc(100% - 36px);
+    margin: -22px 18px 12px;
+  }
+  .glass .heroPreviews,
+  .glass .heroStats {
+    grid-column: 1 / -1;
+  }
+}
+@media (max-width: 760px) {
+  .glass .heroPreviews {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+/* Muted industrial layers tie the light navigation to the darker footer. */
+.glass .header {
+  background: linear-gradient(110deg, #edf1eeef, #dce8e4ef 58%, #e7eeebef);
+}
+.glass .navbar {
+  background:
+    radial-gradient(circle at 12% 0%, #ffffff9c, transparent 35%),
+    linear-gradient(112deg, #e6eeeb, #d1e2df 58%, #e0ebe6);
+  border-color: #8fadaf;
+}
+.glass .footer {
+  background:
+    radial-gradient(ellipse at 5% 8%, #6eb0cd33, transparent 42%),
+    radial-gradient(ellipse at 94% 96%, #7ebad025, transparent 44%),
+    linear-gradient(90deg, #e4f4f614 1px, transparent 1px),
+    linear-gradient(0deg, #e4f4f614 1px, transparent 1px),
+    linear-gradient(125deg, #356a84, #3b708c 56%, #315e7c);
+  background-size: auto, auto, 72px 72px, 72px 72px, auto;
+  color: #f2fafb;
+  border-top: 1px solid #d3eef2a6;
+}
+.glass .footer .brand,
+.glass .footer h3 {
+  color: #f2fafb;
+}
+.glass .footer :is(p, address, a:not(.brand)) {
+  color: #f2fafb;
+}
+.glass .footerBottom {
+  border-color: #e0f2f373;
 }

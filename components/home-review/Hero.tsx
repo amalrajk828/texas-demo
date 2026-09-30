@@ -10,6 +10,9 @@ import IndustrialHeroArt, { IndustrialHeroArtLeft } from "./IndustrialHeroArt";
 import s from "./review.module.css";
 
 export default function Hero({ glass = false }: { glass?: boolean }) {
+  const slides = glass
+    ? [data.slides[2], data.slides[1], data.slides[3]]
+    : data.slides;
   const [current, setCurrent] = useState(glass ? 0 : 1);
   const [paused, setPaused] = useState(false);
   const [interacting, setInteracting] = useState(false);
@@ -25,9 +28,9 @@ export default function Hero({ glass = false }: { glass?: boolean }) {
     ((!paused && !reduced) || playRequested) &&
     inView &&
     documentVisible;
-  const slide = data.slides[current];
+  const slide = slides[current];
   function select(index: number) {
-    setCurrent((index + data.slides.length) % data.slides.length);
+    setCurrent((index + slides.length) % slides.length);
     setPlayRequested(false);
   }
   useEffect(() => {
@@ -38,11 +41,11 @@ export default function Hero({ glass = false }: { glass?: boolean }) {
   useEffect(() => {
     if (!running) return;
     const timer = setTimeout(() => {
-      setCurrent((value) => (value + 1) % data.slides.length);
+      setCurrent((value) => (value + 1) % slides.length);
       setPlayRequested(false);
     }, 9000);
     return () => clearTimeout(timer);
-  }, [running, current]);
+  }, [running, current, slides.length]);
   useEffect(() => {
     const element = video.current;
     if (!element) return;
@@ -80,23 +83,6 @@ export default function Hero({ glass = false }: { glass?: boolean }) {
             ))}
           </div>
           <p className={s.heroCredential}>{first.eyebrow}</p>
-          {glass && (
-            <div className={s.heroCertificates} aria-label="Certifications">
-              {data.about.certifications.map((cert) => (
-                <Link key={cert.label} prefetch={false} href="/certifications/">
-                  <Image
-                    src={cert.badge}
-                    alt=""
-                    width={54}
-                    height={54}
-                    sizes="54px"
-                  />
-                  <strong>{cert.label}</strong>
-                  <span>{cert.sub}</span>
-                </Link>
-              ))}
-            </div>
-          )}
         </Reveal>
         <div
           className={s.heroDeck}
@@ -112,14 +98,14 @@ export default function Hero({ glass = false }: { glass?: boolean }) {
           }}
         >
           <div className={s.heroScreen}>
-            {data.slides.map((item, i) => (
+            {slides.map((item, i) => (
               <div
                 key={item.tag}
                 hidden={current !== i}
                 className={s.slide}
                 role="group"
                 aria-roledescription="slide"
-                aria-label={`${i + 1} of ${data.slides.length}: ${item.tag}`}
+                aria-label={`${i + 1} of ${slides.length}: ${item.tag}`}
               >
                 <Image
                   src={item.poster}
@@ -154,7 +140,7 @@ export default function Hero({ glass = false }: { glass?: boolean }) {
                   )}
                 <div className={s.mediaLabel}>
                   <span>{item.tag}</span>
-                  <span>0{i + 1} / 04</span>
+                  <span>0{i + 1} / 0{slides.length}</span>
                 </div>
               </div>
             ))}
@@ -174,7 +160,7 @@ export default function Hero({ glass = false }: { glass?: boolean }) {
           </div>
           <div className={s.slidePanel}>
             <div className={s.slideCopy} aria-live="off">
-              {data.slides.map((item, i) => (
+              {slides.map((item, i) => (
                 <div
                   aria-hidden={current !== i}
                   inert={current !== i}
@@ -192,7 +178,7 @@ export default function Hero({ glass = false }: { glass?: boolean }) {
                     <p className={s.eyebrow}>{item.eyebrow}</p>
                     <h2>{item.heading.join(" ")}</h2>
                     <p>{item.sub}</p>
-                    {i > 0 && (
+                    {(glass || i > 0) && (
                       <Link
                         prefetch={false}
                         href={item.ctas[0].href}
@@ -215,7 +201,7 @@ export default function Hero({ glass = false }: { glass?: boolean }) {
                 ←
               </button>
               <div className={s.slideDots}>
-                {data.slides.map((item, i) => (
+                {slides.map((item, i) => (
                   <button
                     type="button"
                     key={item.tag}
@@ -249,8 +235,25 @@ export default function Hero({ glass = false }: { glass?: boolean }) {
           </div>
         </div>
         {glass && (
+          <div className={s.heroCertificates} aria-label="Certifications">
+            {data.about.certifications.map((cert) => (
+              <Link key={cert.label} prefetch={false} href="/certifications/">
+                <Image
+                  src={cert.badge}
+                  alt=""
+                  width={54}
+                  height={54}
+                  sizes="54px"
+                />
+                <strong>{cert.label}</strong>
+                <span>{cert.sub}</span>
+              </Link>
+            ))}
+          </div>
+        )}
+        {glass && (
           <div className={s.heroPreviews} aria-label="Hero slide previews">
-            {data.slides.map((item, index) => (
+            {slides.map((item, index) => (
               <motion.button
                 key={item.tag}
                 type="button"
