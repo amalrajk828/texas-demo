@@ -1,74 +1,164 @@
-/* ── Home V3: V5 motif utility classes (Industrial Teal theme) ──
-   Maps v5's red accent to v3's teal primary.
-   Colors reference var(--primary, #17707E) and var(--color-brand-red-dark, #0F5260)
-   which resolve to home-v3's existing palette set by ThemeWrapper.
-*/
+/* ── Home V3: Precision Industrial Engineering Theme ── */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Sora:wght@500;600;700;800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200');
 
-/* ─── Primary button — teal gradient (mirrors v3's "Contact Us" button style) ─── */
-.v3-btn-primary {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  gap: 8px;
-  color: #ffffff;
+:root {
+  --v3-surface: #f9f9ff;
+  --v3-surface-dim: #cfdaf1;
+  --v3-surface-bright: #f9f9ff;
+  --v3-surface-container-lowest: #ffffff;
+  --v3-surface-container-low: #f0f3ff;
+  --v3-surface-container: #e7eeff;
+  --v3-surface-container-high: #dee8ff;
+  --v3-surface-container-highest: #d8e3fa;
+  --v3-on-surface: #111c2c;
+  --v3-on-surface-variant: #564241;
+  --v3-inverse-surface: #263142;
+  --v3-inverse-on-surface: #ebf1ff;
+  --v3-primary: #6b191b;
+  --v3-primary-container: #8a302f;
+  --v3-primary-fixed: #ffdad7;
+  --v3-primary-fixed-dim: #ffb3af;
+  --v3-accent-hover: #c0483f;
+  --v3-secondary: #555f6c;
+  --v3-secondary-fixed: #d9e3f3;
+  --v3-text-muted: #8a94a3;
+  --v3-blob-blue: rgba(30, 77, 122, 0.14);
+  --v3-blob-red: rgba(192, 72, 63, 0.12);
+  --v3-nav-dark-glass: rgba(15, 17, 21, 0.85);
+  --v3-footer-dark: #202c3a;
+}
+
+/* Typography Helpers */
+.font-display-hero {
+  font-family: 'Sora', sans-serif;
+  font-size: clamp(34px, 5vw, 56px);
+  line-height: 1.1;
+  letter-spacing: -0.02em;
   font-weight: 700;
-  font-size: 0.85rem;
-  letter-spacing: 0.12em;
-  text-transform: uppercase;
-  text-decoration: none;
-  padding: 12px 24px;
-  border-radius: 9999px !important;
-  background: linear-gradient(
-    180deg,
-    var(--primary, #17707E) 0%,
-    var(--color-brand-red-dark, #0F5260) 100%
-  );
-  /* No border — gradient provides depth; mismatched border-radius + border creates hard edge artifact */
-  box-shadow: 0 4px 20px rgba(23, 112, 126, 0.35);
-  transition: filter 0.2s ease, transform 0.2s ease, box-shadow 0.2s ease, gap 0.2s ease;
-  overflow: hidden;
-}
-.v3-btn-primary:hover {
-  filter: brightness(1.12);
-  transform: translateY(-2px);
-  box-shadow: 0 8px 28px rgba(23, 112, 126, 0.50);
 }
 
-/* ─── Secondary ghost button — for dark sections ─── */
-.v3-btn-secondary {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  gap: 8px;
-  color: var(--soft-light, #F4F9F9);
+.font-headline-lg {
+  font-family: 'Sora', sans-serif;
+  font-size: clamp(26px, 3.5vw, 40px);
+  line-height: 1.2;
+  letter-spacing: -0.015em;
   font-weight: 600;
-  font-size: 0.85rem;
-  letter-spacing: 0.12em;
-  text-transform: uppercase;
-  text-decoration: none;
-  padding: 12px 24px;
-  border-radius: 9999px !important;
-  background-color: rgba(255, 255, 255, 0.05);
-  border: 1px solid rgba(255, 255, 255, 0.15);
-  transition: all 0.2s ease;
-  backdrop-filter: blur(4px);
-}
-.v3-btn-secondary:hover {
-  border-color: rgba(255, 255, 255, 0.30);
-  color: #ffffff;
-  background-color: rgba(255, 255, 255, 0.10);
-  transform: translateY(-2px);
 }
 
-/* ─── Teal corner dot indicator (replaces v5's red square) ─── */
-.v3-corner-indicator {
-  position: absolute;
-  top: 12px;
-  right: 12px;
-  width: 6px;
-  height: 6px;
-  border-radius: 50%;
-  background-color: var(--primary, #17707E);
-  pointer-events: none;
-  transition: transform 0.2s ease, opacity 0.2s ease;
+.font-headline-md {
+  font-family: 'Sora', sans-serif;
+  font-size: clamp(22px, 2.8vw, 28px);
+  line-height: 1.25;
+  letter-spacing: -0.01em;
+  font-weight: 600;
+}
+
+.font-headline-sm {
+  font-family: 'Sora', sans-serif;
+  font-size: 22px;
+  line-height: 30px;
+  letter-spacing: -0.005em;
+  font-weight: 600;
+}
+
+.font-title-md {
+  font-family: 'Sora', sans-serif;
+  font-size: 18px;
+  line-height: 26px;
+  font-weight: 600;
+}
+
+.font-label-lg {
+  font-family: 'Sora', sans-serif;
+  font-size: 14px;
+  line-height: 20px;
+  letter-spacing: 0.02em;
+  font-weight: 600;
+}
+
+.font-label-md {
+  font-family: 'Sora', sans-serif;
+  font-size: 12px;
+  line-height: 16px;
+  letter-spacing: 0.04em;
+  font-weight: 600;
+}
+
+.font-body-lg {
+  font-family: 'Inter', sans-serif;
+  font-size: 18px;
+  line-height: 28px;
+  font-weight: 400;
+}
+
+.font-body-md {
+  font-family: 'Inter', sans-serif;
+  font-size: 16px;
+  line-height: 26px;
+  font-weight: 400;
+}
+
+.font-body-sm {
+  font-family: 'Inter', sans-serif;
+  font-size: 14px;
+  line-height: 22px;
+  font-weight: 400;
+}
+
+.font-caption {
+  font-family: 'Inter', sans-serif;
+  font-size: 12px;
+  line-height: 18px;
+  letter-spacing: 0.01em;
+  font-weight: 500;
+}
+
+/* Background Utilities */
+.bg-surface { background-color: var(--v3-surface); }
+.bg-surface-dim { background-color: var(--v3-surface-dim); }
+.bg-surface-bright { background-color: var(--v3-surface-bright); }
+.bg-surface-container-lowest { background-color: var(--v3-surface-container-lowest); }
+.bg-surface-container-low { background-color: var(--v3-surface-container-low); }
+.bg-surface-container { background-color: var(--v3-surface-container); }
+.bg-surface-container-high { background-color: var(--v3-surface-container-high); }
+.bg-surface-container-highest { background-color: var(--v3-surface-container-highest); }
+.bg-primary { background-color: var(--v3-primary); }
+.bg-primary-container { background-color: var(--v3-primary-container); }
+.bg-accent-hover:hover { background-color: var(--v3-accent-hover); }
+.bg-blob-blue { background-color: var(--v3-blob-blue); }
+.bg-blob-red { background-color: var(--v3-blob-red); }
+.bg-nav-dark-glass { background-color: var(--v3-nav-dark-glass); }
+.bg-footer-dark { background-color: var(--v3-footer-dark); }
+.bg-inverse-surface { background-color: var(--v3-inverse-surface); }
+
+/* Text Utilities */
+.text-on-surface { color: var(--v3-on-surface); }
+.text-secondary { color: var(--v3-secondary); }
+.text-text-muted { color: var(--v3-text-muted); }
+.text-primary-container { color: var(--v3-primary-container); }
+.text-primary-fixed-dim { color: var(--v3-primary-fixed-dim); }
+.text-primary-fixed { color: var(--v3-primary-fixed); }
+.text-surface-bright { color: var(--v3-surface-bright); }
+.text-inverse-on-surface { color: var(--v3-inverse-on-surface); }
+
+/* Border Utilities */
+.border-secondary-fixed { border-color: var(--v3-secondary-fixed); }
+.border-surface-container { border-color: var(--v3-surface-container); }
+.border-surface-container-high { border-color: var(--v3-surface-container-high); }
+
+/* Material Symbols font rules */
+.material-symbols-outlined {
+  font-family: 'Material Symbols Outlined';
+  font-weight: normal;
+  font-style: normal;
+  font-size: 24px;
+  line-height: 1;
+  letter-spacing: normal;
+  text-transform: none;
+  display: inline-block;
+  white-space: nowrap;
+  word-wrap: normal;
+  direction: ltr;
+  -webkit-font-smoothing: antialiased;
 }

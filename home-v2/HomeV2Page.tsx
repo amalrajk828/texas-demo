@@ -1,122 +1,198 @@
 "use client";
 
+/**
+ * HomeV5Page — fixed-stage cross-fade homepage.
+ *
+ * Architecture:
+ *   CrossFadeStage renders an invisible scroll track (height = N × SECTION_SCROLL_LENGTH vh)
+ *   beside a position:fixed stage (inset: 0). All sections live inside the stage,
+ *   absolutely positioned. Nothing moves vertically — only opacity (+ micro scale) transitions.
+ *
+ * Sections (in order):
+ *   0  Hero
+ *   1  Partners & Ticker
+ *   2  What We Do
+ *   3  Solutions
+ *   4  Vision (stats)
+ *   5  Team
+ *   6  About & Certifications
+ *   7  CTA
+ *
+ * FixedVideoBackground (canvas + scrubbed video + pipeline lines) is kept intact
+ * behind the stage at z-index 0.
+ */
+
 import dynamic from "next/dynamic";
-import ThemeWrapper from "./components/ThemeWrapper";
-import HomeV2Hero from "./components/HomeV2Hero";
-import TickerBanner from "./components/TickerBanner";
-import GreySolutions from "./components/GreySolutions";
+import ThemeWrapper from "@/components/ThemeWrapper";
+import FixedVideoBackground from "@/components/v2/FixedVideoBackground";
 import GreyTeam from "./components/GreyTeam";
-import GreyAbout from "./components/GreyAbout";
-import GreyCta from "./components/GreyCta";
+import GreyAbout from "@/components/t-grey/GreyAbout";
+import GreyCta from "@/components/t-grey/GreyCta";
+import GreySolutions from "./components/GreySolutions";
 
-const PartnersTicker = dynamic(() => import("./components/PartnersTicker"), {
-  loading: () => <div className="py-7 border-y" style={{ minHeight: 200 }} />,
-  ssr: false,
-});
+import StageHero from "./components/StageHero";
+import { CrossFadeStage, type StageSectionDef } from "./components/CrossFadeStage";
+import { DarkStageSection } from "./components/DarkStageSection";
+import "./components/hero-v5.css";
 
-const GreyWhatWeDo = dynamic(() => import("./components/GreyWhatWeDo"), {
-  loading: () => <div className="py-24 lg:py-32" style={{ minHeight: 1500 }} />,
-  ssr: false,
-});
+import WhatWeDoSectionA from "./components/WhatWeDoSectionA";
+import WhatWeDoSectionB from "./components/WhatWeDoSectionB";
+import V1InitialLoader from "./components/V1InitialLoader";
 
-const GreyServices = dynamic(() => import("./components/GreyServices"), {
-  loading: () => <div className="py-24 lg:py-32" style={{ minHeight: 1000 }} />,
-  ssr: false,
-});
-
+/* Dynamic imports for heavy sections */
 const GreyVision = dynamic(() => import("./components/GreyVision"), {
-  loading: () => <div className="py-24 lg:py-32" style={{ minHeight: 800 }} />,
-  ssr: false,
+  loading: () => <div style={{ height: "100vh" }} />,
 });
 
+/* ── CSS variables (light blue + white theme) ────────────────────────── */
 const VARS: Record<string, string> = {
-  "--color-brand-red":       "#8a302f",
-  "--color-brand-red-dark":  "#6e2624",
+  "--color-brand-red": "#8a302f",
+  "--color-brand-red-dark": "#6e2624",
   "--color-brand-red-light": "#f9e8e7",
-  "--color-brand-navy":      "#16202b",
-  "--color-brand-navy-mid":  "#202c3a",
-  "--color-brand-blue":      "#3a6ea5",
+  "--color-brand-navy": "#16202b",
+  "--color-brand-navy-mid": "#202c3a",
+  "--color-brand-blue": "#3a6ea5",
   "--color-brand-blue-soft": "#eef3f8",
-  "--color-brand-gray":      "#eef3f8",
-  "--color-footer-bg":       "#0A0C11",
-  "--color-footer-text":     "#FFFFFF",
-  "--color-footer-muted":    "rgba(255,255,255,0.60)",
-  "--color-bg-hero-from":    "#ffffff",
-  "--color-bg-hero-to":      "#eef3f8",
-  "--color-bg-hero-mask":    "rgba(255,255,255,0.75)",
-  "--color-bg-hero-mask-mid": "rgba(238,243,248,0.65)",
-  "--color-text-hero":       "#16202b",
-  "--color-surface":         "#ffffff",
-  "--color-section-alt":     "#eef3f8",
-  "--color-border":          "rgba(58,110,165,0.12)",
-  "--color-border-accent":   "rgba(138,48,47,0.20)",
-  "--color-text-primary":    "#16202b",
-  "--color-text-muted":      "#8a94a3",
+  "--color-brand-gray": "#eef3f8",
+  /* Reverted to Dark Footer tokens */
+  "--color-footer-bg": "#202c3a",
+  "--color-footer-text": "#FFFFFF",
+  "--color-footer-muted": "rgba(255, 255, 255, 0.60)",
+  "--color-bg-hero-from": "#ffffff",
+  "--color-bg-hero-to": "#eef3f8",
+  "--color-bg-hero-mask": "rgba(255, 255, 255, 0.75)",
+  "--color-bg-hero-mask-mid": "rgba(238, 243, 248, 0.65)",
+  "--color-text-hero": "#16202b",
+  "--color-surface": "#ffffff",
+  "--color-section-alt": "#eef3f8",
+  "--color-border": "rgba(58, 110, 165, 0.12)",
+  "--color-border-accent": "rgba(138, 48, 47, 0.20)",
+  "--color-text-primary": "#16202b",
+  "--color-text-muted": "#8a94a3",
+  /* Light vars for t-grey components */
+  "--g-section-a": "transparent",
+  "--g-section-b": "transparent",
+  "--g-heading": "#16202b",
+  "--g-muted": "#4a5568",
+  "--g-border": "rgba(58, 110, 165, 0.12)",
+  "--g-card-bg": "#ffffff",
+  "--g-card-border": "rgba(58, 110, 165, 0.12)",
+  "--g-card-shadow": "0 4px 20px rgba(20, 50, 90, 0.06)",
+  "--g-stat-bg": "#ffffff",
+  /* Shared section spacing tokens (navbar height + 26px breathing room) */
+  "--section-pt": "calc(var(--navbar-height, 98px) + 26px)",
+  "--section-pb": "clamp(1.5rem, 3.5vh, 2.5rem)",
 };
 
-const DARK_GREY_VARS: Record<string, string> = {
-  "--g-section-a":   "#eef3f8",
-  "--g-section-b":   "#eef3f8",
-  "--g-heading":     "#16202b",
-  "--g-muted":       "#4a5568",
-  "--g-border":      "rgba(58,110,165,0.12)",
-  "--g-card-bg":     "#ffffff",
-  "--g-card-border": "rgba(58,110,165,0.12)",
-  "--g-card-shadow": "0 4px 20px rgba(20,50,90,0.06)",
-  "--g-stat-bg":     "#ffffff",
-};
-
-const LIGHT_GREY_VARS: Record<string, string> = {
-  "--g-section-a":   "#FFFFFF",
-  "--g-section-b":   "#FFFFFF",
-  "--g-heading":     "#16202b",
-  "--g-muted":       "#4a5568",
-  "--g-border":      "rgba(58,110,165,0.12)",
-  "--g-card-bg":     "#ffffff",
-  "--g-card-border": "rgba(58,110,165,0.12)",
-  "--g-card-shadow": "0 4px 20px rgba(20,50,90,0.06)",
-  "--g-stat-bg":     "#eef3f8",
-};
+/* ── Section definitions ──────────────────────────────────────────── */
+const SECTIONS: StageSectionDef[] = [
+  {
+    id: "section-hero",
+    label: "Hero",
+    content: (
+      <DarkStageSection label="Hero" style={{ background: "transparent" }}>
+        <StageHero />
+      </DarkStageSection>
+    ),
+  },
+  {
+    id: "section-whatwedo-a",
+    label: "What We Do",
+    content: (
+      <DarkStageSection label="What We Do" style={{ background: "transparent" }}>
+        <WhatWeDoSectionA />
+      </DarkStageSection>
+    ),
+  },
+  {
+    id: "section-whatwedo-b",
+    label: "Capabilities",
+    content: (
+      <DarkStageSection label="Specialised Capabilities" style={{ background: "rgba(238, 243, 248, 0.75)", backdropFilter: "blur(8px)" }}>
+        <WhatWeDoSectionB />
+      </DarkStageSection>
+    ),
+  },
+  {
+    id: "section-solutions",
+    label: "Solutions",
+    content: (
+      <DarkStageSection label="Solutions & Partners" style={{ background: "transparent" }}>
+        <GreySolutions />
+      </DarkStageSection>
+    ),
+  },
+  {
+    id: "section-vision",
+    label: "Our Vision",
+    content: (
+      <DarkStageSection label="Our Vision" style={{ background: "rgba(238, 243, 248, 0.75)", backdropFilter: "blur(8px)" }}>
+        <GreyVision />
+      </DarkStageSection>
+    ),
+  },
+  {
+    id: "section-team",
+    label: "Our Team",
+    content: (
+      <DarkStageSection label="Our Team" style={{ background: "rgba(255, 255, 255, 0.45)" }}>
+        <GreyTeam />
+      </DarkStageSection>
+    ),
+  },
+  {
+    id: "section-about",
+    label: "About",
+    content: (
+      <DarkStageSection label="About Us" style={{ background: "rgba(238, 243, 248, 0.75)", backdropFilter: "blur(8px)" }}>
+        <GreyAbout />
+      </DarkStageSection>
+    ),
+  },
+  {
+    id: "section-cta",
+    label: "Get In Touch",
+    content: (
+      <DarkStageSection label="Get In Touch" style={{ background: "rgba(238, 243, 248, 0.78)", backdropFilter: "blur(8px)" }}>
+        <GreyCta />
+      </DarkStageSection>
+    ),
+  },
+];
 
 export default function HomeV2Page() {
   return (
     <ThemeWrapper vars={VARS}>
-      <main style={{ background: "linear-gradient(135deg, #f5f7fa 0%, #e2e7ee 45%, #c9d2dc 100%)" }}>
-        {/* Variant 2 Hero Section matching Flow Measurement Solutions Hero */}
-        <HomeV2Hero />
+      {/* Initial load curtain to eliminate any FOUC or raw unstyled background flash */}
+      <V1InitialLoader />
 
-        {/* Identical rest-of-page sections below hero */}
-        <PartnersTicker />
-        <TickerBanner />
+      {/* Fixed video background — z-index 0, untouched */}
+      <FixedVideoBackground />
 
-        <ThemeWrapper vars={LIGHT_GREY_VARS}>
-          <GreyWhatWeDo />
-        </ThemeWrapper>
+      {/* Skip-to-content for keyboard / screen-reader users */}
+      <a
+        href="#section-hero"
+        className="sr-only focus:not-sr-only focus:absolute focus:top-20 focus:left-4 focus:z-[9999] focus:bg-[#8a302f] focus:px-4 focus:py-2 focus:rounded-lg focus:text-white focus:font-semibold"
+      >
+        Skip to content
+      </a>
 
-        <ThemeWrapper vars={DARK_GREY_VARS}>
-          <GreyServices />
-        </ThemeWrapper>
+      {/*
+        noscript fallback: stacked dark sections when JS is disabled.
+        CrossFadeStage is client-only so without JS none of the stage renders.
+      */}
+      <noscript>
+        <div style={{ position: "relative", background: "#080A0E", color: "#F4F1EE", padding: "60px 24px" }}>
+          {SECTIONS.map((s) => (
+            <section key={s.id} id={s.id} style={{ marginBottom: 64 }}>
+              {s.content}
+            </section>
+          ))}
+        </div>
+      </noscript>
 
-        <ThemeWrapper vars={LIGHT_GREY_VARS}>
-          <GreySolutions />
-        </ThemeWrapper>
-
-        <ThemeWrapper vars={DARK_GREY_VARS}>
-          <GreyVision />
-        </ThemeWrapper>
-
-        <ThemeWrapper vars={DARK_GREY_VARS}>
-          <GreyTeam />
-        </ThemeWrapper>
-
-        <ThemeWrapper vars={DARK_GREY_VARS}>
-          <GreyAbout />
-        </ThemeWrapper>
-
-        <ThemeWrapper vars={LIGHT_GREY_VARS}>
-          <GreyCta />
-        </ThemeWrapper>
-      </main>
+      {/* Cross-fade stage — the entire visible homepage */}
+      <CrossFadeStage sections={SECTIONS} />
     </ThemeWrapper>
   );
 }

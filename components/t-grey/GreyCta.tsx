@@ -46,10 +46,34 @@ export default function GreyCta() {
         </FadeSection>
 
         <FadeSection delay={0.22}>
-          <div className="flex items-center justify-center gap-3 sm:gap-5 mb-5 sm:mb-8">
-            {["/about/cert-iso9001.png", "/about/cert-iso14001.png", "/about/cert-iso45001.png", "/about/cert-uasl.png", "/about/cert-accurate.png"].map((src) => (
-              <Link key={src} href="/certifications/" className="relative w-10 h-10 sm:w-16 sm:h-16 block">
-                <Image src={src} alt="" fill className="object-contain" sizes="64px" />
+          <div className="flex items-center justify-center gap-2.5 sm:gap-4 mb-6 sm:mb-9 flex-wrap">
+            {[
+              { src: "/about/cert-iso9001.png", alt: "ISO 9001:2015" },
+              { src: "/about/cert-iso14001.png", alt: "ISO 14001:2015" },
+              { src: "/about/cert-iso45001.png", alt: "ISO 45001:2018" },
+              { src: "/about/cert-uasl.png", alt: "UASL Accredited" },
+              { src: "/about/cert-accurate.png", alt: "Accurate Certified" },
+            ].map((cert) => (
+              <Link
+                key={cert.src}
+                href="/certifications/"
+                className="relative rounded-2xl p-2.5 sm:p-3 flex items-center justify-center transition-all duration-300 hover:-translate-y-1 hover:shadow-xl group"
+                style={{
+                  backgroundColor: "rgba(255, 255, 255, 0.60)",
+                  backdropFilter: "blur(20px) saturate(160%)",
+                  WebkitBackdropFilter: "blur(20px) saturate(160%)",
+                  border: "1px solid rgba(255, 255, 255, 0.90)",
+                  boxShadow: "0 8px 24px -4px rgba(20, 45, 75, 0.08), 0 0 0 1px rgba(255, 255, 255, 0.50) inset",
+                }}
+              >
+                {/* Top specular reflection / edge highlight */}
+                <div
+                  className="absolute top-0 inset-x-0 h-[1.5px] pointer-events-none rounded-t-2xl"
+                  style={{ background: "linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.95), transparent)" }}
+                />
+                <div className="relative w-10 h-10 sm:w-14 sm:h-14 transition-transform duration-300 group-hover:scale-105 filter drop-shadow-[0_2px_6px_rgba(20,40,65,0.12)]">
+                  <Image src={cert.src} alt={cert.alt} fill className="object-contain" sizes="56px" />
+                </div>
               </Link>
             ))}
           </div>

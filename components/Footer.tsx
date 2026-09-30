@@ -81,12 +81,21 @@ function FooterTrack() {
 
 export default function Footer() {
   const pathname = usePathname();
-  const isHomeV5 = pathname?.startsWith("/demo/home-v1") || pathname === "/home-v1" || pathname === "/";
+  const isHomeV3 =
+    pathname === "/demo/home-v3" ||
+    pathname?.startsWith("/demo/home-v3/") ||
+    pathname === "/home-v3" ||
+    pathname?.startsWith("/home-v3/");
+  if (isHomeV3) return null;
+
+  const isHomeV5 =
+    pathname?.startsWith("/demo/home-v1") || pathname === "/home-v1" || pathname === "/" ||
+    pathname?.startsWith("/demo/home-v2") || pathname === "/home-v2";
 
   return (
     <footer
       className="relative z-40"
-      style={{ background: isHomeV5 ? "#0a0a08" : "#0A0C11" }}
+      style={{ background: "#202c3a" }}
     >
       {/* V1: Trusted Technology Partners + Ticker Banner in footer section */}
       {isHomeV5 && (

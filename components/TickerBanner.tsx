@@ -35,7 +35,7 @@ export default function TickerBanner() {
   return (
     <div
       className="overflow-hidden"
-      style={{ background: "var(--color-brand-navy-mid)" }}
+      style={{ background: "var(--color-brand-navy-mid, #202c3a)" }}
     >
       {/* Top accent line */}
       <div className="h-px" style={{ background: "linear-gradient(90deg, transparent, rgba(229,57,53,0.20), transparent)" }} />

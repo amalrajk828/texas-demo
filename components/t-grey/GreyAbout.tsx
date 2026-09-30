@@ -52,35 +52,45 @@ export default function GreyAbout() {
             </Link>
           </div>
 
-          {/* Certification badge grid — light cards with soft blue border */}
-          <div className="grid grid-cols-2 sm:grid-cols-5 gap-2.5 sm:gap-3 mx-auto max-w-3xl justify-items-center w-full">
+          {/* Certification badge grid — glass cards matching Solutions & Partners treatment */}
+          <div className="grid grid-cols-2 sm:grid-cols-5 gap-3 sm:gap-4 mx-auto max-w-4xl justify-items-center w-full">
             {CERTS.map((cert, idx) => (
               <Link
                 href="/certifications/"
                 key={cert.label}
-                className={`relative rounded-xl px-3 py-3 sm:px-4 sm:py-4 text-center overflow-hidden transition-all duration-300 group block w-full min-h-[44px] ${
-                  idx === 4 ? "col-span-2 sm:col-span-1 max-w-[200px] sm:max-w-none" : ""
+                className={`relative rounded-2xl px-3 py-4 sm:px-4 sm:py-5 text-center overflow-hidden transition-all duration-300 group block w-full min-h-[44px] hover:-translate-y-1 hover:shadow-xl ${
+                  idx === 4 ? "col-span-2 sm:col-span-1 max-w-[220px] sm:max-w-none" : ""
                 }`}
                 style={{
-                  background: "#5a86ad",
-                  border: "1px solid rgba(255, 255, 255, 0.22)",
-                  boxShadow: "0 8px 24px rgba(20, 40, 60, 0.18)",
+                  backgroundColor: "rgba(255, 255, 255, 0.60)",
+                  backdropFilter: "blur(20px) saturate(160%)",
+                  WebkitBackdropFilter: "blur(20px) saturate(160%)",
+                  border: "1px solid rgba(255, 255, 255, 0.90)",
+                  boxShadow: "0 10px 30px -4px rgba(20, 45, 75, 0.08), 0 0 0 1px rgba(255, 255, 255, 0.50) inset",
                 }}
               >
-                {/* Top edge glow */}
-                <div className="absolute top-0 inset-x-0 h-[1px] pointer-events-none" style={{ background: "linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.5), transparent)" }} />
-                {/* Hover tint */}
-                <div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none" style={{ background: "rgba(255, 255, 255, 0.08)" }} />
+                {/* Top specular reflection / edge highlight */}
+                <div
+                  className="absolute top-0 inset-x-0 h-[1.5px] pointer-events-none"
+                  style={{ background: "linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.95), transparent)" }}
+                />
+                {/* Hover glass highlight */}
+                <div
+                  className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none"
+                  style={{
+                    background: "rgba(255, 255, 255, 0.25)",
+                  }}
+                />
 
-                <div className="relative z-10 flex justify-center mb-1.5 sm:mb-2">
-                  <div className="relative w-10 h-10 sm:w-14 sm:h-14">
-                    <Image src={cert.badge} alt={cert.label} fill className="object-contain" sizes="56px" />
+                <div className="relative z-10 flex justify-center mb-2.5 sm:mb-3">
+                  <div className="relative w-12 h-12 sm:w-16 sm:h-16 transition-transform duration-300 group-hover:scale-105 filter drop-shadow-[0_4px_10px_rgba(20,40,65,0.12)]">
+                    <Image src={cert.badge} alt={cert.label} fill className="object-contain" sizes="64px" />
                   </div>
                 </div>
-                <p className="relative z-10 text-[11px] sm:text-[12px] font-bold leading-tight text-white">
+                <p className="relative z-10 text-[12px] sm:text-[13px] font-bold leading-tight text-[#16202b] transition-colors duration-200 group-hover:text-[#8a302f]">
                   {cert.label}
                 </p>
-                <p className="relative z-10 text-[9px] sm:text-[10px] mt-0.5 sm:mt-1 font-medium text-[#dce6f0]">
+                <p className="relative z-10 text-[10px] sm:text-[11px] mt-1 font-medium text-[#4a5568] leading-tight">
                   {cert.sub}
                 </p>
               </Link>

@@ -35,7 +35,7 @@ const socials = [
 
 export default function ThemedFooter() {
   return (
-    <footer style={{ background: "var(--color-brand-navy)", borderTop: "1px solid color-mix(in srgb, var(--color-brand-red) 20%, transparent)" }}>
+    <footer style={{ background: "#202c3a", borderTop: "1px solid color-mix(in srgb, var(--color-brand-red) 20%, transparent)" }}>
 
       {/* CTA strip */}
       <div style={{ background: "var(--color-brand-red)" }}>
