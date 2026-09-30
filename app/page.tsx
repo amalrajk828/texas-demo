@@ -1,5 +1,5 @@
 import { redirect } from "next/navigation";
 
 export default function RootPage() {
-  redirect("/demo/home-v1");
+  redirect("/home-v1");
 }

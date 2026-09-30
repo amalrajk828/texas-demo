@@ -13,7 +13,7 @@ const VARIANTS = [
     id: "home-v1",
     title: "Home V1 — Finalized Design",
     description: "Finalized homepage design, moved from the former Home V5 route.",
-    href: "/demo/home-v1/",
+    href: "/home-v1/",
     status: "Active",
     badgeColor: "bg-amber-500/15 text-amber-400 border-amber-500/30",
     features: [
@@ -28,7 +28,7 @@ const VARIANTS = [
     id: "home-v2",
     title: "Home V2 — Flow Measurement Hero",
     description: "Hero section replaced with the exact design, layout, and MoltenMetal shader from /service/flow-measurement-solutions/. Rest of the page remains identical.",
-    href: "/demo/home-v2/",
+    href: "/home-v2/",
     status: "Active",
     badgeColor: "bg-emerald-500/10 text-emerald-400 border-emerald-500/20",
     features: [
@@ -43,7 +43,7 @@ const VARIANTS = [
     id: "home-v3",
     title: "Home V3 — Blog Hero & Liquid Gel Blob",
     description: "Hero section matching /blog/ with layered MoltenMetal ember shader, photorealistic 12-point SVG liquid gel blob, and dark glass stat cards.",
-    href: "/demo/home-v3/",
+    href: "/home-v3/",
     status: "New",
     badgeColor: "bg-[#E53935]/15 text-[#ff6b6b] border-[#E53935]/30",
     features: [
@@ -58,7 +58,7 @@ const VARIANTS = [
     id: "home-v4",
     title: "Home V4 — Dark Glassy 3D Hero (React Three Fiber)",
     description: "Dark, glassy 3D hero with a rotating glass torus-knot, counter-rotating glowing inner icosahedron, neon blue/pink lighting, and glassmorphic stats.",
-    href: "/demo/home-v4/",
+    href: "/home-v4/",
     status: "New",
     badgeColor: "bg-cyan-500/15 text-cyan-400 border-cyan-500/30",
     features: [
@@ -73,7 +73,7 @@ const VARIANTS = [
     id: "home-v6",
     title: "Home V6 — Parallax Scroll & Dual-Video Crossfade Hero",
     description: "Hero featuring scroll-linked parallax translation, receding scale, and soft fade-out, powered by dual-video crossfade looping and unified shared content.",
-    href: "/demo/home-v6/",
+    href: "/home-v6/",
     status: "New",
     badgeColor: "bg-rose-500/15 text-rose-400 border-rose-500/30",
     features: [
@@ -209,7 +209,7 @@ export default function DemoIndexPage() {
             <div>
               <p className="font-bold text-white mb-1">3. Instant Routing</p>
               <p className="text-xs leading-relaxed">
-                Navigate directly to <code className="text-white/80 font-mono">/demo/home-v1/</code> in your browser to preview changes in real time with Next.js HMR.
+                Navigate directly to <code className="text-white/80 font-mono">/home-v1/</code> in your browser to preview changes in real time with Next.js HMR.
               </p>
             </div>
           </div>

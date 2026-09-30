@@ -1,0 +1,466 @@
+@import "../home-v5-theme.css";
+
+.v1-fixed-background {
+  position: fixed;
+  inset: 0;
+  z-index: 0;
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+  pointer-events: none;
+  background: #ffffff;
+}
+
+.v1-fixed-media,
+.v1-fixed-poster,
+.v1-fixed-video {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.v1-fixed-poster {
+  object-position: center;
+  opacity: 0;
+  transition: opacity 600ms ease;
+}
+
+.v1-fixed-poster.is-loaded {
+  opacity: 1;
+}
+
+.v1-fixed-video {
+  object-position: center;
+  opacity: 0;
+  transition: opacity 480ms ease;
+}
+
+.v1-fixed-video.is-ready {
+  opacity: 1;
+}
+
+.v1-fixed-overlay {
+  position: absolute;
+  inset: 0;
+  z-index: 10;
+  background:
+    linear-gradient(135deg, rgba(255, 255, 255, 0.75) 0%, rgba(238, 243, 248, 0.65) 50%, rgba(220, 232, 245, 0.50) 100%),
+    linear-gradient(90deg, rgba(255, 255, 255, 0.85) 0%, rgba(238, 243, 248, 0.60) 60%, rgba(255, 255, 255, 0.40) 100%);
+  transition: opacity 600ms ease;
+}
+
+.v1-fixed-flow-lines {
+  position: absolute;
+  inset: 0;
+  z-index: 20;
+  width: 100%;
+  height: 100%;
+  fill: none;
+  stroke: rgba(58, 110, 165, 0.12);
+  stroke-width: 1.2;
+  stroke-dasharray: 10 18;
+  animation: v1-flow 11s linear infinite;
+}
+
+.v1-fixed-flow-lines path:nth-child(2) {
+  stroke: rgba(138, 48, 47, 0.35);
+  stroke-width: 1.6;
+}
+
+.v1-fixed-flow-lines path:nth-child(3) {
+  stroke: rgba(58, 110, 165, 0.08);
+}
+
+.v1-page-content {
+  position: relative;
+  z-index: 30;
+  width: 100%;
+  background: transparent;
+}
+
+/* V1 section entrances are owned by SectionReveal, avoiding pre-hydration DOM mutations. */
+.v1-page-content .fade-up {
+  opacity: 1;
+  animation: none;
+}
+
+.hero-v5-section {
+  position: relative;
+  display: flex;
+  width: 100%;
+  min-height: 100svh;
+  align-items: center;
+  overflow: hidden;
+}
+
+.hero-v5-content {
+  width: min(100% - 48px, 1400px);
+  margin-inline: auto;
+  padding-top: var(--navbar-height, 92px);
+  will-change: transform;
+}
+
+.hero-v5-copy {
+  width: min(760px, 64vw);
+}
+
+.hero-v5-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 26px;
+  padding: 4.5px 12px;
+  border: 1px solid rgba(58, 110, 165, 0.14);
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.92);
+  color: #4a5568;
+  font-family: var(--font-mono, monospace);
+  font-size: 0.69rem;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  box-shadow: 0 2px 10px rgba(20, 50, 90, 0.05);
+}
+
+.hero-v5-badge-dot {
+  width: 6px;
+  height: 6px;
+  flex: none;
+  border-radius: 50%;
+  background: #8a302f;
+  box-shadow: 0 0 10px rgba(138, 48, 47, 0.45);
+}
+
+.hero-v5-heading {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0 0.24em;
+  max-width: 900px;
+  margin: 0 0 24px;
+  color: #16202b;
+  font-size: clamp(3.1rem, 6vw, 6.4rem);
+  font-weight: 800;
+  line-height: 0.98;
+  letter-spacing: 0;
+}
+
+.hero-v5-word,
+.hero-v5-reveal {
+  opacity: 0;
+  animation: hero-v5-reveal 700ms cubic-bezier(0.22, 1, 0.36, 1) forwards;
+}
+
+.hero-v5-word { display: inline-block; }
+
+.hero-v5-paragraph {
+  max-width: 620px;
+  margin: 0 0 32px;
+  color: #4a5568;
+  font-size: 1rem;
+  line-height: 1.7;
+}
+
+.hero-v5-cta-group {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-bottom: 48px;
+}
+
+.hero-v5-btn-primary,
+.hero-v5-btn-secondary {
+  display: inline-flex;
+  min-height: 48px;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  padding: 0 24px;
+  border-radius: 8px;
+  font-size: 0.82rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-decoration: none;
+  text-transform: uppercase;
+  transition: background-color 180ms ease, border-color 180ms ease, transform 180ms ease, box-shadow 180ms ease;
+}
+
+.hero-v5-btn-primary {
+  border: 1px solid transparent;
+  background: #8a302f;
+  color: #fff;
+  box-shadow: 0 4px 16px rgba(138, 48, 47, 0.30);
+}
+.hero-v5-btn-secondary {
+  border: 1px solid rgba(58, 110, 165, 0.16);
+  background: #ffffff;
+  color: #16202b;
+  box-shadow: 0 2px 8px rgba(20, 50, 90, 0.04);
+}
+.hero-v5-btn-primary:hover, .hero-v5-btn-secondary:hover { transform: translateY(-2px); }
+.hero-v5-btn-primary:hover { background: #c0483f; box-shadow: 0 8px 24px rgba(138, 48, 47, 0.40); }
+.hero-v5-btn-secondary:hover { border-color: #8a302f; color: #8a302f; background: rgba(138, 48, 47, 0.05); box-shadow: 0 4px 14px rgba(20, 50, 90, 0.08); }
+.hero-v5-btn-primary svg { width: 17px; height: 17px; }
+
+.hero-v5-stats {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  max-width: 690px;
+  padding-top: 20px;
+  border-top: 1px solid rgba(58, 110, 165, 0.12);
+}
+
+.hero-v5-stat-item { display: grid; gap: 3px; padding-left: 16px; border-left: 1px solid rgba(58, 110, 165, 0.12); }
+.hero-v5-stat-item:first-child { padding-left: 0; border-left: 0; }
+.hero-v5-stat-prefix, .hero-v5-stat-label { font-family: var(--font-mono, monospace); font-size: .64rem; letter-spacing: .1em; text-transform: uppercase; }
+.hero-v5-stat-prefix { color: #8a302f; font-weight: 700; }
+.hero-v5-stat-num { color: #16202b; font-size: 1.45rem; font-weight: 800; line-height: 1; }
+.hero-v5-stat-label { color: #8a94a3; }
+
+.hero-v5-scroll-indicator {
+  position: absolute;
+  right: 32px;
+  bottom: 28px;
+  display: flex;
+  align-items: center;
+  gap: 9px;
+  color: #8a94a3;
+  font-family: var(--font-mono, monospace);
+  font-size: .64rem;
+  font-weight: 700;
+  letter-spacing: .13em;
+  text-transform: uppercase;
+}
+
+.hero-v5-scroll-indicator svg { width: 16px; height: 16px; animation: hero-v5-nudge 1.6s ease-in-out infinite; will-change: transform; }
+
+.v1-section-reveal {
+  padding: clamp(28px, 7vh, 76px) clamp(12px, 2.2vw, 30px);
+  opacity: 0;
+  transform: translateY(40px) scale(.95);
+  transition: opacity 700ms ease, transform 800ms cubic-bezier(.22,1,.36,1);
+}
+
+.v1-section-reveal.is-visible { opacity: 1; transform: translateY(0) scale(1); }
+
+.v1-section-reveal section {
+  overflow: hidden;
+  border: 1px solid rgba(58, 110, 165, 0.12) !important;
+  border-radius: 16px;
+  box-shadow: 0 10px 30px rgba(20, 50, 90, 0.06);
+  background: #ffffff !important;
+}
+
+.v1-section-light section { background: #ffffff !important; }
+.v1-section-dark section { background: #eef3f8 !important; }
+.v1-section-light section + section, .v1-section-dark section + section { margin-top: 12px; }
+
+.v1-section-reveal > div.overflow-hidden {
+  border: 1px solid rgba(58, 110, 165, 0.12);
+  border-radius: 16px;
+  background: #ffffff !important;
+  box-shadow: 0 8px 24px rgba(20, 50, 90, 0.06);
+}
+
+/* ── Pinned Scene layout ──────────────────────────────────────── */
+.pinned-scene {
+  /* The outer wrapper is purely a scroll-length spacer */
+  background: transparent;
+}
+
+.pinned-scene__stage {
+  /* sticky inner container — children are position:absolute within */
+  display: flex;
+  align-items: stretch;
+  justify-content: stretch;
+}
+
+/* Reduced-motion variant: plain stacked section, no pinning */
+.pinned-scene--reduced {
+  padding: clamp(60px, 10vh, 100px) clamp(16px, 4vw, 60px);
+  opacity: 0;
+  transition: opacity 600ms ease;
+}
+.pinned-scene--reduced.is-visible {
+  opacity: 1;
+}
+
+@keyframes v1-flow { to { stroke-dashoffset: -280; } }
+@keyframes hero-v5-reveal { from { opacity: 0; transform: translateY(20px); } to { opacity: 1; transform: translateY(0); } }
+/* hero-v5-scroll-out removed — motion now driven by Framer Motion useTransform */
+@keyframes hero-v5-nudge { 50% { transform: translateY(5px); } }
+
+/* ── Cross-fade stage utilities ─────────────────────────────────── */
+
+/* Hides the inner scrollbar on DarkStageSection's overflow-y: auto div */
+.hide-scrollbar {
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+.hide-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+
+/* ── Stage Section Spacing Tokens & Rules ── */
+:root {
+  --section-pt: calc(var(--navbar-height, 80px) + 26px);
+  --section-pb: clamp(1.5rem, 3.5vh, 2.5rem);
+  /* Bottom dock safe-area height for mobile layout */
+  --mobile-dock-h: calc(70px + env(safe-area-inset-bottom, 0px));
+}
+
+/* ══ MOBILE/TABLET OVERRIDES (< 1024px) — Desktop ≥1024px is UNTOUCHED ══ */
+@media (max-width: 1023px) {
+  :root {
+    --section-pt: calc(var(--navbar-height, 74px) + 20px);
+    --section-pb: clamp(2rem, 5vh, 3.5rem);
+  }
+
+  /* Force poster visible on mobile (video may not autoplay) */
+  .v1-fixed-poster {
+    opacity: 1 !important;
+    display: block !important;
+  }
+
+  /* Prevent any section from creating horizontal scroll */
+  .dark-stage-section,
+  .dark-stage-inner {
+    overflow-x: hidden;
+  }
+
+  /* Allow stage section to have natural height on mobile/tablet */
+  .dark-stage-section {
+    min-height: auto !important;
+    height: auto !important;
+    contain: none !important;
+  }
+
+  .dark-stage-inner {
+    overflow-y: visible !important;
+  }
+
+  /* ── Hero section mobile: stack column, scale fonts ── */
+  /* The flex-col / lg:flex-row is already in JSX; these handle font/spacing overrides */
+  #hero-home-v1 h1 {
+    font-size: clamp(1.55rem, 7.5vw, 2.6rem) !important;
+    line-height: 1.1 !important;
+    margin-bottom: 0.6rem !important;
+  }
+  #hero-home-v1 p {
+    font-size: 0.8rem !important;
+    margin-bottom: 0.75rem !important;
+  }
+  /* Hero slider: on mobile limit its height so it doesn't overflow */
+  #hero-home-v1 .hero-v1-slider-wrapper {
+    max-height: 38vh;
+  }
+
+  /* ── WhatWeDoSectionA: prevent fanned cards from bleeding off-screen ── */
+  /* Desktop fan uses absolute GSAP transforms; mobile uses separate <640px stack (sm:hidden) */
+  /* Tablet 640-1023: the hidden sm:flex row is visible — clip overflow */
+  .whatwedo-a-fan-container {
+    overflow: visible !important;
+    max-width: 100%;
+  }
+
+  /* ── WhatWeDoSectionB: image collage overflow guard ── */
+  .whatwedo-b-collage-wrapper {
+    overflow: hidden;
+  }
+
+  /* ── GreySolutions: stacked cards, no negative overlap on mobile ── */
+  .solutions-card-stack-mobile {
+    margin-top: 1rem !important;
+  }
+
+  /* ── GreyCta: reduce extreme vertical padding for fixed viewport ── */
+  .grey-cta-section {
+    padding-top: 1.25rem !important;
+    padding-bottom: 1rem !important;
+  }
+
+  /* ── GreyAbout: reduce vertical padding ── */
+  .grey-about-section {
+    padding-top: 0.5rem !important;
+    padding-bottom: 0.5rem !important;
+  }
+
+  /* ── GreyVision: reduce padding ── */
+  .grey-vision-section {
+    padding-top: 0.5rem !important;
+    padding-bottom: 0.5rem !important;
+  }
+
+  /* Progress dots: hide on mobile (bottom bar takes the nav role) */
+  .v1-progress-dots {
+    display: none;
+  }
+}
+
+/* ══ PHONE-SIZE ONLY OVERRIDES (< 640px) ══ */
+@media (max-width: 639px) {
+  /* Hero title scaling for phones */
+  #hero-home-v1 h1 {
+    font-size: clamp(1.4rem, 6.5vw, 2.2rem) !important;
+  }
+
+  /* WhatWeDoSectionA mobile cards: tighten the overlap and reduce rotation */
+  /* These are applied via the .flex.sm\:hidden stack — ensure no width overflow */
+  .whatwedo-mobile-card {
+    max-width: 100%;
+  }
+}
+
+.dark-stage-section {
+  isolation: isolate;
+}
+
+@media (min-width: 1024px) {
+  .dark-stage-section {
+    contain: paint layout;
+  }
+}
+
+.dark-stage-inner {
+  padding-top: var(--section-pt) !important;
+  padding-bottom: var(--section-pb) !important;
+}
+
+/* Ensure child stage sections do not add duplicate padding or force 100vh overflow */
+.dark-stage-inner > section,
+.dark-stage-inner > div > section,
+.dark-stage-inner section {
+  padding-top: 0 !important;
+  padding-bottom: 0 !important;
+  min-height: unset !important;
+}
+
+/* Prevent body scroll overflow when stage is fixed */
+html:has(.cross-fade-track) {
+  overflow-y: scroll;
+  overflow-x: hidden;
+}
+
+@media (max-width: 767px) {
+  .hero-v5-content { width: min(100% - 32px, 1400px); padding-top: clamp(8px, 2vh, 16px); }
+  .hero-v5-copy { width: 100%; }
+  .hero-v5-heading { font-size: clamp(2.4rem, 12vw, 4rem); }
+  .hero-v5-paragraph { font-size: .92rem; }
+  .hero-v5-cta-group { margin-bottom: 36px; }
+  .hero-v5-btn-primary, .hero-v5-btn-secondary { flex: 1 1 150px; }
+  .hero-v5-stats { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 18px 0; }
+  .hero-v5-stat-item:nth-child(3) { padding-left: 0; border-left: 0; }
+  .hero-v5-scroll-indicator, .v1-progress-dots { display: none; }
+  .v1-section-reveal { padding-inline: 10px; }
+  .v1-section-reveal section { backdrop-filter: none; -webkit-backdrop-filter: none; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .v1-fixed-flow-lines, .hero-v5-scroll-indicator svg, .hero-v5-word, .hero-v5-reveal, .hero-v5-content { animation: none; }
+  .hero-v5-word, .hero-v5-reveal { opacity: 1; }
+  .v1-section-reveal { transform: none; transition: opacity 400ms ease; }
+}

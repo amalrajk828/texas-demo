@@ -1,20 +1,56 @@
+"use client";
+
 import React, { useRef, useCallback, useEffect } from 'react';
 import './BorderGlow.css';
 
-function parseHSL(hslStr: string) {
-  const match = hslStr.match(/([\d.]+)\s*([\d.]+)%?\s*([\d.]+)%?/);
-  if (!match) return { h: 40, s: 80, l: 80 };
-  return { h: parseFloat(match[1]), s: parseFloat(match[2]), l: parseFloat(match[3]) };
-}
-
-function buildGlowVars(glowColor: string, intensity: number) {
-  const { h, s, l } = parseHSL(glowColor);
-  const base = `${h}deg ${s}% ${l}%`;
+function parseGlowColor(colorStr: string, intensity: number) {
+  const trimmed = colorStr.trim();
   const opacities = [100, 60, 50, 40, 30, 20, 10];
   const keys = ['', '-60', '-50', '-40', '-30', '-20', '-10'];
   const vars: Record<string, string> = {};
+
+  // 1. Check if hex format (#8a302f or 8a302f)
+  if (trimmed.startsWith('#') || /^[0-9a-fA-F]{6}$/.test(trimmed)) {
+    const hex = trimmed.replace('#', '');
+    const r = parseInt(hex.slice(0, 2), 16);
+    const g = parseInt(hex.slice(2, 4), 16);
+    const b = parseInt(hex.slice(4, 6), 16);
+    for (let i = 0; i < opacities.length; i++) {
+      const alpha = Math.min((opacities[i] * intensity) / 100, 1);
+      vars[`--glow-color${keys[i]}`] = `rgba(${r}, ${g}, ${b}, ${alpha.toFixed(3)})`;
+    }
+    return vars;
+  }
+
+  // 2. Check if RGB space or comma separated: e.g. "138 48 47"
+  const parts = trimmed.split(/[\s,]+/);
+  if (parts.length >= 3) {
+    const p0 = parseFloat(parts[0]);
+    const p1 = parseFloat(parts[1]);
+    const p2 = parseFloat(parts[2]);
+
+    // Check if it represents RGB (values up to 255, e.g. "138 48 47")
+    const isRGB = p0 > 1 || p1 > 100 || p2 > 100 || parts.some(p => !p.includes('%'));
+    if (isRGB) {
+      for (let i = 0; i < opacities.length; i++) {
+        const alpha = Math.min((opacities[i] * intensity) / 100, 1);
+        vars[`--glow-color${keys[i]}`] = `rgba(${p0}, ${p1}, ${p2}, ${alpha.toFixed(3)})`;
+      }
+      return vars;
+    }
+
+    // Otherwise HSL
+    const base = `${p0}deg ${p1}% ${p2}%`;
+    for (let i = 0; i < opacities.length; i++) {
+      vars[`--glow-color${keys[i]}`] = `hsl(${base} / ${Math.min(opacities[i] * intensity, 100)}%)`;
+    }
+    return vars;
+  }
+
+  // Fallback to #8a302f (Texas brand red)
   for (let i = 0; i < opacities.length; i++) {
-    vars[`--glow-color${keys[i]}`] = `hsl(${base} / ${Math.min(opacities[i] * intensity, 100)}%)`;
+    const alpha = Math.min((opacities[i] * intensity) / 100, 1);
+    vars[`--glow-color${keys[i]}`] = `rgba(138, 48, 47, ${alpha.toFixed(3)})`;
   }
   return vars;
 }
@@ -58,7 +94,7 @@ function animateValue({ start = 0, end = 100, duration = 1000, delay = 0, ease =
   setTimeout(() => requestAnimationFrame(tick), delay);
 }
 
-interface BorderGlowProps {
+export interface BorderGlowProps extends React.HTMLAttributes<HTMLDivElement> {
   children: React.ReactNode;
   className?: string;
   edgeSensitivity?: number;
@@ -73,21 +109,25 @@ interface BorderGlowProps {
   fillOpacity?: number;
 }
 
-const BorderGlow: React.FC<BorderGlowProps> = ({
+const BorderGlow = React.forwardRef<HTMLDivElement, BorderGlowProps>(({
   children,
   className = '',
   edgeSensitivity = 30,
-  glowColor = '40 80 80',
-  backgroundColor = '#120F17',
+  glowColor = '138 48 47',
+  backgroundColor = 'transparent',
   borderRadius = 28,
   glowRadius = 40,
   glowIntensity = 1.0,
   coneSpread = 25,
   animated = false,
-  colors = ['#c084fc', '#f472b6', '#38bdf8'],
+  colors = ['#8a302f'],
   fillOpacity = 0.5,
-}) => {
-  const cardRef = useRef<HTMLDivElement>(null);
+  style,
+  ...rest
+}, forwardedRef) => {
+  const internalRef = useRef<HTMLDivElement>(null);
+  const cardRef = (forwardedRef as React.RefObject<HTMLDivElement>) || internalRef;
+  const rafId = useRef<number | null>(null);
 
   const getCenterOfElement = useCallback((el: HTMLElement) => {
     const { width, height } = el.getBoundingClientRect();
@@ -117,19 +157,47 @@ const BorderGlow: React.FC<BorderGlowProps> = ({
   }, [getCenterOfElement]);
 
   const handlePointerMove = useCallback((e: React.PointerEvent<HTMLDivElement>) => {
+    if (e.pointerType === 'touch') return;
     const card = cardRef.current;
     if (!card) return;
 
-    const rect = card.getBoundingClientRect();
-    const x = e.clientX - rect.left;
-    const y = e.clientY - rect.top;
+    const clientX = e.clientX;
+    const clientY = e.clientY;
 
-    const edge = getEdgeProximity(card, x, y);
-    const angle = getCursorAngle(card, x, y);
+    if (rafId.current !== null) return;
+    rafId.current = requestAnimationFrame(() => {
+      rafId.current = null;
+      if (!card) return;
+      const rect = card.getBoundingClientRect();
+      const x = clientX - rect.left;
+      const y = clientY - rect.top;
 
-    card.style.setProperty('--edge-proximity', `${(edge * 100).toFixed(3)}`);
-    card.style.setProperty('--cursor-angle', `${angle.toFixed(3)}deg`);
-  }, [getEdgeProximity, getCursorAngle]);
+      const edge = getEdgeProximity(card, x, y);
+      const angle = getCursorAngle(card, x, y);
+
+      card.style.setProperty('--edge-proximity', `${(edge * 100).toFixed(2)}`);
+      card.style.setProperty('--cursor-angle', `${angle.toFixed(2)}deg`);
+    });
+  }, [cardRef, getEdgeProximity, getCursorAngle]);
+
+  const handlePointerLeave = useCallback(() => {
+    if (rafId.current !== null) {
+      cancelAnimationFrame(rafId.current);
+      rafId.current = null;
+    }
+    const card = cardRef.current;
+    if (!card) return;
+    card.style.setProperty('--edge-proximity', '0');
+  }, [cardRef]);
+
+  useEffect(() => {
+    if (typeof window === 'undefined') return;
+    const mq = window.matchMedia('(prefers-reduced-motion: reduce)');
+    if (mq.matches && cardRef.current) {
+      cardRef.current.style.setProperty('--edge-proximity', '35');
+      cardRef.current.style.setProperty('--cursor-angle', '45deg');
+    }
+  }, [cardRef]);
 
   useEffect(() => {
     if (!animated || !cardRef.current) return;
@@ -150,15 +218,17 @@ const BorderGlow: React.FC<BorderGlowProps> = ({
       onUpdate: v => card.style.setProperty('--edge-proximity', `${v}`),
       onEnd: () => card.classList.remove('sweep-active'),
     });
-  }, [animated]);
+  }, [animated, cardRef]);
 
-  const glowVars = buildGlowVars(glowColor, glowIntensity);
+  const glowVars = parseGlowColor(glowColor, glowIntensity);
+  const isTransparent = backgroundColor === 'transparent' || !backgroundColor;
 
   return (
     <div
       ref={cardRef}
       onPointerMove={handlePointerMove}
-      className={`border-glow-card ${className}`}
+      onPointerLeave={handlePointerLeave}
+      className={`border-glow-card${isTransparent ? ' border-glow-card--transparent' : ''} ${className}`}
       style={{
         '--card-bg': backgroundColor,
         '--edge-sensitivity': edgeSensitivity,
@@ -168,14 +238,18 @@ const BorderGlow: React.FC<BorderGlowProps> = ({
         '--fill-opacity': fillOpacity,
         ...glowVars,
         ...buildGradientVars(colors),
+        ...style,
       } as React.CSSProperties}
+      {...rest}
     >
-      <span className="edge-light" />
+      <span className="edge-light" aria-hidden="true" />
       <div className="border-glow-inner">
         {children}
       </div>
     </div>
   );
-};
+});
+
+BorderGlow.displayName = 'BorderGlow';
 
 export default BorderGlow;

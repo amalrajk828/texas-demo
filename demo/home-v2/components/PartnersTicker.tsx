@@ -10,11 +10,11 @@ function Track() {
       {ALL_PARTNERS.map((p) => (
         <div
           key={p.slug}
-          className="shrink-0 flex items-center justify-center mx-10 sm:mx-14"
+          className="shrink-0 flex items-center justify-center mx-8 sm:mx-12"
         >
           <Link
             href={p.href.startsWith("/solutions/") ? p.href : `/partners/${p.slug}/`}
-            className="block"
+            className="block group"
             aria-label={p.name}
           >
             <Image
@@ -23,8 +23,7 @@ function Track() {
               width={220}
               height={80}
               quality={100}
-              style={{ mixBlendMode: "multiply" }}
-              className="object-contain h-16 w-auto opacity-90 hover:opacity-100 hover:scale-105 transition-all duration-300"
+              className="object-contain h-14 sm:h-16 w-auto brightness-0 opacity-70 group-hover:opacity-100 group-hover:scale-105 transition-all duration-300"
             />
           </Link>
         </div>
@@ -36,12 +35,21 @@ function Track() {
 export default function PartnersTicker() {
   return (
     <section
-      className="relative py-7 overflow-hidden select-none border-y"
-      style={{ background: "#FFFFFF", borderColor: "rgba(0,0,0,0.05)" }}
+      className="relative py-8 overflow-hidden select-none border-y"
+      style={{
+        background: "var(--bg-alt, #eef3f8)",
+        borderColor: "var(--border-default, rgba(58, 110, 165, 0.12))",
+      }}
     >
-      <Link href="/partners/" className="block text-center text-[10px] font-bold tracking-[4px] uppercase mb-5 hover:opacity-70 transition-opacity" style={{ color: "rgba(0,0,0,0.60)" }}>
-        Trusted Technology Partners
-      </Link>
+      <div className="flex justify-center mb-6">
+        <Link
+          href="/partners/"
+          className="inline-flex items-center gap-2.5 px-3.5 py-1.5 rounded-full bg-white border border-[rgba(58,110,165,0.14)] shadow-sm text-[11px] font-mono font-medium text-[#16202b] tracking-[2px] uppercase hover:border-[#8a302f] transition-all"
+        >
+          <span className="w-1.5 h-1.5 rounded-full bg-[var(--accent)]" />
+          <span>Trusted Technology Partners</span>
+        </Link>
+      </div>
 
       <div
         className="partners-wrapper flex w-full"
@@ -57,6 +65,11 @@ export default function PartnersTicker() {
         }
         .partners-wrapper:hover {
           animation-play-state: paused;
+        }
+        @media (prefers-reduced-motion: reduce) {
+          .partners-wrapper {
+            animation: none;
+          }
         }
         @keyframes marquee {
           0%   { transform: translateX(0); }

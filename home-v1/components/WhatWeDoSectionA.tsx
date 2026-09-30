@@ -5,6 +5,7 @@ import Link from "next/link";
 import { ArrowRight, ChevronRight, Gauge, FlaskConical, Cpu } from "lucide-react";
 import { motion, useInView } from "framer-motion";
 import gsap from "gsap";
+import BorderGlow from "./BorderGlow";
 
 const SERVICES = [
   {
@@ -454,23 +455,40 @@ export default function WhatWeDoSectionA() {
                       handleCardLeave();
                     }
                   }}
-                  className={`relative rounded-[26px] overflow-hidden cursor-pointer select-none transition-shadow duration-300 ${
+                  className={`relative rounded-[26px] cursor-pointer select-none transition-shadow duration-300 ${
                     idx !== 0 ? "-ml-3 sm:-ml-4 md:-ml-6 lg:-ml-8 xl:-ml-10" : ""
                   }`}
                   style={{
                     width: "clamp(230px, 21vw, 320px)",
                     minHeight: "clamp(340px, 40vh, 460px)",
                     zIndex: cardZIndex,
-                    background: cfg.bg,
-                    border: isPopped
-                      ? "1.5px solid rgba(255, 255, 255, 0.40)"
-                      : "1px solid rgba(255, 255, 255, 0.22)",
-                    boxShadow: isPopped
-                      ? "0 24px 50px rgba(15, 30, 50, 0.32), 0 0 24px rgba(138, 48, 47, 0.20)"
-                      : "0 12px 30px rgba(20, 40, 60, 0.18)",
                     willChange: "transform, opacity",
                   }}
                 >
+                  <BorderGlow
+                    edgeSensitivity={30}
+                    glowColor="90 140 200"
+                    backgroundColor="transparent"
+                    borderRadius={26}
+                    glowRadius={40}
+                    glowIntensity={1}
+                    coneSpread={25}
+                    animated={false}
+                    colors={["#7fb3e0"]}
+                    className="w-full h-full"
+                  >
+                    <div
+                      className="relative rounded-[26px] overflow-hidden w-full h-full transition-shadow duration-300"
+                      style={{
+                        background: cfg.bg,
+                        border: isPopped
+                          ? "1.5px solid rgba(255, 255, 255, 0.40)"
+                          : "1px solid rgba(255, 255, 255, 0.22)",
+                        boxShadow: isPopped
+                          ? "0 24px 50px rgba(15, 30, 50, 0.32), 0 0 24px rgba(127, 179, 224, 0.25)"
+                          : "0 12px 30px rgba(20, 40, 60, 0.18)",
+                      }}
+                    >
                   {/* Top-edge gradient line that lengthens when popped */}
                   <div
                     aria-hidden="true"
@@ -594,6 +612,8 @@ export default function WhatWeDoSectionA() {
                     </div>
                   </div>
                 </div>
+              </BorderGlow>
+            </div>
               );
             })}
           </div>
@@ -621,21 +641,38 @@ export default function WhatWeDoSectionA() {
                       setHoveredIdx(isPopped ? null : idx);
                     }
                   }}
-                  className={`w-full rounded-[22px] overflow-hidden p-5 transition-all duration-300 cursor-pointer ${
+                  className={`w-full rounded-[22px] transition-all duration-300 cursor-pointer ${
                     idx !== 0 ? "-mt-16" : ""
                   }`}
                   style={{
-                    background: idx === 2 ? "#4d7699" : "#5a86ad",
                     transform: isPopped ? "scale(1.03) translateY(-8px)" : `rotate(${rot}deg)`,
                     zIndex,
-                    border: isPopped
-                      ? "1.5px solid rgba(255, 255, 255, 0.40)"
-                      : "1px solid rgba(255, 255, 255, 0.22)",
-                    boxShadow: isPopped
-                      ? "0 16px 36px rgba(15, 30, 50, 0.30)"
-                      : "0 8px 24px rgba(20, 40, 60, 0.16)",
                   }}
                 >
+                  <BorderGlow
+                    edgeSensitivity={30}
+                    glowColor="90 140 200"
+                    backgroundColor="transparent"
+                    borderRadius={22}
+                    glowRadius={40}
+                    glowIntensity={1}
+                    coneSpread={25}
+                    animated={false}
+                    colors={["#7fb3e0"]}
+                    className="w-full h-full"
+                  >
+                    <div
+                      className="w-full rounded-[22px] overflow-hidden p-5"
+                      style={{
+                        background: idx === 2 ? "#4d7699" : "#5a86ad",
+                        border: isPopped
+                          ? "1.5px solid rgba(255, 255, 255, 0.40)"
+                          : "1px solid rgba(255, 255, 255, 0.22)",
+                        boxShadow: isPopped
+                          ? "0 16px 36px rgba(15, 30, 50, 0.30)"
+                          : "0 8px 24px rgba(20, 40, 60, 0.16)",
+                      }}
+                    >
                   <div className="flex items-center justify-between">
                     <div className="flex items-center gap-3">
                       <div
@@ -671,6 +708,8 @@ export default function WhatWeDoSectionA() {
                       </Link>
                     </div>
                   )}
+                    </div>
+                  </BorderGlow>
                 </div>
               );
             })}

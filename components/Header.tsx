@@ -394,13 +394,17 @@ const showDesc = (label: string) => label === "Services";
 export default function Header() {
   const pathname = usePathname();
   const isHomeV1 = pathname === "/demo/home-v1" || pathname?.startsWith("/demo/home-v1/") || pathname === "/home-v1" || pathname?.startsWith("/home-v1/");
-  if (isHomeV1) return null;
+  const isHomeV3 = pathname === "/demo/home-v3" || pathname?.startsWith("/demo/home-v3/") || pathname === "/home-v3" || pathname?.startsWith("/home-v3/");
+  if (isHomeV1 || isHomeV3) return null;
 
   const isHome = pathname === "/";
   const isAboutUs = pathname.startsWith("/about-us");
   const isHomeV5 = pathname?.startsWith("/demo/home-v1");
-  const isHomeV2 = pathname?.startsWith("/demo/home-v2");
-  const isHomeV3 = pathname === "/demo/home-v3";
+  const isHomeV2 =
+    pathname === "/demo/home-v2" ||
+    pathname?.startsWith("/demo/home-v2/") ||
+    pathname === "/home-v2" ||
+    pathname?.startsWith("/home-v2/");
   const isHomeV4 = pathname === "/demo/home-v4";
   const [open, setOpen]               = useState<string | null>(null);
   const [mobileOpen, setMobileOpen]   = useState(false);
@@ -752,8 +756,8 @@ export default function Header() {
                       }
                     : isHomeV2
                     ? {
-                        background: "linear-gradient(135deg, rgba(255,255,255,0.32) 0%, rgba(255,255,255,0.10) 45%, transparent 68%), linear-gradient(180deg, #E53935 0%, #B71C1C 100%)",
-                        boxShadow: "inset 0 1px 0 rgba(255,255,255,0.36), 0 4px 20px rgba(229,57,53,0.35)",
+                        background: "#8a302f",
+                        boxShadow: "0 4px 16px rgba(138, 48, 47, 0.40)",
                       }
                     : isHomeV3
                     ? {
@@ -769,7 +773,13 @@ export default function Header() {
                 }
                 className={`whitespace-nowrap hidden lg:inline-flex items-center gap-2 text-[13px] tracking-[0.12em] uppercase px-3 xl:px-6 py-2.5 transition-all duration-200 ${
                   isHomeV5 || isHomeV2 || isHomeV4
-                    ? `rounded-full text-white font-bold hover:brightness-110 hover:-translate-y-0.5 ${isHomeV4 ? "hover:shadow-[0_8px_24px_rgba(232,147,90,0.45)]" : "shadow-lg shadow-[#E53935]/35"}`
+                    ? `rounded-full text-white font-bold hover:brightness-110 hover:-translate-y-0.5 ${
+                        isHomeV4
+                          ? "hover:shadow-[0_8px_24px_rgba(232,147,90,0.45)]"
+                          : isHomeV2
+                          ? "shadow-lg shadow-[#8a302f]/35 hover:bg-[#702625]"
+                          : "shadow-lg shadow-[#E53935]/35"
+                      }`
                     : isHomeV3
                     ? "rounded-full text-white font-bold hover:brightness-110 hover:-translate-y-0.5 hover:shadow-[0_8px_28px_rgba(23,112,126,0.50)]"
                     : "rounded-xl bg-[#E53935] hover:bg-[#B71C1C] text-white shadow-lg shadow-[#E53935]/20 font-medium"
@@ -928,8 +938,8 @@ export default function Header() {
                             }
                           : isHomeV2
                           ? {
-                              background: "linear-gradient(135deg, rgba(255,255,255,0.32) 0%, rgba(255,255,255,0.10) 45%, transparent 68%), linear-gradient(180deg, #E53935 0%, #B71C1C 100%)",
-                              boxShadow: "inset 0 1px 0 rgba(255,255,255,0.36), 0 4px 20px rgba(229,57,53,0.35)",
+                              background: "#8a302f",
+                              boxShadow: "0 4px 16px rgba(138, 48, 47, 0.40)",
                             }
                           : isHomeV3
                           ? {
@@ -945,7 +955,13 @@ export default function Header() {
                       }
                       className={`block text-center text-[13px] font-mono tracking-[0.12em] uppercase px-4 py-3.5 transition-all duration-200 ${
                         isHomeV5 || isHomeV2 || isHomeV4
-                          ? `rounded-full text-white font-bold hover:brightness-110 ${isHomeV4 ? "" : "shadow-lg shadow-[#E53935]/35"}`
+                          ? `rounded-full text-white font-bold hover:brightness-110 ${
+                              isHomeV4
+                                ? ""
+                                : isHomeV2
+                                ? "shadow-lg shadow-[#8a302f]/35"
+                                : "shadow-lg shadow-[#E53935]/35"
+                            }`
                           : isHomeV3
                           ? "rounded-full text-white font-bold hover:brightness-110"
                           : "rounded-xl bg-[#E53935] hover:bg-[#B71C1C] text-white font-medium"
@@ -966,8 +982,8 @@ export default function Header() {
         {isHomeV2 && (
           <style>{`
             .v2-btn-primary {
-              background: linear-gradient(135deg, rgba(255,255,255,0.32) 0%, rgba(255,255,255,0.10) 45%, transparent 68%), linear-gradient(180deg, #E53935 0%, #B71C1C 100%) !important;
-              box-shadow: inset 0 1px 0 rgba(255,255,255,0.36), 0 4px 20px rgba(229,57,53,0.35) !important;
+              background: #8a302f !important;
+              box-shadow: 0 4px 16px rgba(138, 48, 47, 0.40) !important;
             }
           `}</style>
         )}

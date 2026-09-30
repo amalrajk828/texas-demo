@@ -56,7 +56,7 @@ const VARS: Record<string, string> = {
   "--color-brand-blue-soft": "#eef3f8",
   "--color-brand-gray": "#eef3f8",
   /* Reverted to Dark Footer tokens */
-  "--color-footer-bg": "#0A0C11",
+  "--color-footer-bg": "#202c3a",
   "--color-footer-text": "#FFFFFF",
   "--color-footer-muted": "rgba(255, 255, 255, 0.60)",
   "--color-bg-hero-from": "#ffffff",

@@ -17,14 +17,14 @@ function MarqueeRow({ items, reverse = false }: { items: string[]; reverse?: boo
       {doubled.map((item, i) => (
         <span
           key={i}
-          className="inline-flex items-center gap-4 px-5 text-[13px] font-semibold tracking-wider whitespace-nowrap"
-          style={{ color: "rgba(255,255,255,0.50)" }}
+          className="inline-flex items-center gap-4 px-6 text-[12px] font-mono font-medium tracking-[0.15em] uppercase whitespace-nowrap text-[#16202b]/80"
         >
+          {/* Small square red bullet */}
           <span
-            className="w-1.5 h-1.5 rounded-full flex-shrink-0"
-            style={{ background: "color-mix(in srgb, var(--color-brand-red) 60%, transparent)" }}
+            className="w-[5px] h-[5px] flex-shrink-0 bg-[var(--accent)]"
+            style={{ borderRadius: 0 }}
           />
-          {item.toUpperCase()}
+          {item}
         </span>
       ))}
     </div>
@@ -35,19 +35,18 @@ export default function TickerBanner() {
   return (
     <div
       className="overflow-hidden"
-      style={{ background: "var(--color-brand-navy-mid)" }}
+      style={{
+        background: "var(--bg-alt, #eef3f8)",
+        borderBottom: "1px solid var(--border-default, rgba(58, 110, 165, 0.12))",
+      }}
     >
-      <div className="h-px" style={{ background: "linear-gradient(90deg, transparent, rgba(229,57,53,0.20), transparent)" }} />
-
-      <div className="py-2.5 border-b" style={{ borderColor: "rgba(255,255,255,0.04)" }}>
+      <div className="py-3 border-b" style={{ borderColor: "var(--border-default, rgba(58, 110, 165, 0.12))" }}>
         <MarqueeRow items={services} />
       </div>
 
-      <div className="py-2.5">
+      <div className="py-3">
         <MarqueeRow items={industries} reverse />
       </div>
-
-      <div className="h-px" style={{ background: "linear-gradient(90deg, transparent, rgba(229,57,53,0.20), transparent)" }} />
 
       <style>{`
         .ticker-row {
