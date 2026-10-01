@@ -1,0 +1,51 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 300" width="100%" height="100%">
+  <defs>
+    <style>
+      .color-blue { fill: #1c2b70; }
+      .color-light-grey { fill: #cfd1d2; }
+      .color-med-grey { fill: #a2a4a7; }
+      .text-ar { 
+        font-family: 'Segoe UI', Tahoma, Arial, sans-serif; 
+        font-size: 26px; 
+        font-weight: 800; 
+      }
+      .text-eng { 
+        font-family: 'Segoe UI', Tahoma, Arial, sans-serif; 
+        font-size: 13px; 
+        font-weight: 700; 
+        letter-spacing: 1.5px; 
+      }
+    </style>
+  </defs>
+
+  <!-- Logo Graphic Mark -->
+  <g transform="translate(10, -10)">
+      <!-- Dark Blue Top Interior -->
+      <polygon points="144,48 176,28 184,70 144,92" class="color-blue" />
+      <polygon points="172,28 184,40 184,75 172,60" fill="rgba(0,0,0,0)" />
+
+      <!-- Light Grey Right Panel -->
+      <polygon points="152,58 186,38 186,170 152,198" class="color-light-grey" />
+
+      <!-- Medium Grey L-Shape Base & Vertical Pillar -->
+      <polygon points="95,185 142,185 142,64 152,58 152,198 95,198" class="color-med-grey" />
+
+      <!-- Stylized 'S' -->
+      <text x="97" y="176" font-family="Arial, sans-serif" font-weight="900" font-size="74" class="color-med-grey">S</text>
+  </g>
+
+  <!-- Typography Section -->
+  <g transform="translate(0, 10)">
+      <!-- Arabic Text (Right-to-Left formatting visually aligned) -->
+      <!-- 'Al-Kuwait' in Blue -->
+      <text x="146" y="230" class="text-ar color-blue" text-anchor="end">الكويت</text>
+      <!-- 'Sadeem' in Grey -->
+      <text x="154" y="230" class="text-ar color-med-grey" text-anchor="start">سديم</text>
+
+      <!-- English Text -->
+      <!-- 'SADEEM' in Grey -->
+      <text x="146" y="255" class="text-eng color-med-grey" text-anchor="end">SADEEM</text>
+      <!-- 'AL-KUWAIT' in Blue -->
+      <text x="154" y="255" class="text-eng color-blue" text-anchor="start">AL-KUWAIT</text>
+  </g>
+</svg>

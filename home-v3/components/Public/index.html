@@ -1,0 +1,815 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Texas Technical Services — Ultrasonic Custody Transfer Flow Meters</title>
+  <meta name="description" content="High-precision ultrasonic custody transfer flow metering built for oil, gas & water across Kuwait and the GCC by Texas Technical Services Company." />
+
+  <!-- Google Fonts: Sora (700, 800) + Inter (400, 500, 600) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Sora:wght@700;800&display=swap" rel="stylesheet" />
+
+  <!-- Stylesheet -->
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+  <!-- Top Navigation (fixed 100vw, transparent to frosted glass on scroll) -->
+  <nav id="main-nav" class="navbar">
+    <div class="nav-container">
+      <!-- Real Brand Logo & Name -->
+      <a href="#" class="nav-brand" id="brand-logo" aria-label="Texas Technical Services Home">
+        <img src="logo.svg" alt="Texas Technical Services Emblem" class="brand-logo-img" width="42" height="42" />
+        <div class="brand-text-block">
+          <span class="brand-title">TEXAS</span>
+          <span class="brand-subtitle">TECHNICAL SERVICES</span>
+        </div>
+      </a>
+
+      <!-- Navigation Links -->
+      <div class="nav-links" id="nav-menu">
+        <a href="#" class="nav-link" id="link-home">Home</a>
+        <a href="#about" class="nav-link" id="link-about">About Us</a>
+        <a href="#services" class="nav-link" id="link-services">Services</a>
+        <a href="#industries" class="nav-link" id="link-industries">Industries</a>
+        <a href="#products" class="nav-link" id="link-products">Products</a>
+        <a href="#blog" class="nav-link" id="link-blog">Blog</a>
+        <a href="#clients" class="nav-link" id="link-clients">Clients</a>
+        <a href="#contact" class="nav-cta-btn" id="link-contact">Contact Us</a>
+      </div>
+
+      <!-- Mobile Hamburger Toggle -->
+      <button class="nav-mobile-toggle" id="nav-mobile-btn" aria-label="Toggle navigation menu" type="button">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- Sticky Scrollytelling Sequence Section (500vh) -->
+  <section id="sequence">
+    <div class="sticky-wrap">
+      <!-- Full-screen Canvas -->
+      <canvas id="hero-canvas"></canvas>
+
+      <!-- Preloading Indicator Overlay -->
+      <div id="loader" class="loader-overlay">
+        <div class="loader-spinner"></div>
+        <div class="loader-status">
+          <span class="loader-value" id="loader-percent">0</span><span class="loader-unit">%</span>
+        </div>
+        <p class="loader-label">Preloading High-Resolution Frames...</p>
+      </div>
+
+      <!-- Scrollytelling Overlay Cards -->
+      <div class="overlay">
+        <!-- First Screen Layer (progress 0.00 – 0.20) -->
+        <div class="hero-screen" id="hero-screen">
+          <div class="hero-main-row">
+            <!-- Left Column: Frosted Glass Card Container -->
+            <div class="hero-glass-card">
+              <div class="hero-card-content">
+                <div class="hero-badge">
+                  <span class="badge-dot"></span>
+                  <span>FLOW MEASUREMENT &amp; AUTOMATION</span>
+                </div>
+                <h1 class="hero-title">
+                  Flow Measurement &amp;<br />Control System Solutions
+                </h1>
+                <p class="hero-desc">
+                  Where flow measurement challenges meet solutions. Expert metering consultants with in-depth knowledge of API, AGA, and custody metering standards.
+                </p>
+              </div>
+              <div class="hero-cta-group">
+                <a href="#services" class="btn btn-primary" id="hero-btn-know-more">
+                  Know More &rarr;
+                </a>
+                <a href="#products" class="btn btn-secondary" id="hero-btn-products">
+                  Our Products
+                </a>
+              </div>
+            </div>
+
+            <!-- Right Column: Interactive Media Showcase Card -->
+            <div class="hero-right-col">
+              <div class="hero-showcase-card" id="hero-showcase">
+                <!-- Top Bar: Tag + Certification Badges -->
+                <div class="showcase-top-bar">
+                  <div class="showcase-tag-pill">
+                    <span class="play-icon">&#9658;</span>
+                    <span id="showcase-tag">AUTOMATION</span>
+                  </div>
+                  <div class="showcase-certs">
+                    <img src="about/cert-iso9001.png" alt="ISO 9001" class="showcase-cert-icon" />
+                    <img src="about/cert-iso14001.png" alt="ISO 14001" class="showcase-cert-icon" />
+                    <img src="about/cert-iso45001.png" alt="ISO 45001" class="showcase-cert-icon" />
+                    <img src="about/cert-accurate-white.png" alt="Accredited" class="showcase-cert-icon" />
+                  </div>
+                </div>
+
+                <!-- Media Stage (Images and Videos) -->
+                <div class="showcase-media-stage" id="showcase-media">
+                  <img src="homevideos/homebannerimage.jpg" alt="Industrial Services" class="showcase-media-item" data-index="0" />
+                  <video src="homevideos/Automated-1-2.mp4" poster="homevideos/Automated-1-2-poster.jpg" class="showcase-media-item active" data-index="1" autoplay muted loop playsinline></video>
+                  <video src="homevideos/newproduct.mp4" poster="homevideos/newproduct-poster.jpg" class="showcase-media-item" data-index="2" muted loop playsinline></video>
+                  <img src="homevideos/INSPECTION-AND-TESTING1.jpg" alt="NDT and Testing" class="showcase-media-item" data-index="3" />
+                </div>
+
+                <!-- Left Floating Category Tabs -->
+                <div class="showcase-tabs">
+                  <button type="button" class="showcase-tab" data-index="0">
+                    <img src="homevideos/homebannerimage.jpg" alt="" class="tab-thumb" />
+                    <span>Industrial</span>
+                  </button>
+                  <button type="button" class="showcase-tab active" data-index="1">
+                    <img src="homevideos/Automated-1-2-poster.jpg" alt="" class="tab-thumb" />
+                    <span>Automation</span>
+                  </button>
+                  <button type="button" class="showcase-tab" data-index="2">
+                    <img src="homevideos/newproduct-poster.jpg" alt="" class="tab-thumb" />
+                    <span>Metering</span>
+                  </button>
+                  <button type="button" class="showcase-tab" data-index="3">
+                    <img src="homevideos/INSPECTION-AND-TESTING1.jpg" alt="" class="tab-thumb" />
+                    <span>NDT &amp; Test</span>
+                  </button>
+                </div>
+
+                <!-- Bottom Right Navigation Controls -->
+                <div class="showcase-nav-bar">
+                  <button type="button" class="showcase-arrow" id="showcase-prev" aria-label="Previous slide">&larr;</button>
+                  <span class="showcase-counter" id="showcase-counter">02 / 04</span>
+                  <button type="button" class="showcase-next-btn" id="showcase-next">NEXT &rarr;</button>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Bottom Stats Strip -->
+          <div class="hero-stats-strip" id="hero-stats-strip">
+            <div class="stat-strip-item">
+              <span class="stat-strip-prefix">/01</span>
+              <span class="stat-strip-num">18+</span>
+              <span class="stat-strip-label">Years Experience</span>
+            </div>
+            <div class="stat-strip-item">
+              <span class="stat-strip-prefix">/02</span>
+              <span class="stat-strip-num">8</span>
+              <span class="stat-strip-label">Industries Served</span>
+            </div>
+            <div class="stat-strip-item">
+              <span class="stat-strip-prefix">/03</span>
+              <span class="stat-strip-num">200+</span>
+              <span class="stat-strip-label">Approved Clients</span>
+            </div>
+            <div class="stat-strip-item">
+              <span class="stat-strip-prefix">/04</span>
+              <span class="stat-strip-num">16+</span>
+              <span class="stat-strip-label">Global Vendors</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Section 2: What We Do (progress 0.20 – 0.58) - 3 Blurred Transparent Glass Solution Cards -->
+        <div class="what-we-do-screen" id="what-we-do-screen">
+          <div class="what-we-do-container">
+            <!-- Left Column: Narrative -->
+            <div class="what-we-do-left">
+              <div class="what-we-do-eyebrow">
+                <span class="eyebrow-bar"></span>
+                <span>WHAT WE DO</span>
+                <span class="eyebrow-bar"></span>
+              </div>
+              <h2 class="what-we-do-title">
+                What precision solutions do we deliver for critical industries?
+              </h2>
+              <p class="what-we-do-desc">
+                Texas Technical Services delivers precision-engineered solutions across flow measurement, inspection, and industrial automation &mdash; trusted by leading operators since 2008.
+              </p>
+              <div class="what-we-do-pills">
+                <span class="what-pill active">&bull; 01</span>
+                <span class="what-pill">&bull; 02</span>
+                <span class="what-pill">&bull; 03</span>
+              </div>
+            </div>
+
+            <!-- Right Column: 3 Blurred Transparent Glass Solution Cards -->
+            <div class="what-we-do-cards">
+              <!-- Card 01 -->
+              <div class="solution-card">
+                <div class="solution-card-top">
+                  <div class="solution-icon-wrap">
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                      <circle cx="12" cy="12" r="10" />
+                      <path d="M12 6v6l4 2" />
+                    </svg>
+                  </div>
+                  <span class="solution-badge">01</span>
+                </div>
+                <h3 class="solution-title">Flow Measurement &amp; Control</h3>
+                <a href="#services" class="solution-link">
+                  <span>EXPLORE</span>
+                  <span class="chevron">&rsaquo;</span>
+                </a>
+                <span class="solution-watermark">01</span>
+              </div>
+
+              <!-- Card 02 -->
+              <div class="solution-card">
+                <div class="solution-card-top">
+                  <div class="solution-icon-wrap">
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                      <path d="M10 2v7.31L4.15 19.8A2 2 0 0 0 5.86 23h12.28a2 2 0 0 0 1.71-3.2L14 9.31V2" />
+                      <line x1="8.5" y1="2" x2="15.5" y2="2" />
+                      <line x1="6" y1="18" x2="18" y2="18" />
+                    </svg>
+                  </div>
+                  <span class="solution-badge">02</span>
+                </div>
+                <h3 class="solution-title">Inspection &amp; Testing</h3>
+                <a href="#services" class="solution-link">
+                  <span>EXPLORE</span>
+                  <span class="chevron">&rsaquo;</span>
+                </a>
+                <span class="solution-watermark">02</span>
+              </div>
+
+              <!-- Card 03 -->
+              <div class="solution-card">
+                <div class="solution-card-top">
+                  <div class="solution-icon-wrap">
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                      <rect x="4" y="4" width="16" height="16" rx="2" />
+                      <rect x="9" y="9" width="6" height="6" />
+                      <line x1="9" y1="2" x2="9" y2="4" />
+                      <line x1="15" y1="2" x2="15" y2="4" />
+                      <line x1="9" y1="20" x2="9" y2="23" />
+                      <line x1="15" y1="20" x2="15" y2="23" />
+                    </svg>
+                  </div>
+                  <span class="solution-badge">03</span>
+                </div>
+                <h3 class="solution-title">Industrial Automation</h3>
+                <a href="#services" class="solution-link">
+                  <span>EXPLORE</span>
+                  <span class="chevron">&rsaquo;</span>
+                </a>
+                <span class="solution-watermark">03</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Section 3: Custody Metering & Automation (progress 0.60 – 0.96) - Single Right-Side Glass Card -->
+        <div class="card card-c card-custody-automation" id="card-c">
+          <div class="pill-badge">WHAT WE DO</div>
+          <h2 class="card-title">
+            Engineered Excellence in<br />Custody Metering &amp; Automation
+          </h2>
+          <p class="card-desc">
+            Extensive expertise in liquid and gas custody metering, Industrial Automation, and Inspection &amp; Testing. Our services cover metering control upgrades, maintenance, validation, and specialised consultancy.
+          </p>
+          <p class="card-desc sub">
+            Committed to end-to-end metering solutions through strategic OEM partnerships &mdash; metering skids, flow computers, CEMS analysers, and field instruments across oil &amp; gas, power, and commercial sectors.
+          </p>
+          <div class="card-cta-group">
+            <a href="#contact" class="btn btn-primary" id="btn-custody-contact">
+              Contact Us &rarr;
+            </a>
+            <a href="#services" class="btn btn-secondary" id="btn-custody-services">
+              Our Services &rsaquo;
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Below-Scroll Content Sections -->
+  <main class="content-wrapper">
+
+    <!-- About Us Section -->
+    <section id="about" class="content-section">
+      <div class="section-container">
+        <div class="section-header">
+          <span class="section-eyebrow">About Texas Technical Services</span>
+          <h2 class="section-title">Kuwait &amp; GCC's Premier Flow Measurement Partner</h2>
+          <p class="section-subtitle">With over two decades of engineering leadership, TTSC delivers end-to-end custody transfer metering skids, calibration, automation, and instrumentation solutions approved by major regional operators.</p>
+        </div>
+
+        <div class="about-stats-grid">
+          <div class="stat-card">
+            <div class="stat-number">20+</div>
+            <div class="stat-title">Years in GCC</div>
+            <p class="stat-desc">Proven track record in high-criticality Kuwait oil &amp; gas projects.</p>
+          </div>
+          <div class="stat-card">
+            <div class="stat-number">1,200+</div>
+            <div class="stat-title">Skids Deployed</div>
+            <p class="stat-desc">Custody transfer &amp; allocation systems commissioned region-wide.</p>
+          </div>
+          <div class="stat-card">
+            <div class="stat-number">±0.15%</div>
+            <div class="stat-title">Fiscal Accuracy</div>
+            <p class="stat-desc">API MPMS &amp; OIML R117 compliant metrology standards.</p>
+          </div>
+          <div class="stat-card">
+            <div class="stat-number">24/7</div>
+            <div class="stat-title">Field Support</div>
+            <p class="stat-desc">Factory-certified technicians based locally in Kuwait.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Services / Features Section -->
+    <section id="services" class="content-section">
+      <div class="section-container">
+        <div class="section-header">
+          <span class="section-eyebrow">Engineering Superiority</span>
+          <h2 class="section-title">Engineered Without Compromise</h2>
+          <p class="section-subtitle">Designed specifically for harsh Middle Eastern environmental conditions, high sulfur crude, and severe fiscal custody regulations.</p>
+        </div>
+
+        <div class="features-grid">
+          <div class="feature-card">
+            <div class="feature-icon">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M2 12h20M12 2v20M4.93 4.93l14.14 14.14M4.93 19.07l14.14-14.14" />
+              </svg>
+            </div>
+            <h3 class="feature-name">Multi-Path Ultrasonic Measurement</h3>
+            <p class="feature-desc">Multi-chord transit-time acoustic transducers continuously map flow symmetry, swirl, and cross-flow velocity profiles to maintain exceptional accuracy across dynamic Reynolds numbers.</p>
+          </div>
+
+          <div class="feature-card">
+            <div class="feature-icon">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <circle cx="12" cy="12" r="10" />
+                <path d="M12 6v12M8 10l8 4M8 14l8-4" />
+              </svg>
+            </div>
+            <h3 class="feature-name">Zero Moving Parts &amp; No Pressure Drop</h3>
+            <p class="feature-desc">Full-bore non-intrusive passage eliminates mechanical wear, turbine blade erosion, and blockage risks, yielding zero parasitic head loss and minimal lifetime maintenance.</p>
+          </div>
+
+          <div class="feature-card">
+            <div class="feature-icon">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" />
+              </svg>
+            </div>
+            <h3 class="feature-name">SIL-2 Rated Redundant Electronics</h3>
+            <p class="feature-desc">Dual independent digital signal processing channels with automated diagnostic health logs ensure continuous custody data logging even in event of transducer anomaly.</p>
+          </div>
+
+          <div class="feature-card">
+            <div class="feature-icon">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <rect x="2" y="2" width="20" height="8" rx="2" />
+                <rect x="2" y="14" width="20" height="8" rx="2" />
+                <line x1="6" y1="6" x2="6.01" y2="6" />
+                <line x1="6" y1="18" x2="6.01" y2="18" />
+              </svg>
+            </div>
+            <h3 class="feature-name">Remote HART / MODBUS / PROFIBUS</h3>
+            <p class="feature-desc">Comprehensive digital bus communication for seamless integration with SCADA, flow computers, and DCS networks, complete with remote verification diagnostic reports.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Industries Section -->
+    <section id="industries" class="content-section">
+      <div class="section-container">
+        <div class="section-header">
+          <span class="section-eyebrow">Sectors &amp; Applications</span>
+          <h2 class="section-title">Built for Mission-Critical Industries</h2>
+          <p class="section-subtitle">Serving energy operators, petrochemical complexes, and municipal utilities across Kuwait and the Arabian Gulf.</p>
+        </div>
+
+        <div class="industries-grid">
+          <div class="industry-card">
+            <div class="industry-badge">Upstream</div>
+            <h3 class="industry-title">Oil &amp; Gas Production</h3>
+            <p class="industry-desc">Wellhead allocation, gathering centers, gas-oil separation plants (GOSP), and sour crude pipeline custody transfer.</p>
+          </div>
+          <div class="industry-card">
+            <div class="industry-badge">Downstream</div>
+            <h3 class="industry-title">Refining &amp; Petrochemicals</h3>
+            <p class="industry-desc">Clean hydrocarbon export lines, ethylene &amp; propylene mass flow metering, and high-pressure steam distribution.</p>
+          </div>
+          <div class="industry-card">
+            <div class="industry-badge">Utilities</div>
+            <h3 class="industry-title">Power &amp; Desalination</h3>
+            <p class="industry-desc">High-volume seawater intake monitoring, condensate return, boiler feed water, and heavy fuel oil delivery systems.</p>
+          </div>
+          <div class="industry-card">
+            <div class="industry-badge">Offshore</div>
+            <h3 class="industry-title">Marine Terminals &amp; Bunkering</h3>
+            <p class="industry-desc">VLCC tanker loading, single point mooring (SPM) buoys, and continuous high-throughput fiscal custody verification.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Products / Technical Specifications Section -->
+    <section id="products" class="content-section">
+      <div class="section-container">
+        <div class="section-header">
+          <span class="section-eyebrow">Product Lineup</span>
+          <h2 class="section-title">Operational &amp; Metrological Data</h2>
+          <p class="section-subtitle">Full compliance with international standards for hydrocarbon custody transfer and allocation metering.</p>
+        </div>
+
+        <div class="specs-card" id="specs">
+          <table class="specs-table">
+            <thead>
+              <tr>
+                <th scope="col">Parameter</th>
+                <th scope="col">Specification Detail</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td class="spec-label">Sizes Available</td>
+                <td class="spec-value"><strong>DN50 – DN1200</strong> (2&Prime; through 48&Prime; nominal bore)</td>
+              </tr>
+              <tr>
+                <td class="spec-label">Fluid Compatibility</td>
+                <td class="spec-value">Crude Oil, Condensate, Natural Gas, Refined Products, Produced Water</td>
+              </tr>
+              <tr>
+                <td class="spec-label">Measurement Accuracy</td>
+                <td class="spec-value"><strong>&plusmn;0.15 %</strong> of measured volume (repeatability &le; &plusmn;0.02 %)</td>
+              </tr>
+              <tr>
+                <td class="spec-label">Maximum Operating Pressure</td>
+                <td class="spec-value">Up to <strong>420 bar</strong> (ANSI Class 150 to Class 2500 / API 10,000 psi)</td>
+              </tr>
+              <tr>
+                <td class="spec-label">Signal &amp; Telemetry Outputs</td>
+                <td class="spec-value">HART 4–20 mA, MODBUS RTU / TCP, PROFIBUS DP, Dual Pulse (API 5.5)</td>
+              </tr>
+              <tr>
+                <td class="spec-label">Certifications &amp; Standards</td>
+                <td class="spec-value">API MPMS Ch. 5.8, AGA Report No. 9, OIML R117 / R137, ATEX, IECEx Ex d IIC T6</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </section>
+
+    <!-- Clients Section -->
+    <section id="clients" class="content-section">
+      <div class="section-container">
+        <div class="section-header">
+          <span class="section-eyebrow">Trusted Partners</span>
+          <h2 class="section-title">Approved by Kuwait &amp; Regional Operators</h2>
+          <p class="section-subtitle">Meeting the rigorous technical qualifications and vendor registrations of major energy and infrastructure leaders.</p>
+        </div>
+
+        <div class="clients-logo-grid">
+          <div class="client-logo-item" title="Kuwait Oil Company (KOC)">
+            <img src="clients/koc.svg" alt="Kuwait Oil Company" class="client-logo-img" />
+            <span class="client-logo-name">Kuwait Oil Company (KOC)</span>
+          </div>
+          <div class="client-logo-item" title="Kuwait National Petroleum Company (KNPC)">
+            <img src="clients/knpc.svg" alt="Kuwait National Petroleum Company" class="client-logo-img" />
+            <span class="client-logo-name">KNPC</span>
+          </div>
+          <div class="client-logo-item" title="Ministry of Electricity & Water (MEW)">
+            <img src="clients/mew.svg" alt="Ministry of Electricity and Water" class="client-logo-img" />
+            <span class="client-logo-name">MEW Kuwait</span>
+          </div>
+          <div class="client-logo-item" title="Chevron">
+            <img src="clients/chevron.svg" alt="Chevron" class="client-logo-img" />
+            <span class="client-logo-name">Chevron</span>
+          </div>
+          <div class="client-logo-item" title="Siemens Energy">
+            <img src="clients/siemens.svg" alt="Siemens" class="client-logo-img" />
+            <span class="client-logo-name">Siemens Energy</span>
+          </div>
+          <div class="client-logo-item" title="Honeywell">
+            <img src="clients/honeywell.svg" alt="Honeywell" class="client-logo-img" />
+            <span class="client-logo-name">Honeywell</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Blog / Engineering Insights Section -->
+    <section id="blog" class="content-section">
+      <div class="section-container">
+        <div class="section-header">
+          <span class="section-eyebrow">Knowledge &amp; Innovation</span>
+          <h2 class="section-title">Metrology &amp; Engineering Insights</h2>
+          <p class="section-subtitle">Technical papers and field case studies authored by TTSC flow measurement specialists.</p>
+        </div>
+
+        <div class="blog-grid">
+          <article class="blog-card">
+            <div class="blog-meta">Metrology &bull; 6 min read</div>
+            <h3 class="blog-title">Transit-Time Ultrasonic vs. Conventional Turbine Meters in Sour Crude Service</h3>
+            <p class="blog-excerpt">How multi-path acoustic metering eliminates bearing wear, pressure loss, and maintenance downtime in Kuwait's high-H2S gathering centers.</p>
+            <a href="#contact" class="blog-link">Read Technical Paper &rarr;</a>
+          </article>
+
+          <article class="blog-card">
+            <div class="blog-meta">Compliance &bull; 8 min read</div>
+            <h3 class="blog-title">Meeting AGA Report No. 9 Guidelines for Custody Transfer Natural Gas Measurement</h3>
+            <p class="blog-excerpt">A practical engineering overview on acoustic path orientation, Reynolds number correction, and real-time speed-of-sound diagnostic verification.</p>
+            <a href="#contact" class="blog-link">Read Technical Paper &rarr;</a>
+          </article>
+
+          <article class="blog-card">
+            <div class="blog-meta">Digitalization &bull; 5 min read</div>
+            <h3 class="blog-title">Remote Diagnostics &amp; Condition-Based Proving via MODBUS TCP</h3>
+            <p class="blog-excerpt">Integrating custody transfer flow computers directly with plant DCS to automate zero-drift detection and transducer health trending.</p>
+            <a href="#contact" class="blog-link">Read Technical Paper &rarr;</a>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Call to Action / Contact Us Section -->
+    <section id="contact" class="content-section cta-section">
+      <div class="section-container">
+        <div class="cta-box">
+          <div class="pill-badge pill-badge-dark">Direct Factory Support</div>
+          <h2 class="cta-title">Ready to specify?</h2>
+          <p class="cta-desc">
+            Partner directly with our specialized flow metering engineers in Kuwait for sizing, skid fabrication, calibration certificates, and lifecycle field commissioning.
+          </p>
+          <div class="cta-actions">
+            <a href="mailto:info@texas.com.kw" class="btn btn-primary btn-large" id="cta-action-button">
+              Request Engineering Consultation &rarr;
+            </a>
+            <div class="cta-footnote">
+              Kuwait Oil Sector Approved &bull; KOC / KNPC / MEW Vendor Compliant
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ========================================================================= -->
+  <!-- V2 FOOTER: PARTNERS TO WHOLE TILL END                                      -->
+  <!-- ========================================================================= -->
+  <footer class="v2-footer" id="footer">
+    
+    <!-- 1. Trusted Technology Partners Section -->
+    <div class="v2-partners-section" id="partners">
+      <div class="v2-partners-container">
+        <div class="v2-partners-badge-wrap">
+          <div class="pill-badge">
+            <span class="badge-dot"></span>
+            <span>Trusted Technology Partners</span>
+          </div>
+        </div>
+
+        <!-- Continuous Partner Logo Marquee -->
+        <div class="v2-partners-marquee">
+          <div class="v2-partners-track">
+            <div class="v2-partner-logo"><img src="about/mitsubishi-electric.png" alt="Mitsubishi Electric" /></div>
+            <div class="v2-partner-logo"><img src="about/endress-hauser.jpg" alt="Endress+Hauser" /></div>
+            <div class="v2-partner-logo"><img src="about/sick.jpg" alt="SICK AG" /></div>
+            <div class="v2-partner-logo"><img src="about/meter-engineers.jpg" alt="Meter Engineers" /></div>
+            <div class="v2-partner-logo"><img src="about/tek-trol.jpg" alt="Tek-Trol" /></div>
+            <div class="v2-partner-logo"><img src="about/rockwin.jpg" alt="Rockwin Flowmeters" /></div>
+            <div class="v2-partner-logo"><img src="about/faure-herman.jpg" alt="Faure Herman" /></div>
+            <div class="v2-partner-logo"><img src="about/euromag.jpg" alt="Euromag" /></div>
+            <div class="v2-partner-logo"><img src="about/hms-networks.jpg" alt="HMS Networks" /></div>
+            <div class="v2-partner-logo"><img src="about/kem-kuppers.png" alt="KEM Kuppers" /></div>
+            <div class="v2-partner-logo"><img src="about/omni.png" alt="Omni Flow Computers" /></div>
+            <div class="v2-partner-logo"><img src="about/pyrotech.jpg" alt="Pyrotech" /></div>
+            <div class="v2-partner-logo"><img src="about/kurz-instruments.jpg" alt="Kurz Instruments" /></div>
+            <div class="v2-partner-logo"><img src="about/novus-automation.jpg" alt="Novus Automation" /></div>
+          </div>
+          <div class="v2-partners-track" aria-hidden="true">
+            <div class="v2-partner-logo"><img src="about/mitsubishi-electric.png" alt="Mitsubishi Electric" /></div>
+            <div class="v2-partner-logo"><img src="about/endress-hauser.jpg" alt="Endress+Hauser" /></div>
+            <div class="v2-partner-logo"><img src="about/sick.jpg" alt="SICK AG" /></div>
+            <div class="v2-partner-logo"><img src="about/meter-engineers.jpg" alt="Meter Engineers" /></div>
+            <div class="v2-partner-logo"><img src="about/tek-trol.jpg" alt="Tek-Trol" /></div>
+            <div class="v2-partner-logo"><img src="about/rockwin.jpg" alt="Rockwin Flowmeters" /></div>
+            <div class="v2-partner-logo"><img src="about/faure-herman.jpg" alt="Faure Herman" /></div>
+            <div class="v2-partner-logo"><img src="about/euromag.jpg" alt="Euromag" /></div>
+            <div class="v2-partner-logo"><img src="about/hms-networks.jpg" alt="HMS Networks" /></div>
+            <div class="v2-partner-logo"><img src="about/kem-kuppers.png" alt="KEM Kuppers" /></div>
+            <div class="v2-partner-logo"><img src="about/omni.png" alt="Omni Flow Computers" /></div>
+            <div class="v2-partner-logo"><img src="about/pyrotech.jpg" alt="Pyrotech" /></div>
+            <div class="v2-partner-logo"><img src="about/kurz-instruments.jpg" alt="Kurz Instruments" /></div>
+            <div class="v2-partner-logo"><img src="about/novus-automation.jpg" alt="Novus Automation" /></div>
+          </div>
+        </div>
+
+        <div class="v2-partners-sublinks">
+          <a href="#clients" class="v2-sublink">View all partners &rarr;</a>
+          <span class="v2-sublink-sep">&bull;</span>
+          <a href="#services" class="v2-sublink">Explore OEM integration capabilities &rarr;</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- 2. Dual Marquee Ticker Banner (Services & Industries) -->
+    <div class="v2-ticker-banner">
+      <div class="v2-ticker-row v2-ticker-left">
+        <div class="v2-ticker-content">
+          <span><span class="v2-ticker-dot"></span>FLOW MEASUREMENT</span>
+          <span><span class="v2-ticker-dot"></span>INDUSTRIAL AUTOMATION</span>
+          <span><span class="v2-ticker-dot"></span>INSPECTION &amp; TESTING</span>
+          <span><span class="v2-ticker-dot"></span>CEMS SOLUTIONS</span>
+          <span><span class="v2-ticker-dot"></span>METERING SYSTEMS</span>
+          <span><span class="v2-ticker-dot"></span>CUSTODY TRANSFER</span>
+          <span><span class="v2-ticker-dot"></span>PLANT AUTOMATION</span>
+          <span><span class="v2-ticker-dot"></span>NDT SERVICES</span>
+          <span><span class="v2-ticker-dot"></span>FLOW MEASUREMENT</span>
+          <span><span class="v2-ticker-dot"></span>INDUSTRIAL AUTOMATION</span>
+          <span><span class="v2-ticker-dot"></span>INSPECTION &amp; TESTING</span>
+          <span><span class="v2-ticker-dot"></span>CEMS SOLUTIONS</span>
+          <span><span class="v2-ticker-dot"></span>METERING SYSTEMS</span>
+          <span><span class="v2-ticker-dot"></span>CUSTODY TRANSFER</span>
+          <span><span class="v2-ticker-dot"></span>PLANT AUTOMATION</span>
+          <span><span class="v2-ticker-dot"></span>NDT SERVICES</span>
+        </div>
+      </div>
+      <div class="v2-ticker-row v2-ticker-right">
+        <div class="v2-ticker-content">
+          <span><span class="v2-ticker-dot"></span>OIL &amp; GAS</span>
+          <span><span class="v2-ticker-dot"></span>REFINERY</span>
+          <span><span class="v2-ticker-dot"></span>PETROCHEMICALS</span>
+          <span><span class="v2-ticker-dot"></span>LNG TERMINALS</span>
+          <span><span class="v2-ticker-dot"></span>POWER PLANT</span>
+          <span><span class="v2-ticker-dot"></span>WATER TREATMENT</span>
+          <span><span class="v2-ticker-dot"></span>CEMENT</span>
+          <span><span class="v2-ticker-dot"></span>METAL &amp; STEEL</span>
+          <span><span class="v2-ticker-dot"></span>OIL &amp; GAS</span>
+          <span><span class="v2-ticker-dot"></span>REFINERY</span>
+          <span><span class="v2-ticker-dot"></span>PETROCHEMICALS</span>
+          <span><span class="v2-ticker-dot"></span>LNG TERMINALS</span>
+          <span><span class="v2-ticker-dot"></span>POWER PLANT</span>
+          <span><span class="v2-ticker-dot"></span>WATER TREATMENT</span>
+          <span><span class="v2-ticker-dot"></span>CEMENT</span>
+          <span><span class="v2-ticker-dot"></span>METAL &amp; STEEL</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- 3. Project Inquiry CTA Strip -->
+    <div class="v2-cta-strip">
+      <div class="v2-cta-container">
+        <div class="v2-cta-content">
+          <h3 class="v2-cta-title">Have a project in mind?</h3>
+          <p class="v2-cta-desc">Talk to our team about your requirements.</p>
+        </div>
+        <a href="#contact" class="v2-cta-btn">
+          <span>Get in Touch</span>
+          <span class="arrow">&rarr;</span>
+        </a>
+      </div>
+    </div>
+
+    <!-- 4. Main Footer Directory & Details -->
+    <div class="v2-footer-main">
+      <div class="v2-footer-container">
+        
+        <!-- Brand Row -->
+        <div class="v2-footer-brand-row">
+          <div class="v2-brand-col">
+            <a href="#" class="v2-brand-link">
+              <img src="logo.svg" alt="Texas Technical Services" class="v2-footer-logo" />
+              <div class="v2-brand-text">
+                <span class="v2-brand-name">TEXAS</span>
+                <span class="v2-brand-sub">TECHNICAL SERVICES</span>
+              </div>
+            </a>
+            <p class="v2-brand-summary">
+              ISO 9001, ISO 14001, ISO 45001, UASL &amp; Accurate certified company established in 2008. Flow measurement, automation &amp; inspection for oil &amp; gas and industrial sectors across Kuwait &amp; UAE.
+            </p>
+            <div class="v2-cert-tag">
+              <span class="v2-cert-icon">&#10003;</span>
+              <span>ISO 9001:2015 Certified Organization</span>
+            </div>
+          </div>
+
+          <div class="v2-contact-col">
+            <div class="v2-contact-block">
+              <span class="v2-contact-label">Email Us</span>
+              <a href="mailto:info@texastechserv.com" class="v2-contact-link">info@texastechserv.com</a>
+            </div>
+            <div class="v2-contact-block">
+              <span class="v2-contact-label">Kuwait Headquarters</span>
+              <div class="v2-phones">
+                <a href="tel:+96597243755">+965 97243755</a>
+                <span class="bullet">&bull;</span>
+                <a href="tel:+96566347267">+965 66347267</a>
+              </div>
+            </div>
+            <div class="v2-contact-block">
+              <span class="v2-contact-label">Dubai Operations Hub</span>
+              <div class="v2-phones">
+                <a href="tel:+971569553747">+971 569553747</a>
+                <span class="bullet">&bull;</span>
+                <a href="tel:+971567793973">+971 567793973</a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- 4 Columns Directory -->
+        <div class="v2-footer-cols-grid">
+          
+          <!-- Locations -->
+          <div class="v2-col">
+            <h4 class="v2-col-title">Our Locations</h4>
+            <div class="v2-location-card">
+              <span class="v2-loc-city">Kuwait Headquarters</span>
+              <p class="v2-loc-addr">Munira Tower Office No. 30, 9th Floor – Building No.6702, Block 7 – Makkah Street Fahaheel, Kuwait</p>
+            </div>
+            <div class="v2-location-card">
+              <span class="v2-loc-city">Dubai Regional Office</span>
+              <p class="v2-loc-addr">Amna Naseer Building, Al Marar Area 20th Street #529 Plot #302 Office #201-19, Deira, Dubai, UAE</p>
+            </div>
+          </div>
+
+          <!-- Services -->
+          <div class="v2-col">
+            <h4 class="v2-col-title">Services</h4>
+            <ul class="v2-col-list">
+              <li><a href="#services">Flow Measurement Solutions</a></li>
+              <li><a href="#services">Industrial Automation</a></li>
+              <li><a href="#services">Inspection &amp; Testing</a></li>
+              <li><a href="#services">PLC &amp; SCADA Integration</a></li>
+              <li><a href="#services">Flow Meter Calibration</a></li>
+              <li><a href="#services">Plant Automation</a></li>
+            </ul>
+          </div>
+
+          <!-- Industries -->
+          <div class="v2-col">
+            <h4 class="v2-col-title">Industries</h4>
+            <ul class="v2-col-list">
+              <li><a href="#industries">Oil &amp; Gas</a></li>
+              <li><a href="#industries">Refinery</a></li>
+              <li><a href="#industries">Petrochemicals</a></li>
+              <li><a href="#industries">LNG</a></li>
+              <li><a href="#industries">Power Plant</a></li>
+              <li><a href="#industries">Water Treatment</a></li>
+              <li><a href="#industries">Cement</a></li>
+              <li><a href="#industries">Metal &amp; Steel</a></li>
+            </ul>
+          </div>
+
+          <!-- Solutions -->
+          <div class="v2-col">
+            <h4 class="v2-col-title">Solutions</h4>
+            <ul class="v2-col-list">
+              <li><a href="#products">Global Network</a></li>
+              <li><a href="#products">Texaflow Custody Metering</a></li>
+              <li><a href="#products">Space AI Industrial AI</a></li>
+              <li><a href="#products">Mitsubishi Electric</a></li>
+              <li><a href="#products">PWS Floor Solutions</a></li>
+              <li><a href="#contact">RFQ Tender Desk</a></li>
+            </ul>
+          </div>
+
+        </div>
+
+        <!-- Certifications Row -->
+        <div class="v2-certs-bar">
+          <div class="v2-certs-wrap">
+            <img src="about/cert-iso9001.png" alt="ISO 9001:2015 Quality Management" class="v2-cert-logo" />
+            <img src="about/cert-iso14001.png" alt="ISO 14001 Environmental Management" class="v2-cert-logo" />
+            <img src="about/cert-iso45001.png" alt="ISO 45001 Occupational Health & Safety" class="v2-cert-logo" />
+            <img src="about/cert-uasl.png" alt="UASL Certification" class="v2-cert-logo" />
+            <img src="about/cert-accurate-white.png" alt="Accurate Certification" class="v2-cert-logo" />
+          </div>
+        </div>
+
+        <!-- Bottom Copyright Row -->
+        <div class="v2-footer-bottom">
+          <p class="v2-copy">
+            TEXAS TECHNICAL SERVICE COMPANY W.L.L. &copy; 2026. All Rights Reserved.
+          </p>
+          <div class="v2-bottom-meta">
+            <span class="v2-cert-spec">ISO 9001 &bull; ISO 14001 &bull; ISO 45001 &bull; UASL &bull; Accurate Certified</span>
+            <span class="v2-dot">&bull;</span>
+            <a href="#sequence" class="v2-top-btn">Back to Top &uarr;</a>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </footer>
+
+  <!-- Vanilla Script -->
+  <script src="script.js"></script>
+</body>
+</html>
