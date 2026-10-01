@@ -1528,7 +1528,7 @@ a {
   background-color: #ffffff;
   border-top: 1px solid rgba(0, 0, 0, 0.06);
   border-bottom: 1px solid rgba(0, 0, 0, 0.06);
-  padding: 56px 4vw 44px;
+  padding: 24px 4vw 20px;
   overflow: hidden;
 }
 
@@ -1541,13 +1541,16 @@ a {
 }
 
 .v2-partners-badge-wrap {
-  margin-bottom: 30px;
+  margin-bottom: 16px;
 }
 
 .v2-partners-badge-wrap .pill-badge {
   background: rgba(107, 25, 27, 0.06);
   border: 1px solid rgba(107, 25, 27, 0.16);
   color: var(--accent);
+  padding: 4px 14px;
+  font-size: 11px;
+  letter-spacing: 0.08em;
 }
 
 .v2-partners-marquee {
@@ -1563,10 +1566,10 @@ a {
 .v2-partners-track {
   display: flex;
   align-items: center;
-  gap: 48px;
+  gap: 40px;
   flex-shrink: 0;
   animation: partners-scroll 32s linear infinite;
-  padding: 12px 24px;
+  padding: 4px 16px;
 }
 
 .v2-partners-marquee:hover .v2-partners-track {
@@ -1583,7 +1586,7 @@ a {
 }
 
 .v2-partner-logo {
-  height: 56px;
+  height: 40px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -1591,8 +1594,8 @@ a {
 }
 
 .v2-partner-logo img {
-  height: 48px;
-  max-width: 160px;
+  height: 34px;
+  max-width: 130px;
   width: auto;
   object-fit: contain;
   filter: none; /* Display in real color */
@@ -1605,11 +1608,11 @@ a {
 }
 
 .v2-partners-sublinks {
-  margin-top: 32px;
+  margin-top: 16px;
   display: flex;
   align-items: center;
   gap: 12px;
-  font-size: 13px;
+  font-size: 12px;
   font-weight: 600;
 }
 
@@ -2386,20 +2389,32 @@ a {
 
 @media (max-width: 640px) {
   .v2-partners-section {
-    padding: 36px 14px 28px;
+    padding: 18px 14px 14px;
+  }
+
+  .v2-partners-badge-wrap {
+    margin-bottom: 10px;
   }
 
   .v2-partners-track {
-    gap: 32px;
+    gap: 24px;
+    padding: 2px 8px;
   }
 
   .v2-partner-logo {
-    height: 44px;
+    height: 32px;
   }
 
   .v2-partner-logo img {
-    height: 38px;
-    max-width: 125px;
+    height: 26px;
+    max-width: 100px;
+  }
+
+  .v2-partners-sublinks {
+    margin-top: 10px;
+    font-size: 11px;
+    flex-wrap: wrap;
+    justify-content: center;
   }
 
   .v2-footer-cols-grid {
