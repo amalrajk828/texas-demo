@@ -56,12 +56,12 @@ export default function HomeV3Page() {
   // ---------------------------------------------------------------------------
   // Frame Source Helper
   // ---------------------------------------------------------------------------
-  function frameSrc(n) {
+  function frameSrc(n: number) {
     return `/frames/ezgif-708412ec47090038-jpg/ezgif-frame-${String(n).padStart(3, '0')}.jpg`;
   }
 
   // Fallback helper in case direct folder without 'frames/' prefix is requested
-  function fallbackSrc(n) {
+  function fallbackSrc(n: number) {
     return `/ezgif-708412ec47090038-jpg/ezgif-frame-${String(n).padStart(3, '0')}.jpg`;
   }
 
@@ -75,7 +75,7 @@ export default function HomeV3Page() {
       const onComplete = () => {
         loadedCount++;
         if (loaderPercent) {
-          loaderPercent.textContent = Math.round((loadedCount / TOTAL_FRAMES) * 100);
+          loaderPercent.textContent = String(Math.round((loadedCount / TOTAL_FRAMES) * 100));
         }
 
         if (loadedCount === TOTAL_FRAMES) {
@@ -108,7 +108,7 @@ export default function HomeV3Page() {
   // ---------------------------------------------------------------------------
   // Canvas Rendering with Cover-Fit Math
   // ---------------------------------------------------------------------------
-  function drawFrame(index) {
+  function drawFrame(index: number) {
     if (!canvas || !ctx) return;
 
     const img = images[index];
@@ -142,7 +142,7 @@ export default function HomeV3Page() {
   // ---------------------------------------------------------------------------
   // Overlay Cards Transition Logic
   // ---------------------------------------------------------------------------
-  function updateCard(cardElement, progress, start, end, isFirst = false, isLast = false) {
+  function updateCard(cardElement: HTMLElement | null, progress: number, start: number, end: number, isFirst: boolean = false, isLast: boolean = false) {
     if (!cardElement) return;
 
     const fade = 0.05; // 5% fade transition window
@@ -202,14 +202,14 @@ export default function HomeV3Page() {
   }
 
   // Perlin smootherstep for buttery-smooth ease-in/ease-out transitions
-  function smootherstep(min, max, val) {
+  function smootherstep(min: number, max: number, val: number) {
     if (val <= min) return 0;
     if (val >= max) return 1;
     const x = (val - min) / (max - min);
     return x * x * x * (x * (x * 6 - 15) + 10);
   }
 
-  function updateOverlayCards(progress) {
+  function updateOverlayCards(progress: number) {
     // 1. First Screen (Hero: Glass Card + Media Showcase + Bottom Stats): 0.00 – 0.20
     if (heroScreen) {
       let opacity = 1;
@@ -300,10 +300,10 @@ export default function HomeV3Page() {
     const tags = ['INDUSTRIAL SERVICES', 'AUTOMATION', 'METERING', 'NDT & TESTING'];
     let currentSlide = 1; // Default to Automation matching V2
     const totalSlides = mediaItems.length;
-    let autoTimer = null;
+    let autoTimer: ReturnType<typeof setInterval> | null = null;
     let isPaused = false;
 
-    function goToSlide(index) {
+    function goToSlide(index: number) {
       currentSlide = (index + totalSlides) % totalSlides;
 
       // Update media items
@@ -311,13 +311,15 @@ export default function HomeV3Page() {
         if (idx === currentSlide) {
           item.classList.add('active');
           if (item.tagName === 'VIDEO') {
-            item.currentTime = 0;
-            item.play().catch(() => {});
+            const vid = item as HTMLVideoElement;
+            vid.currentTime = 0;
+            vid.play().catch(() => {});
           }
         } else {
           item.classList.remove('active');
           if (item.tagName === 'VIDEO') {
-            item.pause();
+            const vid = item as HTMLVideoElement;
+            vid.pause();
           }
         }
       });
@@ -337,7 +339,7 @@ export default function HomeV3Page() {
     // Tab clicks
     tabs.forEach((tab) => {
       tab.addEventListener('click', () => {
-        const idx = parseInt(tab.getAttribute('data-index'), 10);
+        const idx = parseInt(tab.getAttribute('data-index') || '0', 10);
         goToSlide(idx);
       });
     });
@@ -420,9 +422,9 @@ export default function HomeV3Page() {
   // ---------------------------------------------------------------------------
   // Resize Handler with 150ms Debounce
   // ---------------------------------------------------------------------------
-  let resizeTimer = null;
+  let resizeTimer: ReturnType<typeof setTimeout> | null = null;
   function onResize() {
-    clearTimeout(resizeTimer);
+    if (resizeTimer) clearTimeout(resizeTimer);
     resizeTimer = setTimeout(() => {
       if (lastDrawnIndex >= 0 && allLoaded) {
         drawFrame(lastDrawnIndex);
@@ -454,7 +456,7 @@ export default function HomeV3Page() {
 
       // Close menu on click outside
       document.addEventListener('click', (e) => {
-        if (nav && !nav.contains(e.target)) {
+        if (nav && !nav.contains(e.target as Node)) {
           navMenu.classList.remove('open');
           mobileBtn.classList.remove('active');
         }
