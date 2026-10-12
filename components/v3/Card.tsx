@@ -1,0 +1,56 @@
+import React from "react";
+
+interface CardProps extends React.HTMLAttributes<HTMLDivElement> {
+  children: React.ReactNode;
+  variant?: "glass" | "white" | "solid" | "dark";
+  padding?: "default" | "compact" | "generous" | "none";
+  interactive?: boolean;
+  className?: string;
+}
+
+/**
+ * Standard Card component adhering to Home V3:
+ * - Rounded corners: rounded-[20px]
+ * - Background: off-white / glass backdrop-blur
+ * - Border: subtle border-black/[0.06]
+ * - Shadow: 0 20px 40px -15px rgba(0, 0, 0, 0.07)
+ */
+export default function Card({
+  children,
+  variant = "glass",
+  padding = "default",
+  interactive = false,
+  className = "",
+  ...props
+}: CardProps) {
+  const variantStyles = {
+    glass:
+      "bg-white/75 backdrop-blur-md border border-black/[0.06] text-[#1a1a1a] shadow-[0_20px_40px_-15px_rgba(0,0,0,0.07)]",
+    white:
+      "bg-white border border-black/[0.07] text-[#1a1a1a] shadow-[0_20px_40px_-15px_rgba(0,0,0,0.06)]",
+    solid:
+      "bg-[#f3f3f1] border border-black/[0.05] text-[#1a1a1a]",
+    dark:
+      "bg-[#1c1c1c] border border-white/[0.08] text-white shadow-[0_20px_40px_-15px_rgba(0,0,0,0.35)]",
+  };
+
+  const paddingStyles = {
+    default: "p-6 sm:p-8",
+    compact: "p-4 sm:p-6",
+    generous: "p-8 sm:p-10 lg:p-12",
+    none: "p-0",
+  };
+
+  const hoverStyles = interactive
+    ? "transition-all duration-300 hover:-translate-y-1.5 hover:shadow-[0_28px_50px_-15px_rgba(0,0,0,0.12)] hover:border-black/[0.12]"
+    : "";
+
+  return (
+    <div
+      className={`rounded-[20px] overflow-hidden ${variantStyles[variant]} ${paddingStyles[padding]} ${hoverStyles} ${className}`}
+      {...props}
+    >
+      {children}
+    </div>
+  );
+}

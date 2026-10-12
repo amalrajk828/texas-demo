@@ -1,0 +1,45 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Sora:wght@100..800&family=Space+Grotesk:wght@300..700&display=swap');
+@import "tailwindcss";
+@import "tw-animate-css";
+
+/* Tell Tailwind v4 to scan V3 components and pages */
+@source "../../components/v3";
+@source "../../components/home";
+@source ".";
+
+@custom-variant dark (&:is(.dark *));
+
+@theme inline {
+  --color-v3-studio: #e8e8e6;
+  --color-v3-maroon: #6b191b;
+  --color-v3-maroon-hover: #852023;
+  --color-v3-dark: #1a1a1a;
+  --color-v3-muted: #595956;
+  --font-display: var(--font-sora), "Sora", sans-serif;
+  --font-body: var(--font-inter), "Inter", sans-serif;
+}
+
+:root {
+  --header-height: 72px;
+  --bg-studio: #e8e8e6;
+  --bg-studio-glass: rgba(232, 232, 230, 0.76);
+  --text-primary: #1a1a1a;
+  --text-muted: #595956;
+  --text-light: #7a7a76;
+  --accent: #6b191b;
+  --accent-hover: #852023;
+  --accent-light: rgba(107, 25, 27, 0.08);
+  --card-bg: rgba(255, 255, 255, 0.72);
+  --card-border: rgba(0, 0, 0, 0.06);
+  --card-shadow: 0 20px 40px -15px rgba(0, 0, 0, 0.07);
+  --nav-border: rgba(0, 0, 0, 0.08);
+}
+
+html,
+body {
+  background-color: #e8e8e6;
+  color: #1a1a1a;
+  min-height: 100vh;
+}
+
+@import "./home-v3-showcase.css";
