@@ -92,9 +92,9 @@ export default function GreyWhatWeDo() {
               transition={{ duration: 0.7, ease: "easeOut" }}
               className="inline-flex items-center gap-3 mb-4"
             >
-              <span className="w-6 h-px" style={{ background: "#0E7490" }} />
-              <span className="text-[11px] font-bold tracking-[4px] uppercase" style={{ color: "#0E7490" }}>What We Do</span>
-              <span className="w-6 h-px" style={{ background: "#0E7490" }} />
+              <span className="w-6 h-px" style={{ background: "#8a302f" }} />
+              <span className="text-[11px] font-bold tracking-[4px] uppercase" style={{ color: "#8a302f" }}>What We Do</span>
+              <span className="w-6 h-px" style={{ background: "#8a302f" }} />
             </motion.div>
 
             <motion.h2
@@ -132,8 +132,8 @@ export default function GreyWhatWeDo() {
                   style={{
                     background:
                       i % 2 === 0
-                        ? "radial-gradient(circle, rgba(229,57,53,0.12) 0%, rgba(255,255,255,0.4) 50%, transparent 70%)"
-                        : "radial-gradient(circle, rgba(59,130,246,0.12) 0%, rgba(255,255,255,0.4) 50%, transparent 70%)",
+                        ? "radial-gradient(circle, rgba(138,48,47,0.12) 0%, rgba(255,255,255,0.4) 50%, transparent 70%)"
+                        : "radial-gradient(circle, rgba(138,48,47,0.10) 0%, rgba(255,255,255,0.4) 50%, transparent 70%)",
                   }}
                 />
 
@@ -158,10 +158,10 @@ export default function GreyWhatWeDo() {
                   <div className="relative z-10 p-8 flex flex-col flex-1">
                     {/* Top Header Row: Glassy Icon box top-left, Monospace Number top-right */}
                     <div className="flex items-center justify-between mb-6">
-                      <div className="w-12 h-12 rounded-2xl flex items-center justify-center bg-white/50 border border-white/70 shadow-xs backdrop-blur-md">
-                        <svc.Icon className="w-6 h-6 text-[#111827]" strokeWidth={1.6} />
+                      <div className="w-12 h-12 rounded-2xl flex items-center justify-center bg-[#8a302f]/[0.08] border border-[#8a302f]/20 shadow-xs backdrop-blur-md transition-colors group-hover:bg-[#8a302f]/[0.14] group-hover:border-[#8a302f]/35">
+                        <svc.Icon className="w-6 h-6 text-[#8a302f]" strokeWidth={1.75} />
                       </div>
-                      <span className="font-mono text-[13px] font-bold tracking-[3px] text-[#111827]/70 bg-white/50 px-2.5 py-1 rounded-xl border border-white/70 shadow-xs">
+                      <span className="font-mono text-[13px] font-bold tracking-[3px] text-[#8a302f] bg-[#8a302f]/[0.08] px-2.5 py-1 rounded-xl border border-[#8a302f]/20 shadow-xs">
                         {svc.num}
                       </span>
                     </div>
@@ -180,10 +180,10 @@ export default function GreyWhatWeDo() {
                     <div className="mt-auto pt-4 border-t border-black/[0.06]">
                       <Link
                         href="/services/"
-                        className="inline-flex items-center gap-2 text-[14px] font-semibold text-slate-600 hover:text-slate-900 no-underline whitespace-nowrap transition-all duration-200"
+                        className="inline-flex items-center gap-2 text-[14px] font-semibold text-slate-600 hover:text-[#8a302f] no-underline whitespace-nowrap transition-all duration-200"
                       >
                         Learn more about our services{" "}
-                        <ArrowRight className="w-4 h-4 transition-transform duration-200 group-hover:translate-x-1" />
+                        <ArrowRight className="w-4 h-4 text-[#8a302f] transition-transform duration-200 group-hover:translate-x-1" />
                       </Link>
                     </div>
                   </div>
@@ -234,12 +234,15 @@ export default function GreyWhatWeDo() {
                 />
               </div>
 
-              {/* Red Badge - ISO 9001:2015 */}
+              {/* Frosted Glass Badge - ISO 9001:2015 */}
               <div 
                 className="absolute top-4 left-4 rounded-xl px-4 py-3 shadow-lg z-10 flex items-center gap-3" 
                 style={{ 
-                  background: "var(--color-brand-red)", 
-                  boxShadow: "0 8px 24px color-mix(in srgb, var(--color-brand-red) 40%, transparent)" 
+                  background: "rgba(138, 48, 47, 0.35)", 
+                  backdropFilter: "blur(12px)",
+                  WebkitBackdropFilter: "blur(12px)",
+                  border: "1px solid rgba(255, 255, 255, 0.15)",
+                  boxShadow: "0 8px 24px rgba(0, 0, 0, 0.2), inset 0 1px 1px rgba(255, 255, 255, 0.2)"
                 }}
               >
                 <Link href="/certifications/" className="relative w-16 h-16 shrink-0 block">
@@ -255,8 +258,8 @@ export default function GreyWhatWeDo() {
           </FadeUp>
           <div>
             <FadeUp delay={0.08}>
-              <div className="space-y-4 mb-8">
-                {BODY.map((p, i) => <p key={i} className="text-[17px] leading-[1.85]" style={{ color: "var(--g-muted)" }}>{p}</p>)}
+              <div className="space-y-4 mb-8" style={{ color: "#5C6270" }}>
+                {BODY.map((p, i) => <p key={i} className="text-[17px] leading-[1.85]" style={{ color: "#5C6270" }}>{p}</p>)}
               </div>
             </FadeUp>
             <FadeUp delay={0.14}>

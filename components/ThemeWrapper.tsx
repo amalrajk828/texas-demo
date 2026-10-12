@@ -5,5 +5,9 @@ export default function ThemeWrapper({
   vars: Record<string, string>;
   children: React.ReactNode;
 }) {
-  return <div style={vars as React.CSSProperties}>{children}</div>;
+  return (
+    <div style={vars as React.CSSProperties} suppressHydrationWarning>
+      {children}
+    </div>
+  );
 }

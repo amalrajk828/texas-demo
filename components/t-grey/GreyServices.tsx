@@ -53,9 +53,9 @@ export default function GreyServices() {
         <div className="fade-up flex flex-col text-center items-center gap-6 mb-14">
           <div>
             <div className="inline-flex items-center justify-center gap-3 mb-4">
-              <span className="w-6 h-px" style={{ background: "#0891B2" }} />
-              <span className="text-[11px] font-bold tracking-[4px] uppercase" style={{ color: "#0891B2" }}>Our Services</span>
-              <span className="w-6 h-px" style={{ background: "#0891B2" }} />
+              <span className="w-6 h-px" style={{ background: "#8a302f" }} />
+              <span className="text-[11px] font-bold tracking-[4px] uppercase" style={{ color: "#8a302f" }}>Our Services</span>
+              <span className="w-6 h-px" style={{ background: "#8a302f" }} />
             </div>
             <h2 className="text-[1.8rem] sm:text-[2.8rem] lg:text-[3.4rem] font-black leading-[1.05] tracking-tight" style={{ color: "var(--g-heading)" }}>
               What services do we offer for industrial automation and flow measurement?
@@ -95,7 +95,7 @@ export default function GreyServices() {
 
                   {/* Top Row: Category Pill + Number */}
                   <div className="flex justify-between items-start mb-5 relative z-10">
-                    <span className="text-[10px] font-bold uppercase tracking-[1.5px] text-[#ff4d4d] border border-[#ff4d4d]/20 bg-[#ff4d4d]/5 rounded-full px-2.5 py-0.5 w-fit">
+                    <span className="text-[10px] font-bold uppercase tracking-[1.5px] text-[#8a302f] border border-[#8a302f]/35 bg-[#8a302f]/10 rounded-full px-2.5 py-0.5 w-fit">
                       {svc.tag}
                     </span>
                      <span className="text-[11px] font-bold tracking-[3px] text-white/60 font-mono">0{i + 1}</span>
@@ -107,20 +107,34 @@ export default function GreyServices() {
                   </div>
 
                   {/* Heading */}
-                  <h3 className="text-[17px] sm:text-[19px] font-black leading-snug text-white mb-2.5 pr-4 tracking-tight relative z-10 break-words">
+                  {/* Card Title */}
+                  <h3 className="text-[18px] sm:text-[20px] font-black leading-snug text-white mb-3 tracking-tight group-hover:text-white transition-colors relative z-10 break-words">
                     {svc.title}
                   </h3>
 
                   {/* Body paragraph */}
-                  <p className="text-white/70 text-xs sm:text-sm leading-relaxed mb-6 flex-1 font-medium relative z-10">
+                  <p className="text-white/70 text-[13px] sm:text-[14px] leading-relaxed mb-6 flex-1 font-medium relative z-10">
                     {svc.body}
                   </p>
 
-                  {/* Learn More link */}
-                  <Link href={svc.href} className="text-xs sm:text-sm font-bold text-slate-300 hover:text-white transition-all duration-200 mt-auto relative z-10">
-                    <span className="inline">Learn more about {svc.title}</span>{" "}
-                    <ArrowRight className="inline w-3.5 h-3.5 ml-0.5" />
-                  </Link>
+                  {/* Bottom CTA with circular indicator */}
+                  <div
+                    className="mt-auto pt-5 border-t flex items-center justify-between relative z-10 transition-all duration-200"
+                    style={{ borderColor: "rgba(255, 255, 255, 0.08)" }}
+                  >
+                    <Link
+                      href={svc.href}
+                      className="text-[13px] sm:text-[14px] font-bold text-slate-300 group-hover:text-white transition-colors duration-200"
+                    >
+                      Learn more
+                    </Link>
+                    {/* Circular arrow indicator */}
+                    <div
+                      className="w-8 h-8 rounded-full flex items-center justify-center border border-white/15 bg-white/[0.06] text-white/70 group-hover:text-white group-hover:bg-[#8a302f] group-hover:border-[#8a302f] group-hover:translate-x-1 transition-all duration-300 shadow-sm shrink-0"
+                    >
+                      <ArrowRight className="w-3.5 h-3.5" />
+                    </div>
+                  </div>
                 </div>
               </div>
             </div>

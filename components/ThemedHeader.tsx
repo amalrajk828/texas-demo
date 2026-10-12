@@ -202,8 +202,7 @@ export default function ThemedHeader() {
             <div className="flex items-center gap-3 ml-auto lg:ml-0">
               <Link
                 href="/contacts/"
-                className="hidden lg:block text-white text-[13px] font-semibold px-6 py-2.5 rounded-lg transition-colors tracking-wide"
-                style={{ background: "var(--color-brand-red)" }}
+                className="v2-btn-primary hidden lg:inline-flex text-[13px] font-semibold px-6 py-2.5 rounded-lg tracking-wide"
               >
                 Contact Us
               </Link>
@@ -311,8 +310,7 @@ export default function ThemedHeader() {
             ))}
             <div className="pt-2 pb-1">
               <Link href="/contacts/"
-                className="block text-center text-white text-[13px] font-medium px-4 py-2.5 rounded-lg transition-colors"
-                style={{ background: "var(--color-brand-red)" }}
+                className="v2-btn-primary block text-center text-[13px] font-medium px-4 py-2.5 rounded-lg"
               >
                 Contact Us
               </Link>

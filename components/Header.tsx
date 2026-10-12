@@ -395,6 +395,8 @@ export default function Header() {
   const pathname = usePathname();
   const isHome = pathname === "/";
   const isAboutUs = pathname.startsWith("/about-us");
+  const isHomeV5 = pathname?.startsWith("/demo/home-v1");
+  const isHomeV2 = pathname?.startsWith("/demo/home-v2");
   const [open, setOpen]               = useState<string | null>(null);
   const [mobileOpen, setMobileOpen]   = useState(false);
   const [scrolled, setScrolled]       = useState(false);
@@ -505,6 +507,30 @@ export default function Header() {
     return () => document.removeEventListener("mousedown", handler);
   }, []);
 
+  /* Dynamically measure and expose navbar height as CSS custom property */
+  useEffect(() => {
+    const updateNavbarHeight = () => {
+      if (ref.current) {
+        const rect = ref.current.getBoundingClientRect();
+        const h = Math.round(rect.bottom);
+        if (h > 0) {
+          document.documentElement.style.setProperty("--navbar-height", `${h}px`);
+        }
+      }
+    };
+    updateNavbarHeight();
+    window.addEventListener("resize", updateNavbarHeight);
+    let observer: ResizeObserver | null = null;
+    if (typeof ResizeObserver !== "undefined" && ref.current) {
+      observer = new ResizeObserver(updateNavbarHeight);
+      observer.observe(ref.current);
+    }
+    return () => {
+      window.removeEventListener("resize", updateNavbarHeight);
+      if (observer) observer.disconnect();
+    };
+  }, []);
+
   const isActive = (href: string) =>
     href === "/" ? pathname === "/" : pathname.startsWith(href.replace(/\/$/, ""));
 
@@ -580,7 +606,11 @@ export default function Header() {
                           <motion.span
                             layoutId="nav-underline"
                             className="absolute bottom-0 left-4 right-4 h-[2px] rounded-full"
-                            style={{ background: "linear-gradient(90deg, #E53935, #B71C1C)" }}
+                            style={{
+                              background: isHomeV5
+                                ? "linear-gradient(90deg, #832429, #9c2b31)"
+                                : "linear-gradient(90deg, #E53935, #B71C1C)"
+                            }}
                             transition={{ type: "spring", stiffness: 380, damping: 30 }}
                           />
                         )}
@@ -606,7 +636,11 @@ export default function Header() {
                             {/* Gradient accent at top */}
                             <div
                               className="relative z-10 h-[2px]"
-                              style={{ background: "linear-gradient(90deg, #E53935, #FF7043, #E53935)" }}
+                              style={{
+                                background: isHomeV5
+                                  ? "linear-gradient(90deg, #832429, #9c2b31, #832429)"
+                                  : "linear-gradient(90deg, #E53935, #FF7043, #E53935)"
+                              }}
                             />
 
                             {/* Items grid */}
@@ -686,7 +720,11 @@ export default function Header() {
                         <motion.span
                           layoutId="nav-underline"
                           className="absolute bottom-0 left-4 right-4 h-[2px] rounded-full"
-                          style={{ background: "linear-gradient(90deg, #E53935, #B71C1C)" }}
+                          style={{
+                            background: isHomeV5
+                              ? "linear-gradient(90deg, #d47a38, #e8a86a)"
+                              : "linear-gradient(90deg, #E53935, #B71C1C)"
+                          }}
                           transition={{ type: "spring", stiffness: 380, damping: 30 }}
                         />
                       )}
@@ -701,7 +739,21 @@ export default function Header() {
               {/* Contact — desktop */}
               <Link
                 href="/contacts/"
-                className="whitespace-nowrap hidden lg:inline-flex items-center gap-2 bg-[#E53935] hover:bg-[#B71C1C] text-white text-[14px] font-medium font-sans px-3 xl:px-7 py-3 rounded-xl transition-colors tracking-wide shadow-lg shadow-[#E53935]/20"
+                style={
+                  isHomeV5
+                    ? {
+                        background: "linear-gradient(180deg, #a83d3c 0%, #8a302f 60%, #6e2624 100%)",
+                        boxShadow: "0 8px 20px rgba(138, 48, 47, 0.5)",
+                      }
+                    : undefined
+                }
+                className={`whitespace-nowrap hidden lg:inline-flex items-center gap-2 text-[13px] tracking-[0.12em] uppercase px-3 xl:px-6 py-2.5 transition-all duration-200 ${
+                  isHomeV5
+                    ? "rounded-full text-white font-bold hover:brightness-110 hover:-translate-y-0.5"
+                    : isHomeV2
+                    ? "rounded-xl bg-gradient-to-r from-[#f87171] via-[#dc2626] to-[#b91c1c] hover:brightness-110 text-white font-medium shadow-lg shadow-[#dc2626]/30 hover:shadow-xl hover:shadow-[#dc2626]/40"
+                    : "rounded-xl bg-[#E53935] hover:bg-[#B71C1C] text-white shadow-lg shadow-[#E53935]/20 font-medium"
+                }`}
               >
                 <span className="hidden lg:inline xl:hidden">Contact</span>
                 <span className="hidden xl:inline">Contact Us</span>
@@ -848,9 +900,23 @@ export default function Header() {
                     <Link
                       href="/contacts/"
                       onClick={() => setMobileOpen(false)}
-                      className="block text-center bg-[#E53935] hover:bg-[#B71C1C] text-white text-[14px] font-medium font-sans tracking-wide px-4 py-3.5 rounded-xl transition-colors"
+                      style={
+                        isHomeV5
+                          ? {
+                              background: "linear-gradient(180deg, #a83d3c 0%, #8a302f 60%, #6e2624 100%)",
+                              boxShadow: "0 8px 20px rgba(138, 48, 47, 0.5)",
+                            }
+                          : undefined
+                      }
+                      className={`block text-center text-[13px] font-mono tracking-[0.12em] uppercase px-4 py-3.5 transition-all duration-200 ${
+                        isHomeV5
+                          ? "rounded-full text-white font-bold hover:brightness-110"
+                          : isHomeV2
+                          ? "rounded-xl bg-gradient-to-r from-[#f87171] via-[#dc2626] to-[#b91c1c] hover:brightness-110 text-white font-medium shadow-lg shadow-[#dc2626]/30"
+                          : "rounded-xl bg-[#E53935] hover:bg-[#B71C1C] text-white font-medium"
+                      }`}
                     >
-                Contact Us
+                      Contact Us
                     </Link>
                   </div>
                 </SheetContent>
@@ -863,7 +929,9 @@ export default function Header() {
         <div
           className="absolute bottom-0 inset-x-0 h-px transition-opacity duration-300 rounded-b-2xl overflow-hidden"
           style={{
-            background: "linear-gradient(90deg, transparent, rgba(229,57,53,0.25), transparent)",
+            background: isHomeV5
+              ? "linear-gradient(90deg, transparent, rgba(131,36,41,0.5), transparent)"
+              : "linear-gradient(90deg, transparent, rgba(229,57,53,0.25), transparent)",
             opacity: scrolled ? 1 : 0,
           }}
         />

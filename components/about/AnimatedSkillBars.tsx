@@ -45,16 +45,16 @@ function SkillBar({
   }, [inView, value, index, count]);
 
   return (
-    <div>
-      <div className="flex justify-between text-[13px] mb-2">
-        <span className="text-gray-700 font-medium">{label}</span>
-        <motion.span className="text-[#e7212b] font-bold shrink-0 ml-3">
+    <div className="py-1">
+      <div className="flex items-center justify-between text-[13.5px] mb-2.5">
+        <span className="text-[#1a1a1a] font-medium tracking-tight">{label}</span>
+        <motion.span className="text-[#6b191b] font-bold shrink-0 ml-4 font-mono text-[13px]">
           {rounded}
         </motion.span>
       </div>
-      <div className="h-[5px] bg-gray-100/60 rounded-full overflow-hidden">
+      <div className="h-[6px] bg-black/[0.08] rounded-full overflow-hidden">
         <motion.div
-          className="h-full bg-[#e7212b] rounded-full"
+          className="h-full bg-[#6b191b] rounded-full"
           initial={{ width: "0%" }}
           animate={inView ? { width: `${value}%` } : { width: "0%" }}
           transition={{ duration: 1.2, ease: "easeOut", delay: index * 0.15 }}
