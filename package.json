@@ -8,6 +8,7 @@
     "start": "next start",
     "lint": "eslint",
     "typecheck": "tsc --noEmit",
+    "check:review-content": "node scripts/sync-homepage-review-content.mjs --check",
     "analyze": "ANALYZE=true next build --webpack"
   },
   "dependencies": {

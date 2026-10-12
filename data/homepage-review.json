@@ -1,0 +1,574 @@
+{
+  "metadata": {
+    "title": "Industrial Automation & Flow Measurement",
+    "description": "Industrial automation company in Kuwait & GCC — PLC SCADA integration, flow measurement, inspection, and engineering services for oil & gas.",
+    "alternates": {
+      "canonical": "/"
+    },
+    "openGraph": {
+      "title": "Texas Technical Services — Industrial Automation Company in Kuwait & GCC",
+      "description": "Leading industrial automation company in Kuwait and UAE — PLC SCADA integration, flow measurement, inspection, and automation engineering services.",
+      "url": "/",
+      "images": [
+        {
+          "url": "/og-default.png",
+          "width": 1200,
+          "height": 630
+        }
+      ]
+    },
+    "twitter": {
+      "card": "summary_large_image",
+      "title": "Texas Technical Services — Industrial Automation Company in Kuwait & GCC",
+      "description": "Leading industrial automation company in Kuwait and UAE — PLC SCADA integration, flow measurement, inspection, and automation engineering.",
+      "images": [
+        "/og-default.png"
+      ]
+    },
+    "keywords": [
+      "industrial automation companies in Kuwait",
+      "industrial automation companies in Dubai",
+      "automation companies in Dubai",
+      "industrial automation companies in UAE",
+      "automation and engineering services Fahaheel",
+      "metering skids Kuwait",
+      "flow meter calibration Dubai",
+      "Allen Bradley system integrators GCC",
+      "NDT inspection Kuwait",
+      "predictive maintenance GCC",
+      "gas detection system Kuwait",
+      "Coriolis flow meter calibration",
+      "condition monitoring Kuwait"
+    ]
+  },
+  "navigation": [
+    {
+      "label": "Home",
+      "href": "/",
+      "children": []
+    },
+    {
+      "label": "About Us",
+      "href": "/about-us/",
+      "children": []
+    },
+    {
+      "label": "Services",
+      "href": "/service/",
+      "children": [
+        {
+          "label": "Flow Measurement & Control",
+          "href": "/service/flow-measurement-solutions/",
+          "children": []
+        },
+        {
+          "label": "Inspection & Testing",
+          "href": "/service/inspection-testing/",
+          "children": []
+        },
+        {
+          "label": "Industrial Automation",
+          "href": "/service/industrial-automation/",
+          "children": []
+        }
+      ]
+    },
+    {
+      "label": "Industries",
+      "href": "/industries/",
+      "children": [
+        {
+          "label": "Oil & Gas",
+          "href": "/industries/oil-gas/",
+          "children": []
+        },
+        {
+          "label": "Refinery",
+          "href": "/industries/refinery/",
+          "children": []
+        },
+        {
+          "label": "Petrochemicals",
+          "href": "/industries/petrochemicals/",
+          "children": []
+        },
+        {
+          "label": "LNG",
+          "href": "/industries/lng/",
+          "children": []
+        },
+        {
+          "label": "Power Plant",
+          "href": "/industries/power-plant/",
+          "children": []
+        },
+        {
+          "label": "Water Treatment",
+          "href": "/industries/water-treatment/",
+          "children": []
+        },
+        {
+          "label": "Cement",
+          "href": "/industries/cement/",
+          "children": []
+        },
+        {
+          "label": "Metal & Steel",
+          "href": "/industries/metal-steel/",
+          "children": []
+        }
+      ]
+    },
+    {
+      "label": "Products",
+      "href": "/products/",
+      "children": [
+        {
+          "label": "Custody Metering Solutions",
+          "href": "/products/custody-metering-solutions/",
+          "children": []
+        },
+        {
+          "label": "Flow Meters",
+          "href": "/products/flow-meters/",
+          "children": [
+            {
+              "label": "Liquid Flow Meters",
+              "href": "/products/flow-meters/liquid-flow-meters/",
+              "children": []
+            },
+            {
+              "label": "Flare Meters",
+              "href": "/products/flow-meters/flare-meters/",
+              "children": []
+            },
+            {
+              "label": "Gas Flow Meters",
+              "href": "/products/flow-meters/gas-flow-meters/",
+              "children": []
+            }
+          ]
+        },
+        {
+          "label": "Analyzer's",
+          "href": "/products/analyzers/",
+          "children": [
+            {
+              "label": "CEMS Solutions",
+              "href": "/products/analyzers/cems/",
+              "children": []
+            },
+            {
+              "label": "Dust Analyzers",
+              "href": "/products/analyzers/dust-analyzers/",
+              "children": []
+            },
+            {
+              "label": "Gas Analyzers",
+              "href": "/products/analyzers/gas-analyzers/",
+              "children": []
+            }
+          ]
+        },
+        {
+          "label": "Control Room Interior And Console",
+          "href": "/products/control-room-interior-and-console/",
+          "children": []
+        },
+        {
+          "label": "Industrial Automation",
+          "href": "/products/industrial-automation/",
+          "children": []
+        },
+        {
+          "label": "Field Instruments",
+          "href": "/products/field-instruments/",
+          "children": []
+        },
+        {
+          "label": "Industrial Sensors",
+          "href": "/products/sensors/",
+          "children": []
+        },
+        {
+          "label": "PLC",
+          "href": "/products/plc/",
+          "children": []
+        },
+        {
+          "label": "ICONICS",
+          "href": "/products/iconics/",
+          "children": []
+        },
+        {
+          "label": "GOT (Graphic Operator Panels)",
+          "href": "/products/got/",
+          "children": []
+        },
+        {
+          "label": "Frequency Inverters (VFD)",
+          "href": "/products/frequency-inverter-vfd/",
+          "children": []
+        }
+      ]
+    },
+    {
+      "label": "Blog",
+      "href": "/blog/",
+      "children": []
+    },
+    {
+      "label": "Clients",
+      "href": "/clients/",
+      "children": []
+    }
+  ],
+  "sources": [
+    "app/page.tsx",
+    "components/Header.tsx",
+    "components/HeroSlider.tsx",
+    "components/PartnersTicker.tsx",
+    "components/TickerBanner.tsx",
+    "components/t-grey/GreyWhatWeDo.tsx",
+    "components/t-grey/GreyServices.tsx",
+    "components/t-grey/GreySolutions.tsx",
+    "components/t-grey/GreyVision.tsx",
+    "components/t-grey/GreyTeam.tsx",
+    "components/t-grey/GreyAbout.tsx",
+    "components/t-grey/GreyCta.tsx"
+  ],
+  "slides": [
+    {
+      "type": "image",
+      "src": "/homevideos/homebannerimage.jpg",
+      "alt": "Texas Technical Services — industrial flow measurement and control systems facility",
+      "eyebrow": "ISO 9001 · ISO 14001 · ISO 45001 · UASL · Accurate Certified · Est. 2008",
+      "heading": [
+        "Welcome to",
+        "Texas Technical",
+        "Services"
+      ],
+      "sub": "In quality, we believe. Providing flow measurement, inspection, and automation solutions for the world's most demanding industrial environments.",
+      "tag": "Industrial Services",
+      "light": false,
+      "ctas": [
+        {
+          "label": "About Us",
+          "href": "/contacts/",
+          "primary": true
+        },
+        {
+          "label": "Our Services",
+          "href": "/services/",
+          "primary": false
+        }
+      ],
+      "poster": "/homevideos/homebannerimage.jpg"
+    },
+    {
+      "type": "video",
+      "src": "/homevideos/Automated-1-2.mp4",
+      "poster": "/homevideos/Automated-1-2-poster.jpg",
+      "alt": "Industrial Process Automation — PLC SCADA automation systems by leading automation company TTS",
+      "eyebrow": "Industrial Automation",
+      "heading": [
+        "Industrial Process",
+        "Automation",
+        "Solutions"
+      ],
+      "sub": "Empowering industries through industrial automation. PLC SCADA systems, control integration, and commissioning for oil & gas, manufacturing, and power generation.",
+      "tag": "Automation",
+      "light": false,
+      "ctas": [
+        {
+          "label": "Know More",
+          "href": "/service/industrial-automation/",
+          "primary": true
+        },
+        {
+          "label": "Our Services",
+          "href": "/services/",
+          "primary": false
+        }
+      ]
+    },
+    {
+      "type": "video",
+      "src": "/homevideos/newproduct.mp4",
+      "poster": "/homevideos/newproduct-poster.jpg",
+      "alt": "Flow Measurement and Control System Solutions — liquid hydrocarbon and gas metering by TTS",
+      "eyebrow": "Flow Measurement Solutions",
+      "heading": [
+        "Flow Measurement &",
+        "Control System",
+        "Solutions"
+      ],
+      "sub": "Where flow measurement challenges meet solutions. Expert metering consultants with in-depth knowledge of API, AGA, and custody metering standards.",
+      "tag": "Metering",
+      "light": false,
+      "ctas": [
+        {
+          "label": "Know More",
+          "href": "/service/flow-measurement-solutions/",
+          "primary": true
+        },
+        {
+          "label": "Our Products",
+          "href": "/products/",
+          "primary": false
+        }
+      ]
+    },
+    {
+      "type": "image",
+      "src": "/homevideos/INSPECTION-AND-TESTING1.jpg",
+      "alt": "Inspection and Testing services — NDT, mechanical testing, and specialized inspection by TTS",
+      "eyebrow": "Inspection & Testing",
+      "heading": [
+        "Inspection",
+        "and",
+        "Testing"
+      ],
+      "sub": "Your partner in inspecting excellence and testing confidence. ISO 14001:2015, ISO 45001:2018, and ISO 9001:2015 certified inspection and NDT services.",
+      "tag": "NDT & Testing",
+      "light": false,
+      "ctas": [
+        {
+          "label": "Know More",
+          "href": "/service/inspection-testing/",
+          "primary": true
+        },
+        {
+          "label": "Our Services",
+          "href": "/services/",
+          "primary": false
+        }
+      ],
+      "poster": "/homevideos/INSPECTION-AND-TESTING1.jpg"
+    }
+  ],
+  "heroStats": [
+    {
+      "num": "18+",
+      "label": "Years"
+    },
+    {
+      "num": "8",
+      "label": "Industries"
+    },
+    {
+      "num": "200+",
+      "label": "Clients"
+    },
+    {
+      "num": "16+",
+      "label": "Vendors"
+    }
+  ],
+  "ticker": [
+    "Flow Measurement",
+    "Industrial Automation",
+    "Inspection & Testing",
+    "CEMS Solutions",
+    "Metering Systems",
+    "Custody Transfer",
+    "Plant Automation",
+    "NDT Services"
+  ],
+  "industries": [
+    "Oil & Gas",
+    "Refinery",
+    "Petrochemicals",
+    "LNG",
+    "Power Plant",
+    "Water Treatment",
+    "Cement",
+    "Metal & Steel"
+  ],
+  "what": {
+    "eyebrow": "What We Do",
+    "title": "What precision solutions do we deliver for critical industries?",
+    "intro": "Texas Technical Services delivers precision-engineered solutions across flow measurement, inspection, and industrial automation — trusted by leading operators since 2008.",
+    "services": [
+      {
+        "num": "01",
+        "title": "Flow Measurement & Control",
+        "desc": "Comprehensive custody metering, flow computers, metering skids, and control system upgrades for liquid, gas, and water applications."
+      },
+      {
+        "num": "02",
+        "title": "Inspection & Testing",
+        "desc": "Specialised NDT, validation and mechanical testing of metering systems with full ISO-certified consultancy support."
+      },
+      {
+        "num": "03",
+        "title": "Industrial Automation",
+        "desc": "End-to-end plant automation — PLC, SCADA, HMI, VFDs and CEMS for oil & gas, power, and manufacturing sectors."
+      }
+    ],
+    "paragraphs": [
+      "Extensive expertise in liquid and gas custody metering, Industrial Automation, and Inspection & Testing. Our services cover metering control upgrades, maintenance, validation, and specialised consultancy.",
+      "Committed to end-to-end metering solutions through strategic OEM partnerships — metering skids, flow computers, CEMS analysers, and field instruments across oil & gas, power, and commercial sectors."
+    ],
+    "stats": [
+      {
+        "value": 18,
+        "suffix": "+",
+        "label": "Years"
+      },
+      {
+        "value": 200,
+        "suffix": "+",
+        "label": "Clients"
+      },
+      {
+        "value": 8,
+        "suffix": "",
+        "label": "Industries"
+      },
+      {
+        "value": 100,
+        "suffix": "%",
+        "label": "ISO Quality"
+      }
+    ]
+  },
+  "services": {
+    "eyebrow": "Our Services",
+    "title": "What services do we offer for industrial automation and flow measurement?",
+    "intro": "Extensive expertise in custody metering, industrial automation, and inspection & testing — since 2008.",
+    "items": [
+      {
+        "title": "Flow Measurement & Control System Solutions",
+        "body": "Metering control system upgrades, maintenance, and validation for custody metering systems. Ensuring your metering operates accurately to API, AGA, and ISO standards.",
+        "href": "/service/flow-measurement-solutions/",
+        "tag": "Metering"
+      },
+      {
+        "title": "Inspection & Testing",
+        "body": "Comprehensive inspection, non-destructive testing, functional testing and certification across all industrial sectors. Full ISO 9001, ISO 14001, ISO 45001, UASL and Accurate compliance.",
+        "href": "/service/inspection-testing/",
+        "tag": "NDT & QA"
+      },
+      {
+        "title": "Industrial Process Automation Solutions",
+        "body": "Control system design, PLC programming, SCADA integration, and HMI development — optimising operations across oil & gas, power, and manufacturing plants.",
+        "href": "/service/industrial-automation/",
+        "tag": "Automation"
+      }
+    ]
+  },
+  "solutions": {
+    "eyebrow": "Solutions & Partners",
+    "title": "Which proprietary platforms deliver proven results?",
+    "items": [
+      {
+        "label": "Texaflow",
+        "title": "Custody Metering Integrated Control System",
+        "desc": "Proprietary fiscal metering & SCADA solution for oil & gas terminals, refineries, pipeline stations, and loading facilities — automated meter proving, real-time flow computer integration, and regulatory compliance.",
+        "href": "/solutions/texaflow/"
+      },
+      {
+        "label": "Space AI",
+        "title": "Industrial AI & Machine Learning",
+        "desc": "Next-generation AI for industry — predictive maintenance, process optimization with virtual metrology & digital twins, and smart monitoring with ESG & carbon tracking. Reduce unplanned downtime by up to 50%.",
+        "href": "/solutions/space-ai/"
+      }
+    ]
+  },
+  "vision": {
+    "eyebrow": "Our Vision",
+    "title": "What is our vision for industrial automation in the GCC?",
+    "stats": [
+      {
+        "value": 400,
+        "suffix": "+",
+        "label": "Projects Completed",
+        "desc": "Across oil & gas, refinery & beyond"
+      },
+      {
+        "value": 10,
+        "suffix": "+",
+        "label": "Global Partners",
+        "desc": "Trusted technology alliances worldwide"
+      },
+      {
+        "value": 18,
+        "suffix": "",
+        "label": "Years of Excellence",
+        "desc": "Delivering precision since 2008"
+      }
+    ],
+    "note": "ISO 9001 · ISO 14001 · ISO 45001 · UASL · Accurate Certified · Est. 2008 · Kuwait & Dubai"
+  },
+  "team": {
+    "eyebrow": "Our Team",
+    "title": "Who are the specialists behind every project?",
+    "text": "Highly trained engineers with specialised knowledge in Custody Metering Systems, Industrial Automation, and Inspection & Testing — with deep understanding of industry standards and best practices.",
+    "number": "50+",
+    "label": "Certified Engineers",
+    "highlights": [
+      {
+        "label": "Expert Engineers",
+        "badge": null
+      },
+      {
+        "label": "ISO 9001:2015 Certified",
+        "badge": "/about/cert-iso9001.png"
+      },
+      {
+        "label": "ISO 14001:2015",
+        "badge": "/about/cert-iso14001.png"
+      },
+      {
+        "label": "ISO 45001:2018",
+        "badge": "/about/cert-iso45001.png"
+      },
+      {
+        "label": "UASL Accredited",
+        "badge": "/about/cert-uasl.png"
+      },
+      {
+        "label": "Accurate Certified",
+        "badge": "/about/cert-accurate-white.png"
+      }
+    ]
+  },
+  "about": {
+    "eyebrow": "About Texas Technical Services",
+    "title": "Why was Texas Technical Services established in 2008?",
+    "text": "Texas Technical Service Company is an ISO 9001:2015 certified company established in 2008. Primarily focused on flow measurement, inspection & testing, and industrial automation for oil & gas, power plants, manufacturing and commercial sectors.",
+    "certifications": [
+      {
+        "label": "ISO 9001:2015",
+        "sub": "Quality Management",
+        "badge": "/about/cert-iso9001.png"
+      },
+      {
+        "label": "ISO 14001:2015",
+        "sub": "Environmental Management",
+        "badge": "/about/cert-iso14001.png"
+      },
+      {
+        "label": "ISO 45001:2018",
+        "sub": "Occupational Health & Safety",
+        "badge": "/about/cert-iso45001.png"
+      },
+      {
+        "label": "UASL Accredited",
+        "sub": "Independent Verification",
+        "badge": "/about/cert-uasl.png"
+      },
+      {
+        "label": "Accurate Certified",
+        "sub": "International Accreditation",
+        "badge": "/about/cert-accurate.png"
+      }
+    ]
+  },
+  "cta": {
+    "eyebrow": "GET IN TOUCH",
+    "title": "How can we solve your flow measurement challenge?",
+    "text": "From custody metering to full plant automation — our ISO 9001, ISO 14001, ISO 45001, UASL & Accurate certified team has delivered 400+ projects across oil & gas, power, and manufacturing since 2008."
+  }
+}
