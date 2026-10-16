@@ -9,7 +9,8 @@ type Client = {
   external: boolean;
 };
 
-function Track({ clients }: { clients: Client[] }) {
+function Track({ clients = [] }: { clients?: Client[] }) {
+  if (!clients || clients.length === 0) return null;
   return (
     <div className="flex shrink-0 items-center" aria-hidden>
       {clients.map((c) => (
@@ -25,15 +26,24 @@ function Track({ clients }: { clients: Client[] }) {
   );
 }
 
-export default function ClientsMarquee({ clients }: { clients: Client[] }) {
+export default function ClientsMarquee({ clients = [] }: { clients?: Client[] }) {
   return (
     <div className="mb-16">
       <div className="flex items-center gap-3 mb-8">
-        <span className="w-8 h-px bg-[#0891B2]/40" />
-        <span className="text-[#0891B2] text-xs font-semibold tracking-[2px] uppercase">
+        <span
+          className="w-8 h-px opacity-40"
+          style={{ backgroundColor: "var(--eyebrow-color, #8a302f)" }}
+        />
+        <span
+          className="text-xs font-semibold tracking-[2px] uppercase"
+          style={{ color: "var(--eyebrow-color, #8a302f)" }}
+        >
           Featured Clients
         </span>
-        <span className="w-8 h-px bg-[#0891B2]/40 flex-1" />
+        <span
+          className="w-8 h-px flex-1 opacity-40"
+          style={{ backgroundColor: "var(--eyebrow-color, #8a302f)" }}
+        />
       </div>
 
       <div className="relative marquee-container">

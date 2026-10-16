@@ -1,7 +1,8 @@
 import React from "react";
 
 export interface SpecRow {
-  parameter: string;
+  parameter?: string;
+  label?: string;
   value: string;
   notes?: string;
 }
@@ -60,7 +61,7 @@ export default function SpecTable({
                 className="hover:bg-black/[0.02] transition-colors"
               >
                 <td className="py-3.5 px-6 font-semibold text-[#1a1a1a]">
-                  {row.parameter}
+                  {row.parameter || row.label}
                 </td>
                 <td className="py-3.5 px-6 text-[#595956]">
                   {row.value}

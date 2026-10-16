@@ -1,0 +1,50 @@
+{
+  "cement": {
+    "tags": "[\"Emissions Monitoring\", \"Kiln Control\", \"Quality Control\", \"CEMS\", \"BAT Compliance\"]",
+    "stats": "[\r\n          { num: \"3\", label: \"Products\" },\r\n          { num: \"1+\", label: \"OEM Brand\" },\r\n          { num: \"18+\", label: \"Years\" },\r\n        ]",
+    "highlightsText": "[\r\n          { text: \"Kiln Control\" },\r\n          { text: \"BAT Compliance\" },\r\n          { text: \"Emissions Monitoring\" },\r\n        ]",
+    "keywords": "[\r\n    \"cement industry CEMS\",\r\n    \"cement gas analyzers Kuwait\",\r\n    \"cement emissions monitoring\",\r\n    \"extractive gas analyzer cement\",\r\n    \"industrial automation cement manufacturing\",\r\n    \"cement plant instrumentation GCC\",\r\n    \"kiln process control Kuwait\",\r\n    \"cement production automation Dubai\",\r\n    \"raw mill emissions monitoring\",\r\n    \"cement plant safety systems GCC\",\r\n  ]"
+  },
+  "lng": {
+    "tags": "[\"Custody Transfer\", \"Liquefaction\", \"Regasification\", \"BOG Metering\", \"CEMS\"]",
+    "stats": "[\r\n          { num: \"11\", label: \"Products\" },\r\n          { num: \"5+\", label: \"OEM Brands\" },\r\n          { num: \"18+\", label: \"Years\" },\r\n        ]",
+    "highlightsText": "[\r\n          { text: \"Cryogenic Metering\" },\r\n          { text: \"BOG Measurement\" },\r\n          { text: \"Safety Systems\" },\r\n        ]",
+    "keywords": "[\r\n    \"LNG flow metering Kuwait\",\r\n    \"LNG custody transfer solutions\",\r\n    \"LNG CEMS monitoring\",\r\n    \"LNG gas analyzers\",\r\n    \"industrial automation LNG plants\",\r\n    \"LNG terminal instrumentation GCC\",\r\n    \"liquefied natural gas metering Dubai\",\r\n    \"LNG plant safety systems Kuwait\",\r\n    \"cryogenic flow measurement GCC\",\r\n    \"LNG regasification automation\",\r\n  ]"
+  },
+  "metal-steel": {
+    "tags": "[\"Emissions Monitoring\", \"Dust Control\", \"Process Gases\", \"CEMS\", \"Quality Control\"]",
+    "stats": "[\r\n          { num: \"4\", label: \"Products\" },\r\n          { num: \"1+\", label: \"OEM Brand\" },\r\n          { num: \"18+\", label: \"Years\" },\r\n        ]",
+    "highlightsText": "[\r\n          { text: \"Dust Control\" },\r\n          { text: \"Process Gas Analysis\" },\r\n          { text: \"Quality Assurance\" },\r\n        ]",
+    "keywords": "[\r\n    \"metal and steel CEMS solutions\",\r\n    \"metal industry dust analyzers\",\r\n    \"steel plant gas analyzers Kuwait\",\r\n    \"emissions monitoring metal production\",\r\n    \"industrial automation steel manufacturing\",\r\n    \"steel mill instrumentation GCC\",\r\n    \"furnace process control Kuwait\",\r\n    \"metal fabrication automation Dubai\",\r\n    \"rolling mill control systems\",\r\n    \"foundry emissions monitoring GCC\",\r\n  ]"
+  },
+  "oil-gas": {
+    "tags": "[\"Upstream\", \"Midstream\", \"Downstream\", \"Custody Transfer\", \"CEMS\"]",
+    "stats": "[\r\n          { num: \"13\", label: \"Products\" },\r\n          { num: \"5+\", label: \"OEM Brands\" },\r\n          { num: \"18+\", label: \"Years\" },\r\n        ]",
+    "highlightsText": "[\r\n          { text: \"Custody Transfer Metering\" },\r\n          { text: \"CEMS Compliance\" },\r\n          { text: \"Upstream-to-Downstream\" },\r\n        ]",
+    "keywords": "[\r\n    \"oil and gas flow metering Kuwait\",\r\n    \"upstream flow measurement solutions\",\r\n    \"midstream metering systems GCC\",\r\n    \"downstream automation Kuwait\",\r\n    \"CEMS oil and gas Kuwait\",\r\n    \"gas analyzers for oil and gas\",\r\n    \"industrial automation oil and gas Kuwait\",\r\n    \"flow computers for oil and gas\",\r\n    \"custody transfer metering oil and gas\",\r\n    \"oil and gas instrumentation Kuwait\",\r\n    \"production optimization oil gas GCC\",\r\n    \"oil and gas support services Kuwait\",\r\n    \"innovative solutions oil gas\",\r\n    \"Coriolis meter oil and gas\",\r\n  ]"
+  },
+  "petrochemicals": {
+    "tags": "[\"Process Automation\", \"Flow Solutions\", \"CEMS\", \"Quality Control\", \"Custody Transfer\"]",
+    "stats": "[\r\n          { num: \"13\", label: \"Products\" },\r\n          { num: \"5+\", label: \"OEM Brands\" },\r\n          { num: \"18+\", label: \"Years\" },\r\n        ]",
+    "highlightsText": "[\r\n          { text: \"Process Automation\" },\r\n          { text: \"CEMS Compliance\" },\r\n          { text: \"Flow Solutions\" },\r\n        ]",
+    "keywords": "[\r\n    \"petrochemical flow metering Kuwait\",\r\n    \"petrochemical CEMS solutions\",\r\n    \"petrochemical gas analyzers\",\r\n    \"industrial automation petrochemicals\",\r\n    \"flow computer petrochemical industry\",\r\n    \"petrochemical plant instrumentation GCC\",\r\n    \"process automation petrochemical Dubai\",\r\n    \"reactor process control Kuwait\",\r\n    \"petrochemical safety systems GCC\",\r\n    \"ethylene plant flow measurement\",\r\n  ]"
+  },
+  "power-plant": {
+    "tags": "[\"Generation\", \"Emissions Monitoring\", \"Fuel Metering\", \"CEMS\", \"Grid\"]",
+    "stats": "[\r\n          { num: \"11\", label: \"Products\" },\r\n          { num: \"5+\", label: \"OEM Brands\" },\r\n          { num: \"18+\", label: \"Years\" },\r\n        ]",
+    "highlightsText": "[\r\n          { text: \"Fuel Metering\" },\r\n          { text: \"EPA Compliance\" },\r\n          { text: \"Grid Integration\" },\r\n        ]",
+    "keywords": "[\r\n    \"power plant CEMS solutions\",\r\n    \"power plant flow meters\",\r\n    \"power plant industrial automation\",\r\n    \"emissions monitoring power generation\",\r\n    \"flow computer power plant Kuwait\",\r\n    \"power plant instrumentation Kuwait\",\r\n    \"power generation automation GCC\",\r\n    \"boiler combustion monitoring Dubai\",\r\n    \"turbine control systems Kuwait\",\r\n    \"thermal power plant solutions GCC\",\r\n  ]"
+  },
+  "refinery": {
+    "tags": "[\"Process Control\", \"Emissions Monitoring\", \"Custody Transfer\", \"CEMS\", \"Fiscal Metering\"]",
+    "stats": "[\r\n          { num: \"13\", label: \"Products\" },\r\n          { num: \"5+\", label: \"OEM Brands\" },\r\n          { num: \"18+\", label: \"Years\" },\r\n        ]",
+    "highlightsText": "[\r\n          { text: \"Fiscal Metering\" },\r\n          { text: \"Emissions Monitoring\" },\r\n          { text: \"Process Control\" },\r\n        ]",
+    "keywords": "[\r\n    \"refinery flow metering Kuwait\",\r\n    \"refinery CEMS solutions\",\r\n    \"refinery gas analyzers\",\r\n    \"industrial automation refinery\",\r\n    \"flow meter calibration refinery\",\r\n    \"emissions monitoring refinery GCC\",\r\n  ]"
+  },
+  "water-treatment": {
+    "tags": "[\"Municipal\", \"Industrial\", \"Precise Monitoring\", \"Quality Control\", \"CEMS\"]",
+    "stats": "[\r\n          { num: \"9\", label: \"Products\" },\r\n          { num: \"3+\", label: \"OEM Brands\" },\r\n          { num: \"18+\", label: \"Years\" },\r\n        ]",
+    "highlightsText": "[\r\n          { text: \"Precise Flow Control\" },\r\n          { text: \"Quality Monitoring\" },\r\n          { text: \"Municipal & Industrial\" },\r\n        ]",
+    "keywords": "[\r\n    \"water treatment flow meters\",\r\n    \"water treatment CEMS solutions\",\r\n    \"water treatment dust analyzers\",\r\n    \"industrial water treatment automation\",\r\n    \"water treatment monitoring systems Kuwait\",\r\n    \"wastewater treatment instrumentation GCC\",\r\n    \"desalination plant automation Dubai\",\r\n    \"water quality monitoring Kuwait\",\r\n    \"effluent treatment plant control\",\r\n    \"water treatment SCADA systems GCC\",\r\n  ]"
+  }
+}

@@ -18,12 +18,17 @@ export interface PageHeroStat {
 export interface PageHeroCta {
   label: string;
   href: string;
+  external?: boolean;
 }
 
 export interface PageHeroProps {
   eyebrow?: string;
+  badge?: string;
+  badgeText?: string;
+  category?: string;
   title: React.ReactNode;
   description?: React.ReactNode;
+  subtitle?: React.ReactNode;
   breadcrumbs?: BreadcrumbItem[];
   breadcrumb?: BreadcrumbItem[];
   showBreadcrumb?: boolean;
@@ -45,8 +50,12 @@ export interface PageHeroProps {
  */
 export default function PageHero({
   eyebrow,
+  badge,
+  badgeText,
+  category,
   title,
   description,
+  subtitle,
   breadcrumbs,
   breadcrumb,
   showBreadcrumb,
@@ -58,6 +67,9 @@ export default function PageHero({
   align = "center",
   className = "",
 }: PageHeroProps) {
+  const resolvedEyebrow = eyebrow || category || badge;
+  const resolvedBadge = badgeText || (badge !== resolvedEyebrow ? badge : undefined);
+  const resolvedDescription = description || subtitle;
   const isCenter = align === "center";
   const activeBreadcrumbs = breadcrumb || breadcrumbs;
   const shouldShowBreadcrumbs =
@@ -67,12 +79,21 @@ export default function PageHero({
   const renderedActions = actions || (primaryCta || secondaryCta ? (
     <div className={`flex flex-wrap gap-3.5 items-center ${isCenter ? "justify-center" : "justify-start"}`}>
       {primaryCta && (
-        <Button href={primaryCta.href} variant="primary" showArrow>
+        <Button
+          href={primaryCta.href}
+          variant="primary"
+          showArrow
+          {...(primaryCta.external ? { target: "_blank", rel: "noopener noreferrer" } : {})}
+        >
           {primaryCta.label}
         </Button>
       )}
       {secondaryCta && (
-        <Button href={secondaryCta.href} variant="outline">
+        <Button
+          href={secondaryCta.href}
+          variant="outline"
+          {...(secondaryCta.external ? { target: "_blank", rel: "noopener noreferrer" } : {})}
+        >
           {secondaryCta.label}
         </Button>
       )}
@@ -81,7 +102,7 @@ export default function PageHero({
 
   const ptClass = shouldShowBreadcrumbs
     ? "pt-[108px] sm:pt-[120px]"
-    : "pt-[96px] sm:pt-[110px]";
+    : "pt-[88px] sm:pt-[98px]";
 
   return (
     <header
@@ -140,11 +161,18 @@ export default function PageHero({
             isCenter ? "mx-auto text-center" : "text-left"
           }`}
         >
-          {eyebrow && (
-            <div className={`mb-3.5 ${isCenter ? "flex justify-center" : ""}`}>
-              <span className="inline-flex items-center gap-1.5 px-3.5 py-1 rounded-full text-[11px] sm:text-[12px] font-bold uppercase tracking-[0.08em] bg-[rgba(107,25,27,0.08)] text-[#6b191b] border border-[rgba(107,25,27,0.16)]">
-                {eyebrow}
-              </span>
+          {(resolvedEyebrow || resolvedBadge) && (
+            <div className={`mb-3.5 flex flex-wrap items-center gap-2 ${isCenter ? "justify-center" : "justify-start"}`}>
+              {resolvedEyebrow && (
+                <span className="inline-flex items-center gap-1.5 px-3.5 py-1 rounded-full text-[11px] sm:text-[12px] font-bold uppercase tracking-[0.08em] bg-[rgba(107,25,27,0.08)] text-[#6b191b] border border-[rgba(107,25,27,0.16)]">
+                  {resolvedEyebrow}
+                </span>
+              )}
+              {resolvedBadge && (
+                <span className="inline-flex items-center gap-1.5 px-3.5 py-1 rounded-full text-[11px] sm:text-[12px] font-semibold tracking-[0.02em] bg-white text-[#1a1a1a] border border-black/[0.08] shadow-xs">
+                  {resolvedBadge}
+                </span>
+              )}
             </div>
           )}
 
@@ -152,9 +180,9 @@ export default function PageHero({
             {title}
           </h1>
 
-          {description && (
+          {resolvedDescription && (
             <div className="text-[16px] sm:text-[18px] text-[#595956] leading-[1.65] max-w-[680px] mx-auto">
-              {description}
+              {resolvedDescription}
             </div>
           )}
 

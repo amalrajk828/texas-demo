@@ -38,29 +38,14 @@ export const MAIN_NAV: NavItem[] = [
         desc: "Turnkey fiscal metering skids, prover loops & batch auditing",
       },
       {
-        label: "Industrial Automation & SCADA",
-        href: "/service/industrial-automation/",
-        desc: "PLC, DCS, SCADA & Safety Instrumented Systems (SIS)",
-      },
-      {
         label: "Inspection & Testing (NDT)",
         href: "/service/inspection-testing/",
         desc: "UT, RT, MT, PT, structural testing & welder certification",
       },
       {
-        label: "Calibration & Field Proving",
-        href: "/service/flow-meter-calibration/",
-        desc: "Mobile flow, pressure & temperature calibration services",
-      },
-      {
-        label: "PLC & SCADA Systems Integration",
-        href: "/plc-scada-systems-integration/",
-        desc: "Turnkey automation engineering and plant telemetry",
-      },
-      {
-        label: "Plant Automation & Optimization",
-        href: "/service/plant-automation/",
-        desc: "Complete electrical, instrumentation & control upgrades",
+        label: "Industrial Automation & SCADA",
+        href: "/service/industrial-automation/",
+        desc: "PLC, DCS, SCADA & Safety Instrumented Systems (SIS)",
       },
       {
         label: "View All 60+ Services →",

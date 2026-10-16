@@ -18,6 +18,7 @@ import {
   Button,
   CTASection,
   LogoCard,
+  CardGrid,
 } from "@/components/v3";
 import { ALL_PARTNERS } from "@/lib/partners";
 
@@ -278,7 +279,7 @@ export default function AboutPage() {
             description="Our multidisciplinary engineering teams provide turnkey design, specification, execution, and lifetime support across three core technical disciplines."
           />
 
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+          <CardGrid max={3}>
             {serviceCards.map(({ Icon, title, description, href }) => (
               <Card
                 key={href}
@@ -305,7 +306,7 @@ export default function AboutPage() {
                 </div>
               </Card>
             ))}
-          </div>
+          </CardGrid>
         </Container>
       </Section>
 
@@ -410,7 +411,7 @@ export default function AboutPage() {
             description="16+ approved global tier-1 manufacturers delivering world-class flow measurement, automation, and instrumentation solutions across Kuwait, UAE, and the GCC."
           />
 
-          <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-5">
+          <CardGrid max={4}>
             {ALL_PARTNERS.slice(0, 8).map((p) => (
               <LogoCard
                 key={p.name}
@@ -421,7 +422,7 @@ export default function AboutPage() {
                 description={p.description}
               />
             ))}
-          </div>
+          </CardGrid>
 
           <div className="mt-10 text-center">
             <Button href="/partners/" variant="primary">
@@ -440,7 +441,7 @@ export default function AboutPage() {
             description="Our integrated management system is independently audited and certified to the highest international standards."
           />
 
-          <div className="grid grid-cols-2 sm:grid-cols-5 gap-6 items-center mb-16">
+          <CardGrid max={5} className="mb-16">
             {certifications.map((c) => (
               <div
                 key={c.alt}
@@ -460,7 +461,7 @@ export default function AboutPage() {
                 </span>
               </div>
             ))}
-          </div>
+          </CardGrid>
 
           {/* Official Certificate Documents */}
           <div className="mt-12 pt-12 border-t border-black/[0.08]">
@@ -473,7 +474,7 @@ export default function AboutPage() {
               </h3>
             </div>
 
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <CardGrid max={3}>
               {[
                 { src: "/about/iso_9001.jpeg", alt: "ISO 9001:2015 Certificate", title: "ISO 9001:2015 Quality Management" },
                 { src: "/about/iso_14001.jpeg", alt: "ISO 14001:2015 Certificate", title: "ISO 14001:2015 Environmental" },
@@ -505,7 +506,7 @@ export default function AboutPage() {
                   </div>
                 </a>
               ))}
-            </div>
+            </CardGrid>
           </div>
         </Container>
       </Section>
@@ -519,7 +520,7 @@ export default function AboutPage() {
             description="Leading energy operators and measurement engineers trust Texas Technical Services for critical custody and automation infrastructure."
           />
 
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+          <CardGrid max={3}>
             {testimonials.map((t) => (
               <Card
                 key={t.name}
@@ -551,7 +552,7 @@ export default function AboutPage() {
                 </div>
               </Card>
             ))}
-          </div>
+          </CardGrid>
         </Container>
       </Section>
 

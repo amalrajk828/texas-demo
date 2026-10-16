@@ -1,8 +1,11 @@
 export function ReviewJsonLd({
   items,
 }: {
-  items: { author: string; reviewBody: string; ratingValue?: number }[];
+  items?: { author: string; reviewBody: string; ratingValue?: number }[];
 }) {
+  if (!items || !Array.isArray(items) || items.length === 0) {
+    return null;
+  }
   const jsonLd = {
     "@context": "https://schema.org",
     "@graph": items.map(({ author, reviewBody, ratingValue }) => ({

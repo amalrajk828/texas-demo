@@ -170,104 +170,101 @@ export default function Header() {
                       transform: "translateX(-50%)",
                       paddingTop: "12px",
                       zIndex: 1100,
-                      minWidth: item.children && item.children.length > 6 ? "540px" : "340px",
+                      minWidth:
+                        item.label === "Services"
+                          ? "390px"
+                          : item.children && item.children.length > 6
+                          ? "560px"
+                          : "360px",
                     }}
                   >
                     <div
+                      className="nav-dropdown-card"
                       style={{
                         background: "rgba(255, 255, 255, 0.96)",
                         backdropFilter: "blur(20px)",
                         WebkitBackdropFilter: "blur(20px)",
-                        borderRadius: "18px",
+                        borderRadius: "20px",
                         border: "1px solid rgba(0, 0, 0, 0.08)",
                         boxShadow: "0 22px 50px rgba(0, 0, 0, 0.14)",
-                        padding: "16px",
-                        display: "grid",
+                        padding: "14px",
+                        display: item.label === "Services" ? "flex" : "grid",
+                        flexDirection: item.label === "Services" ? "column" : undefined,
                         gridTemplateColumns:
-                          item.children && item.children.length > 6 ? "1fr 1fr" : "1fr",
-                        gap: "10px",
+                          item.label === "Services"
+                            ? undefined
+                            : item.children && item.children.length > 6
+                            ? "1fr 1fr"
+                            : "1fr",
+                        gap: "8px",
                       }}
                     >
-                      {item.children?.map((child, cIdx) => (
-                        <Link
-                          key={cIdx}
-                          href={child.href}
-                          onClick={handleLinkClick}
-                          style={{
-                            display: "flex",
-                            flexDirection: "column",
-                            padding: "10px 14px",
-                            borderRadius: "12px",
-                            background: child.highlight
-                              ? "rgba(107, 25, 27, 0.06)"
-                              : "transparent",
-                            border: child.highlight
-                              ? "1px dashed rgba(107, 25, 27, 0.25)"
-                              : "1px solid transparent",
-                            transition: "all 0.2s ease",
-                            textDecoration: "none",
-                            gridColumn: child.highlight && item.children && item.children.length > 6 ? "span 2" : "auto",
-                          }}
-                          className="dropdown-item-hover"
-                        >
-                          <span
+                      {item.children?.map((child, cIdx) => {
+                        const isChildActive =
+                          pathname === child.href ||
+                          (child.href !== "/" && pathname.startsWith(child.href));
+                        return (
+                          <Link
+                            key={cIdx}
+                            href={child.href}
+                            onClick={handleLinkClick}
+                            className={`nav-dropdown-item ${isChildActive ? "active" : ""} ${
+                              child.highlight ? "nav-dropdown-view-all" : ""
+                            }`}
                             style={{
-                              fontSize: "14px",
-                              fontWeight: child.highlight ? 700 : 600,
-                              color: child.highlight ? "var(--accent)" : "var(--text-primary)",
-                              display: "flex",
-                              alignItems: "center",
-                              justifyContent: "space-between",
+                              gridColumn:
+                                child.highlight &&
+                                item.children &&
+                                item.children.length > 6 &&
+                                item.label !== "Services"
+                                  ? "span 2"
+                                  : "auto",
                             }}
                           >
-                            {child.label}
-                          </span>
-                          {child.desc && (
-                            <span
-                              style={{
-                                fontSize: "12px",
-                                color: "var(--text-muted)",
-                                marginTop: "3px",
-                                lineHeight: 1.35,
-                              }}
-                            >
-                              {child.desc}
+                            <span className="dropdown-title">
+                              <span className="dropdown-arrow" aria-hidden="true">
+                                →
+                              </span>
+                              <span className="dropdown-label">{child.label}</span>
                             </span>
-                          )}
-                        </Link>
-                      ))}
+                            {child.desc && (
+                              <span className="dropdown-desc">{child.desc}</span>
+                            )}
+                          </Link>
+                        );
+                      })}
                     </div>
                   </div>
                 )}
 
                 {/* Mobile Accordion Submenu */}
                 {hasChildren && mobileExpanded === item.label && (
-                  <div
-                    className="mobile-submenu"
-                    style={{
-                      display: "flex",
-                      flexDirection: "column",
-                      paddingLeft: "16px",
-                      gap: "8px",
-                      marginTop: "6px",
-                    }}
-                  >
-                    {item.children?.map((child, cIdx) => (
-                      <Link
-                        key={cIdx}
-                        href={child.href}
-                        onClick={handleLinkClick}
-                        style={{
-                          fontSize: "13px",
-                          fontWeight: 500,
-                          color: child.highlight ? "var(--accent)" : "var(--text-muted)",
-                          padding: "6px 0",
-                          textDecoration: "none",
-                        }}
-                      >
-                        {child.label}
-                      </Link>
-                    ))}
+                  <div className="mobile-submenu">
+                    {item.children?.map((child, cIdx) => {
+                      const isChildActive =
+                        pathname === child.href ||
+                        (child.href !== "/" && pathname.startsWith(child.href));
+                      return (
+                        <Link
+                          key={cIdx}
+                          href={child.href}
+                          onClick={handleLinkClick}
+                          className={`nav-dropdown-item mobile-dropdown-item ${
+                            isChildActive ? "active" : ""
+                          } ${child.highlight ? "nav-dropdown-view-all" : ""}`}
+                        >
+                          <span className="dropdown-title">
+                            <span className="dropdown-arrow" aria-hidden="true">
+                              →
+                            </span>
+                            <span className="dropdown-label">{child.label}</span>
+                          </span>
+                          {child.desc && (
+                            <span className="dropdown-desc">{child.desc}</span>
+                          )}
+                        </Link>
+                      );
+                    })}
                   </div>
                 )}
               </div>

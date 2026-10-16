@@ -1,0 +1,1650 @@
+[
+  {
+    "slug": "",
+    "url": "/service/",
+    "title": "Redirect to /services/",
+    "canonical": "/services/",
+    "category": "Redirect",
+    "componentsUsed": [],
+    "dataSources": [],
+    "hasImages": false,
+    "hasFaq": false,
+    "jsonLdTypes": [],
+    "migrated": false,
+    "isRedirect": true
+  },
+  {
+    "slug": "advanced-training",
+    "url": "/service/advanced-training/",
+    "title": "Advanced Training — NDT, Flow Measurement, Automation",
+    "canonical": "/service/advanced-training/",
+    "category": "Specialized Technical Services",
+    "componentsUsed": [
+      "components/services_group/advanced-training/AdvancedTrainingHero",
+      "components/services_group/advanced-training/AdvancedTrainingContent",
+      "components/schema/BreadcrumbJsonLd",
+      "components/schema/ServiceJsonLd",
+      "components/schema/FaqPageJsonLd"
+    ],
+    "dataSources": [
+      "lib/serviceFaqData",
+      "lib/serviceCrossLinks"
+    ],
+    "hasImages": true,
+    "hasFaq": true,
+    "jsonLdTypes": [
+      "BreadcrumbJsonLd",
+      "ServiceJsonLd",
+      "FaqPageJsonLd"
+    ],
+    "migrated": false
+  },
+  {
+    "slug": "air-permeability-test-2",
+    "url": "/service/air-permeability-test-2/",
+    "title": "Air Permeability Test — On-Site Installed Envelope Testing",
+    "canonical": "/service/air-permeability-test-2/",
+    "category": "Inspection & Non-Destructive Testing",
+    "componentsUsed": [
+      "components/service/air-permeability-test/AirPermeabilityHero",
+      "components/service/air-permeability-test/AirPermeabilityContent",
+      "components/schema/BreadcrumbJsonLd",
+      "components/schema/ServiceJsonLd",
+      "components/schema/FaqPageJsonLd"
+    ],
+    "dataSources": [
+      "lib/serviceCrossLinks",
+      "lib/serviceFaqData"
+    ],
+    "hasImages": true,
+    "hasFaq": true,
+    "jsonLdTypes": [
+      "BreadcrumbJsonLd",
+      "ServiceJsonLd",
+      "FaqPageJsonLd"
+    ],
+    "migrated": false
+  },
+  {
+    "slug": "air-permeability-test",
+    "url": "/service/air-permeability-test/",
+    "title": "Air Permeability Testing — Building Envelope",
+    "canonical": "/service/air-permeability-test/",
+    "category": "Inspection & Non-Destructive Testing",
+    "componentsUsed": [
+      "components/service/air-permeability-test/AirPermeabilityHero",
+      "components/service/air-permeability-test/AirPermeabilityContent",
+      "components/schema/BreadcrumbJsonLd",
+      "components/schema/ServiceJsonLd",
+      "components/schema/FaqPageJsonLd"
+    ],
+    "dataSources": [
+      "lib/serviceCrossLinks",
+      "lib/serviceFaqData"
+    ],
+    "hasImages": true,
+    "hasFaq": true,
+    "jsonLdTypes": [
+      "BreadcrumbJsonLd",
+      "ServiceJsonLd",
+      "FaqPageJsonLd"
+    ],
+    "migrated": false
+  },
+  {
+    "slug": "audits-and-specialized-consultancy",
+    "url": "/service/audits-and-specialized-consultancy/",
+    "title": "Audits and Specialized Consultancy",
+    "canonical": "/service/audits-and-specialized-consultancy/",
+    "category": "Specialized Technical Services",
+    "componentsUsed": [
+      "components/service/audits-and-specialized-consultancy/AuditsHero",
+      "components/service/audits-and-specialized-consultancy/AuditsContent",
+      "components/schema/BreadcrumbJsonLd",
+      "components/schema/ServiceJsonLd",
+      "components/schema/FaqPageJsonLd"
+    ],
+    "dataSources": [
+      "lib/serviceCrossLinks",
+      "lib/serviceFaqData"
+    ],
+    "hasImages": true,
+    "hasFaq": true,
+    "jsonLdTypes": [
+      "BreadcrumbJsonLd",
+      "ServiceJsonLd",
+      "FaqPageJsonLd"
+    ],
+    "migrated": false
+  },
+  {
+    "slug": "bend-test",
+    "url": "/service/bend-test/",
+    "title": "Bend Testing — Ductility & Weld Integrity",
+    "canonical": "/service/bend-test/",
+    "category": "Inspection & Non-Destructive Testing",
+    "componentsUsed": [
+      "components/service/bend-test/BendHero",
+      "components/service/bend-test/BendContent",
+      "components/schema/BreadcrumbJsonLd",
+      "components/schema/ServiceJsonLd",
+      "components/schema/FaqPageJsonLd"
+    ],
+    "dataSources": [
+      "lib/serviceCrossLinks",
+      "lib/serviceFaqData"
+    ],
+    "hasImages": true,
+    "hasFaq": true,
+    "jsonLdTypes": [
+      "BreadcrumbJsonLd",
+      "ServiceJsonLd",
+      "FaqPageJsonLd"
+    ],
+    "migrated": false
+  },
+  {
+    "slug": "commissioning-and-after-sales-support",
+    "url": "/service/commissioning-and-after-sales-support/",
+    "title": "Commissioning and After Sales Support",
+    "canonical": "/service/commissioning-and-after-sales-support/",
+    "category": "Specialized Inspection & Testing",
+    "componentsUsed": [
+      "components/service/commissioning-and-after-sales-support/CommissioningHero",
+      "components/service/commissioning-and-after-sales-support/CommissioningContent",
+      "components/schema/BreadcrumbJsonLd",
+      "components/schema/ServiceJsonLd",
+      "components/schema/FaqPageJsonLd"
+    ],
+    "dataSources": [
+      "lib/serviceCrossLinks",
+      "lib/serviceFaqData"
+    ],
+    "hasImages": true,
+    "hasFaq": true,
+    "jsonLdTypes": [
+      "BreadcrumbJsonLd",
+      "ServiceJsonLd",
+      "FaqPageJsonLd"
+    ],
+    "migrated": false
+  },
+  {
+    "slug": "commissioning-and-start-up-support",
+    "url": "/service/commissioning-and-start-up-support/",
+    "title": "Commissioning and Start-up Support",
+    "canonical": "/service/commissioning-and-start-up-support/",
+    "category": "Specialized Inspection & Testing",
+    "componentsUsed": [
+      "components/service/commissioning-and-start-up-support/CommissioningHero",
+      "components/service/commissioning-and-start-up-support/CommissioningContent",
+      "components/schema/BreadcrumbJsonLd",
+      "components/schema/ServiceJsonLd",
+      "components/schema/FaqPageJsonLd",
+      "components/schema/HowToJsonLd",
+      "components/ServiceProcessSteps"
+    ],
+    "dataSources": [
+      "lib/serviceCrossLinks",
+      "lib/serviceFaqData"
+    ],
+    "hasImages": true,
+    "hasFaq": true,
+    "jsonLdTypes": [
+      "BreadcrumbJsonLd",
+      "ServiceJsonLd",
+      "FaqPageJsonLd"
+    ],
+    "migrated": false
+  },
+  {
+    "slug": "constructions",
+    "url": "/service/constructions/",
+    "title": "Industrial Construction & Project Delivery",
+    "canonical": "/service/constructions/",
+    "category": "Industrial Construction & Fabrication",
+    "componentsUsed": [
+      "components/service/constructions/ConstructionHero",
+      "components/service/constructions/ConstructionSubServices",
+      "components/schema/BreadcrumbJsonLd",
+      "components/schema/ServiceJsonLd",
+      "components/schema/FaqPageJsonLd"
+    ],
+    "dataSources": [
+      "lib/serviceCrossLinks"
+    ],
+    "hasImages": true,
+    "hasFaq": true,
+    "jsonLdTypes": [
+      "BreadcrumbJsonLd",
+      "ServiceJsonLd",
+      "FaqPageJsonLd"
+    ],
+    "migrated": false
+  },
+  {
+    "slug": "corrosion-control-services-2",
+    "url": "/service/corrosion-control-services-2/",
+    "title": "Corrosion Control — Assessment, Mitigation & Coatings",
+    "canonical": "/service/corrosion-control-services-2/",
+    "category": "Specialized Technical Services",
+    "componentsUsed": [
+      "components/service/corrosion-control-services-2/CorrosionControlHero",
+      "components/service/corrosion-control-services-2/CorrosionControlContent",
+      "components/schema/BreadcrumbJsonLd",
+      "components/schema/ServiceJsonLd",
+      "components/schema/FaqPageJsonLd"
+    ],
+    "dataSources": [
+      "lib/serviceCrossLinks",
+      "lib/serviceFaqData"
+    ],
+    "hasImages": true,
+    "hasFaq": true,
+    "jsonLdTypes": [
+      "BreadcrumbJsonLd",
+      "ServiceJsonLd",
+      "FaqPageJsonLd"
+    ],
+    "migrated": false
+  },
+  {
+    "slug": "eddy-current-testing",
+    "url": "/service/eddy-current-testing/",
+    "title": "Eddy Current Testing (ECT) — Tube & Surface Inspection",
+    "canonical": "/service/eddy-current-testing/",
+    "category": "Inspection & Non-Destructive Testing",
+    "componentsUsed": [
+      "components/service/eddy-current-testing/EddyCurrentHero",
+      "components/service/eddy-current-testing/EddyCurrentContent",
+      "components/schema/BreadcrumbJsonLd",
+      "components/schema/ServiceJsonLd",
+      "components/schema/FaqPageJsonLd"
+    ],
+    "dataSources": [
+      "lib/serviceCrossLinks",
+      "lib/serviceFaqData"
+    ],
+    "hasImages": true,
+    "hasFaq": true,
+    "jsonLdTypes": [
+      "BreadcrumbJsonLd",
+      "ServiceJsonLd",
+      "FaqPageJsonLd"
+    ],
+    "migrated": false
+  },
+  {
+    "slug": "electrical-instrumentation-works",
+    "url": "/service/electrical-instrumentation-works/",
+    "title": "Electrical & Instrumentation Works",
+    "canonical": "/service/electrical-instrumentation-works/",
+    "category": "Industrial Process Automation",
+    "componentsUsed": [
+      "components/services_group/electrical-instrumentation-works/ElectricalWorksHero",
+      "components/services_group/electrical-instrumentation-works/ElectricalWorksContent",
+      "components/schema/BreadcrumbJsonLd",
+      "components/schema/ServiceJsonLd",
+      "components/schema/FaqPageJsonLd"
+    ],
+    "dataSources": [
+      "lib/serviceCrossLinks",
+      "lib/serviceFaqData"
+    ],
+    "hasImages": true,
+    "hasFaq": true,
+    "jsonLdTypes": [
+      "BreadcrumbJsonLd",
+      "ServiceJsonLd",
+      "FaqPageJsonLd"
+    ],
+    "migrated": false
+  },
+  {
+    "slug": "exterior-windows-doors-curtain-wall-testing",
+    "url": "/service/exterior-windows-doors-curtain-wall-testing/",
+    "title": "Exterior Windows, Doors & Curtain Wall Testing",
+    "canonical": "/service/exterior-windows-doors-curtain-wall-testing/",
+    "category": "Inspection & Non-Destructive Testing",
+    "componentsUsed": [
+      "components/schema/BreadcrumbJsonLd",
+      "components/schema/ServiceJsonLd",
+      "components/service/exterior-windows-doors-curtain-wall-testing/ExteriorTestingContent",
+      "components/schema/FaqPageJsonLd"
+    ],
+    "dataSources": [
+      "lib/serviceCrossLinks",
+      "lib/serviceFaqData"
+    ],
+    "hasImages": true,
+    "hasFaq": true,
+    "jsonLdTypes": [
+      "BreadcrumbJsonLd",
+      "ServiceJsonLd",
+      "FaqPageJsonLd"
+    ],
+    "migrated": false
+  },
+  {
+    "slug": "flow-computer-configuration",
+    "url": "/service/flow-computer-configuration/",
+    "title": "Flow Computer Configuration — Custody Transfer API",
+    "canonical": "/service/flow-computer-configuration/",
+    "category": "Flow Measurement Solutions",
+    "componentsUsed": [
+      "components/service/flow-computer-configuration/FlowComputerHero",
+      "components/service/flow-computer-configuration/FlowComputerContent",
+      "components/schema/BreadcrumbJsonLd",
+      "components/schema/ServiceJsonLd",
+      "components/schema/FaqPageJsonLd",
+      "components/schema/HowToJsonLd",
+      "components/ServiceProcessSteps"
+    ],
+    "dataSources": [
+      "lib/serviceCrossLinks",
+      "lib/serviceFaqData"
+    ],
+    "hasImages": true,
+    "hasFaq": true,
+    "jsonLdTypes": [
+      "BreadcrumbJsonLd",
+      "ServiceJsonLd",
+      "FaqPageJsonLd"
+    ],
+    "migrated": false
+  },
+  {
+    "slug": "flow-measurement-solutions",
+    "url": "/service/flow-measurement-solutions/",
+    "title": "Flow Measurement & Control System Solutions",
+    "canonical": "/service/flow-measurement-solutions/",
+    "category": "Flow Measurement Solutions",
+    "componentsUsed": [
+      "components/service/flow-measurement/FlowHero",
+      "components/service/flow-measurement/FlowSubServices",
+      "components/schema/BreadcrumbJsonLd",
+      "components/schema/ServiceJsonLd",
+      "components/schema/FaqPageJsonLd"
+    ],
+    "dataSources": [
+      "lib/serviceCrossLinks"
+    ],
+    "hasImages": true,
+    "hasFaq": true,
+    "jsonLdTypes": [
+      "BreadcrumbJsonLd",
+      "ServiceJsonLd",
+      "FaqPageJsonLd"
+    ],
+    "migrated": true
+  },
+  {
+    "slug": "flow-meter-calibration",
+    "url": "/service/flow-meter-calibration/",
+    "title": "Flow Meter Calibration — Lab & On-Site Services",
+    "canonical": "/service/flow-meter-calibration/",
+    "category": "Flow Measurement Solutions",
+    "componentsUsed": [
+      "components/service/flow-meter-calibration/CalibrationHero",
+      "components/service/flow-meter-calibration/CalibrationContent",
+      "components/schema/BreadcrumbJsonLd",
+      "components/schema/ServiceJsonLd",
+      "components/schema/FaqPageJsonLd",
+      "components/schema/HowToJsonLd",
+      "components/ServiceProcessSteps"
+    ],
+    "dataSources": [
+      "lib/serviceCrossLinks",
+      "lib/serviceFaqData"
+    ],
+    "hasImages": true,
+    "hasFaq": true,
+    "jsonLdTypes": [
+      "BreadcrumbJsonLd",
+      "ServiceJsonLd",
+      "FaqPageJsonLd"
+    ],
+    "migrated": false
+  },
+  {
+    "slug": "fracture-test",
+    "url": "/service/fracture-test/",
+    "title": "Fracture Toughness Testing — KIc, CTOD, J-Integral",
+    "canonical": "/service/fracture-test/",
+    "category": "Inspection & Non-Destructive Testing",
+    "componentsUsed": [
+      "components/service/fracture-test/FractureHero",
+      "components/service/fracture-test/FractureContent",
+      "components/schema/BreadcrumbJsonLd",
+      "components/schema/ServiceJsonLd",
+      "components/schema/FaqPageJsonLd"
+    ],
+    "dataSources": [
+      "lib/serviceCrossLinks",
+      "lib/serviceFaqData"
+    ],
+    "hasImages": true,
+    "hasFaq": true,
+    "jsonLdTypes": [
+      "BreadcrumbJsonLd",
+      "ServiceJsonLd",
+      "FaqPageJsonLd"
+    ],
+    "migrated": false
+  },
+  {
+    "slug": "gamma-ray-pipe-crawler-inspection-systems",
+    "url": "/service/gamma-ray-pipe-crawler-inspection-systems/",
+    "title": "Gamma Ray Pipe Crawler Inspection Systems",
+    "canonical": "/service/gamma-ray-pipe-crawler-inspection-systems/",
+    "category": "Inspection & Non-Destructive Testing",
+    "componentsUsed": [
+      "components/service/gamma-ray-pipe-crawler-inspection-systems/GammaRayHero",
+      "components/service/gamma-ray-pipe-crawler-inspection-systems/GammaRayContent",
+      "components/schema/BreadcrumbJsonLd",
+      "components/schema/ServiceJsonLd",
+      "components/schema/FaqPageJsonLd"
+    ],
+    "dataSources": [
+      "lib/serviceCrossLinks",
+      "lib/serviceFaqData"
+    ],
+    "hasImages": true,
+    "hasFaq": true,
+    "jsonLdTypes": [
+      "BreadcrumbJsonLd",
+      "ServiceJsonLd",
+      "FaqPageJsonLd"
+    ],
+    "migrated": false
+  },
+  {
+    "slug": "genuine-spare-parts",
+    "url": "/service/genuine-spare-parts/",
+    "title": "Genuine Spare Parts — Flow Meters, PLCs, Analyzers",
+    "canonical": "/service/genuine-spare-parts/",
+    "category": "Flow Measurement Solutions",
+    "componentsUsed": [
+      "components/service/genuine-spare-parts/SparePartsHero",
+      "components/service/genuine-spare-parts/SparePartsContent",
+      "components/schema/BreadcrumbJsonLd",
+      "components/schema/ServiceJsonLd",
+      "components/schema/FaqPageJsonLd"
+    ],
+    "dataSources": [
+      "lib/serviceCrossLinks",
+      "lib/serviceFaqData"
+    ],
+    "hasImages": true,
+    "hasFaq": true,
+    "jsonLdTypes": [
+      "BreadcrumbJsonLd",
+      "ServiceJsonLd",
+      "FaqPageJsonLd"
+    ],
+    "migrated": false
+  },
+  {
+    "slug": "hand-rail-fabrication",
+    "url": "/service/hand-rail-fabrication/",
+    "title": "Hand Rail Fabrication — Safety Guardrails & Platforms",
+    "canonical": "/service/hand-rail-fabrication/",
+    "category": "Industrial Construction & Fabrication",
+    "componentsUsed": [
+      "components/services_group/hand-rail-fabrication/HandRailHero",
+      "components/services_group/hand-rail-fabrication/HandRailContent",
+      "components/schema/BreadcrumbJsonLd",
+      "components/schema/ServiceJsonLd",
+      "components/schema/FaqPageJsonLd"
+    ],
+    "dataSources": [
+      "lib/serviceCrossLinks",
+      "lib/serviceFaqData"
+    ],
+    "hasImages": true,
+    "hasFaq": true,
+    "jsonLdTypes": [
+      "BreadcrumbJsonLd",
+      "ServiceJsonLd",
+      "FaqPageJsonLd"
+    ],
+    "migrated": false
+  },
+  {
+    "slug": "hardness-test",
+    "url": "/service/hardness-test/",
+    "title": "Hardness Testing — Brinell, Rockwell, Vickers",
+    "canonical": "/service/hardness-test/",
+    "category": "Inspection & Non-Destructive Testing",
+    "componentsUsed": [
+      "components/service/hardness-test/HardnessHero",
+      "components/service/hardness-test/HardnessContent",
+      "components/schema/BreadcrumbJsonLd",
+      "components/schema/ServiceJsonLd",
+      "components/schema/FaqPageJsonLd"
+    ],
+    "dataSources": [
+      "lib/serviceCrossLinks",
+      "lib/serviceFaqData"
+    ],
+    "hasImages": true,
+    "hasFaq": true,
+    "jsonLdTypes": [
+      "BreadcrumbJsonLd",
+      "ServiceJsonLd",
+      "FaqPageJsonLd"
+    ],
+    "migrated": false
+  },
+  {
+    "slug": "heat-treatment-services-2",
+    "url": "/service/heat-treatment-services-2/",
+    "title": "Heat Treatment Services — Structural Steel & Offshore PWHT",
+    "canonical": "/service/heat-treatment-services-2/",
+    "category": "Specialized Technical Services",
+    "componentsUsed": [
+      "components/service/heat-treatment-services/HeatTreatmentHero",
+      "components/service/heat-treatment-services/HeatTreatmentContent",
+      "components/schema/BreadcrumbJsonLd",
+      "components/schema/ServiceJsonLd",
+      "components/schema/FaqPageJsonLd"
+    ],
+    "dataSources": [
+      "lib/serviceCrossLinks",
+      "lib/serviceFaqData"
+    ],
+    "hasImages": true,
+    "hasFaq": true,
+    "jsonLdTypes": [
+      "BreadcrumbJsonLd",
+      "ServiceJsonLd",
+      "FaqPageJsonLd"
+    ],
+    "migrated": false
+  },
+  {
+    "slug": "heat-treatment-services",
+    "url": "/service/heat-treatment-services/",
+    "title": "Heat Treatment — PWHT, Stress Relief, Annealing",
+    "canonical": "/service/heat-treatment-services/",
+    "category": "Specialized Technical Services",
+    "componentsUsed": [
+      "components/service/heat-treatment-services/HeatTreatmentHero",
+      "components/service/heat-treatment-services/HeatTreatmentContent",
+      "components/schema/BreadcrumbJsonLd",
+      "components/schema/ServiceJsonLd",
+      "components/schema/FaqPageJsonLd"
+    ],
+    "dataSources": [
+      "lib/serviceCrossLinks",
+      "lib/serviceFaqData"
+    ],
+    "hasImages": true,
+    "hasFaq": true,
+    "jsonLdTypes": [
+      "BreadcrumbJsonLd",
+      "ServiceJsonLd",
+      "FaqPageJsonLd"
+    ],
+    "migrated": false
+  },
+  {
+    "slug": "high-and-low-voltage-cable-steel-structure-supports",
+    "url": "/service/high-and-low-voltage-cable-steel-structure-supports/",
+    "title": "High and Low Voltage Cable Steel Structure Supports",
+    "canonical": "/service/high-and-low-voltage-cable-steel-structure-supports/",
+    "category": "Industrial Construction & Fabrication",
+    "componentsUsed": [
+      "components/services_group/high-and-low-voltage-cable-steel-structure-supports/CableSupportsHero",
+      "components/services_group/high-and-low-voltage-cable-steel-structure-supports/CableSupportsContent",
+      "components/schema/BreadcrumbJsonLd",
+      "components/schema/ServiceJsonLd",
+      "components/schema/FaqPageJsonLd"
+    ],
+    "dataSources": [
+      "lib/serviceCrossLinks",
+      "lib/serviceFaqData"
+    ],
+    "hasImages": true,
+    "hasFaq": true,
+    "jsonLdTypes": [
+      "BreadcrumbJsonLd",
+      "ServiceJsonLd",
+      "FaqPageJsonLd"
+    ],
+    "migrated": false
+  },
+  {
+    "slug": "hose-test-2",
+    "url": "/service/hose-test-2/",
+    "title": "Hose Test — Existing Building Leak Diagnostics",
+    "canonical": "/service/hose-test-2/",
+    "category": "Inspection & Non-Destructive Testing",
+    "componentsUsed": [
+      "components/service/hose-test/HoseTestHero",
+      "components/service/hose-test/HoseTestContent",
+      "components/schema/BreadcrumbJsonLd",
+      "components/schema/ServiceJsonLd",
+      "components/schema/FaqPageJsonLd"
+    ],
+    "dataSources": [
+      "lib/serviceCrossLinks",
+      "lib/serviceFaqData"
+    ],
+    "hasImages": true,
+    "hasFaq": true,
+    "jsonLdTypes": [
+      "BreadcrumbJsonLd",
+      "ServiceJsonLd",
+      "FaqPageJsonLd"
+    ],
+    "migrated": false
+  },
+  {
+    "slug": "hose-test",
+    "url": "/service/hose-test/",
+    "title": "Hose Test — Curtain Wall & Facade Water Check",
+    "canonical": "/service/hose-test/",
+    "category": "Inspection & Non-Destructive Testing",
+    "componentsUsed": [
+      "components/service/hose-test/HoseTestHero",
+      "components/service/hose-test/HoseTestContent",
+      "components/schema/BreadcrumbJsonLd",
+      "components/schema/ServiceJsonLd",
+      "components/schema/FaqPageJsonLd"
+    ],
+    "dataSources": [
+      "lib/serviceCrossLinks",
+      "lib/serviceFaqData"
+    ],
+    "hasImages": true,
+    "hasFaq": true,
+    "jsonLdTypes": [
+      "BreadcrumbJsonLd",
+      "ServiceJsonLd",
+      "FaqPageJsonLd"
+    ],
+    "migrated": false
+  },
+  {
+    "slug": "impact-test",
+    "url": "/service/impact-test/",
+    "title": "Impact Testing — Charpy & Izod Standards",
+    "canonical": "/service/impact-test/",
+    "category": "Inspection & Non-Destructive Testing",
+    "componentsUsed": [
+      "components/service/impact-test/ImpactHero",
+      "components/service/impact-test/ImpactContent",
+      "components/schema/BreadcrumbJsonLd",
+      "components/schema/ServiceJsonLd",
+      "components/schema/FaqPageJsonLd"
+    ],
+    "dataSources": [
+      "lib/serviceCrossLinks",
+      "lib/serviceFaqData"
+    ],
+    "hasImages": true,
+    "hasFaq": true,
+    "jsonLdTypes": [
+      "BreadcrumbJsonLd",
+      "ServiceJsonLd",
+      "FaqPageJsonLd"
+    ],
+    "migrated": false
+  },
+  {
+    "slug": "industrial-automation",
+    "url": "/service/industrial-automation/",
+    "title": "Industrial Automation, PLC SCADA & Process Control Solutions",
+    "canonical": "/service/industrial-automation/",
+    "category": "Industrial Process Automation",
+    "componentsUsed": [
+      "components/service/industrial-automation/AutomationHero",
+      "components/service/industrial-automation/AutomationSubServices",
+      "components/schema/BreadcrumbJsonLd",
+      "components/schema/ServiceJsonLd",
+      "components/schema/FaqPageJsonLd"
+    ],
+    "dataSources": [
+      "lib/serviceCrossLinks"
+    ],
+    "hasImages": true,
+    "hasFaq": true,
+    "jsonLdTypes": [
+      "BreadcrumbJsonLd",
+      "ServiceJsonLd",
+      "FaqPageJsonLd"
+    ],
+    "migrated": false
+  },
+  {
+    "slug": "inspection-testing",
+    "url": "/service/inspection-testing/",
+    "title": "Inspection & Testing — NDT, Mechanical & Specialized",
+    "canonical": "/service/inspection-testing/",
+    "category": "Inspection & Non-Destructive Testing",
+    "componentsUsed": [
+      "components/service/inspection-testing/InspectionHero",
+      "components/service/inspection-testing/InspectionOverview",
+      "components/schema/BreadcrumbJsonLd",
+      "components/schema/ServiceJsonLd",
+      "components/schema/FaqPageJsonLd",
+      "components/schema/ItemListJsonLd"
+    ],
+    "dataSources": [
+      "lib/serviceCrossLinks"
+    ],
+    "hasImages": true,
+    "hasFaq": true,
+    "jsonLdTypes": [
+      "BreadcrumbJsonLd",
+      "ServiceJsonLd",
+      "FaqPageJsonLd",
+      "ItemListJsonLd"
+    ],
+    "migrated": false
+  },
+  {
+    "slug": "lifting-equipment-inspection-2",
+    "url": "/service/lifting-equipment-inspection-2/",
+    "title": "Lifting Equipment Inspection — Overhead Cranes, Hoists & Elevators",
+    "canonical": "/service/lifting-equipment-inspection-2/",
+    "category": "Inspection & Non-Destructive Testing",
+    "componentsUsed": [
+      "components/service/lifting-equipment-inspection/LiftingInspectionHero",
+      "components/service/lifting-equipment-inspection/LiftingInspectionContent",
+      "components/schema/BreadcrumbJsonLd",
+      "components/schema/ServiceJsonLd",
+      "components/schema/FaqPageJsonLd"
+    ],
+    "dataSources": [
+      "lib/serviceCrossLinks",
+      "lib/serviceFaqData"
+    ],
+    "hasImages": true,
+    "hasFaq": true,
+    "jsonLdTypes": [
+      "BreadcrumbJsonLd",
+      "ServiceJsonLd",
+      "FaqPageJsonLd"
+    ],
+    "migrated": false
+  },
+  {
+    "slug": "lifting-equipment-inspection",
+    "url": "/service/lifting-equipment-inspection/",
+    "title": "Lifting Equipment Inspection — Cranes, Hoists & Slings",
+    "canonical": "/service/lifting-equipment-inspection/",
+    "category": "Inspection & Non-Destructive Testing",
+    "componentsUsed": [
+      "components/service/lifting-equipment-inspection/LiftingInspectionHero",
+      "components/service/lifting-equipment-inspection/LiftingInspectionContent",
+      "components/schema/BreadcrumbJsonLd",
+      "components/schema/ServiceJsonLd",
+      "components/schema/FaqPageJsonLd"
+    ],
+    "dataSources": [
+      "lib/serviceCrossLinks",
+      "lib/serviceFaqData"
+    ],
+    "hasImages": true,
+    "hasFaq": true,
+    "jsonLdTypes": [
+      "BreadcrumbJsonLd",
+      "ServiceJsonLd",
+      "FaqPageJsonLd"
+    ],
+    "migrated": false
+  },
+  {
+    "slug": "liquid-penetrant-dye-penetrant-examination-pt",
+    "url": "/service/liquid-penetrant-dye-penetrant-examination-pt/",
+    "title": "Liquid Penetrant / Dye Penetrant Examination (PT)",
+    "canonical": "/service/liquid-penetrant-dye-penetrant-examination-pt/",
+    "category": "Specialized Inspection & Testing",
+    "componentsUsed": [
+      "components/service/liquid-penetrant-dye-penetrant-examination-pt/PenetrantHero",
+      "components/service/liquid-penetrant-dye-penetrant-examination-pt/PenetrantContent",
+      "components/schema/BreadcrumbJsonLd",
+      "components/schema/ServiceJsonLd",
+      "components/schema/FaqPageJsonLd"
+    ],
+    "dataSources": [
+      "lib/serviceCrossLinks",
+      "lib/serviceFaqData"
+    ],
+    "hasImages": true,
+    "hasFaq": true,
+    "jsonLdTypes": [
+      "BreadcrumbJsonLd",
+      "ServiceJsonLd",
+      "FaqPageJsonLd"
+    ],
+    "migrated": false
+  },
+  {
+    "slug": "macro-and-micro-test",
+    "url": "/service/macro-and-micro-test/",
+    "title": "Macro & Micro Testing — Weld Profile Examination",
+    "canonical": "/service/macro-and-micro-test/",
+    "category": "Inspection & Non-Destructive Testing",
+    "componentsUsed": [
+      "components/service/macro-and-micro-test/MacroMicroHero",
+      "components/service/macro-and-micro-test/MacroMicroContent",
+      "components/schema/BreadcrumbJsonLd",
+      "components/schema/ServiceJsonLd",
+      "components/schema/FaqPageJsonLd"
+    ],
+    "dataSources": [
+      "lib/serviceCrossLinks",
+      "lib/serviceFaqData"
+    ],
+    "hasImages": true,
+    "hasFaq": true,
+    "jsonLdTypes": [
+      "BreadcrumbJsonLd",
+      "ServiceJsonLd",
+      "FaqPageJsonLd"
+    ],
+    "migrated": false
+  },
+  {
+    "slug": "magnetic-flux-leakage",
+    "url": "/service/magnetic-flux-leakage/",
+    "title": "Magnetic Flux Leakage (MFL) — Pipeline & Tank Inspection",
+    "canonical": "/service/magnetic-flux-leakage/",
+    "category": "Inspection & Non-Destructive Testing",
+    "componentsUsed": [
+      "components/service/magnetic-flux-leakage/MFLHero",
+      "components/service/magnetic-flux-leakage/MFLContent",
+      "components/schema/BreadcrumbJsonLd",
+      "components/schema/ServiceJsonLd",
+      "components/schema/FaqPageJsonLd"
+    ],
+    "dataSources": [
+      "lib/serviceCrossLinks",
+      "lib/serviceFaqData"
+    ],
+    "hasImages": true,
+    "hasFaq": true,
+    "jsonLdTypes": [
+      "BreadcrumbJsonLd",
+      "ServiceJsonLd",
+      "FaqPageJsonLd"
+    ],
+    "migrated": false
+  },
+  {
+    "slug": "magnetic-particle-inspection-mt",
+    "url": "/service/magnetic-particle-inspection-mt/",
+    "title": "Magnetic Particle Inspection (MT) — Surface Crack Detection",
+    "canonical": "/service/magnetic-particle-inspection-mt/",
+    "category": "Inspection & Non-Destructive Testing",
+    "componentsUsed": [
+      "components/service/magnetic-particle-inspection-mt/MagneticParticleHero",
+      "components/service/magnetic-particle-inspection-mt/MagneticParticleContent",
+      "components/schema/BreadcrumbJsonLd",
+      "components/schema/ServiceJsonLd",
+      "components/schema/FaqPageJsonLd"
+    ],
+    "dataSources": [
+      "lib/serviceCrossLinks",
+      "lib/serviceFaqData"
+    ],
+    "hasImages": true,
+    "hasFaq": true,
+    "jsonLdTypes": [
+      "BreadcrumbJsonLd",
+      "ServiceJsonLd",
+      "FaqPageJsonLd"
+    ],
+    "migrated": false
+  },
+  {
+    "slug": "mechanical-testing",
+    "url": "/service/mechanical-testing/",
+    "title": "Mechanical Testing — Tensile, Hardness, Impact, Bend",
+    "canonical": "/service/mechanical-testing/",
+    "category": "Inspection & Non-Destructive Testing",
+    "componentsUsed": [
+      "components/service/mechanical-testing/MechanicalHero",
+      "components/service/mechanical-testing/MechanicalSubServices",
+      "components/schema/BreadcrumbJsonLd",
+      "components/schema/ServiceJsonLd",
+      "components/schema/FaqPageJsonLd",
+      "components/schema/ItemListJsonLd"
+    ],
+    "dataSources": [
+      "lib/serviceCrossLinks",
+      "lib/serviceFaqData"
+    ],
+    "hasImages": true,
+    "hasFaq": true,
+    "jsonLdTypes": [
+      "BreadcrumbJsonLd",
+      "ServiceJsonLd",
+      "FaqPageJsonLd",
+      "ItemListJsonLd"
+    ],
+    "migrated": false
+  },
+  {
+    "slug": "metallurgical-services-2",
+    "url": "/service/metallurgical-services-2/",
+    "title": "Metallurgical Services — OES Lab-Grade PMI & Full Chemistry",
+    "canonical": "/service/metallurgical-services-2/",
+    "category": "Specialized Technical Services",
+    "componentsUsed": [
+      "components/service/metallurgical-services/MetallurgicalHero",
+      "components/service/metallurgical-services/MetallurgicalContent",
+      "components/schema/BreadcrumbJsonLd",
+      "components/schema/ServiceJsonLd",
+      "components/schema/FaqPageJsonLd"
+    ],
+    "dataSources": [
+      "lib/serviceCrossLinks",
+      "lib/serviceFaqData"
+    ],
+    "hasImages": true,
+    "hasFaq": true,
+    "jsonLdTypes": [
+      "BreadcrumbJsonLd",
+      "ServiceJsonLd",
+      "FaqPageJsonLd"
+    ],
+    "migrated": false
+  },
+  {
+    "slug": "metallurgical-services",
+    "url": "/service/metallurgical-services/",
+    "title": "Metallurgical Services — Positive Material Identification (PMI)",
+    "canonical": "/service/metallurgical-services/",
+    "category": "Specialized Technical Services",
+    "componentsUsed": [
+      "components/service/metallurgical-services/MetallurgicalHero",
+      "components/service/metallurgical-services/MetallurgicalContent",
+      "components/schema/BreadcrumbJsonLd",
+      "components/schema/ServiceJsonLd",
+      "components/schema/FaqPageJsonLd"
+    ],
+    "dataSources": [
+      "lib/serviceCrossLinks",
+      "lib/serviceFaqData"
+    ],
+    "hasImages": true,
+    "hasFaq": true,
+    "jsonLdTypes": [
+      "BreadcrumbJsonLd",
+      "ServiceJsonLd",
+      "FaqPageJsonLd"
+    ],
+    "migrated": false
+  },
+  {
+    "slug": "metering-control-system-integration",
+    "url": "/service/metering-control-system-integration/",
+    "title": "Metering Control System Integration",
+    "canonical": "/service/metering-control-system-integration/",
+    "category": "Flow Measurement Solutions",
+    "componentsUsed": [
+      "components/service/metering-control-system-integration/McsiHero",
+      "components/service/metering-control-system-integration/McsiServices",
+      "components/service/metering-control-system-integration/McsiWhyUs",
+      "components/schema/BreadcrumbJsonLd",
+      "components/schema/ServiceJsonLd",
+      "components/schema/FaqPageJsonLd",
+      "components/service/common/WhatWeDoSection"
+    ],
+    "dataSources": [
+      "lib/serviceCrossLinks",
+      "lib/serviceFaqData"
+    ],
+    "hasImages": true,
+    "hasFaq": true,
+    "jsonLdTypes": [
+      "BreadcrumbJsonLd",
+      "ServiceJsonLd",
+      "FaqPageJsonLd"
+    ],
+    "migrated": false
+  },
+  {
+    "slug": "metering-expert-services",
+    "url": "/service/metering-expert-services/",
+    "title": "Metering Expert Services — Fiscal Audits & Compliance",
+    "canonical": "/service/metering-expert-services/",
+    "category": "Flow Measurement Solutions",
+    "componentsUsed": [
+      "components/service/metering-expert-services/ExpertServicesHero",
+      "components/service/metering-expert-services/ExpertServicesContent",
+      "components/schema/BreadcrumbJsonLd",
+      "components/schema/ServiceJsonLd",
+      "components/schema/FaqPageJsonLd"
+    ],
+    "dataSources": [
+      "lib/serviceCrossLinks",
+      "lib/serviceFaqData"
+    ],
+    "hasImages": true,
+    "hasFaq": true,
+    "jsonLdTypes": [
+      "BreadcrumbJsonLd",
+      "ServiceJsonLd",
+      "FaqPageJsonLd"
+    ],
+    "migrated": false
+  },
+  {
+    "slug": "new-installation-design-and-commissioning",
+    "url": "/service/new-installation-design-and-commissioning/",
+    "title": "New Installation Design and Commissioning",
+    "canonical": "/service/new-installation-design-and-commissioning/",
+    "category": "Specialized Inspection & Testing",
+    "componentsUsed": [
+      "components/services_group/new-installation-design-and-commissioning/NewInstallationHero",
+      "components/services_group/new-installation-design-and-commissioning/NewInstallationContent",
+      "components/schema/BreadcrumbJsonLd",
+      "components/schema/ServiceJsonLd",
+      "components/schema/FaqPageJsonLd"
+    ],
+    "dataSources": [
+      "lib/serviceCrossLinks",
+      "lib/serviceFaqData"
+    ],
+    "hasImages": true,
+    "hasFaq": true,
+    "jsonLdTypes": [
+      "BreadcrumbJsonLd",
+      "ServiceJsonLd",
+      "FaqPageJsonLd"
+    ],
+    "migrated": false
+  },
+  {
+    "slug": "non-destructive-testing-ndt",
+    "url": "/service/non-destructive-testing-ndt/",
+    "title": "Non-Destructive Testing (NDT) — UT, RT, MT, PT, ET",
+    "canonical": "/service/non-destructive-testing-ndt/",
+    "category": "Inspection & Non-Destructive Testing",
+    "componentsUsed": [
+      "components/service/non-destructive-testing-ndt/NDTHero",
+      "components/service/non-destructive-testing-ndt/NDTSubServices",
+      "components/schema/BreadcrumbJsonLd",
+      "components/schema/ServiceJsonLd",
+      "components/schema/FaqPageJsonLd",
+      "components/schema/ItemListJsonLd"
+    ],
+    "dataSources": [
+      "lib/serviceCrossLinks",
+      "lib/serviceFaqData"
+    ],
+    "hasImages": true,
+    "hasFaq": true,
+    "jsonLdTypes": [
+      "BreadcrumbJsonLd",
+      "ServiceJsonLd",
+      "FaqPageJsonLd",
+      "ItemListJsonLd"
+    ],
+    "migrated": false
+  },
+  {
+    "slug": "page/[page]",
+    "url": "/service/page/[page]/",
+    "title": "Pagination Redirect to /services/",
+    "canonical": "/services/",
+    "category": "Redirect",
+    "componentsUsed": [],
+    "dataSources": [],
+    "hasImages": false,
+    "hasFaq": false,
+    "jsonLdTypes": [],
+    "migrated": false,
+    "isRedirect": true
+  },
+  {
+    "slug": "phased-array-ultrasonic-testing",
+    "url": "/service/phased-array-ultrasonic-testing/",
+    "title": "Phased Array Ultrasonic Testing (PAUT)",
+    "canonical": "/service/phased-array-ultrasonic-testing/",
+    "category": "Inspection & Non-Destructive Testing",
+    "componentsUsed": [
+      "components/service/phased-array-ultrasonic-testing/PhasedArrayHero",
+      "components/service/phased-array-ultrasonic-testing/PhasedArrayContent",
+      "components/schema/BreadcrumbJsonLd",
+      "components/schema/ServiceJsonLd",
+      "components/schema/FaqPageJsonLd"
+    ],
+    "dataSources": [
+      "lib/serviceCrossLinks",
+      "lib/serviceFaqData"
+    ],
+    "hasImages": true,
+    "hasFaq": true,
+    "jsonLdTypes": [
+      "BreadcrumbJsonLd",
+      "ServiceJsonLd",
+      "FaqPageJsonLd"
+    ],
+    "migrated": false
+  },
+  {
+    "slug": "plant-automation",
+    "url": "/service/plant-automation/",
+    "title": "Process Plant Automation — Electrical & Instrumentation",
+    "canonical": "/service/plant-automation/",
+    "category": "Industrial Process Automation",
+    "componentsUsed": [
+      "components/service/plant-automation/PlantAutomationHero",
+      "components/service/plant-automation/PlantAutomationContent",
+      "components/schema/BreadcrumbJsonLd",
+      "components/schema/ServiceJsonLd",
+      "components/schema/FaqPageJsonLd"
+    ],
+    "dataSources": [
+      "lib/serviceCrossLinks",
+      "lib/serviceFaqData"
+    ],
+    "hasImages": true,
+    "hasFaq": true,
+    "jsonLdTypes": [
+      "BreadcrumbJsonLd",
+      "ServiceJsonLd",
+      "FaqPageJsonLd"
+    ],
+    "migrated": false
+  },
+  {
+    "slug": "pullout-test",
+    "url": "/service/pullout-test/",
+    "title": "Pullout Testing — Anchor, Rebar & Fastener Strength",
+    "canonical": "/service/pullout-test/",
+    "category": "Inspection & Non-Destructive Testing",
+    "componentsUsed": [
+      "components/service/pullout-test/PulloutHero",
+      "components/service/pullout-test/PulloutContent",
+      "components/schema/BreadcrumbJsonLd",
+      "components/schema/ServiceJsonLd",
+      "components/schema/FaqPageJsonLd"
+    ],
+    "dataSources": [
+      "lib/serviceCrossLinks",
+      "lib/serviceFaqData"
+    ],
+    "hasImages": true,
+    "hasFaq": true,
+    "jsonLdTypes": [
+      "BreadcrumbJsonLd",
+      "ServiceJsonLd",
+      "FaqPageJsonLd"
+    ],
+    "migrated": false
+  },
+  {
+    "slug": "radiographic-testing-rt",
+    "url": "/service/radiographic-testing-rt/",
+    "title": "Radiographic Testing (RT) — X-Ray & Gamma Inspection",
+    "canonical": "/service/radiographic-testing-rt/",
+    "category": "Inspection & Non-Destructive Testing",
+    "componentsUsed": [
+      "components/service/radiographic-testing-rt/RadiographicHero",
+      "components/service/radiographic-testing-rt/RadiographicContent",
+      "components/schema/BreadcrumbJsonLd",
+      "components/schema/ServiceJsonLd",
+      "components/schema/FaqPageJsonLd"
+    ],
+    "dataSources": [
+      "lib/serviceCrossLinks",
+      "lib/serviceFaqData"
+    ],
+    "hasImages": true,
+    "hasFaq": true,
+    "jsonLdTypes": [
+      "BreadcrumbJsonLd",
+      "ServiceJsonLd",
+      "FaqPageJsonLd"
+    ],
+    "migrated": false
+  },
+  {
+    "slug": "repair-upgrades-for-helical-flow-meters",
+    "url": "/service/repair-upgrades-for-helical-flow-meters/",
+    "title": "Repair & Upgrades for Helical Flow Meters",
+    "canonical": "/service/repair-upgrades-for-helical-flow-meters/",
+    "category": "Flow Measurement Solutions",
+    "componentsUsed": [
+      "components/service/repair-upgrades-for-helical-flow-meters/HelicalHero",
+      "components/service/repair-upgrades-for-helical-flow-meters/HelicalContent",
+      "components/schema/BreadcrumbJsonLd",
+      "components/schema/ServiceJsonLd",
+      "components/schema/FaqPageJsonLd"
+    ],
+    "dataSources": [
+      "lib/serviceCrossLinks",
+      "lib/serviceFaqData"
+    ],
+    "hasImages": true,
+    "hasFaq": true,
+    "jsonLdTypes": [
+      "BreadcrumbJsonLd",
+      "ServiceJsonLd",
+      "FaqPageJsonLd"
+    ],
+    "migrated": false
+  },
+  {
+    "slug": "specialized-inspection-service",
+    "url": "/service/specialized-inspection-service/",
+    "title": "Specialized Inspection — Custom Programs & Turnarounds",
+    "canonical": "/service/specialized-inspection-service/",
+    "category": "Inspection & Non-Destructive Testing",
+    "componentsUsed": [
+      "components/service/specialized-inspection-service/SpecializedHero",
+      "components/service/specialized-inspection-service/SpecializedSubServices",
+      "components/schema/BreadcrumbJsonLd",
+      "components/schema/ServiceJsonLd",
+      "components/schema/FaqPageJsonLd"
+    ],
+    "dataSources": [
+      "lib/serviceCrossLinks",
+      "lib/serviceFaqData"
+    ],
+    "hasImages": true,
+    "hasFaq": true,
+    "jsonLdTypes": [
+      "BreadcrumbJsonLd",
+      "ServiceJsonLd",
+      "FaqPageJsonLd"
+    ],
+    "migrated": false
+  },
+  {
+    "slug": "steel-fabrication",
+    "url": "/service/steel-fabrication/",
+    "title": "Steel Fabrication — Industrial Structures & Platforms",
+    "canonical": "/service/steel-fabrication/",
+    "category": "Industrial Construction & Fabrication",
+    "componentsUsed": [
+      "components/services_group/steel-fabrication/SteelFabricationHero",
+      "components/services_group/steel-fabrication/SteelFabricationContent",
+      "components/schema/BreadcrumbJsonLd",
+      "components/schema/ServiceJsonLd",
+      "components/schema/FaqPageJsonLd"
+    ],
+    "dataSources": [
+      "lib/serviceCrossLinks",
+      "lib/serviceFaqData"
+    ],
+    "hasImages": true,
+    "hasFaq": true,
+    "jsonLdTypes": [
+      "BreadcrumbJsonLd",
+      "ServiceJsonLd",
+      "FaqPageJsonLd"
+    ],
+    "migrated": false
+  },
+  {
+    "slug": "structural-steel-erection",
+    "url": "/service/structural-steel-erection/",
+    "title": "Structural Steel Erection — Supply & Installation",
+    "canonical": "/service/structural-steel-erection/",
+    "category": "Industrial Construction & Fabrication",
+    "componentsUsed": [
+      "components/services_group/structural-steel-erection/SteelErectionHero",
+      "components/services_group/structural-steel-erection/SteelErectionContent",
+      "components/schema/BreadcrumbJsonLd",
+      "components/schema/ServiceJsonLd",
+      "components/schema/FaqPageJsonLd"
+    ],
+    "dataSources": [
+      "lib/serviceCrossLinks",
+      "lib/serviceFaqData"
+    ],
+    "hasImages": true,
+    "hasFaq": true,
+    "jsonLdTypes": [
+      "BreadcrumbJsonLd",
+      "ServiceJsonLd",
+      "FaqPageJsonLd"
+    ],
+    "migrated": false
+  },
+  {
+    "slug": "supply-and-installation-of-suspended-access-equipments",
+    "url": "/service/supply-and-installation-of-suspended-access-equipments/",
+    "title": "Supply and Installation of Suspended Access Equipment",
+    "canonical": "/service/supply-and-installation-of-suspended-access-equipments/",
+    "category": "Industrial Construction & Fabrication",
+    "componentsUsed": [
+      "components/services_group/supply-and-installation-of-suspended-access-equipments/SuspendedAccessHero",
+      "components/services_group/supply-and-installation-of-suspended-access-equipments/SuspendedAccessContent",
+      "components/schema/BreadcrumbJsonLd",
+      "components/schema/ServiceJsonLd",
+      "components/schema/FaqPageJsonLd"
+    ],
+    "dataSources": [
+      "lib/serviceCrossLinks",
+      "lib/serviceFaqData"
+    ],
+    "hasImages": true,
+    "hasFaq": true,
+    "jsonLdTypes": [
+      "BreadcrumbJsonLd",
+      "ServiceJsonLd",
+      "FaqPageJsonLd"
+    ],
+    "migrated": false
+  },
+  {
+    "slug": "system-software-upgrade",
+    "url": "/service/system-software-upgrade/",
+    "title": "Control System Integration and Upgradation",
+    "canonical": "/service/system-software-upgrade/",
+    "category": "Industrial Process Automation",
+    "componentsUsed": [
+      "components/service/system-software-upgrade/ControlSystemHero",
+      "components/service/system-software-upgrade/ControlSystemContent",
+      "components/schema/BreadcrumbJsonLd",
+      "components/schema/ServiceJsonLd",
+      "components/schema/FaqPageJsonLd"
+    ],
+    "dataSources": [
+      "lib/serviceCrossLinks",
+      "lib/serviceFaqData"
+    ],
+    "hasImages": true,
+    "hasFaq": true,
+    "jsonLdTypes": [
+      "BreadcrumbJsonLd",
+      "ServiceJsonLd",
+      "FaqPageJsonLd"
+    ],
+    "migrated": false
+  },
+  {
+    "slug": "tensile-test",
+    "url": "/service/tensile-test/",
+    "title": "Tensile Testing — ASTM E8, ISO 6892",
+    "canonical": "/service/tensile-test/",
+    "category": "Inspection & Non-Destructive Testing",
+    "componentsUsed": [
+      "components/service/tensile-test/TensileHero",
+      "components/service/tensile-test/TensileContent",
+      "components/schema/BreadcrumbJsonLd",
+      "components/schema/ServiceJsonLd",
+      "components/schema/FaqPageJsonLd"
+    ],
+    "dataSources": [
+      "lib/serviceCrossLinks",
+      "lib/serviceFaqData"
+    ],
+    "hasImages": true,
+    "hasFaq": true,
+    "jsonLdTypes": [
+      "BreadcrumbJsonLd",
+      "ServiceJsonLd",
+      "FaqPageJsonLd"
+    ],
+    "migrated": false
+  },
+  {
+    "slug": "time-of-flight-diffraction",
+    "url": "/service/time-of-flight-diffraction/",
+    "title": "TOFD Ultrasonic Inspection — Weld Flaw Sizing",
+    "canonical": "/service/time-of-flight-diffraction/",
+    "category": "Specialized Inspection & Testing",
+    "componentsUsed": [
+      "components/service/time-of-flight-diffraction/TOFDHero",
+      "components/service/time-of-flight-diffraction/TOFDContent",
+      "components/schema/BreadcrumbJsonLd",
+      "components/schema/ServiceJsonLd",
+      "components/schema/FaqPageJsonLd"
+    ],
+    "dataSources": [
+      "lib/serviceCrossLinks",
+      "lib/serviceFaqData"
+    ],
+    "hasImages": true,
+    "hasFaq": true,
+    "jsonLdTypes": [
+      "BreadcrumbJsonLd",
+      "ServiceJsonLd",
+      "FaqPageJsonLd"
+    ],
+    "migrated": false
+  },
+  {
+    "slug": "torque-tightening-bolt-tensioning-2",
+    "url": "/service/torque-tightening-bolt-tensioning-2/",
+    "title": "Torque Tightening & Bolt Tensioning — Hydraulic Tensioning for High-Load Flanges",
+    "canonical": "/service/torque-tightening-bolt-tensioning-2/",
+    "category": "Specialized Technical Services",
+    "componentsUsed": [
+      "components/service/torque-tightening-bolt-tensioning/TorqueHero",
+      "components/service/torque-tightening-bolt-tensioning/TorqueContent",
+      "components/schema/BreadcrumbJsonLd",
+      "components/schema/ServiceJsonLd",
+      "components/schema/FaqPageJsonLd"
+    ],
+    "dataSources": [
+      "lib/serviceCrossLinks",
+      "lib/serviceFaqData"
+    ],
+    "hasImages": true,
+    "hasFaq": true,
+    "jsonLdTypes": [
+      "BreadcrumbJsonLd",
+      "ServiceJsonLd",
+      "FaqPageJsonLd"
+    ],
+    "migrated": false
+  },
+  {
+    "slug": "torque-tightening-bolt-tensioning",
+    "url": "/service/torque-tightening-bolt-tensioning/",
+    "title": "Torque Tightening & Bolt Tensioning",
+    "canonical": "/service/torque-tightening-bolt-tensioning/",
+    "category": "Specialized Technical Services",
+    "componentsUsed": [
+      "components/service/torque-tightening-bolt-tensioning/TorqueHero",
+      "components/service/torque-tightening-bolt-tensioning/TorqueContent",
+      "components/schema/BreadcrumbJsonLd",
+      "components/schema/ServiceJsonLd",
+      "components/schema/FaqPageJsonLd"
+    ],
+    "dataSources": [
+      "lib/serviceCrossLinks",
+      "lib/serviceFaqData"
+    ],
+    "hasImages": true,
+    "hasFaq": true,
+    "jsonLdTypes": [
+      "BreadcrumbJsonLd",
+      "ServiceJsonLd",
+      "FaqPageJsonLd"
+    ],
+    "migrated": false
+  },
+  {
+    "slug": "ultrasonic-testing-ut",
+    "url": "/service/ultrasonic-testing-ut/",
+    "title": "Ultrasonic Testing (UT) — Weld & Thickness Inspection",
+    "canonical": "/service/ultrasonic-testing-ut/",
+    "category": "Inspection & Non-Destructive Testing",
+    "componentsUsed": [
+      "components/service/ultrasonic-testing-ut/UltrasonicHero",
+      "components/service/ultrasonic-testing-ut/UltrasonicContent",
+      "components/schema/BreadcrumbJsonLd",
+      "components/schema/ServiceJsonLd",
+      "components/schema/FaqPageJsonLd"
+    ],
+    "dataSources": [
+      "lib/serviceCrossLinks",
+      "lib/serviceFaqData"
+    ],
+    "hasImages": true,
+    "hasFaq": true,
+    "jsonLdTypes": [
+      "BreadcrumbJsonLd",
+      "ServiceJsonLd",
+      "FaqPageJsonLd"
+    ],
+    "migrated": false
+  },
+  {
+    "slug": "upgrade-of-metering-control-system",
+    "url": "/service/upgrade-of-metering-control-system/",
+    "title": "Upgrade of Metering Control System",
+    "canonical": "/service/upgrade-of-metering-control-system/",
+    "category": "Flow Measurement Solutions",
+    "componentsUsed": [
+      "components/service/upgrade-of-metering-control-system/UpgradeHero",
+      "components/service/upgrade-of-metering-control-system/UpgradeServices",
+      "components/service/upgrade-of-metering-control-system/UpgradeWhyUs",
+      "components/schema/BreadcrumbJsonLd",
+      "components/schema/ServiceJsonLd",
+      "components/service/common/WhatWeDoSection"
+    ],
+    "dataSources": [],
+    "hasImages": true,
+    "hasFaq": false,
+    "jsonLdTypes": [
+      "BreadcrumbJsonLd",
+      "ServiceJsonLd"
+    ],
+    "migrated": false
+  },
+  {
+    "slug": "validation-and-uncertainty-calculations",
+    "url": "/service/validation-and-uncertainty-calculations/",
+    "title": "Validation and Uncertainty Calculations",
+    "canonical": "/service/validation-and-uncertainty-calculations/",
+    "category": "Flow Measurement Solutions",
+    "componentsUsed": [
+      "components/service/validation-and-uncertainty-calculations/ValidationHero",
+      "components/service/validation-and-uncertainty-calculations/ValidationContent",
+      "components/schema/BreadcrumbJsonLd",
+      "components/schema/ServiceJsonLd",
+      "components/schema/FaqPageJsonLd",
+      "components/schema/HowToJsonLd",
+      "components/ServiceProcessSteps"
+    ],
+    "dataSources": [
+      "lib/serviceCrossLinks",
+      "lib/serviceFaqData"
+    ],
+    "hasImages": true,
+    "hasFaq": true,
+    "jsonLdTypes": [
+      "BreadcrumbJsonLd",
+      "ServiceJsonLd",
+      "FaqPageJsonLd"
+    ],
+    "migrated": false
+  },
+  {
+    "slug": "videoscope",
+    "url": "/service/videoscope/",
+    "title": "Videoscope Remote Visual Inspection",
+    "canonical": "/service/videoscope/",
+    "category": "Inspection & Non-Destructive Testing",
+    "componentsUsed": [
+      "components/service/videoscope/VideoscopeHero",
+      "components/service/videoscope/VideoscopeContent",
+      "components/schema/BreadcrumbJsonLd",
+      "components/schema/ServiceJsonLd",
+      "components/schema/FaqPageJsonLd"
+    ],
+    "dataSources": [
+      "lib/serviceCrossLinks",
+      "lib/serviceFaqData"
+    ],
+    "hasImages": true,
+    "hasFaq": true,
+    "jsonLdTypes": [
+      "BreadcrumbJsonLd",
+      "ServiceJsonLd",
+      "FaqPageJsonLd"
+    ],
+    "migrated": false
+  },
+  {
+    "slug": "visual-inspection-vi",
+    "url": "/service/visual-inspection-vi/",
+    "title": "Visual Inspection (VI) — Certified Weld & Structure",
+    "canonical": "/service/visual-inspection-vi/",
+    "category": "Inspection & Non-Destructive Testing",
+    "componentsUsed": [
+      "components/service/visual-inspection-vi/VisualInspectionHero",
+      "components/service/visual-inspection-vi/VisualInspectionContent",
+      "components/schema/BreadcrumbJsonLd",
+      "components/schema/ServiceJsonLd",
+      "components/schema/FaqPageJsonLd"
+    ],
+    "dataSources": [
+      "lib/serviceCrossLinks",
+      "lib/serviceFaqData"
+    ],
+    "hasImages": true,
+    "hasFaq": true,
+    "jsonLdTypes": [
+      "BreadcrumbJsonLd",
+      "ServiceJsonLd",
+      "FaqPageJsonLd"
+    ],
+    "migrated": false
+  },
+  {
+    "slug": "water-penetration-test-2",
+    "url": "/service/water-penetration-test-2/",
+    "title": "Water Penetration Test — Field Hose Testing & Leak Diagnostics",
+    "canonical": "/service/water-penetration-test-2/",
+    "category": "Inspection & Non-Destructive Testing",
+    "componentsUsed": [
+      "components/service/water-penetration-test/WaterPenetrationHero",
+      "components/service/water-penetration-test/WaterPenetrationContent",
+      "components/schema/BreadcrumbJsonLd",
+      "components/schema/ServiceJsonLd",
+      "components/schema/FaqPageJsonLd"
+    ],
+    "dataSources": [
+      "lib/serviceCrossLinks",
+      "lib/serviceFaqData"
+    ],
+    "hasImages": true,
+    "hasFaq": true,
+    "jsonLdTypes": [
+      "BreadcrumbJsonLd",
+      "ServiceJsonLd",
+      "FaqPageJsonLd"
+    ],
+    "migrated": false
+  },
+  {
+    "slug": "water-penetration-test",
+    "url": "/service/water-penetration-test/",
+    "title": "Water Penetration Testing — Facade & Building",
+    "canonical": "/service/water-penetration-test/",
+    "category": "Inspection & Non-Destructive Testing",
+    "componentsUsed": [
+      "components/service/water-penetration-test/WaterPenetrationHero",
+      "components/service/water-penetration-test/WaterPenetrationContent",
+      "components/schema/BreadcrumbJsonLd",
+      "components/schema/ServiceJsonLd",
+      "components/schema/FaqPageJsonLd"
+    ],
+    "dataSources": [
+      "lib/serviceCrossLinks",
+      "lib/serviceFaqData"
+    ],
+    "hasImages": true,
+    "hasFaq": true,
+    "jsonLdTypes": [
+      "BreadcrumbJsonLd",
+      "ServiceJsonLd",
+      "FaqPageJsonLd"
+    ],
+    "migrated": false
+  }
+]

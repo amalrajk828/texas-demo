@@ -1,0 +1,1147 @@
+{
+  "brokenLinks": [
+    {
+      "href": "/service/validation-uncertainty-calculations/",
+      "sourceFile": "lib/blogArticles.ts",
+      "isHash": false,
+      "isBroken": true,
+      "reason": "Target route \"/service/validation-uncertainty-calculations/\" not found in project routes"
+    },
+    {
+      "href": "/service/audits-specialized-consultancy/",
+      "sourceFile": "lib/blogArticles.ts",
+      "isHash": false,
+      "isBroken": true,
+      "reason": "Target route \"/service/audits-specialized-consultancy/\" not found in project routes"
+    },
+    {
+      "href": "/service/commissioning-after-sales-support/",
+      "sourceFile": "lib/blogArticles.ts",
+      "isHash": false,
+      "isBroken": true,
+      "reason": "Target route \"/service/commissioning-after-sales-support/\" not found in project routes"
+    },
+    {
+      "href": "/service/repair-upgrades-helical-flow-meters/",
+      "sourceFile": "lib/blogArticles.ts",
+      "isHash": false,
+      "isBroken": true,
+      "reason": "Target route \"/service/repair-upgrades-helical-flow-meters/\" not found in project routes"
+    },
+    {
+      "href": "/service/validation-uncertainty-calculations/",
+      "sourceFile": "lib/blogArticles.ts",
+      "isHash": false,
+      "isBroken": true,
+      "reason": "Target route \"/service/validation-uncertainty-calculations/\" not found in project routes"
+    },
+    {
+      "href": "/service/audits-specialized-consultancy/",
+      "sourceFile": "lib/blogArticles.ts",
+      "isHash": false,
+      "isBroken": true,
+      "reason": "Target route \"/service/audits-specialized-consultancy/\" not found in project routes"
+    },
+    {
+      "href": "/service/audits-specialized-consultancy/",
+      "sourceFile": "lib/blogArticles.ts",
+      "isHash": false,
+      "isBroken": true,
+      "reason": "Target route \"/service/audits-specialized-consultancy/\" not found in project routes"
+    },
+    {
+      "href": "/service/validation-uncertainty-calculations/",
+      "sourceFile": "lib/blogArticles.ts",
+      "isHash": false,
+      "isBroken": true,
+      "reason": "Target route \"/service/validation-uncertainty-calculations/\" not found in project routes"
+    },
+    {
+      "href": "/service/validation-uncertainty-calculations/",
+      "sourceFile": "lib/blogArticles.ts",
+      "isHash": false,
+      "isBroken": true,
+      "reason": "Target route \"/service/validation-uncertainty-calculations/\" not found in project routes"
+    },
+    {
+      "href": "/service/audits-specialized-consultancy/",
+      "sourceFile": "lib/blogArticles.ts",
+      "isHash": false,
+      "isBroken": true,
+      "reason": "Target route \"/service/audits-specialized-consultancy/\" not found in project routes"
+    },
+    {
+      "href": "/service/validation-uncertainty-calculations/",
+      "sourceFile": "lib/blogArticles.ts",
+      "isHash": false,
+      "isBroken": true,
+      "reason": "Target route \"/service/validation-uncertainty-calculations/\" not found in project routes"
+    },
+    {
+      "href": "/service/audits-specialized-consultancy/",
+      "sourceFile": "lib/blogArticles.ts",
+      "isHash": false,
+      "isBroken": true,
+      "reason": "Target route \"/service/audits-specialized-consultancy/\" not found in project routes"
+    },
+    {
+      "href": "/service/plc-scada-automation/",
+      "sourceFile": "lib/blogArticles.ts",
+      "isHash": false,
+      "isBroken": true,
+      "reason": "Target route \"/service/plc-scada-automation/\" not found in project routes"
+    },
+    {
+      "href": "/service/plc-scada-automation/",
+      "sourceFile": "lib/blogArticles.ts",
+      "isHash": false,
+      "isBroken": true,
+      "reason": "Target route \"/service/plc-scada-automation/\" not found in project routes"
+    },
+    {
+      "href": "/service/audits-specialized-consultancy/",
+      "sourceFile": "lib/blogArticles.ts",
+      "isHash": false,
+      "isBroken": true,
+      "reason": "Target route \"/service/audits-specialized-consultancy/\" not found in project routes"
+    },
+    {
+      "href": "/service/audits-specialized-consultancy/",
+      "sourceFile": "lib/blogArticles.ts",
+      "isHash": false,
+      "isBroken": true,
+      "reason": "Target route \"/service/audits-specialized-consultancy/\" not found in project routes"
+    },
+    {
+      "href": "/industries/power-plants/",
+      "sourceFile": "lib/blogArticles.ts",
+      "isHash": false,
+      "isBroken": true,
+      "reason": "Target route \"/industries/power-plants/\" not found in project routes"
+    },
+    {
+      "href": "/industries/power-plants/",
+      "sourceFile": "lib/blogArticles.ts",
+      "isHash": false,
+      "isBroken": true,
+      "reason": "Target route \"/industries/power-plants/\" not found in project routes"
+    },
+    {
+      "href": "/service/plc-scada-automation/",
+      "sourceFile": "lib/blogArticles.ts",
+      "isHash": false,
+      "isBroken": true,
+      "reason": "Target route \"/service/plc-scada-automation/\" not found in project routes"
+    },
+    {
+      "href": "/industries/power-plants/",
+      "sourceFile": "lib/blogArticles.ts",
+      "isHash": false,
+      "isBroken": true,
+      "reason": "Target route \"/industries/power-plants/\" not found in project routes"
+    },
+    {
+      "href": "/industries/power-plants/",
+      "sourceFile": "lib/blogArticles.ts",
+      "isHash": false,
+      "isBroken": true,
+      "reason": "Target route \"/industries/power-plants/\" not found in project routes"
+    },
+    {
+      "href": "/service/vfd-electrical-instrumentation/",
+      "sourceFile": "lib/blogArticles.ts",
+      "isHash": false,
+      "isBroken": true,
+      "reason": "Target route \"/service/vfd-electrical-instrumentation/\" not found in project routes"
+    },
+    {
+      "href": "/industries/power-plants/",
+      "sourceFile": "lib/blogArticles.ts",
+      "isHash": false,
+      "isBroken": true,
+      "reason": "Target route \"/industries/power-plants/\" not found in project routes"
+    },
+    {
+      "href": "/industries/power-plants/",
+      "sourceFile": "lib/blogArticles.ts",
+      "isHash": false,
+      "isBroken": true,
+      "reason": "Target route \"/industries/power-plants/\" not found in project routes"
+    },
+    {
+      "href": "/service/vfd-electrical-instrumentation/",
+      "sourceFile": "lib/blogArticles.ts",
+      "isHash": false,
+      "isBroken": true,
+      "reason": "Target route \"/service/vfd-electrical-instrumentation/\" not found in project routes"
+    },
+    {
+      "href": "/industries/power-plants/",
+      "sourceFile": "lib/blogArticles.ts",
+      "isHash": false,
+      "isBroken": true,
+      "reason": "Target route \"/industries/power-plants/\" not found in project routes"
+    },
+    {
+      "href": "/service/control-room-design/",
+      "sourceFile": "lib/blogArticles.ts",
+      "isHash": false,
+      "isBroken": true,
+      "reason": "Target route \"/service/control-room-design/\" not found in project routes"
+    },
+    {
+      "href": "/service/plc-scada-automation/",
+      "sourceFile": "lib/blogArticles.ts",
+      "isHash": false,
+      "isBroken": true,
+      "reason": "Target route \"/service/plc-scada-automation/\" not found in project routes"
+    },
+    {
+      "href": "/industries/power-plants/",
+      "sourceFile": "lib/blogArticles.ts",
+      "isHash": false,
+      "isBroken": true,
+      "reason": "Target route \"/industries/power-plants/\" not found in project routes"
+    },
+    {
+      "href": "/service/commissioning-after-sales-support/",
+      "sourceFile": "lib/blogArticles.ts",
+      "isHash": false,
+      "isBroken": true,
+      "reason": "Target route \"/service/commissioning-after-sales-support/\" not found in project routes"
+    },
+    {
+      "href": "/industries/power-plants/",
+      "sourceFile": "lib/blogArticles.ts",
+      "isHash": false,
+      "isBroken": true,
+      "reason": "Target route \"/industries/power-plants/\" not found in project routes"
+    },
+    {
+      "href": "/service/plc-scada-automation/",
+      "sourceFile": "lib/blogArticles.ts",
+      "isHash": false,
+      "isBroken": true,
+      "reason": "Target route \"/service/plc-scada-automation/\" not found in project routes"
+    },
+    {
+      "href": "/service/plc-scada-automation/",
+      "sourceFile": "lib/blogArticles.ts",
+      "isHash": false,
+      "isBroken": true,
+      "reason": "Target route \"/service/plc-scada-automation/\" not found in project routes"
+    },
+    {
+      "href": "/service/plc-scada-automation/",
+      "sourceFile": "lib/blogArticles.ts",
+      "isHash": false,
+      "isBroken": true,
+      "reason": "Target route \"/service/plc-scada-automation/\" not found in project routes"
+    },
+    {
+      "href": "/service/plc-scada-automation/",
+      "sourceFile": "lib/blogArticles.ts",
+      "isHash": false,
+      "isBroken": true,
+      "reason": "Target route \"/service/plc-scada-automation/\" not found in project routes"
+    },
+    {
+      "href": "/service/plc-scada-automation/",
+      "sourceFile": "lib/blogArticles.ts",
+      "isHash": false,
+      "isBroken": true,
+      "reason": "Target route \"/service/plc-scada-automation/\" not found in project routes"
+    },
+    {
+      "href": "/service/plc-scada-automation/",
+      "sourceFile": "lib/blogArticles.ts",
+      "isHash": false,
+      "isBroken": true,
+      "reason": "Target route \"/service/plc-scada-automation/\" not found in project routes"
+    },
+    {
+      "href": "/service/validation-uncertainty-calculations/",
+      "sourceFile": "lib/blogArticles.ts",
+      "isHash": false,
+      "isBroken": true,
+      "reason": "Target route \"/service/validation-uncertainty-calculations/\" not found in project routes"
+    },
+    {
+      "href": "/service/commissioning-after-sales-support/",
+      "sourceFile": "lib/blogArticles.ts",
+      "isHash": false,
+      "isBroken": true,
+      "reason": "Target route \"/service/commissioning-after-sales-support/\" not found in project routes"
+    },
+    {
+      "href": "/service/liquid-penetrant-inspection-pt/",
+      "sourceFile": "lib/blogArticles.ts",
+      "isHash": false,
+      "isBroken": true,
+      "reason": "Target route \"/service/liquid-penetrant-inspection-pt/\" not found in project routes"
+    },
+    {
+      "href": "/service/plc-scada-programming/",
+      "sourceFile": "lib/blogArticles.ts",
+      "isHash": false,
+      "isBroken": true,
+      "reason": "Target route \"/service/plc-scada-programming/\" not found in project routes"
+    },
+    {
+      "href": "/products/flow-meters/custody-transfer-flow-meters/",
+      "sourceFile": "lib/blogArticles.ts",
+      "isHash": false,
+      "isBroken": true,
+      "reason": "Target route \"/products/flow-meters/custody-transfer-flow-meters/\" not found in project routes"
+    },
+    {
+      "href": "/service/inspection-testing/non-destructive-testing-ndt/",
+      "sourceFile": "lib/blogArticles.ts",
+      "isHash": false,
+      "isBroken": true,
+      "reason": "Target route \"/service/inspection-testing/non-destructive-testing-ndt/\" not found in project routes"
+    }
+  ],
+  "hashLinks": [
+    {
+      "href": "#main-content",
+      "sourceFile": "app/(legacy)/layout.tsx",
+      "isHash": true,
+      "isBroken": false,
+      "reason": "In-page anchor"
+    },
+    {
+      "href": "#main-content",
+      "sourceFile": "app/(v3)/layout.tsx",
+      "isHash": true,
+      "isBroken": false,
+      "reason": "In-page anchor"
+    },
+    {
+      "href": "#quality",
+      "sourceFile": "components/home-review/Sections.tsx",
+      "isHash": true,
+      "isBroken": false,
+      "reason": "In-page anchor"
+    },
+    {
+      "href": "#top",
+      "sourceFile": "components/home-review/Sections.tsx",
+      "isHash": true,
+      "isBroken": false,
+      "reason": "In-page anchor"
+    },
+    {
+      "href": "#sequence",
+      "sourceFile": "components/layout/Footer.tsx",
+      "isHash": true,
+      "isBroken": false,
+      "reason": "In-page anchor"
+    },
+    {
+      "href": "#portfolio-grid",
+      "sourceFile": "components/portfolio_group/PortfolioGroupHero.tsx",
+      "isHash": true,
+      "isBroken": false,
+      "reason": "In-page anchor"
+    },
+    {
+      "href": "#contact",
+      "sourceFile": "components/service/air-permeability-test/AirPermeabilityContent.tsx",
+      "isHash": true,
+      "isBroken": false,
+      "reason": "In-page anchor"
+    },
+    {
+      "href": "#contact",
+      "sourceFile": "components/service/air-permeability-test/AirPermeabilityHero.tsx",
+      "isHash": true,
+      "isBroken": false,
+      "reason": "In-page anchor"
+    },
+    {
+      "href": "#contact",
+      "sourceFile": "components/service/audits-and-specialized-consultancy/AuditsContent.tsx",
+      "isHash": true,
+      "isBroken": false,
+      "reason": "In-page anchor"
+    },
+    {
+      "href": "#contact",
+      "sourceFile": "components/service/audits-and-specialized-consultancy/AuditsContent.tsx",
+      "isHash": true,
+      "isBroken": false,
+      "reason": "In-page anchor"
+    },
+    {
+      "href": "#contact",
+      "sourceFile": "components/service/audits-and-specialized-consultancy/AuditsHero.tsx",
+      "isHash": true,
+      "isBroken": false,
+      "reason": "In-page anchor"
+    },
+    {
+      "href": "#contact",
+      "sourceFile": "components/service/bend-test/BendContent.tsx",
+      "isHash": true,
+      "isBroken": false,
+      "reason": "In-page anchor"
+    },
+    {
+      "href": "#contact",
+      "sourceFile": "components/service/bend-test/BendContent.tsx",
+      "isHash": true,
+      "isBroken": false,
+      "reason": "In-page anchor"
+    },
+    {
+      "href": "#contact",
+      "sourceFile": "components/service/bend-test/BendHero.tsx",
+      "isHash": true,
+      "isBroken": false,
+      "reason": "In-page anchor"
+    },
+    {
+      "href": "#contact",
+      "sourceFile": "components/service/commissioning-and-after-sales-support/CommissioningContent.tsx",
+      "isHash": true,
+      "isBroken": false,
+      "reason": "In-page anchor"
+    },
+    {
+      "href": "#contact",
+      "sourceFile": "components/service/commissioning-and-after-sales-support/CommissioningContent.tsx",
+      "isHash": true,
+      "isBroken": false,
+      "reason": "In-page anchor"
+    },
+    {
+      "href": "#contact",
+      "sourceFile": "components/service/commissioning-and-after-sales-support/CommissioningHero.tsx",
+      "isHash": true,
+      "isBroken": false,
+      "reason": "In-page anchor"
+    },
+    {
+      "href": "#contact",
+      "sourceFile": "components/service/commissioning-and-start-up-support/CommissioningContent.tsx",
+      "isHash": true,
+      "isBroken": false,
+      "reason": "In-page anchor"
+    },
+    {
+      "href": "#contact",
+      "sourceFile": "components/service/commissioning-and-start-up-support/CommissioningHero.tsx",
+      "isHash": true,
+      "isBroken": false,
+      "reason": "In-page anchor"
+    },
+    {
+      "href": "#contact",
+      "sourceFile": "components/service/constructions/ConstructionHero.tsx",
+      "isHash": true,
+      "isBroken": false,
+      "reason": "In-page anchor"
+    },
+    {
+      "href": "#contact",
+      "sourceFile": "components/service/constructions/ConstructionSubServices.tsx",
+      "isHash": true,
+      "isBroken": false,
+      "reason": "In-page anchor"
+    },
+    {
+      "href": "#contact",
+      "sourceFile": "components/service/corrosion-control-services-2/CorrosionControlContent.tsx",
+      "isHash": true,
+      "isBroken": false,
+      "reason": "In-page anchor"
+    },
+    {
+      "href": "#contact",
+      "sourceFile": "components/service/corrosion-control-services-2/CorrosionControlHero.tsx",
+      "isHash": true,
+      "isBroken": false,
+      "reason": "In-page anchor"
+    },
+    {
+      "href": "#contact",
+      "sourceFile": "components/service/eddy-current-testing/EddyCurrentContent.tsx",
+      "isHash": true,
+      "isBroken": false,
+      "reason": "In-page anchor"
+    },
+    {
+      "href": "#contact",
+      "sourceFile": "components/service/eddy-current-testing/EddyCurrentHero.tsx",
+      "isHash": true,
+      "isBroken": false,
+      "reason": "In-page anchor"
+    },
+    {
+      "href": "#contact",
+      "sourceFile": "components/service/exterior-windows-doors-curtain-wall-testing/ExteriorTestingContent.tsx",
+      "isHash": true,
+      "isBroken": false,
+      "reason": "In-page anchor"
+    },
+    {
+      "href": "#contact",
+      "sourceFile": "components/service/flow-computer-configuration/FlowComputerContent.tsx",
+      "isHash": true,
+      "isBroken": false,
+      "reason": "In-page anchor"
+    },
+    {
+      "href": "#contact",
+      "sourceFile": "components/service/flow-computer-configuration/FlowComputerContent.tsx",
+      "isHash": true,
+      "isBroken": false,
+      "reason": "In-page anchor"
+    },
+    {
+      "href": "#contact",
+      "sourceFile": "components/service/flow-computer-configuration/FlowComputerHero.tsx",
+      "isHash": true,
+      "isBroken": false,
+      "reason": "In-page anchor"
+    },
+    {
+      "href": "#contact",
+      "sourceFile": "components/service/flow-measurement/FlowHero.tsx",
+      "isHash": true,
+      "isBroken": false,
+      "reason": "In-page anchor"
+    },
+    {
+      "href": "#sub-services",
+      "sourceFile": "components/service/flow-measurement/FlowHero.tsx",
+      "isHash": true,
+      "isBroken": false,
+      "reason": "In-page anchor"
+    },
+    {
+      "href": "#contact",
+      "sourceFile": "components/service/flow-meter-calibration/CalibrationContent.tsx",
+      "isHash": true,
+      "isBroken": false,
+      "reason": "In-page anchor"
+    },
+    {
+      "href": "#contact",
+      "sourceFile": "components/service/flow-meter-calibration/CalibrationContent.tsx",
+      "isHash": true,
+      "isBroken": false,
+      "reason": "In-page anchor"
+    },
+    {
+      "href": "#contact",
+      "sourceFile": "components/service/flow-meter-calibration/CalibrationHero.tsx",
+      "isHash": true,
+      "isBroken": false,
+      "reason": "In-page anchor"
+    },
+    {
+      "href": "#contact",
+      "sourceFile": "components/service/fracture-test/FractureContent.tsx",
+      "isHash": true,
+      "isBroken": false,
+      "reason": "In-page anchor"
+    },
+    {
+      "href": "#contact",
+      "sourceFile": "components/service/fracture-test/FractureContent.tsx",
+      "isHash": true,
+      "isBroken": false,
+      "reason": "In-page anchor"
+    },
+    {
+      "href": "#contact",
+      "sourceFile": "components/service/fracture-test/FractureHero.tsx",
+      "isHash": true,
+      "isBroken": false,
+      "reason": "In-page anchor"
+    },
+    {
+      "href": "#contact",
+      "sourceFile": "components/service/gamma-ray-pipe-crawler-inspection-systems/GammaRayContent.tsx",
+      "isHash": true,
+      "isBroken": false,
+      "reason": "In-page anchor"
+    },
+    {
+      "href": "#contact",
+      "sourceFile": "components/service/gamma-ray-pipe-crawler-inspection-systems/GammaRayHero.tsx",
+      "isHash": true,
+      "isBroken": false,
+      "reason": "In-page anchor"
+    },
+    {
+      "href": "#contact",
+      "sourceFile": "components/service/genuine-spare-parts/SparePartsContent.tsx",
+      "isHash": true,
+      "isBroken": false,
+      "reason": "In-page anchor"
+    },
+    {
+      "href": "#contact",
+      "sourceFile": "components/service/genuine-spare-parts/SparePartsHero.tsx",
+      "isHash": true,
+      "isBroken": false,
+      "reason": "In-page anchor"
+    },
+    {
+      "href": "#contact",
+      "sourceFile": "components/service/hardness-test/HardnessContent.tsx",
+      "isHash": true,
+      "isBroken": false,
+      "reason": "In-page anchor"
+    },
+    {
+      "href": "#contact",
+      "sourceFile": "components/service/hardness-test/HardnessContent.tsx",
+      "isHash": true,
+      "isBroken": false,
+      "reason": "In-page anchor"
+    },
+    {
+      "href": "#contact",
+      "sourceFile": "components/service/hardness-test/HardnessHero.tsx",
+      "isHash": true,
+      "isBroken": false,
+      "reason": "In-page anchor"
+    },
+    {
+      "href": "#contact",
+      "sourceFile": "components/service/heat-treatment-services/HeatTreatmentContent.tsx",
+      "isHash": true,
+      "isBroken": false,
+      "reason": "In-page anchor"
+    },
+    {
+      "href": "#contact",
+      "sourceFile": "components/service/heat-treatment-services/HeatTreatmentHero.tsx",
+      "isHash": true,
+      "isBroken": false,
+      "reason": "In-page anchor"
+    },
+    {
+      "href": "#contact",
+      "sourceFile": "components/service/hose-test/HoseTestContent.tsx",
+      "isHash": true,
+      "isBroken": false,
+      "reason": "In-page anchor"
+    },
+    {
+      "href": "#contact",
+      "sourceFile": "components/service/hose-test/HoseTestHero.tsx",
+      "isHash": true,
+      "isBroken": false,
+      "reason": "In-page anchor"
+    },
+    {
+      "href": "#contact",
+      "sourceFile": "components/service/impact-test/ImpactContent.tsx",
+      "isHash": true,
+      "isBroken": false,
+      "reason": "In-page anchor"
+    },
+    {
+      "href": "#contact",
+      "sourceFile": "components/service/impact-test/ImpactContent.tsx",
+      "isHash": true,
+      "isBroken": false,
+      "reason": "In-page anchor"
+    },
+    {
+      "href": "#contact",
+      "sourceFile": "components/service/impact-test/ImpactHero.tsx",
+      "isHash": true,
+      "isBroken": false,
+      "reason": "In-page anchor"
+    },
+    {
+      "href": "#contact",
+      "sourceFile": "components/service/industrial-automation/AutomationHero.tsx",
+      "isHash": true,
+      "isBroken": false,
+      "reason": "In-page anchor"
+    },
+    {
+      "href": "#contact",
+      "sourceFile": "components/service/inspection-testing/InspectionSubServices.tsx",
+      "isHash": true,
+      "isBroken": false,
+      "reason": "In-page anchor"
+    },
+    {
+      "href": "#contact",
+      "sourceFile": "components/service/lifting-equipment-inspection/LiftingInspectionContent.tsx",
+      "isHash": true,
+      "isBroken": false,
+      "reason": "In-page anchor"
+    },
+    {
+      "href": "#contact",
+      "sourceFile": "components/service/lifting-equipment-inspection/LiftingInspectionHero.tsx",
+      "isHash": true,
+      "isBroken": false,
+      "reason": "In-page anchor"
+    },
+    {
+      "href": "#contact",
+      "sourceFile": "components/service/liquid-penetrant-dye-penetrant-examination-pt/PenetrantContent.tsx",
+      "isHash": true,
+      "isBroken": false,
+      "reason": "In-page anchor"
+    },
+    {
+      "href": "#contact",
+      "sourceFile": "components/service/liquid-penetrant-dye-penetrant-examination-pt/PenetrantContent.tsx",
+      "isHash": true,
+      "isBroken": false,
+      "reason": "In-page anchor"
+    },
+    {
+      "href": "#contact",
+      "sourceFile": "components/service/liquid-penetrant-dye-penetrant-examination-pt/PenetrantHero.tsx",
+      "isHash": true,
+      "isBroken": false,
+      "reason": "In-page anchor"
+    },
+    {
+      "href": "#contact",
+      "sourceFile": "components/service/macro-and-micro-test/MacroMicroContent.tsx",
+      "isHash": true,
+      "isBroken": false,
+      "reason": "In-page anchor"
+    },
+    {
+      "href": "#contact",
+      "sourceFile": "components/service/macro-and-micro-test/MacroMicroContent.tsx",
+      "isHash": true,
+      "isBroken": false,
+      "reason": "In-page anchor"
+    },
+    {
+      "href": "#contact",
+      "sourceFile": "components/service/macro-and-micro-test/MacroMicroHero.tsx",
+      "isHash": true,
+      "isBroken": false,
+      "reason": "In-page anchor"
+    },
+    {
+      "href": "#contact",
+      "sourceFile": "components/service/magnetic-flux-leakage/MFLContent.tsx",
+      "isHash": true,
+      "isBroken": false,
+      "reason": "In-page anchor"
+    },
+    {
+      "href": "#contact",
+      "sourceFile": "components/service/magnetic-flux-leakage/MFLHero.tsx",
+      "isHash": true,
+      "isBroken": false,
+      "reason": "In-page anchor"
+    },
+    {
+      "href": "#contact",
+      "sourceFile": "components/service/magnetic-particle-inspection-mt/MagneticParticleContent.tsx",
+      "isHash": true,
+      "isBroken": false,
+      "reason": "In-page anchor"
+    },
+    {
+      "href": "#contact",
+      "sourceFile": "components/service/magnetic-particle-inspection-mt/MagneticParticleContent.tsx",
+      "isHash": true,
+      "isBroken": false,
+      "reason": "In-page anchor"
+    },
+    {
+      "href": "#contact",
+      "sourceFile": "components/service/magnetic-particle-inspection-mt/MagneticParticleHero.tsx",
+      "isHash": true,
+      "isBroken": false,
+      "reason": "In-page anchor"
+    },
+    {
+      "href": "#contact",
+      "sourceFile": "components/service/mechanical-testing/MechanicalHero.tsx",
+      "isHash": true,
+      "isBroken": false,
+      "reason": "In-page anchor"
+    },
+    {
+      "href": "#contact",
+      "sourceFile": "components/service/mechanical-testing/MechanicalSubServices.tsx",
+      "isHash": true,
+      "isBroken": false,
+      "reason": "In-page anchor"
+    },
+    {
+      "href": "#contact",
+      "sourceFile": "components/service/metallurgical-services/MetallurgicalContent.tsx",
+      "isHash": true,
+      "isBroken": false,
+      "reason": "In-page anchor"
+    },
+    {
+      "href": "#contact",
+      "sourceFile": "components/service/metallurgical-services/MetallurgicalHero.tsx",
+      "isHash": true,
+      "isBroken": false,
+      "reason": "In-page anchor"
+    },
+    {
+      "href": "#contact",
+      "sourceFile": "components/service/metering-control-system-integration/McsiHero.tsx",
+      "isHash": true,
+      "isBroken": false,
+      "reason": "In-page anchor"
+    },
+    {
+      "href": "#contact",
+      "sourceFile": "components/service/metering-control-system-integration/McsiWhyUs.tsx",
+      "isHash": true,
+      "isBroken": false,
+      "reason": "In-page anchor"
+    },
+    {
+      "href": "#contact",
+      "sourceFile": "components/service/metering-expert-services/ExpertServicesContent.tsx",
+      "isHash": true,
+      "isBroken": false,
+      "reason": "In-page anchor"
+    },
+    {
+      "href": "#contact",
+      "sourceFile": "components/service/metering-expert-services/ExpertServicesContent.tsx",
+      "isHash": true,
+      "isBroken": false,
+      "reason": "In-page anchor"
+    },
+    {
+      "href": "#contact",
+      "sourceFile": "components/service/metering-expert-services/ExpertServicesHero.tsx",
+      "isHash": true,
+      "isBroken": false,
+      "reason": "In-page anchor"
+    },
+    {
+      "href": "#contact",
+      "sourceFile": "components/service/non-destructive-testing-ndt/NDTHero.tsx",
+      "isHash": true,
+      "isBroken": false,
+      "reason": "In-page anchor"
+    },
+    {
+      "href": "#contact",
+      "sourceFile": "components/service/non-destructive-testing-ndt/NDTSubServices.tsx",
+      "isHash": true,
+      "isBroken": false,
+      "reason": "In-page anchor"
+    },
+    {
+      "href": "#contact",
+      "sourceFile": "components/service/phased-array-ultrasonic-testing/PhasedArrayContent.tsx",
+      "isHash": true,
+      "isBroken": false,
+      "reason": "In-page anchor"
+    },
+    {
+      "href": "#contact",
+      "sourceFile": "components/service/phased-array-ultrasonic-testing/PhasedArrayHero.tsx",
+      "isHash": true,
+      "isBroken": false,
+      "reason": "In-page anchor"
+    },
+    {
+      "href": "#contact",
+      "sourceFile": "components/service/plant-automation/PlantAutomationContent.tsx",
+      "isHash": true,
+      "isBroken": false,
+      "reason": "In-page anchor"
+    },
+    {
+      "href": "#contact",
+      "sourceFile": "components/service/plant-automation/PlantAutomationHero.tsx",
+      "isHash": true,
+      "isBroken": false,
+      "reason": "In-page anchor"
+    },
+    {
+      "href": "#contact",
+      "sourceFile": "components/service/pullout-test/PulloutContent.tsx",
+      "isHash": true,
+      "isBroken": false,
+      "reason": "In-page anchor"
+    },
+    {
+      "href": "#contact",
+      "sourceFile": "components/service/pullout-test/PulloutHero.tsx",
+      "isHash": true,
+      "isBroken": false,
+      "reason": "In-page anchor"
+    },
+    {
+      "href": "#contact",
+      "sourceFile": "components/service/radiographic-testing-rt/RadiographicContent.tsx",
+      "isHash": true,
+      "isBroken": false,
+      "reason": "In-page anchor"
+    },
+    {
+      "href": "#contact",
+      "sourceFile": "components/service/radiographic-testing-rt/RadiographicContent.tsx",
+      "isHash": true,
+      "isBroken": false,
+      "reason": "In-page anchor"
+    },
+    {
+      "href": "#contact",
+      "sourceFile": "components/service/radiographic-testing-rt/RadiographicHero.tsx",
+      "isHash": true,
+      "isBroken": false,
+      "reason": "In-page anchor"
+    },
+    {
+      "href": "#contact",
+      "sourceFile": "components/service/repair-upgrades-for-helical-flow-meters/HelicalContent.tsx",
+      "isHash": true,
+      "isBroken": false,
+      "reason": "In-page anchor"
+    },
+    {
+      "href": "#contact",
+      "sourceFile": "components/service/repair-upgrades-for-helical-flow-meters/HelicalContent.tsx",
+      "isHash": true,
+      "isBroken": false,
+      "reason": "In-page anchor"
+    },
+    {
+      "href": "#contact",
+      "sourceFile": "components/service/repair-upgrades-for-helical-flow-meters/HelicalHero.tsx",
+      "isHash": true,
+      "isBroken": false,
+      "reason": "In-page anchor"
+    },
+    {
+      "href": "#all-services",
+      "sourceFile": "components/service/ServicesHero.tsx",
+      "isHash": true,
+      "isBroken": false,
+      "reason": "In-page anchor"
+    },
+    {
+      "href": "#contact",
+      "sourceFile": "components/service/specialized-inspection-service/SpecializedHero.tsx",
+      "isHash": true,
+      "isBroken": false,
+      "reason": "In-page anchor"
+    },
+    {
+      "href": "#contact",
+      "sourceFile": "components/service/specialized-inspection-service/SpecializedSubServices.tsx",
+      "isHash": true,
+      "isBroken": false,
+      "reason": "In-page anchor"
+    },
+    {
+      "href": "#contact",
+      "sourceFile": "components/service/system-software-upgrade/ControlSystemContent.tsx",
+      "isHash": true,
+      "isBroken": false,
+      "reason": "In-page anchor"
+    },
+    {
+      "href": "#contact",
+      "sourceFile": "components/service/system-software-upgrade/ControlSystemHero.tsx",
+      "isHash": true,
+      "isBroken": false,
+      "reason": "In-page anchor"
+    },
+    {
+      "href": "#contact",
+      "sourceFile": "components/service/tensile-test/TensileContent.tsx",
+      "isHash": true,
+      "isBroken": false,
+      "reason": "In-page anchor"
+    },
+    {
+      "href": "#contact",
+      "sourceFile": "components/service/tensile-test/TensileContent.tsx",
+      "isHash": true,
+      "isBroken": false,
+      "reason": "In-page anchor"
+    },
+    {
+      "href": "#contact",
+      "sourceFile": "components/service/tensile-test/TensileHero.tsx",
+      "isHash": true,
+      "isBroken": false,
+      "reason": "In-page anchor"
+    },
+    {
+      "href": "#contact",
+      "sourceFile": "components/service/time-of-flight-diffraction/TOFDContent.tsx",
+      "isHash": true,
+      "isBroken": false,
+      "reason": "In-page anchor"
+    },
+    {
+      "href": "#contact",
+      "sourceFile": "components/service/time-of-flight-diffraction/TOFDHero.tsx",
+      "isHash": true,
+      "isBroken": false,
+      "reason": "In-page anchor"
+    },
+    {
+      "href": "#contact",
+      "sourceFile": "components/service/torque-tightening-bolt-tensioning/TorqueContent.tsx",
+      "isHash": true,
+      "isBroken": false,
+      "reason": "In-page anchor"
+    },
+    {
+      "href": "#contact",
+      "sourceFile": "components/service/torque-tightening-bolt-tensioning/TorqueHero.tsx",
+      "isHash": true,
+      "isBroken": false,
+      "reason": "In-page anchor"
+    },
+    {
+      "href": "#contact",
+      "sourceFile": "components/service/ultrasonic-testing-ut/UltrasonicContent.tsx",
+      "isHash": true,
+      "isBroken": false,
+      "reason": "In-page anchor"
+    },
+    {
+      "href": "#contact",
+      "sourceFile": "components/service/ultrasonic-testing-ut/UltrasonicContent.tsx",
+      "isHash": true,
+      "isBroken": false,
+      "reason": "In-page anchor"
+    },
+    {
+      "href": "#contact",
+      "sourceFile": "components/service/ultrasonic-testing-ut/UltrasonicHero.tsx",
+      "isHash": true,
+      "isBroken": false,
+      "reason": "In-page anchor"
+    },
+    {
+      "href": "#contact",
+      "sourceFile": "components/service/upgrade-of-metering-control-system/UpgradeHero.tsx",
+      "isHash": true,
+      "isBroken": false,
+      "reason": "In-page anchor"
+    },
+    {
+      "href": "#contact",
+      "sourceFile": "components/service/upgrade-of-metering-control-system/UpgradeWhyUs.tsx",
+      "isHash": true,
+      "isBroken": false,
+      "reason": "In-page anchor"
+    },
+    {
+      "href": "#contact",
+      "sourceFile": "components/service/validation-and-uncertainty-calculations/ValidationContent.tsx",
+      "isHash": true,
+      "isBroken": false,
+      "reason": "In-page anchor"
+    },
+    {
+      "href": "#contact",
+      "sourceFile": "components/service/validation-and-uncertainty-calculations/ValidationContent.tsx",
+      "isHash": true,
+      "isBroken": false,
+      "reason": "In-page anchor"
+    },
+    {
+      "href": "#contact",
+      "sourceFile": "components/service/validation-and-uncertainty-calculations/ValidationHero.tsx",
+      "isHash": true,
+      "isBroken": false,
+      "reason": "In-page anchor"
+    },
+    {
+      "href": "#contact",
+      "sourceFile": "components/service/videoscope/VideoscopeContent.tsx",
+      "isHash": true,
+      "isBroken": false,
+      "reason": "In-page anchor"
+    },
+    {
+      "href": "#contact",
+      "sourceFile": "components/service/videoscope/VideoscopeHero.tsx",
+      "isHash": true,
+      "isBroken": false,
+      "reason": "In-page anchor"
+    },
+    {
+      "href": "#contact",
+      "sourceFile": "components/service/visual-inspection-vi/VisualInspectionContent.tsx",
+      "isHash": true,
+      "isBroken": false,
+      "reason": "In-page anchor"
+    },
+    {
+      "href": "#contact",
+      "sourceFile": "components/service/visual-inspection-vi/VisualInspectionContent.tsx",
+      "isHash": true,
+      "isBroken": false,
+      "reason": "In-page anchor"
+    },
+    {
+      "href": "#contact",
+      "sourceFile": "components/service/visual-inspection-vi/VisualInspectionHero.tsx",
+      "isHash": true,
+      "isBroken": false,
+      "reason": "In-page anchor"
+    },
+    {
+      "href": "#contact",
+      "sourceFile": "components/service/water-penetration-test/WaterPenetrationContent.tsx",
+      "isHash": true,
+      "isBroken": false,
+      "reason": "In-page anchor"
+    },
+    {
+      "href": "#contact",
+      "sourceFile": "components/service/water-penetration-test/WaterPenetrationHero.tsx",
+      "isHash": true,
+      "isBroken": false,
+      "reason": "In-page anchor"
+    },
+    {
+      "href": "#services-grid",
+      "sourceFile": "components/services_group/ServiceGroupHero.tsx",
+      "isHash": true,
+      "isBroken": false,
+      "reason": "In-page anchor"
+    },
+    {
+      "href": "#",
+      "sourceFile": "components/ThemeButton.tsx",
+      "isHash": true,
+      "isBroken": false,
+      "reason": "In-page anchor"
+    },
+    {
+      "href": "#",
+      "sourceFile": "components/ThemeButton.tsx",
+      "isHash": true,
+      "isBroken": false,
+      "reason": "In-page anchor"
+    },
+    {
+      "href": "#sequence",
+      "sourceFile": "components/v3/V3Footer.tsx",
+      "isHash": true,
+      "isBroken": false,
+      "reason": "In-page anchor"
+    }
+  ]
+}

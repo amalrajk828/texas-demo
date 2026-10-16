@@ -14,8 +14,8 @@ import {
   X,
 } from "lucide-react";
 import BlogPagination from "./BlogPagination";
-
-import MoltenHero from "@/components/common/MoltenHero";
+import ImageCard from "@/components/v3/ImageCard";
+import CardGrid from "@/components/v3/CardGrid";
 
 /* ─── Types ─────────────────────────────────────────────────────────── */
 export interface BlogPost {
@@ -97,45 +97,9 @@ export default function BlogPageContent({ allPosts }: Props) {
   }, [currentPage]);
 
   return (
-    <div className="min-h-screen bg-[#f8f9fb] font-sans antialiased text-[#0B0D26]">
+    <div className="bg-[#f8f9fb] font-sans antialiased text-[#0B0D26]">
       {/* ══════════════════════════════════════════════════════════════
-          1. HERO SECTION — MoltenHero (shared WebGL canvas)
-      ══════════════════════════════════════════════════════════════ */}
-      <MoltenHero
-        id="hero-blog"
-        breadcrumbs={[
-          { label: "Home", href: "/" },
-          { label: "Blog" },
-        ]}
-        eyebrow="Technical Resource Hub"
-        title="Engineering Insights Hub"
-        subtitle="Technical guides, compliance references, and strategic engineering insights for plant managers and automation engineers across the GCC."
-        accentColor="#e7212b"
-      >
-        {/* 4 stat boxes — passed as children so they render inside the content area */}
-        <div className="grid grid-cols-2 sm:grid-cols-4 gap-3 sm:gap-4 mt-10">
-          {HERO_STATS.map((s) => (
-            <div
-              key={s.label}
-              className="rounded-xl px-5 py-4 border flex flex-col gap-1 backdrop-blur-md"
-              style={{
-                background: "rgba(14, 14, 20, 0.75)",
-                borderColor: "rgba(255, 255, 255, 0.12)",
-              }}
-            >
-              <span className="text-[#e7212b] text-2xl sm:text-3xl font-black leading-none">
-                {s.value}
-              </span>
-              <span className="text-white/60 text-[11px] font-medium tracking-wide uppercase">
-                {s.label}
-              </span>
-            </div>
-          ))}
-        </div>
-      </MoltenHero>
-
-      {/* ══════════════════════════════════════════════════════════════
-          2. FEATURED ARTICLE
+          1. FEATURED ARTICLE
       ══════════════════════════════════════════════════════════════ */}
       {featured && (
         <section className="py-16 lg:py-20 bg-white border-b border-gray-100">
@@ -248,8 +212,8 @@ export default function BlogPageContent({ allPosts }: Props) {
                 onClick={() => setActiveFilter(cat)}
                 className={`px-4 py-2 rounded-full text-[12.5px] font-semibold transition-all duration-200 border ${
                   activeFilter === cat
-                    ? "bg-[#e7212b] text-white border-[#e7212b]"
-                    : "bg-white text-[#0B0D26] border-gray-200 hover:border-[#e7212b] hover:text-[#e7212b]"
+                    ? "bg-[#6b191b] text-white border-[#6b191b] shadow-sm"
+                    : "bg-white text-[#1a1c20] border-black/[0.08] hover:border-[#6b191b] hover:text-[#6b191b]"
                 }`}
               >
                 {cat}
@@ -275,11 +239,11 @@ export default function BlogPageContent({ allPosts }: Props) {
             </div>
           ) : (
             <>
-              <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-7">
+              <CardGrid max={3}>
                 {paginatedPosts.map((post) => (
                   <ArticleCard key={post.slug} post={post} />
                 ))}
-              </div>
+              </CardGrid>
 
               {/* Pagination */}
               <BlogPagination
@@ -298,48 +262,17 @@ export default function BlogPageContent({ allPosts }: Props) {
 /* ─── Article Card ────────────────────────────────────────────────────── */
 function ArticleCard({ post }: { post: BlogPost }) {
   return (
-    <Link href={`/blog/${post.slug}/`} className="group block h-full">
-      <article className="flex flex-col bg-white rounded-xl overflow-hidden border border-gray-100 shadow-sm hover:shadow-xl hover:scale-[1.015] transition-all duration-300 h-full">
-        {/* Image */}
-        <div className="relative aspect-[16/10] overflow-hidden bg-gray-100 shrink-0">
-          <Image
-            src={post.image}
-            alt={post.imageAlt ?? post.title}
-            fill
-            className="object-cover transition-transform duration-700 ease-out group-hover:scale-[1.06]"
-            sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
-          />
-          <div className="absolute inset-0 bg-gradient-to-t from-black/25 via-transparent to-transparent pointer-events-none" />
-          <span className={`absolute top-3 left-3 z-10 text-[9.5px] font-bold uppercase tracking-[1.5px] px-2.5 py-1 rounded-full ${tagClass(post.category)}`}>
-            {post.category}
-          </span>
-        </div>
-
-        {/* Body */}
-        <div className="flex flex-col flex-1 p-5">
-          <h3 className="text-[#0B0D26] text-[15px] font-bold leading-snug line-clamp-2 mb-2 group-hover:text-[#e7212b] transition-colors duration-200">
-            {post.title}
-          </h3>
-          <p className="text-gray-500 text-[12.5px] leading-[1.7] line-clamp-2 mb-4 flex-1">
-            {post.description}
-          </p>
-          <div className="border-t border-gray-100 pt-3.5 flex items-center justify-between mt-auto">
-            <span className="flex items-center gap-3 text-[11px] text-gray-500 font-medium">
-              <span className="flex items-center gap-1">
-                <Calendar className="w-3 h-3" />
-                {post.date}
-              </span>
-              <span className="flex items-center gap-1">
-                <Clock className="w-3 h-3" />
-                {post.readTime}
-              </span>
-            </span>
-            <span className="text-[#e7212b] text-[11.5px] font-bold inline-flex items-center gap-1 group-hover:gap-2 transition-all duration-200">
-              Read More <ArrowRight className="w-3 h-3" />
-            </span>
-          </div>
-        </div>
-      </article>
-    </Link>
+    <div className="h-full">
+      <ImageCard
+        href={`/blog/${post.slug}/`}
+        imageSrc={post.image}
+        imageAlt={post.imageAlt || post.title}
+        title={post.title}
+        subtitle={post.description}
+        meta={`${post.date} · ${post.readTime}`}
+        tag={post.category}
+        tone="grey"
+      />
+    </div>
   );
 }

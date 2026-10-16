@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import HeroSection from "@/components/home/HeroSection";
+import ScrollSequenceHero from "@/components/v3/ScrollSequenceHero";
 import HomeSections from "@/components/home/HomeSections";
 
 export const metadata: Metadata = {
@@ -26,7 +26,7 @@ export const metadata: Metadata = {
 export default function HomePage() {
   return (
     <>
-      <HeroSection />
+      <ScrollSequenceHero />
       <HomeSections />
     </>
   );

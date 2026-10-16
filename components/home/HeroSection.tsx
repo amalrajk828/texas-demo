@@ -2,17 +2,18 @@
 
 import React, { useEffect, useRef } from "react";
 
+// ── Scroll Animation Constants & Sequence Configuration ─────────────────────
+export const TOTAL_FRAMES = 300;
+export const BG_COLOR = "#e8e8e6"; // Page studio grey background
+export const LERP_FACTOR = 0.12; // Butter-smooth scroll interpolation factor
+export const SEQUENCE_PATH = "/ezgif-72247e4a35ef8727-png-split";
+
 export default function HeroSection() {
   const containerRef = useRef<HTMLElement>(null);
 
   useEffect(() => {
     let animId = 0;
     let isDestroyed = false;
-
-    // Configuration & Constants
-    const TOTAL_FRAMES = 300;
-    const BG_COLOR = "#e8e8e6";
-    const LERP_FACTOR = 0.12;
 
     const canvas = document.getElementById("hero-canvas") as HTMLCanvasElement | null;
     const ctx = canvas ? canvas.getContext("2d") : null;
@@ -27,38 +28,61 @@ export default function HeroSection() {
     // State Variables
     const images: HTMLImageElement[] = new Array(TOTAL_FRAMES);
     let loadedCount = 0;
-    let allLoaded = false;
+    let isIntersecting = true;
 
     let currentFrame = 0; // Float for silky-smooth LERP easing
     let rawTarget = 0; // Target frame based on raw scroll progress
     let lastDrawnIndex = -1;
 
+    const prefersReducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)");
+
     function frameSrc(n: number) {
-      return `/frames/ezgif-708412ec47090038-jpg/ezgif-frame-${String(n).padStart(3, "0")}.jpg`;
+      return `${SEQUENCE_PATH}/ezgif-frame-${String(n).padStart(3, "0")}.png`;
     }
 
-    function fallbackSrc(n: number) {
-      return `/ezgif-708412ec47090038-jpg/ezgif-frame-${String(n).padStart(3, "0")}.jpg`;
+    function getBestImage(targetIndex: number): HTMLImageElement | null {
+      const direct = images[targetIndex];
+      if (direct && direct.complete && direct.naturalWidth > 0) return direct;
+
+      // Look outward for the closest loaded frame to avoid any blank flash
+      for (let offset = 1; offset < TOTAL_FRAMES; offset++) {
+        const prev = targetIndex - offset;
+        if (prev >= 0 && images[prev]?.complete && (images[prev]?.naturalWidth ?? 0) > 0) {
+          return images[prev];
+        }
+        const next = targetIndex + offset;
+        if (next < TOTAL_FRAMES && images[next]?.complete && (images[next]?.naturalWidth ?? 0) > 0) {
+          return images[next];
+        }
+      }
+      return null;
     }
 
     function drawFrame(index: number) {
       if (!canvas || !ctx) return;
 
-      const img = images[index];
-      const dpr = window.devicePixelRatio || 1;
+      const img = getBestImage(index);
+      const dpr = Math.min(window.devicePixelRatio || 1, 2);
       const W = canvas.offsetWidth;
       const H = canvas.offsetHeight;
 
       if (W === 0 || H === 0) return;
 
-      canvas.width = W * dpr;
-      canvas.height = H * dpr;
+      const renderW = Math.round(W * dpr);
+      const renderH = Math.round(H * dpr);
+
+      if (canvas.width !== renderW || canvas.height !== renderH) {
+        canvas.width = renderW;
+        canvas.height = renderH;
+      }
+
+      ctx.save();
       ctx.scale(dpr, dpr);
 
       ctx.fillStyle = BG_COLOR;
       ctx.fillRect(0, 0, W, H);
 
-      if (img && img.complete && img.naturalWidth > 0 && img.naturalHeight > 0) {
+      if (img && img.naturalWidth > 0 && img.naturalHeight > 0) {
         const scale = Math.max(W / img.naturalWidth, H / img.naturalHeight);
         const sw = img.naturalWidth * scale;
         const sh = img.naturalHeight * scale;
@@ -67,8 +91,57 @@ export default function HeroSection() {
 
         ctx.drawImage(img, dx, dy, sw, sh);
       }
+
+      ctx.restore();
     }
 
+    // ── Preload Image Sequence Progressively ─────────────────────────────────
+    function initPreloader() {
+      // 1. Immediately load frame 1 for instant paint
+      const firstImg = new Image();
+      firstImg.onload = () => {
+        if (isDestroyed) return;
+        loadedCount++;
+        images[0] = firstImg;
+        drawFrame(0);
+        lastDrawnIndex = 0;
+      };
+      firstImg.src = frameSrc(1);
+      images[0] = firstImg;
+
+      // 2. Preload remaining frames
+      for (let i = 2; i <= TOTAL_FRAMES; i++) {
+        const img = new Image();
+        const frameIndex = i - 1;
+
+        img.onload = () => {
+          if (isDestroyed) return;
+          loadedCount++;
+          if (loaderPercent) {
+            loaderPercent.textContent = String(Math.round((loadedCount / TOTAL_FRAMES) * 100));
+          }
+
+          // Once 10% of frames (or all) are ready, hide loader
+          if ((loadedCount >= 30 || loadedCount === TOTAL_FRAMES) && loaderEl) {
+            if (loaderEl.style.opacity !== "0") {
+              loaderEl.style.opacity = "0";
+              setTimeout(() => {
+                if (loaderEl) loaderEl.style.display = "none";
+              }, 400);
+            }
+          }
+
+          if (lastDrawnIndex === frameIndex) {
+            drawFrame(frameIndex);
+          }
+        };
+
+        img.src = frameSrc(i);
+        images[frameIndex] = img;
+      }
+    }
+
+    // ── Smooth Step & Overlay Scrollytelling Transitions ──────────────────
     function smootherstep(min: number, max: number, val: number) {
       if (val <= min) return 0;
       if (val >= max) return 1;
@@ -147,109 +220,91 @@ export default function HeroSection() {
       }
     }
 
-    function initPreloader() {
-      for (let i = 1; i <= TOTAL_FRAMES; i++) {
-        const img = new Image();
-
-        const onComplete = () => {
-          if (isDestroyed) return;
-          loadedCount++;
-          if (loaderPercent) {
-            loaderPercent.textContent = String(Math.round((loadedCount / TOTAL_FRAMES) * 100));
-          }
-
-          if (loadedCount === TOTAL_FRAMES) {
-            allLoaded = true;
-            if (loaderEl) {
-              loaderEl.style.opacity = "0";
-              setTimeout(() => {
-                if (loaderEl) loaderEl.style.display = "none";
-              }, 400);
-            }
-            drawFrame(0);
-            lastDrawnIndex = 0;
-          }
-        };
-
-        img.onload = onComplete;
-        img.onerror = () => {
-          img.onerror = onComplete;
-          img.src = fallbackSrc(i);
-        };
-
-        img.src = frameSrc(i);
-        images[i - 1] = img;
-      }
-    }
-
+    // ── Showcase Slider Tabs & Auto-rotation ──────────────────────────────
     function initShowcaseSlider() {
       const showcaseCard = document.getElementById("hero-showcase");
       if (!showcaseCard) return;
 
       const mediaItems = showcaseCard.querySelectorAll(".showcase-media-item");
-      const tabs = showcaseCard.querySelectorAll(".showcase-tab");
       const tagEl = document.getElementById("showcase-tag");
-      const counterEl = document.getElementById("showcase-counter");
+      const tabBtns = showcaseCard.querySelectorAll(".showcase-tab");
+      const progressFill = document.getElementById("showcase-progress-fill");
       const prevBtn = document.getElementById("showcase-prev");
       const nextBtn = document.getElementById("showcase-next");
 
       const tags = ["INDUSTRIAL SERVICES", "AUTOMATION", "METERING", "NDT & TESTING"];
-      let currentSlide = 1; // Default to Automation matching V3
+      let currentSlide = 1;
       const totalSlides = mediaItems.length;
       let autoTimer: ReturnType<typeof setInterval> | null = null;
       let isPaused = false;
 
       function goToSlide(index: number) {
-        currentSlide = (index + totalSlides) % totalSlides;
+        if (index < 0) index = totalSlides - 1;
+        if (index >= totalSlides) index = 0;
+        currentSlide = index;
 
-        mediaItems.forEach((item, idx) => {
-          if (idx === currentSlide) {
+        mediaItems.forEach((item, i) => {
+          if (i === currentSlide) {
             item.classList.add("active");
             if (item.tagName === "VIDEO") {
-              const vid = item as HTMLVideoElement;
-              vid.currentTime = 0;
-              vid.play().catch(() => {});
+              const video = item as HTMLVideoElement;
+              video.currentTime = 0;
+              video.play().catch(() => {});
             }
           } else {
             item.classList.remove("active");
             if (item.tagName === "VIDEO") {
-              const vid = item as HTMLVideoElement;
-              vid.pause();
+              (item as HTMLVideoElement).pause();
             }
           }
         });
 
-        tabs.forEach((tab, idx) => {
-          tab.classList.toggle("active", idx === currentSlide);
+        tabBtns.forEach((tab, i) => {
+          tab.classList.toggle("active", i === currentSlide);
         });
 
-        if (tagEl) tagEl.textContent = tags[currentSlide] || "AUTOMATION";
-        if (counterEl) {
-          counterEl.textContent = `${String(currentSlide + 1).padStart(2, "0")} / ${String(totalSlides).padStart(2, "0")}`;
+        if (tagEl && tags[currentSlide]) {
+          tagEl.textContent = tags[currentSlide];
         }
-      }
 
-      tabs.forEach((tab) => {
-        tab.addEventListener("click", () => {
-          const idx = parseInt(tab.getAttribute("data-index") || "0", 10);
-          goToSlide(idx);
-        });
-      });
-
-      if (prevBtn) {
-        prevBtn.addEventListener("click", () => goToSlide(currentSlide - 1));
-      }
-      if (nextBtn) {
-        nextBtn.addEventListener("click", () => goToSlide(currentSlide + 1));
+        if (progressFill) {
+          progressFill.style.transition = "none";
+          progressFill.style.width = "0%";
+          void progressFill.offsetWidth;
+          progressFill.style.transition = "width 5s linear";
+          progressFill.style.width = "100%";
+        }
       }
 
       function startAutoTimer() {
         if (autoTimer) clearInterval(autoTimer);
         autoTimer = setInterval(() => {
-          if (!isPaused && !isDestroyed) {
+          if (!isPaused && !document.hidden) {
             goToSlide(currentSlide + 1);
           }
-        }, 5500);
+        }, 5000);
+      }
+
+      tabBtns.forEach((tab) => {
+        tab.addEventListener("click", () => {
+          const slideIdx = parseInt(tab.getAttribute("data-slide") || "0", 10);
+          goToSlide(slideIdx);
+          startAutoTimer();
+        });
+      });
+
+      if (prevBtn) {
+        prevBtn.addEventListener("click", () => {
+          goToSlide(currentSlide - 1);
+          startAutoTimer();
+        });
+      }
+
+      if (nextBtn) {
+        nextBtn.addEventListener("click", () => {
+          goToSlide(currentSlide + 1);
+          startAutoTimer();
+        });
       }
 
       showcaseCard.addEventListener("mouseenter", () => {
@@ -268,7 +323,6 @@ export default function HeroSection() {
         const scrollY = window.scrollY || window.pageYOffset;
         const scrollableDist = sequenceSection.offsetHeight - window.innerHeight;
         const progress = scrollableDist > 0 ? Math.max(0, Math.min(1, scrollY / scrollableDist)) : 0;
-
         rawTarget = progress * (TOTAL_FRAMES - 1);
         updateOverlayCards(progress);
       }
@@ -276,25 +330,45 @@ export default function HeroSection() {
 
     function renderLoop() {
       if (isDestroyed) return;
-      currentFrame += (rawTarget - currentFrame) * LERP_FACTOR;
-      const drawIndex = Math.max(0, Math.min(TOTAL_FRAMES - 1, Math.round(currentFrame)));
 
-      if (drawIndex !== lastDrawnIndex && allLoaded) {
-        drawFrame(drawIndex);
-        lastDrawnIndex = drawIndex;
+      if (isIntersecting) {
+        if (prefersReducedMotion.matches) {
+          currentFrame = rawTarget;
+        } else {
+          currentFrame += (rawTarget - currentFrame) * LERP_FACTOR;
+        }
+
+        const drawIndex = Math.max(0, Math.min(TOTAL_FRAMES - 1, Math.round(currentFrame)));
+
+        if (drawIndex !== lastDrawnIndex) {
+          drawFrame(drawIndex);
+          lastDrawnIndex = drawIndex;
+        }
       }
 
       animId = requestAnimationFrame(renderLoop);
     }
 
+    // ── Visibility & Off-screen Performance Management ─────────────────────
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        isIntersecting = entry.isIntersecting;
+        if (isIntersecting && lastDrawnIndex >= 0) {
+          drawFrame(lastDrawnIndex);
+        }
+      },
+      { threshold: 0.05 }
+    );
+    if (sequenceSection) observer.observe(sequenceSection);
+
     let resizeTimer: ReturnType<typeof setTimeout> | null = null;
     function onResize() {
       if (resizeTimer) clearTimeout(resizeTimer);
       resizeTimer = setTimeout(() => {
-        if (lastDrawnIndex >= 0 && allLoaded && !isDestroyed) {
+        if (lastDrawnIndex >= 0 && !isDestroyed) {
           drawFrame(lastDrawnIndex);
         }
-      }, 150);
+      }, 100);
     }
 
     window.addEventListener("scroll", onScroll, { passive: true });
@@ -308,16 +382,19 @@ export default function HeroSection() {
     return () => {
       isDestroyed = true;
       cancelAnimationFrame(animId);
+      observer.disconnect();
       window.removeEventListener("scroll", onScroll);
       window.removeEventListener("resize", onResize);
     };
   }, []);
 
   return (
-    <section id="sequence" ref={containerRef}>
+    <section id="sequence" ref={containerRef} className="relative sequence-section">
       <div className="sticky-wrap">
         {/* Full-screen Canvas */}
         <canvas id="hero-canvas"></canvas>
+
+
 
         {/* Preloading Indicator Overlay */}
         <div id="loader" className="loader-overlay">
@@ -331,8 +408,8 @@ export default function HeroSection() {
           <p className="loader-label">Preloading High-Resolution Frames...</p>
         </div>
 
-        {/* Scrollytelling Overlay Cards */}
-        <div className="overlay">
+                {/* Scrollytelling Overlay Cards */}
+        <div className="overlay z-10">
           {/* First Screen Layer (progress 0.00 – 0.20) */}
           <div className="hero-screen" id="hero-screen">
             <div className="hero-main-row">

@@ -39,7 +39,7 @@
     color: var(--text-primary);
     line-height: 1.6;
     min-height: 100vh;
-    overflow-x: hidden;
+    overflow-x: clip;
   }
 
   h1, h2, h3, h4, h5, h6 {
@@ -247,6 +247,174 @@
   transform: translateY(-1px);
   box-shadow: 0 6px 20px rgba(107, 25, 27, 0.3);
   color: #ffffff;
+}
+
+/* --------------------------------------------------------------------------
+   Services & Navigation Dropdown Styles (Desktop + Mobile)
+   -------------------------------------------------------------------------- */
+.nav-dropdown-flyout {
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+  padding-top: 12px;
+  z-index: 1100;
+  filter: drop-shadow(0 20px 40px rgba(0, 0, 0, 0.12));
+}
+
+.nav-dropdown-card {
+  background: rgba(255, 255, 255, 0.96);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border-radius: 20px;
+  border: 1px solid rgba(0, 0, 0, 0.08);
+  box-shadow: 0 22px 50px rgba(0, 0, 0, 0.14);
+  padding: 14px;
+}
+
+.nav-dropdown-item {
+  display: flex;
+  flex-direction: column;
+  padding: 12px 14px;
+  border-radius: 14px;
+  background: transparent;
+  border: 1px solid transparent;
+  border-left: 3px solid transparent;
+  transition: all 180ms cubic-bezier(0.16, 1, 0.3, 1);
+  text-decoration: none;
+  cursor: pointer;
+  outline: none;
+  position: relative;
+  box-sizing: border-box;
+}
+
+.nav-dropdown-item:hover,
+.nav-dropdown-item:focus-visible {
+  background: rgba(107, 25, 27, 0.07);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 18px rgba(107, 25, 27, 0.08);
+  border-color: rgba(107, 25, 27, 0.12);
+}
+
+.nav-dropdown-item:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 2px;
+}
+
+.nav-dropdown-item.active {
+  background: rgba(107, 25, 27, 0.07);
+  border-left: 3px solid var(--accent) !important;
+  border-color: rgba(107, 25, 27, 0.15);
+}
+
+.nav-dropdown-item .dropdown-title {
+  display: inline-flex;
+  align-items: center;
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--text-primary);
+  line-height: 1.3;
+  transition: color 180ms ease;
+}
+
+.nav-dropdown-item:hover .dropdown-title,
+.nav-dropdown-item:focus-visible .dropdown-title,
+.nav-dropdown-item.active .dropdown-title {
+  color: var(--accent);
+}
+
+.nav-dropdown-item .dropdown-arrow {
+  display: inline-block;
+  width: 0;
+  opacity: 0;
+  transform: translateX(-6px);
+  transition: all 180ms ease;
+  overflow: hidden;
+  color: var(--accent);
+  font-weight: 700;
+  line-height: 1;
+  vertical-align: middle;
+}
+
+.nav-dropdown-item:hover .dropdown-arrow,
+.nav-dropdown-item:focus-visible .dropdown-arrow,
+.nav-dropdown-item.active .dropdown-arrow {
+  width: 14px;
+  opacity: 1;
+  transform: translateX(0);
+  margin-right: 6px;
+}
+
+.nav-dropdown-item .dropdown-desc {
+  font-size: 12px;
+  color: var(--text-muted);
+  margin-top: 4px;
+  line-height: 1.35;
+  transition: color 180ms ease;
+}
+
+.nav-dropdown-item:hover .dropdown-desc {
+  color: #3b3b38;
+}
+
+/* "View All" Button Style & Strong Hover */
+.nav-dropdown-item.nav-dropdown-view-all {
+  margin-top: 4px;
+  background: rgba(107, 25, 27, 0.05);
+  border: 1px dashed rgba(107, 25, 27, 0.28);
+  border-left: 3px solid rgba(107, 25, 27, 0.4);
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 10px 14px;
+}
+
+.nav-dropdown-item.nav-dropdown-view-all .dropdown-title {
+  color: var(--accent);
+  font-weight: 700;
+  font-size: 13.5px;
+}
+
+.nav-dropdown-item.nav-dropdown-view-all:hover,
+.nav-dropdown-item.nav-dropdown-view-all:focus-visible {
+  background: var(--accent) !important;
+  border-color: var(--accent) !important;
+  border-left: 3px solid var(--accent) !important;
+  transform: translateY(-2px);
+  box-shadow: 0 8px 22px rgba(107, 25, 27, 0.28);
+}
+
+.nav-dropdown-item.nav-dropdown-view-all:hover .dropdown-title,
+.nav-dropdown-item.nav-dropdown-view-all:focus-visible .dropdown-title,
+.nav-dropdown-item.nav-dropdown-view-all:hover .dropdown-title *,
+.nav-dropdown-item.nav-dropdown-view-all:focus-visible .dropdown-title * {
+  color: #ffffff !important;
+}
+
+/* Mobile dropdown items */
+.mobile-submenu {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  margin-top: 8px;
+  width: 100%;
+}
+
+.mobile-submenu .nav-dropdown-item {
+  width: 100%;
+  background: rgba(255, 255, 255, 0.65);
+  border: 1px solid rgba(0, 0, 0, 0.06);
+  border-left: 3px solid transparent;
+}
+
+.mobile-submenu .nav-dropdown-item.active {
+  background: rgba(107, 25, 27, 0.08);
+  border-left: 3px solid var(--accent) !important;
+  border-color: rgba(107, 25, 27, 0.15);
+}
+
+.mobile-submenu .nav-dropdown-item.nav-dropdown-view-all {
+  background: rgba(107, 25, 27, 0.06);
 }
 
 /* Mobile Hamburger Toggle */
@@ -902,11 +1070,7 @@
 }
 
 .solution-card:hover {
-  transform: translateY(-8px) rotate(0deg) scale(1.02);
   background: rgba(255, 255, 255, 0.94);
-  box-shadow: 0 22px 42px -6px rgba(0, 0, 0, 0.14);
-  border-color: rgba(107, 25, 27, 0.35);
-  z-index: 5;
 }
 
 .solution-card-top {
@@ -1114,12 +1278,128 @@
 }
 
 /* --------------------------------------------------------------------------
-   Below-Scroll Content Sections
+   Below-Scroll Content Sections & Hold-and-Cover Sheet
    -------------------------------------------------------------------------- */
+:root {
+  --hero-hold-cover: 100svh;
+  --cover-radius: 32px;
+
+  /* Card Interactive Effect (Uiverse.io reference adaptation) */
+  --card-scale-hover: 1.05;
+  --card-scale-active: 0.95;
+  --card-rotate-active: 1.7deg;
+  --card-border-hover: #1a1a1a;
+  --card-shadow-hover: 12px 17px 51px rgba(0, 0, 0, 0.22);
+  --card-transition-duration: 0.5s;
+  --card-transition-ease: cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+@media (max-width: 768px) {
+  :root {
+    --cover-radius: 24px;
+  }
+}
+
+@media (max-height: 500px) {
+  :root {
+    --hero-hold-cover: 60svh;
+  }
+}
+
+/* ── Reusable Card Interactive Utility ───────────────────────────────────── */
+.card-interactive {
+  /* Reserve 1px border so cards without borders don't jump layout on hover */
+  border-width: 1px;
+  border-style: solid;
+  /* Use individual transform properties so existing transforms / tilts are preserved */
+  scale: 1;
+  rotate: 0deg;
+  transform-origin: center center;
+  transition:
+    scale var(--card-transition-duration) var(--card-transition-ease),
+    rotate var(--card-transition-duration) var(--card-transition-ease),
+    border-color var(--card-transition-duration) var(--card-transition-ease),
+    box-shadow var(--card-transition-duration) var(--card-transition-ease);
+  will-change: scale, rotate, border-color, box-shadow;
+}
+
+@media (hover: hover) and (pointer: fine) {
+  .card-interactive:hover {
+    scale: var(--card-scale-hover);
+    border-color: var(--card-border-hover) !important;
+    box-shadow: var(--card-shadow-hover) !important;
+    z-index: 10;
+  }
+}
+
+.card-interactive:active {
+  scale: var(--card-scale-active) !important;
+  rotate: var(--card-rotate-active) !important;
+  transition-duration: 0.12s;
+}
+
+.card-interactive:focus-visible {
+  outline: 2px solid var(--accent, #6b191b);
+  outline-offset: 3px;
+  scale: var(--card-scale-hover);
+  border-color: var(--card-border-hover) !important;
+  box-shadow: var(--card-shadow-hover) !important;
+  z-index: 10;
+}
+
+.card-interactive.is-clickable,
+a.card-interactive,
+button.card-interactive,
+.card-interactive:has(> a),
+.card-interactive:has(.solution-link),
+.card-interactive:has(.blog-link) {
+  cursor: pointer;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .card-interactive {
+    transition: none !important;
+    scale: 1 !important;
+    rotate: 0deg !important;
+  }
+  .card-interactive:hover,
+  .card-interactive:active,
+  .card-interactive:focus-visible {
+    scale: 1 !important;
+    rotate: 0deg !important;
+    transition: none !important;
+  }
+}
+
 .content-wrapper {
-  background-color: var(--bg-studio);
+  background-color: transparent;
   position: relative;
   z-index: 20;
+}
+
+/* About section acts as the cover sheet rising over the hero */
+.about-cover-section {
+  position: relative;
+  z-index: 20;
+  background-color: var(--bg-studio, #e8e8e6);
+  margin-top: calc(-1 * var(--hero-hold-cover, 100svh));
+  border-top-left-radius: var(--cover-radius, 32px);
+  border-top-right-radius: var(--cover-radius, 32px);
+  box-shadow: 0 -20px 60px rgba(0, 0, 0, 0.12);
+  background-clip: padding-box;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  :root {
+    --hero-hold-cover: 0px;
+    --cover-radius: 0px;
+  }
+  .about-cover-section {
+    margin-top: 0 !important;
+    border-top-left-radius: 0 !important;
+    border-top-right-radius: 0 !important;
+    box-shadow: none !important;
+  }
 }
 
 .content-section {
@@ -1220,8 +1500,7 @@
 }
 
 .feature-card:hover {
-  transform: translateY(-4px);
-  box-shadow: 0 24px 48px -15px rgba(0, 0, 0, 0.1);
+  /* scale & shadow handled by .card-interactive */
 }
 
 .feature-icon {
@@ -1268,7 +1547,7 @@
 }
 
 .industry-card:hover {
-  transform: translateY(-3px);
+  /* scale & shadow handled by .card-interactive */
 }
 
 .industry-badge {
@@ -1375,8 +1654,7 @@
 }
 
 .client-logo-item:hover {
-  transform: translateY(-3px);
-  border-color: rgba(107, 25, 27, 0.2);
+  /* scale & shadow handled by .card-interactive */
 }
 
 .client-logo-img {
@@ -1420,7 +1698,7 @@
 }
 
 .blog-card:hover {
-  transform: translateY(-4px);
+  /* scale & shadow handled by .card-interactive */
 }
 
 .blog-meta {

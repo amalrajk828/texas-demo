@@ -1,0 +1,706 @@
+{
+  "cement": {
+    "slug": "cement",
+    "metaTitle": "Cement Industry Solutions",
+    "metaDesc": "Texas Technical Services delivers CEMS, gas analyzers, and extractive gas analyzers for the cement industry — optimising emissions monitoring, quality control, and operational excellence.",
+    "name": "Cement",
+    "image": "/cement_industry.jpg",
+    "heroDesc": "Advanced OEM analyzer and CEMS solutions for cement manufacturing — optimising emissions monitoring, quality control, and operational excellence from raw mill to kiln and clinker cooler.",
+    "productCount": 3,
+    "products": [
+      {
+        "category": "CEMS",
+        "name": "CEMS Solutions",
+        "slug": "cems-solutions",
+        "image": "/cems.png",
+        "brand": "SICK",
+        "desc": "SICK CEMS solutions tailored for cement kiln and clinker cooler stack emissions — continuously measuring NOₓ, SO₂, CO, HCl, HF, NH₃, dust, and O₂ to ensure compliance with environmental permit limits and IED/BAT requirements."
+      },
+      {
+        "category": "Gas Analyzer",
+        "name": "Gas Analyzers",
+        "slug": "gas-analyzers",
+        "image": "/gas_analyzer.png",
+        "brand": "SICK",
+        "desc": "SICK gas analyzers using powerful in-situ and extractive measurement principles for cement process optimisation — monitoring kiln atmosphere, combustion gases, and preheater exit conditions to maximise fuel efficiency and clinker quality."
+      },
+      {
+        "category": "Gas Analyzer",
+        "name": "Extractive Gas Analyzers",
+        "slug": "extractive-gas-analyzers",
+        "image": "/extractive_gas_analyzer.jpg",
+        "brand": "SICK",
+        "desc": "Reliable continuous extractive gas analysis for cement kiln stacks and raw mill exhausts under the harshest dust-laden, high-temperature conditions — conditioning the sample for precise, repeatable pollutant measurement independent of process upsets."
+      }
+    ]
+  },
+  "lng": {
+    "slug": "lng",
+    "metaTitle": "LNG Industry Solutions",
+    "metaDesc": "Texas Technical Services delivers precision flow metering, CEMS, analyzers, and industrial automation solutions for LNG plant operations — ensuring accurate measurement, efficiency, and safety.",
+    "name": "LNG",
+    "image": "/lng.jpg",
+    "heroDesc": "Cutting-edge flow metering, analyzers, and process automation solutions for LNG plant operations — ensuring precise measurement, efficiency, and safety across liquefaction, storage, and regasification processes.",
+    "productCount": 11,
+    "products": [
+      {
+        "category": "CEMS",
+        "name": "CEMS Solutions",
+        "slug": "cems-solutions",
+        "image": "/cems.png",
+        "brand": "SICK",
+        "desc": "SICK CEMS solutions for LNG facility emissions monitoring — measuring combustion gases, BOG (boil-off gas) venting, and process emissions to meet stringent environmental regulations at LNG terminals and plants."
+      },
+      {
+        "category": "Metering Skid",
+        "name": "Flow Metering Skid",
+        "slug": "flow-metering-skid",
+        "image": "/flow_metering_skid.jpg",
+        "brand": "SICK · FLOWSKID",
+        "desc": "FLOWSKID turnkey gas metering packages for LNG send-out and custody transfer — factory-assembled and tested skids that withstand the cryogenic and high-pressure conditions unique to LNG operations."
+      },
+      {
+        "category": "Flow Meter",
+        "name": "Ultrasonic Liquid Flow Meter",
+        "slug": "ultrasonic-liquid-flow-meter",
+        "image": "/ultrasonic_liquid_flow_meter.png",
+        "brand": "FH Sonic",
+        "desc": "High-accuracy multi-path ultrasonic flowmeter for LNG custody transfer — engineered for cryogenic liquid service at temperatures as low as -162 °C, delivering the precision required at ship loading and unloading terminals."
+      },
+      {
+        "category": "Flow Meter",
+        "name": "Ultrasonic Gas Flow Meter",
+        "slug": "ultrasonic-gas-flow-meter",
+        "image": "/ultrasonic_gas_flow_meter.jpg",
+        "brand": "FH83NEO",
+        "desc": "Full-bore ultrasonic gas measurement for LNG send-out, regasification, and distribution — no pressure drop, no moving parts, and proven accuracy for natural gas and BOG streams at LNG facilities."
+      },
+      {
+        "category": "Flow Meter",
+        "name": "Flare Meter",
+        "slug": "flare-meter",
+        "image": "/flare_meter.png",
+        "brand": "SICK",
+        "desc": "Ultrasonic flare measurement for LNG plant safety and environmental reporting — handling the highly variable flow rates and gas compositions in LNG flare headers from near-zero to over 120 m/s."
+      },
+      {
+        "category": "Flow Meter",
+        "name": "Custody Transfer Gas Flow Meter",
+        "slug": "custody-transfer-gas-flow-meter",
+        "image": "/custody_transfer_gas_flow_meter.png",
+        "brand": "SICK",
+        "desc": "Fiscal-grade gas flow measurement for LNG send-out and regas custody points — where billing accuracy is critical and the economic stakes of even small measurement errors are substantial."
+      },
+      {
+        "category": "Flow Meter",
+        "name": "Non-Custody Transfer Gas Flow Meter",
+        "slug": "non-custody-transfer-gas-flow-meter",
+        "image": "/non_custody_transfer_gas_flow_meter.jpg",
+        "brand": "SICK",
+        "desc": "Reliable gas flow measurement for internal LNG plant use — monitoring fuel gas, BOG recycle, and utility streams to optimise plant performance and support energy balance calculations."
+      },
+      {
+        "category": "Flow Meter",
+        "name": "Clamp ON Meter",
+        "slug": "clamp-on-meter",
+        "image": "/clamp_on_meter.png",
+        "brand": "Ultraflux · Minisonic P",
+        "desc": "Portable non-invasive flowmeter for LNG facility maintenance checks and commissioning verification — measure pipeline flows without process interruption across gas, liquid, and cryogenic service lines."
+      },
+      {
+        "category": "Flow Computer",
+        "name": "Flow Computer",
+        "slug": "flow-computer",
+        "image": "/flow_computer.png",
+        "brand": "OMNI · 4000/7000 Series",
+        "desc": "OMNI flow computers for LNG custody and allocation metering — supporting ISO 6976 calorific value calculations and AGA standards to accurately determine energy content for billing in LNG trade."
+      },
+      {
+        "category": "Gas Analyzer",
+        "name": "Gas Analyzers",
+        "slug": "gas-analyzers",
+        "image": "/gas_analyzer.png",
+        "brand": "SICK",
+        "desc": "In-situ and extractive gas analyzers for LNG plant process control — monitoring natural gas composition, BOG quality, and combustion efficiency to optimise liquefaction and regasification processes."
+      },
+      {
+        "category": "Gas Analyzer",
+        "name": "Extractive Gas Analyzers",
+        "slug": "extractive-gas-analyzers",
+        "image": "/extractive_gas_analyzer.jpg",
+        "brand": "SICK",
+        "desc": "Continuous extractive gas analysis for LNG terminal stacks and process streams — reliable measurement under the demanding pressure and temperature conditions found in liquefaction and regasification trains."
+      }
+    ]
+  },
+  "metal-steel": {
+    "slug": "metal-steel",
+    "metaTitle": "Metal & Steel Industry Solutions",
+    "metaDesc": "Texas Technical Services delivers CEMS, dust analyzers, gas analyzers, and extractive gas analyzers for the metal and steel industry — enhancing efficiency, quality control, and emissions monitoring.",
+    "name": "Metal & Steel",
+    "image": "/metal_and_steel.jpg",
+    "heroDesc": "Cutting-edge OEM solutions engineered for the metal and steel industry — delivering CEMS, dust monitoring, and gas analysis to enhance efficiency, quality control, and emissions compliance across the production chain.",
+    "productCount": 4,
+    "products": [
+      {
+        "category": "CEMS",
+        "name": "CEMS Solutions",
+        "slug": "cems-solutions",
+        "image": "/cems.png",
+        "brand": "SICK",
+        "desc": "SICK CEMS solutions for continuous emissions monitoring at blast furnaces, electric arc furnaces, and sinter plants — measuring CO, NOₓ, SO₂, HCl, dust, and O₂ to meet stringent environmental regulations and IED permit conditions."
+      },
+      {
+        "category": "Dust Analyzer",
+        "name": "Dust Analyzer",
+        "slug": "dust-analyzer",
+        "image": "/gas_analyzer.png",
+        "brand": "SICK",
+        "desc": "SICK sets new standards in dust measurement with rugged, low-maintenance devices for metal and steel facilities — detecting and monitoring dust concentrations at furnace exhausts, dedusting systems, and material handling points with minimal maintenance burden."
+      },
+      {
+        "category": "Gas Analyzer",
+        "name": "Gas Analyzers",
+        "slug": "gas-analyzers",
+        "image": "/gas_analyzer.png",
+        "brand": "SICK",
+        "desc": "In-situ and extractive gas analyzers for metal and steel process control — monitoring blast furnace top gas, coke oven gas, and converter off-gas composition to optimise combustion, energy recovery, and product quality."
+      },
+      {
+        "category": "Gas Analyzer",
+        "name": "Extractive Gas Analyzers",
+        "slug": "extractive-gas-analyzers",
+        "image": "/extractive_gas_analyzer.jpg",
+        "brand": "SICK",
+        "desc": "Reliable extractive gas analysis for metal and steel stacks and process ducts under extreme dust, temperature, and corrosion conditions — conditioning and analysing samples with consistent accuracy for regulatory reporting and process optimisation."
+      }
+    ]
+  },
+  "oil-gas": {
+    "slug": "oil-gas",
+    "metaTitle": "Oil & Gas Industry Solutions",
+    "metaDesc": "Texas Technical Services delivers precision flow metering, CEMS, analyzers, and industrial automation solutions for the oil & gas industry — upstream, midstream, and downstream.",
+    "name": "Oil & Gas",
+    "image": "/oil_and_gas.jpg",
+    "heroDesc": "Comprehensive OEM solutions tailored to the unique needs of the oil and gas industries — from advanced flow metering and precision analyzers to industrial automation for upstream, midstream, and downstream operations.",
+    "productCount": 13,
+    "products": [
+      {
+        "category": "CEMS",
+        "name": "CEMS Solutions",
+        "slug": "cems-solutions",
+        "image": "/cems.png",
+        "brand": "SICK",
+        "desc": "SICK CEMS solutions are tailored for emission measurement in power plants, industrial facilities, and ships — measuring pollutants and reference quantities in compliance with national and international regulations."
+      },
+      {
+        "category": "Metering Skid",
+        "name": "Flow Metering Skid",
+        "slug": "flow-metering-skid",
+        "image": "/flow_metering_skid.jpg",
+        "brand": "SICK · FLOWSKID",
+        "desc": "FLOWSKID flow metering systems are the full gas flow metering system offering from SICK — a reliable turnkey solution for fiscal metering of natural gas and process gases."
+      },
+      {
+        "category": "Flow Meter",
+        "name": "Ultrasonic Liquid Flow Meter",
+        "slug": "ultrasonic-liquid-flow-meter",
+        "image": "/ultrasonic_liquid_flow_meter.png",
+        "brand": "FH Sonic",
+        "desc": "High-performance liquid volume flowmeter for custody transfer using the transit time measurement method. Integrates up to 5 parallel measuring paths for optimal flow profile evaluation."
+      },
+      {
+        "category": "Flow Meter",
+        "name": "Ultrasonic Gas Flow Meter",
+        "slug": "ultrasonic-gas-flow-meter",
+        "image": "/ultrasonic_gas_flow_meter.jpg",
+        "brand": "FH83NEO",
+        "desc": "Ultrasonic flowmeter for full bore measuring element without pressure drop — engineered for precision gas flow measurement in demanding oil and gas environments."
+      },
+      {
+        "category": "Flow Meter",
+        "name": "Helical Turbine Meter",
+        "slug": "helical-turbine-meter",
+        "image": "/helical_turbine_meter.png",
+        "brand": "Heliflu TZN",
+        "desc": "The leading meter for custody transfer. Designed for high accuracy liquid measurement from very light LPG products to heavy crude oils — securing your revenues while reducing operational costs."
+      },
+      {
+        "category": "Flow Meter",
+        "name": "Flare Meter",
+        "slug": "flare-meter",
+        "image": "/flare_meter.png",
+        "brand": "SICK",
+        "desc": "Ultrasonic flow meters for flare stack management, accurately measuring gas velocities from near-zero to over 120 m/s — ensuring optimal combustion control and environmental compliance."
+      },
+      {
+        "category": "Flow Meter",
+        "name": "Custody Transfer Gas Flow Meter",
+        "slug": "custody-transfer-gas-flow-meter",
+        "image": "/custody_transfer_gas_flow_meter.png",
+        "brand": "SICK",
+        "desc": "Exact gas quantity detection for precise billing. SICK gas flow meters are absolutely accurate and rugged — built specifically for custody transfer where even small errors cause substantial loss."
+      },
+      {
+        "category": "Flow Meter",
+        "name": "Non-Custody Transfer Gas Flow Meter",
+        "slug": "non-custody-transfer-gas-flow-meter",
+        "image": "/non_custody_transfer_gas_flow_meter.jpg",
+        "brand": "SICK",
+        "desc": "Reliable measurement of gaseous media for volume flow, mass flow, or flow velocity — even in challenging environments like flare gas measurement, tunnel monitoring, and emission monitoring."
+      },
+      {
+        "category": "Flow Meter",
+        "name": "Clamp ON Meter",
+        "slug": "clamp-on-meter",
+        "image": "/clamp_on_meter.png",
+        "brand": "Ultraflux · Minisonic P",
+        "desc": "Portable ultrasonic flowmeter on the transit time principle — measuring water, petroleum products, and chemical industry fluids with high performance signal processing adapted to each site."
+      },
+      {
+        "category": "Flow Metering",
+        "name": "Master Meter",
+        "slug": "master-meter",
+        "image": "/master_meter.jpg",
+        "brand": "Faure Herman",
+        "desc": "A complete flow measurement solution combining a flow conditioner, upstream and downstream spools, and the Master Meter — a compact, efficient alternative to larger provers."
+      },
+      {
+        "category": "Flow Computer",
+        "name": "Flow Computer",
+        "slug": "flow-computer",
+        "image": "/flow_computer.png",
+        "brand": "OMNI · 4000/7000 Series",
+        "desc": "The most recognized and trusted brand of custody flow computers for oil and gas measurement — reducing uncertainty and ensuring precise, compliant fiscal measurement."
+      },
+      {
+        "category": "Gas Analyzer",
+        "name": "Gas Analyzers",
+        "slug": "gas-analyzers",
+        "image": "/gas_analyzer.png",
+        "brand": "SICK",
+        "desc": "A diverse selection of gas analyzers using powerful in-situ and extractive measurement principles — versatile enough to equip entire facilities and tackle complex measurement tasks."
+      },
+      {
+        "category": "Gas Analyzer",
+        "name": "Extractive Gas Analyzers",
+        "slug": "extractive-gas-analyzers",
+        "image": "/extractive_gas_analyzer.jpg",
+        "brand": "SICK",
+        "desc": "Reliable gas analysis under harsh process conditions — extracting a partial gas flow, conditioning it, and feeding it to an analyzer module under constant, controlled conditions."
+      }
+    ]
+  },
+  "petrochemicals": {
+    "slug": "petrochemicals",
+    "metaTitle": "Petrochemicals Industry Solutions",
+    "metaDesc": "Texas Technical Services delivers state-of-the-art flow metering, CEMS, analyzers, and industrial automation solutions for the petrochemical industry.",
+    "name": "Petrochemicals",
+    "image": "/petrochemical.webp",
+    "heroDesc": "State-of-the-art flow metering, gas analyzers, and process automation solutions for the petrochemical industry — from feedstock measurement to product custody transfer and continuous emissions monitoring.",
+    "productCount": 13,
+    "products": [
+      {
+        "category": "CEMS",
+        "name": "CEMS Solutions",
+        "slug": "cems-solutions",
+        "image": "/cems.png",
+        "brand": "SICK",
+        "desc": "SICK CEMS solutions for continuous emissions monitoring in petrochemical facilities — measuring NOₓ, SO₂, CO, VOCs, and particulates at stacks and process vents to maintain environmental permit compliance."
+      },
+      {
+        "category": "Metering Skid",
+        "name": "Flow Metering Skid",
+        "slug": "flow-metering-skid",
+        "image": "/flow_metering_skid.jpg",
+        "brand": "SICK · FLOWSKID",
+        "desc": "FLOWSKID turnkey metering packages for petrochemical feedstock and product gas streams — factory-assembled and tested, minimising site installation time and ensuring measurement accuracy from day one."
+      },
+      {
+        "category": "Flow Meter",
+        "name": "Ultrasonic Liquid Flow Meter",
+        "slug": "ultrasonic-liquid-flow-meter",
+        "image": "/ultrasonic_liquid_flow_meter.png",
+        "brand": "FH Sonic",
+        "desc": "Multi-path transit-time liquid flow meter for custody transfer of petrochemical products — handling aromatics, olefins, and other chemical liquids with high accuracy across wide viscosity ranges."
+      },
+      {
+        "category": "Flow Meter",
+        "name": "Ultrasonic Gas Flow Meter",
+        "slug": "ultrasonic-gas-flow-meter",
+        "image": "/ultrasonic_gas_flow_meter.jpg",
+        "brand": "FH83NEO",
+        "desc": "Full-bore ultrasonic measurement of petrochemical process gas streams — ethylene, propylene, natural gas liquids, and synthesis gas — with zero pressure drop and no moving parts to maintain."
+      },
+      {
+        "category": "Flow Meter",
+        "name": "Helical Turbine Meter",
+        "slug": "helical-turbine-meter",
+        "image": "/helical_turbine_meter.png",
+        "brand": "Heliflu TZN",
+        "desc": "The industry's leading custody transfer meter for liquid petrochemical products — from light LPG to heavy aromatics. Robust construction handles the wide product range and varying flow rates in petrochemical plants."
+      },
+      {
+        "category": "Flow Meter",
+        "name": "Flare Meter",
+        "slug": "flare-meter",
+        "image": "/flare_meter.png",
+        "brand": "SICK",
+        "desc": "Ultrasonic flare measurement for petrochemical plant relief and disposal systems — accurately quantifying combustible gas from near-zero to over 120 m/s to support environmental reporting and process safety."
+      },
+      {
+        "category": "Flow Meter",
+        "name": "Custody Transfer Gas Flow Meter",
+        "slug": "custody-transfer-gas-flow-meter",
+        "image": "/custody_transfer_gas_flow_meter.png",
+        "brand": "SICK",
+        "desc": "Fiscal-grade gas measurement at petrochemical plant battery limits and transfer points — delivering the precision required where feedstock and product ownership changes hands and billing accuracy is paramount."
+      },
+      {
+        "category": "Flow Meter",
+        "name": "Non-Custody Transfer Gas Flow Meter",
+        "slug": "non-custody-transfer-gas-flow-meter",
+        "image": "/non_custody_transfer_gas_flow_meter.jpg",
+        "brand": "SICK",
+        "desc": "Process gas flow measurement for internal petrochemical plant use — monitoring fuel gas, utility streams, and intermediate process flows to optimise unit performance and energy consumption."
+      },
+      {
+        "category": "Flow Meter",
+        "name": "Clamp ON Meter",
+        "slug": "clamp-on-meter",
+        "image": "/clamp_on_meter.png",
+        "brand": "Ultraflux · Minisonic P",
+        "desc": "Non-invasive portable flowmeter for petrochemical plant surveys and commissioning verification — clamp onto existing pipework without shutdown to measure chemicals, solvents, and process fluids on demand."
+      },
+      {
+        "category": "Flow Metering",
+        "name": "Master Meter",
+        "slug": "master-meter",
+        "image": "/master_meter.jpg",
+        "brand": "Faure Herman",
+        "desc": "Compact, self-contained master meter package for petrochemical product proving and verification — combining conditioner, spools, and meter in one unit for efficient calibration of field meters."
+      },
+      {
+        "category": "Flow Computer",
+        "name": "Flow Computer",
+        "slug": "flow-computer",
+        "image": "/flow_computer.png",
+        "brand": "OMNI · 4000/7000 Series",
+        "desc": "OMNI flow computers for petrochemical custody and allocation metering — supporting complex multi-stream configurations with built-in AGA, API, GPA, and ISO calculation standards for all product types."
+      },
+      {
+        "category": "Gas Analyzer",
+        "name": "Gas Analyzers",
+        "slug": "gas-analyzers",
+        "image": "/gas_analyzer.png",
+        "brand": "SICK",
+        "desc": "In-situ and extractive gas analyzers for petrochemical process streams — measuring product quality, catalyst performance, and emission parameters to optimise yield and ensure regulatory compliance."
+      },
+      {
+        "category": "Gas Analyzer",
+        "name": "Extractive Gas Analyzers",
+        "slug": "extractive-gas-analyzers",
+        "image": "/extractive_gas_analyzer.jpg",
+        "brand": "SICK",
+        "desc": "Continuous extractive gas analysis for petrochemical stacks and reactors under aggressive conditions — conditioning the sample for precise, repeatable analysis independent of process pressure and temperature swings."
+      }
+    ]
+  },
+  "power-plant": {
+    "slug": "power-plant",
+    "metaTitle": "Power Plant Industry Solutions",
+    "metaDesc": "Texas Technical Services delivers CEMS, flow meters, flow computers, analyzers, and industrial process automation systems for power plants — optimising performance, emissions monitoring, and operational efficiency.",
+    "name": "Power Plant",
+    "image": "/power_plant.jpg",
+    "heroDesc": "Comprehensive OEM solutions for power generation — CEMS, flow meters, flow computers, analyzers, and industrial process automation systems that optimise performance, emissions monitoring, and operational efficiency.",
+    "productCount": 11,
+    "products": [
+      {
+        "category": "CEMS",
+        "name": "CEMS Solutions",
+        "slug": "cems-solutions",
+        "image": "/cems.png",
+        "brand": "SICK",
+        "desc": "SICK CEMS solutions for continuous stack emissions monitoring at power plants — measuring NOₓ, SO₂, CO, CO₂, and particulates to demonstrate regulatory compliance and optimise combustion efficiency across all generation types."
+      },
+      {
+        "category": "Metering Skid",
+        "name": "Flow Metering Skid",
+        "slug": "flow-metering-skid",
+        "image": "/flow_metering_skid.jpg",
+        "brand": "SICK · FLOWSKID",
+        "desc": "FLOWSKID turnkey gas metering packages for power plant fuel gas supply — factory-assembled and tested, providing accurate fiscal measurement of natural gas and other fuel streams at the plant gate."
+      },
+      {
+        "category": "Flow Meter",
+        "name": "Ultrasonic Liquid Flow Meter",
+        "slug": "ultrasonic-liquid-flow-meter",
+        "image": "/ultrasonic_liquid_flow_meter.png",
+        "brand": "FH Sonic",
+        "desc": "Multi-path transit-time liquid flowmeter for power plant cooling water, condensate, and liquid fuel measurement — delivering reliable accuracy in high-temperature and high-flow applications across the generation cycle."
+      },
+      {
+        "category": "Flow Meter",
+        "name": "Ultrasonic Gas Flow Meter",
+        "slug": "ultrasonic-gas-flow-meter",
+        "image": "/ultrasonic_gas_flow_meter.jpg",
+        "brand": "FH83NEO",
+        "desc": "Full-bore ultrasonic gas measurement for power plant fuel gas, steam, and process gas streams — no pressure drop, no moving parts, and robust accuracy for demanding turbine and boiler fuel monitoring applications."
+      },
+      {
+        "category": "Flow Meter",
+        "name": "Flare Meter",
+        "slug": "flare-meter",
+        "image": "/flare_meter.png",
+        "brand": "SICK",
+        "desc": "Ultrasonic flare measurement for power plant safety relief and venting systems — handling wide flow rate swings from near-zero to over 120 m/s to support accurate environmental reporting and safety management."
+      },
+      {
+        "category": "Flow Meter",
+        "name": "Custody Transfer Gas Flow Meter",
+        "slug": "custody-transfer-gas-flow-meter",
+        "image": "/custody_transfer_gas_flow_meter.png",
+        "brand": "SICK",
+        "desc": "Fiscal-grade gas measurement at power plant battery limits — providing the billing accuracy required where fuel ownership changes hands and where small measurement errors directly impact generation operating costs."
+      },
+      {
+        "category": "Flow Meter",
+        "name": "Non-Custody Transfer Gas Flow Meter",
+        "slug": "non-custody-transfer-gas-flow-meter",
+        "image": "/non_custody_transfer_gas_flow_meter.jpg",
+        "brand": "SICK",
+        "desc": "Reliable internal gas flow measurement for power plant fuel distribution, burner management, and utility monitoring — covering volume, mass flow, and velocity across diverse gas types and operating conditions."
+      },
+      {
+        "category": "Flow Meter",
+        "name": "Clamp ON Meter",
+        "slug": "clamp-on-meter",
+        "image": "/clamp_on_meter.png",
+        "brand": "Ultraflux · Minisonic P",
+        "desc": "Non-invasive portable flowmeter for power plant maintenance surveys and commissioning — clamp onto cooling water lines, fuel pipes, or process lines without shutdown for instant, accurate flow readings."
+      },
+      {
+        "category": "Flow Computer",
+        "name": "Flow Computer",
+        "slug": "flow-computer",
+        "image": "/flow_computer.png",
+        "brand": "OMNI · 4000/7000 Series",
+        "desc": "OMNI flow computers for power plant fuel gas fiscal and allocation metering — multi-stream capable with built-in AGA and ISO calculation standards, reducing billing uncertainty and supporting heat rate analysis."
+      },
+      {
+        "category": "Gas Analyzer",
+        "name": "Gas Analyzers",
+        "slug": "gas-analyzers",
+        "image": "/gas_analyzer.png",
+        "brand": "SICK",
+        "desc": "In-situ and extractive gas analyzers for power plant combustion control and emissions measurement — monitoring O₂, CO, NOₓ, and SO₂ to maximise boiler and turbine efficiency while minimising environmental impact."
+      },
+      {
+        "category": "Gas Analyzer",
+        "name": "Extractive Gas Analyzers",
+        "slug": "extractive-gas-analyzers",
+        "image": "/extractive_gas_analyzer.jpg",
+        "brand": "SICK",
+        "desc": "Continuous extractive stack gas analysis for power plants — conditioning the flue gas sample for precise, repeatable measurement of pollutants and combustion parameters regardless of stack pressure or temperature."
+      }
+    ]
+  },
+  "refinery": {
+    "slug": "refinery",
+    "metaTitle": "Refinery Industry Solutions",
+    "metaDesc": "Texas Technical Services provides cutting-edge flow metering, CEMS, analyzers, and industrial automation solutions tailored for the demanding world of refinery operations.",
+    "name": "Refinery",
+    "image": "/refinery.webp",
+    "heroDesc": "Cutting-edge flow metering, CEMS, and industrial automation solutions for the demanding world of refinery operations — ensuring process control, emissions compliance, and precise custody transfer across the full product slate.",
+    "productCount": 13,
+    "products": [
+      {
+        "category": "CEMS",
+        "name": "CEMS Solutions",
+        "slug": "cems-solutions",
+        "image": "/cems.png",
+        "brand": "SICK",
+        "desc": "SICK CEMS solutions designed for refinery emission measurement — accurately monitoring stack emissions, flue gas, and process vents to ensure compliance with environmental regulations and permit requirements."
+      },
+      {
+        "category": "Metering Skid",
+        "name": "Flow Metering Skid",
+        "slug": "flow-metering-skid",
+        "image": "/flow_metering_skid.jpg",
+        "brand": "SICK · FLOWSKID",
+        "desc": "FLOWSKID turnkey gas flow metering systems for refinery fiscal measurement — pre-engineered, factory-tested packages covering the full gas flow metering system from inlet to data output."
+      },
+      {
+        "category": "Flow Meter",
+        "name": "Ultrasonic Liquid Flow Meter",
+        "slug": "ultrasonic-liquid-flow-meter",
+        "image": "/ultrasonic_liquid_flow_meter.png",
+        "brand": "FH Sonic",
+        "desc": "High-performance custody transfer flowmeter for refined liquid products — crude oil, distillates, and intermediate streams — using multi-path transit time technology for maximum accuracy at battery limits."
+      },
+      {
+        "category": "Flow Meter",
+        "name": "Ultrasonic Gas Flow Meter",
+        "slug": "ultrasonic-gas-flow-meter",
+        "image": "/ultrasonic_gas_flow_meter.jpg",
+        "brand": "FH83NEO",
+        "desc": "Full-bore ultrasonic gas flow measurement without pressure drop — ideal for refinery fuel gas, hydrogen, and process gas streams where pressure loss impacts process efficiency."
+      },
+      {
+        "category": "Flow Meter",
+        "name": "Helical Turbine Meter",
+        "slug": "helical-turbine-meter",
+        "image": "/helical_turbine_meter.png",
+        "brand": "Heliflu TZN",
+        "desc": "The leading custody transfer meter for refined petroleum products — from light LPG to heavy fuel oils. The Heliflu TZN's advanced design handles viscosity variations across the full refinery product slate."
+      },
+      {
+        "category": "Flow Meter",
+        "name": "Flare Meter",
+        "slug": "flare-meter",
+        "image": "/flare_meter.png",
+        "brand": "SICK",
+        "desc": "Ultrasonic flare measurement for refinery flare headers and individual unit flares — measuring from near-zero to over 120 m/s, enabling accurate flare gas accounting and minimising uncontrolled emissions."
+      },
+      {
+        "category": "Flow Meter",
+        "name": "Custody Transfer Gas Flow Meter",
+        "slug": "custody-transfer-gas-flow-meter",
+        "image": "/custody_transfer_gas_flow_meter.png",
+        "brand": "SICK",
+        "desc": "Accurate custody transfer gas measurement at refinery battery limits and product transfer points — where billing accuracy is critical and even small measurement errors result in significant financial loss."
+      },
+      {
+        "category": "Flow Meter",
+        "name": "Non-Custody Transfer Gas Flow Meter",
+        "slug": "non-custody-transfer-gas-flow-meter",
+        "image": "/non_custody_transfer_gas_flow_meter.jpg",
+        "brand": "SICK",
+        "desc": "Reliable measurement of refinery fuel gas, hydrogen, and process gas streams for volume flow, mass flow, or flow velocity — built to handle the harsh ambient conditions and wide range of gas compositions found in refinery operations."
+      },
+      {
+        "category": "Flow Meter",
+        "name": "Clamp ON Meter",
+        "slug": "clamp-on-meter",
+        "image": "/clamp_on_meter.png",
+        "brand": "Ultraflux · Minisonic P",
+        "desc": "Non-intrusive portable flowmeter for refinery maintenance and verification — clamp onto any pipe without process interruption to measure hydrocarbons, water, and process fluids across the unit."
+      },
+      {
+        "category": "Flow Metering",
+        "name": "Master Meter",
+        "slug": "master-meter",
+        "image": "/master_meter.jpg",
+        "brand": "Faure Herman",
+        "desc": "Compact master meter solution combining flow conditioner, upstream and downstream spools in a single package — a space-efficient alternative to conventional provers for refinery product verification."
+      },
+      {
+        "category": "Flow Computer",
+        "name": "Flow Computer",
+        "slug": "flow-computer",
+        "image": "/flow_computer.png",
+        "brand": "OMNI · 4000/7000 Series",
+        "desc": "The OMNI Flow Computer — the industry-standard for refinery custody measurement. Handles multi-stream, multi-product configurations with built-in AGA, API, and ISO calculation standards."
+      },
+      {
+        "category": "Gas Analyzer",
+        "name": "Gas Analyzers",
+        "slug": "gas-analyzers",
+        "image": "/gas_analyzer.png",
+        "brand": "SICK",
+        "desc": "In-situ and extractive gas analyzers for refinery process streams — measuring H₂S, CO, SO₂, NOₓ, O₂ and combustibles for process optimisation, safety, and environmental compliance."
+      },
+      {
+        "category": "Gas Analyzer",
+        "name": "Extractive Gas Analyzers",
+        "slug": "extractive-gas-analyzers",
+        "image": "/extractive_gas_analyzer.jpg",
+        "brand": "SICK",
+        "desc": "Reliable continuous gas analysis for refinery stacks and process ducts under harsh conditions — extractive measurement technology conditions the sample before analysis, ensuring consistent and accurate readings."
+      }
+    ]
+  },
+  "water-treatment": {
+    "slug": "water-treatment",
+    "metaTitle": "Water Treatment Industry Solutions",
+    "metaDesc": "Texas Technical Services delivers CEMS, analyzers, flow meters, and industrial process automation systems for water treatment — ensuring precise monitoring, quality control, and operational efficiency.",
+    "name": "Water Treatment",
+    "image": "/water_treatment.webp",
+    "heroDesc": "Advanced OEM solutions for municipal and industrial water treatment — delivering precise monitoring, quality control, and operational efficiency through flow meters, CEMS, dust analyzers, and process automation systems.",
+    "productCount": 9,
+    "products": [
+      {
+        "category": "Metering Skid",
+        "name": "Flow Metering Skid",
+        "slug": "flow-metering-skid",
+        "image": "/flow_metering_skid.jpg",
+        "brand": "SICK · FLOWSKID",
+        "desc": "FLOWSKID turnkey flow metering systems for water treatment plant gas supply — factory-assembled, pre-tested packages delivering reliable fiscal measurement of fuel and process gas at the plant gate."
+      },
+      {
+        "category": "Flow Meter",
+        "name": "Custody Transfer Gas Flow Meter",
+        "slug": "custody-transfer-gas-flow-meter",
+        "image": "/custody_transfer_gas_flow_meter.png",
+        "brand": "SICK",
+        "desc": "Exact gas quantity detection for precise billing at water treatment facilities — where accurate fuel gas measurement directly impacts operational cost control and energy management across the plant."
+      },
+      {
+        "category": "Flow Computer",
+        "name": "Flow Computer",
+        "slug": "flow-computer",
+        "image": "/flow_computer.png",
+        "brand": "OMNI · 4000/7000 Series",
+        "desc": "OMNI flow computers — the most trusted brand for custody flow measurement — reducing uncertainty and supporting energy accounting across water treatment plant gas and liquid metering stations."
+      },
+      {
+        "category": "Flow Meter",
+        "name": "Ultrasonic Gas Flow Meter",
+        "slug": "ultrasonic-gas-flow-meter",
+        "image": "/ultrasonic_gas_flow_meter.jpg",
+        "brand": "FH83NEO",
+        "desc": "Full-bore ultrasonic flowmeter for water treatment plant gas streams — no pressure drop, no moving parts, and zero maintenance burden across aeration gas, biogas, and fuel gas applications."
+      },
+      {
+        "category": "Flow Meter",
+        "name": "Non-Custody Transfer Gas Flow Meter",
+        "slug": "non-custody-transfer-gas-flow-meter",
+        "image": "/non_custody_transfer_gas_flow_meter.jpg",
+        "brand": "SICK",
+        "desc": "Reliable gas flow measurement for internal water treatment plant operations — monitoring biogas, aeration air, and utility streams for volume, mass flow, and velocity across diverse process conditions."
+      },
+      {
+        "category": "CEMS",
+        "name": "CEMS Solutions",
+        "slug": "cems-solutions",
+        "image": "/cems.png",
+        "brand": "SICK",
+        "desc": "SICK CEMS solutions for continuous emissions monitoring at water treatment plants — accurately measuring pollutants and reference quantities from incineration, biogas combustion, and process vents in compliance with regulations."
+      },
+      {
+        "category": "Dust Analyzer",
+        "name": "Dust Analyzer",
+        "slug": "dust-analyzer",
+        "image": "/dust_analyzer.png",
+        "brand": "SICK",
+        "desc": "SICK sets new standards in dust measurement with rugged, low-maintenance devices for detecting and monitoring dust concentrations at water treatment facilities — easy to integrate, install, and commission with user-friendly operation."
+      },
+      {
+        "category": "Flow Meter",
+        "name": "Clamp ON Meter",
+        "slug": "clamp-on-meter",
+        "image": "/clamp_on_meter.png",
+        "brand": "Ultraflux · Minisonic P",
+        "desc": "Portable transit-time ultrasonic flowmeter ideal for water treatment — measuring water of variable quality, process fluids, and chemical dosing lines without pipe penetration or process interruption."
+      },
+      {
+        "category": "Flow Meter",
+        "name": "Ultrasonic Liquid Flow Meter",
+        "slug": "ultrasonic-liquid-flow-meter",
+        "image": "/ultrasonic_liquid_flow_meter.png",
+        "brand": "FH Sonic",
+        "desc": "High-performance multi-path liquid flowmeter for water treatment custody transfer — integrating up to 5 asymmetric measuring paths for accurate flow profile correction across raw water, treated water, and effluent streams."
+      }
+    ]
+  }
+}

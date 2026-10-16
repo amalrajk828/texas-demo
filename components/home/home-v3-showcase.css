@@ -44,7 +44,7 @@ body {
   color: var(--text-primary);
   line-height: 1.6;
   min-height: 100vh;
-  overflow-x: hidden;
+  overflow-x: clip;
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -907,11 +907,7 @@ a {
 }
 
 .solution-card:hover {
-  transform: translateY(-8px) rotate(0deg) scale(1.02);
   background: rgba(255, 255, 255, 0.94);
-  box-shadow: 0 22px 42px -6px rgba(0, 0, 0, 0.14);
-  border-color: rgba(107, 25, 27, 0.35);
-  z-index: 5;
 }
 
 .solution-card-top {
@@ -1119,12 +1115,128 @@ a {
 }
 
 /* --------------------------------------------------------------------------
-   Below-Scroll Content Sections
+   Below-Scroll Content Sections & Hold-and-Cover Sheet
    -------------------------------------------------------------------------- */
+:root {
+  --hero-hold-cover: 100svh;
+  --cover-radius: 32px;
+
+  /* Card Interactive Effect (Uiverse.io reference adaptation) */
+  --card-scale-hover: 1.05;
+  --card-scale-active: 0.95;
+  --card-rotate-active: 1.7deg;
+  --card-border-hover: #1a1a1a;
+  --card-shadow-hover: 12px 17px 51px rgba(0, 0, 0, 0.22);
+  --card-transition-duration: 0.5s;
+  --card-transition-ease: cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+@media (max-width: 768px) {
+  :root {
+    --cover-radius: 24px;
+  }
+}
+
+@media (max-height: 500px) {
+  :root {
+    --hero-hold-cover: 60svh;
+  }
+}
+
+/* ── Reusable Card Interactive Utility ───────────────────────────────────── */
+.card-interactive {
+  /* Reserve 1px border so cards without borders don't jump layout on hover */
+  border-width: 1px;
+  border-style: solid;
+  /* Use individual transform properties so existing transforms / tilts are preserved */
+  scale: 1;
+  rotate: 0deg;
+  transform-origin: center center;
+  transition:
+    scale var(--card-transition-duration) var(--card-transition-ease),
+    rotate var(--card-transition-duration) var(--card-transition-ease),
+    border-color var(--card-transition-duration) var(--card-transition-ease),
+    box-shadow var(--card-transition-duration) var(--card-transition-ease);
+  will-change: scale, rotate, border-color, box-shadow;
+}
+
+@media (hover: hover) and (pointer: fine) {
+  .card-interactive:hover {
+    scale: var(--card-scale-hover);
+    border-color: var(--card-border-hover) !important;
+    box-shadow: var(--card-shadow-hover) !important;
+    z-index: 10;
+  }
+}
+
+.card-interactive:active {
+  scale: var(--card-scale-active) !important;
+  rotate: var(--card-rotate-active) !important;
+  transition-duration: 0.12s;
+}
+
+.card-interactive:focus-visible {
+  outline: 2px solid var(--accent, #6b191b);
+  outline-offset: 3px;
+  scale: var(--card-scale-hover);
+  border-color: var(--card-border-hover) !important;
+  box-shadow: var(--card-shadow-hover) !important;
+  z-index: 10;
+}
+
+.card-interactive.is-clickable,
+a.card-interactive,
+button.card-interactive,
+.card-interactive:has(> a),
+.card-interactive:has(.solution-link),
+.card-interactive:has(.blog-link) {
+  cursor: pointer;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .card-interactive {
+    transition: none !important;
+    scale: 1 !important;
+    rotate: 0deg !important;
+  }
+  .card-interactive:hover,
+  .card-interactive:active,
+  .card-interactive:focus-visible {
+    scale: 1 !important;
+    rotate: 0deg !important;
+    transition: none !important;
+  }
+}
+
 .content-wrapper {
-  background-color: var(--bg-studio);
+  background-color: transparent;
   position: relative;
   z-index: 20;
+}
+
+/* About section acts as the cover sheet rising over the hero */
+.about-cover-section {
+  position: relative;
+  z-index: 20;
+  background-color: var(--bg-studio, #e8e8e6);
+  margin-top: calc(-1 * var(--hero-hold-cover, 100svh));
+  border-top-left-radius: var(--cover-radius, 32px);
+  border-top-right-radius: var(--cover-radius, 32px);
+  box-shadow: 0 -20px 60px rgba(0, 0, 0, 0.12);
+  background-clip: padding-box;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  :root {
+    --hero-hold-cover: 0px;
+    --cover-radius: 0px;
+  }
+  .about-cover-section {
+    margin-top: 0 !important;
+    border-top-left-radius: 0 !important;
+    border-top-right-radius: 0 !important;
+    box-shadow: none !important;
+  }
 }
 
 .content-section {
@@ -1225,8 +1337,7 @@ a {
 }
 
 .feature-card:hover {
-  transform: translateY(-4px);
-  box-shadow: 0 24px 48px -15px rgba(0, 0, 0, 0.1);
+  /* scale & shadow handled by .card-interactive */
 }
 
 .feature-icon {
@@ -1273,7 +1384,7 @@ a {
 }
 
 .industry-card:hover {
-  transform: translateY(-3px);
+  /* scale & shadow handled by .card-interactive */
 }
 
 .industry-badge {
@@ -1380,8 +1491,7 @@ a {
 }
 
 .client-logo-item:hover {
-  transform: translateY(-3px);
-  border-color: rgba(107, 25, 27, 0.2);
+  /* scale & shadow handled by .card-interactive */
 }
 
 .client-logo-img {
@@ -1425,7 +1535,7 @@ a {
 }
 
 .blog-card:hover {
-  transform: translateY(-4px);
+  /* scale & shadow handled by .card-interactive */
 }
 
 .blog-meta {
