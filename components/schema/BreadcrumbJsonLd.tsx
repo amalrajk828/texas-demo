@@ -6,9 +6,12 @@ export function BreadcrumbJsonLd({
   items,
   baseUrl = SITE_URL,
 }: {
-  items: Crumb[];
+  items?: Crumb[];
   baseUrl?: string;
 }) {
+  if (!items || !Array.isArray(items) || items.length === 0) {
+    return null;
+  }
   const jsonLd = {
     "@context": "https://schema.org",
     "@type": "BreadcrumbList",

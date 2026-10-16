@@ -36,7 +36,7 @@ export default function SectionHeading({
 
   return (
     <div
-      className={`max-w-[760px] mb-12 sm:mb-16 ${
+      className={`max-w-[54rem] mb-12 sm:mb-16 ${
         isCenter ? "mx-auto text-center" : "text-left"
       } ${className}`}
     >
@@ -50,7 +50,7 @@ export default function SectionHeading({
         </div>
       )}
 
-      <h2 className="font-heading text-[28px] sm:text-[34px] lg:text-[42px] font-extrabold tracking-[-0.025em] text-[#1a1a1a] leading-[1.16] mb-4">
+      <h2 className="font-heading text-[28px] sm:text-[34px] lg:text-[42px] font-extrabold tracking-[-0.025em] text-[#1a1a1a] leading-[1.16] mb-4 text-balance">
         {title}
       </h2>
 

@@ -1,0 +1,612 @@
+{
+  "advanced-training": [
+    {
+      "name": "AdvancedTrainingHero",
+      "path": "@/components/services_group/advanced-training/AdvancedTrainingHero"
+    },
+    {
+      "name": "AdvancedTrainingContent",
+      "path": "@/components/services_group/advanced-training/AdvancedTrainingContent"
+    }
+  ],
+  "air-permeability-test": [
+    {
+      "name": "AirPermeabilityHero",
+      "path": "@/components/service/air-permeability-test/AirPermeabilityHero"
+    },
+    {
+      "name": "AirPermeabilityContent",
+      "path": "@/components/service/air-permeability-test/AirPermeabilityContent"
+    }
+  ],
+  "air-permeability-test-2": [
+    {
+      "name": "AirPermeabilityHero",
+      "path": "@/components/service/air-permeability-test/AirPermeabilityHero"
+    },
+    {
+      "name": "AirPermeabilityContent",
+      "path": "@/components/service/air-permeability-test/AirPermeabilityContent"
+    }
+  ],
+  "audits-and-specialized-consultancy": [
+    {
+      "name": "AuditsHero",
+      "path": "@/components/service/audits-and-specialized-consultancy/AuditsHero"
+    },
+    {
+      "name": "AuditsContent",
+      "path": "@/components/service/audits-and-specialized-consultancy/AuditsContent"
+    }
+  ],
+  "bend-test": [
+    {
+      "name": "BendHero",
+      "path": "@/components/service/bend-test/BendHero"
+    },
+    {
+      "name": "BendContent",
+      "path": "@/components/service/bend-test/BendContent"
+    }
+  ],
+  "commissioning-and-after-sales-support": [
+    {
+      "name": "CommissioningHero",
+      "path": "@/components/service/commissioning-and-after-sales-support/CommissioningHero"
+    },
+    {
+      "name": "CommissioningContent",
+      "path": "@/components/service/commissioning-and-after-sales-support/CommissioningContent"
+    }
+  ],
+  "commissioning-and-start-up-support": [
+    {
+      "name": "CommissioningHero",
+      "path": "@/components/service/commissioning-and-start-up-support/CommissioningHero"
+    },
+    {
+      "name": "CommissioningContent",
+      "path": "@/components/service/commissioning-and-start-up-support/CommissioningContent"
+    },
+    {
+      "name": "ServiceProcessSteps",
+      "path": "@/components/ServiceProcessSteps"
+    }
+  ],
+  "constructions": [
+    {
+      "name": "ConstructionHero",
+      "path": "@/components/service/constructions/ConstructionHero"
+    },
+    {
+      "name": "ConstructionSubServices",
+      "path": "@/components/service/constructions/ConstructionSubServices"
+    }
+  ],
+  "corrosion-control-services-2": [
+    {
+      "name": "CorrosionControlHero",
+      "path": "@/components/service/corrosion-control-services-2/CorrosionControlHero"
+    },
+    {
+      "name": "CorrosionControlContent",
+      "path": "@/components/service/corrosion-control-services-2/CorrosionControlContent"
+    }
+  ],
+  "eddy-current-testing": [
+    {
+      "name": "EddyCurrentHero",
+      "path": "@/components/service/eddy-current-testing/EddyCurrentHero"
+    },
+    {
+      "name": "EddyCurrentContent",
+      "path": "@/components/service/eddy-current-testing/EddyCurrentContent"
+    }
+  ],
+  "electrical-instrumentation-works": [
+    {
+      "name": "ElectricalWorksHero",
+      "path": "@/components/services_group/electrical-instrumentation-works/ElectricalWorksHero"
+    },
+    {
+      "name": "ElectricalWorksContent",
+      "path": "@/components/services_group/electrical-instrumentation-works/ElectricalWorksContent"
+    }
+  ],
+  "exterior-windows-doors-curtain-wall-testing": [
+    {
+      "name": "ExteriorTestingContent",
+      "path": "@/components/service/exterior-windows-doors-curtain-wall-testing/ExteriorTestingContent"
+    }
+  ],
+  "flow-computer-configuration": [
+    {
+      "name": "FlowComputerHero",
+      "path": "@/components/service/flow-computer-configuration/FlowComputerHero"
+    },
+    {
+      "name": "FlowComputerContent",
+      "path": "@/components/service/flow-computer-configuration/FlowComputerContent"
+    },
+    {
+      "name": "ServiceProcessSteps",
+      "path": "@/components/ServiceProcessSteps"
+    }
+  ],
+  "flow-meter-calibration": [
+    {
+      "name": "CalibrationHero",
+      "path": "@/components/service/flow-meter-calibration/CalibrationHero"
+    },
+    {
+      "name": "CalibrationContent",
+      "path": "@/components/service/flow-meter-calibration/CalibrationContent"
+    },
+    {
+      "name": "ServiceProcessSteps",
+      "path": "@/components/ServiceProcessSteps"
+    }
+  ],
+  "fracture-test": [
+    {
+      "name": "FractureHero",
+      "path": "@/components/service/fracture-test/FractureHero"
+    },
+    {
+      "name": "FractureContent",
+      "path": "@/components/service/fracture-test/FractureContent"
+    }
+  ],
+  "gamma-ray-pipe-crawler-inspection-systems": [
+    {
+      "name": "GammaRayHero",
+      "path": "@/components/service/gamma-ray-pipe-crawler-inspection-systems/GammaRayHero"
+    },
+    {
+      "name": "GammaRayContent",
+      "path": "@/components/service/gamma-ray-pipe-crawler-inspection-systems/GammaRayContent"
+    }
+  ],
+  "genuine-spare-parts": [
+    {
+      "name": "SparePartsHero",
+      "path": "@/components/service/genuine-spare-parts/SparePartsHero"
+    },
+    {
+      "name": "SparePartsContent",
+      "path": "@/components/service/genuine-spare-parts/SparePartsContent"
+    }
+  ],
+  "hand-rail-fabrication": [
+    {
+      "name": "HandRailHero",
+      "path": "@/components/services_group/hand-rail-fabrication/HandRailHero"
+    },
+    {
+      "name": "HandRailContent",
+      "path": "@/components/services_group/hand-rail-fabrication/HandRailContent"
+    }
+  ],
+  "hardness-test": [
+    {
+      "name": "HardnessHero",
+      "path": "@/components/service/hardness-test/HardnessHero"
+    },
+    {
+      "name": "HardnessContent",
+      "path": "@/components/service/hardness-test/HardnessContent"
+    }
+  ],
+  "heat-treatment-services": [
+    {
+      "name": "HeatTreatmentHero",
+      "path": "@/components/service/heat-treatment-services/HeatTreatmentHero"
+    },
+    {
+      "name": "HeatTreatmentContent",
+      "path": "@/components/service/heat-treatment-services/HeatTreatmentContent"
+    }
+  ],
+  "heat-treatment-services-2": [
+    {
+      "name": "HeatTreatmentHero",
+      "path": "@/components/service/heat-treatment-services/HeatTreatmentHero"
+    },
+    {
+      "name": "HeatTreatmentContent",
+      "path": "@/components/service/heat-treatment-services/HeatTreatmentContent"
+    }
+  ],
+  "high-and-low-voltage-cable-steel-structure-supports": [
+    {
+      "name": "CableSupportsHero",
+      "path": "@/components/services_group/high-and-low-voltage-cable-steel-structure-supports/CableSupportsHero"
+    },
+    {
+      "name": "CableSupportsContent",
+      "path": "@/components/services_group/high-and-low-voltage-cable-steel-structure-supports/CableSupportsContent"
+    }
+  ],
+  "hose-test": [
+    {
+      "name": "HoseTestHero",
+      "path": "@/components/service/hose-test/HoseTestHero"
+    },
+    {
+      "name": "HoseTestContent",
+      "path": "@/components/service/hose-test/HoseTestContent"
+    }
+  ],
+  "hose-test-2": [
+    {
+      "name": "HoseTestHero",
+      "path": "@/components/service/hose-test/HoseTestHero"
+    },
+    {
+      "name": "HoseTestContent",
+      "path": "@/components/service/hose-test/HoseTestContent"
+    }
+  ],
+  "impact-test": [
+    {
+      "name": "ImpactHero",
+      "path": "@/components/service/impact-test/ImpactHero"
+    },
+    {
+      "name": "ImpactContent",
+      "path": "@/components/service/impact-test/ImpactContent"
+    }
+  ],
+  "lifting-equipment-inspection": [
+    {
+      "name": "LiftingInspectionHero",
+      "path": "@/components/service/lifting-equipment-inspection/LiftingInspectionHero"
+    },
+    {
+      "name": "LiftingInspectionContent",
+      "path": "@/components/service/lifting-equipment-inspection/LiftingInspectionContent"
+    }
+  ],
+  "lifting-equipment-inspection-2": [
+    {
+      "name": "LiftingInspectionHero",
+      "path": "@/components/service/lifting-equipment-inspection/LiftingInspectionHero"
+    },
+    {
+      "name": "LiftingInspectionContent",
+      "path": "@/components/service/lifting-equipment-inspection/LiftingInspectionContent"
+    }
+  ],
+  "liquid-penetrant-dye-penetrant-examination-pt": [
+    {
+      "name": "PenetrantHero",
+      "path": "@/components/service/liquid-penetrant-dye-penetrant-examination-pt/PenetrantHero"
+    },
+    {
+      "name": "PenetrantContent",
+      "path": "@/components/service/liquid-penetrant-dye-penetrant-examination-pt/PenetrantContent"
+    }
+  ],
+  "macro-and-micro-test": [
+    {
+      "name": "MacroMicroHero",
+      "path": "@/components/service/macro-and-micro-test/MacroMicroHero"
+    },
+    {
+      "name": "MacroMicroContent",
+      "path": "@/components/service/macro-and-micro-test/MacroMicroContent"
+    }
+  ],
+  "magnetic-flux-leakage": [
+    {
+      "name": "MFLHero",
+      "path": "@/components/service/magnetic-flux-leakage/MFLHero"
+    },
+    {
+      "name": "MFLContent",
+      "path": "@/components/service/magnetic-flux-leakage/MFLContent"
+    }
+  ],
+  "magnetic-particle-inspection-mt": [
+    {
+      "name": "MagneticParticleHero",
+      "path": "@/components/service/magnetic-particle-inspection-mt/MagneticParticleHero"
+    },
+    {
+      "name": "MagneticParticleContent",
+      "path": "@/components/service/magnetic-particle-inspection-mt/MagneticParticleContent"
+    }
+  ],
+  "mechanical-testing": [
+    {
+      "name": "MechanicalHero",
+      "path": "@/components/service/mechanical-testing/MechanicalHero"
+    },
+    {
+      "name": "MechanicalSubServices",
+      "path": "@/components/service/mechanical-testing/MechanicalSubServices"
+    }
+  ],
+  "metallurgical-services": [
+    {
+      "name": "MetallurgicalHero",
+      "path": "@/components/service/metallurgical-services/MetallurgicalHero"
+    },
+    {
+      "name": "MetallurgicalContent",
+      "path": "@/components/service/metallurgical-services/MetallurgicalContent"
+    }
+  ],
+  "metallurgical-services-2": [
+    {
+      "name": "MetallurgicalHero",
+      "path": "@/components/service/metallurgical-services/MetallurgicalHero"
+    },
+    {
+      "name": "MetallurgicalContent",
+      "path": "@/components/service/metallurgical-services/MetallurgicalContent"
+    }
+  ],
+  "metering-control-system-integration": [
+    {
+      "name": "McsiHero",
+      "path": "@/components/service/metering-control-system-integration/McsiHero"
+    },
+    {
+      "name": "McsiServices",
+      "path": "@/components/service/metering-control-system-integration/McsiServices"
+    },
+    {
+      "name": "McsiWhyUs",
+      "path": "@/components/service/metering-control-system-integration/McsiWhyUs"
+    }
+  ],
+  "metering-expert-services": [
+    {
+      "name": "ExpertServicesHero",
+      "path": "@/components/service/metering-expert-services/ExpertServicesHero"
+    },
+    {
+      "name": "ExpertServicesContent",
+      "path": "@/components/service/metering-expert-services/ExpertServicesContent"
+    }
+  ],
+  "new-installation-design-and-commissioning": [
+    {
+      "name": "NewInstallationHero",
+      "path": "@/components/services_group/new-installation-design-and-commissioning/NewInstallationHero"
+    },
+    {
+      "name": "NewInstallationContent",
+      "path": "@/components/services_group/new-installation-design-and-commissioning/NewInstallationContent"
+    }
+  ],
+  "non-destructive-testing-ndt": [
+    {
+      "name": "NDTHero",
+      "path": "@/components/service/non-destructive-testing-ndt/NDTHero"
+    },
+    {
+      "name": "NDTSubServices",
+      "path": "@/components/service/non-destructive-testing-ndt/NDTSubServices"
+    }
+  ],
+  "phased-array-ultrasonic-testing": [
+    {
+      "name": "PhasedArrayHero",
+      "path": "@/components/service/phased-array-ultrasonic-testing/PhasedArrayHero"
+    },
+    {
+      "name": "PhasedArrayContent",
+      "path": "@/components/service/phased-array-ultrasonic-testing/PhasedArrayContent"
+    }
+  ],
+  "plant-automation": [
+    {
+      "name": "PlantAutomationHero",
+      "path": "@/components/service/plant-automation/PlantAutomationHero"
+    },
+    {
+      "name": "PlantAutomationContent",
+      "path": "@/components/service/plant-automation/PlantAutomationContent"
+    }
+  ],
+  "pullout-test": [
+    {
+      "name": "PulloutHero",
+      "path": "@/components/service/pullout-test/PulloutHero"
+    },
+    {
+      "name": "PulloutContent",
+      "path": "@/components/service/pullout-test/PulloutContent"
+    }
+  ],
+  "radiographic-testing-rt": [
+    {
+      "name": "RadiographicHero",
+      "path": "@/components/service/radiographic-testing-rt/RadiographicHero"
+    },
+    {
+      "name": "RadiographicContent",
+      "path": "@/components/service/radiographic-testing-rt/RadiographicContent"
+    }
+  ],
+  "repair-upgrades-for-helical-flow-meters": [
+    {
+      "name": "HelicalHero",
+      "path": "@/components/service/repair-upgrades-for-helical-flow-meters/HelicalHero"
+    },
+    {
+      "name": "HelicalContent",
+      "path": "@/components/service/repair-upgrades-for-helical-flow-meters/HelicalContent"
+    }
+  ],
+  "specialized-inspection-service": [
+    {
+      "name": "SpecializedHero",
+      "path": "@/components/service/specialized-inspection-service/SpecializedHero"
+    },
+    {
+      "name": "SpecializedSubServices",
+      "path": "@/components/service/specialized-inspection-service/SpecializedSubServices"
+    }
+  ],
+  "steel-fabrication": [
+    {
+      "name": "SteelFabricationHero",
+      "path": "@/components/services_group/steel-fabrication/SteelFabricationHero"
+    },
+    {
+      "name": "SteelFabricationContent",
+      "path": "@/components/services_group/steel-fabrication/SteelFabricationContent"
+    }
+  ],
+  "structural-steel-erection": [
+    {
+      "name": "SteelErectionHero",
+      "path": "@/components/services_group/structural-steel-erection/SteelErectionHero"
+    },
+    {
+      "name": "SteelErectionContent",
+      "path": "@/components/services_group/structural-steel-erection/SteelErectionContent"
+    }
+  ],
+  "supply-and-installation-of-suspended-access-equipments": [
+    {
+      "name": "SuspendedAccessHero",
+      "path": "@/components/services_group/supply-and-installation-of-suspended-access-equipments/SuspendedAccessHero"
+    },
+    {
+      "name": "SuspendedAccessContent",
+      "path": "@/components/services_group/supply-and-installation-of-suspended-access-equipments/SuspendedAccessContent"
+    }
+  ],
+  "system-software-upgrade": [
+    {
+      "name": "ControlSystemHero",
+      "path": "@/components/service/system-software-upgrade/ControlSystemHero"
+    },
+    {
+      "name": "ControlSystemContent",
+      "path": "@/components/service/system-software-upgrade/ControlSystemContent"
+    }
+  ],
+  "tensile-test": [
+    {
+      "name": "TensileHero",
+      "path": "@/components/service/tensile-test/TensileHero"
+    },
+    {
+      "name": "TensileContent",
+      "path": "@/components/service/tensile-test/TensileContent"
+    }
+  ],
+  "time-of-flight-diffraction": [
+    {
+      "name": "TOFDHero",
+      "path": "@/components/service/time-of-flight-diffraction/TOFDHero"
+    },
+    {
+      "name": "TOFDContent",
+      "path": "@/components/service/time-of-flight-diffraction/TOFDContent"
+    }
+  ],
+  "torque-tightening-bolt-tensioning": [
+    {
+      "name": "TorqueHero",
+      "path": "@/components/service/torque-tightening-bolt-tensioning/TorqueHero"
+    },
+    {
+      "name": "TorqueContent",
+      "path": "@/components/service/torque-tightening-bolt-tensioning/TorqueContent"
+    }
+  ],
+  "torque-tightening-bolt-tensioning-2": [
+    {
+      "name": "TorqueHero",
+      "path": "@/components/service/torque-tightening-bolt-tensioning/TorqueHero"
+    },
+    {
+      "name": "TorqueContent",
+      "path": "@/components/service/torque-tightening-bolt-tensioning/TorqueContent"
+    }
+  ],
+  "ultrasonic-testing-ut": [
+    {
+      "name": "UltrasonicHero",
+      "path": "@/components/service/ultrasonic-testing-ut/UltrasonicHero"
+    },
+    {
+      "name": "UltrasonicContent",
+      "path": "@/components/service/ultrasonic-testing-ut/UltrasonicContent"
+    }
+  ],
+  "upgrade-of-metering-control-system": [
+    {
+      "name": "UpgradeHero",
+      "path": "@/components/service/upgrade-of-metering-control-system/UpgradeHero"
+    },
+    {
+      "name": "UpgradeServices",
+      "path": "@/components/service/upgrade-of-metering-control-system/UpgradeServices"
+    },
+    {
+      "name": "UpgradeWhyUs",
+      "path": "@/components/service/upgrade-of-metering-control-system/UpgradeWhyUs"
+    }
+  ],
+  "validation-and-uncertainty-calculations": [
+    {
+      "name": "ValidationHero",
+      "path": "@/components/service/validation-and-uncertainty-calculations/ValidationHero"
+    },
+    {
+      "name": "ValidationContent",
+      "path": "@/components/service/validation-and-uncertainty-calculations/ValidationContent"
+    },
+    {
+      "name": "ServiceProcessSteps",
+      "path": "@/components/ServiceProcessSteps"
+    }
+  ],
+  "videoscope": [
+    {
+      "name": "VideoscopeHero",
+      "path": "@/components/service/videoscope/VideoscopeHero"
+    },
+    {
+      "name": "VideoscopeContent",
+      "path": "@/components/service/videoscope/VideoscopeContent"
+    }
+  ],
+  "visual-inspection-vi": [
+    {
+      "name": "VisualInspectionHero",
+      "path": "@/components/service/visual-inspection-vi/VisualInspectionHero"
+    },
+    {
+      "name": "VisualInspectionContent",
+      "path": "@/components/service/visual-inspection-vi/VisualInspectionContent"
+    }
+  ],
+  "water-penetration-test": [
+    {
+      "name": "WaterPenetrationHero",
+      "path": "@/components/service/water-penetration-test/WaterPenetrationHero"
+    },
+    {
+      "name": "WaterPenetrationContent",
+      "path": "@/components/service/water-penetration-test/WaterPenetrationContent"
+    }
+  ],
+  "water-penetration-test-2": [
+    {
+      "name": "WaterPenetrationHero",
+      "path": "@/components/service/water-penetration-test/WaterPenetrationHero"
+    },
+    {
+      "name": "WaterPenetrationContent",
+      "path": "@/components/service/water-penetration-test/WaterPenetrationContent"
+    }
+  ]
+}

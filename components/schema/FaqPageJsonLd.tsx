@@ -1,6 +1,9 @@
 type FaqItem = { q: string; a: string };
 
-export function FaqPageJsonLd({ items }: { items: FaqItem[] }) {
+export function FaqPageJsonLd({ items }: { items?: FaqItem[] }) {
+  if (!items || !Array.isArray(items) || items.length === 0) {
+    return null;
+  }
   const jsonLd = {
     "@context": "https://schema.org",
     "@type": "FAQPage",

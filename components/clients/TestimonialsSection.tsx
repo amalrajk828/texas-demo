@@ -1,7 +1,9 @@
 "use client";
 
+import React from "react";
 import Image from "next/image";
 import { Star } from "lucide-react";
+import { Section, Container, CardGrid } from "@/components/v3";
 
 const testimonials = [
   {
@@ -24,56 +26,62 @@ const testimonials = [
   },
 ];
 
-export default function TestimonialsSection() {
-  return (
-    <section className="bg-[#000000] blueprint-grid blueprint-dot-grid relative overflow-hidden">
-      <div className="absolute inset-0 pointer-events-none"
-        style={{ backgroundImage: "repeating-linear-gradient(0deg,transparent,transparent 39px,rgba(255,255,255,0.02) 40px),repeating-linear-gradient(90deg,transparent,transparent 39px,rgba(255,255,255,0.02) 40px)" }} />
-      <div className="absolute top-0 right-0 w-[520px] h-[520px] pointer-events-none"
-        style={{ background: "radial-gradient(circle, rgba(231,33,43,0.08) 0%, transparent 70%)" }} />
+interface TestimonialsSectionProps {
+  tone?: "white" | "light" | "grey";
+}
 
-      <div className="relative z-10 max-w-6xl mx-auto px-4 sm:px-6 py-20 lg:py-28">
-        <div className="text-center mb-14">
+export default function TestimonialsSection({ tone = "white" }: TestimonialsSectionProps) {
+  const sectionTone = tone === "light" ? "white" : tone;
+
+  return (
+    <Section tone={sectionTone} className="relative overflow-hidden">
+      <Container>
+        <div className="text-center mb-12 sm:mb-16">
           <div className="fade-up">
-            <span className="text-[11px] font-bold tracking-[0.28em] uppercase text-[#0891B2]">
-              testimonials
+            <span
+              className="text-[11px] font-bold tracking-[0.28em] uppercase block"
+              style={{ color: "var(--eyebrow-color, #8a302f)" }}
+            >
+              TESTIMONIALS
             </span>
           </div>
           <div className="fade-up d1">
-            <h2 className="mt-4 text-3xl lg:text-4xl font-bold text-white">
+            <h2 className="mt-4 font-heading text-[28px] sm:text-[34px] lg:text-[42px] font-extrabold tracking-[-0.025em] text-[#1a1c20] leading-[1.16]">
               What people say
             </h2>
           </div>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+        <CardGrid max={4}>
           {testimonials.map((t, i) => (
-            <div key={t.name} className={`fade-up d${i + 2}`}>
-              <div
-                className="bg-white/5 border border-white/10 hover:border-[#e7212b]/40 rounded-2xl p-8 flex flex-col gap-5 transition-all duration-300 h-full"
-              >
-                <div className="flex gap-1">
+            <div
+              key={t.name}
+              className={`glass-card justify-between hover:-translate-y-1.5 transition-all duration-300 fade-up d${i + 2}`}
+            >
+              <div>
+                <div className="flex gap-1 mb-5">
                   {[...Array(5)].map((_, j) => (
-                    <Star key={j} className="w-4 h-4 fill-[#e7212b] text-[#e7212b]" />
+                    <Star key={j} className="w-4 h-4 fill-[#8a302f] text-[#8a302f]" />
                   ))}
                 </div>
-                <p className="text-gray-300 italic text-[14px] leading-[1.9] flex-1">
+                <p className="text-[#2b2f36] italic text-[14px] sm:text-[14.5px] leading-[1.8]">
                   &ldquo;{t.text}&rdquo;
                 </p>
-                <div className="flex items-center gap-3.5 pt-4 border-t border-white/10">
-                  <div className="relative w-11 h-11 rounded-full overflow-hidden shrink-0 ring-2 ring-white/20">
-                    <Image src={t.avatar} alt={t.name} fill className="object-cover" sizes="44px" />
-                  </div>
-                  <div>
-                    <p className="text-white font-semibold text-sm">{t.name}</p>
-                    <p className="text-gray-400 text-xs mt-0.5">{t.role}</p>
-                  </div>
+              </div>
+
+              <div className="flex items-center gap-3.5 pt-5 mt-6 border-t border-black/[0.08]">
+                <div className="relative w-11 h-11 rounded-full overflow-hidden shrink-0 ring-2 ring-white shadow-sm border border-black/[0.06]">
+                  <Image src={t.avatar} alt={t.name} fill className="object-cover" sizes="44px" />
+                </div>
+                <div>
+                  <p className="text-[#1a1c20] font-bold text-sm leading-tight">{t.name}</p>
+                  <p className="text-[#5f6670] text-xs mt-0.5">{t.role}</p>
                 </div>
               </div>
             </div>
           ))}
-        </div>
-      </div>
-    </section>
+        </CardGrid>
+      </Container>
+    </Section>
   );
 }

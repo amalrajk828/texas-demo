@@ -1,0 +1,14 @@
+{
+  "count": 300,
+  "width": 1920,
+  "height": 1080,
+  "mobileWidth": 1280,
+  "mobileHeight": 720,
+  "prefix": "frame_",
+  "ext": ".webp",
+  "bgColor": "#e8e8e6",
+  "originalPayloadMB": "163.51",
+  "webpPayloadMB": "30.82",
+  "mobilePayloadMB": "12.16",
+  "reductionPct": "81.1%"
+}

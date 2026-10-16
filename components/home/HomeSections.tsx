@@ -1,12 +1,13 @@
 import React from "react";
 import Image from "next/image";
 import Link from "next/link";
+import CardGrid from "@/components/v3/CardGrid";
 
 export default function HomeSections() {
   return (
-    <main className="content-wrapper">
+    <div className="content-wrapper">
       {/* About Us Section */}
-      <section id="about" className="content-section">
+      <section id="about" className="content-section about-cover-section">
         <div className="section-container">
           <div className="section-header">
             <span className="section-eyebrow">About Texas Technical Services</span>
@@ -22,7 +23,7 @@ export default function HomeSections() {
           </div>
 
           <div className="about-stats-grid">
-            <div className="stat-card">
+            <div className="stat-card card-interactive">
               <div className="stat-number">18+</div>
               <div className="stat-title">Years Industrial Precision</div>
               <p className="stat-desc">
@@ -30,7 +31,7 @@ export default function HomeSections() {
                 the GCC since 2008.
               </p>
             </div>
-            <div className="stat-card">
+            <div className="stat-card card-interactive">
               <div className="stat-number">200+</div>
               <div className="stat-title">Completed Skid Packages</div>
               <p className="stat-desc">
@@ -38,7 +39,7 @@ export default function HomeSections() {
                 and Chevron.
               </p>
             </div>
-            <div className="stat-card">
+            <div className="stat-card card-interactive">
               <div className="stat-number">16+</div>
               <div className="stat-title">Global OEM Alliances</div>
               <p className="stat-desc">
@@ -46,7 +47,7 @@ export default function HomeSections() {
                 including Emerson, SICK &amp; Endress+Hauser.
               </p>
             </div>
-            <div className="stat-card">
+            <div className="stat-card card-interactive">
               <div className="stat-number">100%</div>
               <div className="stat-title">Certified Quality &amp; Safety</div>
               <p className="stat-desc">
@@ -79,8 +80,8 @@ export default function HomeSections() {
             </p>
           </div>
 
-          <div className="features-grid">
-            <div className="feature-card">
+          <CardGrid max={2}>
+            <div className="feature-card card-interactive">
               <div className="feature-icon">
                 <svg
                   width="24"
@@ -104,7 +105,7 @@ export default function HomeSections() {
               </p>
             </div>
 
-            <div className="feature-card">
+            <div className="feature-card card-interactive">
               <div className="feature-icon">
                 <svg
                   width="24"
@@ -136,7 +137,7 @@ export default function HomeSections() {
               </p>
             </div>
 
-            <div className="feature-card">
+            <div className="feature-card card-interactive">
               <div className="feature-icon">
                 <svg
                   width="24"
@@ -160,7 +161,7 @@ export default function HomeSections() {
               </p>
             </div>
 
-            <div className="feature-card">
+            <div className="feature-card card-interactive">
               <div className="feature-icon">
                 <svg
                   width="24"
@@ -190,7 +191,7 @@ export default function HomeSections() {
                 reference standards.
               </p>
             </div>
-          </div>
+          </CardGrid>
 
           <div style={{ textAlign: "center", marginTop: "36px" }}>
             <Link href="/services/" className="btn btn-secondary">
@@ -212,8 +213,8 @@ export default function HomeSections() {
             </p>
           </div>
 
-          <div className="industries-grid">
-            <div className="industry-card">
+          <CardGrid max={4}>
+            <div className="industry-card card-interactive">
               <div className="industry-badge">Upstream</div>
               <h3 className="industry-title">Oil &amp; Gas Production</h3>
               <p className="industry-desc">
@@ -221,7 +222,7 @@ export default function HomeSections() {
                 crude pipeline custody transfer.
               </p>
             </div>
-            <div className="industry-card">
+            <div className="industry-card card-interactive">
               <div className="industry-badge">Downstream</div>
               <h3 className="industry-title">Refining &amp; Petrochemicals</h3>
               <p className="industry-desc">
@@ -229,7 +230,7 @@ export default function HomeSections() {
                 high-pressure steam distribution.
               </p>
             </div>
-            <div className="industry-card">
+            <div className="industry-card card-interactive">
               <div className="industry-badge">Utilities</div>
               <h3 className="industry-title">Power &amp; Desalination</h3>
               <p className="industry-desc">
@@ -237,7 +238,7 @@ export default function HomeSections() {
                 heavy fuel oil delivery systems.
               </p>
             </div>
-            <div className="industry-card">
+            <div className="industry-card card-interactive">
               <div className="industry-badge">Offshore</div>
               <h3 className="industry-title">Marine Terminals &amp; Bunkering</h3>
               <p className="industry-desc">
@@ -245,7 +246,7 @@ export default function HomeSections() {
                 fiscal custody verification.
               </p>
             </div>
-          </div>
+          </CardGrid>
 
           <div style={{ textAlign: "center", marginTop: "36px" }}>
             <Link href="/industries/" className="btn btn-secondary">
@@ -353,8 +354,8 @@ export default function HomeSections() {
             </p>
           </div>
 
-          <div className="clients-logo-grid">
-            <div className="client-logo-item" title="Kuwait Oil Company (KOC)">
+          <CardGrid max={4}>
+            <div className="client-logo-item card-interactive" title="Kuwait Oil Company (KOC)">
               <Image
                 src="/clients/koc.svg"
                 alt="Kuwait Oil Company"
@@ -364,7 +365,7 @@ export default function HomeSections() {
               />
               <span className="client-logo-name">Kuwait Oil Company (KOC)</span>
             </div>
-            <div className="client-logo-item" title="Kuwait National Petroleum Company (KNPC)">
+            <div className="client-logo-item card-interactive" title="Kuwait National Petroleum Company (KNPC)">
               <Image
                 src="/clients/knpc.svg"
                 alt="Kuwait National Petroleum Company"
@@ -374,7 +375,7 @@ export default function HomeSections() {
               />
               <span className="client-logo-name">KNPC</span>
             </div>
-            <div className="client-logo-item" title="Kuwait Gulf Oil Company (KGOC)">
+            <div className="client-logo-item card-interactive" title="Kuwait Gulf Oil Company (KGOC)">
               <Image
                 src="/clients/kgoc.png"
                 alt="Kuwait Gulf Oil Company"
@@ -384,7 +385,7 @@ export default function HomeSections() {
               />
               <span className="client-logo-name">KGOC</span>
             </div>
-            <div className="client-logo-item" title="Ministry of Electricity & Water (MEW)">
+            <div className="client-logo-item card-interactive" title="Ministry of Electricity & Water (MEW)">
               <Image
                 src="/clients/mew.svg"
                 alt="Ministry of Electricity and Water"
@@ -394,7 +395,7 @@ export default function HomeSections() {
               />
               <span className="client-logo-name">MEW Kuwait</span>
             </div>
-            <div className="client-logo-item" title="Saudi Arabian Chevron">
+            <div className="client-logo-item card-interactive" title="Saudi Arabian Chevron">
               <Image
                 src="/clients/chevron.svg"
                 alt="Saudi Arabian Chevron"
@@ -404,7 +405,7 @@ export default function HomeSections() {
               />
               <span className="client-logo-name">Chevron</span>
             </div>
-            <div className="client-logo-item" title="Kuwait Cement Company">
+            <div className="client-logo-item card-interactive" title="Kuwait Cement Company">
               <Image
                 src="/clients/kuwaitcement.svg"
                 alt="Kuwait Cement Company"
@@ -414,7 +415,7 @@ export default function HomeSections() {
               />
               <span className="client-logo-name">Kuwait Cement</span>
             </div>
-          </div>
+          </CardGrid>
 
           <div style={{ textAlign: "center", marginTop: "36px" }}>
             <Link href="/clients/" className="btn btn-secondary">
@@ -436,8 +437,8 @@ export default function HomeSections() {
             </p>
           </div>
 
-          <div className="blog-grid">
-            <article className="blog-card">
+          <CardGrid max={3}>
+            <article className="blog-card card-interactive is-clickable">
               <div className="blog-meta">Flow Measurement &bull; 10 min read</div>
               <h3 className="blog-title">
                 What is Custody Transfer Metering? A Complete Guide to Standards and Accuracy
@@ -451,7 +452,7 @@ export default function HomeSections() {
               </Link>
             </article>
 
-            <article className="blog-card">
+            <article className="blog-card card-interactive is-clickable">
               <div className="blog-meta">Industrial Automation &bull; 8 min read</div>
               <h3 className="blog-title">
                 SCADA System Upgrades: Modernizing Legacy Control Architectures
@@ -465,7 +466,7 @@ export default function HomeSections() {
               </Link>
             </article>
 
-            <article className="blog-card">
+            <article className="blog-card card-interactive is-clickable">
               <div className="blog-meta">NDT &amp; Inspection &bull; 10 min read</div>
               <h3 className="blog-title">
                 Non-Destructive Testing (NDT) Methods: A Complete Technical Guide
@@ -478,7 +479,7 @@ export default function HomeSections() {
                 Read Technical Guide &rarr;
               </Link>
             </article>
-          </div>
+          </CardGrid>
 
           <div style={{ textAlign: "center", marginTop: "36px" }}>
             <Link href="/blog/" className="btn btn-secondary">
@@ -511,6 +512,6 @@ export default function HomeSections() {
           </div>
         </div>
       </section>
-    </main>
+    </div>
   );
 }

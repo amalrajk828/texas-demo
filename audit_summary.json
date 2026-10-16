@@ -1,0 +1,3373 @@
+[
+  {
+    "slug": "advanced-training",
+    "url": "/service/advanced-training/",
+    "title": "Advanced Training — NDT, Flow Measurement, Automation",
+    "canonical": "/service/advanced-training/",
+    "imports": [
+      {
+        "spec": "type { Metadata }",
+        "source": "next"
+      },
+      {
+        "spec": "AdvancedTrainingHero",
+        "source": "@/components/services_group/advanced-training/AdvancedTrainingHero"
+      },
+      {
+        "spec": "AdvancedTrainingContent",
+        "source": "@/components/services_group/advanced-training/AdvancedTrainingContent"
+      },
+      {
+        "spec": "{ BreadcrumbJsonLd }",
+        "source": "@/components/schema/BreadcrumbJsonLd"
+      },
+      {
+        "spec": "{ ServiceJsonLd }",
+        "source": "@/components/schema/ServiceJsonLd"
+      },
+      {
+        "spec": "{ FaqPageJsonLd }",
+        "source": "@/components/schema/FaqPageJsonLd"
+      },
+      {
+        "spec": "{ serviceFaqData }",
+        "source": "@/lib/serviceFaqData"
+      },
+      {
+        "spec": "{ serviceCrossLinks }",
+        "source": "@/lib/serviceCrossLinks"
+      }
+    ],
+    "sectionsUsed": [
+      "Hero",
+      "Overview/WhatWeDo",
+      "SubServices/Grid",
+      "FAQ",
+      "RelatedServices"
+    ],
+    "images": [
+      "\"/og-default.png\"",
+      "\"/og-default.png\""
+    ],
+    "hasBreadcrumbLd": true,
+    "hasServiceLd": true,
+    "hasFaqLd": true
+  },
+  {
+    "slug": "air-permeability-test",
+    "url": "/service/air-permeability-test/",
+    "title": "Air Permeability Testing — Building Envelope",
+    "canonical": "/service/air-permeability-test/",
+    "imports": [
+      {
+        "spec": "type { Metadata }",
+        "source": "next"
+      },
+      {
+        "spec": "AirPermeabilityHero",
+        "source": "@/components/service/air-permeability-test/AirPermeabilityHero"
+      },
+      {
+        "spec": "AirPermeabilityContent",
+        "source": "@/components/service/air-permeability-test/AirPermeabilityContent"
+      },
+      {
+        "spec": "{ BreadcrumbJsonLd }",
+        "source": "@/components/schema/BreadcrumbJsonLd"
+      },
+      {
+        "spec": "{ ServiceJsonLd }",
+        "source": "@/components/schema/ServiceJsonLd"
+      },
+      {
+        "spec": "{ serviceCrossLinks }",
+        "source": "@/lib/serviceCrossLinks"
+      },
+      {
+        "spec": "{ FaqPageJsonLd }",
+        "source": "@/components/schema/FaqPageJsonLd"
+      },
+      {
+        "spec": "{ serviceFaqData }",
+        "source": "@/lib/serviceFaqData"
+      }
+    ],
+    "sectionsUsed": [
+      "Hero",
+      "Overview/WhatWeDo",
+      "SubServices/Grid",
+      "FAQ",
+      "RelatedServices"
+    ],
+    "images": [
+      "\"/og-default.png\"",
+      "\"/og-default.png\""
+    ],
+    "hasBreadcrumbLd": true,
+    "hasServiceLd": true,
+    "hasFaqLd": true
+  },
+  {
+    "slug": "air-permeability-test-2",
+    "url": "/service/air-permeability-test-2/",
+    "title": "Air Permeability Test — On-Site Installed Envelope Testing",
+    "canonical": "/service/air-permeability-test-2/",
+    "imports": [
+      {
+        "spec": "type { Metadata }",
+        "source": "next"
+      },
+      {
+        "spec": "AirPermeabilityHero",
+        "source": "@/components/service/air-permeability-test/AirPermeabilityHero"
+      },
+      {
+        "spec": "AirPermeabilityContent",
+        "source": "@/components/service/air-permeability-test/AirPermeabilityContent"
+      },
+      {
+        "spec": "{ BreadcrumbJsonLd }",
+        "source": "@/components/schema/BreadcrumbJsonLd"
+      },
+      {
+        "spec": "{ ServiceJsonLd }",
+        "source": "@/components/schema/ServiceJsonLd"
+      },
+      {
+        "spec": "{ serviceCrossLinks }",
+        "source": "@/lib/serviceCrossLinks"
+      },
+      {
+        "spec": "{ FaqPageJsonLd }",
+        "source": "@/components/schema/FaqPageJsonLd"
+      },
+      {
+        "spec": "{ serviceFaqData }",
+        "source": "@/lib/serviceFaqData"
+      }
+    ],
+    "sectionsUsed": [
+      "Hero",
+      "Overview/WhatWeDo",
+      "SubServices/Grid",
+      "FAQ",
+      "RelatedServices"
+    ],
+    "images": [
+      "\"/og-default.png\"",
+      "\"/og-default.png\""
+    ],
+    "hasBreadcrumbLd": true,
+    "hasServiceLd": true,
+    "hasFaqLd": true
+  },
+  {
+    "slug": "audits-and-specialized-consultancy",
+    "url": "/service/audits-and-specialized-consultancy/",
+    "title": "Audits and Specialized Consultancy",
+    "canonical": "/service/audits-and-specialized-consultancy/",
+    "imports": [
+      {
+        "spec": "type { Metadata }",
+        "source": "next"
+      },
+      {
+        "spec": "AuditsHero",
+        "source": "@/components/service/audits-and-specialized-consultancy/AuditsHero"
+      },
+      {
+        "spec": "AuditsContent",
+        "source": "@/components/service/audits-and-specialized-consultancy/AuditsContent"
+      },
+      {
+        "spec": "{ BreadcrumbJsonLd }",
+        "source": "@/components/schema/BreadcrumbJsonLd"
+      },
+      {
+        "spec": "{ ServiceJsonLd }",
+        "source": "@/components/schema/ServiceJsonLd"
+      },
+      {
+        "spec": "{ serviceCrossLinks }",
+        "source": "@/lib/serviceCrossLinks"
+      },
+      {
+        "spec": "{ FaqPageJsonLd }",
+        "source": "@/components/schema/FaqPageJsonLd"
+      },
+      {
+        "spec": "{ serviceFaqData }",
+        "source": "@/lib/serviceFaqData"
+      }
+    ],
+    "sectionsUsed": [
+      "Hero",
+      "Overview/WhatWeDo",
+      "SubServices/Grid",
+      "FAQ",
+      "RelatedServices"
+    ],
+    "images": [
+      "\"/og-default.png\"",
+      "\"/og-default.png\""
+    ],
+    "hasBreadcrumbLd": true,
+    "hasServiceLd": true,
+    "hasFaqLd": true
+  },
+  {
+    "slug": "bend-test",
+    "url": "/service/bend-test/",
+    "title": "Bend Testing — Ductility & Weld Integrity",
+    "canonical": "/service/bend-test/",
+    "imports": [
+      {
+        "spec": "type { Metadata }",
+        "source": "next"
+      },
+      {
+        "spec": "BendHero",
+        "source": "@/components/service/bend-test/BendHero"
+      },
+      {
+        "spec": "BendContent",
+        "source": "@/components/service/bend-test/BendContent"
+      },
+      {
+        "spec": "{ BreadcrumbJsonLd }",
+        "source": "@/components/schema/BreadcrumbJsonLd"
+      },
+      {
+        "spec": "{ ServiceJsonLd }",
+        "source": "@/components/schema/ServiceJsonLd"
+      },
+      {
+        "spec": "{ serviceCrossLinks }",
+        "source": "@/lib/serviceCrossLinks"
+      },
+      {
+        "spec": "{ FaqPageJsonLd }",
+        "source": "@/components/schema/FaqPageJsonLd"
+      },
+      {
+        "spec": "{ serviceFaqData }",
+        "source": "@/lib/serviceFaqData"
+      }
+    ],
+    "sectionsUsed": [
+      "Hero",
+      "Overview/WhatWeDo",
+      "SubServices/Grid",
+      "FAQ",
+      "RelatedServices"
+    ],
+    "images": [
+      "\"/og-default.png\"",
+      "\"/og-default.png\""
+    ],
+    "hasBreadcrumbLd": true,
+    "hasServiceLd": true,
+    "hasFaqLd": true
+  },
+  {
+    "slug": "commissioning-and-after-sales-support",
+    "url": "/service/commissioning-and-after-sales-support/",
+    "title": "Commissioning and After Sales Support",
+    "canonical": "/service/commissioning-and-after-sales-support/",
+    "imports": [
+      {
+        "spec": "type { Metadata }",
+        "source": "next"
+      },
+      {
+        "spec": "CommissioningHero",
+        "source": "@/components/service/commissioning-and-after-sales-support/CommissioningHero"
+      },
+      {
+        "spec": "CommissioningContent",
+        "source": "@/components/service/commissioning-and-after-sales-support/CommissioningContent"
+      },
+      {
+        "spec": "{ BreadcrumbJsonLd }",
+        "source": "@/components/schema/BreadcrumbJsonLd"
+      },
+      {
+        "spec": "{ ServiceJsonLd }",
+        "source": "@/components/schema/ServiceJsonLd"
+      },
+      {
+        "spec": "{ serviceCrossLinks }",
+        "source": "@/lib/serviceCrossLinks"
+      },
+      {
+        "spec": "{ FaqPageJsonLd }",
+        "source": "@/components/schema/FaqPageJsonLd"
+      },
+      {
+        "spec": "{ serviceFaqData }",
+        "source": "@/lib/serviceFaqData"
+      }
+    ],
+    "sectionsUsed": [
+      "Hero",
+      "Overview/WhatWeDo",
+      "SubServices/Grid",
+      "FAQ",
+      "RelatedServices"
+    ],
+    "images": [
+      "\"/og-default.png\"",
+      "\"/og-default.png\""
+    ],
+    "hasBreadcrumbLd": true,
+    "hasServiceLd": true,
+    "hasFaqLd": true
+  },
+  {
+    "slug": "commissioning-and-start-up-support",
+    "url": "/service/commissioning-and-start-up-support/",
+    "title": "Commissioning and Start-up Support",
+    "canonical": "/service/commissioning-and-start-up-support/",
+    "imports": [
+      {
+        "spec": "type { Metadata }",
+        "source": "next"
+      },
+      {
+        "spec": "CommissioningHero",
+        "source": "@/components/service/commissioning-and-start-up-support/CommissioningHero"
+      },
+      {
+        "spec": "CommissioningContent",
+        "source": "@/components/service/commissioning-and-start-up-support/CommissioningContent"
+      },
+      {
+        "spec": "{ BreadcrumbJsonLd }",
+        "source": "@/components/schema/BreadcrumbJsonLd"
+      },
+      {
+        "spec": "{ ServiceJsonLd }",
+        "source": "@/components/schema/ServiceJsonLd"
+      },
+      {
+        "spec": "{ serviceCrossLinks }",
+        "source": "@/lib/serviceCrossLinks"
+      },
+      {
+        "spec": "{ FaqPageJsonLd }",
+        "source": "@/components/schema/FaqPageJsonLd"
+      },
+      {
+        "spec": "{ serviceFaqData }",
+        "source": "@/lib/serviceFaqData"
+      },
+      {
+        "spec": "{ HowToJsonLd }",
+        "source": "@/components/schema/HowToJsonLd"
+      },
+      {
+        "spec": "ServiceProcessSteps",
+        "source": "@/components/ServiceProcessSteps"
+      }
+    ],
+    "sectionsUsed": [
+      "Hero",
+      "Overview/WhatWeDo",
+      "SubServices/Grid",
+      "FAQ",
+      "RelatedServices"
+    ],
+    "images": [
+      "\"/og-default.png\"",
+      "\"/og-default.png\""
+    ],
+    "hasBreadcrumbLd": true,
+    "hasServiceLd": true,
+    "hasFaqLd": true
+  },
+  {
+    "slug": "constructions",
+    "url": "/service/constructions/",
+    "title": "Industrial Construction & Project Delivery",
+    "canonical": "/service/constructions/",
+    "imports": [
+      {
+        "spec": "type { Metadata }",
+        "source": "next"
+      },
+      {
+        "spec": "ConstructionHero",
+        "source": "@/components/service/constructions/ConstructionHero"
+      },
+      {
+        "spec": "ConstructionSubServices",
+        "source": "@/components/service/constructions/ConstructionSubServices"
+      },
+      {
+        "spec": "{ BreadcrumbJsonLd }",
+        "source": "@/components/schema/BreadcrumbJsonLd"
+      },
+      {
+        "spec": "{ ServiceJsonLd }",
+        "source": "@/components/schema/ServiceJsonLd"
+      },
+      {
+        "spec": "{ FaqPageJsonLd }",
+        "source": "@/components/schema/FaqPageJsonLd"
+      },
+      {
+        "spec": "{ serviceCrossLinks }",
+        "source": "@/lib/serviceCrossLinks"
+      }
+    ],
+    "sectionsUsed": [
+      "Hero",
+      "SubServices/Grid",
+      "FAQ",
+      "RelatedServices"
+    ],
+    "images": [
+      "\"/og-default.png\"",
+      "\"/og-default.png\""
+    ],
+    "hasBreadcrumbLd": true,
+    "hasServiceLd": true,
+    "hasFaqLd": true
+  },
+  {
+    "slug": "corrosion-control-services-2",
+    "url": "/service/corrosion-control-services-2/",
+    "title": "Corrosion Control — Assessment, Mitigation & Coatings",
+    "canonical": "/service/corrosion-control-services-2/",
+    "imports": [
+      {
+        "spec": "type { Metadata }",
+        "source": "next"
+      },
+      {
+        "spec": "CorrosionControlHero",
+        "source": "@/components/service/corrosion-control-services-2/CorrosionControlHero"
+      },
+      {
+        "spec": "CorrosionControlContent",
+        "source": "@/components/service/corrosion-control-services-2/CorrosionControlContent"
+      },
+      {
+        "spec": "{ BreadcrumbJsonLd }",
+        "source": "@/components/schema/BreadcrumbJsonLd"
+      },
+      {
+        "spec": "{ ServiceJsonLd }",
+        "source": "@/components/schema/ServiceJsonLd"
+      },
+      {
+        "spec": "{ serviceCrossLinks }",
+        "source": "@/lib/serviceCrossLinks"
+      },
+      {
+        "spec": "{ FaqPageJsonLd }",
+        "source": "@/components/schema/FaqPageJsonLd"
+      },
+      {
+        "spec": "{ serviceFaqData }",
+        "source": "@/lib/serviceFaqData"
+      }
+    ],
+    "sectionsUsed": [
+      "Hero",
+      "Overview/WhatWeDo",
+      "SubServices/Grid",
+      "FAQ",
+      "RelatedServices"
+    ],
+    "images": [
+      "\"/og-default.png\"",
+      "\"/og-default.png\""
+    ],
+    "hasBreadcrumbLd": true,
+    "hasServiceLd": true,
+    "hasFaqLd": true
+  },
+  {
+    "slug": "eddy-current-testing",
+    "url": "/service/eddy-current-testing/",
+    "title": "Eddy Current Testing (ECT) — Tube & Surface Inspection",
+    "canonical": "/service/eddy-current-testing/",
+    "imports": [
+      {
+        "spec": "type { Metadata }",
+        "source": "next"
+      },
+      {
+        "spec": "EddyCurrentHero",
+        "source": "@/components/service/eddy-current-testing/EddyCurrentHero"
+      },
+      {
+        "spec": "EddyCurrentContent",
+        "source": "@/components/service/eddy-current-testing/EddyCurrentContent"
+      },
+      {
+        "spec": "{ BreadcrumbJsonLd }",
+        "source": "@/components/schema/BreadcrumbJsonLd"
+      },
+      {
+        "spec": "{ ServiceJsonLd }",
+        "source": "@/components/schema/ServiceJsonLd"
+      },
+      {
+        "spec": "{ serviceCrossLinks }",
+        "source": "@/lib/serviceCrossLinks"
+      },
+      {
+        "spec": "{ FaqPageJsonLd }",
+        "source": "@/components/schema/FaqPageJsonLd"
+      },
+      {
+        "spec": "{ serviceFaqData }",
+        "source": "@/lib/serviceFaqData"
+      }
+    ],
+    "sectionsUsed": [
+      "Hero",
+      "Overview/WhatWeDo",
+      "SubServices/Grid",
+      "FAQ",
+      "RelatedServices"
+    ],
+    "images": [
+      "\"/og-default.png\"",
+      "\"/og-default.png\""
+    ],
+    "hasBreadcrumbLd": true,
+    "hasServiceLd": true,
+    "hasFaqLd": true
+  },
+  {
+    "slug": "electrical-instrumentation-works",
+    "url": "/service/electrical-instrumentation-works/",
+    "title": "Electrical & Instrumentation Works",
+    "canonical": "/service/electrical-instrumentation-works/",
+    "imports": [
+      {
+        "spec": "type { Metadata }",
+        "source": "next"
+      },
+      {
+        "spec": "ElectricalWorksHero",
+        "source": "@/components/services_group/electrical-instrumentation-works/ElectricalWorksHero"
+      },
+      {
+        "spec": "ElectricalWorksContent",
+        "source": "@/components/services_group/electrical-instrumentation-works/ElectricalWorksContent"
+      },
+      {
+        "spec": "{ BreadcrumbJsonLd }",
+        "source": "@/components/schema/BreadcrumbJsonLd"
+      },
+      {
+        "spec": "{ ServiceJsonLd }",
+        "source": "@/components/schema/ServiceJsonLd"
+      },
+      {
+        "spec": "{ serviceCrossLinks }",
+        "source": "@/lib/serviceCrossLinks"
+      },
+      {
+        "spec": "{ FaqPageJsonLd }",
+        "source": "@/components/schema/FaqPageJsonLd"
+      },
+      {
+        "spec": "{ serviceFaqData }",
+        "source": "@/lib/serviceFaqData"
+      }
+    ],
+    "sectionsUsed": [
+      "Hero",
+      "Overview/WhatWeDo",
+      "SubServices/Grid",
+      "FAQ",
+      "RelatedServices"
+    ],
+    "images": [
+      "\"/og-default.png\"",
+      "\"/og-default.png\""
+    ],
+    "hasBreadcrumbLd": true,
+    "hasServiceLd": true,
+    "hasFaqLd": true
+  },
+  {
+    "slug": "exterior-windows-doors-curtain-wall-testing",
+    "url": "/service/exterior-windows-doors-curtain-wall-testing/",
+    "title": "Exterior Windows, Doors & Curtain Wall Testing",
+    "canonical": "/service/exterior-windows-doors-curtain-wall-testing/",
+    "imports": [
+      {
+        "spec": "type { Metadata }",
+        "source": "next"
+      },
+      {
+        "spec": "{ BreadcrumbJsonLd }",
+        "source": "@/components/schema/BreadcrumbJsonLd"
+      },
+      {
+        "spec": "{ ServiceJsonLd }",
+        "source": "@/components/schema/ServiceJsonLd"
+      },
+      {
+        "spec": "ExteriorTestingContent",
+        "source": "@/components/service/exterior-windows-doors-curtain-wall-testing/ExteriorTestingContent"
+      },
+      {
+        "spec": "{ serviceCrossLinks }",
+        "source": "@/lib/serviceCrossLinks"
+      },
+      {
+        "spec": "{ FaqPageJsonLd }",
+        "source": "@/components/schema/FaqPageJsonLd"
+      },
+      {
+        "spec": "{ serviceFaqData }",
+        "source": "@/lib/serviceFaqData"
+      }
+    ],
+    "sectionsUsed": [
+      "Overview/WhatWeDo",
+      "SubServices/Grid",
+      "FAQ",
+      "RelatedServices"
+    ],
+    "images": [
+      "\"/og-default.png\"",
+      "\"/og-default.png\"",
+      "'/images/hero-pattern.svg'"
+    ],
+    "hasBreadcrumbLd": true,
+    "hasServiceLd": true,
+    "hasFaqLd": true
+  },
+  {
+    "slug": "flow-computer-configuration",
+    "url": "/service/flow-computer-configuration/",
+    "title": "Flow Computer Configuration — Custody Transfer API",
+    "canonical": "/service/flow-computer-configuration/",
+    "imports": [
+      {
+        "spec": "type { Metadata }",
+        "source": "next"
+      },
+      {
+        "spec": "FlowComputerHero",
+        "source": "@/components/service/flow-computer-configuration/FlowComputerHero"
+      },
+      {
+        "spec": "FlowComputerContent",
+        "source": "@/components/service/flow-computer-configuration/FlowComputerContent"
+      },
+      {
+        "spec": "{ BreadcrumbJsonLd }",
+        "source": "@/components/schema/BreadcrumbJsonLd"
+      },
+      {
+        "spec": "{ ServiceJsonLd }",
+        "source": "@/components/schema/ServiceJsonLd"
+      },
+      {
+        "spec": "{ serviceCrossLinks }",
+        "source": "@/lib/serviceCrossLinks"
+      },
+      {
+        "spec": "{ FaqPageJsonLd }",
+        "source": "@/components/schema/FaqPageJsonLd"
+      },
+      {
+        "spec": "{ serviceFaqData }",
+        "source": "@/lib/serviceFaqData"
+      },
+      {
+        "spec": "{ HowToJsonLd }",
+        "source": "@/components/schema/HowToJsonLd"
+      },
+      {
+        "spec": "ServiceProcessSteps",
+        "source": "@/components/ServiceProcessSteps"
+      }
+    ],
+    "sectionsUsed": [
+      "Hero",
+      "Overview/WhatWeDo",
+      "SubServices/Grid",
+      "FAQ",
+      "RelatedServices"
+    ],
+    "images": [
+      "\"/og-default.png\"",
+      "\"/og-default.png\""
+    ],
+    "hasBreadcrumbLd": true,
+    "hasServiceLd": true,
+    "hasFaqLd": true
+  },
+  {
+    "slug": "flow-measurement-solutions",
+    "url": "/service/flow-measurement-solutions/",
+    "title": "Flow Measurement & Control System Solutions",
+    "canonical": "/service/flow-measurement-solutions/",
+    "imports": [
+      {
+        "spec": "type { Metadata }",
+        "source": "next"
+      },
+      {
+        "spec": "FlowHero",
+        "source": "@/components/service/flow-measurement/FlowHero"
+      },
+      {
+        "spec": "FlowSubServices",
+        "source": "@/components/service/flow-measurement/FlowSubServices"
+      },
+      {
+        "spec": "{ BreadcrumbJsonLd }",
+        "source": "@/components/schema/BreadcrumbJsonLd"
+      },
+      {
+        "spec": "{ ServiceJsonLd }",
+        "source": "@/components/schema/ServiceJsonLd"
+      },
+      {
+        "spec": "{ FaqPageJsonLd }",
+        "source": "@/components/schema/FaqPageJsonLd"
+      },
+      {
+        "spec": "{ serviceCrossLinks }",
+        "source": "@/lib/serviceCrossLinks"
+      }
+    ],
+    "sectionsUsed": [
+      "Hero",
+      "SubServices/Grid",
+      "FAQ",
+      "RelatedServices"
+    ],
+    "images": [
+      "\"/og-default.png\"",
+      "\"/og-default.png\""
+    ],
+    "hasBreadcrumbLd": true,
+    "hasServiceLd": true,
+    "hasFaqLd": true
+  },
+  {
+    "slug": "flow-meter-calibration",
+    "url": "/service/flow-meter-calibration/",
+    "title": "Flow Meter Calibration — Lab & On-Site Services",
+    "canonical": "/service/flow-meter-calibration/",
+    "imports": [
+      {
+        "spec": "type { Metadata }",
+        "source": "next"
+      },
+      {
+        "spec": "CalibrationHero",
+        "source": "@/components/service/flow-meter-calibration/CalibrationHero"
+      },
+      {
+        "spec": "CalibrationContent",
+        "source": "@/components/service/flow-meter-calibration/CalibrationContent"
+      },
+      {
+        "spec": "{ BreadcrumbJsonLd }",
+        "source": "@/components/schema/BreadcrumbJsonLd"
+      },
+      {
+        "spec": "{ ServiceJsonLd }",
+        "source": "@/components/schema/ServiceJsonLd"
+      },
+      {
+        "spec": "{ serviceCrossLinks }",
+        "source": "@/lib/serviceCrossLinks"
+      },
+      {
+        "spec": "{ FaqPageJsonLd }",
+        "source": "@/components/schema/FaqPageJsonLd"
+      },
+      {
+        "spec": "{ serviceFaqData }",
+        "source": "@/lib/serviceFaqData"
+      },
+      {
+        "spec": "{ HowToJsonLd }",
+        "source": "@/components/schema/HowToJsonLd"
+      },
+      {
+        "spec": "ServiceProcessSteps",
+        "source": "@/components/ServiceProcessSteps"
+      }
+    ],
+    "sectionsUsed": [
+      "Hero",
+      "Overview/WhatWeDo",
+      "SubServices/Grid",
+      "FAQ",
+      "RelatedServices"
+    ],
+    "images": [
+      "\"/og-default.png\"",
+      "\"/og-default.png\""
+    ],
+    "hasBreadcrumbLd": true,
+    "hasServiceLd": true,
+    "hasFaqLd": true
+  },
+  {
+    "slug": "fracture-test",
+    "url": "/service/fracture-test/",
+    "title": "Fracture Toughness Testing — KIc, CTOD, J-Integral",
+    "canonical": "/service/fracture-test/",
+    "imports": [
+      {
+        "spec": "type { Metadata }",
+        "source": "next"
+      },
+      {
+        "spec": "FractureHero",
+        "source": "@/components/service/fracture-test/FractureHero"
+      },
+      {
+        "spec": "FractureContent",
+        "source": "@/components/service/fracture-test/FractureContent"
+      },
+      {
+        "spec": "{ BreadcrumbJsonLd }",
+        "source": "@/components/schema/BreadcrumbJsonLd"
+      },
+      {
+        "spec": "{ ServiceJsonLd }",
+        "source": "@/components/schema/ServiceJsonLd"
+      },
+      {
+        "spec": "{ serviceCrossLinks }",
+        "source": "@/lib/serviceCrossLinks"
+      },
+      {
+        "spec": "{ FaqPageJsonLd }",
+        "source": "@/components/schema/FaqPageJsonLd"
+      },
+      {
+        "spec": "{ serviceFaqData }",
+        "source": "@/lib/serviceFaqData"
+      }
+    ],
+    "sectionsUsed": [
+      "Hero",
+      "Overview/WhatWeDo",
+      "SubServices/Grid",
+      "FAQ",
+      "RelatedServices"
+    ],
+    "images": [
+      "\"/og-default.png\"",
+      "\"/og-default.png\""
+    ],
+    "hasBreadcrumbLd": true,
+    "hasServiceLd": true,
+    "hasFaqLd": true
+  },
+  {
+    "slug": "gamma-ray-pipe-crawler-inspection-systems",
+    "url": "/service/gamma-ray-pipe-crawler-inspection-systems/",
+    "title": "Gamma Ray Pipe Crawler Inspection Systems",
+    "canonical": "/service/gamma-ray-pipe-crawler-inspection-systems/",
+    "imports": [
+      {
+        "spec": "type { Metadata }",
+        "source": "next"
+      },
+      {
+        "spec": "GammaRayHero",
+        "source": "@/components/service/gamma-ray-pipe-crawler-inspection-systems/GammaRayHero"
+      },
+      {
+        "spec": "GammaRayContent",
+        "source": "@/components/service/gamma-ray-pipe-crawler-inspection-systems/GammaRayContent"
+      },
+      {
+        "spec": "{ BreadcrumbJsonLd }",
+        "source": "@/components/schema/BreadcrumbJsonLd"
+      },
+      {
+        "spec": "{ ServiceJsonLd }",
+        "source": "@/components/schema/ServiceJsonLd"
+      },
+      {
+        "spec": "{ serviceCrossLinks }",
+        "source": "@/lib/serviceCrossLinks"
+      },
+      {
+        "spec": "{ FaqPageJsonLd }",
+        "source": "@/components/schema/FaqPageJsonLd"
+      },
+      {
+        "spec": "{ serviceFaqData }",
+        "source": "@/lib/serviceFaqData"
+      }
+    ],
+    "sectionsUsed": [
+      "Hero",
+      "Overview/WhatWeDo",
+      "SubServices/Grid",
+      "FAQ",
+      "RelatedServices"
+    ],
+    "images": [
+      "\"/og-default.png\"",
+      "\"/og-default.png\""
+    ],
+    "hasBreadcrumbLd": true,
+    "hasServiceLd": true,
+    "hasFaqLd": true
+  },
+  {
+    "slug": "genuine-spare-parts",
+    "url": "/service/genuine-spare-parts/",
+    "title": "Genuine Spare Parts — Flow Meters, PLCs, Analyzers",
+    "canonical": "/service/genuine-spare-parts/",
+    "imports": [
+      {
+        "spec": "type { Metadata }",
+        "source": "next"
+      },
+      {
+        "spec": "SparePartsHero",
+        "source": "@/components/service/genuine-spare-parts/SparePartsHero"
+      },
+      {
+        "spec": "SparePartsContent",
+        "source": "@/components/service/genuine-spare-parts/SparePartsContent"
+      },
+      {
+        "spec": "{ BreadcrumbJsonLd }",
+        "source": "@/components/schema/BreadcrumbJsonLd"
+      },
+      {
+        "spec": "{ ServiceJsonLd }",
+        "source": "@/components/schema/ServiceJsonLd"
+      },
+      {
+        "spec": "{ serviceCrossLinks }",
+        "source": "@/lib/serviceCrossLinks"
+      },
+      {
+        "spec": "{ FaqPageJsonLd }",
+        "source": "@/components/schema/FaqPageJsonLd"
+      },
+      {
+        "spec": "{ serviceFaqData }",
+        "source": "@/lib/serviceFaqData"
+      }
+    ],
+    "sectionsUsed": [
+      "Hero",
+      "Overview/WhatWeDo",
+      "SubServices/Grid",
+      "FAQ",
+      "RelatedServices"
+    ],
+    "images": [
+      "\"/og-default.png\"",
+      "\"/og-default.png\""
+    ],
+    "hasBreadcrumbLd": true,
+    "hasServiceLd": true,
+    "hasFaqLd": true
+  },
+  {
+    "slug": "hand-rail-fabrication",
+    "url": "/service/hand-rail-fabrication/",
+    "title": "Hand Rail Fabrication — Safety Guardrails & Platforms",
+    "canonical": "/service/hand-rail-fabrication/",
+    "imports": [
+      {
+        "spec": "type { Metadata }",
+        "source": "next"
+      },
+      {
+        "spec": "HandRailHero",
+        "source": "@/components/services_group/hand-rail-fabrication/HandRailHero"
+      },
+      {
+        "spec": "HandRailContent",
+        "source": "@/components/services_group/hand-rail-fabrication/HandRailContent"
+      },
+      {
+        "spec": "{ BreadcrumbJsonLd }",
+        "source": "@/components/schema/BreadcrumbJsonLd"
+      },
+      {
+        "spec": "{ ServiceJsonLd }",
+        "source": "@/components/schema/ServiceJsonLd"
+      },
+      {
+        "spec": "{ serviceCrossLinks }",
+        "source": "@/lib/serviceCrossLinks"
+      },
+      {
+        "spec": "{ FaqPageJsonLd }",
+        "source": "@/components/schema/FaqPageJsonLd"
+      },
+      {
+        "spec": "{ serviceFaqData }",
+        "source": "@/lib/serviceFaqData"
+      }
+    ],
+    "sectionsUsed": [
+      "Hero",
+      "Overview/WhatWeDo",
+      "SubServices/Grid",
+      "FAQ",
+      "RelatedServices"
+    ],
+    "images": [
+      "\"/og-default.png\"",
+      "\"/og-default.png\""
+    ],
+    "hasBreadcrumbLd": true,
+    "hasServiceLd": true,
+    "hasFaqLd": true
+  },
+  {
+    "slug": "hardness-test",
+    "url": "/service/hardness-test/",
+    "title": "Hardness Testing — Brinell, Rockwell, Vickers",
+    "canonical": "/service/hardness-test/",
+    "imports": [
+      {
+        "spec": "type { Metadata }",
+        "source": "next"
+      },
+      {
+        "spec": "HardnessHero",
+        "source": "@/components/service/hardness-test/HardnessHero"
+      },
+      {
+        "spec": "HardnessContent",
+        "source": "@/components/service/hardness-test/HardnessContent"
+      },
+      {
+        "spec": "{ BreadcrumbJsonLd }",
+        "source": "@/components/schema/BreadcrumbJsonLd"
+      },
+      {
+        "spec": "{ ServiceJsonLd }",
+        "source": "@/components/schema/ServiceJsonLd"
+      },
+      {
+        "spec": "{ serviceCrossLinks }",
+        "source": "@/lib/serviceCrossLinks"
+      },
+      {
+        "spec": "{ FaqPageJsonLd }",
+        "source": "@/components/schema/FaqPageJsonLd"
+      },
+      {
+        "spec": "{ serviceFaqData }",
+        "source": "@/lib/serviceFaqData"
+      }
+    ],
+    "sectionsUsed": [
+      "Hero",
+      "Overview/WhatWeDo",
+      "SubServices/Grid",
+      "FAQ",
+      "RelatedServices"
+    ],
+    "images": [
+      "\"/og-default.png\"",
+      "\"/og-default.png\""
+    ],
+    "hasBreadcrumbLd": true,
+    "hasServiceLd": true,
+    "hasFaqLd": true
+  },
+  {
+    "slug": "heat-treatment-services",
+    "url": "/service/heat-treatment-services/",
+    "title": "Heat Treatment — PWHT, Stress Relief, Annealing",
+    "canonical": "/service/heat-treatment-services/",
+    "imports": [
+      {
+        "spec": "type { Metadata }",
+        "source": "next"
+      },
+      {
+        "spec": "HeatTreatmentHero",
+        "source": "@/components/service/heat-treatment-services/HeatTreatmentHero"
+      },
+      {
+        "spec": "HeatTreatmentContent",
+        "source": "@/components/service/heat-treatment-services/HeatTreatmentContent"
+      },
+      {
+        "spec": "{ BreadcrumbJsonLd }",
+        "source": "@/components/schema/BreadcrumbJsonLd"
+      },
+      {
+        "spec": "{ ServiceJsonLd }",
+        "source": "@/components/schema/ServiceJsonLd"
+      },
+      {
+        "spec": "{ serviceCrossLinks }",
+        "source": "@/lib/serviceCrossLinks"
+      },
+      {
+        "spec": "{ FaqPageJsonLd }",
+        "source": "@/components/schema/FaqPageJsonLd"
+      },
+      {
+        "spec": "{ serviceFaqData }",
+        "source": "@/lib/serviceFaqData"
+      }
+    ],
+    "sectionsUsed": [
+      "Hero",
+      "Overview/WhatWeDo",
+      "SubServices/Grid",
+      "FAQ",
+      "RelatedServices"
+    ],
+    "images": [
+      "\"/og-default.png\"",
+      "\"/og-default.png\""
+    ],
+    "hasBreadcrumbLd": true,
+    "hasServiceLd": true,
+    "hasFaqLd": true
+  },
+  {
+    "slug": "heat-treatment-services-2",
+    "url": "/service/heat-treatment-services-2/",
+    "title": "Heat Treatment Services — Structural Steel & Offshore PWHT",
+    "canonical": "/service/heat-treatment-services-2/",
+    "imports": [
+      {
+        "spec": "type { Metadata }",
+        "source": "next"
+      },
+      {
+        "spec": "HeatTreatmentHero",
+        "source": "@/components/service/heat-treatment-services/HeatTreatmentHero"
+      },
+      {
+        "spec": "HeatTreatmentContent",
+        "source": "@/components/service/heat-treatment-services/HeatTreatmentContent"
+      },
+      {
+        "spec": "{ BreadcrumbJsonLd }",
+        "source": "@/components/schema/BreadcrumbJsonLd"
+      },
+      {
+        "spec": "{ ServiceJsonLd }",
+        "source": "@/components/schema/ServiceJsonLd"
+      },
+      {
+        "spec": "{ serviceCrossLinks }",
+        "source": "@/lib/serviceCrossLinks"
+      },
+      {
+        "spec": "{ FaqPageJsonLd }",
+        "source": "@/components/schema/FaqPageJsonLd"
+      },
+      {
+        "spec": "{ serviceFaqData }",
+        "source": "@/lib/serviceFaqData"
+      }
+    ],
+    "sectionsUsed": [
+      "Hero",
+      "Overview/WhatWeDo",
+      "SubServices/Grid",
+      "FAQ",
+      "RelatedServices"
+    ],
+    "images": [
+      "\"/og-default.png\"",
+      "\"/og-default.png\""
+    ],
+    "hasBreadcrumbLd": true,
+    "hasServiceLd": true,
+    "hasFaqLd": true
+  },
+  {
+    "slug": "high-and-low-voltage-cable-steel-structure-supports",
+    "url": "/service/high-and-low-voltage-cable-steel-structure-supports/",
+    "title": "High and Low Voltage Cable Steel Structure Supports",
+    "canonical": "/service/high-and-low-voltage-cable-steel-structure-supports/",
+    "imports": [
+      {
+        "spec": "type { Metadata }",
+        "source": "next"
+      },
+      {
+        "spec": "CableSupportsHero",
+        "source": "@/components/services_group/high-and-low-voltage-cable-steel-structure-supports/CableSupportsHero"
+      },
+      {
+        "spec": "CableSupportsContent",
+        "source": "@/components/services_group/high-and-low-voltage-cable-steel-structure-supports/CableSupportsContent"
+      },
+      {
+        "spec": "{ BreadcrumbJsonLd }",
+        "source": "@/components/schema/BreadcrumbJsonLd"
+      },
+      {
+        "spec": "{ ServiceJsonLd }",
+        "source": "@/components/schema/ServiceJsonLd"
+      },
+      {
+        "spec": "{ serviceCrossLinks }",
+        "source": "@/lib/serviceCrossLinks"
+      },
+      {
+        "spec": "{ FaqPageJsonLd }",
+        "source": "@/components/schema/FaqPageJsonLd"
+      },
+      {
+        "spec": "{ serviceFaqData }",
+        "source": "@/lib/serviceFaqData"
+      }
+    ],
+    "sectionsUsed": [
+      "Hero",
+      "Overview/WhatWeDo",
+      "SubServices/Grid",
+      "FAQ",
+      "RelatedServices"
+    ],
+    "images": [
+      "\"/og-default.png\"",
+      "\"/og-default.png\""
+    ],
+    "hasBreadcrumbLd": true,
+    "hasServiceLd": true,
+    "hasFaqLd": true
+  },
+  {
+    "slug": "hose-test",
+    "url": "/service/hose-test/",
+    "title": "Hose Test — Curtain Wall & Facade Water Check",
+    "canonical": "/service/hose-test/",
+    "imports": [
+      {
+        "spec": "type { Metadata }",
+        "source": "next"
+      },
+      {
+        "spec": "HoseTestHero",
+        "source": "@/components/service/hose-test/HoseTestHero"
+      },
+      {
+        "spec": "HoseTestContent",
+        "source": "@/components/service/hose-test/HoseTestContent"
+      },
+      {
+        "spec": "{ BreadcrumbJsonLd }",
+        "source": "@/components/schema/BreadcrumbJsonLd"
+      },
+      {
+        "spec": "{ ServiceJsonLd }",
+        "source": "@/components/schema/ServiceJsonLd"
+      },
+      {
+        "spec": "{ serviceCrossLinks }",
+        "source": "@/lib/serviceCrossLinks"
+      },
+      {
+        "spec": "{ FaqPageJsonLd }",
+        "source": "@/components/schema/FaqPageJsonLd"
+      },
+      {
+        "spec": "{ serviceFaqData }",
+        "source": "@/lib/serviceFaqData"
+      }
+    ],
+    "sectionsUsed": [
+      "Hero",
+      "Overview/WhatWeDo",
+      "SubServices/Grid",
+      "FAQ",
+      "RelatedServices"
+    ],
+    "images": [
+      "\"/og-default.png\"",
+      "\"/og-default.png\""
+    ],
+    "hasBreadcrumbLd": true,
+    "hasServiceLd": true,
+    "hasFaqLd": true
+  },
+  {
+    "slug": "hose-test-2",
+    "url": "/service/hose-test-2/",
+    "title": "Hose Test — Existing Building Leak Diagnostics",
+    "canonical": "/service/hose-test-2/",
+    "imports": [
+      {
+        "spec": "type { Metadata }",
+        "source": "next"
+      },
+      {
+        "spec": "HoseTestHero",
+        "source": "@/components/service/hose-test/HoseTestHero"
+      },
+      {
+        "spec": "HoseTestContent",
+        "source": "@/components/service/hose-test/HoseTestContent"
+      },
+      {
+        "spec": "{ BreadcrumbJsonLd }",
+        "source": "@/components/schema/BreadcrumbJsonLd"
+      },
+      {
+        "spec": "{ ServiceJsonLd }",
+        "source": "@/components/schema/ServiceJsonLd"
+      },
+      {
+        "spec": "{ serviceCrossLinks }",
+        "source": "@/lib/serviceCrossLinks"
+      },
+      {
+        "spec": "{ FaqPageJsonLd }",
+        "source": "@/components/schema/FaqPageJsonLd"
+      },
+      {
+        "spec": "{ serviceFaqData }",
+        "source": "@/lib/serviceFaqData"
+      }
+    ],
+    "sectionsUsed": [
+      "Hero",
+      "Overview/WhatWeDo",
+      "SubServices/Grid",
+      "FAQ",
+      "RelatedServices"
+    ],
+    "images": [
+      "\"/og-default.png\"",
+      "\"/og-default.png\""
+    ],
+    "hasBreadcrumbLd": true,
+    "hasServiceLd": true,
+    "hasFaqLd": true
+  },
+  {
+    "slug": "impact-test",
+    "url": "/service/impact-test/",
+    "title": "Impact Testing — Charpy & Izod Standards",
+    "canonical": "/service/impact-test/",
+    "imports": [
+      {
+        "spec": "type { Metadata }",
+        "source": "next"
+      },
+      {
+        "spec": "ImpactHero",
+        "source": "@/components/service/impact-test/ImpactHero"
+      },
+      {
+        "spec": "ImpactContent",
+        "source": "@/components/service/impact-test/ImpactContent"
+      },
+      {
+        "spec": "{ BreadcrumbJsonLd }",
+        "source": "@/components/schema/BreadcrumbJsonLd"
+      },
+      {
+        "spec": "{ ServiceJsonLd }",
+        "source": "@/components/schema/ServiceJsonLd"
+      },
+      {
+        "spec": "{ serviceCrossLinks }",
+        "source": "@/lib/serviceCrossLinks"
+      },
+      {
+        "spec": "{ FaqPageJsonLd }",
+        "source": "@/components/schema/FaqPageJsonLd"
+      },
+      {
+        "spec": "{ serviceFaqData }",
+        "source": "@/lib/serviceFaqData"
+      }
+    ],
+    "sectionsUsed": [
+      "Hero",
+      "Overview/WhatWeDo",
+      "SubServices/Grid",
+      "FAQ",
+      "RelatedServices"
+    ],
+    "images": [
+      "\"/og-default.png\"",
+      "\"/og-default.png\""
+    ],
+    "hasBreadcrumbLd": true,
+    "hasServiceLd": true,
+    "hasFaqLd": true
+  },
+  {
+    "slug": "industrial-automation",
+    "url": "/service/industrial-automation/",
+    "title": "Industrial Automation, PLC SCADA & Process Control Solutions",
+    "canonical": "/service/industrial-automation/",
+    "imports": [
+      {
+        "spec": "type { Metadata }",
+        "source": "next"
+      },
+      {
+        "spec": "AutomationHero",
+        "source": "@/components/service/industrial-automation/AutomationHero"
+      },
+      {
+        "spec": "AutomationSubServices",
+        "source": "@/components/service/industrial-automation/AutomationSubServices"
+      },
+      {
+        "spec": "{ BreadcrumbJsonLd }",
+        "source": "@/components/schema/BreadcrumbJsonLd"
+      },
+      {
+        "spec": "{ ServiceJsonLd }",
+        "source": "@/components/schema/ServiceJsonLd"
+      },
+      {
+        "spec": "{ FaqPageJsonLd }",
+        "source": "@/components/schema/FaqPageJsonLd"
+      },
+      {
+        "spec": "{ serviceCrossLinks }",
+        "source": "@/lib/serviceCrossLinks"
+      }
+    ],
+    "sectionsUsed": [
+      "Hero",
+      "SubServices/Grid",
+      "FAQ",
+      "RelatedServices"
+    ],
+    "images": [
+      "\"/og-default.png\"",
+      "\"/og-default.png\""
+    ],
+    "hasBreadcrumbLd": true,
+    "hasServiceLd": true,
+    "hasFaqLd": true
+  },
+  {
+    "slug": "inspection-testing",
+    "url": "/service/inspection-testing/",
+    "title": "Inspection & Testing — NDT, Mechanical & Specialized",
+    "canonical": "/service/inspection-testing/",
+    "imports": [
+      {
+        "spec": "type { Metadata }",
+        "source": "next"
+      },
+      {
+        "spec": "InspectionHero",
+        "source": "@/components/service/inspection-testing/InspectionHero"
+      },
+      {
+        "spec": "InspectionOverview",
+        "source": "@/components/service/inspection-testing/InspectionOverview"
+      },
+      {
+        "spec": "{ BreadcrumbJsonLd }",
+        "source": "@/components/schema/BreadcrumbJsonLd"
+      },
+      {
+        "spec": "{ ServiceJsonLd }",
+        "source": "@/components/schema/ServiceJsonLd"
+      },
+      {
+        "spec": "{ FaqPageJsonLd }",
+        "source": "@/components/schema/FaqPageJsonLd"
+      },
+      {
+        "spec": "{ ItemListJsonLd }",
+        "source": "@/components/schema/ItemListJsonLd"
+      },
+      {
+        "spec": "{ serviceCrossLinks }",
+        "source": "@/lib/serviceCrossLinks"
+      }
+    ],
+    "sectionsUsed": [
+      "Hero",
+      "Overview/WhatWeDo",
+      "SubServices/Grid",
+      "FAQ",
+      "RelatedServices"
+    ],
+    "images": [
+      "\"/og-default.png\"",
+      "\"/og-default.png\""
+    ],
+    "hasBreadcrumbLd": true,
+    "hasServiceLd": true,
+    "hasFaqLd": true
+  },
+  {
+    "slug": "lifting-equipment-inspection",
+    "url": "/service/lifting-equipment-inspection/",
+    "title": "Lifting Equipment Inspection — Cranes, Hoists & Slings",
+    "canonical": "/service/lifting-equipment-inspection/",
+    "imports": [
+      {
+        "spec": "type { Metadata }",
+        "source": "next"
+      },
+      {
+        "spec": "LiftingInspectionHero",
+        "source": "@/components/service/lifting-equipment-inspection/LiftingInspectionHero"
+      },
+      {
+        "spec": "LiftingInspectionContent",
+        "source": "@/components/service/lifting-equipment-inspection/LiftingInspectionContent"
+      },
+      {
+        "spec": "{ BreadcrumbJsonLd }",
+        "source": "@/components/schema/BreadcrumbJsonLd"
+      },
+      {
+        "spec": "{ ServiceJsonLd }",
+        "source": "@/components/schema/ServiceJsonLd"
+      },
+      {
+        "spec": "{ serviceCrossLinks }",
+        "source": "@/lib/serviceCrossLinks"
+      },
+      {
+        "spec": "{ FaqPageJsonLd }",
+        "source": "@/components/schema/FaqPageJsonLd"
+      },
+      {
+        "spec": "{ serviceFaqData }",
+        "source": "@/lib/serviceFaqData"
+      }
+    ],
+    "sectionsUsed": [
+      "Hero",
+      "Overview/WhatWeDo",
+      "SubServices/Grid",
+      "FAQ",
+      "RelatedServices"
+    ],
+    "images": [
+      "\"/og-default.png\"",
+      "\"/og-default.png\""
+    ],
+    "hasBreadcrumbLd": true,
+    "hasServiceLd": true,
+    "hasFaqLd": true
+  },
+  {
+    "slug": "lifting-equipment-inspection-2",
+    "url": "/service/lifting-equipment-inspection-2/",
+    "title": "Lifting Equipment Inspection — Overhead Cranes, Hoists & Elevators",
+    "canonical": "/service/lifting-equipment-inspection-2/",
+    "imports": [
+      {
+        "spec": "type { Metadata }",
+        "source": "next"
+      },
+      {
+        "spec": "LiftingInspectionHero",
+        "source": "@/components/service/lifting-equipment-inspection/LiftingInspectionHero"
+      },
+      {
+        "spec": "LiftingInspectionContent",
+        "source": "@/components/service/lifting-equipment-inspection/LiftingInspectionContent"
+      },
+      {
+        "spec": "{ BreadcrumbJsonLd }",
+        "source": "@/components/schema/BreadcrumbJsonLd"
+      },
+      {
+        "spec": "{ ServiceJsonLd }",
+        "source": "@/components/schema/ServiceJsonLd"
+      },
+      {
+        "spec": "{ serviceCrossLinks }",
+        "source": "@/lib/serviceCrossLinks"
+      },
+      {
+        "spec": "{ FaqPageJsonLd }",
+        "source": "@/components/schema/FaqPageJsonLd"
+      },
+      {
+        "spec": "{ serviceFaqData }",
+        "source": "@/lib/serviceFaqData"
+      }
+    ],
+    "sectionsUsed": [
+      "Hero",
+      "Overview/WhatWeDo",
+      "SubServices/Grid",
+      "FAQ",
+      "RelatedServices"
+    ],
+    "images": [
+      "\"/og-default.png\"",
+      "\"/og-default.png\""
+    ],
+    "hasBreadcrumbLd": true,
+    "hasServiceLd": true,
+    "hasFaqLd": true
+  },
+  {
+    "slug": "liquid-penetrant-dye-penetrant-examination-pt",
+    "url": "/service/liquid-penetrant-dye-penetrant-examination-pt/",
+    "title": "Liquid Penetrant / Dye Penetrant Examination (PT)",
+    "canonical": "/service/liquid-penetrant-dye-penetrant-examination-pt/",
+    "imports": [
+      {
+        "spec": "type { Metadata }",
+        "source": "next"
+      },
+      {
+        "spec": "PenetrantHero",
+        "source": "@/components/service/liquid-penetrant-dye-penetrant-examination-pt/PenetrantHero"
+      },
+      {
+        "spec": "PenetrantContent",
+        "source": "@/components/service/liquid-penetrant-dye-penetrant-examination-pt/PenetrantContent"
+      },
+      {
+        "spec": "{ BreadcrumbJsonLd }",
+        "source": "@/components/schema/BreadcrumbJsonLd"
+      },
+      {
+        "spec": "{ ServiceJsonLd }",
+        "source": "@/components/schema/ServiceJsonLd"
+      },
+      {
+        "spec": "{ serviceCrossLinks }",
+        "source": "@/lib/serviceCrossLinks"
+      },
+      {
+        "spec": "{ FaqPageJsonLd }",
+        "source": "@/components/schema/FaqPageJsonLd"
+      },
+      {
+        "spec": "{ serviceFaqData }",
+        "source": "@/lib/serviceFaqData"
+      }
+    ],
+    "sectionsUsed": [
+      "Hero",
+      "Overview/WhatWeDo",
+      "SubServices/Grid",
+      "FAQ",
+      "RelatedServices"
+    ],
+    "images": [
+      "\"/og-default.png\"",
+      "\"/og-default.png\""
+    ],
+    "hasBreadcrumbLd": true,
+    "hasServiceLd": true,
+    "hasFaqLd": true
+  },
+  {
+    "slug": "macro-and-micro-test",
+    "url": "/service/macro-and-micro-test/",
+    "title": "Macro & Micro Testing — Weld Profile Examination",
+    "canonical": "/service/macro-and-micro-test/",
+    "imports": [
+      {
+        "spec": "type { Metadata }",
+        "source": "next"
+      },
+      {
+        "spec": "MacroMicroHero",
+        "source": "@/components/service/macro-and-micro-test/MacroMicroHero"
+      },
+      {
+        "spec": "MacroMicroContent",
+        "source": "@/components/service/macro-and-micro-test/MacroMicroContent"
+      },
+      {
+        "spec": "{ BreadcrumbJsonLd }",
+        "source": "@/components/schema/BreadcrumbJsonLd"
+      },
+      {
+        "spec": "{ ServiceJsonLd }",
+        "source": "@/components/schema/ServiceJsonLd"
+      },
+      {
+        "spec": "{ serviceCrossLinks }",
+        "source": "@/lib/serviceCrossLinks"
+      },
+      {
+        "spec": "{ FaqPageJsonLd }",
+        "source": "@/components/schema/FaqPageJsonLd"
+      },
+      {
+        "spec": "{ serviceFaqData }",
+        "source": "@/lib/serviceFaqData"
+      }
+    ],
+    "sectionsUsed": [
+      "Hero",
+      "Overview/WhatWeDo",
+      "SubServices/Grid",
+      "FAQ",
+      "RelatedServices"
+    ],
+    "images": [
+      "\"/og-default.png\"",
+      "\"/og-default.png\""
+    ],
+    "hasBreadcrumbLd": true,
+    "hasServiceLd": true,
+    "hasFaqLd": true
+  },
+  {
+    "slug": "magnetic-flux-leakage",
+    "url": "/service/magnetic-flux-leakage/",
+    "title": "Magnetic Flux Leakage (MFL) — Pipeline & Tank Inspection",
+    "canonical": "/service/magnetic-flux-leakage/",
+    "imports": [
+      {
+        "spec": "type { Metadata }",
+        "source": "next"
+      },
+      {
+        "spec": "MFLHero",
+        "source": "@/components/service/magnetic-flux-leakage/MFLHero"
+      },
+      {
+        "spec": "MFLContent",
+        "source": "@/components/service/magnetic-flux-leakage/MFLContent"
+      },
+      {
+        "spec": "{ BreadcrumbJsonLd }",
+        "source": "@/components/schema/BreadcrumbJsonLd"
+      },
+      {
+        "spec": "{ ServiceJsonLd }",
+        "source": "@/components/schema/ServiceJsonLd"
+      },
+      {
+        "spec": "{ serviceCrossLinks }",
+        "source": "@/lib/serviceCrossLinks"
+      },
+      {
+        "spec": "{ FaqPageJsonLd }",
+        "source": "@/components/schema/FaqPageJsonLd"
+      },
+      {
+        "spec": "{ serviceFaqData }",
+        "source": "@/lib/serviceFaqData"
+      }
+    ],
+    "sectionsUsed": [
+      "Hero",
+      "Overview/WhatWeDo",
+      "SubServices/Grid",
+      "FAQ",
+      "RelatedServices"
+    ],
+    "images": [
+      "\"/og-default.png\"",
+      "\"/og-default.png\""
+    ],
+    "hasBreadcrumbLd": true,
+    "hasServiceLd": true,
+    "hasFaqLd": true
+  },
+  {
+    "slug": "magnetic-particle-inspection-mt",
+    "url": "/service/magnetic-particle-inspection-mt/",
+    "title": "Magnetic Particle Inspection (MT) — Surface Crack Detection",
+    "canonical": "/service/magnetic-particle-inspection-mt/",
+    "imports": [
+      {
+        "spec": "type { Metadata }",
+        "source": "next"
+      },
+      {
+        "spec": "MagneticParticleHero",
+        "source": "@/components/service/magnetic-particle-inspection-mt/MagneticParticleHero"
+      },
+      {
+        "spec": "MagneticParticleContent",
+        "source": "@/components/service/magnetic-particle-inspection-mt/MagneticParticleContent"
+      },
+      {
+        "spec": "{ BreadcrumbJsonLd }",
+        "source": "@/components/schema/BreadcrumbJsonLd"
+      },
+      {
+        "spec": "{ ServiceJsonLd }",
+        "source": "@/components/schema/ServiceJsonLd"
+      },
+      {
+        "spec": "{ serviceCrossLinks }",
+        "source": "@/lib/serviceCrossLinks"
+      },
+      {
+        "spec": "{ FaqPageJsonLd }",
+        "source": "@/components/schema/FaqPageJsonLd"
+      },
+      {
+        "spec": "{ serviceFaqData }",
+        "source": "@/lib/serviceFaqData"
+      }
+    ],
+    "sectionsUsed": [
+      "Hero",
+      "Overview/WhatWeDo",
+      "SubServices/Grid",
+      "FAQ",
+      "RelatedServices"
+    ],
+    "images": [
+      "\"/og-default.png\"",
+      "\"/og-default.png\""
+    ],
+    "hasBreadcrumbLd": true,
+    "hasServiceLd": true,
+    "hasFaqLd": true
+  },
+  {
+    "slug": "mechanical-testing",
+    "url": "/service/mechanical-testing/",
+    "title": "Mechanical Testing — Tensile, Hardness, Impact, Bend",
+    "canonical": "/service/mechanical-testing/",
+    "imports": [
+      {
+        "spec": "type { Metadata }",
+        "source": "next"
+      },
+      {
+        "spec": "MechanicalHero",
+        "source": "@/components/service/mechanical-testing/MechanicalHero"
+      },
+      {
+        "spec": "MechanicalSubServices",
+        "source": "@/components/service/mechanical-testing/MechanicalSubServices"
+      },
+      {
+        "spec": "{ BreadcrumbJsonLd }",
+        "source": "@/components/schema/BreadcrumbJsonLd"
+      },
+      {
+        "spec": "{ ServiceJsonLd }",
+        "source": "@/components/schema/ServiceJsonLd"
+      },
+      {
+        "spec": "{ serviceCrossLinks }",
+        "source": "@/lib/serviceCrossLinks"
+      },
+      {
+        "spec": "{ FaqPageJsonLd }",
+        "source": "@/components/schema/FaqPageJsonLd"
+      },
+      {
+        "spec": "{ serviceFaqData }",
+        "source": "@/lib/serviceFaqData"
+      },
+      {
+        "spec": "{ ItemListJsonLd }",
+        "source": "@/components/schema/ItemListJsonLd"
+      }
+    ],
+    "sectionsUsed": [
+      "Hero",
+      "SubServices/Grid",
+      "FAQ",
+      "RelatedServices"
+    ],
+    "images": [
+      "\"/og-default.png\"",
+      "\"/og-default.png\""
+    ],
+    "hasBreadcrumbLd": true,
+    "hasServiceLd": true,
+    "hasFaqLd": true
+  },
+  {
+    "slug": "metallurgical-services",
+    "url": "/service/metallurgical-services/",
+    "title": "Metallurgical Services — Positive Material Identification (PMI)",
+    "canonical": "/service/metallurgical-services/",
+    "imports": [
+      {
+        "spec": "type { Metadata }",
+        "source": "next"
+      },
+      {
+        "spec": "MetallurgicalHero",
+        "source": "@/components/service/metallurgical-services/MetallurgicalHero"
+      },
+      {
+        "spec": "MetallurgicalContent",
+        "source": "@/components/service/metallurgical-services/MetallurgicalContent"
+      },
+      {
+        "spec": "{ BreadcrumbJsonLd }",
+        "source": "@/components/schema/BreadcrumbJsonLd"
+      },
+      {
+        "spec": "{ ServiceJsonLd }",
+        "source": "@/components/schema/ServiceJsonLd"
+      },
+      {
+        "spec": "{ serviceCrossLinks }",
+        "source": "@/lib/serviceCrossLinks"
+      },
+      {
+        "spec": "{ FaqPageJsonLd }",
+        "source": "@/components/schema/FaqPageJsonLd"
+      },
+      {
+        "spec": "{ serviceFaqData }",
+        "source": "@/lib/serviceFaqData"
+      }
+    ],
+    "sectionsUsed": [
+      "Hero",
+      "Overview/WhatWeDo",
+      "SubServices/Grid",
+      "FAQ",
+      "RelatedServices"
+    ],
+    "images": [
+      "\"/og-default.png\"",
+      "\"/og-default.png\""
+    ],
+    "hasBreadcrumbLd": true,
+    "hasServiceLd": true,
+    "hasFaqLd": true
+  },
+  {
+    "slug": "metallurgical-services-2",
+    "url": "/service/metallurgical-services-2/",
+    "title": "Metallurgical Services — OES Lab-Grade PMI & Full Chemistry",
+    "canonical": "/service/metallurgical-services-2/",
+    "imports": [
+      {
+        "spec": "type { Metadata }",
+        "source": "next"
+      },
+      {
+        "spec": "MetallurgicalHero",
+        "source": "@/components/service/metallurgical-services/MetallurgicalHero"
+      },
+      {
+        "spec": "MetallurgicalContent",
+        "source": "@/components/service/metallurgical-services/MetallurgicalContent"
+      },
+      {
+        "spec": "{ BreadcrumbJsonLd }",
+        "source": "@/components/schema/BreadcrumbJsonLd"
+      },
+      {
+        "spec": "{ ServiceJsonLd }",
+        "source": "@/components/schema/ServiceJsonLd"
+      },
+      {
+        "spec": "{ serviceCrossLinks }",
+        "source": "@/lib/serviceCrossLinks"
+      },
+      {
+        "spec": "{ FaqPageJsonLd }",
+        "source": "@/components/schema/FaqPageJsonLd"
+      },
+      {
+        "spec": "{ serviceFaqData }",
+        "source": "@/lib/serviceFaqData"
+      }
+    ],
+    "sectionsUsed": [
+      "Hero",
+      "Overview/WhatWeDo",
+      "SubServices/Grid",
+      "FAQ",
+      "RelatedServices"
+    ],
+    "images": [
+      "\"/og-default.png\"",
+      "\"/og-default.png\""
+    ],
+    "hasBreadcrumbLd": true,
+    "hasServiceLd": true,
+    "hasFaqLd": true
+  },
+  {
+    "slug": "metering-control-system-integration",
+    "url": "/service/metering-control-system-integration/",
+    "title": "Metering Control System Integration",
+    "canonical": "/service/metering-control-system-integration/",
+    "imports": [
+      {
+        "spec": "type { Metadata }",
+        "source": "next"
+      },
+      {
+        "spec": "McsiHero",
+        "source": "@/components/service/metering-control-system-integration/McsiHero"
+      },
+      {
+        "spec": "McsiServices",
+        "source": "@/components/service/metering-control-system-integration/McsiServices"
+      },
+      {
+        "spec": "McsiWhyUs",
+        "source": "@/components/service/metering-control-system-integration/McsiWhyUs"
+      },
+      {
+        "spec": "{ BreadcrumbJsonLd }",
+        "source": "@/components/schema/BreadcrumbJsonLd"
+      },
+      {
+        "spec": "{ ServiceJsonLd }",
+        "source": "@/components/schema/ServiceJsonLd"
+      },
+      {
+        "spec": "{ serviceCrossLinks }",
+        "source": "@/lib/serviceCrossLinks"
+      },
+      {
+        "spec": "{ FaqPageJsonLd }",
+        "source": "@/components/schema/FaqPageJsonLd"
+      },
+      {
+        "spec": "{ serviceFaqData }",
+        "source": "@/lib/serviceFaqData"
+      },
+      {
+        "spec": "{ WhatWeDoSection }",
+        "source": "@/components/service/common/WhatWeDoSection"
+      }
+    ],
+    "sectionsUsed": [
+      "Hero",
+      "Overview/WhatWeDo",
+      "SubServices/Grid",
+      "WhyUs",
+      "FAQ",
+      "RelatedServices"
+    ],
+    "images": [
+      "\"/og-default.png\"",
+      "\"/og-default.png\"",
+      "\"/images/services/metering-control-integration.png\""
+    ],
+    "hasBreadcrumbLd": true,
+    "hasServiceLd": true,
+    "hasFaqLd": true
+  },
+  {
+    "slug": "metering-expert-services",
+    "url": "/service/metering-expert-services/",
+    "title": "Metering Expert Services — Fiscal Audits & Compliance",
+    "canonical": "/service/metering-expert-services/",
+    "imports": [
+      {
+        "spec": "type { Metadata }",
+        "source": "next"
+      },
+      {
+        "spec": "ExpertServicesHero",
+        "source": "@/components/service/metering-expert-services/ExpertServicesHero"
+      },
+      {
+        "spec": "ExpertServicesContent",
+        "source": "@/components/service/metering-expert-services/ExpertServicesContent"
+      },
+      {
+        "spec": "{ BreadcrumbJsonLd }",
+        "source": "@/components/schema/BreadcrumbJsonLd"
+      },
+      {
+        "spec": "{ ServiceJsonLd }",
+        "source": "@/components/schema/ServiceJsonLd"
+      },
+      {
+        "spec": "{ serviceCrossLinks }",
+        "source": "@/lib/serviceCrossLinks"
+      },
+      {
+        "spec": "{ FaqPageJsonLd }",
+        "source": "@/components/schema/FaqPageJsonLd"
+      },
+      {
+        "spec": "{ serviceFaqData }",
+        "source": "@/lib/serviceFaqData"
+      }
+    ],
+    "sectionsUsed": [
+      "Hero",
+      "Overview/WhatWeDo",
+      "SubServices/Grid",
+      "FAQ",
+      "RelatedServices"
+    ],
+    "images": [
+      "\"/og-default.png\"",
+      "\"/og-default.png\""
+    ],
+    "hasBreadcrumbLd": true,
+    "hasServiceLd": true,
+    "hasFaqLd": true
+  },
+  {
+    "slug": "new-installation-design-and-commissioning",
+    "url": "/service/new-installation-design-and-commissioning/",
+    "title": "New Installation Design and Commissioning",
+    "canonical": "/service/new-installation-design-and-commissioning/",
+    "imports": [
+      {
+        "spec": "type { Metadata }",
+        "source": "next"
+      },
+      {
+        "spec": "NewInstallationHero",
+        "source": "@/components/services_group/new-installation-design-and-commissioning/NewInstallationHero"
+      },
+      {
+        "spec": "NewInstallationContent",
+        "source": "@/components/services_group/new-installation-design-and-commissioning/NewInstallationContent"
+      },
+      {
+        "spec": "{ BreadcrumbJsonLd }",
+        "source": "@/components/schema/BreadcrumbJsonLd"
+      },
+      {
+        "spec": "{ ServiceJsonLd }",
+        "source": "@/components/schema/ServiceJsonLd"
+      },
+      {
+        "spec": "{ serviceCrossLinks }",
+        "source": "@/lib/serviceCrossLinks"
+      },
+      {
+        "spec": "{ FaqPageJsonLd }",
+        "source": "@/components/schema/FaqPageJsonLd"
+      },
+      {
+        "spec": "{ serviceFaqData }",
+        "source": "@/lib/serviceFaqData"
+      }
+    ],
+    "sectionsUsed": [
+      "Hero",
+      "Overview/WhatWeDo",
+      "SubServices/Grid",
+      "FAQ",
+      "RelatedServices"
+    ],
+    "images": [
+      "\"/og-default.png\"",
+      "\"/og-default.png\""
+    ],
+    "hasBreadcrumbLd": true,
+    "hasServiceLd": true,
+    "hasFaqLd": true
+  },
+  {
+    "slug": "non-destructive-testing-ndt",
+    "url": "/service/non-destructive-testing-ndt/",
+    "title": "Non-Destructive Testing (NDT) — UT, RT, MT, PT, ET",
+    "canonical": "/service/non-destructive-testing-ndt/",
+    "imports": [
+      {
+        "spec": "type { Metadata }",
+        "source": "next"
+      },
+      {
+        "spec": "NDTHero",
+        "source": "@/components/service/non-destructive-testing-ndt/NDTHero"
+      },
+      {
+        "spec": "NDTSubServices",
+        "source": "@/components/service/non-destructive-testing-ndt/NDTSubServices"
+      },
+      {
+        "spec": "{ BreadcrumbJsonLd }",
+        "source": "@/components/schema/BreadcrumbJsonLd"
+      },
+      {
+        "spec": "{ ServiceJsonLd }",
+        "source": "@/components/schema/ServiceJsonLd"
+      },
+      {
+        "spec": "{ serviceCrossLinks }",
+        "source": "@/lib/serviceCrossLinks"
+      },
+      {
+        "spec": "{ FaqPageJsonLd }",
+        "source": "@/components/schema/FaqPageJsonLd"
+      },
+      {
+        "spec": "{ serviceFaqData }",
+        "source": "@/lib/serviceFaqData"
+      },
+      {
+        "spec": "{ ItemListJsonLd }",
+        "source": "@/components/schema/ItemListJsonLd"
+      }
+    ],
+    "sectionsUsed": [
+      "Hero",
+      "SubServices/Grid",
+      "FAQ",
+      "RelatedServices"
+    ],
+    "images": [
+      "\"/og-default.png\"",
+      "\"/og-default.png\""
+    ],
+    "hasBreadcrumbLd": true,
+    "hasServiceLd": true,
+    "hasFaqLd": true
+  },
+  {
+    "slug": "phased-array-ultrasonic-testing",
+    "url": "/service/phased-array-ultrasonic-testing/",
+    "title": "Phased Array Ultrasonic Testing (PAUT)",
+    "canonical": "/service/phased-array-ultrasonic-testing/",
+    "imports": [
+      {
+        "spec": "type { Metadata }",
+        "source": "next"
+      },
+      {
+        "spec": "PhasedArrayHero",
+        "source": "@/components/service/phased-array-ultrasonic-testing/PhasedArrayHero"
+      },
+      {
+        "spec": "PhasedArrayContent",
+        "source": "@/components/service/phased-array-ultrasonic-testing/PhasedArrayContent"
+      },
+      {
+        "spec": "{ BreadcrumbJsonLd }",
+        "source": "@/components/schema/BreadcrumbJsonLd"
+      },
+      {
+        "spec": "{ ServiceJsonLd }",
+        "source": "@/components/schema/ServiceJsonLd"
+      },
+      {
+        "spec": "{ serviceCrossLinks }",
+        "source": "@/lib/serviceCrossLinks"
+      },
+      {
+        "spec": "{ FaqPageJsonLd }",
+        "source": "@/components/schema/FaqPageJsonLd"
+      },
+      {
+        "spec": "{ serviceFaqData }",
+        "source": "@/lib/serviceFaqData"
+      }
+    ],
+    "sectionsUsed": [
+      "Hero",
+      "Overview/WhatWeDo",
+      "SubServices/Grid",
+      "FAQ",
+      "RelatedServices"
+    ],
+    "images": [
+      "\"/og-default.png\"",
+      "\"/og-default.png\""
+    ],
+    "hasBreadcrumbLd": true,
+    "hasServiceLd": true,
+    "hasFaqLd": true
+  },
+  {
+    "slug": "plant-automation",
+    "url": "/service/plant-automation/",
+    "title": "Process Plant Automation — Electrical & Instrumentation",
+    "canonical": "/service/plant-automation/",
+    "imports": [
+      {
+        "spec": "type { Metadata }",
+        "source": "next"
+      },
+      {
+        "spec": "PlantAutomationHero",
+        "source": "@/components/service/plant-automation/PlantAutomationHero"
+      },
+      {
+        "spec": "PlantAutomationContent",
+        "source": "@/components/service/plant-automation/PlantAutomationContent"
+      },
+      {
+        "spec": "{ BreadcrumbJsonLd }",
+        "source": "@/components/schema/BreadcrumbJsonLd"
+      },
+      {
+        "spec": "{ ServiceJsonLd }",
+        "source": "@/components/schema/ServiceJsonLd"
+      },
+      {
+        "spec": "{ serviceCrossLinks }",
+        "source": "@/lib/serviceCrossLinks"
+      },
+      {
+        "spec": "{ FaqPageJsonLd }",
+        "source": "@/components/schema/FaqPageJsonLd"
+      },
+      {
+        "spec": "{ serviceFaqData }",
+        "source": "@/lib/serviceFaqData"
+      }
+    ],
+    "sectionsUsed": [
+      "Hero",
+      "Overview/WhatWeDo",
+      "SubServices/Grid",
+      "FAQ",
+      "RelatedServices"
+    ],
+    "images": [
+      "\"/og-default.png\"",
+      "\"/og-default.png\""
+    ],
+    "hasBreadcrumbLd": true,
+    "hasServiceLd": true,
+    "hasFaqLd": true
+  },
+  {
+    "slug": "pullout-test",
+    "url": "/service/pullout-test/",
+    "title": "Pullout Testing — Anchor, Rebar & Fastener Strength",
+    "canonical": "/service/pullout-test/",
+    "imports": [
+      {
+        "spec": "type { Metadata }",
+        "source": "next"
+      },
+      {
+        "spec": "PulloutHero",
+        "source": "@/components/service/pullout-test/PulloutHero"
+      },
+      {
+        "spec": "PulloutContent",
+        "source": "@/components/service/pullout-test/PulloutContent"
+      },
+      {
+        "spec": "{ BreadcrumbJsonLd }",
+        "source": "@/components/schema/BreadcrumbJsonLd"
+      },
+      {
+        "spec": "{ ServiceJsonLd }",
+        "source": "@/components/schema/ServiceJsonLd"
+      },
+      {
+        "spec": "{ serviceCrossLinks }",
+        "source": "@/lib/serviceCrossLinks"
+      },
+      {
+        "spec": "{ FaqPageJsonLd }",
+        "source": "@/components/schema/FaqPageJsonLd"
+      },
+      {
+        "spec": "{ serviceFaqData }",
+        "source": "@/lib/serviceFaqData"
+      }
+    ],
+    "sectionsUsed": [
+      "Hero",
+      "Overview/WhatWeDo",
+      "SubServices/Grid",
+      "FAQ",
+      "RelatedServices"
+    ],
+    "images": [
+      "\"/og-default.png\"",
+      "\"/og-default.png\""
+    ],
+    "hasBreadcrumbLd": true,
+    "hasServiceLd": true,
+    "hasFaqLd": true
+  },
+  {
+    "slug": "radiographic-testing-rt",
+    "url": "/service/radiographic-testing-rt/",
+    "title": "Radiographic Testing (RT) — X-Ray & Gamma Inspection",
+    "canonical": "/service/radiographic-testing-rt/",
+    "imports": [
+      {
+        "spec": "type { Metadata }",
+        "source": "next"
+      },
+      {
+        "spec": "RadiographicHero",
+        "source": "@/components/service/radiographic-testing-rt/RadiographicHero"
+      },
+      {
+        "spec": "RadiographicContent",
+        "source": "@/components/service/radiographic-testing-rt/RadiographicContent"
+      },
+      {
+        "spec": "{ BreadcrumbJsonLd }",
+        "source": "@/components/schema/BreadcrumbJsonLd"
+      },
+      {
+        "spec": "{ ServiceJsonLd }",
+        "source": "@/components/schema/ServiceJsonLd"
+      },
+      {
+        "spec": "{ serviceCrossLinks }",
+        "source": "@/lib/serviceCrossLinks"
+      },
+      {
+        "spec": "{ FaqPageJsonLd }",
+        "source": "@/components/schema/FaqPageJsonLd"
+      },
+      {
+        "spec": "{ serviceFaqData }",
+        "source": "@/lib/serviceFaqData"
+      }
+    ],
+    "sectionsUsed": [
+      "Hero",
+      "Overview/WhatWeDo",
+      "SubServices/Grid",
+      "FAQ",
+      "RelatedServices"
+    ],
+    "images": [
+      "\"/og-default.png\"",
+      "\"/og-default.png\""
+    ],
+    "hasBreadcrumbLd": true,
+    "hasServiceLd": true,
+    "hasFaqLd": true
+  },
+  {
+    "slug": "repair-upgrades-for-helical-flow-meters",
+    "url": "/service/repair-upgrades-for-helical-flow-meters/",
+    "title": "Repair & Upgrades for Helical Flow Meters",
+    "canonical": "/service/repair-upgrades-for-helical-flow-meters/",
+    "imports": [
+      {
+        "spec": "type { Metadata }",
+        "source": "next"
+      },
+      {
+        "spec": "HelicalHero",
+        "source": "@/components/service/repair-upgrades-for-helical-flow-meters/HelicalHero"
+      },
+      {
+        "spec": "HelicalContent",
+        "source": "@/components/service/repair-upgrades-for-helical-flow-meters/HelicalContent"
+      },
+      {
+        "spec": "{ BreadcrumbJsonLd }",
+        "source": "@/components/schema/BreadcrumbJsonLd"
+      },
+      {
+        "spec": "{ ServiceJsonLd }",
+        "source": "@/components/schema/ServiceJsonLd"
+      },
+      {
+        "spec": "{ serviceCrossLinks }",
+        "source": "@/lib/serviceCrossLinks"
+      },
+      {
+        "spec": "{ FaqPageJsonLd }",
+        "source": "@/components/schema/FaqPageJsonLd"
+      },
+      {
+        "spec": "{ serviceFaqData }",
+        "source": "@/lib/serviceFaqData"
+      }
+    ],
+    "sectionsUsed": [
+      "Hero",
+      "Overview/WhatWeDo",
+      "SubServices/Grid",
+      "FAQ",
+      "RelatedServices"
+    ],
+    "images": [
+      "\"/og-default.png\"",
+      "\"/og-default.png\""
+    ],
+    "hasBreadcrumbLd": true,
+    "hasServiceLd": true,
+    "hasFaqLd": true
+  },
+  {
+    "slug": "specialized-inspection-service",
+    "url": "/service/specialized-inspection-service/",
+    "title": "Specialized Inspection — Custom Programs & Turnarounds",
+    "canonical": "/service/specialized-inspection-service/",
+    "imports": [
+      {
+        "spec": "type { Metadata }",
+        "source": "next"
+      },
+      {
+        "spec": "SpecializedHero",
+        "source": "@/components/service/specialized-inspection-service/SpecializedHero"
+      },
+      {
+        "spec": "SpecializedSubServices",
+        "source": "@/components/service/specialized-inspection-service/SpecializedSubServices"
+      },
+      {
+        "spec": "{ BreadcrumbJsonLd }",
+        "source": "@/components/schema/BreadcrumbJsonLd"
+      },
+      {
+        "spec": "{ ServiceJsonLd }",
+        "source": "@/components/schema/ServiceJsonLd"
+      },
+      {
+        "spec": "{ serviceCrossLinks }",
+        "source": "@/lib/serviceCrossLinks"
+      },
+      {
+        "spec": "{ FaqPageJsonLd }",
+        "source": "@/components/schema/FaqPageJsonLd"
+      },
+      {
+        "spec": "{ serviceFaqData }",
+        "source": "@/lib/serviceFaqData"
+      }
+    ],
+    "sectionsUsed": [
+      "Hero",
+      "SubServices/Grid",
+      "FAQ",
+      "RelatedServices"
+    ],
+    "images": [
+      "\"/og-default.png\"",
+      "\"/og-default.png\""
+    ],
+    "hasBreadcrumbLd": true,
+    "hasServiceLd": true,
+    "hasFaqLd": true
+  },
+  {
+    "slug": "steel-fabrication",
+    "url": "/service/steel-fabrication/",
+    "title": "Steel Fabrication — Industrial Structures & Platforms",
+    "canonical": "/service/steel-fabrication/",
+    "imports": [
+      {
+        "spec": "type { Metadata }",
+        "source": "next"
+      },
+      {
+        "spec": "SteelFabricationHero",
+        "source": "@/components/services_group/steel-fabrication/SteelFabricationHero"
+      },
+      {
+        "spec": "SteelFabricationContent",
+        "source": "@/components/services_group/steel-fabrication/SteelFabricationContent"
+      },
+      {
+        "spec": "{ BreadcrumbJsonLd }",
+        "source": "@/components/schema/BreadcrumbJsonLd"
+      },
+      {
+        "spec": "{ ServiceJsonLd }",
+        "source": "@/components/schema/ServiceJsonLd"
+      },
+      {
+        "spec": "{ serviceCrossLinks }",
+        "source": "@/lib/serviceCrossLinks"
+      },
+      {
+        "spec": "{ FaqPageJsonLd }",
+        "source": "@/components/schema/FaqPageJsonLd"
+      },
+      {
+        "spec": "{ serviceFaqData }",
+        "source": "@/lib/serviceFaqData"
+      }
+    ],
+    "sectionsUsed": [
+      "Hero",
+      "Overview/WhatWeDo",
+      "SubServices/Grid",
+      "FAQ",
+      "RelatedServices"
+    ],
+    "images": [
+      "\"/og-default.png\"",
+      "\"/og-default.png\""
+    ],
+    "hasBreadcrumbLd": true,
+    "hasServiceLd": true,
+    "hasFaqLd": true
+  },
+  {
+    "slug": "structural-steel-erection",
+    "url": "/service/structural-steel-erection/",
+    "title": "Structural Steel Erection — Supply & Installation",
+    "canonical": "/service/structural-steel-erection/",
+    "imports": [
+      {
+        "spec": "type { Metadata }",
+        "source": "next"
+      },
+      {
+        "spec": "SteelErectionHero",
+        "source": "@/components/services_group/structural-steel-erection/SteelErectionHero"
+      },
+      {
+        "spec": "SteelErectionContent",
+        "source": "@/components/services_group/structural-steel-erection/SteelErectionContent"
+      },
+      {
+        "spec": "{ BreadcrumbJsonLd }",
+        "source": "@/components/schema/BreadcrumbJsonLd"
+      },
+      {
+        "spec": "{ ServiceJsonLd }",
+        "source": "@/components/schema/ServiceJsonLd"
+      },
+      {
+        "spec": "{ serviceCrossLinks }",
+        "source": "@/lib/serviceCrossLinks"
+      },
+      {
+        "spec": "{ FaqPageJsonLd }",
+        "source": "@/components/schema/FaqPageJsonLd"
+      },
+      {
+        "spec": "{ serviceFaqData }",
+        "source": "@/lib/serviceFaqData"
+      }
+    ],
+    "sectionsUsed": [
+      "Hero",
+      "Overview/WhatWeDo",
+      "SubServices/Grid",
+      "FAQ",
+      "RelatedServices"
+    ],
+    "images": [
+      "\"/og-default.png\"",
+      "\"/og-default.png\""
+    ],
+    "hasBreadcrumbLd": true,
+    "hasServiceLd": true,
+    "hasFaqLd": true
+  },
+  {
+    "slug": "supply-and-installation-of-suspended-access-equipments",
+    "url": "/service/supply-and-installation-of-suspended-access-equipments/",
+    "title": "Supply and Installation of Suspended Access Equipment",
+    "canonical": "/service/supply-and-installation-of-suspended-access-equipments/",
+    "imports": [
+      {
+        "spec": "type { Metadata }",
+        "source": "next"
+      },
+      {
+        "spec": "SuspendedAccessHero",
+        "source": "@/components/services_group/supply-and-installation-of-suspended-access-equipments/SuspendedAccessHero"
+      },
+      {
+        "spec": "SuspendedAccessContent",
+        "source": "@/components/services_group/supply-and-installation-of-suspended-access-equipments/SuspendedAccessContent"
+      },
+      {
+        "spec": "{ BreadcrumbJsonLd }",
+        "source": "@/components/schema/BreadcrumbJsonLd"
+      },
+      {
+        "spec": "{ ServiceJsonLd }",
+        "source": "@/components/schema/ServiceJsonLd"
+      },
+      {
+        "spec": "{ serviceCrossLinks }",
+        "source": "@/lib/serviceCrossLinks"
+      },
+      {
+        "spec": "{ FaqPageJsonLd }",
+        "source": "@/components/schema/FaqPageJsonLd"
+      },
+      {
+        "spec": "{ serviceFaqData }",
+        "source": "@/lib/serviceFaqData"
+      }
+    ],
+    "sectionsUsed": [
+      "Hero",
+      "Overview/WhatWeDo",
+      "SubServices/Grid",
+      "FAQ",
+      "RelatedServices"
+    ],
+    "images": [
+      "\"/og-default.png\"",
+      "\"/og-default.png\""
+    ],
+    "hasBreadcrumbLd": true,
+    "hasServiceLd": true,
+    "hasFaqLd": true
+  },
+  {
+    "slug": "system-software-upgrade",
+    "url": "/service/system-software-upgrade/",
+    "title": "Control System Integration and Upgradation",
+    "canonical": "/service/system-software-upgrade/",
+    "imports": [
+      {
+        "spec": "type { Metadata }",
+        "source": "next"
+      },
+      {
+        "spec": "ControlSystemHero",
+        "source": "@/components/service/system-software-upgrade/ControlSystemHero"
+      },
+      {
+        "spec": "ControlSystemContent",
+        "source": "@/components/service/system-software-upgrade/ControlSystemContent"
+      },
+      {
+        "spec": "{ BreadcrumbJsonLd }",
+        "source": "@/components/schema/BreadcrumbJsonLd"
+      },
+      {
+        "spec": "{ ServiceJsonLd }",
+        "source": "@/components/schema/ServiceJsonLd"
+      },
+      {
+        "spec": "{ serviceCrossLinks }",
+        "source": "@/lib/serviceCrossLinks"
+      },
+      {
+        "spec": "{ FaqPageJsonLd }",
+        "source": "@/components/schema/FaqPageJsonLd"
+      },
+      {
+        "spec": "{ serviceFaqData }",
+        "source": "@/lib/serviceFaqData"
+      }
+    ],
+    "sectionsUsed": [
+      "Hero",
+      "Overview/WhatWeDo",
+      "SubServices/Grid",
+      "FAQ",
+      "RelatedServices"
+    ],
+    "images": [
+      "\"/og-default.png\"",
+      "\"/og-default.png\""
+    ],
+    "hasBreadcrumbLd": true,
+    "hasServiceLd": true,
+    "hasFaqLd": true
+  },
+  {
+    "slug": "tensile-test",
+    "url": "/service/tensile-test/",
+    "title": "Tensile Testing — ASTM E8, ISO 6892",
+    "canonical": "/service/tensile-test/",
+    "imports": [
+      {
+        "spec": "type { Metadata }",
+        "source": "next"
+      },
+      {
+        "spec": "TensileHero",
+        "source": "@/components/service/tensile-test/TensileHero"
+      },
+      {
+        "spec": "TensileContent",
+        "source": "@/components/service/tensile-test/TensileContent"
+      },
+      {
+        "spec": "{ BreadcrumbJsonLd }",
+        "source": "@/components/schema/BreadcrumbJsonLd"
+      },
+      {
+        "spec": "{ ServiceJsonLd }",
+        "source": "@/components/schema/ServiceJsonLd"
+      },
+      {
+        "spec": "{ serviceCrossLinks }",
+        "source": "@/lib/serviceCrossLinks"
+      },
+      {
+        "spec": "{ FaqPageJsonLd }",
+        "source": "@/components/schema/FaqPageJsonLd"
+      },
+      {
+        "spec": "{ serviceFaqData }",
+        "source": "@/lib/serviceFaqData"
+      }
+    ],
+    "sectionsUsed": [
+      "Hero",
+      "Overview/WhatWeDo",
+      "SubServices/Grid",
+      "FAQ",
+      "RelatedServices"
+    ],
+    "images": [
+      "\"/og-default.png\"",
+      "\"/og-default.png\""
+    ],
+    "hasBreadcrumbLd": true,
+    "hasServiceLd": true,
+    "hasFaqLd": true
+  },
+  {
+    "slug": "time-of-flight-diffraction",
+    "url": "/service/time-of-flight-diffraction/",
+    "title": "TOFD Ultrasonic Inspection — Weld Flaw Sizing",
+    "canonical": "/service/time-of-flight-diffraction/",
+    "imports": [
+      {
+        "spec": "type { Metadata }",
+        "source": "next"
+      },
+      {
+        "spec": "TOFDHero",
+        "source": "@/components/service/time-of-flight-diffraction/TOFDHero"
+      },
+      {
+        "spec": "TOFDContent",
+        "source": "@/components/service/time-of-flight-diffraction/TOFDContent"
+      },
+      {
+        "spec": "{ BreadcrumbJsonLd }",
+        "source": "@/components/schema/BreadcrumbJsonLd"
+      },
+      {
+        "spec": "{ ServiceJsonLd }",
+        "source": "@/components/schema/ServiceJsonLd"
+      },
+      {
+        "spec": "{ serviceCrossLinks }",
+        "source": "@/lib/serviceCrossLinks"
+      },
+      {
+        "spec": "{ FaqPageJsonLd }",
+        "source": "@/components/schema/FaqPageJsonLd"
+      },
+      {
+        "spec": "{ serviceFaqData }",
+        "source": "@/lib/serviceFaqData"
+      }
+    ],
+    "sectionsUsed": [
+      "Hero",
+      "Overview/WhatWeDo",
+      "SubServices/Grid",
+      "FAQ",
+      "RelatedServices"
+    ],
+    "images": [
+      "\"/og-default.png\"",
+      "\"/og-default.png\""
+    ],
+    "hasBreadcrumbLd": true,
+    "hasServiceLd": true,
+    "hasFaqLd": true
+  },
+  {
+    "slug": "torque-tightening-bolt-tensioning",
+    "url": "/service/torque-tightening-bolt-tensioning/",
+    "title": "Torque Tightening & Bolt Tensioning",
+    "canonical": "/service/torque-tightening-bolt-tensioning/",
+    "imports": [
+      {
+        "spec": "type { Metadata }",
+        "source": "next"
+      },
+      {
+        "spec": "TorqueHero",
+        "source": "@/components/service/torque-tightening-bolt-tensioning/TorqueHero"
+      },
+      {
+        "spec": "TorqueContent",
+        "source": "@/components/service/torque-tightening-bolt-tensioning/TorqueContent"
+      },
+      {
+        "spec": "{ BreadcrumbJsonLd }",
+        "source": "@/components/schema/BreadcrumbJsonLd"
+      },
+      {
+        "spec": "{ ServiceJsonLd }",
+        "source": "@/components/schema/ServiceJsonLd"
+      },
+      {
+        "spec": "{ serviceCrossLinks }",
+        "source": "@/lib/serviceCrossLinks"
+      },
+      {
+        "spec": "{ FaqPageJsonLd }",
+        "source": "@/components/schema/FaqPageJsonLd"
+      },
+      {
+        "spec": "{ serviceFaqData }",
+        "source": "@/lib/serviceFaqData"
+      }
+    ],
+    "sectionsUsed": [
+      "Hero",
+      "Overview/WhatWeDo",
+      "SubServices/Grid",
+      "FAQ",
+      "RelatedServices"
+    ],
+    "images": [
+      "\"/og-default.png\"",
+      "\"/og-default.png\""
+    ],
+    "hasBreadcrumbLd": true,
+    "hasServiceLd": true,
+    "hasFaqLd": true
+  },
+  {
+    "slug": "torque-tightening-bolt-tensioning-2",
+    "url": "/service/torque-tightening-bolt-tensioning-2/",
+    "title": "Torque Tightening & Bolt Tensioning — Hydraulic Tensioning for High-Load Flanges",
+    "canonical": "/service/torque-tightening-bolt-tensioning-2/",
+    "imports": [
+      {
+        "spec": "type { Metadata }",
+        "source": "next"
+      },
+      {
+        "spec": "TorqueHero",
+        "source": "@/components/service/torque-tightening-bolt-tensioning/TorqueHero"
+      },
+      {
+        "spec": "TorqueContent",
+        "source": "@/components/service/torque-tightening-bolt-tensioning/TorqueContent"
+      },
+      {
+        "spec": "{ BreadcrumbJsonLd }",
+        "source": "@/components/schema/BreadcrumbJsonLd"
+      },
+      {
+        "spec": "{ ServiceJsonLd }",
+        "source": "@/components/schema/ServiceJsonLd"
+      },
+      {
+        "spec": "{ serviceCrossLinks }",
+        "source": "@/lib/serviceCrossLinks"
+      },
+      {
+        "spec": "{ FaqPageJsonLd }",
+        "source": "@/components/schema/FaqPageJsonLd"
+      },
+      {
+        "spec": "{ serviceFaqData }",
+        "source": "@/lib/serviceFaqData"
+      }
+    ],
+    "sectionsUsed": [
+      "Hero",
+      "Overview/WhatWeDo",
+      "SubServices/Grid",
+      "FAQ",
+      "RelatedServices"
+    ],
+    "images": [
+      "\"/og-default.png\"",
+      "\"/og-default.png\""
+    ],
+    "hasBreadcrumbLd": true,
+    "hasServiceLd": true,
+    "hasFaqLd": true
+  },
+  {
+    "slug": "ultrasonic-testing-ut",
+    "url": "/service/ultrasonic-testing-ut/",
+    "title": "Ultrasonic Testing (UT) — Weld & Thickness Inspection",
+    "canonical": "/service/ultrasonic-testing-ut/",
+    "imports": [
+      {
+        "spec": "type { Metadata }",
+        "source": "next"
+      },
+      {
+        "spec": "UltrasonicHero",
+        "source": "@/components/service/ultrasonic-testing-ut/UltrasonicHero"
+      },
+      {
+        "spec": "UltrasonicContent",
+        "source": "@/components/service/ultrasonic-testing-ut/UltrasonicContent"
+      },
+      {
+        "spec": "{ BreadcrumbJsonLd }",
+        "source": "@/components/schema/BreadcrumbJsonLd"
+      },
+      {
+        "spec": "{ ServiceJsonLd }",
+        "source": "@/components/schema/ServiceJsonLd"
+      },
+      {
+        "spec": "{ serviceCrossLinks }",
+        "source": "@/lib/serviceCrossLinks"
+      },
+      {
+        "spec": "{ FaqPageJsonLd }",
+        "source": "@/components/schema/FaqPageJsonLd"
+      },
+      {
+        "spec": "{ serviceFaqData }",
+        "source": "@/lib/serviceFaqData"
+      }
+    ],
+    "sectionsUsed": [
+      "Hero",
+      "Overview/WhatWeDo",
+      "SubServices/Grid",
+      "FAQ",
+      "RelatedServices"
+    ],
+    "images": [
+      "\"/og-default.png\"",
+      "\"/og-default.png\""
+    ],
+    "hasBreadcrumbLd": true,
+    "hasServiceLd": true,
+    "hasFaqLd": true
+  },
+  {
+    "slug": "upgrade-of-metering-control-system",
+    "url": "/service/upgrade-of-metering-control-system/",
+    "title": "Upgrade of Metering Control System",
+    "canonical": "/service/upgrade-of-metering-control-system/",
+    "imports": [
+      {
+        "spec": "type { Metadata }",
+        "source": "next"
+      },
+      {
+        "spec": "UpgradeHero",
+        "source": "@/components/service/upgrade-of-metering-control-system/UpgradeHero"
+      },
+      {
+        "spec": "UpgradeServices",
+        "source": "@/components/service/upgrade-of-metering-control-system/UpgradeServices"
+      },
+      {
+        "spec": "UpgradeWhyUs",
+        "source": "@/components/service/upgrade-of-metering-control-system/UpgradeWhyUs"
+      },
+      {
+        "spec": "{ BreadcrumbJsonLd }",
+        "source": "@/components/schema/BreadcrumbJsonLd"
+      },
+      {
+        "spec": "{ ServiceJsonLd }",
+        "source": "@/components/schema/ServiceJsonLd"
+      },
+      {
+        "spec": "{ WhatWeDoSection }",
+        "source": "@/components/service/common/WhatWeDoSection"
+      }
+    ],
+    "sectionsUsed": [
+      "Hero",
+      "Overview/WhatWeDo",
+      "SubServices/Grid",
+      "WhyUs"
+    ],
+    "images": [
+      "\"/og-upgrade-metering-control-system.jpg\"",
+      "\"/images/services/metering-upgrade.png\""
+    ],
+    "hasBreadcrumbLd": true,
+    "hasServiceLd": true,
+    "hasFaqLd": false
+  },
+  {
+    "slug": "validation-and-uncertainty-calculations",
+    "url": "/service/validation-and-uncertainty-calculations/",
+    "title": "Validation and Uncertainty Calculations",
+    "canonical": "/service/validation-and-uncertainty-calculations/",
+    "imports": [
+      {
+        "spec": "type { Metadata }",
+        "source": "next"
+      },
+      {
+        "spec": "ValidationHero",
+        "source": "@/components/service/validation-and-uncertainty-calculations/ValidationHero"
+      },
+      {
+        "spec": "ValidationContent",
+        "source": "@/components/service/validation-and-uncertainty-calculations/ValidationContent"
+      },
+      {
+        "spec": "{ BreadcrumbJsonLd }",
+        "source": "@/components/schema/BreadcrumbJsonLd"
+      },
+      {
+        "spec": "{ ServiceJsonLd }",
+        "source": "@/components/schema/ServiceJsonLd"
+      },
+      {
+        "spec": "{ serviceCrossLinks }",
+        "source": "@/lib/serviceCrossLinks"
+      },
+      {
+        "spec": "{ FaqPageJsonLd }",
+        "source": "@/components/schema/FaqPageJsonLd"
+      },
+      {
+        "spec": "{ serviceFaqData }",
+        "source": "@/lib/serviceFaqData"
+      },
+      {
+        "spec": "{ HowToJsonLd }",
+        "source": "@/components/schema/HowToJsonLd"
+      },
+      {
+        "spec": "ServiceProcessSteps",
+        "source": "@/components/ServiceProcessSteps"
+      }
+    ],
+    "sectionsUsed": [
+      "Hero",
+      "Overview/WhatWeDo",
+      "SubServices/Grid",
+      "FAQ",
+      "RelatedServices"
+    ],
+    "images": [
+      "\"/og-default.png\"",
+      "\"/og-default.png\""
+    ],
+    "hasBreadcrumbLd": true,
+    "hasServiceLd": true,
+    "hasFaqLd": true
+  },
+  {
+    "slug": "videoscope",
+    "url": "/service/videoscope/",
+    "title": "Videoscope Remote Visual Inspection",
+    "canonical": "/service/videoscope/",
+    "imports": [
+      {
+        "spec": "type { Metadata }",
+        "source": "next"
+      },
+      {
+        "spec": "VideoscopeHero",
+        "source": "@/components/service/videoscope/VideoscopeHero"
+      },
+      {
+        "spec": "VideoscopeContent",
+        "source": "@/components/service/videoscope/VideoscopeContent"
+      },
+      {
+        "spec": "{ BreadcrumbJsonLd }",
+        "source": "@/components/schema/BreadcrumbJsonLd"
+      },
+      {
+        "spec": "{ ServiceJsonLd }",
+        "source": "@/components/schema/ServiceJsonLd"
+      },
+      {
+        "spec": "{ serviceCrossLinks }",
+        "source": "@/lib/serviceCrossLinks"
+      },
+      {
+        "spec": "{ FaqPageJsonLd }",
+        "source": "@/components/schema/FaqPageJsonLd"
+      },
+      {
+        "spec": "{ serviceFaqData }",
+        "source": "@/lib/serviceFaqData"
+      }
+    ],
+    "sectionsUsed": [
+      "Hero",
+      "Overview/WhatWeDo",
+      "SubServices/Grid",
+      "FAQ",
+      "RelatedServices"
+    ],
+    "images": [
+      "\"/og-default.png\"",
+      "\"/og-default.png\""
+    ],
+    "hasBreadcrumbLd": true,
+    "hasServiceLd": true,
+    "hasFaqLd": true
+  },
+  {
+    "slug": "visual-inspection-vi",
+    "url": "/service/visual-inspection-vi/",
+    "title": "Visual Inspection (VI) — Certified Weld & Structure",
+    "canonical": "/service/visual-inspection-vi/",
+    "imports": [
+      {
+        "spec": "type { Metadata }",
+        "source": "next"
+      },
+      {
+        "spec": "VisualInspectionHero",
+        "source": "@/components/service/visual-inspection-vi/VisualInspectionHero"
+      },
+      {
+        "spec": "VisualInspectionContent",
+        "source": "@/components/service/visual-inspection-vi/VisualInspectionContent"
+      },
+      {
+        "spec": "{ BreadcrumbJsonLd }",
+        "source": "@/components/schema/BreadcrumbJsonLd"
+      },
+      {
+        "spec": "{ ServiceJsonLd }",
+        "source": "@/components/schema/ServiceJsonLd"
+      },
+      {
+        "spec": "{ serviceCrossLinks }",
+        "source": "@/lib/serviceCrossLinks"
+      },
+      {
+        "spec": "{ FaqPageJsonLd }",
+        "source": "@/components/schema/FaqPageJsonLd"
+      },
+      {
+        "spec": "{ serviceFaqData }",
+        "source": "@/lib/serviceFaqData"
+      }
+    ],
+    "sectionsUsed": [
+      "Hero",
+      "Overview/WhatWeDo",
+      "SubServices/Grid",
+      "FAQ",
+      "RelatedServices"
+    ],
+    "images": [
+      "\"/og-default.png\"",
+      "\"/og-default.png\""
+    ],
+    "hasBreadcrumbLd": true,
+    "hasServiceLd": true,
+    "hasFaqLd": true
+  },
+  {
+    "slug": "water-penetration-test",
+    "url": "/service/water-penetration-test/",
+    "title": "Water Penetration Testing — Facade & Building",
+    "canonical": "/service/water-penetration-test/",
+    "imports": [
+      {
+        "spec": "type { Metadata }",
+        "source": "next"
+      },
+      {
+        "spec": "WaterPenetrationHero",
+        "source": "@/components/service/water-penetration-test/WaterPenetrationHero"
+      },
+      {
+        "spec": "WaterPenetrationContent",
+        "source": "@/components/service/water-penetration-test/WaterPenetrationContent"
+      },
+      {
+        "spec": "{ BreadcrumbJsonLd }",
+        "source": "@/components/schema/BreadcrumbJsonLd"
+      },
+      {
+        "spec": "{ ServiceJsonLd }",
+        "source": "@/components/schema/ServiceJsonLd"
+      },
+      {
+        "spec": "{ serviceCrossLinks }",
+        "source": "@/lib/serviceCrossLinks"
+      },
+      {
+        "spec": "{ FaqPageJsonLd }",
+        "source": "@/components/schema/FaqPageJsonLd"
+      },
+      {
+        "spec": "{ serviceFaqData }",
+        "source": "@/lib/serviceFaqData"
+      }
+    ],
+    "sectionsUsed": [
+      "Hero",
+      "Overview/WhatWeDo",
+      "SubServices/Grid",
+      "FAQ",
+      "RelatedServices"
+    ],
+    "images": [
+      "\"/og-default.png\"",
+      "\"/og-default.png\""
+    ],
+    "hasBreadcrumbLd": true,
+    "hasServiceLd": true,
+    "hasFaqLd": true
+  },
+  {
+    "slug": "water-penetration-test-2",
+    "url": "/service/water-penetration-test-2/",
+    "title": "Water Penetration Test — Field Hose Testing & Leak Diagnostics",
+    "canonical": "/service/water-penetration-test-2/",
+    "imports": [
+      {
+        "spec": "type { Metadata }",
+        "source": "next"
+      },
+      {
+        "spec": "WaterPenetrationHero",
+        "source": "@/components/service/water-penetration-test/WaterPenetrationHero"
+      },
+      {
+        "spec": "WaterPenetrationContent",
+        "source": "@/components/service/water-penetration-test/WaterPenetrationContent"
+      },
+      {
+        "spec": "{ BreadcrumbJsonLd }",
+        "source": "@/components/schema/BreadcrumbJsonLd"
+      },
+      {
+        "spec": "{ ServiceJsonLd }",
+        "source": "@/components/schema/ServiceJsonLd"
+      },
+      {
+        "spec": "{ serviceCrossLinks }",
+        "source": "@/lib/serviceCrossLinks"
+      },
+      {
+        "spec": "{ FaqPageJsonLd }",
+        "source": "@/components/schema/FaqPageJsonLd"
+      },
+      {
+        "spec": "{ serviceFaqData }",
+        "source": "@/lib/serviceFaqData"
+      }
+    ],
+    "sectionsUsed": [
+      "Hero",
+      "Overview/WhatWeDo",
+      "SubServices/Grid",
+      "FAQ",
+      "RelatedServices"
+    ],
+    "images": [
+      "\"/og-default.png\"",
+      "\"/og-default.png\""
+    ],
+    "hasBreadcrumbLd": true,
+    "hasServiceLd": true,
+    "hasFaqLd": true
+  }
+]

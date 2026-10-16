@@ -41,13 +41,11 @@ export default function Card({
     none: "p-0",
   };
 
-  const hoverStyles = interactive
-    ? "transition-all duration-300 hover:-translate-y-1.5 hover:shadow-[0_28px_50px_-15px_rgba(0,0,0,0.12)] hover:border-black/[0.12]"
-    : "";
+  const interactiveClass = interactive ? "card-interactive" : "";
 
   return (
     <div
-      className={`rounded-[20px] overflow-hidden ${variantStyles[variant]} ${paddingStyles[padding]} ${hoverStyles} ${className}`}
+      className={`rounded-[20px] ${variantStyles[variant]} ${paddingStyles[padding]} ${interactiveClass} ${className}`}
       {...props}
     >
       {children}

@@ -5,9 +5,12 @@ import Button from "./Button";
 interface CTASectionProps {
   eyebrow?: string;
   title?: React.ReactNode;
+  subtitle?: React.ReactNode;
   description?: React.ReactNode;
   primaryCta?: { label: string; href: string };
+  primaryAction?: { label: string; href: string };
   secondaryCta?: { label: string; href: string };
+  secondaryAction?: { label: string; href: string };
   variant?: "crimson" | "dark" | "studio" | "white" | "light";
   className?: string;
 }
@@ -21,12 +24,19 @@ interface CTASectionProps {
 export default function CTASection({
   eyebrow = "Ready to Discuss Your Project?",
   title = "Accelerate Your Plant Precision & Compliance",
-  description = "Speak directly with our senior flow measurement and industrial automation engineers in Kuwait and Dubai for custom technical sizing and quotation.",
-  primaryCta = { label: "Contact Engineering Team", href: "/contacts/" },
-  secondaryCta = { label: "Explore Services", href: "/services/" },
+  subtitle,
+  description,
+  primaryCta,
+  primaryAction,
+  secondaryCta,
+  secondaryAction,
   variant = "white",
   className = "",
 }: CTASectionProps) {
+  const resolvedDescription = description ?? subtitle ?? "Speak directly with our senior flow measurement and industrial automation engineers in Kuwait and Dubai for custom technical sizing and quotation.";
+  const resolvedPrimary = primaryCta ?? primaryAction ?? { label: "Contact Engineering Team", href: "/contacts/" };
+  const resolvedSecondary = secondaryCta ?? secondaryAction ?? { label: "Explore Services", href: "/services/" };
+
   const isCrimson = variant === "crimson";
   const isDark = variant === "dark";
   const isWhite = variant === "white" || variant === "light";
@@ -73,29 +83,29 @@ export default function CTASection({
               {title}
             </h2>
 
-            {description && (
+            {resolvedDescription && (
               <p
                 className={`text-[15px] sm:text-[17px] leading-[1.65] max-w-[620px] mx-auto mb-9 ${
                   isCrimson ? "text-white/85" : isDark ? "text-white/70" : "text-[#595956]"
                 }`}
               >
-                {description}
+                {resolvedDescription}
               </p>
             )}
 
             <div className="flex flex-wrap items-center justify-center gap-4">
-              {primaryCta && (
+              {resolvedPrimary && (
                 <Button
-                  href={primaryCta.href}
+                  href={resolvedPrimary.href}
                   variant={isCrimson ? "secondary" : "primary"}
                   size="lg"
                 >
-                  {primaryCta.label}
+                  {resolvedPrimary.label}
                 </Button>
               )}
-              {secondaryCta && (
+              {resolvedSecondary && (
                 <Button
-                  href={secondaryCta.href}
+                  href={resolvedSecondary.href}
                   variant={isCrimson ? "dark" : isDark ? "outline" : "secondary"}
                   size="lg"
                   className={
@@ -104,7 +114,7 @@ export default function CTASection({
                       : "border-black/[0.12] text-[#1a1a1a]"
                   }
                 >
-                  {secondaryCta.label}
+                  {resolvedSecondary.label}
                 </Button>
               )}
             </div>

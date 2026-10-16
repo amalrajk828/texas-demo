@@ -1,0 +1,142 @@
+[
+  {
+    "pair": "air-permeability-test vs air-permeability-test-2",
+    "slug1": {
+      "slug": "air-permeability-test",
+      "title": "Air Permeability Testing — Building Envelope",
+      "canonical": "/service/air-permeability-test/",
+      "inSitemap": true
+    },
+    "slug2": {
+      "slug": "air-permeability-test-2",
+      "title": "Air Permeability Test — On-Site Installed Envelope Testing",
+      "canonical": "/service/air-permeability-test-2/",
+      "inSitemap": true
+    },
+    "similarityPercentage": "93.2%",
+    "isCanonicalIdentical": false,
+    "notes": "HIGH DUPLICATION"
+  },
+  {
+    "pair": "water-penetration-test vs water-penetration-test-2",
+    "slug1": {
+      "slug": "water-penetration-test",
+      "title": "Water Penetration Testing — Facade & Building",
+      "canonical": "/service/water-penetration-test/",
+      "inSitemap": true
+    },
+    "slug2": {
+      "slug": "water-penetration-test-2",
+      "title": "Water Penetration Test — Field Hose Testing & Leak Diagnostics",
+      "canonical": "/service/water-penetration-test-2/",
+      "inSitemap": true
+    },
+    "similarityPercentage": "92.3%",
+    "isCanonicalIdentical": false,
+    "notes": "HIGH DUPLICATION"
+  },
+  {
+    "pair": "hose-test vs hose-test-2",
+    "slug1": {
+      "slug": "hose-test",
+      "title": "Hose Test — Curtain Wall & Facade Water Check",
+      "canonical": "/service/hose-test/",
+      "inSitemap": true
+    },
+    "slug2": {
+      "slug": "hose-test-2",
+      "title": "Hose Test — Existing Building Leak Diagnostics",
+      "canonical": "/service/hose-test-2/",
+      "inSitemap": true
+    },
+    "similarityPercentage": "88.7%",
+    "isCanonicalIdentical": false,
+    "notes": "HIGH DUPLICATION"
+  },
+  {
+    "pair": "lifting-equipment-inspection vs lifting-equipment-inspection-2",
+    "slug1": {
+      "slug": "lifting-equipment-inspection",
+      "title": "Lifting Equipment Inspection — Cranes, Hoists & Slings",
+      "canonical": "/service/lifting-equipment-inspection/",
+      "inSitemap": true
+    },
+    "slug2": {
+      "slug": "lifting-equipment-inspection-2",
+      "title": "Lifting Equipment Inspection — Overhead Cranes, Hoists & Elevators",
+      "canonical": "/service/lifting-equipment-inspection-2/",
+      "inSitemap": true
+    },
+    "similarityPercentage": "92.0%",
+    "isCanonicalIdentical": false,
+    "notes": "HIGH DUPLICATION"
+  },
+  {
+    "pair": "torque-tightening-bolt-tensioning vs torque-tightening-bolt-tensioning-2",
+    "slug1": {
+      "slug": "torque-tightening-bolt-tensioning",
+      "title": "Torque Tightening & Bolt Tensioning",
+      "canonical": "/service/torque-tightening-bolt-tensioning/",
+      "inSitemap": true
+    },
+    "slug2": {
+      "slug": "torque-tightening-bolt-tensioning-2",
+      "title": "Torque Tightening & Bolt Tensioning — Hydraulic Tensioning for High-Load Flanges",
+      "canonical": "/service/torque-tightening-bolt-tensioning-2/",
+      "inSitemap": true
+    },
+    "similarityPercentage": "94.7%",
+    "isCanonicalIdentical": false,
+    "notes": "HIGH DUPLICATION"
+  },
+  {
+    "pair": "corrosion-control-services-2 (single)",
+    "slug1": {
+      "slug": "corrosion-control-services",
+      "exists": false
+    },
+    "slug2": {
+      "slug": "corrosion-control-services-2",
+      "title": "Corrosion Control — Assessment, Mitigation & Coatings",
+      "canonical": "/service/corrosion-control-services-2/",
+      "inSitemap": true
+    },
+    "notes": "No base corrosion-control-services exists; only corrosion-control-services-2 exists in routes!"
+  },
+  {
+    "pair": "metallurgical-services vs metallurgical-services-2",
+    "slug1": {
+      "slug": "metallurgical-services",
+      "title": "Metallurgical Services — Positive Material Identification (PMI)",
+      "canonical": "/service/metallurgical-services/",
+      "inSitemap": true
+    },
+    "slug2": {
+      "slug": "metallurgical-services-2",
+      "title": "Metallurgical Services — OES Lab-Grade PMI & Full Chemistry",
+      "canonical": "/service/metallurgical-services-2/",
+      "inSitemap": true
+    },
+    "similarityPercentage": "95.9%",
+    "isCanonicalIdentical": false,
+    "notes": "HIGH DUPLICATION"
+  },
+  {
+    "pair": "heat-treatment-services vs heat-treatment-services-2",
+    "slug1": {
+      "slug": "heat-treatment-services",
+      "title": "Heat Treatment — PWHT, Stress Relief, Annealing",
+      "canonical": "/service/heat-treatment-services/",
+      "inSitemap": true
+    },
+    "slug2": {
+      "slug": "heat-treatment-services-2",
+      "title": "Heat Treatment Services — Structural Steel & Offshore PWHT",
+      "canonical": "/service/heat-treatment-services-2/",
+      "inSitemap": true
+    },
+    "similarityPercentage": "91.2%",
+    "isCanonicalIdentical": false,
+    "notes": "HIGH DUPLICATION"
+  }
+]

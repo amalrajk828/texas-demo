@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>3D Flow Meter — Precision Engineering & Exploded Architecture</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Space+Grotesk:wght@500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+  <!-- Minimal Fixed Top Navigation -->
+  <header id="top-nav" class="top-nav">
+    <div class="nav-container">
+      <div class="nav-brand">
+        <span class="brand-badge">TTS</span>
+        <div class="brand-info">
+          <span class="brand-name">TEXAS TECHNICAL</span>
+          <span class="brand-sub">SERIES X-300 FLOW METER</span>
+        </div>
+      </div>
+
+      <nav class="nav-links">
+        <a href="#overview">Architecture</a>
+        <a href="#specifications">Specifications</a>
+        <a href="#custody">Custody Transfer</a>
+      </nav>
+
+      <div class="nav-actions">
+        <span class="status-indicator">
+          <span class="pulse-dot"></span>
+          Exploded 3D View
+        </span>
+        <a href="#inquire" class="btn-primary">Request Data Sheet</a>
+      </div>
+    </div>
+  </header>
+
+  <!-- Preloader Screen -->
+  <div id="preloader" class="preloader">
+    <div class="preloader-content">
+      <div class="loader-ring"></div>
+      <div class="loader-counter">
+        <span id="load-progress">0</span><span class="pct">%</span>
+      </div>
+      <p class="loader-caption">Loading High-Fidelity Sequence...</p>
+    </div>
+  </div>
+
+  <!-- Sticky Scrollytelling Section -->
+  <section id="scrolly-container" class="scrolly-container">
+    <div class="sticky-viewport">
+      <!-- Full-screen Canvas -->
+      <canvas id="flow-canvas"></canvas>
+
+      <!-- Scrollytelling Content Overlays -->
+      <div class="overlays-wrapper">
+
+        <!-- Stage 0: Assembled State (0% - 18%) -->
+        <div class="overlay-stage stage-0 active" id="stage-0">
+          <div class="badge-pill">
+            <span class="dot"></span> ULTRA-HIGH PRESSURE RATED
+          </div>
+          <h1 class="hero-title">
+            Engineered For Zero Friction.
+            <span class="text-maroon">Precision Redefined.</span>
+          </h1>
+          <p class="hero-desc">
+            Industrial custody-transfer ultrasonic flow meter designed for extreme pipelines, gas metering, and high-velocity fluids.
+          </p>
+          <div class="scroll-cue">
+            <div class="mouse-icon">
+              <div class="wheel"></div>
+            </div>
+            <span>Scroll down to disassemble</span>
+          </div>
+        </div>
+
+        <!-- Stage 1: Sensor & Transducer Array (20% - 45%) -->
+        <div class="overlay-stage stage-1" id="stage-1">
+          <div class="annotation-card left">
+            <span class="step-num">01 / DISASSEMBLY</span>
+            <h3>Acoustic Path Transducers</h3>
+            <p>Direct-insertion wetted ultrasonic crystals offering ±0.1% repeatability and microsecond transit-time capture.</p>
+            <ul class="spec-list">
+              <li>Titanium alloy housing</li>
+              <li>Dual-frequency beam paths</li>
+              <li>Integrated temperature compensation</li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- Stage 2: Chamber & Flow Conditioning (48% - 75%) -->
+        <div class="overlay-stage stage-2" id="stage-2">
+          <div class="annotation-card right">
+            <span class="step-num">02 / CORE ARCHITECTURE</span>
+            <h3>Vortex & Profile Conditioner</h3>
+            <p>Flange-coupled flow straightener eliminates swirl profiles and upstream disturbances with zero moving parts.</p>
+            <ul class="spec-list">
+              <li>ANSI Class 600 / 900 / 1500</li>
+              <li>NACE MR0175 sour service compliance</li>
+              <li>Zero maintenance solid body</li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- Stage 3: Exploded Assembly Complete (78% - 100%) -->
+        <div class="overlay-stage stage-3" id="stage-3">
+          <div class="annotation-card center">
+            <span class="step-num">03 / FULL EXPLODED VIEW</span>
+            <h3>Modular Architecture</h3>
+            <p>Every subcomponent is field-replaceable without de-pressurizing bypass manifolds or disrupting SCADA telemetry.</p>
+            <div class="card-pills">
+              <span>Class 1 Div 1</span>
+              <span>HART 7 / Modbus TCP</span>
+              <span>API 21.1 Compliant</span>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Scrolly Progress Bar -->
+      <div class="scroll-progress-rail">
+        <div id="progress-bar-fill" class="progress-bar-fill"></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Static Specifications Section Below Canvas -->
+  <section id="specifications" class="spec-section">
+    <div class="section-container">
+      <div class="section-header">
+        <span class="section-tag">ENGINEERING SPECS</span>
+        <h2>Custody-Grade Measurement Performance</h2>
+        <p>Built and calibrated in certified ISO 17025 flow laboratories.</p>
+      </div>
+
+      <div class="spec-grid">
+        <div class="spec-box">
+          <span class="spec-metric">±0.1%</span>
+          <span class="spec-label">Custody Accuracy</span>
+          <p>OIML R117-1 & AGA 9 fiscal transfer compliant across full turndown.</p>
+        </div>
+        <div class="spec-box">
+          <span class="spec-metric">100:1</span>
+          <span class="spec-label">Dynamic Turndown</span>
+          <p>Measures from creeping low flow to maximum surge velocity effortlessly.</p>
+        </div>
+        <div class="spec-box">
+          <span class="spec-metric">0 Bar</span>
+          <span class="spec-label">Pressure Drop</span>
+          <p>Full-bore unobstructed geometry eliminates pumping parasitic loss.</p>
+        </div>
+        <div class="spec-box">
+          <span class="spec-metric">IP68</span>
+          <span class="spec-label">Submersible Enclosure</span>
+          <p>Hermetically sealed explosion-proof electronics for hazardous environments.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="site-footer">
+    <div class="footer-container">
+      <p>&copy; 2026 Texas Technical Services. All rights reserved.</p>
+      <div class="footer-links">
+        <a href="#">Technical Support</a>
+        <a href="#">API Manuals</a>
+        <a href="#">Contact Engineering</a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

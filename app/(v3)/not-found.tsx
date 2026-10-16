@@ -1,6 +1,13 @@
 import type { Metadata } from "next";
 import Link from "next/link";
-import { ArrowRight } from "lucide-react";
+import { ArrowRight, Compass } from "lucide-react";
+import {
+  PageHero,
+  Section,
+  Container,
+  SectionHeading,
+  Button,
+} from "@/components/v3";
 import { blogMetadata } from "@/lib/blogMetadata";
 
 export const metadata: Metadata = {
@@ -9,193 +16,160 @@ export const metadata: Metadata = {
 };
 
 const POPULAR_SERVICES = [
-  { title: "Flow Measurement & Control", href: "/service/flow-measurement-solutions/" },
+  { title: "Flow Measurement Solutions", href: "/service/flow-measurement-solutions/" },
   { title: "Inspection & Testing", href: "/service/inspection-testing/" },
   { title: "Industrial Automation", href: "/service/industrial-automation/" },
-  { title: "Constructions", href: "/service/constructions/" },
+  { title: "View All 60+ Services", href: "/services/" },
 ];
 
 const POPULAR_PRODUCTS = [
   { title: "Flow Meters", href: "/products/flow-meters/" },
-  { title: "Analyzers", href: "/products/analyzers/" },
-  { title: "PLC & SCADA", href: "/products/plc/" },
+  { title: "Custody Metering Solutions", href: "/products/custody-metering-solutions/" },
+  { title: "Analyzers & CEMS", href: "/products/analyzers/" },
+  { title: "PLC & SCADA Hardware", href: "/products/plc/" },
 ];
 
 const POPULAR_INDUSTRIES = [
-  { title: "Oil & Gas", href: "/industries/oil-gas/" },
-  { title: "Refinery", href: "/industries/refinery/" },
-  { title: "Petrochemicals", href: "/industries/petrochemicals/" },
+  { title: "Oil & Gas Production", href: "/industries/oil-gas/" },
+  { title: "Refinery Operations", href: "/industries/refinery/" },
+  { title: "Petrochemical Complexes", href: "/industries/petrochemicals/" },
+  { title: "LNG Terminals", href: "/industries/lng/" },
 ];
 
-const latestArticles = blogMetadata
-  .slice(-2)
-  .reverse()
-  .map((article) => ({
-    slug: article.slug,
-    title: article.title,
-    category: article.category,
-  }));
+const latestArticles = blogMetadata.slice(0, 3).map((article) => ({
+  slug: article.slug,
+  title: article.title,
+  category: article.category,
+}));
 
 export default function NotFound() {
   return (
     <>
-      {/* Hero */}
-      <section className="relative bg-[#0B0D26] py-24 lg:py-32 overflow-hidden">
-        <div
-          className="absolute inset-0 pointer-events-none"
-          style={{
-            backgroundImage:
-              "repeating-linear-gradient(0deg,transparent,transparent 39px,rgba(255,255,255,0.03) 40px),repeating-linear-gradient(90deg,transparent,transparent 39px,rgba(255,255,255,0.03) 40px)",
-          }}
-        />
-        <div
-          className="absolute top-1/3 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[500px] h-[500px] rounded-full pointer-events-none"
-          style={{
-            background:
-              "radial-gradient(circle, rgba(231,33,43,0.12) 0%, transparent 70%)",
-          }}
-        />
-        <div className="relative z-10 text-center px-4">
-          <p className="text-[#0891B2] text-[11px] font-semibold tracking-[4px] uppercase mb-4">
-            Page Not Found
-          </p>
-          <h1 className="text-6xl sm:text-7xl lg:text-8xl font-bold text-white leading-none mb-6">
-            4<span className="text-[#e7212b]">0</span>4
-          </h1>
-          <p className="text-white/70 text-lg max-w-md mx-auto mb-10">
-            The page you&apos;re looking for doesn&apos;t exist or has been moved.
-          </p>
-          <div className="flex flex-wrap justify-center gap-3">
-            <Link
-              href="/"
-              className="inline-flex items-center gap-2 bg-[#e7212b] hover:bg-[#aa0b1b] text-white font-semibold px-7 py-3.5 rounded-lg transition-colors duration-200 text-[14px] shadow-lg shadow-[#e7212b]/25"
-            >
-              Back to Home
-              <ArrowRight className="w-4 h-4" />
-            </Link>
-            <Link
-              href="/services/"
-              className="inline-flex items-center gap-2 border border-white/15 hover:border-white/35 text-white/60 hover:text-white px-7 py-3.5 rounded-lg transition-all duration-200 text-[14px]"
-            >
-              ← Our Services
-            </Link>
-          </div>
-        </div>
-      </section>
+      {/* ── 1. Page Hero ── */}
+      <PageHero
+        title="404 — Page Not Found"
+        subtitle="The engineering resource or route you requested has been moved or is no longer available. Explore our directory below to locate the technical specifications you need."
+        badge="Navigation Notice"
+        primaryCta={{ label: "Back to Home", href: "/" }}
+        secondaryCta={{ label: "View All Services", href: "/services/" }}
+      />
 
-      {/* Popular Pages */}
-      <section className="bg-[#f4f5f8] py-16 lg:py-20">
-        <div className="max-w-6xl mx-auto px-4 sm:px-6">
-          {/* Services */}
-          <div className="mb-12">
-            <div className="flex items-center gap-2.5 mb-6">
-              <span className="w-5 h-px bg-[#0891B2]" />
-              <span className="text-[#0891B2] text-[10px] font-semibold tracking-[3.5px] uppercase">
-                Popular Services
+      {/* ── 2. Popular Destinations ── */}
+      <Section tone="grey">
+        <Container>
+          <SectionHeading
+            eyebrow="Quick Recovery"
+            title="Popular Engineering Destinations"
+            description="Jump directly to our core service skids, OEM product catalogs, or industry compliance solutions."
+            align="center"
+            className="mb-12"
+          />
+
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 sm:gap-8">
+            {/* Services */}
+            <div className="bg-white rounded-[28px] p-6 sm:p-7 border border-black/[0.06] shadow-[0_10px_30px_rgba(0,0,0,0.04)]">
+              <span className="text-[11px] font-mono font-bold uppercase tracking-wider text-[#6b191b] block mb-3">
+                Services
               </span>
+              <h3 className="font-heading text-[18px] font-bold text-[#1a1c20] mb-4">
+                Core Disciplines
+              </h3>
+              <ul className="space-y-3">
+                {POPULAR_SERVICES.map((s) => (
+                  <li key={s.href}>
+                    <Link
+                      href={s.href}
+                      className="group flex items-center justify-between text-[13.5px] text-[#4b5563] hover:text-[#6b191b] font-medium py-1.5 transition-colors"
+                    >
+                      <span>{s.title}</span>
+                      <ArrowRight className="w-3.5 h-3.5 opacity-0 -translate-x-1 group-hover:opacity-100 group-hover:translate-x-0 transition-all text-[#6b191b]" />
+                    </Link>
+                  </li>
+                ))}
+              </ul>
             </div>
-            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
-              {POPULAR_SERVICES.map((item) => (
+
+            {/* Products */}
+            <div className="bg-white rounded-[28px] p-6 sm:p-7 border border-black/[0.06] shadow-[0_10px_30px_rgba(0,0,0,0.04)]">
+              <span className="text-[11px] font-mono font-bold uppercase tracking-wider text-[#6b191b] block mb-3">
+                Products
+              </span>
+              <h3 className="font-heading text-[18px] font-bold text-[#1a1c20] mb-4">
+                Hardware & Systems
+              </h3>
+              <ul className="space-y-3">
+                {POPULAR_PRODUCTS.map((p) => (
+                  <li key={p.href}>
+                    <Link
+                      href={p.href}
+                      className="group flex items-center justify-between text-[13.5px] text-[#4b5563] hover:text-[#6b191b] font-medium py-1.5 transition-colors"
+                    >
+                      <span>{p.title}</span>
+                      <ArrowRight className="w-3.5 h-3.5 opacity-0 -translate-x-1 group-hover:opacity-100 group-hover:translate-x-0 transition-all text-[#6b191b]" />
+                    </Link>
+                  </li>
+                ))}
+              </ul>
+            </div>
+
+            {/* Industries */}
+            <div className="bg-white rounded-[28px] p-6 sm:p-7 border border-black/[0.06] shadow-[0_10px_30px_rgba(0,0,0,0.04)]">
+              <span className="text-[11px] font-mono font-bold uppercase tracking-wider text-[#6b191b] block mb-3">
+                Industries
+              </span>
+              <h3 className="font-heading text-[18px] font-bold text-[#1a1c20] mb-4">
+                Sectors Served
+              </h3>
+              <ul className="space-y-3">
+                {POPULAR_INDUSTRIES.map((ind) => (
+                  <li key={ind.href}>
+                    <Link
+                      href={ind.href}
+                      className="group flex items-center justify-between text-[13.5px] text-[#4b5563] hover:text-[#6b191b] font-medium py-1.5 transition-colors"
+                    >
+                      <span>{ind.title}</span>
+                      <ArrowRight className="w-3.5 h-3.5 opacity-0 -translate-x-1 group-hover:opacity-100 group-hover:translate-x-0 transition-all text-[#6b191b]" />
+                    </Link>
+                  </li>
+                ))}
+              </ul>
+            </div>
+          </div>
+        </Container>
+      </Section>
+
+      {/* ── 3. Knowledge Hub Articles ── */}
+      <Section tone="white">
+        <Container>
+          <div className="max-w-[720px] mx-auto text-center">
+            <span className="text-[11px] font-mono font-bold uppercase tracking-wider text-[#6b191b] block mb-2">
+              Knowledge Hub
+            </span>
+            <h3 className="font-heading text-[22px] font-bold text-[#1a1c20] mb-6">
+              Latest Technical Guides
+            </h3>
+            <div className="space-y-3 text-left">
+              {latestArticles.map((art) => (
                 <Link
-                  key={item.href}
-                  href={item.href}
-                  className="group bg-white border border-[#e8eaf0] rounded-xl p-5 hover:border-[#e7212b]/25 hover:shadow-lg transition-all duration-200"
+                  key={art.slug}
+                  href={`/blog/${art.slug}/`}
+                  className="group flex items-center justify-between p-4 rounded-xl border border-black/[0.06] hover:border-[#6b191b] hover:bg-[#ece9e6]/40 transition-all"
                 >
-                  <h3 className="text-[14px] font-semibold text-[#0B0D26] mb-1 group-hover:text-[#e7212b] transition-colors">
-                    {item.title}
-                  </h3>
-                  <span className="text-[12px] text-gray-400 group-hover:text-[#e7212b]/60 transition-colors">
-                    View service →
-                  </span>
+                  <div>
+                    <span className="text-[11px] font-mono text-[#6b7280] uppercase tracking-wide block mb-0.5">
+                      {art.category}
+                    </span>
+                    <h4 className="text-[14px] font-semibold text-[#1a1c20] group-hover:text-[#6b191b] transition-colors line-clamp-1">
+                      {art.title}
+                    </h4>
+                  </div>
+                  <ArrowRight className="w-4 h-4 text-[#6b7280] group-hover:text-[#6b191b] group-hover:translate-x-1 transition-all shrink-0 ml-4" />
                 </Link>
               ))}
             </div>
           </div>
-
-          {/* Products & Industries side by side */}
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 mb-12">
-            {/* Products */}
-            <div>
-              <div className="flex items-center gap-2.5 mb-6">
-                <span className="w-5 h-px bg-[#0891B2]" />
-                <span className="text-[#0891B2] text-[10px] font-semibold tracking-[3.5px] uppercase">
-                  Products
-                </span>
-              </div>
-              <div className="space-y-3">
-                {POPULAR_PRODUCTS.map((item) => (
-                  <Link
-                    key={item.href}
-                    href={item.href}
-                    className="group flex items-center justify-between bg-white border border-[#e8eaf0] rounded-xl p-4 hover:border-[#e7212b]/25 hover:shadow-lg transition-all duration-200"
-                  >
-                    <span className="text-[14px] font-semibold text-[#0B0D26] group-hover:text-[#e7212b] transition-colors">
-                      {item.title}
-                    </span>
-                    <span className="text-gray-300 group-hover:text-[#e7212b] transition-colors">
-                      →
-                    </span>
-                  </Link>
-                ))}
-              </div>
-            </div>
-
-            {/* Industries */}
-            <div>
-              <div className="flex items-center gap-2.5 mb-6">
-                <span className="w-5 h-px bg-[#0891B2]" />
-                <span className="text-[#0891B2] text-[10px] font-semibold tracking-[3.5px] uppercase">
-                  Industries
-                </span>
-              </div>
-              <div className="space-y-3">
-                {POPULAR_INDUSTRIES.map((item) => (
-                  <Link
-                    key={item.href}
-                    href={item.href}
-                    className="group flex items-center justify-between bg-white border border-[#e8eaf0] rounded-xl p-4 hover:border-[#e7212b]/25 hover:shadow-lg transition-all duration-200"
-                  >
-                    <span className="text-[14px] font-semibold text-[#0B0D26] group-hover:text-[#e7212b] transition-colors">
-                      {item.title}
-                    </span>
-                    <span className="text-gray-300 group-hover:text-[#e7212b] transition-colors">
-                      →
-                    </span>
-                  </Link>
-                ))}
-              </div>
-            </div>
-          </div>
-
-          {/* Blog */}
-          {latestArticles.length > 0 && (
-            <div>
-              <div className="flex items-center gap-2.5 mb-6">
-                <span className="w-5 h-px bg-[#0891B2]" />
-                <span className="text-[#0891B2] text-[10px] font-semibold tracking-[3.5px] uppercase">
-                  From Our Blog
-                </span>
-              </div>
-              <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-                {latestArticles.map((article) => (
-                  <Link
-                    key={article.slug}
-                    href={`/blog/${article.slug}/`}
-                    className="group bg-white border border-[#e8eaf0] rounded-xl p-5 hover:border-[#e7212b]/25 hover:shadow-lg transition-all duration-200"
-                  >
-                    <span className="text-[10px] font-semibold text-[#0891B2] tracking-[2px] uppercase mb-2 block">
-                      {article.category}
-                    </span>
-                    <h3 className="text-[14px] font-semibold text-[#0B0D26] leading-snug group-hover:text-[#e7212b] transition-colors line-clamp-2">
-                      {article.title}
-                    </h3>
-                  </Link>
-                ))}
-              </div>
-            </div>
-          )}
-        </div>
-      </section>
+        </Container>
+      </Section>
     </>
   );
 }
