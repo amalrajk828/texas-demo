@@ -236,7 +236,7 @@ export default function InteractiveNebulaShader({
 
     // 4. Animation Loop
     let animationFrameId: number;
-    let clock = new THREE.Clock();
+    const clock = new THREE.Clock();
 
     const animate = () => {
       animationFrameId = requestAnimationFrame(animate);

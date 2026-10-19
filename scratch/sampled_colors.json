@@ -1,0 +1,346 @@
+{
+  "dimensions": [
+    2400,
+    1792
+  ],
+  "samples": [
+    {
+      "label": "Page Background",
+      "x": 120,
+      "y": 896,
+      "norm_x": 0.05,
+      "norm_y": 0.5,
+      "hex": "#e3e3e3",
+      "rgb": [
+        227,
+        227,
+        227
+      ]
+    },
+    {
+      "label": "Back Panel - Dark Left",
+      "x": 456,
+      "y": 394,
+      "norm_x": 0.19,
+      "norm_y": 0.22,
+      "hex": "#2f1c18",
+      "rgb": [
+        47,
+        28,
+        24
+      ]
+    },
+    {
+      "label": "Back Panel - Mid Left (oxblood blend)",
+      "x": 840,
+      "y": 358,
+      "norm_x": 0.35,
+      "norm_y": 0.2,
+      "hex": "#4a2220",
+      "rgb": [
+        74,
+        34,
+        32
+      ]
+    },
+    {
+      "label": "Back Panel - Tab / Mid",
+      "x": 1320,
+      "y": 268,
+      "norm_x": 0.55,
+      "norm_y": 0.15,
+      "hex": "#722b27",
+      "rgb": [
+        114,
+        43,
+        39
+      ]
+    },
+    {
+      "label": "Back Panel - Darker oxblood before arc",
+      "x": 1632,
+      "y": 448,
+      "norm_x": 0.68,
+      "norm_y": 0.25,
+      "hex": "#83302c",
+      "rgb": [
+        131,
+        48,
+        44
+      ]
+    },
+    {
+      "label": "Back Panel - Inside Arc (Terracotta Deep)",
+      "x": 1920,
+      "y": 358,
+      "norm_x": 0.8,
+      "norm_y": 0.2,
+      "hex": "#ab5240",
+      "rgb": [
+        171,
+        82,
+        64
+      ]
+    },
+    {
+      "label": "Back Panel - Far Right Terracotta",
+      "x": 2112,
+      "y": 358,
+      "norm_x": 0.88,
+      "norm_y": 0.2,
+      "hex": "#ab533f",
+      "rgb": [
+        171,
+        83,
+        63
+      ]
+    },
+    {
+      "label": "Back Panel - Top Right Corner",
+      "x": 2208,
+      "y": 179,
+      "norm_x": 0.92,
+      "norm_y": 0.1,
+      "hex": "#ac4f40",
+      "rgb": [
+        172,
+        79,
+        64
+      ]
+    },
+    {
+      "label": "Back Panel - Top Sheen / Edge",
+      "x": 1440,
+      "y": 89,
+      "norm_x": 0.6,
+      "norm_y": 0.05,
+      "hex": "#894c49",
+      "rgb": [
+        137,
+        76,
+        73
+      ]
+    },
+    {
+      "label": "Front Glass - Top-Left Sage",
+      "x": 576,
+      "y": 680,
+      "norm_x": 0.24,
+      "norm_y": 0.38,
+      "hex": "#a7ab9d",
+      "rgb": [
+        167,
+        171,
+        157
+      ]
+    },
+    {
+      "label": "Front Glass - Sage mid",
+      "x": 768,
+      "y": 752,
+      "norm_x": 0.32,
+      "norm_y": 0.42,
+      "hex": "#abafa1",
+      "rgb": [
+        171,
+        175,
+        161
+      ]
+    },
+    {
+      "label": "Front Glass - Center transition",
+      "x": 1152,
+      "y": 860,
+      "norm_x": 0.48,
+      "norm_y": 0.48,
+      "hex": "#b6aea3",
+      "rgb": [
+        182,
+        174,
+        163
+      ]
+    },
+    {
+      "label": "Front Glass - Upper-Right Rose",
+      "x": 1560,
+      "y": 752,
+      "norm_x": 0.65,
+      "norm_y": 0.42,
+      "hex": "#ac8b82",
+      "rgb": [
+        172,
+        139,
+        130
+      ]
+    },
+    {
+      "label": "Front Glass - Far-Right Rose",
+      "x": 1872,
+      "y": 806,
+      "norm_x": 0.78,
+      "norm_y": 0.45,
+      "hex": "#b7958c",
+      "rgb": [
+        183,
+        149,
+        140
+      ]
+    },
+    {
+      "label": "Front Glass - Mid-Right Warm transition",
+      "x": 2040,
+      "y": 985,
+      "norm_x": 0.85,
+      "norm_y": 0.55,
+      "hex": "#d2bbb3",
+      "rgb": [
+        210,
+        187,
+        179
+      ]
+    },
+    {
+      "label": "Front Glass - Mid-Left Warm Cream",
+      "x": 600,
+      "y": 1075,
+      "norm_x": 0.25,
+      "norm_y": 0.6,
+      "hex": "#d2cfc8",
+      "rgb": [
+        210,
+        207,
+        200
+      ]
+    },
+    {
+      "label": "Front Glass - Lower-Left Warm Cream",
+      "x": 600,
+      "y": 1469,
+      "norm_x": 0.25,
+      "norm_y": 0.82,
+      "hex": "#e9e6df",
+      "rgb": [
+        233,
+        230,
+        223
+      ]
+    },
+    {
+      "label": "Front Glass - Bottom-Center Cream",
+      "x": 1200,
+      "y": 1469,
+      "norm_x": 0.5,
+      "norm_y": 0.82,
+      "hex": "#e9e6df",
+      "rgb": [
+        233,
+        230,
+        223
+      ]
+    },
+    {
+      "label": "Front Glass - Bottom Cream",
+      "x": 960,
+      "y": 1576,
+      "norm_x": 0.4,
+      "norm_y": 0.88,
+      "hex": "#e9e6e1",
+      "rgb": [
+        233,
+        230,
+        225
+      ]
+    },
+    {
+      "label": "Front Glass - Top Rim Stroke",
+      "x": 600,
+      "y": 501,
+      "norm_x": 0.25,
+      "norm_y": 0.28,
+      "hex": "#a4a89a",
+      "rgb": [
+        164,
+        168,
+        154
+      ]
+    },
+    {
+      "label": "Front Glass - Mid Rim Stroke",
+      "x": 1680,
+      "y": 680,
+      "norm_x": 0.7,
+      "norm_y": 0.38,
+      "hex": "#d5bdbb",
+      "rgb": [
+        213,
+        189,
+        187
+      ]
+    },
+    {
+      "label": "Title Text ('My Files')",
+      "x": 592,
+      "y": 1281,
+      "norm_x": 0.247,
+      "norm_y": 0.715,
+      "hex": "#e9e6df",
+      "rgb": [
+        233,
+        230,
+        223
+      ]
+    },
+    {
+      "label": "Meta Text ('3 items')",
+      "x": 564,
+      "y": 1406,
+      "norm_x": 0.235,
+      "norm_y": 0.785,
+      "hex": "#e7e6e1",
+      "rgb": [
+        231,
+        230,
+        225
+      ]
+    },
+    {
+      "label": "Accent Button - Center",
+      "x": 1992,
+      "y": 1344,
+      "norm_x": 0.83,
+      "norm_y": 0.75,
+      "hex": "#291b1a",
+      "rgb": [
+        41,
+        27,
+        26
+      ]
+    },
+    {
+      "label": "Accent Button - Top Rim Highlight",
+      "x": 1992,
+      "y": 1218,
+      "norm_x": 0.83,
+      "norm_y": 0.68,
+      "hex": "#463d3e",
+      "rgb": [
+        70,
+        61,
+        62
+      ]
+    },
+    {
+      "label": "Accent Button - Bottom Dark",
+      "x": 1992,
+      "y": 1469,
+      "norm_x": 0.83,
+      "norm_y": 0.82,
+      "hex": "#1b1515",
+      "rgb": [
+        27,
+        21,
+        21
+      ]
+    }
+  ]
+}

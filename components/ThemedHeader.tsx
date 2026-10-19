@@ -56,6 +56,7 @@ const NAV: NavItem[] = [
       { label: "View all products →", href: "/products/", highlight: true },
     ],
   },
+  { label: "Blog", href: "/blog/" },
   { label: "Clients", href: "/clients/" },
 ];
 
@@ -82,7 +83,13 @@ export default function ThemedHeader() {
     return () => window.removeEventListener("scroll", onScroll);
   }, []);
 
-  useEffect(() => { setMobileOpen(false); setOpen(null); setSocialOpen(false); }, [pathname]);
+  const [prevPathname, setPrevPathname] = useState(pathname);
+  if (prevPathname !== pathname) {
+    setPrevPathname(pathname);
+    setMobileOpen(false);
+    setOpen(null);
+    setSocialOpen(false);
+  }
 
   useEffect(() => {
     const handler = (e: MouseEvent) => {
@@ -92,8 +99,16 @@ export default function ThemedHeader() {
     return () => document.removeEventListener("mousedown", handler);
   }, []);
 
-  const isActive = (href: string) =>
-    href === "/" ? pathname === "/" : pathname.startsWith(href.replace(/\/$/, ""));
+  const isActive = (href: string) => {
+    const current = pathname || "/";
+    if (href === "/") return current === "/";
+    const cleanHref = href.replace(/\/$/, "");
+    if (current === href || current === cleanHref || current.startsWith(`${cleanHref}/`)) return true;
+    if (cleanHref === "/services" && (current.startsWith("/service/") || current === "/service")) return true;
+    if (cleanHref === "/products" && current.startsWith("/portfolio/")) return true;
+    if (cleanHref === "/about-us" && current.startsWith("/about/")) return true;
+    return false;
+  };
 
   const navBg = scrolled
     ? "backdrop-blur-md shadow-xl shadow-black/30"

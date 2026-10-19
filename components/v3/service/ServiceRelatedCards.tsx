@@ -1,8 +1,8 @@
 "use client";
 
 import React from "react";
-import GlassFolder from "@/components/ui/glass-folder-cards";
 import CardGrid from "@/components/v3/CardGrid";
+import FolderCard from "@/components/v3/folder/FolderCard";
 import type { ServiceRelatedItem } from "./types";
 
 interface ServiceRelatedCardsProps {
@@ -13,43 +13,36 @@ export default function ServiceRelatedCards({ items }: ServiceRelatedCardsProps)
   const displayItems = items.slice(0, 6);
 
   return (
-    <CardGrid max={3} className="pt-6 w-full max-w-[1280px] mx-auto">
+    <CardGrid max={3} className="pt-14 gap-y-12 w-full max-w-[1280px] mx-auto">
       {displayItems.map((item, idx) => {
-        const fullTitle = item.label;
-
-        const files = [
+        const itemHref = `/service/${item.slug}/`;
+        const links = [
           {
-            name: `Explore ${fullTitle}`,
-            href: `/service/${item.slug}/`,
+            label: `Explore ${item.label}`,
+            href: itemHref,
           },
           ...(item.description
             ? [
                 {
-                  name: item.description,
+                  label: item.description,
+                  href: itemHref,
                 },
               ]
             : []),
         ];
 
         return (
-          <GlassFolder
+          <FolderCard
             key={item.slug || idx}
-            label={fullTitle}
-            aria-label={fullTitle}
-            meta="Discipline"
-            files={files}
-            action="none"
-            tone="light"
-            labelPlacement="bottom-left"
-            art="featured"
-            appear={true}
-            appearDelay={idx * 120}
-            width="100%"
-            className="h-full"
+            kind="DISCIPLINE"
+            title={item.label}
+            href={itemHref}
+            links={links}
+            tone="maroon"
+            appearDelay={idx * 130}
           />
         );
       })}
     </CardGrid>
   );
 }
-

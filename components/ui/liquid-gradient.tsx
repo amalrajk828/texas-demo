@@ -437,7 +437,7 @@ export const LiquidGradientCanvas = forwardRef<
     }
 
     let animationId: number;
-    let startTime = performance.now();
+    const startTime = performance.now();
 
     const render = (now: number) => {
       animationId = requestAnimationFrame(render);

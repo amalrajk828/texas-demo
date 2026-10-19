@@ -30,6 +30,37 @@ interface TestimonialsSectionProps {
   tone?: "white" | "light" | "grey";
 }
 
+function TestimonialAvatar({ name, src }: { name: string; src: string }) {
+  const [failed, setFailed] = React.useState(false);
+  const initials = name
+    .split(" ")
+    .map((n) => n[0])
+    .slice(0, 2)
+    .join("")
+    .toUpperCase();
+
+  if (failed || !src) {
+    return (
+      <div className="w-[46px] h-[46px] min-w-[46px] min-h-[46px] rounded-full shrink-0 flex items-center justify-center bg-[rgba(138,48,47,0.1)] text-[#8a302f] font-bold text-sm border-2 border-white shadow-sm ring-1 ring-black/[0.06]">
+        {initials}
+      </div>
+    );
+  }
+
+  return (
+    <div className="relative w-[46px] h-[46px] min-w-[46px] min-h-[46px] rounded-full overflow-hidden shrink-0 border-2 border-white shadow-sm ring-1 ring-black/[0.06] bg-[rgba(138,48,47,0.06)]">
+      <Image
+        src={src}
+        alt={name}
+        fill
+        className="object-cover"
+        sizes="46px"
+        onError={() => setFailed(true)}
+      />
+    </div>
+  );
+}
+
 export default function TestimonialsSection({ tone = "white" }: TestimonialsSectionProps) {
   const sectionTone = tone === "light" ? "white" : tone;
 
@@ -52,30 +83,31 @@ export default function TestimonialsSection({ tone = "white" }: TestimonialsSect
           </div>
         </div>
 
-        <CardGrid max={4}>
+        <CardGrid max={3}>
           {testimonials.map((t, i) => (
             <div
               key={t.name}
-              className={`glass-card justify-between hover:-translate-y-1.5 transition-all duration-300 fade-up d${i + 2}`}
+              className={`group rounded-[24px] bg-white border border-black/[0.08] p-7 sm:p-8 flex flex-col justify-between h-full shadow-[0_4px_20px_rgba(0,0,0,0.04)] hover:shadow-[0_16px_36px_rgba(0,0,0,0.08)] hover:-translate-y-1.5 transition-all duration-300 fade-up d${i + 2}`}
             >
-              <div>
-                <div className="flex gap-1 mb-5">
+              <div className="flex flex-col flex-1">
+                {/* Horizontal row of stars */}
+                <div className="inline-flex flex-row items-center gap-1 mb-5 shrink-0" role="img" aria-label="5 out of 5 stars">
                   {[...Array(5)].map((_, j) => (
-                    <Star key={j} className="w-4 h-4 fill-[#8a302f] text-[#8a302f]" />
+                    <Star key={j} className="w-4 h-4 fill-[#8a302f] text-[#8a302f] shrink-0" />
                   ))}
                 </div>
-                <p className="text-[#2b2f36] italic text-[14px] sm:text-[14.5px] leading-[1.8]">
+                {/* Italic quote body */}
+                <blockquote className="text-[#2b2f36] italic text-[15px] sm:text-[15.5px] leading-[1.7] flex-1 mb-6">
                   &ldquo;{t.text}&rdquo;
-                </p>
+                </blockquote>
               </div>
 
-              <div className="flex items-center gap-3.5 pt-5 mt-6 border-t border-black/[0.08]">
-                <div className="relative w-11 h-11 rounded-full overflow-hidden shrink-0 ring-2 ring-white shadow-sm border border-black/[0.06]">
-                  <Image src={t.avatar} alt={t.name} fill className="object-cover" sizes="44px" />
-                </div>
-                <div>
-                  <p className="text-[#1a1c20] font-bold text-sm leading-tight">{t.name}</p>
-                  <p className="text-[#5f6670] text-xs mt-0.5">{t.role}</p>
+              {/* Author block pinned to bottom */}
+              <div className="flex items-center gap-3.5 pt-5 mt-auto border-t border-black/[0.08] w-full">
+                <TestimonialAvatar name={t.name} src={t.avatar} />
+                <div className="min-w-0">
+                  <p className="text-[#1a1c20] font-bold text-sm leading-tight truncate">{t.name}</p>
+                  <p className="text-[#5f6670] text-xs mt-0.5 truncate">{t.role}</p>
                 </div>
               </div>
             </div>

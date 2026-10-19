@@ -1,0 +1,667 @@
+[
+  {
+    "route": "/service/air-permeability-test/",
+    "element": "<title>, <h1>, <h2> (FAQ), JSON-LD (name)",
+    "brokenText": "Air Permeability{\" \"} Test",
+    "sourceFile": "lib/services/registry-data.json:175",
+    "cause": "Legacy TSX hero H1 (<h1...>{title}{\" \"}<em...>) had HTML tags stripped by regex in scratch/build_full_registry.js without evaluating or removing {\" \"}"
+  },
+  {
+    "route": "/service/air-permeability-test/",
+    "element": "<meta property=\"og:image:alt\">, <meta name=\"twitter:image:alt\">",
+    "brokenText": "Air Permeability{\" \"} Test",
+    "sourceFile": "lib/services/registry-data.json:175",
+    "cause": "OpenGraph/Twitter image alt tag was populated from the malformed title string containing {\" \"}"
+  },
+  {
+    "route": "/service/air-permeability-test-2/",
+    "element": "<title>, <h1>, <h2> (FAQ), JSON-LD (name)",
+    "brokenText": "Air Permeability{\" \"} Test",
+    "sourceFile": "lib/services/registry-data.json:346",
+    "cause": "Legacy TSX hero H1 (<h1...>{title}{\" \"}<em...>) had HTML tags stripped by regex in scratch/build_full_registry.js without evaluating or removing {\" \"}"
+  },
+  {
+    "route": "/service/air-permeability-test-2/",
+    "element": "<meta property=\"og:image:alt\">, <meta name=\"twitter:image:alt\">",
+    "brokenText": "Air Permeability{\" \"} Test",
+    "sourceFile": "lib/services/registry-data.json:346",
+    "cause": "OpenGraph/Twitter image alt tag was populated from the malformed title string containing {\" \"}"
+  },
+  {
+    "route": "/service/audits-and-specialized-consultancy/",
+    "element": "<title>, <h1>, <h2> (FAQ), JSON-LD (name)",
+    "brokenText": "Audits &{\" \"} Specialized Consultancy",
+    "sourceFile": "lib/services/registry-data.json:517",
+    "cause": "Legacy TSX hero H1 (<h1...>{title}{\" \"}<em...>) had HTML tags stripped by regex in scratch/build_full_registry.js without evaluating or removing {\" \"}"
+  },
+  {
+    "route": "/service/audits-and-specialized-consultancy/",
+    "element": "<meta property=\"og:image:alt\">, <meta name=\"twitter:image:alt\">",
+    "brokenText": "Audits &{\" \"} Specialized Consultancy",
+    "sourceFile": "lib/services/registry-data.json:517",
+    "cause": "OpenGraph/Twitter image alt tag was populated from the malformed title string containing {\" \"}"
+  },
+  {
+    "route": "/service/commissioning-and-after-sales-support/",
+    "element": "<title>, <h1>, <h2> (FAQ), JSON-LD (name)",
+    "brokenText": "Commissioning &{\" \"} After Sales Support",
+    "sourceFile": "lib/services/registry-data.json:852",
+    "cause": "Legacy TSX hero H1 (<h1...>{title}{\" \"}<em...>) had HTML tags stripped by regex in scratch/build_full_registry.js without evaluating or removing {\" \"}"
+  },
+  {
+    "route": "/service/commissioning-and-after-sales-support/",
+    "element": "<meta property=\"og:image:alt\">, <meta name=\"twitter:image:alt\">",
+    "brokenText": "Commissioning &{\" \"} After Sales Support",
+    "sourceFile": "lib/services/registry-data.json:852",
+    "cause": "OpenGraph/Twitter image alt tag was populated from the malformed title string containing {\" \"}"
+  },
+  {
+    "route": "/service/commissioning-and-start-up-support/",
+    "element": "<title>, <h1>, <h2> (FAQ), JSON-LD (name)",
+    "brokenText": "Commissioning &{\" \"} Start-up Support",
+    "sourceFile": "lib/services/registry-data.json:1020",
+    "cause": "Legacy TSX hero H1 (<h1...>{title}{\" \"}<em...>) had HTML tags stripped by regex in scratch/build_full_registry.js without evaluating or removing {\" \"}"
+  },
+  {
+    "route": "/service/commissioning-and-start-up-support/",
+    "element": "<meta property=\"og:image:alt\">, <meta name=\"twitter:image:alt\">",
+    "brokenText": "Commissioning &{\" \"} Start-up Support",
+    "sourceFile": "lib/services/registry-data.json:1020",
+    "cause": "OpenGraph/Twitter image alt tag was populated from the malformed title string containing {\" \"}"
+  },
+  {
+    "route": "/service/corrosion-control-services-2/",
+    "element": "<title>, <h1>, <h2> (FAQ), JSON-LD (name)",
+    "brokenText": "Corrosion{\" \"} Control Services",
+    "sourceFile": "lib/services/registry-data.json:1363",
+    "cause": "Legacy TSX hero H1 (<h1...>{title}{\" \"}<em...>) had HTML tags stripped by regex in scratch/build_full_registry.js without evaluating or removing {\" \"}"
+  },
+  {
+    "route": "/service/corrosion-control-services-2/",
+    "element": "<meta property=\"og:image:alt\">, <meta name=\"twitter:image:alt\">",
+    "brokenText": "Corrosion{\" \"} Control Services",
+    "sourceFile": "lib/services/registry-data.json:1363",
+    "cause": "OpenGraph/Twitter image alt tag was populated from the malformed title string containing {\" \"}"
+  },
+  {
+    "route": "/service/eddy-current-testing/",
+    "element": "<title>, <h1>, <h2> (FAQ), JSON-LD (name)",
+    "brokenText": "Eddy Current{\" \"} Testing (ECT)",
+    "sourceFile": "lib/services/registry-data.json:1533",
+    "cause": "Legacy TSX hero H1 (<h1...>{title}{\" \"}<em...>) had HTML tags stripped by regex in scratch/build_full_registry.js without evaluating or removing {\" \"}"
+  },
+  {
+    "route": "/service/eddy-current-testing/",
+    "element": "<meta property=\"og:image:alt\">, <meta name=\"twitter:image:alt\">",
+    "brokenText": "Eddy Current{\" \"} Testing (ECT)",
+    "sourceFile": "lib/services/registry-data.json:1533",
+    "cause": "OpenGraph/Twitter image alt tag was populated from the malformed title string containing {\" \"}"
+  },
+  {
+    "route": "/service/flow-computer-configuration/",
+    "element": "<title>, <h1>, <h2> (FAQ), JSON-LD (name)",
+    "brokenText": "Flow Computer{\" \"} Configuration",
+    "sourceFile": "lib/services/registry-data.json:2044",
+    "cause": "Legacy TSX hero H1 (<h1...>{title}{\" \"}<em...>) had HTML tags stripped by regex in scratch/build_full_registry.js without evaluating or removing {\" \"}"
+  },
+  {
+    "route": "/service/flow-computer-configuration/",
+    "element": "PageHero subtitle / <p>",
+    "brokenText": "{stat.label}",
+    "sourceFile": "lib/services/registry-data.json:2045",
+    "cause": "scratch/build_full_registry.js regex for subtitle (<p className=\"[^\"]*text-white/[0-9]+[^\"]*\"[^>]*>) matched stats item <p>{stat.label}</p> instead of the hero description paragraph"
+  },
+  {
+    "route": "/service/flow-computer-configuration/",
+    "element": "<meta property=\"og:image:alt\">, <meta name=\"twitter:image:alt\">",
+    "brokenText": "Flow Computer{\" \"} Configuration",
+    "sourceFile": "lib/services/registry-data.json:2044",
+    "cause": "OpenGraph/Twitter image alt tag was populated from the malformed title string containing {\" \"}"
+  },
+  {
+    "route": "/service/flow-meter-calibration/",
+    "element": "<title>, <h1>, <h2> (FAQ), JSON-LD (name)",
+    "brokenText": "Flow Meter{\" \"} Calibration",
+    "sourceFile": "lib/services/registry-data.json:2220",
+    "cause": "Legacy TSX hero H1 (<h1...>{title}{\" \"}<em...>) had HTML tags stripped by regex in scratch/build_full_registry.js without evaluating or removing {\" \"}"
+  },
+  {
+    "route": "/service/flow-meter-calibration/",
+    "element": "PageHero subtitle / <p>",
+    "brokenText": "{stat.label}",
+    "sourceFile": "lib/services/registry-data.json:2221",
+    "cause": "scratch/build_full_registry.js regex for subtitle (<p className=\"[^\"]*text-white/[0-9]+[^\"]*\"[^>]*>) matched stats item <p>{stat.label}</p> instead of the hero description paragraph"
+  },
+  {
+    "route": "/service/flow-meter-calibration/",
+    "element": "<meta property=\"og:image:alt\">, <meta name=\"twitter:image:alt\">",
+    "brokenText": "Flow Meter{\" \"} Calibration",
+    "sourceFile": "lib/services/registry-data.json:2220",
+    "cause": "OpenGraph/Twitter image alt tag was populated from the malformed title string containing {\" \"}"
+  },
+  {
+    "route": "/service/flow-meter-calibration/",
+    "element": "Overview paragraph [1]",
+    "brokenText": "Accreditation No. 2-1210 — scope available at{\" \"} www.cofrac.fr/en",
+    "sourceFile": "lib/services/registry-data.json:2220",
+    "cause": "Paragraph string contains raw {\" \"} instead of space"
+  },
+  {
+    "route": "/service/gamma-ray-pipe-crawler-inspection-systems/",
+    "element": "<title>, <h1>, <h2> (FAQ), JSON-LD (name)",
+    "brokenText": "Gamma Ray Pipe{\" \"} Crawler Inspection",
+    "sourceFile": "lib/services/registry-data.json:2564",
+    "cause": "Legacy TSX hero H1 (<h1...>{title}{\" \"}<em...>) had HTML tags stripped by regex in scratch/build_full_registry.js without evaluating or removing {\" \"}"
+  },
+  {
+    "route": "/service/gamma-ray-pipe-crawler-inspection-systems/",
+    "element": "<meta property=\"og:image:alt\">, <meta name=\"twitter:image:alt\">",
+    "brokenText": "Gamma Ray Pipe{\" \"} Crawler Inspection",
+    "sourceFile": "lib/services/registry-data.json:2564",
+    "cause": "OpenGraph/Twitter image alt tag was populated from the malformed title string containing {\" \"}"
+  },
+  {
+    "route": "/service/genuine-spare-parts/",
+    "element": "<title>, <h1>, <h2> (FAQ), JSON-LD (name)",
+    "brokenText": "Genuine{\" \"} Spare Parts",
+    "sourceFile": "lib/services/registry-data.json:2734",
+    "cause": "Legacy TSX hero H1 (<h1...>{title}{\" \"}<em...>) had HTML tags stripped by regex in scratch/build_full_registry.js without evaluating or removing {\" \"}"
+  },
+  {
+    "route": "/service/genuine-spare-parts/",
+    "element": "<meta property=\"og:image:alt\">, <meta name=\"twitter:image:alt\">",
+    "brokenText": "Genuine{\" \"} Spare Parts",
+    "sourceFile": "lib/services/registry-data.json:2734",
+    "cause": "OpenGraph/Twitter image alt tag was populated from the malformed title string containing {\" \"}"
+  },
+  {
+    "route": "/service/heat-treatment-services/",
+    "element": "<title>, <h1>, <h2> (FAQ), JSON-LD (name)",
+    "brokenText": "Heat Treatment{\" \"} Services",
+    "sourceFile": "lib/services/registry-data.json:3256",
+    "cause": "Legacy TSX hero H1 (<h1...>{title}{\" \"}<em...>) had HTML tags stripped by regex in scratch/build_full_registry.js without evaluating or removing {\" \"}"
+  },
+  {
+    "route": "/service/heat-treatment-services/",
+    "element": "<meta property=\"og:image:alt\">, <meta name=\"twitter:image:alt\">",
+    "brokenText": "Heat Treatment{\" \"} Services",
+    "sourceFile": "lib/services/registry-data.json:3256",
+    "cause": "OpenGraph/Twitter image alt tag was populated from the malformed title string containing {\" \"}"
+  },
+  {
+    "route": "/service/heat-treatment-services-2/",
+    "element": "<title>, <h1>, <h2> (FAQ), JSON-LD (name)",
+    "brokenText": "Heat Treatment{\" \"} Services",
+    "sourceFile": "lib/services/registry-data.json:3426",
+    "cause": "Legacy TSX hero H1 (<h1...>{title}{\" \"}<em...>) had HTML tags stripped by regex in scratch/build_full_registry.js without evaluating or removing {\" \"}"
+  },
+  {
+    "route": "/service/heat-treatment-services-2/",
+    "element": "<meta property=\"og:image:alt\">, <meta name=\"twitter:image:alt\">",
+    "brokenText": "Heat Treatment{\" \"} Services",
+    "sourceFile": "lib/services/registry-data.json:3426",
+    "cause": "OpenGraph/Twitter image alt tag was populated from the malformed title string containing {\" \"}"
+  },
+  {
+    "route": "/service/hose-test/",
+    "element": "<title>, <h1>, <h2> (FAQ), JSON-LD (name)",
+    "brokenText": "Hose Test{\" \"} Facade Water Check",
+    "sourceFile": "lib/services/registry-data.json:3766",
+    "cause": "Legacy TSX hero H1 (<h1...>{title}{\" \"}<em...>) had HTML tags stripped by regex in scratch/build_full_registry.js without evaluating or removing {\" \"}"
+  },
+  {
+    "route": "/service/hose-test/",
+    "element": "<meta property=\"og:image:alt\">, <meta name=\"twitter:image:alt\">",
+    "brokenText": "Hose Test{\" \"} Facade Water Check",
+    "sourceFile": "lib/services/registry-data.json:3766",
+    "cause": "OpenGraph/Twitter image alt tag was populated from the malformed title string containing {\" \"}"
+  },
+  {
+    "route": "/service/hose-test-2/",
+    "element": "<title>, <h1>, <h2> (FAQ), JSON-LD (name)",
+    "brokenText": "Hose Test{\" \"} Facade Water Check",
+    "sourceFile": "lib/services/registry-data.json:3937",
+    "cause": "Legacy TSX hero H1 (<h1...>{title}{\" \"}<em...>) had HTML tags stripped by regex in scratch/build_full_registry.js without evaluating or removing {\" \"}"
+  },
+  {
+    "route": "/service/hose-test-2/",
+    "element": "<meta property=\"og:image:alt\">, <meta name=\"twitter:image:alt\">",
+    "brokenText": "Hose Test{\" \"} Facade Water Check",
+    "sourceFile": "lib/services/registry-data.json:3937",
+    "cause": "OpenGraph/Twitter image alt tag was populated from the malformed title string containing {\" \"}"
+  },
+  {
+    "route": "/service/lifting-equipment-inspection/",
+    "element": "<title>, <h1>, <h2> (FAQ), JSON-LD (name)",
+    "brokenText": "Lifting Equipment{\" \"} Inspection",
+    "sourceFile": "lib/services/registry-data.json:4274",
+    "cause": "Legacy TSX hero H1 (<h1...>{title}{\" \"}<em...>) had HTML tags stripped by regex in scratch/build_full_registry.js without evaluating or removing {\" \"}"
+  },
+  {
+    "route": "/service/lifting-equipment-inspection/",
+    "element": "<meta property=\"og:image:alt\">, <meta name=\"twitter:image:alt\">",
+    "brokenText": "Lifting Equipment{\" \"} Inspection",
+    "sourceFile": "lib/services/registry-data.json:4274",
+    "cause": "OpenGraph/Twitter image alt tag was populated from the malformed title string containing {\" \"}"
+  },
+  {
+    "route": "/service/lifting-equipment-inspection-2/",
+    "element": "<title>, <h1>, <h2> (FAQ), JSON-LD (name)",
+    "brokenText": "Lifting Equipment{\" \"} Inspection",
+    "sourceFile": "lib/services/registry-data.json:4445",
+    "cause": "Legacy TSX hero H1 (<h1...>{title}{\" \"}<em...>) had HTML tags stripped by regex in scratch/build_full_registry.js without evaluating or removing {\" \"}"
+  },
+  {
+    "route": "/service/lifting-equipment-inspection-2/",
+    "element": "<meta property=\"og:image:alt\">, <meta name=\"twitter:image:alt\">",
+    "brokenText": "Lifting Equipment{\" \"} Inspection",
+    "sourceFile": "lib/services/registry-data.json:4445",
+    "cause": "OpenGraph/Twitter image alt tag was populated from the malformed title string containing {\" \"}"
+  },
+  {
+    "route": "/service/liquid-penetrant-dye-penetrant-examination-pt/",
+    "element": "<title>, <h1>, <h2> (FAQ), JSON-LD (name)",
+    "brokenText": "Liquid / Dye Penetrant{\" \"} Examination (PT)",
+    "sourceFile": "lib/services/registry-data.json:4616",
+    "cause": "Legacy TSX hero H1 (<h1...>{title}{\" \"}<em...>) had HTML tags stripped by regex in scratch/build_full_registry.js without evaluating or removing {\" \"}"
+  },
+  {
+    "route": "/service/liquid-penetrant-dye-penetrant-examination-pt/",
+    "element": "<meta property=\"og:image:alt\">, <meta name=\"twitter:image:alt\">",
+    "brokenText": "Liquid / Dye Penetrant{\" \"} Examination (PT)",
+    "sourceFile": "lib/services/registry-data.json:4616",
+    "cause": "OpenGraph/Twitter image alt tag was populated from the malformed title string containing {\" \"}"
+  },
+  {
+    "route": "/service/magnetic-flux-leakage/",
+    "element": "<title>, <h1>, <h2> (FAQ), JSON-LD (name)",
+    "brokenText": "Magnetic Flux{\" \"} Leakage (MFL)",
+    "sourceFile": "lib/services/registry-data.json:4950",
+    "cause": "Legacy TSX hero H1 (<h1...>{title}{\" \"}<em...>) had HTML tags stripped by regex in scratch/build_full_registry.js without evaluating or removing {\" \"}"
+  },
+  {
+    "route": "/service/magnetic-flux-leakage/",
+    "element": "<meta property=\"og:image:alt\">, <meta name=\"twitter:image:alt\">",
+    "brokenText": "Magnetic Flux{\" \"} Leakage (MFL)",
+    "sourceFile": "lib/services/registry-data.json:4950",
+    "cause": "OpenGraph/Twitter image alt tag was populated from the malformed title string containing {\" \"}"
+  },
+  {
+    "route": "/service/magnetic-particle-inspection-mt/",
+    "element": "<title>, <h1>, <h2> (FAQ), JSON-LD (name)",
+    "brokenText": "Magnetic Particle{\" \"} Inspection (MT)",
+    "sourceFile": "lib/services/registry-data.json:5121",
+    "cause": "Legacy TSX hero H1 (<h1...>{title}{\" \"}<em...>) had HTML tags stripped by regex in scratch/build_full_registry.js without evaluating or removing {\" \"}"
+  },
+  {
+    "route": "/service/magnetic-particle-inspection-mt/",
+    "element": "<meta property=\"og:image:alt\">, <meta name=\"twitter:image:alt\">",
+    "brokenText": "Magnetic Particle{\" \"} Inspection (MT)",
+    "sourceFile": "lib/services/registry-data.json:5121",
+    "cause": "OpenGraph/Twitter image alt tag was populated from the malformed title string containing {\" \"}"
+  },
+  {
+    "route": "/service/mechanical-testing/",
+    "element": "<title>, <h1>, <h2> (FAQ), JSON-LD (name)",
+    "brokenText": "Mechanical{\" \"} Testing",
+    "sourceFile": "lib/services/registry-data.json:5288",
+    "cause": "Legacy TSX hero H1 (<h1...>{title}{\" \"}<em...>) had HTML tags stripped by regex in scratch/build_full_registry.js without evaluating or removing {\" \"}"
+  },
+  {
+    "route": "/service/mechanical-testing/",
+    "element": "<meta property=\"og:image:alt\">, <meta name=\"twitter:image:alt\">",
+    "brokenText": "Mechanical{\" \"} Testing",
+    "sourceFile": "lib/services/registry-data.json:5288",
+    "cause": "OpenGraph/Twitter image alt tag was populated from the malformed title string containing {\" \"}"
+  },
+  {
+    "route": "/service/mechanical-testing/",
+    "element": "Overview <h2> SectionHeading",
+    "brokenText": "Professional Mechanical{\" \"} Testing Services",
+    "sourceFile": "lib/services/registry-data.json:5288",
+    "cause": "Overview heading extracted from legacy component with raw {\" \"}"
+  },
+  {
+    "route": "/service/metallurgical-services/",
+    "element": "<title>, <h1>, <h2> (FAQ), JSON-LD (name)",
+    "brokenText": "Metallurgical{\" \"} Services (PMI)",
+    "sourceFile": "lib/services/registry-data.json:5472",
+    "cause": "Legacy TSX hero H1 (<h1...>{title}{\" \"}<em...>) had HTML tags stripped by regex in scratch/build_full_registry.js without evaluating or removing {\" \"}"
+  },
+  {
+    "route": "/service/metallurgical-services/",
+    "element": "<meta property=\"og:image:alt\">, <meta name=\"twitter:image:alt\">",
+    "brokenText": "Metallurgical{\" \"} Services (PMI)",
+    "sourceFile": "lib/services/registry-data.json:5472",
+    "cause": "OpenGraph/Twitter image alt tag was populated from the malformed title string containing {\" \"}"
+  },
+  {
+    "route": "/service/metallurgical-services-2/",
+    "element": "<title>, <h1>, <h2> (FAQ), JSON-LD (name)",
+    "brokenText": "Metallurgical{\" \"} Services (PMI)",
+    "sourceFile": "lib/services/registry-data.json:5643",
+    "cause": "Legacy TSX hero H1 (<h1...>{title}{\" \"}<em...>) had HTML tags stripped by regex in scratch/build_full_registry.js without evaluating or removing {\" \"}"
+  },
+  {
+    "route": "/service/metallurgical-services-2/",
+    "element": "<meta property=\"og:image:alt\">, <meta name=\"twitter:image:alt\">",
+    "brokenText": "Metallurgical{\" \"} Services (PMI)",
+    "sourceFile": "lib/services/registry-data.json:5643",
+    "cause": "OpenGraph/Twitter image alt tag was populated from the malformed title string containing {\" \"}"
+  },
+  {
+    "route": "/service/metering-control-system-integration/",
+    "element": "<title>, <h1>, <h2> (FAQ), JSON-LD (name)",
+    "brokenText": "Metering Control{\" \"} System {\" \"}Integration",
+    "sourceFile": "lib/services/registry-data.json:5814",
+    "cause": "Legacy TSX hero H1 (<h1...>{title}{\" \"}<em...>) had HTML tags stripped by regex in scratch/build_full_registry.js without evaluating or removing {\" \"}"
+  },
+  {
+    "route": "/service/metering-control-system-integration/",
+    "element": "PageHero subtitle / <p>",
+    "brokenText": "{stat.label}",
+    "sourceFile": "lib/services/registry-data.json:5815",
+    "cause": "scratch/build_full_registry.js regex for subtitle (<p className=\"[^\"]*text-white/[0-9]+[^\"]*\"[^>]*>) matched stats item <p>{stat.label}</p> instead of the hero description paragraph"
+  },
+  {
+    "route": "/service/metering-control-system-integration/",
+    "element": "<meta property=\"og:image:alt\">, <meta name=\"twitter:image:alt\">",
+    "brokenText": "Metering Control{\" \"} System {\" \"}Integration",
+    "sourceFile": "lib/services/registry-data.json:5814",
+    "cause": "OpenGraph/Twitter image alt tag was populated from the malformed title string containing {\" \"}"
+  },
+  {
+    "route": "/service/metering-expert-services/",
+    "element": "<title>, <h1>, <h2> (FAQ), JSON-LD (name)",
+    "brokenText": "Metering{\" \"} Expert Services",
+    "sourceFile": "lib/services/registry-data.json:5973",
+    "cause": "Legacy TSX hero H1 (<h1...>{title}{\" \"}<em...>) had HTML tags stripped by regex in scratch/build_full_registry.js without evaluating or removing {\" \"}"
+  },
+  {
+    "route": "/service/metering-expert-services/",
+    "element": "<meta property=\"og:image:alt\">, <meta name=\"twitter:image:alt\">",
+    "brokenText": "Metering{\" \"} Expert Services",
+    "sourceFile": "lib/services/registry-data.json:5973",
+    "cause": "OpenGraph/Twitter image alt tag was populated from the malformed title string containing {\" \"}"
+  },
+  {
+    "route": "/service/non-destructive-testing-ndt/",
+    "element": "<title>, <h1>, <h2> (FAQ), JSON-LD (name)",
+    "brokenText": "Non Destructive{\" \"} Testing (NDT)",
+    "sourceFile": "lib/services/registry-data.json:6311",
+    "cause": "Legacy TSX hero H1 (<h1...>{title}{\" \"}<em...>) had HTML tags stripped by regex in scratch/build_full_registry.js without evaluating or removing {\" \"}"
+  },
+  {
+    "route": "/service/non-destructive-testing-ndt/",
+    "element": "<meta property=\"og:image:alt\">, <meta name=\"twitter:image:alt\">",
+    "brokenText": "Non Destructive{\" \"} Testing (NDT)",
+    "sourceFile": "lib/services/registry-data.json:6311",
+    "cause": "OpenGraph/Twitter image alt tag was populated from the malformed title string containing {\" \"}"
+  },
+  {
+    "route": "/service/non-destructive-testing-ndt/",
+    "element": "Overview <h2> SectionHeading",
+    "brokenText": "Professional Non Destructive{\" \"} Testing (NDT) Services",
+    "sourceFile": "lib/services/registry-data.json:6311",
+    "cause": "Overview heading extracted from legacy component with raw {\" \"}"
+  },
+  {
+    "route": "/service/phased-array-ultrasonic-testing/",
+    "element": "<title>, <h1>, <h2> (FAQ), JSON-LD (name)",
+    "brokenText": "Phased Array{\" \"} Ultrasonic Testing",
+    "sourceFile": "lib/services/registry-data.json:6491",
+    "cause": "Legacy TSX hero H1 (<h1...>{title}{\" \"}<em...>) had HTML tags stripped by regex in scratch/build_full_registry.js without evaluating or removing {\" \"}"
+  },
+  {
+    "route": "/service/phased-array-ultrasonic-testing/",
+    "element": "<meta property=\"og:image:alt\">, <meta name=\"twitter:image:alt\">",
+    "brokenText": "Phased Array{\" \"} Ultrasonic Testing",
+    "sourceFile": "lib/services/registry-data.json:6491",
+    "cause": "OpenGraph/Twitter image alt tag was populated from the malformed title string containing {\" \"}"
+  },
+  {
+    "route": "/service/plant-automation/",
+    "element": "<title>, <h1>, <h2> (FAQ), JSON-LD (name)",
+    "brokenText": "Process Plant{\" \"} Automation",
+    "sourceFile": "lib/services/registry-data.json:6662",
+    "cause": "Legacy TSX hero H1 (<h1...>{title}{\" \"}<em...>) had HTML tags stripped by regex in scratch/build_full_registry.js without evaluating or removing {\" \"}"
+  },
+  {
+    "route": "/service/plant-automation/",
+    "element": "<meta property=\"og:image:alt\">, <meta name=\"twitter:image:alt\">",
+    "brokenText": "Process Plant{\" \"} Automation",
+    "sourceFile": "lib/services/registry-data.json:6662",
+    "cause": "OpenGraph/Twitter image alt tag was populated from the malformed title string containing {\" \"}"
+  },
+  {
+    "route": "/service/plant-automation/",
+    "element": "Overview <h2> SectionHeading",
+    "brokenText": "Professional Process Plant{\" \"} Automation Services",
+    "sourceFile": "lib/services/registry-data.json:6662",
+    "cause": "Overview heading extracted from legacy component with raw {\" \"}"
+  },
+  {
+    "route": "/service/pullout-test/",
+    "element": "<title>, <h1>, <h2> (FAQ), JSON-LD (name)",
+    "brokenText": "Pullout Test{\" \"} for Bolts & Anchors",
+    "sourceFile": "lib/services/registry-data.json:6828",
+    "cause": "Legacy TSX hero H1 (<h1...>{title}{\" \"}<em...>) had HTML tags stripped by regex in scratch/build_full_registry.js without evaluating or removing {\" \"}"
+  },
+  {
+    "route": "/service/pullout-test/",
+    "element": "<meta property=\"og:image:alt\">, <meta name=\"twitter:image:alt\">",
+    "brokenText": "Pullout Test{\" \"} for Bolts & Anchors",
+    "sourceFile": "lib/services/registry-data.json:6828",
+    "cause": "OpenGraph/Twitter image alt tag was populated from the malformed title string containing {\" \"}"
+  },
+  {
+    "route": "/service/radiographic-testing-rt/",
+    "element": "<title>, <h1>, <h2> (FAQ), JSON-LD (name)",
+    "brokenText": "Radiographic{\" \"} Testing (RT)",
+    "sourceFile": "lib/services/registry-data.json:6998",
+    "cause": "Legacy TSX hero H1 (<h1...>{title}{\" \"}<em...>) had HTML tags stripped by regex in scratch/build_full_registry.js without evaluating or removing {\" \"}"
+  },
+  {
+    "route": "/service/radiographic-testing-rt/",
+    "element": "<meta property=\"og:image:alt\">, <meta name=\"twitter:image:alt\">",
+    "brokenText": "Radiographic{\" \"} Testing (RT)",
+    "sourceFile": "lib/services/registry-data.json:6998",
+    "cause": "OpenGraph/Twitter image alt tag was populated from the malformed title string containing {\" \"}"
+  },
+  {
+    "route": "/service/repair-upgrades-for-helical-flow-meters/",
+    "element": "<title>, <h1>, <h2> (FAQ), JSON-LD (name)",
+    "brokenText": "Repair & Upgrades for{\" \"} Helical Flow Meters",
+    "sourceFile": "lib/services/registry-data.json:7165",
+    "cause": "Legacy TSX hero H1 (<h1...>{title}{\" \"}<em...>) had HTML tags stripped by regex in scratch/build_full_registry.js without evaluating or removing {\" \"}"
+  },
+  {
+    "route": "/service/repair-upgrades-for-helical-flow-meters/",
+    "element": "<meta property=\"og:image:alt\">, <meta name=\"twitter:image:alt\">",
+    "brokenText": "Repair & Upgrades for{\" \"} Helical Flow Meters",
+    "sourceFile": "lib/services/registry-data.json:7165",
+    "cause": "OpenGraph/Twitter image alt tag was populated from the malformed title string containing {\" \"}"
+  },
+  {
+    "route": "/service/specialized-inspection-service/",
+    "element": "<title>, <h1>, <h2> (FAQ), JSON-LD (name)",
+    "brokenText": "Advanced Inspection &{\" \"} Specialist NDT Services",
+    "sourceFile": "lib/services/registry-data.json:7333",
+    "cause": "Legacy TSX hero H1 (<h1...>{title}{\" \"}<em...>) had HTML tags stripped by regex in scratch/build_full_registry.js without evaluating or removing {\" \"}"
+  },
+  {
+    "route": "/service/specialized-inspection-service/",
+    "element": "<meta property=\"og:image:alt\">, <meta name=\"twitter:image:alt\">",
+    "brokenText": "Advanced Inspection &{\" \"} Specialist NDT Services",
+    "sourceFile": "lib/services/registry-data.json:7333",
+    "cause": "OpenGraph/Twitter image alt tag was populated from the malformed title string containing {\" \"}"
+  },
+  {
+    "route": "/service/specialized-inspection-service/",
+    "element": "Overview <h2> SectionHeading",
+    "brokenText": "Professional Advanced Inspection &{\" \"} Specialist NDT Services Services",
+    "sourceFile": "lib/services/registry-data.json:7333",
+    "cause": "Overview heading extracted from legacy component with raw {\" \"}"
+  },
+  {
+    "route": "/service/system-software-upgrade/",
+    "element": "<title>, <h1>, <h2> (FAQ), JSON-LD (name)",
+    "brokenText": "Control System{\" \"} Integration & Upgradation",
+    "sourceFile": "lib/services/registry-data.json:8064",
+    "cause": "Legacy TSX hero H1 (<h1...>{title}{\" \"}<em...>) had HTML tags stripped by regex in scratch/build_full_registry.js without evaluating or removing {\" \"}"
+  },
+  {
+    "route": "/service/system-software-upgrade/",
+    "element": "<meta property=\"og:image:alt\">, <meta name=\"twitter:image:alt\">",
+    "brokenText": "Control System{\" \"} Integration & Upgradation",
+    "sourceFile": "lib/services/registry-data.json:8064",
+    "cause": "OpenGraph/Twitter image alt tag was populated from the malformed title string containing {\" \"}"
+  },
+  {
+    "route": "/service/time-of-flight-diffraction/",
+    "element": "<title>, <h1>, <h2> (FAQ), JSON-LD (name)",
+    "brokenText": "Time of Flight{\" \"} Diffraction (TOFD)",
+    "sourceFile": "lib/services/registry-data.json:8398",
+    "cause": "Legacy TSX hero H1 (<h1...>{title}{\" \"}<em...>) had HTML tags stripped by regex in scratch/build_full_registry.js without evaluating or removing {\" \"}"
+  },
+  {
+    "route": "/service/time-of-flight-diffraction/",
+    "element": "<meta property=\"og:image:alt\">, <meta name=\"twitter:image:alt\">",
+    "brokenText": "Time of Flight{\" \"} Diffraction (TOFD)",
+    "sourceFile": "lib/services/registry-data.json:8398",
+    "cause": "OpenGraph/Twitter image alt tag was populated from the malformed title string containing {\" \"}"
+  },
+  {
+    "route": "/service/torque-tightening-bolt-tensioning/",
+    "element": "<title>, <h1>, <h2> (FAQ), JSON-LD (name)",
+    "brokenText": "Torque Tightening &{\" \"} Bolt Tensioning",
+    "sourceFile": "lib/services/registry-data.json:8569",
+    "cause": "Legacy TSX hero H1 (<h1...>{title}{\" \"}<em...>) had HTML tags stripped by regex in scratch/build_full_registry.js without evaluating or removing {\" \"}"
+  },
+  {
+    "route": "/service/torque-tightening-bolt-tensioning/",
+    "element": "<meta property=\"og:image:alt\">, <meta name=\"twitter:image:alt\">",
+    "brokenText": "Torque Tightening &{\" \"} Bolt Tensioning",
+    "sourceFile": "lib/services/registry-data.json:8569",
+    "cause": "OpenGraph/Twitter image alt tag was populated from the malformed title string containing {\" \"}"
+  },
+  {
+    "route": "/service/torque-tightening-bolt-tensioning-2/",
+    "element": "<title>, <h1>, <h2> (FAQ), JSON-LD (name)",
+    "brokenText": "Torque Tightening &{\" \"} Bolt Tensioning",
+    "sourceFile": "lib/services/registry-data.json:8740",
+    "cause": "Legacy TSX hero H1 (<h1...>{title}{\" \"}<em...>) had HTML tags stripped by regex in scratch/build_full_registry.js without evaluating or removing {\" \"}"
+  },
+  {
+    "route": "/service/torque-tightening-bolt-tensioning-2/",
+    "element": "<meta property=\"og:image:alt\">, <meta name=\"twitter:image:alt\">",
+    "brokenText": "Torque Tightening &{\" \"} Bolt Tensioning",
+    "sourceFile": "lib/services/registry-data.json:8740",
+    "cause": "OpenGraph/Twitter image alt tag was populated from the malformed title string containing {\" \"}"
+  },
+  {
+    "route": "/service/ultrasonic-testing-ut/",
+    "element": "<title>, <h1>, <h2> (FAQ), JSON-LD (name)",
+    "brokenText": "Ultrasonic{\" \"} Testing (UT)",
+    "sourceFile": "lib/services/registry-data.json:8911",
+    "cause": "Legacy TSX hero H1 (<h1...>{title}{\" \"}<em...>) had HTML tags stripped by regex in scratch/build_full_registry.js without evaluating or removing {\" \"}"
+  },
+  {
+    "route": "/service/ultrasonic-testing-ut/",
+    "element": "<meta property=\"og:image:alt\">, <meta name=\"twitter:image:alt\">",
+    "brokenText": "Ultrasonic{\" \"} Testing (UT)",
+    "sourceFile": "lib/services/registry-data.json:8911",
+    "cause": "OpenGraph/Twitter image alt tag was populated from the malformed title string containing {\" \"}"
+  },
+  {
+    "route": "/service/upgrade-of-metering-control-system/",
+    "element": "<title>, <h1>, <h2> (FAQ), JSON-LD (name)",
+    "brokenText": "Upgrade of{\" \"} Metering {\" \"}Control System",
+    "sourceFile": "lib/services/registry-data.json:9078",
+    "cause": "Legacy TSX hero H1 (<h1...>{title}{\" \"}<em...>) had HTML tags stripped by regex in scratch/build_full_registry.js without evaluating or removing {\" \"}"
+  },
+  {
+    "route": "/service/upgrade-of-metering-control-system/",
+    "element": "PageHero subtitle / <p>",
+    "brokenText": "{stat.label}",
+    "sourceFile": "lib/services/registry-data.json:9079",
+    "cause": "scratch/build_full_registry.js regex for subtitle (<p className=\"[^\"]*text-white/[0-9]+[^\"]*\"[^>]*>) matched stats item <p>{stat.label}</p> instead of the hero description paragraph"
+  },
+  {
+    "route": "/service/upgrade-of-metering-control-system/",
+    "element": "<meta property=\"og:image:alt\">, <meta name=\"twitter:image:alt\">",
+    "brokenText": "Upgrade of{\" \"} Metering {\" \"}Control System",
+    "sourceFile": "lib/services/registry-data.json:9078",
+    "cause": "OpenGraph/Twitter image alt tag was populated from the malformed title string containing {\" \"}"
+  },
+  {
+    "route": "/service/validation-and-uncertainty-calculations/",
+    "element": "<title>, <h1>, <h2> (FAQ), JSON-LD (name)",
+    "brokenText": "Validation &{\" \"} Uncertainty Calculations",
+    "sourceFile": "lib/services/registry-data.json:9243",
+    "cause": "Legacy TSX hero H1 (<h1...>{title}{\" \"}<em...>) had HTML tags stripped by regex in scratch/build_full_registry.js without evaluating or removing {\" \"}"
+  },
+  {
+    "route": "/service/validation-and-uncertainty-calculations/",
+    "element": "<meta property=\"og:image:alt\">, <meta name=\"twitter:image:alt\">",
+    "brokenText": "Validation &{\" \"} Uncertainty Calculations",
+    "sourceFile": "lib/services/registry-data.json:9243",
+    "cause": "OpenGraph/Twitter image alt tag was populated from the malformed title string containing {\" \"}"
+  },
+  {
+    "route": "/service/videoscope/",
+    "element": "<title>, <h1>, <h2> (FAQ), JSON-LD (name)",
+    "brokenText": "Videoscope{\" \"} Remote Visual Inspection",
+    "sourceFile": "lib/services/registry-data.json:9436",
+    "cause": "Legacy TSX hero H1 (<h1...>{title}{\" \"}<em...>) had HTML tags stripped by regex in scratch/build_full_registry.js without evaluating or removing {\" \"}"
+  },
+  {
+    "route": "/service/videoscope/",
+    "element": "<meta property=\"og:image:alt\">, <meta name=\"twitter:image:alt\">",
+    "brokenText": "Videoscope{\" \"} Remote Visual Inspection",
+    "sourceFile": "lib/services/registry-data.json:9436",
+    "cause": "OpenGraph/Twitter image alt tag was populated from the malformed title string containing {\" \"}"
+  },
+  {
+    "route": "/service/visual-inspection-vi/",
+    "element": "<title>, <h1>, <h2> (FAQ), JSON-LD (name)",
+    "brokenText": "Visual Inspection{\" \"} (VI)",
+    "sourceFile": "lib/services/registry-data.json:9606",
+    "cause": "Legacy TSX hero H1 (<h1...>{title}{\" \"}<em...>) had HTML tags stripped by regex in scratch/build_full_registry.js without evaluating or removing {\" \"}"
+  },
+  {
+    "route": "/service/visual-inspection-vi/",
+    "element": "<meta property=\"og:image:alt\">, <meta name=\"twitter:image:alt\">",
+    "brokenText": "Visual Inspection{\" \"} (VI)",
+    "sourceFile": "lib/services/registry-data.json:9606",
+    "cause": "OpenGraph/Twitter image alt tag was populated from the malformed title string containing {\" \"}"
+  },
+  {
+    "route": "/service/water-penetration-test/",
+    "element": "<title>, <h1>, <h2> (FAQ), JSON-LD (name)",
+    "brokenText": "Water Penetration{\" \"} Test",
+    "sourceFile": "lib/services/registry-data.json:9772",
+    "cause": "Legacy TSX hero H1 (<h1...>{title}{\" \"}<em...>) had HTML tags stripped by regex in scratch/build_full_registry.js without evaluating or removing {\" \"}"
+  },
+  {
+    "route": "/service/water-penetration-test/",
+    "element": "<meta property=\"og:image:alt\">, <meta name=\"twitter:image:alt\">",
+    "brokenText": "Water Penetration{\" \"} Test",
+    "sourceFile": "lib/services/registry-data.json:9772",
+    "cause": "OpenGraph/Twitter image alt tag was populated from the malformed title string containing {\" \"}"
+  },
+  {
+    "route": "/service/water-penetration-test-2/",
+    "element": "<title>, <h1>, <h2> (FAQ), JSON-LD (name)",
+    "brokenText": "Water Penetration{\" \"} Test",
+    "sourceFile": "lib/services/registry-data.json:9942",
+    "cause": "Legacy TSX hero H1 (<h1...>{title}{\" \"}<em...>) had HTML tags stripped by regex in scratch/build_full_registry.js without evaluating or removing {\" \"}"
+  },
+  {
+    "route": "/service/water-penetration-test-2/",
+    "element": "<meta property=\"og:image:alt\">, <meta name=\"twitter:image:alt\">",
+    "brokenText": "Water Penetration{\" \"} Test",
+    "sourceFile": "lib/services/registry-data.json:9942",
+    "cause": "OpenGraph/Twitter image alt tag was populated from the malformed title string containing {\" \"}"
+  }
+]

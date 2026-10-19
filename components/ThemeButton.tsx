@@ -15,14 +15,14 @@ export function ThemePrimaryLink({ href = "#", children, className = "", externa
     "inline-flex items-center gap-2 text-white font-semibold px-7 py-3.5 rounded-lg transition-colors duration-200 text-[14px]";
 
   const style = {
-    background: "var(--color-brand-red)",
+    background: "var(--brand-action, #8a302f)",
   } as React.CSSProperties;
 
   const handleEnter = (e: React.MouseEvent<HTMLAnchorElement>) => {
-    e.currentTarget.style.background = "var(--color-brand-red-dark)";
+    e.currentTarget.style.background = "var(--brand-action-hover, #6f2423)";
   };
   const handleLeave = (e: React.MouseEvent<HTMLAnchorElement>) => {
-    e.currentTarget.style.background = "var(--color-brand-red)";
+    e.currentTarget.style.background = "var(--brand-action, #8a302f)";
   };
 
   if (external) {
@@ -45,17 +45,17 @@ export function ThemePrimaryLink({ href = "#", children, className = "", externa
 
 export function ThemeCTALink({ href = "#", children, className = "" }: Props) {
   const handleEnter = (e: React.MouseEvent<HTMLAnchorElement>) => {
-    e.currentTarget.style.background = "var(--color-brand-red-dark)";
+    e.currentTarget.style.background = "var(--brand-action-hover, #6f2423)";
   };
   const handleLeave = (e: React.MouseEvent<HTMLAnchorElement>) => {
-    e.currentTarget.style.background = "var(--color-brand-red)";
+    e.currentTarget.style.background = "var(--brand-action, #8a302f)";
   };
 
   return (
     <Link
       href={href}
       className={`inline-flex items-center gap-2 text-white font-semibold px-8 py-3.5 rounded-lg transition-colors duration-200 ${className}`}
-      style={{ background: "var(--color-brand-red)" } as React.CSSProperties}
+      style={{ background: "var(--brand-action, #8a302f)" } as React.CSSProperties}
       onMouseEnter={handleEnter}
       onMouseLeave={handleLeave}
     >

@@ -27,11 +27,11 @@ export default function SectionHeading({
 
   const badgeStyles = {
     maroon:
-      "bg-[rgba(107,25,27,0.08)] text-[#6b191b] border border-[rgba(107,25,27,0.16)]",
+      "bg-[rgba(138,48,47,0.08)] text-[var(--brand-action,#8a302f)] border border-[rgba(138,48,47,0.25)]",
     dark:
       "bg-[rgba(26,26,26,0.08)] text-[#1a1a1a] border border-[rgba(26,26,26,0.14)]",
     outline:
-      "bg-transparent text-[#6b191b] border border-[#6b191b]/30",
+      "bg-transparent text-[var(--brand-action,#8a302f)] border border-[var(--brand-action,#8a302f)]/30",
   };
 
   return (

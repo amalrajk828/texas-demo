@@ -1,8 +1,8 @@
 "use client";
 
 import React from "react";
-import GlassFolder from "@/components/ui/glass-folder-cards";
 import CardGrid from "@/components/v3/CardGrid";
+import FolderCard from "@/components/v3/folder/FolderCard";
 import type { ServiceIndustryItem } from "./types";
 
 interface ServiceIndustriesServedProps {
@@ -13,43 +13,38 @@ export default function ServiceIndustriesServed({ items }: ServiceIndustriesServ
   const displayItems = items.slice(0, 6);
 
   return (
-    <CardGrid max={4} className="pt-6 w-full max-w-[1280px] mx-auto">
+    <CardGrid max={4} className="pt-14 gap-y-12 w-full max-w-[1280px] mx-auto">
       {displayItems.map((ind, idx) => {
         const fullTitle = ind.name;
+        const indHref = `/industries/${ind.slug}/`;
 
-        const files = [
+        const links = [
           {
-            name: `View ${fullTitle}`,
-            href: `/industries/${ind.slug}/`,
+            label: `View ${fullTitle}`,
+            href: indHref,
           },
           ...(ind.description
             ? [
                 {
-                  name: ind.description,
+                  label: ind.description,
+                  href: indHref,
                 },
               ]
             : []),
         ];
 
         return (
-          <GlassFolder
+          <FolderCard
             key={ind.slug || idx}
-            label={fullTitle}
-            aria-label={fullTitle}
-            meta="Sector"
-            files={files}
-            action="none"
+            kind="SECTOR"
+            title={fullTitle}
+            href={indHref}
+            links={links}
             tone="light"
-            labelPlacement="bottom-left"
-            art="none"
-            appear={true}
-            appearDelay={idx * 120}
-            width="100%"
-            className="h-full"
+            appearDelay={idx * 130}
           />
         );
       })}
     </CardGrid>
   );
 }
-

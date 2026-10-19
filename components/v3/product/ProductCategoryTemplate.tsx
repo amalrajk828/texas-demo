@@ -88,6 +88,7 @@ export default function ProductCategoryTemplate({
                   title={sub.title}
                   subtitle={sub.description}
                   tag="Explore Sub-Category"
+                  fit={sub.fit}
                 />
               ))}
             </CardGrid>
@@ -116,7 +117,7 @@ export default function ProductCategoryTemplate({
               </span>
             </div>
 
-            <CardGrid max={4}>
+            <CardGrid max={3}>
               {products.map((product) => (
                 <ImageCard
                   key={product.slug}
@@ -128,7 +129,8 @@ export default function ProductCategoryTemplate({
                   title={product.name}
                   subtitle={product.description}
                   meta={product.tag || product.category}
-                  tag="View Specs"
+                  tag={product.tag || product.category || "View Specs"}
+                  fit={product.fit}
                 />
               ))}
             </CardGrid>

@@ -6,8 +6,10 @@
     "dev": "cross-env NODE_OPTIONS=--max-old-space-size=4096 next dev --webpack",
     "build": "next build --webpack",
     "start": "next start",
-    "lint": "eslint",
+    "lint": "eslint && node scripts/check-source-text.mjs",
     "typecheck": "tsc --noEmit",
+    "check:text": "node scripts/check-rendered-text.mjs",
+    "check:source-text": "node scripts/check-source-text.mjs",
     "check:review-content": "node scripts/sync-homepage-review-content.mjs --check",
     "analyze": "ANALYZE=true next build --webpack"
   },

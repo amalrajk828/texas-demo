@@ -1,0 +1,1292 @@
+[
+  {
+    "route": "/service/air-permeability-test-2/",
+    "element": "<meta content>",
+    "brokenText": "Air Permeability{&quot; &quot;} Test",
+    "pattern": "{\" \"}"
+  },
+  {
+    "route": "/service/air-permeability-test-2/",
+    "element": "<h1>",
+    "brokenText": "Air Permeability{&quot; &quot;} Test",
+    "pattern": "{\" \"}"
+  },
+  {
+    "route": "/service/air-permeability-test-2/",
+    "element": "<h2>",
+    "brokenText": "Questions About Air Permeability{&quot; &quot;} Test",
+    "pattern": "{\" \"}"
+  },
+  {
+    "route": "/service/air-permeability-test-2/",
+    "element": "<p>",
+    "brokenText": "Specialized Inspection Service Air Permeability{&quot; &quot;} Test Air permeability testing measures air infiltration through windows, doors, and curtain wall systems from exterior to interior throug",
+    "pattern": "{\" \"}"
+  },
+  {
+    "route": "/service/air-permeability-test-2/",
+    "element": "JSON-LD (jsonLd.name)",
+    "brokenText": "Air Permeability{\" \"} Test",
+    "pattern": "{\" \"}"
+  },
+  {
+    "route": "/service/air-permeability-test/",
+    "element": "<meta content>",
+    "brokenText": "Air Permeability{&quot; &quot;} Test",
+    "pattern": "{\" \"}"
+  },
+  {
+    "route": "/service/air-permeability-test/",
+    "element": "<h1>",
+    "brokenText": "Air Permeability{&quot; &quot;} Test",
+    "pattern": "{\" \"}"
+  },
+  {
+    "route": "/service/air-permeability-test/",
+    "element": "<h2>",
+    "brokenText": "Questions About Air Permeability{&quot; &quot;} Test",
+    "pattern": "{\" \"}"
+  },
+  {
+    "route": "/service/air-permeability-test/",
+    "element": "<p>",
+    "brokenText": "Specialized Inspection Service Air Permeability{&quot; &quot;} Test Air permeability testing measures air infiltration through windows, doors, and curtain wall systems from exterior to interior throug",
+    "pattern": "{\" \"}"
+  },
+  {
+    "route": "/service/air-permeability-test/",
+    "element": "JSON-LD (jsonLd.name)",
+    "brokenText": "Air Permeability{\" \"} Test",
+    "pattern": "{\" \"}"
+  },
+  {
+    "route": "/service/audits-and-specialized-consultancy/",
+    "element": "<meta content>",
+    "brokenText": "Audits &amp;{&quot; &quot;} Specialized Consultancy",
+    "pattern": "{\" \"}"
+  },
+  {
+    "route": "/service/audits-and-specialized-consultancy/",
+    "element": "<h1>",
+    "brokenText": "Audits &amp;{&quot; &quot;} Specialized Consultancy",
+    "pattern": "{\" \"}"
+  },
+  {
+    "route": "/service/audits-and-specialized-consultancy/",
+    "element": "<h2>",
+    "brokenText": "Questions About Audits &amp;{&quot; &quot;} Specialized Consultancy",
+    "pattern": "{\" \"}"
+  },
+  {
+    "route": "/service/audits-and-specialized-consultancy/",
+    "element": "<p>",
+    "brokenText": "Flow Measurement Services Audits &amp;{&quot; &quot;} Specialized Consultancy Comprehensive custody metering audits, compliance assessments, and expert consultancy — delivering data-driven insights an",
+    "pattern": "{\" \"}"
+  },
+  {
+    "route": "/service/audits-and-specialized-consultancy/",
+    "element": "JSON-LD (jsonLd.name)",
+    "brokenText": "Audits &{\" \"} Specialized Consultancy",
+    "pattern": "{\" \"}"
+  },
+  {
+    "route": "/service/commissioning-and-after-sales-support/",
+    "element": "<meta content>",
+    "brokenText": "Commissioning &amp;{&quot; &quot;} After Sales Support",
+    "pattern": "{\" \"}"
+  },
+  {
+    "route": "/service/commissioning-and-after-sales-support/",
+    "element": "<h1>",
+    "brokenText": "Commissioning &amp;{&quot; &quot;} After Sales Support",
+    "pattern": "{\" \"}"
+  },
+  {
+    "route": "/service/commissioning-and-after-sales-support/",
+    "element": "<h2>",
+    "brokenText": "Questions About Commissioning &amp;{&quot; &quot;} After Sales Support",
+    "pattern": "{\" \"}"
+  },
+  {
+    "route": "/service/commissioning-and-after-sales-support/",
+    "element": "<p>",
+    "brokenText": "Flow Measurement Services Commissioning &amp;{&quot; &quot;} After Sales Support Expert commissioning and 24/7 after-sales support for flow meters, metering control systems, metering skids, analyzers,",
+    "pattern": "{\" \"}"
+  },
+  {
+    "route": "/service/commissioning-and-after-sales-support/",
+    "element": "JSON-LD (jsonLd.name)",
+    "brokenText": "Commissioning &{\" \"} After Sales Support",
+    "pattern": "{\" \"}"
+  },
+  {
+    "route": "/service/commissioning-and-start-up-support/",
+    "element": "<meta content>",
+    "brokenText": "Commissioning &amp;{&quot; &quot;} Start-up Support",
+    "pattern": "{\" \"}"
+  },
+  {
+    "route": "/service/commissioning-and-start-up-support/",
+    "element": "<h1>",
+    "brokenText": "Commissioning &amp;{&quot; &quot;} Start-up Support",
+    "pattern": "{\" \"}"
+  },
+  {
+    "route": "/service/commissioning-and-start-up-support/",
+    "element": "<h2>",
+    "brokenText": "Questions About Commissioning &amp;{&quot; &quot;} Start-up Support",
+    "pattern": "{\" \"}"
+  },
+  {
+    "route": "/service/commissioning-and-start-up-support/",
+    "element": "<p>",
+    "brokenText": "Industrial Automation Commissioning &amp;{&quot; &quot;} Start-up Support From pre-commissioning through hot commissioning, start-up, and post-commissioning handover — TTS guides every stage of your a",
+    "pattern": "{\" \"}"
+  },
+  {
+    "route": "/service/commissioning-and-start-up-support/",
+    "element": "JSON-LD (jsonLd.name)",
+    "brokenText": "Commissioning &{\" \"} Start-up Support",
+    "pattern": "{\" \"}"
+  },
+  {
+    "route": "/service/corrosion-control-services-2/",
+    "element": "<meta content>",
+    "brokenText": "Corrosion{&quot; &quot;} Control Services",
+    "pattern": "{\" \"}"
+  },
+  {
+    "route": "/service/corrosion-control-services-2/",
+    "element": "<h1>",
+    "brokenText": "Corrosion{&quot; &quot;} Control Services",
+    "pattern": "{\" \"}"
+  },
+  {
+    "route": "/service/corrosion-control-services-2/",
+    "element": "<h2>",
+    "brokenText": "Questions About Corrosion{&quot; &quot;} Control Services",
+    "pattern": "{\" \"}"
+  },
+  {
+    "route": "/service/corrosion-control-services-2/",
+    "element": "<p>",
+    "brokenText": "Specialized Inspection Service Corrosion{&quot; &quot;} Control Services Corrosion control services encompass a range of techniques, practices, and strategies to prevent, mitigate, and manage corrosio",
+    "pattern": "{\" \"}"
+  },
+  {
+    "route": "/service/corrosion-control-services-2/",
+    "element": "JSON-LD (jsonLd.name)",
+    "brokenText": "Corrosion{\" \"} Control Services",
+    "pattern": "{\" \"}"
+  },
+  {
+    "route": "/service/eddy-current-testing/",
+    "element": "<meta content>",
+    "brokenText": "Eddy Current{&quot; &quot;} Testing (ECT)",
+    "pattern": "{\" \"}"
+  },
+  {
+    "route": "/service/eddy-current-testing/",
+    "element": "<h1>",
+    "brokenText": "Eddy Current{&quot; &quot;} Testing (ECT)",
+    "pattern": "{\" \"}"
+  },
+  {
+    "route": "/service/eddy-current-testing/",
+    "element": "<h2>",
+    "brokenText": "Questions About Eddy Current{&quot; &quot;} Testing (ECT)",
+    "pattern": "{\" \"}"
+  },
+  {
+    "route": "/service/eddy-current-testing/",
+    "element": "<p>",
+    "brokenText": "Specialized Inspection Service Eddy Current{&quot; &quot;} Testing (ECT) Eddy Current Testing is the process of running electronic probes through the length of various types of tubes or along the surf",
+    "pattern": "{\" \"}"
+  },
+  {
+    "route": "/service/eddy-current-testing/",
+    "element": "JSON-LD (jsonLd.name)",
+    "brokenText": "Eddy Current{\" \"} Testing (ECT)",
+    "pattern": "{\" \"}"
+  },
+  {
+    "route": "/service/flow-computer-configuration/",
+    "element": "<meta content>",
+    "brokenText": "Flow Computer{&quot; &quot;} Configuration",
+    "pattern": "{\" \"}"
+  },
+  {
+    "route": "/service/flow-computer-configuration/",
+    "element": "<h1>",
+    "brokenText": "Flow Computer{&quot; &quot;} Configuration",
+    "pattern": "{\" \"}"
+  },
+  {
+    "route": "/service/flow-computer-configuration/",
+    "element": "<h2>",
+    "brokenText": "Questions About Flow Computer{&quot; &quot;} Configuration",
+    "pattern": "{\" \"}"
+  },
+  {
+    "route": "/service/flow-computer-configuration/",
+    "element": "<p>",
+    "brokenText": "Flow Measurement Solutions Flow Computer{&quot; &quot;} Configuration {stat.label} Consult Engineering Team Explore All Services About This Service Precision Configuration for Every Application Our de",
+    "pattern": "{\" \"}"
+  },
+  {
+    "route": "/service/flow-computer-configuration/",
+    "element": "JSON-LD (jsonLd.name)",
+    "brokenText": "Flow Computer{\" \"} Configuration",
+    "pattern": "{\" \"}"
+  },
+  {
+    "route": "/service/flow-meter-calibration/",
+    "element": "<meta content>",
+    "brokenText": "Flow Meter{&quot; &quot;} Calibration",
+    "pattern": "{\" \"}"
+  },
+  {
+    "route": "/service/flow-meter-calibration/",
+    "element": "<h1>",
+    "brokenText": "Flow Meter{&quot; &quot;} Calibration",
+    "pattern": "{\" \"}"
+  },
+  {
+    "route": "/service/flow-meter-calibration/",
+    "element": "<h2>",
+    "brokenText": "Questions About Flow Meter{&quot; &quot;} Calibration",
+    "pattern": "{\" \"}"
+  },
+  {
+    "route": "/service/flow-meter-calibration/",
+    "element": "<p>",
+    "brokenText": "Flow Measurement Solutions Flow Meter{&quot; &quot;} Calibration {stat.label} Consult Engineering Team Explore All Services About This Service ILAC/COFRAC ISO 17025 Accredited Facility, France Faure H",
+    "pattern": "{\" \"}"
+  },
+  {
+    "route": "/service/flow-meter-calibration/",
+    "element": "<p>",
+    "brokenText": "Accreditation No. 2-1210 — scope available at{&quot; &quot;} www.cofrac.fr/en",
+    "pattern": "{\" \"}"
+  },
+  {
+    "route": "/service/flow-meter-calibration/",
+    "element": "JSON-LD (jsonLd.name)",
+    "brokenText": "Flow Meter{\" \"} Calibration",
+    "pattern": "{\" \"}"
+  },
+  {
+    "route": "/service/gamma-ray-pipe-crawler-inspection-systems/",
+    "element": "<meta content>",
+    "brokenText": "Gamma Ray Pipe{&quot; &quot;} Crawler Inspection",
+    "pattern": "{\" \"}"
+  },
+  {
+    "route": "/service/gamma-ray-pipe-crawler-inspection-systems/",
+    "element": "<h1>",
+    "brokenText": "Gamma Ray Pipe{&quot; &quot;} Crawler Inspection",
+    "pattern": "{\" \"}"
+  },
+  {
+    "route": "/service/gamma-ray-pipe-crawler-inspection-systems/",
+    "element": "<h2>",
+    "brokenText": "Questions About Gamma Ray Pipe{&quot; &quot;} Crawler Inspection",
+    "pattern": "{\" \"}"
+  },
+  {
+    "route": "/service/gamma-ray-pipe-crawler-inspection-systems/",
+    "element": "<p>",
+    "brokenText": "Specialized Inspection Service Gamma Ray Pipe{&quot; &quot;} Crawler Inspection The X-ray/gamma ray pipe crawler is similar to conventional radiography — a battery-powered, remote-controlled mobile ra",
+    "pattern": "{\" \"}"
+  },
+  {
+    "route": "/service/gamma-ray-pipe-crawler-inspection-systems/",
+    "element": "JSON-LD (jsonLd.name)",
+    "brokenText": "Gamma Ray Pipe{\" \"} Crawler Inspection",
+    "pattern": "{\" \"}"
+  },
+  {
+    "route": "/service/genuine-spare-parts/",
+    "element": "<meta content>",
+    "brokenText": "Genuine{&quot; &quot;} Spare Parts",
+    "pattern": "{\" \"}"
+  },
+  {
+    "route": "/service/genuine-spare-parts/",
+    "element": "<h1>",
+    "brokenText": "Genuine{&quot; &quot;} Spare Parts",
+    "pattern": "{\" \"}"
+  },
+  {
+    "route": "/service/genuine-spare-parts/",
+    "element": "<h2>",
+    "brokenText": "Questions About Genuine{&quot; &quot;} Spare Parts",
+    "pattern": "{\" \"}"
+  },
+  {
+    "route": "/service/genuine-spare-parts/",
+    "element": "<p>",
+    "brokenText": "Flow Measurement Services Genuine{&quot; &quot;} Spare Parts As an authorised Faure Herman OEM Representative, TTS supplies genuine spare parts for helical flow meters and associated metering equipmen",
+    "pattern": "{\" \"}"
+  },
+  {
+    "route": "/service/genuine-spare-parts/",
+    "element": "JSON-LD (jsonLd.name)",
+    "brokenText": "Genuine{\" \"} Spare Parts",
+    "pattern": "{\" \"}"
+  },
+  {
+    "route": "/service/heat-treatment-services-2/",
+    "element": "<meta content>",
+    "brokenText": "Heat Treatment{&quot; &quot;} Services",
+    "pattern": "{\" \"}"
+  },
+  {
+    "route": "/service/heat-treatment-services-2/",
+    "element": "<h1>",
+    "brokenText": "Heat Treatment{&quot; &quot;} Services",
+    "pattern": "{\" \"}"
+  },
+  {
+    "route": "/service/heat-treatment-services-2/",
+    "element": "<h2>",
+    "brokenText": "Questions About Heat Treatment{&quot; &quot;} Services",
+    "pattern": "{\" \"}"
+  },
+  {
+    "route": "/service/heat-treatment-services-2/",
+    "element": "<p>",
+    "brokenText": "Specialized Inspection Service Heat Treatment{&quot; &quot;} Services Heating services covering low, mid, and high range temperature processes using both electrical and fuel-fired methods. Specialised",
+    "pattern": "{\" \"}"
+  },
+  {
+    "route": "/service/heat-treatment-services-2/",
+    "element": "JSON-LD (jsonLd.name)",
+    "brokenText": "Heat Treatment{\" \"} Services",
+    "pattern": "{\" \"}"
+  },
+  {
+    "route": "/service/heat-treatment-services/",
+    "element": "<meta content>",
+    "brokenText": "Heat Treatment{&quot; &quot;} Services",
+    "pattern": "{\" \"}"
+  },
+  {
+    "route": "/service/heat-treatment-services/",
+    "element": "<h1>",
+    "brokenText": "Heat Treatment{&quot; &quot;} Services",
+    "pattern": "{\" \"}"
+  },
+  {
+    "route": "/service/heat-treatment-services/",
+    "element": "<h2>",
+    "brokenText": "Questions About Heat Treatment{&quot; &quot;} Services",
+    "pattern": "{\" \"}"
+  },
+  {
+    "route": "/service/heat-treatment-services/",
+    "element": "<p>",
+    "brokenText": "Specialized Inspection Service Heat Treatment{&quot; &quot;} Services Heating services covering low, mid, and high range temperature processes using both electrical and fuel-fired methods. Specialised",
+    "pattern": "{\" \"}"
+  },
+  {
+    "route": "/service/heat-treatment-services/",
+    "element": "JSON-LD (jsonLd.name)",
+    "brokenText": "Heat Treatment{\" \"} Services",
+    "pattern": "{\" \"}"
+  },
+  {
+    "route": "/service/hose-test-2/",
+    "element": "<meta content>",
+    "brokenText": "Hose Test{&quot; &quot;} Facade Water Check",
+    "pattern": "{\" \"}"
+  },
+  {
+    "route": "/service/hose-test-2/",
+    "element": "<h1>",
+    "brokenText": "Hose Test{&quot; &quot;} Facade Water Check",
+    "pattern": "{\" \"}"
+  },
+  {
+    "route": "/service/hose-test-2/",
+    "element": "<h2>",
+    "brokenText": "Questions About Hose Test{&quot; &quot;} Facade Water Check",
+    "pattern": "{\" \"}"
+  },
+  {
+    "route": "/service/hose-test-2/",
+    "element": "<p>",
+    "brokenText": "Specialized Inspection Service Hose Test{&quot; &quot;} Facade Water Check The hose test provides quality assurance and diagnostic field water checking for installed curtain walls, exterior windows, a",
+    "pattern": "{\" \"}"
+  },
+  {
+    "route": "/service/hose-test-2/",
+    "element": "JSON-LD (jsonLd.name)",
+    "brokenText": "Hose Test{\" \"} Facade Water Check",
+    "pattern": "{\" \"}"
+  },
+  {
+    "route": "/service/hose-test/",
+    "element": "<meta content>",
+    "brokenText": "Hose Test{&quot; &quot;} Facade Water Check",
+    "pattern": "{\" \"}"
+  },
+  {
+    "route": "/service/hose-test/",
+    "element": "<h1>",
+    "brokenText": "Hose Test{&quot; &quot;} Facade Water Check",
+    "pattern": "{\" \"}"
+  },
+  {
+    "route": "/service/hose-test/",
+    "element": "<h2>",
+    "brokenText": "Questions About Hose Test{&quot; &quot;} Facade Water Check",
+    "pattern": "{\" \"}"
+  },
+  {
+    "route": "/service/hose-test/",
+    "element": "<p>",
+    "brokenText": "Specialized Inspection Service Hose Test{&quot; &quot;} Facade Water Check The hose test provides quality assurance and diagnostic field water checking for installed curtain walls, exterior windows, a",
+    "pattern": "{\" \"}"
+  },
+  {
+    "route": "/service/hose-test/",
+    "element": "JSON-LD (jsonLd.name)",
+    "brokenText": "Hose Test{\" \"} Facade Water Check",
+    "pattern": "{\" \"}"
+  },
+  {
+    "route": "/service/lifting-equipment-inspection-2/",
+    "element": "<meta content>",
+    "brokenText": "Lifting Equipment{&quot; &quot;} Inspection",
+    "pattern": "{\" \"}"
+  },
+  {
+    "route": "/service/lifting-equipment-inspection-2/",
+    "element": "<h1>",
+    "brokenText": "Lifting Equipment{&quot; &quot;} Inspection",
+    "pattern": "{\" \"}"
+  },
+  {
+    "route": "/service/lifting-equipment-inspection-2/",
+    "element": "<h2>",
+    "brokenText": "Questions About Lifting Equipment{&quot; &quot;} Inspection",
+    "pattern": "{\" \"}"
+  },
+  {
+    "route": "/service/lifting-equipment-inspection-2/",
+    "element": "<p>",
+    "brokenText": "Specialized Inspection Service Lifting Equipment{&quot; &quot;} Inspection Lifting equipment inspection is a systematic and detailed examination carried out at specified intervals by certified compete",
+    "pattern": "{\" \"}"
+  },
+  {
+    "route": "/service/lifting-equipment-inspection-2/",
+    "element": "JSON-LD (jsonLd.name)",
+    "brokenText": "Lifting Equipment{\" \"} Inspection",
+    "pattern": "{\" \"}"
+  },
+  {
+    "route": "/service/liquid-penetrant-dye-penetrant-examination-pt/",
+    "element": "<meta content>",
+    "brokenText": "Liquid / Dye Penetrant{&quot; &quot;} Examination (PT)",
+    "pattern": "{\" \"}"
+  },
+  {
+    "route": "/service/liquid-penetrant-dye-penetrant-examination-pt/",
+    "element": "<h1>",
+    "brokenText": "Liquid / Dye Penetrant{&quot; &quot;} Examination (PT)",
+    "pattern": "{\" \"}"
+  },
+  {
+    "route": "/service/liquid-penetrant-dye-penetrant-examination-pt/",
+    "element": "<h2>",
+    "brokenText": "Questions About Liquid / Dye Penetrant{&quot; &quot;} Examination (PT)",
+    "pattern": "{\" \"}"
+  },
+  {
+    "route": "/service/liquid-penetrant-dye-penetrant-examination-pt/",
+    "element": "<p>",
+    "brokenText": "Non Destructive Testing Liquid / Dye Penetrant{&quot; &quot;} Examination (PT) A widely used NDT method that uses capillary forces to find surface cracks, laps, and porosity and make them visible — pa",
+    "pattern": "{\" \"}"
+  },
+  {
+    "route": "/service/liquid-penetrant-dye-penetrant-examination-pt/",
+    "element": "JSON-LD (jsonLd.name)",
+    "brokenText": "Liquid / Dye Penetrant{\" \"} Examination (PT)",
+    "pattern": "{\" \"}"
+  },
+  {
+    "route": "/service/magnetic-flux-leakage/",
+    "element": "<meta content>",
+    "brokenText": "Magnetic Flux{&quot; &quot;} Leakage (MFL)",
+    "pattern": "{\" \"}"
+  },
+  {
+    "route": "/service/magnetic-flux-leakage/",
+    "element": "<h1>",
+    "brokenText": "Magnetic Flux{&quot; &quot;} Leakage (MFL)",
+    "pattern": "{\" \"}"
+  },
+  {
+    "route": "/service/magnetic-flux-leakage/",
+    "element": "<h2>",
+    "brokenText": "Questions About Magnetic Flux{&quot; &quot;} Leakage (MFL)",
+    "pattern": "{\" \"}"
+  },
+  {
+    "route": "/service/magnetic-flux-leakage/",
+    "element": "<p>",
+    "brokenText": "Specialized Inspection Service Magnetic Flux{&quot; &quot;} Leakage (MFL) Magnetic Flux Leakage (MFL) is a magnetic NDT method used to detect corrosion and pitting in steel structures — most commonly ",
+    "pattern": "{\" \"}"
+  },
+  {
+    "route": "/service/magnetic-flux-leakage/",
+    "element": "JSON-LD (jsonLd.name)",
+    "brokenText": "Magnetic Flux{\" \"} Leakage (MFL)",
+    "pattern": "{\" \"}"
+  },
+  {
+    "route": "/service/magnetic-particle-inspection-mt/",
+    "element": "<meta content>",
+    "brokenText": "Magnetic Particle{&quot; &quot;} Inspection (MT)",
+    "pattern": "{\" \"}"
+  },
+  {
+    "route": "/service/magnetic-particle-inspection-mt/",
+    "element": "<h1>",
+    "brokenText": "Magnetic Particle{&quot; &quot;} Inspection (MT)",
+    "pattern": "{\" \"}"
+  },
+  {
+    "route": "/service/magnetic-particle-inspection-mt/",
+    "element": "<h2>",
+    "brokenText": "Questions About Magnetic Particle{&quot; &quot;} Inspection (MT)",
+    "pattern": "{\" \"}"
+  },
+  {
+    "route": "/service/magnetic-particle-inspection-mt/",
+    "element": "<p>",
+    "brokenText": "Non Destructive Testing Magnetic Particle{&quot; &quot;} Inspection (MT) Detecting surface and near-surface defects in ferromagnetic materials — iron, steel, nickel, and cobalt. Fast and easy to condu",
+    "pattern": "{\" \"}"
+  },
+  {
+    "route": "/service/magnetic-particle-inspection-mt/",
+    "element": "JSON-LD (jsonLd.name)",
+    "brokenText": "Magnetic Particle{\" \"} Inspection (MT)",
+    "pattern": "{\" \"}"
+  },
+  {
+    "route": "/service/mechanical-testing/",
+    "element": "<meta content>",
+    "brokenText": "Mechanical{&quot; &quot;} Testing",
+    "pattern": "{\" \"}"
+  },
+  {
+    "route": "/service/mechanical-testing/",
+    "element": "<h1>",
+    "brokenText": "Mechanical{&quot; &quot;} Testing",
+    "pattern": "{\" \"}"
+  },
+  {
+    "route": "/service/mechanical-testing/",
+    "element": "<h2>",
+    "brokenText": "Professional Mechanical{&quot; &quot;} Testing Services",
+    "pattern": "{\" \"}"
+  },
+  {
+    "route": "/service/mechanical-testing/",
+    "element": "<h2>",
+    "brokenText": "Questions About Mechanical{&quot; &quot;} Testing",
+    "pattern": "{\" \"}"
+  },
+  {
+    "route": "/service/mechanical-testing/",
+    "element": "<p>",
+    "brokenText": "Inspection &amp; Testing Services Mechanical{&quot; &quot;} Testing Comprehensive mechanical testing services for metals, plastics, ceramics, and composites — including tensile, hardness, impact, bend",
+    "pattern": "{\" \"}"
+  },
+  {
+    "route": "/service/mechanical-testing/",
+    "element": "JSON-LD (jsonLd.name)",
+    "brokenText": "Mechanical{\" \"} Testing",
+    "pattern": "{\" \"}"
+  },
+  {
+    "route": "/service/metallurgical-services-2/",
+    "element": "<meta content>",
+    "brokenText": "Metallurgical{&quot; &quot;} Services (PMI)",
+    "pattern": "{\" \"}"
+  },
+  {
+    "route": "/service/metallurgical-services-2/",
+    "element": "<h1>",
+    "brokenText": "Metallurgical{&quot; &quot;} Services (PMI)",
+    "pattern": "{\" \"}"
+  },
+  {
+    "route": "/service/metallurgical-services-2/",
+    "element": "<h2>",
+    "brokenText": "Questions About Metallurgical{&quot; &quot;} Services (PMI)",
+    "pattern": "{\" \"}"
+  },
+  {
+    "route": "/service/metallurgical-services-2/",
+    "element": "<p>",
+    "brokenText": "Specialized Inspection Service Metallurgical{&quot; &quot;} Services (PMI) Positive Material Identification (PMI) is a fast and non-destructive method for verifying the chemical composition of metals ",
+    "pattern": "{\" \"}"
+  },
+  {
+    "route": "/service/metallurgical-services-2/",
+    "element": "JSON-LD (jsonLd.name)",
+    "brokenText": "Metallurgical{\" \"} Services (PMI)",
+    "pattern": "{\" \"}"
+  },
+  {
+    "route": "/service/metallurgical-services/",
+    "element": "<meta content>",
+    "brokenText": "Metallurgical{&quot; &quot;} Services (PMI)",
+    "pattern": "{\" \"}"
+  },
+  {
+    "route": "/service/metallurgical-services/",
+    "element": "<h1>",
+    "brokenText": "Metallurgical{&quot; &quot;} Services (PMI)",
+    "pattern": "{\" \"}"
+  },
+  {
+    "route": "/service/metallurgical-services/",
+    "element": "<h2>",
+    "brokenText": "Questions About Metallurgical{&quot; &quot;} Services (PMI)",
+    "pattern": "{\" \"}"
+  },
+  {
+    "route": "/service/metallurgical-services/",
+    "element": "<p>",
+    "brokenText": "Specialized Inspection Service Metallurgical{&quot; &quot;} Services (PMI) Positive Material Identification (PMI) is a fast and non-destructive method for verifying the chemical composition of metals ",
+    "pattern": "{\" \"}"
+  },
+  {
+    "route": "/service/metallurgical-services/",
+    "element": "JSON-LD (jsonLd.name)",
+    "brokenText": "Metallurgical{\" \"} Services (PMI)",
+    "pattern": "{\" \"}"
+  },
+  {
+    "route": "/service/metering-control-system-integration/",
+    "element": "<meta content>",
+    "brokenText": "Metering Control{&quot; &quot;} System {&quot; &quot;}Integration",
+    "pattern": "{\" \"}"
+  },
+  {
+    "route": "/service/metering-control-system-integration/",
+    "element": "<h1>",
+    "brokenText": "Metering Control{&quot; &quot;} System {&quot; &quot;}Integration",
+    "pattern": "{\" \"}"
+  },
+  {
+    "route": "/service/metering-control-system-integration/",
+    "element": "<h2>",
+    "brokenText": "Questions About Metering Control{&quot; &quot;} System {&quot; &quot;}Integration",
+    "pattern": "{\" \"}"
+  },
+  {
+    "route": "/service/metering-control-system-integration/",
+    "element": "<p>",
+    "brokenText": "Flow Measurement Solutions Metering Control{&quot; &quot;} System {&quot; &quot;}Integration {stat.label} Consult Engineering Team Explore All Services About This Service Your Trusted Partner for Cust",
+    "pattern": "{\" \"}"
+  },
+  {
+    "route": "/service/metering-control-system-integration/",
+    "element": "JSON-LD (jsonLd.name)",
+    "brokenText": "Metering Control{\" \"} System {\" \"}Integration",
+    "pattern": "{\" \"}"
+  },
+  {
+    "route": "/service/metering-expert-services/",
+    "element": "<meta content>",
+    "brokenText": "Metering{&quot; &quot;} Expert Services",
+    "pattern": "{\" \"}"
+  },
+  {
+    "route": "/service/metering-expert-services/",
+    "element": "<h1>",
+    "brokenText": "Metering{&quot; &quot;} Expert Services",
+    "pattern": "{\" \"}"
+  },
+  {
+    "route": "/service/metering-expert-services/",
+    "element": "<h2>",
+    "brokenText": "Questions About Metering{&quot; &quot;} Expert Services",
+    "pattern": "{\" \"}"
+  },
+  {
+    "route": "/service/metering-expert-services/",
+    "element": "<p>",
+    "brokenText": "Flow Measurement Services Metering{&quot; &quot;} Expert Services Access TTS&#x27;s specialist metering engineers for on-site assignments, project support, and field expertise — bringing deep technica",
+    "pattern": "{\" \"}"
+  },
+  {
+    "route": "/service/metering-expert-services/",
+    "element": "JSON-LD (jsonLd.name)",
+    "brokenText": "Metering{\" \"} Expert Services",
+    "pattern": "{\" \"}"
+  },
+  {
+    "route": "/service/non-destructive-testing-ndt/",
+    "element": "<meta content>",
+    "brokenText": "Non Destructive{&quot; &quot;} Testing (NDT)",
+    "pattern": "{\" \"}"
+  },
+  {
+    "route": "/service/non-destructive-testing-ndt/",
+    "element": "<h1>",
+    "brokenText": "Non Destructive{&quot; &quot;} Testing (NDT)",
+    "pattern": "{\" \"}"
+  },
+  {
+    "route": "/service/non-destructive-testing-ndt/",
+    "element": "<h2>",
+    "brokenText": "Professional Non Destructive{&quot; &quot;} Testing (NDT) Services",
+    "pattern": "{\" \"}"
+  },
+  {
+    "route": "/service/non-destructive-testing-ndt/",
+    "element": "<h2>",
+    "brokenText": "Questions About Non Destructive{&quot; &quot;} Testing (NDT)",
+    "pattern": "{\" \"}"
+  },
+  {
+    "route": "/service/non-destructive-testing-ndt/",
+    "element": "<p>",
+    "brokenText": "Inspection &amp; Testing Services Non Destructive{&quot; &quot;} Testing (NDT) TTS provides a full range of non-destructive examination services with qualified, experienced technicians and modern equi",
+    "pattern": "{\" \"}"
+  },
+  {
+    "route": "/service/non-destructive-testing-ndt/",
+    "element": "JSON-LD (jsonLd.name)",
+    "brokenText": "Non Destructive{\" \"} Testing (NDT)",
+    "pattern": "{\" \"}"
+  },
+  {
+    "route": "/service/phased-array-ultrasonic-testing/",
+    "element": "<meta content>",
+    "brokenText": "Phased Array{&quot; &quot;} Ultrasonic Testing",
+    "pattern": "{\" \"}"
+  },
+  {
+    "route": "/service/phased-array-ultrasonic-testing/",
+    "element": "<h1>",
+    "brokenText": "Phased Array{&quot; &quot;} Ultrasonic Testing",
+    "pattern": "{\" \"}"
+  },
+  {
+    "route": "/service/phased-array-ultrasonic-testing/",
+    "element": "<h2>",
+    "brokenText": "Questions About Phased Array{&quot; &quot;} Ultrasonic Testing",
+    "pattern": "{\" \"}"
+  },
+  {
+    "route": "/service/phased-array-ultrasonic-testing/",
+    "element": "<p>",
+    "brokenText": "Specialized Inspection Service Phased Array{&quot; &quot;} Ultrasonic Testing Phased arrays are used to detect image defects including cracks, voids, and pits caused by corrosion. They measure materia",
+    "pattern": "{\" \"}"
+  },
+  {
+    "route": "/service/phased-array-ultrasonic-testing/",
+    "element": "JSON-LD (jsonLd.name)",
+    "brokenText": "Phased Array{\" \"} Ultrasonic Testing",
+    "pattern": "{\" \"}"
+  },
+  {
+    "route": "/service/plant-automation/",
+    "element": "<meta content>",
+    "brokenText": "Process Plant{&quot; &quot;} Automation",
+    "pattern": "{\" \"}"
+  },
+  {
+    "route": "/service/plant-automation/",
+    "element": "<h1>",
+    "brokenText": "Process Plant{&quot; &quot;} Automation",
+    "pattern": "{\" \"}"
+  },
+  {
+    "route": "/service/plant-automation/",
+    "element": "<h2>",
+    "brokenText": "Professional Process Plant{&quot; &quot;} Automation Services",
+    "pattern": "{\" \"}"
+  },
+  {
+    "route": "/service/plant-automation/",
+    "element": "<h2>",
+    "brokenText": "Questions About Process Plant{&quot; &quot;} Automation",
+    "pattern": "{\" \"}"
+  },
+  {
+    "route": "/service/plant-automation/",
+    "element": "<p>",
+    "brokenText": "Industrial Automation Process Plant{&quot; &quot;} Automation TTS specialises in delivering top-tier Plant Automation solutions that streamline industrial processes. Our cutting-edge automation system",
+    "pattern": "{\" \"}"
+  },
+  {
+    "route": "/service/plant-automation/",
+    "element": "JSON-LD (jsonLd.name)",
+    "brokenText": "Process Plant{\" \"} Automation",
+    "pattern": "{\" \"}"
+  },
+  {
+    "route": "/service/pullout-test/",
+    "element": "<meta content>",
+    "brokenText": "Pullout Test{&quot; &quot;} for Bolts &amp; Anchors",
+    "pattern": "{\" \"}"
+  },
+  {
+    "route": "/service/pullout-test/",
+    "element": "<h1>",
+    "brokenText": "Pullout Test{&quot; &quot;} for Bolts &amp; Anchors",
+    "pattern": "{\" \"}"
+  },
+  {
+    "route": "/service/pullout-test/",
+    "element": "<h2>",
+    "brokenText": "Questions About Pullout Test{&quot; &quot;} for Bolts &amp; Anchors",
+    "pattern": "{\" \"}"
+  },
+  {
+    "route": "/service/pullout-test/",
+    "element": "<p>",
+    "brokenText": "Specialized Inspection Service Pullout Test{&quot; &quot;} for Bolts &amp; Anchors The pullout test determines the strength and integrity of the bond between a bolt and the material in which it is emb",
+    "pattern": "{\" \"}"
+  },
+  {
+    "route": "/service/pullout-test/",
+    "element": "JSON-LD (jsonLd.name)",
+    "brokenText": "Pullout Test{\" \"} for Bolts & Anchors",
+    "pattern": "{\" \"}"
+  },
+  {
+    "route": "/service/radiographic-testing-rt/",
+    "element": "<meta content>",
+    "brokenText": "Radiographic{&quot; &quot;} Testing (RT)",
+    "pattern": "{\" \"}"
+  },
+  {
+    "route": "/service/radiographic-testing-rt/",
+    "element": "<h1>",
+    "brokenText": "Radiographic{&quot; &quot;} Testing (RT)",
+    "pattern": "{\" \"}"
+  },
+  {
+    "route": "/service/radiographic-testing-rt/",
+    "element": "<h2>",
+    "brokenText": "Questions About Radiographic{&quot; &quot;} Testing (RT)",
+    "pattern": "{\" \"}"
+  },
+  {
+    "route": "/service/radiographic-testing-rt/",
+    "element": "<p>",
+    "brokenText": "Non Destructive Testing Radiographic{&quot; &quot;} Testing (RT) A powerful NDT method using X-rays or gamma rays to examine the internal structure of materials and detect flaws not visible on the sur",
+    "pattern": "{\" \"}"
+  },
+  {
+    "route": "/service/radiographic-testing-rt/",
+    "element": "JSON-LD (jsonLd.name)",
+    "brokenText": "Radiographic{\" \"} Testing (RT)",
+    "pattern": "{\" \"}"
+  },
+  {
+    "route": "/service/repair-upgrades-for-helical-flow-meters/",
+    "element": "<meta content>",
+    "brokenText": "Repair &amp; Upgrades for{&quot; &quot;} Helical Flow Meters",
+    "pattern": "{\" \"}"
+  },
+  {
+    "route": "/service/repair-upgrades-for-helical-flow-meters/",
+    "element": "<h1>",
+    "brokenText": "Repair &amp; Upgrades for{&quot; &quot;} Helical Flow Meters",
+    "pattern": "{\" \"}"
+  },
+  {
+    "route": "/service/repair-upgrades-for-helical-flow-meters/",
+    "element": "<h2>",
+    "brokenText": "Questions About Repair &amp; Upgrades for{&quot; &quot;} Helical Flow Meters",
+    "pattern": "{\" \"}"
+  },
+  {
+    "route": "/service/repair-upgrades-for-helical-flow-meters/",
+    "element": "<p>",
+    "brokenText": "Flow Measurement Services Repair &amp; Upgrades for{&quot; &quot;} Helical Flow Meters As an authorised Faure Herman OEM Representative, TTS delivers expert preventive and corrective maintenance, perf",
+    "pattern": "{\" \"}"
+  },
+  {
+    "route": "/service/repair-upgrades-for-helical-flow-meters/",
+    "element": "JSON-LD (jsonLd.name)",
+    "brokenText": "Repair & Upgrades for{\" \"} Helical Flow Meters",
+    "pattern": "{\" \"}"
+  },
+  {
+    "route": "/service/specialized-inspection-service/",
+    "element": "<meta content>",
+    "brokenText": "Advanced Inspection &amp;{&quot; &quot;} Specialist NDT Services",
+    "pattern": "{\" \"}"
+  },
+  {
+    "route": "/service/specialized-inspection-service/",
+    "element": "<h1>",
+    "brokenText": "Advanced Inspection &amp;{&quot; &quot;} Specialist NDT Services",
+    "pattern": "{\" \"}"
+  },
+  {
+    "route": "/service/specialized-inspection-service/",
+    "element": "<h2>",
+    "brokenText": "Professional Advanced Inspection &amp;{&quot; &quot;} Specialist NDT Services Services",
+    "pattern": "{\" \"}"
+  },
+  {
+    "route": "/service/specialized-inspection-service/",
+    "element": "<h2>",
+    "brokenText": "Questions About Advanced Inspection &amp;{&quot; &quot;} Specialist NDT Services",
+    "pattern": "{\" \"}"
+  },
+  {
+    "route": "/service/specialized-inspection-service/",
+    "element": "<p>",
+    "brokenText": "Specialized Inspection Service Advanced Inspection &amp;{&quot; &quot;} Specialist NDT Services From Phased Array Ultrasonic Testing and Eddy Current Testing to Corrosion Control, Metallurgical Analys",
+    "pattern": "{\" \"}"
+  },
+  {
+    "route": "/service/specialized-inspection-service/",
+    "element": "JSON-LD (jsonLd.name)",
+    "brokenText": "Advanced Inspection &{\" \"} Specialist NDT Services",
+    "pattern": "{\" \"}"
+  },
+  {
+    "route": "/service/system-software-upgrade/",
+    "element": "<meta content>",
+    "brokenText": "Control System{&quot; &quot;} Integration &amp; Upgradation",
+    "pattern": "{\" \"}"
+  },
+  {
+    "route": "/service/system-software-upgrade/",
+    "element": "<h1>",
+    "brokenText": "Control System{&quot; &quot;} Integration &amp; Upgradation",
+    "pattern": "{\" \"}"
+  },
+  {
+    "route": "/service/system-software-upgrade/",
+    "element": "<h2>",
+    "brokenText": "Questions About Control System{&quot; &quot;} Integration &amp; Upgradation",
+    "pattern": "{\" \"}"
+  },
+  {
+    "route": "/service/system-software-upgrade/",
+    "element": "<p>",
+    "brokenText": "Industrial Automation Control System{&quot; &quot;} Integration &amp; Upgradation TTS is your trusted partner for PLC and SCADA-based automation and system integration. Our expertise empowers industri",
+    "pattern": "{\" \"}"
+  },
+  {
+    "route": "/service/system-software-upgrade/",
+    "element": "JSON-LD (jsonLd.name)",
+    "brokenText": "Control System{\" \"} Integration & Upgradation",
+    "pattern": "{\" \"}"
+  },
+  {
+    "route": "/service/time-of-flight-diffraction/",
+    "element": "<meta content>",
+    "brokenText": "Time of Flight{&quot; &quot;} Diffraction (TOFD)",
+    "pattern": "{\" \"}"
+  },
+  {
+    "route": "/service/time-of-flight-diffraction/",
+    "element": "<h1>",
+    "brokenText": "Time of Flight{&quot; &quot;} Diffraction (TOFD)",
+    "pattern": "{\" \"}"
+  },
+  {
+    "route": "/service/time-of-flight-diffraction/",
+    "element": "<h2>",
+    "brokenText": "Questions About Time of Flight{&quot; &quot;} Diffraction (TOFD)",
+    "pattern": "{\" \"}"
+  },
+  {
+    "route": "/service/time-of-flight-diffraction/",
+    "element": "<p>",
+    "brokenText": "Specialized Inspection Service Time of Flight{&quot; &quot;} Diffraction (TOFD) TOFD uses the time of flight of an ultrasonic pulse to determine the position and size of a reflector. When a crack is p",
+    "pattern": "{\" \"}"
+  },
+  {
+    "route": "/service/time-of-flight-diffraction/",
+    "element": "JSON-LD (jsonLd.name)",
+    "brokenText": "Time of Flight{\" \"} Diffraction (TOFD)",
+    "pattern": "{\" \"}"
+  },
+  {
+    "route": "/service/torque-tightening-bolt-tensioning-2/",
+    "element": "<meta content>",
+    "brokenText": "Torque Tightening &amp;{&quot; &quot;} Bolt Tensioning",
+    "pattern": "{\" \"}"
+  },
+  {
+    "route": "/service/torque-tightening-bolt-tensioning-2/",
+    "element": "<h1>",
+    "brokenText": "Torque Tightening &amp;{&quot; &quot;} Bolt Tensioning",
+    "pattern": "{\" \"}"
+  },
+  {
+    "route": "/service/torque-tightening-bolt-tensioning-2/",
+    "element": "<h2>",
+    "brokenText": "Questions About Torque Tightening &amp;{&quot; &quot;} Bolt Tensioning",
+    "pattern": "{\" \"}"
+  },
+  {
+    "route": "/service/torque-tightening-bolt-tensioning-2/",
+    "element": "<p>",
+    "brokenText": "Specialized Inspection Service Torque Tightening &amp;{&quot; &quot;} Bolt Tensioning Torque tightening and bolt tensioning services using calibrated standard-range torque sensors and fasteners to ens",
+    "pattern": "{\" \"}"
+  },
+  {
+    "route": "/service/torque-tightening-bolt-tensioning-2/",
+    "element": "JSON-LD (jsonLd.name)",
+    "brokenText": "Torque Tightening &{\" \"} Bolt Tensioning",
+    "pattern": "{\" \"}"
+  },
+  {
+    "route": "/service/torque-tightening-bolt-tensioning/",
+    "element": "<meta content>",
+    "brokenText": "Torque Tightening &amp;{&quot; &quot;} Bolt Tensioning",
+    "pattern": "{\" \"}"
+  },
+  {
+    "route": "/service/torque-tightening-bolt-tensioning/",
+    "element": "<h1>",
+    "brokenText": "Torque Tightening &amp;{&quot; &quot;} Bolt Tensioning",
+    "pattern": "{\" \"}"
+  },
+  {
+    "route": "/service/torque-tightening-bolt-tensioning/",
+    "element": "<h2>",
+    "brokenText": "Questions About Torque Tightening &amp;{&quot; &quot;} Bolt Tensioning",
+    "pattern": "{\" \"}"
+  },
+  {
+    "route": "/service/torque-tightening-bolt-tensioning/",
+    "element": "<p>",
+    "brokenText": "Specialized Inspection Service Torque Tightening &amp;{&quot; &quot;} Bolt Tensioning Torque tightening and bolt tensioning services using calibrated standard-range torque sensors and fasteners to ens",
+    "pattern": "{\" \"}"
+  },
+  {
+    "route": "/service/torque-tightening-bolt-tensioning/",
+    "element": "JSON-LD (jsonLd.name)",
+    "brokenText": "Torque Tightening &{\" \"} Bolt Tensioning",
+    "pattern": "{\" \"}"
+  },
+  {
+    "route": "/service/ultrasonic-testing-ut/",
+    "element": "<meta content>",
+    "brokenText": "Ultrasonic{&quot; &quot;} Testing (UT)",
+    "pattern": "{\" \"}"
+  },
+  {
+    "route": "/service/ultrasonic-testing-ut/",
+    "element": "<h1>",
+    "brokenText": "Ultrasonic{&quot; &quot;} Testing (UT)",
+    "pattern": "{\" \"}"
+  },
+  {
+    "route": "/service/ultrasonic-testing-ut/",
+    "element": "<h2>",
+    "brokenText": "Questions About Ultrasonic{&quot; &quot;} Testing (UT)",
+    "pattern": "{\" \"}"
+  },
+  {
+    "route": "/service/ultrasonic-testing-ut/",
+    "element": "<p>",
+    "brokenText": "Non Destructive Testing Ultrasonic{&quot; &quot;} Testing (UT) Utilising high-frequency sound waves to inspect the internal structure of materials and detect defects and flaws — particularly effective",
+    "pattern": "{\" \"}"
+  },
+  {
+    "route": "/service/ultrasonic-testing-ut/",
+    "element": "JSON-LD (jsonLd.name)",
+    "brokenText": "Ultrasonic{\" \"} Testing (UT)",
+    "pattern": "{\" \"}"
+  },
+  {
+    "route": "/service/upgrade-of-metering-control-system/",
+    "element": "<meta content>",
+    "brokenText": "Upgrade of{&quot; &quot;} Metering {&quot; &quot;}Control System",
+    "pattern": "{\" \"}"
+  },
+  {
+    "route": "/service/upgrade-of-metering-control-system/",
+    "element": "<h1>",
+    "brokenText": "Upgrade of{&quot; &quot;} Metering {&quot; &quot;}Control System",
+    "pattern": "{\" \"}"
+  },
+  {
+    "route": "/service/upgrade-of-metering-control-system/",
+    "element": "<h2>",
+    "brokenText": "Questions About Upgrade of{&quot; &quot;} Metering {&quot; &quot;}Control System",
+    "pattern": "{\" \"}"
+  },
+  {
+    "route": "/service/upgrade-of-metering-control-system/",
+    "element": "<p>",
+    "brokenText": "Flow Measurement Solutions Upgrade of{&quot; &quot;} Metering {&quot; &quot;}Control System {stat.label} Consult Engineering Team Explore All Services About This Service The Smart Choice for System Up",
+    "pattern": "{\" \"}"
+  },
+  {
+    "route": "/service/upgrade-of-metering-control-system/",
+    "element": "JSON-LD (jsonLd.name)",
+    "brokenText": "Upgrade of{\" \"} Metering {\" \"}Control System",
+    "pattern": "{\" \"}"
+  },
+  {
+    "route": "/service/validation-and-uncertainty-calculations/",
+    "element": "<meta content>",
+    "brokenText": "Validation &amp;{&quot; &quot;} Uncertainty Calculations",
+    "pattern": "{\" \"}"
+  },
+  {
+    "route": "/service/validation-and-uncertainty-calculations/",
+    "element": "<h1>",
+    "brokenText": "Validation &amp;{&quot; &quot;} Uncertainty Calculations",
+    "pattern": "{\" \"}"
+  },
+  {
+    "route": "/service/validation-and-uncertainty-calculations/",
+    "element": "<h2>",
+    "brokenText": "Questions About Validation &amp;{&quot; &quot;} Uncertainty Calculations",
+    "pattern": "{\" \"}"
+  },
+  {
+    "route": "/service/validation-and-uncertainty-calculations/",
+    "element": "<p>",
+    "brokenText": "Flow Measurement Services Validation &amp;{&quot; &quot;} Uncertainty Calculations Advanced GUM-compliant measurement uncertainty calculations and comprehensive validation services for custody meterin",
+    "pattern": "{\" \"}"
+  },
+  {
+    "route": "/service/validation-and-uncertainty-calculations/",
+    "element": "JSON-LD (jsonLd.name)",
+    "brokenText": "Validation &{\" \"} Uncertainty Calculations",
+    "pattern": "{\" \"}"
+  },
+  {
+    "route": "/service/videoscope/",
+    "element": "<meta content>",
+    "brokenText": "Videoscope{&quot; &quot;} Remote Visual Inspection",
+    "pattern": "{\" \"}"
+  },
+  {
+    "route": "/service/videoscope/",
+    "element": "<h1>",
+    "brokenText": "Videoscope{&quot; &quot;} Remote Visual Inspection",
+    "pattern": "{\" \"}"
+  },
+  {
+    "route": "/service/videoscope/",
+    "element": "<h2>",
+    "brokenText": "Questions About Videoscope{&quot; &quot;} Remote Visual Inspection",
+    "pattern": "{\" \"}"
+  },
+  {
+    "route": "/service/videoscope/",
+    "element": "<p>",
+    "brokenText": "Specialized Inspection Service Videoscope{&quot; &quot;} Remote Visual Inspection Videoscope is a specialised inspection method for visual inspection used when the area to be examined can only be acce",
+    "pattern": "{\" \"}"
+  },
+  {
+    "route": "/service/videoscope/",
+    "element": "JSON-LD (jsonLd.name)",
+    "brokenText": "Videoscope{\" \"} Remote Visual Inspection",
+    "pattern": "{\" \"}"
+  },
+  {
+    "route": "/service/visual-inspection-vi/",
+    "element": "<meta content>",
+    "brokenText": "Visual Inspection{&quot; &quot;} (VI)",
+    "pattern": "{\" \"}"
+  },
+  {
+    "route": "/service/visual-inspection-vi/",
+    "element": "<h1>",
+    "brokenText": "Visual Inspection{&quot; &quot;} (VI)",
+    "pattern": "{\" \"}"
+  },
+  {
+    "route": "/service/visual-inspection-vi/",
+    "element": "<h2>",
+    "brokenText": "Questions About Visual Inspection{&quot; &quot;} (VI)",
+    "pattern": "{\" \"}"
+  },
+  {
+    "route": "/service/visual-inspection-vi/",
+    "element": "<p>",
+    "brokenText": "Non Destructive Testing Visual Inspection{&quot; &quot;} (VI) A fundamental NDT method used to examine the surface and external characteristics of components and materials — identifying visible defect",
+    "pattern": "{\" \"}"
+  },
+  {
+    "route": "/service/visual-inspection-vi/",
+    "element": "JSON-LD (jsonLd.name)",
+    "brokenText": "Visual Inspection{\" \"} (VI)",
+    "pattern": "{\" \"}"
+  },
+  {
+    "route": "/service/water-penetration-test-2/",
+    "element": "<meta content>",
+    "brokenText": "Water Penetration{&quot; &quot;} Test",
+    "pattern": "{\" \"}"
+  },
+  {
+    "route": "/service/water-penetration-test-2/",
+    "element": "<h1>",
+    "brokenText": "Water Penetration{&quot; &quot;} Test",
+    "pattern": "{\" \"}"
+  },
+  {
+    "route": "/service/water-penetration-test-2/",
+    "element": "<h2>",
+    "brokenText": "Questions About Water Penetration{&quot; &quot;} Test",
+    "pattern": "{\" \"}"
+  },
+  {
+    "route": "/service/water-penetration-test-2/",
+    "element": "<p>",
+    "brokenText": "Specialized Inspection Service Water Penetration{&quot; &quot;} Test Water penetration testing determines whether leakage is present through windows, doors, and curtain wall systems from the exterior ",
+    "pattern": "{\" \"}"
+  },
+  {
+    "route": "/service/water-penetration-test-2/",
+    "element": "JSON-LD (jsonLd.name)",
+    "brokenText": "Water Penetration{\" \"} Test",
+    "pattern": "{\" \"}"
+  },
+  {
+    "route": "/service/water-penetration-test/",
+    "element": "<meta content>",
+    "brokenText": "Water Penetration{&quot; &quot;} Test",
+    "pattern": "{\" \"}"
+  },
+  {
+    "route": "/service/water-penetration-test/",
+    "element": "<h1>",
+    "brokenText": "Water Penetration{&quot; &quot;} Test",
+    "pattern": "{\" \"}"
+  },
+  {
+    "route": "/service/water-penetration-test/",
+    "element": "<h2>",
+    "brokenText": "Questions About Water Penetration{&quot; &quot;} Test",
+    "pattern": "{\" \"}"
+  },
+  {
+    "route": "/service/water-penetration-test/",
+    "element": "<p>",
+    "brokenText": "Specialized Inspection Service Water Penetration{&quot; &quot;} Test Water penetration testing determines whether leakage is present through windows, doors, and curtain wall systems from the exterior ",
+    "pattern": "{\" \"}"
+  },
+  {
+    "route": "/service/water-penetration-test/",
+    "element": "JSON-LD (jsonLd.name)",
+    "brokenText": "Water Penetration{\" \"} Test",
+    "pattern": "{\" \"}"
+  }
+]

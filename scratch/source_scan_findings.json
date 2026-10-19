@@ -1,0 +1,122 @@
+[
+  {
+    "file": "C:\\Users\\amalr\\Desktop\\spaceAI\\Texas\\texastechservnextjs\\components\\Header.tsx",
+    "line": 623,
+    "pattern": "Brace identifier inside quotes",
+    "content": "key={`dd-${item.label}`}"
+  },
+  {
+    "file": "C:\\Users\\amalr\\Desktop\\spaceAI\\Texas\\texastechservnextjs\\components\\home-review\\EditorialVision.tsx",
+    "line": 105,
+    "pattern": "Brace identifier inside quotes",
+    "content": "aria-label={`Show ${stat.label}`}"
+  },
+  {
+    "file": "C:\\Users\\amalr\\Desktop\\spaceAI\\Texas\\texastechservnextjs\\components\\home-review\\Hero.tsx",
+    "line": 208,
+    "pattern": "Brace identifier inside quotes",
+    "content": "aria-label={`Show ${item.tag}`}"
+  },
+  {
+    "file": "C:\\Users\\amalr\\Desktop\\spaceAI\\Texas\\texastechservnextjs\\components\\home-review\\Hero.tsx",
+    "line": 260,
+    "pattern": "Brace identifier inside quotes",
+    "content": "aria-label={`Preview ${item.tag}`}"
+  },
+  {
+    "file": "C:\\Users\\amalr\\Desktop\\spaceAI\\Texas\\texastechservnextjs\\components\\home-review\\Navbar.tsx",
+    "line": 106,
+    "pattern": "Brace identifier inside quotes",
+    "content": "<nav aria-label={`${item.label} navigation`}>"
+  },
+  {
+    "file": "C:\\Users\\amalr\\Desktop\\spaceAI\\Texas\\texastechservnextjs\\components\\layout\\Header.tsx",
+    "line": 123,
+    "pattern": "Brace identifier inside quotes",
+    "content": "aria-label={`Toggle ${item.label} submenu`}"
+  },
+  {
+    "file": "C:\\Users\\amalr\\Desktop\\spaceAI\\Texas\\texastechservnextjs\\components\\schema\\BreadcrumbJsonLd.tsx",
+    "line": 19,
+    "pattern": "Brace identifier inside quotes",
+    "content": "const href = item.href.endsWith(\"/\") ? item.href : `${item.href}/`;"
+  },
+  {
+    "file": "C:\\Users\\amalr\\Desktop\\spaceAI\\Texas\\texastechservnextjs\\components\\v3\\service\\ServicePage.tsx",
+    "line": 443,
+    "pattern": "Brace identifier inside quotes",
+    "content": "title={`Questions About ${title}`}"
+  },
+  {
+    "file": "C:\\Users\\amalr\\Desktop\\spaceAI\\Texas\\texastechservnextjs\\components\\v3\\service\\ServiceRelatedCards.tsx",
+    "line": 18,
+    "pattern": "Brace identifier inside quotes",
+    "content": "const itemHref = `/service/${item.slug}/`;"
+  },
+  {
+    "file": "C:\\Users\\amalr\\Desktop\\spaceAI\\Texas\\texastechservnextjs\\components\\v3\\service\\ServiceRelatedCards.tsx",
+    "line": 21,
+    "pattern": "Brace identifier inside quotes",
+    "content": "label: `Explore ${item.label}`,"
+  },
+  {
+    "file": "C:\\Users\\amalr\\Desktop\\spaceAI\\Texas\\texastechservnextjs\\components\\v3\\V3Header.tsx",
+    "line": 123,
+    "pattern": "Brace identifier inside quotes",
+    "content": "aria-label={`Toggle ${item.label} submenu`}"
+  },
+  {
+    "file": "C:\\Users\\amalr\\Desktop\\spaceAI\\Texas\\texastechservnextjs\\lib\\portfolio-group.ts",
+    "line": 91,
+    "pattern": "Brace identifier inside quotes",
+    "content": "title: `${title} — Portfolio`,"
+  },
+  {
+    "file": "C:\\Users\\amalr\\Desktop\\spaceAI\\Texas\\texastechservnextjs\\lib\\services\\registry-data.json",
+    "line": 2045,
+    "pattern": "Raw prop/identifier in braces {id.prop}",
+    "content": "\"subtitle\": \"{stat.label}\","
+  },
+  {
+    "file": "C:\\Users\\amalr\\Desktop\\spaceAI\\Texas\\texastechservnextjs\\lib\\services\\registry-data.json",
+    "line": 2045,
+    "pattern": "Literal {stat.label}",
+    "content": "\"subtitle\": \"{stat.label}\","
+  },
+  {
+    "file": "C:\\Users\\amalr\\Desktop\\spaceAI\\Texas\\texastechservnextjs\\lib\\services\\registry-data.json",
+    "line": 2221,
+    "pattern": "Raw prop/identifier in braces {id.prop}",
+    "content": "\"subtitle\": \"{stat.label}\","
+  },
+  {
+    "file": "C:\\Users\\amalr\\Desktop\\spaceAI\\Texas\\texastechservnextjs\\lib\\services\\registry-data.json",
+    "line": 2221,
+    "pattern": "Literal {stat.label}",
+    "content": "\"subtitle\": \"{stat.label}\","
+  },
+  {
+    "file": "C:\\Users\\amalr\\Desktop\\spaceAI\\Texas\\texastechservnextjs\\lib\\services\\registry-data.json",
+    "line": 5815,
+    "pattern": "Raw prop/identifier in braces {id.prop}",
+    "content": "\"subtitle\": \"{stat.label}\","
+  },
+  {
+    "file": "C:\\Users\\amalr\\Desktop\\spaceAI\\Texas\\texastechservnextjs\\lib\\services\\registry-data.json",
+    "line": 5815,
+    "pattern": "Literal {stat.label}",
+    "content": "\"subtitle\": \"{stat.label}\","
+  },
+  {
+    "file": "C:\\Users\\amalr\\Desktop\\spaceAI\\Texas\\texastechservnextjs\\lib\\services\\registry-data.json",
+    "line": 9079,
+    "pattern": "Raw prop/identifier in braces {id.prop}",
+    "content": "\"subtitle\": \"{stat.label}\","
+  },
+  {
+    "file": "C:\\Users\\amalr\\Desktop\\spaceAI\\Texas\\texastechservnextjs\\lib\\services\\registry-data.json",
+    "line": 9079,
+    "pattern": "Literal {stat.label}",
+    "content": "\"subtitle\": \"{stat.label}\","
+  }
+]

@@ -65,7 +65,7 @@ export default function PortfolioListingClient() {
       </div>
 
       {/* ── Products Grid ── */}
-      <CardGrid max={4}>
+      <CardGrid max={3}>
         {filteredProducts.map((product) => (
           <ImageCard
             key={product.slug}
@@ -76,7 +76,8 @@ export default function PortfolioListingClient() {
             title={product.name}
             subtitle={product.description}
             meta={product.tag || product.category}
-            tag="View Specs"
+            tag={product.tag || product.category || "View Specs"}
+            fit={product.fit}
           />
         ))}
       </CardGrid>

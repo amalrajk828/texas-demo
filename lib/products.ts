@@ -42,6 +42,7 @@ export type ProductData = {
   detailHrefs?: string[];
   downloadHref?: string;
   faq?: FaqItem[];
+  fit?: "contain" | "cover";
 };
 
 const PRODUCTS: Record<string, ProductData> = {
@@ -205,6 +206,7 @@ const PRODUCTS: Record<string, ProductData> = {
     category: "Flow Meter",
     brand: "SICK",
     heroImage: "/flare_meter.png",
+    fit: "cover",
     paragraphs: [
       "Flare stacks are a ubiquitous feature in oil and gas installations, serving as an integral part of the waste gas system and a controlled vent for handling large quantities of combustible gases during upsets. Due to the fluctuating nature of pressure, volume flow, and gas composition in flare stacks, a dependable and precise measurement solution is crucial.",
       "Ultrasonic flow meters prove to be highly suitable for this purpose, offering reliable process control by accurately measuring gas velocities ranging from almost zero flow to velocities exceeding 120 m/s. With this capability, the optimal ratio of O₂ and steam to combustion gas can be ensured, and the actual volume of flared gas can be accurately determined.",
@@ -470,7 +472,7 @@ const PRODUCTS: Record<string, ProductData> = {
   },
 };
 
-export function getProduct(slug: string): any {
+export function getProduct(slug: string): ProductData | Product | undefined {
   return PRODUCTS[slug] || products.find((p) => p.slug === slug);
 }
 
@@ -531,6 +533,7 @@ export type Product = {
   models?: string[];
   downloadHref?: string;
   detailHref?: string;
+  fit?: "contain" | "cover";
 };
 
 export const products: Product[] = [

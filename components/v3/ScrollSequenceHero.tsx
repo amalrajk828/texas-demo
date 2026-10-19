@@ -2,8 +2,19 @@
 
 import React, { useEffect, useRef, useState, useCallback } from "react";
 import Image from "next/image";
+import Link from "next/link";
 
 // ── Tunable Constants ──────────────────────────────────────────────────────
+type LenisInstance = {
+  scrollTo: (target: number | HTMLElement | string, options?: { duration?: number; offset?: number; immediate?: boolean }) => void;
+  on: (event: string, callback: (...args: unknown[]) => void) => void;
+  off: (event: string, callback: (...args: unknown[]) => void) => void;
+};
+
+type WindowWithLenis = Window & {
+  __lenis?: LenisInstance | null;
+};
+
 export const TOTAL_FRAMES         = 300;
 export const SEQUENCE_PATH        = "/hero-frames";
 export const SEQUENCE_PATH_MOBILE = "/hero-frames/mobile";
@@ -12,12 +23,23 @@ export const FRAME_EXT            = ".webp";
 export const BG_COLOR             = "#e8e8e6";    // Studio-grey, matches frames
 
 // Product placement: centred full-width coverage across all viewports
-export const PRODUCT_SCALE        = 1.0;         // Cover scale
+export const PRODUCT_SCALE        = 1.0;         // Cover scale (desktop)
 export const PRODUCT_ANCHOR_X     = 0.5;         // Centred horizontally (50%)
 export const PRODUCT_ANCHOR_Y     = 0.5;         // Centred vertically (50%)
 
+// Mobile Safe-Rect Fit Constants (<1024px)
+export const MOBILE_SIDE_MARGIN   = 0.03;        // 3% margin each side
+export const MOBILE_ANCHOR_Y      = 0.50;        // Centred vertically (50% of viewport height)
+export const MOBILE_SCALE_BOOST   = 1.0;         // Gentle mobile zoom constant (1.0 up to 1.15)
+export const SAFE_RECT            = { x: 0.11, y: 0.11, width: 0.815, height: 0.73 };
+
+// Tunable constants for Stage Dwell, Velocity cap & Overlap
+export const STAGE_DWELL_VH        = 85;          // ~70-90vh per stage
+export const MAX_PROGRESS_PER_SECOND = 1.2;       // max progress velocity cap for flicks
+export const STAGE_OVERLAP         = 0.09;        // 9% stage cross-fade overlap (8-10%)
+
 // Tunable constants for Hold and Cover
-export const SCROLL_LENGTH        = "400vh";     // frame scrubbing length
+export const SCROLL_LENGTH        = "450vh";     // frame scrubbing length (~85-90vh dwell per stage + buffer)
 export const HOLD_COVER           = "100svh";    // hold travel distance while next section covers
 export const COVER_SCALE          = 0.94;        // hero content scale at full cover
 export const COVER_LIFT           = 40;          // hero content translateY (px) at full cover
@@ -39,15 +61,18 @@ function framePad(n: number) {
 }
 
 export default function ScrollSequenceHero() {
-  const sectionRef       = useRef<HTMLElement>(null);
-  const stickyRef        = useRef<HTMLDivElement>(null);
-  const heroContentRef   = useRef<HTMLDivElement>(null);
-  const overlayRef       = useRef<HTMLDivElement>(null);
-  const dimOverlayRef    = useRef<HTMLDivElement>(null);
-  const canvasRef        = useRef<HTMLCanvasElement>(null);
+  const sectionRef          = useRef<HTMLElement>(null);
+  const stickyRef           = useRef<HTMLDivElement>(null);
+  const heroContentRef      = useRef<HTMLDivElement>(null);
+  const overlayRef          = useRef<HTMLDivElement>(null);
+  const stageIndicatorRef   = useRef<HTMLElement>(null);
+  const dimOverlayRef       = useRef<HTMLDivElement>(null);
+  const canvasRef           = useRef<HTMLCanvasElement>(null);
 
   const [posterVisible, setPosterVisible] = useState(true);
   const [reducedMotion, setReducedMotion] = useState(false);
+  const [activeStage, setActiveStage]     = useState(1);
+  const activeStageRef                    = useRef(1);
 
   // ImageBitmap store
   const bitmaps   = useRef<(ImageBitmap | null)[]>(
@@ -60,6 +85,32 @@ export default function ScrollSequenceHero() {
   const current       = useRef(0);   // float frame index being animated
   const lastDrawn     = useRef(-1);  // rounded index last drawn
   const isVisible     = useRef(true);
+
+  // ── Scroll to Stage Function (interactive stage indicator) ───────────────
+  const scrollToStage = useCallback((stageNum: number) => {
+    const sec = sectionRef.current;
+    if (!sec) return;
+    const scrollY       = window.scrollY || window.pageYOffset;
+    const sectionTop    = sec.getBoundingClientRect().top + scrollY;
+    const viewH         = window.innerHeight;
+    const isShort       = viewH < 500;
+    const holdPx        = isShort ? 0.6 * viewH : viewH;
+    const bufferPx      = Math.round(0.18 * viewH);
+    const aboutTop      = sectionTop + sec.offsetHeight - holdPx;
+    const coverStartScroll = aboutTop - holdPx;
+    const frameTravelPx = Math.max(1, coverStartScroll - sectionTop - bufferPx);
+
+    let targetY = sectionTop;
+    if (stageNum === 2) targetY = sectionTop + frameTravelPx * 0.46;
+    if (stageNum === 3) targetY = sectionTop + frameTravelPx * 0.86;
+
+    const lenis = (window as WindowWithLenis).__lenis;
+    if (lenis && typeof lenis.scrollTo === "function") {
+      lenis.scrollTo(targetY, { duration: 1.0 });
+    } else {
+      window.scrollTo({ top: targetY, behavior: "smooth" });
+    }
+  }, []);
 
   // ── Draw ────────────────────────────────────────────────────────────────
   const draw = useCallback((index: number) => {
@@ -100,14 +151,60 @@ export default function ScrollSequenceHero() {
     ctx.fillRect(0, 0, W, H);
 
     if (bmp) {
-      const isDesk    = W >= 1024;
-      const coverS    = Math.max(W / bmp.width, H / bmp.height);
-      const effS      = coverS * (isDesk ? PRODUCT_SCALE : 0.92);
-      const sw        = bmp.width  * effS;
-      const sh        = bmp.height * effS;
-      const ax        = isDesk ? PRODUCT_ANCHOR_X : 0.5;
-      const ay        = isDesk ? PRODUCT_ANCHOR_Y : 0.54;
-      ctx.drawImage(bmp, W * ax - sw / 2, H * ay - sh / 2, sw, sh);
+      const isDesk = W >= 1024;
+      if (isDesk) {
+        // Desktop (>= 1024px): keep current layout and cover fit untouched
+        const coverS = Math.max(W / bmp.width, H / bmp.height);
+        const effS   = coverS * PRODUCT_SCALE;
+        const sw     = bmp.width  * effS;
+        const sh     = bmp.height * effS;
+        const ax     = PRODUCT_ANCHOR_X;
+        const ay     = PRODUCT_ANCHOR_Y;
+        ctx.drawImage(bmp, W * ax - sw / 2, H * ay - sh / 2, sw, sh);
+      } else {
+        // Mobile & small tablets (< 1024px): safe-rect fit
+        const isShort = H < 500;
+        let scale: number;
+        if (isShort) {
+          // In landscape phones (height below 500px), use safe-rect fit by HEIGHT
+          scale = ((H * (1 - 2 * MOBILE_SIDE_MARGIN)) / (SAFE_RECT.height * bmp.height)) * MOBILE_SCALE_BOOST;
+        } else {
+          // Portrait phones & small tablets: safe-rect fits canvas width exactly (plus side margin)
+          scale = ((W * (1 - 2 * MOBILE_SIDE_MARGIN)) / (SAFE_RECT.width * bmp.width)) * MOBILE_SCALE_BOOST;
+        }
+
+        const sw = bmp.width  * scale;
+        const sh = bmp.height * scale;
+
+        // Centre the safe rect horizontally
+        const safeCenterX = (SAFE_RECT.x + SAFE_RECT.width * 0.5) * sw;
+        const drawX = W * 0.5 - safeCenterX;
+
+        // Place vertically at MOBILE_ANCHOR_Y (or 0.5 in landscape)
+        const safeCenterY = (SAFE_RECT.y + SAFE_RECT.height * 0.5) * sh;
+        const anchorY = isShort ? 0.5 : MOBILE_ANCHOR_Y;
+        const drawY = H * anchorY - safeCenterY;
+
+        ctx.drawImage(bmp, drawX, drawY, sw, sh);
+
+        // Seamless edge blending: fade top and bottom 24-32px into fill colour
+        // to prevent any visible edge line or colour variance from the render
+        const fadePx = Math.min(32, Math.max(16, sh * 0.08));
+        if (drawY > -fadePx) {
+          const topGrad = ctx.createLinearGradient(0, drawY, 0, drawY + fadePx);
+          topGrad.addColorStop(0, BG_COLOR);
+          topGrad.addColorStop(1, "rgba(232, 232, 230, 0)");
+          ctx.fillStyle = topGrad;
+          ctx.fillRect(0, drawY - 1, W, fadePx + 1);
+        }
+        if (drawY + sh < H + fadePx) {
+          const botGrad = ctx.createLinearGradient(0, drawY + sh - fadePx, 0, drawY + sh);
+          botGrad.addColorStop(0, "rgba(232, 232, 230, 0)");
+          botGrad.addColorStop(1, BG_COLOR);
+          ctx.fillStyle = botGrad;
+          ctx.fillRect(0, drawY + sh - fadePx, W, fadePx + 1);
+        }
+      }
     }
 
     ctx.restore();
@@ -124,30 +221,86 @@ export default function ScrollSequenceHero() {
   }, []);
 
   const updateCards = useCallback((p: number) => {
-    // Stage A: hero card  0 → 0.25
+    // Stage 1 (hero intro): 0.00 → 0.38
+    // Active 0.00 → 0.29; cross-fades out 0.29 → 0.38 (9% overlap)
     {
-      const t = smootherstep(0.06, 0.25, p);
-      applyStage("hero-screen", 1 - t, -30 * t);
+      let op = 0;
+      let y = 0;
+      if (p <= 0.29) {
+        op = 1;
+        y = 0;
+      } else if (p < 0.38) {
+        const t = smootherstep(0.29, 0.38, p);
+        op = 1 - t;
+        y = -28 * t;
+      } else {
+        op = 0;
+        y = -28;
+      }
+      applyStage("hero-screen", op, y);
     }
-    // Stage B: what-we-do  0.22 → 0.64
+
+    // Stage 2 (what we do & 01/02/03 cards): 0.29 → 0.72
+    // Cross-fades in 0.29 → 0.38; active 0.38 → 0.63; cross-fades out 0.63 → 0.72 (9% overlap)
     {
-      let op = 0, y = 24;
-      if (p >= 0.22 && p <= 0.64) {
-        if (p < 0.34)      { const t = smootherstep(0.22, 0.34, p); op = t;     y = 24 * (1 - t); }
-        else if (p > 0.52) { const t = smootherstep(0.52, 0.64, p); op = 1 - t; y = -24 * t;      }
-        else               { op = 1; y = 0; }
+      let op = 0;
+      let y = 24;
+      if (p >= 0.29 && p <= 0.72) {
+        if (p < 0.38) {
+          const t = smootherstep(0.29, 0.38, p);
+          op = t;
+          y = 24 * (1 - t);
+        } else if (p > 0.63) {
+          const t = smootherstep(0.63, 0.72, p);
+          op = 1 - t;
+          y = -24 * t;
+        } else {
+          op = 1;
+          y = 0;
+        }
+      } else if (p > 0.72) {
+        op = 0;
+        y = -24;
+      } else {
+        op = 0;
+        y = 24;
       }
       applyStage("what-we-do-screen", op, y);
     }
-    // Stage C: custody  0.60 → 0.98
+
+    // Stage 3 (custody metering & automation): 0.63 → 1.00+
+    // Cross-fades in 0.63 → 0.72; STAYS FULLY VISIBLE (opacity 1) from 0.72 to 1.00 and through cover!
     {
-      let op = 0, y = 24;
-      if (p >= 0.60 && p <= 0.98) {
-        if (p < 0.72)      { const t = smootherstep(0.60, 0.72, p); op = t;     y = 24 * (1 - t); }
-        else if (p > 0.88) { const t = smootherstep(0.88, 0.98, p); op = 1 - t; y = -20 * t;      }
-        else               { op = 1; y = 0; }
+      let op = 0;
+      let y = 24;
+      if (p >= 0.63) {
+        if (p < 0.72) {
+          const t = smootherstep(0.63, 0.72, p);
+          op = t;
+          y = 24 * (1 - t);
+        } else {
+          op = 1;
+          y = 0;
+        }
+      } else {
+        op = 0;
+        y = 24;
       }
       applyStage("card-c", op, y);
+
+      // On mobile devices, fade the background canvas out when stage 3 card appears
+      // so the canvas flange does not extend outside the card boundary on the left.
+      // The card's internal background layer contains the clipped flange image.
+      if (typeof window !== "undefined" && window.innerWidth < 1024 && canvasRef.current) {
+        if (p >= 0.63) {
+          const t = smootherstep(0.63, 0.72, p);
+          canvasRef.current.style.opacity = Math.max(0, 1 - t).toFixed(3);
+        } else {
+          canvasRef.current.style.opacity = "1";
+        }
+      } else if (canvasRef.current && canvasRef.current.style.opacity !== "1") {
+        canvasRef.current.style.opacity = "1";
+      }
     }
   }, [applyStage]);
 
@@ -166,7 +319,14 @@ export default function ScrollSequenceHero() {
       overlayRef.current.style.opacity = fade.toFixed(3);
     }
 
-    // 3) Optional dimming (default COVER_DIM = 0, disabled)
+    // 3) Hero stage indicator fades out during hold-and-cover so it never shows over the next section
+    if (stageIndicatorRef.current) {
+      const fade = coverP <= 0 ? 1 : Math.max(0, 1 - coverP / 0.6);
+      stageIndicatorRef.current.style.opacity = fade.toFixed(3);
+      stageIndicatorRef.current.style.pointerEvents = fade <= 0.05 ? "none" : "auto";
+    }
+
+    // 4) Optional dimming (default COVER_DIM = 0, disabled)
     if (dimOverlayRef.current && COVER_DIM > 0) {
       dimOverlayRef.current.style.opacity = (COVER_DIM * coverP).toFixed(3);
     }
@@ -269,42 +429,76 @@ export default function ScrollSequenceHero() {
       const isShort       = viewH < 500;
       // On very short screens (<500px), reduce HOLD_COVER to 60svh
       const holdPx        = isShort ? 0.6 * viewH : viewH;
+      const bufferPx      = Math.round(0.18 * viewH); // short buffer ensuring stage 3 is fully visible before cover starts
 
       // The next section has margin-top: -holdPx, so its document top is:
       const aboutTop         = sectionTop + sec.offsetHeight - holdPx;
       const coverEndScroll   = aboutTop;
       const coverStartScroll = coverEndScroll - holdPx;
-      const frameTravelPx    = Math.max(1, coverStartScroll - sectionTop);
+      const frameTravelPx    = Math.max(1, coverStartScroll - sectionTop - bufferPx);
       const scrolledInHero   = Math.max(0, scrollY - sectionTop);
 
       // 1) Frame progress maps ONLY to the first frame travel of the wrapper
       const frameProgress = Math.max(0, Math.min(1, scrolledInHero / frameTravelPx));
       rawTarget.current   = frameProgress * (TOTAL_FRAMES - 1);
-      updateCards(frameProgress);
 
-      // 2) Cover progress (0 to 1 over the HOLD_COVER distance)
+      // 2) Cover progress (0 to 1 over the HOLD_COVER distance, starting strictly after frameProgress reaches 1 + buffer)
       const coverProgress = scrollY < coverStartScroll
         ? 0
         : Math.max(0, Math.min(1, (scrollY - coverStartScroll) / holdPx));
 
       applyCoverReaction(coverProgress);
+
+      if (stageIndicatorRef.current) {
+        stageIndicatorRef.current.style.opacity = coverProgress <= 0 ? "1" : Math.max(0, 1 - coverProgress / 0.5).toFixed(3);
+      }
+
       pump();
     }
 
     // ── rAF loop — always running while mounted ───────────────────────────
+    let lastTime = performance.now();
     let raf = 0;
-    function loop() {
+    function loop(time?: number) {
       if (destroyed.current) return;
       raf = requestAnimationFrame(loop);      // schedule FIRST so it never stops
 
-      if (!isVisible.current) return;
+      if (!isVisible.current) {
+        if (time) lastTime = time;
+        return;
+      }
+
+      const now = time || performance.now();
+      const dt = Math.min(0.1, Math.max(0.001, (now - lastTime) / 1000));
+      lastTime = now;
 
       if (prefersReduced) {
         current.current = rawTarget.current;
       } else {
         const diff = rawTarget.current - current.current;
-        current.current += diff * EASE;
-        if (Math.abs(diff) < 0.01) current.current = rawTarget.current;
+        let step = diff * EASE;
+
+        // Fast-scroll protection: Cap maximum progress change per second on rapid flicks
+        // so flicking doesn't skip intermediate stages.
+        const maxStep = MAX_PROGRESS_PER_SECOND * (TOTAL_FRAMES - 1) * dt;
+        if (Math.abs(step) > maxStep) {
+          step = Math.sign(step) * maxStep;
+        }
+
+        current.current += step;
+        if (Math.abs(rawTarget.current - current.current) < 0.01) {
+          current.current = rawTarget.current;
+        }
+      }
+
+      // Drive all stage text, cards and indicators from the SAME eased progress value
+      const easedProgress = Math.max(0, Math.min(1, current.current / (TOTAL_FRAMES - 1)));
+      updateCards(easedProgress);
+
+      const stage = easedProgress < 0.33 ? 1 : easedProgress < 0.68 ? 2 : 3;
+      if (stage !== activeStageRef.current) {
+        activeStageRef.current = stage;
+        setActiveStage(stage);
       }
 
       const idx = Math.max(0, Math.min(TOTAL_FRAMES - 1, Math.round(current.current)));
@@ -388,8 +582,14 @@ export default function ScrollSequenceHero() {
       if (!document.hidden && lastDrawn.current >= 0) draw(lastDrawn.current);
     };
 
-    window.addEventListener("scroll",           readScroll,    { passive: true });
-    window.addEventListener("resize",           onResize,      { passive: true });
+    const lenis = (window as WindowWithLenis).__lenis;
+    if (lenis && typeof lenis.on === "function") {
+      lenis.on("scroll", readScroll);
+    }
+
+    window.addEventListener("scroll",            readScroll,    { passive: true });
+    window.addEventListener("resize",            onResize,      { passive: true });
+    window.addEventListener("orientationchange", onResize,      { passive: true });
     document.addEventListener("visibilitychange", onVisibility);
 
     readScroll();
@@ -402,8 +602,12 @@ export default function ScrollSequenceHero() {
       io.disconnect();
       ro.disconnect();
       clearTimeout(resizeT);
+      if (lenis && typeof lenis.off === "function") {
+        lenis.off("scroll", readScroll);
+      }
       window.removeEventListener("scroll",            readScroll);
       window.removeEventListener("resize",            onResize);
+      window.removeEventListener("orientationchange", onResize);
       document.removeEventListener("visibilitychange", onVisibility);
       bitmaps.current.forEach(b => b?.close());
       bitmaps.current = Array.from({ length: TOTAL_FRAMES }, () => null);
@@ -449,10 +653,11 @@ export default function ScrollSequenceHero() {
               fill
               priority
               sizes="100vw"
+              className="hero-poster-img"
               style={{
-                objectFit:      "cover",
                 objectPosition: "50% 50%",
               }}
+              suppressHydrationWarning
             />
           </div>
 
@@ -480,7 +685,7 @@ export default function ScrollSequenceHero() {
         >
           <div className="hero-main-row">
             {/* Left glass card */}
-            <div className="hero-glass-card">
+            <div className="hero-glass-card hero-stage-card">
               <div className="hero-card-content">
                 <div className="hero-badge">
                   <span className="badge-dot" />
@@ -495,8 +700,8 @@ export default function ScrollSequenceHero() {
                 </p>
               </div>
               <div className="hero-cta-group">
-                <a href="/services/" className="btn btn-primary" id="hero-btn-know-more">Know More &rarr;</a>
-                <a href="/products/" className="btn btn-secondary" id="hero-btn-products">Our Products</a>
+                <Link href="/services/" className="btn btn-primary" id="hero-btn-know-more">Know More &rarr;</Link>
+                <Link href="/products/" className="btn btn-secondary" id="hero-btn-products">Our Products</Link>
               </div>
             </div>
 
@@ -570,7 +775,7 @@ export default function ScrollSequenceHero() {
           style={{ willChange: "opacity, transform" }}
         >
           <div className="what-we-do-container">
-            <div className="what-we-do-left">
+            <div className="what-we-do-left hero-stage-card">
               <div className="what-we-do-eyebrow">
                 <span className="eyebrow-bar" />
                 <span>WHAT WE DO</span>
@@ -594,7 +799,7 @@ export default function ScrollSequenceHero() {
                   <span className="solution-badge">01</span>
                 </div>
                 <h3 className="solution-title">Flow Measurement &amp; Control</h3>
-                <a href="/service/flow-measurement-solutions/" className="solution-link"><span>EXPLORE</span><span className="chevron">&rsaquo;</span></a>
+                <Link href="/service/flow-measurement-solutions/" className="solution-link"><span>EXPLORE</span><span className="chevron">&rsaquo;</span></Link>
                 <span className="solution-watermark">01</span>
               </div>
               <div className="solution-card card-interactive is-clickable">
@@ -605,7 +810,7 @@ export default function ScrollSequenceHero() {
                   <span className="solution-badge">02</span>
                 </div>
                 <h3 className="solution-title">Inspection &amp; Testing</h3>
-                <a href="/service/inspection-testing/" className="solution-link"><span>EXPLORE</span><span className="chevron">&rsaquo;</span></a>
+                <Link href="/service/inspection-testing/" className="solution-link"><span>EXPLORE</span><span className="chevron">&rsaquo;</span></Link>
                 <span className="solution-watermark">02</span>
               </div>
               <div className="solution-card card-interactive is-clickable">
@@ -616,7 +821,7 @@ export default function ScrollSequenceHero() {
                   <span className="solution-badge">03</span>
                 </div>
                 <h3 className="solution-title">Industrial Automation</h3>
-                <a href="/service/industrial-automation/" className="solution-link"><span>EXPLORE</span><span className="chevron">&rsaquo;</span></a>
+                <Link href="/service/industrial-automation/" className="solution-link"><span>EXPLORE</span><span className="chevron">&rsaquo;</span></Link>
                 <span className="solution-watermark">03</span>
               </div>
             </div>
@@ -626,26 +831,47 @@ export default function ScrollSequenceHero() {
         {/* ── Stage C: custody metering (60–98%) — uses .card-custody-automation CSS ── */}
         <div
           id="card-c"
-          className="card card-c card-custody-automation"
+          className="card-c card-custody-automation hero-stage-card"
           style={{ willChange: "opacity, transform" }}
         >
-          <div className="pill-badge">WHAT WE DO</div>
-          <h2 className="card-title">
-            Engineered Excellence in<br />Custody Metering &amp; Automation
-          </h2>
-          <p className="card-desc">
-            Extensive expertise in liquid and gas custody metering, Industrial Automation, and
-            Inspection &amp; Testing. Our services cover metering control upgrades, maintenance,
-            validation, and specialised consultancy.
-          </p>
-          <p className="card-desc sub">
-            Committed to end-to-end metering solutions through strategic OEM partnerships —
-            metering skids, flow computers, CEMS analysers, and field instruments across oil
-            &amp; gas, power, and commercial sectors.
-          </p>
-          <div className="card-cta-group">
-            <a href="/contacts/" className="btn btn-primary"   id="btn-custody-contact">Contact Us &rarr;</a>
-            <a href="/services/" className="btn btn-secondary" id="btn-custody-services">Our Services &rsaquo;</a>
+          {/* Top red accent bar following the card's rounded corners */}
+          <div className="card-top-accent-bar" aria-hidden="true" />
+
+          {/* Background pipe/flange image clipped inside card */}
+          <div className="card-bg-flange-layer" aria-hidden="true">
+            {/* eslint-disable-next-line @next/next/no-img-element */}
+            <img
+              src="/hero-frames/frame_300.webp"
+              alt=""
+              className="card-bg-flange-img"
+              loading="lazy"
+              decoding="async"
+            />
+          </div>
+
+          {/* Gradient overlay above image and below text */}
+          <div className="card-bg-gradient-overlay" aria-hidden="true" />
+
+          {/* Foreground content wrapper */}
+          <div className="card-content-wrapper">
+            <div className="pill-badge">WHAT WE DO</div>
+            <h2 className="card-title">
+              Engineered Excellence in<br />Custody Metering &amp; Automation
+            </h2>
+            <p className="card-desc">
+              Extensive expertise in liquid and gas custody metering, Industrial Automation, and
+              Inspection &amp; Testing. Our services cover metering control upgrades, maintenance,
+              validation, and specialised consultancy.
+            </p>
+            <p className="card-desc sub">
+              Committed to end-to-end metering solutions through strategic OEM partnerships —
+              metering skids, flow computers, CEMS analysers, and field instruments across oil
+              &amp; gas, power, and commercial sectors.
+            </p>
+            <div className="card-cta-group">
+              <Link href="/contacts/" className="btn btn-primary"   id="btn-custody-contact">Contact Us &rarr;</Link>
+              <Link href="/services/" className="btn btn-secondary" id="btn-custody-services">Our Services &rsaquo;</Link>
+            </div>
           </div>
         </div>
 
@@ -654,6 +880,33 @@ export default function ScrollSequenceHero() {
 
         {/* ── End Reactive Hero Content Container ────────────────────────── */}
         </div>
+
+        {/* ── Accessible Interactive Stage Indicator (3 Plain Dots) ────────── */}
+        <nav
+          ref={stageIndicatorRef}
+          className="hero-stage-indicator"
+          aria-label="Hero stages"
+        >
+          {[
+            { id: 1, name: "Flow Measurement" },
+            { id: 2, name: "Industrial Automation" },
+            { id: 3, name: "Inspection & Testing" },
+          ].map((stage) => {
+            const isActive = activeStage === stage.id;
+            return (
+              <button
+                key={stage.id}
+                type="button"
+                aria-label={`Show stage ${stage.id}: ${stage.name}`}
+                aria-current={isActive ? "true" : undefined}
+                className={`hero-stage-dot ${isActive ? "active" : ""}`}
+                onClick={() => scrollToStage(stage.id)}
+              >
+                <span className="hero-stage-dot-shape" />
+              </button>
+            );
+          })}
+        </nav>
 
         {/* Optional dim overlay (COVER_DIM default 0 = disabled) */}
         {COVER_DIM > 0 && (

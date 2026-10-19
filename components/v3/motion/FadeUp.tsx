@@ -1,7 +1,9 @@
 "use client";
 
-import React, { useEffect, useState } from "react";
+import React, { useSyncExternalStore } from "react";
 import { motion, useReducedMotion } from "framer-motion";
+
+const emptySubscribe = () => () => {};
 
 interface FadeUpProps {
   children: React.ReactNode;
@@ -19,14 +21,10 @@ export default function FadeUp({
   className = "",
 }: FadeUpProps) {
   const shouldReduceMotion = useReducedMotion();
-  const [mounted, setMounted] = useState(false);
-
-  useEffect(() => {
-    setMounted(true);
-  }, []);
+  const mounted = useSyncExternalStore(emptySubscribe, () => true, () => false);
 
   if (shouldReduceMotion || !mounted) {
-    return <div className={className}>{children}</div>;
+    return <div className={`flex flex-col flex-1 h-full min-w-0 ${className}`}>{children}</div>;
   }
 
   return (
@@ -35,7 +33,7 @@ export default function FadeUp({
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true, margin: "120px" }}
       transition={{ duration, delay, ease: "easeOut" }}
-      className={className}
+      className={`flex flex-col flex-1 h-full min-w-0 ${className}`}
     >
       {children}
     </motion.div>

@@ -3,6 +3,7 @@ export interface SubCategoryItem {
   href: string;
   image: string;
   description: string;
+  fit?: "contain" | "cover";
 }
 
 export interface ProductCategoryData {
@@ -370,7 +371,8 @@ export const PRODUCT_CATEGORIES: Record<string, ProductCategoryData> = {
         "title": "Flare Gas Meters",
         "href": "/products/flow-meters/flare-meters/",
         "image": "/flare_meter.png",
-        "description": "Continuous ultrasonic flare stack meters operating accurately from near-zero velocities up to 120 m/s for EPA compliance."
+        "description": "Continuous ultrasonic flare stack meters operating accurately from near-zero velocities up to 120 m/s for EPA compliance.",
+        "fit": "cover"
       }
     ]
   },

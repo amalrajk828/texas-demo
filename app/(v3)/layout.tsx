@@ -4,6 +4,7 @@ import Script from "next/script";
 import { V3Header, V3Footer } from "@/components/v3";
 import PageLoader from "@/components/v3/PageLoader";
 import WhatsAppButton from "@/components/WhatsAppButton";
+import V3SmoothScroll from "@/components/v3/V3SmoothScroll";
 import { SITE_URL } from "@/lib/site";
 import "./globals-v3.css";
 
@@ -132,27 +133,29 @@ export default function V3RootLayout({ children }: { children: React.ReactNode }
         />
       </head>
       <body className="overflow-x-clip bg-[#e8e8e6] text-[#1a1a1a] antialiased">
-        <PageLoader />
-        <a
-          href="#main-content"
-          className="sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 focus:z-[9999] focus:bg-[#6b191b] focus:text-white focus:px-4 focus:py-2 focus:rounded-lg focus:shadow-lg focus:font-semibold"
-        >
-          Skip to main content
-        </a>
-        <noscript>
-          <iframe
-            src={`https://www.googletagmanager.com/ns.html?id=${GTM}`}
-            height="0"
-            width="0"
-            style={{ display: "none", visibility: "hidden" }}
-          />
-        </noscript>
-        <V3Header />
-        <main id="main-content">
-          {children}
-        </main>
-        <V3Footer />
-        <WhatsAppButton />
+        <V3SmoothScroll>
+          <PageLoader />
+          <a
+            href="#main-content"
+            className="sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 focus:z-[9999] focus:bg-[#6b191b] focus:text-white focus:px-4 focus:py-2 focus:rounded-lg focus:shadow-lg focus:font-semibold"
+          >
+            Skip to main content
+          </a>
+          <noscript>
+            <iframe
+              src={`https://www.googletagmanager.com/ns.html?id=${GTM}`}
+              height="0"
+              width="0"
+              style={{ display: "none", visibility: "hidden" }}
+            />
+          </noscript>
+          <V3Header />
+          <main id="main-content">
+            {children}
+          </main>
+          <V3Footer />
+          <WhatsAppButton />
+        </V3SmoothScroll>
       </body>
     </html>
   );

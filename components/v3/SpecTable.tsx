@@ -33,22 +33,34 @@ export default function SpecTable({
       className={`rounded-[20px] bg-white/80 backdrop-blur-md border border-black/[0.08] shadow-[0_20px_40px_-15px_rgba(0,0,0,0.06)] overflow-hidden ${className}`}
     >
       {caption && (
-        <div className="px-6 py-4 bg-black/[0.02] border-b border-black/[0.06] text-[13px] font-bold uppercase tracking-wider text-[#6b191b]">
+        <div
+          className="px-6 py-4 bg-black/[0.02] border-b border-black/[0.06] text-[13px] font-bold uppercase tracking-wider"
+          style={{ color: "var(--brand-action, #8a302f)" }}
+        >
           {caption}
         </div>
       )}
       <div className="overflow-x-auto">
         <table className="w-full text-left border-collapse text-[14px]">
           <thead>
-            <tr className="border-b border-black/[0.08] bg-black/[0.03]">
-              <th className="py-3.5 px-6 text-[11px] font-bold uppercase tracking-[0.08em] text-[#595956]">
+            <tr className="border-none" style={{ backgroundColor: "var(--brand-action, #8a302f)" }}>
+              <th
+                className="py-3.5 px-6 text-[11px] font-bold uppercase tracking-[0.08em] text-white"
+                style={{ backgroundColor: "var(--brand-action, #8a302f)" }}
+              >
                 {headers.parameter}
               </th>
-              <th className="py-3.5 px-6 text-[11px] font-bold uppercase tracking-[0.08em] text-[#595956]">
+              <th
+                className="py-3.5 px-6 text-[11px] font-bold uppercase tracking-[0.08em] text-white"
+                style={{ backgroundColor: "var(--brand-action, #8a302f)" }}
+              >
                 {headers.value}
               </th>
               {hasNotes && (
-                <th className="py-3.5 px-6 text-[11px] font-bold uppercase tracking-[0.08em] text-[#595956]">
+                <th
+                  className="py-3.5 px-6 text-[11px] font-bold uppercase tracking-[0.08em] text-white"
+                  style={{ backgroundColor: "var(--brand-action, #8a302f)" }}
+                >
                   {headers.notes}
                 </th>
               )}

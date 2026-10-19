@@ -71,7 +71,7 @@ export default function ProductCard({
 
   return (
     <div
-      className={`group rounded-2xl overflow-hidden transition-all duration-500 flex flex-col fade-up ${
+      className={`group rounded-2xl overflow-hidden transition-all duration-500 flex flex-col h-full flex-1 fade-up ${
         dark
           ? "bg-white/[0.10] backdrop-blur-xl border border-white/[0.12] hover:border-[#e7212b]/40 shadow-[0_4px_32px_rgba(0,0,0,0.35)] hover:shadow-[0_8px_40px_rgba(231,33,43,0.12)]"
           : "bg-white border border-gray-200 hover:border-[#e7212b]/40 shadow-md hover:shadow-lg"
@@ -147,11 +147,11 @@ export default function ProductCard({
 
       {/* Body */}
       <div className="p-5 flex flex-col flex-1">
-        <p className={`text-[11px] mb-1.5 tracking-wide ${dark ? "text-white/60" : "text-gray-500"}`}>{displayBrand}</p>
-        <h3 className={`text-[15px] font-medium group-hover:text-[#e7212b] transition-colors duration-200 leading-snug mb-2 ${dark ? "text-white" : "text-[#1A1A2E]"}`}>
+        <p className={`text-[11px] mb-1.5 tracking-wide truncate h-[1.4em] min-h-[1.4em] ${dark ? "text-white/60" : "text-gray-500"}`}>{displayBrand}</p>
+        <h3 className={`text-[15px] font-medium group-hover:text-[#e7212b] transition-colors duration-200 leading-[1.3] line-clamp-2 sm:min-h-[calc(2*1.3em)] mb-2 ${dark ? "text-white" : "text-[#1A1A2E]"}`}>
           <Link href={finalHref}>{product.name}</Link>
         </h3>
-        <p className={`text-[13px] leading-relaxed line-clamp-3 mb-4 flex-1 ${dark ? "text-white/70" : "text-gray-600"}`}>
+        <p className={`text-[13px] leading-[1.55] line-clamp-2 sm:min-h-[calc(2*1.55em)] mb-4 flex-1 ${dark ? "text-white/70" : "text-gray-600"}`}>
           {displayDesc}
         </p>
 
