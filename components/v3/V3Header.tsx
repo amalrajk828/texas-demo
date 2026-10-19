@@ -54,7 +54,34 @@ export default function Header() {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
+  useEffect(() => {
+    if (mobileOpen) {
+      document.body.style.overflow = "hidden";
+    } else {
+      document.body.style.overflow = "";
+    }
+    return () => {
+      document.body.style.overflow = "";
+    };
+  }, [mobileOpen]);
+
+  useEffect(() => {
+    const handleResize = () => {
+      if (window.innerWidth > 1180) {
+        setMobileOpen(false);
+        setMobileExpanded(null);
+        setActiveDropdown(null);
+      }
+    };
+    window.addEventListener("resize", handleResize);
+    return () => window.removeEventListener("resize", handleResize);
+  }, []);
+
   const handleMouseEnter = (label: string) => {
+    if (mobileOpen) return;
+    if (typeof window !== "undefined" && window.matchMedia && !window.matchMedia("(hover: hover)").matches) {
+      return;
+    }
     if (dropdownTimeoutRef.current) {
       clearTimeout(dropdownTimeoutRef.current);
       dropdownTimeoutRef.current = null;
@@ -63,6 +90,7 @@ export default function Header() {
   };
 
   const handleMouseLeave = () => {
+    if (mobileOpen) return;
     if (dropdownTimeoutRef.current) clearTimeout(dropdownTimeoutRef.current);
     dropdownTimeoutRef.current = setTimeout(() => {
       setActiveDropdown(null);
@@ -364,14 +392,19 @@ export default function Header() {
                   className="nav-item-wrapper"
                   style={{ position: "relative" }}
                   onMouseEnter={() => {
+                    if (mobileOpen) return;
+                    if (typeof window !== "undefined" && window.matchMedia && !window.matchMedia("(hover: hover)").matches) {
+                      return;
+                    }
                     if (hasChildren) handleMouseEnter(item.label);
                     handleItemHover(item);
                   }}
                   onMouseLeave={() => {
+                    if (mobileOpen) return;
                     if (hasChildren) handleMouseLeave();
                   }}
                 >
-                  <div style={{ display: "flex", alignItems: "center", gap: "4px" }}>
+                  <div className="nav-item-header" style={{ display: "flex", alignItems: "center", gap: "4px" }}>
                     <Link
                       href={item.href}
                       className={`nav-link ${active ? "active" : ""}`}
@@ -379,58 +412,76 @@ export default function Header() {
                       ref={(el) => {
                         linkRefs.current[item.id] = el;
                       }}
-                      onMouseEnter={() => handleItemHover(item)}
-                      onFocus={() => handleLinkFocus(item)}
+                      onMouseEnter={() => {
+                        if (mobileOpen) return;
+                        if (typeof window !== "undefined" && window.matchMedia && !window.matchMedia("(hover: hover)").matches) return;
+                        handleItemHover(item);
+                      }}
+                      onFocus={() => {
+                        if (mobileOpen) return;
+                        handleLinkFocus(item);
+                      }}
                       onBlur={handleLinkBlur}
-                      onClick={() => handleNavLinkClick(item)}
+                      onClick={(e) => {
+                        if (mobileOpen && hasChildren) {
+                          e.preventDefault();
+                          setActiveDropdown(null);
+                          setMobileExpanded((prev) => (prev === item.label ? null : item.label));
+                        } else {
+                          handleNavLinkClick(item);
+                        }
+                      }}
                     >
                       {item.label}
                     </Link>
 
-                  {hasChildren && (
-                    <button
-                      type="button"
-                      aria-label={`Toggle ${item.label} submenu`}
-                      className="nav-chevron-btn"
-                      onClick={(e) => {
-                        e.preventDefault();
-                        setMobileExpanded((prev) => (prev === item.label ? null : item.label));
-                      }}
-                      style={{
-                        background: "none",
-                        border: "none",
-                        cursor: "pointer",
-                        padding: "4px",
-                        color: "inherit",
-                        display: "flex",
-                        alignItems: "center",
-                      }}
-                    >
-                      <svg
-                        width="12"
-                        height="12"
-                        viewBox="0 0 24 24"
-                        fill="none"
-                        stroke="currentColor"
-                        strokeWidth="2.5"
-                        strokeLinecap="round"
-                        strokeLinejoin="round"
+                    {hasChildren && (
+                      <button
+                        type="button"
+                        aria-label={`Toggle ${item.label} submenu`}
+                        className="nav-chevron-btn"
+                        onClick={(e) => {
+                          e.preventDefault();
+                          e.stopPropagation();
+                          setActiveDropdown(null);
+                          setMobileExpanded((prev) => (prev === item.label ? null : item.label));
+                        }}
                         style={{
-                          transform:
-                            activeDropdown === item.label || mobileExpanded === item.label
-                              ? "rotate(180deg)"
-                              : "rotate(0deg)",
-                          transition: "transform 0.2s ease",
+                          background: "none",
+                          border: "none",
+                          cursor: "pointer",
+                          padding: "6px",
+                          color: "inherit",
+                          display: "flex",
+                          alignItems: "center",
                         }}
                       >
-                        <path d="m6 9 6 6 6-6" />
-                      </svg>
-                    </button>
-                  )}
-                </div>
+                        <svg
+                          width="12"
+                          height="12"
+                          viewBox="0 0 24 24"
+                          fill="none"
+                          stroke="currentColor"
+                          strokeWidth="2.5"
+                          strokeLinecap="round"
+                          strokeLinejoin="round"
+                          style={{
+                            transform:
+                              (!mobileOpen && activeDropdown === item.label) ||
+                              (mobileOpen && mobileExpanded === item.label)
+                                ? "rotate(180deg)"
+                                : "rotate(0deg)",
+                            transition: "transform 0.2s ease",
+                          }}
+                        >
+                          <path d="m6 9 6 6 6-6" />
+                        </svg>
+                      </button>
+                    )}
+                  </div>
 
-                {/* Desktop Dropdown Flyout */}
-                {hasChildren && activeDropdown === item.label && (
+                  {/* Desktop Dropdown Flyout */}
+                  {hasChildren && activeDropdown === item.label && !mobileOpen && (
                   <div
                     className="nav-dropdown-flyout"
                     style={{
@@ -583,13 +634,35 @@ export default function Header() {
           aria-label="Toggle navigation menu"
           type="button"
           aria-expanded={mobileOpen}
-          onClick={() => setMobileOpen((prev) => !prev)}
+          onClick={() => {
+            setMobileOpen((prev) => {
+              const next = !prev;
+              if (!next) {
+                setMobileExpanded(null);
+                setActiveDropdown(null);
+              }
+              return next;
+            });
+          }}
         >
           <span></span>
           <span></span>
           <span></span>
         </button>
       </div>
+
+      {/* Mobile Drawer Backdrop Overlay */}
+      {mobileOpen && (
+        <div
+          className="nav-mobile-backdrop"
+          onClick={() => {
+            setMobileOpen(false);
+            setActiveDropdown(null);
+            setMobileExpanded(null);
+          }}
+          aria-hidden="true"
+        />
+      )}
     </nav>
   );
 }
