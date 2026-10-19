@@ -35,27 +35,13 @@ interface Props {
   allPosts: BlogPost[];
 }
 
-/* ─── Category badge style ─────────────────────────────────────────────────── */
-function tagClass(_cat?: string) {
-  return "bg-[#e7212b] text-white";
-}
-
-/* ─── Hero stats ─────────────────────────────────────────────────────── */
-const HERO_STATS = [
-  { value: "50+",  label: "Technical Articles" },
-  { value: "3",    label: "Engineering Pillars" },
-  { value: "2008", label: "Est. Year" },
-  { value: "ISO",  label: "9001:2015 Certified" },
-];
-
 const ALL = "All";
 const POSTS_PER_PAGE = 9;
 
 /* ─── Main component ──────────────────────────────────────────────────── */
 export default function BlogPageContent({ allPosts }: Props) {
   const articlesSectionRef = useRef<HTMLDivElement>(null);
-  // Day-based deterministic rotation so it varies daily but stays consistent between server and client render
-  const dayIndex = Math.floor(Date.now() / 86400000);
+  const [dayIndex] = useState(() => Math.floor(Date.now() / 86400000));
   const featured = allPosts.length > 0 ? allPosts[dayIndex % allPosts.length] : undefined;
 
   const gridPosts = (featured ? allPosts.filter((p) => p.slug !== featured.slug) : allPosts)
@@ -83,10 +69,15 @@ export default function BlogPageContent({ allPosts }: Props) {
     currentPage * POSTS_PER_PAGE
   );
 
-  // Reset to page 1 when filter or search changes
-  useEffect(() => {
+  const handleFilterChange = (cat: string) => {
+    setActiveFilter(cat);
     setCurrentPage(1);
-  }, [activeFilter, searchQuery]);
+  };
+
+  const handleSearchChange = (query: string) => {
+    setSearchQuery(query);
+    setCurrentPage(1);
+  };
 
   // Scroll to article grid on every page change
   useLayoutEffect(() => {
@@ -97,7 +88,7 @@ export default function BlogPageContent({ allPosts }: Props) {
   }, [currentPage]);
 
   return (
-    <div className="bg-[#f8f9fb] font-sans antialiased text-[#0B0D26]">
+    <div className="bg-[#e8e8e6] font-sans antialiased text-[#1a1a1a]">
       {/* ══════════════════════════════════════════════════════════════
           1. FEATURED ARTICLE
       ══════════════════════════════════════════════════════════════ */}
@@ -127,7 +118,7 @@ export default function BlogPageContent({ allPosts }: Props) {
                     priority
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-black/30 via-transparent to-transparent pointer-events-none" />
-                  <span className={`absolute top-4 left-4 z-10 text-[10px] font-bold uppercase tracking-[1.5px] px-3 py-1.5 rounded-full ${tagClass(featured.category)}`}>
+                  <span className="absolute top-4 left-4 z-10 text-[10.5px] font-bold uppercase tracking-[1.5px] px-3.5 py-1.5 rounded-full bg-[#8a302f] text-white shadow-sm">
                     {featured.category}
                   </span>
                 </div>
@@ -135,30 +126,30 @@ export default function BlogPageContent({ allPosts }: Props) {
                 {/* Content */}
                 <div className="flex flex-col justify-between p-8 sm:p-10 bg-white">
                   <div>
-                    <h2 className="text-[#0B0D26] text-2xl sm:text-[1.85rem] font-black leading-tight mb-4 group-hover:text-[#e7212b] transition-colors duration-300">
+                    <h2 className="text-[#1a1a1a] text-2xl sm:text-[1.85rem] font-black leading-tight mb-4 group-hover:text-[#8a302f] transition-colors duration-300">
                       {featured.title}
                     </h2>
-                    <p className="text-gray-500 text-[14.5px] leading-[1.8] line-clamp-4 mb-6">
+                    <p className="text-[#595956] text-[14.5px] leading-[1.8] line-clamp-4 mb-6">
                       {featured.description}
                     </p>
                     <hr className="border-gray-100 mb-5" />
                     <div className="flex flex-wrap items-center gap-4 text-[12px] text-gray-500 font-medium">
-                      <span className="flex items-center gap-1.5 text-[#0B0D26] font-bold uppercase tracking-wide text-[11px]">
+                      <span className="flex items-center gap-1.5 text-[#1a1a1a] font-bold uppercase tracking-wide text-[11px]">
                         <User className="w-3.5 h-3.5" />
                         TTS Editorial
                       </span>
                       <span className="flex items-center gap-1.5">
-                        <Calendar className="w-3.5 h-3.5 text-[#e7212b]" />
+                        <Calendar className="w-3.5 h-3.5 text-[#8a302f]" />
                         {featured.date}
                       </span>
                       <span className="flex items-center gap-1.5">
-                        <Clock className="w-3.5 h-3.5 text-[#e7212b]" />
+                        <Clock className="w-3.5 h-3.5 text-[#8a302f]" />
                         {featured.readTime}
                       </span>
                     </div>
                   </div>
                   <div className="mt-8">
-                    <span className="inline-flex items-center gap-2 bg-[#e7212b] hover:bg-[#c01020] text-white text-[13px] font-bold px-6 py-3 rounded-full transition-colors duration-200">
+                    <span className="inline-flex items-center gap-2 bg-[#8a302f] hover:bg-[#6f2423] text-white text-[13px] font-bold px-6 py-3 rounded-full transition-colors duration-200">
                       Read Article <ArrowRight className="w-3.5 h-3.5" />
                     </span>
                   </div>
@@ -175,8 +166,8 @@ export default function BlogPageContent({ allPosts }: Props) {
       <section ref={articlesSectionRef} id="articles" className="py-16 lg:py-24">
         <div className="max-w-7xl mx-auto px-4 sm:px-6">
           <div className="flex items-center gap-2.5 mb-8">
-            <span className="w-4 h-px bg-[#e7212b]" />
-            <span className="text-[#e7212b] text-[10.5px] font-bold tracking-[3.5px] uppercase">
+            <span className="w-4 h-px bg-[#8a302f]" />
+            <span className="text-[#8a302f] text-[10.5px] font-bold tracking-[3.5px] uppercase">
               All Articles
             </span>
           </div>
@@ -187,14 +178,14 @@ export default function BlogPageContent({ allPosts }: Props) {
             <input
               type="text"
               value={searchQuery}
-              onChange={(e) => setSearchQuery(e.target.value)}
+              onChange={(e) => handleSearchChange(e.target.value)}
               placeholder="Search articles..."
               aria-label="Search articles"
-              className="w-full pl-10 pr-10 py-2.5 rounded-xl border border-gray-300 bg-white text-[14px] text-[#0B0D26] placeholder:text-gray-500 focus:outline-none focus:border-[#e7212b]/50 focus:ring-1 focus:ring-[#e7212b]/20 transition-colors"
+              className="w-full pl-10 pr-10 py-2.5 rounded-xl border border-gray-300 bg-white text-[14px] text-[#1a1a1a] placeholder:text-gray-500 focus:outline-none focus:border-[#8a302f]/50 focus:ring-1 focus:ring-[#8a302f]/20 transition-colors"
             />
             {searchQuery && (
               <button
-                onClick={() => setSearchQuery("")}
+                onClick={() => handleSearchChange("")}
                 className="absolute right-3 top-1/2 -translate-y-1/2 p-0.5 rounded-full text-gray-600 hover:text-gray-800 hover:bg-gray-100 transition-colors"
                 aria-label="Clear search"
               >
@@ -209,11 +200,11 @@ export default function BlogPageContent({ allPosts }: Props) {
               <button
                 key={cat}
                 id={`filter-${cat.toLowerCase().replace(/\s+/g, "-")}`}
-                onClick={() => setActiveFilter(cat)}
+                onClick={() => handleFilterChange(cat)}
                 className={`px-4 py-2 rounded-full text-[12.5px] font-semibold transition-all duration-200 border ${
                   activeFilter === cat
-                    ? "bg-[#6b191b] text-white border-[#6b191b] shadow-sm"
-                    : "bg-white text-[#1a1c20] border-black/[0.08] hover:border-[#6b191b] hover:text-[#6b191b]"
+                    ? "bg-[#8a302f] text-white border-[#8a302f] shadow-sm"
+                    : "bg-white text-[#1a1c20] border-black/[0.08] hover:border-[#8a302f] hover:text-[#8a302f]"
                 }`}
               >
                 {cat}
@@ -261,18 +252,23 @@ export default function BlogPageContent({ allPosts }: Props) {
 
 /* ─── Article Card ────────────────────────────────────────────────────── */
 function ArticleCard({ post }: { post: BlogPost }) {
+  const excerpt = post.description || (post.title ? post.title.slice(0, 160) : "");
   return (
-    <div className="h-full">
-      <ImageCard
-        href={`/blog/${post.slug}/`}
-        imageSrc={post.image}
-        imageAlt={post.imageAlt || post.title}
-        title={post.title}
-        subtitle={post.description}
-        meta={`${post.date} · ${post.readTime}`}
-        tag={post.category}
-        tone="grey"
-      />
-    </div>
+    <ImageCard
+      variant="blog"
+      href={`/blog/${post.slug}/`}
+      imageSrc={post.image}
+      imageAlt={post.imageAlt || post.title}
+      title={post.title}
+      description={excerpt}
+      tag={post.category}
+      blogMeta={{
+        category: post.category,
+        date: post.date,
+        readTime: post.readTime,
+      }}
+      tone="grey"
+      fit="cover"
+    />
   );
 }

@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import Image from "next/image";
-import { Gauge, ClipboardCheck, Cpu } from "lucide-react";
+import Link from "next/link";
 import { BreadcrumbJsonLd } from "@/components/schema/BreadcrumbJsonLd";
 import { ReviewJsonLd } from "@/components/schema/ReviewJsonLd";
 import { OrganizationJsonLd } from "@/components/schema/OrganizationJsonLd";
@@ -9,6 +9,7 @@ import { FaqPageJsonLd } from "@/components/schema/FaqPageJsonLd";
 import PageFaqSection from "@/components/PageFaqSection";
 import { aboutUsFaq } from "@/lib/pageFaqData";
 import AnimatedSkillBars from "@/components/about/AnimatedSkillBars";
+import AboutServiceCards from "@/components/about/AboutServiceCards";
 import {
   PageHero,
   Section,
@@ -64,25 +65,31 @@ export const metadata: Metadata = {
 
 const serviceCards = [
   {
-    Icon: Gauge,
+    icon: "gauge",
     title: "Flow Measurement & Control System Solutions",
     description:
       "Custody transfer fiscal metering, flow computer configuration, calibration, and turnkey control system integration across upstream and downstream facilities.",
     href: "/service/flow-measurement-solutions/",
+    index: "01",
+    tags: ["Custody Transfer", "Calibration", "Flow Computers"],
   },
   {
-    Icon: ClipboardCheck,
+    icon: "clipboard-check",
     title: "Inspection and Testing Solutions",
     description:
       "Advanced Non-Destructive Testing (NDT), lifting equipment inspection, metallurgical analysis (PMI), and pressure vessel certification to international standards.",
     href: "/service/inspection-testing/",
+    index: "02",
+    tags: ["NDT", "PMI", "Pressure Vessels"],
   },
   {
-    Icon: Cpu,
+    icon: "cpu",
     title: "Industrial Process Automation Solutions",
     description:
       "Complete PLC SCADA integration, HMI design, distributed telemetry, and factory automation powered by authorized partnerships with Mitsubishi Electric and ICONICS.",
     href: "/service/industrial-automation/",
+    index: "03",
+    tags: ["PLC", "SCADA", "HMI"],
   },
 ];
 
@@ -279,34 +286,7 @@ export default function AboutPage() {
             description="Our multidisciplinary engineering teams provide turnkey design, specification, execution, and lifetime support across three core technical disciplines."
           />
 
-          <CardGrid max={3}>
-            {serviceCards.map(({ Icon, title, description, href }) => (
-              <Card
-                key={href}
-                variant="glass"
-                interactive
-                className="flex flex-col justify-between h-full bg-[#f8f8f7] border border-black/[0.06]"
-              >
-                <div>
-                  <div className="w-14 h-14 rounded-full bg-[rgba(107,25,27,0.08)] border border-[rgba(107,25,27,0.18)] flex items-center justify-center text-[#6b191b] mb-6">
-                    <Icon className="w-7 h-7" strokeWidth={1.75} />
-                  </div>
-                  <h3 className="font-heading text-[20px] font-bold text-[#1a1a1a] mb-3 leading-snug">
-                    {title}
-                  </h3>
-                  <p className="text-[14.5px] text-[#595956] leading-[1.65] mb-6">
-                    {description}
-                  </p>
-                </div>
-
-                <div className="pt-4 border-t border-black/[0.06]">
-                  <Button href={href} variant="outline" size="sm" className="w-full">
-                    Learn More
-                  </Button>
-                </div>
-              </Card>
-            ))}
-          </CardGrid>
+          <AboutServiceCards cards={serviceCards} />
         </Container>
       </Section>
 
@@ -441,27 +421,28 @@ export default function AboutPage() {
             description="Our integrated management system is independently audited and certified to the highest international standards."
           />
 
-          <CardGrid max={5} className="mb-16">
+          <div className="certifications-cards-grid mb-16">
             {certifications.map((c) => (
               <div
                 key={c.alt}
-                className="bg-[#f8f8f7] border border-black/[0.06] rounded-[18px] p-5 flex flex-col items-center justify-center text-center shadow-sm"
+                className="group rounded-[20px] bg-white border border-black/[0.08] p-6 flex flex-col items-center justify-center text-center shadow-[0_4px_20px_rgba(0,0,0,0.04)] hover:shadow-[0_12px_28px_rgba(0,0,0,0.08)] hover:-translate-y-1 transition-all duration-300 min-h-[175px]"
               >
-                <div className="relative h-16 w-24 mb-2">
+                <div className="relative h-[80px] w-full max-w-[150px] mb-3 flex items-center justify-center">
                   <Image
                     src={c.src}
                     alt={c.alt}
                     fill
                     className="object-contain"
-                    sizes="96px"
+                    sizes="150px"
+                    unoptimized
                   />
                 </div>
-                <span className="text-[11px] font-bold uppercase tracking-wider text-[#1a1a1a]">
+                <span className="text-[11.5px] font-bold uppercase tracking-wider text-[#1a1a1a] mt-auto">
                   {c.title}
                 </span>
               </div>
             ))}
-          </CardGrid>
+          </div>
 
           {/* Official Certificate Documents */}
           <div className="mt-12 pt-12 border-t border-black/[0.08]">

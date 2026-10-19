@@ -115,7 +115,7 @@ export default function PurpleHeroBubble() {
     heroEl.addEventListener("mouseleave", onMouseLeave as EventListener);
     heroEl.addEventListener("touchend", onMouseLeave as EventListener);
 
-    let startTime = performance.now();
+    const startTime = performance.now();
 
     const animate = (now: number) => {
       const elapsed = (now - startTime) * 0.001;

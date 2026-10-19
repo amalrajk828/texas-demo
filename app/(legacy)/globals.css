@@ -52,10 +52,12 @@
   --radius-4xl: calc(var(--radius) * 2.6);
 
   /* Brand tokens */
+  --brand-action: #8a302f;
+  --brand-action-hover: #6f2423;
   --color-brand-navy: #0B0D26;
   --color-brand-navy-mid: #12163A;
-  --color-brand-red: #e7212b;
-  --color-brand-red-dark: #aa0b1b;
+  --color-brand-red: #8a302f;
+  --color-brand-red-dark: #6f2423;
   --color-brand-red-light: #fde8e9;
   --color-brand-gray: #f4f5f8;
 

@@ -1,6 +1,7 @@
 "use client";
 
 import React, { useEffect, useRef } from "react";
+import Link from "next/link";
 
 // ── Scroll Animation Constants & Sequence Configuration ─────────────────────
 export const TOTAL_FRAMES = 300;
@@ -431,12 +432,12 @@ export default function HeroSection() {
                   </p>
                 </div>
                 <div className="hero-cta-group">
-                  <a href="/services/" className="btn btn-primary" id="hero-btn-know-more">
+                  <Link href="/services/" className="btn btn-primary" id="hero-btn-know-more">
                     Know More &rarr;
-                  </a>
-                  <a href="/products/" className="btn btn-secondary" id="hero-btn-products">
+                  </Link>
+                  <Link href="/products/" className="btn btn-secondary" id="hero-btn-products">
                     Our Products
-                  </a>
+                  </Link>
                 </div>
               </div>
 
@@ -640,10 +641,10 @@ export default function HeroSection() {
                     <span className="solution-badge">01</span>
                   </div>
                   <h3 className="solution-title">Flow Measurement &amp; Control</h3>
-                  <a href="/service/flow-measurement-solutions/" className="solution-link">
+                  <Link href="/service/flow-measurement-solutions/" className="solution-link">
                     <span>EXPLORE</span>
                     <span className="chevron">&rsaquo;</span>
-                  </a>
+                  </Link>
                   <span className="solution-watermark">01</span>
                 </div>
 
@@ -669,10 +670,10 @@ export default function HeroSection() {
                     <span className="solution-badge">02</span>
                   </div>
                   <h3 className="solution-title">Inspection &amp; Testing</h3>
-                  <a href="/service/inspection-testing/" className="solution-link">
+                  <Link href="/service/inspection-testing/" className="solution-link">
                     <span>EXPLORE</span>
                     <span className="chevron">&rsaquo;</span>
-                  </a>
+                  </Link>
                   <span className="solution-watermark">02</span>
                 </div>
 
@@ -701,10 +702,10 @@ export default function HeroSection() {
                     <span className="solution-badge">03</span>
                   </div>
                   <h3 className="solution-title">Industrial Automation</h3>
-                  <a href="/service/industrial-automation/" className="solution-link">
+                  <Link href="/service/industrial-automation/" className="solution-link">
                     <span>EXPLORE</span>
                     <span className="chevron">&rsaquo;</span>
-                  </a>
+                  </Link>
                   <span className="solution-watermark">03</span>
                 </div>
               </div>
@@ -712,30 +713,47 @@ export default function HeroSection() {
           </div>
 
           {/* Section 3: Custody Metering & Automation (progress 0.60 – 0.96) */}
-          <div className="card card-c card-custody-automation" id="card-c">
-            <div className="pill-badge">WHAT WE DO</div>
-            <h2 className="card-title">
-              Engineered Excellence in
-              <br />
-              Custody Metering &amp; Automation
-            </h2>
-            <p className="card-desc">
-              Extensive expertise in liquid and gas custody metering, Industrial Automation, and
-              Inspection &amp; Testing. Our services cover metering control upgrades, maintenance,
-              validation, and specialised consultancy.
-            </p>
-            <p className="card-desc sub">
-              Committed to end-to-end metering solutions through strategic OEM partnerships &mdash;
-              metering skids, flow computers, CEMS analysers, and field instruments across oil &amp;
-              gas, power, and commercial sectors.
-            </p>
-            <div className="card-cta-group">
-              <a href="/contacts/" className="btn btn-primary" id="btn-custody-contact">
-                Contact Us &rarr;
-              </a>
-              <a href="/services/" className="btn btn-secondary" id="btn-custody-services">
-                Our Services &rsaquo;
-              </a>
+          <div className="card-c card-custody-automation hero-stage-card" id="card-c">
+            <div className="card-top-accent-bar" aria-hidden="true" />
+
+            <div className="card-bg-flange-layer" aria-hidden="true">
+              {/* eslint-disable-next-line @next/next/no-img-element */}
+              <img
+                src="/hero-frames/frame_300.webp"
+                alt=""
+                className="card-bg-flange-img"
+                loading="lazy"
+                decoding="async"
+              />
+            </div>
+
+            <div className="card-bg-gradient-overlay" aria-hidden="true" />
+
+            <div className="card-content-wrapper">
+              <div className="pill-badge">WHAT WE DO</div>
+              <h2 className="card-title">
+                Engineered Excellence in
+                <br />
+                Custody Metering &amp; Automation
+              </h2>
+              <p className="card-desc">
+                Extensive expertise in liquid and gas custody metering, Industrial Automation, and
+                Inspection &amp; Testing. Our services cover metering control upgrades, maintenance,
+                validation, and specialised consultancy.
+              </p>
+              <p className="card-desc sub">
+                Committed to end-to-end metering solutions through strategic OEM partnerships &mdash;
+                metering skids, flow computers, CEMS analysers, and field instruments across oil &amp;
+                gas, power, and commercial sectors.
+              </p>
+              <div className="card-cta-group">
+                <a href="/contacts/" className="btn btn-primary" id="btn-custody-contact">
+                  Contact Us &rarr;
+                </a>
+                <a href="/services/" className="btn btn-secondary" id="btn-custody-services">
+                  Our Services &rsaquo;
+                </a>
+              </div>
             </div>
           </div>
         </div>

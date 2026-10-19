@@ -1,0 +1,554 @@
+[
+  {
+    "path": "registry.air-permeability-test.title",
+    "value": "Air Permeability{\" \"} Test"
+  },
+  {
+    "path": "registry.air-permeability-test.meta.openGraph.images[0].alt",
+    "value": "Air Permeability{\" \"} Test"
+  },
+  {
+    "path": "registry.air-permeability-test.meta.twitter.images[0].alt",
+    "value": "Air Permeability{\" \"} Test"
+  },
+  {
+    "path": "registry.air-permeability-test-2.title",
+    "value": "Air Permeability{\" \"} Test"
+  },
+  {
+    "path": "registry.air-permeability-test-2.meta.openGraph.images[0].alt",
+    "value": "Air Permeability{\" \"} Test"
+  },
+  {
+    "path": "registry.air-permeability-test-2.meta.twitter.images[0].alt",
+    "value": "Air Permeability{\" \"} Test"
+  },
+  {
+    "path": "registry.audits-and-specialized-consultancy.title",
+    "value": "Audits &{\" \"} Specialized Consultancy"
+  },
+  {
+    "path": "registry.audits-and-specialized-consultancy.meta.openGraph.images[0].alt",
+    "value": "Audits &{\" \"} Specialized Consultancy"
+  },
+  {
+    "path": "registry.audits-and-specialized-consultancy.meta.twitter.images[0].alt",
+    "value": "Audits &{\" \"} Specialized Consultancy"
+  },
+  {
+    "path": "registry.commissioning-and-after-sales-support.title",
+    "value": "Commissioning &{\" \"} After Sales Support"
+  },
+  {
+    "path": "registry.commissioning-and-after-sales-support.meta.openGraph.images[0].alt",
+    "value": "Commissioning &{\" \"} After Sales Support"
+  },
+  {
+    "path": "registry.commissioning-and-after-sales-support.meta.twitter.images[0].alt",
+    "value": "Commissioning &{\" \"} After Sales Support"
+  },
+  {
+    "path": "registry.commissioning-and-start-up-support.title",
+    "value": "Commissioning &{\" \"} Start-up Support"
+  },
+  {
+    "path": "registry.commissioning-and-start-up-support.meta.openGraph.images[0].alt",
+    "value": "Commissioning &{\" \"} Start-up Support"
+  },
+  {
+    "path": "registry.commissioning-and-start-up-support.meta.twitter.images[0].alt",
+    "value": "Commissioning &{\" \"} Start-up Support"
+  },
+  {
+    "path": "registry.corrosion-control-services-2.title",
+    "value": "Corrosion{\" \"} Control Services"
+  },
+  {
+    "path": "registry.corrosion-control-services-2.meta.openGraph.images[0].alt",
+    "value": "Corrosion{\" \"} Control Services"
+  },
+  {
+    "path": "registry.corrosion-control-services-2.meta.twitter.images[0].alt",
+    "value": "Corrosion{\" \"} Control Services"
+  },
+  {
+    "path": "registry.eddy-current-testing.title",
+    "value": "Eddy Current{\" \"} Testing (ECT)"
+  },
+  {
+    "path": "registry.eddy-current-testing.meta.openGraph.images[0].alt",
+    "value": "Eddy Current{\" \"} Testing (ECT)"
+  },
+  {
+    "path": "registry.eddy-current-testing.meta.twitter.images[0].alt",
+    "value": "Eddy Current{\" \"} Testing (ECT)"
+  },
+  {
+    "path": "registry.flow-computer-configuration.title",
+    "value": "Flow Computer{\" \"} Configuration"
+  },
+  {
+    "path": "registry.flow-computer-configuration.subtitle",
+    "value": "{stat.label}"
+  },
+  {
+    "path": "registry.flow-computer-configuration.meta.openGraph.images[0].alt",
+    "value": "Flow Computer{\" \"} Configuration"
+  },
+  {
+    "path": "registry.flow-computer-configuration.meta.twitter.images[0].alt",
+    "value": "Flow Computer{\" \"} Configuration"
+  },
+  {
+    "path": "registry.flow-meter-calibration.title",
+    "value": "Flow Meter{\" \"} Calibration"
+  },
+  {
+    "path": "registry.flow-meter-calibration.subtitle",
+    "value": "{stat.label}"
+  },
+  {
+    "path": "registry.flow-meter-calibration.overview.paragraphs[1]",
+    "value": "Accreditation No. 2-1210 — scope available at{\" \"} www.cofrac.fr/en"
+  },
+  {
+    "path": "registry.flow-meter-calibration.meta.openGraph.images[0].alt",
+    "value": "Flow Meter{\" \"} Calibration"
+  },
+  {
+    "path": "registry.flow-meter-calibration.meta.twitter.images[0].alt",
+    "value": "Flow Meter{\" \"} Calibration"
+  },
+  {
+    "path": "registry.gamma-ray-pipe-crawler-inspection-systems.title",
+    "value": "Gamma Ray Pipe{\" \"} Crawler Inspection"
+  },
+  {
+    "path": "registry.gamma-ray-pipe-crawler-inspection-systems.meta.openGraph.images[0].alt",
+    "value": "Gamma Ray Pipe{\" \"} Crawler Inspection"
+  },
+  {
+    "path": "registry.gamma-ray-pipe-crawler-inspection-systems.meta.twitter.images[0].alt",
+    "value": "Gamma Ray Pipe{\" \"} Crawler Inspection"
+  },
+  {
+    "path": "registry.genuine-spare-parts.title",
+    "value": "Genuine{\" \"} Spare Parts"
+  },
+  {
+    "path": "registry.genuine-spare-parts.meta.openGraph.images[0].alt",
+    "value": "Genuine{\" \"} Spare Parts"
+  },
+  {
+    "path": "registry.genuine-spare-parts.meta.twitter.images[0].alt",
+    "value": "Genuine{\" \"} Spare Parts"
+  },
+  {
+    "path": "registry.heat-treatment-services.title",
+    "value": "Heat Treatment{\" \"} Services"
+  },
+  {
+    "path": "registry.heat-treatment-services.meta.openGraph.images[0].alt",
+    "value": "Heat Treatment{\" \"} Services"
+  },
+  {
+    "path": "registry.heat-treatment-services.meta.twitter.images[0].alt",
+    "value": "Heat Treatment{\" \"} Services"
+  },
+  {
+    "path": "registry.heat-treatment-services-2.title",
+    "value": "Heat Treatment{\" \"} Services"
+  },
+  {
+    "path": "registry.heat-treatment-services-2.meta.openGraph.images[0].alt",
+    "value": "Heat Treatment{\" \"} Services"
+  },
+  {
+    "path": "registry.heat-treatment-services-2.meta.twitter.images[0].alt",
+    "value": "Heat Treatment{\" \"} Services"
+  },
+  {
+    "path": "registry.hose-test.title",
+    "value": "Hose Test{\" \"} Facade Water Check"
+  },
+  {
+    "path": "registry.hose-test.meta.openGraph.images[0].alt",
+    "value": "Hose Test{\" \"} Facade Water Check"
+  },
+  {
+    "path": "registry.hose-test.meta.twitter.images[0].alt",
+    "value": "Hose Test{\" \"} Facade Water Check"
+  },
+  {
+    "path": "registry.hose-test-2.title",
+    "value": "Hose Test{\" \"} Facade Water Check"
+  },
+  {
+    "path": "registry.hose-test-2.meta.openGraph.images[0].alt",
+    "value": "Hose Test{\" \"} Facade Water Check"
+  },
+  {
+    "path": "registry.hose-test-2.meta.twitter.images[0].alt",
+    "value": "Hose Test{\" \"} Facade Water Check"
+  },
+  {
+    "path": "registry.lifting-equipment-inspection.title",
+    "value": "Lifting Equipment{\" \"} Inspection"
+  },
+  {
+    "path": "registry.lifting-equipment-inspection.meta.openGraph.images[0].alt",
+    "value": "Lifting Equipment{\" \"} Inspection"
+  },
+  {
+    "path": "registry.lifting-equipment-inspection.meta.twitter.images[0].alt",
+    "value": "Lifting Equipment{\" \"} Inspection"
+  },
+  {
+    "path": "registry.lifting-equipment-inspection-2.title",
+    "value": "Lifting Equipment{\" \"} Inspection"
+  },
+  {
+    "path": "registry.lifting-equipment-inspection-2.meta.openGraph.images[0].alt",
+    "value": "Lifting Equipment{\" \"} Inspection"
+  },
+  {
+    "path": "registry.lifting-equipment-inspection-2.meta.twitter.images[0].alt",
+    "value": "Lifting Equipment{\" \"} Inspection"
+  },
+  {
+    "path": "registry.liquid-penetrant-dye-penetrant-examination-pt.title",
+    "value": "Liquid / Dye Penetrant{\" \"} Examination (PT)"
+  },
+  {
+    "path": "registry.liquid-penetrant-dye-penetrant-examination-pt.meta.openGraph.images[0].alt",
+    "value": "Liquid / Dye Penetrant{\" \"} Examination (PT)"
+  },
+  {
+    "path": "registry.liquid-penetrant-dye-penetrant-examination-pt.meta.twitter.images[0].alt",
+    "value": "Liquid / Dye Penetrant{\" \"} Examination (PT)"
+  },
+  {
+    "path": "registry.magnetic-flux-leakage.title",
+    "value": "Magnetic Flux{\" \"} Leakage (MFL)"
+  },
+  {
+    "path": "registry.magnetic-flux-leakage.meta.openGraph.images[0].alt",
+    "value": "Magnetic Flux{\" \"} Leakage (MFL)"
+  },
+  {
+    "path": "registry.magnetic-flux-leakage.meta.twitter.images[0].alt",
+    "value": "Magnetic Flux{\" \"} Leakage (MFL)"
+  },
+  {
+    "path": "registry.magnetic-particle-inspection-mt.title",
+    "value": "Magnetic Particle{\" \"} Inspection (MT)"
+  },
+  {
+    "path": "registry.magnetic-particle-inspection-mt.meta.openGraph.images[0].alt",
+    "value": "Magnetic Particle{\" \"} Inspection (MT)"
+  },
+  {
+    "path": "registry.magnetic-particle-inspection-mt.meta.twitter.images[0].alt",
+    "value": "Magnetic Particle{\" \"} Inspection (MT)"
+  },
+  {
+    "path": "registry.mechanical-testing.title",
+    "value": "Mechanical{\" \"} Testing"
+  },
+  {
+    "path": "registry.mechanical-testing.overview.heading",
+    "value": "Professional Mechanical{\" \"} Testing Services"
+  },
+  {
+    "path": "registry.mechanical-testing.meta.openGraph.images[0].alt",
+    "value": "Mechanical{\" \"} Testing"
+  },
+  {
+    "path": "registry.mechanical-testing.meta.twitter.images[0].alt",
+    "value": "Mechanical{\" \"} Testing"
+  },
+  {
+    "path": "registry.metallurgical-services.title",
+    "value": "Metallurgical{\" \"} Services (PMI)"
+  },
+  {
+    "path": "registry.metallurgical-services.meta.openGraph.images[0].alt",
+    "value": "Metallurgical{\" \"} Services (PMI)"
+  },
+  {
+    "path": "registry.metallurgical-services.meta.twitter.images[0].alt",
+    "value": "Metallurgical{\" \"} Services (PMI)"
+  },
+  {
+    "path": "registry.metallurgical-services-2.title",
+    "value": "Metallurgical{\" \"} Services (PMI)"
+  },
+  {
+    "path": "registry.metallurgical-services-2.meta.openGraph.images[0].alt",
+    "value": "Metallurgical{\" \"} Services (PMI)"
+  },
+  {
+    "path": "registry.metallurgical-services-2.meta.twitter.images[0].alt",
+    "value": "Metallurgical{\" \"} Services (PMI)"
+  },
+  {
+    "path": "registry.metering-control-system-integration.title",
+    "value": "Metering Control{\" \"} System {\" \"}Integration"
+  },
+  {
+    "path": "registry.metering-control-system-integration.subtitle",
+    "value": "{stat.label}"
+  },
+  {
+    "path": "registry.metering-control-system-integration.meta.openGraph.images[0].alt",
+    "value": "Metering Control{\" \"} System {\" \"}Integration"
+  },
+  {
+    "path": "registry.metering-control-system-integration.meta.twitter.images[0].alt",
+    "value": "Metering Control{\" \"} System {\" \"}Integration"
+  },
+  {
+    "path": "registry.metering-expert-services.title",
+    "value": "Metering{\" \"} Expert Services"
+  },
+  {
+    "path": "registry.metering-expert-services.meta.openGraph.images[0].alt",
+    "value": "Metering{\" \"} Expert Services"
+  },
+  {
+    "path": "registry.metering-expert-services.meta.twitter.images[0].alt",
+    "value": "Metering{\" \"} Expert Services"
+  },
+  {
+    "path": "registry.non-destructive-testing-ndt.title",
+    "value": "Non Destructive{\" \"} Testing (NDT)"
+  },
+  {
+    "path": "registry.non-destructive-testing-ndt.overview.heading",
+    "value": "Professional Non Destructive{\" \"} Testing (NDT) Services"
+  },
+  {
+    "path": "registry.non-destructive-testing-ndt.meta.openGraph.images[0].alt",
+    "value": "Non Destructive{\" \"} Testing (NDT)"
+  },
+  {
+    "path": "registry.non-destructive-testing-ndt.meta.twitter.images[0].alt",
+    "value": "Non Destructive{\" \"} Testing (NDT)"
+  },
+  {
+    "path": "registry.phased-array-ultrasonic-testing.title",
+    "value": "Phased Array{\" \"} Ultrasonic Testing"
+  },
+  {
+    "path": "registry.phased-array-ultrasonic-testing.meta.openGraph.images[0].alt",
+    "value": "Phased Array{\" \"} Ultrasonic Testing"
+  },
+  {
+    "path": "registry.phased-array-ultrasonic-testing.meta.twitter.images[0].alt",
+    "value": "Phased Array{\" \"} Ultrasonic Testing"
+  },
+  {
+    "path": "registry.plant-automation.title",
+    "value": "Process Plant{\" \"} Automation"
+  },
+  {
+    "path": "registry.plant-automation.overview.heading",
+    "value": "Professional Process Plant{\" \"} Automation Services"
+  },
+  {
+    "path": "registry.plant-automation.meta.openGraph.images[0].alt",
+    "value": "Process Plant{\" \"} Automation"
+  },
+  {
+    "path": "registry.plant-automation.meta.twitter.images[0].alt",
+    "value": "Process Plant{\" \"} Automation"
+  },
+  {
+    "path": "registry.pullout-test.title",
+    "value": "Pullout Test{\" \"} for Bolts & Anchors"
+  },
+  {
+    "path": "registry.pullout-test.meta.openGraph.images[0].alt",
+    "value": "Pullout Test{\" \"} for Bolts & Anchors"
+  },
+  {
+    "path": "registry.pullout-test.meta.twitter.images[0].alt",
+    "value": "Pullout Test{\" \"} for Bolts & Anchors"
+  },
+  {
+    "path": "registry.radiographic-testing-rt.title",
+    "value": "Radiographic{\" \"} Testing (RT)"
+  },
+  {
+    "path": "registry.radiographic-testing-rt.meta.openGraph.images[0].alt",
+    "value": "Radiographic{\" \"} Testing (RT)"
+  },
+  {
+    "path": "registry.radiographic-testing-rt.meta.twitter.images[0].alt",
+    "value": "Radiographic{\" \"} Testing (RT)"
+  },
+  {
+    "path": "registry.repair-upgrades-for-helical-flow-meters.title",
+    "value": "Repair & Upgrades for{\" \"} Helical Flow Meters"
+  },
+  {
+    "path": "registry.repair-upgrades-for-helical-flow-meters.meta.openGraph.images[0].alt",
+    "value": "Repair & Upgrades for{\" \"} Helical Flow Meters"
+  },
+  {
+    "path": "registry.repair-upgrades-for-helical-flow-meters.meta.twitter.images[0].alt",
+    "value": "Repair & Upgrades for{\" \"} Helical Flow Meters"
+  },
+  {
+    "path": "registry.specialized-inspection-service.title",
+    "value": "Advanced Inspection &{\" \"} Specialist NDT Services"
+  },
+  {
+    "path": "registry.specialized-inspection-service.overview.heading",
+    "value": "Professional Advanced Inspection &{\" \"} Specialist NDT Services Services"
+  },
+  {
+    "path": "registry.specialized-inspection-service.meta.openGraph.images[0].alt",
+    "value": "Advanced Inspection &{\" \"} Specialist NDT Services"
+  },
+  {
+    "path": "registry.specialized-inspection-service.meta.twitter.images[0].alt",
+    "value": "Advanced Inspection &{\" \"} Specialist NDT Services"
+  },
+  {
+    "path": "registry.system-software-upgrade.title",
+    "value": "Control System{\" \"} Integration & Upgradation"
+  },
+  {
+    "path": "registry.system-software-upgrade.meta.openGraph.images[0].alt",
+    "value": "Control System{\" \"} Integration & Upgradation"
+  },
+  {
+    "path": "registry.system-software-upgrade.meta.twitter.images[0].alt",
+    "value": "Control System{\" \"} Integration & Upgradation"
+  },
+  {
+    "path": "registry.time-of-flight-diffraction.title",
+    "value": "Time of Flight{\" \"} Diffraction (TOFD)"
+  },
+  {
+    "path": "registry.time-of-flight-diffraction.meta.openGraph.images[0].alt",
+    "value": "Time of Flight{\" \"} Diffraction (TOFD)"
+  },
+  {
+    "path": "registry.time-of-flight-diffraction.meta.twitter.images[0].alt",
+    "value": "Time of Flight{\" \"} Diffraction (TOFD)"
+  },
+  {
+    "path": "registry.torque-tightening-bolt-tensioning.title",
+    "value": "Torque Tightening &{\" \"} Bolt Tensioning"
+  },
+  {
+    "path": "registry.torque-tightening-bolt-tensioning.meta.openGraph.images[0].alt",
+    "value": "Torque Tightening &{\" \"} Bolt Tensioning"
+  },
+  {
+    "path": "registry.torque-tightening-bolt-tensioning.meta.twitter.images[0].alt",
+    "value": "Torque Tightening &{\" \"} Bolt Tensioning"
+  },
+  {
+    "path": "registry.torque-tightening-bolt-tensioning-2.title",
+    "value": "Torque Tightening &{\" \"} Bolt Tensioning"
+  },
+  {
+    "path": "registry.torque-tightening-bolt-tensioning-2.meta.openGraph.images[0].alt",
+    "value": "Torque Tightening &{\" \"} Bolt Tensioning"
+  },
+  {
+    "path": "registry.torque-tightening-bolt-tensioning-2.meta.twitter.images[0].alt",
+    "value": "Torque Tightening &{\" \"} Bolt Tensioning"
+  },
+  {
+    "path": "registry.ultrasonic-testing-ut.title",
+    "value": "Ultrasonic{\" \"} Testing (UT)"
+  },
+  {
+    "path": "registry.ultrasonic-testing-ut.meta.openGraph.images[0].alt",
+    "value": "Ultrasonic{\" \"} Testing (UT)"
+  },
+  {
+    "path": "registry.ultrasonic-testing-ut.meta.twitter.images[0].alt",
+    "value": "Ultrasonic{\" \"} Testing (UT)"
+  },
+  {
+    "path": "registry.upgrade-of-metering-control-system.title",
+    "value": "Upgrade of{\" \"} Metering {\" \"}Control System"
+  },
+  {
+    "path": "registry.upgrade-of-metering-control-system.subtitle",
+    "value": "{stat.label}"
+  },
+  {
+    "path": "registry.upgrade-of-metering-control-system.meta.openGraph.images[0].alt",
+    "value": "Upgrade of{\" \"} Metering {\" \"}Control System"
+  },
+  {
+    "path": "registry.upgrade-of-metering-control-system.meta.twitter.images[0].alt",
+    "value": "Upgrade of{\" \"} Metering {\" \"}Control System"
+  },
+  {
+    "path": "registry.validation-and-uncertainty-calculations.title",
+    "value": "Validation &{\" \"} Uncertainty Calculations"
+  },
+  {
+    "path": "registry.validation-and-uncertainty-calculations.meta.openGraph.images[0].alt",
+    "value": "Validation &{\" \"} Uncertainty Calculations"
+  },
+  {
+    "path": "registry.validation-and-uncertainty-calculations.meta.twitter.images[0].alt",
+    "value": "Validation &{\" \"} Uncertainty Calculations"
+  },
+  {
+    "path": "registry.videoscope.title",
+    "value": "Videoscope{\" \"} Remote Visual Inspection"
+  },
+  {
+    "path": "registry.videoscope.meta.openGraph.images[0].alt",
+    "value": "Videoscope{\" \"} Remote Visual Inspection"
+  },
+  {
+    "path": "registry.videoscope.meta.twitter.images[0].alt",
+    "value": "Videoscope{\" \"} Remote Visual Inspection"
+  },
+  {
+    "path": "registry.visual-inspection-vi.title",
+    "value": "Visual Inspection{\" \"} (VI)"
+  },
+  {
+    "path": "registry.visual-inspection-vi.meta.openGraph.images[0].alt",
+    "value": "Visual Inspection{\" \"} (VI)"
+  },
+  {
+    "path": "registry.visual-inspection-vi.meta.twitter.images[0].alt",
+    "value": "Visual Inspection{\" \"} (VI)"
+  },
+  {
+    "path": "registry.water-penetration-test.title",
+    "value": "Water Penetration{\" \"} Test"
+  },
+  {
+    "path": "registry.water-penetration-test.meta.openGraph.images[0].alt",
+    "value": "Water Penetration{\" \"} Test"
+  },
+  {
+    "path": "registry.water-penetration-test.meta.twitter.images[0].alt",
+    "value": "Water Penetration{\" \"} Test"
+  },
+  {
+    "path": "registry.water-penetration-test-2.title",
+    "value": "Water Penetration{\" \"} Test"
+  },
+  {
+    "path": "registry.water-penetration-test-2.meta.openGraph.images[0].alt",
+    "value": "Water Penetration{\" \"} Test"
+  },
+  {
+    "path": "registry.water-penetration-test-2.meta.twitter.images[0].alt",
+    "value": "Water Penetration{\" \"} Test"
+  }
+]

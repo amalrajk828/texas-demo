@@ -11,10 +11,10 @@ const CardGrid = React.forwardRef<HTMLDivElement, CardGridProps>(
     { children, max = 4, className = "", ...props },
     ref
   ) {
-    const maxClass = `v3-card-grid-max-${max}`;
+    const maxClass = `v3-card-grid-max-${max} card-grid-max-${max}`;
 
     return (
-      <div ref={ref} className={`v3-card-grid ${maxClass} ${className}`} {...props}>
+      <div ref={ref} className={`card-grid v3-card-grid ${maxClass} ${className}`} {...props}>
         {children}
       </div>
     );

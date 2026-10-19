@@ -1,6 +1,7 @@
 import React from "react";
 import Container from "./Container";
 import Button from "./Button";
+import EyebrowPill from "./EyebrowPill";
 
 interface CTASectionProps {
   eyebrow?: string;
@@ -66,17 +67,23 @@ export default function CTASection({
 
           <div className="relative z-10 max-w-[760px] mx-auto">
             {eyebrow && (
-              <span
-                className={`inline-block px-3.5 py-1 rounded-full text-[11px] sm:text-[12px] font-bold uppercase tracking-[0.08em] mb-4 ${
-                  isCrimson
-                    ? "bg-white/15 text-white border border-white/20"
-                    : isDark
-                    ? "bg-[rgba(107,25,27,0.2)] text-[#ff6b6e] border border-[#6b191b]/40"
-                    : "bg-[rgba(107,25,27,0.08)] text-[#6b191b] border border-[rgba(107,25,27,0.16)]"
-                }`}
-              >
-                {eyebrow}
-              </span>
+              <div className="flex justify-center mb-5">
+                {isWhite ? (
+                  <EyebrowPill text={typeof eyebrow === "string" ? eyebrow : undefined}>
+                    {eyebrow}
+                  </EyebrowPill>
+                ) : (
+                  <span
+                    className={`inline-block px-3.5 py-1 rounded-full text-[11px] sm:text-[12px] font-bold uppercase tracking-[0.08em] ${
+                      isCrimson
+                        ? "bg-white/15 text-white border border-white/20"
+                        : "bg-[rgba(138,48,47,0.2)] text-[#ff6b6e] border border-[var(--brand-action,#8a302f)]/40"
+                    }`}
+                  >
+                    {eyebrow}
+                  </span>
+                )}
+              </div>
             )}
 
             <h2 className="font-heading text-[28px] sm:text-[38px] lg:text-[46px] font-black tracking-[-0.03em] leading-[1.14] text-[#1a1a1a] mb-5">

@@ -291,37 +291,40 @@ export default function ServicePage({ data }: ServicePageProps) {
                 const isLink = Boolean(item.href);
 
                 const cardInner = (
-                  <div className="glass-card flex flex-col h-full text-center items-center">
+                  <div className="glass-card service-capability-card group/card relative flex flex-col h-full flex-1 text-center items-center overflow-hidden transition-all duration-300 hover:-translate-y-1 hover:border-[#8a302f]/40 hover:shadow-[0_20px_40px_-10px_rgba(138,48,47,0.16)]">
+                    {/* Thin 3px #8a302f accent bar at the top of each card that animates on hover */}
+                    <div className="absolute top-0 inset-x-0 h-[3px] bg-[#8a302f] transition-all duration-300 transform scale-x-0 group-hover/card:scale-x-100 origin-left z-10" />
+
                     <div className="glass-layer flex flex-col h-full flex-1 w-full text-center items-center">
                       <div className="w-full flex items-center justify-between mb-4">
                         {ItemIcon ? (
-                          <div className="w-10 h-10 rounded-xl bg-black/[0.05] text-[#2b2f36] flex items-center justify-center">
-                            <ItemIcon className="w-5 h-5 text-[#2b2f36]" strokeWidth={2} />
+                          <div className="w-11 h-11 rounded-xl bg-[#8a302f]/10 text-[#8a302f] flex items-center justify-center transition-all duration-300 group-hover/card:bg-[#8a302f] group-hover/card:text-white shadow-sm">
+                            <ItemIcon className="w-5 h-5 text-[#8a302f] group-hover/card:text-white transition-colors duration-300" strokeWidth={2} />
                           </div>
                         ) : (
-                          <span className="text-[11px] font-bold uppercase tracking-wider text-[#6b7280]">
+                          <span className="text-[11px] font-bold uppercase tracking-wider text-[#8a302f]">
                             {item.category || `Capability ${String(idx + 1).padStart(2, "0")}`}
                           </span>
                         )}
-                        <span className="text-[12px] font-bold text-[#6b7280] font-mono">
+                        <span className="text-[13px] font-bold text-[#8a302f] font-mono tracking-wider">
                           {String(idx + 1).padStart(2, "0")}
                         </span>
                       </div>
 
                       <div className="w-full flex-1 flex flex-col items-center text-center">
-                        <h3 className="font-heading text-[17px] sm:text-[18px] font-bold text-[#1a1c20] mb-2.5 leading-snug min-h-0 sm:min-h-[48px] text-balance">
+                        <h3 className="font-heading text-[17px] sm:text-[18px] font-bold text-[#1a1c20] mb-2.5 leading-[1.3] line-clamp-2 min-h-[calc(2*1.3em)] text-balance transition-colors duration-200 group-hover/card:text-[#8a302f]">
                           {item.title}
                         </h3>
 
-                        <p className="text-[14px] text-[#2b2f36] leading-[1.65] flex-1 mb-5 line-clamp-6">
+                        <p className="text-[13.5px] sm:text-[14px] text-[#595956] leading-[1.65] flex-1 mb-5 line-clamp-6">
                           {item.description}
                         </p>
                       </div>
 
                       {isLink && (
-                        <div className="mt-auto pt-3.5 flex items-center justify-center gap-1 text-[13px] font-bold text-[#1a1c20] underline underline-offset-4 decoration-[#1a1c20]/40 group-hover:decoration-[#1a1c20]">
-                          <span>View more</span>
-                          <ChevronRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
+                        <div className="mt-auto pt-4 border-t border-black/[0.06] w-full flex items-center justify-center gap-1.5 text-[13px] font-bold text-[#8a302f]">
+                          <span className="group-hover/card:underline underline-offset-4 decoration-[#8a302f]">View more</span>
+                          <ChevronRight className="w-4 h-4 text-[#8a302f] transition-transform duration-200 group-hover/card:translate-x-1.5" />
                         </div>
                       )}
                     </div>
@@ -329,14 +332,14 @@ export default function ServicePage({ data }: ServicePageProps) {
                 );
 
                 return isLink ? (
-                  <Link key={item.title || idx} href={item.href!} className="group h-full block">
-                    <FadeUp delay={idx * 0.05} className="h-full">
+                  <Link key={item.title || idx} href={item.href!} className="group h-full flex flex-col flex-1">
+                    <FadeUp delay={idx * 0.05} className="h-full flex flex-col flex-1">
                       {cardInner}
                     </FadeUp>
                   </Link>
                 ) : (
-                  <div key={item.title || idx} className="group h-full">
-                    <FadeUp delay={idx * 0.05} className="h-full">
+                  <div key={item.title || idx} className="group h-full flex flex-col flex-1">
+                    <FadeUp delay={idx * 0.05} className="h-full flex flex-col flex-1">
                       {cardInner}
                     </FadeUp>
                   </div>

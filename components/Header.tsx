@@ -401,6 +401,12 @@ export default function Header() {
   const [mobileOpen, setMobileOpen]   = useState(false);
   const [scrolled, setScrolled]       = useState(false);
   const [mobileExpanded, setMobileExpanded] = useState<string | null>(null);
+  const [prevPathname, setPrevPathname] = useState(pathname);
+  if (prevPathname !== pathname) {
+    setPrevPathname(pathname);
+    setMobileOpen(false);
+    setOpen(null);
+  }
   const ref = useRef<HTMLDivElement>(null);
   const closeTimeoutRef = useRef<NodeJS.Timeout | null>(null);
 
@@ -492,11 +498,7 @@ export default function Header() {
     };
   }, []);
 
-  /* Close everything on route change */
-  useEffect(() => {
-    setMobileOpen(false);
-    setOpen(null);
-  }, [pathname]);
+
 
   /* Click outside */
   useEffect(() => {
@@ -531,8 +533,16 @@ export default function Header() {
     };
   }, []);
 
-  const isActive = (href: string) =>
-    href === "/" ? pathname === "/" : pathname.startsWith(href.replace(/\/$/, ""));
+  const isActive = (href: string) => {
+    const current = pathname || "/";
+    if (href === "/") return current === "/";
+    const cleanHref = href.replace(/\/$/, "");
+    if (current === href || current === cleanHref || current.startsWith(`${cleanHref}/`)) return true;
+    if (cleanHref === "/service" && (current.startsWith("/services/") || current === "/services")) return true;
+    if (cleanHref === "/products" && current.startsWith("/portfolio/")) return true;
+    if (cleanHref === "/about-us" && current.startsWith("/about/")) return true;
+    return false;
+  };
 
   return (
     <>

@@ -1,0 +1,12 @@
+const res = await fetch('http://localhost:3000/service/flow-computer-configuration/');
+const html = await res.text();
+const h1Match = html.match(/<h1[^>]*>([\s\S]*?)<\/h1>/);
+console.log('H1:', h1Match ? h1Match[1] : 'NOT FOUND');
+const statLabelMatch = html.match(/\{stat\.label\}/g);
+console.log('{stat.label} matches:', statLabelMatch);
+const jsxSpaceMatch = html.match(/\{" "\}/g);
+console.log('{" "} matches:', jsxSpaceMatch);
+const owMatch = html.match(/ow Computer/g);
+console.log('ow Computer matches:', owMatch);
+const flowMatch = html.match(/Flow Computer/g);
+console.log('Flow Computer matches:', flowMatch);

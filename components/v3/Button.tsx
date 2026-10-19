@@ -46,7 +46,7 @@ export default function Button({
   const displayArrow = showArrow !== undefined ? showArrow : withArrow;
   const variantStyles = {
     primary:
-      "bg-[#6b191b] hover:bg-[#852023] text-white shadow-[0_4px_16px_rgba(107,25,27,0.22)] hover:shadow-[0_8px_24px_rgba(107,25,27,0.32)]",
+      "bg-[var(--brand-action,#8a302f)] hover:bg-[var(--brand-action-hover,#6f2423)] text-white font-semibold border border-[var(--brand-action,#8a302f)] shadow-[0_8px_20px_rgba(138,48,47,0.28)] hover:-translate-y-[2px] active:scale-[0.97] focus-visible:outline focus-visible:outline-2 focus-visible:outline-[var(--brand-action,#8a302f)] focus-visible:outline-offset-[3px]",
     secondary:
       "bg-white/90 hover:bg-white text-[#1a1a1a] border border-black/[0.1] shadow-[0_4px_16px_rgba(0,0,0,0.06)] hover:shadow-[0_8px_24px_rgba(0,0,0,0.1)]",
     dark:
@@ -61,14 +61,14 @@ export default function Button({
     lg: "px-9 py-4 text-[15px]",
   };
 
-  const combinedClasses = `inline-flex items-center justify-center gap-2.5 rounded-full font-bold uppercase tracking-[0.03em] transition-all duration-200 hover:-translate-y-0.5 active:translate-y-0 cursor-pointer ${variantStyles[variant]} ${sizeStyles[size]} ${className}`;
+  const combinedClasses = `group inline-flex items-center justify-center gap-2.5 rounded-full font-semibold uppercase tracking-[0.03em] transition-all duration-200 cursor-pointer ${variantStyles[variant]} ${sizeStyles[size]} ${className}`;
 
   if ("href" in props && props.href) {
     const { href, ...rest } = props as ButtonAsLink;
     return (
       <Link href={href} className={combinedClasses} {...rest}>
         <span>{children}</span>
-        {displayArrow && <ArrowRight className="w-4 h-4 shrink-0 transition-transform group-hover:translate-x-1" />}
+        {displayArrow && <ArrowRight className="w-4 h-4 shrink-0 transition-transform duration-200 group-hover:translate-x-1" />}
       </Link>
     );
   }
@@ -76,7 +76,7 @@ export default function Button({
   return (
     <button className={combinedClasses} {...(props as ButtonAsButton)}>
       <span>{children}</span>
-      {displayArrow && <ArrowRight className="w-4 h-4 shrink-0 transition-transform group-hover:translate-x-1" />}
+      {displayArrow && <ArrowRight className="w-4 h-4 shrink-0 transition-transform duration-200 group-hover:translate-x-1" />}
     </button>
   );
 }

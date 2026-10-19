@@ -1,6 +1,8 @@
 "use client";
 
-import React, { useEffect, useState, useMemo } from "react";
+import React, { useSyncExternalStore, useMemo } from "react";
+
+const emptySubscribe = () => () => {};
 
 interface Star {
   id: number;
@@ -12,11 +14,7 @@ interface Star {
 }
 
 export default function StarfieldBackground() {
-  const [mounted, setMounted] = useState(false);
-
-  useEffect(() => {
-    setMounted(true);
-  }, []);
+  const mounted = useSyncExternalStore(emptySubscribe, () => true, () => false);
 
   const stars: Star[] = useMemo(() => {
     const list: Star[] = [];

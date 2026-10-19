@@ -4,6 +4,7 @@ import {
   getProduct,
   getAllProductSlugs,
   products,
+  type ProductData,
 } from "@/lib/products";
 import ProductDetailTemplate from "@/components/v3/portfolio/ProductDetailTemplate";
 
@@ -25,16 +26,17 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
     };
   }
 
+  const brand = product.brand || "Texas Technical Services";
   const desc =
     product.paragraphs?.[0] ||
-    `${product.name} from ${product.brand} — precision ${product.category} for industrial applications.`;
+    `${product.name} from ${brand} — precision ${product.category} for industrial applications.`;
 
   return {
-    title: `${product.name} — ${product.brand} | Texas Technical Services`,
+    title: `${product.name} — ${brand} | Texas Technical Services`,
     description: desc,
     keywords: [
       product.name,
-      product.brand,
+      brand,
       product.category,
       "industrial automation Kuwait",
       "flow measurement GCC",
@@ -43,7 +45,7 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
       canonical: `/portfolio/${slug}/`,
     },
     openGraph: {
-      title: `${product.name} — ${product.brand}`,
+      title: `${product.name} — ${brand}`,
       description: desc,
       url: `/portfolio/${slug}/`,
       images: [
@@ -57,7 +59,7 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
     },
     twitter: {
       card: "summary_large_image",
-      title: `${product.name} — ${product.brand}`,
+      title: `${product.name} — ${brand}`,
       description: desc,
       images: [product.heroImage || "/og-default.png"],
     },
@@ -93,9 +95,17 @@ export default async function DynamicProductDetailPage({ params }: PageProps) {
     relatedProducts.push(...extra);
   }
 
+  const productData: ProductData = {
+    ...product,
+    brand: product.brand || "Texas Technical Services",
+    heroImage: product.heroImage || "/og-default.png",
+    paragraphs: product.paragraphs || [],
+    models: product.models || [],
+  };
+
   return (
     <ProductDetailTemplate
-      product={product}
+      product={productData}
       relatedProducts={relatedProducts}
     />
   );

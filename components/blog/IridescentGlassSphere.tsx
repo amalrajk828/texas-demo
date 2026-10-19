@@ -339,7 +339,7 @@ export default function IridescentGlassSphere({
     window.addEventListener("resize", resize);
 
     const motionQuery = window.matchMedia("(prefers-reduced-motion: reduce)");
-    let isReducedMotion = motionQuery.matches;
+    const isReducedMotion = motionQuery.matches;
 
     let animId = 0;
     const startTime = performance.now();

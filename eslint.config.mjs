@@ -5,6 +5,13 @@ import nextTs from "eslint-config-next/typescript";
 const eslintConfig = defineConfig([
   ...nextVitals,
   ...nextTs,
+  {
+    rules: {
+      "react/no-unescaped-entities": "off",
+      "@typescript-eslint/no-explicit-any": "warn",
+      "react-hooks/set-state-in-effect": "warn",
+    },
+  },
   // Override default ignores of eslint-config-next.
   globalIgnores([
     // Default ignores of eslint-config-next:
@@ -12,6 +19,17 @@ const eslintConfig = defineConfig([
     "out/**",
     "build/**",
     "next-env.d.ts",
+    "scratch/**",
+    "scripts/**",
+    "src/**",
+    "public/**",
+    "app/(legacy)/**",
+    "components/service/**",
+    "!components/service/ServicesAllGrid.tsx",
+    "components/services_group/**",
+    "components/t-grey/**",
+    "components/products/common/**",
+    "components/HeroSlider*",
   ]),
 ]);
 

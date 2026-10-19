@@ -181,13 +181,13 @@ export default function ProductDetailTemplate({
                 {product.bulletSections.map((sec, idx) => (
                   <div
                     key={idx}
-                    className="rounded-[28px] bg-white p-7 border border-black/[0.06] shadow-[0_15px_30px_rgba(0,0,0,0.04)] flex flex-col justify-between"
+                    className="rounded-[28px] bg-white p-7 border border-black/[0.06] shadow-[0_15px_30px_rgba(0,0,0,0.04)] flex flex-col justify-between h-full flex-1"
                   >
                     <div>
                       <div className="w-10 h-10 rounded-[12px] bg-[#6b191b]/[0.08] text-[#6b191b] flex items-center justify-center mb-4 font-bold text-[13px] font-mono">
                         0{idx + 1}
                       </div>
-                      <h3 className="font-heading text-[18px] font-bold text-[#1a1c20] mb-4">
+                      <h3 className="font-heading text-[18px] font-bold text-[#1a1c20] mb-4 line-clamp-2 sm:min-h-[calc(2*1.3em)]">
                         {sec.heading}
                       </h3>
                       <ul className="space-y-2.5">
@@ -286,7 +286,7 @@ export default function ProductDetailTemplate({
               </Link>
             </div>
 
-            <CardGrid max={4}>
+            <CardGrid max={3}>
               {relatedProducts.map((p) => (
                 <ImageCard
                   key={p.slug}
@@ -297,7 +297,8 @@ export default function ProductDetailTemplate({
                   title={p.name}
                   subtitle={p.description}
                   meta={p.tag || p.category}
-                  tag="View Specs"
+                  tag={p.tag || p.category || "View Specs"}
+                  fit={p.fit}
                 />
               ))}
             </CardGrid>

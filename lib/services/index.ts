@@ -14,7 +14,7 @@ const STATIC_SERVICES: Record<string, ServicePageData> = {
 };
 
 // Typed registry data
-const registry = rawRegistry as Record<string, any>;
+const registry = rawRegistry as Record<string, ServicePageData>;
 
 export function getServiceData(slug: string): ServicePageData | undefined {
   if (STATIC_SERVICES[slug]) {
@@ -29,7 +29,7 @@ export function getServiceData(slug: string): ServicePageData | undefined {
   if (capabilities && capabilities.items) {
     capabilities = {
       ...capabilities,
-      items: capabilities.items.map((item: any) => ({
+      items: capabilities.items.map((item: { title: string; description: string; iconName?: string }) => ({
         ...item,
         icon: getServiceIcon(item.iconName),
       })),

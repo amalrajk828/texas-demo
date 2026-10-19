@@ -94,14 +94,14 @@ for (const slug of slugs) {
     // Title from H1
     const h1Match = heroSrc.match(/<h1[^>]*>([\s\S]*?)<\/h1>/);
     if (h1Match) {
-      const rawH1 = h1Match[1].replace(/<[^>]+>/g, ' ').replace(/&amp;/g, '&').replace(/\s+/g, ' ').trim();
+      let rawH1 = h1Match[1].replace(/<[^>]+>/g, ' ').replace(/&amp;/g, '&').replace(/\{["']\s*["']\}/g, ' ').replace(/\s+/g, ' ').trim();
       if (rawH1) heroTitle = rawH1;
     }
 
     // Subtitle
     const subMatch = heroSrc.match(/<p className="[^"]*text-white\/[0-9]+[^"]*"[^>]*>([\s\S]*?)<\/p>/);
-    if (subMatch) {
-      heroSubtitle = subMatch[1].replace(/<[^>]+>/g, ' ').replace(/&amp;/g, '&').replace(/&nbsp;/g, ' ').replace(/\s+/g, ' ').trim();
+    if (subMatch && !subMatch[1].includes('{stat.label}')) {
+      heroSubtitle = subMatch[1].replace(/<[^>]+>/g, ' ').replace(/&amp;/g, '&').replace(/&nbsp;/g, ' ').replace(/\{["']\s*["']\}/g, ' ').replace(/\s+/g, ' ').trim();
     }
 
     // Image

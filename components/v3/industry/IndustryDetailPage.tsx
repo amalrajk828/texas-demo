@@ -66,7 +66,7 @@ export default function IndustryDetailPage({ data }: IndustryDetailPageProps) {
             </span>
           </div>
 
-          <CardGrid max={4}>
+          <CardGrid max={3}>
             {data.products.map((product) => (
               <ImageCard
                 key={product.slug}
@@ -79,6 +79,7 @@ export default function IndustryDetailPage({ data }: IndustryDetailPageProps) {
                 subtitle={product.desc}
                 meta={product.brand}
                 tag={product.category}
+                fit={product.fit}
               />
             ))}
           </CardGrid>
@@ -107,6 +108,7 @@ export default function IndustryDetailPage({ data }: IndustryDetailPageProps) {
                 subtitle={service.desc}
                 meta="Engineering Service"
                 tag="Explore Service"
+                fit={service.fit || "cover"}
               />
             ))}
           </CardGrid>

@@ -164,7 +164,7 @@ export default function PageHero({
           {(resolvedEyebrow || resolvedBadge) && (
             <div className={`mb-3.5 flex flex-wrap items-center gap-2 ${isCenter ? "justify-center" : "justify-start"}`}>
               {resolvedEyebrow && (
-                <span className="inline-flex items-center gap-1.5 px-3.5 py-1 rounded-full text-[11px] sm:text-[12px] font-bold uppercase tracking-[0.08em] bg-[rgba(107,25,27,0.08)] text-[#6b191b] border border-[rgba(107,25,27,0.16)]">
+                <span className="inline-flex items-center gap-1.5 px-3.5 py-1 rounded-full text-[11px] sm:text-[12px] font-bold uppercase tracking-[0.08em] bg-[rgba(138,48,47,0.08)] text-[var(--brand-action,#8a302f)] border border-[rgba(138,48,47,0.25)]">
                   {resolvedEyebrow}
                 </span>
               )}
@@ -176,7 +176,7 @@ export default function PageHero({
             </div>
           )}
 
-          <h1 className="font-heading text-[32px] sm:text-[44px] lg:text-[54px] font-black tracking-[-0.03em] text-[#1a1a1a] leading-[1.12] mb-5">
+          <h1 className="font-heading text-[32px] sm:text-[44px] lg:text-[54px] font-black tracking-[-0.03em] text-[#1a1a1a] leading-[1.12] mb-5 text-balance">
             {title}
           </h1>
 

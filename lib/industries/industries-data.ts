@@ -5,6 +5,7 @@ export interface IndustryProductItem {
   image: string;
   brand: string;
   desc: string;
+  fit?: "contain" | "cover";
 }
 
 export interface IndustryChallengeItem {
@@ -18,6 +19,7 @@ export interface IndustryServiceItem {
   slug: string;
   desc: string;
   image: string;
+  fit?: "contain" | "cover";
 }
 
 export interface IndustryDetailData {
@@ -253,7 +255,8 @@ export const INDUSTRIES_DATA: Record<string, IndustryDetailData> = {
         "slug": "flare-meter",
         "image": "/flare_meter.png",
         "brand": "SICK",
-        "desc": "Ultrasonic flare measurement for LNG plant safety and environmental reporting — handling the highly variable flow rates and gas compositions in LNG flare headers from near-zero to over 120 m/s."
+        "desc": "Ultrasonic flare measurement for LNG plant safety and environmental reporting — handling the highly variable flow rates and gas compositions in LNG flare headers from near-zero to over 120 m/s.",
+        "fit": "cover"
       },
       {
         "category": "Flow Meter",
@@ -567,7 +570,8 @@ export const INDUSTRIES_DATA: Record<string, IndustryDetailData> = {
         "slug": "flare-meter",
         "image": "/flare_meter.png",
         "brand": "SICK",
-        "desc": "Ultrasonic flow meters for flare stack management, accurately measuring gas velocities from near-zero to over 120 m/s — ensuring optimal combustion control and environmental compliance."
+        "desc": "Ultrasonic flow meters for flare stack management, accurately measuring gas velocities from near-zero to over 120 m/s — ensuring optimal combustion control and environmental compliance.",
+        "fit": "cover"
       },
       {
         "category": "Flow Meter",
@@ -762,7 +766,8 @@ export const INDUSTRIES_DATA: Record<string, IndustryDetailData> = {
         "slug": "flare-meter",
         "image": "/flare_meter.png",
         "brand": "SICK",
-        "desc": "Ultrasonic flare measurement for petrochemical plant relief and disposal systems — accurately quantifying combustible gas from near-zero to over 120 m/s to support environmental reporting and process safety."
+        "desc": "Ultrasonic flare measurement for petrochemical plant relief and disposal systems — accurately quantifying combustible gas from near-zero to over 120 m/s to support environmental reporting and process safety.",
+        "fit": "cover"
       },
       {
         "category": "Flow Meter",
@@ -949,7 +954,8 @@ export const INDUSTRIES_DATA: Record<string, IndustryDetailData> = {
         "slug": "flare-meter",
         "image": "/flare_meter.png",
         "brand": "SICK",
-        "desc": "Ultrasonic flare measurement for power plant safety relief and venting systems — handling wide flow rate swings from near-zero to over 120 m/s to support accurate environmental reporting and safety management."
+        "desc": "Ultrasonic flare measurement for power plant safety relief and venting systems — handling wide flow rate swings from near-zero to over 120 m/s to support accurate environmental reporting and safety management.",
+        "fit": "cover"
       },
       {
         "category": "Flow Meter",
@@ -1132,7 +1138,8 @@ export const INDUSTRIES_DATA: Record<string, IndustryDetailData> = {
         "slug": "flare-meter",
         "image": "/flare_meter.png",
         "brand": "SICK",
-        "desc": "Ultrasonic flare measurement for refinery flare headers and individual unit flares — measuring from near-zero to over 120 m/s, enabling accurate flare gas accounting and minimising uncontrolled emissions."
+        "desc": "Ultrasonic flare measurement for refinery flare headers and individual unit flares — measuring from near-zero to over 120 m/s, enabling accurate flare gas accounting and minimising uncontrolled emissions.",
+        "fit": "cover"
       },
       {
         "category": "Flow Meter",

@@ -31,7 +31,7 @@ export default function Button({
 
   // Variant mappings using the brand/standard colors
   const variants = {
-    primary: "bg-[#e7212b] text-white hover:bg-[#c61922] focus:ring-[#e7212b] shadow-md hover:shadow-lg shadow-red-500/10",
+    primary: "bg-[var(--brand-action,#8a302f)] text-white hover:bg-[var(--brand-action-hover,#6f2423)] focus:ring-[var(--brand-action,#8a302f)] shadow-md hover:shadow-lg shadow-[rgba(138,48,47,0.28)]",
     secondary: "bg-[#0b0d26] text-white hover:bg-[#181c4e] focus:ring-[#0b0d26] shadow-sm",
     outline: "border border-gray-300 text-[#0b0d26] hover:bg-gray-50 focus:ring-gray-300",
     danger: "bg-red-600 text-white hover:bg-red-700 focus:ring-red-500 shadow-sm",

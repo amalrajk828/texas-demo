@@ -110,7 +110,7 @@ export default function GlossyHeroSphere() {
     heroEl.addEventListener("touchmove", handleTouchMove as EventListener, { passive: true });
     heroEl.addEventListener("touchend", handlePointerLeave as EventListener);
 
-    let startTime = performance.now();
+    const startTime = performance.now();
 
     // Unified animation frame loop
     const animate = (time: number) => {

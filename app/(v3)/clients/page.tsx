@@ -154,21 +154,22 @@ export default function ClientsPage() {
           <CardGrid max={6}>
             {CLIENTS.map((client) => {
               const cardContent = (
-                <div className="relative group rounded-[22px] bg-white p-4 sm:p-5 flex flex-col items-center justify-center text-center h-[140px] border border-black/[0.06] shadow-[0_4px_16px_rgba(0,0,0,0.03)] hover:shadow-[0_12px_28px_rgba(0,0,0,0.08)] hover:-translate-y-1 transition-all duration-300">
-                  <div className="relative w-full h-12 flex items-center justify-center mb-2.5">
+                <div className="relative group rounded-[20px] bg-white p-5 sm:p-6 flex flex-col items-center justify-center text-center h-full min-h-[165px] flex-1 border border-black/[0.08] shadow-[0_4px_20px_rgba(0,0,0,0.04)] hover:shadow-[0_12px_28px_rgba(0,0,0,0.08)] hover:-translate-y-1 transition-all duration-300">
+                  <div className="relative w-full h-[60px] max-w-[140px] flex items-center justify-center mb-3">
                     <Image
                       src={client.logo}
                       alt={client.name}
                       fill
-                      className="object-contain filter grayscale group-hover:grayscale-0 transition-all duration-300"
-                      sizes="(max-width: 640px) 50vw, (max-width: 1024px) 25vw, 16vw"
+                      className="object-contain"
+                      sizes="140px"
+                      unoptimized
                     />
                   </div>
-                  <span className="text-[11.5px] font-semibold text-[#1a1c20] line-clamp-1 leading-tight group-hover:text-[#6b191b] transition-colors">
+                  <span className="font-heading text-[12px] sm:text-[12.5px] font-bold text-[#1a1a1a] line-clamp-2 leading-snug group-hover:text-[#8a302f] transition-colors mt-auto min-h-[calc(2*1.3em)] text-balance">
                     {client.name}
                   </span>
                   {client.external && (
-                    <ExternalLink className="w-3 h-3 text-[#9ca3af] absolute top-3 right-3 opacity-0 group-hover:opacity-100 transition-opacity" />
+                    <ExternalLink className="w-3.5 h-3.5 text-black/30 group-hover:text-[#8a302f] absolute top-3 right-3 transition-colors" />
                   )}
                 </div>
               );
@@ -179,7 +180,7 @@ export default function ClientsPage() {
                   href={client.url}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="block focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#6b191b] rounded-[22px]"
+                  className="flex flex-col h-full flex-1 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#8a302f] rounded-[20px]"
                 >
                   {cardContent}
                 </a>
@@ -187,7 +188,7 @@ export default function ClientsPage() {
                 <Link
                   key={client.name}
                   href={client.url}
-                  className="block focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#6b191b] rounded-[22px]"
+                  className="flex flex-col h-full flex-1 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#8a302f] rounded-[20px]"
                 >
                   {cardContent}
                 </Link>

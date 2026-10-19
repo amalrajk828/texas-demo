@@ -53,7 +53,7 @@ export default function WhatWeDo() {
         {/* Service cards */}
         <div className="grid grid-cols-1 md:grid-cols-3 gap-5 mb-20">
           {SERVICES.map((svc, i) => (
-            <div className="fade-up">
+            <div key={svc.title || i} className="fade-up">
               <div
                 className="group relative rounded-2xl overflow-hidden transition-all duration-300 hover:-translate-y-1 h-full flex flex-col border"
                 style={{

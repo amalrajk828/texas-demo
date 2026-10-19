@@ -91,7 +91,7 @@ const PER_PAGE = 9;
 
 function ServiceCard({ service }: { service: ServiceItem; index: number }) {
   return (
-    <div className="h-full">
+    <div className="h-full flex flex-col flex-1">
       <ImageCard
         href={service.href}
         imageSrc={service.image}
