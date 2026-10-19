@@ -288,17 +288,7 @@ export default function ScrollSequenceHero() {
       }
       applyStage("card-c", op, y);
 
-      // On mobile devices, fade the background canvas out when stage 3 card appears
-      // so the canvas flange does not extend outside the card boundary on the left.
-      // The card's internal background layer contains the clipped flange image.
-      if (typeof window !== "undefined" && window.innerWidth < 1024 && canvasRef.current) {
-        if (p >= 0.63) {
-          const t = smootherstep(0.63, 0.72, p);
-          canvasRef.current.style.opacity = Math.max(0, 1 - t).toFixed(3);
-        } else {
-          canvasRef.current.style.opacity = "1";
-        }
-      } else if (canvasRef.current && canvasRef.current.style.opacity !== "1") {
+      if (canvasRef.current && canvasRef.current.style.opacity !== "1") {
         canvasRef.current.style.opacity = "1";
       }
     }
@@ -552,6 +542,35 @@ export default function ScrollSequenceHero() {
       nextBtn?.addEventListener("click", () => { go(cur + 1); startTimer(); });
       card.addEventListener("mouseenter", () => { paused = true;  });
       card.addEventListener("mouseleave", () => { paused = false; });
+
+      // Touch swipe support (left / right)
+      let touchStartX = 0;
+      let touchStartY = 0;
+      card.addEventListener("touchstart", (e: TouchEvent) => {
+        if (e.touches.length > 0) {
+          touchStartX = e.touches[0].clientX;
+          touchStartY = e.touches[0].clientY;
+          paused = true;
+        }
+      }, { passive: true });
+
+      card.addEventListener("touchend", (e: TouchEvent) => {
+        paused = false;
+        if (e.changedTouches.length > 0) {
+          const touchEndX = e.changedTouches[0].clientX;
+          const touchEndY = e.changedTouches[0].clientY;
+          const dx = touchEndX - touchStartX;
+          const dy = touchEndY - touchStartY;
+          if (Math.abs(dx) > 35 && Math.abs(dx) > Math.abs(dy)) {
+            if (dx < 0) {
+              go(cur + 1);
+            } else {
+              go(cur - 1);
+            }
+            startTimer();
+          }
+        }
+      }, { passive: true });
 
       go(1);
       startTimer();

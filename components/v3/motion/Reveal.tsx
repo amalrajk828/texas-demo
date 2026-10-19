@@ -26,7 +26,8 @@ export function Reveal({
     if (!el) return;
 
     const prefersReduced = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
-    if (prefersReduced) {
+    const isMobile = window.innerWidth <= 768;
+    if (prefersReduced || isMobile) {
       el.classList.add("is-revealed");
       el.style.opacity = "1";
       el.style.transform = "none";
@@ -116,7 +117,8 @@ export function RevealGroup({
     if (!items.length) return;
 
     const prefersReduced = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
-    if (prefersReduced) {
+    const isMobile = window.innerWidth <= 768;
+    if (prefersReduced || isMobile) {
       items.forEach((item) => {
         item.classList.add("is-revealed");
         item.style.opacity = "1";
