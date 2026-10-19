@@ -44,9 +44,13 @@ export default function WhatsAppButton() {
 
   return (
     <div
-      className={`fixed bottom-6 right-6 z-[999] transition-all duration-500 ${
+      className={`fixed z-[999] transition-all duration-500 ${
         visible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-4 pointer-events-none"
       }`}
+      style={{
+        bottom: "max(1.5rem, env(safe-area-inset-bottom, 1.5rem))",
+        right: "max(1.5rem, env(safe-area-inset-right, 1.5rem))",
+      }}
     >
       {/* Tooltip */}
       <div className="absolute bottom-full right-0 mb-3 opacity-0 group-hover:opacity-100 transition-opacity duration-200 pointer-events-none">

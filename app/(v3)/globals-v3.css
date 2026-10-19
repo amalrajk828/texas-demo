@@ -212,12 +212,26 @@ body {
   visibility: visible;
   transition: opacity 300ms ease, visibility 300ms ease;
   pointer-events: auto;
+  animation: page-loader-autohide 3.2s cubic-bezier(0.16, 1, 0.3, 1) forwards;
 }
 
 .page-loader-overlay.is-hidden {
-  opacity: 0;
-  visibility: hidden;
-  pointer-events: none;
+  opacity: 0 !important;
+  visibility: hidden !important;
+  pointer-events: none !important;
+  animation: none !important;
+}
+
+@keyframes page-loader-autohide {
+  0%, 80% {
+    opacity: 1;
+    visibility: visible;
+  }
+  100% {
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+  }
 }
 
 .page-loader-overlay .loader {

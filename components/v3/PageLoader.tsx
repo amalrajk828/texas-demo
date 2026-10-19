@@ -11,36 +11,55 @@ export default function PageLoader({ isRouteTransition = false }: PageLoaderProp
   const [mounted, setMounted] = useState(true);
 
   useEffect(() => {
-    if (isRouteTransition) return;
+    let hideTimer: ReturnType<typeof setTimeout> | null = null;
+    let unmountTimer: ReturnType<typeof setTimeout> | null = null;
+    let safetyTimer: ReturnType<typeof setTimeout> | null = null;
+
+    const hideLoader = () => {
+      setVisible(false);
+      unmountTimer = setTimeout(() => {
+        setMounted(false);
+      }, 350);
+    };
 
     const startTime = Date.now();
-    const minDisplayTime = 500;
+    const minDisplayTime = isRouteTransition ? 200 : 400;
     const maxDisplayTime = 3000;
 
     const handleReady = () => {
-      const elapsed = Date.now() - startTime;
-      const remaining = Math.max(0, minDisplayTime - elapsed);
+      try {
+        const elapsed = Date.now() - startTime;
+        const remaining = Math.max(0, minDisplayTime - elapsed);
 
-      setTimeout(() => {
-        setVisible(false);
-        setTimeout(() => setMounted(false), 300);
-      }, remaining);
+        hideTimer = setTimeout(hideLoader, remaining);
+      } catch {
+        hideLoader();
+      }
     };
 
-    if (document.readyState === "complete") {
+    // 1. Check if document is already interactive or complete
+    try {
+      if (document.readyState === "complete" || document.readyState === "interactive") {
+        handleReady();
+      } else {
+        window.addEventListener("DOMContentLoaded", handleReady, { once: true });
+        window.addEventListener("load", handleReady, { once: true });
+      }
+    } catch {
       handleReady();
-    } else {
-      window.addEventListener("load", handleReady, { once: true });
     }
 
-    const safetyTimer = setTimeout(() => {
-      setVisible(false);
-      setTimeout(() => setMounted(false), 300);
-    }, maxDisplayTime);
+    // 2. Ironclad safety fallback timeout (force hide after 3 seconds)
+    safetyTimer = setTimeout(hideLoader, maxDisplayTime);
 
     return () => {
-      window.removeEventListener("load", handleReady);
-      clearTimeout(safetyTimer);
+      try {
+        window.removeEventListener("DOMContentLoaded", handleReady);
+        window.removeEventListener("load", handleReady);
+      } catch {}
+      if (hideTimer) clearTimeout(hideTimer);
+      if (unmountTimer) clearTimeout(unmountTimer);
+      if (safetyTimer) clearTimeout(safetyTimer);
     };
   }, [isRouteTransition]);
 
@@ -52,9 +71,11 @@ export default function PageLoader({ isRouteTransition = false }: PageLoaderProp
         <style>{`.page-loader-overlay { display: none !important; }`}</style>
       </noscript>
       <div
+        id="page-loader-root"
         role="status"
         aria-label="Loading"
-        className={`page-loader-overlay ${!visible && !isRouteTransition ? "is-hidden" : ""}`}
+        suppressHydrationWarning
+        className={`page-loader-overlay ${!visible ? "is-hidden" : ""}`}
       >
         <div className="loader">
           <span className="bar" />

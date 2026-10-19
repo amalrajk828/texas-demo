@@ -315,6 +315,35 @@ export default function HeroSection() {
         isPaused = false;
       });
 
+      // Touch swipe support (left / right)
+      let touchStartX = 0;
+      let touchStartY = 0;
+      showcaseCard.addEventListener("touchstart", (e: TouchEvent) => {
+        if (e.touches.length > 0) {
+          touchStartX = e.touches[0].clientX;
+          touchStartY = e.touches[0].clientY;
+          isPaused = true;
+        }
+      }, { passive: true });
+
+      showcaseCard.addEventListener("touchend", (e: TouchEvent) => {
+        isPaused = false;
+        if (e.changedTouches.length > 0) {
+          const touchEndX = e.changedTouches[0].clientX;
+          const touchEndY = e.changedTouches[0].clientY;
+          const dx = touchEndX - touchStartX;
+          const dy = touchEndY - touchStartY;
+          if (Math.abs(dx) > 35 && Math.abs(dx) > Math.abs(dy)) {
+            if (dx < 0) {
+              goToSlide(currentSlide + 1);
+            } else {
+              goToSlide(currentSlide - 1);
+            }
+            startAutoTimer();
+          }
+        }
+      }, { passive: true });
+
       goToSlide(1);
       startAutoTimer();
     }

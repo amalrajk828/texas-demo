@@ -13,51 +13,70 @@ export default function V3SmoothScroll({ children }: { children: React.ReactNode
   useEffect(() => {
     if (typeof window === "undefined") return;
 
-    const prefersReduced = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
-    if (prefersReduced) {
-      return;
+    try {
+      const prefersReduced = window.matchMedia?.("(prefers-reduced-motion: reduce)")?.matches;
+      if (prefersReduced) {
+        return;
+      }
+    } catch {
+      // ignore matchMedia error on older/restricted mobile browsers
     }
 
-    const lenis = new Lenis({
-      lerp: LENIS_LERP,
-      wheelMultiplier: 1.0,
-      touchMultiplier: 1.0,
-      smoothWheel: true,
-      syncTouch: false,
-      autoRaf: false,
-    });
+    let lenis: Lenis | null = null;
+    let win: LenisWindow | null = null;
+    let rafId: number | null = null;
 
-    const win = window as LenisWindow;
-    win.__lenis = lenis;
-
-    let rafId: number;
-    function raf(time: number) {
-      lenis.raf(time);
-      rafId = requestAnimationFrame(raf);
-    }
-    rafId = requestAnimationFrame(raf);
-
-    // Anchor link smooth scrolling support
     function handleAnchorClick(e: MouseEvent) {
-      const target = (e.target as HTMLElement)?.closest("a");
-      if (!target) return;
-      const href = target.getAttribute("href");
-      if (href && href.startsWith("#") && href.length > 1) {
-        const id = href.slice(1);
-        const el = document.getElementById(id);
-        if (el) {
-          e.preventDefault();
-          lenis.scrollTo(el, { offset: -90 });
+      try {
+        const target = (e.target as HTMLElement)?.closest("a");
+        if (!target) return;
+        const href = target.getAttribute("href");
+        if (href && href.startsWith("#") && href.length > 1) {
+          const id = href.slice(1);
+          const el = document.getElementById(id);
+          if (el && lenis) {
+            e.preventDefault();
+            lenis.scrollTo(el, { offset: -90 });
+          }
         }
+      } catch {
+        // ignore anchor click error
       }
     }
-    document.addEventListener("click", handleAnchorClick);
+
+    try {
+      lenis = new Lenis({
+        lerp: LENIS_LERP,
+        wheelMultiplier: 1.0,
+        touchMultiplier: 1.0,
+        smoothWheel: true,
+        syncTouch: false,
+        autoRaf: false,
+      });
+
+      win = window as LenisWindow;
+      win.__lenis = lenis;
+
+      function raf(time: number) {
+        if (lenis) {
+          lenis.raf(time);
+          rafId = requestAnimationFrame(raf);
+        }
+      }
+      rafId = requestAnimationFrame(raf);
+
+      document.addEventListener("click", handleAnchorClick);
+    } catch (err) {
+      console.warn("Smooth scroll skipped:", err);
+    }
 
     return () => {
-      cancelAnimationFrame(rafId);
-      document.removeEventListener("click", handleAnchorClick);
-      lenis.destroy();
-      win.__lenis = null;
+      try {
+        if (rafId !== null) cancelAnimationFrame(rafId);
+        document.removeEventListener("click", handleAnchorClick);
+        if (lenis) lenis.destroy();
+        if (win) win.__lenis = null;
+      } catch {}
     };
   }, []);
 
