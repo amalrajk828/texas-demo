@@ -3668,9 +3668,9 @@ button.card-interactive,
     max-width: none !important;
     margin: 0 !important;
     border-radius: 20px !important;
-    background: rgba(255, 255, 255, 0.94) !important;
-    backdrop-filter: blur(16px) !important;
-    -webkit-backdrop-filter: blur(16px) !important;
+    background: #ffffff !important;
+    backdrop-filter: none !important;
+    -webkit-backdrop-filter: none !important;
     border: 1px solid rgba(0, 0, 0, 0.06) !important;
     box-shadow: 0 10px 28px rgba(0, 0, 0, 0.08) !important;
     overflow: hidden !important;

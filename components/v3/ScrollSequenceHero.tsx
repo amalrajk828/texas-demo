@@ -493,15 +493,26 @@ export default function ScrollSequenceHero() {
   const applyCoverReaction = useCallback((coverP: number) => {
     // 1) Parallax scale (1.0 → COVER_SCALE) & lift (0 → -COVER_LIFT)
     if (heroContentRef.current) {
-      const scale = 1 - (1 - COVER_SCALE) * coverP;
-      const translateY = -COVER_LIFT * coverP;
-      heroContentRef.current.style.transform = `scale(${scale.toFixed(4)}) translateY(${translateY.toFixed(2)}px)`;
+      if (isPortraitMobileRef.current) {
+        heroContentRef.current.style.transform = "none";
+      } else {
+        const scale = 1 - (1 - COVER_SCALE) * coverP;
+        const translateY = -COVER_LIFT * coverP;
+        heroContentRef.current.style.transform = `scale(${scale.toFixed(4)}) translateY(${translateY.toFixed(2)}px)`;
+      }
     }
 
-    // 2) Hero text and cards fade to 0 opacity by 60% of cover
+    // 2) Hero text and cards fade to 0 opacity
     if (overlayRef.current) {
-      const fade = coverP <= 0 ? 1 : Math.max(0, 1 - coverP / 0.6);
-      overlayRef.current.style.opacity = fade.toFixed(3);
+      if (isPortraitMobileRef.current) {
+        // Mobile: Opacity stays 1 while About sits halfway (up to 50% cover), then fades linearly to 0 by 0.95
+        const fade = coverP <= 0.5 ? 1 : Math.max(0, 1 - (coverP - 0.5) / 0.45);
+        overlayRef.current.style.opacity = fade.toFixed(3);
+        overlayRef.current.style.pointerEvents = fade <= 0.05 ? "none" : "";
+      } else {
+        const fade = coverP <= 0 ? 1 : Math.max(0, 1 - coverP / 0.6);
+        overlayRef.current.style.opacity = fade.toFixed(3);
+      }
     }
 
     // 3) Hero stage indicator fades out during hold-and-cover so it never shows over the next section
