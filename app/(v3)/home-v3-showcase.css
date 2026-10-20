@@ -2881,7 +2881,7 @@ button.card-interactive,
    ========================================================================== */
 @media (max-width: 1023px) {
   #sequence {
-    height: 380vh; /* Snappier mobile scrolling */
+    height: calc(240vh + 100svh); /* Snappier, natural mobile scrolling */
   }
 
   /* Sticky hero container */
@@ -2978,6 +2978,7 @@ button.card-interactive,
 
   .showcase-media-item {
     object-position: 70% center;
+    pointer-events: none !important;
   }
 
   .showcase-nav-bar {
@@ -2998,10 +2999,11 @@ button.card-interactive,
     padding: 0 2px;
   }
 
-  /* Interactive cards & buttons re-enable pointer-events */
+  /* Interactive cards & buttons re-enable pointer-events and guarantee vertical scroll */
   .hero-glass-card,
   .hero-right-col,
   .hero-showcase-card,
+  .showcase-media-stage,
   .showcase-tab,
   .showcase-arrow,
   .showcase-next-btn,
@@ -3011,6 +3013,7 @@ button.card-interactive,
   .what-we-do-cards,
   .card-custody-automation {
     pointer-events: auto;
+    touch-action: pan-y !important;
   }
 
   /* Stage 1 Top Text Card */

@@ -1,7 +1,6 @@
 "use client";
 
 import React, { useEffect, useRef, useState, useCallback } from "react";
-import Image from "next/image";
 import Link from "next/link";
 
 // ── Tunable Constants ──────────────────────────────────────────────────────
@@ -15,23 +14,93 @@ type WindowWithLenis = Window & {
   __lenis?: LenisInstance | null;
 };
 
-export const TOTAL_FRAMES         = 300;
-export const SEQUENCE_PATH        = "/hero-frames";
-export const SEQUENCE_PATH_MOBILE = "/hero-frames/mobile";
-export const FRAME_PREFIX         = "frame_";
-export const FRAME_EXT            = ".webp";
-export const BG_COLOR             = "#e8e8e6";    // Studio-grey, matches frames
+export const TOTAL_FRAMES            = 300;
+export const SEQUENCE_PATH           = "/hero-frames";
+export const SEQUENCE_PATH_MOBILE    = "/hero-frames/mobile";
+export const FRAME_PREFIX            = "frame_";
+export const FRAME_EXT               = ".webp";
+export const BG_COLOR                = "#e8e8e6";    // Desktop Studio-grey, matches desktop frames
+export const PORTRAIT_BG_COLOR       = "#ececec";    // Mobile portrait background, matches mobile manifest
 
-// Product placement: centred full-width coverage across all viewports
-export const PRODUCT_SCALE        = 1.0;         // Cover scale (desktop)
-export const PRODUCT_ANCHOR_X     = 0.5;         // Centred horizontally (50%)
-export const PRODUCT_ANCHOR_Y     = 0.5;         // Centred vertically (50%)
+// Desktop placement: centred full-width coverage across desktop viewports
+export const PRODUCT_SCALE           = 1.0;         // Cover scale (desktop)
+export const PRODUCT_ANCHOR_X        = 0.5;         // Centred horizontally (50%)
+export const PRODUCT_ANCHOR_Y        = 0.5;         // Centred vertically (50%)
 
-// Mobile Safe-Rect Fit Constants (<1024px)
-export const MOBILE_SIDE_MARGIN   = 0.03;        // 3% margin each side
-export const MOBILE_ANCHOR_Y      = 0.50;        // Centred vertically (50% of viewport height)
-export const MOBILE_SCALE_BOOST   = 1.0;         // Gentle mobile zoom constant (1.0 up to 1.15)
-export const SAFE_RECT            = { x: 0.11, y: 0.11, width: 0.815, height: 0.73 };
+// Landscape Mobile Safe-Rect Fit Constants (<1024px landscape)
+export const LANDSCAPE_SIDE_MARGIN   = 0.03;        // 3% margin each side
+export const LANDSCAPE_ANCHOR_Y      = 0.50;        // Centred vertically (50% of viewport height)
+export const MOBILE_SCALE_BOOST      = 1.0;         // Gentle mobile zoom constant (1.0 up to 1.15)
+export const SAFE_RECT               = { x: 0.11, y: 0.11, width: 0.815, height: 0.73 };
+
+export interface SequenceManifest {
+  count: number;
+  width: number;
+  height: number;
+  prefix: string;
+  ext: string;
+  bgColor: string;
+}
+
+export const DESKTOP_MANIFEST_DEFAULT: SequenceManifest = {
+  count: 300,
+  width: 1920,
+  height: 1080,
+  prefix: "frame_",
+  ext: ".webp",
+  bgColor: "#e8e8e6",
+};
+
+export const MOBILE_MANIFEST_DEFAULT: SequenceManifest = {
+  count: 300,
+  width: 1080,
+  height: 1920,
+  prefix: "frame_",
+  ext: ".webp",
+  bgColor: "#ececec",
+};
+
+export type DrawableFrame = ImageBitmap | HTMLImageElement;
+
+function closeDrawable(d: DrawableFrame | null) {
+  if (d && "close" in d && typeof (d as ImageBitmap).close === "function") {
+    (d as ImageBitmap).close();
+  }
+}
+
+function loadFrameImage(url: string): Promise<DrawableFrame> {
+  if (typeof window !== "undefined" && typeof window.createImageBitmap === "function") {
+    return fetch(url)
+      .then((r) => {
+        if (!r.ok) throw new Error(`HTTP ${r.status}`);
+        return r.blob();
+      })
+      .then((blob) => createImageBitmap(blob))
+      .catch(() => {
+        return new Promise<HTMLImageElement>((resolve, reject) => {
+          const img = new Image();
+          img.crossOrigin = "anonymous";
+          img.onload = () => resolve(img);
+          img.onerror = () => reject(new Error(`Failed to load: ${url}`));
+          img.src = url;
+        });
+      });
+  }
+
+  return new Promise<HTMLImageElement>((resolve, reject) => {
+    const img = new Image();
+    img.crossOrigin = "anonymous";
+    img.onload = () => resolve(img);
+    img.onerror = () => reject(new Error(`Failed to load: ${url}`));
+    img.src = url;
+  });
+}
+
+// Single Selection Rule: Mobile portrait when orientation is portrait AND width < 1024px
+export function isPortraitMobileViewport(): boolean {
+  if (typeof window === "undefined") return false;
+  return window.matchMedia("(orientation: portrait) and (max-width: 1023px)").matches;
+}
 
 // Tunable constants for Stage Dwell, Velocity cap & Overlap
 export const STAGE_DWELL_VH        = 85;          // ~70-90vh per stage
@@ -40,6 +109,7 @@ export const STAGE_OVERLAP         = 0.09;        // 9% stage cross-fade overlap
 
 // Tunable constants for Hold and Cover
 export const SCROLL_LENGTH        = "450vh";     // frame scrubbing length (~85-90vh dwell per stage + buffer)
+export const MOBILE_PORTRAIT_SCROLL_LENGTH = "240vh"; // snappy, natural mobile touch scrubbing
 export const HOLD_COVER           = "100svh";    // hold travel distance while next section covers
 export const COVER_SCALE          = 0.94;        // hero content scale at full cover
 export const COVER_LIFT           = 40;          // hero content translateY (px) at full cover
@@ -73,17 +143,26 @@ export default function ScrollSequenceHero() {
   const [reducedMotion, setReducedMotion] = useState(false);
   const [activeStage, setActiveStage]     = useState(1);
   const activeStageRef                    = useRef(1);
+  const [isPortraitMobile, setIsPortraitMobile] = useState(() => isPortraitMobileViewport());
+  const isPortraitMobileRef               = useRef(false);
 
-  // ImageBitmap store
-  const bitmaps   = useRef<(ImageBitmap | null)[]>(
+  // Separate manifests for desktop and mobile portrait frame sets
+  const desktopManifestRef = useRef<SequenceManifest>(DESKTOP_MANIFEST_DEFAULT);
+  const mobileManifestRef  = useRef<SequenceManifest>(MOBILE_MANIFEST_DEFAULT);
+
+  // Dual frame stores for separate desktop and portrait mobile caching
+  const desktopBitmaps  = useRef<(DrawableFrame | null)[]>(
+    Array.from({ length: TOTAL_FRAMES }, () => null)
+  );
+  const portraitBitmaps = useRef<(DrawableFrame | null)[]>(
     Array.from({ length: TOTAL_FRAMES }, () => null)
   );
   const destroyed = useRef(false);
 
   // Scroll state (refs, no re-renders)
-  const rawTarget     = useRef(0);   // float frame index from scroll
-  const current       = useRef(0);   // float frame index being animated
-  const lastDrawn     = useRef(-1);  // rounded index last drawn
+  const rawTarget     = useRef(0);   // normalized progress 0 to 1
+  const current       = useRef(0);   // normalized progress 0 to 1 being animated
+  const lastDrawn     = useRef(-1);  // rounded frame index last drawn
   const isVisible     = useRef(true);
 
   // ── Scroll to Stage Function (interactive stage indicator) ───────────────
@@ -100,32 +179,42 @@ export default function ScrollSequenceHero() {
     const coverStartScroll = aboutTop - holdPx;
     const frameTravelPx = Math.max(1, coverStartScroll - sectionTop - bufferPx);
 
+    const isPortrait = isPortraitMobileViewport();
     let targetY = sectionTop;
-    if (stageNum === 2) targetY = sectionTop + frameTravelPx * 0.46;
-    if (stageNum === 3) targetY = sectionTop + frameTravelPx * 0.86;
+    if (stageNum === 2) {
+      targetY = sectionTop + frameTravelPx * (isPortrait ? 0.40 : 0.46);
+    }
+    if (stageNum === 3) {
+      targetY = sectionTop + frameTravelPx * (isPortrait ? 0.78 : 0.86);
+    }
 
     const lenis = (window as WindowWithLenis).__lenis;
     if (lenis && typeof lenis.scrollTo === "function") {
-      lenis.scrollTo(targetY, { duration: 1.0 });
+      lenis.scrollTo(targetY, { duration: 0.8 });
     } else {
       window.scrollTo({ top: targetY, behavior: "smooth" });
     }
   }, []);
 
   // ── Draw ────────────────────────────────────────────────────────────────
-  const draw = useCallback((index: number) => {
+  const draw = useCallback((progress: number) => {
     const canvas = canvasRef.current;
     if (!canvas) return;
     const ctx = canvas.getContext("2d", { alpha: false });
     if (!ctx) return;
 
-    // Find nearest loaded bitmap
-    const store = bitmaps.current;
-    let bmp = store[index];
+    const isPortrait = isPortraitMobileViewport();
+    const manifest   = isPortrait ? mobileManifestRef.current : desktopManifestRef.current;
+    const store      = isPortrait ? portraitBitmaps.current : desktopBitmaps.current;
+    const count      = manifest.count || TOTAL_FRAMES;
+    const targetIdx  = Math.max(0, Math.min(count - 1, Math.round(progress * (count - 1))));
+
+    // 1) Find exact or nearest loaded bitmap in current active set only (never fallback to desktop frames in portrait)
+    let bmp = store[targetIdx];
     if (!bmp) {
-      for (let d = 1; d < TOTAL_FRAMES; d++) {
-        if (store[index - d]) { bmp = store[index - d]; break; }
-        if (store[index + d]) { bmp = store[index + d]; break; }
+      for (let d = 1; d < count; d++) {
+        if (targetIdx - d >= 0 && store[targetIdx - d]) { bmp = store[targetIdx - d]; break; }
+        if (targetIdx + d < count && store[targetIdx + d]) { bmp = store[targetIdx + d]; break; }
       }
     }
 
@@ -135,6 +224,9 @@ export default function ScrollSequenceHero() {
     const W = wrapper ? wrapper.clientWidth : (canvas.clientWidth || canvas.offsetWidth);
     const H = wrapper ? wrapper.clientHeight : (canvas.clientHeight || canvas.offsetHeight);
     if (!W || !H) return;
+
+    // If no frame in the active set is ready yet, keep canvas transparent so poster stays cleanly visible
+    if (!bmp) return;
 
     const rW = Math.round(W * dpr);
     const rH = Math.round(H * dpr);
@@ -147,62 +239,82 @@ export default function ScrollSequenceHero() {
     ctx.scale(dpr, dpr);
     ctx.imageSmoothingEnabled    = true;
     ctx.imageSmoothingQuality    = "high";
-    ctx.fillStyle                = BG_COLOR;
+    ctx.fillStyle                = manifest.bgColor || (isPortrait ? PORTRAIT_BG_COLOR : BG_COLOR);
     ctx.fillRect(0, 0, W, H);
 
     if (bmp) {
-      const isDesk = W >= 1024;
-      if (isDesk) {
-        // Desktop (>= 1024px): keep current layout and cover fit untouched
-        const coverS = Math.max(W / bmp.width, H / bmp.height);
-        const effS   = coverS * PRODUCT_SCALE;
-        const sw     = bmp.width  * effS;
-        const sh     = bmp.height * effS;
-        const ax     = PRODUCT_ANCHOR_X;
-        const ay     = PRODUCT_ANCHOR_Y;
-        ctx.drawImage(bmp, W * ax - sw / 2, H * ay - sh / 2, sw, sh);
-      } else {
-        // Mobile & small tablets (< 1024px): safe-rect fit
-        const isShort = H < 500;
-        let scale: number;
-        if (isShort) {
-          // In landscape phones (height below 500px), use safe-rect fit by HEIGHT
-          scale = ((H * (1 - 2 * MOBILE_SIDE_MARGIN)) / (SAFE_RECT.height * bmp.height)) * MOBILE_SCALE_BOOST;
-        } else {
-          // Portrait phones & small tablets: safe-rect fits canvas width exactly (plus side margin)
-          scale = ((W * (1 - 2 * MOBILE_SIDE_MARGIN)) / (SAFE_RECT.width * bmp.width)) * MOBILE_SCALE_BOOST;
-        }
-
+      if (isPortrait) {
+        // Mobile portrait (< 1024px portrait): fit full frame without cropping (contain fit)
+        const scale = Math.min(W / bmp.width, H / bmp.height);
         const sw = bmp.width  * scale;
         const sh = bmp.height * scale;
-
-        // Centre the safe rect horizontally
-        const safeCenterX = (SAFE_RECT.x + SAFE_RECT.width * 0.5) * sw;
-        const drawX = W * 0.5 - safeCenterX;
-
-        // Place vertically at MOBILE_ANCHOR_Y (or 0.5 in landscape)
-        const safeCenterY = (SAFE_RECT.y + SAFE_RECT.height * 0.5) * sh;
-        const anchorY = isShort ? 0.5 : MOBILE_ANCHOR_Y;
-        const drawY = H * anchorY - safeCenterY;
+        const drawX = (W - sw) / 2;
+        const drawY = (H - sh) / 2;
 
         ctx.drawImage(bmp, drawX, drawY, sw, sh);
 
-        // Seamless edge blending: fade top and bottom 24-32px into fill colour
-        // to prevent any visible edge line or colour variance from the render
-        const fadePx = Math.min(32, Math.max(16, sh * 0.08));
-        if (drawY > -fadePx) {
-          const topGrad = ctx.createLinearGradient(0, drawY, 0, drawY + fadePx);
-          topGrad.addColorStop(0, BG_COLOR);
-          topGrad.addColorStop(1, "rgba(232, 232, 230, 0)");
-          ctx.fillStyle = topGrad;
-          ctx.fillRect(0, drawY - 1, W, fadePx + 1);
+        // Seamlessly bleed top and bottom 1px edge rows to canvas borders so there is zero color difference or seam
+        if (drawY > 0) {
+          ctx.drawImage(bmp, 0, 0, bmp.width, 1, drawX, 0, sw, drawY + 1);
         }
-        if (drawY + sh < H + fadePx) {
-          const botGrad = ctx.createLinearGradient(0, drawY + sh - fadePx, 0, drawY + sh);
-          botGrad.addColorStop(0, "rgba(232, 232, 230, 0)");
-          botGrad.addColorStop(1, BG_COLOR);
-          ctx.fillStyle = botGrad;
-          ctx.fillRect(0, drawY + sh - fadePx, W, fadePx + 1);
+        if (drawY + sh < H) {
+          ctx.drawImage(bmp, 0, bmp.height - 1, bmp.width, 1, drawX, drawY + sh - 1, sw, H - (drawY + sh) + 1);
+        }
+        if (drawX > 0) {
+          ctx.drawImage(bmp, 0, 0, 1, bmp.height, 0, drawY, drawX + 1, sh);
+        }
+        if (drawX + sw < W) {
+          ctx.drawImage(bmp, bmp.width - 1, 0, 1, bmp.height, drawX + sw - 1, drawY, W - (drawX + sw) + 1, sh);
+        }
+      } else {
+        const isDesk = W >= 1024;
+        if (isDesk) {
+          // Desktop (>= 1024px): keep current layout and cover fit untouched
+          const coverS = Math.max(W / bmp.width, H / bmp.height);
+          const effS   = coverS * PRODUCT_SCALE;
+          const sw     = bmp.width  * effS;
+          const sh     = bmp.height * effS;
+          const ax     = PRODUCT_ANCHOR_X;
+          const ay     = PRODUCT_ANCHOR_Y;
+          ctx.drawImage(bmp, W * ax - sw / 2, H * ay - sh / 2, sw, sh);
+        } else {
+          // Landscape mobile & small landscape tablets (< 1024px): safe-rect fit untouched
+          const isShort = H < 500;
+          let scale: number;
+          if (isShort) {
+            scale = ((H * (1 - 2 * LANDSCAPE_SIDE_MARGIN)) / (SAFE_RECT.height * bmp.height)) * MOBILE_SCALE_BOOST;
+          } else {
+            scale = ((W * (1 - 2 * LANDSCAPE_SIDE_MARGIN)) / (SAFE_RECT.width * bmp.width)) * MOBILE_SCALE_BOOST;
+          }
+
+          const sw = bmp.width  * scale;
+          const sh = bmp.height * scale;
+
+          const safeCenterX = (SAFE_RECT.x + SAFE_RECT.width * 0.5) * sw;
+          const drawX = W * 0.5 - safeCenterX;
+
+          const safeCenterY = (SAFE_RECT.y + SAFE_RECT.height * 0.5) * sh;
+          const anchorY = isShort ? 0.5 : LANDSCAPE_ANCHOR_Y;
+          const drawY = H * anchorY - safeCenterY;
+
+          ctx.drawImage(bmp, drawX, drawY, sw, sh);
+
+          // Edge blending for landscape phone letterbox
+          const fadePx = Math.min(32, Math.max(16, sh * 0.08));
+          if (drawY > -fadePx) {
+            const topGrad = ctx.createLinearGradient(0, drawY, 0, drawY + fadePx);
+            topGrad.addColorStop(0, BG_COLOR);
+            topGrad.addColorStop(1, "rgba(232, 232, 230, 0)");
+            ctx.fillStyle = topGrad;
+            ctx.fillRect(0, drawY - 1, W, fadePx + 1);
+          }
+          if (drawY + sh < H + fadePx) {
+            const botGrad = ctx.createLinearGradient(0, drawY + sh - fadePx, 0, drawY + sh);
+            botGrad.addColorStop(0, "rgba(232, 232, 230, 0)");
+            botGrad.addColorStop(1, BG_COLOR);
+            ctx.fillStyle = botGrad;
+            ctx.fillRect(0, drawY + sh - fadePx, W, fadePx + 1);
+          }
         }
       }
     }
@@ -216,80 +328,164 @@ export default function ScrollSequenceHero() {
     if (!el) return;
     el.style.opacity        = opacity.toFixed(3);
     el.style.transform      = `translateY(${yPx.toFixed(1)}px)`;
-    el.style.pointerEvents  = opacity > 0.05 ? "auto" : "none";
+    // Screen containers use pointer-events: none so touches in gutters pass through to scroll,
+    // while cards inside have pointer-events: auto.
+    const isScreenWrapper   = id === "hero-screen" || id === "what-we-do-screen";
+    el.style.pointerEvents  = opacity > 0.05 ? (isScreenWrapper ? "none" : "auto") : "none";
     el.style.visibility     = opacity > 0.05 ? "visible" : "hidden";
   }, []);
 
   const updateCards = useCallback((p: number) => {
-    // Stage 1 (hero intro): 0.00 → 0.38
-    // Active 0.00 → 0.29; cross-fades out 0.29 → 0.38 (9% overlap)
-    {
-      let op = 0;
-      let y = 0;
-      if (p <= 0.29) {
-        op = 1;
-        y = 0;
-      } else if (p < 0.38) {
-        const t = smootherstep(0.29, 0.38, p);
-        op = 1 - t;
-        y = -28 * t;
-      } else {
-        op = 0;
-        y = -28;
-      }
-      applyStage("hero-screen", op, y);
-    }
+    const isPortrait = isPortraitMobileViewport();
 
-    // Stage 2 (what we do & 01/02/03 cards): 0.29 → 0.72
-    // Cross-fades in 0.29 → 0.38; active 0.38 → 0.63; cross-fades out 0.63 → 0.72 (9% overlap)
-    {
-      let op = 0;
-      let y = 24;
-      if (p >= 0.29 && p <= 0.72) {
-        if (p < 0.38) {
-          const t = smootherstep(0.29, 0.38, p);
-          op = t;
-          y = 24 * (1 - t);
-        } else if (p > 0.63) {
-          const t = smootherstep(0.63, 0.72, p);
+    if (isPortrait) {
+      // ── Mobile Portrait Progression (Snappy, Natural Touch Scroll) ───────
+      // Total travel is tuned so 1-2 thumb swipes (~150-250px) immediately begins transition,
+      // and stages 1, 2, 3 are all comfortably reachable without feeling stuck.
+
+      // Stage 1 (hero intro & showcase): 0.00 → 0.28
+      // Active 0.00 → 0.18; cross-fades out 0.18 → 0.28
+      {
+        let op = 0;
+        let y = 0;
+        if (p <= 0.18) {
+          op = 1;
+          y = 0;
+        } else if (p < 0.28) {
+          const t = smootherstep(0.18, 0.28, p);
           op = 1 - t;
-          y = -24 * t;
+          y = -22 * t;
         } else {
+          op = 0;
+          y = -22;
+        }
+        applyStage("hero-screen", op, y);
+      }
+
+      // Stage 2 (what we do & 01/02/03 cards): 0.18 → 0.62
+      // Cross-fades in 0.18 → 0.28; active 0.28 → 0.52; cross-fades out 0.52 → 0.62
+      {
+        let op = 0;
+        let y = 20;
+        if (p >= 0.18 && p <= 0.62) {
+          if (p < 0.28) {
+            const t = smootherstep(0.18, 0.28, p);
+            op = t;
+            y = 20 * (1 - t);
+          } else if (p > 0.52) {
+            const t = smootherstep(0.52, 0.62, p);
+            op = 1 - t;
+            y = -20 * t;
+          } else {
+            op = 1;
+            y = 0;
+          }
+        } else if (p > 0.62) {
+          op = 0;
+          y = -20;
+        } else {
+          op = 0;
+          y = 20;
+        }
+        applyStage("what-we-do-screen", op, y);
+      }
+
+      // Stage 3 (custody metering & automation): 0.52 → 1.00+
+      // Cross-fades in 0.52 → 0.62; STAYS FULLY VISIBLE (opacity 1) from 0.62 through 1.00 and cover!
+      {
+        let op = 0;
+        let y = 20;
+        if (p >= 0.52) {
+          if (p < 0.62) {
+            const t = smootherstep(0.52, 0.62, p);
+            op = t;
+            y = 20 * (1 - t);
+          } else {
+            op = 1;
+            y = 0;
+          }
+        } else {
+          op = 0;
+          y = 20;
+        }
+        applyStage("card-c", op, y);
+
+        if (canvasRef.current && canvasRef.current.style.opacity !== "1") {
+          canvasRef.current.style.opacity = "1";
+        }
+      }
+    } else {
+      // ── Desktop Progression (Unchanged) ──────────────────────────────────
+      // Stage 1 (hero intro): 0.00 → 0.38
+      // Active 0.00 → 0.29; cross-fades out 0.29 → 0.38 (9% overlap)
+      {
+        let op = 0;
+        let y = 0;
+        if (p <= 0.29) {
           op = 1;
           y = 0;
-        }
-      } else if (p > 0.72) {
-        op = 0;
-        y = -24;
-      } else {
-        op = 0;
-        y = 24;
-      }
-      applyStage("what-we-do-screen", op, y);
-    }
-
-    // Stage 3 (custody metering & automation): 0.63 → 1.00+
-    // Cross-fades in 0.63 → 0.72; STAYS FULLY VISIBLE (opacity 1) from 0.72 to 1.00 and through cover!
-    {
-      let op = 0;
-      let y = 24;
-      if (p >= 0.63) {
-        if (p < 0.72) {
-          const t = smootherstep(0.63, 0.72, p);
-          op = t;
-          y = 24 * (1 - t);
+        } else if (p < 0.38) {
+          const t = smootherstep(0.29, 0.38, p);
+          op = 1 - t;
+          y = -28 * t;
         } else {
-          op = 1;
-          y = 0;
+          op = 0;
+          y = -28;
         }
-      } else {
-        op = 0;
-        y = 24;
+        applyStage("hero-screen", op, y);
       }
-      applyStage("card-c", op, y);
 
-      if (canvasRef.current && canvasRef.current.style.opacity !== "1") {
-        canvasRef.current.style.opacity = "1";
+      // Stage 2 (what we do & 01/02/03 cards): 0.29 → 0.72
+      // Cross-fades in 0.29 → 0.38; active 0.38 → 0.63; cross-fades out 0.63 → 0.72 (9% overlap)
+      {
+        let op = 0;
+        let y = 24;
+        if (p >= 0.29 && p <= 0.72) {
+          if (p < 0.38) {
+            const t = smootherstep(0.29, 0.38, p);
+            op = t;
+            y = 24 * (1 - t);
+          } else if (p > 0.63) {
+            const t = smootherstep(0.63, 0.72, p);
+            op = 1 - t;
+            y = -24 * t;
+          } else {
+            op = 1;
+            y = 0;
+          }
+        } else if (p > 0.72) {
+          op = 0;
+          y = -24;
+        } else {
+          op = 0;
+          y = 24;
+        }
+        applyStage("what-we-do-screen", op, y);
+      }
+
+      // Stage 3 (custody metering & automation): 0.63 → 1.00+
+      // Cross-fades in 0.63 → 0.72; STAYS FULLY VISIBLE (opacity 1) from 0.72 to 1.00 and through cover!
+      {
+        let op = 0;
+        let y = 24;
+        if (p >= 0.63) {
+          if (p < 0.72) {
+            const t = smootherstep(0.63, 0.72, p);
+            op = t;
+            y = 24 * (1 - t);
+          } else {
+            op = 1;
+            y = 0;
+          }
+        } else {
+          op = 0;
+          y = 24;
+        }
+        applyStage("card-c", op, y);
+
+        if (canvasRef.current && canvasRef.current.style.opacity !== "1") {
+          canvasRef.current.style.opacity = "1";
+        }
       }
     }
   }, [applyStage]);
@@ -331,26 +527,25 @@ export default function ScrollSequenceHero() {
     const mq             = window.matchMedia("(prefers-reduced-motion: reduce)");
     const prefersReduced = mq.matches;
     setReducedMotion(prefersReduced);
-    const isMobile       = window.innerWidth < 768;
 
-    if (prefersReduced) {
-      // Reduced motion: static last frame, no hold, no cover animation
-      rawTarget.current = TOTAL_FRAMES - 1;
-      current.current   = TOTAL_FRAMES - 1;
-      const base = isMobile ? SEQUENCE_PATH_MOBILE : SEQUENCE_PATH;
-      fetch(`${base}/${FRAME_PREFIX}300${FRAME_EXT}`)
-        .then(r => r.blob())
-        .then(b => createImageBitmap(b))
-        .then(bmp => {
-          if (destroyed.current) { bmp.close(); return; }
-          bitmaps.current[TOTAL_FRAMES - 1] = bmp;
-          setPosterVisible(false);
-          draw(TOTAL_FRAMES - 1);
-          lastDrawn.current = TOTAL_FRAMES - 1;
-        })
-        .catch(() => {});
-      return;
+    const initialPortrait = isPortraitMobileViewport();
+    setIsPortraitMobile(initialPortrait);
+    isPortraitMobileRef.current = initialPortrait;
+
+    // Apply responsive height and background directly to DOM elements
+    if (section) {
+      section.style.height = initialPortrait
+        ? `calc(${MOBILE_PORTRAIT_SCROLL_LENGTH} + ${HOLD_COVER})`
+        : `calc(${SCROLL_LENGTH} + ${HOLD_COVER})`;
+      section.style.backgroundColor = initialPortrait ? PORTRAIT_BG_COLOR : BG_COLOR;
     }
+    if (stickyRef.current) {
+      stickyRef.current.style.backgroundColor = initialPortrait ? PORTRAIT_BG_COLOR : BG_COLOR;
+    }
+
+    // Use static defaults directly (no runtime manifest network fetches)
+    desktopManifestRef.current = DESKTOP_MANIFEST_DEFAULT;
+    mobileManifestRef.current  = MOBILE_MANIFEST_DEFAULT;
 
     const nav = navigator as unknown as {
       connection?:   { saveData?: boolean };
@@ -358,55 +553,139 @@ export default function ScrollSequenceHero() {
     };
     const saveData    = nav.connection?.saveData === true;
     const lowMemory   = (nav.deviceMemory ?? 8) <= 4;
-    const step        = isMobile || saveData || lowMemory ? 2 : 1;
-    const base        = isMobile ? SEQUENCE_PATH_MOBILE : SEQUENCE_PATH;
+    const isMobileWidth = window.innerWidth < 768;
+    const step        = initialPortrait || isMobileWidth || saveData || lowMemory ? 2 : 1;
 
-    // ── Preload ──────────────────────────────────────────────────────────
-    let active = 0;
-    const loading = new Set<number>();
-    const queue: number[] = [];
-    for (let i = 2; i <= TOTAL_FRAMES; i += step) queue.push(i - 1);
+    let activeLoads = 0;
+    const loadingSet = new Set<string>();
+    type SetKey = "desktop" | "mobilePortrait";
+    let queue: { set: SetKey; index: number }[] = [];
+    let cleanupTimer: ReturnType<typeof setTimeout> | null = null;
 
-    function fetchFrame(idx: number, url: string) {
-      if (destroyed.current || bitmaps.current[idx] || loading.has(idx)) return;
-      loading.add(idx);
-      active++;
-      fetch(url)
-        .then(r => r.blob())
-        .then(b => createImageBitmap(b))
-        .then(bmp => {
-          if (destroyed.current) { bmp.close(); return; }
-          bitmaps.current[idx] = bmp;
-          if (lastDrawn.current === idx) draw(idx);
+    function buildQueue(setKey: SetKey) {
+      const q: { set: SetKey; index: number }[] = [];
+      const manifest = setKey === "mobilePortrait" ? mobileManifestRef.current : desktopManifestRef.current;
+      const count = manifest.count || TOTAL_FRAMES;
+      for (let i = 2; i <= count; i += step) {
+        q.push({ set: setKey, index: i - 1 });
+      }
+      return q;
+    }
+
+    queue = buildQueue(initialPortrait ? "mobilePortrait" : "desktop");
+
+    function fetchFrame(setKey: SetKey, idx: number) {
+      const store = setKey === "mobilePortrait" ? portraitBitmaps.current : desktopBitmaps.current;
+      const manifest = setKey === "mobilePortrait" ? mobileManifestRef.current : desktopManifestRef.current;
+      const count = manifest.count || TOTAL_FRAMES;
+      if (idx < 0 || idx >= count) return;
+
+      const keyStr = `${setKey}:${idx}`;
+      if (destroyed.current || store[idx] || loadingSet.has(keyStr)) return;
+
+      loadingSet.add(keyStr);
+      activeLoads++;
+      const base = setKey === "mobilePortrait" ? SEQUENCE_PATH_MOBILE : SEQUENCE_PATH;
+      const pad = framePad(idx + 1);
+      const url = `${base}/${manifest.prefix || FRAME_PREFIX}${pad}${manifest.ext || FRAME_EXT}`;
+
+      loadFrameImage(url)
+        .then(drawable => {
+          if (destroyed.current) { closeDrawable(drawable); return; }
+          store[idx] = drawable;
+          const currentIsPortrait = isPortraitMobileViewport();
+          const activeSetKey: SetKey = currentIsPortrait ? "mobilePortrait" : "desktop";
+          if (activeSetKey === setKey) {
+            setPosterVisible(false);
+            const activeManifest = activeSetKey === "mobilePortrait" ? mobileManifestRef.current : desktopManifestRef.current;
+            const currentIdx = Math.round(current.current * (activeManifest.count - 1));
+            if (lastDrawn.current === currentIdx || Math.abs(currentIdx - idx) <= 1 || idx === 0) {
+              draw(current.current);
+            }
+          }
         })
         .catch(() => {})
-        .finally(() => { loading.delete(idx); active--; pump(); });
+        .finally(() => {
+          loadingSet.delete(keyStr);
+          activeLoads--;
+          pump();
+        });
     }
 
     function pump() {
-      if (destroyed.current || active >= 8 || queue.length === 0) return;
-      const target = Math.round(rawTarget.current);
-      queue.sort((a, b) => Math.abs(a - target) - Math.abs(b - target));
-      while (active < 8 && queue.length > 0) {
-        const fi = queue.shift()!;
-        const pad = framePad(fi + 1);
-        fetchFrame(fi, `${base}/${FRAME_PREFIX}${pad}${FRAME_EXT}`);
+      if (destroyed.current || activeLoads >= 8 || queue.length === 0) return;
+      const currentIsPortrait = isPortraitMobileViewport();
+      const currentActiveSet: SetKey = currentIsPortrait ? "mobilePortrait" : "desktop";
+      const activeManifest = currentActiveSet === "mobilePortrait" ? mobileManifestRef.current : desktopManifestRef.current;
+
+      // Prioritize active set frames nearest to current scroll target
+      const targetIdx = Math.round(rawTarget.current * (activeManifest.count - 1));
+      queue.sort((a, b) => {
+        if (a.set === currentActiveSet && b.set !== currentActiveSet) return -1;
+        if (b.set === currentActiveSet && a.set !== currentActiveSet) return 1;
+        return Math.abs(a.index - targetIdx) - Math.abs(b.index - targetIdx);
+      });
+
+      while (activeLoads < 8 && queue.length > 0) {
+        const item = queue.shift()!;
+        fetchFrame(item.set, item.index);
       }
     }
 
-    // Frame 0 (LCP) immediately
-    fetch(`${base}/${FRAME_PREFIX}001${FRAME_EXT}`)
-      .then(r => r.blob())
-      .then(b => createImageBitmap(b))
-      .then(bmp => {
-        if (destroyed.current) { bmp.close(); return; }
-        bitmaps.current[0] = bmp;
-        setPosterVisible(false);
-        draw(0);
-        lastDrawn.current = 0;
-        pump();
-      })
-      .catch(() => {});
+    // Load Frame 0 (LCP) immediately for active set
+    const activeInitialSet: SetKey = initialPortrait ? "mobilePortrait" : "desktop";
+    fetchFrame(activeInitialSet, 0);
+
+    // ── Orientation & Breakpoint Change Listener (Switch sets without flash) ──
+    const portraitMq = window.matchMedia("(orientation: portrait) and (max-width: 1023px)");
+    const handleOrientationOrBreakpoint = (e: MediaQueryListEvent | MediaQueryList) => {
+      const isPortrait = e.matches;
+      if (isPortrait === isPortraitMobileRef.current) return;
+      isPortraitMobileRef.current = isPortrait;
+      setIsPortraitMobile(isPortrait);
+
+      if (sectionRef.current) {
+        sectionRef.current.style.height = isPortrait
+          ? `calc(${MOBILE_PORTRAIT_SCROLL_LENGTH} + ${HOLD_COVER})`
+          : `calc(${SCROLL_LENGTH} + ${HOLD_COVER})`;
+        sectionRef.current.style.backgroundColor = isPortrait ? PORTRAIT_BG_COLOR : BG_COLOR;
+      }
+      if (stickyRef.current) {
+        stickyRef.current.style.backgroundColor = isPortrait ? PORTRAIT_BG_COLOR : BG_COLOR;
+      }
+
+      const newSetKey: SetKey = isPortrait ? "mobilePortrait" : "desktop";
+      const inactiveSetKey: SetKey = isPortrait ? "desktop" : "mobilePortrait";
+      const newManifest = isPortrait ? mobileManifestRef.current : desktopManifestRef.current;
+
+      // Immediately request frame 0 & target frame of new set
+      const curIdx = Math.round(current.current * (newManifest.count - 1));
+      fetchFrame(newSetKey, 0);
+      fetchFrame(newSetKey, curIdx);
+
+      // Rebuild queue for the newly active set
+      queue = buildQueue(newSetKey);
+      pump();
+
+      // Redraw immediately
+      draw(current.current);
+
+      // Delayed cleanup: if the user remains on the new orientation for 5s,
+      // release the inactive set's bitmaps to free memory.
+      if (cleanupTimer) clearTimeout(cleanupTimer);
+      cleanupTimer = setTimeout(() => {
+        if (destroyed.current) return;
+        const currentActive: SetKey = isPortraitMobileRef.current ? "mobilePortrait" : "desktop";
+        if (currentActive !== inactiveSetKey) {
+          const inactiveStore = inactiveSetKey === "mobilePortrait" ? portraitBitmaps.current : desktopBitmaps.current;
+          inactiveStore.forEach((b, i) => {
+            if (b) { closeDrawable(b); inactiveStore[i] = null; }
+          });
+        }
+      }, 5000);
+    };
+
+    portraitMq.addEventListener("change", handleOrientationOrBreakpoint);
 
     // ── Scroll → progress ────────────────────────────────────────────────
     function readScroll() {
@@ -428,9 +707,9 @@ export default function ScrollSequenceHero() {
       const frameTravelPx    = Math.max(1, coverStartScroll - sectionTop - bufferPx);
       const scrolledInHero   = Math.max(0, scrollY - sectionTop);
 
-      // 1) Frame progress maps ONLY to the first frame travel of the wrapper
+      // 1) Frame progress maps ONLY to the first frame travel of the wrapper (normalized 0 to 1)
       const frameProgress = Math.max(0, Math.min(1, scrolledInHero / frameTravelPx));
-      rawTarget.current   = frameProgress * (TOTAL_FRAMES - 1);
+      rawTarget.current   = frameProgress;
 
       // 2) Cover progress (0 to 1 over the HOLD_COVER distance, starting strictly after frameProgress reaches 1 + buffer)
       const coverProgress = scrollY < coverStartScroll
@@ -462,39 +741,47 @@ export default function ScrollSequenceHero() {
       const dt = Math.min(0.1, Math.max(0.001, (now - lastTime) / 1000));
       lastTime = now;
 
+      const isPortrait = isPortraitMobileViewport();
       if (prefersReduced) {
         current.current = rawTarget.current;
       } else {
         const diff = rawTarget.current - current.current;
-        let step = diff * EASE;
+        const easeFactor = isPortrait ? 0.20 : EASE;
+        let step = diff * easeFactor;
 
         // Fast-scroll protection: Cap maximum progress change per second on rapid flicks
-        // so flicking doesn't skip intermediate stages.
-        const maxStep = MAX_PROGRESS_PER_SECOND * (TOTAL_FRAMES - 1) * dt;
+        // so flicking doesn't skip intermediate stages. Higher cap on mobile for snappy touch feel.
+        const maxProgPerSec = isPortrait ? 3.2 : MAX_PROGRESS_PER_SECOND;
+        const maxStep = maxProgPerSec * dt;
         if (Math.abs(step) > maxStep) {
           step = Math.sign(step) * maxStep;
         }
 
         current.current += step;
-        if (Math.abs(rawTarget.current - current.current) < 0.01) {
+        if (Math.abs(rawTarget.current - current.current) < 0.0001) {
           current.current = rawTarget.current;
         }
       }
 
       // Drive all stage text, cards and indicators from the SAME eased progress value
-      const easedProgress = Math.max(0, Math.min(1, current.current / (TOTAL_FRAMES - 1)));
+      const easedProgress = Math.max(0, Math.min(1, current.current));
       updateCards(easedProgress);
 
-      const stage = easedProgress < 0.33 ? 1 : easedProgress < 0.68 ? 2 : 3;
+      const stage = isPortrait
+        ? (easedProgress < 0.25 ? 1 : easedProgress < 0.58 ? 2 : 3)
+        : (easedProgress < 0.33 ? 1 : easedProgress < 0.68 ? 2 : 3);
       if (stage !== activeStageRef.current) {
         activeStageRef.current = stage;
         setActiveStage(stage);
       }
 
-      const idx = Math.max(0, Math.min(TOTAL_FRAMES - 1, Math.round(current.current)));
-      if (idx !== lastDrawn.current) {
-        draw(idx);
-        lastDrawn.current = idx;
+      const manifest = isPortrait ? mobileManifestRef.current : desktopManifestRef.current;
+      const count = manifest.count || TOTAL_FRAMES;
+      const targetIdx = Math.max(0, Math.min(count - 1, Math.round(easedProgress * (count - 1))));
+
+      if (targetIdx !== lastDrawn.current) {
+        draw(easedProgress);
+        lastDrawn.current = targetIdx;
       }
     }
 
@@ -578,14 +865,14 @@ export default function ScrollSequenceHero() {
 
     // ── Intersection observer (pause when off-screen) ─────────────────────
     const io = new IntersectionObserver(([e]) => {
-      isVisible.current = e.isIntersecting;
-      if (e.isIntersecting && lastDrawn.current >= 0) draw(lastDrawn.current);
-    }, { threshold: 0.05 });
+      isVisible.current = e.isIntersecting || (window.scrollY || window.pageYOffset) < 100;
+      if (isVisible.current) draw(current.current);
+    }, { threshold: 0 });
     io.observe(section);
 
     // ── ResizeObserver on wrapper for exact clientWidth (excludes scrollbar) ─
     const ro = new ResizeObserver(() => {
-      if (lastDrawn.current >= 0) draw(lastDrawn.current);
+      draw(current.current);
     });
     if (stickyRef.current) ro.observe(stickyRef.current);
 
@@ -593,12 +880,14 @@ export default function ScrollSequenceHero() {
     let resizeT: ReturnType<typeof setTimeout>;
     const onResize = () => {
       clearTimeout(resizeT);
-      resizeT = setTimeout(() => { if (lastDrawn.current >= 0) draw(lastDrawn.current); }, 80);
+      resizeT = setTimeout(() => {
+        draw(current.current);
+      }, 80);
     };
 
     const onVisibility = () => {
       isVisible.current = !document.hidden;
-      if (!document.hidden && lastDrawn.current >= 0) draw(lastDrawn.current);
+      if (!document.hidden) draw(current.current);
     };
 
     const lenis = (window as WindowWithLenis).__lenis;
@@ -613,6 +902,7 @@ export default function ScrollSequenceHero() {
 
     readScroll();
     initSlider();
+    draw(0);                // Paint initial frame immediately on mount
     loop();                 // start the always-on rAF
 
     return () => {
@@ -621,6 +911,8 @@ export default function ScrollSequenceHero() {
       io.disconnect();
       ro.disconnect();
       clearTimeout(resizeT);
+      if (cleanupTimer) clearTimeout(cleanupTimer);
+      portraitMq.removeEventListener("change", handleOrientationOrBreakpoint);
       if (lenis && typeof lenis.off === "function") {
         lenis.off("scroll", readScroll);
       }
@@ -628,8 +920,10 @@ export default function ScrollSequenceHero() {
       window.removeEventListener("resize",            onResize);
       window.removeEventListener("orientationchange", onResize);
       document.removeEventListener("visibilitychange", onVisibility);
-      bitmaps.current.forEach(b => b?.close());
-      bitmaps.current = Array.from({ length: TOTAL_FRAMES }, () => null);
+      desktopBitmaps.current.forEach(b => closeDrawable(b));
+      desktopBitmaps.current = Array.from({ length: TOTAL_FRAMES }, () => null);
+      portraitBitmaps.current.forEach(b => closeDrawable(b));
+      portraitBitmaps.current = Array.from({ length: TOTAL_FRAMES }, () => null);
     };
   }, [draw, updateCards, applyCoverReaction]);
 
@@ -639,15 +933,17 @@ export default function ScrollSequenceHero() {
       ref={sectionRef}
       className="relative"
       style={{
-        height: reducedMotion ? "100svh" : `calc(${SCROLL_LENGTH} + ${HOLD_COVER})`,
-        backgroundColor: BG_COLOR,
+        height: isPortraitMobile
+          ? `calc(${MOBILE_PORTRAIT_SCROLL_LENGTH} + ${HOLD_COVER})`
+          : `calc(${SCROLL_LENGTH} + ${HOLD_COVER})`,
+        backgroundColor: isPortraitMobile ? PORTRAIT_BG_COLOR : BG_COLOR,
       }}
     >
       {/* ── Sticky viewport: w-full (clientWidth without scrollbar), 100svh ─── */}
       <div
         ref={stickyRef}
         className="sticky top-0 left-0 w-full h-[100svh] overflow-hidden"
-        style={{ backgroundColor: BG_COLOR }}
+        style={{ backgroundColor: isPortraitMobile ? PORTRAIT_BG_COLOR : BG_COLOR }}
       >
         {/* ── Reactive Hero Content Container (scales & lifts during cover) ─ */}
         <div
@@ -658,7 +954,7 @@ export default function ScrollSequenceHero() {
             transformOrigin: "center center",
           }}
         >
-          {/* LCP poster – absolutely positioned parent so next/image fill is happy */}
+          {/* LCP poster – uses <picture> so mobile portrait selects portrait frame before JS runs */}
           <div
             className="absolute inset-0 w-full h-full z-0 pointer-events-none"
             style={{
@@ -666,18 +962,23 @@ export default function ScrollSequenceHero() {
               transition: "opacity 0.4s ease",
             }}
           >
-            <Image
-              src="/hero-frames/frame_001.webp"
-              alt="Texas Technical Services Custody Ultrasonic Flow Meter"
-              fill
-              priority
-              sizes="100vw"
-              className="hero-poster-img"
-              style={{
-                objectPosition: "50% 50%",
-              }}
-              suppressHydrationWarning
-            />
+            <picture>
+              <source
+                media="(orientation: portrait) and (max-width: 1023px)"
+                srcSet="/hero-frames/mobile/frame_001.webp"
+                type="image/webp"
+              />
+              <img
+                src="/hero-frames/frame_001.webp"
+                alt="Texas Technical Services Custody Ultrasonic Flow Meter"
+                className="hero-poster-img w-full h-full object-cover max-lg:object-contain"
+                style={{
+                  objectPosition: "50% 50%",
+                }}
+                loading="eager"
+                fetchPriority="high"
+              />
+            </picture>
           </div>
 
           {/* Full-screen canvas */}
@@ -688,6 +989,7 @@ export default function ScrollSequenceHero() {
             aria-label="Exploded 3-D view of a custody ultrasonic flow meter"
             className="absolute inset-0 w-full h-full block z-[1]"
           />
+
 
           {/* ── Dedicated Overlay Layer for Cards (fades during cover) ───── */}
           <div
