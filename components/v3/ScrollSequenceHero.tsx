@@ -516,6 +516,17 @@ export default function ScrollSequenceHero() {
     if (dimOverlayRef.current && COVER_DIM > 0) {
       dimOverlayRef.current.style.opacity = (COVER_DIM * coverP).toFixed(3);
     }
+
+    // 5) When Section 4 has fully covered the hero (coverP >= 1), hide canvas so frames never bleed into section 4+
+    if (canvasRef.current) {
+      if (coverP >= 1.0) {
+        canvasRef.current.style.opacity = "0";
+        canvasRef.current.style.visibility = "hidden";
+      } else {
+        canvasRef.current.style.opacity = "1";
+        canvasRef.current.style.visibility = "visible";
+      }
+    }
   }, []);
 
   // ── Main effect ─────────────────────────────────────────────────────────
@@ -981,13 +992,13 @@ export default function ScrollSequenceHero() {
             </picture>
           </div>
 
-          {/* Full-screen canvas */}
+          {/* Full-screen canvas – pointer-events: none so it never blocks touch/taps */}
           <canvas
             ref={canvasRef}
             id="hero-canvas"
             role="img"
             aria-label="Exploded 3-D view of a custody ultrasonic flow meter"
-            className="absolute inset-0 w-full h-full block z-[1]"
+            className="absolute inset-0 w-full h-full block z-[1] pointer-events-none"
           />
 
 
