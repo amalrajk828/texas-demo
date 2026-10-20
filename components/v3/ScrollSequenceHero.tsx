@@ -140,7 +140,6 @@ export default function ScrollSequenceHero() {
   const canvasRef           = useRef<HTMLCanvasElement>(null);
 
   const [posterVisible, setPosterVisible] = useState(true);
-  const [reducedMotion, setReducedMotion] = useState(false);
   const [activeStage, setActiveStage]     = useState(1);
   const activeStageRef                    = useRef(1);
   const [isPortraitMobile, setIsPortraitMobile] = useState(() => isPortraitMobileViewport());
