@@ -142,7 +142,7 @@ export default function ScrollSequenceHero() {
   const [posterVisible, setPosterVisible] = useState(true);
   const [activeStage, setActiveStage]     = useState(1);
   const activeStageRef                    = useRef(1);
-  const [isPortraitMobile, setIsPortraitMobile] = useState(() => isPortraitMobileViewport());
+  const [isPortraitMobile, setIsPortraitMobile] = useState(false);
   const isPortraitMobileRef               = useRef(false);
 
   // Separate manifests for desktop and mobile portrait frame sets
