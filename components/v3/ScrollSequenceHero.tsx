@@ -533,11 +533,6 @@ export default function ScrollSequenceHero() {
     destroyed.current = false;
     const section     = sectionRef.current;
     if (!section) return;
-
-    const mq             = window.matchMedia("(prefers-reduced-motion: reduce)");
-    const prefersReduced = mq.matches;
-    setReducedMotion(prefersReduced);
-
     const initialPortrait = isPortraitMobileViewport();
     setIsPortraitMobile(initialPortrait);
     isPortraitMobileRef.current = initialPortrait;
@@ -736,6 +731,7 @@ export default function ScrollSequenceHero() {
     }
 
     // ── rAF loop — always running while mounted ───────────────────────────
+    const prefersReduced = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
     let lastTime = performance.now();
     let raf = 0;
     function loop(time?: number) {
