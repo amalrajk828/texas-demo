@@ -2,6 +2,7 @@
 
 import React, { useEffect, useRef, useState, useCallback } from "react";
 import Link from "next/link";
+import StackedCards, { StackedCardItem } from "./StackedCards";
 
 // ── Tunable Constants ──────────────────────────────────────────────────────
 type LenisInstance = {
@@ -14,13 +15,13 @@ type WindowWithLenis = Window & {
   __lenis?: LenisInstance | null;
 };
 
-export const TOTAL_FRAMES            = 300;
+export const TOTAL_FRAMES            = 299;
 export const SEQUENCE_PATH           = "/hero-frames";
 export const SEQUENCE_PATH_MOBILE    = "/hero-frames/mobile";
 export const FRAME_PREFIX            = "frame_";
 export const FRAME_EXT               = ".webp";
-export const BG_COLOR                = "#e8e8e6";    // Desktop Studio-grey, matches desktop frames
-export const PORTRAIT_BG_COLOR       = "#ececec";    // Mobile portrait background, matches mobile manifest
+export const BG_COLOR                = "#b8b7ad";    // Warm neutral sampled from the replacement sequence
+export const PORTRAIT_BG_COLOR       = "#b8b7ad";    // Matches the edge-extended portrait frames
 
 // Desktop placement: centred full-width coverage across desktop viewports
 export const PRODUCT_SCALE           = 1.0;         // Cover scale (desktop)
@@ -43,21 +44,21 @@ export interface SequenceManifest {
 }
 
 export const DESKTOP_MANIFEST_DEFAULT: SequenceManifest = {
-  count: 300,
+  count: 299,
   width: 1920,
   height: 1080,
   prefix: "frame_",
   ext: ".webp",
-  bgColor: "#e8e8e6",
+  bgColor: "#b8b7ad",
 };
 
 export const MOBILE_MANIFEST_DEFAULT: SequenceManifest = {
-  count: 300,
+  count: 299,
   width: 1080,
   height: 1920,
   prefix: "frame_",
   ext: ".webp",
-  bgColor: "#ececec",
+  bgColor: "#b8b7ad",
 };
 
 export type DrawableFrame = ImageBitmap | HTMLImageElement;
@@ -109,7 +110,8 @@ export const STAGE_OVERLAP         = 0.09;        // 9% stage cross-fade overlap
 
 // Tunable constants for Hold and Cover
 export const SCROLL_LENGTH        = "450vh";     // frame scrubbing length (~85-90vh dwell per stage + buffer)
-export const MOBILE_PORTRAIT_SCROLL_LENGTH = "240vh"; // snappy, natural mobile touch scrubbing
+export const MOBILE_PORTRAIT_SCROLL_LENGTH = "300vh"; // snappy, natural mobile touch scrubbing
+export const MOBILE_SETTLE_P      = 0.72;        // progress at which mobile Stage 3 settles
 export const HOLD_COVER           = "100svh";    // hold travel distance while next section covers
 export const COVER_SCALE          = 0.94;        // hero content scale at full cover
 export const COVER_LIFT           = 40;          // hero content translateY (px) at full cover
@@ -129,6 +131,77 @@ function smootherstep(min: number, max: number, v: number) {
 function framePad(n: number) {
   return String(n).padStart(3, "0");
 }
+
+const WHAT_WE_DO_SERVICES: StackedCardItem[] = [
+  {
+    id: "flow-measurement",
+    number: "01",
+    title: "Flow Measurement & Control",
+    href: "/service/flow-measurement-solutions/",
+    icon: (
+      <svg
+        width="18"
+        height="18"
+        viewBox="0 0 24 24"
+        fill="none"
+        stroke="currentColor"
+        strokeWidth="2"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+      >
+        <circle cx="12" cy="12" r="10" />
+        <path d="M12 6v6l4 2" />
+      </svg>
+    ),
+  },
+  {
+    id: "inspection-testing",
+    number: "02",
+    title: "Inspection & Testing",
+    href: "/service/inspection-testing/",
+    icon: (
+      <svg
+        width="18"
+        height="18"
+        viewBox="0 0 24 24"
+        fill="none"
+        stroke="currentColor"
+        strokeWidth="2"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+      >
+        <path d="M10 2v7.31L4.15 19.8A2 2 0 0 0 5.86 23h12.28a2 2 0 0 0 1.71-3.2L14 9.31V2" />
+        <line x1="8.5" y1="2" x2="15.5" y2="2" />
+        <line x1="6" y1="18" x2="18" y2="18" />
+      </svg>
+    ),
+  },
+  {
+    id: "industrial-automation",
+    number: "03",
+    title: "Industrial Automation",
+    href: "/service/industrial-automation/",
+    icon: (
+      <svg
+        width="18"
+        height="18"
+        viewBox="0 0 24 24"
+        fill="none"
+        stroke="currentColor"
+        strokeWidth="2"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+      >
+        <rect x="4" y="4" width="16" height="16" rx="2" />
+        <rect x="9" y="9" width="6" height="6" />
+        <line x1="9" y1="2" x2="9" y2="4" />
+        <line x1="15" y1="2" x2="15" y2="4" />
+        <line x1="9" y1="20" x2="9" y2="23" />
+        <line x1="15" y1="20" x2="15" y2="23" />
+      </svg>
+    ),
+  },
+];
 
 export default function ScrollSequenceHero() {
   const sectionRef          = useRef<HTMLElement>(null);
@@ -243,28 +316,14 @@ export default function ScrollSequenceHero() {
 
     if (bmp) {
       if (isPortrait) {
-        // Mobile portrait (< 1024px portrait): fit full frame without cropping (contain fit)
-        const scale = Math.min(W / bmp.width, H / bmp.height);
+        // Mobile portrait (< 1024px portrait): cover-fit so frame fills the full canvas with no letterbox
+        const scale = Math.max(W / bmp.width, H / bmp.height);
         const sw = bmp.width  * scale;
         const sh = bmp.height * scale;
         const drawX = (W - sw) / 2;
         const drawY = (H - sh) / 2;
 
         ctx.drawImage(bmp, drawX, drawY, sw, sh);
-
-        // Seamlessly bleed top and bottom 1px edge rows to canvas borders so there is zero color difference or seam
-        if (drawY > 0) {
-          ctx.drawImage(bmp, 0, 0, bmp.width, 1, drawX, 0, sw, drawY + 1);
-        }
-        if (drawY + sh < H) {
-          ctx.drawImage(bmp, 0, bmp.height - 1, bmp.width, 1, drawX, drawY + sh - 1, sw, H - (drawY + sh) + 1);
-        }
-        if (drawX > 0) {
-          ctx.drawImage(bmp, 0, 0, 1, bmp.height, 0, drawY, drawX + 1, sh);
-        }
-        if (drawX + sw < W) {
-          ctx.drawImage(bmp, bmp.width - 1, 0, 1, bmp.height, drawX + sw - 1, drawY, W - (drawX + sw) + 1, sh);
-        }
       } else {
         const isDesk = W >= 1024;
         if (isDesk) {
@@ -505,10 +564,11 @@ export default function ScrollSequenceHero() {
     // 2) Hero text and cards fade to 0 opacity
     if (overlayRef.current) {
       if (isPortraitMobileRef.current) {
-        // Mobile: Opacity stays 1 while About sits halfway (up to 50% cover), then fades linearly to 0 by 0.95
-        const fade = coverP <= 0.5 ? 1 : Math.max(0, 1 - (coverP - 0.5) / 0.45);
+        // Mobile: Opacity stays 1 until coverP = 0.25, then fades linearly to 0 between 0.25 and 0.75
+        const fade = coverP <= 0.25 ? 1 : Math.max(0, 1 - (coverP - 0.25) / 0.5);
         overlayRef.current.style.opacity = fade.toFixed(3);
-        overlayRef.current.style.pointerEvents = fade <= 0.05 ? "none" : "";
+        overlayRef.current.style.pointerEvents = coverP >= 0.75 ? "none" : "";
+        overlayRef.current.style.visibility = coverP >= 0.75 ? "hidden" : "visible";
       } else {
         const fade = coverP <= 0 ? 1 : Math.max(0, 1 - coverP / 0.6);
         overlayRef.current.style.opacity = fade.toFixed(3);
@@ -529,7 +589,13 @@ export default function ScrollSequenceHero() {
 
     // 5) When Section 4 has fully covered the hero (coverP >= 1), hide canvas so frames never bleed into section 4+
     if (canvasRef.current) {
-      if (coverP >= 1.0) {
+      if (isPortraitMobileRef.current) {
+        // Mobile: Frame canvas fades out with opacity only alongside cards (1 until 0.25, 0 at 0.75)
+        const fade = coverP <= 0.25 ? 1 : Math.max(0, 1 - (coverP - 0.25) / 0.5);
+        canvasRef.current.style.opacity = fade.toFixed(3);
+        canvasRef.current.style.pointerEvents = coverP >= 0.75 ? "none" : "";
+        canvasRef.current.style.visibility = coverP >= 0.75 ? "hidden" : "visible";
+      } else if (coverP >= 1.0) {
         canvasRef.current.style.opacity = "0";
         canvasRef.current.style.visibility = "hidden";
       } else {
@@ -714,7 +780,8 @@ export default function ScrollSequenceHero() {
       const isShort       = viewH < 500;
       // On very short screens (<500px), reduce HOLD_COVER to 60svh
       const holdPx        = isShort ? 0.6 * viewH : viewH;
-      const bufferPx      = Math.round(0.18 * viewH); // short buffer ensuring stage 3 is fully visible before cover starts
+      // On portrait mobile cover must start the instant frames finish (no dead zone between sections)
+      const bufferPx      = isPortraitMobileRef.current ? 0 : Math.round(0.18 * viewH);
 
       // The next section has margin-top: -holdPx, so its document top is:
       const aboutTop         = sectionTop + sec.offsetHeight - holdPx;
@@ -723,8 +790,11 @@ export default function ScrollSequenceHero() {
       const frameTravelPx    = Math.max(1, coverStartScroll - sectionTop - bufferPx);
       const scrolledInHero   = Math.max(0, scrollY - sectionTop);
 
-      // 1) Frame progress maps ONLY to the first frame travel of the wrapper (normalized 0 to 1)
-      const frameProgress = Math.max(0, Math.min(1, scrolledInHero / frameTravelPx));
+      // 1) Frame progress maps to frame travel (on mobile portrait, scaled to reach 1 at MOBILE_SETTLE_P)
+      const effectiveTravel = isPortraitMobileRef.current
+        ? frameTravelPx * MOBILE_SETTLE_P
+        : frameTravelPx;
+      const frameProgress = Math.max(0, Math.min(1, scrolledInHero / effectiveTravel));
       rawTarget.current   = frameProgress;
 
       // 2) Cover progress (0 to 1 over the HOLD_COVER distance, starting strictly after frameProgress reaches 1 + buffer)
@@ -1018,34 +1088,37 @@ export default function ScrollSequenceHero() {
         {/* ── Stage A: hero intro (0 – 25%) — uses .hero-screen CSS class ── */}
         <div
           id="hero-screen"
-          className="hero-screen"
+          className="hero-screen max-md:flex max-md:flex-col max-md:h-[100svh] max-md:min-h-[100svh] max-md:max-h-[100svh] max-md:overflow-hidden max-md:justify-between md:flex md:flex-col md:justify-between"
           style={{ willChange: "opacity, transform" }}
         >
-          <div className="hero-main-row">
-            {/* Left glass card */}
-            <div className="hero-glass-card hero-stage-card">
+          <div className="hero-main-row max-md:contents md:grid">
+            {/* Left glass card (Top card) */}
+            <div className="hero-glass-card hero-stage-card relative z-10 overflow-hidden isolate [transform:translateZ(0)] max-md:top-auto max-md:translate-y-0 max-md:py-6 max-md:px-5 max-md:pb-6 max-md:h-auto max-md:min-h-[240px] max-md:shrink-0 md:h-full md:min-h-0 md:p-0">
               <div className="hero-card-content">
                 <div className="hero-badge">
                   <span className="badge-dot" />
                   <span>FLOW MEASUREMENT &amp; AUTOMATION</span>
                 </div>
-                <h1 className="hero-title">
+                <h1 className="hero-title max-md:mt-3 max-md:text-[24px] max-md:leading-[1.25] md:mt-0">
                   Flow Measurement &amp;<br />Control System Solutions
                 </h1>
-                <p className="hero-desc">
+                <p className="hero-desc max-md:mt-3 max-md:text-[13px] max-md:leading-relaxed max-md:line-clamp-none max-md:max-h-none max-md:overflow-visible md:mt-0">
                   Where flow measurement challenges meet solutions. Expert metering consultants
                   with in-depth knowledge of API, AGA, and custody metering standards.
                 </p>
               </div>
-              <div className="hero-cta-group">
-                <Link href="/services/" className="btn btn-primary" id="hero-btn-know-more">Know More &rarr;</Link>
-                <Link href="/products/" className="btn btn-secondary" id="hero-btn-products">Our Products</Link>
+              <div className="hero-cta-group max-md:mt-5 max-md:gap-3 md:mt-auto md:gap-3">
+                <Link href="/services/" className="btn btn-primary max-md:h-12 max-md:flex max-md:items-center max-md:justify-center md:h-auto" id="hero-btn-know-more">Know More &rarr;</Link>
+                <Link href="/products/" className="btn btn-secondary max-md:h-12 max-md:flex max-md:items-center max-md:justify-center md:h-auto" id="hero-btn-products">Our Products</Link>
               </div>
             </div>
 
-            {/* Right showcase slider */}
-            <div className="hero-right-col">
-              <div className="hero-showcase-card" id="hero-showcase">
+            {/* Mobile flex-1 spacer between top card and image card */}
+            <div className="flex-1 max-md:block md:hidden pointer-events-none min-h-0 shrink" aria-hidden="true" />
+
+            {/* Right showcase slider (Image card) */}
+            <div className="hero-right-col max-md:h-auto max-md:min-h-0 max-md:max-h-none max-md:relative max-md:static max-md:top-auto max-md:translate-y-0 max-md:mt-auto max-md:mb-4 max-md:w-full max-md:shrink-0 md:relative md:top-auto md:translate-y-0 md:mt-0 md:mb-0 md:h-full">
+              <div className="hero-showcase-card max-md:relative max-md:static max-md:top-auto max-md:translate-y-0 max-md:h-[190px] max-md:min-h-[190px] max-md:max-h-[190px] md:relative md:top-auto md:translate-y-0 md:h-full md:min-h-0 md:max-h-none" id="hero-showcase">
                 <div className="showcase-top-bar">
                   <div className="showcase-tag-pill">
                     <span className="play-icon">&#9658;</span>
@@ -1097,8 +1170,8 @@ export default function ScrollSequenceHero() {
             </div>
           </div>
 
-          {/* Stats strip */}
-          <div className="hero-stats-strip" id="hero-stats-strip">
+          {/* Stats strip pinned at bottom */}
+          <div className="hero-stats-strip max-md:pb-4 max-md:shrink-0 md:pb-0" id="hero-stats-strip">
             <div className="stat-strip-item"><span className="stat-strip-prefix">/01</span><span className="stat-strip-num">18+</span><span className="stat-strip-label">Years Experience</span></div>
             <div className="stat-strip-item"><span className="stat-strip-prefix">/02</span><span className="stat-strip-num">8</span><span className="stat-strip-label">Industries Served</span></div>
             <div className="stat-strip-item"><span className="stat-strip-prefix">/03</span><span className="stat-strip-num">200+</span><span className="stat-strip-label">Approved Clients</span></div>
@@ -1109,58 +1182,70 @@ export default function ScrollSequenceHero() {
         {/* ── Stage B: what we do (22–64%) — uses .what-we-do-screen CSS ── */}
         <div
           id="what-we-do-screen"
-          className="what-we-do-screen"
+          className="what-we-do-screen max-md:flex max-md:flex-col max-md:h-[100svh] max-md:min-h-[100svh] max-md:max-h-[100svh] max-md:overflow-hidden max-md:justify-between md:flex md:items-center md:justify-center"
           style={{ willChange: "opacity, transform" }}
         >
-          <div className="what-we-do-container">
-            <div className="what-we-do-left hero-stage-card">
-              <div className="what-we-do-eyebrow">
+          <div className="what-we-do-container max-md:flex max-md:flex-col max-md:h-full max-md:justify-between md:flex md:flex-col">
+            <div className="what-we-do-left hero-stage-card relative z-10 overflow-hidden isolate [transform:translateZ(0)] max-md:top-auto max-md:translate-y-0 max-md:py-6 max-md:px-5 max-md:pb-6 max-md:h-auto max-md:min-h-[240px] max-md:shrink-0 md:min-h-0 md:h-auto md:p-0">
+              <div className="what-we-do-eyebrow max-md:mt-0 max-md:mb-3 md:mt-0 md:mb-[12px]">
                 <span className="eyebrow-bar" />
                 <span>WHAT WE DO</span>
                 <span className="eyebrow-bar" />
               </div>
-              <h2 className="what-we-do-title">
+              <h2 className="what-we-do-title max-md:mt-3 max-md:text-[24px] max-md:leading-[1.25] md:mt-0">
                 Precision solutions for critical industries
               </h2>
-              <p className="what-we-do-desc">
+              <p className="what-we-do-desc max-md:mt-3 max-md:text-[13px] max-md:leading-relaxed max-md:line-clamp-none max-md:max-h-none max-md:overflow-visible md:mt-0">
                 Precision-engineered turnkey architectures across flow measurement,
                 in-situ inspection, and industrial automation — trusted by leading
                 operators since 2008.
               </p>
             </div>
-            <div className="what-we-do-cards">
-              <div className="solution-card card-interactive is-clickable">
-                <div className="solution-card-top">
-                  <div className="solution-icon-wrap">
-                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>
+
+            {/* Mobile flex-1 spacer absorbing leftover space */}
+            <div className="flex-1 max-md:block md:hidden pointer-events-none min-h-0 shrink" aria-hidden="true" />
+
+            {/* Mobile-only Vertical Stacked Card Deck (< 768px) */}
+            <div className="block md:hidden w-full px-0 mt-auto mb-4 shrink-0">
+              <StackedCards items={WHAT_WE_DO_SERVICES} />
+            </div>
+
+            {/* Desktop original carousel / 3-grid row (>= 768px) */}
+            <div className="hidden md:block">
+              <div className="what-we-do-cards">
+                <div className="solution-card card-interactive is-clickable">
+                  <div className="solution-card-top">
+                    <div className="solution-icon-wrap">
+                      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>
+                    </div>
+                    <span className="solution-badge">01</span>
                   </div>
-                  <span className="solution-badge">01</span>
+                  <h3 className="solution-title">Flow Measurement &amp; Control</h3>
+                  <Link href="/service/flow-measurement-solutions/" className="solution-link"><span>EXPLORE</span><span className="chevron">&rsaquo;</span></Link>
+                  <span className="solution-watermark">01</span>
                 </div>
-                <h3 className="solution-title">Flow Measurement &amp; Control</h3>
-                <Link href="/service/flow-measurement-solutions/" className="solution-link"><span>EXPLORE</span><span className="chevron">&rsaquo;</span></Link>
-                <span className="solution-watermark">01</span>
-              </div>
-              <div className="solution-card card-interactive is-clickable">
-                <div className="solution-card-top">
-                  <div className="solution-icon-wrap">
-                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M10 2v7.31L4.15 19.8A2 2 0 0 0 5.86 23h12.28a2 2 0 0 0 1.71-3.2L14 9.31V2"/><line x1="8.5" y1="2" x2="15.5" y2="2"/><line x1="6" y1="18" x2="18" y2="18"/></svg>
+                <div className="solution-card card-interactive is-clickable">
+                  <div className="solution-card-top">
+                    <div className="solution-icon-wrap">
+                      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M10 2v7.31L4.15 19.8A2 2 0 0 0 5.86 23h12.28a2 2 0 0 0 1.71-3.2L14 9.31V2"/><line x1="8.5" y1="2" x2="15.5" y2="2"/><line x1="6" y1="18" x2="18" y2="18"/></svg>
+                    </div>
+                    <span className="solution-badge">02</span>
                   </div>
-                  <span className="solution-badge">02</span>
+                  <h3 className="solution-title">Inspection &amp; Testing</h3>
+                  <Link href="/service/inspection-testing/" className="solution-link"><span>EXPLORE</span><span className="chevron">&rsaquo;</span></Link>
+                  <span className="solution-watermark">02</span>
                 </div>
-                <h3 className="solution-title">Inspection &amp; Testing</h3>
-                <Link href="/service/inspection-testing/" className="solution-link"><span>EXPLORE</span><span className="chevron">&rsaquo;</span></Link>
-                <span className="solution-watermark">02</span>
-              </div>
-              <div className="solution-card card-interactive is-clickable">
-                <div className="solution-card-top">
-                  <div className="solution-icon-wrap">
-                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><rect x="4" y="4" width="16" height="16" rx="2"/><rect x="9" y="9" width="6" height="6"/><line x1="9" y1="2" x2="9" y2="4"/><line x1="15" y1="2" x2="15" y2="4"/><line x1="9" y1="20" x2="9" y2="23"/><line x1="15" y1="20" x2="15" y2="23"/></svg>
+                <div className="solution-card card-interactive is-clickable">
+                  <div className="solution-card-top">
+                    <div className="solution-icon-wrap">
+                      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><rect x="4" y="4" width="16" height="16" rx="2"/><rect x="9" y="9" width="6" height="6"/><line x1="9" y1="2" x2="9" y2="4"/><line x1="15" y1="2" x2="15" y2="4"/><line x1="9" y1="20" x2="9" y2="23"/><line x1="15" y1="20" x2="15" y2="23"/></svg>
+                    </div>
+                    <span className="solution-badge">03</span>
                   </div>
-                  <span className="solution-badge">03</span>
+                  <h3 className="solution-title">Industrial Automation</h3>
+                  <Link href="/service/industrial-automation/" className="solution-link"><span>EXPLORE</span><span className="chevron">&rsaquo;</span></Link>
+                  <span className="solution-watermark">03</span>
                 </div>
-                <h3 className="solution-title">Industrial Automation</h3>
-                <Link href="/service/industrial-automation/" className="solution-link"><span>EXPLORE</span><span className="chevron">&rsaquo;</span></Link>
-                <span className="solution-watermark">03</span>
               </div>
             </div>
           </div>
@@ -1179,7 +1264,7 @@ export default function ScrollSequenceHero() {
           <div className="card-bg-flange-layer" aria-hidden="true">
             {/* eslint-disable-next-line @next/next/no-img-element */}
             <img
-              src="/hero-frames/frame_300.webp"
+              src="/hero-frames/frame_299.webp"
               alt=""
               className="card-bg-flange-img"
               loading="lazy"

@@ -8,6 +8,7 @@ export { default as SpecTable, type SpecRow } from "./SpecTable";
 export { default as CTASection } from "./CTASection";
 export { default as LogoCard } from "./LogoCard";
 export { default as V3Header } from "./V3Header";
+export { default as GlassNavbar, type GlassNavbarProps, type NavItem } from "./GlassNavbar";
 export { default as V3Footer } from "./V3Footer";
 export { default as PageLoader } from "./PageLoader";
 export { default as GlassCard } from "./GlassCard";

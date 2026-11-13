@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import { Plus_Jakarta_Sans, Inter, Sora } from "next/font/google";
 import Script from "next/script";
-import { V3Header, V3Footer } from "@/components/v3";
+import { GlassNavbar, V3Footer } from "@/components/v3";
 import PageLoader from "@/components/v3/PageLoader";
 import WhatsAppButton from "@/components/WhatsAppButton";
 import V3SmoothScroll from "@/components/v3/V3SmoothScroll";
@@ -149,7 +149,7 @@ export default function V3RootLayout({ children }: { children: React.ReactNode }
               style={{ display: "none", visibility: "hidden" }}
             />
           </noscript>
-          <V3Header />
+          <GlassNavbar />
           <main id="main-content">
             {children}
           </main>

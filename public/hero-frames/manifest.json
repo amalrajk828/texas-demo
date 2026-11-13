@@ -1,14 +1,14 @@
 {
-  "count": 300,
+  "count": 299,
   "width": 1920,
   "height": 1080,
-  "mobileWidth": 1280,
-  "mobileHeight": 720,
+  "mobileWidth": 1080,
+  "mobileHeight": 1920,
   "prefix": "frame_",
   "ext": ".webp",
-  "bgColor": "#e8e8e6",
-  "originalPayloadMB": "163.51",
-  "webpPayloadMB": "30.82",
-  "mobilePayloadMB": "12.16",
-  "reductionPct": "81.1%"
+  "bgColor": "#b8b7ad",
+  "source": "ezgif-318774b2dc621a61-png-split (1)",
+  "sourcePayloadMB": "189.97",
+  "webpPayloadMB": "34.06",
+  "mobilePayloadMB": "13.08"
 }
