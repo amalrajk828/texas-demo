@@ -533,6 +533,7 @@
   position: relative;
   height: 500vh;
   background-color: var(--bg-studio);
+  contain: paint;
 }
 
 .sticky-wrap {
@@ -551,6 +552,7 @@
   width: 100%;
   height: 100%;
   display: block;
+  pointer-events: none;
 }
 
 .hero-poster-img {
@@ -676,7 +678,10 @@
   --hero-card-top-accent: #8a302f;
   --hero-card-top-accent-width: 4px;
   position: relative;
-  overflow: clip;
+  overflow: hidden;
+  isolation: isolate;
+  transform: translateZ(0);
+  -webkit-transform: translateZ(0);
 }
 
 .hero-stage-card::before {
@@ -977,11 +982,6 @@
   letter-spacing: 0.05em;
   color: #555;
   padding: 0 4px;
-}
-
-/* Mobile Showcase section is strictly mobile only (<=768px) */
-.mobile-showcase-section {
-  display: none;
 }
 
 /* Bottom Stats Strip (/01, /02, /03, /04) */
@@ -1571,7 +1571,7 @@ button.card-interactive,
 }
 
 .content-wrapper {
-  background-color: transparent;
+  background-color: var(--bg-studio, #e8e8e6);
   position: relative;
   z-index: 20;
 }
@@ -2886,7 +2886,7 @@ button.card-interactive,
    ========================================================================== */
 @media (max-width: 1023px) {
   #sequence {
-    height: 380vh; /* Snappier mobile scrolling */
+    height: calc(300vh + 100svh); /* Snappier, natural mobile scrolling */
   }
 
   /* Sticky hero container */
@@ -2983,6 +2983,7 @@ button.card-interactive,
 
   .showcase-media-item {
     object-position: 70% center;
+    pointer-events: none !important;
   }
 
   .showcase-nav-bar {
@@ -3003,10 +3004,11 @@ button.card-interactive,
     padding: 0 2px;
   }
 
-  /* Interactive cards & buttons re-enable pointer-events */
+  /* Interactive cards & buttons re-enable pointer-events and guarantee vertical scroll */
   .hero-glass-card,
   .hero-right-col,
   .hero-showcase-card,
+  .showcase-media-stage,
   .showcase-tab,
   .showcase-arrow,
   .showcase-next-btn,
@@ -3016,11 +3018,16 @@ button.card-interactive,
   .what-we-do-cards,
   .card-custody-automation {
     pointer-events: auto;
+    touch-action: pan-y !important;
   }
 
   /* Stage 1 Top Text Card */
   .hero-stage-card {
     --hero-card-top-accent-width: 3px;
+    overflow: hidden;
+    isolation: isolate;
+    transform: translateZ(0);
+    -webkit-transform: translateZ(0);
   }
 
   .hero-glass-card {
@@ -3332,8 +3339,6 @@ button.card-interactive,
 
 /* Very Short Phones (height <= 660px): collapse text card to heading + buttons */
 @media (max-width: 1023px) and (max-height: 660px) {
-  .hero-desc,
-  .what-we-do-desc,
   .card-custody-automation .card-desc {
     display: none !important;
   }
@@ -3416,13 +3421,7 @@ button.card-interactive,
     mask-image: linear-gradient(to bottom, #000 80%, transparent 100%) !important;
   }
 
-  /* ── 1. UNIFIED HERO TOP CARDS (Slide 1 & Slide 2 = Same Top, Width, and Height) ── */
-  :root {
-    --hero-card-h: clamp(192px, 24svh, 210px);
-  }
-
-  /* Shared Screen Container Settings for Exact Side Margins & Top Offset */
-  .hero-screen,
+  /* 2. Slide 2 Screen container: exact 16px side alignment and 80px bottom clearance */
   .what-we-do-screen {
     position: absolute !important;
     inset: 0 !important;
@@ -3443,7 +3442,6 @@ button.card-interactive,
     pointer-events: none !important;
   }
 
-  .hero-main-row,
   .what-we-do-container {
     display: flex !important;
     flex-direction: column !important;
@@ -3459,50 +3457,56 @@ button.card-interactive,
     backdrop-filter: none !important;
     -webkit-backdrop-filter: none !important;
     box-sizing: border-box !important;
-    gap: 0 !important;
   }
 
-  /* Slide 1 Card & Slide 2 Top Card: Identical Width, Height, Top, and Padding */
-  .hero-glass-card,
+  /* Top Card: Matches Hero Stage 1 Card size and spacing on mobile */
   .what-we-do-left {
     width: 100% !important;
     max-width: 100% !important;
     margin: 0 !important;
-    min-height: var(--hero-card-h) !important;
-    height: var(--hero-card-h) !important;
+    min-height: 240px !important;
+    height: auto !important;
     max-height: none !important;
-    padding: 20px !important;
-    border-radius: 20px !important;
+    padding: 24px 20px 24px 20px !important;
+    border-radius: 16px !important;
     box-sizing: border-box !important;
-    display: flex !important;
-    flex-direction: column !important;
-    justify-content: flex-start !important;
-    align-items: stretch !important;
+    position: relative !important;
+    z-index: 10 !important;
+    top: auto !important;
+    transform: none !important;
+    overflow: hidden !important;
+    isolation: isolate !important;
+    transform: translateZ(0) !important;
+    -webkit-transform: translateZ(0) !important;
+    flex-shrink: 0 !important;
     pointer-events: auto !important;
   }
 
   .what-we-do-eyebrow {
-    margin-bottom: clamp(3px, 0.7svh, 6px) !important;
+    margin-top: 0 !important;
+    margin-bottom: 12px !important;
   }
 
   .what-we-do-title {
-    font-size: clamp(15px, 4.2vw, 20px) !important;
-    line-height: 1.2 !important;
-    margin-bottom: clamp(3px, 0.7svh, 6px) !important;
-    font-weight: 700 !important;
+    font-size: 24px !important;
+    line-height: 1.25 !important;
+    margin-top: 12px !important;
+    margin-bottom: 0 !important;
   }
 
   .what-we-do-desc {
-    font-size: clamp(10.5px, 2.5vw, 11.5px) !important;
-    line-height: 1.35 !important;
+    font-size: 13px !important;
+    line-height: 1.625 !important;
+    margin-top: 12px !important;
     margin-bottom: 0 !important;
-    display: -webkit-box !important;
-    -webkit-line-clamp: 3 !important;
-    -webkit-box-orient: vertical !important;
-    overflow: hidden !important;
+    display: block !important;
+    -webkit-line-clamp: unset !important;
+    line-clamp: unset !important;
+    max-height: none !important;
+    overflow: visible !important;
   }
 
-  /* ── 2. SMOOTH SWIPE ON SLIDE 2 (Explore Cards Row) ── */
+  /* 3. Hide any color strip behind cards; row runs edge-to-edge (100vw) */
   .what-we-do-cards {
     --hero-cards-shift-x: 0px !important;
     --hero-cards-effective-shift: 0px !important;
@@ -3511,10 +3515,7 @@ button.card-interactive,
     flex-direction: row !important;
     overflow-x: auto !important;
     scroll-snap-type: x mandatory !important;
-    scroll-behavior: smooth !important;
     -webkit-overflow-scrolling: touch !important;
-    overscroll-behavior-x: contain !important;
-    touch-action: pan-x !important;
     scrollbar-width: none !important;
     width: 100vw !important;
     max-width: 100vw !important;
@@ -3537,7 +3538,7 @@ button.card-interactive,
     display: none !important;
   }
 
-  /* Explore Cards: Fixed consistent width, no jerky layout transitions, will-change: transform */
+  /* 4. Explore Cards: 78vw width, padding 20px, border-radius 20px, soft shadow */
   .solution-card {
     flex: 0 0 clamp(280px, 78vw, 340px) !important;
     width: clamp(280px, 78vw, 340px) !important;
@@ -3552,9 +3553,7 @@ button.card-interactive,
     box-shadow: 0 10px 28px rgba(0, 0, 0, 0.08) !important;
     border: 1px solid rgba(0, 0, 0, 0.06) !important;
     scroll-snap-align: start !important;
-    scroll-snap-stop: normal !important;
-    will-change: transform !important;
-    transition: transform 0.25s ease, opacity 0.25s ease !important;
+    transform: none !important;
     display: flex !important;
     flex-direction: column !important;
     justify-content: space-between !important;
@@ -3605,9 +3604,12 @@ button.card-interactive,
     margin-bottom: 12px !important;
     min-height: calc(1.28 * 18px * 2) !important; /* ~46px for 2 lines */
     display: -webkit-box !important;
-    -webkit-line-clamp: 2 !important;
     -webkit-box-orient: vertical !important;
-    overflow: visible !important;
+    -webkit-line-clamp: 2 !important;
+    overflow: hidden !important;
+    isolation: isolate !important;
+    transform: translateZ(0) !important;
+    -webkit-transform: translateZ(0) !important;
     white-space: normal !important;
     word-break: break-word !important;
   }
@@ -3663,9 +3665,9 @@ button.card-interactive,
     max-width: none !important;
     margin: 0 !important;
     border-radius: 20px !important;
-    background: rgba(255, 255, 255, 0.94) !important;
-    backdrop-filter: blur(16px) !important;
-    -webkit-backdrop-filter: blur(16px) !important;
+    background: #ffffff !important;
+    backdrop-filter: none !important;
+    -webkit-backdrop-filter: none !important;
     border: 1px solid rgba(0, 0, 0, 0.06) !important;
     box-shadow: 0 10px 28px rgba(0, 0, 0, 0.08) !important;
     overflow: hidden !important;
@@ -3752,199 +3754,12 @@ button.card-interactive,
     align-items: center !important;
   }
 
-  /* ── 3. MOBILE HERO SHOWCASE CARD (Normal Flow in Middle of Page) ── */
-  .mobile-showcase-section {
-    display: block !important;
-    width: 100% !important;
-    box-sizing: border-box !important;
-    padding: 32px 16px !important;
-    margin: 0 auto !important;
-  }
-
-  .mobile-showcase-card {
-    position: relative !important;
-    width: 100% !important;
-    border-radius: 24px !important;
-    overflow: hidden !important;
-    aspect-ratio: 4 / 5 !important;
-    min-height: 460px !important;
-    background: #141820 !important;
-    border: 1px solid rgba(0, 0, 0, 0.1) !important;
-    box-shadow: 0 16px 40px rgba(0, 0, 0, 0.12) !important;
-    box-sizing: border-box !important;
-    touch-action: pan-y pinch-zoom !important;
-    isolation: isolate !important;
-  }
-
-  /* Dark bottom gradient overlay */
-  .mobile-showcase-card::after {
-    content: '' !important;
-    position: absolute !important;
-    inset: 0 !important;
-    background: linear-gradient(to top, rgba(0, 0, 0, 0.88) 0%, rgba(0, 0, 0, 0.35) 45%, transparent 75%) !important;
-    pointer-events: none !important;
-    z-index: 5 !important;
-  }
-
-  /* Top Bar: Pill top-left, ISO badges top-right */
-  .mobile-showcase-card .showcase-top-bar {
-    position: absolute !important;
-    top: 12px !important;
-    left: 12px !important;
-    right: 12px !important;
-    display: flex !important;
-    align-items: center !important;
-    justify-content: space-between !important;
-    z-index: 15 !important;
-    pointer-events: none !important;
-  }
-
-  /* Pill: top-left, 12px offset, 12-13px font, fit-content width */
-  .mobile-showcase-card .showcase-tag-pill {
-    font-size: clamp(12px, 3.2vw, 13px) !important;
-    padding: 6px 14px !important;
-    width: fit-content !important;
-    background: rgba(255, 255, 255, 0.94) !important;
-    backdrop-filter: blur(10px) !important;
-    -webkit-backdrop-filter: blur(10px) !important;
-    border-radius: 999px !important;
-    font-weight: 700 !important;
-    letter-spacing: 0.06em !important;
-    color: #1a1a1a !important;
-  }
-
-  /* ISO badges: 24 to 28px each in a row */
-  .mobile-showcase-card .showcase-certs {
-    display: flex !important;
-    align-items: center !important;
-    gap: 6px !important;
-  }
-
-  .mobile-showcase-card .showcase-cert-icon {
-    height: 26px !important;
-    width: auto !important;
-    object-fit: contain !important;
-    filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.3)) !important;
-  }
-
-  /* Media stage with object-fit: cover */
-  .mobile-showcase-card .showcase-media-stage {
-    position: absolute !important;
-    inset: 0 !important;
-    width: 100% !important;
-    height: 100% !important;
-    z-index: 1 !important;
-  }
-
-  .mobile-showcase-card .showcase-media-item {
-    position: absolute !important;
-    inset: 0 !important;
-    width: 100% !important;
-    height: 100% !important;
-    object-fit: cover !important;
-  }
-
-  /* "← 03 / 04 NEXT →": bottom-center, above tabs, not overlapping, >=80px clearance from bottom right */
-  .mobile-showcase-card .showcase-nav-bar {
-    position: absolute !important;
-    bottom: 68px !important;
-    left: 50% !important;
-    right: auto !important;
-    transform: translateX(-50%) !important;
-    display: flex !important;
-    align-items: center !important;
-    gap: 8px !important;
-    background: rgba(255, 255, 255, 0.94) !important;
-    backdrop-filter: blur(12px) !important;
-    -webkit-backdrop-filter: blur(12px) !important;
-    border-radius: 999px !important;
-    padding: 6px 14px !important;
-    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.22) !important;
-    z-index: 15 !important;
-    pointer-events: auto !important;
-  }
-
-  .mobile-showcase-card .showcase-arrow,
-  .mobile-showcase-card .showcase-next-btn {
-    font-size: 13px !important;
-    font-weight: 700 !important;
-    color: #1a1a1a !important;
-    min-height: 32px !important;
-    display: inline-flex !important;
-    align-items: center !important;
-    padding: 2px 6px !important;
-  }
-
-  .mobile-showcase-card .showcase-counter {
-    font-size: 13px !important;
-    font-weight: 700 !important;
-    color: var(--accent, #8a302f) !important;
-    padding: 0 4px !important;
-  }
-
-  /* Tabs: horizontal scroll row at the bottom (scroll-snap, hidden scrollbar, 44px tap height) */
-  .mobile-showcase-card .showcase-tabs {
-    position: absolute !important;
-    top: auto !important;
-    bottom: 12px !important;
-    left: 12px !important;
-    right: 12px !important;
-    display: flex !important;
-    flex-direction: row !important;
-    gap: 8px !important;
-    overflow-x: auto !important;
-    scroll-snap-type: x mandatory !important;
-    -webkit-overflow-scrolling: touch !important;
-    scrollbar-width: none !important;
-    padding: 2px 2px !important;
-    z-index: 15 !important;
-  }
-
-  .mobile-showcase-card .showcase-tabs::-webkit-scrollbar {
-    display: none !important;
-  }
-
-  .mobile-showcase-card .showcase-tab {
-    flex: 0 0 auto !important;
-    scroll-snap-align: start !important;
-    display: inline-flex !important;
-    align-items: center !important;
-    gap: 8px !important;
-    min-height: 44px !important;
-    height: 44px !important;
-    padding: 4px 14px 4px 6px !important;
-    background: rgba(255, 255, 255, 0.92) !important;
-    backdrop-filter: blur(12px) !important;
-    -webkit-backdrop-filter: blur(12px) !important;
-    border: 1.5px solid rgba(0, 0, 0, 0.1) !important;
-    border-radius: 999px !important;
-    font-size: 12px !important;
-    font-weight: 600 !important;
-    color: #1a1a1a !important;
-    cursor: pointer !important;
-    box-sizing: border-box !important;
-    pointer-events: auto !important;
-  }
-
-  .mobile-showcase-card .showcase-tab.active {
-    background: #ffffff !important;
-    border-color: #8a302f !important;
-    outline: 2px solid #8a302f !important;
-    outline-offset: -1px !important;
-    color: #8a302f !important;
-    font-weight: 700 !important;
-  }
-
-  .mobile-showcase-card .tab-thumb {
-    width: 28px !important;
-    height: 28px !important;
-    min-width: 28px !important;
-    border-radius: 50% !important;
-    object-fit: cover !important;
-  }
-
   /* 7. Slide 1 Hero Showcase Card & First Section Mobile Alignment */
   .hero-screen {
+    height: 100svh !important;
+    max-height: 100svh !important;
+    min-height: 100svh !important;
+    overflow: hidden !important;
     padding-top: calc(var(--header-height, 64px) + 8px) !important;
     padding-bottom: max(16px, env(safe-area-inset-bottom, 16px)) !important;
     padding-left: 16px !important;
@@ -3953,47 +3768,60 @@ button.card-interactive,
   }
 
   .hero-main-row {
-    display: flex !important;
-    flex-direction: column !important;
-    width: 100% !important;
-    max-width: 100% !important;
-    margin: 0 auto !important;
-    gap: clamp(8px, 1.4vh, 12px) !important;
+    display: contents !important;
   }
 
   .hero-glass-card {
     width: 100% !important;
-    min-height: unset !important;
+    min-height: 240px !important;
+    height: auto !important;
     max-height: none !important;
-    padding: clamp(8px, 1.2vh, 12px) clamp(12px, 3.5vw, 16px) !important;
+    padding: 24px 20px 24px 20px !important;
     border-radius: 16px !important;
     box-sizing: border-box !important;
+    position: relative !important;
+    z-index: 10 !important;
+    top: auto !important;
+    transform: none !important;
+    overflow: hidden !important;
+    isolation: isolate !important;
+    transform: translateZ(0) !important;
+    -webkit-transform: translateZ(0) !important;
+    flex-shrink: 0 !important;
   }
 
   .hero-title {
-    font-size: clamp(15px, 4vw, 18px) !important;
-    line-height: 1.2 !important;
-    margin-bottom: 4px !important;
+    font-size: 24px !important;
+    line-height: 1.25 !important;
+    margin-top: 12px !important;
+    margin-bottom: 0 !important;
   }
 
   .hero-desc {
-    font-size: clamp(10px, 2.4vw, 11px) !important;
-    line-height: 1.35 !important;
-    margin-bottom: 6px !important;
-    -webkit-line-clamp: 2 !important;
+    font-size: 13px !important;
+    line-height: 1.625 !important;
+    margin-top: 12px !important;
+    margin-bottom: 0 !important;
+    display: block !important;
+    -webkit-line-clamp: unset !important;
+    line-clamp: unset !important;
+    max-height: none !important;
+    overflow: visible !important;
   }
 
   .hero-cta-group {
     display: flex !important;
-    gap: 8px !important;
+    margin-top: 20px !important;
+    gap: 12px !important;
     width: 100% !important;
   }
 
   .hero-cta-group .btn {
     flex: 1 !important;
-    padding: 6px 12px !important;
-    font-size: 11px !important;
-    min-height: 32px !important;
+    padding: 0 12px !important;
+    font-size: 12px !important;
+    height: 48px !important;
+    min-height: 48px !important;
     display: inline-flex !important;
     align-items: center !important;
     justify-content: center !important;
@@ -4004,16 +3832,27 @@ button.card-interactive,
     display: flex !important;
     flex-direction: column !important;
     width: 100% !important;
+    height: auto !important;
+    min-height: 0 !important;
+    max-height: none !important;
+    margin-top: auto !important;
+    margin-bottom: 16px !important;
+    position: relative !important;
+    top: auto !important;
+    transform: none !important;
     pointer-events: auto !important;
+    flex-shrink: 0 !important;
   }
 
   .hero-showcase-card {
     display: block !important;
     position: relative !important;
+    top: auto !important;
+    transform: none !important;
     width: 100% !important;
-    height: clamp(210px, 28vh, 250px) !important;
-    min-height: 200px !important;
-    max-height: 260px !important;
+    height: 190px !important;
+    min-height: 190px !important;
+    max-height: 190px !important;
     border-radius: 16px !important;
     overflow: hidden !important;
     background: #141820 !important;
@@ -4137,7 +3976,7 @@ button.card-interactive,
     margin: 0 auto !important;
     grid-template-columns: repeat(2, 1fr) !important;
     gap: 4px 8px !important;
-    padding: 6px 10px !important;
+    padding: 6px 10px 16px !important;
     border-radius: 12px !important;
     pointer-events: auto !important;
     box-sizing: border-box !important;
@@ -4153,12 +3992,20 @@ button.card-interactive,
 }
 
 @media (max-width: 767px) and (max-height: 650px) {
-  .hero-desc {
-    display: none !important;
+  .hero-screen,
+  .what-we-do-screen {
+    padding-top: calc(var(--header-height, 56px) + 2px) !important;
+  }
+  .hero-glass-card,
+  .what-we-do-left {
+    padding: 16px 16px 18px !important;
   }
   .hero-showcase-card {
-    height: clamp(170px, 25vh, 195px) !important;
-    min-height: 170px !important;
+    height: clamp(160px, 24vh, 175px) !important;
+    min-height: 160px !important;
+  }
+  .hero-stats-strip {
+    padding: 4px 8px 12px !important;
   }
   .showcase-tabs {
     top: 36px !important;

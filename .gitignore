@@ -53,4 +53,11 @@ skills-lock.json
 
 lighthouse/
 
+# Temporary frame backups
+public/hero-frames/_old-mobile-backup/
+public/ezgif*
+
+# Local test scratch scripts and images
+scratch/
+
 

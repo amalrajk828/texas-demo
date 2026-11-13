@@ -4,10 +4,10 @@ import React, { useEffect, useRef } from "react";
 import Link from "next/link";
 
 // ── Scroll Animation Constants & Sequence Configuration ─────────────────────
-export const TOTAL_FRAMES = 300;
-export const BG_COLOR = "#e8e8e6"; // Page studio grey background
+export const TOTAL_FRAMES = 299;
+export const BG_COLOR = "#b8b7ad"; // Warm neutral matching the new frame sequence
 export const LERP_FACTOR = 0.12; // Butter-smooth scroll interpolation factor
-export const SEQUENCE_PATH = "/ezgif-72247e4a35ef8727-png-split";
+export const SEQUENCE_PATH = "/hero-frames";
 
 export default function HeroSection() {
   const containerRef = useRef<HTMLElement>(null);
@@ -38,7 +38,7 @@ export default function HeroSection() {
     const prefersReducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)");
 
     function frameSrc(n: number) {
-      return `${SEQUENCE_PATH}/ezgif-frame-${String(n).padStart(3, "0")}.png`;
+      return `${SEQUENCE_PATH}/frame_${String(n).padStart(3, "0")}.webp`;
     }
 
     function getBestImage(targetIndex: number): HTMLImageElement | null {
@@ -748,7 +748,7 @@ export default function HeroSection() {
             <div className="card-bg-flange-layer" aria-hidden="true">
               {/* eslint-disable-next-line @next/next/no-img-element */}
               <img
-                src="/hero-frames/frame_300.webp"
+                src="/hero-frames/frame_299.webp"
                 alt=""
                 className="card-bg-flange-img"
                 loading="lazy"

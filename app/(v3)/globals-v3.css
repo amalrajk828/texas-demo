@@ -38,6 +38,7 @@
 
 html {
   scroll-padding-top: 96px;
+  scrollbar-gutter: stable;
 }
 
 html,
