@@ -514,6 +514,7 @@ export default function GlassNavbar({
           {mobileOpen && (
             <motion.div
               id="mobile-glass-panel"
+              data-lenis-prevent="true"
               initial={
                 prefersReducedMotion
                   ? { opacity: 0 }
@@ -530,7 +531,7 @@ export default function GlassNavbar({
                   ? { duration: 0.15 }
                   : { type: "spring", stiffness: 350, damping: 28 }
               }
-              className="pointer-events-auto absolute top-[calc(100%+8px)] left-0 right-0 w-full max-h-[80svh] overflow-y-auto overscroll-contain rounded-3xl bg-white/92 backdrop-blur-2xl backdrop-saturate-150 border border-white/70 p-4 sm:p-5 shadow-[0_20px_48px_rgba(0,0,0,0.18),inset_0_1px_0_rgba(255,255,255,0.8)] lg:hidden flex flex-col gap-1.5 isolate [transform:translateZ(0)] will-change-transform"
+              className="pointer-events-auto absolute top-[calc(100%+8px)] left-0 right-0 w-full max-h-[calc(100dvh-92px)] max-h-[calc(100svh-92px)] overflow-y-auto overscroll-contain rounded-3xl bg-white/95 backdrop-blur-2xl backdrop-saturate-150 border border-white/70 p-4 sm:p-5 shadow-[0_20px_48px_rgba(0,0,0,0.18),inset_0_1px_0_rgba(255,255,255,0.8)] lg:hidden flex flex-col gap-1.5 isolate [transform:translateZ(0)] will-change-transform [-webkit-overflow-scrolling:touch]"
               style={{
                 WebkitBackdropFilter: "blur(24px) saturate(150%)",
               }}
@@ -548,12 +549,12 @@ export default function GlassNavbar({
 
                   if (hasChildren) {
                     return (
-                      <div key={item.id} className="flex flex-col rounded-2xl overflow-hidden">
+                      <div key={item.id} className="shrink-0 flex flex-col rounded-2xl overflow-hidden">
                         <button
                           type="button"
                           onClick={() => setMobileExpanded((prev) => (prev === item.label ? null : item.label))}
                           aria-expanded={isExpanded}
-                          className={`flex items-center justify-between px-4 py-3 rounded-2xl text-[15px] font-semibold transition-all outline-none focus:outline-none ${
+                          className={`shrink-0 flex items-center justify-between px-4 py-3 rounded-2xl text-[15px] font-semibold transition-all outline-none focus:outline-none ${
                             active
                               ? "bg-[#8B0000]/10 text-[#8B0000] font-bold"
                               : "text-[#2a2a28] hover:bg-black/[0.04] active:bg-black/[0.08]"
@@ -569,7 +570,7 @@ export default function GlassNavbar({
                             strokeWidth="2.5"
                             strokeLinecap="round"
                             strokeLinejoin="round"
-                            className={`transition-transform duration-200 ${
+                            className={`transition-transform duration-200 shrink-0 ${
                               isExpanded ? "rotate-180 text-[#8B0000]" : "rotate-0 text-black/40"
                             }`}
                           >
@@ -578,14 +579,14 @@ export default function GlassNavbar({
                         </button>
 
                         {/* Accordion Sub-items */}
-                        <AnimatePresence>
+                        <AnimatePresence initial={false}>
                           {isExpanded && (
                             <motion.div
                               initial={{ height: 0, opacity: 0 }}
                               animate={{ height: "auto", opacity: 1 }}
                               exit={{ height: 0, opacity: 0 }}
-                              transition={{ duration: 0.2 }}
-                              className="overflow-hidden flex flex-col gap-1 pl-3 pr-1 py-1"
+                              transition={{ duration: 0.22, ease: [0.25, 1, 0.5, 1] }}
+                              className="shrink-0 overflow-hidden flex flex-col gap-1 pl-3 pr-1 py-1"
                             >
                               {item.children?.map((child: NavChild, cIdx: number) => {
                                 const isChildActive =
@@ -598,7 +599,7 @@ export default function GlassNavbar({
                                       key={cIdx}
                                       href={child.href}
                                       onClick={() => setMobileOpen(false)}
-                                      className="mt-1 flex items-center justify-center p-2.5 rounded-full border border-dashed border-[#8B0000]/30 bg-[#8B0000]/[0.06] text-[#8B0000] font-bold text-xs text-center outline-none focus:outline-none focus-visible:ring-2 focus-visible:ring-[#8B0000]"
+                                      className="shrink-0 mt-1 flex items-center justify-center p-2.5 rounded-full border border-dashed border-[#8B0000]/30 bg-[#8B0000]/[0.06] text-[#8B0000] font-bold text-xs text-center outline-none focus:outline-none focus-visible:ring-2 focus-visible:ring-[#8B0000]"
                                     >
                                       {child.label}
                                     </Link>
@@ -610,7 +611,7 @@ export default function GlassNavbar({
                                     key={cIdx}
                                     href={child.href}
                                     onClick={() => setMobileOpen(false)}
-                                    className={`flex flex-col p-2.5 rounded-xl transition-all outline-none focus:outline-none ${
+                                    className={`shrink-0 flex flex-col p-2.5 rounded-xl transition-all outline-none focus:outline-none ${
                                       isChildActive
                                         ? "bg-[#8B0000]/[0.08] text-[#8B0000]"
                                         : "bg-white/60 hover:bg-white/90 text-[#2a2a28]"
@@ -618,7 +619,7 @@ export default function GlassNavbar({
                                   >
                                     <span className="text-[13px] font-semibold flex items-center justify-between">
                                       <span>{child.label}</span>
-                                      <span className="text-xs text-[#8B0000]">→</span>
+                                      <span className="text-xs text-[#8B0000] shrink-0 ml-1">→</span>
                                     </span>
                                     {child.desc && (
                                       <span className="text-[11px] text-[#666663] mt-0.5 leading-snug">
@@ -640,7 +641,7 @@ export default function GlassNavbar({
                       key={item.id}
                       href={item.href}
                       onClick={() => setMobileOpen(false)}
-                      className={`flex items-center justify-between px-4 py-3 rounded-2xl text-[15px] font-semibold transition-all outline-none focus:outline-none ${
+                      className={`shrink-0 flex items-center justify-between px-4 py-3 rounded-2xl text-[15px] font-semibold transition-all outline-none focus:outline-none ${
                         active
                           ? "bg-[#8B0000]/10 text-[#8B0000] font-bold"
                           : "text-[#2a2a28] hover:bg-black/[0.04] active:bg-black/[0.08]"
@@ -663,7 +664,7 @@ export default function GlassNavbar({
                 <Link
                   href={ctaHref}
                   onClick={() => setMobileOpen(false)}
-                  className="mt-3 flex items-center justify-center w-full h-12 rounded-full bg-[#8B0000] hover:bg-[#6b191b] active:scale-[0.98] text-white text-[14px] font-semibold shadow-[0_6px_20px_rgba(139,0,0,0.32)] transition-all shrink-0 outline-none focus:outline-none focus-visible:ring-2 focus-visible:ring-[#8B0000] focus-visible:ring-offset-2"
+                  className="shrink-0 mt-3 mb-1 flex items-center justify-center w-full h-12 rounded-full bg-[#8B0000] hover:bg-[#6b191b] active:scale-[0.98] text-white text-[14px] font-semibold shadow-[0_6px_20px_rgba(139,0,0,0.32)] transition-all outline-none focus:outline-none focus-visible:ring-2 focus-visible:ring-[#8B0000] focus-visible:ring-offset-2"
                 >
                   {ctaLabel}
                 </Link>
