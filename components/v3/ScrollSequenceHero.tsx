@@ -3,6 +3,7 @@
 import React, { useEffect, useRef, useState, useCallback } from "react";
 import Link from "next/link";
 import StackedCards, { StackedCardItem } from "./StackedCards";
+import TiltedServiceCard from "./TiltedServiceCard";
 
 // ── Tunable Constants ──────────────────────────────────────────────────────
 type LenisInstance = {
@@ -225,6 +226,56 @@ const WHAT_WE_DO_SERVICES: StackedCardItem[] = [
         <line x1="15" y1="20" x2="15" y2="23" />
       </svg>
     ),
+  },
+];
+
+const TILTED_SERVICES = [
+  {
+    index: 0,
+    number: "01",
+    title: "Flow Measurement & Control",
+    href: "/service/flow-measurement-solutions/",
+    icon: (
+      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+        <circle cx="12" cy="12" r="10" />
+        <path d="M12 6v6l4 2" />
+      </svg>
+    ),
+    rotation: -5,
+    offsetX: -10,
+  },
+  {
+    index: 1,
+    number: "02",
+    title: "Inspection & Testing",
+    href: "/service/inspection-testing/",
+    icon: (
+      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+        <path d="M10 2v7.31L4.15 19.8A2 2 0 0 0 5.86 23h12.28a2 2 0 0 0 1.71-3.2L14 9.31V2" />
+        <line x1="8.5" y1="2" x2="15.5" y2="2" />
+        <line x1="6" y1="18" x2="18" y2="18" />
+      </svg>
+    ),
+    rotation: 4,
+    offsetX: 14,
+  },
+  {
+    index: 2,
+    number: "03",
+    title: "Industrial Automation",
+    href: "/service/industrial-automation/",
+    icon: (
+      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+        <rect x="4" y="4" width="16" height="16" rx="2" />
+        <rect x="9" y="9" width="6" height="6" />
+        <line x1="9" y1="2" x2="9" y2="4" />
+        <line x1="15" y1="2" x2="15" y2="4" />
+        <line x1="9" y1="20" x2="9" y2="23" />
+        <line x1="15" y1="20" x2="15" y2="23" />
+      </svg>
+    ),
+    rotation: -3,
+    offsetX: -4,
   },
 ];
 
@@ -1292,8 +1343,8 @@ export default function ScrollSequenceHero() {
               <StackedCards items={WHAT_WE_DO_SERVICES} />
             </div>
 
-            {/* Desktop original carousel / 3-grid row (>= 768px) */}
-            <div className="hidden md:block">
+            {/* Desktop / tablet original carousel row (768px - 1023px, hidden on desktop lg:) */}
+            <div className="hidden md:block lg:hidden">
               <div className="what-we-do-cards">
                 <div className="solution-card card-interactive is-clickable">
                   <div className="solution-card-top">
@@ -1330,6 +1381,25 @@ export default function ScrollSequenceHero() {
                 </div>
               </div>
             </div>
+          </div>
+
+          {/* Desktop-only Vertical Tilted Service Cards Column (>= 1024px) */}
+          <div
+            className="hidden lg:flex lg:flex-col lg:absolute lg:right-10 xl:right-16 lg:top-1/2 lg:-translate-y-1/2 lg:w-[250px] xl:w-[290px] lg:-space-y-5 lg:z-20 pointer-events-auto [@media(max-height:800px)]:scale-90 [@media(max-height:800px)]:origin-right"
+          >
+            {TILTED_SERVICES.map((service) => (
+              <TiltedServiceCard
+                key={service.number}
+                index={service.index}
+                title={service.title}
+                icon={service.icon}
+                href={service.href}
+                number={service.number}
+                rotation={service.rotation}
+                offsetX={service.offsetX}
+                isActive={activeStage === 2}
+              />
+            ))}
           </div>
         </div>
 
