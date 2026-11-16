@@ -63,38 +63,63 @@ export const MOBILE_MANIFEST_DEFAULT: SequenceManifest = {
 
 export type DrawableFrame = ImageBitmap | HTMLImageElement;
 
+export function isIOSDevice(): boolean {
+  if (typeof window === "undefined" || typeof navigator === "undefined") return false;
+  return (
+    /iPad|iPhone|iPod/.test(navigator.userAgent) ||
+    (typeof navigator.platform === "string" && navigator.platform === "MacIntel" && navigator.maxTouchPoints > 1)
+  );
+}
+
+export function isSafariBrowser(): boolean {
+  if (typeof window === "undefined" || typeof navigator === "undefined") return false;
+  return /^((?!chrome|android).)*safari/i.test(navigator.userAgent);
+}
+
 function closeDrawable(d: DrawableFrame | null) {
-  if (d && "close" in d && typeof (d as ImageBitmap).close === "function") {
-    (d as ImageBitmap).close();
+  if (!d) return;
+  if ("close" in d && typeof (d as ImageBitmap).close === "function") {
+    try {
+      (d as ImageBitmap).close();
+    } catch {}
+  } else if ("src" in d) {
+    try {
+      const img = d as HTMLImageElement;
+      img.onload = null;
+      img.onerror = null;
+      img.src = "";
+    } catch {}
   }
 }
 
+function loadImageElement(url: string): Promise<HTMLImageElement> {
+  return new Promise<HTMLImageElement>((resolve, reject) => {
+    const img = new Image();
+    img.crossOrigin = "anonymous";
+    img.decoding = "async";
+    img.onload = () => resolve(img);
+    img.onerror = () => reject(new Error(`Failed to load: ${url}`));
+    img.src = url;
+  });
+}
+
 function loadFrameImage(url: string): Promise<DrawableFrame> {
-  if (typeof window !== "undefined" && typeof window.createImageBitmap === "function") {
+  const isIOS = isIOSDevice();
+  const isSafari = isSafariBrowser();
+  // On iOS / Safari, NEVER use createImageBitmap — WebKit has a documented issue where
+  // ImageBitmaps allocate directly into unmanaged CoreAnimation/Metal buffers and leak,
+  // rapidly triggering iOS jetsam SIGKILL (Safari "A problem repeatedly occurred" crash).
+  if (!isIOS && !isSafari && typeof window !== "undefined" && typeof window.createImageBitmap === "function") {
     return fetch(url)
       .then((r) => {
         if (!r.ok) throw new Error(`HTTP ${r.status}`);
         return r.blob();
       })
       .then((blob) => createImageBitmap(blob))
-      .catch(() => {
-        return new Promise<HTMLImageElement>((resolve, reject) => {
-          const img = new Image();
-          img.crossOrigin = "anonymous";
-          img.onload = () => resolve(img);
-          img.onerror = () => reject(new Error(`Failed to load: ${url}`));
-          img.src = url;
-        });
-      });
+      .catch(() => loadImageElement(url));
   }
 
-  return new Promise<HTMLImageElement>((resolve, reject) => {
-    const img = new Image();
-    img.crossOrigin = "anonymous";
-    img.onload = () => resolve(img);
-    img.onerror = () => reject(new Error(`Failed to load: ${url}`));
-    img.src = url;
-  });
+  return loadImageElement(url);
 }
 
 // Single Selection Rule: Mobile portrait when orientation is portrait AND width < 1024px
@@ -290,7 +315,9 @@ export default function ScrollSequenceHero() {
       }
     }
 
-    const dpr = Math.min(window.devicePixelRatio || 1, 2);
+    const isIOS = isIOSDevice();
+    const isSafari = isSafariBrowser();
+    const dpr = Math.min(window.devicePixelRatio || 1, isIOS || isSafari ? 1.5 : (isPortrait ? 1.75 : 2));
     // Use clientWidth / clientHeight of the wrapper so scrollbar is not counted
     const wrapper = stickyRef.current;
     const W = wrapper ? wrapper.clientWidth : (canvas.clientWidth || canvas.offsetWidth);
@@ -629,13 +656,19 @@ export default function ScrollSequenceHero() {
     desktopManifestRef.current = DESKTOP_MANIFEST_DEFAULT;
     mobileManifestRef.current  = MOBILE_MANIFEST_DEFAULT;
 
+    const isIOS = isIOSDevice();
+    const isSafari = isSafariBrowser();
+    const isMobileWidth = window.innerWidth < 768;
+    const isMobile = initialPortrait || isMobileWidth;
+    const MAX_CACHED_FRAMES = isIOS || isSafari ? 24 : (isMobile ? 32 : 70);
+    const MAX_CONCURRENT_LOADS = isIOS || isSafari || isMobile ? 4 : 6;
+
     const nav = navigator as unknown as {
       connection?:   { saveData?: boolean };
       deviceMemory?: number;
     };
     const saveData    = nav.connection?.saveData === true;
     const lowMemory   = (nav.deviceMemory ?? 8) <= 4;
-    const isMobileWidth = window.innerWidth < 768;
     const step        = initialPortrait || isMobileWidth || saveData || lowMemory ? 2 : 1;
 
     let activeLoads = 0;
@@ -643,18 +676,47 @@ export default function ScrollSequenceHero() {
     type SetKey = "desktop" | "mobilePortrait";
     let queue: { set: SetKey; index: number }[] = [];
     let cleanupTimer: ReturnType<typeof setTimeout> | null = null;
+    let lastRequestedTarget = -1;
 
-    function buildQueue(setKey: SetKey) {
-      const q: { set: SetKey; index: number }[] = [];
-      const manifest = setKey === "mobilePortrait" ? mobileManifestRef.current : desktopManifestRef.current;
+    // Track loaded indices for eviction
+    const loadedDesktop = new Set<number>();
+    const loadedPortrait = new Set<number>();
+
+    function requestFramesAround(targetIdx: number) {
+      if (destroyed.current) return;
+      const currentIsPortrait = isPortraitMobileViewport();
+      const activeSetKey: SetKey = currentIsPortrait ? "mobilePortrait" : "desktop";
+      const manifest = activeSetKey === "mobilePortrait" ? mobileManifestRef.current : desktopManifestRef.current;
       const count = manifest.count || TOTAL_FRAMES;
-      for (let i = 2; i <= count; i += step) {
-        q.push({ set: setKey, index: i - 1 });
-      }
-      return q;
-    }
 
-    queue = buildQueue(initialPortrait ? "mobilePortrait" : "desktop");
+      const clampedTarget = Math.max(0, Math.min(count - 1, targetIdx));
+      lastRequestedTarget = clampedTarget;
+
+      const lookBehind = isMobile ? 10 : 16;
+      const lookAhead  = isMobile ? 22 : 36;
+      const minIdx = Math.max(0, clampedTarget - lookBehind);
+      const maxIdx = Math.min(count - 1, clampedTarget + lookAhead);
+
+      const needed: number[] = [0]; // Frame 0 always anchored
+      for (let i = minIdx; i <= maxIdx; i += step) {
+        if (i !== 0) needed.push(i);
+      }
+      if (!needed.includes(clampedTarget)) {
+        needed.push(clampedTarget);
+      }
+
+      const store = activeSetKey === "mobilePortrait" ? portraitBitmaps.current : desktopBitmaps.current;
+      const toLoad = needed.filter(idx => !store[idx] && !loadingSet.has(`${activeSetKey}:${idx}`));
+
+      toLoad.sort((a, b) => {
+        if (a === clampedTarget) return -1;
+        if (b === clampedTarget) return 1;
+        return Math.abs(a - clampedTarget) - Math.abs(b - clampedTarget);
+      });
+
+      queue = toLoad.map(index => ({ set: activeSetKey, index }));
+      pump();
+    }
 
     function fetchFrame(setKey: SetKey, idx: number) {
       const store = setKey === "mobilePortrait" ? portraitBitmaps.current : desktopBitmaps.current;
@@ -675,6 +737,34 @@ export default function ScrollSequenceHero() {
         .then(drawable => {
           if (destroyed.current) { closeDrawable(drawable); return; }
           store[idx] = drawable;
+
+          const loadedSet = setKey === "mobilePortrait" ? loadedPortrait : loadedDesktop;
+          loadedSet.add(idx);
+
+          // LRU Eviction: cap frames in memory
+          if (loadedSet.size > MAX_CACHED_FRAMES) {
+            const activeManifest = setKey === "mobilePortrait" ? mobileManifestRef.current : desktopManifestRef.current;
+            const currentIdx = Math.round(current.current * (activeManifest.count - 1));
+            const indices = Array.from(loadedSet);
+            // Sort furthest from currentIdx first (keep frame 0 protected)
+            indices.sort((a, b) => {
+              if (a === 0) return 1;
+              if (b === 0) return -1;
+              return Math.abs(b - currentIdx) - Math.abs(a - currentIdx);
+            });
+
+            while (loadedSet.size > MAX_CACHED_FRAMES && indices.length > 0) {
+              const evictIdx = indices.shift()!;
+              if (evictIdx === 0) continue;
+              const item = store[evictIdx];
+              if (item) {
+                closeDrawable(item);
+                store[evictIdx] = null;
+              }
+              loadedSet.delete(evictIdx);
+            }
+          }
+
           const currentIsPortrait = isPortraitMobileViewport();
           const activeSetKey: SetKey = currentIsPortrait ? "mobilePortrait" : "desktop";
           if (activeSetKey === setKey) {
@@ -695,28 +785,15 @@ export default function ScrollSequenceHero() {
     }
 
     function pump() {
-      if (destroyed.current || activeLoads >= 8 || queue.length === 0) return;
-      const currentIsPortrait = isPortraitMobileViewport();
-      const currentActiveSet: SetKey = currentIsPortrait ? "mobilePortrait" : "desktop";
-      const activeManifest = currentActiveSet === "mobilePortrait" ? mobileManifestRef.current : desktopManifestRef.current;
-
-      // Prioritize active set frames nearest to current scroll target
-      const targetIdx = Math.round(rawTarget.current * (activeManifest.count - 1));
-      queue.sort((a, b) => {
-        if (a.set === currentActiveSet && b.set !== currentActiveSet) return -1;
-        if (b.set === currentActiveSet && a.set !== currentActiveSet) return 1;
-        return Math.abs(a.index - targetIdx) - Math.abs(b.index - targetIdx);
-      });
-
-      while (activeLoads < 8 && queue.length > 0) {
+      if (destroyed.current || activeLoads >= MAX_CONCURRENT_LOADS || queue.length === 0) return;
+      while (activeLoads < MAX_CONCURRENT_LOADS && queue.length > 0) {
         const item = queue.shift()!;
         fetchFrame(item.set, item.index);
       }
     }
 
-    // Load Frame 0 (LCP) immediately for active set
-    const activeInitialSet: SetKey = initialPortrait ? "mobilePortrait" : "desktop";
-    fetchFrame(activeInitialSet, 0);
+    // Start with frames around initial frame (0)
+    requestFramesAround(0);
 
     // ── Orientation & Breakpoint Change Listener (Switch sets without flash) ──
     const portraitMq = window.matchMedia("(orientation: portrait) and (max-width: 1023px)");
@@ -736,18 +813,12 @@ export default function ScrollSequenceHero() {
         stickyRef.current.style.backgroundColor = isPortrait ? PORTRAIT_BG_COLOR : BG_COLOR;
       }
 
-      const newSetKey: SetKey = isPortrait ? "mobilePortrait" : "desktop";
-      const inactiveSetKey: SetKey = isPortrait ? "desktop" : "mobilePortrait";
       const newManifest = isPortrait ? mobileManifestRef.current : desktopManifestRef.current;
+      const inactiveSetKey: SetKey = isPortrait ? "desktop" : "mobilePortrait";
 
-      // Immediately request frame 0 & target frame of new set
+      // Request frames around current scroll position for the new set
       const curIdx = Math.round(current.current * (newManifest.count - 1));
-      fetchFrame(newSetKey, 0);
-      fetchFrame(newSetKey, curIdx);
-
-      // Rebuild queue for the newly active set
-      queue = buildQueue(newSetKey);
-      pump();
+      requestFramesAround(curIdx);
 
       // Redraw immediately
       draw(current.current);
@@ -760,9 +831,11 @@ export default function ScrollSequenceHero() {
         const currentActive: SetKey = isPortraitMobileRef.current ? "mobilePortrait" : "desktop";
         if (currentActive !== inactiveSetKey) {
           const inactiveStore = inactiveSetKey === "mobilePortrait" ? portraitBitmaps.current : desktopBitmaps.current;
+          const inactiveLoaded = inactiveSetKey === "mobilePortrait" ? loadedPortrait : loadedDesktop;
           inactiveStore.forEach((b, i) => {
             if (b) { closeDrawable(b); inactiveStore[i] = null; }
           });
+          inactiveLoaded.clear();
         }
       }, 5000);
     };
@@ -808,7 +881,14 @@ export default function ScrollSequenceHero() {
         stageIndicatorRef.current.style.opacity = coverProgress <= 0 ? "1" : Math.max(0, 1 - coverProgress / 0.5).toFixed(3);
       }
 
-      pump();
+      const activeManifest = isPortraitMobileRef.current ? mobileManifestRef.current : desktopManifestRef.current;
+      const count = activeManifest.count || TOTAL_FRAMES;
+      const targetIdx = Math.round(frameProgress * (count - 1));
+      if (Math.abs(targetIdx - lastRequestedTarget) >= 1) {
+        requestFramesAround(targetIdx);
+      } else {
+        pump();
+      }
     }
 
     // ── rAF loop — always running while mounted ───────────────────────────
@@ -1011,6 +1091,8 @@ export default function ScrollSequenceHero() {
       desktopBitmaps.current = Array.from({ length: TOTAL_FRAMES }, () => null);
       portraitBitmaps.current.forEach(b => closeDrawable(b));
       portraitBitmaps.current = Array.from({ length: TOTAL_FRAMES }, () => null);
+      loadedDesktop.clear();
+      loadedPortrait.clear();
     };
   }, [draw, updateCards, applyCoverReaction]);
 
@@ -1138,8 +1220,8 @@ export default function ScrollSequenceHero() {
                 <div className="showcase-media-stage" id="showcase-media">
                   {/* eslint-disable-next-line @next/next/no-img-element */}
                   <img  src="/homevideos/homebannerimage.jpg"                alt="Industrial Services" className="showcase-media-item" data-index="0" />
-                  <video src="/homevideos/Automated-1-2.mp4"  poster="/homevideos/Automated-1-2-poster.jpg"  className="showcase-media-item active" data-index="1" autoPlay muted loop playsInline />
-                  <video src="/homevideos/newproduct.mp4"     poster="/homevideos/newproduct-poster.jpg"     className="showcase-media-item"        data-index="2" muted loop playsInline />
+                  <video src="/homevideos/Automated-1-2.mp4"  poster="/homevideos/Automated-1-2-poster.jpg"  className="showcase-media-item active" data-index="1" autoPlay muted loop playsInline preload="metadata" />
+                  <video src="/homevideos/newproduct.mp4"     poster="/homevideos/newproduct-poster.jpg"     className="showcase-media-item"        data-index="2" muted loop playsInline preload="none" />
                   {/* eslint-disable-next-line @next/next/no-img-element */}
                   <img  src="/homevideos/INSPECTION-AND-TESTING1.jpg"       alt="NDT and Testing"    className="showcase-media-item" data-index="3" />
                 </div>
@@ -1171,7 +1253,7 @@ export default function ScrollSequenceHero() {
           </div>
 
           {/* Stats strip pinned at bottom */}
-          <div className="hero-stats-strip max-md:pb-4 max-md:shrink-0 md:pb-0" id="hero-stats-strip">
+          <div className="hero-stats-strip max-md:shrink-0 md:pb-0" id="hero-stats-strip">
             <div className="stat-strip-item"><span className="stat-strip-prefix">/01</span><span className="stat-strip-num">18+</span><span className="stat-strip-label">Years Experience</span></div>
             <div className="stat-strip-item"><span className="stat-strip-prefix">/02</span><span className="stat-strip-num">8</span><span className="stat-strip-label">Industries Served</span></div>
             <div className="stat-strip-item"><span className="stat-strip-prefix">/03</span><span className="stat-strip-num">200+</span><span className="stat-strip-label">Approved Clients</span></div>
