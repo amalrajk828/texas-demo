@@ -1342,21 +1342,6 @@ export default function ScrollSequenceHero() {
           {/* Top red accent bar following the card's rounded corners */}
           <div className="card-top-accent-bar" aria-hidden="true" />
 
-          {/* Background pipe/flange image clipped inside card */}
-          <div className="card-bg-flange-layer" aria-hidden="true">
-            {/* eslint-disable-next-line @next/next/no-img-element */}
-            <img
-              src="/hero-frames/frame_299.webp"
-              alt=""
-              className="card-bg-flange-img"
-              loading="lazy"
-              decoding="async"
-            />
-          </div>
-
-          {/* Gradient overlay above image and below text */}
-          <div className="card-bg-gradient-overlay" aria-hidden="true" />
-
           {/* Foreground content wrapper */}
           <div className="card-content-wrapper">
             <div className="pill-badge">WHAT WE DO</div>
