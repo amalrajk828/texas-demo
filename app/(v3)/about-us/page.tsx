@@ -278,8 +278,51 @@ export default function AboutPage() {
       </Section>
 
       {/* ═══ 3. WHAT WE OFFER (CORE DISCIPLINES) ════════════════════ */}
-      <Section variant="white">
-        <Container>
+      <Section
+        id="about-services-section"
+        className="relative overflow-hidden bg-gradient-to-b from-[#fbfcfc] via-[#f1f3f5] to-[#f8f9fa]"
+      >
+        {/* Soft decorative blurred background blobs for glassmorphism backdrop-filter */}
+        <div className="absolute inset-0 pointer-events-none overflow-hidden z-0 select-none" aria-hidden="true">
+          {/* Maroon/rose soft blob behind left cards */}
+          <div
+            className="absolute -top-16 -left-10 w-[500px] h-[500px] rounded-full"
+            style={{
+              background: "radial-gradient(circle, rgba(176,48,56,0.20) 0%, rgba(176,48,56,0.05) 60%, transparent 80%)",
+              filter: "blur(80px)",
+              opacity: 0.45,
+            }}
+          />
+          {/* Warm peach / soft amber blob behind center cards */}
+          <div
+            className="absolute top-[28%] left-[35%] w-[440px] h-[440px] rounded-full"
+            style={{
+              background: "radial-gradient(circle, rgba(254,215,170,0.65) 0%, rgba(251,191,36,0.15) 60%, transparent 80%)",
+              filter: "blur(80px)",
+              opacity: 0.45,
+            }}
+          />
+          {/* Maroon/rose soft blob behind right cards */}
+          <div
+            className="absolute -bottom-20 -right-10 w-[520px] h-[520px] rounded-full"
+            style={{
+              background: "radial-gradient(circle, rgba(176,48,56,0.22) 0%, rgba(120,30,40,0.06) 65%, transparent 80%)",
+              filter: "blur(80px)",
+              opacity: 0.45,
+            }}
+          />
+          {/* Subtle warm gray / slate soft blob */}
+          <div
+            className="absolute top-[8%] right-[24%] w-[360px] h-[360px] rounded-full"
+            style={{
+              background: "radial-gradient(circle, rgba(203,213,225,0.55) 0%, transparent 70%)",
+              filter: "blur(80px)",
+              opacity: 0.4,
+            }}
+          />
+        </div>
+
+        <Container className="relative z-10">
           <SectionHeading
             eyebrow="What We Offer"
             title="Innovative Solutions for Industrial Excellence"
