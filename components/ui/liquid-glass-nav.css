@@ -1,0 +1,162 @@
+/* ==========================================================================
+   Liquid Frosted Glass Navbar Styles - Flicker-Free Composited Layers
+   8 Optical Layers for High-Fidelity Depth, Refraction, and Specular Lighting
+   ========================================================================== */
+
+:root {
+  --nav-blur: 0px; /* Setting: 0px disables live backdrop blur for zero repaint flicker. */
+}
+
+/* 1. Root Pill Container (Pixel-aligned, hardware-accelerated, isolated compositing) */
+.liquid-nav {
+  position: relative;
+  width: 100%;
+  height: 60px; /* Strict whole-pixel integer height (mobile) */
+  border-radius: 9999px;
+  isolation: isolate;
+  overflow: visible; /* Dropdown panels are not clipped */
+  box-shadow: 0 10px 30px rgba(20, 20, 20, 0.10), 0 2px 6px rgba(20, 20, 20, 0.06);
+  transform: translate3d(0, 0, 0);
+  -webkit-transform: translate3d(0, 0, 0);
+  backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
+  contain: layout style; /* Layout & style containment prevents hero canvas repaint invalidation */
+  -webkit-tap-highlight-color: transparent;
+  box-sizing: border-box;
+}
+
+@media (min-width: 1024px) {
+  .liquid-nav {
+    height: 72px; /* Strict whole-pixel integer height (desktop) */
+  }
+}
+
+/* 2. Clipped Decorative Backdrop (Holds the 8 Optical Layers inside the pill radius) */
+.liquid-nav-backdrop {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: inherit;
+  overflow: hidden;
+  pointer-events: none;
+  isolation: isolate;
+  transform: translateZ(0);
+  -webkit-transform: translateZ(0);
+  box-sizing: border-box;
+}
+
+/* Base Decorative Layer Properties - Every layer is inset 0 with border-radius: inherit */
+.liquid-nav-backdrop > span {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: inherit;
+  pointer-events: none;
+  box-sizing: border-box;
+}
+
+/* Layer 1: Surface (Static fake glass - zero live blur recomputation over canvas/video) */
+.liquid-nav-surface {
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.82) 0%, rgba(255, 255, 255, 0.66) 100%);
+  transform: translateZ(0);
+  -webkit-transform: translateZ(0);
+  backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
+  transition: background-color 0.3s ease-out;
+}
+
+/* Scrolled state: changes only background-color alpha tint, no shadow or layout shift */
+.liquid-nav.is-scrolled .liquid-nav-surface,
+.liquid-nav[data-scrolled="true"] .liquid-nav-surface {
+  background-color: rgba(255, 255, 255, 0.12);
+}
+
+/* Layer 2: Tint (Subtle warm/neutral wash with faint red warmth on the right) */
+.liquid-nav-tint {
+  background: linear-gradient(90deg, rgba(255, 255, 255, 0.10) 0%, rgba(255, 255, 255, 0.05) 70%, rgba(139, 0, 0, 0.03) 100%);
+}
+
+/* Layer 3: Shoulder (Smooth multi-stop gradient without hard stops or edge seams) */
+.liquid-nav-shoulder {
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.45) 0%, rgba(255, 255, 255, 0.15) 35%, rgba(255, 255, 255, 0) 100%);
+}
+
+/* Layer 4: Reflection (105deg angled sheen moved purely on X axis with translate3d, no skew) */
+.liquid-nav-reflection {
+  width: 140%;
+  height: 100%;
+  left: -20%;
+  right: auto;
+  top: 0;
+  bottom: 0;
+  background: linear-gradient(105deg, transparent 0%, rgba(255, 255, 255, 0.22) 48%, rgba(255, 255, 255, 0.35) 50%, rgba(255, 255, 255, 0.22) 52%, transparent 100%);
+  transform: translate3d(var(--glass-sheen-x, 0px), 0, 0);
+  -webkit-transform: translate3d(var(--glass-sheen-x, 0px), 0, 0);
+  opacity: 0.35;
+  will-change: transform;
+}
+
+/* Layer 5: Pointer Light (Cursor-following radial glow with opacity transition only) */
+.liquid-nav-pointer-light {
+  background: radial-gradient(circle 140px at var(--glass-x, 50%) var(--glass-y, 50%), rgba(255, 255, 255, 0.55) 0%, transparent 45%);
+  opacity: var(--glass-pointer-opacity, 0);
+  transition: opacity 0.25s ease-out;
+  will-change: transform;
+}
+
+@media (hover: none) or (pointer: coarse) {
+  .liquid-nav-pointer-light {
+    display: none !important;
+    opacity: 0 !important;
+  }
+}
+
+/* Layer 6: Rim (Bright gradient edge with specular inset highlight, zero mask seam) */
+.liquid-nav-rim {
+  border: 1px solid rgba(255, 255, 255, 0.65);
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.85);
+}
+
+/* Layer 7: Caustic (Smooth normal-blend radial gradient without mix-blend-mode or hard stops) */
+.liquid-nav-caustic {
+  background: radial-gradient(ellipse 70% 50% at 50% 100%, rgba(255, 255, 255, 0.25) 0%, rgba(255, 255, 255, 0.08) 50%, rgba(255, 255, 255, 0) 100%);
+  opacity: 0.25;
+}
+
+/* Layer 8: Bottom (Smooth grounding gradient fading over full height - NO inset shadow line) */
+.liquid-nav-bottom {
+  background: linear-gradient(0deg, rgba(0, 0, 0, 0.025) 0%, rgba(0, 0, 0, 0.008) 50%, transparent 100%);
+}
+
+/* Foreground Content Row (Integer pixel paddings) */
+.liquid-nav-content {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  height: 100%;
+  padding: 0 16px; /* Strict whole-pixel padding */
+  box-sizing: border-box;
+}
+
+@media (min-width: 1024px) {
+  .liquid-nav-content {
+    padding: 0 24px; /* Strict whole-pixel padding */
+  }
+}
+
+/* Prefers Reduced Motion */
+@media (prefers-reduced-motion: reduce) {
+  .liquid-nav,
+  .liquid-nav-surface,
+  .liquid-nav-reflection,
+  .liquid-nav-pointer-light {
+    transition: none !important;
+    transform: none !important;
+    -webkit-transform: none !important;
+  }
+}

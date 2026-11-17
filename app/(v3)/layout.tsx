@@ -133,6 +133,7 @@ export default function V3RootLayout({ children }: { children: React.ReactNode }
         />
       </head>
       <body className="overflow-x-clip bg-[#e8e8e6] text-[#1a1a1a] antialiased">
+        <GlassNavbar />
         <V3SmoothScroll>
           <PageLoader />
           <a
@@ -149,7 +150,6 @@ export default function V3RootLayout({ children }: { children: React.ReactNode }
               style={{ display: "none", visibility: "hidden" }}
             />
           </noscript>
-          <GlassNavbar />
           <main id="main-content">
             {children}
           </main>

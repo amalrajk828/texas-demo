@@ -62,20 +62,20 @@ export default function AboutServiceCards({ cards }: AboutServiceCardsProps) {
               delay: i * 0.1,
               ease: [0.22, 1, 0.36, 1],
             }}
-            className="about-service-card group"
+            className="glass-card about-service-card group"
           >
             {/* Soft radial glow in top-right corner on hover */}
             <div className="about-service-card-glow" aria-hidden="true" />
 
             {/* Top row: Icon badge + Index number */}
             <div className="flex items-center justify-between mb-6">
-              {/* Icon badge: 56px rounded square (radius 16px) with soft gradient */}
-              <div className="about-service-icon-badge">
+              {/* Icon badge: glass tile with blur, highlight and shadow */}
+              <div className="glass-icon-box about-service-icon-badge">
                 <IconComponent className="w-6 h-6 text-[#8a302f]" strokeWidth={1.85} />
               </div>
 
-              {/* Large faint index "01 / 02 / 03" in mono font, color #8a302f at 25% opacity */}
-              <span className="font-mono text-[32px] font-bold text-[#8a302f]/25 leading-none select-none tracking-tight">
+              {/* Number (01/02/03): lighter and semi-transparent color: rgba(176,48,56,0.35) */}
+              <span className="about-service-number">
                 {index}
               </span>
             </div>
@@ -93,13 +93,13 @@ export default function AboutServiceCards({ cards }: AboutServiceCardsProps) {
               {description}
             </p>
 
-            {/* Pill tags: 12px text, background rgba(138,48,47,0.08), color #8a302f, radius 999px */}
+            {/* Pill tags: glass pills with border, blur and soft highlight */}
             {tags && tags.length > 0 && (
               <div className="flex flex-wrap gap-2 mb-6">
                 {tags.map((tag) => (
                   <span
                     key={tag}
-                    className="inline-flex items-center px-3 py-1 rounded-full text-[12px] font-medium tracking-normal bg-[#8a302f]/[0.08] text-[#8a302f]"
+                    className="glass-pill about-service-pill"
                   >
                     {tag}
                   </span>
@@ -107,8 +107,8 @@ export default function AboutServiceCards({ cards }: AboutServiceCardsProps) {
               </div>
             )}
 
-            {/* Pinned bottom action bar with divider */}
-            <div className="about-service-card-footer mt-auto pt-5 border-t border-black/[0.06]">
+            {/* Pinned bottom action bar with glass divider */}
+            <div className="about-service-card-footer mt-auto pt-5">
               <Link
                 href={href}
                 className="about-service-link-btn group/link"
@@ -116,7 +116,7 @@ export default function AboutServiceCards({ cards }: AboutServiceCardsProps) {
                 <span className="about-service-link-text">
                   Learn More
                 </span>
-                <span className="about-service-arrow-circle" aria-hidden="true">
+                <span className="glass-btn about-service-arrow-circle" aria-hidden="true">
                   <ArrowRight className="w-4 h-4 transition-transform duration-300 group-hover/link:translate-x-1" />
                 </span>
               </Link>

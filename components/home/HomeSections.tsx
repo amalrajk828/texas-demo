@@ -28,7 +28,7 @@ export default function HomeSections() {
 
           <CardGrid max={4} className="about-stats-grid">
             <Reveal delay={0}>
-              <div className="stat-card card-interactive">
+              <div className="stat-card card-interactive card-accent">
                 <div className="stat-number">18+</div>
                 <div className="stat-title">Years Industrial Precision</div>
                 <p className="stat-desc">
@@ -38,7 +38,7 @@ export default function HomeSections() {
               </div>
             </Reveal>
             <Reveal delay={0.08}>
-              <div className="stat-card card-interactive">
+              <div className="stat-card card-interactive card-accent">
                 <div className="stat-number">200+</div>
                 <div className="stat-title">Completed Skid Packages</div>
                 <p className="stat-desc">
@@ -48,7 +48,7 @@ export default function HomeSections() {
               </div>
             </Reveal>
             <Reveal delay={0.16}>
-              <div className="stat-card card-interactive">
+              <div className="stat-card card-interactive card-accent">
                 <div className="stat-number">16+</div>
                 <div className="stat-title">Global OEM Alliances</div>
                 <p className="stat-desc">
@@ -58,7 +58,7 @@ export default function HomeSections() {
               </div>
             </Reveal>
             <Reveal delay={0.24}>
-              <div className="stat-card card-interactive">
+              <div className="stat-card card-interactive card-accent">
                 <div className="stat-number">100%</div>
                 <div className="stat-title">Certified Quality &amp; Safety</div>
                 <p className="stat-desc">
@@ -98,7 +98,7 @@ export default function HomeSections() {
 
           <CardGrid max={2}>
             <Reveal delay={0}>
-              <div className="feature-card card-interactive">
+              <div className="feature-card card-interactive card-accent">
                 <div className="feature-icon">
                   <svg
                     width="24"
@@ -124,7 +124,7 @@ export default function HomeSections() {
             </Reveal>
 
             <Reveal delay={0.08}>
-              <div className="feature-card card-interactive">
+              <div className="feature-card card-interactive card-accent">
                 <div className="feature-icon">
                   <svg
                     width="24"
@@ -158,7 +158,7 @@ export default function HomeSections() {
             </Reveal>
 
             <Reveal delay={0.16}>
-              <div className="feature-card card-interactive">
+              <div className="feature-card card-interactive card-accent">
                 <div className="feature-icon">
                   <svg
                     width="24"
@@ -184,7 +184,7 @@ export default function HomeSections() {
             </Reveal>
 
             <Reveal delay={0.24}>
-              <div className="feature-card card-interactive">
+              <div className="feature-card card-interactive card-accent">
                 <div className="feature-icon">
                   <svg
                     width="24"
@@ -243,7 +243,7 @@ export default function HomeSections() {
 
           <CardGrid max={4} className="industries-grid">
             <Reveal delay={0}>
-              <div className="industry-card card-interactive">
+              <div className="industry-card card-interactive card-accent">
                 <div className="industry-badge">Upstream</div>
                 <h3 className="industry-title">Oil &amp; Gas Production</h3>
                 <p className="industry-desc">
@@ -253,7 +253,7 @@ export default function HomeSections() {
               </div>
             </Reveal>
             <Reveal delay={0.08}>
-              <div className="industry-card card-interactive">
+              <div className="industry-card card-interactive card-accent">
                 <div className="industry-badge">Downstream</div>
                 <h3 className="industry-title">Refining &amp; Petrochemicals</h3>
                 <p className="industry-desc">
@@ -263,7 +263,7 @@ export default function HomeSections() {
               </div>
             </Reveal>
             <Reveal delay={0.16}>
-              <div className="industry-card card-interactive">
+              <div className="industry-card card-interactive card-accent">
                 <div className="industry-badge">Utilities</div>
                 <h3 className="industry-title">Power &amp; Desalination</h3>
                 <p className="industry-desc">
@@ -273,7 +273,7 @@ export default function HomeSections() {
               </div>
             </Reveal>
             <Reveal delay={0.24}>
-              <div className="industry-card card-interactive">
+              <div className="industry-card card-interactive card-accent">
                 <div className="industry-badge">Offshore</div>
                 <h3 className="industry-title">Marine Terminals &amp; Bunkering</h3>
                 <p className="industry-desc">
@@ -310,7 +310,7 @@ export default function HomeSections() {
           </Reveal>
 
           <Reveal delay={0.05}>
-            <div className="specs-card" id="specs">
+            <div className="specs-card card-accent" id="specs">
               <table className="specs-table">
                 <thead>
                   <tr>
@@ -402,7 +402,7 @@ export default function HomeSections() {
 
           <div className="clients-logo-grid">
             <Reveal delay={0}>
-              <div className="client-logo-item card-interactive" title="Kuwait Oil Company (KOC)">
+              <div className="client-logo-item card-interactive card-accent" title="Kuwait Oil Company (KOC)">
                 <div className="client-logo-box">
                   <div className="client-logo-inner" style={{ transform: "scale(0.95)" }}>
                     <Image
@@ -419,7 +419,7 @@ export default function HomeSections() {
               </div>
             </Reveal>
             <Reveal delay={0.07}>
-              <div className="client-logo-item card-interactive" title="Kuwait National Petroleum Company (KNPC)">
+              <div className="client-logo-item card-interactive card-accent" title="Kuwait National Petroleum Company (KNPC)">
                 <div className="client-logo-box">
                   <div className="client-logo-inner" style={{ transform: "scale(0.95)" }}>
                     <Image
@@ -436,7 +436,7 @@ export default function HomeSections() {
               </div>
             </Reveal>
             <Reveal delay={0.14}>
-              <div className="client-logo-item card-interactive" title="Kuwait Gulf Oil Company (KGOC)">
+              <div className="client-logo-item card-interactive card-accent" title="Kuwait Gulf Oil Company (KGOC)">
                 <div className="client-logo-box">
                   <div className="client-logo-inner" style={{ transform: "scale(1.15)" }}>
                     <Image
@@ -453,7 +453,7 @@ export default function HomeSections() {
               </div>
             </Reveal>
             <Reveal delay={0.21}>
-              <div className="client-logo-item card-interactive" title="Ministry of Electricity & Water (MEW)">
+              <div className="client-logo-item card-interactive card-accent" title="Ministry of Electricity & Water (MEW)">
                 <div className="client-logo-box">
                   <div className="client-logo-inner" style={{ transform: "scale(1.15)" }}>
                     <Image
@@ -470,7 +470,7 @@ export default function HomeSections() {
               </div>
             </Reveal>
             <Reveal delay={0.28}>
-              <div className="client-logo-item card-interactive" title="Saudi Arabian Chevron">
+              <div className="client-logo-item card-interactive card-accent" title="Saudi Arabian Chevron">
                 <div className="client-logo-box">
                   <div className="client-logo-inner" style={{ transform: "scale(0.92)" }}>
                     <Image
@@ -487,7 +487,7 @@ export default function HomeSections() {
               </div>
             </Reveal>
             <Reveal delay={0.35}>
-              <div className="client-logo-item card-interactive" title="Kuwait Cement Company">
+              <div className="client-logo-item card-interactive card-accent" title="Kuwait Cement Company">
                 <div className="client-logo-box">
                   <div className="client-logo-inner" style={{ transform: "scale(1.06)" }}>
                     <Image
@@ -531,7 +531,7 @@ export default function HomeSections() {
 
           <CardGrid max={3}>
             <Reveal delay={0}>
-              <article className="blog-card card-interactive is-clickable">
+              <article className="blog-card card-interactive is-clickable card-accent">
                 <div className="blog-meta">Flow Measurement &bull; 10 min read</div>
                 <h3 className="blog-title">
                   What is Custody Transfer Metering? A Complete Guide to Standards and Accuracy
@@ -547,7 +547,7 @@ export default function HomeSections() {
             </Reveal>
 
             <Reveal delay={0.08}>
-              <article className="blog-card card-interactive is-clickable">
+              <article className="blog-card card-interactive is-clickable card-accent">
                 <div className="blog-meta">Industrial Automation &bull; 8 min read</div>
                 <h3 className="blog-title">
                   SCADA System Upgrades: Modernizing Legacy Control Architectures
@@ -563,7 +563,7 @@ export default function HomeSections() {
             </Reveal>
 
             <Reveal delay={0.16}>
-              <article className="blog-card card-interactive is-clickable">
+              <article className="blog-card card-interactive is-clickable card-accent">
                 <div className="blog-meta">NDT &amp; Inspection &bull; 10 min read</div>
                 <h3 className="blog-title">
                   Non-Destructive Testing (NDT) Methods: A Complete Technical Guide
@@ -593,7 +593,7 @@ export default function HomeSections() {
       <section id="contact" className="content-section cta-section">
         <div className="section-container">
           <Reveal delay={0}>
-            <div className="cta-box">
+            <div className="cta-box card-accent">
               <div className="flex justify-center mb-5">
                 <EyebrowPill>GET IN TOUCH</EyebrowPill>
               </div>
