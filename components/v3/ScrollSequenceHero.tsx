@@ -1537,11 +1537,9 @@ export default function ScrollSequenceHero() {
               </div>
             </div>
 
-            {/* ── Stage C: custody metering (60–100%) — Wrapped in navbar-aligned container ── */}
             {/* ── Stage C: custody metering (60–100%) — Mobile: top of screen with standard margin; Desktop: left max with standard margin ── */}
             <div
               id="custody-screen"
-              className="custody-screen absolute inset-0 w-full min-h-[100vh] h-[100svh] flex items-center justify-start pointer-events-none pt-24 lg:pt-28 pb-8 z-10 box-border overflow-hidden"
               className="custody-screen absolute inset-0 w-full min-h-[100vh] h-[100svh] flex flex-col items-start justify-start lg:flex-row lg:items-center lg:justify-start pointer-events-none pt-[calc(var(--header-height,56px)+12px)] lg:pt-28 pb-8 z-10 box-border overflow-hidden px-3.5 sm:px-6 md:px-8 lg:px-12 xl:px-16"
               style={{ willChange: "opacity, transform" }}
             >

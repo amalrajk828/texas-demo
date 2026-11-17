@@ -3516,13 +3516,11 @@ button.card-interactive,
   }
 
   .hero-screen,
-  .what-we-do-screen {
-
-    .what-we-do-screen,
-    .custody-screen {
-      padding: calc(var(--header-height, 56px) + 4px) 14px 8px !important;
-      justify-content: flex-start !important;
-    }
+  .what-we-do-screen,
+  .custody-screen {
+    padding: calc(var(--header-height, 56px) + 4px) 14px 8px !important;
+    justify-content: flex-start !important;
+  }
 
     .hero-glass-card,
     .what-we-do-left {
@@ -4178,15 +4176,13 @@ button.card-interactive,
     }
   }
 
-  @media (max-width: 767px) and (max-height: 650px) {
+@media (max-width: 767px) and (max-height: 650px) {
 
-    .hero-screen,
-    .what-we-do-screen {
-
-      .what-we-do-screen,
-      .custody-screen {
-        padding-top: calc(var(--header-height, 56px) + 2px) !important;
-      }
+  .hero-screen,
+  .what-we-do-screen,
+  .custody-screen {
+    padding-top: calc(var(--header-height, 56px) + 2px) !important;
+  }
 
       .hero-glass-card,
       .what-we-do-left {
