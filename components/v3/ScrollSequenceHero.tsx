@@ -336,8 +336,8 @@ export default function ScrollSequenceHero() {
   const isPortraitMobileRef = useRef(false);
 
   // ── Hero Showcase Slider State & Handlers ─────────────────────────────────
-  const [showcaseIndex, setShowcaseIndex] = useState(1);
-  const showcaseIndexRef = useRef(1);
+  const [showcaseIndex, setShowcaseIndex] = useState(0);
+  const showcaseIndexRef = useRef(0);
   showcaseIndexRef.current = showcaseIndex;
   const lastSliderClickRef = useRef(0);
   const autoPlayTimerRef = useRef<NodeJS.Timeout | null>(null);
@@ -357,7 +357,7 @@ export default function ScrollSequenceHero() {
 
   const handlePrevSlide = useCallback(() => {
     const now = Date.now();
-    if (now - lastSliderClickRef.current < 300) return;
+    if (now - lastSliderClickRef.current < 150) return;
     lastSliderClickRef.current = now;
     setShowcaseIndex((prev) => (prev - 1 + SHOWCASE_SLIDES.length) % SHOWCASE_SLIDES.length);
     resetSliderTimer();
@@ -365,7 +365,7 @@ export default function ScrollSequenceHero() {
 
   const handleNextSlide = useCallback(() => {
     const now = Date.now();
-    if (now - lastSliderClickRef.current < 300) return;
+    if (now - lastSliderClickRef.current < 150) return;
     lastSliderClickRef.current = now;
     setShowcaseIndex((prev) => (prev + 1) % SHOWCASE_SLIDES.length);
     resetSliderTimer();
@@ -373,7 +373,7 @@ export default function ScrollSequenceHero() {
 
   const handleSelectSlide = useCallback((index: number) => {
     const now = Date.now();
-    if (now - lastSliderClickRef.current < 300) return;
+    if (now - lastSliderClickRef.current < 150) return;
     lastSliderClickRef.current = now;
     setShowcaseIndex(index);
     resetSliderTimer();
@@ -1450,7 +1450,7 @@ export default function ScrollSequenceHero() {
             <div
               id="what-we-do-screen"
               className="what-we-do-screen max-md:flex max-md:flex-col max-md:h-[100svh] max-md:min-h-[100svh] max-md:max-h-[100svh] max-md:overflow-hidden max-md:justify-between md:flex md:items-center md:justify-center lg:relative lg:w-full lg:min-h-[100dvh] lg:px-12 xl:px-16 lg:overflow-x-hidden"
-              style={{ willChange: "opacity, transform" }}
+              style={{ willChange: "opacity, transform", opacity: 0, visibility: "hidden" }}
             >
               <div className="what-we-do-container max-md:flex max-md:flex-col max-md:h-full max-md:justify-between md:flex md:flex-col lg:static lg:w-full lg:h-full lg:max-w-none lg:m-0 lg:p-0">
                 <div className="what-we-do-left hero-stage-card card-accent relative z-10 overflow-hidden isolate [transform:translateZ(0)] max-md:top-auto max-md:translate-y-0 max-md:py-6 max-md:px-5 max-md:pb-6 max-md:h-auto max-md:min-h-[240px] max-md:shrink-0 md:min-h-0 md:h-auto md:p-0 lg:!absolute lg:!left-12 xl:!left-16 lg:!top-1/2 lg:!-translate-y-1/2 lg:z-20 lg:!w-[min(520px,42vw)] lg:!max-w-[520px] lg:max-xl:!w-[min(440px,44vw)] lg:!p-8 xl:!p-10 lg:box-border">
@@ -1519,7 +1519,9 @@ export default function ScrollSequenceHero() {
 
               {/* Desktop-only Vertical Tilted Service Cards Column (>= 1024px) */}
               <div
-                className="hidden lg:flex lg:flex-col lg:absolute lg:right-10 xl:right-16 lg:top-1/2 lg:-translate-y-1/2 lg:w-[250px] xl:w-[290px] lg:-space-y-5 lg:z-20 pointer-events-auto [@media(max-height:800px)]:scale-90 [@media(max-height:800px)]:origin-right"
+                className={`hidden lg:flex lg:flex-col lg:absolute lg:right-10 xl:right-16 lg:top-1/2 lg:-translate-y-1/2 lg:w-[250px] xl:w-[290px] lg:-space-y-5 lg:z-20 ${
+                  activeStage === 2 ? "pointer-events-auto" : "pointer-events-none"
+                } [@media(max-height:800px)]:scale-90 [@media(max-height:800px)]:origin-right`}
               >
                 {TILTED_SERVICES.map((service) => (
                   <TiltedServiceCard
@@ -1541,7 +1543,7 @@ export default function ScrollSequenceHero() {
             <div
               id="custody-screen"
               className="custody-screen absolute inset-0 w-full min-h-[100vh] h-[100svh] flex flex-col items-start justify-start lg:flex-row lg:items-center lg:justify-start pointer-events-none pt-[calc(var(--header-height,56px)+12px)] lg:pt-28 pb-8 z-10 box-border overflow-hidden px-3.5 sm:px-6 md:px-8 lg:px-12 xl:px-16"
-              style={{ willChange: "opacity, transform" }}
+              style={{ willChange: "opacity, transform", opacity: 0, visibility: "hidden" }}
             >
               <div className="custody-container w-full max-w-[480px] lg:max-w-[620px] m-0 p-0 flex items-start lg:items-center justify-start box-border">
                 <div
@@ -1551,73 +1553,73 @@ export default function ScrollSequenceHero() {
                   {/* Top red accent bar following the card's rounded corners */}
                   <div className="card-top-accent-bar" aria-hidden="true" />
 
-                    {/* Foreground content wrapper with equal padding and left-aligned items sharing the left edge */}
-                    <div className="card-content-wrapper w-full p-8 lg:p-10 flex flex-col items-start text-left box-border">
-                      <div className="pill-badge">WHAT WE DO</div>
-                      <h2 className="card-title">
-                        Engineered Excellence in<br />Custody Metering &amp; Automation
-                      </h2>
-                      <p className="card-desc">
-                        Extensive expertise in liquid and gas custody metering, Industrial Automation, and
-                        Inspection &amp; Testing. Our services cover metering control upgrades, maintenance,
-                        validation, and specialised consultancy.
-                      </p>
-                      <p className="card-desc sub">
-                        Committed to end-to-end metering solutions through strategic OEM partnerships —
-                        metering skids, flow computers, CEMS analysers, and field instruments across oil
-                        &amp; gas, power, and commercial sectors.
-                      </p>
-                      <div className="card-cta-group">
-                        <Link href="/contacts/" className="btn btn-primary" id="btn-custody-contact">Contact Us &rarr;</Link>
-                        <Link href="/services/" className="btn btn-secondary" id="btn-custody-services">Our Services &rsaquo;</Link>
-                      </div>
+                  {/* Foreground content wrapper with equal padding and left-aligned items sharing the left edge */}
+                  <div className="card-content-wrapper w-full p-8 lg:p-10 flex flex-col items-start text-left box-border">
+                    <div className="pill-badge">WHAT WE DO</div>
+                    <h2 className="card-title">
+                      Engineered Excellence in<br />Custody Metering &amp; Automation
+                    </h2>
+                    <p className="card-desc">
+                      Extensive expertise in liquid and gas custody metering, Industrial Automation, and
+                      Inspection &amp; Testing. Our services cover metering control upgrades, maintenance,
+                      validation, and specialised consultancy.
+                    </p>
+                    <p className="card-desc sub">
+                      Committed to end-to-end metering solutions through strategic OEM partnerships —
+                      metering skids, flow computers, CEMS analysers, and field instruments across oil
+                      &amp; gas, power, and commercial sectors.
+                    </p>
+                    <div className="card-cta-group">
+                      <Link href="/contacts/" className="btn btn-primary" id="btn-custody-contact">Contact Us &rarr;</Link>
+                      <Link href="/services/" className="btn btn-secondary" id="btn-custody-services">Our Services &rsaquo;</Link>
                     </div>
                   </div>
                 </div>
               </div>
-
-              {/* ── End Overlay Layer ────────────────────────────────────────── */}
             </div>
 
-            {/* ── End Reactive Hero Content Container ────────────────────────── */}
+            {/* ── End Overlay Layer ────────────────────────────────────────── */}
           </div>
 
-          {/* ── Accessible Interactive Stage Indicator (3 Plain Dots) ────────── */}
-          <nav
-            ref={stageIndicatorRef}
-            className="hero-stage-indicator"
-            aria-label="Hero stages"
-          >
-            {[
-              { id: 1, name: "Flow Measurement" },
-              { id: 2, name: "Industrial Automation" },
-              { id: 3, name: "Inspection & Testing" },
-            ].map((stage) => {
-              const isActive = activeStage === stage.id;
-              return (
-                <button
-                  key={stage.id}
-                  type="button"
-                  aria-label={`Show stage ${stage.id}: ${stage.name}`}
-                  aria-current={isActive ? "true" : undefined}
-                  className={`hero-stage-dot ${isActive ? "active" : ""}`}
-                  onClick={() => scrollToStage(stage.id)}
-                >
-                  <span className="hero-stage-dot-shape" />
-                </button>
-              );
-            })}
-          </nav>
-
-          {/* Optional dim overlay (COVER_DIM default 0 = disabled) */}
-          {COVER_DIM > 0 && (
-            <div
-              ref={dimOverlayRef}
-              className="absolute inset-0 pointer-events-none z-20 bg-black opacity-0"
-            />
-          )}
-
+          {/* ── End Reactive Hero Content Container ────────────────────────── */}
         </div>
+
+        {/* ── Accessible Interactive Stage Indicator (3 Plain Dots) ────────── */}
+        <nav
+          ref={stageIndicatorRef}
+          className="hero-stage-indicator"
+          aria-label="Hero stages"
+        >
+          {[
+            { id: 1, name: "Flow Measurement" },
+            { id: 2, name: "Industrial Automation" },
+            { id: 3, name: "Inspection & Testing" },
+          ].map((stage) => {
+            const isActive = activeStage === stage.id;
+            return (
+              <button
+                key={stage.id}
+                type="button"
+                aria-label={`Show stage ${stage.id}: ${stage.name}`}
+                aria-current={isActive ? "true" : undefined}
+                className={`hero-stage-dot ${isActive ? "active" : ""}`}
+                onClick={() => scrollToStage(stage.id)}
+              >
+                <span className="hero-stage-dot-shape" />
+              </button>
+            );
+          })}
+        </nav>
+
+        {/* Optional dim overlay (COVER_DIM default 0 = disabled) */}
+        {COVER_DIM > 0 && (
+          <div
+            ref={dimOverlayRef}
+            className="absolute inset-0 pointer-events-none z-20 bg-black opacity-0"
+          />
+        )}
+
+      </div>
     </section>
   );
 }
