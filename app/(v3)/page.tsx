@@ -3,12 +3,14 @@ import ScrollSequenceHero from "@/components/v3/ScrollSequenceHero";
 import HomeSections from "@/components/home/HomeSections";
 
 export const metadata: Metadata = {
-  title: "Precision Industrial Engineering | Texas Technical Services Company",
+  title: {
+    absolute: "Texas Technical Services Company - Innovative Industrial Solutions",
+  },
   description:
     "Turnkey engineering architectures spanning Fiscal Metering Packages, Modular Process Skids, In-Situ Calibration, and SIL-3 Safety Systems across Kuwait, UAE, and the wider Arabian Gulf since 2008.",
   alternates: { canonical: "/" },
   openGraph: {
-    title: "Precision Industrial Engineering | Texas Technical Services Company",
+    title: "Texas Technical Services Company - Innovative Industrial Solutions",
     description:
       "Turnkey engineering architectures spanning Fiscal Metering Packages, Modular Process Skids, In-Situ Calibration, and SIL-3 Safety Systems across Kuwait, UAE, and the wider Arabian Gulf since 2008.",
     url: "/",
@@ -16,7 +18,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Precision Industrial Engineering | Texas Technical Services Company",
+    title: "Texas Technical Services Company - Innovative Industrial Solutions",
     description:
       "Turnkey engineering architectures spanning Fiscal Metering Packages, Modular Process Skids, In-Situ Calibration, and SIL-3 Safety Systems across Kuwait, UAE, and the wider Arabian Gulf since 2008.",
     images: ["/og-default.png"],

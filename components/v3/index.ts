@@ -16,3 +16,4 @@ export { default as ImageCard, type ImageCardProps } from "./ImageCard";
 export { default as CardGrid, type CardGridProps } from "./CardGrid";
 export { default as FolderCard, type FolderCardProps } from "./folder/FolderCard";
 export { default as EyebrowPill, type EyebrowPillProps } from "./EyebrowPill";
+export { default as SocialSplit } from "./SocialSplit";

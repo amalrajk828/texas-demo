@@ -1,6 +1,7 @@
 import React from "react";
 import Link from "next/link";
 import Image from "next/image";
+import SocialSplit from "@/components/v3/SocialSplit";
 
 const PARTNER_LOGOS = [
   { name: "Mitsubishi Electric", src: "/about/mitsubishi-electric.png" },
@@ -151,11 +152,7 @@ export default function Footer() {
                   <span className="v2-brand-sub">TECHNICAL SERVICES</span>
                 </div>
               </Link>
-              <p className="v2-brand-summary">
-                ISO 9001, ISO 14001, ISO 45001, UASL &amp; Accurate certified company
-                established in 2008. Flow measurement, automation &amp; inspection for oil &amp; gas and
-                industrial sectors across Kuwait &amp; UAE.
-              </p>
+              <SocialSplit />
               <div className="v2-cert-tag">
                 <span className="v2-cert-icon">&#10003;</span>
                 <span>ISO 9001:2015 Certified Organization</span>
@@ -296,9 +293,16 @@ export default function Footer() {
               TEXAS TECHNICAL SERVICE COMPANY W.L.L. &copy; 2026. All Rights Reserved.
             </p>
             <div className="v2-bottom-meta">
-              <span className="v2-cert-spec">
-                ISO 9001 &bull; ISO 14001 &bull; ISO 45001 &bull; UASL &bull; Accurate Certified
-              </span>
+              <p className="powered-by">
+                Powered by{" "}
+                <a
+                  href="https://aibizmod.com/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  AIBizMod
+                </a>
+              </p>
               <span className="v2-dot">&bull;</span>
               <a href="#sequence" className="v2-top-btn" aria-label="Back to top">
                 Back to Top &uarr;

@@ -1,0 +1,1 @@
+i have scroll animtaion currently its perfectly but i want to get maximux smooth animation frame by frame in both mobile and desktop, public\hero-frames folder for all animations need to be there
