@@ -9,52 +9,81 @@ export default function TearDivider() {
     if (!tear) return;
     if (matchMedia("(prefers-reduced-motion: reduce)").matches) return;
 
-    // Build a random jagged tear line shared by both halves
-    const steps = 48;
-    const line: { x: number; y: number }[] = Array.from({ length: steps + 1 }, (_, i) => ({
-      x: (i / steps) * 100,
-      y: 55 + Math.random() * 30, // roughly 55–85% down the top half
-    }));
+    const stage = tear.querySelector<HTMLElement>(".tear__stage")!;
+    const rim = tear.querySelector<HTMLElement>(".tear__rim")!;
+    const gap = tear.querySelector<HTMLElement>(".tear__gap")!;
 
-    const poly = (pts: string[]) => `polygon(${pts.join(",")})`;
+    const N = 360;
+    let builtFor = 0;
 
-    // Top half: fill = page bg, edge = white fibrous shadow
-    const topPts = line
-      .slice()
-      .reverse()
-      .map((p) => `${p.x}% ${p.y}%`);
-    const topFill = poly(["0% 0%", "100% 0%", ...topPts]);
-    const topEdgePts = line
-      .slice()
-      .reverse()
-      .map((p) => `${p.x}% ${Math.min(p.y + 8, 100)}%`);
-    const topEdge = poly(["0% 0%", "100% 0%", ...topEdgePts]);
+    /**
+     * Generate one ripped edge as an array of N+1 y-values in [0,1].
+     * Layers: slow wave + medium bumps + fine jitter + rare spikes.
+     */
+    const ripped = (): number[] => {
+      const ph = [0, 1, 2].map(() => Math.random() * 6.283);
+      return Array.from({ length: N + 1 }, (_, i) => {
+        const x = i / N;
+        let v =
+          0.5 +
+          0.26 * Math.sin(x * 6.283 * 1.4 + ph[0]) +
+          0.14 * Math.sin(x * 6.283 * 4.1 + ph[1]) +
+          0.07 * Math.sin(x * 6.283 * 11 + ph[2]) +
+          (Math.random() - 0.5) * 0.22;
+        if (Math.random() < 0.04) v += (Math.random() - 0.5) * 0.5;
+        return Math.min(Math.max(v, 0), 1);
+      });
+    };
 
-    // Bottom half: mirror (100% - y)
-    const botLine = line.map((p) => ({ x: p.x, y: 100 - p.y }));
-    const botFill = poly([
-      ...botLine.map((p) => `${p.x}% ${p.y}%`),
-      "100% 100%",
-      "0% 100%",
-    ]);
-    const botEdgePts = botLine.map((p) => `${p.x}% ${Math.max(p.y - 8, 0)}%`);
-    const botEdge = poly([...botEdgePts, "100% 100%", "0% 100%"]);
+    const build = () => {
+      const H = stage.offsetHeight;
+      if (!H || H === builtFor) return;
+      builtFor = H;
 
-    const qs = (sel: string) => tear.querySelector<HTMLElement>(sel)!;
-    qs(".tear__half--top .tear__fill").style.clipPath = topFill;
-    qs(".tear__half--top .tear__edge").style.clipPath = topEdge;
-    qs(".tear__half--bottom .tear__fill").style.clipPath = botFill;
-    qs(".tear__half--bottom .tear__edge").style.clipPath = botEdge;
+      const amp = H * 0.17;
+      const margin = H * 0.07;
+
+      // Two independent edges — top and bottom don't mirror each other
+      const topVals = ripped().map((v) => margin + v * amp);
+      const botVals = ripped().map((v) => H - margin - v * amp);
+
+      /**
+       * Build a polygon string.
+       * rimMode = true → nudge edge outward by a random 3-8px fibrous thickness
+       */
+      const poly = (
+        topPts: number[],
+        botPts: number[],
+        rimMode: boolean
+      ): string => {
+        const pts: string[] = [];
+        // Top edge — left to right
+        topPts.forEach((y, i) => {
+          const yy = rimMode ? Math.max(y - (3 + Math.random() * 5), 0) : y;
+          pts.push(`${((i / N) * 100).toFixed(2)}% ${yy.toFixed(1)}px`);
+        });
+        // Bottom edge — right to left
+        for (let i = N; i >= 0; i--) {
+          const y = botPts[i];
+          const yy = rimMode ? Math.min(y + (3 + Math.random() * 5), H) : y;
+          pts.push(`${((i / N) * 100).toFixed(2)}% ${yy.toFixed(1)}px`);
+        }
+        return `polygon(${pts.join(",")})`;
+      };
+
+      gap.style.clipPath = poly(topVals, botVals, false);
+      rim.style.clipPath = poly(topVals, botVals, true);
+    };
 
     let ticking = false;
     const update = () => {
+      build();
       const r = tear.getBoundingClientRect();
-      const vh = window.innerHeight;
-      // progress: 0 when centre is at bottom of viewport, 1 at top
-      const progress = 1 - (r.top + r.height / 2) / vh;
-      const clamped = Math.min(Math.max(progress, 0), 1);
-      // sine curve so it opens smoothly and closes again
-      tear.style.setProperty("--tear", Math.sin(clamped * Math.PI).toFixed(3));
+      // progress: 0 at bottom of viewport, 1 at top
+      const p = 1 - r.top / window.innerHeight;
+      const c = Math.min(Math.max(p, 0), 1);
+      // sine curve → open in the middle, closed at both ends
+      tear.style.setProperty("--tear", Math.sin(c * Math.PI).toFixed(3));
       ticking = false;
     };
 
@@ -77,17 +106,11 @@ export default function TearDivider() {
 
   return (
     <div className="tear" aria-hidden="true" ref={tearRef}>
-      {/* Dark gap revealed between the two halves */}
-      <div className="tear__gap" />
-      {/* Top torn half */}
-      <div className="tear__half tear__half--top">
-        <div className="tear__edge" />
-        <div className="tear__fill" />
-      </div>
-      {/* Bottom torn half */}
-      <div className="tear__half tear__half--bottom">
-        <div className="tear__edge" />
-        <div className="tear__fill" />
+      <div className="tear__stage">
+        {/* White fibrous paper-edge rim — slightly wider than the gap */}
+        <div className="tear__rim" />
+        {/* The coloured interior of the crack with inner shadow */}
+        <div className="tear__gap" />
       </div>
     </div>
   );

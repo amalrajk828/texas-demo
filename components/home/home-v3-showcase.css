@@ -5468,77 +5468,67 @@ button.card-interactive,
 
 
 /* ==========================================================================
-   Torn Paper / Page Crack Divider  —  .tear
+   Torn Paper / Page Crack Divider  —  .tear  (v2: organic ripped-paper crack)
    Used by TearDivider.tsx between About and Services sections.
    ========================================================================== */
 
 .tear {
   --tear: 0;
-  --max-gap: 120px;
-  --page-bg: #e8e8e6;
+  --gap-bg: #b9bbb0;
+  --gap-image: none;
   position: relative;
-  height: 140px;
-  margin: -40px 0;
+  height: 0;
+  z-index: 10;
   pointer-events: none;
-  z-index: 2;
-  overflow: visible;
 }
 
-.tear__gap {
+.tear__stage {
   position: absolute;
   left: 0;
   right: 0;
-  top: 50%;
-  height: calc(var(--tear) * var(--max-gap));
-  transform: translateY(-50%);
-  background: #0d1117;
-}
-
-.tear__half {
-  position: absolute;
-  left: 0;
-  right: 0;
-  height: 50%;
-  will-change: transform;
-  filter: drop-shadow(0 4px 8px rgba(0, 0, 0, 0.3));
-}
-
-.tear__half--top {
   top: 0;
-  transform: translateY(calc(var(--tear) * var(--max-gap) * -0.5))
-    rotate(calc(var(--tear) * -0.35deg));
+  height: 150px;
+  margin-top: -75px;
+  transform: scaleY(var(--tear));
+  transform-origin: 50% 50%;
+  will-change: transform;
+  filter: drop-shadow(0 3px 5px rgba(0, 0, 0, 0.28));
 }
 
-.tear__half--bottom {
-  bottom: 0;
-  transform: translateY(calc(var(--tear) * var(--max-gap) * 0.5))
-    rotate(calc(var(--tear) * 0.3deg));
-}
-
-.tear__edge,
-.tear__fill {
+.tear__rim,
+.tear__gap {
   position: absolute;
   inset: 0;
 }
 
-.tear__edge {
-  background: #ffffff;
+.tear__rim {
+  background: #fff;
 }
 
-.tear__fill {
-  background: var(--page-bg);
+.tear__gap {
+  background:
+    linear-gradient(
+      to bottom,
+      rgba(0, 0, 0, 0.38) 0,
+      rgba(0, 0, 0, 0) 60px,
+      rgba(0, 0, 0, 0) calc(100% - 60px),
+      rgba(0, 0, 0, 0.38) 100%
+    ),
+    var(--gap-image),
+    var(--gap-bg);
+  background-size: 100% 100%, cover, auto;
+  background-position: center;
 }
 
 @media (max-width: 640px) {
-  .tear {
-    height: 90px;
-    margin: -25px 0;
-    --max-gap: 60px;
+  .tear__stage {
+    height: 100px;
+    margin-top: -50px;
   }
 }
 
 @media (prefers-reduced-motion: reduce) {
   .tear {
-    --tear: 0 !important;
+    display: none;
   }
 }
