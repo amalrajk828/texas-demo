@@ -4,6 +4,8 @@ import Link from "next/link";
 import CardGrid from "@/components/v3/CardGrid";
 import { Reveal } from "@/components/v3/motion/Reveal";
 import EyebrowPill from "@/components/v3/EyebrowPill";
+import ServiceCards from "@/components/home/ServiceCards";
+import HomeCtaCard from "@/components/home/HomeCtaCard";
 
 export default function HomeSections() {
   return (
@@ -28,44 +30,52 @@ export default function HomeSections() {
 
           <CardGrid max={4} className="about-stats-grid">
             <Reveal delay={0}>
-              <div className="stat-card card-interactive card-accent">
-                <div className="stat-number">18+</div>
-                <div className="stat-title">Years Industrial Precision</div>
-                <p className="stat-desc">
-                  Delivering certified engineering and flow measurement excellence across Kuwait and
-                  the GCC since 2008.
-                </p>
-              </div>
+              <article className="stat-card glass-hover-card">
+                <div className="card-content stat-card-content">
+                  <div className="stat-number">18+</div>
+                  <div className="stat-title">Years Industrial Precision</div>
+                  <p className="stat-desc">
+                    Delivering certified engineering and flow measurement excellence across Kuwait and
+                    the GCC since 2008.
+                  </p>
+                </div>
+              </article>
             </Reveal>
             <Reveal delay={0.08}>
-              <div className="stat-card card-interactive card-accent">
-                <div className="stat-number">200+</div>
-                <div className="stat-title">Completed Skid Packages</div>
-                <p className="stat-desc">
-                  Approved vendor delivering turnkey custody transfer solutions for KOC, KNPC, MEW,
-                  and Chevron.
-                </p>
-              </div>
+              <article className="stat-card glass-hover-card">
+                <div className="card-content stat-card-content">
+                  <div className="stat-number">200+</div>
+                  <div className="stat-title">Completed Skid Packages</div>
+                  <p className="stat-desc">
+                    Approved vendor delivering turnkey custody transfer solutions for KOC, KNPC, MEW,
+                    and Chevron.
+                  </p>
+                </div>
+              </article>
             </Reveal>
             <Reveal delay={0.16}>
-              <div className="stat-card card-interactive card-accent">
-                <div className="stat-number">16+</div>
-                <div className="stat-title">Global OEM Alliances</div>
-                <p className="stat-desc">
-                  Strategic technology partnerships with tier-1 international manufacturers
-                  including Emerson, SICK &amp; Endress+Hauser.
-                </p>
-              </div>
+              <article className="stat-card glass-hover-card">
+                <div className="card-content stat-card-content">
+                  <div className="stat-number">16+</div>
+                  <div className="stat-title">Global OEM Alliances</div>
+                  <p className="stat-desc">
+                    Strategic technology partnerships with tier-1 international manufacturers
+                    including Emerson, SICK &amp; Endress+Hauser.
+                  </p>
+                </div>
+              </article>
             </Reveal>
             <Reveal delay={0.24}>
-              <div className="stat-card card-interactive card-accent">
-                <div className="stat-number">100%</div>
-                <div className="stat-title">Certified Quality &amp; Safety</div>
-                <p className="stat-desc">
-                  ISO 9001:2015, ISO 14001:2015, ISO 45001:2018, UASL and Accurate accredited
-                  operations.
-                </p>
-              </div>
+              <article className="stat-card glass-hover-card">
+                <div className="card-content stat-card-content">
+                  <div className="stat-number">100%</div>
+                  <div className="stat-title">Certified Quality &amp; Safety</div>
+                  <p className="stat-desc">
+                    ISO 9001:2015, ISO 14001:2015, ISO 45001:2018, UASL and Accurate accredited
+                    operations.
+                  </p>
+                </div>
+              </article>
             </Reveal>
           </CardGrid>
 
@@ -96,126 +106,7 @@ export default function HomeSections() {
             </div>
           </Reveal>
 
-          <CardGrid max={2}>
-            <Reveal delay={0}>
-              <div className="feature-card card-interactive card-accent">
-                <div className="feature-icon">
-                  <svg
-                    width="24"
-                    height="24"
-                    viewBox="0 0 24 24"
-                    fill="none"
-                    stroke="currentColor"
-                    strokeWidth="2"
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                  >
-                    <circle cx="12" cy="12" r="10" />
-                    <path d="M12 6v6l4 2" />
-                  </svg>
-                </div>
-                <h3 className="feature-name">Flow Measurement &amp; Custody Transfer Skids</h3>
-                <p className="feature-desc">
-                  Turnkey liquid and gas fiscal metering packages. Integrated with multipath
-                  ultrasonic flow meters, Coriolis mass meters, bi-directional prover loops, and
-                  computerized batch auditing to API and AGA standards.
-                </p>
-              </div>
-            </Reveal>
-
-            <Reveal delay={0.08}>
-              <div className="feature-card card-interactive card-accent">
-                <div className="feature-icon">
-                  <svg
-                    width="24"
-                    height="24"
-                    viewBox="0 0 24 24"
-                    fill="none"
-                    stroke="currentColor"
-                    strokeWidth="2"
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                  >
-                    <rect x="4" y="4" width="16" height="16" rx="2" />
-                    <rect x="9" y="9" width="6" height="6" />
-                    <line x1="9" y1="2" x2="9" y2="4" />
-                    <line x1="15" y1="2" x2="15" y2="4" />
-                    <line x1="9" y1="20" x2="9" y2="23" />
-                    <line x1="15" y1="20" x2="15" y2="23" />
-                    <line x1="20" y1="9" x2="23" y2="9" />
-                    <line x1="20" y1="15" x2="23" y2="15" />
-                    <line x1="1" y1="9" x2="4" y2="9" />
-                    <line x1="1" y1="15" x2="4" y2="15" />
-                  </svg>
-                </div>
-                <h3 className="feature-name">Plant SCADA &amp; Industrial Automation</h3>
-                <p className="feature-desc">
-                  Turnkey DCS, PLC programming, and Safety Instrumented Systems (SIS). Complete
-                  engineering from functional safety lifecycle calculations to redundant fieldbus
-                  architectures and remote telemetric dashboards.
-                </p>
-              </div>
-            </Reveal>
-
-            <Reveal delay={0.16}>
-              <div className="feature-card card-interactive card-accent">
-                <div className="feature-icon">
-                  <svg
-                    width="24"
-                    height="24"
-                    viewBox="0 0 24 24"
-                    fill="none"
-                    stroke="currentColor"
-                    strokeWidth="2"
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                  >
-                    <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" />
-                    <path d="m9 12 2 2 4-4" />
-                  </svg>
-                </div>
-                <h3 className="feature-name">Inspection &amp; Non-Destructive Testing (NDT)</h3>
-                <p className="feature-desc">
-                  Comprehensive structural and piping inspection, advanced ultrasonic testing (UT),
-                  radiographic testing (RT), and welder certification compliant with ISO 9001, ISO
-                  14001, ISO 45001 &amp; UASL.
-                </p>
-              </div>
-            </Reveal>
-
-            <Reveal delay={0.24}>
-              <div className="feature-card card-interactive card-accent">
-                <div className="feature-icon">
-                  <svg
-                    width="24"
-                    height="24"
-                    viewBox="0 0 24 24"
-                    fill="none"
-                    stroke="currentColor"
-                    strokeWidth="2"
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                  >
-                    <line x1="4" y1="21" x2="4" y2="14" />
-                    <line x1="4" y1="10" x2="4" y2="3" />
-                    <line x1="12" y1="21" x2="12" y2="12" />
-                    <line x1="12" y1="8" x2="12" y2="3" />
-                    <line x1="20" y1="21" x2="20" y2="16" />
-                    <line x1="20" y1="12" x2="20" y2="3" />
-                    <line x1="1" y1="14" x2="7" y2="14" />
-                    <line x1="9" y1="8" x2="15" y2="8" />
-                    <line x1="17" y1="16" x2="23" y2="16" />
-                  </svg>
-                </div>
-                <h3 className="feature-name">Calibration, Proving &amp; Field Services</h3>
-                <p className="feature-desc">
-                  Mobile field calibration teams and laboratory testing services for flow, pressure,
-                  temperature, and analytical instruments with ISO/IEC 17025 accredited primary
-                  reference standards.
-                </p>
-              </div>
-            </Reveal>
-          </CardGrid>
+          <ServiceCards />
 
           <Reveal delay={0.1}>
             <div style={{ textAlign: "center", marginTop: "36px" }}>
@@ -243,44 +134,52 @@ export default function HomeSections() {
 
           <CardGrid max={4} className="industries-grid">
             <Reveal delay={0}>
-              <div className="industry-card card-interactive card-accent">
-                <div className="industry-badge">Upstream</div>
-                <h3 className="industry-title">Oil &amp; Gas Production</h3>
-                <p className="industry-desc">
-                  Wellhead allocation, gathering centers, gas-oil separation plants (GOSP), and sour
-                  crude pipeline custody transfer.
-                </p>
-              </div>
+              <article className="industry-card glass-hover-card">
+                <div className="card-content industry-card-content">
+                  <div className="industry-badge">Upstream</div>
+                  <h3 className="industry-title">Oil &amp; Gas Production</h3>
+                  <p className="industry-desc">
+                    Wellhead allocation, gathering centers, gas-oil separation plants (GOSP), and sour
+                    crude pipeline custody transfer.
+                  </p>
+                </div>
+              </article>
             </Reveal>
             <Reveal delay={0.08}>
-              <div className="industry-card card-interactive card-accent">
-                <div className="industry-badge">Downstream</div>
-                <h3 className="industry-title">Refining &amp; Petrochemicals</h3>
-                <p className="industry-desc">
-                  Clean hydrocarbon export lines, ethylene &amp; propylene mass flow metering, and
-                  high-pressure steam distribution.
-                </p>
-              </div>
+              <article className="industry-card glass-hover-card">
+                <div className="card-content industry-card-content">
+                  <div className="industry-badge">Downstream</div>
+                  <h3 className="industry-title">Refining &amp; Petrochemicals</h3>
+                  <p className="industry-desc">
+                    Clean hydrocarbon export lines, ethylene &amp; propylene mass flow metering, and
+                    high-pressure steam distribution.
+                  </p>
+                </div>
+              </article>
             </Reveal>
             <Reveal delay={0.16}>
-              <div className="industry-card card-interactive card-accent">
-                <div className="industry-badge">Utilities</div>
-                <h3 className="industry-title">Power &amp; Desalination</h3>
-                <p className="industry-desc">
-                  High-volume seawater intake monitoring, condensate return, boiler feed water, and
-                  heavy fuel oil delivery systems.
-                </p>
-              </div>
+              <article className="industry-card glass-hover-card">
+                <div className="card-content industry-card-content">
+                  <div className="industry-badge">Utilities</div>
+                  <h3 className="industry-title">Power &amp; Desalination</h3>
+                  <p className="industry-desc">
+                    High-volume seawater intake monitoring, condensate return, boiler feed water, and
+                    heavy fuel oil delivery systems.
+                  </p>
+                </div>
+              </article>
             </Reveal>
             <Reveal delay={0.24}>
-              <div className="industry-card card-interactive card-accent">
-                <div className="industry-badge">Offshore</div>
-                <h3 className="industry-title">Marine Terminals &amp; Bunkering</h3>
-                <p className="industry-desc">
-                  VLCC tanker loading, single point mooring (SPM) buoys, and continuous high-throughput
-                  fiscal custody verification.
-                </p>
-              </div>
+              <article className="industry-card glass-hover-card">
+                <div className="card-content industry-card-content">
+                  <div className="industry-badge">Offshore</div>
+                  <h3 className="industry-title">Marine Terminals &amp; Bunkering</h3>
+                  <p className="industry-desc">
+                    VLCC tanker loading, single point mooring (SPM) buoys, and continuous high-throughput
+                    fiscal custody verification.
+                  </p>
+                </div>
+              </article>
             </Reveal>
           </CardGrid>
 
@@ -402,7 +301,7 @@ export default function HomeSections() {
 
           <div className="clients-logo-grid">
             <Reveal delay={0}>
-              <div className="client-logo-item card-interactive card-accent" title="Kuwait Oil Company (KOC)">
+              <div className="client-logo-item card-interactive" title="Kuwait Oil Company (KOC)">
                 <div className="client-logo-box">
                   <div className="client-logo-inner" style={{ transform: "scale(0.95)" }}>
                     <Image
@@ -419,7 +318,7 @@ export default function HomeSections() {
               </div>
             </Reveal>
             <Reveal delay={0.07}>
-              <div className="client-logo-item card-interactive card-accent" title="Kuwait National Petroleum Company (KNPC)">
+              <div className="client-logo-item card-interactive" title="Kuwait National Petroleum Company (KNPC)">
                 <div className="client-logo-box">
                   <div className="client-logo-inner" style={{ transform: "scale(0.95)" }}>
                     <Image
@@ -436,7 +335,7 @@ export default function HomeSections() {
               </div>
             </Reveal>
             <Reveal delay={0.14}>
-              <div className="client-logo-item card-interactive card-accent" title="Kuwait Gulf Oil Company (KGOC)">
+              <div className="client-logo-item card-interactive" title="Kuwait Gulf Oil Company (KGOC)">
                 <div className="client-logo-box">
                   <div className="client-logo-inner" style={{ transform: "scale(1.15)" }}>
                     <Image
@@ -453,7 +352,7 @@ export default function HomeSections() {
               </div>
             </Reveal>
             <Reveal delay={0.21}>
-              <div className="client-logo-item card-interactive card-accent" title="Ministry of Electricity & Water (MEW)">
+              <div className="client-logo-item card-interactive" title="Ministry of Electricity & Water (MEW)">
                 <div className="client-logo-box">
                   <div className="client-logo-inner" style={{ transform: "scale(1.15)" }}>
                     <Image
@@ -470,7 +369,7 @@ export default function HomeSections() {
               </div>
             </Reveal>
             <Reveal delay={0.28}>
-              <div className="client-logo-item card-interactive card-accent" title="Saudi Arabian Chevron">
+              <div className="client-logo-item card-interactive" title="Saudi Arabian Chevron">
                 <div className="client-logo-box">
                   <div className="client-logo-inner" style={{ transform: "scale(0.92)" }}>
                     <Image
@@ -487,7 +386,7 @@ export default function HomeSections() {
               </div>
             </Reveal>
             <Reveal delay={0.35}>
-              <div className="client-logo-item card-interactive card-accent" title="Kuwait Cement Company">
+              <div className="client-logo-item card-interactive" title="Kuwait Cement Company">
                 <div className="client-logo-box">
                   <div className="client-logo-inner" style={{ transform: "scale(1.06)" }}>
                     <Image
@@ -531,50 +430,56 @@ export default function HomeSections() {
 
           <CardGrid max={3}>
             <Reveal delay={0}>
-              <article className="blog-card card-interactive is-clickable card-accent">
-                <div className="blog-meta">Flow Measurement &bull; 10 min read</div>
-                <h3 className="blog-title">
-                  What is Custody Transfer Metering? A Complete Guide to Standards and Accuracy
-                </h3>
-                <p className="blog-excerpt">
-                  Critical principles of fiscal custody metering, including API MPMS and AGA
-                  compliance, flow meter selection, and calibration for the Oil &amp; Gas sector.
-                </p>
-                <Link href="/blog/custody-transfer-metering-guide/" className="blog-link">
-                  Read Technical Guide &rarr;
-                </Link>
+              <article className="blog-card glass-hover-card">
+                <div className="card-content blog-card-content">
+                  <div className="blog-meta">Flow Measurement &bull; 10 min read</div>
+                  <h3 className="blog-title">
+                    What is Custody Transfer Metering? A Complete Guide to Standards and Accuracy
+                  </h3>
+                  <p className="blog-excerpt">
+                    Critical principles of fiscal custody metering, including API MPMS and AGA
+                    compliance, flow meter selection, and calibration for the Oil &amp; Gas sector.
+                  </p>
+                  <Link href="/blog/custody-transfer-metering-guide/" className="blog-link">
+                    Read Technical Guide &rarr;
+                  </Link>
+                </div>
               </article>
             </Reveal>
 
             <Reveal delay={0.08}>
-              <article className="blog-card card-interactive is-clickable card-accent">
-                <div className="blog-meta">Industrial Automation &bull; 8 min read</div>
-                <h3 className="blog-title">
-                  SCADA System Upgrades: Modernizing Legacy Control Architectures
-                </h3>
-                <p className="blog-excerpt">
-                  Discover key indicators for control system migration. Learn how industrial
-                  automation modernization reduces downtime and improves plant OT cyber security.
-                </p>
-                <Link href="/blog/scada-system-upgrade-guide/" className="blog-link">
-                  Read Technical Guide &rarr;
-                </Link>
+              <article className="blog-card glass-hover-card">
+                <div className="card-content blog-card-content">
+                  <div className="blog-meta">Industrial Automation &bull; 8 min read</div>
+                  <h3 className="blog-title">
+                    SCADA System Upgrades: Modernizing Legacy Control Architectures
+                  </h3>
+                  <p className="blog-excerpt">
+                    Discover key indicators for control system migration. Learn how industrial
+                    automation modernization reduces downtime and improves plant OT cyber security.
+                  </p>
+                  <Link href="/blog/scada-system-upgrade-guide/" className="blog-link">
+                    Read Technical Guide &rarr;
+                  </Link>
+                </div>
               </article>
             </Reveal>
 
             <Reveal delay={0.16}>
-              <article className="blog-card card-interactive is-clickable card-accent">
-                <div className="blog-meta">NDT &amp; Inspection &bull; 10 min read</div>
-                <h3 className="blog-title">
-                  Non-Destructive Testing (NDT) Methods: A Complete Technical Guide
-                </h3>
-                <p className="blog-excerpt">
-                  A comprehensive overview of industrial NDT methods including UT, RT, MT, PT, and
-                  TOFD for pipelines, pressure equipment, and structural integrity.
-                </p>
-                <Link href="/blog/" className="blog-link">
-                  Read Technical Guide &rarr;
-                </Link>
+              <article className="blog-card glass-hover-card">
+                <div className="card-content blog-card-content">
+                  <div className="blog-meta">NDT &amp; Inspection &bull; 10 min read</div>
+                  <h3 className="blog-title">
+                    Non-Destructive Testing (NDT) Methods: A Complete Technical Guide
+                  </h3>
+                  <p className="blog-excerpt">
+                    A comprehensive overview of industrial NDT methods including UT, RT, MT, PT, and
+                    TOFD for pipelines, pressure equipment, and structural integrity.
+                  </p>
+                  <Link href="/blog/" className="blog-link">
+                    Read Technical Guide &rarr;
+                  </Link>
+                </div>
               </article>
             </Reveal>
           </CardGrid>
@@ -593,26 +498,7 @@ export default function HomeSections() {
       <section id="contact" className="content-section cta-section">
         <div className="section-container">
           <Reveal delay={0}>
-            <div className="cta-box card-accent">
-              <div className="flex justify-center mb-5">
-                <EyebrowPill>GET IN TOUCH</EyebrowPill>
-              </div>
-              <h2 className="cta-title">How can we solve your flow measurement challenge?</h2>
-              <p className="cta-desc">
-                From custody metering to full plant automation &mdash; our ISO 9001, ISO 14001, ISO
-                45001, UASL &amp; Accurate certified team has delivered 400+ projects across oil &amp;
-                gas, power, and manufacturing since 2008.
-              </p>
-              <div className="cta-actions">
-                <Link href="/contacts/" className="btn btn-primary btn-large" id="cta-action-button">
-                  Request Engineering Consultation &rarr;
-                </Link>
-                <div className="cta-footnote">
-                  Kuwait Oil Sector Approved &bull; KOC / KNPC / MEW Vendor Compliant &bull; ISO 9001
-                  Certified
-                </div>
-              </div>
-            </div>
+            <HomeCtaCard />
           </Reveal>
         </div>
       </section>
