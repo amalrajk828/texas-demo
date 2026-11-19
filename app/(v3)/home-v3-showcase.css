@@ -5438,3 +5438,80 @@ button.card-interactive,
         transition: none !important;
       }
     }
+
+
+/* ==========================================================================
+   Torn Paper / Page Crack Divider  —  .tear
+   Used by TearDivider.tsx between About and Services sections.
+   ========================================================================== */
+
+.tear {
+  --tear: 0;
+  --max-gap: 120px;
+  --page-bg: #e8e8e6;
+  position: relative;
+  height: 140px;
+  margin: -40px 0;
+  pointer-events: none;
+  z-index: 2;
+  overflow: visible;
+}
+
+.tear__gap {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 50%;
+  height: calc(var(--tear) * var(--max-gap));
+  transform: translateY(-50%);
+  background: #0d1117;
+}
+
+.tear__half {
+  position: absolute;
+  left: 0;
+  right: 0;
+  height: 50%;
+  will-change: transform;
+  filter: drop-shadow(0 4px 8px rgba(0, 0, 0, 0.3));
+}
+
+.tear__half--top {
+  top: 0;
+  transform: translateY(calc(var(--tear) * var(--max-gap) * -0.5))
+    rotate(calc(var(--tear) * -0.35deg));
+}
+
+.tear__half--bottom {
+  bottom: 0;
+  transform: translateY(calc(var(--tear) * var(--max-gap) * 0.5))
+    rotate(calc(var(--tear) * 0.3deg));
+}
+
+.tear__edge,
+.tear__fill {
+  position: absolute;
+  inset: 0;
+}
+
+.tear__edge {
+  background: #ffffff;
+}
+
+.tear__fill {
+  background: var(--page-bg);
+}
+
+@media (max-width: 640px) {
+  .tear {
+    height: 90px;
+    margin: -25px 0;
+    --max-gap: 60px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .tear {
+    --tear: 0 !important;
+  }
+}

@@ -6,6 +6,7 @@ import { Reveal } from "@/components/v3/motion/Reveal";
 import EyebrowPill from "@/components/v3/EyebrowPill";
 import ServiceCards from "@/components/home/ServiceCards";
 import HomeCtaCard from "@/components/home/HomeCtaCard";
+import TearDivider from "@/components/home/TearDivider";
 
 export default function HomeSections() {
   return (
@@ -88,6 +89,9 @@ export default function HomeSections() {
           </Reveal>
         </div>
       </section>
+
+      {/* Torn Paper / Page Crack Divider */}
+      <TearDivider />
 
       {/* Services / Features Section */}
       <section id="services" className="content-section">
