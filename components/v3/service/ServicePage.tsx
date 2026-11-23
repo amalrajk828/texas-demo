@@ -6,10 +6,8 @@ import {
   Container,
   Section,
   SectionHeading,
-  PageHero,
   SpecTable,
   LogoCard,
-  CTASection,
   CardGrid,
 } from "@/components/v3";
 import { BreadcrumbJsonLd } from "@/components/schema/BreadcrumbJsonLd";
@@ -21,6 +19,9 @@ import ServiceProcessSteps from "./ServiceProcessSteps";
 import ServiceIndustriesServed from "./ServiceIndustriesServed";
 import ServiceRelatedCards from "./ServiceRelatedCards";
 import type { ServicePageData } from "./types";
+import ServiceHero from "./ServiceHero";
+import ServiceCta from "./ServiceCta";
+import { getServiceHeroImage } from "@/lib/services/hero-images";
 
 interface ServicePageProps {
   data: ServicePageData;
@@ -85,42 +86,16 @@ export default function ServicePage({ data }: ServicePageProps) {
       {faq && faq.length > 0 && <FaqPageJsonLd items={faq} />}
 
       {/* ── 1. PageHero ── */}
-      <PageHero
-        eyebrow={category}
+      <ServiceHero
+        category={category}
         title={title}
-        description={subtitle}
+        subtitle={subtitle}
         breadcrumbs={breadcrumbs}
-        showBreadcrumb={false}
         primaryCta={primaryCta}
         secondaryCta={secondaryCta}
         stats={stats}
+        image={heroImage || overview?.image || getServiceHeroImage(slug, title)}
       />
-
-      {/* Optional Hero Image banner below hero text if provided */}
-      {heroImage && (
-        <div className="relative -mt-6 sm:-mt-10 mb-8 sm:mb-12 z-20">
-          <Container>
-            <FadeUp>
-              <div className="relative w-full aspect-[21/9] max-h-[480px] rounded-[24px] sm:rounded-[28px] overflow-hidden border border-black/[0.08] shadow-[0_24px_50px_-15px_rgba(0,0,0,0.12)] bg-black/5">
-                <Image
-                  src={heroImage.src}
-                  alt={heroImage.alt}
-                  fill
-                  priority
-                  className="object-cover"
-                  style={
-                    heroImage.objectPosition
-                      ? { objectPosition: heroImage.objectPosition }
-                      : undefined
-                  }
-                  sizes="(max-width: 1420px) 100vw, 1420px"
-                />
-                <div className="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-transparent pointer-events-none" />
-              </div>
-            </FadeUp>
-          </Container>
-        </div>
-      )}
 
       {/* ── Optional Comparison Blog Callout ── */}
       {comparisonBlog && (
@@ -451,8 +426,7 @@ export default function ServicePage({ data }: ServicePageProps) {
       )}
 
       {/* ── 10. CTA Banner ── */}
-      <CTASection
-        variant="white"
+      <ServiceCta
         eyebrow={ctaBanner?.eyebrow || "Ready to Discuss Your Requirements?"}
         title={ctaBanner?.title || "Consult Our Senior Engineering Specialists"}
         description={
