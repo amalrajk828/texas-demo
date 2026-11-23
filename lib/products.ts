@@ -534,6 +534,11 @@ export type Product = {
   downloadHref?: string;
   detailHref?: string;
   fit?: "contain" | "cover";
+
+  // Reusable card fields
+  label?: string;
+  statement?: string;
+  tint?: { t1: string; t2: string };
 };
 
 export const products: Product[] = [
@@ -570,6 +575,8 @@ export const products: Product[] = [
       "Heavy Industry and Steel",
       "Infrastructure and Transportation",
     ],
+        label: "RADAR SENSORS",
+    statement: "Non&#8209;contact <b>80 GHz radar sensors</b> for continuous level detection in harsh media.",
     externalLink:
       "https://www.sick.com/ae/en/radar-sensors/c/g575803?q=:Def_Type:ProductFamily",
     downloadLink:
@@ -607,6 +614,8 @@ export const products: Product[] = [
       "Printing and Labeling",
       "Oil & Gas and Process Industries",
     ],
+        label: "PHOTOELECTRIC SENSORS",
+    statement: "High&#8209;precision <b>optical detection sensors</b> for fast object presence and positioning.",
     externalLink:
       "https://www.sick.com/ae/en/photoelectric-sensors/c/g172752?q=:Def_Type:Product",
     downloadLink:
@@ -680,6 +689,8 @@ export const products: Product[] = [
       "Robotics and Industrial Automation",
       "Oil & Gas (Auxiliary Systems)",
     ],
+        label: "SAFETY LIGHT CURTAINS",
+    statement: "Type 4 <b>safety light curtains</b> for finger, hand, and body access protection.",
     externalLink:
       "https://www.sick.com/ae/en/safety-light-curtains/c/g184853?q=:Def_Type:ProductFamily",
     downloadLink:
@@ -752,6 +763,8 @@ export const products: Product[] = [
       "Robotics and Automated Guided Vehicles",
       "Oil & Gas (Auxiliary Systems)",
     ],
+        label: "SAFETY LASER SCANNERS",
+    statement: "Compact <b>safety laser scanners</b> with configurable warning and protective fields.",
     externalLink: "https://www.sick.com/ae/en/safety-laser-scanners/c/g184794",
     downloadLink: null,
   },
@@ -822,6 +835,8 @@ export const products: Product[] = [
       "Oil & Gas (Asset Tracking)",
       "Food & Beverage and Pharmaceuticals",
     ],
+        label: "RFID SYSTEMS",
+    statement: "Rugged <b>HF and UHF RFID interrogators</b> for industrial asset tracking and logistics.",
     externalLink: "https://www.sick.com/ae/en/rfid-systems/c/g301836",
     downloadLink: null,
   },
@@ -998,6 +1013,8 @@ export const products: Product[] = [
       "Packaging and Material Handling",
       "Steel and Metal Processing",
     ],
+        label: "INDUCTIVE SENSORS",
+    statement: "Non&#8209;contact <b>inductive proximity switches</b> for metallic target sensing.",
     externalLink:
       "https://www.sick.com/ae/en/inductive-proximity-sensors/c/g183656",
     downloadLink: null,
@@ -1213,6 +1230,8 @@ export const products: Product[] = [
       "Oil & Gas (Drive and Pump Systems)",
       "Elevators and Transportation",
     ],
+        label: "ROTARY ENCODERS",
+    statement: "Absolute and incremental <b>rotary encoders</b> for high&#8209;resolution shaft angle measurement.",
     externalLink: "https://www.sick.com/ae/en/encoders/c/g183695",
     downloadLink: null,
   },
@@ -1248,6 +1267,8 @@ export const products: Product[] = [
       "Oil & Gas (Tank and Level Measurement)",
       "Robotics and Automation",
     ],
+        label: "DISTANCE SENSORS",
+    statement: "Long&#8209;range <b>laser distance sensors</b> delivering millimeter&#8209;accuracy position feedback.",
     externalLink: "https://www.sick.com/ae/en/distance-sensors/c/g102363",
     downloadLink: null,
   },
@@ -1356,6 +1377,8 @@ export const products: Product[] = [
       "Manufacturing Plants and Factories",
       "EPC Projects and System Integrators",
     ],
+        label: "MELSEC iQ-R",
+    statement: "Next&#8209;generation <b>programmable automation controller</b> for multi&#8209;discipline enterprise production.",
     externalLink:
       "https://www.mitsubishielectric.com/fa/products/cnt/plcr/items/index.html",
     downloadLink:
@@ -1393,6 +1416,8 @@ export const products: Product[] = [
       "Manufacturing Plants and Factories",
       "EPC Projects and System Integrators",
     ],
+        label: "MELSEC-Q",
+    statement: "Modular <b>multi&#8209;CPU automation platform</b> for high&#8209;speed sequence and process control.",
     externalLink:
       "https://www.mitsubishielectric.com/fa/products/cnt/plcq/items/index.html",
     downloadLink: null,
@@ -1429,6 +1454,8 @@ export const products: Product[] = [
       "Packaging and Material Handling",
       "OEM Machine Builders",
     ],
+        label: "FX5U",
+    statement: "Compact <b>iQ&#8209;F series PLC</b> with integrated Ethernet, analog, and motion control.",
     externalLink:
       "https://www.mitsubishielectric.com/fa/products/cnt/plcf/items/index.html",
     downloadLink: null,
@@ -1464,6 +1491,8 @@ export const products: Product[] = [
       "Packaging and Light Industry",
       "Utilities and Auxiliary Systems",
     ],
+        label: "FX5UJ",
+    statement: "Cost&#8209;effective <b>micro PLC controller</b> built for compact machinery and standalone systems.",
     externalLink:
       "https://www.mitsubishielectric.com/fa/products/cnt/plcf/items/index.html",
     downloadLink: null,
@@ -1498,6 +1527,8 @@ export const products: Product[] = [
       "Utilities and Auxiliary Systems",
       "General Industrial Applications",
     ],
+        label: "FX5S",
+    statement: "Entry&#8209;level <b>micro PLC</b> engineered for simple machine automation and basic I/O.",
     externalLink:
       "https://www.mitsubishielectric.com/fa/products/cnt/plcf/items/index.html",
     downloadLink: null,
@@ -1536,6 +1567,8 @@ export const products: Product[] = [
       "Infrastructure and Smart Facilities",
       "EPC Projects and System Integrators",
     ],
+        label: "GENESIS64",
+    statement: "64&#8209;bit <b>SCADA and IoT visualization suite</b> for enterprise automation and telemetry.",
     externalLink: "https://iconics.com/Products/GENESIS64",
     downloadLink: null,
   },
@@ -1579,6 +1612,8 @@ export const products: Product[] = [
       "Oil & Gas and Petrochemical Facilities",
       "Manufacturing Plants and Factories",
     ],
+        label: "GOT2000 SERIES",
+    statement: "Industrial <b>touch screen HMI panels</b> with multi&#8209;touch gestures and high&#8209;definition display.",
     externalLink:
       "https://www.mitsubishielectric.com/fa/products/hmi/got/items/got2000/index.html",
     downloadLink: null,
@@ -1617,6 +1652,8 @@ export const products: Product[] = [
       "Power Generation Auxiliary Systems",
       "OEM Machine Builders and Skid Manufacturers",
     ],
+        label: "FR-E800-E",
+    statement: "Compact <b>variable frequency drive</b> with dual Ethernet ports and predictive maintenance.",
     externalLink:
       "https://emea.mitsubishielectric.com/fa/products/drv/inv/fr_a800/fra800e",
     downloadLink: null,
@@ -1653,6 +1690,8 @@ export const products: Product[] = [
       "Oil & Gas and Petrochemical Facilities",
       "Manufacturing Plants and Factories",
     ],
+        label: "FR-CS80",
+    statement: "Cost&#8209;effective <b>compact inverter</b> designed for energy&#8209;saving small motor applications.",
     externalLink:
       "https://emea.mitsubishielectric.com/fa/products/drv/inv/fr_cs",
     downloadLink: null,
@@ -1688,6 +1727,8 @@ export const products: Product[] = [
       "Power, Water, and Wastewater Treatment Utilities",
       "Oil & Gas Facilities (Auxiliary and Non-Critical Systems)",
     ],
+        label: "FR-D700",
+    statement: "Ultra&#8209;compact <b>general&#8209;purpose inverter</b> with high startup torque and simple setup.",
     externalLink:
       "https://emea.mitsubishielectric.com/fa/products/drv/inv/frd-series/frd700",
     downloadLink: null,
@@ -1724,6 +1765,8 @@ export const products: Product[] = [
       "Power Generation Auxiliary Systems",
       "OEM Machine Builders and Skid Manufacturers",
     ],
+        label: "FR-E800",
+    statement: "All&#8209;in&#8209;one <b>multi&#8209;network variable speed drive</b> with functional safety and AI diagnostics.",
     externalLink:
       "https://emea.mitsubishielectric.com/fa/products/drv/inv/fr_a800/fra800e",
     downloadLink: null,
@@ -1760,6 +1803,8 @@ export const products: Product[] = [
       "Power Generation Auxiliary Systems",
       "OEM Machine Builders and Skid Manufacturers",
     ],
+        label: "FR-E800-SCE",
+    statement: "Ethernet <b>safety communication inverter</b> supporting CIP Safety and PROFIsafe protocols.",
     externalLink:
       "https://emea.mitsubishielectric.com/fa/products/drv/inv/fr_a800/fra800e",
     downloadLink: null,
@@ -1796,6 +1841,8 @@ export const products: Product[] = [
       "Power Generation Plants",
       "Large Industrial and Infrastructure Facilities",
     ],
+        label: "FR-F800",
+    statement: "Energy&#8209;saving <b>pump and fan inverter</b> with advanced motor control algorithms.",
     externalLink:
       "https://emea.mitsubishielectric.com/fa/products/drv/inv/fr_f800",
     downloadLink: null,
@@ -1832,6 +1879,8 @@ export const products: Product[] = [
       "Power Generation Plants",
       "Large Industrial and Infrastructure Facilities",
     ],
+        label: "FR-F800-E",
+    statement: "Network&#8209;connected <b>fan and pump drive</b> with BACnet and Modbus TCP integration.",
     externalLink:
       "https://emea.mitsubishielectric.com/fa/products/drv/inv/fr_f800/frf800e",
     downloadLink: null,
@@ -1869,6 +1918,8 @@ export const products: Product[] = [
       "Power Generation Plants",
       "Large Industrial and Infrastructure Facilities",
     ],
+        label: "FR-F846-E",
+    statement: "IP55 <b>dust and splash&#8209;proof inverter</b> for demanding HVAC and outdoor environments.",
     externalLink:
       "https://emea.mitsubishielectric.com/fa/products/drv/inv/fr_f800/frf846e2",
     downloadLink: null,
@@ -1905,6 +1956,8 @@ export const products: Product[] = [
       "Ports, Cranes, and Material Handling Systems",
       "Manufacturing and Process Plants",
     ],
+        label: "FR-A800-E",
+    statement: "High&#8209;performance <b>vector drive</b> with Ethernet capability for demanding machine axes.",
     externalLink:
       "https://emea.mitsubishielectric.com/fa/products/drv/inv/fr_a800/fra800e",
     downloadLink: null,
@@ -1941,6 +1994,8 @@ export const products: Product[] = [
       "Manufacturing and Test Facilities",
       "Heavy Industrial Plants",
     ],
+        label: "FR-A741",
+    statement: "Power&#8209;regenerative <b>integrated inverter drive</b> for energy return during braking.",
     externalLink:
       "https://emea.mitsubishielectric.com/fa/products/drv/inv/fr_a800/fra741",
     downloadLink: null,
@@ -2280,6 +2335,8 @@ export const products: Product[] = [
       "Terminals, Storage, and Distribution",
       "EPC Contractors and System Integrators",
     ],
+        label: "CONTROL SYSTEM",
+    statement: "Integrated <b>custody transfer supervisory system</b> with automated valve and meter validation.",
     externalLink: "https://texastechserv.com/contact/",
     downloadLink: null,
   },
@@ -2436,6 +2493,8 @@ export const products: Product[] = [
       "Biogas and Environmental Industries",
     ],
     variants: ["XT", "XT Forte", "XT 2plex", "XT Quatro"],
+        label: "FLOWSIC600 XT",
+    statement: "Ultrasonic <b>custody transfer gas flow meter</b> with continuous internal diagnostics.",
     externalLink: "https://www.sick.com/ae/en/flow/",
     downloadLink:
       "https://texastechserv.com/wp-content/uploads/2023/09/familyOverview_FLOWSIC600-XT_g349351_en.pdf",
@@ -2482,6 +2541,8 @@ export const products: Product[] = [
       "Power Generation and Utilities",
       "Industrial Process Industries",
     ],
+        label: "FLOWSIC600",
+    statement: "High&#8209;precision <b>multipath ultrasonic gas meter</b> for pipeline transport and distribution.",
     externalLink: "https://www.sick.com/ae/en/flow/",
     downloadLink:
       "https://texastechserv.com/wp-content/uploads/2023/09/familyOverview_FLOWSIC600_g57523_en.pdf",
@@ -2525,6 +2586,8 @@ export const products: Product[] = [
       "Refineries and Petrochemical Plants",
       "Building and Facility Management",
     ],
+        label: "FLOWSIC500",
+    statement: "Compact <b>ultrasonic gas flow meter</b> with integrated volume conversion.",
     externalLink: "https://www.sick.com/ae/en/flow/",
     downloadLink:
       "https://texastechserv.com/wp-content/uploads/2023/09/FLOWSIC500_g180262_en.pdf",
@@ -2570,6 +2633,8 @@ export const products: Product[] = [
       "Wellhead and Pipeline Operators",
       "EPC Contractors and System Integrators",
     ],
+        label: "FLOWSIC600 DRU",
+    statement: "Upstream <b>ultrasonic gas flow meter</b> engineered for high&#8209;pressure fiscal applications.",
     externalLink: "https://www.sick.com/ae/en/flow/",
     downloadLink:
       "https://texastechserv.com/wp-content/uploads/2023/09/familyOverview_FLOWSIC600-DRU_g549382_en.pdf",
@@ -2611,6 +2676,8 @@ export const products: Product[] = [
       "Environmental and Renewable Energy",
       "Industrial Process Industries",
     ],
+        label: "FLOWSIC30",
+    statement: "Accurate <b>gas flow measurement</b> for boiler efficiency and flare monitoring.",
     externalLink: "https://www.sick.com/ae/en/flow/",
     downloadLink:
       "https://texastechserv.com/wp-content/uploads/2023/09/familyOverview_FLOWSIC30_g352051_en.pdf",
@@ -2619,6 +2686,11 @@ export const products: Product[] = [
   // ══ LIQUID FLOW METERS — SUB-PRODUCTS (13) ═══════════════
   {
     slug: "helical-tzn",
+    label: "HELICAL TZN",
+    brand: "Faure Herman",
+    series: "Helical turbine",
+    statement: "Extended <b>helical turbine</b> range for your <b>highest flow</b> metering requirements.",
+    tint: { t1: "#b4bfca", t2: "#e4e9ee" },
     name: "HELICAL TZN",
     category: "Liquid Flow Meters",
     parentPath: "/products/flow-meters/liquid-flow-meters",
@@ -2656,6 +2728,11 @@ export const products: Product[] = [
   },
   {
     slug: "helical-tlm",
+    label: "HELICAL TLM",
+    brand: "Heliflu · Faure Herman",
+    series: "Helical turbine",
+    statement: "<b>High accuracy</b> for low to medium viscosity liquids, built for <b>custody transfer</b>.",
+    tint: { t1: "#c3bdb4", t2: "#ebe8e2" },
     name: "HELICAL TLM",
     category: "Liquid Flow Meters",
     parentPath: "/products/flow-meters/liquid-flow-meters",
@@ -2693,6 +2770,11 @@ export const products: Product[] = [
   },
   {
     slug: "heliflu-cta",
+    label: "HELIFLU CTA",
+    brand: "Heliflu · Faure Herman",
+    series: "Helical turbine",
+    statement: "A <b>compact</b>, <b>bi&#8209;directional</b> flow meter with <b>integrated electronics</b>.",
+    tint: { t1: "#a9bfc0", t2: "#e1ecec" },
     name: "HELIFLU CTA",
     category: "Liquid Flow Meters",
     parentPath: "/products/flow-meters/liquid-flow-meters",
@@ -2730,6 +2812,11 @@ export const products: Product[] = [
   },
   {
     slug: "fh-sonic",
+    label: "FH SONIC",
+    brand: "Faure Herman",
+    series: "Ultrasonic",
+    statement: "<b>Ultrasonic transit time</b> volume metering for demanding <b>custody transfer</b>.",
+    tint: { t1: "#a9b6cc", t2: "#e0e6f1" },
     name: "FH SONIC",
     category: "Liquid Flow Meters",
     parentPath: "/products/flow-meters/liquid-flow-meters",
@@ -2767,6 +2854,11 @@ export const products: Product[] = [
   },
   {
     slug: "fh83-neo",
+    label: "FH83 NEO",
+    brand: "Faure Herman",
+    series: "Ultrasonic",
+    statement: "An evolutive <b>ultrasonic</b> range for <b>liquid metering</b>, adapted to your needs.",
+    tint: { t1: "#c9c1ad", t2: "#efebdf" },
     name: "FH83 NEO",
     category: "Liquid Flow Meters",
     parentPath: "/products/flow-meters/liquid-flow-meters",
@@ -2804,6 +2896,11 @@ export const products: Product[] = [
   },
   {
     slug: "minisonic",
+    label: "MINISONIC",
+    brand: "SICK Ultrasonic Flow",
+    series: "Ultrasonic",
+    statement: "<b>Compact, non&#8209;intrusive</b> ultrasonic measurement of <b>industrial liquids</b>.",
+    tint: { t1: "#cdb4b4", t2: "#f1e3e3" },
     name: "MINISONIC",
     category: "Liquid Flow Meters",
     parentPath: "/products/flow-meters/liquid-flow-meters",
@@ -2841,6 +2938,11 @@ export const products: Product[] = [
   },
   {
     slug: "miniosonic-ii",
+    label: "MINISONIC II",
+    brand: "SICK Ultrasonic Flow",
+    series: "Ultrasonic",
+    statement: "Next generation <b>compact ultrasonic</b> flowmeter with <b>enhanced accuracy</b> and <b>diagnostics</b>.",
+    tint: { t1: "#b4bfca", t2: "#e4e9ee" },
     name: "MINIOSONIC II",
     category: "Liquid Flow Meters",
     parentPath: "/products/flow-meters/liquid-flow-meters",
@@ -2878,6 +2980,11 @@ export const products: Product[] = [
   },
   {
     slug: "minisonic-ii-portable",
+    label: "MINISONIC II PORTABLE",
+    brand: "SICK Portable Ultrasonic Flow",
+    series: "Ultrasonic",
+    statement: "Battery&#8209;powered <b>clamp&#8209;on ultrasonic</b> flowmeter for fast, <b>non&#8209;intrusive verification</b>.",
+    tint: { t1: "#c3bdb4", t2: "#ebe8e2" },
     name: "MINISONIC II PORTABLE",
     category: "Liquid Flow Meters",
     parentPath: "/products/flow-meters/liquid-flow-meters",
@@ -2915,6 +3022,11 @@ export const products: Product[] = [
   },
   {
     slug: "uf-801p",
+    label: "UF 801P",
+    brand: "Ultraflux",
+    series: "Ultrasonic",
+    statement: "Portable <b>ultrasonic flowmeter</b> for temporary, <b>non&#8209;intrusive</b> on&#8209;site <b>liquid verification</b>.",
+    tint: { t1: "#a9bfc0", t2: "#e1ecec" },
     name: "UF 801P",
     category: "Liquid Flow Meters",
     parentPath: "/products/flow-meters/liquid-flow-meters",
@@ -2952,6 +3064,11 @@ export const products: Product[] = [
   },
   {
     slug: "uf-811",
+    label: "UF 811",
+    brand: "Ultraflux",
+    series: "Ultrasonic",
+    statement: "Permanent <b>non&#8209;intrusive ultrasonic</b> measurement for <b>clean liquids</b> and <b>process fluids</b>.",
+    tint: { t1: "#a9b6cc", t2: "#e0e6f1" },
     name: "UF 811",
     category: "Liquid Flow Meters",
     parentPath: "/products/flow-meters/liquid-flow-meters",
@@ -2989,6 +3106,11 @@ export const products: Product[] = [
   },
   {
     slug: "uf-821",
+    label: "UF 821",
+    brand: "Ultraflux",
+    series: "Ultrasonic",
+    statement: "Flexible <b>ultrasonic flowmeter</b> with <b>robust construction</b> for <b>industrial liquid processes</b>.",
+    tint: { t1: "#c9c1ad", t2: "#efebdf" },
     name: "UF 821",
     category: "Liquid Flow Meters",
     parentPath: "/products/flow-meters/liquid-flow-meters",
@@ -3026,6 +3148,11 @@ export const products: Product[] = [
   },
   {
     slug: "uf-831",
+    label: "UF 831",
+    brand: "Ultraflux",
+    series: "Ultrasonic",
+    statement: "Advanced <b>high&#8209;accuracy ultrasonic</b> flowmeter with <b>enhanced diagnostics</b> and <b>flexible integration</b>.",
+    tint: { t1: "#cdb4b4", t2: "#f1e3e3" },
     name: "UF 831",
     category: "Liquid Flow Meters",
     parentPath: "/products/flow-meters/liquid-flow-meters",
@@ -3063,6 +3190,11 @@ export const products: Product[] = [
   },
   {
     slug: "uf-841",
+    label: "UF 841",
+    brand: "Ultraflux",
+    series: "Ultrasonic",
+    statement: "High&#8209;performance <b>non&#8209;intrusive ultrasonic</b> measurement for <b>demanding process environments</b>.",
+    tint: { t1: "#b4bfca", t2: "#e4e9ee" },
     name: "UF 841",
     category: "Liquid Flow Meters",
     parentPath: "/products/flow-meters/liquid-flow-meters",
@@ -3139,6 +3271,8 @@ export const products: Product[] = [
       "Environmental and Emissions Monitoring",
       "EPC Contractors and System Integrators",
     ],
+        label: "FLOWSIC100-FLARE-XT",
+    statement: "Ultrasonic <b>flare gas flow meter</b> for extreme velocities and emissions.",
     externalLink: "https://www.sick.com/ae/en/flow/",
     downloadLink:
       "https://texastechserv.com/wp-content/uploads/2023/09/familyOverview_FLOWSIC100-Flare-XT_g465551_en.pdf",
@@ -3183,6 +3317,8 @@ export const products: Product[] = [
       "Environmental and Emissions Monitoring",
       "EPC Contractors and System Integrators",
     ],
+        label: "FLOWSIC100 FLARE",
+    statement: "Rugged <b>flare and steam flow meter</b> for continuous environmental compliance.",
     externalLink: "https://www.sick.com/ae/en/flow/",
     downloadLink:
       "https://texastechserv.com/wp-content/uploads/2023/09/familyOverview_FLOWSIC100-Flare_g198253_en.pdf",
@@ -3336,6 +3472,8 @@ export const products: Product[] = [
       "Chemical and Process Industries",
       "Environmental Monitoring and Compliance",
     ],
+        label: "CEMS DAS",
+    statement: "Automated <b>emissions data acquisition system</b> for environmental compliance reporting.",
     externalLink: "https://www.sick.com/ae/en/gas-analyzers/c/g295776",
     downloadLink: null,
   },
@@ -3378,6 +3516,8 @@ export const products: Product[] = [
       "Chemical and Process Industries",
       "Environmental Monitoring and Compliance",
     ],
+        label: "MCS100FT",
+    statement: "Hot&#8209;wet <b>extractive multi&#8209;gas analyzer</b> powered by high&#8209;resolution FTIR technology.",
     externalLink: "https://www.sick.com/ae/en/gas-analyzers/c/g295776",
     downloadLink:
       "https://texastechserv.com/wp-content/uploads/2023/09/product_information_mcs100ft_en_im0018674.pdf",
@@ -3423,6 +3563,8 @@ export const products: Product[] = [
       "Chemical and Process Industries",
       "Environmental Monitoring and Compliance",
     ],
+        label: "MCS200HW",
+    statement: "Extractive <b>flue gas monitoring system</b> for power plants and waste incineration.",
     externalLink: "https://www.sick.com/ae/en/gas-analyzers/c/g295776",
     downloadLink:
       "https://texastechserv.com/wp-content/uploads/2023/09/product_information_mcs200hw_en_im0085335.pdf",
@@ -3460,6 +3602,8 @@ export const products: Product[] = [
       "Chemical and Process Industries",
       "Environmental Monitoring and Compliance",
     ],
+        label: "CEMS SHELTER",
+    statement: "Turnkey <b>climate&#8209;controlled CEMS shelter</b> built for harsh Middle East ambient conditions.",
     externalLink: "https://www.sick.com/ae/en/gas-analyzers/c/g295776",
     downloadLink:
       "https://texastechserv.com/wp-content/uploads/2023/09/dataSheet_Special-Shelter_p660974_en.pdf",
@@ -3499,6 +3643,8 @@ export const products: Product[] = [
       "Chemical and Process Industries",
       "Environmental Monitoring and Compliance",
     ],
+        label: "DUSTHUNTER T100",
+    statement: "Type&#8209;approved <b>optical transmissiometer</b> for continuous dust concentration monitoring.",
     externalLink: "https://www.sick.com/ae/en/gas-analyzers/c/g295776",
     downloadLink:
       "https://texastechserv.com/wp-content/uploads/2023/09/product_segment_overview_product_overview_dust_measuring_devices_en_im0082087.pdf",
@@ -3536,6 +3682,8 @@ export const products: Product[] = [
       "Chemical and Process Industries",
       "Environmental Monitoring and Compliance",
     ],
+        label: "DUSTHUNTER T200",
+    statement: "Optical <b>dust concentration analyzer</b> with automatic optical self&#8209;alignment.",
     externalLink: "https://www.sick.com/ae/en/gas-analyzers/c/g295776",
     downloadLink:
       "https://texastechserv.com/wp-content/uploads/2023/09/dataSheet_DUSTHUNTER-T200_p475055_en.pdf",
@@ -3576,6 +3724,8 @@ export const products: Product[] = [
       "Waste Incineration and Treatment",
       "Environmental Monitoring and Compliance",
     ],
+        label: "GM32",
+    statement: "In&#8209;situ <b>ultraviolet gas analyzer</b> for direct SO2, NO, and NH3 measurement.",
     externalLink: "https://www.sick.com/ae/en/gas-analyzers/c/g295776",
     downloadLink:
       "https://texastechserv.com/wp-content/uploads/2023/09/product_information_gm32_en_im0030195.pdf",
@@ -3614,6 +3764,8 @@ export const products: Product[] = [
       "Waste Incineration and Treatment",
       "Environmental Monitoring and Compliance",
     ],
+        label: "GM35",
+    statement: "Fast <b>infrared in&#8209;situ gas analyzer</b> for combustion efficiency and CO2 control.",
     externalLink: "https://www.sick.com/ae/en/gas-analyzers/c/g295776",
     downloadLink: null,
   },
@@ -3627,7 +3779,9 @@ export const products: Product[] = [
     image: "/images/industrial_automation/plc_&_io_module/1.jpg",
     tag: "PLC & I/O Systems",
     description:
-      "Experience Seamless Automation with Our PLC & I/O Modules. Welcome to a realm of industrial automation where efficiency meets innovation. Our range of PLC (Programmable Logic Controller) and I/O (Input/Output) module products sets a new standard for seamless and intelligent operations.",
+      "Experience Seamless Automation with Our PLC & I/O Modules. Welcome to a realm of industrial automation where efficiency meets innovation. Our range of PLC (Programmable Logic Controller) and I/O (Input/Output) module products sets a new standard for seamless and intelligent operations.",    label: "PLC & I/O MODULES",
+    statement: "Modular <b>distributed I/O slices</b> supporting PROFINET, Modbus, and EtherNet/IP.",
+    
   },
   {
     slug: "industrial-control-panels",
@@ -3643,7 +3797,9 @@ export const products: Product[] = [
       "Unleash Automation: Navigate complex processes with ease. Our panels empower you to control, monitor, and manage intricate tasks, ensuring your operations are finely tuned and effortlessly controlled.",
       "Custom Solutions, Tailored Results: Every industry is unique, and so are our solutions. Our Industrial Control Panels are designed with customization in mind, adapting to your specific needs for PLC SCADA or Custody Metering projects.",
       "Ahead of the Curve: Stay ahead in the realm of industrial innovation. Our advanced technology ensures that your operations not only meet today's demands but are also future-ready for the dynamic landscape of tomorrow.",
-    ],
+    ],    label: "CONTROL PANELS",
+    statement: "Custom <b>UL508A certified control panels</b> engineered for hazardous and process plants.",
+    
   },
   {
     slug: "industrial-workstation-server-desktop-pc",
@@ -3653,7 +3809,9 @@ export const products: Product[] = [
     image: "/images/industrial_automation/industrial_workstation_server_desktop_pc/1.jpg",
     tag: "Industrial Computing",
     description:
-      "Explore our diverse range of Industrial Workstations, Servers, and Desktop PCs designed to enhance your operations. From robust Servers that ensure seamless data management to dependable Desktop PCs tailored to your needs, our solutions are engineered for reliability and performance. Elevate your industrial computing with our comprehensive offerings, built to withstand demanding environments and drive efficiency.",
+      "Explore our diverse range of Industrial Workstations, Servers, and Desktop PCs designed to enhance your operations. From robust Servers that ensure seamless data management to dependable Desktop PCs tailored to your needs, our solutions are engineered for reliability and performance. Elevate your industrial computing with our comprehensive offerings, built to withstand demanding environments and drive efficiency.",    label: "INDUSTRIAL COMPUTING",
+    statement: "Rugged <b>fanless industrial computers</b> for 24/7 mission&#8209;critical control and data acquisition.",
+    
   },
   {
     slug: "controller",
@@ -3663,7 +3821,9 @@ export const products: Product[] = [
     image: "/images/industrial_automation/controller/1.jpg",
     tag: "Industrial Controllers",
     description:
-      "Discover our array of Industrial Automation Controllers, each meticulously crafted to optimize your processes. From PLCs that enable precision control to SCADA systems that provide real-time insights, our controllers empower your operations. Choose reliability, flexibility, and advanced technology for your industrial automation needs with our wide range of controllers.",
+      "Discover our array of Industrial Automation Controllers, each meticulously crafted to optimize your processes. From PLCs that enable precision control to SCADA systems that provide real-time insights, our controllers empower your operations. Choose reliability, flexibility, and advanced technology for your industrial automation needs with our wide range of controllers.",    label: "PROCESS CONTROLLERS",
+    statement: "Dedicated <b>multi&#8209;loop process controllers</b> for precise temperature and PID loop regulation.",
+    
   },
   {
     slug: "converters",
@@ -3673,7 +3833,9 @@ export const products: Product[] = [
     image: "/images/industrial_automation/converters/1.png",
     tag: "Industrial Converters",
     description:
-      "Elevate your industrial connectivity with our diverse range of Industrial Converters. Whether you require protocol converters to bridge communication gaps or signal converters to ensure seamless data transmission, our solutions are designed to enhance your operational efficiency. Experience reliable and adaptable industrial conversion solutions that bridge the gap between legacy systems and modern technology.",
+      "Elevate your industrial connectivity with our diverse range of Industrial Converters. Whether you require protocol converters to bridge communication gaps or signal converters to ensure seamless data transmission, our solutions are designed to enhance your operational efficiency. Experience reliable and adaptable industrial conversion solutions that bridge the gap between legacy systems and modern technology.",    label: "SIGNAL CONVERTERS",
+    statement: "Industrial <b>signal isolators and converters</b> for seamless analog and digital translation.",
+    
   },
   {
     slug: "industrial-ethernet-network-switch",
@@ -3683,7 +3845,9 @@ export const products: Product[] = [
     image: "/images/industrial_automation/industrial_ethernet_network_switch/1.jpg",
     tag: "Industrial Networking",
     description:
-      "Experience enhanced networking capabilities with our diverse selection of Industrial Ethernet Network Switches. Designed to provide reliable connectivity in demanding environments, our switches ensure seamless data transmission and communication across your industrial infrastructure. Choose from our range of Industrial Ethernet Network Switches to optimize your network performance and drive operational efficiency.",
+      "Experience enhanced networking capabilities with our diverse selection of Industrial Ethernet Network Switches. Designed to provide reliable connectivity in demanding environments, our switches ensure seamless data transmission and communication across your industrial infrastructure. Choose from our range of Industrial Ethernet Network Switches to optimize your network performance and drive operational efficiency.",    label: "NETWORK SWITCHES",
+    statement: "Managed <b>hardened Ethernet switches</b> for deterministic plant floor network rings.",
+    
   },
   {
     slug: "industrial-consoles",
@@ -3694,6 +3858,8 @@ export const products: Product[] = [
     tag: "Control Room Solutions",
     description:
       "Pyrotech Workspace Solutions is a founder for delivering turnkey Control Room Solutions and Ergonomic Command Centre Console. Their idea of a command centre is based on sustainable, safe and contemporary workspace for both the operators and the equipment. They are looking further to provide ultra-modern designs with strict adherence to international standards of Control Rooms Solutions & Control desks.",
+        label: "OPERATOR CONSOLES",
+    statement: "Ergonomic <b>modular operator consoles</b> engineered for continuous control room operations.",
     externalLink: "https://www.pyrotechworkspace.com/expertise/control-room-console/",
   },
 
@@ -3805,6 +3971,8 @@ export const products: Product[] = [
     tag: "SICK Field Instruments",
     description:
       "SICK provides top-notch solutions for contact temperature measurement in liquids and gases, offering a product portfolio that includes screw-in and insertion thermometers, along with temperature switches. With various insertion lengths and flexible mechanical configuration options, these devices can be perfectly tailored to meet individual requirements.",
+        label: "TEMPERATURE SENSORS",
+    statement: "High&#8209;precision <b>RTD and thermocouple sensors</b> for industrial process temperature measurement.",
     externalLink: "https://www.sick.com/in/en/temperature-sensors/c/g173252?q=:Def_Type:ProductFamily",
   },
   {
@@ -3816,6 +3984,8 @@ export const products: Product[] = [
     tag: "SICK Field Instruments",
     description:
       "SICK presents a diverse array of solutions for process engineering, storage, and protection, catering to both continuous level measurement and point level measurement needs. Our sensors are designed to ensure efficient processes, taking into account the installation situation, medium properties, and ambient conditions. With one of the broadest technology portfolios in the industry, SICK is at the forefront, leveraging our knowledge to deliver top-notch solutions.",
+        label: "LEVEL SENSORS",
+    statement: "Continuous <b>radar and hydrostatic level sensors</b> for liquids, bulk solids, and storage.",
     externalLink: "https://www.sick.com/in/en/temperature-sensors/c/g173252?q=:Def_Type:ProductFamily",
     downloadLink: "https://www.sick.com/ae/en/presence/level-sensors/c/g98155?q=:Def_Type:ProductFamily",
   },
@@ -3828,6 +3998,8 @@ export const products: Product[] = [
     tag: "SICK Field Instruments",
     description:
       "SICK provides a range of electronic pressure measurement transmitters and switches that can be customized to meet specific customer needs, thanks to their intelligent and diverse configuration options. All SICK devices are known for their high-quality materials, robust properties, and precise measurement technology, while also being user-friendly and easy to install.",
+        label: "PRESSURE SENSORS",
+    statement: "Electronic <b>pressure transmitters and switches</b> with configurable ranges and high accuracy.",
     externalLink: "https://www.sick.com/in/en/temperature-sensors/c/g173252?q=:Def_Type:ProductFamily",
   },
   {
@@ -3839,6 +4011,8 @@ export const products: Product[] = [
     tag: "SICK Field Instruments",
     description:
       "SICK's Condition Monitoring sensors enable intelligent condition-based monitoring by assessing essential physical parameters for mission-critical processes and applications. The gathered sensor data serves as the basis for analyses that facilitate condition-dependent maintenance. This not only minimizes unplanned downtimes but also extends the service life of components and helps in reducing overall costs.",
+        label: "CONDITION MONITORING",
+    statement: "Multi&#8209;physics <b>vibration and temperature sensors</b> for predictive asset maintenance.",
     externalLink: "https://www.sick.com/ae/en/condition-monitoring-sensors/condition-monitoring-sensors/multi-physics-box/c/g569306",
     downloadLink: "https://cdn.sick.com/media/familyoverview/6/06/306/familyOverview_Multi-Physics-Box_g569306_en.pdf",
   },
@@ -3851,6 +4025,8 @@ export const products: Product[] = [
     tag: "SICK Field Instruments",
     description:
       "Optimized control of process parameters is the main driver for increasing efficiency and reducing input of valuable resources. Whether it's pressure measurement, temperature measurement, level control or flow metering, SICK offers a wide range of solutions for measuring process variables for liquids, gases and bulk solids and protecting against overfill and dry run. SICK devices are rugged and easy to use. Innovative sensor technology enables accurate, universal measurement independent of material type.",
+        label: "FLOW SENSORS",
+    statement: "Rugged <b>calorimetric flow sensors</b> for liquid and gas velocity monitoring.",
     externalLink: "https://www.sick.com/in/en/temperature-sensors/c/g173252?q=:Def_Type:ProductFamily",
   },
 ];

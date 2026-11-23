@@ -430,7 +430,7 @@ export default function MitsubishiContent() {
           <div className="flex flex-wrap items-center justify-center gap-3">
             <Link
               href="/contacts/"
-              className="inline-flex items-center gap-2 bg-[#e7212b] hover:bg-[#aa0b1b] text-white font-medium px-8 py-3.5 rounded-lg transition-colors duration-200"
+              className="btn-primary inline-flex items-center gap-2 text-white font-medium px-8 py-3.5 rounded-lg transition-all duration-200"
             >
               Contact Us <ArrowRight className="w-4 h-4" />
             </Link>

@@ -17,6 +17,13 @@ import { FaqPageJsonLd } from "@/components/schema/FaqPageJsonLd";
 import { productsListingFaq } from "@/lib/pageFaqData";
 import type { ProductCategoryData } from "@/lib/product-categories";
 import type { Product } from "@/lib/products";
+import ProductStackShowcase from "./ProductStackShowcase";
+import LiquidFlowMetersCatalog from "./LiquidFlowMetersCatalog";
+import ProductCatalogShowcase from "./ProductCatalogShowcase";
+import {
+  FLOW_METERS_SHOWCASE_CONFIG,
+  ANALYZERS_SHOWCASE_CONFIG,
+} from "./showcase-configs";
 
 interface ProductCategoryTemplateProps {
   data: ProductCategoryData;
@@ -28,6 +35,12 @@ export default function ProductCategoryTemplate({
   products,
 }: ProductCategoryTemplateProps) {
   const hasSubcategories = Boolean(data.subcategories && data.subcategories.length > 0);
+  const isFlowMetersRoot = data.key === "flow-meters" || data.path === "/products/flow-meters/";
+  const isAnalyzersRoot = data.key === "analyzers" || data.path === "/products/analyzers/";
+  const isStackShowcase = isFlowMetersRoot || isAnalyzersRoot;
+  const isLiquidFlowMeters =
+    data.key === "flow-meters/liquid-flow-meters" ||
+    data.path === "/products/flow-meters/liquid-flow-meters/";
   const showProductGrid = !hasSubcategories; // Safeguard: keep product catalog only on leaf pages where it is the sole main content
 
   const breadcrumbItems = [
@@ -54,6 +67,7 @@ export default function ProductCategoryTemplate({
         title={data.heroTitle}
         subtitle={data.subtitle}
         category={data.eyebrow}
+        flatBg={true}
         badgeText={
           hasSubcategories
             ? `${data.subcategories.length} Specialized Branches Available`
@@ -69,77 +83,59 @@ export default function ProductCategoryTemplate({
 
       {/* ── 2. Sub-Categories (if available) ── */}
       {hasSubcategories && (
-        <Section id="sub-categories" tone="grey">
-          <Container>
-            <SectionHeading
-              eyebrow="Specialized Branches"
-              title="Select Measurement Technology"
-              description="Explore dedicated equipment groupings engineered for specific fluid phases, operating envelopes, and regulatory standards."
-            />
-            <CardGrid max={3} className="mt-10">
-              {data.subcategories.map((sub, idx) => (
-                <ImageCard
-                  key={idx}
-                  variant="default"
-                  tone="grey"
-                  elevation="flat"
-                  href={sub.href}
-                  imageSrc={sub.image}
-                  title={sub.title}
-                  subtitle={sub.description}
-                  tag="Explore Sub-Category"
-                  fit={sub.fit}
-                />
-              ))}
-            </CardGrid>
-          </Container>
-        </Section>
+        isStackShowcase ? (
+          <ProductStackShowcase
+            config={isAnalyzersRoot ? ANALYZERS_SHOWCASE_CONFIG : FLOW_METERS_SHOWCASE_CONFIG}
+          />
+        ) : (
+          <Section id="sub-categories" tone="grey">
+            <Container>
+              <SectionHeading
+                eyebrow="Specialized Branches"
+                title="Select Measurement Technology"
+                description="Explore dedicated equipment groupings engineered for specific fluid phases, operating envelopes, and regulatory standards."
+              />
+              <CardGrid max={3} className="mt-10">
+                {data.subcategories.map((sub, idx) => (
+                  <ImageCard
+                    key={idx}
+                    variant="default"
+                    tone="grey"
+                    elevation="flat"
+                    href={sub.href}
+                    imageSrc={sub.image}
+                    title={sub.title}
+                    subtitle={sub.description}
+                    tag="Explore Sub-Category"
+                    fit={sub.fit}
+                  />
+                ))}
+              </CardGrid>
+            </Container>
+          </Section>
+        )
       )}
 
       {/* ── 3. Product Catalog Grid (Safeguard: rendered only on leaf pages as the sole main content) ── */}
       {showProductGrid && (
-        <Section
-          id="product-models"
-          tone="grey"
-        >
-          <Container>
-            <div className="flex flex-col sm:flex-row sm:items-end justify-between gap-4 mb-10">
-              <div>
-                <span className="text-[12px] font-mono uppercase tracking-wider text-[#6b191b] font-bold block mb-1">
-                  Precision Hardware
-                </span>
-                <h2 className="font-heading text-[28px] sm:text-[34px] font-bold text-[#1a1c20] leading-tight">
-                  {`Available ${data.heroTitle} Systems`}
-                </h2>
-              </div>
-              <span className="text-[#6b7280] text-[13px] font-mono font-medium">
-                {products.length} Products Cataloged
-              </span>
-            </div>
-
-            <CardGrid max={3}>
-              {products.map((product) => (
-                <ImageCard
-                  key={product.slug}
-                  variant="product"
-                  tone="grey"
-                  elevation="flat"
-                  href={`/portfolio/${product.slug}/`}
-                  imageSrc={product.image}
-                  title={product.name}
-                  subtitle={product.description}
-                  meta={product.tag || product.category}
-                  tag={product.tag || product.category || "View Specs"}
-                  fit={product.fit}
-                />
-              ))}
-            </CardGrid>
-          </Container>
-        </Section>
+        isLiquidFlowMeters ? (
+          <LiquidFlowMetersCatalog
+            heroTitle={data.heroTitle}
+            products={products}
+          />
+        ) : (
+          <ProductCatalogShowcase
+            heroTitle={data.heroTitle}
+            products={products}
+          />
+        )
       )}
 
       {/* ── 4. Frequently Asked Questions ── */}
-      <Section tone="white">
+      <Section
+        tone="grey"
+        className="!bg-[#ece9e5] !mt-0 !pt-8"
+      >
         <Container>
           <SectionHeading
             eyebrow="Procurement & Technical FAQ"

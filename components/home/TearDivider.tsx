@@ -1,27 +1,29 @@
-"use client";
-import { useEffect, useRef } from "react";
+'use client';
+import { useEffect, useRef } from 'react';
 
 export default function TearDivider() {
-  const tearRef = useRef<HTMLDivElement>(null);
+  const rootRef = useRef<HTMLDivElement>(null);
+  const stageRef = useRef<HTMLDivElement>(null);
+  const gapRef = useRef<HTMLDivElement>(null);
+  const rimTRef = useRef<HTMLDivElement>(null);
+  const rimBRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
-    const tear = tearRef.current;
-    if (!tear) return;
-    if (matchMedia("(prefers-reduced-motion: reduce)").matches) return;
+    const root = rootRef.current;
+    const stage = stageRef.current;
+    const gap = gapRef.current;
+    const rimT = rimTRef.current;
+    const rimB = rimBRef.current;
 
-    const stage = tear.querySelector<HTMLElement>(".tear__stage")!;
-    const rim = tear.querySelector<HTMLElement>(".tear__rim")!;
-    const gap = tear.querySelector<HTMLElement>(".tear__gap")!;
+    if (!root || !stage || !gap || !rimT || !rimB) return;
+    if (typeof root.getBoundingClientRect !== 'function') return;
+    if (matchMedia('(prefers-reduced-motion: reduce)').matches) return;
 
-    const N = 360;
-    let builtFor = 0;
+    const N = 220;
 
-    /**
-     * Generate one ripped edge as an array of N+1 y-values in [0,1].
-     * Layers: slow wave + medium bumps + fine jitter + rare spikes.
-     */
+    // One ripped edge: slow wave + medium bumps + fine jitter + rare spikes (0..1)
     const ripped = (): number[] => {
-      const ph = [0, 1, 2].map(() => Math.random() * 6.283);
+      const ph = [0, 0, 0].map(() => Math.random() * 6.283);
       return Array.from({ length: N + 1 }, (_, i) => {
         const x = i / N;
         let v =
@@ -29,62 +31,67 @@ export default function TearDivider() {
           0.26 * Math.sin(x * 6.283 * 1.4 + ph[0]) +
           0.14 * Math.sin(x * 6.283 * 4.1 + ph[1]) +
           0.07 * Math.sin(x * 6.283 * 11 + ph[2]) +
-          (Math.random() - 0.5) * 0.22;
-        if (Math.random() < 0.04) v += (Math.random() - 0.5) * 0.5;
+          (Math.random() - 0.5) * 0.25;
+        if (Math.random() < 0.05) v += (Math.random() - 0.5) * 0.5;
         return Math.min(Math.max(v, 0), 1);
       });
     };
 
-    const build = () => {
-      const H = stage.offsetHeight;
-      if (!H || H === builtFor) return;
-      builtFor = H;
+    // Shapes are created once; scrolling only changes the height
+    const topShape = ripped();
+    const botShape = ripped();
+    const rimTh = Array.from({ length: N + 1 }, () => 2 + Math.random() * 5);
 
-      const amp = H * 0.17;
-      const margin = H * 0.07;
+    const clamp = (v: number) => Math.min(Math.max(v, 0), 1);
+    const smooth = (a: number, b: number, x: number) => {
+      const t = clamp((x - a) / (b - a));
+      return t * t * (3 - 2 * t);
+    };
+    const X = (i: number) => `${((i / N) * 100).toFixed(2)}%`;
+    const rev = <T,>(a: T[]) => a.slice().reverse();
 
-      // Two independent edges — top and bottom don't mirror each other
-      const topVals = ripped().map((v) => margin + v * amp);
-      const botVals = ripped().map((v) => H - margin - v * amp);
+    const draw = (H: number) => {
+      const m = Math.min(6, H * 0.12); // margin for rim
+      const amp = Math.min(30, H * 0.2); // roughness
 
-      /**
-       * Build a polygon string.
-       * rimMode = true → nudge edge outward by a random 3-8px fibrous thickness
-       */
-      const poly = (
-        topPts: number[],
-        botPts: number[],
-        rimMode: boolean
-      ): string => {
-        const pts: string[] = [];
-        // Top edge — left to right
-        topPts.forEach((y, i) => {
-          const yy = rimMode ? Math.max(y - (3 + Math.random() * 5), 0) : y;
-          pts.push(`${((i / N) * 100).toFixed(2)}% ${yy.toFixed(1)}px`);
-        });
-        // Bottom edge — right to left
-        for (let i = N; i >= 0; i--) {
-          const y = botPts[i];
-          const yy = rimMode ? Math.min(y + (3 + Math.random() * 5), H) : y;
-          pts.push(`${((i / N) * 100).toFixed(2)}% ${yy.toFixed(1)}px`);
-        }
-        return `polygon(${pts.join(",")})`;
-      };
+      const t = topShape.map((v) => m + v * amp);
+      const b = botShape.map((v) => H - m - v * amp);
 
-      gap.style.clipPath = poly(topVals, botVals, false);
-      rim.style.clipPath = poly(topVals, botVals, true);
+      const line = (arr: number[]) => arr.map((y, i) => `${X(i)} ${y.toFixed(1)}px`);
+      const above = (arr: number[]) =>
+        arr.map((y, i) => `${X(i)} ${Math.max(y - rimTh[i], 0).toFixed(1)}px`);
+      const below = (arr: number[]) =>
+        arr.map((y, i) => `${X(i)} ${Math.min(y + rimTh[i], H).toFixed(1)}px`);
+
+      gap.style.clipPath = `polygon(${[...line(t), ...rev(line(b))].join(',')})`;
+      rimT.style.clipPath = `polygon(${[...above(t), ...rev(line(t))].join(',')})`;
+      rimB.style.clipPath = `polygon(${[...line(b), ...rev(below(b))].join(',')})`;
     };
 
     let ticking = false;
+    let lastH = -1;
+
     const update = () => {
-      build();
-      const r = tear.getBoundingClientRect();
-      // progress: 0 at bottom of viewport, 1 at top
-      const p = 1 - r.top / window.innerHeight;
-      const c = Math.min(Math.max(p, 0), 1);
-      // sine curve → open in the middle, closed at both ends
-      tear.style.setProperty("--tear", Math.sin(c * Math.PI).toFixed(3));
       ticking = false;
+      const rect = root.getBoundingClientRect();
+      const MAX = window.innerWidth <= 640 ? 150 : 260;
+      // p: 0 when divider top is at the bottom of the viewport, 1 at the top
+      const p = 1 - rect.top / window.innerHeight;
+      // Opens while scrolling down, stays open, closes only on scroll up
+      const o = smooth(0.1, 0.4, p);
+      const H = Math.round(o * MAX);
+      if (H === lastH) return;
+      lastH = H;
+
+      // Animate real layout height — pushes the next section down
+      root.style.height = `${H}px`;
+
+      if (H < 24) {
+        stage.style.display = 'none';
+        return;
+      }
+      stage.style.display = 'block';
+      draw(H);
     };
 
     const onScroll = () => {
@@ -93,24 +100,31 @@ export default function TearDivider() {
         requestAnimationFrame(update);
       }
     };
+    const onResize = () => {
+      lastH = -1;
+      update();
+    };
 
-    window.addEventListener("scroll", onScroll, { passive: true });
-    window.addEventListener("resize", update);
+    window.addEventListener('scroll', onScroll, { passive: true });
+    window.addEventListener('resize', onResize);
     update();
 
     return () => {
-      window.removeEventListener("scroll", onScroll);
-      window.removeEventListener("resize", update);
+      window.removeEventListener('scroll', onScroll);
+      window.removeEventListener('resize', onResize);
     };
   }, []);
 
   return (
-    <div className="tear" aria-hidden="true" ref={tearRef}>
-      <div className="tear__stage">
-        {/* White fibrous paper-edge rim — slightly wider than the gap */}
-        <div className="tear__rim" />
-        {/* The coloured interior of the crack with inner shadow */}
-        <div className="tear__gap" />
+    <div className="tear" ref={rootRef} aria-hidden="true">
+      <div className="tear__stage" ref={stageRef}>
+        <div className="tear__gap" ref={gapRef} />
+        <div className="tear__shadow tear__shadow--t">
+          <div className="tear__rim" ref={rimTRef} />
+        </div>
+        <div className="tear__shadow tear__shadow--b">
+          <div className="tear__rim" ref={rimBRef} />
+        </div>
       </div>
     </div>
   );

@@ -5,6 +5,9 @@
    ========================================================================== */
 
 :root {
+  --btn-primary-bg: linear-gradient(90deg, #9b1a1a 0%, #6a1111 100%);
+  --btn-primary-bg-hover: linear-gradient(90deg, #aa2020 0%, #761616 100%);
+  --btn-primary-shadow: 0 10px 24px rgba(120, 20, 20, 0.35);
   --brand-action: #8a302f;
   --brand-action-hover: #6f2423;
   --bg-studio: #e8e8e6;
@@ -70,7 +73,7 @@
   align-items: center;
   justify-content: center;
   gap: 8px;
-  background-color: var(--brand-action);
+  background: var(--btn-primary-bg);
   color: #ffffff;
   border-radius: 999px;
   padding: 14px 32px;
@@ -78,17 +81,17 @@
   font-size: 15px;
   font-weight: 600;
   letter-spacing: -0.01em;
-  border: 1px solid var(--brand-action);
+  border: 1px solid transparent;
   cursor: pointer;
   transition: all 0.25s ease;
-  box-shadow: 0 8px 20px rgba(138, 48, 47, 0.28);
+  box-shadow: var(--btn-primary-shadow);
   text-decoration: none;
 }
 
 .btn:hover {
-  background-color: var(--brand-action-hover);
+  background: var(--btn-primary-bg-hover);
   transform: translateY(-2px);
-  box-shadow: 0 8px 24px rgba(138, 48, 47, 0.35);
+  box-shadow: var(--btn-primary-shadow);
   color: #ffffff;
 }
 
@@ -102,22 +105,22 @@
 }
 
 .btn:focus-visible {
-  outline: 2px solid var(--brand-action);
+  outline: 2px solid #8B0000;
   outline-offset: 3px;
 }
 
 .btn-primary {
-  background-color: var(--brand-action);
+  background: var(--btn-primary-bg);
   color: #ffffff;
-  border: 1px solid var(--brand-action);
-  box-shadow: 0 8px 20px rgba(138, 48, 47, 0.28);
+  border: 1px solid transparent;
+  box-shadow: var(--btn-primary-shadow);
   font-weight: 600;
 }
 
 .btn-primary:hover {
-  background-color: var(--brand-action-hover);
+  background: var(--btn-primary-bg-hover);
   transform: translateY(-2px);
-  box-shadow: 0 10px 26px rgba(138, 48, 47, 0.35);
+  box-shadow: var(--btn-primary-shadow);
   color: #ffffff;
 }
 
@@ -126,7 +129,7 @@
 }
 
 .btn-primary:focus-visible {
-  outline: 2px solid var(--brand-action);
+  outline: 2px solid #8B0000;
   outline-offset: 3px;
 }
 
@@ -303,20 +306,20 @@
 .nav-cta-btn {
   font-size: 13px;
   font-weight: 600;
-  background: var(--brand-action);
+  background: var(--btn-primary-bg);
   color: #ffffff;
   padding: 10px 22px;
   border-radius: 999px;
   white-space: nowrap;
   transition: all 0.2s ease;
-  box-shadow: 0 8px 20px rgba(138, 48, 47, 0.28);
+  box-shadow: var(--btn-primary-shadow);
   margin-left: 6px;
 }
 
 .nav-cta-btn:hover {
-  background: var(--brand-action-hover);
+  background: var(--btn-primary-bg-hover);
   transform: translateY(-2px);
-  box-shadow: 0 10px 24px rgba(138, 48, 47, 0.35);
+  box-shadow: var(--btn-primary-shadow);
   color: #ffffff;
 }
 
@@ -1621,7 +1624,7 @@
 }
 
 .card-custody-automation #btn-custody-contact {
-  background: #6b191b;
+  background: var(--btn-primary-bg);
   color: #ffffff;
   border: none;
   border-radius: 999px;
@@ -1634,7 +1637,7 @@
 }
 
 .card-custody-automation #btn-custody-contact:hover {
-  background: #841f22;
+  background: var(--btn-primary-bg-hover);
   transform: translateY(-2px);
   box-shadow: 0 6px 18px rgba(107, 25, 27, 0.36);
 }
@@ -1785,6 +1788,7 @@ button.card-interactive,
 }
 
 @media (max-width: 1023px) {
+
   .content-wrapper,
   .about-cover-section {
     border-top-left-radius: var(--cover-radius, 32px) !important;
@@ -1793,6 +1797,7 @@ button.card-interactive,
 }
 
 @media (max-width: 767px) {
+
   .content-wrapper,
   .about-cover-section {
     border-top-left-radius: var(--cover-radius, 24px) !important;
@@ -1894,10 +1899,10 @@ button.card-interactive,
   }
 }
 
-.about-stats-grid > .v3-reveal,
-.about-stats-grid > .v3-reveal-item,
-.about-stats-grid > div,
-.about-stats-grid > * {
+.about-stats-grid>.v3-reveal,
+.about-stats-grid>.v3-reveal-item,
+.about-stats-grid>div,
+.about-stats-grid>* {
   display: flex !important;
   flex-direction: column !important;
   height: 100% !important;
@@ -1914,7 +1919,8 @@ button.card-interactive,
 
 .glass-hover-card {
   position: relative !important;
-  overflow: hidden !important; /* clips the blob to rounded corners; does not clip card's own shadow */
+  overflow: hidden !important;
+  /* clips the blob to rounded corners; does not clip card's own shadow */
   border-radius: 24px !important;
   background: #e7e7e7 !important;
   box-shadow: 0 0 3px 1px #1818183d, 2px 2px 3px #18181865, inset 2px 2px 2px #ffffff !important;
@@ -1953,11 +1959,11 @@ button.card-interactive,
 
 /* Card content layer sitting above the blob */
 /* Card content layer sitting above the blob */
-.glass-hover-card > .card-content,
-.glass-hover-card > .stat-card-content,
-.glass-hover-card > .service-card-content,
-.glass-hover-card > .industry-card-content,
-.glass-hover-card > .blog-card-content {
+.glass-hover-card>.card-content,
+.glass-hover-card>.stat-card-content,
+.glass-hover-card>.service-card-content,
+.glass-hover-card>.industry-card-content,
+.glass-hover-card>.blog-card-content {
   position: relative !important;
   z-index: 2 !important;
   display: flex !important;
@@ -1967,18 +1973,18 @@ button.card-interactive,
   box-sizing: border-box !important;
 }
 
-.stat-card.glass-hover-card > .card-content,
-.stat-card.glass-hover-card > .stat-card-content {
+.stat-card.glass-hover-card>.card-content,
+.stat-card.glass-hover-card>.stat-card-content {
   align-items: center !important;
   text-align: center !important;
 }
 
-.service-card.glass-hover-card > .card-content,
-.service-card.glass-hover-card > .service-card-content,
-.industry-card.glass-hover-card > .card-content,
-.industry-card.glass-hover-card > .industry-card-content,
-.blog-card.glass-hover-card > .card-content,
-.blog-card.glass-hover-card > .blog-card-content {
+.service-card.glass-hover-card>.card-content,
+.service-card.glass-hover-card>.service-card-content,
+.industry-card.glass-hover-card>.card-content,
+.industry-card.glass-hover-card>.industry-card-content,
+.blog-card.glass-hover-card>.card-content,
+.blog-card.glass-hover-card>.blog-card-content {
   align-items: flex-start !important;
   text-align: left !important;
 }
@@ -1990,16 +1996,15 @@ button.card-interactive,
   height: 96px !important;
   width: 96px !important;
   bottom: -38px !important;
-  right: -140px !important; /* fully outside the card at rest, so it is never visible */
+  right: -140px !important;
+  /* fully outside the card at rest, so it is never visible */
   border-radius: 30% !important;
-  background: linear-gradient(
-    135deg,
-    rgba(255, 255, 255, 0.95) 0%,
-    rgba(255, 255, 255, 0.55) 28%,
-    rgba(255, 255, 255, 0.95) 42%,
-    rgba(255, 255, 255, 0.45) 58%,
-    rgba(255, 255, 255, 0.80) 100%
-  ) !important;
+  background: linear-gradient(135deg,
+      rgba(255, 255, 255, 0.95) 0%,
+      rgba(255, 255, 255, 0.55) 28%,
+      rgba(255, 255, 255, 0.95) 42%,
+      rgba(255, 255, 255, 0.45) 58%,
+      rgba(255, 255, 255, 0.80) 100%) !important;
   backdrop-filter: blur(10px) saturate(160%) !important;
   -webkit-backdrop-filter: blur(10px) saturate(160%) !important;
   border: 1px solid rgba(255, 255, 255, 0.85) !important;
@@ -2034,6 +2039,7 @@ button.card-interactive,
   from {
     transform: rotate(0deg);
   }
+
   to {
     transform: rotate(360deg);
   }
@@ -2042,12 +2048,10 @@ button.card-interactive,
 /* Fallback for no backdrop-filter: slightly more opaque white gradient */
 @supports not ((backdrop-filter: blur(10px)) or (-webkit-backdrop-filter: blur(10px))) {
   .glass-hover-card::after {
-    background: linear-gradient(
-      135deg,
-      rgba(255, 255, 255, 0.98) 0%,
-      rgba(255, 255, 255, 0.85) 42%,
-      rgba(255, 255, 255, 0.95) 100%
-    ) !important;
+    background: linear-gradient(135deg,
+        rgba(255, 255, 255, 0.98) 0%,
+        rgba(255, 255, 255, 0.85) 42%,
+        rgba(255, 255, 255, 0.95) 100%) !important;
   }
 }
 
@@ -2160,9 +2164,9 @@ button.card-interactive,
 }
 
 /* Ensure Reveal wrappers stretch to full height */
-.services-static-grid > div,
-.services-static-grid > .v3-reveal,
-.services-static-grid > .v3-reveal-item {
+.services-static-grid>div,
+.services-static-grid>.v3-reveal,
+.services-static-grid>.v3-reveal-item {
   display: flex !important;
   flex-direction: column !important;
   height: 100% !important;
@@ -2253,6 +2257,7 @@ button.card-interactive,
 }
 
 @media (hover: hover) and (pointer: fine) {
+
   .service-card:hover .service-card-title,
   .service-static-card:hover .service-card-title {
     color: #181818 !important;
@@ -2327,9 +2332,9 @@ button.card-interactive,
   }
 }
 
-.industries-grid > .v3-reveal,
-.industries-grid > .v3-reveal-item,
-.industries-grid > * {
+.industries-grid>.v3-reveal,
+.industries-grid>.v3-reveal-item,
+.industries-grid>* {
   display: flex !important;
   flex-direction: column !important;
   height: 100% !important;
@@ -2384,6 +2389,7 @@ button.card-interactive,
 }
 
 @media (hover: hover) and (pointer: fine) {
+
   .industry-card:hover .industry-title,
   .glass-hover-card:hover .industry-title {
     color: #181818 !important;
@@ -2752,6 +2758,7 @@ button.card-interactive,
 
 /* Text colors stay crisp dark on hover/focus */
 @media (hover: hover) and (pointer: fine) {
+
   .blog-card:hover .blog-title,
   .glass-hover-card:hover .blog-title {
     color: #181818 !important;
@@ -2806,7 +2813,8 @@ button.card-interactive,
   margin: 0 auto !important;
   box-sizing: border-box !important;
   transform-style: preserve-3d !important;
-  overflow: visible !important; /* Keep overflow visible so 3D depth isn't flattened */
+  overflow: visible !important;
+  /* Keep overflow visible so 3D depth isn't flattened */
 }
 
 @media (max-width: 767px) {
@@ -2848,12 +2856,10 @@ button.card-interactive,
   left: -20% !important;
   opacity: 0 !important;
   transform: skewX(-20deg) !important;
-  background: linear-gradient(
-    90deg,
-    rgba(255, 255, 255, 0) 0%,
-    rgba(255, 255, 255, 0.95) 50%,
-    rgba(255, 255, 255, 100%) 100%
-  ) !important;
+  background: linear-gradient(90deg,
+      rgba(255, 255, 255, 0) 0%,
+      rgba(255, 255, 255, 0.95) 50%,
+      rgba(255, 255, 255, 100%) 100%) !important;
   box-shadow: 0 0 50px 30px rgba(255, 255, 255, 0.6) !important;
   pointer-events: none !important;
   z-index: 1 !important;
@@ -2871,9 +2877,11 @@ button.card-interactive,
     opacity: 0;
     left: -20%;
   }
+
   50% {
     opacity: 1;
   }
+
   to {
     opacity: 0;
     left: 110%;
@@ -2920,6 +2928,53 @@ button.card-interactive,
 #cta-action-button:hover,
 #cta-action-button:active {
   transform: none !important;
+}
+
+/* Scroll-driven peel effect for CTA button */
+.peel {
+  --peel: 1;                    /* 1 = fully peeled (no-JS fallback) */
+  --peel-cover: #e7e7e7;        /* set to the card's exact background colour */
+  position: relative;
+  display: inline-block;
+}
+
+/* the cover that hides the button */
+.peel__cover {
+  position: absolute;
+  inset: -6px;
+  border-radius: 999px;
+  background: var(--peel-cover);
+  box-shadow: 0 4px 16px 6px var(--peel-cover);
+  clip-path: inset(-20px -20px -20px calc(var(--peel) * 100%));
+  pointer-events: none;
+  z-index: 2;
+}
+
+/* curled-back flap at the peel edge */
+.peel__flap {
+  position: absolute;
+  top: -6px;
+  bottom: -6px;
+  left: calc(var(--peel) * 100%);
+  width: 28px;
+  transform: translateX(-100%);
+  border-radius: 999px 0 0 999px;
+  background: linear-gradient(90deg, #b9b9b9 0%, #ffffff 55%, #d6d6d6 100%);
+  box-shadow: 6px 0 14px rgba(0, 0, 0, 0.28);
+  pointer-events: none;
+  z-index: 3;
+  /* visible only while peeling, hidden at 0 and 1 */
+  opacity: calc(min(var(--peel) * 12, (1 - var(--peel)) * 12, 1));
+}
+
+@media (max-width: 640px) {
+  .peel { display: block; }     /* use this only if your button is full width on mobile */
+  .peel__flap { width: 20px; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .peel__cover,
+  .peel__flap { display: none; }
 }
 
 .cta-footnote {
@@ -3394,7 +3449,7 @@ button.card-interactive,
 }
 
 /* --------------------------------------------------------------------------
-   Minimal Clean Social Split Card (Dark Corporate Style)
+   Minimal Clean Social Cards (Dark Corporate Style)
    -------------------------------------------------------------------------- */
 .social-split {
   position: relative;
@@ -3403,30 +3458,10 @@ button.card-interactive,
   width: fit-content;
 }
 
-/* Resting label centered in the single card */
-.social-split .s-label {
-  position: absolute;
-  inset: 0;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-family: var(--font-heading, inherit);
-  font-size: 11px;
-  font-weight: 700;
-  letter-spacing: 0.2em;
-  text-transform: uppercase;
-  color: #9aa4b2;
-  pointer-events: none;
-  transition: opacity 0.25s ease;
-  z-index: 3;
-  white-space: nowrap;
-}
-
 .social-split-track {
   display: inline-flex;
   align-items: center;
-  gap: 0px;
-  transition: gap 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+  gap: 10px;
   vertical-align: middle;
 }
 
@@ -3435,15 +3470,15 @@ button.card-interactive,
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 44px;
-  height: 44px;
+  width: 52px;
+  height: 52px;
+  border-radius: 12px;
   background: rgba(255, 255, 255, 0.04);
   border: 1px solid rgba(255, 255, 255, 0.1);
   color: rgba(255, 255, 255, 0.55);
   text-decoration: none;
   cursor: pointer;
-  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1),
-    color 0.2s ease,
+  transition: color 0.2s ease,
     border-color 0.2s ease,
     background-color 0.2s ease,
     transform 0.2s ease,
@@ -3451,133 +3486,43 @@ button.card-interactive,
   box-sizing: border-box;
 }
 
-/* Merged state at rest: single seamless card with rounded ends and no interior dividers */
-.social-split-btn:nth-child(1),
-.social-split .s-card:nth-child(1) {
-  border-radius: 10px 0 0 10px;
-  border-right: none;
-}
-
-.social-split-btn:nth-child(2),
-.social-split .s-card:nth-child(2) {
-  border-radius: 0;
-  border-left: none;
-  border-right: none;
-}
-
-.social-split-btn:nth-child(3),
-.social-split .s-card:nth-child(3) {
-  border-radius: 0 10px 10px 0;
-  border-left: none;
-}
-
-/* Resting state: icons hidden, text visible */
 .social-split .social-split-icon,
 .social-split .s-card svg {
   width: 20px;
   height: 20px;
   color: currentColor;
-  opacity: 0;
-  transition: opacity 0.25s ease, color 0.2s ease, fill 0.25s ease, transform 0.2s ease;
+  opacity: 1;
   flex-shrink: 0;
+  transition: color 0.2s ease;
 }
 
-/* Hover effect: splits into 3 separate rounded cards with gap, text fades out, icons fade in */
-@media (hover: hover) and (pointer: fine) {
-  .social-split:hover .s-label,
-  .social-split:focus-within .s-label {
-    opacity: 0;
-  }
-
-  .social-split:hover .social-split-track,
-  .social-split:focus-within .social-split-track {
-    gap: 8px;
-  }
-
-  .social-split:hover .social-split-btn,
-  .social-split:hover .s-card,
-  .social-split:focus-within .social-split-btn,
-  .social-split:focus-within .s-card {
-    border-radius: 10px;
-    border: 1px solid rgba(255, 255, 255, 0.1);
-    background: rgba(255, 255, 255, 0.04);
-  }
-
-  .social-split:hover .social-split-icon,
-  .social-split:hover .s-card svg,
-  .social-split:focus-within .social-split-icon,
-  .social-split:focus-within .s-card svg {
-    opacity: 1;
-  }
-
-  /* Individual hover: soft brand tint, brand color icon, subtle lift */
-  .social-split-btn.linkedin:hover {
-    color: #0A66C2 !important;
-    border-color: rgba(10, 102, 194, 0.5) !important;
-    background: rgba(10, 102, 194, 0.08) !important;
-    transform: translateY(-2px);
-    box-shadow: 0 4px 14px rgba(10, 102, 194, 0.16);
-  }
-
-  .social-split-btn.facebook:hover {
-    color: #1877F2 !important;
-    border-color: rgba(24, 119, 242, 0.5) !important;
-    background: rgba(24, 119, 242, 0.08) !important;
-    transform: translateY(-2px);
-    box-shadow: 0 4px 14px rgba(24, 119, 242, 0.16);
-  }
-
-  .social-split-btn.instagram:hover {
-    color: #E1306C !important;
-    border-color: rgba(225, 48, 108, 0.5) !important;
-    background: rgba(225, 48, 108, 0.08) !important;
-    transform: translateY(-2px);
-    box-shadow: 0 4px 14px rgba(225, 48, 108, 0.16);
-  }
+/* Individual card hover effects */
+.social-split-btn.linkedin:hover {
+  color: #0A66C2 !important;
+  border-color: rgba(10, 102, 194, 0.5) !important;
+  background: rgba(10, 102, 194, 0.08) !important;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 14px rgba(10, 102, 194, 0.16);
 }
 
-/* Mobile & touch devices: pre-split state, no text, icons visible */
-@media (hover: none), (pointer: coarse) {
-  .social-split .s-label {
-    display: none !important;
-  }
+.social-split-btn.facebook:hover {
+  color: #1877F2 !important;
+  border-color: rgba(24, 119, 242, 0.5) !important;
+  background: rgba(24, 119, 242, 0.08) !important;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 14px rgba(24, 119, 242, 0.16);
+}
 
-  .social-split-track {
-    gap: 8px !important;
-  }
+.social-split-btn.instagram:hover {
+  color: #E1306C !important;
+  border-color: rgba(225, 48, 108, 0.5) !important;
+  background: rgba(225, 48, 108, 0.08) !important;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 14px rgba(225, 48, 108, 0.16);
+}
 
-  .social-split-btn,
-  .social-split .s-card {
-    border-radius: 10px !important;
-    border: 1px solid rgba(255, 255, 255, 0.1) !important;
-  }
-
-  .social-split .social-split-icon,
-  .social-split .s-card svg {
-    opacity: 1 !important;
-  }
-
-  .social-split-btn:active {
-    transform: scale(0.95);
-  }
-
-  .social-split-btn.linkedin:active {
-    color: #0A66C2 !important;
-    border-color: rgba(10, 102, 194, 0.5) !important;
-    background: rgba(10, 102, 194, 0.12) !important;
-  }
-
-  .social-split-btn.facebook:active {
-    color: #1877F2 !important;
-    border-color: rgba(24, 119, 242, 0.5) !important;
-    background: rgba(24, 119, 242, 0.12) !important;
-  }
-
-  .social-split-btn.instagram:active {
-    color: #E1306C !important;
-    border-color: rgba(225, 48, 108, 0.5) !important;
-    background: rgba(225, 48, 108, 0.12) !important;
-  }
+.social-split-btn:active {
+  transform: scale(0.97);
 }
 
 .v2-cert-tag {
@@ -5468,67 +5413,58 @@ button.card-interactive,
 
 
 /* ==========================================================================
-   Torn Paper / Page Crack Divider  —  .tear  (v2: organic ripped-paper crack)
+   Torn Paper / Page Crack Divider  —  .tear  (v4: real layout space)
    Used by TearDivider.tsx between About and Services sections.
+   JS animates root height from 0→260px so content is pushed down, never covered.
    ========================================================================== */
 
+/* Stops the browser's scroll-anchoring from fighting the animated height */
+html { overflow-anchor: none; }
+
 .tear {
-  --tear: 0;
-  --gap-bg: #b9bbb0;
-  --gap-image: none;
+  --page-bg: #e8e7e5;        /* must match page background */
+  --gap-bg:  #b9bbb0;        /* colour inside the crack */
+  --gap-image: none;         /* optional: url('/tear-bg.jpg') */
   position: relative;
-  height: 0;
-  z-index: 10;
+  height: 0;                 /* JS sets this each frame */
+  overflow: visible;
   pointer-events: none;
+  z-index: 5;
 }
 
 .tear__stage {
   position: absolute;
-  left: 0;
-  right: 0;
-  top: 0;
-  height: 150px;
-  margin-top: -75px;
-  transform: scaleY(var(--tear));
-  transform-origin: 50% 50%;
-  will-change: transform;
-  filter: drop-shadow(0 3px 5px rgba(0, 0, 0, 0.28));
+  inset: 0;
+  display: none;             /* JS shows/hides this */
+  background: var(--page-bg);
 }
 
-.tear__rim,
-.tear__gap {
+.tear__gap,
+.tear__shadow,
+.tear__rim {
   position: absolute;
   inset: 0;
+}
+
+.tear__gap {
+  background: var(--gap-image), var(--gap-bg);
+  background-size: cover, auto;
+  background-position: center;
 }
 
 .tear__rim {
   background: #fff;
 }
 
-.tear__gap {
-  background:
-    linear-gradient(
-      to bottom,
-      rgba(0, 0, 0, 0.38) 0,
-      rgba(0, 0, 0, 0) 60px,
-      rgba(0, 0, 0, 0) calc(100% - 60px),
-      rgba(0, 0, 0, 0.38) 100%
-    ),
-    var(--gap-image),
-    var(--gap-bg);
-  background-size: 100% 100%, cover, auto;
-  background-position: center;
+/* Shadows fall INTO the opening */
+.tear__shadow--t {
+  filter: drop-shadow(0  5px 6px rgba(0, 0, 0, 0.45));
 }
 
-@media (max-width: 640px) {
-  .tear__stage {
-    height: 100px;
-    margin-top: -50px;
-  }
+.tear__shadow--b {
+  filter: drop-shadow(0 -5px 6px rgba(0, 0, 0, 0.45));
 }
 
 @media (prefers-reduced-motion: reduce) {
-  .tear {
-    display: none;
-  }
+  .tear { display: none; }
 }

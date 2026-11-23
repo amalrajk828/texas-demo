@@ -128,6 +128,17 @@ export default function Header() {
     }
 
     // Route family aliases
+    if (item.label === "Solutions") {
+      return (
+        current.startsWith("/solutions/") ||
+        current === "/solutions" ||
+        current.startsWith("/solution/") ||
+        current === "/solution" ||
+        current.startsWith("/partners/") ||
+        current === "/partners"
+      );
+    }
+
     if (item.label === "Services") {
       return (
         current.startsWith("/service/") ||
@@ -553,9 +564,6 @@ export default function Header() {
                               </span>
                               <span className="dropdown-label">{child.label}</span>
                             </span>
-                            {child.desc && (
-                              <span className="dropdown-desc">{child.desc}</span>
-                            )}
                           </Link>
                         );
                       })}
@@ -585,9 +593,6 @@ export default function Header() {
                             </span>
                             <span className="dropdown-label">{child.label}</span>
                           </span>
-                          {child.desc && (
-                            <span className="dropdown-desc">{child.desc}</span>
-                          )}
                         </Link>
                       );
                     })}

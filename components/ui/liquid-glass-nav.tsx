@@ -74,20 +74,6 @@ export function LiquidGlassNav({
   }, []);
 
   useEffect(() => {
-    if (typeof window !== "undefined") {
-      const surface = containerRef.current?.querySelector<HTMLElement>(".liquid-nav-surface");
-      if (surface) {
-        const blur = getComputedStyle(document.documentElement).getPropertyValue("--nav-blur").trim();
-        if (blur && blur !== "0px" && blur !== "0") {
-          surface.style.backdropFilter = `blur(${blur})`;
-          (surface.style as any).webkitBackdropFilter = `blur(${blur})`;
-        } else {
-          surface.style.backdropFilter = "none";
-          (surface.style as any).webkitBackdropFilter = "none";
-        }
-      }
-    }
-
     return () => {
       if (rafId.current !== null) {
         window.cancelAnimationFrame(rafId.current);

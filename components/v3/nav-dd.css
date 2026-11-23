@@ -1,0 +1,65 @@
+/* ==========================================================================
+   Navbar Dropdown Panel (.nav-dd)
+   Centering, dynamic columns, and viewport bounds
+   ========================================================================== */
+
+/* Absolutely positioned wrapper with 8px hover bridge */
+.nav-dd,
+.nav-dd-wrapper {
+  position: absolute;
+  top: 100%;
+  padding-top: 8px; /* 8px hover bridge between button and panel */
+  z-index: 1200;
+  pointer-events: auto;
+  width: max-content;
+  max-width: calc(100vw - 32px);
+}
+
+/* Panel card */
+.nav-dd-panel,
+.nav-dd__panel {
+  width: max-content;
+  max-width: calc(100vw - 32px);
+  box-sizing: border-box;
+}
+
+/* Columns container: CSS Grid auto-flow column */
+.nav-dd-columns,
+.nav-dd__columns {
+  display: grid;
+  grid-auto-flow: column;
+  grid-auto-columns: minmax(0, max-content);
+  column-gap: 36px;
+  min-width: 0;
+  max-width: 100%;
+}
+
+/* Each column */
+.nav-dd-col,
+.nav-dd__col {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  min-width: 0;
+}
+
+/* Titles: remove white-space: nowrap, wrap cleanly if hitting screen limit */
+.nav-dd-title,
+.nav-dd__title {
+  min-width: 0;
+  white-space: normal;
+  word-break: normal;
+  overflow-wrap: break-word;
+}
+
+/* View All button row stays full width inside panel */
+.nav-dd-footer,
+.nav-dd__footer {
+  width: 100%;
+  padding-top: 8px;
+}
+
+.nav-dd-footer > a,
+.nav-dd__footer > a {
+  width: 100%;
+}

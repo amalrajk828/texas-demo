@@ -245,18 +245,6 @@ export default function Header() {
                           >
                             {child.label}
                           </span>
-                          {child.desc && (
-                            <span
-                              style={{
-                                fontSize: "12px",
-                                color: "var(--text-muted)",
-                                marginTop: "3px",
-                                lineHeight: 1.35,
-                              }}
-                            >
-                              {child.desc}
-                            </span>
-                          )}
                         </Link>
                       ))}
                     </div>

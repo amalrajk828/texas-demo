@@ -1,37 +1,67 @@
 /* ==========================================================================
-   Liquid Frosted Glass Navbar Styles - Flicker-Free Composited Layers
+   Liquid Frosted Glass Navbar Styles — aibqs.com-inspired design
    8 Optical Layers for High-Fidelity Depth, Refraction, and Specular Lighting
+   Brand palette: #8B0000 / #8a302f (Texas deep red)
    ========================================================================== */
 
 :root {
-  --nav-blur: 0px; /* Setting: 0px disables live backdrop blur for zero repaint flicker. */
+  --nav-blur: 3px; /* Live backdrop blur — matches aibqs.com 3px blur */
+  --btn-primary-bg: linear-gradient(90deg, #9b1a1a 0%, #6a1111 100%);
+  --btn-primary-bg-hover: linear-gradient(90deg, #aa2020 0%, #761616 100%);
+  --btn-primary-shadow: 0 10px 24px rgba(120, 20, 20, 0.35);
+  /* Texas brand colors used across nav layers */
+  --nav-brand:    #8B0000;
+  --nav-brand-alt: #8a302f;
+  --nav-dark:     #1a0505; /* deep shadow tint (aibqs uses #031038, we use deep red-black) */
 }
 
-/* 1. Root Pill Container (Pixel-aligned, hardware-accelerated, isolated compositing) */
+/* 1. Root Pill Container */
 .liquid-nav {
-  position: relative;
-  width: 100%;
-  height: 60px; /* Strict whole-pixel integer height (mobile) */
-  border-radius: 9999px;
   isolation: isolate;
-  overflow: visible; /* Dropdown panels are not clipped */
-  box-shadow: 0 10px 30px rgba(20, 20, 20, 0.10), 0 2px 6px rgba(20, 20, 20, 0.06);
+  /* aibqs: #e4eaf04d → Texas: warm parchment/red tint at ~30% opacity */
+  background: rgba(232, 220, 220, 0.30);
+  border-radius: 9999px;
+  min-height: 64px;
+  transition: box-shadow 0.4s cubic-bezier(0.16, 1, 0.3, 1), background 0.4s;
+  position: relative;
+  overflow: visible; /* Dropdown panels must NOT be clipped */
+  /* aibqs shadow uses #031038 navy — we use #1a0505 deep red-black */
+  box-shadow:
+    0 1px 1px rgba(26, 5, 5, 0.16),
+    0 5px 7px -4px rgba(26, 5, 5, 0.22),
+    0 24px 34px -18px rgba(26, 5, 5, 0.26);
   transform: translate3d(0, 0, 0);
   -webkit-transform: translate3d(0, 0, 0);
   backface-visibility: hidden;
   -webkit-backface-visibility: hidden;
-  contain: layout style; /* Layout & style containment prevents hero canvas repaint invalidation */
+  contain: layout style;
   -webkit-tap-highlight-color: transparent;
   box-sizing: border-box;
+  width: 100%;
+  height: 60px; /* mobile */
 }
 
 @media (min-width: 1024px) {
   .liquid-nav {
-    height: 72px; /* Strict whole-pixel integer height (desktop) */
+    height: 72px; /* desktop */
   }
 }
 
-/* 2. Clipped Decorative Backdrop (Holds the 8 Optical Layers inside the pill radius) */
+/* Scrolled state — denser tint, deeper shadow (mirrors aibqs data-scrolled=true) */
+.liquid-nav.is-scrolled,
+.liquid-nav[data-scrolled="true"] {
+  background: rgba(218, 200, 200, 0.42);
+  box-shadow:
+    0 1px 1px rgba(26, 5, 5, 0.14),
+    0 7px 10px -6px rgba(26, 5, 5, 0.25),
+    0 30px 44px -22px rgba(26, 5, 5, 0.32);
+}
+
+/* Hover: lift reflection + pointer-light (aibqs: :hover on .liquid-nav) */
+.liquid-nav:hover .liquid-nav-reflection { opacity: 0.72; }
+.liquid-nav:hover .liquid-nav-pointer-light { opacity: 0.9; }
+
+/* 2. Clipped Decorative Backdrop */
 .liquid-nav-backdrop {
   position: absolute;
   inset: 0;
@@ -46,7 +76,6 @@
   box-sizing: border-box;
 }
 
-/* Base Decorative Layer Properties - Every layer is inset 0 with border-radius: inherit */
 .liquid-nav-backdrop > span {
   position: absolute;
   inset: 0;
@@ -57,96 +86,178 @@
   box-sizing: border-box;
 }
 
-/* Layer 1: Surface (Static fake glass - zero live blur recomputation over canvas/video) */
+/* Layer 1: Surface — backdrop blur + white-to-transparent gradient (aibqs: blur(3px) saturate(1.12)) */
 .liquid-nav-surface {
-  background: linear-gradient(180deg, rgba(255, 255, 255, 0.82) 0%, rgba(255, 255, 255, 0.66) 100%);
+  z-index: -8;
+  -webkit-backdrop-filter: blur(3px) saturate(1.12);
+  backdrop-filter: blur(3px) saturate(1.12);
+  /* aibqs: 150deg #ffffff47 → #ffffff0b 42% → #ffffff38 */
+  background: linear-gradient(150deg, rgba(255,255,255,0.28), rgba(255,255,255,0.07) 42%, rgba(255,255,255,0.22));
+  overflow: hidden;
   transform: translateZ(0);
   -webkit-transform: translateZ(0);
   backface-visibility: hidden;
   -webkit-backface-visibility: hidden;
-  transition: background-color 0.3s ease-out;
+  transition: background 0.3s ease-out;
 }
 
-/* Scrolled state: changes only background-color alpha tint, no shadow or layout shift */
-.liquid-nav.is-scrolled .liquid-nav-surface,
-.liquid-nav[data-scrolled="true"] .liquid-nav-surface {
-  background-color: rgba(255, 255, 255, 0.12);
+/* No-blur fallback */
+@supports not ((-webkit-backdrop-filter: blur(1px)) or (backdrop-filter: blur(1px))) {
+  .liquid-nav-surface {
+    background: rgba(240, 232, 232, 0.96);
+  }
 }
 
-/* Layer 2: Tint (Subtle warm/neutral wash with faint red warmth on the right) */
+/* Layer 2: Tint — warm red wash (aibqs uses cool blue tint #dae5ef14) */
 .liquid-nav-tint {
-  background: linear-gradient(90deg, rgba(255, 255, 255, 0.10) 0%, rgba(255, 255, 255, 0.05) 70%, rgba(139, 0, 0, 0.03) 100%);
+  z-index: -7;
+  /* aibqs: 110deg #ffffff1f → #dae5ef14 55% → #ffffff0f; Texas: replace blue with warm rose */
+  background: linear-gradient(110deg, rgba(255,255,255,0.12), rgba(232,210,210,0.08) 55%, rgba(255,255,255,0.06));
 }
 
-/* Layer 3: Shoulder (Smooth multi-stop gradient without hard stops or edge seams) */
+/* Layer 3: Shoulder — inset depth cues (aibqs uses #031038 navy, Texas uses #1a0505) */
 .liquid-nav-shoulder {
-  background: linear-gradient(180deg, rgba(255, 255, 255, 0.45) 0%, rgba(255, 255, 255, 0.15) 35%, rgba(255, 255, 255, 0) 100%);
+  z-index: -5;
+  box-shadow:
+    inset 0 10px 13px -10px rgba(26,5,5,0.55),
+    inset 0 -10px 10px -8px rgba(255,255,255,0.97),
+    inset 6px 0 9px -8px rgba(26,5,5,0.45),
+    inset -6px 0 9px -8px rgba(26,5,5,0.28);
 }
 
-/* Layer 4: Reflection (105deg angled sheen moved purely on X axis with translate3d, no skew) */
+/* Layer 4: Reflection — sheen stripe (aibqs: 112deg, inset: -60% -25%) */
 .liquid-nav-reflection {
-  width: 140%;
-  height: 100%;
-  left: -20%;
-  right: auto;
-  top: 0;
-  bottom: 0;
-  background: linear-gradient(105deg, transparent 0%, rgba(255, 255, 255, 0.22) 48%, rgba(255, 255, 255, 0.35) 50%, rgba(255, 255, 255, 0.22) 52%, transparent 100%);
-  transform: translate3d(var(--glass-sheen-x, 0px), 0, 0);
-  -webkit-transform: translate3d(var(--glass-sheen-x, 0px), 0, 0);
-  opacity: 0.35;
+  z-index: -4;
+  opacity: 0.58;
+  transform: translateX(var(--glass-sheen-x, 0%)) rotate(0.001deg);
+  -webkit-transform: translateX(var(--glass-sheen-x, 0%)) rotate(0.001deg);
+  background: linear-gradient(
+    112deg,
+    transparent 29%,
+    rgba(255,255,255,0.06) 34%,
+    rgba(255,255,255,0.50) 44%,
+    rgba(255,255,255,0.72) 47%,
+    rgba(255,255,255,0.18) 54%,
+    transparent 62%
+  );
+  transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1), opacity 0.4s;
+  inset: -60% -25%;
   will-change: transform;
 }
 
-/* Layer 5: Pointer Light (Cursor-following radial glow with opacity transition only) */
+/* Layer 5: Pointer Light — cursor-tracking radial (aibqs: ellipse 170px 62px) */
 .liquid-nav-pointer-light {
-  background: radial-gradient(circle 140px at var(--glass-x, 50%) var(--glass-y, 50%), rgba(255, 255, 255, 0.55) 0%, transparent 45%);
-  opacity: var(--glass-pointer-opacity, 0);
-  transition: opacity 0.25s ease-out;
-  will-change: transform;
+  z-index: -3;
+  opacity: var(--glass-pointer-opacity, 0.55);
+  background: radial-gradient(
+    ellipse 170px 62px at var(--glass-x, 72%) var(--glass-y, 20%),
+    rgba(255,255,255,0.66),
+    rgba(255,255,255,0.14) 38%,
+    transparent 78%
+  );
+  transition: opacity 0.35s;
 }
 
-@media (hover: none) or (pointer: coarse) {
+@media (hover: none), (pointer: coarse) {
   .liquid-nav-pointer-light {
     display: none !important;
     opacity: 0 !important;
   }
 }
 
-/* Layer 6: Rim (Bright gradient edge with specular inset highlight, zero mask seam) */
+/* Layer 6: Rim — conic-gradient border ring (matches aibqs structure exactly, red tones) */
 .liquid-nav-rim {
-  border: 1px solid rgba(255, 255, 255, 0.65);
-  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.85);
+  z-index: 5;
+  /* aibqs uses conic with #031038 (navy). Texas: replace navy with deep red-black #1a0505 */
+  background: conic-gradient(
+    from 210deg,
+    rgba(255,255,255,0.98),
+    rgba(255,255,255,0.18) 18%,
+    rgba(26,5,5,0.22) 33%,
+    rgba(255,255,255,0.24) 48%,
+    rgba(255,255,255,0.98) 64%,
+    rgba(255,255,255,0.20) 82%,
+    rgba(255,255,255,0.98)
+  );
+  padding: 1.35px;
+  /* Mask: show only the border ring, exclude the content area */
+  -webkit-mask-image: linear-gradient(#fff 0 0), linear-gradient(#fff 0 0);
+  mask-image: linear-gradient(#fff 0 0), linear-gradient(#fff 0 0);
+  -webkit-mask-clip: content-box, border-box;
+  mask-clip: content-box, border-box;
+  -webkit-mask-composite: xor;
+  mask-composite: exclude;
 }
 
-/* Layer 7: Caustic (Smooth normal-blend radial gradient without mix-blend-mode or hard stops) */
+/* Layer 7: Caustic — bottom edge refraction spot */
 .liquid-nav-caustic {
-  background: radial-gradient(ellipse 70% 50% at 50% 100%, rgba(255, 255, 255, 0.25) 0%, rgba(255, 255, 255, 0.08) 50%, rgba(255, 255, 255, 0) 100%);
-  opacity: 0.25;
+  z-index: 5;
+  pointer-events: none;
+  filter: blur(0.35px);
+  opacity: 0.88;
+  background: linear-gradient(90deg, transparent, rgba(255,255,255,0.98) 48%, transparent);
+  border-radius: 100%;
+  width: 35%;
+  height: 2px;
+  position: absolute;
+  bottom: 1px;
+  left: 11%;
 }
 
-/* Layer 8: Bottom (Smooth grounding gradient fading over full height - NO inset shadow line) */
+/* Layer 8: Bottom — grounding gradient line */
 .liquid-nav-bottom {
-  background: linear-gradient(0deg, rgba(0, 0, 0, 0.025) 0%, rgba(0, 0, 0, 0.008) 50%, transparent 100%);
+  z-index: 5;
+  pointer-events: none;
+  background: linear-gradient(90deg, transparent, rgba(255,255,255,0.08) 20%, rgba(255,255,255,0.90) 53%, rgba(255,255,255,0.10) 86%, transparent);
+  border-radius: 100%;
+  height: 1px;
+  position: absolute;
+  bottom: 1.5px;
+  left: 13%;
+  right: 13%;
 }
 
-/* Foreground Content Row (Integer pixel paddings) */
+/* Foreground Content Row */
 .liquid-nav-content {
+  z-index: 4;
   position: relative;
-  z-index: 1;
   display: flex;
   align-items: center;
   justify-content: space-between;
   width: 100%;
   height: 100%;
-  padding: 0 16px; /* Strict whole-pixel padding */
+  padding: 0 14px 0 16px;
   box-sizing: border-box;
 }
 
 @media (min-width: 1024px) {
   .liquid-nav-content {
-    padding: 0 24px; /* Strict whole-pixel padding */
+    padding: 0 20px 0 24px;
   }
+}
+
+/* ── Nav link base (aibqs: .marine-nav-link) ── */
+/* Applied in GlassNavbar via Tailwind; we keep Tailwind classes. */
+/* The active/hover pill is handled by framer-motion activeGlassPill in GlassNavbar.tsx */
+
+/* ── CTA Button — gradient matching "OUR GLOBAL NETWORK →" ── */
+.navbar-cta-btn,
+.nav-cta-btn,
+.nav-cta-shiny {
+  background: var(--btn-primary-bg) !important;
+  box-shadow: var(--btn-primary-shadow) !important;
+  color: #ffffff !important;
+  white-space: nowrap;
+  flex-shrink: 0;
+  transition: all 0.2s ease;
+}
+
+.navbar-cta-btn:hover,
+.nav-cta-btn:hover,
+.nav-cta-shiny:hover {
+  background: var(--btn-primary-bg-hover) !important;
+  box-shadow: var(--btn-primary-shadow) !important;
+  color: #ffffff !important;
 }
 
 /* Prefers Reduced Motion */
@@ -154,9 +265,13 @@
   .liquid-nav,
   .liquid-nav-surface,
   .liquid-nav-reflection,
-  .liquid-nav-pointer-light {
+  .liquid-nav-pointer-light,
+  .navbar-cta-btn,
+  .nav-cta-btn,
+  .nav-cta-shiny {
     transition: none !important;
     transform: none !important;
     -webkit-transform: none !important;
+    animation: none !important;
   }
 }

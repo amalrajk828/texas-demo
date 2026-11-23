@@ -39,6 +39,7 @@ export interface PageHeroProps {
   stats?: PageHeroStat[];
   align?: "center" | "left";
   className?: string;
+  flatBg?: boolean;
 }
 
 /**
@@ -66,6 +67,7 @@ export default function PageHero({
   stats,
   align = "center",
   className = "",
+  flatBg = false,
 }: PageHeroProps) {
   const resolvedEyebrow = eyebrow || category || badge;
   const resolvedBadge = badgeText || (badge !== resolvedEyebrow ? badge : undefined);
@@ -106,16 +108,18 @@ export default function PageHero({
 
   return (
     <header
-      className={`relative w-full ${ptClass} pb-14 sm:pb-18 bg-[#e8e8e6] text-[#1a1a1a] overflow-hidden border-b border-black/[0.06] ${className}`}
+      className={`relative w-full ${ptClass} pb-14 sm:pb-18 ${flatBg ? "bg-[#ece9e5] border-b-0" : "bg-[#e8e8e6] border-b border-black/[0.06]"} text-[#1a1a1a] overflow-hidden ${className}`}
     >
       {/* Subtle warm depth vignette matching Home V3 studio environment */}
-      <div
-        className="absolute inset-0 pointer-events-none opacity-40"
-        style={{
-          background:
-            "radial-gradient(ellipse at 50% 0%, rgba(255,255,255,0.8) 0%, rgba(232,232,230,0) 70%)",
-        }}
-      />
+      {!flatBg && (
+        <div
+          className="absolute inset-0 pointer-events-none opacity-40"
+          style={{
+            background:
+              "radial-gradient(ellipse at 50% 0%, rgba(255,255,255,0.8) 0%, rgba(232,232,230,0) 70%)",
+          }}
+        />
+      )}
 
       <Container className="relative z-10">
         {/* Optional Breadcrumb */}

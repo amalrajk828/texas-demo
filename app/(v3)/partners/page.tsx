@@ -1,14 +1,17 @@
 import type { Metadata } from "next";
+import Image from "next/image";
+import Link from "next/link";
+import { ExternalLink } from "lucide-react";
 import {
   PageHero,
   Section,
   Container,
   SectionHeading,
   CTASection,
-  ImageCard,
   CardGrid,
 } from "@/components/v3";
 import ServiceFaqAccordion from "@/components/v3/service/ServiceFaqAccordion";
+import PartnersMarquee from "@/components/partners/PartnersMarquee";
 import { BreadcrumbJsonLd } from "@/components/schema/BreadcrumbJsonLd";
 import { ServiceJsonLd } from "@/components/schema/ServiceJsonLd";
 import { SpeakableJsonLd } from "@/components/schema/SpeakableJsonLd";
@@ -49,9 +52,16 @@ export const metadata: Metadata = {
   ],
 };
 
+const STATS = [
+  { value: "15+", label: "Global OEM Partners" },
+  { value: "5+", label: "Countries Represented" },
+  { value: "100%", label: "Genuine OEM Factory Backed" },
+  { value: "24/7", label: "Certified Field Support" },
+];
+
 export default function PartnersPage() {
   return (
-    <>
+    <div style={{ "--eyebrow-color": "#8a302f" } as React.CSSProperties}>
       <BreadcrumbJsonLd
         items={[
           { name: "Home", href: "/" },
@@ -75,70 +85,108 @@ export default function PartnersPage() {
       />
       <FaqPageJsonLd items={partnersFaq} />
 
-      {/* ── 1. Page Hero ── */}
+      {/* ── 1. Page Hero (matching /clients/) ── */}
       <PageHero
         title="Global OEM Partner Network"
         subtitle="Direct authorized integration and distribution agreements with tier-1 instrumentation manufacturers from Switzerland, Germany, Japan, France, and the United States."
         category="Alliances & Distribution"
-        badgeText={`${ALL_PARTNERS.length} Global Technology Partners`}
-        primaryCta={{ label: "Explore Partners", href: "#partner-grid" }}
-        secondaryCta={{ label: "Contact Engineering Team", href: "/contacts/" }}
+        badge="Authorized Partnerships"
+        stats={STATS}
       />
 
-      {/* ── 2. Partners Logo Grid (ImageCard variant="logo") ── */}
+      {/* ── 2. Partners Marquee (matching /clients/ marquee bar) ── */}
+      <div className="py-6 border-b border-black/[0.06] bg-white overflow-hidden">
+        <PartnersMarquee partners={ALL_PARTNERS} />
+      </div>
+
+      {/* ── 3. Partner Card Grid (matching /clients/ 6-col grid) ── */}
       <Section id="partner-grid" tone="grey">
         <Container>
-          <div className="flex flex-col sm:flex-row sm:items-end justify-between gap-4 mb-10">
-            <div>
-              <span className="text-[12px] font-mono uppercase tracking-wider text-[#6b191b] font-bold block mb-1">
-                Authorized Manufacturers
-              </span>
-              <h2 className="font-heading text-[28px] sm:text-[34px] font-bold text-[#1a1c20] leading-tight">
-                World-Class Engineering Alliances
-              </h2>
-            </div>
-            <span className="text-[#6b7280] text-[13px] font-mono font-medium">
-              Certified Systems Integration
-            </span>
-          </div>
+          <SectionHeading
+            eyebrow="Authorized Manufacturers"
+            title="World-Class Engineering Alliances"
+            description="We represent the world's leading flow measurement, process automation, and analytical instrumentation manufacturers across Kuwait, UAE, and the GCC."
+            align="center"
+            className="mb-12 sm:mb-16"
+          />
 
-          <CardGrid max={4}>
-            {ALL_PARTNERS.map((partner) => (
-              <ImageCard
-                key={partner.slug}
-                variant="logo"
-                tone="grey"
-                href={`/partners/${partner.slug}/`}
-                imageSrc={partner.logo}
-                title={partner.name}
-                subtitle={partner.description}
-                meta={`${partner.country} · ${partner.relationship}`}
-                tag={partner.product}
-              />
-            ))}
+          <CardGrid max={6}>
+            {ALL_PARTNERS.map((partner) => {
+              const isExternal = partner.href?.startsWith("http");
+              const partnerHref = partner.href || `/partners/${partner.slug}/`;
+
+              const cardContent = (
+                <div className="relative group rounded-[20px] bg-white p-5 sm:p-6 flex flex-col items-center justify-center text-center h-full min-h-[175px] flex-1 border border-black/[0.08] shadow-[0_4px_20px_rgba(0,0,0,0.04)] hover:shadow-[0_12px_28px_rgba(0,0,0,0.08)] hover:-translate-y-1 transition-all duration-300">
+                  <div className="relative w-full h-[60px] max-w-[140px] flex items-center justify-center mb-3">
+                    <Image
+                      src={partner.logo}
+                      alt={partner.name}
+                      fill
+                      className="object-contain"
+                      sizes="140px"
+                      unoptimized
+                    />
+                  </div>
+                  <span className="font-heading text-[12px] sm:text-[12.5px] font-bold text-[#1a1a1a] line-clamp-2 leading-snug group-hover:text-[#8a302f] transition-colors mt-auto min-h-[calc(2*1.3em)] text-balance">
+                    {partner.name}
+                  </span>
+                  <span className="text-[10px] font-mono uppercase text-[#6b191b] font-semibold mt-1 tracking-wider">
+                    {partner.country} · {partner.product}
+                  </span>
+                  {isExternal ? (
+                    <ExternalLink className="w-3.5 h-3.5 text-black/30 group-hover:text-[#8a302f] absolute top-3 right-3 transition-colors" />
+                  ) : null}
+                </div>
+              );
+
+              return isExternal ? (
+                <a
+                  key={partner.slug}
+                  href={partnerHref}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="flex flex-col h-full flex-1 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#8a302f] rounded-[20px]"
+                >
+                  {cardContent}
+                </a>
+              ) : (
+                <Link
+                  key={partner.slug}
+                  href={partnerHref}
+                  className="flex flex-col h-full flex-1 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#8a302f] rounded-[20px]"
+                >
+                  {cardContent}
+                </Link>
+              );
+            })}
           </CardGrid>
         </Container>
       </Section>
 
-      {/* ── 3. Frequently Asked Questions ── */}
+      {/* ── 4. Frequently Asked Questions (matching /clients/ FAQ) ── */}
       <Section tone="light">
         <Container>
           <SectionHeading
             eyebrow="Partnership FAQ"
             title="Questions About OEM Distribution & Warranties"
             description="Details on factory warranty coverage, original manufacturer certificates of origin, and certified technical support."
+            align="center"
           />
-          <ServiceFaqAccordion items={partnersFaq} />
+          <div className="max-w-[840px] mx-auto mt-10">
+            <ServiceFaqAccordion items={partnersFaq} />
+          </div>
         </Container>
       </Section>
 
-      {/* ── 4. CTA Section ── */}
+      {/* ── 5. CTA Section (matching /clients/ CTA) ── */}
       <CTASection
+        variant="white"
+        eyebrow="Authorized Representation"
         title="Looking for Factory Direct Pricing & Support?"
-        subtitle="As authorized regional representatives, Texas Technical Services offers direct factory warranty protection, spare parts, and certified commissioning."
+        description="As authorized regional representatives, Texas Technical Services offers direct factory warranty protection, spare parts, and certified commissioning."
         primaryCta={{ label: "Request Partnership Quote", href: "/contacts/" }}
         secondaryCta={{ label: "View Services", href: "/services/" }}
       />
-    </>
+    </div>
   );
 }

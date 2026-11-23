@@ -5,14 +5,13 @@ import {
   Container,
   SectionHeading,
   CTASection,
-  ImageCard,
-  CardGrid,
 } from "@/components/v3";
 import ServiceFaqAccordion from "@/components/v3/service/ServiceFaqAccordion";
 import { BreadcrumbJsonLd } from "@/components/schema/BreadcrumbJsonLd";
 import { SpeakableJsonLd } from "@/components/schema/SpeakableJsonLd";
 import { FaqPageJsonLd } from "@/components/schema/FaqPageJsonLd";
 import { productsListingFaq } from "@/lib/pageFaqData";
+import CategoryMountainGrid from "@/components/v3/product/CategoryMountainGrid";
 
 export const metadata: Metadata = {
   title: "Flow Meters, Analyzers, PLCs & Industrial Automation Products",
@@ -50,99 +49,99 @@ export const metadata: Metadata = {
 const CATEGORIES = [
   {
     title: "Custody Metering Solutions",
-    description: "High-accuracy fiscal metering packages for custody transfer of oil, gas, and LNG.",
+    label: "Custody Transfer",
+    statement: "High&#8209;accuracy <b>fiscal metering packages</b> for custody transfer of oil, gas, and LNG.",
     href: "/products/custody-metering-solutions/",
     image: "/flow_metering_skid.jpg",
     meta: "Fiscal Metering Skids",
-    tag: "Custody Transfer",
   },
   {
     title: "Flow Meters",
-    description: "Precision flow measurement instruments for liquids, gases, and flare applications.",
+    label: "Flow Measurement",
+    statement: "<b>Precision flow measurement</b> instruments for liquids, gases, and flare applications.",
     href: "/products/flow-meters/",
     image: "/images/services/flow-measurement.jpg",
     meta: "Ultrasonic · Coriolis · Turbine",
-    tag: "Flow Measurement",
   },
   {
     title: "Analyzers & CEMS",
-    description: "Industrial process analyzers for continuous emissions monitoring, dust, and gas analysis.",
+    label: "Environmental Compliance",
+    statement: "<b>Continuous emissions monitoring</b> systems, dust detection, and process gas analysis.",
     href: "/products/analyzers/",
     image: "/cems.webp",
     meta: "CEMS · Gas · Dust",
-    tag: "Environmental Compliance",
   },
   {
     title: "Control Room Interior & Console",
-    description: "Ergonomic control room furniture and modular console systems for 24/7 mission-critical operations.",
+    label: "Control Room",
+    statement: "<b>Ergonomic modular console</b> systems built for 24/7 mission&#8209;critical control centers.",
     href: "/products/control-room-interior-and-console/",
     image: "/images/control_room_interior_and_console/xlat/2.jpg",
     meta: "ISO 11064 Ergonomics",
-    tag: "Control Room",
   },
   {
     title: "Industrial Automation Systems",
-    description: "End-to-end automation solutions, safety instrumented systems (SIS), and plant control cabinets.",
+    label: "Industrial Automation",
+    statement: "<b>Turnkey DCS, safety instrumented</b> systems, and plant control cabinets.",
     href: "/products/industrial-automation/",
     image: "/images/services/automation.jpg",
     meta: "Turnkey DCS · SIS · Panels",
-    tag: "Automation",
   },
   {
     title: "Field Instruments",
-    description: "Pressure, differential pressure, temperature, level, and process transmitters for hazardous areas.",
+    label: "Field Instrumentation",
+    statement: "<b>Pressure, temperature, and level</b> transmitters certified for hazardous environments.",
     href: "/products/field-instruments/",
     image: "/images/field_instruments/pressure_sensors/1.png",
     meta: "Pressure · Temp · Level",
-    tag: "Instrumentation",
   },
   {
     title: "Industrial Sensors",
-    description: "SICK sensors for optical detection, safety light curtains, distance measurement, and identification.",
+    label: "Optical & Safety Sensors",
+    statement: "<b>SICK optical detection</b>, safety light curtains, and industrial distance measurement.",
     href: "/products/sensors/",
     image: "/images/sensors/Photoelectric Sensors.png",
     meta: "SICK Authorized",
-    tag: "Sensors",
   },
   {
     title: "PLC Systems (Mitsubishi & Rockwell)",
-    description: "Mitsubishi MELSEC iQ-R & iQ-F programmable automation controllers for ultra-fast, reliable machine control.",
+    label: "PAC / PLC Controllers",
+    statement: "<b>Mitsubishi MELSEC controllers</b> engineered for ultra&#8209;fast, reliable machine automation.",
     href: "/products/plc/",
     image: "/images/plc/MELSEC-iQ-R-Series.png",
     meta: "PAC / PLC Controllers",
-    tag: "Control Hardware",
   },
   {
     title: "ICONICS SCADA & IoT",
-    description: "GENESIS64 next-generation supervisory control and telemetry software for industrial big data.",
+    label: "SCADA & Telemetry",
+    statement: "<b>GENESIS64 supervisory software</b> for enterprise control and industrial big data.",
     href: "/products/iconics/",
     image: "/images/control_room_interior_and_console/xlat_cyber/1.jpg",
     meta: "SCADA Software",
-    tag: "Supervisory Control",
   },
   {
     title: "GOT (Graphic Operator Panels)",
-    description: "Mitsubishi GOT2000 series high-visibility industrial touch screen operator interfaces.",
+    label: "Industrial Touch HMIs",
+    statement: "<b>Mitsubishi GOT2000 touch</b> screen interfaces with high&#8209;visibility operation.",
     href: "/products/got/",
     image: "/images/got/GOT2000-Series.png",
     meta: "Touch HMIs",
-    tag: "HMI Interfaces",
   },
   {
     title: "Frequency Inverters (VFD)",
-    description: "Variable frequency drives for energy-saving motor speed regulation and high torque control.",
+    label: "Drives & Motor Control",
+    statement: "<b>Variable frequency drives</b> for energy&#8209;saving speed regulation and torque control.",
     href: "/products/frequency-inverter-vfd/",
     image: "/images/frequency-inverters/FR-A800.webp",
     meta: "Motor Inverters",
-    tag: "Drives & Motors",
   },
   {
     title: "AC Servos & Motion",
-    description: "Mitsubishi MelSERVO AC servo amplifiers and rotary servomotors for ultra-precise motion control.",
+    label: "Precision Motion Control",
+    statement: "<b>Mitsubishi MELSERVO drives</b> and servomotors for ultra&#8209;precise industrial positioning.",
     href: "/products/acservos/",
     image: "/images/acservos/MR-JE-Servo-Amplifier.webp",
     meta: "Precision Motion",
-    tag: "Motion Control",
   },
 ];
 
@@ -172,39 +171,32 @@ export default function ProductsPage() {
         subtitle="Genuine OEM instrumentation, custody transfer flow meters, analytical CEMS systems, and Mitsubishi Electric control automation hardware for Middle East industrial plants."
         badge="Product Catalog"
         stats={STATS}
+        flatBg={true}
       />
 
       {/* ── 2. Product Categories Grid ── */}
-      <Section tone="grey">
+      <Section tone="grey" className="!bg-[#ece9e5] !pt-8">
         <Container>
-          <SectionHeading
-            eyebrow="Equipment Spectrum"
-            title="Explore 12 Specialized Product Lines"
-            description="From high-accuracy fiscal flow skids to PLC racks, VFD inverters, and explosion-proof field instrumentation."
-            align="center"
-            className="mb-12 sm:mb-16"
-          />
+          <div className="flex flex-col sm:flex-row sm:items-end justify-between gap-4 mb-10">
+            <div>
+              <span className="text-[12px] font-mono uppercase tracking-wider text-[#8b1e1e] font-bold block mb-1">
+                Equipment Spectrum
+              </span>
+              <h2 className="font-heading text-[28px] sm:text-[40px] font-bold text-[#171717] leading-tight">
+                Explore 12 Specialized Product Lines
+              </h2>
+            </div>
+            <span className="text-[#7a7773] text-[13px] font-mono font-medium">
+              12 Product Categories Cataloged
+            </span>
+          </div>
 
-          <CardGrid max={4}>
-            {CATEGORIES.map((cat) => (
-              <ImageCard
-                key={cat.title}
-                href={cat.href}
-                imageSrc={cat.image}
-                imageAlt={cat.title}
-                title={cat.title}
-                subtitle={cat.description}
-                meta={cat.meta}
-                tag={cat.tag}
-                tone="grey"
-              />
-            ))}
-          </CardGrid>
+          <CategoryMountainGrid categories={CATEGORIES} />
         </Container>
       </Section>
 
       {/* ── 3. Technical FAQ ── */}
-      <Section tone="white">
+      <Section tone="grey" className="!bg-[#ece9e5] !mt-0 !pt-8">
         <Container>
           <SectionHeading
             eyebrow="Equipment FAQ"

@@ -225,7 +225,7 @@ export default function ServicePage({ data }: ServicePageProps) {
                     <div className="pt-2">
                       <Link
                         href={primaryCta.href}
-                        className="inline-flex items-center gap-2 bg-[#6b191b] hover:bg-[#852023] text-white font-bold text-[13px] sm:text-[14px] uppercase tracking-[0.03em] px-7 py-3.5 rounded-full transition-all duration-200 shadow-[0_4px_16px_rgba(107,25,27,0.22)] hover:shadow-[0_8px_24px_rgba(107,25,27,0.32)]"
+                        className="btn-primary inline-flex items-center gap-2 text-white font-bold text-[13px] sm:text-[14px] uppercase tracking-[0.03em] px-7 py-3.5 rounded-full transition-all duration-200"
                       >
                         <span>Inquire About This Service</span>
                         <ArrowRight className="w-4 h-4" />
@@ -262,7 +262,7 @@ export default function ServicePage({ data }: ServicePageProps) {
                   <div className="pt-2 flex justify-center">
                     <Link
                       href={primaryCta.href}
-                      className="inline-flex items-center gap-2 bg-[#6b191b] hover:bg-[#852023] text-white font-bold text-[13px] sm:text-[14px] uppercase tracking-[0.03em] px-7 py-3.5 rounded-full transition-all duration-200 shadow-[0_4px_16px_rgba(107,25,27,0.22)] hover:shadow-[0_8px_24px_rgba(107,25,27,0.32)]"
+                      className="btn-primary inline-flex items-center gap-2 text-white font-bold text-[13px] sm:text-[14px] uppercase tracking-[0.03em] px-7 py-3.5 rounded-full transition-all duration-200"
                     >
                       <span>Inquire About This Service</span>
                       <ArrowRight className="w-4 h-4" />
