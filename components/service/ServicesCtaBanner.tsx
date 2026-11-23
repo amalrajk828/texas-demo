@@ -51,7 +51,7 @@ export default function ServicesCtaBanner() {
               <div className="flex flex-col sm:flex-row gap-3">
                 <Link
                   href="/contacts/"
-                  className="inline-flex items-center justify-center gap-2 bg-[#e7212b] hover:bg-[#aa0b1b] text-white font-semibold px-8 py-3.5 rounded-lg transition-colors duration-200 text-[14px] shadow-lg shadow-[#e7212b]/25"
+                  className="btn-primary inline-flex items-center justify-center gap-2 text-white font-semibold px-8 py-3.5 rounded-lg transition-all duration-200 text-[14px] shadow-lg"
                 >
                   Contact Us
                   <ArrowRight className="w-4 h-4" />

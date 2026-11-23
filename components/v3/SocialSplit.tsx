@@ -3,7 +3,6 @@ import React from "react";
 export default function SocialSplit() {
   return (
     <div className="social-split">
-      <span className="s-label">Social Media</span>
       <div className="social-split-track">
         {/* LinkedIn */}
         <a

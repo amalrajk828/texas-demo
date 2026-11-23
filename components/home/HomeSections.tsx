@@ -6,6 +6,8 @@ import { Reveal } from "@/components/v3/motion/Reveal";
 import EyebrowPill from "@/components/v3/EyebrowPill";
 import ServiceCards from "@/components/home/ServiceCards";
 import HomeCtaCard from "@/components/home/HomeCtaCard";
+import TearDivider from "@/components/home/TearDivider";
+import PartnersWallSection from "@/components/partners/PartnersWallSection";
 
 export default function HomeSections() {
   return (
@@ -89,6 +91,9 @@ export default function HomeSections() {
         </div>
       </section>
 
+      {/* Torn Paper / Page Crack Divider */}
+      <TearDivider />
+
       {/* Services / Features Section */}
       <section id="services" className="content-section">
         <div className="section-container">
@@ -117,6 +122,8 @@ export default function HomeSections() {
           </Reveal>
         </div>
       </section>
+
+      <TearDivider />
 
       {/* Industries Section */}
       <section id="industries" className="content-section">
@@ -192,6 +199,8 @@ export default function HomeSections() {
           </Reveal>
         </div>
       </section>
+
+      <TearDivider />
 
       {/* Products / Technical Specifications Section */}
       <section id="products" className="content-section">
@@ -284,6 +293,8 @@ export default function HomeSections() {
           </Reveal>
         </div>
       </section>
+
+      <TearDivider />
 
       {/* Clients Section */}
       <section id="clients" className="content-section">
@@ -414,6 +425,15 @@ export default function HomeSections() {
         </div>
       </section>
 
+      <TearDivider />
+
+      {/* Authorized Partnerships & Dealerships Section */}
+      <div id="partners">
+        <PartnersWallSection />
+      </div>
+
+      <TearDivider />
+
       {/* Blog / Engineering Insights Section */}
       <section id="blog" className="content-section">
         <div className="section-container">
@@ -493,6 +513,8 @@ export default function HomeSections() {
           </Reveal>
         </div>
       </section>
+
+      <TearDivider />
 
       {/* Call to Action / Contact Us Section */}
       <section id="contact" className="content-section cta-section">

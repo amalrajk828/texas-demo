@@ -4,6 +4,7 @@ import React, { useRef, useState, useEffect } from "react";
 import Link from "next/link";
 import { motion, useMotionValue, useSpring, useTransform } from "framer-motion";
 import EyebrowPill from "@/components/v3/EyebrowPill";
+import PeelButton from "./PeelButton";
 
 export default function HomeCtaCard() {
   const cardRef = useRef<HTMLDivElement>(null);
@@ -146,9 +147,11 @@ export default function HomeCtaCard() {
               transition={{ duration: 0.2 }}
               style={{ transformStyle: "preserve-3d" }}
             >
-              <Link href="/contacts/" className="btn btn-primary btn-large" id="cta-action-button">
-                Request Engineering Consultation &rarr;
-              </Link>
+              <PeelButton>
+                <Link href="/contacts/" className="btn btn-primary btn-large" id="cta-action-button">
+                  Request Engineering Consultation &rarr;
+                </Link>
+              </PeelButton>
             </motion.div>
 
             <div

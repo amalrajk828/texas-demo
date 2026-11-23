@@ -46,7 +46,7 @@ export default function Button({
   const displayArrow = showArrow !== undefined ? showArrow : withArrow;
   const variantStyles = {
     primary:
-      "bg-[var(--brand-action,#8a302f)] hover:bg-[var(--brand-action-hover,#6f2423)] text-white font-semibold border border-[var(--brand-action,#8a302f)] shadow-[0_8px_20px_rgba(138,48,47,0.28)] hover:-translate-y-[2px] active:scale-[0.97] focus-visible:outline focus-visible:outline-2 focus-visible:outline-[var(--brand-action,#8a302f)] focus-visible:outline-offset-[3px]",
+      "btn-primary bg-[image:var(--btn-primary-bg)] hover:bg-[image:var(--btn-primary-bg-hover)] text-white font-semibold border border-transparent shadow-[0_10px_24px_rgba(120,20,20,0.35)] hover:-translate-y-[2px] active:scale-[0.97] focus-visible:outline focus-visible:outline-2 focus-visible:outline-[#8B0000] focus-visible:outline-offset-[3px]",
     secondary:
       "bg-white/90 hover:bg-white text-[#1a1a1a] border border-black/[0.1] shadow-[0_4px_16px_rgba(0,0,0,0.06)] hover:shadow-[0_8px_24px_rgba(0,0,0,0.1)]",
     dark:

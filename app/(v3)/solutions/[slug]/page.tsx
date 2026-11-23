@@ -5,11 +5,8 @@ import { ServiceJsonLd } from "@/components/schema/ServiceJsonLd";
 import { ProductJsonLd } from "@/components/schema/ProductJsonLd";
 import { FaqPageJsonLd } from "@/components/schema/FaqPageJsonLd";
 import { SpeakableJsonLd } from "@/components/schema/SpeakableJsonLd";
-import PageFaqSection from "@/components/PageFaqSection";
-import TexaflowContent from "@/components/solutions/TexaflowContent";
-import SpaceAiContent from "@/components/solutions/SpaceAiContent";
-import MitsubishiContent from "@/components/solutions/MitsubishiContent";
-import PwsFloorSolutions from "@/components/solutions/PwsFloorSolutions";
+import SolutionPage from "@/components/v3/solution/SolutionPage";
+import { SOLUTIONS_PAGE_DATA } from "@/lib/solutions-data";
 
 interface SolutionMeta {
   title: string;
@@ -278,8 +275,10 @@ export default async function SolutionDetailPage({
   const meta = SOLUTIONS_DATA[slug];
   if (!meta) notFound();
 
+  const solutionData = SOLUTIONS_PAGE_DATA[slug];
+
   return (
-    <div className="min-h-screen bg-white font-sans antialiased">
+    <div className="min-h-screen bg-[#e8e8e6] font-sans antialiased">
       <BreadcrumbJsonLd
         items={[
           { name: "Home", href: "/" },
@@ -304,20 +303,9 @@ export default async function SolutionDetailPage({
       />
       <FaqPageJsonLd items={meta.faqItems} />
 
-      {slug === "texaflow" && <TexaflowContent />}
-      {slug === "space-ai" && <SpaceAiContent />}
-      {slug === "mitsubishi-electric" && <MitsubishiContent />}
-      {slug === "pws-floor-solutions" && <PwsFloorSolutions />}
-
-      <section className="py-20 lg:py-24 bg-[#f8fafc] border-t border-black/[0.04]">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6">
-          <PageFaqSection
-            items={meta.faqItems}
-            title="Questions About"
-            highlight={meta.serviceName.split("—")[0].trim()}
-          />
-        </div>
-      </section>
+      {solutionData ? (
+        <SolutionPage data={solutionData} />
+      ) : null}
     </div>
   );
 }

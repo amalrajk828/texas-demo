@@ -7,6 +7,7 @@ import { usePathname } from "next/navigation";
 import { motion, AnimatePresence, useReducedMotion } from "framer-motion";
 import { MAIN_NAV, NavItem, NavChild } from "@/lib/navigation";
 import { LiquidGlassNav } from "@/components/ui/liquid-glass-nav";
+import NavDropdownPanel from "./NavDropdownPanel";
 
 export type { NavItem, NavChild };
 
@@ -58,10 +59,25 @@ export default function GlassNavbar({
     }
     if (item.children && item.children.length > 0) {
       const isChildMatch = item.children.some((child) => {
+        // Exclude /contacts/ from marking parent active if parent is Solutions
+        if (item.label === "Solutions" && (child.href === "/contacts/" || child.href === "/contacts")) {
+          return false;
+        }
         const cleanChild = child.href.replace(/\/$/, "");
+        if (!cleanChild || cleanChild === "") return false;
         return current === child.href || current === cleanChild || current.startsWith(`${cleanChild}/`);
       });
       if (isChildMatch) return true;
+    }
+    if (item.label === "Solutions") {
+      return (
+        current.startsWith("/solutions/") ||
+        current === "/solutions" ||
+        current.startsWith("/solution/") ||
+        current === "/solution" ||
+        current.startsWith("/partners/") ||
+        current === "/partners"
+      );
     }
     if (item.label === "Services") {
       return (
@@ -227,7 +243,6 @@ export default function GlassNavbar({
   }, [hideOnScrollDown]);
 
   const isNavVisible = mobileOpen || visible;
-  const activeDropdownItem = items.find((item) => item.label === activeDropdown);
 
   return (
     <>
@@ -235,9 +250,8 @@ export default function GlassNavbar({
       <header
         ref={navRef}
         role="banner"
-        className={`fixed top-[12px] inset-x-0 mx-auto z-[100] w-[calc(100%-24px)] lg:w-[calc(100%-32px)] lg:max-w-6xl pointer-events-none bg-transparent border-none shadow-none outline-none transition-transform duration-300 ease-out [transform:translate3d(0,0,0)] [contain:layout_style] [isolation:isolate] [backface-visibility:hidden] [-webkit-font-smoothing:subpixel-antialiased] ${
-          isNavVisible ? "translate-y-0" : "-translate-y-24"
-        } ${className}`}
+        className={`fixed top-[12px] inset-x-0 mx-auto z-[100] w-[calc(100%-24px)] lg:w-[calc(100%-32px)] lg:max-w-6xl pointer-events-none bg-transparent border-none shadow-none outline-none transition-transform duration-300 ease-out [transform:translate3d(0,0,0)] [contain:layout_style] [isolation:isolate] [backface-visibility:hidden] [-webkit-font-smoothing:subpixel-antialiased] ${isNavVisible ? "translate-y-0" : "-translate-y-24"
+          } ${className}`}
       >
         {/* SIBLING 1: The Liquid Glass Pill Wrapper */}
         <LiquidGlassNav
@@ -277,7 +291,7 @@ export default function GlassNavbar({
 
           {/* Center Links (Desktop only, >= 1024px) */}
           <div
-            className="hidden lg:flex items-center gap-0.5 xl:gap-1.5 p-1 rounded-full relative"
+            className="hidden lg:flex items-center gap-0.5 xl:gap-1.5 p-1 rounded-full relative shrink-0 whitespace-nowrap"
             onMouseLeave={() => {
               setHoveredId(null);
               handleDropdownLeave();
@@ -288,22 +302,28 @@ export default function GlassNavbar({
               const hovered = hoveredId === item.id;
               const hasChildren = Boolean(item.children && item.children.length > 0);
               const isDropdownOpen = activeDropdown === item.label;
+              const isHoveredOrOpen = hovered || isDropdownOpen;
 
               return (
                 <div
                   key={item.id}
-                  className="relative flex items-center rounded-full"
+                  className={`relative flex items-center rounded-full shrink-0 ${active ? "active" : ""}`}
                   onMouseEnter={() => {
                     setHoveredId(item.id);
                     if (hasChildren) handleDropdownEnter(item.label);
                     else if (activeDropdown) setActiveDropdown(null);
                   }}
                 >
-                  {/* Active sliding pill indicator */}
+                  {/* Active sliding pill indicator — aibqs-style brand gradient */}
                   {active && (
                     <motion.span
                       layoutId="activeGlassPill"
-                      className="absolute inset-0 rounded-full bg-white/70 shadow-[inset_0_1px_1px_rgba(255,255,255,0.9),0_2px_4px_rgba(0,0,0,0.06)] border border-white/80 -z-10 pointer-events-none"
+                      className="absolute inset-0 rounded-full -z-10 pointer-events-none"
+                      style={{
+                        background: "linear-gradient(135deg, #8B0000, #b02222)",
+                        border: "1px solid rgba(255,255,255,0.38)",
+                        boxShadow: "0 3px 10px rgba(139,0,0,0.38), inset 0 1px rgba(255,255,255,0.25)",
+                      }}
                       transition={
                         prefersReducedMotion
                           ? { duration: 0 }
@@ -313,16 +333,15 @@ export default function GlassNavbar({
                     />
                   )}
 
-                  {/* Hover highlight for non-active links */}
-                  {!active && hovered && !isDropdownOpen && (
-                    <motion.span
-                      layoutId="hoverGlassPill"
-                      className="absolute inset-0 rounded-full bg-white/50 -z-10 pointer-events-none"
-                      transition={
-                        prefersReducedMotion
-                          ? { duration: 0 }
-                          : { type: "spring", stiffness: 420, damping: 32 }
-                      }
+                  {/* Hover / open highlight for non-active links (no layoutId to keep active pill pinned) */}
+                  {!active && (
+                    <span
+                      className={`absolute inset-0 pointer-events-none transition-all duration-200 ${
+                        isHoveredOrOpen
+                          ? "bg-[rgba(138,48,47,0.08)] opacity-100"
+                          : "bg-transparent opacity-0"
+                      }`}
+                      style={{ borderRadius: "999px" }}
                       aria-hidden="true"
                     />
                   )}
@@ -346,12 +365,23 @@ export default function GlassNavbar({
                       setActiveDropdown(null);
                       setMobileOpen(false);
                     }}
-                    className={`relative z-10 flex items-center pl-2.5 xl:pl-3 ${
-                      hasChildren ? "pr-1" : "pr-2.5 xl:pr-3"
-                    } py-1.5 rounded-full text-[13px] xl:text-[13.5px] transition-colors duration-200 outline-none focus:outline-none focus-visible:ring-2 focus-visible:ring-[#8B0000] ${
-                      active || isDropdownOpen
-                        ? "text-[#8B0000] font-semibold"
-                        : "text-[#1f1f1f] font-medium hover:text-[#8B0000]"
+                    onKeyDown={(e) => {
+                      if (hasChildren && (e.key === "ArrowDown" || e.key === " ")) {
+                        e.preventDefault();
+                        setActiveDropdown(item.label);
+                      } else if (e.key === "Escape") {
+                        e.preventDefault();
+                        setActiveDropdown(null);
+                      }
+                    }}
+                    className={`relative z-10 flex items-center whitespace-nowrap pl-2 xl:pl-3 ${
+                      hasChildren ? "pr-0.5 xl:pr-1" : "pr-2 xl:pr-3"
+                    } py-1.5 rounded-full text-[13px] xl:text-[13.5px] transition-colors duration-150 outline-none focus:outline-none focus-visible:ring-2 focus-visible:ring-[#8a302f] ${
+                      active
+                        ? "active text-white font-semibold"
+                        : isHoveredOrOpen
+                        ? "text-[#8a302f] font-medium"
+                        : "text-[#3d2a1e] font-medium hover:text-[#8a302f]"
                     }`}
                   >
                     <span>{item.label}</span>
@@ -370,18 +400,20 @@ export default function GlassNavbar({
                         handleDropdownToggle(item.label);
                       }}
                       onKeyDown={(e) => {
-                        if (e.key === "ArrowDown" || e.key === " ") {
+                        if (e.key === "ArrowDown" || e.key === " " || e.key === "Enter") {
                           e.preventDefault();
-                          setActiveDropdown(item.label);
+                          handleDropdownToggle(item.label);
                         } else if (e.key === "Escape") {
                           e.preventDefault();
                           setActiveDropdown(null);
                         }
                       }}
-                      className={`relative z-10 mr-1.5 xl:mr-2 p-1 rounded-full transition-colors outline-none focus:outline-none focus-visible:ring-2 focus-visible:ring-[#8B0000] ${
-                        active || isDropdownOpen
-                          ? "text-[#8B0000]"
-                          : "text-[#1f1f1f] opacity-70 hover:opacity-100 hover:text-[#8B0000]"
+                      className={`relative z-10 mr-1 xl:mr-1.5 p-1 rounded-full transition-colors outline-none focus:outline-none focus-visible:ring-2 focus-visible:ring-[#8a302f] shrink-0 ${
+                        active
+                          ? "active text-white"
+                          : isHoveredOrOpen
+                          ? "text-[#8a302f]"
+                          : "text-[#3d2a1e] opacity-70 hover:opacity-100 hover:text-[#8a302f]"
                       }`}
                     >
                       <svg
@@ -402,6 +434,22 @@ export default function GlassNavbar({
                       </svg>
                     </button>
                   )}
+
+                  {/* Reusable NavDropdownPanel rendered inside each nav item that has a submenu */}
+                  {hasChildren && (
+                    <AnimatePresence>
+                      {isDropdownOpen && (
+                        <NavDropdownPanel
+                          item={item}
+                          pathname={pathname}
+                          onClose={() => setActiveDropdown(null)}
+                          onMouseEnter={() => handleDropdownEnter(item.label)}
+                          onMouseLeave={handleDropdownLeave}
+                          prefersReducedMotion={prefersReducedMotion}
+                        />
+                      )}
+                    </AnimatePresence>
+                  )}
                 </div>
               );
             })}
@@ -410,7 +458,7 @@ export default function GlassNavbar({
           {/* Right CTA Button (Desktop only, >= 1024px) */}
           <Link
             href={ctaHref}
-            className="hidden lg:inline-flex items-center justify-center gap-1.5 rounded-full bg-gradient-to-r from-[#9a1b1b] to-[#6e0f0f] hover:from-[#b02222] hover:to-[#821414] active:scale-[0.98] text-white text-[13px] xl:text-[13.5px] font-semibold px-4 xl:px-5 py-2 lg:py-2.5 shadow-[0_4px_14px_rgba(154,27,27,0.35)] hover:shadow-[0_6px_20px_rgba(154,27,27,0.45)] hover:scale-[1.02] transition-all duration-200 shrink-0 group outline-none focus:outline-none focus-visible:ring-2 focus-visible:ring-[#8B0000] focus-visible:ring-offset-2"
+            className="navbar-cta-btn hidden lg:inline-flex items-center justify-center gap-1.5 rounded-full text-white text-[13px] xl:text-[13.5px] font-semibold px-4 xl:px-5 py-2 lg:py-2.5 hover:scale-[1.02] active:scale-[0.98] transition-all duration-200 shrink-0 group outline-none focus:outline-none focus-visible:ring-2 focus-visible:ring-[#8B0000] focus-visible:ring-offset-2"
           >
             <span>{ctaLabel}</span>
             <svg
@@ -444,113 +492,22 @@ export default function GlassNavbar({
           >
             <div className="w-5 h-4 flex flex-col justify-between items-center pointer-events-none">
               <span
-                className={`block h-[2px] w-5 rounded-full bg-[#1a1a1a] transition-all duration-300 origin-center ${
-                  mobileOpen ? "translate-y-[7px] rotate-45" : ""
-                }`}
+                className={`block h-[2px] w-5 rounded-full bg-[#1a1a1a] transition-all duration-300 origin-center ${mobileOpen ? "translate-y-[7px] rotate-45" : ""
+                  }`}
               />
               <span
-                className={`block h-[2px] w-5 rounded-full bg-[#1a1a1a] transition-all duration-300 ${
-                  mobileOpen ? "opacity-0 scale-0" : "opacity-100"
-                }`}
+                className={`block h-[2px] w-5 rounded-full bg-[#1a1a1a] transition-all duration-300 ${mobileOpen ? "opacity-0 scale-0" : "opacity-100"
+                  }`}
               />
               <span
-                className={`block h-[2px] w-5 rounded-full bg-[#1a1a1a] transition-all duration-300 origin-center ${
-                  mobileOpen ? "-translate-y-[7px] -rotate-45" : ""
-                }`}
+                className={`block h-[2px] w-5 rounded-full bg-[#1a1a1a] transition-all duration-300 origin-center ${mobileOpen ? "-translate-y-[7px] -rotate-45" : ""
+                  }`}
               />
             </div>
           </button>
         </LiquidGlassNav>
 
-        {/* SIBLING 2: Desktop Dropdown Flyout Panel (Positioned as sibling to nav, outside overflow-hidden) */}
-        <AnimatePresence>
-          {activeDropdownItem && activeDropdownItem.children && (
-            <div
-              className="hidden lg:block pointer-events-auto absolute top-[calc(100%+12px)] left-1/2 -translate-x-1/2 z-[1100]"
-              onMouseEnter={() => handleDropdownEnter(activeDropdownItem.label)}
-              onMouseLeave={handleDropdownLeave}
-            >
-              <motion.div
-                initial={prefersReducedMotion ? { opacity: 0 } : { opacity: 0, scale: 0.96, y: -6 }}
-                animate={{ opacity: 1, scale: 1, y: 0 }}
-                exit={prefersReducedMotion ? { opacity: 0 } : { opacity: 0, scale: 0.96, y: -6 }}
-                transition={{ duration: 0.18, ease: "easeOut" }}
-                className={`rounded-3xl bg-white/92 backdrop-blur-2xl backdrop-saturate-150 border border-white/70 p-4 shadow-[0_24px_60px_rgba(0,0,0,0.16),0_4px_16px_rgba(0,0,0,0.06),inset_0_1px_0_rgba(255,255,255,0.85)] isolate [transform:translateZ(0)] ${
-                  activeDropdownItem.label === "Services"
-                    ? "w-[400px]"
-                    : activeDropdownItem.label === "Industries"
-                    ? "w-[620px]"
-                    : "w-[660px]"
-                }`}
-                style={{
-                  WebkitBackdropFilter: "blur(24px) saturate(150%)",
-                }}
-              >
-                <div
-                  className={
-                    activeDropdownItem.label === "Services"
-                      ? "flex flex-col gap-1.5"
-                      : "grid grid-cols-2 gap-x-3 gap-y-1.5"
-                  }
-                >
-                  {activeDropdownItem.children.map((child: NavChild, cIdx: number) => {
-                    const isChildActive =
-                      pathname === child.href ||
-                      (child.href !== "/" && pathname.startsWith(child.href));
-
-                    // Highlight / "View All" footer card
-                    if (child.highlight) {
-                      return (
-                        <Link
-                          key={cIdx}
-                          href={child.href}
-                          onClick={() => setActiveDropdown(null)}
-                          className={`group/viewall mt-2.5 flex items-center justify-center p-2.5 rounded-full border border-dashed border-[#8B0000]/30 bg-[#8B0000]/[0.05] hover:bg-[#8B0000] hover:text-white transition-all text-center outline-none focus:outline-none focus-visible:ring-2 focus-visible:ring-[#8B0000] ${
-                            activeDropdownItem.label !== "Services" ? "col-span-2" : "w-full"
-                          }`}
-                        >
-                          <span className="text-[13px] font-bold text-[#8B0000] group-hover/viewall:text-white transition-colors">
-                            {child.label}
-                          </span>
-                        </Link>
-                      );
-                    }
-
-                    return (
-                      <Link
-                        key={cIdx}
-                        href={child.href}
-                        onClick={() => setActiveDropdown(null)}
-                        className={`group/item flex flex-col p-2.5 rounded-2xl transition-all outline-none focus:outline-none focus-visible:ring-2 focus-visible:ring-[#8B0000] ${
-                          isChildActive
-                            ? "bg-[#8B0000]/[0.07] border-l-2 border-[#8B0000]"
-                            : "hover:bg-black/[0.04] active:bg-black/[0.08]"
-                        }`}
-                      >
-                        <span className="flex items-center gap-1.5 text-[13px] font-semibold text-[#1a1a1a] group-hover/item:text-[#8B0000] transition-colors">
-                          <span
-                            className="text-[#8B0000] text-xs opacity-0 -translate-x-1 group-hover/item:opacity-100 group-hover/item:translate-x-0 transition-all"
-                            aria-hidden="true"
-                          >
-                            →
-                          </span>
-                          <span>{child.label}</span>
-                        </span>
-                        {child.desc && (
-                          <span className="text-[11.5px] text-[#666663] leading-snug mt-0.5 line-clamp-2">
-                            {child.desc}
-                          </span>
-                        )}
-                      </Link>
-                    );
-                  })}
-                </div>
-              </motion.div>
-            </div>
-          )}
-        </AnimatePresence>
-
-        {/* SIBLING 3: Mobile Glass Dropdown Panel (< 1024px, completely separate sibling) */}
+        {/* SIBLING 2: Mobile Glass Dropdown Panel (< 1024px, completely separate sibling) */}
         <AnimatePresence>
           {mobileOpen && (
             <motion.div
@@ -572,9 +529,12 @@ export default function GlassNavbar({
                   ? { duration: 0.15 }
                   : { type: "spring", stiffness: 350, damping: 28 }
               }
-              className="pointer-events-auto absolute top-[calc(100%+8px)] left-0 right-0 w-full max-h-[calc(100dvh-92px)] max-h-[calc(100svh-92px)] overflow-y-auto overscroll-contain rounded-3xl bg-white/92 backdrop-blur-2xl backdrop-saturate-150 border border-white/70 p-4 sm:p-5 shadow-[0_20px_48px_rgba(0,0,0,0.18),inset_0_1px_0_rgba(255,255,255,0.8)] lg:hidden flex flex-col gap-1.5 isolate [transform:translateZ(0)] will-change-transform [-webkit-overflow-scrolling:touch]"
+              className="pointer-events-auto absolute top-[calc(100%+8px)] left-0 right-0 w-full max-h-[calc(100dvh-92px)] max-h-[calc(100svh-92px)] overflow-y-auto overscroll-contain rounded-3xl p-4 sm:p-5 shadow-[0_20px_60px_rgba(26,5,5,0.19)] lg:hidden flex flex-col gap-1.5 isolate [transform:translateZ(0)] will-change-transform [-webkit-overflow-scrolling:touch]"
               style={{
-                WebkitBackdropFilter: "blur(24px) saturate(150%)",
+                /* aibqs marine-mobile-menu: gradient bg, solid border, navy shadow → Texas warm equivalent */
+                background: "linear-gradient(145deg, #fdf8f8, #f9eaea)",
+                border: "1px solid rgba(255,255,255,0.90)",
+                WebkitBackdropFilter: "blur(16px) saturate(140%)",
               }}
             >
               {/* Top Highlight Sheen */}
@@ -595,11 +555,10 @@ export default function GlassNavbar({
                         type="button"
                         onClick={() => setMobileExpanded((prev) => (prev === item.label ? null : item.label))}
                         aria-expanded={isExpanded}
-                        className={`shrink-0 flex items-center justify-between px-4 py-3 rounded-2xl text-[15px] font-semibold transition-all outline-none focus:outline-none ${
-                          active
-                            ? "bg-[#8B0000]/10 text-[#8B0000] font-bold"
-                            : "text-[#2a2a28] hover:bg-black/[0.04] active:bg-black/[0.08]"
-                        }`}
+                        className={`shrink-0 flex items-center justify-between px-4 py-3 rounded-2xl text-[15px] font-semibold transition-all outline-none focus:outline-none ${active
+                          ? "bg-[#8B0000]/10 text-[#8B0000] font-bold"
+                          : "text-[#2a2a28] hover:bg-black/[0.04] active:bg-black/[0.08]"
+                          }`}
                       >
                         <span>{item.label}</span>
                         <svg
@@ -611,9 +570,8 @@ export default function GlassNavbar({
                           strokeWidth="2.5"
                           strokeLinecap="round"
                           strokeLinejoin="round"
-                          className={`transition-transform duration-200 shrink-0 ${
-                            isExpanded ? "rotate-180 text-[#8B0000]" : "rotate-0 text-black/40"
-                          }`}
+                          className={`transition-transform duration-200 shrink-0 ${isExpanded ? "rotate-180 text-[#8B0000]" : "rotate-0 text-black/40"
+                            }`}
                         >
                           <path d="m6 9 6 6 6-6" />
                         </svg>
@@ -634,13 +592,15 @@ export default function GlassNavbar({
                                 pathname === child.href ||
                                 (child.href !== "/" && pathname.startsWith(child.href));
 
+                              const Icon = child.icon;
+
                               if (child.highlight) {
                                 return (
                                   <Link
                                     key={cIdx}
                                     href={child.href}
                                     onClick={() => setMobileOpen(false)}
-                                    className="shrink-0 mt-1 flex items-center justify-center p-2.5 rounded-full border border-dashed border-[#8B0000]/30 bg-[#8B0000]/[0.06] text-[#8B0000] font-bold text-xs text-center outline-none focus:outline-none focus-visible:ring-2 focus-visible:ring-[#8B0000]"
+                                    className="shrink-0 mt-1 flex items-center justify-center p-2.5 rounded-full border border-dashed border-[#8a302f]/30 bg-[#8a302f]/[0.06] text-[#8a302f] font-bold text-xs text-center outline-none focus:outline-none focus-visible:ring-2 focus-visible:ring-[#8a302f]"
                                   >
                                     {child.label}
                                   </Link>
@@ -652,21 +612,30 @@ export default function GlassNavbar({
                                   key={cIdx}
                                   href={child.href}
                                   onClick={() => setMobileOpen(false)}
-                                  className={`shrink-0 flex flex-col p-2.5 rounded-xl transition-all outline-none focus:outline-none ${
-                                    isChildActive
-                                      ? "bg-[#8B0000]/[0.08] text-[#8B0000]"
-                                      : "bg-white/60 hover:bg-white/90 text-[#2a2a28]"
-                                  }`}
+                                  className={`shrink-0 flex items-center justify-between w-full px-3 py-2.5 rounded-[12px] transition-all outline-none focus:outline-none ${isChildActive
+                                    ? "bg-[#8a302f]/[0.08]"
+                                    : "bg-white/60 hover:bg-[#8a302f]/[0.06] active:bg-[#8a302f]/[0.10]"
+                                    }`}
                                 >
-                                  <span className="text-[13px] font-semibold flex items-center justify-between">
-                                    <span>{child.label}</span>
-                                    <span className="text-xs text-[#8B0000] shrink-0 ml-1">→</span>
-                                  </span>
-                                  {child.desc && (
-                                    <span className="text-[11px] text-[#666663] mt-0.5 leading-snug">
-                                      {child.desc}
+                                  <div className="flex items-center gap-3 min-w-0">
+                                    {Icon && (
+                                      <div
+                                        className={`w-9 h-9 min-w-9 min-h-9 rounded-[10px] flex items-center justify-center transition-colors duration-200 ${isChildActive
+                                          ? "bg-[#8a302f] border border-[#8a302f] text-white"
+                                          : "border border-black/[0.08] bg-white text-[#8a302f]"
+                                          }`}
+                                      >
+                                        <Icon size={18} strokeWidth={2} />
+                                      </div>
+                                    )}
+                                    <span
+                                      className={`text-[14.5px] font-semibold truncate transition-colors ${isChildActive ? "text-[#8a302f]" : "text-[#1a1a1a]"
+                                        }`}
+                                    >
+                                      {child.label}
                                     </span>
-                                  )}
+                                  </div>
+                                  <span className="text-xs text-[#8a302f] shrink-0 ml-2">→</span>
                                 </Link>
                               );
                             })}
@@ -682,17 +651,15 @@ export default function GlassNavbar({
                     key={item.id}
                     href={item.href}
                     onClick={() => setMobileOpen(false)}
-                    className={`shrink-0 flex items-center justify-between px-4 py-3 rounded-2xl text-[15px] font-semibold transition-all outline-none focus:outline-none ${
-                      active
-                        ? "bg-[#8B0000]/10 text-[#8B0000] font-bold"
-                        : "text-[#2a2a28] hover:bg-black/[0.04] active:bg-black/[0.08]"
-                    }`}
+                    className={`shrink-0 flex items-center justify-between px-4 py-3 rounded-2xl text-[15px] font-semibold transition-all outline-none focus:outline-none ${active
+                      ? "bg-[#8B0000]/10 text-[#8B0000] font-bold"
+                      : "text-[#2a2a28] hover:bg-black/[0.04] active:bg-black/[0.08]"
+                      }`}
                   >
                     <span>{item.label}</span>
                     <span
-                      className={`text-sm transition-transform ${
-                        active ? "text-[#8B0000] translate-x-0.5" : "text-black/35"
-                      }`}
+                      className={`text-sm transition-transform ${active ? "text-[#8B0000] translate-x-0.5" : "text-black/35"
+                        }`}
                       aria-hidden="true"
                     >
                       ›
@@ -705,7 +672,7 @@ export default function GlassNavbar({
               <Link
                 href={ctaHref}
                 onClick={() => setMobileOpen(false)}
-                className="shrink-0 mt-3 mb-1 flex items-center justify-center gap-1.5 w-full h-12 rounded-full bg-gradient-to-r from-[#9a1b1b] to-[#6e0f0f] hover:from-[#b02222] hover:to-[#821414] active:scale-[0.98] text-white text-[14px] font-semibold shadow-[0_6px_20px_rgba(154,27,27,0.35)] transition-all outline-none focus:outline-none focus-visible:ring-2 focus-visible:ring-[#8B0000] focus-visible:ring-offset-2"
+                className="navbar-cta-btn shrink-0 mt-3 mb-1 flex items-center justify-center gap-1.5 w-full h-12 rounded-full active:scale-[0.98] text-white text-[14px] font-semibold transition-all outline-none focus:outline-none focus-visible:ring-2 focus-visible:ring-[#8B0000] focus-visible:ring-offset-2"
               >
                 <span>{ctaLabel}</span>
                 <svg

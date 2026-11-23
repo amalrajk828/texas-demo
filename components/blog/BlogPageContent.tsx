@@ -149,7 +149,7 @@ export default function BlogPageContent({ allPosts }: Props) {
                     </div>
                   </div>
                   <div className="mt-8">
-                    <span className="inline-flex items-center gap-2 bg-[#8a302f] hover:bg-[#6f2423] text-white text-[13px] font-bold px-6 py-3 rounded-full transition-colors duration-200">
+                    <span className="btn-primary inline-flex items-center gap-2 text-white text-[13px] font-bold px-6 py-3 rounded-full transition-all duration-200">
                       Read Article <ArrowRight className="w-3.5 h-3.5" />
                     </span>
                   </div>

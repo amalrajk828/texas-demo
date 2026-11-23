@@ -388,7 +388,7 @@ const getDropdownCols = (label: string) => {
   return "grid-cols-1";
 };
 
-const showDesc = (label: string) => label === "Services";
+const showDesc = (_label: string) => false;
 
 /* ── Component ────────────────────────────────────────────────────── */
 export default function Header() {

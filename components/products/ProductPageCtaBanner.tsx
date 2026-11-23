@@ -25,7 +25,7 @@ export default function ProductPageCtaBanner({
           </div>
           <Link
             href={ctaHref}
-            className="shrink-0 inline-flex items-center gap-2 bg-[#e7212b] hover:bg-[#aa0b1b] text-white font-bold px-6 py-3.5 rounded-[6px] shadow-lg hover:shadow-[#e7212b]/20 transition-all duration-200"
+            className="btn-primary shrink-0 inline-flex items-center gap-2 text-white font-bold px-6 py-3.5 rounded-[6px] shadow-lg transition-all duration-200"
           >
             {ctaLabel}
           </Link>

@@ -109,7 +109,7 @@ export default function ProductDetailTemplate({
               <div className="flex flex-wrap items-center gap-4">
                 <Link
                   href="/contacts/"
-                  className="inline-flex items-center justify-center gap-2 px-6 py-3.5 rounded-full bg-[#6b191b] hover:bg-[#8a2527] text-white text-[14px] font-semibold transition-all duration-300 shadow-md shadow-[#6b191b]/20 hover:-translate-y-0.5"
+                  className="btn-primary inline-flex items-center justify-center gap-2 px-6 py-3.5 rounded-full text-white text-[14px] font-semibold transition-all duration-300 hover:-translate-y-0.5"
                 >
                   <span>Request Engineering Quote</span>
                   <ArrowRight className="w-4 h-4" />
