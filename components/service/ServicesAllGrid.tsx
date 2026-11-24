@@ -150,12 +150,8 @@ export default function ServicesAllGrid({ initialPage = 1 }: { initialPage?: num
 
   return (
     <section
-<<<<<<< HEAD
-      className="relative py-16 sm:py-20 overflow-hidden bg-[#ffffff]"
-=======
       id="all-services"
-      className="relative py-16 sm:py-20 overflow-hidden bg-[#e8e8e6]"
->>>>>>> origin/main
+      className="relative py-16 sm:py-20 overflow-hidden bg-[#ffffff]"
     >
       <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6">
         {/* Search Bar */}
