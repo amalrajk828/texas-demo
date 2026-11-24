@@ -258,7 +258,7 @@ export function TiltStackScroll({
       {/* ── Sticky Stage: 100svh viewport pinned while track scrolls ── */}
       <div
         ref={stageRef}
-        className="sticky top-0 h-[100svh] w-full overflow-hidden flex flex-col justify-between pt-20 sm:pt-24 pb-[56px] select-none bg-gradient-to-b from-[#e8e8e6] via-[#ecece9] to-[#e8e8e6]"
+        className="sticky top-0 h-[100svh] w-full overflow-hidden flex flex-col justify-between pt-20 sm:pt-24 pb-[56px] select-none bg-white"
       >
         {/* Subtle Ambient Background Texture */}
         <div

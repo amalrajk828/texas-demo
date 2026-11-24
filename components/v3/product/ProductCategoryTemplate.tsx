@@ -133,8 +133,8 @@ export default function ProductCategoryTemplate({
 
       {/* ── 4. Frequently Asked Questions ── */}
       <Section
-        tone="grey"
-        className="!bg-[#ece9e5] !mt-0 !pt-8"
+        tone="light"
+        className="!bg-[#ffffff] !mt-0 !pt-8"
       >
         <Container>
           <SectionHeading

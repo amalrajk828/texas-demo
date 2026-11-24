@@ -202,12 +202,12 @@ export function ScrollReelTestimonials({
       aria-label="Testimonials"
       aria-live={paused ? "polite" : "off"}
       {...handlers}
-      className={`relative w-full max-w-[1294px] mx-auto rounded-3xl bg-white border border-black/[0.08] border-t-[3px] border-t-[#9b2c2c] shadow-[0_16px_36px_-12px_rgba(0,0,0,0.06)] overflow-hidden p-6 sm:p-8 lg:p-12 ${className}`}
+      className={`relative w-full max-w-[1294px] mx-auto rounded-3xl bg-[#DCDCD9] border border-[#C8C8C5] border-t-[3px] border-t-[#9b2c2c] shadow-[0_16px_36px_-12px_rgba(0,0,0,0.06)] overflow-hidden p-6 sm:p-8 lg:p-12 ${className}`}
     >
       <div className="flex flex-col md:flex-row items-center gap-8 lg:gap-14">
         {/* ── Left Column: Counter-Rotating Portrait Reel ── */}
         <div
-          className="w-full md:w-[380px] h-48 sm:h-56 md:h-[380px] shrink-0 overflow-hidden relative rounded-2xl bg-[#f7f6f4] border border-black/[0.05] p-2.5 sm:p-3"
+          className="w-full md:w-[380px] h-48 sm:h-56 md:h-[380px] shrink-0 overflow-hidden relative rounded-2xl bg-[#D0D0CD] border border-[#C8C8C5] p-2.5 sm:p-3"
           style={{
             maskImage:
               "linear-gradient(to bottom, transparent 0%, black 5%, black 95%, transparent 100%), linear-gradient(to right, transparent 0%, black 6%, black 94%, transparent 100%)",

@@ -63,7 +63,7 @@ export default function ServicePage({ data }: ServicePageProps) {
   };
 
   return (
-    <div className="w-full bg-[#e8e8e6] text-[#1a1a1a]">
+    <div className="w-full bg-[#ffffff] text-[#1a1a1a]">
       {/* ── JSON-LD Structured Data ── */}
       <BreadcrumbJsonLd items={breadcrumbItems} />
       <ServiceJsonLd
@@ -124,7 +124,7 @@ export default function ServicePage({ data }: ServicePageProps) {
 
       {/* ── Optional Comparison Blog Callout ── */}
       {comparisonBlog && (
-        <div className="py-4 bg-[#e8e8e6] border-b border-black/[0.05]">
+        <div className="py-4 bg-[#ffffff] border-b border-black/[0.05]">
           <Container>
             <div className="flex items-center justify-between flex-wrap gap-3 bg-white/75 backdrop-blur-md rounded-[16px] px-5 py-3.5 border border-black/[0.06] shadow-[0_4px_16px_rgba(0,0,0,0.03)]">
               <div className="flex items-center gap-2.5 text-[13.5px] font-medium text-[#1a1a1a]">

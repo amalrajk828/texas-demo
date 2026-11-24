@@ -42,13 +42,13 @@ export default function CertificationsGrid({ items }: CertificationsGridProps) {
         {items.map((cert, idx) => (
           <div
             key={idx}
-            className="group rounded-[30px] bg-white border border-black/[0.06] overflow-hidden flex flex-col justify-between shadow-[12px_12px_24px_#bebebe,-12px_-12px_24px_#ffffff] hover:shadow-[0_15px_30px_rgba(0,0,0,0.10)] hover:-translate-y-1.5 transition-all duration-500"
+            className="group rounded-[30px] bg-white border border-[#e5e5e5] overflow-hidden flex flex-col justify-between shadow-[0_4px_20px_rgba(0,0,0,0.05)] hover:shadow-[0_15px_30px_rgba(0,0,0,0.10)] hover:-translate-y-1.5 transition-all duration-500"
           >
             <div>
               {/* Certificate Image Frame */}
               <div
                 onClick={() => setActiveCert(cert)}
-                className="relative aspect-[4/3] w-full bg-[#f8f7f5] p-6 flex items-center justify-center cursor-pointer overflow-hidden border-b border-black/[0.04]"
+                className="relative aspect-[4/3] w-full bg-white p-6 flex items-center justify-center cursor-pointer overflow-hidden border-b border-black/[0.04]"
               >
                 <div className="relative w-full h-full">
                   <Image
@@ -131,7 +131,7 @@ export default function CertificationsGrid({ items }: CertificationsGridProps) {
             </div>
 
             {/* Certificate Preview */}
-            <div className="relative flex-1 min-h-[300px] sm:min-h-[480px] my-4 bg-[#f8f7f5] rounded-[18px] p-4 flex items-center justify-center overflow-hidden">
+            <div className="relative flex-1 min-h-[300px] sm:min-h-[480px] my-4 bg-white rounded-[18px] p-4 flex items-center justify-center overflow-hidden border border-[#e5e5e5]">
               <Image
                 src={activeCert.src}
                 alt={activeCert.alt}

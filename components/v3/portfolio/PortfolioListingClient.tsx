@@ -1,7 +1,7 @@
 "use client";
 
 import React, { useState } from "react";
-import { products, type Product } from "@/lib/products";
+import { products } from "@/lib/products";
 import { ImageCard, CardGrid } from "@/components/v3";
 
 const categories = [

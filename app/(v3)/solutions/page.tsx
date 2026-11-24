@@ -135,7 +135,7 @@ export default function SolutionsPage() {
               return (
                 <div
                   key={s.slug}
-                  className="group relative flex flex-col justify-between rounded-[28px] border border-black/[0.06] bg-[#f8fafc] p-8 sm:p-10 transition-all duration-300 hover:shadow-2xl hover:shadow-black/5 hover:-translate-y-1 hover:border-[#6b1a1f]/30"
+                  className="group relative flex flex-col justify-between rounded-[28px] border border-[#C8C8C5] bg-[#DCDCD9] p-8 sm:p-10 transition-all duration-300 hover:shadow-2xl hover:shadow-black/5 hover:-translate-y-1 hover:border-[#6b1a1f]/30"
                 >
                   <div>
                     <div className="flex items-center justify-between gap-4 mb-6">
@@ -181,8 +181,8 @@ export default function SolutionsPage() {
         </div>
       </section>
 
-      {/* Alternating grey section: FAQ */}
-      <section className="py-20 lg:py-24 bg-[#f8fafc] border-t border-black/[0.04]">
+      {/* FAQ section */}
+      <section className="py-20 lg:py-24 bg-white border-t border-black/[0.04]">
         <div className="max-w-7xl mx-auto px-4 sm:px-6">
           <FaqPageJsonLd items={solutionsFaq} />
           <PageFaqSection items={solutionsFaq} title="Frequently Asked Questions" highlight="Solutions Overview" />

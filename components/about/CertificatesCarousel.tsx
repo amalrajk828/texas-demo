@@ -211,12 +211,12 @@ export default function CertificatesCarousel() {
                 className="absolute inset-0 m-auto w-[250px] xs:w-[275px] sm:w-[315px] lg:w-[335px] aspect-[1/1.414] max-w-full"
               >
                 {/* A4 Portrait Card Container */}
-                <div className="relative w-full h-full rounded-[14px] bg-white border border-black/[0.08] shadow-[0_16px_36px_-12px_rgba(0,0,0,0.12)] overflow-hidden p-[10px] flex flex-col">
+                <div className="relative w-full h-full rounded-[14px] bg-[#DCDCD9] border border-[#C8C8C5] shadow-[0_16px_36px_-12px_rgba(0,0,0,0.12)] overflow-hidden p-[10px] flex flex-col">
                   {/* Thin Red Top Line #8a302f (3px) */}
                   <div className="absolute top-0 inset-x-0 h-[3px] bg-[#8a302f] z-20 pointer-events-none" />
 
                   {/* Inner Certificate Container (Full certificate with object-contain & 10px padding) */}
-                  <div className="relative w-full h-full bg-white flex items-center justify-center overflow-hidden rounded-[8px]">
+                  <div className="relative w-full h-full bg-[#DCDCD9] flex items-center justify-center overflow-hidden rounded-[8px]">
                     <Image
                       src={cert.imageSrc}
                       alt={cert.alt}

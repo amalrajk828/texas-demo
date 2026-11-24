@@ -491,7 +491,7 @@ export default function ProductStackShowcase({ config }: ProductStackShowcasePro
         .flow-showcase-container {
           position: relative;
           width: 100%;
-          background: #ece9e5;
+          background: #ffffff;
           margin: 0;
           padding: 0;
         }
@@ -500,7 +500,7 @@ export default function ProductStackShowcase({ config }: ProductStackShowcasePro
         .flow-track {
           position: relative;
           height: ${Math.max(300, cards.length * 115)}vh;
-          background: #ece9e5;
+          background: #ffffff;
           scroll-margin-top: var(--nav-h);
         }
         .flow-stage {
@@ -508,7 +508,7 @@ export default function ProductStackShowcase({ config }: ProductStackShowcasePro
           top: var(--nav-h);
           height: calc(100vh - var(--nav-h));
           overflow: hidden;
-          background: #ece9e5;
+          background: #ffffff;
           perspective: 1700px;
           perspective-origin: 50% 40%;
         }
@@ -820,7 +820,7 @@ export default function ProductStackShowcase({ config }: ProductStackShowcasePro
         .flow-trusted-section {
           position: relative;
           width: 100%;
-          background: #ece9e5;
+          background: #ffffff;
           min-height: calc(100vh - var(--nav-h));
           scroll-margin-top: var(--nav-h);
           padding-top: calc(var(--nav-h) + clamp(24px, 4vh, 48px));

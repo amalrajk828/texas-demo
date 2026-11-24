@@ -95,7 +95,7 @@ export default function SolutionPage({ data }: SolutionPageProps) {
   };
 
   return (
-    <div className="w-full bg-[#e8e8e6] text-[#1a1a1a]">
+    <div className="w-full bg-[#ffffff] text-[#1a1a1a]">
       {/* ── 1. PageHero ── */}
       <PageHero
         eyebrow={category}

@@ -119,9 +119,12 @@ export default function GlassNavbar({
 
   // Close menus on route change
   useEffect(() => {
-    setMobileOpen(false);
-    setActiveDropdown(null);
-    setMobileExpanded(null);
+    const raf = requestAnimationFrame(() => {
+      setMobileOpen(false);
+      setActiveDropdown(null);
+      setMobileExpanded(null);
+    });
+    return () => cancelAnimationFrame(raf);
   }, [pathname]);
 
   // Lock body scroll when mobile drawer is open

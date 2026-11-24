@@ -188,7 +188,7 @@ export default function PartnersWallSection({
         const hasLink = Boolean(p.href && p.href.trim().length > 0);
 
         const cardContent = (
-          <span className="absolute inset-0 rounded-[14px] bg-white border border-black/[0.06] shadow-[0_4px_16px_rgba(0,0,0,0.04)] p-4 flex items-center justify-center transition-all duration-300 ease-out group-hover:z-20 group-hover:scale-[1.12] group-hover:shadow-[0_16px_32px_rgba(0,0,0,0.12)] group-focus-visible:z-20 group-focus-visible:scale-[1.12] group-focus-visible:ring-2 group-focus-visible:ring-[#8a302f] group-focus-visible:ring-offset-2 overflow-hidden">
+          <span className="absolute inset-0 rounded-[14px] bg-[#DCDCD9] border border-[#C8C8C5] shadow-[0_4px_16px_rgba(0,0,0,0.04)] p-4 flex items-center justify-center transition-all duration-300 ease-out group-hover:z-20 group-hover:scale-[1.12] group-hover:shadow-[0_16px_32px_rgba(0,0,0,0.12)] group-focus-visible:z-20 group-focus-visible:scale-[1.12] group-focus-visible:ring-2 group-focus-visible:ring-[#8a302f] group-focus-visible:ring-offset-2 overflow-hidden">
             {/* Thin Red Top Line (#8a302f) appearing on hover or focus */}
             <span className="absolute top-0 inset-x-0 h-[3px] bg-[#8a302f] opacity-0 transition-opacity duration-300 group-hover:opacity-100 group-focus-visible:opacity-100 pointer-events-none" />
 
@@ -244,7 +244,7 @@ export default function PartnersWallSection({
 
   return (
     <section
-      className={`py-16 sm:py-24 px-4 sm:px-6 w-full [--wall-bg:#e8e7e5] bg-[var(--wall-bg)] text-[#1a1a1a] overflow-hidden ${className}`}
+      className={`py-16 sm:py-24 px-4 sm:px-6 w-full [--wall-bg:#ffffff] bg-[var(--wall-bg)] text-[#1a1a1a] overflow-hidden ${className}`}
     >
       <div className="max-w-6xl mx-auto">
         {/* ── Center Header (Eyebrow, Heading, Paragraph) ── */}

@@ -315,11 +315,11 @@ export default function WhatWeOfferSection() {
     >
       <style dangerouslySetInnerHTML={{ __html: `
         .wwo-wrapper {
-          --wwo-bg: #e8e8e6;
+          --wwo-bg: #ffffff;
           --wwo-ink: #1a1a1a;
           --wwo-sub: #5a5754;
           --wwo-maroon: #8b2e2e;
-          --wwo-card: #ffffff;
+          --wwo-card: #DCDCD9;
           --wwo-tint: #f6ebea;
           position: relative;
         }

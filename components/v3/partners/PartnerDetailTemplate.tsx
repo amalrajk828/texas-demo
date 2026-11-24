@@ -6,14 +6,10 @@ import Link from "next/link";
 import {
   ExternalLink,
   CheckCircle2,
-  Globe2,
   Building2,
   ArrowRight,
-  ShieldCheck,
-  Layers,
 } from "lucide-react";
 import {
-  PageHero,
   Section,
   Container,
   SectionHeading,
@@ -39,7 +35,7 @@ export default function PartnerDetailTemplate({ partner }: PartnerDetailTemplate
       />
 
       {/* ── 1. Page Hero with Partner Logo ── */}
-      <section className="relative bg-[#e8e8e6] pt-32 pb-16 lg:pb-24 border-b border-black/[0.06] overflow-hidden">
+      <section className="relative bg-[#ffffff] pt-32 pb-16 lg:pb-24 border-b border-black/[0.06] overflow-hidden">
         <Container>
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-center">
             {/* Left: Info */}
@@ -121,7 +117,7 @@ export default function PartnerDetailTemplate({ partner }: PartnerDetailTemplate
               {partner.features.map((feature, idx) => (
                 <div
                   key={idx}
-                  className="rounded-[24px] bg-[#f8f7f5] p-6 border border-black/[0.06] flex items-start gap-4 hover:-translate-y-1 transition-transform"
+                  className="rounded-[24px] bg-[#ffffff] p-6 border border-[#e5e5e5] shadow-[0_4px_16px_rgba(0,0,0,0.04)] flex items-start gap-4 hover:-translate-y-1 transition-transform"
                 >
                   <div className="w-9 h-9 rounded-[10px] bg-[#6b191b]/[0.08] text-[#6b191b] flex items-center justify-center shrink-0 mt-0.5">
                     <CheckCircle2 className="w-5 h-5" />

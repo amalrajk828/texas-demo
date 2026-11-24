@@ -25,11 +25,11 @@ export default function Card({
 }: CardProps) {
   const variantStyles = {
     glass:
-      "bg-white/75 backdrop-blur-md border border-black/[0.06] text-[#1a1a1a] shadow-[0_20px_40px_-15px_rgba(0,0,0,0.07)]",
+      "bg-[#DCDCD9] backdrop-blur-md border border-[#C8C8C5] text-[#1a1a1a] shadow-[0_20px_40px_-15px_rgba(0,0,0,0.07)]",
     white:
-      "bg-white border border-black/[0.07] text-[#1a1a1a] shadow-[0_20px_40px_-15px_rgba(0,0,0,0.06)]",
+      "bg-[#DCDCD9] border border-[#C8C8C5] text-[#1a1a1a] shadow-[0_20px_40px_-15px_rgba(0,0,0,0.06)]",
     solid:
-      "bg-[#f3f3f1] border border-black/[0.05] text-[#1a1a1a]",
+      "bg-[#DCDCD9] border border-[#C8C8C5] text-[#1a1a1a]",
     dark:
       "bg-[#1c1c1c] border border-white/[0.08] text-white shadow-[0_20px_40px_-15px_rgba(0,0,0,0.35)]",
   };

@@ -43,7 +43,7 @@ export default function CTASection({
   const isWhite = variant === "white" || variant === "light";
 
   return (
-    <section className={`py-16 sm:py-24 bg-[#e8e8e6] ${className}`}>
+    <section className={`py-16 sm:py-24 bg-[#ffffff] ${className}`}>
       <Container>
         <div
           className={`relative rounded-[28px] overflow-hidden p-8 sm:p-12 lg:p-16 text-center ${

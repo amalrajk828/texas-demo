@@ -268,7 +268,7 @@ export default function SocialMediaPage() {
                 href={item.url}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="group rounded-[24px] bg-[#f8f7f5] hover:bg-white p-5 sm:p-6 border border-black/[0.06] hover:shadow-[0_15px_30px_rgba(0,0,0,0.06)] hover:-translate-y-1 transition-all duration-300 flex flex-col justify-between"
+                className="group rounded-[24px] bg-white p-5 sm:p-6 border border-[#e5e5e5] shadow-[0_2px_8px_rgba(0,0,0,0.03)] hover:shadow-[0_15px_30px_rgba(0,0,0,0.06)] hover:-translate-y-1 transition-all duration-300 flex flex-col justify-between"
               >
                 <div>
                   <div className="flex items-center justify-between mb-3">

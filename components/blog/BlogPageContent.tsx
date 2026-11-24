@@ -88,7 +88,7 @@ export default function BlogPageContent({ allPosts }: Props) {
   }, [currentPage]);
 
   return (
-    <div className="bg-[#e8e8e6] font-sans antialiased text-[#1a1a1a]">
+    <div className="bg-[#ffffff] font-sans antialiased text-[#1a1a1a]">
       {/* ══════════════════════════════════════════════════════════════
           1. FEATURED ARTICLE
       ══════════════════════════════════════════════════════════════ */}

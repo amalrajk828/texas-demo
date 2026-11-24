@@ -15,7 +15,7 @@ export default function PageFaqSection({
   if (!items || items.length === 0) return null;
 
   return (
-    <section className="bg-[#f4f5f8] py-20 lg:py-24">
+    <section className="bg-white py-20 lg:py-24">
       <div className="max-w-7xl mx-auto px-4 sm:px-6">
         <div className="flex items-center gap-2.5 mb-4">
           <span className="w-5 h-px bg-[#0891B2]" />
@@ -31,7 +31,7 @@ export default function PageFaqSection({
           {items.map((item) => (
             <details
               key={item.q}
-              className="group bg-white border border-[#e8eaf0] rounded-2xl overflow-hidden transition-all duration-200 open:border-[#e7212b]/25 open:shadow-lg"
+              className="group bg-[#DCDCD9] border border-[#C8C8C5] rounded-2xl overflow-hidden transition-all duration-200 open:border-[#e7212b]/25 open:shadow-lg"
             >
               <summary className="flex items-center justify-between p-5 lg:p-6 cursor-pointer list-none">
                 <span className="text-[15px] font-semibold text-[#0B0D26] pr-4 leading-snug">

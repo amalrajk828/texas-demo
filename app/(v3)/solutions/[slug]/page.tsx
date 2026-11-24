@@ -278,7 +278,7 @@ export default async function SolutionDetailPage({
   const solutionData = SOLUTIONS_PAGE_DATA[slug];
 
   return (
-    <div className="min-h-screen bg-[#e8e8e6] font-sans antialiased">
+    <div className="min-h-screen bg-[#ffffff] font-sans antialiased">
       <BreadcrumbJsonLd
         items={[
           { name: "Home", href: "/" },

@@ -5,17 +5,11 @@ import Image from "next/image";
 import Link from "next/link";
 import {
   Download,
-  ExternalLink,
   CheckCircle2,
-  Cpu,
   Layers,
-  Sparkles,
   ArrowRight,
-  ShieldCheck,
-  FileText,
 } from "lucide-react";
 import {
-  PageHero,
   Section,
   Container,
   SectionHeading,
@@ -81,7 +75,7 @@ export default function ProductDetailTemplate({
       {faqs.length > 0 && <FaqPageJsonLd items={faqs} />}
 
       {/* ── 1. Page Hero with Product Image & Key Specs ── */}
-      <section className="relative bg-[#e8e8e6] pt-32 pb-16 lg:pb-24 border-b border-black/[0.06] overflow-hidden">
+      <section className="relative bg-[#ffffff] pt-32 pb-16 lg:pb-24 border-b border-black/[0.06] overflow-hidden">
         <Container>
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-center">
             {/* Left: Product Info */}
@@ -213,7 +207,7 @@ export default function ProductDetailTemplate({
                 {product.subBlocks.map((block) => (
                   <div
                     key={block.id}
-                    className="rounded-[30px] bg-[#f8f7f5] p-6 sm:p-8 lg:p-10 border border-black/[0.06] flex flex-col lg:flex-row gap-8 items-center"
+                    className="rounded-[30px] bg-[#ffffff] p-6 sm:p-8 lg:p-10 border border-[#e5e5e5] shadow-[0_4px_16px_rgba(0,0,0,0.04)] flex flex-col lg:flex-row gap-8 items-center"
                   >
                     {block.image && (
                       <div className="w-full lg:w-1/3 aspect-[4/3] relative rounded-[20px] overflow-hidden bg-white p-4 border border-black/[0.04] shrink-0">

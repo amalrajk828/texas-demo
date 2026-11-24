@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useState, useEffect, useRef } from "react";
+import React, { useState, useEffect, useRef, useCallback } from "react";
 import Link from "next/link";
 import Image from "next/image";
 import { usePathname } from "next/navigation";
@@ -103,7 +103,7 @@ export default function Header() {
     setMobileExpanded(null);
   };
 
-  const isLinkActive = (item: NavItem) => {
+  const isLinkActive = useCallback((item: NavItem) => {
     const current = pathname || "/";
     if (item.href === "/") {
       return current === "/";
@@ -179,26 +179,13 @@ export default function Header() {
     }
 
     return false;
-  };
+  }, [pathname]);
 
-  const getActiveItem = () => {
+  const getActiveItem = useCallback(() => {
     return MAIN_NAV.find((item) => isLinkActive(item)) || null;
-  };
+  }, [isLinkActive]);
 
-  const getTargetItem = () => {
-    if (hoveredIdRef.current) {
-      return MAIN_NAV.find((item) => item.id === hoveredIdRef.current) || null;
-    }
-    if (clickedIdRef.current) {
-      return MAIN_NAV.find((item) => item.id === clickedIdRef.current) || null;
-    }
-    if (optimisticActiveId) {
-      return MAIN_NAV.find((item) => item.id === optimisticActiveId) || null;
-    }
-    return getActiveItem();
-  };
-
-  const syncIndicator = (targetId?: string | null, immediate = false) => {
+  const syncIndicator = useCallback((targetId?: string | null, immediate = false) => {
     if (!trackRef.current) return;
 
     const idToUse =
@@ -241,7 +228,7 @@ export default function Header() {
       width: `${Math.round(width * 10) / 10}px`,
       opacity: 1,
     });
-  };
+  }, [optimisticActiveId, getActiveItem]);
 
   // Sync on pathname change
   useEffect(() => {
@@ -250,7 +237,7 @@ export default function Header() {
     requestAnimationFrame(() => {
       syncIndicator(undefined, false);
     });
-  }, [pathname]);
+  }, [pathname, syncIndicator]);
 
   // Initial measurement, document fonts, resize observer
   useEffect(() => {
@@ -318,7 +305,7 @@ export default function Header() {
         track.removeEventListener("focusout", handleFocusOut);
       }
     };
-  }, []);
+  }, [syncIndicator]);
 
   const handleItemHover = (item: NavItem) => {
     hoveredIdRef.current = item.id;

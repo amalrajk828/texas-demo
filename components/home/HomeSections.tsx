@@ -6,7 +6,6 @@ import { Reveal } from "@/components/v3/motion/Reveal";
 import EyebrowPill from "@/components/v3/EyebrowPill";
 import ServiceCards from "@/components/home/ServiceCards";
 import HomeCtaCard from "@/components/home/HomeCtaCard";
-import TearDivider from "@/components/home/TearDivider";
 import PartnersWallSection from "@/components/partners/PartnersWallSection";
 
 export default function HomeSections() {
@@ -32,7 +31,7 @@ export default function HomeSections() {
 
           <CardGrid max={4} className="about-stats-grid">
             <Reveal delay={0}>
-              <article className="stat-card glass-hover-card">
+              <article className="stat-card card-wave-hover">
                 <div className="card-content stat-card-content">
                   <div className="stat-number">18+</div>
                   <div className="stat-title">Years Industrial Precision</div>
@@ -44,7 +43,7 @@ export default function HomeSections() {
               </article>
             </Reveal>
             <Reveal delay={0.08}>
-              <article className="stat-card glass-hover-card">
+              <article className="stat-card card-wave-hover">
                 <div className="card-content stat-card-content">
                   <div className="stat-number">200+</div>
                   <div className="stat-title">Completed Skid Packages</div>
@@ -56,7 +55,7 @@ export default function HomeSections() {
               </article>
             </Reveal>
             <Reveal delay={0.16}>
-              <article className="stat-card glass-hover-card">
+              <article className="stat-card card-wave-hover">
                 <div className="card-content stat-card-content">
                   <div className="stat-number">16+</div>
                   <div className="stat-title">Global OEM Alliances</div>
@@ -68,7 +67,7 @@ export default function HomeSections() {
               </article>
             </Reveal>
             <Reveal delay={0.24}>
-              <article className="stat-card glass-hover-card">
+              <article className="stat-card card-wave-hover">
                 <div className="card-content stat-card-content">
                   <div className="stat-number">100%</div>
                   <div className="stat-title">Certified Quality &amp; Safety</div>
@@ -90,9 +89,6 @@ export default function HomeSections() {
           </Reveal>
         </div>
       </section>
-
-      {/* Torn Paper / Page Crack Divider */}
-      <TearDivider />
 
       {/* Services / Features Section */}
       <section id="services" className="content-section">
@@ -123,8 +119,6 @@ export default function HomeSections() {
         </div>
       </section>
 
-      <TearDivider />
-
       {/* Industries Section */}
       <section id="industries" className="content-section">
         <div className="section-container">
@@ -141,7 +135,7 @@ export default function HomeSections() {
 
           <CardGrid max={4} className="industries-grid">
             <Reveal delay={0}>
-              <article className="industry-card glass-hover-card">
+              <article className="industry-card card-wave-hover">
                 <div className="card-content industry-card-content">
                   <div className="industry-badge">Upstream</div>
                   <h3 className="industry-title">Oil &amp; Gas Production</h3>
@@ -153,37 +147,37 @@ export default function HomeSections() {
               </article>
             </Reveal>
             <Reveal delay={0.08}>
-              <article className="industry-card glass-hover-card">
+              <article className="industry-card card-wave-hover">
                 <div className="card-content industry-card-content">
                   <div className="industry-badge">Downstream</div>
                   <h3 className="industry-title">Refining &amp; Petrochemicals</h3>
                   <p className="industry-desc">
-                    Clean hydrocarbon export lines, ethylene &amp; propylene mass flow metering, and
-                    high-pressure steam distribution.
+                    Refinery process control, custody transfer loading arms, blending skids, and continuous
+                    emission monitoring.
                   </p>
                 </div>
               </article>
             </Reveal>
             <Reveal delay={0.16}>
-              <article className="industry-card glass-hover-card">
+              <article className="industry-card card-wave-hover">
                 <div className="card-content industry-card-content">
                   <div className="industry-badge">Utilities</div>
                   <h3 className="industry-title">Power &amp; Desalination</h3>
                   <p className="industry-desc">
-                    High-volume seawater intake monitoring, condensate return, boiler feed water, and
-                    heavy fuel oil delivery systems.
+                    Thermal power plant steam and feedwater metering, RO desalination plant telemetry,
+                    and turbine health monitoring.
                   </p>
                 </div>
               </article>
             </Reveal>
             <Reveal delay={0.24}>
-              <article className="industry-card glass-hover-card">
+              <article className="industry-card card-wave-hover">
                 <div className="card-content industry-card-content">
                   <div className="industry-badge">Offshore</div>
                   <h3 className="industry-title">Marine Terminals &amp; Bunkering</h3>
                   <p className="industry-desc">
-                    VLCC tanker loading, single point mooring (SPM) buoys, and continuous high-throughput
-                    fiscal custody verification.
+                    Offshore SPM buoy metering, jetty bunkering skids, tanker loading verification, and
+                    ballast water monitoring.
                   </p>
                 </div>
               </article>
@@ -200,8 +194,6 @@ export default function HomeSections() {
         </div>
       </section>
 
-      <TearDivider />
-
       {/* Products / Technical Specifications Section */}
       <section id="products" className="content-section">
         <div className="section-container">
@@ -217,72 +209,103 @@ export default function HomeSections() {
             </div>
           </Reveal>
 
-          <Reveal delay={0.05}>
-            <div className="specs-card card-accent" id="specs">
-              <table className="specs-table">
-                <thead>
-                  <tr>
-                    <th scope="col">Parameter</th>
-                    <th scope="col">Specification Detail</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr>
-                    <td className="spec-label">Piping &amp; Fabrication Standards</td>
-                    <td className="spec-value">
-                      <strong>ASME B31.3 / B31.4 / B31.8</strong> &bull; NACE MR0175 sour service
-                      compliance
-                    </td>
-                  </tr>
-                  <tr>
-                    <td className="spec-label">Line Sizes &amp; Flow Capacity</td>
-                    <td className="spec-value">
-                      <strong>DN50 – DN1200</strong> (2&Prime; through 48&Prime;) &bull; Up to{" "}
-                      <strong>8,500 m&sup3;/hr</strong> liquid / <strong>50 MMSCFD</strong> gas
-                    </td>
-                  </tr>
-                  <tr>
-                    <td className="spec-label">Fluid Compatibility</td>
-                    <td className="spec-value">
-                      Crude Oil, Wet Gas, Condensate, Refined Hydrocarbons, High H2S Sour Streams
-                    </td>
-                  </tr>
-                  <tr>
-                    <td className="spec-label">Measurement Accuracy</td>
-                    <td className="spec-value">
-                      <strong>&plusmn;0.15 %</strong> of measured volume (repeatability &le;
-                      &plusmn;0.02 % to API MPMS Ch. 5.8)
-                    </td>
-                  </tr>
-                  <tr>
-                    <td className="spec-label">Operating Pressure Rating</td>
-                    <td className="spec-value">
-                      Up to <strong>420 bar</strong> (ANSI Class 150 to Class 2500 / API 10,000 psi)
-                    </td>
-                  </tr>
-                  <tr>
-                    <td className="spec-label">NDT &amp; Quality Verification</td>
-                    <td className="spec-value">
-                      <strong>100% RT / UT</strong> flange &amp; weld verification &bull; FAT / SAT at
-                      Ahmadi Facility
-                    </td>
-                  </tr>
-                  <tr>
-                    <td className="spec-label">Signal &amp; Telemetry Outputs</td>
-                    <td className="spec-value">
-                      Modbus TCP/RTU, OPC UA, HART 4–20 mA, PROFIBUS DP, Dual Pulse (API 5.5)
-                    </td>
-                  </tr>
-                  <tr>
-                    <td className="spec-label">Standards &amp; Certifications</td>
-                    <td className="spec-value">
-                      API MPMS, AGA Report No. 9, OIML R117 / R137, ATEX / IECEx Zone 1 Ex d IIC T6
-                    </td>
-                  </tr>
-                </tbody>
-              </table>
-            </div>
-          </Reveal>
+          <div className="products-preview-grid">
+            <Reveal delay={0}>
+              <div className="product-spec-unified-table">
+                {/* Master Columns Header Bar (Matching Reference Spec Table) */}
+                <div className="product-spec-columns-bar">
+                  <span className="product-spec-col-key">PARAMETER</span>
+                  <span className="product-spec-col-val">SPECIFICATION DETAIL</span>
+                </div>
+
+                <div className="product-spec-list">
+                  {/* Package 01 */}
+                  <div className="product-spec-package-divider">
+                    <div className="product-spec-package-info">
+                      <span className="product-spec-package-badge">Package 01</span>
+                      <h3 className="product-spec-package-name">Fiscal Metering &amp; Custody Transfer Skids</h3>
+                    </div>
+                    <Link href="/products/" className="product-spec-package-link">
+                      <span>View Technical Specs</span>
+                      <span>&rarr;</span>
+                    </Link>
+                  </div>
+                  <div className="spec-row">
+                    <span className="spec-key">Design Standard</span>
+                    <span className="spec-val">API MPMS, AGA, ISO 5167</span>
+                  </div>
+                  <div className="spec-row">
+                    <span className="spec-key">Meter Types</span>
+                    <span className="spec-val">Ultrasonic, Coriolis, Turbine</span>
+                  </div>
+                  <div className="spec-row">
+                    <span className="spec-key">Uncertainty</span>
+                    <span className="spec-val">&plusmn;0.15% to &plusmn;0.25%</span>
+                  </div>
+                  <div className="spec-row">
+                    <span className="spec-key">Pressure Class</span>
+                    <span className="spec-val">ANSI 150# through 2500#</span>
+                  </div>
+
+                  {/* Package 02 */}
+                  <div className="product-spec-package-divider">
+                    <div className="product-spec-package-info">
+                      <span className="product-spec-package-badge">Package 02</span>
+                      <h3 className="product-spec-package-name">PLC &amp; SCADA Process Automation Systems</h3>
+                    </div>
+                    <Link href="/products/" className="product-spec-package-link">
+                      <span>View Technical Specs</span>
+                      <span>&rarr;</span>
+                    </Link>
+                  </div>
+                  <div className="spec-row">
+                    <span className="spec-key">PLC Platforms</span>
+                    <span className="spec-val">Mitsubishi iQ-R, Q-Series, FX5U</span>
+                  </div>
+                  <div className="spec-row">
+                    <span className="spec-key">SCADA Suite</span>
+                    <span className="spec-val">ICONICS GENESIS64, MC Works64</span>
+                  </div>
+                  <div className="spec-row">
+                    <span className="spec-key">Safety Rating</span>
+                    <span className="spec-val">SIL-2 / SIL-3 IEC 61508</span>
+                  </div>
+                  <div className="spec-row">
+                    <span className="spec-key">Protocols</span>
+                    <span className="spec-val">Modbus TCP, OPC UA, CC-Link IE</span>
+                  </div>
+
+                  {/* Package 03 */}
+                  <div className="product-spec-package-divider">
+                    <div className="product-spec-package-info">
+                      <span className="product-spec-package-badge">Package 03</span>
+                      <h3 className="product-spec-package-name">Industrial Sensors &amp; Analyzers</h3>
+                    </div>
+                    <Link href="/products/" className="product-spec-package-link">
+                      <span>View Technical Specs</span>
+                      <span>&rarr;</span>
+                    </Link>
+                  </div>
+                  <div className="spec-row">
+                    <span className="spec-key">Gas Analyzers</span>
+                    <span className="spec-val">SICK GM32, GM35, GM700 In-Situ</span>
+                  </div>
+                  <div className="spec-row">
+                    <span className="spec-key">CEMS Solutions</span>
+                    <span className="spec-val">EN 15267 / QAL1 Compliant</span>
+                  </div>
+                  <div className="spec-row">
+                    <span className="spec-key">Dust Monitors</span>
+                    <span className="spec-val">DUSTHUNTER T100 / T200</span>
+                  </div>
+                  <div className="spec-row">
+                    <span className="spec-key">Enclosure</span>
+                    <span className="spec-val">ATEX / IECEx Zone 1 &amp; 2</span>
+                  </div>
+                </div>
+              </div>
+            </Reveal>
+          </div>
 
           <Reveal delay={0.1}>
             <div style={{ textAlign: "center", marginTop: "36px" }}>
@@ -293,8 +316,6 @@ export default function HomeSections() {
           </Reveal>
         </div>
       </section>
-
-      <TearDivider />
 
       {/* Clients Section */}
       <section id="clients" className="content-section">
@@ -312,101 +333,106 @@ export default function HomeSections() {
 
           <div className="clients-logo-grid">
             <Reveal delay={0}>
-              <div className="client-logo-item card-interactive" title="Kuwait Oil Company (KOC)">
+              <div className="client-logo-item">
                 <div className="client-logo-box">
-                  <div className="client-logo-inner" style={{ transform: "scale(0.95)" }}>
+                  <div className="client-logo-inner">
                     <Image
                       src="/clients/koc.svg"
-                      alt="Kuwait Oil Company"
+                      alt="Kuwait Oil Company (KOC)"
                       className="client-logo-img"
                       fill
                       unoptimized
-                      sizes="(max-width: 640px) 45vw, (max-width: 1024px) 30vw, 160px"
+                      sizes="(max-width: 640px) 45vw, (max-width: 1024px) 30vw, 150px"
                     />
                   </div>
                 </div>
                 <span className="client-logo-name">Kuwait Oil Company (KOC)</span>
               </div>
             </Reveal>
-            <Reveal delay={0.07}>
-              <div className="client-logo-item card-interactive" title="Kuwait National Petroleum Company (KNPC)">
+
+            <Reveal delay={0.06}>
+              <div className="client-logo-item">
                 <div className="client-logo-box">
-                  <div className="client-logo-inner" style={{ transform: "scale(0.95)" }}>
+                  <div className="client-logo-inner">
                     <Image
                       src="/clients/knpc.svg"
-                      alt="Kuwait National Petroleum Company"
+                      alt="Kuwait National Petroleum Company (KNPC)"
                       className="client-logo-img"
                       fill
                       unoptimized
-                      sizes="(max-width: 640px) 45vw, (max-width: 1024px) 30vw, 160px"
+                      sizes="(max-width: 640px) 45vw, (max-width: 1024px) 30vw, 150px"
                     />
                   </div>
                 </div>
                 <span className="client-logo-name">KNPC</span>
               </div>
             </Reveal>
-            <Reveal delay={0.14}>
-              <div className="client-logo-item card-interactive" title="Kuwait Gulf Oil Company (KGOC)">
+
+            <Reveal delay={0.12}>
+              <div className="client-logo-item">
                 <div className="client-logo-box">
-                  <div className="client-logo-inner" style={{ transform: "scale(1.15)" }}>
+                  <div className="client-logo-inner">
                     <Image
                       src="/clients/kgoc-clean.png"
-                      alt="Kuwait Gulf Oil Company"
+                      alt="Kuwait Gulf Oil Company (KGOC)"
                       className="client-logo-img"
                       fill
                       unoptimized
-                      sizes="(max-width: 640px) 45vw, (max-width: 1024px) 30vw, 160px"
+                      sizes="(max-width: 640px) 45vw, (max-width: 1024px) 30vw, 150px"
                     />
                   </div>
                 </div>
                 <span className="client-logo-name">KGOC</span>
               </div>
             </Reveal>
-            <Reveal delay={0.21}>
-              <div className="client-logo-item card-interactive" title="Ministry of Electricity & Water (MEW)">
+
+            <Reveal delay={0.18}>
+              <div className="client-logo-item">
                 <div className="client-logo-box">
-                  <div className="client-logo-inner" style={{ transform: "scale(1.15)" }}>
+                  <div className="client-logo-inner">
                     <Image
                       src="/clients/mew.svg"
-                      alt="Ministry of Electricity and Water"
+                      alt="Ministry of Electricity & Water & Renewable Energy"
                       className="client-logo-img"
                       fill
                       unoptimized
-                      sizes="(max-width: 640px) 45vw, (max-width: 1024px) 30vw, 160px"
+                      sizes="(max-width: 640px) 45vw, (max-width: 1024px) 30vw, 150px"
                     />
                   </div>
                 </div>
                 <span className="client-logo-name">MEW Kuwait</span>
               </div>
             </Reveal>
-            <Reveal delay={0.28}>
-              <div className="client-logo-item card-interactive" title="Saudi Arabian Chevron">
+
+            <Reveal delay={0.24}>
+              <div className="client-logo-item">
                 <div className="client-logo-box">
-                  <div className="client-logo-inner" style={{ transform: "scale(0.92)" }}>
+                  <div className="client-logo-inner">
                     <Image
                       src="/clients/chevron.svg"
-                      alt="Saudi Arabian Chevron"
+                      alt="Chevron"
                       className="client-logo-img"
                       fill
                       unoptimized
-                      sizes="(max-width: 640px) 45vw, (max-width: 1024px) 30vw, 160px"
+                      sizes="(max-width: 640px) 45vw, (max-width: 1024px) 30vw, 150px"
                     />
                   </div>
                 </div>
                 <span className="client-logo-name">Chevron</span>
               </div>
             </Reveal>
-            <Reveal delay={0.35}>
-              <div className="client-logo-item card-interactive" title="Kuwait Cement Company">
+
+            <Reveal delay={0.3}>
+              <div className="client-logo-item">
                 <div className="client-logo-box">
-                  <div className="client-logo-inner" style={{ transform: "scale(1.06)" }}>
+                  <div className="client-logo-inner">
                     <Image
                       src="/clients/kuwaitcement.svg"
                       alt="Kuwait Cement Company"
                       className="client-logo-img"
                       fill
                       unoptimized
-                      sizes="(max-width: 640px) 45vw, (max-width: 1024px) 30vw, 160px"
+                      sizes="(max-width: 640px) 45vw, (max-width: 1024px) 30vw, 150px"
                     />
                   </div>
                 </div>
@@ -425,14 +451,10 @@ export default function HomeSections() {
         </div>
       </section>
 
-      <TearDivider />
-
       {/* Authorized Partnerships & Dealerships Section */}
       <div id="partners">
         <PartnersWallSection />
       </div>
-
-      <TearDivider />
 
       {/* Blog / Engineering Insights Section */}
       <section id="blog" className="content-section">
@@ -450,7 +472,7 @@ export default function HomeSections() {
 
           <CardGrid max={3}>
             <Reveal delay={0}>
-              <article className="blog-card glass-hover-card">
+              <article className="blog-card card-wave-hover">
                 <div className="card-content blog-card-content">
                   <div className="blog-meta">Flow Measurement &bull; 10 min read</div>
                   <h3 className="blog-title">
@@ -468,7 +490,7 @@ export default function HomeSections() {
             </Reveal>
 
             <Reveal delay={0.08}>
-              <article className="blog-card glass-hover-card">
+              <article className="blog-card card-wave-hover">
                 <div className="card-content blog-card-content">
                   <div className="blog-meta">Industrial Automation &bull; 8 min read</div>
                   <h3 className="blog-title">
@@ -486,7 +508,7 @@ export default function HomeSections() {
             </Reveal>
 
             <Reveal delay={0.16}>
-              <article className="blog-card glass-hover-card">
+              <article className="blog-card card-wave-hover">
                 <div className="card-content blog-card-content">
                   <div className="blog-meta">NDT &amp; Inspection &bull; 10 min read</div>
                   <h3 className="blog-title">
@@ -513,8 +535,6 @@ export default function HomeSections() {
           </Reveal>
         </div>
       </section>
-
-      <TearDivider />
 
       {/* Call to Action / Contact Us Section */}
       <section id="contact" className="content-section cta-section">

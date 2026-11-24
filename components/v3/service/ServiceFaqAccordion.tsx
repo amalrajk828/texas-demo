@@ -27,8 +27,8 @@ export default function ServiceFaqAccordion({ items }: ServiceFaqAccordionProps)
             key={idx}
             className={`rounded-[18px] transition-all duration-200 border ${
               isOpen
-                ? "bg-white border-[#6b191b]/35 shadow-[0_12px_32px_-12px_rgba(107,25,27,0.12)]"
-                : "bg-white/85 hover:bg-white border-black/[0.06] shadow-[0_6px_20px_-8px_rgba(0,0,0,0.04)]"
+                ? "bg-[#DCDCD9] border-[#6b191b]/35 shadow-[0_12px_32px_-12px_rgba(107,25,27,0.12)]"
+                : "bg-[#DCDCD9] hover:bg-[#d4d4d1] border-[#C8C8C5] shadow-[0_6px_20px_-8px_rgba(0,0,0,0.04)]"
             }`}
           >
             <h3>
