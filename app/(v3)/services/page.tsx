@@ -2,11 +2,9 @@ import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
 import {
-  PageHero,
   Section,
   Container,
   SectionHeading,
-  CTASection,
 } from "@/components/v3";
 import ServicesAllGrid from "@/components/service/ServicesAllGrid";
 import ServiceFaqAccordion from "@/components/v3/service/ServiceFaqAccordion";
@@ -15,6 +13,8 @@ import { ServiceJsonLd } from "@/components/schema/ServiceJsonLd";
 import { SpeakableJsonLd } from "@/components/schema/SpeakableJsonLd";
 import { FaqPageJsonLd } from "@/components/schema/FaqPageJsonLd";
 import { servicesListingFaq } from "@/lib/pageFaqData";
+import ServiceHero from "@/components/v3/service/ServiceHero";
+import ServiceCta from "@/components/v3/service/ServiceCta";
 
 export const metadata: Metadata = {
   title: "Industrial Services in Kuwait & UAE",
@@ -107,11 +107,15 @@ export default function ServicesPage() {
       />
 
       {/* ── 1. Page Hero ── */}
-      <PageHero
+      <ServiceHero
         title="Industrial Engineering Services in Kuwait & UAE"
         subtitle="Turnkey flow measurement skids, certified NDT inspections, and advanced PLC/SCADA industrial process automation for energy and heavy manufacturing sectors across the GCC."
-        badge="Full Engineering Spectrum"
+        category="Full Engineering Spectrum"
+        breadcrumbs={[{ label: "Home", href: "/" }, { label: "Services" }]}
+        primaryCta={{ label: "Discuss Your Project", href: "/contacts/" }}
+        secondaryCta={{ label: "Explore Our Services", href: "#all-services" }}
         stats={STATS}
+        listing
       />
 
       {/* ── 2. ISO Certification Trust Strip ── */}
@@ -169,8 +173,7 @@ export default function ServicesPage() {
       <FaqPageJsonLd items={servicesListingFaq} />
 
       {/* ── 5. CTA Section ── */}
-      <CTASection
-        variant="white"
+      <ServiceCta
         eyebrow="Tender & Proposal Inquiries"
         title="Ready to Discuss Your Project Specifications?"
         description="Speak directly with our engineering department in Kuwait and Dubai for technical sizing, commercial proposals, and tender specifications."
