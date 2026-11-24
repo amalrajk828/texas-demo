@@ -29,8 +29,10 @@ export default function CategoryMountainGrid({ categories }: CategoryMountainGri
     ).matches;
 
     if (prefersReducedMotion || !("IntersectionObserver" in window)) {
-      setVisibleIndices(new Set(categories.map((_, i) => i)));
-      return;
+      const raf = requestAnimationFrame(() => {
+        setVisibleIndices(new Set(categories.map((_, i) => i)));
+      });
+      return () => cancelAnimationFrame(raf);
     }
 
     const observer = new IntersectionObserver(
@@ -96,6 +98,7 @@ export default function CategoryMountainGrid({ categories }: CategoryMountainGri
                     <path d="M7 17L17 7M8 7h9v9" />
                   </svg>
                 </span>
+                {/* eslint-disable-next-line @next/next/no-img-element */}
                 <img
                   src={cat.image}
                   alt={cat.title}
@@ -138,11 +141,11 @@ export default function CategoryMountainGrid({ categories }: CategoryMountainGri
           flex-direction: column;
           width: 100%;
           height: 100%;
-          background: #f4f4f4;
-          border: 6px solid #ffffff;
+          background: #ffffff;
+          border: 1px solid #e5e5e5;
           border-radius: 48px;
           padding: 8px 8px 0;
-          box-shadow: 0 34px 60px -32px rgba(0, 0, 0, 0.38), 0 10px 24px -12px rgba(0, 0, 0, 0.16);
+          box-shadow: 0 10px 30px -10px rgba(0, 0, 0, 0.08), 0 4px 12px -4px rgba(0, 0, 0, 0.04);
           transition: transform 0.5s cubic-bezier(0.22, 0.8, 0.2, 1), box-shadow 0.5s;
           opacity: 0;
           transform: translateY(26px);

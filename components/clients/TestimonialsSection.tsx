@@ -87,7 +87,7 @@ export default function TestimonialsSection({ tone = "white" }: TestimonialsSect
           {testimonials.map((t, i) => (
             <div
               key={t.name}
-              className={`group rounded-[24px] bg-white border border-black/[0.08] p-7 sm:p-8 flex flex-col justify-between h-full shadow-[0_4px_20px_rgba(0,0,0,0.04)] hover:shadow-[0_16px_36px_rgba(0,0,0,0.08)] hover:-translate-y-1.5 transition-all duration-300 fade-up d${i + 2}`}
+              className={`group rounded-[24px] bg-[#DCDCD9] border border-[#C8C8C5] p-7 sm:p-8 flex flex-col justify-between h-full shadow-[0_4px_20px_rgba(0,0,0,0.04)] hover:shadow-[0_16px_36px_rgba(0,0,0,0.08)] hover:-translate-y-1.5 transition-all duration-300 fade-up d${i + 2}`}
             >
               <div className="flex flex-col flex-1">
                 {/* Horizontal row of stars */}

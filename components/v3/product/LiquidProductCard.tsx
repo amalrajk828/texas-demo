@@ -18,11 +18,33 @@ export const CARD_TINT_PALETTE: CardTint[] = [
   { t1: "#cdb4b4", t2: "#f1e3e3" }, // rose
 ];
 
+const PRODUCT_RADIAL_TINTS: Record<string, string> = {
+  "helical-tzn": "#f3f3f3",
+  "fh83-neo": "#ffffff",
+  "heliflu-cta": "#fefefe",
+  "minisonic": "#ffffff",
+  "uf-801p": "#080a0a",
+  "minisonic-ii-portable": "#080a0a",
+  "uf-811": "#fefefe",
+  "uf-821": "#ffffff",
+  "uf-831": "#ffffff",
+  "uf-841": "#fefefe",
+};
+
+function hexToRgba(hex: string, alpha: number): string {
+  const clean = hex.replace("#", "");
+  const r = parseInt(clean.substring(0, 2), 16) || 0;
+  const g = parseInt(clean.substring(2, 4), 16) || 0;
+  const b = parseInt(clean.substring(4, 6), 16) || 0;
+  return `rgba(${r}, ${g}, ${b}, ${alpha})`;
+}
+
 export interface LiquidProductCardProps {
   product: Product;
   index?: number;
   isVisible?: boolean;
   className?: string;
+  variant?: "default" | "cutout";
 }
 
 /**
@@ -39,6 +61,7 @@ export default function LiquidProductCard({
   index = 0,
   isVisible = true,
   className = "",
+  variant,
 }: LiquidProductCardProps) {
   const label = product.label || product.name;
 
@@ -59,6 +82,19 @@ export default function LiquidProductCard({
   // Stagger animation: 90ms per card in each row (3 cols)
   const delayMs = (index % 3) * 90;
 
+  const isCutout =
+    variant === "cutout" ||
+    Boolean(
+      product.image &&
+        (product.image.includes("products-cutout") ||
+          product.image.includes("Liquid%20Flow%20Meters"))
+    );
+
+  const radialColor = PRODUCT_RADIAL_TINTS[product.slug] || tint.t1;
+  const radialBg = isCutout
+    ? `radial-gradient(circle at 50% 40%, ${radialColor} 0%, ${hexToRgba(radialColor, 0.4)} 100%), linear-gradient(160deg, ${tint.t1}, ${tint.t2})`
+    : undefined;
+
   return (
     <Link
       href={href}
@@ -74,7 +110,10 @@ export default function LiquidProductCard({
         .filter(Boolean)
         .join("|")}
     >
-      <div className="mountain-shot">
+      <div
+        className={`mountain-shot ${isCutout ? "is-cutout" : ""}`}
+        style={radialBg ? { background: radialBg } : undefined}
+      >
         <span className="mountain-go" aria-hidden="true">
           <svg
             viewBox="0 0 24 24"
@@ -87,10 +126,12 @@ export default function LiquidProductCard({
             <path d="M7 17L17 7M8 7h9v9" />
           </svg>
         </span>
+        {/* eslint-disable-next-line @next/next/no-img-element */}
         <img
           src={imageSrc}
           alt={product.name}
           loading="lazy"
+          className={isCutout ? "cutout-img" : ""}
         />
       </div>
 

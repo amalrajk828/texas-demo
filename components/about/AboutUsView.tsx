@@ -190,7 +190,7 @@ function StatCard({
       onAnimationEnd={handleAnimationEnd}
       onTouchStart={handleTouchStart}
       style={{ "--i": index } as React.CSSProperties}
-      className="stat-card relative rounded-[20px] bg-white border border-black/[0.08] p-6 sm:p-8 text-center shadow-[0_16px_36px_-12px_rgba(0,0,0,0.06)] overflow-visible group cursor-default"
+      className="stat-card relative rounded-[20px] bg-[#DCDCD9] border border-[#C8C8C5] p-6 sm:p-8 text-center shadow-[0_16px_36px_-12px_rgba(0,0,0,0.06)] overflow-visible group cursor-default"
     >
       {/* ── Hanging string + clip (18px line + 8px clip shape) ── */}
       <div
@@ -449,7 +449,7 @@ function CertificationCard({
           "--cert-delay": `${index * 80}ms`,
         } as React.CSSProperties}
         data-swing={isSwinging ? "true" : undefined}
-        className={`cert-hanging-card relative flex-1 w-full rounded-[28px] bg-white p-6 sm:p-8 flex flex-col items-center justify-center text-center cursor-default group overflow-hidden ${
+        className={`cert-hanging-card relative flex-1 w-full rounded-[28px] bg-[#DCDCD9] border border-[#C8C8C5] p-6 sm:p-8 flex flex-col items-center justify-center text-center cursor-default group overflow-hidden ${
           !reducedMotion ? "load-swing" : ""
         }`}
       >
@@ -542,7 +542,7 @@ export default function AboutUsView() {
   const prefersReducedMotion = useReducedMotion();
 
   return (
-    <div className="about-us-page w-full bg-[#e8e7e5] text-[#1a1a1a]" style={{ overflowX: "clip" }}>
+    <div className="about-us-page w-full bg-white text-[#1a1a1a]" style={{ overflowX: "clip" }}>
       {/* ─── Visually Hidden SVG ClipPath Definitions (objectBoundingBox) ─── */}
       <svg
         className="absolute -top-[9999px] -left-[9999px] w-0 h-0 pointer-events-none"
@@ -584,13 +584,13 @@ export default function AboutUsView() {
           1. INTRO HERO (Reference 1 adaptation)
          ══════════════════════════════════════════════════════════════ */}
       <section className="relative pt-32 pb-16 sm:pt-36 sm:pb-20 lg:pt-40 lg:pb-24 px-4 sm:px-6 overflow-hidden">
-        {/* Decorative Grid Overlay (70px squares, lines rgba(0,0,0,0.06), radial mask fade) */}
+        {/* Decorative Grid Overlay (70px squares, faint lines rgba(0,0,0,0.04) on pure white, radial mask fade) */}
         <div
           className="absolute inset-0 pointer-events-none select-none z-0"
           style={{
             backgroundImage: `
-              linear-gradient(to right, rgba(0, 0, 0, 0.06) 1px, transparent 1px),
-              linear-gradient(to bottom, rgba(0, 0, 0, 0.06) 1px, transparent 1px)
+              linear-gradient(to right, rgba(0, 0, 0, 0.04) 1px, transparent 1px),
+              linear-gradient(to bottom, rgba(0, 0, 0, 0.04) 1px, transparent 1px)
             `,
             backgroundSize: "70px 70px",
             maskImage:
@@ -817,7 +817,7 @@ export default function AboutUsView() {
                 variant="image"
                 index={0}
                 delay={100}
-                className="relative aspect-[3/4] rounded-[20px] overflow-hidden shadow-[0_16px_36px_-12px_rgba(0,0,0,0.08)] border border-black/[0.08] group bg-white"
+                className="relative aspect-[3/4] rounded-[20px] overflow-hidden shadow-[0_16px_36px_-12px_rgba(0,0,0,0.08)] border border-[#C8C8C5] group bg-[#DCDCD9]"
               >
                 <div className="absolute top-0 inset-x-0 h-[3px] bg-[#8a302f] z-10 transition-all duration-300 group-hover:h-[4px]" />
                 <Image
@@ -832,7 +832,7 @@ export default function AboutUsView() {
                 variant="image"
                 index={1}
                 delay={180}
-                className="relative aspect-[3/4] sm:mt-8 rounded-[20px] overflow-hidden shadow-[0_16px_36px_-12px_rgba(0,0,0,0.08)] border border-black/[0.08] group bg-white"
+                className="relative aspect-[3/4] sm:mt-8 rounded-[20px] overflow-hidden shadow-[0_16px_36px_-12px_rgba(0,0,0,0.08)] border border-[#C8C8C5] group bg-[#DCDCD9]"
               >
                 <div className="absolute top-0 inset-x-0 h-[3px] bg-[#8a302f] z-10 transition-all duration-300 group-hover:h-[4px]" />
                 <Image
@@ -856,7 +856,7 @@ export default function AboutUsView() {
       {/* ══════════════════════════════════════════════════════════════
           10. QUALITY ASSURANCE & COMPLIANCE (Accreditations & Certificates)
          ══════════════════════════════════════════════════════════════ */}
-      <section className="py-16 sm:py-24 px-4 sm:px-6 bg-[#e8e6e4]">
+      <section className="py-16 sm:py-24 px-4 sm:px-6 bg-white">
         <div className="max-w-6xl mx-auto">
           {/* Section Header */}
           <div className="text-center max-w-2xl mx-auto mb-12 sm:mb-16">

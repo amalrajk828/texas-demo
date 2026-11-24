@@ -80,7 +80,7 @@ export default function V3RootLayout({ children }: { children: React.ReactNode }
       suppressHydrationWarning
       data-scroll-behavior="smooth"
       className={`${sora.variable} ${inter.variable} ${plusJakarta.variable}`}
-      style={{ backgroundColor: "#e8e8e6", color: "#1a1a1a" }}
+      style={{ backgroundColor: "#ffffff", color: "#1a1a1a" }}
     >
       <head>
         <meta charSet="UTF-8" />
@@ -126,7 +126,7 @@ export default function V3RootLayout({ children }: { children: React.ReactNode }
           }}
         />
       </head>
-      <body className="overflow-x-clip bg-[#e8e8e6] text-[#1a1a1a] antialiased">
+      <body className="overflow-x-clip bg-[#ffffff] text-[#1a1a1a] antialiased">
         <Script
           id="gtm"
           strategy="lazyOnload"

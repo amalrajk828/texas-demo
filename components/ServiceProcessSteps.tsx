@@ -6,7 +6,7 @@ export default function ServiceProcessSteps({
   steps: { name: string; description: string }[];
 }) {
   return (
-    <section className="bg-[#f4f5f8] py-16 lg:py-20">
+    <section className="bg-white py-16 lg:py-20">
       <div className="max-w-5xl mx-auto px-4 sm:px-6">
         <div className="flex items-center gap-2.5 mb-4">
           <span className="w-5 h-px bg-[#0891B2]" />
@@ -21,7 +21,7 @@ export default function ServiceProcessSteps({
           {steps.map((step, i) => (
             <div
               key={step.name}
-              className="flex gap-5 items-start bg-white rounded-2xl border border-[#e8eaf0] p-6 lg:p-8"
+              className="flex gap-5 items-start bg-[#DCDCD9] rounded-2xl border border-[#C8C8C5] p-6 lg:p-8"
             >
               <div className="flex-shrink-0 w-10 h-10 rounded-full bg-[#e7212b] flex items-center justify-center">
                 <span className="text-white text-sm font-bold">{i + 1}</span>

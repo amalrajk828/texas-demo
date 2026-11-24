@@ -74,8 +74,10 @@ export default function ProductCatalogShowcase({
     ).matches;
 
     if (prefersReducedMotion || !("IntersectionObserver" in window)) {
-      setVisibleSlugs(new Set(products.map((p) => p.slug)));
-      return;
+      const raf = requestAnimationFrame(() => {
+        setVisibleSlugs(new Set(products.map((p) => p.slug)));
+      });
+      return () => cancelAnimationFrame(raf);
     }
 
     const observer = new IntersectionObserver(
@@ -160,7 +162,7 @@ export default function ProductCatalogShowcase({
           __html: `
         .liquid-catalog-section {
           width: 100%;
-          background: #ece9e5;
+          background: #ffffff;
           margin: 0;
           padding: 0;
           box-sizing: border-box;
@@ -261,11 +263,11 @@ export default function ProductCatalogShowcase({
           flex-direction: column;
           width: 100%;
           height: 100%;
-          background: #f4f4f4;
-          border: 6px solid #ffffff;
+          background: #ffffff;
+          border: 1px solid #e5e5e5;
           border-radius: 48px;
           padding: 8px 8px 0;
-          box-shadow: 0 34px 60px -32px rgba(0, 0, 0, 0.38), 0 10px 24px -12px rgba(0, 0, 0, 0.16);
+          box-shadow: 0 10px 30px -10px rgba(0, 0, 0, 0.08), 0 4px 12px -4px rgba(0, 0, 0, 0.04);
           transition: transform 0.5s cubic-bezier(0.22, 0.8, 0.2, 1), box-shadow 0.5s;
           opacity: 0;
           transform: translateY(26px);

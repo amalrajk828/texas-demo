@@ -32,7 +32,8 @@ export default function TiltedServiceCard({
 
   useEffect(() => {
     if (isActive) {
-      setHasEntered(true);
+      const raf = requestAnimationFrame(() => setHasEntered(true));
+      return () => cancelAnimationFrame(raf);
     }
   }, [isActive]);
 

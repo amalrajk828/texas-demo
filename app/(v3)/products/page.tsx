@@ -175,7 +175,7 @@ export default function ProductsPage() {
       />
 
       {/* ── 2. Product Categories Grid ── */}
-      <Section tone="grey" className="!bg-[#ece9e5] !pt-8">
+      <Section tone="light" className="!bg-[#ffffff] !pt-8">
         <Container>
           <div className="flex flex-col sm:flex-row sm:items-end justify-between gap-4 mb-10">
             <div>
@@ -196,7 +196,7 @@ export default function ProductsPage() {
       </Section>
 
       {/* ── 3. Technical FAQ ── */}
-      <Section tone="grey" className="!bg-[#ece9e5] !mt-0 !pt-8">
+      <Section tone="light" className="!bg-[#ffffff] !mt-0 !pt-8">
         <Container>
           <SectionHeading
             eyebrow="Equipment FAQ"

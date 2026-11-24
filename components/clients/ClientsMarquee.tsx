@@ -15,7 +15,7 @@ function Track({ clients = [] }: { clients?: Client[] }) {
     <div className="flex shrink-0 items-center" aria-hidden>
       {clients.map((c) => (
         <div key={c.name} className="shrink-0 flex items-center justify-center mx-4 sm:mx-5">
-          <div className="bg-white border border-gray-200 rounded-xl px-6 py-3 w-44 h-16 flex items-center justify-center shadow-sm">
+          <div className="bg-[#DCDCD9] border border-[#C8C8C5] rounded-xl px-6 py-3 w-44 h-16 flex items-center justify-center shadow-sm">
             <Image src={c.logo} alt={c.name} width={120} height={40} quality={100}
               className="object-contain max-h-full w-auto"
               style={{ filter: "drop-shadow(0 0 3px rgba(0,0,0,0.35))", mixBlendMode: c.logo.includes("alkhorayef") ? "multiply" : undefined }} />

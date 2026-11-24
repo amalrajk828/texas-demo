@@ -249,7 +249,7 @@ export default async function BlogArticlePage({ params }: PageProps) {
             </Link>
             <Link
               href="/contacts/"
-              className="inline-flex items-center gap-2 px-5 py-2.5 rounded-xl bg-[#f8fafc] border border-black/[0.08] text-[13px] font-bold text-[#0f172a] hover:bg-[#6b1a1f] hover:text-white transition-colors"
+              className="inline-flex items-center gap-2 px-5 py-2.5 rounded-xl bg-[#DCDCD9] border border-black/[0.08] text-[13px] font-bold text-[#0f172a] hover:bg-[#6b1a1f] hover:text-white transition-colors"
             >
               <span>Speak to an Engineer</span>
               <ChevronRight className="w-4 h-4" />
@@ -260,7 +260,7 @@ export default async function BlogArticlePage({ params }: PageProps) {
 
       {/* ══ SECTION (Grey): FAQ if present ════════════════════════ */}
       {faqItems.length > 0 && (
-        <section className="py-20 bg-[#f8fafc] border-t border-black/[0.04]">
+        <section className="py-20 bg-white border-t border-black/[0.04]">
           <div className="max-w-4xl mx-auto px-4 sm:px-6">
             <PageFaqSection
               items={faqItems}

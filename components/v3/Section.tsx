@@ -35,18 +35,18 @@ const Section = React.forwardRef<HTMLElement, SectionProps>(function Section(
   const activeVariant = background || variant;
 
   const bgClasses = {
-    studio: "section-tone-grey bg-[var(--bg-grey,#e2e3e3)] text-[#1a1a1a]",
-    white: "section-tone-light bg-[var(--bg-white,#ffffff)] text-[#1a1a1a]",
+    studio: "section-tone-grey bg-[#ffffff] text-[#1a1a1a]",
+    white: "section-tone-light bg-[#ffffff] text-[#1a1a1a]",
     dark: "bg-[#141414] text-[#f5f5f5]",
-    glass: "bg-[rgba(232,232,230,0.85)] backdrop-blur-md text-[#1a1a1a]",
+    glass: "bg-[rgba(255,255,255,0.92)] backdrop-blur-md text-[#1a1a1a]",
   };
 
   const toneClass = tone
     ? tone === "light" || tone === "white"
-      ? "section-tone-light bg-[var(--bg-white,#ffffff)] text-[#1a1a1a]"
+      ? "section-tone-light bg-[#ffffff] text-[#1a1a1a]"
       : tone === "dark"
       ? "bg-[#141414] text-[#f5f5f5]"
-      : "section-tone-grey bg-[var(--bg-grey,#e2e3e3)] text-[#1a1a1a]"
+      : "section-tone-grey bg-[#ffffff] text-[#1a1a1a]"
     : bgClasses[activeVariant];
 
   const spacingClasses = {

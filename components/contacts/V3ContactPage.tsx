@@ -77,7 +77,7 @@ export default function V3ContactPage() {
   return (
     <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-start">
       {/* ── Left: Frosted Glass Form Card ── */}
-      <div className="lg:col-span-7 bg-white/80 backdrop-blur-xl border border-white/90 rounded-[30px] p-6 sm:p-8 md:p-10 shadow-[0_20px_45px_rgba(0,0,0,0.06)] relative overflow-hidden">
+      <div className="lg:col-span-7 bg-[#DCDCD9] border border-[#C8C8C5] rounded-[30px] p-6 sm:p-8 md:p-10 shadow-[0_20px_45px_rgba(0,0,0,0.06)] relative overflow-hidden">
         <div className="relative z-10">
           <div className="mb-8">
             <span className="text-[12px] font-mono uppercase tracking-wider text-[#6b191b] font-bold">
@@ -140,7 +140,7 @@ export default function V3ContactPage() {
                     value={form.fullName}
                     onChange={handleChange}
                     placeholder="e.g. Eng. Ahmed Al-Sabah"
-                    className="w-full px-4 py-3 rounded-[14px] bg-[#ece9e6]/60 border border-black/[0.06] text-[#1a1c20] text-[14px] placeholder-[#9ca3af] focus:outline-none focus:ring-2 focus:ring-[#6b191b] focus:bg-white transition-all"
+                    className="w-full px-4 py-3 rounded-[14px] bg-white border border-[#C8C8C5] text-[#1a1c20] text-[14px] placeholder-[#9ca3af] focus:outline-none focus:ring-2 focus:ring-[#6b191b] focus:bg-white transition-all"
                   />
                 </div>
                 <div>
@@ -158,7 +158,7 @@ export default function V3ContactPage() {
                     value={form.email}
                     onChange={handleChange}
                     placeholder="name@company.com"
-                    className="w-full px-4 py-3 rounded-[14px] bg-[#ece9e6]/60 border border-black/[0.06] text-[#1a1c20] text-[14px] placeholder-[#9ca3af] focus:outline-none focus:ring-2 focus:ring-[#6b191b] focus:bg-white transition-all"
+                    className="w-full px-4 py-3 rounded-[14px] bg-white border border-[#C8C8C5] text-[#1a1c20] text-[14px] placeholder-[#9ca3af] focus:outline-none focus:ring-2 focus:ring-[#6b191b] focus:bg-white transition-all"
                   />
                 </div>
               </div>
@@ -178,7 +178,7 @@ export default function V3ContactPage() {
                     value={form.phone}
                     onChange={handleChange}
                     placeholder="+965 / +971"
-                    className="w-full px-4 py-3 rounded-[14px] bg-[#ece9e6]/60 border border-black/[0.06] text-[#1a1c20] text-[14px] placeholder-[#9ca3af] focus:outline-none focus:ring-2 focus:ring-[#6b191b] focus:bg-white transition-all"
+                    className="w-full px-4 py-3 rounded-[14px] bg-white border border-[#C8C8C5] text-[#1a1c20] text-[14px] placeholder-[#9ca3af] focus:outline-none focus:ring-2 focus:ring-[#6b191b] focus:bg-white transition-all"
                   />
                 </div>
                 <div>
@@ -195,7 +195,7 @@ export default function V3ContactPage() {
                     value={form.subject}
                     onChange={handleChange}
                     placeholder="e.g. Fiscal Metering Package"
-                    className="w-full px-4 py-3 rounded-[14px] bg-[#ece9e6]/60 border border-black/[0.06] text-[#1a1c20] text-[14px] placeholder-[#9ca3af] focus:outline-none focus:ring-2 focus:ring-[#6b191b] focus:bg-white transition-all"
+                    className="w-full px-4 py-3 rounded-[14px] bg-white border border-[#C8C8C5] text-[#1a1c20] text-[14px] placeholder-[#9ca3af] focus:outline-none focus:ring-2 focus:ring-[#6b191b] focus:bg-white transition-all"
                   />
                 </div>
               </div>
@@ -216,7 +216,7 @@ export default function V3ContactPage() {
                   value={form.message}
                   onChange={handleChange}
                   placeholder="Describe your instrumentation, flow metering, automation, or NDT inspection requirements..."
-                  className="w-full px-4 py-3 rounded-[14px] bg-[#ece9e6]/60 border border-black/[0.06] text-[#1a1c20] text-[14px] placeholder-[#9ca3af] focus:outline-none focus:ring-2 focus:ring-[#6b191b] focus:bg-white transition-all resize-y"
+                  className="w-full px-4 py-3 rounded-[14px] bg-white border border-[#C8C8C5] text-[#1a1c20] text-[14px] placeholder-[#9ca3af] focus:outline-none focus:ring-2 focus:ring-[#6b191b] focus:bg-white transition-all resize-y"
                 />
               </div>
 
@@ -240,7 +240,7 @@ export default function V3ContactPage() {
         {offices.map((office, idx) => (
           <div
             key={idx}
-            className="rounded-[30px] bg-white p-6 sm:p-7 border border-black/[0.06] shadow-[0_15px_30px_rgba(0,0,0,0.04)]"
+            className="rounded-[30px] bg-[#DCDCD9] p-6 sm:p-7 border border-[#C8C8C5] shadow-[0_15px_30px_rgba(0,0,0,0.04)]"
           >
             <div className="flex items-center gap-2 mb-3">
               <Building2 className="w-4 h-4 text-[#6b191b]" />

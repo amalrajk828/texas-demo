@@ -77,7 +77,7 @@ export default function ImageCard({
   return (
     <Link
       href={href}
-      className={`v3-image-card group relative flex flex-col w-full h-full flex-1 min-w-0 rounded-[22px] bg-white overflow-hidden transition-all duration-300 ease-out focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#8a302f] focus-visible:ring-offset-2 hover:-translate-y-1.5 border border-black/[0.07] ${
+      className={`v3-image-card group relative flex flex-col w-full h-full flex-1 min-w-0 rounded-[22px] bg-[#DCDCD9] overflow-hidden transition-all duration-300 ease-out focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#8a302f] focus-visible:ring-offset-2 hover:-translate-y-1.5 border border-[#C8C8C5] ${
         isProduct ? "v3-image-card-product" : isBlog ? "v3-image-card-blog" : ""
       } ${
         isFlat
@@ -89,7 +89,7 @@ export default function ImageCard({
     >
       {/* ── 1. Top Image Container ── */}
       <div className={`v3-card-image-area relative w-full flex-none overflow-hidden rounded-t-[22px] isolate ${
-        isProduct ? "aspect-[4/3] bg-white is-product" : "aspect-[16/10] bg-[#efeeec]"
+        isProduct ? "aspect-[4/3] bg-[#DCDCD9] is-product" : "aspect-[16/10] bg-[#DCDCD9] border-b border-[#C8C8C5]"
       }`}>
         {resolvedImage ? (
           <Image
@@ -109,7 +109,7 @@ export default function ImageCard({
             }`}
           />
         ) : (
-          <div className="w-full h-full flex flex-col items-center justify-center bg-[#efeeec] text-[#6b7280]">
+          <div className="w-full h-full flex flex-col items-center justify-center bg-white text-[#6b7280]">
             <Layers className="w-8 h-8 stroke-[1.5] mb-2 text-[#9ca3af]" />
             <span className="text-[11px] font-mono uppercase tracking-wider font-semibold">
               Texas Technical

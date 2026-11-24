@@ -10,8 +10,8 @@
   --btn-primary-shadow: 0 10px 24px rgba(120, 20, 20, 0.35);
   --brand-action: #8a302f;
   --brand-action-hover: #6f2423;
-  --bg-studio: #e8e8e6;
-  --bg-studio-glass: rgba(232, 232, 230, 0.76);
+  --bg-studio: #ffffff;
+  --bg-studio-glass: rgba(255, 255, 255, 0.92);
   --text-primary: #1a1a1a;
   --text-muted: #595956;
   --text-light: #7a7a76;
@@ -22,6 +22,9 @@
   --card-border: rgba(0, 0, 0, 0.06);
   --card-shadow: 0 20px 40px -15px rgba(0, 0, 0, 0.07);
   --nav-border: rgba(0, 0, 0, 0.08);
+  --card-hover-wave: #DCDCD9;
+  --card-hover-wave-light: #E6E6E3;
+  --card-hover-wave-dark: #D0D0CD;
   --font-heading: 'Sora', -apple-system, BlinkMacSystemFont, sans-serif;
   --font-body: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
   --what-we-do-card-width: 380px;
@@ -541,7 +544,7 @@
 #sequence {
   position: relative;
   height: 500vh;
-  background-color: var(--bg-studio);
+  background-color: #b8b7ad;
   contain: paint;
 }
 
@@ -552,7 +555,7 @@
   width: 100%;
   height: 100vh;
   overflow: hidden;
-  background-color: var(--bg-studio);
+  background-color: #b8b7ad;
 }
 
 #hero-canvas {
@@ -1761,7 +1764,7 @@ button.card-interactive,
 }
 
 .content-wrapper {
-  background-color: var(--bg-studio, #e8e8e6) !important;
+  background-color: #ffffff !important;
   position: relative;
   z-index: 20;
   border: none !important;
@@ -1776,7 +1779,7 @@ button.card-interactive,
 .about-cover-section {
   position: relative;
   z-index: 20;
-  background-color: var(--bg-studio, #e8e8e6) !important;
+  background-color: #ffffff !important;
   margin-top: calc(-1 * var(--hero-hold-cover, 100svh));
   border-top-left-radius: var(--cover-radius, 40px) !important;
   border-top-right-radius: var(--cover-radius, 40px) !important;
@@ -1821,10 +1824,140 @@ button.card-interactive,
 }
 
 .content-section {
-  padding: 110px 6vw;
-  background-color: var(--bg-studio, #e8e8e6) !important;
+  padding: 44px 6vw;
+  background-color: #ffffff !important;
   border: none !important;
   box-shadow: none !important;
+}
+
+#products.content-section {
+  background-color: #ffffff !important;
+  padding: 72px 6vw !important;
+}
+
+#clients.content-section {
+  background-color: #ffffff !important;
+  padding: 72px 6vw !important;
+}
+
+/* --------------------------------------------------------------------------
+   Product Engineering Packages Specification Cards (Single Unified Table)
+   -------------------------------------------------------------------------- */
+
+.products-preview-grid {
+  display: flex;
+  flex-direction: column;
+  max-width: 1100px;
+  margin: 0 auto;
+  width: 100%;
+}
+
+.product-spec-unified-table,
+.product-spec-card {
+  position: relative;
+  background-color: #DCDCD9 !important;
+  border-radius: 18px;
+  border: 1px solid rgba(0, 0, 0, 0.08);
+  box-shadow: 0 16px 36px -12px rgba(0, 0, 0, 0.08), 0 4px 12px rgba(0, 0, 0, 0.03);
+  overflow: hidden;
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+  width: 100%;
+}
+
+.product-spec-unified-table:hover,
+.product-spec-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 20px 44px -12px rgba(0, 0, 0, 0.12), 0 6px 16px rgba(0, 0, 0, 0.04);
+}
+
+.product-spec-columns-bar {
+  display: grid;
+  grid-template-columns: 35% 65%;
+  padding: 15px 32px;
+  background-color: var(--brand-action, #8a302f) !important;
+  border-top: none;
+  font-size: 11.5px;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: #ffffff !important;
+  border-top-left-radius: 18px;
+  border-top-right-radius: 18px;
+}
+
+.product-spec-col-key {
+  font-weight: 800;
+  color: #ffffff !important;
+}
+
+.product-spec-col-val {
+  font-weight: 800;
+  color: #ffffff !important;
+}
+
+.product-spec-list {
+  background-color: #DCDCD9 !important;
+  display: flex;
+  flex-direction: column;
+}
+
+.product-spec-list .spec-row {
+  display: grid;
+  grid-template-columns: 35% 65%;
+  padding: 17px 32px;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.07);
+  align-items: center;
+  font-size: 14.5px;
+  line-height: 1.5;
+  background-color: #DCDCD9 !important;
+  transition: background-color 0.15s ease;
+}
+
+.product-spec-list .spec-row:last-child {
+  border-bottom: none;
+}
+
+.product-spec-list .spec-row:hover {
+  background-color: #d4d4d1 !important;
+}
+
+.product-spec-list .spec-key {
+  font-weight: 700;
+  color: #1a1a1a;
+  padding-right: 20px;
+}
+
+.product-spec-list .spec-val {
+  color: #4a4a4a;
+  font-weight: 400;
+}
+
+.product-spec-list .spec-val strong {
+  font-weight: 700;
+  color: #111111;
+}
+
+@media (max-width: 767px) {
+  .product-spec-columns-bar {
+    grid-template-columns: 42% 58%;
+    padding: 12px 18px;
+    font-size: 10px;
+  }
+
+  .product-spec-list .spec-row {
+    grid-template-columns: 42% 58%;
+    padding: 13px 18px;
+    font-size: 13px;
+  }
+
+  .product-spec-list .spec-key {
+    padding-right: 8px;
+  }
+}
+
+.about-cover-section {
+  padding-top: 80px !important;
+  padding-bottom: 44px !important;
 }
 
 .section-container {
@@ -1913,19 +2046,20 @@ button.card-interactive,
 }
 
 /* ==========================================================================
-   Shared Glass Hover Card (.glass-hover-card)
-   Used by both About Stats Cards and Service Cards (Uiverse Deri-Kurniawan)
+   Shared Card Wave Hover (.card-wave-hover, .glass-hover-card)
+   Used by Stats Cards, Service Cards, Industry Cards, Blog Cards
    ========================================================================== */
 
+.card-wave-hover,
 .glass-hover-card {
   position: relative !important;
   overflow: hidden !important;
-  /* clips the blob to rounded corners; does not clip card's own shadow */
-  border-radius: 24px !important;
-  background: #e7e7e7 !important;
-  box-shadow: 0 0 3px 1px #1818183d, 2px 2px 3px #18181865, inset 2px 2px 2px #ffffff !important;
+  border-radius: 20px !important;
+  background: #ffffff !important;
+  border: 1px solid rgba(0, 0, 0, 0.08) !important;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05), 0 1px 3px rgba(0, 0, 0, 0.03) !important;
   z-index: 1 !important;
-  transition: all 1.2s linear !important;
+  transition: transform 0.28s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.28s cubic-bezier(0.16, 1, 0.3, 1), border-color 0.28s ease !important;
   display: flex !important;
   flex-direction: column !important;
   padding: 32px !important;
@@ -1933,18 +2067,29 @@ button.card-interactive,
   width: 100% !important;
   flex: 1 1 auto !important;
   box-sizing: border-box !important;
-  cursor: default !important;
-  border: none !important;
+  cursor: pointer !important;
+  will-change: transform, box-shadow;
+}
+
+.card-wave-hover:hover,
+.glass-hover-card:hover {
+  transform: translateY(-8px) !important;
+  border-color: rgba(0, 0, 0, 0.12) !important;
+  box-shadow: 0 20px 40px -10px rgba(0, 0, 0, 0.12), 0 8px 16px -4px rgba(0, 0, 0, 0.06) !important;
+  z-index: 10 !important;
 }
 
 @media (max-width: 767px) {
+
+  .card-wave-hover,
   .glass-hover-card {
     padding: 26px !important;
-    border-radius: 20px !important;
+    border-radius: 18px !important;
   }
 }
 
 /* Thin maroon top line as ::before inside card, clipped naturally by border-radius */
+.card-wave-hover::before,
 .glass-hover-card::before {
   content: "" !important;
   position: absolute !important;
@@ -1953,12 +2098,16 @@ button.card-interactive,
   right: 0 !important;
   height: 4px !important;
   background-color: var(--accent, #8a302f) !important;
-  z-index: 1 !important;
+  z-index: 3 !important;
   pointer-events: none !important;
 }
 
-/* Card content layer sitting above the blob */
-/* Card content layer sitting above the blob */
+/* Card content layer sitting above the wave */
+.card-wave-hover>.card-content,
+.card-wave-hover>.stat-card-content,
+.card-wave-hover>.service-card-content,
+.card-wave-hover>.industry-card-content,
+.card-wave-hover>.blog-card-content,
 .glass-hover-card>.card-content,
 .glass-hover-card>.stat-card-content,
 .glass-hover-card>.service-card-content,
@@ -1973,23 +2122,44 @@ button.card-interactive,
   box-sizing: border-box !important;
 }
 
+/* Ensure text inside cards is positioned above wave */
+.stat-card .stat-number,
+.stat-card .stat-title,
+.stat-card .stat-desc,
+.service-card .service-card-icon-tile,
+.service-card .service-card-title,
+.service-card .service-card-divider,
+.service-card .service-card-desc {
+  position: relative !important;
+  z-index: 1 !important;
+}
+
+.stat-card.card-wave-hover>.card-content,
+.stat-card.card-wave-hover>.stat-card-content,
 .stat-card.glass-hover-card>.card-content,
 .stat-card.glass-hover-card>.stat-card-content {
   align-items: center !important;
   text-align: center !important;
 }
 
+.service-card.card-wave-hover>.card-content,
+.service-card.card-wave-hover>.service-card-content,
 .service-card.glass-hover-card>.card-content,
 .service-card.glass-hover-card>.service-card-content,
+.industry-card.card-wave-hover>.card-content,
+.industry-card.card-wave-hover>.industry-card-content,
 .industry-card.glass-hover-card>.card-content,
 .industry-card.glass-hover-card>.industry-card-content,
+.blog-card.card-wave-hover>.card-content,
+.blog-card.card-wave-hover>.blog-card-content,
 .blog-card.glass-hover-card>.card-content,
 .blog-card.glass-hover-card>.blog-card-content {
   align-items: flex-start !important;
   text-align: left !important;
 }
 
-/* The Blob: original Uiverse Deri-Kurniawan mechanism with glassy shine texture */
+/* Wave / Water-Fill Hover Effect: Rising rotating liquid mechanism using #DCDCD9, #E6E6E3, and #D0D0CD */
+.card-wave-hover::after,
 .glass-hover-card::after {
   content: "" !important;
   position: absolute !important;
@@ -2000,18 +2170,18 @@ button.card-interactive,
   /* fully outside the card at rest, so it is never visible */
   border-radius: 30% !important;
   background: linear-gradient(135deg,
-      rgba(255, 255, 255, 0.95) 0%,
-      rgba(255, 255, 255, 0.55) 28%,
-      rgba(255, 255, 255, 0.95) 42%,
-      rgba(255, 255, 255, 0.45) 58%,
-      rgba(255, 255, 255, 0.80) 100%) !important;
+      rgba(220, 220, 217, 0.95) 0%,
+      rgba(230, 230, 227, 0.65) 28%,
+      rgba(220, 220, 217, 0.90) 42%,
+      rgba(208, 208, 205, 0.60) 58%,
+      rgba(220, 220, 217, 0.85) 100%) !important;
   backdrop-filter: blur(10px) saturate(160%) !important;
   -webkit-backdrop-filter: blur(10px) saturate(160%) !important;
-  border: 1px solid rgba(255, 255, 255, 0.85) !important;
+  border: 1px solid rgba(208, 208, 205, 0.85) !important;
   box-shadow:
-    inset 0 2px 6px rgba(255, 255, 255, 0.95),
-    inset 0 -6px 18px rgba(255, 255, 255, 0.35),
-    0 8px 24px rgba(120, 130, 160, 0.20) !important;
+    inset 0 2px 6px rgba(240, 240, 238, 0.95),
+    inset 0 -6px 18px rgba(190, 190, 185, 0.40),
+    0 8px 24px rgba(160, 160, 155, 0.25) !important;
   animation: spin 1.8s linear infinite !important;
   transition: all 1.2s linear !important;
   z-index: 0 !important;
@@ -2019,6 +2189,8 @@ button.card-interactive,
 }
 
 @media (hover: hover) {
+
+  .card-wave-hover:hover::after,
   .glass-hover-card:hover::after {
     width: 760px !important;
     height: 760px !important;
@@ -2027,6 +2199,8 @@ button.card-interactive,
   }
 }
 
+.card-wave-hover:focus-within::after,
+.card-wave-hover:active::after,
 .glass-hover-card:focus-within::after,
 .glass-hover-card:active::after {
   width: 760px !important;
@@ -2045,18 +2219,22 @@ button.card-interactive,
   }
 }
 
-/* Fallback for no backdrop-filter: slightly more opaque white gradient */
+/* Fallback for no backdrop-filter: multi-layer grey liquid gradient */
 @supports not ((backdrop-filter: blur(10px)) or (-webkit-backdrop-filter: blur(10px))) {
+
+  .card-wave-hover::after,
   .glass-hover-card::after {
     background: linear-gradient(135deg,
-        rgba(255, 255, 255, 0.98) 0%,
-        rgba(255, 255, 255, 0.85) 42%,
-        rgba(255, 255, 255, 0.95) 100%) !important;
+        var(--card-hover-wave-light, #E6E6E3) 0%,
+        var(--card-hover-wave, #DCDCD9) 42%,
+        var(--card-hover-wave-dark, #D0D0CD) 100%) !important;
   }
 }
 
 /* Respect prefers-reduced-motion: remove spin and use a plain 0.2s fade */
 @media (prefers-reduced-motion: reduce) {
+
+  .card-wave-hover::after,
   .glass-hover-card::after {
     animation: none !important;
     transition: opacity 0.2s ease !important;
@@ -2066,8 +2244,12 @@ button.card-interactive,
     height: 100% !important;
     border-radius: inherit !important;
     opacity: 0 !important;
+    background: var(--card-hover-wave, #DCDCD9) !important;
   }
 
+  .card-wave-hover:hover::after,
+  .card-wave-hover:focus-within::after,
+  .card-wave-hover:active::after,
   .glass-hover-card:hover::after,
   .glass-hover-card:focus-within::after,
   .glass-hover-card:active::after {
@@ -2080,6 +2262,7 @@ button.card-interactive,
 }
 
 /* Focus outline for keyboard navigation */
+.card-wave-hover:focus-visible,
 .glass-hover-card:focus-visible {
   outline: 2px solid var(--accent, #8a302f) !important;
   outline-offset: 3px !important;
@@ -2275,9 +2458,10 @@ button.card-interactive,
 
   .service-card:hover .service-card-icon-tile,
   .service-static-card:hover .service-card-icon-tile {
-    background: rgba(255, 255, 255, 0.70) !important;
+    background: rgba(138, 48, 47, 0.12) !important;
     color: var(--accent, #8a302f) !important;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06) !important;
+    box-shadow: 0 4px 14px rgba(138, 48, 47, 0.18) !important;
+    transform: scale(1.08);
   }
 }
 
@@ -2509,20 +2693,18 @@ button.card-interactive,
 }
 
 .client-logo-item {
-  background: var(--card-bg);
-  backdrop-filter: blur(12px);
-  -webkit-backdrop-filter: blur(12px);
-  border: 1px solid var(--card-border);
-  border-radius: 16px;
-  padding: 24px 16px;
+  background: #DCDCD9 !important;
+  border: 1px solid rgba(0, 0, 0, 0.1) !important;
+  border-radius: 20px !important;
+  padding: 26px 16px !important;
   display: flex !important;
   flex-direction: column !important;
   align-items: center !important;
   justify-content: center !important;
   text-align: center !important;
-  box-shadow: var(--card-shadow);
-  transition: transform 0.25s ease, border-color 0.25s ease, box-shadow 0.25s ease;
-  min-height: 175px;
+  box-shadow: 0 12px 28px -6px rgba(0, 0, 0, 0.06), 0 2px 8px rgba(0, 0, 0, 0.02) !important;
+  transition: transform 0.25s ease, border-color 0.25s ease, box-shadow 0.25s ease, background-color 0.25s ease !important;
+  min-height: 180px;
   height: 100%;
   width: 100%;
   box-sizing: border-box;
@@ -2541,21 +2723,24 @@ button.card-interactive,
 @media (max-width: 1023px) {
   .client-logo-item {
     min-height: 160px;
-    padding: 20px 14px;
+    padding: 20px 14px !important;
+    border-radius: 16px !important;
   }
 }
 
 @media (max-width: 639px) {
   .client-logo-item {
     min-height: 150px;
-    padding: 18px 12px;
+    padding: 18px 12px !important;
+    border-radius: 14px !important;
   }
 }
 
 .client-logo-item:hover {
-  transform: translateY(-4px);
-  border-color: rgba(138, 48, 47, 0.35);
-  box-shadow: 0 16px 32px -8px rgba(0, 0, 0, 0.08);
+  transform: translateY(-4px) !important;
+  border-color: rgba(0, 0, 0, 0.14) !important;
+  background-color: #d4d4d1 !important;
+  box-shadow: 0 18px 36px -8px rgba(0, 0, 0, 0.1) !important;
   z-index: 2;
 }
 
@@ -2802,10 +2987,10 @@ button.card-interactive,
 
 .cta-box {
   position: relative !important;
-  background: #e7e7e7 !important;
+  background: #ffffff !important;
   border-radius: 24px !important;
-  box-shadow: 0 0 3px 1px #1818183d, 2px 2px 3px #18181865, inset 2px 2px 2px #ffffff !important;
-  border: none !important;
+  border: 1px solid #e5e5e5 !important;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05), 0 1px 3px rgba(0, 0, 0, 0.03) !important;
   padding: 64px 48px !important;
   text-align: center !important;
   max-width: 900px !important;
@@ -2857,10 +3042,10 @@ button.card-interactive,
   opacity: 0 !important;
   transform: skewX(-20deg) !important;
   background: linear-gradient(90deg,
-      rgba(255, 255, 255, 0) 0%,
-      rgba(255, 255, 255, 0.95) 50%,
-      rgba(255, 255, 255, 100%) 100%) !important;
-  box-shadow: 0 0 50px 30px rgba(255, 255, 255, 0.6) !important;
+      rgba(220, 220, 217, 0) 0%,
+      rgba(220, 220, 217, 0.75) 50%,
+      rgba(220, 220, 217, 0) 100%) !important;
+  box-shadow: 0 0 50px 30px rgba(220, 220, 217, 0.45) !important;
   pointer-events: none !important;
   z-index: 1 !important;
 }
@@ -2932,8 +3117,10 @@ button.card-interactive,
 
 /* Scroll-driven peel effect for CTA button */
 .peel {
-  --peel: 1;                    /* 1 = fully peeled (no-JS fallback) */
-  --peel-cover: #e7e7e7;        /* set to the card's exact background colour */
+  --peel: 1;
+  /* 1 = fully peeled (no-JS fallback) */
+  --peel-cover: #ffffff;
+  /* set to the card's exact background colour */
   position: relative;
   display: inline-block;
 }
@@ -2968,13 +3155,22 @@ button.card-interactive,
 }
 
 @media (max-width: 640px) {
-  .peel { display: block; }     /* use this only if your button is full width on mobile */
-  .peel__flap { width: 20px; }
+  .peel {
+    display: block;
+  }
+
+  /* use this only if your button is full width on mobile */
+  .peel__flap {
+    width: 20px;
+  }
 }
 
 @media (prefers-reduced-motion: reduce) {
+
   .peel__cover,
-  .peel__flap { display: none; }
+  .peel__flap {
+    display: none;
+  }
 }
 
 .cta-footnote {
@@ -3025,8 +3221,9 @@ button.card-interactive,
   .cta-section .cta-box {
     padding: 28px 20px !important;
     border-radius: 20px !important;
-    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12) !important;
-    background: #e7e7e7 !important;
+    border: 1px solid #e5e5e5 !important;
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.06) !important;
+    background: #ffffff !important;
     width: 100% !important;
     max-width: 100% !important;
     box-sizing: border-box !important;
@@ -5253,7 +5450,12 @@ button.card-interactive,
   }
 
   .content-section {
-    padding: 64px 16px;
+    padding: 24px 16px;
+  }
+
+  .about-cover-section {
+    padding-top: 56px !important;
+    padding-bottom: 24px !important;
   }
 
   .section-title {
@@ -5413,58 +5615,123 @@ button.card-interactive,
 
 
 /* ==========================================================================
-   Torn Paper / Page Crack Divider  —  .tear  (v4: real layout space)
-   Used by TearDivider.tsx between About and Services sections.
-   JS animates root height from 0→260px so content is pushed down, never covered.
+   Stack Scroll Pop Up / Pop Down Animation (Home Page Sections 1-3)
    ========================================================================== */
-
-/* Stops the browser's scroll-anchoring from fighting the animated height */
-html { overflow-anchor: none; }
-
-.tear {
-  --page-bg: #e8e7e5;        /* must match page background */
-  --gap-bg:  #b9bbb0;        /* colour inside the crack */
-  --gap-image: none;         /* optional: url('/tear-bg.jpg') */
+.stack-scroll {
   position: relative;
-  height: 0;                 /* JS sets this each frame */
-  overflow: visible;
-  pointer-events: none;
-  z-index: 5;
+  width: 100%;
 }
 
-.tear__stage {
-  position: absolute;
-  inset: 0;
-  display: none;             /* JS shows/hides this */
-  background: var(--page-bg);
+.stack-scroll>section {
+  position: sticky;
+  top: 0;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--bg-studio, #e8e8e6) !important;
+  transform-origin: 50% 0;
+  will-change: transform, filter;
+  box-sizing: border-box;
 }
 
-.tear__gap,
-.tear__shadow,
-.tear__rim {
-  position: absolute;
-  inset: 0;
+.stack-scroll>section:nth-child(1) {
+  z-index: 1;
 }
 
-.tear__gap {
-  background: var(--gap-image), var(--gap-bg);
-  background-size: cover, auto;
-  background-position: center;
+.stack-scroll>section:nth-child(2) {
+  z-index: 2;
+  border-radius: 44px 44px 0 0;
+  box-shadow: 0 -24px 60px rgba(0, 0, 0, 0.22);
 }
 
-.tear__rim {
-  background: #fff;
+.stack-scroll>section:nth-child(3) {
+  z-index: 3;
+  border-radius: 44px 44px 0 0;
+  box-shadow: 0 -24px 60px rgba(0, 0, 0, 0.22);
 }
 
-/* Shadows fall INTO the opening */
-.tear__shadow--t {
-  filter: drop-shadow(0  5px 6px rgba(0, 0, 0, 0.45));
+.stack-scroll>section .section-container {
+  width: 100%;
 }
 
-.tear__shadow--b {
-  filter: drop-shadow(0 -5px 6px rgba(0, 0, 0, 0.45));
+/* Headings split into masked words */
+.stack-scroll.js .stack-word {
+  display: inline-block;
+  overflow: hidden;
+  vertical-align: top;
+  padding-bottom: 0.12em;
+  margin-bottom: -0.12em;
+}
+
+.stack-scroll.js .stack-word>span {
+  display: inline-block;
+  transform: translateY(110%);
+  transition: transform 0.9s cubic-bezier(0.2, 0.8, 0.2, 1);
+  transition-delay: calc(var(--w, 0) * 55ms);
+}
+
+.stack-scroll.js section.in .stack-word>span {
+  transform: none;
+}
+
+/* Eyebrows, subtitles, buttons fade up */
+.stack-scroll.js .stack-fade {
+  opacity: 0;
+  transform: translateY(24px);
+  transition: opacity 0.8s ease, transform 0.8s cubic-bezier(0.2, 0.8, 0.2, 1);
+  transition-delay: calc(var(--d, 0) * 1ms);
+}
+
+.stack-scroll.js section.in .stack-fade {
+  opacity: 1;
+  transform: none;
+}
+
+/* Cards entrance with alternating tilt */
+.stack-scroll.js .stack-card {
+  opacity: 0;
+  transform: translateY(90px) rotate(var(--r, 0deg)) scale(0.92);
+  transition: opacity 0.9s ease, transform 1s cubic-bezier(0.2, 0.8, 0.2, 1);
+  transition-delay: calc(var(--i, 0) * 110ms);
+}
+
+.stack-scroll.js section.in .stack-card {
+  opacity: 1;
+  transform: none;
+}
+
+/* Once settled, card hover effects take effect without entrance delay */
+.stack-scroll.js section.in .stack-card.settled {
+  transition-delay: 0s !important;
+}
+
+@media (max-width: 768px) {
+  .stack-scroll>section {
+    min-height: 100vh;
+    padding: 72px 18px;
+  }
 }
 
 @media (prefers-reduced-motion: reduce) {
-  .tear { display: none; }
+
+  .stack-scroll.js .stack-word>span,
+  .stack-scroll.js .stack-fade,
+  .stack-scroll.js .stack-card {
+    transition: none !important;
+    transform: none !important;
+    opacity: 1 !important;
+  }
+
+  .stack-scroll>section {
+    position: relative !important;
+    transform: none !important;
+    filter: none !important;
+    min-height: auto !important;
+  }
+
+  .stack-scroll>section+section {
+    border-radius: 0 !important;
+    box-shadow: none !important;
+  }
 }

@@ -2694,7 +2694,7 @@ export const products: Product[] = [
     name: "HELICAL TZN",
     category: "Liquid Flow Meters",
     parentPath: "/products/flow-meters/liquid-flow-meters",
-    image: "/images/liquid_flow_meters/helical_tzn/1.png",
+    image: "/images/products-cutout/Liquid%20Flow%20Meters/helical_tzn.webp",
     tag: "Faure Herman",
     description:
       "The innovative design and extended product range of helical turbine meters address your highest flow metering requirements. Our measurement solutions provide you the greatest flexibility to address flow rate changes with a minimum impact on your facilities and rig piping design. The Heliflu TZN helical turbine flowmeter is designed for high accuracy liquid measurement from very light LPG products to heavy crude oils. The advanced design and robust construction of the Heliflu TZN helical turbine meter is the perfect choice to secure your revenues while reducing your operational costs across various industries.",
@@ -2778,7 +2778,7 @@ export const products: Product[] = [
     name: "HELIFLU CTA",
     category: "Liquid Flow Meters",
     parentPath: "/products/flow-meters/liquid-flow-meters",
-    image: "/images/liquid_flow_meters/heliflu_cta/1.jpg",
+    image: "/images/products-cutout/Liquid%20Flow%20Meters/heliflu_cta.webp",
     tag: "Heliflu · Faure Herman",
     description:
       "The Heliflu® CTA is a new generation of compact autonomous bi-directional flow meter with integrated electronics. The advanced design and robust construction of the CTA enables it to be installed at the end of a flexible fuelling hose and straight upstream from a fueling nozzle. The CTA precisely measures volumetric flowrates of liquid during fueling or re-fueling. The operating principle for this flow meter relies on the centrally located rotational velocity of a helical bladed impeller, embedded with magnets and a pick up coil (positioned in the flowmeter body). If you consider its performance, capabilities and all its features, the Heliflu® CTA is the obvious choice.",
@@ -2862,7 +2862,7 @@ export const products: Product[] = [
     name: "FH83 NEO",
     category: "Liquid Flow Meters",
     parentPath: "/products/flow-meters/liquid-flow-meters",
-    image: "/images/liquid_flow_meters/fh83_neo/1.jpg",
+    image: "/images/products-cutout/Liquid%20Flow%20Meters/fh83_neo.webp",
     tag: "Faure Herman",
     description:
       "Faure Herman\u2019s FH83NEO is an evolutive range of ultrasonic flowmeters for liquid metering. The metrological solution adapted to your needs. This ultrasonic flowmeter is designed to measure all types of conductive or non-conductive liquids and even the most aggressive ones. Thanks to its electronics, digital and analogue inputs/outputs, the FH83Neo is a flowmeter that offers great flexibility of use, it can be easily connected to all industrial control systems.",
@@ -2904,7 +2904,7 @@ export const products: Product[] = [
     name: "MINISONIC",
     category: "Liquid Flow Meters",
     parentPath: "/products/flow-meters/liquid-flow-meters",
-    image: "/images/liquid_flow_meters/minisonic/1.jpg",
+    image: "/images/products-cutout/Liquid%20Flow%20Meters/minisonic.webp",
     tag: "SICK Ultrasonic Flow",
     description:
       "The MINISONIC is a compact ultrasonic flowmeter from SICK designed for reliable, non-intrusive measurement of liquids in industrial applications. Ideal for clean liquids and a wide range of process conditions, it delivers accurate flow measurement without moving parts, reducing maintenance and operating costs.",
@@ -2988,7 +2988,7 @@ export const products: Product[] = [
     name: "MINISONIC II PORTABLE",
     category: "Liquid Flow Meters",
     parentPath: "/products/flow-meters/liquid-flow-meters",
-    image: "/images/liquid_flow_meters/minisonic_2_portable/1.jpg",
+    image: "/images/products-cutout/Liquid%20Flow%20Meters/minisonic_2_portable.webp",
     tag: "SICK Portable Ultrasonic Flow",
     description:
       "The MINISONIC II PORTABLE is a compact, battery-powered ultrasonic clamp-on flowmeter from SICK designed for temporary measurement and verification of liquid flows. Ideal for on-site checks, commissioning, and troubleshooting, it provides fast, non-intrusive flow measurement without process interruption.",
@@ -3030,7 +3030,7 @@ export const products: Product[] = [
     name: "UF 801P",
     category: "Liquid Flow Meters",
     parentPath: "/products/flow-meters/liquid-flow-meters",
-    image: "/images/liquid_flow_meters/uf_801p/1.jpg",
+    image: "/images/products-cutout/Liquid%20Flow%20Meters/uf_801p.webp",
     tag: "Ultraflux",
     description:
       "The UF 801P is a portable ultrasonic flowmeter from Ultraflux designed for temporary and non-intrusive measurement of liquids. Engineered for accurate, on-site flow verification, it enables quick checks, commissioning, and troubleshooting across a wide range of industrial liquid flow applications without process interruption.",
@@ -3072,7 +3072,7 @@ export const products: Product[] = [
     name: "UF 811",
     category: "Liquid Flow Meters",
     parentPath: "/products/flow-meters/liquid-flow-meters",
-    image: "/images/liquid_flow_meters/uf_811/1.jpg",
+    image: "/images/products-cutout/Liquid%20Flow%20Meters/uf_811.webp",
     tag: "Ultraflux",
     description:
       "The UF 811 is an ultrasonic flowmeter from Ultraflux designed for permanent, non-intrusive measurement of liquids in industrial applications. With its clamp-on or inline configuration options, it provides accurate and reliable flow measurement for a wide range of clean liquids and process fluids in demanding industrial environments.",
@@ -3114,7 +3114,7 @@ export const products: Product[] = [
     name: "UF 821",
     category: "Liquid Flow Meters",
     parentPath: "/products/flow-meters/liquid-flow-meters",
-    image: "/images/liquid_flow_meters/uf_821/1.jpg",
+    image: "/images/products-cutout/Liquid%20Flow%20Meters/uf_821.webp",
     tag: "Ultraflux",
     description:
       "The UF 821 is an ultrasonic flowmeter from Ultraflux designed for accurate, non-intrusive measurement of liquids in industrial applications. With flexible installation options and robust construction, it provides reliable flow measurement for clean liquids and process fluids across a wide range of industrial and process applications.",
@@ -3156,7 +3156,7 @@ export const products: Product[] = [
     name: "UF 831",
     category: "Liquid Flow Meters",
     parentPath: "/products/flow-meters/liquid-flow-meters",
-    image: "/images/liquid_flow_meters/uf_831/1.jpg",
+    image: "/images/products-cutout/Liquid%20Flow%20Meters/uf_831.webp",
     tag: "Ultraflux",
     description:
       "The UF 831 is an advanced ultrasonic flowmeter from Ultraflux designed for high-accuracy, non-intrusive measurement of liquids. With its enhanced diagnostics, flexible integration, and robust construction, it is engineered to deliver reliable flow measurement in demanding industrial applications, including those with challenging process conditions.",
@@ -3198,7 +3198,7 @@ export const products: Product[] = [
     name: "UF 841",
     category: "Liquid Flow Meters",
     parentPath: "/products/flow-meters/liquid-flow-meters",
-    image: "/images/liquid_flow_meters/uf_841/1.jpg",
+    image: "/images/products-cutout/Liquid%20Flow%20Meters/uf_841.webp",
     tag: "Ultraflux",
     description:
       "The UF 841 is a high-performance ultrasonic flowmeter from Ultraflux designed for the most demanding non-intrusive liquid flow measurement applications. Combining advanced measurement technology with flexible integration and robust construction, it delivers accurate and reliable performance in challenging industrial and process environments.",
@@ -3779,7 +3779,8 @@ export const products: Product[] = [
     image: "/images/industrial_automation/plc_&_io_module/1.jpg",
     tag: "PLC & I/O Systems",
     description:
-      "Experience Seamless Automation with Our PLC & I/O Modules. Welcome to a realm of industrial automation where efficiency meets innovation. Our range of PLC (Programmable Logic Controller) and I/O (Input/Output) module products sets a new standard for seamless and intelligent operations.",    label: "PLC & I/O MODULES",
+      "Experience Seamless Automation with Our PLC & I/O Modules. Welcome to a realm of industrial automation where efficiency meets innovation. Our range of PLC (Programmable Logic Controller) and I/O (Input/Output) module products sets a new standard for seamless and intelligent operations.",
+    label: "PLC & I/O MODULES",
     statement: "Modular <b>distributed I/O slices</b> supporting PROFINET, Modbus, and EtherNet/IP.",
     
   },
@@ -3797,7 +3798,8 @@ export const products: Product[] = [
       "Unleash Automation: Navigate complex processes with ease. Our panels empower you to control, monitor, and manage intricate tasks, ensuring your operations are finely tuned and effortlessly controlled.",
       "Custom Solutions, Tailored Results: Every industry is unique, and so are our solutions. Our Industrial Control Panels are designed with customization in mind, adapting to your specific needs for PLC SCADA or Custody Metering projects.",
       "Ahead of the Curve: Stay ahead in the realm of industrial innovation. Our advanced technology ensures that your operations not only meet today's demands but are also future-ready for the dynamic landscape of tomorrow.",
-    ],    label: "CONTROL PANELS",
+    ],
+    label: "CONTROL PANELS",
     statement: "Custom <b>UL508A certified control panels</b> engineered for hazardous and process plants.",
     
   },
@@ -3809,7 +3811,8 @@ export const products: Product[] = [
     image: "/images/industrial_automation/industrial_workstation_server_desktop_pc/1.jpg",
     tag: "Industrial Computing",
     description:
-      "Explore our diverse range of Industrial Workstations, Servers, and Desktop PCs designed to enhance your operations. From robust Servers that ensure seamless data management to dependable Desktop PCs tailored to your needs, our solutions are engineered for reliability and performance. Elevate your industrial computing with our comprehensive offerings, built to withstand demanding environments and drive efficiency.",    label: "INDUSTRIAL COMPUTING",
+      "Explore our diverse range of Industrial Workstations, Servers, and Desktop PCs designed to enhance your operations. From robust Servers that ensure seamless data management to dependable Desktop PCs tailored to your needs, our solutions are engineered for reliability and performance. Elevate your industrial computing with our comprehensive offerings, built to withstand demanding environments and drive efficiency.",
+    label: "INDUSTRIAL COMPUTING",
     statement: "Rugged <b>fanless industrial computers</b> for 24/7 mission&#8209;critical control and data acquisition.",
     
   },
@@ -3821,7 +3824,8 @@ export const products: Product[] = [
     image: "/images/industrial_automation/controller/1.jpg",
     tag: "Industrial Controllers",
     description:
-      "Discover our array of Industrial Automation Controllers, each meticulously crafted to optimize your processes. From PLCs that enable precision control to SCADA systems that provide real-time insights, our controllers empower your operations. Choose reliability, flexibility, and advanced technology for your industrial automation needs with our wide range of controllers.",    label: "PROCESS CONTROLLERS",
+      "Discover our array of Industrial Automation Controllers, each meticulously crafted to optimize your processes. From PLCs that enable precision control to SCADA systems that provide real-time insights, our controllers empower your operations. Choose reliability, flexibility, and advanced technology for your industrial automation needs with our wide range of controllers.",
+    label: "PROCESS CONTROLLERS",
     statement: "Dedicated <b>multi&#8209;loop process controllers</b> for precise temperature and PID loop regulation.",
     
   },
@@ -3833,7 +3837,8 @@ export const products: Product[] = [
     image: "/images/industrial_automation/converters/1.png",
     tag: "Industrial Converters",
     description:
-      "Elevate your industrial connectivity with our diverse range of Industrial Converters. Whether you require protocol converters to bridge communication gaps or signal converters to ensure seamless data transmission, our solutions are designed to enhance your operational efficiency. Experience reliable and adaptable industrial conversion solutions that bridge the gap between legacy systems and modern technology.",    label: "SIGNAL CONVERTERS",
+      "Elevate your industrial connectivity with our diverse range of Industrial Converters. Whether you require protocol converters to bridge communication gaps or signal converters to ensure seamless data transmission, our solutions are designed to enhance your operational efficiency. Experience reliable and adaptable industrial conversion solutions that bridge the gap between legacy systems and modern technology.",
+    label: "SIGNAL CONVERTERS",
     statement: "Industrial <b>signal isolators and converters</b> for seamless analog and digital translation.",
     
   },
@@ -3845,7 +3850,8 @@ export const products: Product[] = [
     image: "/images/industrial_automation/industrial_ethernet_network_switch/1.jpg",
     tag: "Industrial Networking",
     description:
-      "Experience enhanced networking capabilities with our diverse selection of Industrial Ethernet Network Switches. Designed to provide reliable connectivity in demanding environments, our switches ensure seamless data transmission and communication across your industrial infrastructure. Choose from our range of Industrial Ethernet Network Switches to optimize your network performance and drive operational efficiency.",    label: "NETWORK SWITCHES",
+      "Experience enhanced networking capabilities with our diverse selection of Industrial Ethernet Network Switches. Designed to provide reliable connectivity in demanding environments, our switches ensure seamless data transmission and communication across your industrial infrastructure. Choose from our range of Industrial Ethernet Network Switches to optimize your network performance and drive operational efficiency.",
+    label: "NETWORK SWITCHES",
     statement: "Managed <b>hardened Ethernet switches</b> for deterministic plant floor network rings.",
     
   },

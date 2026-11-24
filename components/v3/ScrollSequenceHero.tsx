@@ -338,7 +338,9 @@ export default function ScrollSequenceHero() {
   // ── Hero Showcase Slider State & Handlers ─────────────────────────────────
   const [showcaseIndex, setShowcaseIndex] = useState(0);
   const showcaseIndexRef = useRef(0);
-  showcaseIndexRef.current = showcaseIndex;
+  useEffect(() => {
+    showcaseIndexRef.current = showcaseIndex;
+  }, [showcaseIndex]);
   const lastSliderClickRef = useRef(0);
   const autoPlayTimerRef = useRef<NodeJS.Timeout | null>(null);
   const isSliderPausedRef = useRef(false);

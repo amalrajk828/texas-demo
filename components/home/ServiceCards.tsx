@@ -119,7 +119,7 @@ export default function ServiceCards() {
     <div className="services-static-grid">
       {services.map((service, index) => (
         <Reveal key={service.id} delay={index * 0.08}>
-          <article className="service-card service-static-card glass-hover-card">
+          <article className="service-card service-static-card card-wave-hover">
             <div className="card-content service-card-content">
               <div className="service-card-icon-tile">{service.icon}</div>
               <h3 className="service-card-title">{service.title}</h3>

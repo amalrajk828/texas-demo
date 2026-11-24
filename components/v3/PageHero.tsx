@@ -108,7 +108,7 @@ export default function PageHero({
 
   return (
     <header
-      className={`relative w-full ${ptClass} pb-14 sm:pb-18 ${flatBg ? "bg-[#ece9e5] border-b-0" : "bg-[#e8e8e6] border-b border-black/[0.06]"} text-[#1a1a1a] overflow-hidden ${className}`}
+      className={`relative w-full ${ptClass} pb-14 sm:pb-18 ${flatBg ? "bg-[#ffffff] border-b-0" : "bg-[#ffffff] border-b border-black/[0.06]"} text-[#1a1a1a] overflow-hidden ${className}`}
     >
       {/* Subtle warm depth vignette matching Home V3 studio environment */}
       {!flatBg && (
@@ -116,7 +116,7 @@ export default function PageHero({
           className="absolute inset-0 pointer-events-none opacity-40"
           style={{
             background:
-              "radial-gradient(ellipse at 50% 0%, rgba(255,255,255,0.8) 0%, rgba(232,232,230,0) 70%)",
+              "radial-gradient(ellipse at 50% 0%, rgba(255,255,255,0.8) 0%, rgba(255,255,255,0) 70%)",
           }}
         />
       )}

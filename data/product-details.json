@@ -1,0 +1,1117 @@
+{
+  "helical-tzn": {
+    "slug": "helical-tzn",
+    "name": "HELICAL TZN",
+    "brand": "Faure Herman",
+    "category": "Liquid Flow Meters",
+    "badge": "Faure Herman \u00b7 Liquid Flow Meters",
+    "parentPath": "/products/flow-meters/liquid-flow-meters",
+    "shortDescription": "The innovative design and extended product range of helical turbine meters address your highest flow metering requirements.",
+    "longDescription": "Our measurement solutions provide you the greatest flexibility to address flow rate changes with a minimum impact on your facilities and rig piping design. The Heliflu TZN helical turbine flowmeter is designed for high accuracy liquid measurement from very light LPG products to heavy crude oils. The advanced design and robust construction of the Heliflu TZN helical turbine meter is the perfect choice to secure your revenues while reducing your operational costs across various industries.",
+    "highlightChips": [
+      "High-Accuracy Custody Transfer",
+      "LPG to Heavy Crude Liquids",
+      "Low Pressure Drop Helical Rotor",
+      "Extended Flow Range Flexibility"
+    ],
+    "heroImage": "/images/products-cutout/Liquid%20Flow%20Meters/helical_tzn.webp",
+    "tint": "#f3f3f3",
+    "galleryImages": [
+      {
+        "src": "/images/products-cutout/Liquid%20Flow%20Meters/helical_tzn.webp",
+        "alt": "Helical TZN Liquid Flow Meter Cutout"
+      },
+      {
+        "src": "/images/products/helical-tzn/cartridge.png",
+        "alt": "Helical TZN Turbine Cartridge"
+      },
+      {
+        "src": "/images/products/helical-tzn/x-ray.png",
+        "alt": "Helical TZN Internal Flow Dynamics"
+      },
+      {
+        "src": "/images/products/helical-tzn/cus.png",
+        "alt": "Helical TZN Custody Transfer Skid Assembly"
+      }
+    ],
+    "quickFacts": [
+      {
+        "label": "OEM Manufacturer",
+        "value": "Faure Herman"
+      },
+      {
+        "label": "Equipment Category",
+        "value": "Liquid Flow Meters"
+      },
+      {
+        "label": "Meter Architecture",
+        "value": "Heliflu TZN Helical Turbine"
+      },
+      {
+        "label": "Fluid Spectrum",
+        "value": "Light LPG to Heavy Crude Oil"
+      },
+      {
+        "label": "Metrology Level",
+        "value": "Fiscal & Custody Transfer"
+      }
+    ],
+    "keyFeatures": [
+      {
+        "title": "Extended Flow Range Flexibility",
+        "description": "Innovative helical rotor design accommodates high flow dynamics and process rate swings with minimal footprint impact.",
+        "iconName": "Gauge"
+      },
+      {
+        "title": "Broad Viscosity Handling",
+        "description": "Engineered for high-accuracy fiscal measurement across fluid profiles from light LPG to heavy crude hydrocarbons.",
+        "iconName": "Layers"
+      },
+      {
+        "title": "Ultra-Low Pressure Drop",
+        "description": "Helical blade profile and integrated straighteners minimize hydraulic resistance and pumping power consumption.",
+        "iconName": "Zap"
+      },
+      {
+        "title": "Custody Transfer Metrology",
+        "description": "Strict compliance with international fiscal metering standards ensures revenue protection and auditable billing accuracy.",
+        "iconName": "ShieldCheck"
+      }
+    ],
+    "specifications": [
+      {
+        "parameter": "OEM Manufacturer",
+        "value": "Faure Herman"
+      },
+      {
+        "parameter": "Equipment Category",
+        "value": "Liquid Flow Meters"
+      },
+      {
+        "parameter": "Meter Series / Model",
+        "value": "Heliflu TZN Helical Turbine"
+      },
+      {
+        "parameter": "Fluid Applications",
+        "value": "LPG, refined hydrocarbons, light to heavy crude oils"
+      },
+      {
+        "parameter": "Metrological Service",
+        "value": "Fiscal custody transfer and allocation measurement"
+      },
+      {
+        "parameter": "Installation Design",
+        "value": "In-line pipeline, tanker loading/unloading, LACT skids"
+      }
+    ],
+    "applications": [
+      "High-accuracy custody transfer of crude oil and refined products",
+      "Pipeline receipt, delivery, and check metering",
+      "Loading and unloading of tankers, ships, and rail cars",
+      "Refineries, terminals, and tank farm operations",
+      "Process metering in petrochemical plants",
+      "Fiscal and allocation metering across varying flow rates"
+    ],
+    "industries": [
+      "Upstream Oil & Gas Production",
+      "Midstream Pipeline and Storage Terminals",
+      "Downstream Refineries and Petrochemicals",
+      "Marine and Tanker Loading Facilities",
+      "EPC Contractors and Skid Fabricators"
+    ],
+    "downloads": [
+      {
+        "title": "Datasheet Helical TZN Model",
+        "fileType": "PDF",
+        "url": "https://texastechserv.com/wp-content/uploads/2023/09/DATASHEET-HELICAL-TZN-MODEL.pdf",
+        "description": "Official technical specifications, dimensional drawings, and sizing charts."
+      }
+    ]
+  },
+  "melsec-iq-r-series": {
+    "slug": "melsec-iq-r-series",
+    "name": "MELSEC iQ-R Series",
+    "brand": "Mitsubishi Electric",
+    "category": "PLC",
+    "badge": "Mitsubishi Electric \u00b7 PLC",
+    "parentPath": "/products/plc",
+    "shortDescription": "The MELSEC iQ-R Series is Mitsubishi Electric's next-generation modular PAC/PLC platform designed for advanced and large-scale industrial automation.",
+    "longDescription": "It delivers deterministic high-speed control while improving productivity, engineering efficiency, and system availability. With a scalable multi-CPU architecture and a wide range of compatible I/O modules, the iQ-R Series supports sequence, process, safety, motion, and C-language control within a unified system. It is ideally suited as a core controller for mission-critical industrial, petrochemical, and oil & gas facilities across Kuwait and the GCC.",
+    "highlightChips": [
+      "Next-Gen PAC Platform",
+      "Multi-CPU Control Architecture",
+      "High-Speed Deterministic Bus",
+      "Mission-Critical Redundancy"
+    ],
+    "heroImage": "/images/plc/MELSEC-iQ-R-Series.png",
+    "tint": "#f2f4f7",
+    "galleryImages": [
+      {
+        "src": "/images/plc/MELSEC-iQ-R-Series.png",
+        "alt": "MELSEC iQ-R Series Modular PLC System"
+      }
+    ],
+    "quickFacts": [
+      {
+        "label": "OEM Manufacturer",
+        "value": "Mitsubishi Electric"
+      },
+      {
+        "label": "Equipment Category",
+        "value": "PLC / PAC System"
+      },
+      {
+        "label": "Control Architecture",
+        "value": "Multi-CPU (Logic, Process, Motion, C-Controller)"
+      },
+      {
+        "label": "System Bus Speed",
+        "value": "40x Faster Inter-Module Communication"
+      },
+      {
+        "label": "High Availability",
+        "value": "Redundant CPU, Power, and Network Options"
+      }
+    ],
+    "keyFeatures": [
+      {
+        "title": "Multi-CPU Hybrid Control",
+        "description": "Combine sequence, process control, motion control, and safety processing on a single high-speed backplane.",
+        "iconName": "Cpu"
+      },
+      {
+        "title": "Deterministic High-Speed Processing",
+        "description": "Sub-microsecond execution speeds with synchronized inter-module communications for high-speed loops.",
+        "iconName": "Zap"
+      },
+      {
+        "title": "Mission-Critical Redundancy",
+        "description": "Hot-standby redundant CPU configurations and dual power supplies prevent downtime in continuous process operations.",
+        "iconName": "ShieldCheck"
+      },
+      {
+        "title": "Seamless Plant Connectivity",
+        "description": "Native CC-Link IE TSN, Ethernet/IP, Modbus, and OPC UA integration with SCADA, DCS, and enterprise manufacturing systems.",
+        "iconName": "Layers"
+      }
+    ],
+    "specifications": [
+      {
+        "parameter": "OEM Manufacturer",
+        "value": "Mitsubishi Electric"
+      },
+      {
+        "parameter": "Equipment Category",
+        "value": "PLC / PAC Automation System"
+      },
+      {
+        "parameter": "Controller Series",
+        "value": "MELSEC iQ-R Series"
+      },
+      {
+        "parameter": "Supported CPUs",
+        "value": "R04CPU, R08CPU, R16CPU, R32CPU, R120CPU"
+      },
+      {
+        "parameter": "Program Capacity",
+        "value": "40K to 1200K Steps"
+      },
+      {
+        "parameter": "Max I/O Points",
+        "value": "4,096 local points (up to 8,192 remote points)"
+      },
+      {
+        "parameter": "Communication Protocols",
+        "value": "CC-Link IE TSN, CC-Link IE Field, Ethernet, Modbus/TCP, Profibus"
+      },
+      {
+        "parameter": "Operating Ambient Temp",
+        "value": "0 to 55 \u00b0C (Industrial rated)"
+      }
+    ],
+    "applications": [
+      "Oil & gas production facilities and gathering stations",
+      "Refineries and petrochemical process units",
+      "Tank farms, terminals, and pipeline systems",
+      "Compressor, pump, and utility control systems",
+      "Package units and skid-mounted systems",
+      "Emergency shutdown (ESD) and interlock interface systems",
+      "SCADA-based industrial plants and manufacturing facilities"
+    ],
+    "industries": [
+      "Oil & Gas (Upstream, Midstream, Downstream)",
+      "Refineries and Petrochemical Industries",
+      "Power Generation and Utilities",
+      "Manufacturing Plants and Factories",
+      "EPC Projects and System Integrators"
+    ],
+    "downloads": [
+      {
+        "title": "MELSEC iQ-R Series Comprehensive Catalog",
+        "fileType": "PDF",
+        "url": "https://www.mitsubishielectric.com/dl/fa/document/catalog/plcr/l08298eng/l08298engz.pdf",
+        "description": "Official Mitsubishi Electric technical catalog, module specifications, and architecture guide."
+      }
+    ]
+  },
+  "radar-sensors": {
+    "slug": "radar-sensors",
+    "name": "Radar Sensors",
+    "brand": "SICK",
+    "category": "Industrial Sensors",
+    "badge": "SICK \u00b7 Industrial Sensors",
+    "parentPath": "/products/sensors",
+    "shortDescription": "SICK radar sensors deliver rugged, non-contact detection and distance measurement regardless of rain, fog, dust, or extreme ambient temperatures.",
+    "longDescription": "The advantages of radar over other sensor technologies lie in its ruggedness. Radar sensors can reliably detect objects within their range under harsh environmental conditions, and can analyze speed and distance simultaneously. SICK radar sensors are widely deployed in ports, mining sites, petrochemical yards, and heavy industrial facilities to prevent collisions and monitor material levels.",
+    "highlightChips": [
+      "Rugged FMCW Radar",
+      "All-Weather Resistance",
+      "Collision Prevention",
+      "Speed & Distance Ranging"
+    ],
+    "heroImage": "/images/sensors/Radar Sensors.png",
+    "tint": "#eef2f6",
+    "galleryImages": [
+      {
+        "src": "/images/sensors/Radar Sensors.png",
+        "alt": "SICK Industrial Radar Sensor"
+      }
+    ],
+    "quickFacts": [
+      {
+        "label": "OEM Manufacturer",
+        "value": "SICK"
+      },
+      {
+        "label": "Equipment Category",
+        "value": "Industrial Sensors"
+      },
+      {
+        "label": "Sensing Principle",
+        "value": "Frequency Modulated Continuous Wave (FMCW)"
+      },
+      {
+        "label": "Environmental Immunity",
+        "value": "Impervious to Dust, Fog, Steam, and Heavy Rain"
+      },
+      {
+        "label": "Enclosure Protection",
+        "value": "IP67 / IP69K Heavy Industrial"
+      }
+    ],
+    "keyFeatures": [
+      {
+        "title": "All-Weather Reliability",
+        "description": "Operates continuously through rain, snow, fog, dust, and solar glare without false triggering.",
+        "iconName": "ShieldCheck"
+      },
+      {
+        "title": "Dual Velocity & Distance Output",
+        "description": "Simultaneously calculates target distance and relative velocity for intelligent collision warning.",
+        "iconName": "Gauge"
+      },
+      {
+        "title": "Long Range Detection",
+        "description": "Configurable sensing fields extending up to 100+ meters for large vehicles and yard equipment.",
+        "iconName": "Activity"
+      },
+      {
+        "title": "Industrial Enclosure",
+        "description": "IP67 and IP69K housing resists chemical washing, thermal shocks, and mechanical vibrations.",
+        "iconName": "Layers"
+      }
+    ],
+    "specifications": [
+      {
+        "parameter": "OEM Manufacturer",
+        "value": "SICK"
+      },
+      {
+        "parameter": "Equipment Category",
+        "value": "Industrial Radar Sensors"
+      },
+      {
+        "parameter": "Radar Technology",
+        "value": "77 GHz / 24 GHz FMCW Radar"
+      },
+      {
+        "parameter": "Measuring Range",
+        "value": "0.2 m to 100 m (configurable zones)"
+      },
+      {
+        "parameter": "Aperture Angle",
+        "value": "Broad azimuth / narrow elevation options"
+      },
+      {
+        "parameter": "Interfaces",
+        "value": "CAN, Ethernet, Discrete I/O, IO-Link"
+      },
+      {
+        "parameter": "Enclosure Rating",
+        "value": "IP67 / IP69K"
+      },
+      {
+        "parameter": "Operating Temperature",
+        "value": "-40 \u00b0C to +65 \u00b0C"
+      }
+    ],
+    "applications": [
+      "Mobile machinery collision avoidance in ports and yards",
+      "Industrial gantry crane and container handler protection",
+      "Raw material bulk level measurement in silos",
+      "Outdoor perimeter surveillance and perimeter protection",
+      "Automated guided vehicle (AGV) long-range navigation"
+    ],
+    "industries": [
+      "Ports and Marine Terminals",
+      "Mining and Bulk Material Handling",
+      "Oil & Gas Loading Terminals",
+      "Heavy Manufacturing and Logistics",
+      "Steel and Cement Plants"
+    ],
+    "downloads": [
+      {
+        "title": "SICK Detection and Ranging Solutions Catalog",
+        "fileType": "PDF",
+        "url": "https://cdn.sick.com/media/docs/0/30/930/product_segment_overview_detection_and_ranging_solutions_2d_laser_scanners_3d_laser_scanners_radar_sensors_en_im0063930.pdf",
+        "description": "Overview of SICK radar sensors, 2D/3D laser scanners, and ranging solutions."
+      }
+    ]
+  },
+  "pressure-sensors": {
+    "slug": "pressure-sensors",
+    "name": "Pressure Sensors",
+    "brand": "SICK",
+    "category": "Field Instruments",
+    "badge": "SICK \u00b7 Field Instruments",
+    "parentPath": "/products/field-instruments",
+    "shortDescription": "High-precision electronic pressure transmitters and switches engineered for demanding fluid, gas, and hygienic applications.",
+    "longDescription": "SICK provides a comprehensive portfolio of electronic pressure transmitters and switches with customizable configurations. Built with high-grade stainless steel wetted materials and advanced piezoresistive and ceramic measuring cells, SICK pressure sensors deliver repeatable accuracy, exceptional burst resistance, and stable long-term operation across GCC plant environments.",
+    "highlightChips": [
+      "Precision Pressure Transmitters",
+      "Ceramic & Stainless Diaphragms",
+      "High Overpressure Resistance",
+      "IO-Link & 4-20mA Output"
+    ],
+    "heroImage": "/images/field_instruments/pressure_sensors/1.png",
+    "tint": "#f5f6f8",
+    "galleryImages": [
+      {
+        "src": "/images/field_instruments/pressure_sensors/1.png",
+        "alt": "SICK Electronic Pressure Sensor"
+      }
+    ],
+    "quickFacts": [
+      {
+        "label": "OEM Manufacturer",
+        "value": "SICK"
+      },
+      {
+        "label": "Equipment Category",
+        "value": "Field Instruments / Pressure Sensors"
+      },
+      {
+        "label": "Measuring Principles",
+        "value": "Piezoresistive / Ceramic Thick-Film"
+      },
+      {
+        "label": "Pressure Ranges",
+        "value": "-1 to 1000 bar gauge and absolute"
+      },
+      {
+        "label": "Output Signals",
+        "value": "4-20 mA, 0-10 V, IO-Link, PNP/NPN switch"
+      }
+    ],
+    "keyFeatures": [
+      {
+        "title": "Rugged Stainless Steel Construction",
+        "description": "Welded stainless steel measuring cells withstand aggressive chemical media and hydraulic pressure surges.",
+        "iconName": "ShieldCheck"
+      },
+      {
+        "title": "Digital IO-Link Communication",
+        "description": "Enables remote configuration, diagnostic monitoring, and predictive maintenance from the control room.",
+        "iconName": "Zap"
+      },
+      {
+        "title": "Thermal Stability & Compensation",
+        "description": "Built-in active temperature compensation maintains measurement accuracy across extreme process temperatures.",
+        "iconName": "Gauge"
+      },
+      {
+        "title": "Versatile Process Connections",
+        "description": "Wide array of threaded, flanged, and flush diaphragm connections for viscous or crystallizing liquids.",
+        "iconName": "Layers"
+      }
+    ],
+    "specifications": [
+      {
+        "parameter": "OEM Manufacturer",
+        "value": "SICK"
+      },
+      {
+        "parameter": "Equipment Category",
+        "value": "Pressure Measurement Transmitter"
+      },
+      {
+        "parameter": "Measurement Range",
+        "value": "Vacuum up to 1000 bar"
+      },
+      {
+        "parameter": "Accuracy Class",
+        "value": "\u2264 \u00b10.5% of span (optional \u00b10.25%)"
+      },
+      {
+        "parameter": "Process Media",
+        "value": "Liquids, gases, steam, hydraulic fluids"
+      },
+      {
+        "parameter": "Process Temperature",
+        "value": "-30 \u00b0C to +100 \u00b0C (extended to 150 \u00b0C)"
+      },
+      {
+        "parameter": "Electrical Outputs",
+        "value": "4-20 mA (2-wire), 0-10 V, IO-Link"
+      },
+      {
+        "parameter": "Enclosure Rating",
+        "value": "IP65 / IP67 stainless steel 316L"
+      }
+    ],
+    "applications": [
+      "Hydraulic pump and lubricating oil pressure monitoring",
+      "Process line pressure control in chemical and water plants",
+      "Compressor discharge pressure monitoring",
+      "Hydrostatic tank level measurement",
+      "Pneumatic system pressure regulation"
+    ],
+    "industries": [
+      "Oil & Gas and Petrochemical Plants",
+      "Water & Wastewater Treatment",
+      "Power Generation Facilities",
+      "Factory Automation and Machine Building",
+      "Food & Beverage and Hygienic Processing"
+    ],
+    "downloads": [
+      {
+        "title": "SICK Fluid Sensors Product Overview",
+        "fileType": "PDF",
+        "url": "https://cdn.sick.com/media/docs/1/01/601/product_segment_overview_fluid_sensors_products_at_a_glance_en_im0059601.pdf",
+        "description": "Product overview covering SICK pressure, level, temperature, and flow transmitters."
+      }
+    ]
+  },
+  "cems-solutions": {
+    "slug": "cems-solutions",
+    "name": "CEMS Solutions",
+    "brand": "SICK",
+    "category": "CEMS",
+    "badge": "SICK \u00b7 Continuous Emission Monitoring",
+    "parentPath": "/products/cems",
+    "shortDescription": "Complete Continuous Emission Monitoring Systems (CEMS) designed for compliance with environmental standards and emission measurement.",
+    "longDescription": "SICK CEMS solutions are tailored specifically for stationary emission measurement across industrial facilities, power stations, petrochemical complexes, and incinerators. The systems monitor pollutants (SO2, NOx, CO, CO2, HCl, HF, dust) and reference variables (O2, flow rate, pressure, temperature) with full data acquisition and regulatory reporting compliance.",
+    "highlightChips": [
+      "Continuous Emission Monitoring",
+      "EPA & EN 15267 Certified",
+      "Multi-Component Gas Analysis",
+      "Turnkey Integration Skids"
+    ],
+    "heroImage": "/cems.png",
+    "tint": "#f3f4f6",
+    "galleryImages": [
+      {
+        "src": "/cems.png",
+        "alt": "SICK Continuous Emission Monitoring System"
+      }
+    ],
+    "quickFacts": [
+      {
+        "label": "OEM Manufacturer",
+        "value": "SICK"
+      },
+      {
+        "label": "Equipment Category",
+        "value": "Continuous Emission Monitoring System (CEMS)"
+      },
+      {
+        "label": "Metrology Level",
+        "value": "Regulatory Compliance & Legal Emissions Monitoring"
+      },
+      {
+        "label": "Analyzed Gases",
+        "value": "SO2, NO, NO2, CO, CO2, HCl, HF, NH3, O2, H2O"
+      },
+      {
+        "label": "Certifications",
+        "value": "EN 15267 QAL1, MCERTS, US EPA 40 CFR 60/75"
+      }
+    ],
+    "keyFeatures": [
+      {
+        "title": "Multi-Pollutant Simultaneous Analysis",
+        "description": "Simultaneously measures acid gases, greenhouse gases, toxic compounds, and reference oxygen in a single cabinet.",
+        "iconName": "Layers"
+      },
+      {
+        "title": "Regulatory Compliance Certified",
+        "description": "Certified to European EN 15267 and US EPA performance specifications for uninterrupted environmental compliance.",
+        "iconName": "ShieldCheck"
+      },
+      {
+        "title": "Hot-Wet or Cold-Dry Sampling",
+        "description": "Flexible sampling train configurations engineered for corrosive, high-moisture flue gases without analyte loss.",
+        "iconName": "Zap"
+      },
+      {
+        "title": "Automated QAL3 Validation",
+        "description": "Automated zero and span gas calibration cycles ensure auditable metrological drift verification.",
+        "iconName": "Activity"
+      }
+    ],
+    "specifications": [
+      {
+        "parameter": "OEM Manufacturer",
+        "value": "SICK"
+      },
+      {
+        "parameter": "System Model / Solution",
+        "value": "CEMS Modular Solution (MCS, PowerCEMS)"
+      },
+      {
+        "parameter": "Emission Standards",
+        "value": "EN 14181 (QAL1/QAL2/QAL3/AST), US EPA 40 CFR 60/75"
+      },
+      {
+        "parameter": "Measurement Principles",
+        "value": "NDIR, UV Resonance, FTIR, Zirconia O2, Paramagnetic"
+      },
+      {
+        "parameter": "Sample Conditioning",
+        "value": "Heated sample line, gas cooler, acid dosing filter"
+      },
+      {
+        "parameter": "Data Acquisition (DAS)",
+        "value": "EPA/EN compliant automated data logging and reporting"
+      },
+      {
+        "parameter": "Cabinet Protection",
+        "value": "Rittal IP54 / IP55 air-conditioned outdoor shelter"
+      }
+    ],
+    "applications": [
+      "Thermal power plant stack emission monitoring",
+      "Petrochemical refinery flaring and furnace flue gas monitoring",
+      "Cement kiln and incinerator exhaust compliance",
+      "Gas turbine exhaust monitoring and deNOx control",
+      "Chemical manufacturing scrubbed stack monitoring"
+    ],
+    "industries": [
+      "Power Generation and Utilities",
+      "Refineries and Petrochemicals",
+      "Cement and Minerals Processing",
+      "Waste-to-Energy and Incineration",
+      "Environmental Agencies and EPCs"
+    ],
+    "downloads": [
+      {
+        "title": "SICK CEMS Continuous Emission Monitoring Overview",
+        "fileType": "PDF",
+        "url": "https://www.sick.com/in/en/system-solutions/flow-metering-systems/flowskid/c/g472153",
+        "description": "Official technical overview of SICK continuous emission monitoring systems and skids."
+      }
+    ]
+  },
+  "gas-analyzers": {
+    "slug": "gas-analyzers",
+    "name": "Gas Analyzers",
+    "brand": "SICK",
+    "category": "Gas Analyzer",
+    "badge": "SICK \u00b7 Gas Analyzers",
+    "parentPath": "/products/gas-analyzers",
+    "shortDescription": "SICK provides a diverse selection of industrial in-situ and extractive gas analyzers utilizing advanced optical and laser spectroscopy.",
+    "longDescription": "SICK gas analyzers utilize proven optical spectroscopy techniques including NDIR, UV resonance, and tunable diode laser absorption spectroscopy (TDLS). Designed for continuous gas monitoring in challenging high-temperature, dusty, and aggressive chemical environments, SICK analyzers provide rapid response times with minimal maintenance.",
+    "highlightChips": [
+      "In-Situ & Extractive Analysis",
+      "UV & Infrared Spectroscopy",
+      "Rapid Response Photometers",
+      "Direct Duct In-Situ Mounting"
+    ],
+    "heroImage": "/gas_analyzer.png",
+    "tint": "#f1f3f6",
+    "galleryImages": [
+      {
+        "src": "/gas_analyzer.png",
+        "alt": "SICK Process Gas Analyzer"
+      }
+    ],
+    "quickFacts": [
+      {
+        "label": "OEM Manufacturer",
+        "value": "SICK"
+      },
+      {
+        "label": "Equipment Category",
+        "value": "Gas Analyzers"
+      },
+      {
+        "label": "Measurement Principle",
+        "value": "UV Photometry / NDIR / In-Situ Laser"
+      },
+      {
+        "label": "Key Analyzers",
+        "value": "GM32, GM35, GM700, GMS800 Series"
+      },
+      {
+        "label": "Mounting Options",
+        "value": "Direct in-situ cross-duct and extractive"
+      }
+    ],
+    "keyFeatures": [
+      {
+        "title": "Direct In-Situ Measurement",
+        "description": "Measures directly within the process duct without expensive sample extraction or gas conditioning lines.",
+        "iconName": "Activity"
+      },
+      {
+        "title": "High Spectral Selectivity",
+        "description": "DOAS (Differential Optical Absorption Spectroscopy) eliminates cross-sensitivities with water vapor and CO2.",
+        "iconName": "Gauge"
+      },
+      {
+        "title": "Self-Calibrating Optics",
+        "description": "Integrated optical filter wheels perform automatic zero-point drift checks without test gas cylinders.",
+        "iconName": "Zap"
+      },
+      {
+        "title": "Hazardous Area Certification",
+        "description": "ATEX and IECEx certified models for installation in Zone 1 and Zone 2 explosive environments.",
+        "iconName": "ShieldCheck"
+      }
+    ],
+    "specifications": [
+      {
+        "parameter": "OEM Manufacturer",
+        "value": "SICK"
+      },
+      {
+        "parameter": "Equipment Category",
+        "value": "Process Gas Analyzer"
+      },
+      {
+        "parameter": "Supported Models",
+        "value": "GM32, GM35, GM700, GMS800"
+      },
+      {
+        "parameter": "Gases Detected",
+        "value": "NO, NO2, SO2, CO, CO2, NH3, HCl, O2, H2O"
+      },
+      {
+        "parameter": "Sample Gas Temperature",
+        "value": "Up to +1000 \u00b0C (in-situ probe models)"
+      },
+      {
+        "parameter": "Response Time (T90)",
+        "value": "< 5 seconds (in-situ measurement)"
+      },
+      {
+        "parameter": "Ex Approvals",
+        "value": "ATEX II 2G / II 3G Zone 1 / Zone 2"
+      }
+    ],
+    "applications": [
+      "Claus sulfur recovery plant tail gas analysis",
+      "DeNOx / SCR ammonia slip control and optimization",
+      "Combustion boiler efficiency and CO/O2 control",
+      "Process safety monitoring in chemical reactors",
+      "Flue gas desulfurization (FGD) inlet and outlet"
+    ],
+    "industries": [
+      "Oil & Gas Refineries",
+      "Petrochemical and Fertilizer Plants",
+      "Thermal Power Stations",
+      "Chemical Processing Facilities",
+      "Cement and Glass Furnaces"
+    ],
+    "downloads": [
+      {
+        "title": "SICK GM32 In-Situ Gas Analyzer Technical Information",
+        "fileType": "PDF",
+        "url": "https://cdn.sick.com/media/docs/5/95/195/product_information_gm32_en_im0030195.pdf",
+        "description": "Technical specifications, optics details, and dimensional drawings for GM32."
+      }
+    ]
+  },
+  "e800e": {
+    "slug": "e800e",
+    "name": "E800-E Series (Ethernet Communication)",
+    "brand": "Mitsubishi Electric",
+    "category": "Frequency Inverters (VFD)",
+    "badge": "Mitsubishi Electric \u00b7 Frequency Inverters (VFD)",
+    "parentPath": "/products/frequency-inverter-vfd",
+    "shortDescription": "Advanced compact frequency inverter with built-in dual-port Ethernet, designed for high-efficiency motor control in industrial plants.",
+    "longDescription": "The FR-E800-E Series is Mitsubishi Electric's high-performance compact inverter equipped with native dual Ethernet ports. Supporting CC-Link IE TSN, Ethernet/IP, Modbus/TCP, and PROFINET, it connects effortlessly to modern automation networks. It features advanced vector control, PM sensorless motor drive, PLC functionality, and SIL 3 functional safety.",
+    "highlightChips": [
+      "Dual-Port Multi-Protocol Ethernet",
+      "Real Sensorless Vector Control",
+      "Built-in PLC Functionality",
+      "SIL 3 / PLe Functional Safety"
+    ],
+    "heroImage": "/images/frequency-inverters/FR-E800.webp",
+    "tint": "#f3f5f8",
+    "galleryImages": [
+      {
+        "src": "/images/frequency-inverters/FR-E800.webp",
+        "alt": "Mitsubishi Electric FR-E800 Compact VFD"
+      },
+      {
+        "src": "/images/frequency-inverters/FR-E800-2.webp",
+        "alt": "FR-E800 Dual Ethernet Connectivity"
+      }
+    ],
+    "quickFacts": [
+      {
+        "label": "OEM Manufacturer",
+        "value": "Mitsubishi Electric"
+      },
+      {
+        "label": "Equipment Category",
+        "value": "Frequency Inverter (VFD)"
+      },
+      {
+        "label": "Series / Model",
+        "value": "FR-E800-E Multi-Protocol Ethernet"
+      },
+      {
+        "label": "Motor Compatibility",
+        "value": "Induction (IM) & Permanent Magnet (PM/IPM/SPM)"
+      },
+      {
+        "label": "Power Range",
+        "value": "0.1 kW to 30 kW (200V / 400V class)"
+      }
+    ],
+    "keyFeatures": [
+      {
+        "title": "Dual-Port Multi-Protocol Ethernet",
+        "description": "Seamlessly switches between CC-Link IE TSN, Ethernet/IP, Modbus/TCP, and PROFINET via software selection.",
+        "iconName": "Zap"
+      },
+      {
+        "title": "Advanced Vector Motor Control",
+        "description": "Delivers 200% starting torque at 0.5 Hz for heavy-load pump, mixer, and conveyor operations.",
+        "iconName": "Activity"
+      },
+      {
+        "title": "Integrated Functional Safety",
+        "description": "Equipped standard with Safe Torque Off (STO), certified to SIL 3 / PLe Cat. 3 without external contactors.",
+        "iconName": "ShieldCheck"
+      },
+      {
+        "title": "Environmental Robustness",
+        "description": "Corrosion-resistant circuit board conformal coating (IEC 60721-3-3 3C2) suitable for humid GCC climates.",
+        "iconName": "Layers"
+      }
+    ],
+    "specifications": [
+      {
+        "parameter": "OEM Manufacturer",
+        "value": "Mitsubishi Electric"
+      },
+      {
+        "parameter": "Equipment Category",
+        "value": "Variable Frequency Drive (VFD)"
+      },
+      {
+        "parameter": "Inverter Series",
+        "value": "FR-E800-E Series"
+      },
+      {
+        "parameter": "Voltage Class",
+        "value": "3-phase 380-480V (-15% / +10%) 50/60Hz"
+      },
+      {
+        "parameter": "Capacity Range",
+        "value": "0.4 kW to 30 kW"
+      },
+      {
+        "parameter": "Control Modes",
+        "value": "V/F, Advanced Magnetic Flux Vector, Real Sensorless Vector, PM Sensorless"
+      },
+      {
+        "parameter": "Network Protocols",
+        "value": "CC-Link IE TSN, Ethernet/IP, Modbus/TCP, PROFINET, BACnet"
+      },
+      {
+        "parameter": "Safety Integrity",
+        "value": "SIL 3, PLe, Cat. 3 (STO built-in)"
+      }
+    ],
+    "applications": [
+      "Water supply, wastewater, and desalination pumping stations",
+      "HVAC fans, blowers, AHUs, and cooling tower drives",
+      "Oil & gas utility skids and chemical injection pump packages",
+      "Compressor and industrial ventilation systems",
+      "Conveyors, packaging machines, and material handling"
+    ],
+    "industries": [
+      "Water and Wastewater Treatment Facilities",
+      "Oil & Gas and Petrochemical Plants",
+      "HVAC and District Cooling Systems",
+      "Food, Beverage & Pharmaceutical Processing",
+      "EPC Contractors and Skid Fabricators"
+    ],
+    "downloads": [
+      {
+        "title": "Mitsubishi Electric FR-E800 Technical Catalog",
+        "fileType": "PDF",
+        "url": "https://emea.mitsubishielectric.com/fa/get-asset?asset=https%3A%2F%2Feu-assets.contentstack.com%2Fv3%2Fassets%2Fblt5412ff9af9aef77f%2Fbltf05aab0631486b43%2F64f59e1d8c754b9ceb16267e%2Fl06131engd_(3).pdf",
+        "description": "Comprehensive specifications, wiring diagrams, and dimensional drawings for FR-E800."
+      }
+    ]
+  },
+  "got2000series": {
+    "slug": "got2000series",
+    "name": "GOT2000 Series",
+    "brand": "Mitsubishi Electric",
+    "category": "GOT",
+    "badge": "Mitsubishi Electric \u00b7 HMI / GOT",
+    "parentPath": "/products/got",
+    "shortDescription": "High-performance Graphic Operation Terminals (HMI) delivering clear visualization, gesture touch, and advanced system diagnostics.",
+    "longDescription": "The GOT2000 Series from Mitsubishi Electric is an advanced industrial HMI family offering high-resolution wide screens, multi-touch gesture control, and deep diagnostic integration with Mitsubishi PLCs and third-party controllers. Engineered for continuous operation in demanding control rooms and skid panels.",
+    "highlightChips": [
+      "Intuitive Multi-Touch Displays",
+      "Built-in PLC Diagnostics",
+      "Mobile Remote Access",
+      "Seamless Multi-Protocol Connectivity"
+    ],
+    "heroImage": "/images/got/GOT2000-Series.png",
+    "tint": "#f3f4f7",
+    "galleryImages": [
+      {
+        "src": "/images/got/GOT2000-Series.png",
+        "alt": "Mitsubishi Electric GOT2000 Graphic Operation Terminal"
+      }
+    ],
+    "quickFacts": [
+      {
+        "label": "OEM Manufacturer",
+        "value": "Mitsubishi Electric"
+      },
+      {
+        "label": "Equipment Category",
+        "value": "HMI (Graphic Operation Terminal)"
+      },
+      {
+        "label": "Display Sizes",
+        "value": "5.7\" up to 15\" High-Resolution TFT LCD"
+      },
+      {
+        "label": "Touch Screen Type",
+        "value": "Analog Resistive & Capacitive Multi-Touch"
+      },
+      {
+        "label": "Front Enclosure",
+        "value": "IP67F / NEMA 4X Oil-Proof & Water-Resistant"
+      }
+    ],
+    "keyFeatures": [
+      {
+        "title": "Clear High-Resolution Visualization",
+        "description": "Vibrant TFT screens displaying 65,536 colors with wide viewing angles and gesture-based pinch-to-zoom.",
+        "iconName": "Gauge"
+      },
+      {
+        "title": "Embedded Controller Diagnostics",
+        "description": "Direct ladder monitor and network diagnostic screens allow field troubleshooting without connecting a laptop.",
+        "iconName": "Cpu"
+      },
+      {
+        "title": "Mobile & Web Remote Monitoring",
+        "description": "Built-in VNC server and GOT Mobile allow operators to view and interact with screens from tablets and PCs.",
+        "iconName": "Zap"
+      },
+      {
+        "title": "Multi-Vendor Communication",
+        "description": "Connects simultaneously to Ethernet, RS-232, and RS-422/485 devices across various PLC protocols.",
+        "iconName": "Layers"
+      }
+    ],
+    "specifications": [
+      {
+        "parameter": "OEM Manufacturer",
+        "value": "Mitsubishi Electric"
+      },
+      {
+        "parameter": "Equipment Category",
+        "value": "Industrial HMI Terminal"
+      },
+      {
+        "parameter": "Product Family",
+        "value": "GOT2000 Series (GT27, GT25, GT21)"
+      },
+      {
+        "parameter": "Display Types",
+        "value": "5.7\", 8.4\", 10.4\", 12.1\", 15\" TFT Color LCD"
+      },
+      {
+        "parameter": "Resolution",
+        "value": "VGA (640x480), SVGA (800x600), XGA (1024x768)"
+      },
+      {
+        "parameter": "Interfaces",
+        "value": "Dual Ethernet, USB Host/Device, RS-232, RS-422/485, SD Card"
+      },
+      {
+        "parameter": "Front Protection",
+        "value": "IP67F, IP66F, NEMA 4X indoor"
+      },
+      {
+        "parameter": "Operating Ambient Temp",
+        "value": "0 to 55 \u00b0C"
+      }
+    ],
+    "applications": [
+      "Operator interface for oil & gas skids and pumping stations",
+      "Process monitoring and parameter entry in refineries",
+      "Utility management for water, power, and air systems",
+      "Machine visualization in packaging and assembly lines",
+      "Local control room panels and plant operator stations"
+    ],
+    "industries": [
+      "Oil & Gas and Petrochemical Plants",
+      "Water and Desalination Utilities",
+      "Power Generation and Distribution",
+      "Manufacturing and Packaging Facilities",
+      "System Integrators and Panel Builders"
+    ],
+    "downloads": [
+      {
+        "title": "Mitsubishi Electric GOT2000 Series Digital Catalog",
+        "fileType": "PDF",
+        "url": "https://www.mitsubishielectric.com/fa/products/hmi/got/pmerit/digital-catalog/index.html",
+        "description": "Official product catalog, panel cutouts, hardware specifications, and software options."
+      }
+    ]
+  },
+  "genesis64": {
+    "slug": "genesis64",
+    "name": "GENESIS64",
+    "brand": "ICONICS",
+    "category": "ICONICS",
+    "badge": "ICONICS \u00b7 SCADA & HMI Software",
+    "parentPath": "/products/iconics",
+    "shortDescription": "Advanced 64-bit, web-enabled SCADA and HMI software suite designed for enterprise-wide industrial automation and real-time visualization.",
+    "longDescription": "GENESIS64 from ICONICS (a group company of Mitsubishi Electric) is a state-of-the-art 64-bit SCADA, HMI, and supervisory control software platform. Designed for mission-critical operations, GENESIS64 delivers 3D graphics, alarm analytics, historical data logging, and cloud-native IoT integration across oil & gas, water, and smart city infrastructure.",
+    "highlightChips": [
+      "64-Bit Enterprise SCADA",
+      "Rich 3D Visualization",
+      "OPC UA & IoT Native",
+      "High-Performance Historian"
+    ],
+    "heroImage": "/images/iconics/GENESIS64.webp",
+    "tint": "#f0f4f8",
+    "galleryImages": [
+      {
+        "src": "/images/iconics/GENESIS64.webp",
+        "alt": "ICONICS GENESIS64 Advanced SCADA Platform"
+      }
+    ],
+    "quickFacts": [
+      {
+        "label": "OEM Manufacturer",
+        "value": "ICONICS (Mitsubishi Electric Group)"
+      },
+      {
+        "label": "Equipment Category",
+        "value": "SCADA & Enterprise Visualization"
+      },
+      {
+        "label": "Platform Architecture",
+        "value": "Native 64-Bit Web-Enabled Suite"
+      },
+      {
+        "label": "Supported Standards",
+        "value": "OPC UA, OPC Classic, BACnet, MQTT, REST"
+      },
+      {
+        "label": "Redundancy Support",
+        "value": "Full Server Redundancy with Automatic Failover"
+      }
+    ],
+    "keyFeatures": [
+      {
+        "title": "Rich 2D & 3D Real-Time Visualization",
+        "description": "GraphWorX64 delivers dynamic vector graphics and true 3D spatial models of plants and pipeline networks.",
+        "iconName": "Gauge"
+      },
+      {
+        "title": "Alarm Management & Fault Analytics",
+        "description": "AlarmWorX64 provides ISA-18.2 compliant alarm management, sequence of events recording, and notification dispatches.",
+        "iconName": "ShieldCheck"
+      },
+      {
+        "title": "High-Speed Historian & Trend Analysis",
+        "description": "Hyper Historian logs hundreds of thousands of tags per second with lossless data compression algorithms.",
+        "iconName": "Activity"
+      },
+      {
+        "title": "Cloud & Mobile Universal Access",
+        "description": "HTML5 responsive WebHMI and MobileHMI clients enable secure supervisory control on any tablet, phone, or browser.",
+        "iconName": "Zap"
+      }
+    ],
+    "specifications": [
+      {
+        "parameter": "OEM Manufacturer",
+        "value": "ICONICS / Mitsubishi Electric"
+      },
+      {
+        "parameter": "Software Solution",
+        "value": "GENESIS64 Enterprise SCADA Suite"
+      },
+      {
+        "parameter": "Operating Systems",
+        "value": "Microsoft Windows Server 2022/2019, Windows 11/10 Pro (64-bit)"
+      },
+      {
+        "parameter": "Communication Drivers",
+        "value": "Native OPC UA, Modbus TCP, BACnet, Mitsubishi CC-Link, Siemens, Rockwell"
+      },
+      {
+        "parameter": "Database Connectivity",
+        "value": "Microsoft SQL Server, Azure SQL, Oracle, ODBC"
+      },
+      {
+        "parameter": "Client Technology",
+        "value": "HTML5, WPF, WebAssembly, iOS/Android Apps"
+      },
+      {
+        "parameter": "Cybersecurity Standards",
+        "value": "IEC 62443 compliance, role-based RBAC, TLS encryption"
+      }
+    ],
+    "applications": [
+      "Pipeline, tank farm, and distribution terminal SCADA systems",
+      "Refinery and petrochemical plant supervisory monitoring",
+      "Power generation, substation, and smart grid automation",
+      "Centralized water distribution and wastewater SCADA",
+      "Smart buildings and enterprise facility management"
+    ],
+    "industries": [
+      "Oil & Gas (Upstream, Midstream, Downstream)",
+      "Power Generation and Distribution",
+      "Water & Wastewater Authorities",
+      "Smart Cities and Infrastructure",
+      "Manufacturing & Life Sciences"
+    ],
+    "downloads": [
+      {
+        "title": "ICONICS GENESIS64 Comprehensive Product Catalog",
+        "fileType": "PDF",
+        "url": "https://dl.mitsubishielectric.com/dl/fa/document/catalog/scada/l08785eng/l08785engd.pdf",
+        "description": "Official Mitsubishi Electric / ICONICS technical brochure, features, and system architecture."
+      }
+    ]
+  }
+}
