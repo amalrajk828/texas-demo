@@ -62,9 +62,20 @@ html {
 
 html,
 body {
-  background-color: #ffffff;
+  background-color: var(--page-bg);
   color: #1a1a1a;
   min-height: 100vh;
+}
+
+:is(div, article, aside, form, input, textarea, select, button, a)[class~="bg-white"]:not(.about-us-page) {
+  background-color: var(--card-bg);
+}
+
+section[class~="bg-white"],
+main[class~="bg-white"],
+.min-h-screen[class~="bg-white"],
+.about-us-page {
+  background-color: var(--page-bg);
 }
 
 @import "./home-v3-showcase.css";
@@ -101,16 +112,16 @@ input[type="submit"].btn-primary:hover,
 
 /* Glass Card (Frosted Glassmorphism - Monochrome & Neutral with Section Tone Adaptation) */
 :root {
-  --bg-white: #ffffff;
-  --bg-grey: #ffffff;
-  --bg-studio: #ffffff;
-  --bg-card-section: var(--bg-white);
+  --bg-white: var(--page-bg);
+  --bg-grey: var(--page-bg);
+  --bg-studio: var(--page-bg);
+  --bg-card-section: var(--card-bg);
 
   /* Grey section defaults */
-  --card-fill: #ffffff;
-  --card-fill-fallback: #ffffff;
-  --card-border: #e5e5e5;
-  --card-ring: 0 0 0 1px #e5e5e5;
+  --card-fill: var(--card-bg);
+  --card-fill-fallback: var(--card-bg);
+  --card-border: #C8C8C5;
+  --card-ring: 0 0 0 1px #C8C8C5;
   --card-specular-opacity: 0.45;
   --card-shadow: 0 4px 20px rgba(0, 0, 0, 0.05), 0 1px 3px rgba(0, 0, 0, 0.03);
   --card-shadow-hover: 0 12px 32px rgba(0, 0, 0, 0.08), 0 2px 6px rgba(0, 0, 0, 0.04);
@@ -127,10 +138,10 @@ input[type="submit"].btn-primary:hover,
 /* Section Tone Variants */
 .section-tone-light {
   background-color: var(--bg-white, #ffffff);
-  --card-fill: #ffffff;
-  --card-fill-fallback: #ffffff;
-  --card-border: #e5e5e5;
-  --card-ring: 0 0 0 1px #e5e5e5;
+  --card-fill: var(--card-bg);
+  --card-fill-fallback: var(--card-bg);
+  --card-border: #C8C8C5;
+  --card-ring: 0 0 0 1px #C8C8C5;
   --card-specular-opacity: 0.6;
   --card-shadow: 0 4px 20px rgba(0, 0, 0, 0.05), 0 1px 3px rgba(0, 0, 0, 0.03);
   --card-shadow-hover: 0 12px 32px rgba(0, 0, 0, 0.08), 0 2px 6px rgba(0, 0, 0, 0.04);
@@ -138,10 +149,10 @@ input[type="submit"].btn-primary:hover,
 
 .section-tone-grey {
   background-color: var(--bg-grey, #ffffff);
-  --card-fill: #ffffff;
-  --card-fill-fallback: #ffffff;
-  --card-border: #e5e5e5;
-  --card-ring: 0 0 0 1px #e5e5e5;
+  --card-fill: var(--card-bg);
+  --card-fill-fallback: var(--card-bg);
+  --card-border: #C8C8C5;
+  --card-ring: 0 0 0 1px #C8C8C5;
   --card-specular-opacity: 0.45;
   --card-shadow: 0 4px 20px rgba(0, 0, 0, 0.05), 0 1px 3px rgba(0, 0, 0, 0.03);
   --card-shadow-hover: 0 12px 32px rgba(0, 0, 0, 0.08), 0 2px 6px rgba(0, 0, 0, 0.04);
@@ -152,8 +163,8 @@ input[type="submit"].btn-primary:hover,
   width: 100%;
   height: 100%;
   border-radius: 28px;
-  background: var(--card-fill-fallback, rgba(255, 255, 255, 0.6));
-  border: 1px solid var(--card-border, rgba(255, 255, 255, 0.85));
+  background: var(--card-fill-fallback, var(--card-bg));
+  border: 1px solid var(--card-border, #C8C8C5);
   box-shadow: var(--card-ring, 0 0 0 0 transparent), var(--card-shadow, 0 24px 40px -12px rgba(0, 0, 0, 0.18));
   padding: 24px;
   overflow: hidden;
@@ -164,7 +175,7 @@ input[type="submit"].btn-primary:hover,
 
 @supports (backdrop-filter: blur(14px)) or (-webkit-backdrop-filter: blur(14px)) {
   .glass-card {
-    background: var(--card-fill, rgba(255, 255, 255, 0.35));
+    background: var(--card-fill, var(--card-bg));
     -webkit-backdrop-filter: blur(14px) saturate(120%);
     backdrop-filter: blur(14px) saturate(120%);
   }
@@ -382,7 +393,7 @@ input[type="submit"].btn-primary:hover,
   min-width: 0 !important;
   box-sizing: border-box !important;
   border-radius: 20px;
-  background: var(--card-bg, rgba(255, 255, 255, 0.72));
+  background: var(--card-bg);
   border: 1px solid var(--card-border, rgba(0, 0, 0, 0.06));
   box-shadow: var(--card-shadow, 0 4px 20px rgba(0, 0, 0, 0.04));
   overflow: hidden;
@@ -443,7 +454,7 @@ input[type="submit"].btn-primary:hover,
 .v3-card-image-area.is-product,
 .v3-image-card-product .v3-card-image-area {
   aspect-ratio: 4 / 3 !important;
-  background-color: #ffffff !important;
+  background-color: var(--card-bg) !important;
 }
 
 .v3-card-body {
@@ -765,7 +776,7 @@ input[type="submit"].btn-primary:hover,
   width: 100%;
   box-sizing: border-box;
   border-radius: 24px;
-  background: rgba(255, 255, 255, 0.72);
+  background: var(--card-bg);
   border: 1px solid rgba(0, 0, 0, 0.06);
   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.04);
   overflow: hidden;
@@ -874,7 +885,7 @@ input[type="submit"].btn-primary:hover,
   height: 100%;
   padding: 36px 32px;
   border-radius: 32px;
-  background: linear-gradient(180deg, rgba(255, 255, 255, 0.65) 0%, rgba(255, 255, 255, 0.35) 60%, rgba(176, 48, 56, 0.10) 100%);
+  background: var(--card-bg);
   backdrop-filter: blur(20px) saturate(160%);
   -webkit-backdrop-filter: blur(20px) saturate(160%);
   border: 1.5px solid rgba(255, 255, 255, 0.7);
@@ -908,14 +919,14 @@ input[type="submit"].btn-primary:hover,
 @supports not (backdrop-filter: blur(1px)) {
   .glass-card,
   .about-service-card {
-    background: rgba(255, 255, 255, 0.9);
+    background: var(--card-bg);
   }
 }
 
 @supports not ((backdrop-filter: blur(1px)) or (-webkit-backdrop-filter: blur(1px))) {
   .glass-card,
   .about-service-card {
-    background: rgba(255, 255, 255, 0.9) !important;
+    background: var(--card-bg) !important;
   }
 }
 
@@ -943,7 +954,7 @@ input[type="submit"].btn-primary:hover,
   width: 56px;
   height: 56px;
   border-radius: 18px;
-  background: rgba(255, 255, 255, 0.55);
+  background: var(--card-bg);
   border: 1px solid rgba(255, 255, 255, 0.8);
   backdrop-filter: blur(10px);
   -webkit-backdrop-filter: blur(10px);
@@ -964,7 +975,7 @@ input[type="submit"].btn-primary:hover,
 @supports not (backdrop-filter: blur(1px)) {
   .glass-icon-box,
   .about-service-icon-badge {
-    background: rgba(255, 255, 255, 0.9);
+    background: var(--card-bg);
   }
 }
 
@@ -1002,7 +1013,7 @@ input[type="submit"].btn-primary:hover,
   font-size: 12px;
   font-weight: 600;
   color: #8a302f;
-  background: rgba(255, 255, 255, 0.55);
+  background: var(--card-bg);
   border: 1px solid rgba(255, 255, 255, 0.8);
   backdrop-filter: blur(8px);
   -webkit-backdrop-filter: blur(8px);

@@ -190,7 +190,7 @@ export default function PwsFloorSolutions() {
       </section>
 
       {/* ══ CATEGORIES ═══════════════════════════════════════ */}
-      <section className="relative bg-[#f4f5f8] py-24 lg:py-32 overflow-hidden">
+      <section className="relative bg-white py-24 lg:py-32 overflow-hidden">
         <div
           className="absolute top-0 left-1/2 -translate-x-1/2 w-[600px] h-[1px] pointer-events-none"
           style={{
@@ -217,7 +217,7 @@ export default function PwsFloorSolutions() {
             {categories.map((cat) => (
               <div
                 key={cat.title}
-                className="group relative rounded-2xl border border-[#e8eaf0] bg-white overflow-hidden flex flex-col hover:border-[#e7212b]/25 hover:shadow-xl hover:shadow-[#e7212b]/6 transition-all duration-300"
+                className="group relative rounded-2xl border border-[#C8C8C5] bg-[#DCDCD9] overflow-hidden flex flex-col hover:border-[#e7212b]/25 hover:shadow-xl hover:shadow-[#e7212b]/6 transition-all duration-300"
               >
                 <div className="flex flex-col flex-1 p-6">
                   <div className="w-12 h-12 rounded-xl bg-[#e7212b]/8 border border-[#e7212b]/15 flex items-center justify-center mb-5 group-hover:bg-[#e7212b]/15 group-hover:border-[#e7212b]/30 transition-all duration-300">

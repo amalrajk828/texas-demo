@@ -212,95 +212,61 @@ export default function HomeSections() {
           <div className="products-preview-grid">
             <Reveal delay={0}>
               <div className="product-spec-unified-table">
-                {/* Master Columns Header Bar (Matching Reference Spec Table) */}
+                {/* Master Columns Header Bar (Matching Reference Spec Table Exactly) */}
                 <div className="product-spec-columns-bar">
                   <span className="product-spec-col-key">PARAMETER</span>
                   <span className="product-spec-col-val">SPECIFICATION DETAIL</span>
                 </div>
 
                 <div className="product-spec-list">
-                  {/* Package 01 */}
-                  <div className="product-spec-package-divider">
-                    <div className="product-spec-package-info">
-                      <span className="product-spec-package-badge">Package 01</span>
-                      <h3 className="product-spec-package-name">Fiscal Metering &amp; Custody Transfer Skids</h3>
-                    </div>
-                    <Link href="/products/" className="product-spec-package-link">
-                      <span>View Technical Specs</span>
-                      <span>&rarr;</span>
-                    </Link>
+                  <div className="spec-row">
+                    <span className="spec-key">Piping &amp; Fabrication Standards</span>
+                    <span className="spec-val">
+                      <strong>ASME B31.3 / B31.4 / B31.8&bull;</strong> NACE MR0175 sour service compliance
+                    </span>
                   </div>
                   <div className="spec-row">
-                    <span className="spec-key">Design Standard</span>
-                    <span className="spec-val">API MPMS, AGA, ISO 5167</span>
+                    <span className="spec-key">Line Sizes &amp; Flow Capacity</span>
+                    <span className="spec-val">
+                      <strong>DN50 &ndash; DN1200</strong> (2&rdquo; through 48&rdquo;) &bull; Up to{" "}
+                      <strong>8,500 m&sup3;/hr</strong> liquid / <strong>50 MMSCFD</strong> gas
+                    </span>
                   </div>
                   <div className="spec-row">
-                    <span className="spec-key">Meter Types</span>
-                    <span className="spec-val">Ultrasonic, Coriolis, Turbine</span>
+                    <span className="spec-key">Fluid Compatibility</span>
+                    <span className="spec-val">
+                      Crude Oil, Wet Gas, Condensate, Refined Hydrocarbons, High H2S Sour Streams
+                    </span>
                   </div>
                   <div className="spec-row">
-                    <span className="spec-key">Uncertainty</span>
-                    <span className="spec-val">&plusmn;0.15% to &plusmn;0.25%</span>
+                    <span className="spec-key">Measurement Accuracy</span>
+                    <span className="spec-val">
+                      <strong>&plusmn;0.15 %</strong> of measured volume (repeatability &le; &plusmn;0.02 % to API MPMS Ch. 5.8)
+                    </span>
                   </div>
                   <div className="spec-row">
-                    <span className="spec-key">Pressure Class</span>
-                    <span className="spec-val">ANSI 150# through 2500#</span>
-                  </div>
-
-                  {/* Package 02 */}
-                  <div className="product-spec-package-divider">
-                    <div className="product-spec-package-info">
-                      <span className="product-spec-package-badge">Package 02</span>
-                      <h3 className="product-spec-package-name">PLC &amp; SCADA Process Automation Systems</h3>
-                    </div>
-                    <Link href="/products/" className="product-spec-package-link">
-                      <span>View Technical Specs</span>
-                      <span>&rarr;</span>
-                    </Link>
+                    <span className="spec-key">Operating Pressure Rating</span>
+                    <span className="spec-val">
+                      Up to <strong>420 bar</strong> (ANSI Class 150 to Class 2500 / API 10,000 psi)
+                    </span>
                   </div>
                   <div className="spec-row">
-                    <span className="spec-key">PLC Platforms</span>
-                    <span className="spec-val">Mitsubishi iQ-R, Q-Series, FX5U</span>
+                    <span className="spec-key">NDT &amp; Quality Verification</span>
+                    <span className="spec-val">
+                      <strong>100% RT / UT</strong> flange &amp; weld verification &bull; FAT / SAT at Ahmadi Facility
+                    </span>
                   </div>
                   <div className="spec-row">
-                    <span className="spec-key">SCADA Suite</span>
-                    <span className="spec-val">ICONICS GENESIS64, MC Works64</span>
+                    <span className="spec-key">Signal &amp; Telemetry Outputs</span>
+                    <span className="spec-val">
+                      Modbus TCP/RTU, OPC UA, HART 4–20 mA, PROFIBUS DP, Dual Pulse (API 5.5)
+                    </span>
                   </div>
                   <div className="spec-row">
-                    <span className="spec-key">Safety Rating</span>
-                    <span className="spec-val">SIL-2 / SIL-3 IEC 61508</span>
-                  </div>
-                  <div className="spec-row">
-                    <span className="spec-key">Protocols</span>
-                    <span className="spec-val">Modbus TCP, OPC UA, CC-Link IE</span>
-                  </div>
-
-                  {/* Package 03 */}
-                  <div className="product-spec-package-divider">
-                    <div className="product-spec-package-info">
-                      <span className="product-spec-package-badge">Package 03</span>
-                      <h3 className="product-spec-package-name">Industrial Sensors &amp; Analyzers</h3>
-                    </div>
-                    <Link href="/products/" className="product-spec-package-link">
-                      <span>View Technical Specs</span>
-                      <span>&rarr;</span>
-                    </Link>
-                  </div>
-                  <div className="spec-row">
-                    <span className="spec-key">Gas Analyzers</span>
-                    <span className="spec-val">SICK GM32, GM35, GM700 In-Situ</span>
-                  </div>
-                  <div className="spec-row">
-                    <span className="spec-key">CEMS Solutions</span>
-                    <span className="spec-val">EN 15267 / QAL1 Compliant</span>
-                  </div>
-                  <div className="spec-row">
-                    <span className="spec-key">Dust Monitors</span>
-                    <span className="spec-val">DUSTHUNTER T100 / T200</span>
-                  </div>
-                  <div className="spec-row">
-                    <span className="spec-key">Enclosure</span>
-                    <span className="spec-val">ATEX / IECEx Zone 1 &amp; 2</span>
+                    <span className="spec-key">Standards &amp; Certifications</span>
+                    <span className="spec-val">
+                      API MPMS, AGA Report No. 9, OIML R117 / R137, ATEX / IECEx Zone 1 Ex d IIC T6
+                    </span>
                   </div>
                 </div>
               </div>

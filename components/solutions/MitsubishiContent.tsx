@@ -163,7 +163,7 @@ export default function MitsubishiContent() {
       </section>
 
       {/* ══ OUR SOLUTIONS ═══════════════════════════════════ */}
-      <section className="relative bg-[#f4f5f8] py-24 lg:py-32 overflow-hidden">
+      <section className="relative bg-white py-24 lg:py-32 overflow-hidden">
         <div
           className="absolute top-0 left-1/2 -translate-x-1/2 w-[600px] h-[1px] pointer-events-none"
           style={{
@@ -199,7 +199,7 @@ export default function MitsubishiContent() {
               <Link
                 key={sol.title}
                 href={sol.href}
-                className="group relative rounded-2xl border border-[#e8eaf0] bg-white overflow-hidden flex flex-col hover:border-[#e7212b]/25 hover:shadow-xl hover:shadow-[#e7212b]/6 transition-all duration-300"
+                className="group relative rounded-2xl border border-[#C8C8C5] bg-[#DCDCD9] overflow-hidden flex flex-col hover:border-[#e7212b]/25 hover:shadow-xl hover:shadow-[#e7212b]/6 transition-all duration-300"
               >
                 <div className="flex flex-col flex-1 p-7">
                   <div className="flex items-center justify-between mb-4">
@@ -323,7 +323,7 @@ export default function MitsubishiContent() {
             ].map((item) => (
               <div
                 key={item.step}
-                className="relative rounded-2xl border border-[#e8eaf0] bg-white p-6 hover:border-[#e7212b]/25 hover:shadow-lg hover:shadow-[#e7212b]/6 transition-all duration-300"
+                className="relative rounded-2xl border border-[#C8C8C5] bg-[#DCDCD9] p-6 hover:border-[#e7212b]/25 hover:shadow-lg hover:shadow-[#e7212b]/6 transition-all duration-300"
               >
                 <span className="text-[2.5rem] font-bold text-[#e7212b]/10 leading-none">
                   {item.step}
@@ -337,7 +337,7 @@ export default function MitsubishiContent() {
       </section>
 
       {/* ══ INDUSTRIES ══════════════════════════════════════ */}
-      <section className="py-20 lg:py-24 bg-[#f4f5f8]">
+      <section className="py-20 lg:py-24 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6">
           <div className="flex items-center gap-2.5 mb-4">
             <span className="w-5 h-px bg-[#0891B2]" />
@@ -375,7 +375,7 @@ export default function MitsubishiContent() {
       </section>
 
       {/* ══ FAQ ════════════════════════════════════════════ */}
-      <section className="bg-[#f4f5f8] py-20 lg:py-24">
+      <section className="bg-white py-20 lg:py-24">
         <div className="max-w-7xl mx-auto px-4 sm:px-6">
           <div className="flex items-center gap-2.5 mb-4">
             <span className="w-5 h-px bg-[#0891B2]" />

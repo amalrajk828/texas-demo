@@ -10,7 +10,6 @@
   --btn-primary-shadow: 0 10px 24px rgba(120, 20, 20, 0.35);
   --brand-action: #8a302f;
   --brand-action-hover: #6f2423;
-  --page-bg: #FFFFFF;
   --bg-studio: #ffffff;
   --bg-studio-glass: rgba(255, 255, 255, 0.92);
   --text-primary: #1a1a1a;
@@ -19,13 +18,13 @@
   --accent: var(--brand-action);
   --accent-hover: var(--brand-action-hover);
   --accent-light: rgba(138, 48, 47, 0.08);
-  --card-bg: #DCDCD9;
-  --card-border: #C8C8C5;
+  --card-bg: rgba(255, 255, 255, 0.72);
+  --card-border: rgba(0, 0, 0, 0.06);
   --card-shadow: 0 20px 40px -15px rgba(0, 0, 0, 0.07);
   --nav-border: rgba(0, 0, 0, 0.08);
-  --card-hover-wave: #FFFFFF;
-  --card-hover-wave-light: #FFFFFF;
-  --card-hover-wave-dark: #F5F5F3;
+  --card-hover-wave: #DCDCD9;
+  --card-hover-wave-light: #E6E6E3;
+  --card-hover-wave-dark: #D0D0CD;
   --font-heading: 'Sora', -apple-system, BlinkMacSystemFont, sans-serif;
   --font-body: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
   --what-we-do-card-width: 380px;
@@ -1823,6 +1822,7 @@ button.card-interactive,
   display: flex;
   flex-direction: column;
   max-width: 1080px;
+  max-width: 1100px;
   margin: 0 auto;
   width: 100%;
 }
@@ -1833,6 +1833,8 @@ button.card-interactive,
   background-color: #DCDCD9 !important;
   border-radius: 20px;
   border: 1px solid rgba(0, 0, 0, 0.1);
+  border-radius: 18px;
+  border: 1px solid rgba(0, 0, 0, 0.08);
   box-shadow: 0 16px 36px -12px rgba(0, 0, 0, 0.08), 0 4px 12px rgba(0, 0, 0, 0.03);
   overflow: hidden;
   transition: transform 0.25s ease, box-shadow 0.25s ease;
@@ -1849,13 +1851,18 @@ button.card-interactive,
   display: grid;
   grid-template-columns: 38% 62%;
   padding: 16px 28px;
+  grid-template-columns: 35% 65%;
+  padding: 15px 32px;
   background-color: var(--brand-action, #8a302f) !important;
   border-top: none;
   font-size: 11px;
+  font-size: 11.5px;
   font-weight: 800;
   text-transform: uppercase;
   letter-spacing: 0.08em;
   color: #ffffff !important;
+  border-top-left-radius: 18px;
+  border-top-right-radius: 18px;
 }
 
 .product-spec-col-key {
@@ -1935,9 +1942,12 @@ button.card-interactive,
   display: grid;
   grid-template-columns: 38% 62%;
   padding: 14px 28px;
+  grid-template-columns: 35% 65%;
+  padding: 17px 32px;
   border-bottom: 1px solid rgba(0, 0, 0, 0.07);
   align-items: center;
   font-size: 14px;
+  font-size: 14.5px;
   line-height: 1.5;
   background-color: #DCDCD9 !important;
   transition: background-color 0.15s ease;
@@ -1955,16 +1965,25 @@ button.card-interactive,
   font-weight: 700;
   color: #1a1a1a;
   padding-right: 16px;
+  padding-right: 20px;
 }
 
 .product-spec-list .spec-val {
   color: #2b2b2b;
   font-weight: 500;
+  color: #4a4a4a;
+  font-weight: 400;
+}
+
+.product-spec-list .spec-val strong {
+  font-weight: 700;
+  color: #111111;
 }
 
 @media (max-width: 767px) {
   .product-spec-columns-bar {
     grid-template-columns: 44% 56%;
+    grid-template-columns: 42% 58%;
     padding: 12px 18px;
     font-size: 10px;
   }
@@ -1987,6 +2006,8 @@ button.card-interactive,
   .product-spec-list .spec-row {
     grid-template-columns: 44% 56%;
     padding: 12px 18px;
+    grid-template-columns: 42% 58%;
+    padding: 13px 18px;
     font-size: 13px;
   }
 
@@ -2095,8 +2116,8 @@ button.card-interactive,
   position: relative !important;
   overflow: hidden !important;
   border-radius: 20px !important;
-  background: var(--card-bg, #DCDCD9) !important;
-  border: 1px solid var(--card-border, #C8C8C5) !important;
+  background: #ffffff !important;
+  border: 1px solid rgba(0, 0, 0, 0.08) !important;
   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05), 0 1px 3px rgba(0, 0, 0, 0.03) !important;
   z-index: 1 !important;
   transition: transform 0.28s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.28s cubic-bezier(0.16, 1, 0.3, 1), border-color 0.28s ease !important;
@@ -2120,6 +2141,7 @@ button.card-interactive,
 }
 
 @media (max-width: 767px) {
+
   .card-wave-hover,
   .glass-hover-card {
     padding: 26px !important;
@@ -2197,7 +2219,7 @@ button.card-interactive,
   text-align: left !important;
 }
 
-/* Wave / Water-Fill Hover Effect: Rising rotating liquid mechanism using #FFFFFF and #F5F5F3 over #DCDCD9 cards */
+/* Wave / Water-Fill Hover Effect: Rising rotating liquid mechanism using #DCDCD9, #E6E6E3, and #D0D0CD */
 .card-wave-hover::after,
 .glass-hover-card::after {
   content: "" !important;
@@ -2208,21 +2230,19 @@ button.card-interactive,
   right: -140px !important;
   /* fully outside the card at rest, so it is never visible */
   border-radius: 30% !important;
-  background: linear-gradient(
-    135deg,
-    rgba(255, 255, 255, 0.96) 0%,
-    rgba(245, 245, 243, 0.75) 28%,
-    rgba(255, 255, 255, 0.92) 42%,
-    rgba(240, 240, 238, 0.70) 58%,
-    rgba(255, 255, 255, 0.88) 100%
-  ) !important;
+  background: linear-gradient(135deg,
+      rgba(220, 220, 217, 0.95) 0%,
+      rgba(230, 230, 227, 0.65) 28%,
+      rgba(220, 220, 217, 0.90) 42%,
+      rgba(208, 208, 205, 0.60) 58%,
+      rgba(220, 220, 217, 0.85) 100%) !important;
   backdrop-filter: blur(10px) saturate(160%) !important;
   -webkit-backdrop-filter: blur(10px) saturate(160%) !important;
-  border: 1px solid rgba(255, 255, 255, 0.90) !important;
+  border: 1px solid rgba(208, 208, 205, 0.85) !important;
   box-shadow:
-    inset 0 2px 6px rgba(255, 255, 255, 0.95),
-    inset 0 -6px 18px rgba(230, 230, 225, 0.40),
-    0 8px 24px rgba(180, 180, 175, 0.25) !important;
+    inset 0 2px 6px rgba(240, 240, 238, 0.95),
+    inset 0 -6px 18px rgba(190, 190, 185, 0.40),
+    0 8px 24px rgba(160, 160, 155, 0.25) !important;
   animation: spin 1.8s linear infinite !important;
   transition: all 1.2s linear !important;
   z-index: 0 !important;
@@ -2230,6 +2250,7 @@ button.card-interactive,
 }
 
 @media (hover: hover) {
+
   .card-wave-hover:hover::after,
   .glass-hover-card:hover::after {
     width: 760px !important;
@@ -2259,21 +2280,21 @@ button.card-interactive,
   }
 }
 
-/* Fallback for no backdrop-filter: multi-layer white liquid gradient */
+/* Fallback for no backdrop-filter: multi-layer grey liquid gradient */
 @supports not ((backdrop-filter: blur(10px)) or (-webkit-backdrop-filter: blur(10px))) {
+
   .card-wave-hover::after,
   .glass-hover-card::after {
-    background: linear-gradient(
-      135deg,
-      var(--card-hover-wave-light, #FFFFFF) 0%,
-      var(--card-hover-wave-dark, #F5F5F3) 42%,
-      var(--card-hover-wave, #FFFFFF) 100%
-    ) !important;
+    background: linear-gradient(135deg,
+        var(--card-hover-wave-light, #E6E6E3) 0%,
+        var(--card-hover-wave, #DCDCD9) 42%,
+        var(--card-hover-wave-dark, #D0D0CD) 100%) !important;
   }
 }
 
 /* Respect prefers-reduced-motion: remove spin and use a plain 0.2s fade */
 @media (prefers-reduced-motion: reduce) {
+
   .card-wave-hover::after,
   .glass-hover-card::after {
     animation: none !important;
@@ -2284,7 +2305,7 @@ button.card-interactive,
     height: 100% !important;
     border-radius: inherit !important;
     opacity: 0 !important;
-    background: var(--card-hover-wave, #FFFFFF) !important;
+    background: var(--card-hover-wave, #DCDCD9) !important;
   }
 
   .card-wave-hover:hover::after,
@@ -2833,7 +2854,7 @@ button.card-interactive,
   justify-content: center;
   font-size: 13px;
   font-weight: 600;
-  color: #1a1a1a;
+  color: var(--text-secondary);
   letter-spacing: 0.01em;
   text-align: center;
   text-wrap: balance;
@@ -3026,9 +3047,9 @@ button.card-interactive,
 
 .cta-box {
   position: relative !important;
-  background: var(--card-bg, #DCDCD9) !important;
+  background: #ffffff !important;
   border-radius: 24px !important;
-  border: 1px solid #C8C8C5 !important;
+  border: 1px solid #e5e5e5 !important;
   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05), 0 1px 3px rgba(0, 0, 0, 0.03) !important;
   padding: 64px 48px !important;
   text-align: center !important;
@@ -3260,9 +3281,9 @@ button.card-interactive,
   .cta-section .cta-box {
     padding: 28px 20px !important;
     border-radius: 20px !important;
-    border: 1px solid #C8C8C5 !important;
+    border: 1px solid #e5e5e5 !important;
     box-shadow: 0 4px 16px rgba(0, 0, 0, 0.06) !important;
-    background: var(--card-bg, #DCDCD9) !important;
+    background: #ffffff !important;
     width: 100% !important;
     max-width: 100% !important;
     box-sizing: border-box !important;

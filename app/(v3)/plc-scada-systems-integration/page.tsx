@@ -217,7 +217,7 @@ export default function PlcScadaIntegrationPage() {
               <Link
                 key={svc.title}
                 href={svc.href}
-                className="group relative flex flex-col justify-between rounded-[24px] border border-black/[0.06] bg-[#f8fafc] p-8 hover:bg-white hover:border-[#6b1a1f]/30 hover:shadow-xl hover:shadow-black/5 hover:-translate-y-1 transition-all duration-300"
+                className="group relative flex flex-col justify-between rounded-[24px] border border-black/[0.06] bg-[#DCDCD9] p-8 hover:bg-white hover:border-[#6b1a1f]/30 hover:shadow-xl hover:shadow-black/5 hover:-translate-y-1 transition-all duration-300"
               >
                 <div>
                   <div className="flex items-center justify-between mb-6">
@@ -246,7 +246,7 @@ export default function PlcScadaIntegrationPage() {
       </section>
 
       {/* ══ SECTION 2 (Grey): Capabilities List ═══════════════════ */}
-      <section className="py-20 lg:py-24 bg-[#f8fafc] border-t border-black/[0.04]">
+      <section className="py-20 lg:py-24 bg-white border-t border-black/[0.04]">
         <div className="max-w-7xl mx-auto px-4 sm:px-6">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-start">
             <div className="lg:col-span-5">
