@@ -340,16 +340,12 @@ export function TiltStackScroll({
                   willChange: "transform, opacity, filter",
                 }}
               >
-                {/* ── Card Box ── */}
-                <div className="relative w-full h-full rounded-[24px] sm:rounded-[30px] overflow-hidden shadow-[0_24px_50px_-12px_rgba(0,0,0,0.38),0_8px_20px_-6px_rgba(0,0,0,0.22)] border border-white/15 text-white flex flex-col justify-between p-6 sm:p-9 md:p-11 select-none">
-                  {/* Brand Red Top Line */}
-                  <div
-                    className="absolute top-0 inset-x-0 h-[4px] bg-[#9b2c2c] z-30"
-                    aria-hidden="true"
-                  />
+                {/* ── Card Box (Scoped Solid Red Design matching Products Card) ── */}
+                <div className={`capability-card--solid relative w-full h-full text-white select-none ${hasImage ? "has-bg-image" : ""}`}>
+                  {/* Soft Radial Highlight in top-left (matching Products card .flow-card::before) */}
+                  <div className="capability-card-highlight" aria-hidden="true" />
 
-                  {/* ── Background ── */}
-                  {hasImage ? (
+                  {hasImage && (
                     <>
                       {/* eslint-disable-next-line @next/next/no-img-element */}
                       <img
@@ -359,100 +355,60 @@ export function TiltStackScroll({
                         loading="eager"
                         decoding="async"
                       />
-                      {/* Dark Overlay for Readability */}
                       <div
-                        className="absolute inset-0 bg-gradient-to-t from-black/95 via-black/75 to-black/40 z-10"
-                        aria-hidden="true"
-                      />
-                    </>
-                  ) : (
-                    <>
-                      {/* Rich Dark-Red Gradient */}
-                      <div
-                        className="absolute inset-0 z-0"
-                        style={{
-                          background:
-                            "linear-gradient(135deg, #7a1f1f 0%, #461111 48%, #2b0a0a 100%)",
-                        }}
-                      />
-                      {/* Subtle Dot Grid Pattern */}
-                      <div
-                        className="absolute inset-0 opacity-[0.14] pointer-events-none z-10"
-                        style={{
-                          backgroundImage:
-                            "radial-gradient(circle, rgba(255,255,255,0.45) 1px, transparent 1px)",
-                          backgroundSize: "24px 24px",
-                        }}
-                        aria-hidden="true"
-                      />
-                      {/* Subtle Technical Linear Grid Accent */}
-                      <div
-                        className="absolute inset-0 opacity-[0.05] pointer-events-none z-10"
-                        style={{
-                          backgroundImage:
-                            "linear-gradient(to right, #fff 1px, transparent 1px), linear-gradient(to bottom, #fff 1px, transparent 1px)",
-                          backgroundSize: "48px 48px",
-                        }}
-                        aria-hidden="true"
-                      />
-                      {/* Ambient Brand Glow in Corner */}
-                      <div
-                        className="absolute -bottom-20 -right-20 w-80 h-80 rounded-full bg-[#9b2c2c]/30 blur-3xl pointer-events-none z-10"
+                        className="absolute inset-0 bg-gradient-to-t from-black/95 via-black/75 to-black/40 z-1"
                         aria-hidden="true"
                       />
                     </>
                   )}
 
-                  {/* ── Glazing Light-Sweep Streak ── */}
-                  <span className="tss-glaze-wrap" aria-hidden="true">
-                    <span className="tss-glaze" />
-                  </span>
+                  {/* ── Top-Right Slide Number (matching Products card .flow-num) ── */}
+                  <div className="capability-card-num" aria-hidden="true">
+                    ({String(idx + 1).padStart(2, "0")})
+                  </div>
 
-                  {/* ── Card Content (Above Overlays) ── */}
-                  <div className="relative z-20 w-full flex items-start justify-between gap-4">
-                    {/* Top Left Icon */}
-                    {card.icon ? (
-                      <div className="w-12 h-12 sm:w-14 sm:h-14 rounded-2xl bg-[#9b2c2c] border border-white/20 text-white flex items-center justify-center shadow-lg shadow-[#9b2c2c]/40 shrink-0">
-                        {card.icon}
-                      </div>
-                    ) : (
-                      <div className="w-12 h-12 sm:w-14 sm:h-14 rounded-2xl bg-[#9b2c2c]/60 border border-white/20 flex items-center justify-center text-white font-mono font-bold text-lg">
-                        {String(idx + 1).padStart(2, "0")}
+                  {/* ── Top-Left: Label (kicker), Heading, Description ── */}
+                  <div className="capability-card-main">
+                    {card.kicker && (
+                      <div className="capability-card-kicker">
+                        {card.kicker}
                       </div>
                     )}
+                    <h3 className="capability-card-title">{card.title}</h3>
+                    <p className="capability-card-desc">{card.description}</p>
+                  </div>
 
-                    {/* Top Right Tag Chips */}
+                  {/* ── Bottom-Left: Small text meta (matching Products card .flow-meta) ── */}
+                  <div className="capability-card-meta">
+                    <b className="capability-card-meta-label">{card.kicker || "CAPABILITY"}</b>
+                    <span className="capability-card-meta-sub">
+                      Capability {String(idx + 1).padStart(2, "0")} · Approved Engineering
+                    </span>
+                  </div>
+
+                  {/* ── Bottom-Right: Action Area (Tags pills + Translucent Icon box) ── */}
+                  <div className="capability-card-action">
                     {card.tags && card.tags.length > 0 && (
-                      <div className="flex flex-wrap gap-1.5 sm:gap-2 justify-end max-w-xs sm:max-w-md">
+                      <div className="capability-card-tags">
                         {card.tags.map((tag) => (
-                          <span
-                            key={tag}
-                            className="inline-flex items-center gap-1.5 px-2.5 py-1 sm:px-3 sm:py-1 rounded-full text-[11px] sm:text-xs font-medium bg-black/40 backdrop-blur-md border border-white/10 text-white/90 select-none"
-                          >
-                            <span
-                              className="w-1.5 h-1.5 rounded-full bg-[#9b2c2c] shrink-0"
-                              aria-hidden="true"
-                            />
+                          <span key={tag} className="capability-card-tag">
+                            <span className="capability-card-tag-dot" aria-hidden="true" />
                             {tag}
                           </span>
                         ))}
                       </div>
                     )}
-                  </div>
 
-                  {/* Bottom Block (Kicker, Title, Description) */}
-                  <div className="relative z-20 w-full mt-auto pt-6">
-                    {card.kicker && (
-                      <div className="text-[11px] sm:text-xs font-bold uppercase tracking-[0.16em] text-[#f28a8a] mb-2">
-                        {card.kicker}
-                      </div>
-                    )}
-                    <h3 className="font-heading font-extrabold text-xl sm:text-2xl md:text-3xl lg:text-[34px] text-white tracking-tight leading-snug sm:leading-tight mb-3">
-                      {card.title}
-                    </h3>
-                    <p className="text-neutral-200/90 text-xs sm:text-[14.5px] md:text-[15.5px] leading-relaxed max-w-2xl line-clamp-3 sm:line-clamp-none">
-                      {card.description}
-                    </p>
+                    {/* Translucent white icon box with rounded corners */}
+                    <div className="capability-card-icon" aria-hidden="true">
+                      {card.icon ? (
+                        card.icon
+                      ) : (
+                        <span className="font-mono font-bold text-base">
+                          {String(idx + 1).padStart(2, "0")}
+                        </span>
+                      )}
+                    </div>
                   </div>
                 </div>
               </div>
@@ -480,54 +436,282 @@ export function TiltStackScroll({
       </div>
 
       <style>{`
-        .tss-glaze-wrap {
+        /* ==========================================================================
+           Core Capabilities Solid Card (.capability-card--solid)
+           Scoped design copying the Products page large red product card (.flow-card)
+           ========================================================================== */
+        .capability-card--solid {
+          background-color: #a11d1d;
+          color: #ffffff;
+          padding: 40px 46px 36px;
+          display: grid;
+          grid-template-columns: 1.15fr 1fr;
+          grid-template-rows: auto 1fr auto;
+          column-gap: 36px;
+          box-shadow: 0 40px 80px -30px rgba(0, 0, 0, 0.45), 0 2px 0 rgba(255, 255, 255, 0.18) inset;
+          overflow: hidden;
+          height: 100%;
+          border-radius: 22px;
+          position: relative;
+          box-sizing: border-box;
+        }
+
+        /* Very soft lighter highlight toward top-left (exact replica of .flow-card::before) */
+        .capability-card-highlight {
           position: absolute;
           inset: 0;
-          z-index: 1;
-          overflow: hidden;
           border-radius: inherit;
           pointer-events: none;
-          opacity: 1;
-          transition: opacity .25s ease;
-        }
-        .tss-glaze {
-          position: absolute;
-          top: -20%;
-          left: 0;
-          width: 38%;
-          height: 140%;
-          opacity: 0;
-          background: linear-gradient(
-            90deg,
-            rgba(255,255,255,0) 0%,
-            rgba(255,255,255,.04) 30%,
-            rgba(255,255,255,.16) 50%,
-            rgba(255,255,255,.04) 70%,
-            rgba(255,255,255,0) 100%
-          );
-          filter: blur(10px);
-          mix-blend-mode: soft-light;
-          transform: translate3d(-160%, 0, 0) skewX(-18deg);
-          will-change: transform, opacity;
+          background: radial-gradient(90% 70% at 15% 0%, rgba(255, 255, 255, 0.14), transparent 60%);
+          z-index: 1;
         }
 
-        /* Only the visible (active) card sweeps, once after it settles, then every ~5s */
-        .tss-card[data-active="true"] .tss-glaze {
-          animation: tss-glaze-sweep 5s cubic-bezier(.45,.05,.25,1) .5s infinite;
-        }
-        @keyframes tss-glaze-sweep {
-          0%   { transform: translate3d(-160%,0,0) skewX(-18deg); opacity: 0; }
-          6%   { opacity: 1; }
-          28%  { transform: translate3d(380%,0,0) skewX(-18deg); opacity: 0; }
-          100% { transform: translate3d(380%,0,0) skewX(-18deg); opacity: 0; }
+        /* Slide Number in top-right (matching Products card .flow-num) */
+        .capability-card-num {
+          grid-column: 2;
+          grid-row: 1;
+          justify-self: end;
+          font-family: var(--font-heading, "Sora", sans-serif);
+          font-size: 15px;
+          font-weight: 500;
+          opacity: 0.55;
+          letter-spacing: 0.02em;
+          color: #ffffff;
+          z-index: 2;
+          line-height: 1;
         }
 
-        /* Hide while scrolling */
-        .tss-track.tss-scrolling .tss-glaze-wrap { opacity: 0; }
-        .tss-track.tss-scrolling .tss-glaze { animation: none; }
+        /* Top-Left Main Content */
+        .capability-card-main {
+          grid-column: 1;
+          grid-row: 1 / 3;
+          display: flex;
+          flex-direction: column;
+          z-index: 2;
+          max-width: 520px;
+        }
 
-        @media (prefers-reduced-motion: reduce) {
-          .tss-glaze-wrap { display: none; }
+        /* Small uppercase label / kicker (pinkish / light white) */
+        .capability-card-kicker {
+          font-family: var(--font-heading, "Sora", sans-serif);
+          font-size: 11px;
+          font-weight: 700;
+          text-transform: uppercase;
+          letter-spacing: 0.14em;
+          color: #ffd6d6;
+          margin-bottom: 8px;
+          opacity: 0.95;
+        }
+
+        /* Heading: bold white, same font size, weight, line-height as Products card */
+        .capability-card-title {
+          font-family: var(--font-heading, "Sora", sans-serif);
+          font-weight: 700;
+          font-size: clamp(24px, 2.7vw, 36px);
+          letter-spacing: -0.03em;
+          line-height: 1.1;
+          color: #ffffff;
+          margin: 0;
+        }
+
+        /* Description: white at ~85% opacity, matching Products card paragraph */
+        .capability-card-desc {
+          font-family: var(--font-body, "Inter", sans-serif);
+          font-size: clamp(13px, 1.05vw, 14.5px);
+          line-height: 1.65;
+          opacity: 0.85;
+          color: #ffffff;
+          margin-top: 14px;
+          margin-bottom: 0;
+        }
+
+        /* Bottom-Left Meta: matching Products card .flow-meta */
+        .capability-card-meta {
+          grid-column: 1;
+          grid-row: 3;
+          align-self: end;
+          z-index: 2;
+          margin-top: 18px;
+        }
+
+        .capability-card-meta-label {
+          display: block;
+          font-size: 13px;
+          font-weight: 700;
+          color: #ffffff;
+          font-family: var(--font-heading, "Sora", sans-serif);
+          text-transform: uppercase;
+          letter-spacing: 0.04em;
+        }
+
+        .capability-card-meta-sub {
+          display: block;
+          font-size: 11px;
+          opacity: 0.75;
+          color: #ffffff;
+          font-family: var(--font-body, "Inter", sans-serif);
+          margin-top: 2px;
+        }
+
+        /* Bottom-Right Action Area: tags and translucent icon box */
+        .capability-card-action {
+          grid-column: 2;
+          grid-row: 2 / 4;
+          display: flex;
+          flex-direction: column;
+          justify-content: flex-end;
+          align-items: flex-end;
+          gap: 18px;
+          z-index: 2;
+        }
+
+        .capability-card-tags {
+          display: flex;
+          flex-wrap: wrap;
+          gap: 8px;
+          justify-content: flex-end;
+          max-width: 380px;
+        }
+
+        /* Tags: translucent white pills (rgba(255,255,255,0.15)) with white text and thin light border */
+        .capability-card-tag {
+          display: inline-flex;
+          align-items: center;
+          gap: 6px;
+          padding: 6px 12px;
+          border-radius: 9999px;
+          font-size: 11.5px;
+          font-weight: 500;
+          background: rgba(255, 255, 255, 0.15);
+          backdrop-filter: blur(8px);
+          -webkit-backdrop-filter: blur(8px);
+          border: 1px solid rgba(255, 255, 255, 0.22);
+          color: #ffffff;
+          letter-spacing: 0.01em;
+          transition: background 0.2s ease, border-color 0.2s ease;
+        }
+
+        .capability-card-tag:hover {
+          background: rgba(255, 255, 255, 0.22);
+          border-color: rgba(255, 255, 255, 0.35);
+        }
+
+        .capability-card-tag-dot {
+          width: 5px;
+          height: 5px;
+          border-radius: 9999px;
+          background: rgba(255, 255, 255, 0.75);
+          flex-shrink: 0;
+        }
+
+        /* Icon Box: translucent white background, white icon, same rounded corners as now (rounded-2xl) */
+        .capability-card-icon {
+          width: 52px;
+          height: 52px;
+          border-radius: 16px;
+          background: rgba(255, 255, 255, 0.18);
+          backdrop-filter: blur(10px);
+          -webkit-backdrop-filter: blur(10px);
+          border: 1px solid rgba(255, 255, 255, 0.30);
+          color: #ffffff;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          box-shadow: 0 8px 20px -4px rgba(0, 0, 0, 0.25);
+          flex-shrink: 0;
+        }
+
+        .capability-card-icon svg {
+          width: 24px;
+          height: 24px;
+          stroke: #ffffff;
+        }
+
+        /* Responsive: Tablet and Mobile adjustments */
+        @media (max-width: 767px) {
+          .capability-card--solid {
+            grid-template-columns: 1fr;
+            grid-template-rows: auto auto auto auto;
+            padding: 24px 20px 20px;
+            column-gap: 0;
+            row-gap: 12px;
+            border-radius: 20px;
+          }
+
+          .capability-card-num {
+            position: absolute;
+            top: 22px;
+            right: 20px;
+            grid-column: 1;
+            grid-row: 1;
+          }
+
+          .capability-card-main {
+            grid-column: 1;
+            grid-row: 1;
+            max-width: calc(100% - 44px);
+          }
+
+          .capability-card-title {
+            font-size: 20px;
+            line-height: 1.15;
+          }
+
+          .capability-card-desc {
+            font-size: 12px;
+            line-height: 1.55;
+            margin-top: 8px;
+            display: -webkit-box;
+            -webkit-line-clamp: 3;
+            -webkit-box-orient: vertical;
+            overflow: hidden;
+          }
+
+          .capability-card-action {
+            grid-column: 1;
+            grid-row: 2;
+            flex-direction: row;
+            align-items: center;
+            justify-content: space-between;
+            gap: 10px;
+            margin-top: 2px;
+          }
+
+          .capability-card-tags {
+            justify-content: flex-start;
+            max-width: 100%;
+            gap: 6px;
+          }
+
+          .capability-card-tag {
+            padding: 4px 9px;
+            font-size: 10.5px;
+          }
+
+          .capability-card-icon {
+            width: 38px;
+            height: 38px;
+            border-radius: 12px;
+          }
+
+          .capability-card-icon svg {
+            width: 18px;
+            height: 18px;
+          }
+
+          .capability-card-meta {
+            grid-column: 1;
+            grid-row: 3;
+            margin-top: 2px;
+          }
+
+          .capability-card-meta-label {
+            font-size: 11px;
+          }
+
+          .capability-card-meta-sub {
+            font-size: 9.5px;
+          }
         }
       `}</style>
     </section>
