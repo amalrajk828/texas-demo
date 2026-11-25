@@ -344,6 +344,7 @@ const tiltStackCards = [
       "Custody transfer fiscal metering skids, ultrasonic flow metering, calibration, and supervisory flow computer integration.",
     icon: <Gauge className="w-6 h-6" strokeWidth={2} />,
     tags: ["Fiscal skids", "Ultrasonic", "Calibration"],
+    theme: "red",
   },
   {
     title: "Industrial Automation & SCADA",
@@ -352,6 +353,7 @@ const tiltStackCards = [
       "Complete PLC SCADA integration, telemetry systems, HMI design, and Mitsubishi Electric authorized engineering across GCC facilities.",
     icon: <Cpu className="w-6 h-6" strokeWidth={2} />,
     tags: ["PLC", "SCADA", "HMI"],
+    theme: "navy",
   },
   {
     title: "Inspection & Advanced NDT",
@@ -360,6 +362,7 @@ const tiltStackCards = [
       "Certified Non-Destructive Testing (NDT), ultrasonic, magnetic particle, eddy current, and metallurgical PMI testing.",
     icon: <SearchCheck className="w-6 h-6" strokeWidth={2} />,
     tags: ["UT", "MPI", "Eddy current", "PMI"],
+    theme: "orange",
   },
   {
     title: "Pressure Vessels & Lifting Inspection",
@@ -368,6 +371,7 @@ const tiltStackCards = [
       "Statutory proof load testing, crane and lifting tackle certification, and ASME pressure vessel compliance audits.",
     icon: <ShieldCheck className="w-6 h-6" strokeWidth={2} />,
     tags: ["Proof Load", "Lifting Tackle", "ASME Compliance"],
+    theme: "green",
   },
   {
     title: "16+ Approved Global OEM Alliances",
@@ -376,6 +380,7 @@ const tiltStackCards = [
       "Direct Kuwait & GCC partnerships with tier-1 global instrumentation leaders including Endress+Hauser, Faure Herman, and KEM Küppers.",
     icon: <Network className="w-6 h-6" strokeWidth={2} />,
     tags: ["Kuwait & GCC", "Faure Herman", "KEM Küppers", "Tier-1 OEMs"],
+    theme: "purple",
   },
   {
     title: "ISO 9001, 14001, 45001 & UASL Accredited",
@@ -384,6 +389,7 @@ const tiltStackCards = [
       "Independently verified integrated management systems for quality assurance, environmental care, and occupational health & safety.",
     icon: <Award className="w-6 h-6" strokeWidth={2} />,
     tags: ["ISO 9001", "ISO 14001", "ISO 45001", "UASL"],
+    theme: "teal",
   },
 ];
 

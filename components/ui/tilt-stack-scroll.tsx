@@ -5,33 +5,34 @@ import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 
 if (typeof window !== "undefined") {
-  gsap.registerPlugin(ScrollTrigger);
+    gsap.registerPlugin(ScrollTrigger);
 }
 
 export interface TiltStackCard {
-  title: string;
-  kicker?: string;
-  description: string;
-  icon?: React.ReactNode;
-  tags?: string[];
-  image?: string;
+    title: string;
+    kicker?: string;
+    description: string;
+    icon?: React.ReactNode;
+    tags?: string[];
+    image?: string;
+  theme?: string;
 }
 
 export interface TiltStackScrollProps {
-  eyebrow?: string;
-  heading?: string;
-  cards: TiltStackCard[];
-  className?: string;
+    eyebrow?: string;
+    heading?: string;
+    cards: TiltStackCard[];
+    className?: string;
 }
 
 export interface CardPose {
-  y: number;
-  yUnit: "%" | "px";
-  rotateX: number;
-  scale: number;
-  opacity: number;
-  brightness: number;
-  zIndex: number;
+    y: number;
+    yUnit: "%" | "px";
+    rotateX: number;
+    scale: number;
+    opacity: number;
+    brightness: number;
+    zIndex: number;
 }
 
 /**
@@ -42,292 +43,294 @@ export interface CardPose {
  * d > 0: past card (tips back, shrinks, darkens)
  */
 export function pose(
-  progress: number,
-  index: number,
-  prefersReducedMotion: boolean = false
+    progress: number,
+    index: number,
+    prefersReducedMotion: boolean = false
 ): CardPose {
-  const d = progress - index;
+    const d = progress - index;
 
-  if (prefersReducedMotion) {
-    if (d < -0.5) {
-      return { y: 0, yUnit: "%", rotateX: 0, scale: 1, opacity: 0, brightness: 1, zIndex: index };
+    if (prefersReducedMotion) {
+        if (d < -0.5) {
+            return { y: 0, yUnit: "%", rotateX: 0, scale: 1, opacity: 0, brightness: 1, zIndex: index };
+        }
+        if (d < 0) {
+            const op = (d + 0.5) / 0.5;
+            return {
+                y: 0,
+                yUnit: "%",
+                rotateX: 0,
+                scale: 1,
+                opacity: Math.max(0, Math.min(1, op)),
+                brightness: 1,
+                zIndex: 10 + index,
+            };
+        }
+        return {
+            y: 0,
+            yUnit: "%",
+            rotateX: 0,
+            scale: 1,
+            opacity: Math.max(0, 1 - d * 0.9),
+            brightness: 1,
+            zIndex: 10 + index,
+        };
     }
+
+    // Incoming card (below screen)
+    if (d <= -1) {
+        return {
+            y: 110,
+            yUnit: "%",
+            rotateX: -16,
+            scale: 0.92,
+            opacity: 0,
+            brightness: 1,
+            zIndex: 10 + index,
+        };
+    }
+
     if (d < 0) {
-      const op = (d + 0.5) / 0.5;
-      return {
-        y: 0,
-        yUnit: "%",
-        rotateX: 0,
-        scale: 1,
-        opacity: Math.max(0, Math.min(1, op)),
-        brightness: 1,
-        zIndex: 10 + index,
-      };
+        // d in (-1, 0): card slides up into view
+        const enterProgress = 1 + d; // 0 -> 1
+        const y = (-d) * 105; // 105% down to 0%
+        const rotateX = d * 16; // -16deg up to 0deg
+        const scale = 0.92 + enterProgress * 0.08; // 0.92 -> 1.0
+        const opacity = Math.min(1, Math.max(0, enterProgress * 1.6));
+        return {
+            y,
+            yUnit: "%",
+            rotateX,
+            scale,
+            opacity,
+            brightness: 1,
+            zIndex: 10 + index,
+        };
     }
+
+    // Active or past card (d >= 0)
+    // At d = 0: flat & bright
+    // As d increases: tips back away (+rotateX), shrinks slightly, and darkens
+    const pastD = Math.min(d, 4);
+    const y = -pastD * 18; // shifts upward slightly
+    const rotateX = Math.min(22, d * 13); // tilts backwards
+    const scale = Math.max(0.76, 1 - d * 0.06);
+    const opacity = Math.max(0.12, 1 - d * 0.22);
+    const brightness = Math.max(0.25, 1 - d * 0.25);
+
     return {
-      y: 0,
-      yUnit: "%",
-      rotateX: 0,
-      scale: 1,
-      opacity: Math.max(0, 1 - d * 0.9),
-      brightness: 1,
-      zIndex: 10 + index,
+        y,
+        yUnit: "px",
+        rotateX,
+        scale,
+        opacity,
+        brightness,
+        zIndex: 10 + index,
     };
-  }
-
-  // Incoming card (below screen)
-  if (d <= -1) {
-    return {
-      y: 110,
-      yUnit: "%",
-      rotateX: -16,
-      scale: 0.92,
-      opacity: 0,
-      brightness: 1,
-      zIndex: 10 + index,
-    };
-  }
-
-  if (d < 0) {
-    // d in (-1, 0): card slides up into view
-    const enterProgress = 1 + d; // 0 -> 1
-    const y = (-d) * 105; // 105% down to 0%
-    const rotateX = d * 16; // -16deg up to 0deg
-    const scale = 0.92 + enterProgress * 0.08; // 0.92 -> 1.0
-    const opacity = Math.min(1, Math.max(0, enterProgress * 1.6));
-    return {
-      y,
-      yUnit: "%",
-      rotateX,
-      scale,
-      opacity,
-      brightness: 1,
-      zIndex: 10 + index,
-    };
-  }
-
-  // Active or past card (d >= 0)
-  // At d = 0: flat & bright
-  // As d increases: tips back away (+rotateX), shrinks slightly, and darkens
-  const pastD = Math.min(d, 4);
-  const y = -pastD * 18; // shifts upward slightly
-  const rotateX = Math.min(22, d * 13); // tilts backwards
-  const scale = Math.max(0.76, 1 - d * 0.06);
-  const opacity = Math.max(0.12, 1 - d * 0.22);
-  const brightness = Math.max(0.25, 1 - d * 0.25);
-
-  return {
-    y,
-    yUnit: "px",
-    rotateX,
-    scale,
-    opacity,
-    brightness,
-    zIndex: 10 + index,
-  };
 }
 
 /**
  * Converts a CardPose into a CSS 3D transform string
  */
 export function toTransform(p: CardPose): string {
-  const yStr = `${p.y}${p.yUnit}`;
-  return `translate3d(0, ${yStr}, 0) rotateX(${p.rotateX}deg) scale(${p.scale})`;
+    const yStr = `${p.y}${p.yUnit}`;
+    return `translate3d(0, ${yStr}, 0) rotateX(${p.rotateX}deg) scale(${p.scale})`;
 }
 
 export function TiltStackScroll({
-  eyebrow = "What we do",
-  heading = "Our Core Capabilities",
-  cards,
-  className = "",
+    eyebrow = "What we do",
+    heading = "Our Core Capabilities",
+    cards,
+    className = "",
 }: TiltStackScrollProps) {
-  const trackRef = useRef<HTMLDivElement>(null);
-  const stageRef = useRef<HTMLDivElement>(null);
-  const cardRefs = useRef<(HTMLDivElement | null)[]>([]);
+    const trackRef = useRef<HTMLDivElement>(null);
+    const stageRef = useRef<HTMLDivElement>(null);
+    const cardRefs = useRef<(HTMLDivElement | null)[]>([]);
 
-  const [activeIndex, setActiveIndex] = useState(0);
-  const [progressRatio, setProgressRatio] = useState(0);
+    const [activeIndex, setActiveIndex] = useState(0);
+    const [progressRatio, setProgressRatio] = useState(0);
 
-  const applyPoses = useCallback(
-    (currentP: number, reducedMotion: boolean) => {
-      cards.forEach((_, idx) => {
-        const el = cardRefs.current[idx];
-        if (!el) return;
-        const currentPose = pose(currentP, idx, reducedMotion);
-        el.style.transform = toTransform(currentPose);
-        el.style.opacity = currentPose.opacity.toFixed(3);
-        el.style.filter = `brightness(${currentPose.brightness.toFixed(3)})`;
-        el.style.zIndex = String(currentPose.zIndex);
+    const applyPoses = useCallback(
+        (currentP: number, reducedMotion: boolean) => {
+            cards.forEach((_, idx) => {
+                const el = cardRefs.current[idx];
+                if (!el) return;
+                const currentPose = pose(currentP, idx, reducedMotion);
+                el.style.transform = toTransform(currentPose);
+                el.style.opacity = currentPose.opacity.toFixed(3);
+                el.style.filter = `brightness(${currentPose.brightness.toFixed(3)})`;
+                el.style.zIndex = String(currentPose.zIndex);
 
-        // Allow interaction only on active or nearly active card
-        const dist = Math.abs(currentP - idx);
-        el.style.pointerEvents = dist < 0.4 ? "auto" : "none";
-      });
-    },
-    [cards]
-  );
-
-  useEffect(() => {
-    if (typeof window === "undefined" || !trackRef.current) return;
-
-    let idleTimer: ReturnType<typeof setTimeout> | undefined;
-    let lastActive = 0;
-
-    let reduced = false;
-    try {
-      reduced = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
-    } catch {
-      reduced = false;
-    }
-
-    // Set initial poses and initial active card attribute
-    applyPoses(0, reduced);
-    cardRefs.current.forEach((el, i) =>
-      el?.setAttribute("data-active", String(i === 0))
+                // Allow interaction only on active or nearly active card
+                const dist = Math.abs(currentP - idx);
+                el.style.pointerEvents = dist < 0.4 ? "auto" : "none";
+            });
+        },
+        [cards]
     );
 
-    // Sync with smooth scroll (Lenis) if present
-    const win = window as any;
-    const lenis = win.__lenis;
-    const handleLenisScroll = () => {
-      ScrollTrigger.update();
-    };
-    if (lenis) {
-      lenis.on("scroll", handleLenisScroll);
-    }
+    useEffect(() => {
+        if (typeof window === "undefined" || !trackRef.current) return;
 
-    const ctx = gsap.context(() => {
-      ScrollTrigger.create({
-        trigger: trackRef.current,
-        start: "top top",
-        end: "bottom bottom",
-        scrub: 0.5,
-        snap: {
-          snapTo: 1 / Math.max(1, cards.length - 1),
-          duration: { min: 0.25, max: 0.6 },
-          ease: "power2.out",
-          delay: 0.08,
-        },
-        onUpdate: (self) => {
-          trackRef.current?.classList.add("tss-scrolling");
-          clearTimeout(idleTimer);
-          idleTimer = setTimeout(() => {
-            trackRef.current?.classList.remove("tss-scrolling");
-          }, 180);
+        let idleTimer: ReturnType<typeof setTimeout> | undefined;
+        let lastActive = 0;
 
-          const rawP = self.progress * (cards.length - 1);
-          setProgressRatio(self.progress);
-          const currentActive = Math.min(
-            cards.length - 1,
-            Math.max(0, Math.round(rawP))
-          );
-          if (currentActive !== lastActive) {
-            lastActive = currentActive;
-            setActiveIndex(currentActive);
-            cardRefs.current.forEach((el, i) =>
-              el?.setAttribute("data-active", String(i === currentActive))
-            );
-          }
-          applyPoses(rawP, reduced);
-        },
-      });
-    }, trackRef);
+        let reduced = false;
+        try {
+            reduced = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+        } catch {
+            reduced = false;
+        }
 
-    return () => {
-      clearTimeout(idleTimer);
-      if (lenis) {
-        lenis.off("scroll", handleLenisScroll);
-      }
-      ctx.revert();
-    };
-  }, [cards, applyPoses]);
+        // Set initial poses and initial active card attribute
+        applyPoses(0, reduced);
+        cardRefs.current.forEach((el, i) =>
+            el?.setAttribute("data-active", String(i === 0))
+        );
 
-  const totalCards = cards.length;
-  const currentFormatted = String(activeIndex + 1).padStart(2, "0");
-  const totalFormatted = String(totalCards).padStart(2, "0");
+        // Sync with smooth scroll (Lenis) if present
+        const win = window as any;
+        const lenis = win.__lenis;
+        const handleLenisScroll = () => {
+            ScrollTrigger.update();
+        };
+        if (lenis) {
+            lenis.on("scroll", handleLenisScroll);
+        }
 
-  return (
-    <section
-      ref={trackRef}
-      className={`tss-track relative w-full ${className}`}
-      style={{
-        // 100vh of scroll per card ensures smooth pacing
-        height: `${Math.max(1, totalCards) * 100}vh`,
-      }}
-    >
-      {/* ── Sticky Stage: 100svh viewport pinned while track scrolls ── */}
-      <div
-        ref={stageRef}
-        className="sticky top-0 h-[100svh] w-full overflow-hidden flex flex-col justify-between pt-20 sm:pt-24 pb-[56px] select-none bg-white"
-      >
-        {/* Subtle Ambient Background Texture */}
-        <div
-          className="absolute inset-0 pointer-events-none opacity-[0.035]"
-          style={{
-            backgroundImage:
-              "radial-gradient(circle, #000 1px, transparent 1px)",
-            backgroundSize: "28px 28px",
-          }}
-          aria-hidden="true"
-        />
+        const ctx = gsap.context(() => {
+            ScrollTrigger.create({
+                trigger: trackRef.current,
+                start: "top top",
+                end: "bottom bottom",
+                scrub: 0.5,
+                snap: {
+                    snapTo: 1 / Math.max(1, cards.length - 1),
+                    duration: { min: 0.25, max: 0.6 },
+                    ease: "power2.out",
+                    delay: 0.08,
+                },
+                onUpdate: (self) => {
+                    trackRef.current?.classList.add("tss-scrolling");
+                    clearTimeout(idleTimer);
+                    idleTimer = setTimeout(() => {
+                        trackRef.current?.classList.remove("tss-scrolling");
+                    }, 180);
 
-        {/* ── Top Header Row (Eyebrow + Heading on left, Counter + Rail on right) ── */}
-        <div className="relative z-[5] max-w-6xl w-full mx-auto px-4 sm:px-6 md:px-8 flex flex-col sm:flex-row sm:items-end justify-between gap-4 shrink-0">
-          {/* Left: Eyebrow + Heading */}
-          <div className="max-w-xl">
-            {eyebrow && (
-              <div className="inline-block text-[#9b2c2c] text-[11px] sm:text-[12px] font-bold uppercase tracking-[0.16em] mb-2">
-                {eyebrow}
-              </div>
-            )}
-            {heading && (
-              <h2 className="font-heading text-2xl sm:text-3xl md:text-4xl font-extrabold text-[#1a1a1a] tracking-tight leading-tight">
-                {heading}
-              </h2>
-            )}
-          </div>
+                    const rawP = self.progress * (cards.length - 1);
+                    setProgressRatio(self.progress);
+                    const currentActive = Math.min(
+                        cards.length - 1,
+                        Math.max(0, Math.round(rawP))
+                    );
+                    if (currentActive !== lastActive) {
+                        lastActive = currentActive;
+                        setActiveIndex(currentActive);
+                        cardRefs.current.forEach((el, i) =>
+                            el?.setAttribute("data-active", String(i === currentActive))
+                        );
+                    }
+                    applyPoses(rawP, reduced);
+                },
+            });
+        }, trackRef);
 
-          {/* Right: Counter "01 / 06" and Progress Rail */}
-          <div className="flex sm:flex-col items-center sm:items-end justify-between sm:justify-center gap-2">
-            <div className="flex items-baseline font-mono text-2xl sm:text-3xl md:text-[34px] font-extrabold tracking-tight">
-              <span className="text-[#9b2c2c] transition-colors duration-200">
-                {currentFormatted}
-              </span>
-              <span className="text-neutral-400 font-normal text-base sm:text-lg mx-1.5">
-                /
-              </span>
-              <span className="text-neutral-400 text-base sm:text-lg">
-                {totalFormatted}
-              </span>
-            </div>
+        return () => {
+            clearTimeout(idleTimer);
+            if (lenis) {
+                lenis.off("scroll", handleLenisScroll);
+            }
+            ctx.revert();
+        };
+    }, [cards, applyPoses]);
 
-            {/* Slim Progress Rail */}
-            <div
-              className="w-28 sm:w-36 h-1.5 bg-neutral-300/80 rounded-full overflow-hidden relative"
-              aria-hidden="true"
-            >
-              <div
-                className="h-full bg-[#9b2c2c] rounded-full transition-all duration-150 ease-out"
-                style={{
-                  width: `${Math.max(8, progressRatio * 100).toFixed(1)}%`,
-                }}
-              />
-            </div>
-          </div>
-        </div>
+    const totalCards = cards.length;
+    const currentFormatted = String(activeIndex + 1).padStart(2, "0");
+    const totalFormatted = String(totalCards).padStart(2, "0");
 
-        {/* ── Card 3D Stage (Cards live here) ── */}
-        <div
-          className="tss-deck relative flex-1 w-full max-w-5xl mx-auto flex items-center justify-center px-4 sm:px-6 my-auto mt-[clamp(28px,6vh,64px)]"
-          style={{
-            perspective: "1400px",
-            perspectiveOrigin: "50% 65%",
-          }}
+    return (
+        <section
+            ref={trackRef}
+            className={`tss-track relative w-full ${className}`}
+            style={{
+                // 100vh of scroll per card ensures smooth pacing
+                height: `${Math.max(1, totalCards) * 100}vh`,
+            }}
         >
-          {cards.map((card, idx) => {
-            const hasImage = Boolean(card.image);
+            {/* ── Sticky Stage: 100svh viewport pinned while track scrolls ── */}
+            <div
+                ref={stageRef}
+                className="sticky top-0 h-[100svh] w-full overflow-hidden flex flex-col justify-between pt-20 sm:pt-24 pb-[56px] select-none bg-white"
+            >
+                {/* Subtle Ambient Background Texture */}
+                <div
+                    className="absolute inset-0 pointer-events-none opacity-[0.035]"
+                    style={{
+                        backgroundImage:
+                            "radial-gradient(circle, #000 1px, transparent 1px)",
+                        backgroundSize: "28px 28px",
+                    }}
+                    aria-hidden="true"
+                />
 
-            return (
+                {/* ── Top Header Row (Eyebrow + Heading on left, Counter + Rail on right) ── */}
+                <div className="relative z-[5] max-w-6xl w-full mx-auto px-4 sm:px-6 md:px-8 flex flex-col sm:flex-row sm:items-end justify-between gap-4 shrink-0">
+                    {/* Left: Eyebrow + Heading */}
+                    <div className="max-w-xl">
+                        {eyebrow && (
+                            <div className="inline-block text-[#9b2c2c] text-[11px] sm:text-[12px] font-bold uppercase tracking-[0.16em] mb-2">
+                                {eyebrow}
+                            </div>
+                        )}
+                        {heading && (
+                            <h2 className="font-heading text-2xl sm:text-3xl md:text-4xl font-extrabold text-[#1a1a1a] tracking-tight leading-tight">
+                                {heading}
+                            </h2>
+                        )}
+                    </div>
+
+                    {/* Right: Counter "01 / 06" and Progress Rail */}
+                    <div className="flex sm:flex-col items-center sm:items-end justify-between sm:justify-center gap-2">
+                        <div className="flex items-baseline font-mono text-2xl sm:text-3xl md:text-[34px] font-extrabold tracking-tight">
+                            <span className="text-[#9b2c2c] transition-colors duration-200">
+                                {currentFormatted}
+                            </span>
+                            <span className="text-neutral-400 font-normal text-base sm:text-lg mx-1.5">
+                                /
+                            </span>
+                            <span className="text-neutral-400 text-base sm:text-lg">
+                                {totalFormatted}
+                            </span>
+                        </div>
+
+                        {/* Slim Progress Rail */}
+                        <div
+                            className="w-28 sm:w-36 h-1.5 bg-neutral-300/80 rounded-full overflow-hidden relative"
+                            aria-hidden="true"
+                        >
+                            <div
+                                className="h-full bg-[#9b2c2c] rounded-full transition-all duration-150 ease-out"
+                                style={{
+                                    width: `${Math.max(8, progressRatio * 100).toFixed(1)}%`,
+                                }}
+                            />
+                        </div>
+                    </div>
+                </div>
+
+                {/* ── Card 3D Stage (Cards live here) ── */}
+                <div
+                    className="tss-deck relative flex-1 w-full max-w-5xl mx-auto flex items-center justify-center px-4 sm:px-6 my-auto mt-[clamp(28px,6vh,64px)]"
+                    style={{
+                        perspective: "1400px",
+                        perspectiveOrigin: "50% 65%",
+                    }}
+                >
+                    {cards.map((card, idx) => {
+                        const hasImage = Boolean(card.image);
+            const THEME_CYCLE = ["red", "navy", "orange", "green", "purple", "teal"] as const;
+            const cardTheme = card.theme || THEME_CYCLE[idx % THEME_CYCLE.length];
+
+                        return (
               <div
                 key={card.title || idx}
                 ref={(el) => {
@@ -340,8 +343,11 @@ export function TiltStackScroll({
                   willChange: "transform, opacity, filter",
                 }}
               >
-                {/* ── Card Box (Scoped Solid Red Design matching Products Card) ── */}
-                <div className={`capability-card--solid relative w-full h-full text-white select-none ${hasImage ? "has-bg-image" : ""}`}>
+                {/* ── Card Box (Scoped Palette Design matching Products/Analyzers Cards) ── */}
+                <div
+                  className={`capability-card--solid capability-card--${cardTheme} relative w-full h-full text-white select-none ${hasImage ? "has-bg-image" : ""}`}
+                  data-theme={cardTheme}
+                >
                   {/* Soft Radial Highlight in top-left (matching Products card .flow-card::before) */}
                   <div className="capability-card-highlight" aria-hidden="true" />
 
@@ -437,11 +443,21 @@ export function TiltStackScroll({
 
       <style>{`
         /* ==========================================================================
-           Core Capabilities Solid Card (.capability-card--solid)
-           Scoped design copying the Products page large red product card (.flow-card)
+           Core Capabilities Palette Card (.capability-card--solid)
+           Scoped palette design matching Products & Analyzers cards
            ========================================================================== */
+        :root, .tss-deck {
+          --card-red: #a11d1d;
+          --card-navy: #1f2c4b;
+          --card-orange: #ba4913;
+          --card-green: #1b4d3e;
+          --card-purple: #3e2752;
+          --card-teal: #1d4354;
+        }
+
         .capability-card--solid {
-          background-color: #a11d1d;
+          --card-color: var(--card-red, #a11d1d);
+          background-color: var(--card-color);
           color: #ffffff;
           padding: 40px 46px 36px;
           display: grid;
@@ -454,6 +470,38 @@ export function TiltStackScroll({
           border-radius: 22px;
           position: relative;
           box-sizing: border-box;
+          transition: background-color 0.35s ease;
+        }
+
+        /* ── Slide Theme Mappings (derived via single --card-color variable) ── */
+        .capability-card--solid[data-theme="red"],
+        .capability-card--red {
+          --card-color: var(--card-red, #a11d1d);
+        }
+
+        .capability-card--solid[data-theme="navy"],
+        .capability-card--navy {
+          --card-color: var(--card-navy, #1f2c4b);
+        }
+
+        .capability-card--solid[data-theme="orange"],
+        .capability-card--orange {
+          --card-color: var(--card-orange, #ba4913);
+        }
+
+        .capability-card--solid[data-theme="green"],
+        .capability-card--green {
+          --card-color: var(--card-green, #1b4d3e);
+        }
+
+        .capability-card--solid[data-theme="purple"],
+        .capability-card--purple {
+          --card-color: var(--card-purple, #3e2752);
+        }
+
+        .capability-card--solid[data-theme="teal"],
+        .capability-card--teal {
+          --card-color: var(--card-teal, #1d4354);
         }
 
         /* Very soft lighter highlight toward top-left (exact replica of .flow-card::before) */
@@ -474,9 +522,8 @@ export function TiltStackScroll({
           font-family: var(--font-heading, "Sora", sans-serif);
           font-size: 15px;
           font-weight: 500;
-          opacity: 0.55;
           letter-spacing: 0.02em;
-          color: #ffffff;
+          color: rgba(255, 255, 255, 0.70);
           z-index: 2;
           line-height: 1;
         }
@@ -491,16 +538,15 @@ export function TiltStackScroll({
           max-width: 520px;
         }
 
-        /* Small uppercase label / kicker (pinkish / light white) */
+        /* Small uppercase label / kicker (~70% white) */
         .capability-card-kicker {
           font-family: var(--font-heading, "Sora", sans-serif);
           font-size: 11px;
           font-weight: 700;
           text-transform: uppercase;
           letter-spacing: 0.14em;
-          color: #ffd6d6;
+          color: rgba(255, 255, 255, 0.70);
           margin-bottom: 8px;
-          opacity: 0.95;
         }
 
         /* Heading: bold white, same font size, weight, line-height as Products card */
@@ -547,8 +593,7 @@ export function TiltStackScroll({
         .capability-card-meta-sub {
           display: block;
           font-size: 11px;
-          opacity: 0.75;
-          color: #ffffff;
+          color: rgba(255, 255, 255, 0.70);
           font-family: var(--font-body, "Inter", sans-serif);
           margin-top: 2px;
         }
