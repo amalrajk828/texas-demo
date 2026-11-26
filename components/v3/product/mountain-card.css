@@ -1,0 +1,190 @@
+/* ── Mountain Product Card (Squircle Card with Soft Radial Tint & Luxury Vignette) ── */
+.mountain-card-wrap {
+  display: flex;
+  width: 100%;
+  height: 100%;
+}
+
+.mountain-card {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: 100%;
+  background: #ffffff !important;
+  border: 1px solid #e5e5e5;
+  border-radius: 48px;
+  padding: 8px 8px 0;
+  box-shadow: 0 10px 30px -10px rgba(0, 0, 0, 0.08), 0 4px 12px -4px rgba(0, 0, 0, 0.04);
+  transition: transform 0.5s cubic-bezier(0.22, 0.8, 0.2, 1), box-shadow 0.5s, opacity 0.5s ease;
+  opacity: 1;
+  text-decoration: none;
+  color: inherit;
+  box-sizing: border-box;
+  will-change: transform, box-shadow;
+  overflow: hidden;
+}
+
+.mountain-card.in {
+  opacity: 1;
+  transform: none;
+}
+
+.mountain-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 48px 70px -34px rgba(0, 0, 0, 0.35), 0 12px 26px -12px rgba(0, 0, 0, 0.16);
+}
+
+/* ── Image Shot Area ── */
+.mountain-shot {
+  position: relative;
+  width: 100%;
+  height: 262px;
+  border-radius: 40px;
+  overflow: hidden;
+  background: linear-gradient(160deg, var(--t1, #b4bfca), var(--t2, #e4e9ee));
+  box-sizing: border-box;
+  flex-shrink: 0;
+}
+
+/* Soft dark edge vignette */
+.mountain-shot::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  pointer-events: none;
+  box-shadow: inset 0 0 34px rgba(0, 0, 0, 0.12), inset 0 -46px 60px -34px rgba(0, 0, 0, 0.2);
+  z-index: 2;
+}
+
+/* Product hardware image: perfectly centered, never clipped, natural colors */
+.mountain-shot img,
+.mountain-shot.is-cutout img.cutout-img,
+.mountain-shot img.cutout-img {
+  position: absolute !important;
+  top: 50% !important;
+  left: 50% !important;
+  transform: translate(-50%, -50%) scale(1) !important;
+  width: 88% !important;
+  height: 84% !important;
+  max-width: 88% !important;
+  max-height: 84% !important;
+  object-fit: contain !important;
+  padding: 6% !important;
+  box-sizing: border-box !important;
+  mix-blend-mode: normal !important;
+  filter: drop-shadow(0 16px 22px rgba(0, 0, 0, 0.22)) !important;
+  transition: transform 0.5s cubic-bezier(0.22, 0.8, 0.2, 1) !important;
+  z-index: 1 !important;
+}
+
+.mountain-card:hover .mountain-shot img,
+.mountain-card:hover .mountain-shot.is-cutout img.cutout-img,
+.mountain-card:hover .mountain-shot img.cutout-img {
+  transform: translate(-50%, -50%) scale(1.06) !important;
+}
+
+/* ── 38px Round Arrow Button (Top-Right) ── */
+.mountain-go {
+  position: absolute;
+  top: 16px;
+  right: 16px;
+  z-index: 10;
+  width: 38px;
+  height: 38px;
+  min-width: 38px;
+  min-height: 38px;
+  max-width: 38px;
+  max-height: 38px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.92);
+  color: #171717;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 8px 18px -8px rgba(0, 0, 0, 0.4);
+  transition: background 0.25s ease, color 0.25s ease, transform 0.35s ease;
+  pointer-events: none;
+}
+
+.mountain-go svg {
+  width: 15px;
+  height: 15px;
+  min-width: 15px;
+  min-height: 15px;
+  max-width: 15px;
+  max-height: 15px;
+  stroke-width: 2.6;
+  display: block;
+}
+
+.mountain-card:hover .mountain-go {
+  background: #171717;
+  color: #ffffff;
+  transform: rotate(45deg);
+}
+
+/* ── Text Content Block ── */
+.mountain-txt {
+  padding: 24px 26px 32px;
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  box-sizing: border-box;
+}
+
+.mountain-lab {
+  font-family: var(--font-body, "Inter", system-ui, sans-serif);
+  font-size: 15px;
+  font-weight: 700;
+  letter-spacing: -0.01em;
+  text-transform: uppercase;
+  color: #8a302f;
+}
+
+.mountain-say {
+  margin-top: 9px;
+  font-family: var(--font-body, "Inter", system-ui, sans-serif);
+  font-size: clamp(20px, 1.9vw, 24px);
+  font-weight: 500;
+  line-height: 1.25;
+  letter-spacing: -0.03em;
+  color: #737373;
+}
+
+.mountain-say b,
+.mountain-say strong {
+  color: #171717;
+  font-weight: 600;
+}
+
+/* ── Mobile & Tablet Responsiveness ── */
+@media (max-width: 1024px) {
+  .mountain-card {
+    border-radius: 40px;
+  }
+  .mountain-shot {
+    height: 248px;
+    border-radius: 34px;
+  }
+  .mountain-txt {
+    padding: 22px 22px 28px;
+  }
+}
+
+@media (max-width: 640px) {
+  .mountain-card {
+    border-radius: 36px;
+  }
+  .mountain-shot {
+    height: 236px;
+    border-radius: 30px;
+  }
+  .mountain-txt {
+    padding: 20px 20px 26px;
+  }
+  .mountain-say {
+    font-size: 19px;
+  }
+}

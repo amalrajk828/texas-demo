@@ -3,8 +3,9 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "dev": "cross-env NODE_OPTIONS=--max-old-space-size=4096 next dev --webpack -H 0.0.0.0",
-    "build": "next build --webpack",
+    "postinstall": "node scripts/patch-next-font.js",
+    "dev": "node scripts/patch-next-font.js && cross-env NODE_OPTIONS=--max-old-space-size=4096 next dev --webpack -H 0.0.0.0",
+    "build": "node scripts/patch-next-font.js && next build --webpack",
     "start": "next start",
     "lint": "eslint && node scripts/check-source-text.mjs",
     "typecheck": "tsc --noEmit",

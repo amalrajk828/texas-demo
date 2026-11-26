@@ -50,8 +50,8 @@ export interface LiquidProductCardProps {
 /**
  * Mountain Card (Squircle style with soft diagonal gradient tint and vignette)
  * Reusable product card fed by existing product data.
- * - Outer card: #f4f4f4 with 6px solid white border, radius 48px, deep soft shadow
- * - Image block: 262px high, radius 40px, gradient tint, vignette, multiply blend, drop-shadow
+ * - Outer card: #ffffff container with 1px border, radius 48px, deep soft shadow
+ * - Image block: 262px high, radius 40px, gradient tint, vignette, normal blend, drop-shadow
  * - Arrow button: 38px circle, rotates 45deg and turns black on hover
  * - Text block: Bold uppercase label, 500-weight statement with <b> highlights
  * - Supports prefers-reduced-motion
@@ -82,18 +82,8 @@ export default function LiquidProductCard({
   // Stagger animation: 90ms per card in each row (3 cols)
   const delayMs = (index % 3) * 90;
 
-  const isCutout =
-    variant === "cutout" ||
-    Boolean(
-      product.image &&
-        (product.image.includes("products-cutout") ||
-          product.image.includes("Liquid%20Flow%20Meters"))
-    );
-
-  const radialColor = PRODUCT_RADIAL_TINTS[product.slug] || tint.t1;
-  const radialBg = isCutout
-    ? `radial-gradient(circle at 50% 40%, ${radialColor} 0%, ${hexToRgba(radialColor, 0.4)} 100%), linear-gradient(160deg, ${tint.t1}, ${tint.t2})`
-    : undefined;
+  const radialColor = PRODUCT_RADIAL_TINTS[product.slug] || "#ffffff";
+  const radialBg = `radial-gradient(circle at 50% 38%, ${hexToRgba(radialColor, 0.65)} 0%, ${hexToRgba(radialColor, 0.1)} 72%), linear-gradient(160deg, ${tint.t1}, ${tint.t2})`;
 
   return (
     <Link
@@ -111,10 +101,13 @@ export default function LiquidProductCard({
         .join("|")}
     >
       <div
-        className={`mountain-shot ${isCutout ? "is-cutout" : ""}`}
-        style={radialBg ? { background: radialBg } : undefined}
+        className="mountain-shot is-cutout"
+        style={{ background: radialBg }}
       >
-        <span className="mountain-go" aria-hidden="true">
+        <span
+          className="mountain-go absolute top-4 right-4 z-10 w-[38px] h-[38px] min-w-[38px] min-h-[38px] rounded-full bg-white/95 text-[#171717] flex items-center justify-center shadow-md shrink-0 pointer-events-none"
+          aria-hidden="true"
+        >
           <svg
             viewBox="0 0 24 24"
             fill="none"
@@ -122,6 +115,9 @@ export default function LiquidProductCard({
             strokeWidth="2.6"
             strokeLinecap="round"
             strokeLinejoin="round"
+            width="15"
+            height="15"
+            className="w-[15px] h-[15px] min-w-[15px] min-h-[15px] shrink-0 block"
           >
             <path d="M7 17L17 7M8 7h9v9" />
           </svg>
@@ -131,12 +127,12 @@ export default function LiquidProductCard({
           src={imageSrc}
           alt={product.name}
           loading="lazy"
-          className={isCutout ? "cutout-img" : ""}
+          className="cutout-img"
         />
       </div>
 
       <div className="mountain-txt">
-        <div className="mountain-lab" style={{ color: "#8a302f" }}>{label}</div>
+        <div className="mountain-lab">{label}</div>
         <p
           className="mountain-say"
           dangerouslySetInnerHTML={{ __html: statement }}

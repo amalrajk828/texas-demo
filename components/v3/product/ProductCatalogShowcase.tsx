@@ -25,7 +25,7 @@ export default function ProductCatalogShowcase({
   // Dynamic filter generation from product metadata
   const filterOptions: FilterOption[] = useMemo(() => {
     const brandSet = new Set<string>();
-    
+
     products.forEach((p) => {
       if (p.brand && p.brand.trim()) {
         brandSet.add(p.brand.trim());
@@ -318,7 +318,7 @@ export default function ProductCatalogShowcase({
           height: 84%;
           object-fit: contain;
           transform: translate(-50%, -50%) scale(1);
-          mix-blend-mode: multiply;
+          mix-blend-mode: normal;
           filter: drop-shadow(0 18px 16px rgba(0, 0, 0, 0.2));
           transition: transform 0.8s cubic-bezier(0.22, 0.8, 0.2, 1);
         }

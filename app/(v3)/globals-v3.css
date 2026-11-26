@@ -47,6 +47,14 @@
   --card-hover-wave: #FFFFFF;
   --card-hover-wave-light: #FFFFFF;
   --card-hover-wave-dark: #F5F5F3;
+
+  /* Shared Showcase & Capability Card Color Palette */
+  --card-red: #a11d1d;
+  --card-navy: #1f2c4b;
+  --card-orange: #ba4913;
+  --card-green: #1b4d3e;
+  --card-purple: #3e2752;
+  --card-teal: #1d4354;
 }
 
 @media (min-width: 768px) {
@@ -81,6 +89,7 @@ main[class~="bg-white"],
 @import "./home-v3-showcase.css";
 @import "../../components/v3/folder/folder-card.css";
 @import "../../components/v3/nav-dd.css";
+@import "../../components/v3/product/mountain-card.css";
 
 /* ── Primary Button Gradient Styling (Navbar Contact Us Match) ── */
 .btn-primary,

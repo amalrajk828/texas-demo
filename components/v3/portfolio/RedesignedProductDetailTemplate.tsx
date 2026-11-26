@@ -242,11 +242,10 @@ export default function RedesignedProductDetailTemplate({
                         key={idx}
                         type="button"
                         onClick={() => setActiveImageIndex(idx)}
-                        className={`relative w-16 h-12 rounded-[12px] bg-white border p-1 shrink-0 overflow-hidden transition-all duration-200 cursor-pointer ${
-                          activeImageIndex === idx
-                            ? "border-[#8a302f] ring-2 ring-[#8a302f]/30 scale-105"
-                            : "border-black/[0.08] opacity-70 hover:opacity-100"
-                        }`}
+                        className={`relative w-16 h-12 rounded-[12px] bg-white border p-1 shrink-0 overflow-hidden transition-all duration-200 cursor-pointer ${activeImageIndex === idx
+                          ? "border-[#8a302f] ring-2 ring-[#8a302f]/30 scale-105"
+                          : "border-black/[0.08] opacity-70 hover:opacity-100"
+                          }`}
                         title={img.alt}
                         aria-label={`View image ${idx + 1}`}
                       >
@@ -375,64 +374,64 @@ export default function RedesignedProductDetailTemplate({
       {/* ── 5. Applications & Industries ── */}
       {((product.applications && product.applications.length > 0) ||
         (product.industries && product.industries.length > 0)) && (
-        <Section tone="grey">
-          <Container>
-            <SectionHeading
-              eyebrow="Operating Domains"
-              title="Applications & Industries Served"
-              description="Field-proven performance across critical petrochemical installations, loading terminals, and pipeline corridors."
-            />
+          <Section tone="grey">
+            <Container>
+              <SectionHeading
+                eyebrow="Operating Domains"
+                title="Applications & Industries Served"
+                description="Field-proven performance across critical petrochemical installations, loading terminals, and pipeline corridors."
+              />
 
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 mt-10">
-              {/* Process Applications */}
-              {product.applications && product.applications.length > 0 && (
-                <div className="rounded-[30px] bg-white p-7 sm:p-8 border border-black/[0.06] shadow-xs">
-                  <div className="flex items-center gap-2 pb-4 mb-4 border-b border-black/[0.06]">
-                    <span className="text-[12px] font-mono uppercase tracking-wider text-[#8a302f] font-bold">
-                      Process Applications
-                    </span>
-                  </div>
-                  <ul className="space-y-3">
-                    {product.applications.map((app, idx) => (
-                      <li key={idx} className="flex items-start gap-3 text-[14px] text-[#374151]">
-                        <CheckCircle2 className="w-4 h-4 text-[#8a302f] shrink-0 mt-0.5" />
-                        <span>{app}</span>
-                      </li>
-                    ))}
-                  </ul>
-                </div>
-              )}
-
-              {/* Target Industries */}
-              {product.industries && product.industries.length > 0 && (
-                <div className="rounded-[30px] bg-white p-7 sm:p-8 border border-black/[0.06] shadow-xs flex flex-col justify-between">
-                  <div>
+              <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 mt-10">
+                {/* Process Applications */}
+                {product.applications && product.applications.length > 0 && (
+                  <div className="rounded-[30px] bg-white p-7 sm:p-8 border border-black/[0.06] shadow-xs">
                     <div className="flex items-center gap-2 pb-4 mb-4 border-b border-black/[0.06]">
                       <span className="text-[12px] font-mono uppercase tracking-wider text-[#8a302f] font-bold">
-                        Target Industries
+                        Process Applications
                       </span>
                     </div>
-                    <div className="flex flex-wrap gap-2.5 mt-2">
-                      {product.industries.map((ind, idx) => (
-                        <span
-                          key={idx}
-                          className="px-4 py-2 rounded-full bg-[#f3f4f6] text-[#1f2937] text-[13px] font-medium border border-black/[0.04]"
-                        >
-                          {ind}
-                        </span>
+                    <ul className="space-y-3">
+                      {product.applications.map((app, idx) => (
+                        <li key={idx} className="flex items-start gap-3 text-[14px] text-[#374151]">
+                          <CheckCircle2 className="w-4 h-4 text-[#8a302f] shrink-0 mt-0.5" />
+                          <span>{app}</span>
+                        </li>
                       ))}
+                    </ul>
+                  </div>
+                )}
+
+                {/* Target Industries */}
+                {product.industries && product.industries.length > 0 && (
+                  <div className="rounded-[30px] bg-white p-7 sm:p-8 border border-black/[0.06] shadow-xs flex flex-col justify-between">
+                    <div>
+                      <div className="flex items-center gap-2 pb-4 mb-4 border-b border-black/[0.06]">
+                        <span className="text-[12px] font-mono uppercase tracking-wider text-[#8a302f] font-bold">
+                          Target Industries
+                        </span>
+                      </div>
+                      <div className="flex flex-wrap gap-2.5 mt-2">
+                        {product.industries.map((ind, idx) => (
+                          <span
+                            key={idx}
+                            className="px-4 py-2 rounded-full bg-[#f3f4f6] text-[#1f2937] text-[13px] font-medium border border-black/[0.04]"
+                          >
+                            {ind}
+                          </span>
+                        ))}
+                      </div>
+                    </div>
+
+                    <div className="mt-8 pt-4 border-t border-black/[0.05] text-[13px] text-[#6b7280]">
+                      Certified for deployment across Kuwait, UAE, Saudi Arabia, and regional GCC facilities.
                     </div>
                   </div>
-
-                  <div className="mt-8 pt-4 border-t border-black/[0.05] text-[13px] text-[#6b7280]">
-                    Certified for deployment across Kuwait, UAE, Saudi Arabia, and regional GCC facilities.
-                  </div>
-                </div>
-              )}
-            </div>
-          </Container>
-        </Section>
-      )}
+                )}
+              </div>
+            </Container>
+          </Section>
+        )}
 
       {/* ── 6. Downloads ── */}
       {product.downloads && product.downloads.length > 0 && (
@@ -514,13 +513,13 @@ export default function RedesignedProductDetailTemplate({
 
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
               {relatedProducts.slice(0, 3).map((p, idx) => (
-                <LiquidProductCard
-                  key={p.slug}
-                  product={p}
-                  index={idx}
-                  isVisible={true}
-                  variant="cutout"
-                />
+                <div key={p.slug} className="mountain-card-wrap">
+                  <LiquidProductCard
+                    product={p}
+                    index={idx}
+                    isVisible={true}
+                  />
+                </div>
               ))}
             </div>
           </Container>

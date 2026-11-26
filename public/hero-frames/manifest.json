@@ -1,14 +1,20 @@
 {
-  "count": 299,
-  "width": 1920,
-  "height": 1080,
-  "mobileWidth": 1080,
-  "mobileHeight": 1920,
-  "prefix": "frame_",
-  "ext": ".webp",
-  "bgColor": "#b8b7ad",
-  "source": "ezgif-318774b2dc621a61-png-split (1)",
-  "sourcePayloadMB": "189.97",
-  "webpPayloadMB": "34.06",
-  "mobilePayloadMB": "13.08"
+  "desktop": {
+    "count": 240,
+    "width": 1600,
+    "height": 900,
+    "fps": 24,
+    "prefix": "frame_",
+    "ext": ".webp",
+    "path": "/hero-frames"
+  },
+  "mobile": {
+    "count": 120,
+    "width": 720,
+    "height": 900,
+    "fps": 12,
+    "prefix": "frame_",
+    "ext": ".webp",
+    "path": "/hero-frames/mobile"
+  }
 }

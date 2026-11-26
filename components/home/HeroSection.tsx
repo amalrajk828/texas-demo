@@ -4,7 +4,7 @@ import React, { useEffect, useRef } from "react";
 import Link from "next/link";
 
 // ── Scroll Animation Constants & Sequence Configuration ─────────────────────
-export const TOTAL_FRAMES = 299;
+export const TOTAL_FRAMES = 300;
 export const BG_COLOR = "#b8b7ad"; // Warm neutral matching the new frame sequence
 export const LERP_FACTOR = 0.12; // Butter-smooth scroll interpolation factor
 export const SEQUENCE_PATH = "/hero-frames";
@@ -748,7 +748,7 @@ export default function HeroSection() {
             <div className="card-bg-flange-layer" aria-hidden="true">
               {/* eslint-disable-next-line @next/next/no-img-element */}
               <img
-                src="/hero-frames/frame_299.webp"
+                src="/hero-frames/frame_300.webp"
                 alt=""
                 className="card-bg-flange-img"
                 loading="lazy"

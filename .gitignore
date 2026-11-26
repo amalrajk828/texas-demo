@@ -57,6 +57,8 @@ lighthouse/
 # Temporary frame backups
 public/hero-frames/_old-mobile-backup/
 public/ezgif*
+source-frames/
+public/hero-source.mp4
 
 # Local test scratch scripts and images
 scratch/
