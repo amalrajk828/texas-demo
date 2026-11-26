@@ -1,283 +1,127 @@
 "use client";
 
-import React, { useEffect, useRef, useState, useCallback } from "react";
+import React, { useEffect, useRef, useState, useCallback, useMemo } from "react";
 import Link from "next/link";
-import StackedCards, { StackedCardItem } from "./StackedCards";
-import TiltedServiceCard from "./TiltedServiceCard";
 
-// ── Tunable Constants ──────────────────────────────────────────────────────
-type LenisInstance = {
-  scrollTo: (target: number | HTMLElement | string, options?: { duration?: number; offset?: number; immediate?: boolean }) => void;
-  on: (event: string, callback: (...args: unknown[]) => void) => void;
-  off: (event: string, callback: (...args: unknown[]) => void) => void;
+// ── Shared Frame Count Constant (Exactly 300 Frames) ─────────────────────────
+export const TOTAL_FRAMES = 300;
+
+// ── Single Timeline Table (Single Source of Truth) ──────────────────────────
+// Format: [fadeInStart, fullyVisible, fadeOutStart, gone] in frame numbers (1 to 300)
+// The 3 sections are placed exactly where the 3 dots are:
+// - Dot 1: frames 1 to 100 (Section 1: Flow Measurement & Control System Solutions)
+// - Dot 2: frames 101 to 200 (Section 2: Precision solutions for critical industries)
+// - Dot 3: frames 201 to 300 (Section 3: Engineered Excellence in Custody Metering & Automation)
+export const TIMELINE = {
+  stage1: {
+    panel: [1, 1, 94, 102] as const,     // Section 1: active during Dot 1 (1–100)
+    slider: [1, 1, 94, 102] as const,    // Section 1: active during Dot 1 (1–100)
+    stats: [1, 1, 94, 102] as const,     // Section 1: active during Dot 1 (1–100)
+  },
+  stage2: {
+    panel: [96, 104, 194, 202] as const, // Section 2: active during Dot 2 (101–200)
+    card1: [98, 106, 194, 202] as const, // Flow Measurement
+    card2: [100, 108, 194, 202] as const, // Inspection & Testing
+    card3: [102, 110, 194, 202] as const, // Industrial Automation
+  },
+  stage3: {
+    panel: [196, 204, 292, 300] as const, // Section 3: active during Dot 3 (201–300)
+    endCtas: [292, 296, 300, 300] as const,
+  },
 };
 
-type WindowWithLenis = Window & {
-  __lenis?: LenisInstance | null;
+export const MOBILE_TIMELINE = {
+  stage1_topPanel: [1, 1, 94, 102] as const,
+  stage1_bottomArea: [1, 1, 94, 102] as const,
+  stage2_topPanel: [96, 104, 194, 202] as const,
+  stage2_cardDeck: [98, 106, 194, 202] as const,
+  stage3_topPanel: [196, 204, 290, 298] as const,
+  stage3_endCtas: [290, 296, 300, 300] as const,
 };
 
-export const TOTAL_FRAMES = 299;
-export const SEQUENCE_PATH = "/hero-frames";
-export const SEQUENCE_PATH_MOBILE = "/hero-frames/mobile";
-export const FRAME_PREFIX = "frame_";
-export const FRAME_EXT = ".webp";
-export const BG_COLOR = "#b8b7ad";    // Warm neutral sampled from the replacement sequence
-export const PORTRAIT_BG_COLOR = "#b8b7ad";    // Matches the edge-extended portrait frames
-
-// Desktop placement: centred full-width coverage across desktop viewports
-export const PRODUCT_SCALE = 1.0;         // Cover scale (desktop)
-export const PRODUCT_ANCHOR_X = 0.5;         // Centred horizontally (50%)
-export const PRODUCT_ANCHOR_Y = 0.5;         // Centred vertically (50%)
-
-// Landscape Mobile Safe-Rect Fit Constants (<1024px landscape)
-export const LANDSCAPE_SIDE_MARGIN = 0.03;        // 3% margin each side
-export const LANDSCAPE_ANCHOR_Y = 0.50;        // Centred vertically (50% of viewport height)
-export const MOBILE_SCALE_BOOST = 1.0;         // Gentle mobile zoom constant (1.0 up to 1.15)
-export const SAFE_RECT = { x: 0.11, y: 0.11, width: 0.815, height: 0.73 };
-
-export interface SequenceManifest {
-  count: number;
-  width: number;
-  height: number;
-  prefix: string;
-  ext: string;
-  bgColor: string;
+// ── Math & Easing Helpers ───────────────────────────────────────────────────
+function clamp(val: number, min = 0, max = 1) {
+  return Math.max(min, Math.min(max, val));
 }
 
-export const DESKTOP_MANIFEST_DEFAULT: SequenceManifest = {
-  count: 299,
-  width: 1920,
-  height: 1080,
+export interface CardMotion {
+  opacity: number;
+  y: number;
+  visible: boolean;
+}
+
+// Pure function computing opacity and translateY for any frame with ease-out
+export function getCardMotion(
+  frame: number,
+  range: readonly [number, number, number, number],
+  slideDistance = 24
+): CardMotion {
+  const [inStart, inFull, outStart, outGone] = range;
+
+  // 1. Before entrance
+  if (frame < inStart) {
+    return { opacity: 0, y: slideDistance, visible: false };
+  }
+  // 2. Fading in
+  if (frame <= inFull) {
+    if (inStart === inFull) {
+      return { opacity: 1, y: 0, visible: true };
+    }
+    const t = clamp((frame - inStart) / (inFull - inStart), 0, 1);
+    // Smooth ease-out cubic
+    const ease = 1 - Math.pow(1 - t, 3);
+    const opacity = Number(ease.toFixed(3));
+    return {
+      opacity,
+      y: Math.round(slideDistance * (1 - ease)),
+      visible: opacity > 0.005,
+    };
+  }
+  // 3. Fully visible hold range
+  if (frame < outStart) {
+    return { opacity: 1, y: 0, visible: true };
+  }
+  // 4. Fading out
+  if (frame <= outGone) {
+    if (outStart === outGone) {
+      return { opacity: 0, y: -Math.round(slideDistance * 0.6), visible: false };
+    }
+    const t = clamp((frame - outStart) / (outGone - outStart), 0, 1);
+    // Smooth ease-in
+    const ease = t * t * (3 - 2 * t);
+    const opacity = Number(Math.max(0, 1 - ease).toFixed(3));
+    return {
+      opacity,
+      y: Math.round(-slideDistance * 0.6 * ease),
+      visible: opacity > 0.005,
+    };
+  }
+  // 5. After exit
+  return { opacity: 0, y: -Math.round(slideDistance * 0.6), visible: false };
+}
+
+// ── Manifest Configuration ──────────────────────────────────────────────────
+const DESKTOP_CONFIG = {
+  count: TOTAL_FRAMES,
+  width: 1600,
+  height: 900,
+  fps: 30,
   prefix: "frame_",
   ext: ".webp",
-  bgColor: "#b8b7ad",
+  path: "/hero-frames",
 };
 
-export const MOBILE_MANIFEST_DEFAULT: SequenceManifest = {
-  count: 299,
-  width: 1080,
-  height: 1920,
+const MOBILE_CONFIG = {
+  count: TOTAL_FRAMES,
+  width: 720,
+  height: 900,
+  fps: 30,
   prefix: "frame_",
   ext: ".webp",
-  bgColor: "#b8b7ad",
+  path: "/hero-frames/mobile",
 };
 
 export type DrawableFrame = ImageBitmap | HTMLImageElement;
-
-export function isIOSDevice(): boolean {
-  if (typeof window === "undefined" || typeof navigator === "undefined") return false;
-  return (
-    /iPad|iPhone|iPod/.test(navigator.userAgent) ||
-    (typeof navigator.platform === "string" && navigator.platform === "MacIntel" && navigator.maxTouchPoints > 1)
-  );
-}
-
-export function isSafariBrowser(): boolean {
-  if (typeof window === "undefined" || typeof navigator === "undefined") return false;
-  return /^((?!chrome|android).)*safari/i.test(navigator.userAgent);
-}
-
-function closeDrawable(d: DrawableFrame | null) {
-  if (!d) return;
-  if ("close" in d && typeof (d as ImageBitmap).close === "function") {
-    try {
-      (d as ImageBitmap).close();
-    } catch { }
-  } else if ("src" in d) {
-    try {
-      const img = d as HTMLImageElement;
-      img.onload = null;
-      img.onerror = null;
-      img.src = "";
-    } catch { }
-  }
-}
-
-function loadImageElement(url: string): Promise<HTMLImageElement> {
-  return new Promise<HTMLImageElement>((resolve, reject) => {
-    const img = new Image();
-    img.crossOrigin = "anonymous";
-    img.decoding = "async";
-    img.onload = () => resolve(img);
-    img.onerror = () => reject(new Error(`Failed to load: ${url}`));
-    img.src = url;
-  });
-}
-
-function loadFrameImage(url: string): Promise<DrawableFrame> {
-  const isIOS = isIOSDevice();
-  const isSafari = isSafariBrowser();
-  // On iOS / Safari, NEVER use createImageBitmap — WebKit has a documented issue where
-  // ImageBitmaps allocate directly into unmanaged CoreAnimation/Metal buffers and leak,
-  // rapidly triggering iOS jetsam SIGKILL (Safari "A problem repeatedly occurred" crash).
-  if (!isIOS && !isSafari && typeof window !== "undefined" && typeof window.createImageBitmap === "function") {
-    return fetch(url)
-      .then((r) => {
-        if (!r.ok) throw new Error(`HTTP ${r.status}`);
-        return r.blob();
-      })
-      .then((blob) => createImageBitmap(blob))
-      .catch(() => loadImageElement(url));
-  }
-
-  return loadImageElement(url);
-}
-
-// Single Selection Rule: Mobile portrait when orientation is portrait AND width < 1024px
-export function isPortraitMobileViewport(): boolean {
-  if (typeof window === "undefined") return false;
-  return window.matchMedia("(orientation: portrait) and (max-width: 1023px)").matches;
-}
-
-// Tunable constants for Stage Dwell, Velocity cap & Overlap
-export const STAGE_DWELL_VH = 85;          // ~70-90vh per stage
-export const MAX_PROGRESS_PER_SECOND = 1.2;       // max progress velocity cap for flicks
-export const STAGE_OVERLAP = 0.09;        // 9% stage cross-fade overlap (8-10%)
-
-// Tunable constants for Hold and Cover
-export const SCROLL_LENGTH = "450vh";     // frame scrubbing length (~85-90vh dwell per stage + buffer)
-export const MOBILE_PORTRAIT_SCROLL_LENGTH = "300vh"; // snappy, natural mobile touch scrubbing
-export const MOBILE_SETTLE_P = 0.72;        // progress at which mobile Stage 3 settles
-export const HOLD_COVER = "100svh";    // hold travel distance while next section covers
-export const COVER_SCALE = 0.94;        // hero content scale at full cover
-export const COVER_LIFT = 40;          // hero content translateY (px) at full cover
-export const COVER_DIM = 0;           // optional hero dimming overlay (default 0)
-export const CORNER_RADIUS = 32;          // px (32px desktop, 24px mobile)
-
-export const EASE = 0.14;        // lerp factor
-
-// ── Helpers ────────────────────────────────────────────────────────────────
-function smootherstep(min: number, max: number, v: number) {
-  if (v <= min) return 0;
-  if (v >= max) return 1;
-  const x = (v - min) / (max - min);
-  return x * x * x * (x * (6 * x - 15) + 10);
-}
-
-function framePad(n: number) {
-  return String(n).padStart(3, "0");
-}
-
-const WHAT_WE_DO_SERVICES: StackedCardItem[] = [
-  {
-    id: "flow-measurement",
-    number: "01",
-    title: "Flow Measurement & Control",
-    href: "/service/flow-measurement-solutions/",
-    icon: (
-      <svg
-        width="18"
-        height="18"
-        viewBox="0 0 24 24"
-        fill="none"
-        stroke="currentColor"
-        strokeWidth="2"
-        strokeLinecap="round"
-        strokeLinejoin="round"
-      >
-        <circle cx="12" cy="12" r="10" />
-        <path d="M12 6v6l4 2" />
-      </svg>
-    ),
-  },
-  {
-    id: "inspection-testing",
-    number: "02",
-    title: "Inspection & Testing",
-    href: "/service/inspection-testing/",
-    icon: (
-      <svg
-        width="18"
-        height="18"
-        viewBox="0 0 24 24"
-        fill="none"
-        stroke="currentColor"
-        strokeWidth="2"
-        strokeLinecap="round"
-        strokeLinejoin="round"
-      >
-        <path d="M10 2v7.31L4.15 19.8A2 2 0 0 0 5.86 23h12.28a2 2 0 0 0 1.71-3.2L14 9.31V2" />
-        <line x1="8.5" y1="2" x2="15.5" y2="2" />
-        <line x1="6" y1="18" x2="18" y2="18" />
-      </svg>
-    ),
-  },
-  {
-    id: "industrial-automation",
-    number: "03",
-    title: "Industrial Automation",
-    href: "/service/industrial-automation/",
-    icon: (
-      <svg
-        width="18"
-        height="18"
-        viewBox="0 0 24 24"
-        fill="none"
-        stroke="currentColor"
-        strokeWidth="2"
-        strokeLinecap="round"
-        strokeLinejoin="round"
-      >
-        <rect x="4" y="4" width="16" height="16" rx="2" />
-        <rect x="9" y="9" width="6" height="6" />
-        <line x1="9" y1="2" x2="9" y2="4" />
-        <line x1="15" y1="2" x2="15" y2="4" />
-        <line x1="9" y1="20" x2="9" y2="23" />
-        <line x1="15" y1="20" x2="15" y2="23" />
-      </svg>
-    ),
-  },
-];
-
-const TILTED_SERVICES = [
-  {
-    index: 0,
-    number: "01",
-    title: "Flow Measurement & Control",
-    href: "/service/flow-measurement-solutions/",
-    icon: (
-      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-        <circle cx="12" cy="12" r="10" />
-        <path d="M12 6v6l4 2" />
-      </svg>
-    ),
-    rotation: -5,
-    offsetX: -10,
-  },
-  {
-    index: 1,
-    number: "02",
-    title: "Inspection & Testing",
-    href: "/service/inspection-testing/",
-    icon: (
-      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-        <path d="M10 2v7.31L4.15 19.8A2 2 0 0 0 5.86 23h12.28a2 2 0 0 0 1.71-3.2L14 9.31V2" />
-        <line x1="8.5" y1="2" x2="15.5" y2="2" />
-        <line x1="6" y1="18" x2="18" y2="18" />
-      </svg>
-    ),
-    rotation: 4,
-    offsetX: 14,
-  },
-  {
-    index: 2,
-    number: "03",
-    title: "Industrial Automation",
-    href: "/service/industrial-automation/",
-    icon: (
-      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-        <rect x="4" y="4" width="16" height="16" rx="2" />
-        <rect x="9" y="9" width="6" height="6" />
-        <line x1="9" y1="2" x2="9" y2="4" />
-        <line x1="15" y1="2" x2="15" y2="4" />
-        <line x1="9" y1="20" x2="9" y2="23" />
-        <line x1="15" y1="20" x2="15" y2="23" />
-      </svg>
-    ),
-    rotation: -3,
-    offsetX: -4,
-  },
-];
 
 export const SHOWCASE_SLIDES = [
   {
@@ -320,1027 +164,793 @@ export const SHOWCASE_SLIDES = [
   },
 ];
 
+const SERVICE_ITEMS = [
+  {
+    number: "01",
+    title: "Flow Measurement & Control",
+    href: "/service/flow-measurement-solutions/",
+    desc: "Custody transfer fiscal metering, ultrasonic flow computers & automated skids.",
+    rotation: -2.5,
+    offsetX: 0,
+    icon: (
+      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+        <circle cx="12" cy="12" r="10" />
+        <path d="M12 6v6l4 2" />
+      </svg>
+    ),
+  },
+  {
+    number: "02",
+    title: "Inspection & Testing",
+    href: "/service/inspection-testing/",
+    desc: "Certified NDT, advanced ultrasonic, statutory crane & lifting compliance.",
+    rotation: 0,
+    offsetX: 0,
+    icon: (
+      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+        <path d="m21.73 18-8-14a2 2 0 0 0-3.48 0l-8 14A2 2 0 0 0 4 21h16a2 2 0 0 0 1.73-3Z" />
+        <line x1="12" y1="9" x2="12" y2="13" />
+        <line x1="12" y1="17" x2="12.01" y2="17" />
+      </svg>
+    ),
+  },
+  {
+    number: "03",
+    title: "Industrial Automation",
+    href: "/service/industrial-automation/",
+    desc: "Turnkey PLC/SCADA systems, telemetry, HMI & Mitsubishi Electric engineering.",
+    rotation: 2.5,
+    offsetX: 0,
+    icon: (
+      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+        <rect x="4" y="4" width="16" height="16" rx="2" />
+        <rect x="9" y="9" width="6" height="6" />
+        <line x1="9" y1="2" x2="9" y2="4" />
+        <line x1="15" y1="2" x2="15" y2="4" />
+        <line x1="9" y1="20" x2="9" y2="23" />
+        <line x1="15" y1="20" x2="15" y2="23" />
+      </svg>
+    ),
+  },
+];
+
+// Exactly 3 Stages navigation dots - placing user at the peak visible frame of each section
+const CHAPTER_DOTS = [
+  { frame: 1, label: "Overview" },
+  { frame: 150, label: "Solutions" },
+  { frame: 250, label: "Excellence" },
+];
+
+function isAppleSafari(): boolean {
+  if (typeof window === "undefined" || typeof navigator === "undefined") return false;
+  const isIOS = /iPad|iPhone|iPod/.test(navigator.userAgent) ||
+    (navigator.platform === "MacIntel" && navigator.maxTouchPoints > 1);
+  const isSafari = /^((?!chrome|android).)*safari/i.test(navigator.userAgent);
+  return isIOS || isSafari;
+}
+
 export default function ScrollSequenceHero() {
-  const sectionRef = useRef<HTMLElement>(null);
-  const stickyRef = useRef<HTMLDivElement>(null);
-  const heroContentRef = useRef<HTMLDivElement>(null);
-  const overlayRef = useRef<HTMLDivElement>(null);
-  const stageIndicatorRef = useRef<HTMLElement>(null);
-  const dimOverlayRef = useRef<HTMLDivElement>(null);
+  const trackRef = useRef<HTMLElement>(null);
+  const stageRef = useRef<HTMLDivElement>(null);
   const canvasRef = useRef<HTMLCanvasElement>(null);
 
-  const [posterVisible, setPosterVisible] = useState(true);
-  const [activeStage, setActiveStage] = useState(1);
-  const activeStageRef = useRef(1);
-  const [isPortraitMobile, setIsPortraitMobile] = useState(false);
-  const isPortraitMobileRef = useRef(false);
+  // Viewport / device mode
+  const [isMobile, setIsMobile] = useState(false);
+  const isMobileRef = useRef(false);
+  const [prefersReducedMotion, setPrefersReducedMotion] = useState(false);
+  const [showDebug, setShowDebug] = useState(false);
 
-  // ── Hero Showcase Slider State & Handlers ─────────────────────────────────
+  // Frames & Preload storage
+  const desktopFrames = useRef<(DrawableFrame | null)[]>([]);
+  const mobileFrames = useRef<(DrawableFrame | null)[]>([]);
+  const isVisible = useRef(true);
+  const isDestroyed = useRef(false);
+
+  // Scroll tracking: single smoothed progress value (0 to 1) & frame number (1 to 300)
+  const currentProgress = useRef(0);
+  const lastDrawnFrame = useRef(-1);
+  const lastStateFrame = useRef(1);
+
+  // Single Shared Frame State driving both Canvas & Cards
+  const [frame, setFrame] = useState(1);
+  const [progressVal, setProgressVal] = useState(0);
+
+  // Stats counting state (synchronized with frame)
+  const [countYears, setCountYears] = useState(18);
+  const [countIndustries, setCountIndustries] = useState(8);
+  const [countClients, setCountClients] = useState(200);
+  const [countVendors, setCountVendors] = useState(16);
+  const statsCounted = useRef(true);
+
+  // Showcase Slider state
   const [showcaseIndex, setShowcaseIndex] = useState(0);
-  const showcaseIndexRef = useRef(0);
-  useEffect(() => {
-    showcaseIndexRef.current = showcaseIndex;
-  }, [showcaseIndex]);
-  const lastSliderClickRef = useRef(0);
-  const autoPlayTimerRef = useRef<NodeJS.Timeout | null>(null);
-  const isSliderPausedRef = useRef(false);
+  const isSliderPaused = useRef(false);
+  const autoPlayTimer = useRef<NodeJS.Timeout | null>(null);
   const videoRefs = useRef<(HTMLVideoElement | null)[]>([]);
 
-  const resetSliderTimer = useCallback(() => {
-    if (autoPlayTimerRef.current) {
-      clearInterval(autoPlayTimerRef.current);
+  // ── 0. Debug Param Check ──────────────────────────────────────────────────
+  useEffect(() => {
+    if (typeof window !== "undefined") {
+      setShowDebug(new URLSearchParams(window.location.search).get("debug") === "1");
     }
-    autoPlayTimerRef.current = setInterval(() => {
-      if (!isSliderPausedRef.current && typeof document !== "undefined" && !document.hidden && isVisible.current) {
+  }, []);
+
+  // ── 1. Breakpoint & Resize Detection ───────────────────────────────────────
+  useEffect(() => {
+    if (typeof window === "undefined") return;
+
+    const checkReduced = () => {
+      setPrefersReducedMotion(
+        window.matchMedia("(prefers-reduced-motion: reduce)").matches
+      );
+    };
+    checkReduced();
+
+    const updateDimensions = () => {
+      const mobile = window.innerWidth <= 768;
+      if (mobile !== isMobileRef.current) {
+        isMobileRef.current = mobile;
+        setIsMobile(mobile);
+        lastDrawnFrame.current = -1; // force redraw on breakpoint switch
+      }
+    };
+    updateDimensions();
+
+    let resizeTimer: NodeJS.Timeout;
+    const onResize = () => {
+      clearTimeout(resizeTimer);
+      resizeTimer = setTimeout(() => {
+        updateDimensions();
+        checkReduced();
+      }, 150);
+    };
+
+    window.addEventListener("resize", onResize, { passive: true });
+    return () => {
+      clearTimeout(resizeTimer);
+      window.removeEventListener("resize", onResize);
+    };
+  }, []);
+
+  // ── 2. Showcase Slider (Controlled Visibility & Reset) ────────────────────
+  const isSliderVisible = frame >= 1 && frame <= 100;
+
+  const resetSliderTimer = useCallback(() => {
+    if (autoPlayTimer.current) clearInterval(autoPlayTimer.current);
+    if (!isSliderVisible) return;
+
+    autoPlayTimer.current = setInterval(() => {
+      if (!isSliderPaused.current && isVisible.current && typeof document !== "undefined" && !document.hidden) {
         setShowcaseIndex((prev) => (prev + 1) % SHOWCASE_SLIDES.length);
       }
     }, 5000);
-  }, []);
+  }, [isSliderVisible]);
+
+  // When slider goes out of range: reset to slide 1 (index 0) and stop timer
+  useEffect(() => {
+    if (!isSliderVisible) {
+      setShowcaseIndex(0);
+      if (autoPlayTimer.current) clearInterval(autoPlayTimer.current);
+      autoPlayTimer.current = null;
+      return;
+    }
+
+    resetSliderTimer();
+    return () => {
+      if (autoPlayTimer.current) clearInterval(autoPlayTimer.current);
+    };
+  }, [isSliderVisible, resetSliderTimer]);
 
   const handlePrevSlide = useCallback(() => {
-    const now = Date.now();
-    if (now - lastSliderClickRef.current < 150) return;
-    lastSliderClickRef.current = now;
     setShowcaseIndex((prev) => (prev - 1 + SHOWCASE_SLIDES.length) % SHOWCASE_SLIDES.length);
     resetSliderTimer();
   }, [resetSliderTimer]);
 
   const handleNextSlide = useCallback(() => {
-    const now = Date.now();
-    if (now - lastSliderClickRef.current < 150) return;
-    lastSliderClickRef.current = now;
     setShowcaseIndex((prev) => (prev + 1) % SHOWCASE_SLIDES.length);
     resetSliderTimer();
   }, [resetSliderTimer]);
 
-  const handleSelectSlide = useCallback((index: number) => {
-    const now = Date.now();
-    if (now - lastSliderClickRef.current < 150) return;
-    lastSliderClickRef.current = now;
-    setShowcaseIndex(index);
+  const handleSelectSlide = useCallback((idx: number) => {
+    setShowcaseIndex(idx);
     resetSliderTimer();
   }, [resetSliderTimer]);
 
-  // Touch swipe handling
-  const touchStartXRef = useRef(0);
-  const touchStartYRef = useRef(0);
-
-  const handleTouchStart = useCallback((e: React.TouchEvent) => {
-    if (e.touches.length > 0) {
-      touchStartXRef.current = e.touches[0].clientX;
-      touchStartYRef.current = e.touches[0].clientY;
-      isSliderPausedRef.current = true;
-    }
-  }, []);
-
-  const handleTouchEnd = useCallback((e: React.TouchEvent) => {
-    isSliderPausedRef.current = false;
-    if (e.changedTouches.length > 0) {
-      const dx = e.changedTouches[0].clientX - touchStartXRef.current;
-      const dy = e.changedTouches[0].clientY - touchStartYRef.current;
-      if (Math.abs(dx) > 35 && Math.abs(dx) > Math.abs(dy)) {
-        if (dx < 0) {
-          handleNextSlide();
-        } else {
-          handlePrevSlide();
-        }
-      }
-    }
-  }, [handleNextSlide, handlePrevSlide]);
-
-  // Synchronize video play/pause on index change
+  // Video sync
   useEffect(() => {
-    videoRefs.current.forEach((video, idx) => {
-      if (!video) return;
-      if (idx === showcaseIndex && isVisible.current) {
-        video.currentTime = 0;
-        video.play().catch(() => { });
+    videoRefs.current.forEach((vid, i) => {
+      if (!vid) return;
+      if (i === showcaseIndex && isSliderVisible && isVisible.current) {
+        vid.currentTime = 0;
+        vid.play().catch(() => {});
       } else {
-        video.pause();
+        vid.pause();
       }
     });
-  }, [showcaseIndex]);
+  }, [showcaseIndex, isSliderVisible]);
 
-  // Initialize and cleanup autoplay timer
-  useEffect(() => {
-    resetSliderTimer();
-    return () => {
-      if (autoPlayTimerRef.current) {
-        clearInterval(autoPlayTimerRef.current);
-      }
-    };
-  }, [resetSliderTimer]);
+  // ── 3. Frame Image Loader ─────────────────────────────────────────────────
+  const loadSingleFrame = useCallback((url: string): Promise<DrawableFrame> => {
+    const useAppleFallback = isAppleSafari();
 
-  // Separate manifests for desktop and mobile portrait frame sets
-  const desktopManifestRef = useRef<SequenceManifest>(DESKTOP_MANIFEST_DEFAULT);
-  const mobileManifestRef = useRef<SequenceManifest>(MOBILE_MANIFEST_DEFAULT);
-
-  // Dual frame stores for separate desktop and portrait mobile caching
-  const desktopBitmaps = useRef<(DrawableFrame | null)[]>(
-    Array.from({ length: TOTAL_FRAMES }, () => null)
-  );
-  const portraitBitmaps = useRef<(DrawableFrame | null)[]>(
-    Array.from({ length: TOTAL_FRAMES }, () => null)
-  );
-  const destroyed = useRef(false);
-
-  // Scroll state (refs, no re-renders)
-  const rawTarget = useRef(0);   // normalized progress 0 to 1
-  const current = useRef(0);   // normalized progress 0 to 1 being animated
-  const lastDrawn = useRef(-1);  // rounded frame index last drawn
-  const isVisible = useRef(true);
-
-  // ── Scroll to Stage Function (interactive stage indicator) ───────────────
-  const scrollToStage = useCallback((stageNum: number) => {
-    const sec = sectionRef.current;
-    if (!sec) return;
-    const scrollY = window.scrollY || window.pageYOffset;
-    const sectionTop = sec.getBoundingClientRect().top + scrollY;
-    const viewH = window.innerHeight;
-    const isShort = viewH < 500;
-    const holdPx = isShort ? 0.6 * viewH : viewH;
-    const bufferPx = Math.round(0.18 * viewH);
-    const aboutTop = sectionTop + sec.offsetHeight - holdPx;
-    const coverStartScroll = aboutTop - holdPx;
-    const frameTravelPx = Math.max(1, coverStartScroll - sectionTop - bufferPx);
-
-    const isPortrait = isPortraitMobileViewport();
-    let targetY = sectionTop;
-    if (stageNum === 2) {
-      targetY = sectionTop + frameTravelPx * (isPortrait ? 0.40 : 0.46);
-    }
-    if (stageNum === 3) {
-      targetY = sectionTop + frameTravelPx * (isPortrait ? 0.78 : 0.86);
+    if (!useAppleFallback && typeof window !== "undefined" && typeof window.createImageBitmap === "function") {
+      return fetch(url)
+        .then((res) => {
+          if (!res.ok) throw new Error(`HTTP ${res.status}`);
+          return res.blob();
+        })
+        .then((blob) => createImageBitmap(blob))
+        .catch(() => {
+          return new Promise<HTMLImageElement>((resolve, reject) => {
+            const img = new Image();
+            img.crossOrigin = "anonymous";
+            img.decoding = "async";
+            img.onload = () => resolve(img);
+            img.onerror = () => reject(new Error(`Failed to load: ${url}`));
+            img.src = url;
+          });
+        });
     }
 
-    const lenis = (window as WindowWithLenis).__lenis;
-    if (lenis && typeof lenis.scrollTo === "function") {
-      lenis.scrollTo(targetY, { duration: 0.8 });
-    } else {
-      window.scrollTo({ top: targetY, behavior: "smooth" });
-    }
+    return new Promise<HTMLImageElement>((resolve, reject) => {
+      const img = new Image();
+      img.crossOrigin = "anonymous";
+      img.decoding = "async";
+      img.onload = () => resolve(img);
+      img.onerror = () => reject(new Error(`Failed to load: ${url}`));
+      img.src = url;
+    });
   }, []);
 
-  // ── Draw ────────────────────────────────────────────────────────────────
-  const draw = useCallback((progress: number) => {
+  const getFrameUrl = useCallback((mobile: boolean, index: number) => {
+    const config = mobile ? MOBILE_CONFIG : DESKTOP_CONFIG;
+    const padIndex = String(index + 1).padStart(3, "0");
+    return `${config.path}/${config.prefix}${padIndex}${config.ext}`;
+  }, []);
+
+  // ── 4. Frame Priority Preloading ──────────────────────────────────────────
+  useEffect(() => {
+    desktopFrames.current = Array.from({ length: TOTAL_FRAMES }, () => null);
+    mobileFrames.current = Array.from({ length: TOTAL_FRAMES }, () => null);
+    isDestroyed.current = false;
+
+    // Load first 15 frames immediately (priority 1)
+    const priorityCount = 15;
+    for (let i = 0; i < priorityCount; i++) {
+      // Desktop
+      const dUrl = getFrameUrl(false, i);
+      loadSingleFrame(dUrl).then((drawable) => {
+        if (!isDestroyed.current) {
+          desktopFrames.current[i] = drawable;
+          if (!isMobileRef.current && (lastDrawnFrame.current === -1 || lastDrawnFrame.current === 0)) {
+            lastDrawnFrame.current = -1;
+          }
+        }
+      }).catch(() => {});
+
+      // Mobile
+      const mUrl = getFrameUrl(true, i);
+      loadSingleFrame(mUrl).then((drawable) => {
+        if (!isDestroyed.current) {
+          mobileFrames.current[i] = drawable;
+          if (isMobileRef.current && (lastDrawnFrame.current === -1 || lastDrawnFrame.current === 0)) {
+            lastDrawnFrame.current = -1;
+          }
+        }
+      }).catch(() => {});
+    }
+
+    // Load remaining frames in small deferred batches
+    let currentBatch = priorityCount;
+    const batchSize = 15;
+    const loadRemaining = () => {
+      if (isDestroyed.current) return;
+      const targetMobile = isMobileRef.current;
+      const store = targetMobile ? mobileFrames.current : desktopFrames.current;
+
+      const end = Math.min(TOTAL_FRAMES, currentBatch + batchSize);
+      for (let i = currentBatch; i < end; i++) {
+        if (!store[i]) {
+          const url = getFrameUrl(targetMobile, i);
+          loadSingleFrame(url).then((drawable) => {
+            if (!isDestroyed.current) {
+              store[i] = drawable;
+            }
+          }).catch(() => {});
+        }
+      }
+      currentBatch = end;
+      if (currentBatch < TOTAL_FRAMES) {
+        if ("requestIdleCallback" in window) {
+          (window as unknown as { requestIdleCallback: (cb: () => void) => void }).requestIdleCallback(loadRemaining);
+        } else {
+          setTimeout(loadRemaining, 50);
+        }
+      }
+    };
+
+    const idleTimer = setTimeout(loadRemaining, 200);
+
+    return () => {
+      isDestroyed.current = true;
+      clearTimeout(idleTimer);
+    };
+  }, [getFrameUrl, loadSingleFrame]);
+
+  // Nearest frame fallback
+  const getNearestFrame = useCallback((store: (DrawableFrame | null)[], targetIdx: number, total: number): DrawableFrame | null => {
+    if (store[targetIdx]) return store[targetIdx];
+    let step = 1;
+    while (targetIdx - step >= 0 || targetIdx + step < total) {
+      if (targetIdx - step >= 0 && store[targetIdx - step]) return store[targetIdx - step];
+      if (targetIdx + step < total && store[targetIdx + step]) return store[targetIdx + step];
+      step++;
+    }
+    return null;
+  }, []);
+
+  // ── 5. Canvas Drawing ─────────────────────────────────────────────────────
+  const drawCanvas = useCallback((frameIndex: number) => {
     const canvas = canvasRef.current;
     if (!canvas) return;
     const ctx = canvas.getContext("2d", { alpha: false });
     if (!ctx) return;
 
-    const isPortrait = isPortraitMobileViewport();
-    const manifest = isPortrait ? mobileManifestRef.current : desktopManifestRef.current;
-    const store = isPortrait ? portraitBitmaps.current : desktopBitmaps.current;
-    const count = manifest.count || TOTAL_FRAMES;
-    const targetIdx = Math.max(0, Math.min(count - 1, Math.round(progress * (count - 1))));
+    const mobile = isMobileRef.current;
+    const store = mobile ? mobileFrames.current : desktopFrames.current;
+    const total = TOTAL_FRAMES;
 
-    // 1) Find exact or nearest loaded bitmap in current active set only (never fallback to desktop frames in portrait)
-    let bmp = store[targetIdx];
-    if (!bmp) {
-      for (let d = 1; d < count; d++) {
-        if (targetIdx - d >= 0 && store[targetIdx - d]) { bmp = store[targetIdx - d]; break; }
-        if (targetIdx + d < count && store[targetIdx + d]) { bmp = store[targetIdx + d]; break; }
-      }
+    const frameIdx = Math.max(0, Math.min(total - 1, frameIndex));
+    if (frameIdx === lastDrawnFrame.current && canvas.dataset.drawn === "true") {
+      return;
     }
 
-    const isIOS = isIOSDevice();
-    const isSafari = isSafariBrowser();
-    const dpr = Math.min(window.devicePixelRatio || 1, isIOS || isSafari ? 1.5 : (isPortrait ? 1.75 : 2));
-    // Use clientWidth / clientHeight of the wrapper so scrollbar is not counted
-    const wrapper = stickyRef.current;
-    const W = wrapper ? wrapper.clientWidth : (canvas.clientWidth || canvas.offsetWidth);
-    const H = wrapper ? wrapper.clientHeight : (canvas.clientHeight || canvas.offsetHeight);
-    if (!W || !H) return;
-
-    // If no frame in the active set is ready yet, keep canvas transparent so poster stays cleanly visible
-    if (!bmp) return;
-
-    const rW = Math.round(W * dpr);
-    const rH = Math.round(H * dpr);
-    if (canvas.width !== rW || canvas.height !== rH) {
-      canvas.width = rW;
-      canvas.height = rH;
-    }
-
-    ctx.save();
-    ctx.scale(dpr, dpr);
-    ctx.imageSmoothingEnabled = true;
-    ctx.imageSmoothingQuality = "high";
-    ctx.fillStyle = manifest.bgColor || (isPortrait ? PORTRAIT_BG_COLOR : BG_COLOR);
-    ctx.fillRect(0, 0, W, H);
-
-    if (bmp) {
-      if (isPortrait) {
-        // Mobile portrait (< 1024px portrait): cover-fit so frame fills the full canvas with no letterbox
-        const scale = Math.max(W / bmp.width, H / bmp.height);
-        const sw = bmp.width * scale;
-        const sh = bmp.height * scale;
-        const drawX = (W - sw) / 2;
-        const drawY = (H - sh) / 2;
-
-        ctx.drawImage(bmp, drawX, drawY, sw, sh);
-      } else {
-        const isDesk = W >= 1024;
-        if (isDesk) {
-          // Desktop (>= 1024px): keep current layout and cover fit untouched
-          const coverS = Math.max(W / bmp.width, H / bmp.height);
-          const effS = coverS * PRODUCT_SCALE;
-          const sw = bmp.width * effS;
-          const sh = bmp.height * effS;
-          const ax = PRODUCT_ANCHOR_X;
-          const ay = PRODUCT_ANCHOR_Y;
-          ctx.drawImage(bmp, W * ax - sw / 2, H * ay - sh / 2, sw, sh);
-        } else {
-          // Landscape mobile & small landscape tablets (< 1024px): safe-rect fit untouched
-          const isShort = H < 500;
-          let scale: number;
-          if (isShort) {
-            scale = ((H * (1 - 2 * LANDSCAPE_SIDE_MARGIN)) / (SAFE_RECT.height * bmp.height)) * MOBILE_SCALE_BOOST;
-          } else {
-            scale = ((W * (1 - 2 * LANDSCAPE_SIDE_MARGIN)) / (SAFE_RECT.width * bmp.width)) * MOBILE_SCALE_BOOST;
-          }
-
-          const sw = bmp.width * scale;
-          const sh = bmp.height * scale;
-
-          const safeCenterX = (SAFE_RECT.x + SAFE_RECT.width * 0.5) * sw;
-          const drawX = W * 0.5 - safeCenterX;
-
-          const safeCenterY = (SAFE_RECT.y + SAFE_RECT.height * 0.5) * sh;
-          const anchorY = isShort ? 0.5 : LANDSCAPE_ANCHOR_Y;
-          const drawY = H * anchorY - safeCenterY;
-
-          ctx.drawImage(bmp, drawX, drawY, sw, sh);
-
-          // Edge blending for landscape phone letterbox
-          const fadePx = Math.min(32, Math.max(16, sh * 0.08));
-          if (drawY > -fadePx) {
-            const topGrad = ctx.createLinearGradient(0, drawY, 0, drawY + fadePx);
-            topGrad.addColorStop(0, BG_COLOR);
-            topGrad.addColorStop(1, "rgba(232, 232, 230, 0)");
-            ctx.fillStyle = topGrad;
-            ctx.fillRect(0, drawY - 1, W, fadePx + 1);
-          }
-          if (drawY + sh < H + fadePx) {
-            const botGrad = ctx.createLinearGradient(0, drawY + sh - fadePx, 0, drawY + sh);
-            botGrad.addColorStop(0, "rgba(232, 232, 230, 0)");
-            botGrad.addColorStop(1, BG_COLOR);
-            ctx.fillStyle = botGrad;
-            ctx.fillRect(0, drawY + sh - fadePx, W, fadePx + 1);
+    const frameImg = getNearestFrame(store, frameIdx, total);
+    if (!store[frameIdx]) {
+      const url = getFrameUrl(mobile, frameIdx);
+      loadSingleFrame(url).then((drawable) => {
+        if (!isDestroyed.current) {
+          store[frameIdx] = drawable;
+          if (lastDrawnFrame.current === frameIdx) {
+            lastDrawnFrame.current = -1;
+            drawCanvas(frameIdx);
           }
         }
-      }
+      }).catch(() => {});
+    }
+    if (!frameImg) return;
+
+    const stage = stageRef.current;
+    const rect = canvas.getBoundingClientRect();
+    const stageW = rect.width || (stage ? stage.clientWidth : window.innerWidth);
+    const stageH = rect.height || (stage ? stage.clientHeight : window.innerHeight);
+
+    const dpr = Math.min(typeof window !== "undefined" ? window.devicePixelRatio || 1 : 1, 2);
+    const targetW = Math.round(stageW * dpr);
+    const targetH = Math.round(stageH * dpr);
+
+    if (canvas.width !== targetW || canvas.height !== targetH) {
+      canvas.width = targetW;
+      canvas.height = targetH;
     }
 
-    ctx.restore();
-  }, []);
+    const imgW = (frameImg as ImageBitmap).width || (frameImg as HTMLImageElement).naturalWidth;
+    const imgH = (frameImg as ImageBitmap).height || (frameImg as HTMLImageElement).naturalHeight;
 
-  // ── Overlay opacity (no CSS transitions — pure JS for sync) ─────────────
-  const applyStage = useCallback((id: string, opacity: number, yPx: number) => {
-    const el = document.getElementById(id);
-    if (!el) return;
-    el.style.opacity = opacity.toFixed(3);
-    const isCentered = (
-      el.classList.contains("lg:-translate-y-1/2") ||
-      el.classList.contains("lg:!-translate-y-1/2") ||
-      el.classList.contains("what-we-do-left")
-    ) && (typeof window !== "undefined" && window.innerWidth >= 1024);
-    el.style.transform = isCentered ? `translateY(calc(-50% + ${yPx.toFixed(1)}px))` : `translateY(${yPx.toFixed(1)}px)`;
-    // Screen containers use pointer-events: none so touches in gutters pass through to scroll,
-    // while cards inside have pointer-events: auto.
-    const isScreenWrapper = id === "hero-screen" || id === "what-we-do-screen" || id === "custody-screen";
-    el.style.pointerEvents = opacity > 0.05 ? (isScreenWrapper ? "none" : "auto") : "none";
-    el.style.visibility = opacity > 0.05 ? "visible" : "hidden";
-  }, []);
+    if (!imgW || !imgH) return;
 
-  const updateCards = useCallback((p: number) => {
-    const isPortrait = isPortraitMobileViewport();
+    // Cover scale centered
+    const scale = Math.max(targetW / imgW, targetH / imgH);
+    const sw = targetW / scale;
+    const sh = targetH / scale;
+    const sx = (imgW - sw) * 0.5;
+    const sy = (imgH - sh) * 0.5;
 
-    if (isPortrait) {
-      // ── Mobile Portrait Progression (Snappy, Natural Touch Scroll) ───────
-      // Total travel is tuned so 1-2 thumb swipes (~150-250px) immediately begins transition,
-      // and stages 1, 2, 3 are all comfortably reachable without feeling stuck.
+    ctx.drawImage(frameImg, sx, sy, sw, sh, 0, 0, targetW, targetH);
+    lastDrawnFrame.current = frameIdx;
+    canvas.dataset.drawn = "true";
+  }, [getNearestFrame]);
 
-      // Stage 1 (hero intro & showcase): 0.00 → 0.28
-      // Active 0.00 → 0.18; cross-fades out 0.18 → 0.28
-      {
-        let op = 0;
-        let y = 0;
-        if (p <= 0.18) {
-          op = 1;
-          y = 0;
-        } else if (p < 0.28) {
-          const t = smootherstep(0.18, 0.28, p);
-          op = 1 - t;
-          y = -22 * t;
-        } else {
-          op = 0;
-          y = -22;
-        }
-        applyStage("hero-screen", op, y);
-      }
-
-      // Stage 2 (what we do & 01/02/03 cards): 0.18 → 0.62
-      // Cross-fades in 0.18 → 0.28; active 0.28 → 0.52; cross-fades out 0.52 → 0.62
-      {
-        let op = 0;
-        let y = 20;
-        if (p >= 0.18 && p <= 0.62) {
-          if (p < 0.28) {
-            const t = smootherstep(0.18, 0.28, p);
-            op = t;
-            y = 20 * (1 - t);
-          } else if (p > 0.52) {
-            const t = smootherstep(0.52, 0.62, p);
-            op = 1 - t;
-            y = -20 * t;
-          } else {
-            op = 1;
-            y = 0;
-          }
-        } else if (p > 0.62) {
-          op = 0;
-          y = -20;
-        } else {
-          op = 0;
-          y = 20;
-        }
-        applyStage("what-we-do-screen", op, y);
-      }
-
-      // Stage 3 (custody metering & automation): 0.52 → 1.00+
-      // Cross-fades in 0.52 → 0.62; STAYS FULLY VISIBLE (opacity 1) from 0.62 through 1.00 and cover!
-      {
-        let op = 0;
-        let y = 20;
-        if (p >= 0.52) {
-          if (p < 0.62) {
-            const t = smootherstep(0.52, 0.62, p);
-            op = t;
-            y = 20 * (1 - t);
-          } else {
-            op = 1;
-            y = 0;
-          }
-        } else {
-          op = 0;
-          y = 20;
-        }
-        applyStage("custody-screen", op, y);
-
-        if (canvasRef.current && canvasRef.current.style.opacity !== "1") {
-          canvasRef.current.style.opacity = "1";
-        }
-      }
-    } else {
-      // ── Desktop Progression (Unchanged) ──────────────────────────────────
-      // Stage 1 (hero intro): 0.00 → 0.38
-      // Active 0.00 → 0.29; cross-fades out 0.29 → 0.38 (9% overlap)
-      {
-        let op = 0;
-        let y = 0;
-        if (p <= 0.29) {
-          op = 1;
-          y = 0;
-        } else if (p < 0.38) {
-          const t = smootherstep(0.29, 0.38, p);
-          op = 1 - t;
-          y = -28 * t;
-        } else {
-          op = 0;
-          y = -28;
-        }
-        applyStage("hero-screen", op, y);
-      }
-
-      // Stage 2 (what we do & 01/02/03 cards): 0.29 → 0.72
-      // Cross-fades in 0.29 → 0.38; active 0.38 → 0.63; cross-fades out 0.63 → 0.72 (9% overlap)
-      {
-        let op = 0;
-        let y = 24;
-        if (p >= 0.29 && p <= 0.72) {
-          if (p < 0.38) {
-            const t = smootherstep(0.29, 0.38, p);
-            op = t;
-            y = 24 * (1 - t);
-          } else if (p > 0.63) {
-            const t = smootherstep(0.63, 0.72, p);
-            op = 1 - t;
-            y = -24 * t;
-          } else {
-            op = 1;
-            y = 0;
-          }
-        } else if (p > 0.72) {
-          op = 0;
-          y = -24;
-        } else {
-          op = 0;
-          y = 24;
-        }
-        applyStage("what-we-do-screen", op, y);
-      }
-
-      // Stage 3 (custody metering & automation): 0.63 → 1.00+
-      // Cross-fades in 0.63 → 0.72; STAYS FULLY VISIBLE (opacity 1) from 0.72 to 1.00 and through cover!
-      {
-        let op = 0;
-        let y = 24;
-        if (p >= 0.63) {
-          if (p < 0.72) {
-            const t = smootherstep(0.63, 0.72, p);
-            op = t;
-            y = 24 * (1 - t);
-          } else {
-            op = 1;
-            y = 0;
-          }
-        } else {
-          op = 0;
-          y = 24;
-        }
-        applyStage("custody-screen", op, y);
-
-        if (canvasRef.current && canvasRef.current.style.opacity !== "1") {
-          canvasRef.current.style.opacity = "1";
-        }
-      }
-    }
-  }, [applyStage]);
-
-  // ── Cover reaction (transform & opacity only, driven by coverProgress 0 → 1) ──
-  const applyCoverReaction = useCallback((coverP: number) => {
-    // 1) Parallax scale (1.0 → COVER_SCALE) & lift (0 → -COVER_LIFT)
-    if (heroContentRef.current) {
-      if (isPortraitMobileRef.current) {
-        heroContentRef.current.style.transform = "none";
-      } else {
-        const scale = 1 - (1 - COVER_SCALE) * coverP;
-        const translateY = -COVER_LIFT * coverP;
-        heroContentRef.current.style.transform = `scale(${scale.toFixed(4)}) translateY(${translateY.toFixed(2)}px)`;
-      }
-    }
-
-    // 2) Hero text and cards fade to 0 opacity
-    if (overlayRef.current) {
-      if (isPortraitMobileRef.current) {
-        // Mobile: Opacity stays 1 until coverP = 0.25, then fades linearly to 0 between 0.25 and 0.75
-        const fade = coverP <= 0.25 ? 1 : Math.max(0, 1 - (coverP - 0.25) / 0.5);
-        overlayRef.current.style.opacity = fade.toFixed(3);
-        overlayRef.current.style.pointerEvents = coverP >= 0.75 ? "none" : "";
-        overlayRef.current.style.visibility = coverP >= 0.75 ? "hidden" : "visible";
-      } else {
-        const fade = coverP <= 0 ? 1 : Math.max(0, 1 - coverP / 0.6);
-        overlayRef.current.style.opacity = fade.toFixed(3);
-      }
-    }
-
-    // 3) Hero stage indicator fades out during hold-and-cover so it never shows over the next section
-    if (stageIndicatorRef.current) {
-      const fade = coverP <= 0 ? 1 : Math.max(0, 1 - coverP / 0.6);
-      stageIndicatorRef.current.style.opacity = fade.toFixed(3);
-      stageIndicatorRef.current.style.pointerEvents = fade <= 0.05 ? "none" : "auto";
-    }
-
-    // 4) Optional dimming (default COVER_DIM = 0, disabled)
-    if (dimOverlayRef.current && COVER_DIM > 0) {
-      dimOverlayRef.current.style.opacity = (COVER_DIM * coverP).toFixed(3);
-    }
-
-    // 5) When Section 4 has fully covered the hero (coverP >= 1), hide canvas so frames never bleed into section 4+
-    if (canvasRef.current) {
-      if (isPortraitMobileRef.current) {
-        // Mobile: Frame canvas fades out with opacity only alongside cards (1 until 0.25, 0 at 0.75)
-        const fade = coverP <= 0.25 ? 1 : Math.max(0, 1 - (coverP - 0.25) / 0.5);
-        canvasRef.current.style.opacity = fade.toFixed(3);
-        canvasRef.current.style.pointerEvents = coverP >= 0.75 ? "none" : "";
-        canvasRef.current.style.visibility = coverP >= 0.75 ? "hidden" : "visible";
-      } else if (coverP >= 1.0) {
-        canvasRef.current.style.opacity = "0";
-        canvasRef.current.style.visibility = "hidden";
-      } else {
-        canvasRef.current.style.opacity = "1";
-        canvasRef.current.style.visibility = "visible";
-      }
-    }
-  }, []);
-
-  // ── Main effect ─────────────────────────────────────────────────────────
+  // ── 6. Stats Count-Up Animation (Purely Reversible) ────────────────────────
   useEffect(() => {
-    destroyed.current = false;
-    const section = sectionRef.current;
-    if (!section) return;
-    const initialPortrait = isPortraitMobileViewport();
-    setIsPortraitMobile(initialPortrait);
-    isPortraitMobileRef.current = initialPortrait;
-
-    // Apply responsive height and background directly to DOM elements
-    if (section) {
-      section.style.height = initialPortrait
-        ? `calc(${MOBILE_PORTRAIT_SCROLL_LENGTH} + ${HOLD_COVER})`
-        : `calc(${SCROLL_LENGTH} + ${HOLD_COVER})`;
-      section.style.backgroundColor = initialPortrait ? PORTRAIT_BG_COLOR : BG_COLOR;
-    }
-    if (stickyRef.current) {
-      stickyRef.current.style.backgroundColor = initialPortrait ? PORTRAIT_BG_COLOR : BG_COLOR;
+    const inStatsRange = frame >= 1 && frame <= 100;
+    if (!inStatsRange) {
+      setCountYears(0);
+      setCountIndustries(0);
+      setCountClients(0);
+      setCountVendors(0);
+      statsCounted.current = false;
+      return;
     }
 
-    // Use static defaults directly (no runtime manifest network fetches)
-    desktopManifestRef.current = DESKTOP_MANIFEST_DEFAULT;
-    mobileManifestRef.current = MOBILE_MANIFEST_DEFAULT;
+    if (statsCounted.current) return;
+    statsCounted.current = true;
 
-    const isIOS = isIOSDevice();
-    const isSafari = isSafariBrowser();
-    const isMobileWidth = window.innerWidth < 768;
-    const isMobile = initialPortrait || isMobileWidth;
-    const MAX_CACHED_FRAMES = isIOS || isSafari ? 24 : (isMobile ? 32 : 70);
-    const MAX_CONCURRENT_LOADS = isIOS || isSafari || isMobile ? 4 : 6;
-
-    const nav = navigator as unknown as {
-      connection?: { saveData?: boolean };
-      deviceMemory?: number;
+    const startTime = performance.now();
+    const duration = 1000;
+    const animateStats = (now: number) => {
+      const elapsed = now - startTime;
+      const t = clamp(elapsed / duration, 0, 1);
+      const ease = 1 - Math.pow(1 - t, 3);
+      setCountYears(Math.floor(ease * 18));
+      setCountIndustries(Math.floor(ease * 8));
+      setCountClients(Math.floor(ease * 200));
+      setCountVendors(Math.floor(ease * 16));
+      if (t < 1) {
+        requestAnimationFrame(animateStats);
+      } else {
+        setCountYears(18);
+        setCountIndustries(8);
+        setCountClients(200);
+        setCountVendors(16);
+      }
     };
-    const saveData = nav.connection?.saveData === true;
-    const lowMemory = (nav.deviceMemory ?? 8) <= 4;
-    const step = initialPortrait || isMobileWidth || saveData || lowMemory ? 2 : 1;
+    requestAnimationFrame(animateStats);
+  }, [frame, isMobile]);
 
-    let activeLoads = 0;
-    const loadingSet = new Set<string>();
-    type SetKey = "desktop" | "mobilePortrait";
-    let queue: { set: SetKey; index: number }[] = [];
-    let cleanupTimer: ReturnType<typeof setTimeout> | null = null;
-    let lastRequestedTarget = -1;
+  // ── 7. Single Scroll & rAF Engine (Canvas & Cards 100% Locked) ─────────────
+  useEffect(() => {
+    if (typeof window === "undefined") return;
 
-    // Track loaded indices for eviction
-    const loadedDesktop = new Set<number>();
-    const loadedPortrait = new Set<number>();
+    let rafId = 0;
+    const EASE = 0.16;
 
-    function requestFramesAround(targetIdx: number) {
-      if (destroyed.current) return;
-      const currentIsPortrait = isPortraitMobileViewport();
-      const activeSetKey: SetKey = currentIsPortrait ? "mobilePortrait" : "desktop";
-      const manifest = activeSetKey === "mobilePortrait" ? mobileManifestRef.current : desktopManifestRef.current;
-      const count = manifest.count || TOTAL_FRAMES;
+    const update = () => {
+      if (isDestroyed.current) return;
+      const track = trackRef.current;
+      if (!track) return;
 
-      const clampedTarget = Math.max(0, Math.min(count - 1, targetIdx));
-      lastRequestedTarget = clampedTarget;
-
-      const lookBehind = isMobile ? 10 : 16;
-      const lookAhead = isMobile ? 22 : 36;
-      const minIdx = Math.max(0, clampedTarget - lookBehind);
-      const maxIdx = Math.min(count - 1, clampedTarget + lookAhead);
-
-      const needed: number[] = [0]; // Frame 0 always anchored
-      for (let i = minIdx; i <= maxIdx; i += step) {
-        if (i !== 0) needed.push(i);
-      }
-      if (!needed.includes(clampedTarget)) {
-        needed.push(clampedTarget);
-      }
-
-      const store = activeSetKey === "mobilePortrait" ? portraitBitmaps.current : desktopBitmaps.current;
-      const toLoad = needed.filter(idx => !store[idx] && !loadingSet.has(`${activeSetKey}:${idx}`));
-
-      toLoad.sort((a, b) => {
-        if (a === clampedTarget) return -1;
-        if (b === clampedTarget) return 1;
-        return Math.abs(a - clampedTarget) - Math.abs(b - clampedTarget);
-      });
-
-      queue = toLoad.map(index => ({ set: activeSetKey, index }));
-      pump();
-    }
-
-    function fetchFrame(setKey: SetKey, idx: number) {
-      const store = setKey === "mobilePortrait" ? portraitBitmaps.current : desktopBitmaps.current;
-      const manifest = setKey === "mobilePortrait" ? mobileManifestRef.current : desktopManifestRef.current;
-      const count = manifest.count || TOTAL_FRAMES;
-      if (idx < 0 || idx >= count) return;
-
-      const keyStr = `${setKey}:${idx}`;
-      if (destroyed.current || store[idx] || loadingSet.has(keyStr)) return;
-
-      loadingSet.add(keyStr);
-      activeLoads++;
-      const base = setKey === "mobilePortrait" ? SEQUENCE_PATH_MOBILE : SEQUENCE_PATH;
-      const pad = framePad(idx + 1);
-      const url = `${base}/${manifest.prefix || FRAME_PREFIX}${pad}${manifest.ext || FRAME_EXT}`;
-
-      loadFrameImage(url)
-        .then(drawable => {
-          if (destroyed.current) { closeDrawable(drawable); return; }
-          store[idx] = drawable;
-
-          const loadedSet = setKey === "mobilePortrait" ? loadedPortrait : loadedDesktop;
-          loadedSet.add(idx);
-
-          // LRU Eviction: cap frames in memory
-          if (loadedSet.size > MAX_CACHED_FRAMES) {
-            const activeManifest = setKey === "mobilePortrait" ? mobileManifestRef.current : desktopManifestRef.current;
-            const currentIdx = Math.round(current.current * (activeManifest.count - 1));
-            const indices = Array.from(loadedSet);
-            // Sort furthest from currentIdx first (keep frame 0 protected)
-            indices.sort((a, b) => {
-              if (a === 0) return 1;
-              if (b === 0) return -1;
-              return Math.abs(b - currentIdx) - Math.abs(a - currentIdx);
-            });
-
-            while (loadedSet.size > MAX_CACHED_FRAMES && indices.length > 0) {
-              const evictIdx = indices.shift()!;
-              if (evictIdx === 0) continue;
-              const item = store[evictIdx];
-              if (item) {
-                closeDrawable(item);
-                store[evictIdx] = null;
-              }
-              loadedSet.delete(evictIdx);
-            }
-          }
-
-          const currentIsPortrait = isPortraitMobileViewport();
-          const activeSetKey: SetKey = currentIsPortrait ? "mobilePortrait" : "desktop";
-          if (activeSetKey === setKey) {
-            setPosterVisible(false);
-            const activeManifest = activeSetKey === "mobilePortrait" ? mobileManifestRef.current : desktopManifestRef.current;
-            const currentIdx = Math.round(current.current * (activeManifest.count - 1));
-            if (lastDrawn.current === currentIdx || Math.abs(currentIdx - idx) <= 1 || idx === 0) {
-              draw(current.current);
-            }
-          }
-        })
-        .catch(() => { })
-        .finally(() => {
-          loadingSet.delete(keyStr);
-          activeLoads--;
-          pump();
-        });
-    }
-
-    function pump() {
-      if (destroyed.current || activeLoads >= MAX_CONCURRENT_LOADS || queue.length === 0) return;
-      while (activeLoads < MAX_CONCURRENT_LOADS && queue.length > 0) {
-        const item = queue.shift()!;
-        fetchFrame(item.set, item.index);
-      }
-    }
-
-    // Start with frames around initial frame (0)
-    requestFramesAround(0);
-
-    // ── Orientation & Breakpoint Change Listener (Switch sets without flash) ──
-    const portraitMq = window.matchMedia("(orientation: portrait) and (max-width: 1023px)");
-    const handleOrientationOrBreakpoint = (e: MediaQueryListEvent | MediaQueryList) => {
-      const isPortrait = e.matches;
-      if (isPortrait === isPortraitMobileRef.current) return;
-      isPortraitMobileRef.current = isPortrait;
-      setIsPortraitMobile(isPortrait);
-
-      if (sectionRef.current) {
-        sectionRef.current.style.height = isPortrait
-          ? `calc(${MOBILE_PORTRAIT_SCROLL_LENGTH} + ${HOLD_COVER})`
-          : `calc(${SCROLL_LENGTH} + ${HOLD_COVER})`;
-        sectionRef.current.style.backgroundColor = isPortrait ? PORTRAIT_BG_COLOR : BG_COLOR;
-      }
-      if (stickyRef.current) {
-        stickyRef.current.style.backgroundColor = isPortrait ? PORTRAIT_BG_COLOR : BG_COLOR;
-      }
-
-      const newManifest = isPortrait ? mobileManifestRef.current : desktopManifestRef.current;
-      const inactiveSetKey: SetKey = isPortrait ? "desktop" : "mobilePortrait";
-
-      // Request frames around current scroll position for the new set
-      const curIdx = Math.round(current.current * (newManifest.count - 1));
-      requestFramesAround(curIdx);
-
-      // Redraw immediately
-      draw(current.current);
-
-      // Delayed cleanup: if the user remains on the new orientation for 5s,
-      // release the inactive set's bitmaps to free memory.
-      if (cleanupTimer) clearTimeout(cleanupTimer);
-      cleanupTimer = setTimeout(() => {
-        if (destroyed.current) return;
-        const currentActive: SetKey = isPortraitMobileRef.current ? "mobilePortrait" : "desktop";
-        if (currentActive !== inactiveSetKey) {
-          const inactiveStore = inactiveSetKey === "mobilePortrait" ? portraitBitmaps.current : desktopBitmaps.current;
-          const inactiveLoaded = inactiveSetKey === "mobilePortrait" ? loadedPortrait : loadedDesktop;
-          inactiveStore.forEach((b, i) => {
-            if (b) { closeDrawable(b); inactiveStore[i] = null; }
-          });
-          inactiveLoaded.clear();
-        }
-      }, 5000);
-    };
-
-    portraitMq.addEventListener("change", handleOrientationOrBreakpoint);
-
-    // ── Scroll → progress ────────────────────────────────────────────────
-    function readScroll() {
-      const sec = sectionRef.current;
-      if (!sec) return;
-      const scrollY = window.scrollY || window.pageYOffset;
-      const rect = sec.getBoundingClientRect();
-      const sectionTop = rect.top + scrollY;
+      const rect = track.getBoundingClientRect();
+      const trackH = track.offsetHeight;
       const viewH = window.innerHeight;
-      const isShort = viewH < 500;
-      // On very short screens (<500px), reduce HOLD_COVER to 60svh
-      const holdPx = isShort ? 0.6 * viewH : viewH;
-      // On portrait mobile cover must start the instant frames finish (no dead zone between sections)
-      const bufferPx = isPortraitMobileRef.current ? 0 : Math.round(0.18 * viewH);
 
-      // The next section has margin-top: -holdPx, so its document top is:
-      const aboutTop = sectionTop + sec.offsetHeight - holdPx;
-      const coverEndScroll = aboutTop;
-      const coverStartScroll = coverEndScroll - holdPx;
-      const frameTravelPx = Math.max(1, coverStartScroll - sectionTop - bufferPx);
-      const scrolledInHero = Math.max(0, scrollY - sectionTop);
+      // Only skip if completely scrolled past the hero
+      if (rect.bottom < 0) return;
 
-      // 1) Frame progress maps to frame travel (on mobile portrait, scaled to reach 1 at MOBILE_SETTLE_P)
-      const effectiveTravel = isPortraitMobileRef.current
-        ? frameTravelPx * MOBILE_SETTLE_P
-        : frameTravelPx;
-      const frameProgress = Math.max(0, Math.min(1, scrolledInHero / effectiveTravel));
-      rawTarget.current = frameProgress;
+      const scrollRange = trackH - viewH;
+      const scrolled = -rect.top;
+      const rawP = scrollRange > 0 ? clamp(scrolled / scrollRange, 0, 1) : 0;
 
-      // 2) Cover progress (0 to 1 over the HOLD_COVER distance, starting strictly after frameProgress reaches 1 + buffer)
-      const coverProgress = scrollY < coverStartScroll
-        ? 0
-        : Math.max(0, Math.min(1, (scrollY - coverStartScroll) / holdPx));
-
-      applyCoverReaction(coverProgress);
-
-      if (stageIndicatorRef.current) {
-        stageIndicatorRef.current.style.opacity = coverProgress <= 0 ? "1" : Math.max(0, 1 - coverProgress / 0.5).toFixed(3);
-      }
-
-      const activeManifest = isPortraitMobileRef.current ? mobileManifestRef.current : desktopManifestRef.current;
-      const count = activeManifest.count || TOTAL_FRAMES;
-      const targetIdx = Math.round(frameProgress * (count - 1));
-      if (Math.abs(targetIdx - lastRequestedTarget) >= 1) {
-        requestFramesAround(targetIdx);
+      // Smooth progress with lerp
+      const diff = rawP - currentProgress.current;
+      if (Math.abs(diff) < 0.0001) {
+        currentProgress.current = rawP;
       } else {
-        pump();
-      }
-    }
-
-    // ── rAF loop — always running while mounted ───────────────────────────
-    const prefersReduced = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
-    let lastTime = performance.now();
-    let raf = 0;
-    function loop(time?: number) {
-      if (destroyed.current) return;
-      raf = requestAnimationFrame(loop);      // schedule FIRST so it never stops
-
-      if (!isVisible.current) {
-        if (time) lastTime = time;
-        return;
+        currentProgress.current += diff * EASE;
       }
 
-      const now = time || performance.now();
-      const dt = Math.min(0.1, Math.max(0.001, (now - lastTime) / 1000));
-      lastTime = now;
+      const p = currentProgress.current;
+      const frameIdx = Math.max(0, Math.min(TOTAL_FRAMES - 1, Math.round(p * (TOTAL_FRAMES - 1))));
+      const currentFrameNum = frameIdx + 1; // 1 to 300
 
-      const isPortrait = isPortraitMobileViewport();
-      if (prefersReduced) {
-        current.current = rawTarget.current;
-      } else {
-        const diff = rawTarget.current - current.current;
-        const easeFactor = isPortrait ? 0.20 : EASE;
-        let step = diff * easeFactor;
+      // Draw canvas
+      drawCanvas(frameIdx);
 
-        // Fast-scroll protection: Cap maximum progress change per second on rapid flicks
-        // so flicking doesn't skip intermediate stages. Higher cap on mobile for snappy touch feel.
-        const maxProgPerSec = isPortrait ? 3.2 : MAX_PROGRESS_PER_SECOND;
-        const maxStep = maxProgPerSec * dt;
-        if (Math.abs(step) > maxStep) {
-          step = Math.sign(step) * maxStep;
-        }
-
-        current.current += step;
-        if (Math.abs(rawTarget.current - current.current) < 0.0001) {
-          current.current = rawTarget.current;
-        }
+      // Synchronize React card state (only updates when integer frame changes)
+      if (currentFrameNum !== lastStateFrame.current) {
+        lastStateFrame.current = currentFrameNum;
+        setFrame(currentFrameNum);
+        setProgressVal(p);
       }
+    };
 
-      // Drive all stage text, cards and indicators from the SAME eased progress value
-      const easedProgress = Math.max(0, Math.min(1, current.current));
-      updateCards(easedProgress);
+    const loop = () => {
+      if (isDestroyed.current) return;
+      rafId = requestAnimationFrame(loop);
+      update();
+    };
 
-      const stage = isPortrait
-        ? (easedProgress < 0.25 ? 1 : easedProgress < 0.58 ? 2 : 3)
-        : (easedProgress < 0.33 ? 1 : easedProgress < 0.68 ? 2 : 3);
-      if (stage !== activeStageRef.current) {
-        activeStageRef.current = stage;
-        setActiveStage(stage);
-      }
+    rafId = requestAnimationFrame(loop);
 
-      const manifest = isPortrait ? mobileManifestRef.current : desktopManifestRef.current;
-      const count = manifest.count || TOTAL_FRAMES;
-      const targetIdx = Math.max(0, Math.min(count - 1, Math.round(easedProgress * (count - 1))));
+    const onScroll = () => {
+      update();
+    };
+    window.addEventListener("scroll", onScroll, { passive: true });
 
-      if (targetIdx !== lastDrawn.current) {
-        draw(easedProgress);
-        lastDrawn.current = targetIdx;
-      }
-    }
-
-    // ── Intersection observer (pause when off-screen) ─────────────────────
-    const syncMediaState = (visible: boolean) => {
-      videoRefs.current.forEach((video, idx) => {
-        if (!video) return;
-        if (visible && idx === showcaseIndexRef.current) {
-          video.play().catch(() => { });
+    // Expose programmatic frame setter for exact test verification
+    (window as unknown as { __setHeroFrame?: (f: number) => void }).__setHeroFrame = (f: number) => {
+      const clampedF = clamp(f, 1, TOTAL_FRAMES);
+      const p = (clampedF - 1) / (TOTAL_FRAMES - 1);
+      const track = trackRef.current;
+      if (track) {
+        const trackH = track.offsetHeight;
+        const viewH = window.innerHeight;
+        const scrollRange = trackH - viewH;
+        const targetY = p * scrollRange;
+        const lenis = (window as unknown as { __lenis?: { scrollTo: (y: number, opts?: unknown) => void } }).__lenis;
+        if (lenis) {
+          lenis.scrollTo(targetY, { immediate: true });
         } else {
-          video.pause();
+          window.scrollTo(0, targetY);
         }
-      });
+      }
+      currentProgress.current = p;
+      drawCanvas(clampedF - 1);
+      setFrame(clampedF);
+      setProgressVal(p);
     };
-
-    const io = new IntersectionObserver(([e]) => {
-      const visible = e.isIntersecting || (window.scrollY || window.pageYOffset) < 100;
-      isVisible.current = visible;
-      syncMediaState(visible);
-      if (visible) draw(current.current);
-    }, { threshold: 0 });
-    io.observe(section);
-
-    // ── ResizeObserver on wrapper for exact clientWidth (excludes scrollbar) ─
-    const ro = new ResizeObserver(() => {
-      draw(current.current);
-    });
-    if (stickyRef.current) ro.observe(stickyRef.current);
-
-    // ── Window events ─────────────────────────────────────────────────────
-    let resizeT: ReturnType<typeof setTimeout>;
-    const onResize = () => {
-      clearTimeout(resizeT);
-      resizeT = setTimeout(() => {
-        draw(current.current);
-      }, 80);
-    };
-
-    const onVisibility = () => {
-      const visible = !document.hidden && isVisible.current;
-      syncMediaState(visible);
-      if (visible) draw(current.current);
-    };
-
-    const lenis = (window as WindowWithLenis).__lenis;
-    if (lenis && typeof lenis.on === "function") {
-      lenis.on("scroll", readScroll);
-    }
-
-    window.addEventListener("scroll", readScroll, { passive: true });
-    window.addEventListener("resize", onResize, { passive: true });
-    window.addEventListener("orientationchange", onResize, { passive: true });
-    document.addEventListener("visibilitychange", onVisibility);
-
-    readScroll();
-    draw(0);                // Paint initial frame immediately on mount
-    loop();                 // start the always-on rAF
 
     return () => {
-      destroyed.current = true;
-      cancelAnimationFrame(raf);
-      io.disconnect();
-      ro.disconnect();
-      clearTimeout(resizeT);
-      if (cleanupTimer) clearTimeout(cleanupTimer);
-      portraitMq.removeEventListener("change", handleOrientationOrBreakpoint);
-      if (lenis && typeof lenis.off === "function") {
-        lenis.off("scroll", readScroll);
-      }
-      window.removeEventListener("scroll", readScroll);
-      window.removeEventListener("resize", onResize);
-      window.removeEventListener("orientationchange", onResize);
-      document.removeEventListener("visibilitychange", onVisibility);
-      desktopBitmaps.current.forEach(b => closeDrawable(b));
-      desktopBitmaps.current = Array.from({ length: TOTAL_FRAMES }, () => null);
-      portraitBitmaps.current.forEach(b => closeDrawable(b));
-      portraitBitmaps.current = Array.from({ length: TOTAL_FRAMES }, () => null);
-      loadedDesktop.clear();
-      loadedPortrait.clear();
+      cancelAnimationFrame(rafId);
+      window.removeEventListener("scroll", onScroll);
+      delete (window as unknown as { __setHeroFrame?: unknown }).__setHeroFrame;
     };
-  }, [draw, updateCards, applyCoverReaction]);
+  }, [drawCanvas]);
 
+  // Chapter jump handler
+  const scrollToFrame = useCallback((targetFrame: number) => {
+    const track = trackRef.current;
+    if (!track) return;
+    const trackH = track.offsetHeight;
+    const viewH = window.innerHeight;
+    const scrollRange = trackH - viewH;
+    const trackTop = track.getBoundingClientRect().top + (window.scrollY || window.pageYOffset);
+    const targetP = (targetFrame - 1) / (TOTAL_FRAMES - 1);
+    const targetY = trackTop + targetP * scrollRange;
+
+    const lenis = (window as unknown as { __lenis?: { scrollTo: (y: number, opts?: unknown) => void } }).__lenis;
+    if (lenis) {
+      lenis.scrollTo(targetY);
+    } else {
+      window.scrollTo({
+        top: targetY,
+        behavior: "smooth",
+      });
+    }
+  }, []);
+
+  // ── 8. Pure Card Motions Derived from Single Frame ────────────────────────
+  const desktopMotions = useMemo(() => {
+    return {
+      s1Panel: getCardMotion(frame, TIMELINE.stage1.panel, 24),
+      s1Slider: getCardMotion(frame, TIMELINE.stage1.slider, 24),
+      s1Stats: getCardMotion(frame, TIMELINE.stage1.stats, 20),
+      s2Panel: getCardMotion(frame, TIMELINE.stage2.panel, 24),
+      s2Card1: getCardMotion(frame, TIMELINE.stage2.card1, 24),
+      s2Card2: getCardMotion(frame, TIMELINE.stage2.card2, 24),
+      s2Card3: getCardMotion(frame, TIMELINE.stage2.card3, 24),
+      s3Panel: getCardMotion(frame, TIMELINE.stage3.panel, 24),
+      s3EndCtas: getCardMotion(frame, TIMELINE.stage3.endCtas, 20),
+    };
+  }, [frame]);
+
+  const mobileMotions = useMemo(() => {
+    return {
+      s1TopPanel: getCardMotion(frame, MOBILE_TIMELINE.stage1_topPanel, 16),
+      s1BottomArea: getCardMotion(frame, MOBILE_TIMELINE.stage1_bottomArea, 16),
+      s2TopPanel: getCardMotion(frame, MOBILE_TIMELINE.stage2_topPanel, 16),
+      s2CardDeck: getCardMotion(frame, MOBILE_TIMELINE.stage2_cardDeck, 16),
+      s3TopPanel: getCardMotion(frame, MOBILE_TIMELINE.stage3_topPanel, 16),
+      s3EndCtas: getCardMotion(frame, MOBILE_TIMELINE.stage3_endCtas, 16),
+    };
+  }, [frame]);
+
+  // Mobile dark overlay in frames 288–300
+  const mobileDarkOpacity = useMemo(() => {
+    if (!isMobile || frame < 288) return 0;
+    const t = clamp((frame - 288) / (298 - 288), 0, 1);
+    return Number((t * 0.95).toFixed(3));
+  }, [isMobile, frame]);
+
+  // Current stage calculation for dots and debug HUD: exact 1/3 splits (1-100, 101-200, 201-300)
+  const currentStage = useMemo(() => {
+    if (frame <= 100) return 1;
+    if (frame <= 200) return 2;
+    return 3;
+  }, [frame]);
+
+  // ── Reduced Motion Fallback ───────────────────────────────────────────────
+  if (prefersReducedMotion) {
+    return (
+      <section className="relative w-full bg-[#111622] text-white py-20 px-4 sm:px-8">
+        <div className="max-w-6xl mx-auto space-y-12">
+          <div className="rounded-[24px] bg-white/10 backdrop-blur-md p-8 border border-white/20">
+            <span className="text-[12px] font-mono uppercase tracking-widest text-[#8a302f] font-bold block mb-2">
+              FLOW MEASUREMENT &amp; AUTOMATION
+            </span>
+            <h1 className="text-3xl sm:text-5xl font-extrabold tracking-tight">
+              Flow Measurement &amp; Control System Solutions
+            </h1>
+            <p className="mt-4 text-neutral-300 max-w-2xl text-base leading-relaxed">
+              Where flow measurement challenges meet solutions. Expert metering consultants with in-depth knowledge of API, AGA, and custody metering standards.
+            </p>
+            <div className="mt-6 flex flex-wrap gap-4">
+              <Link href="/services/" className="btn btn-primary">Know More &rarr;</Link>
+              <Link href="/products/" className="btn btn-secondary">OUR PRODUCTS</Link>
+            </div>
+          </div>
+        </div>
+      </section>
+    );
+  }
+
+  // ── Render Normal Scroll Sequence ─────────────────────────────────────────
   return (
     <section
-      id="sequence"
-      ref={sectionRef}
-      className="relative"
+      ref={trackRef}
+      id="hero-track"
+      className="relative w-full bg-[#0b0f19] select-none"
       style={{
-        height: isPortraitMobile
-          ? `calc(${MOBILE_PORTRAIT_SCROLL_LENGTH} + ${HOLD_COVER})`
-          : `calc(${SCROLL_LENGTH} + ${HOLD_COVER})`,
-        backgroundColor: isPortraitMobile ? PORTRAIT_BG_COLOR : BG_COLOR,
+        height: "600vh",
       }}
+      aria-label="Interactive Texas Technical Services presentation"
     >
-      {/* ── Sticky viewport: w-full (clientWidth without scrollbar), 100svh ─── */}
-      <div
-        ref={stickyRef}
-        className="sticky top-0 left-0 w-full h-[100svh] overflow-hidden"
-        style={{ backgroundColor: isPortraitMobile ? PORTRAIT_BG_COLOR : BG_COLOR }}
-      >
-        {/* ── Reactive Hero Content Container (scales & lifts during cover) ─ */}
-        <div
-          ref={heroContentRef}
-          className="relative w-full h-full"
-          style={{
-            willChange: "transform",
-            transformOrigin: "center center",
-          }}
+      {/* ── Debug Overlay (?debug=1) ──────────────────────────────────────── */}
+      {showDebug && (
+        <aside
+          className="fixed top-24 left-4 z-50 bg-black/92 text-white font-mono text-xs p-3.5 rounded-xl border border-white/20 shadow-2xl pointer-events-none space-y-1.5 backdrop-blur-md"
+          aria-label="Hero Animation Debug Overlay"
         >
-          {/* LCP poster – uses <picture> so mobile portrait selects portrait frame before JS runs */}
-          <div
-            className="absolute inset-0 w-full h-full z-0 pointer-events-none"
-            style={{
-              opacity: posterVisible ? 1 : 0,
-              transition: "opacity 0.4s ease",
-            }}
-          >
-            <picture>
-              <source
-                media="(orientation: portrait) and (max-width: 1023px)"
-                srcSet="/hero-frames/mobile/frame_001.webp"
-                type="image/webp"
-              />
-              <img
-                src="/hero-frames/frame_001.webp"
-                alt="Texas Technical Services Custody Ultrasonic Flow Meter"
-                className="hero-poster-img w-full h-full object-cover max-lg:object-contain"
-                style={{
-                  objectPosition: "50% 50%",
-                }}
-                loading="eager"
-                fetchPriority="high"
-              />
-            </picture>
+          <div className="text-yellow-400 font-bold text-sm tracking-wide">HERO DEBUG (?debug=1)</div>
+          <div className="text-neutral-300">
+            Frame: <span className="text-emerald-400 font-black text-sm">{frame}</span> / {TOTAL_FRAMES}
+            <span className="text-neutral-500 ml-2">(p: {progressVal.toFixed(3)})</span>
           </div>
+          <div className="text-neutral-300">
+            Stage: <span className="text-cyan-400 font-bold">Stage {currentStage}</span>
+            <span className="text-neutral-500 ml-2">({isMobile ? "Mobile" : "Desktop"})</span>
+          </div>
+          <div className="border-t border-white/20 pt-1.5 text-[11px] space-y-0.5 text-neutral-300">
+            {!isMobile ? (
+              <>
+                <div>S1 Panel: <span className="text-yellow-300">{desktopMotions.s1Panel.opacity}</span> (y: {desktopMotions.s1Panel.y})</div>
+                <div>S1 Slider: <span className="text-yellow-300">{desktopMotions.s1Slider.opacity}</span> (slide: {showcaseIndex + 1})</div>
+                <div>S1 Stats: <span className="text-yellow-300">{desktopMotions.s1Stats.opacity}</span> ({countYears}y / {countIndustries}ind)</div>
+                <div>S2 Panel: <span className="text-yellow-300">{desktopMotions.s2Panel.opacity}</span></div>
+                <div>S2 C1/C2/C3: <span className="text-yellow-300">{desktopMotions.s2Card1.opacity} / {desktopMotions.s2Card2.opacity} / {desktopMotions.s2Card3.opacity}</span></div>
+                <div>S3 Panel: <span className="text-yellow-300">{desktopMotions.s3Panel.opacity}</span></div>
+                <div>S3 End CTAs: <span className="text-yellow-300">{desktopMotions.s3EndCtas.opacity}</span></div>
+              </>
+            ) : (
+              <>
+                <div>S1 Top: <span className="text-yellow-300">{mobileMotions.s1TopPanel.opacity}</span></div>
+                <div>S1 Bottom: <span className="text-yellow-300">{mobileMotions.s1BottomArea.opacity}</span></div>
+                <div>S2 Top: <span className="text-yellow-300">{mobileMotions.s2TopPanel.opacity}</span></div>
+                <div>S2 Deck: <span className="text-yellow-300">{mobileMotions.s2CardDeck.opacity}</span></div>
+                <div>S3 Top: <span className="text-yellow-300">{mobileMotions.s3TopPanel.opacity}</span></div>
+                <div>S3 End: <span className="text-yellow-300">{mobileMotions.s3EndCtas.opacity}</span></div>
+              </>
+            )}
+          </div>
+        </aside>
+      )}
 
-          {/* Full-screen canvas – pointer-events: none so it never blocks touch/taps */}
-          <canvas
-            ref={canvasRef}
-            id="hero-canvas"
-            role="img"
-            aria-label="Exploded 3-D view of a custody ultrasonic flow meter"
-            className="absolute inset-0 w-full h-full block z-[1] pointer-events-none [will-change:transform] [transform:translateZ(0)]"
+      {/* ── Sticky Full-Screen Stage ─────────────────────────────────────── */}
+      <div
+        ref={stageRef}
+        id="hero-stage"
+        className="sticky top-0 left-0 w-full overflow-hidden"
+        style={{
+          height: "100vh",
+          minHeight: "100svh",
+          maxHeight: "100dvh",
+        }}
+      >
+        {/* LCP Poster (Frame 1): Instant paint before canvas runs */}
+        <picture className="absolute inset-0 w-full h-full pointer-events-none z-0">
+          <source
+            media="(max-width: 768px)"
+            srcSet="/hero-frames/mobile/frame_001.webp"
+            type="image/webp"
           />
+          {/* eslint-disable-next-line @next/next/no-img-element */}
+          <img
+            src="/hero-frames/frame_001.webp"
+            alt="Texas Technical Services Operations Showcase"
+            className="w-full h-full object-cover"
+            style={{
+              objectPosition: "50% 50%",
+              height: "100%",
+            }}
+            loading="eager"
+            fetchPriority="high"
+          />
+        </picture>
 
+        {/* ── Background Canvas ─────────────────────────────────────────── */}
+        <canvas
+          ref={canvasRef}
+          id="hero-canvas"
+          className="absolute inset-0 w-full h-full block z-[1] pointer-events-none"
+          role="img"
+          aria-label="Scroll-driven visual journey of industrial automation and flow metering"
+          style={{
+            height: "100%",
+          }}
+        />
 
-          {/* ── Dedicated Overlay Layer for Cards (fades during cover) ───── */}
+        {/* Soft dark-to-transparent gradient on left side for text contrast */}
+        <div
+          className="absolute inset-0 pointer-events-none z-[2]"
+          style={{
+            background: isMobile
+              ? "linear-gradient(180deg, rgba(0,0,0,0.06) 0%, transparent 22%, transparent 78%, rgba(0,0,0,0.1) 100%)"
+              : "linear-gradient(90deg, rgba(0,0,0,0.55) 0%, rgba(0,0,0,0.25) 30%, rgba(0,0,0,0.05) 55%, transparent 70%)",
+          }}
+          aria-hidden="true"
+        />
+
+        {/* Mobile dark fade in frames 245–300 */}
+        {isMobile && mobileDarkOpacity > 0 && (
           <div
-            ref={overlayRef}
-            className="overlay absolute inset-0 pointer-events-none z-10"
-            style={{ willChange: "opacity" }}
-          >
+            className="absolute inset-0 pointer-events-none z-[3] bg-[#0b0f19] transition-opacity duration-150"
+            style={{ opacity: mobileDarkOpacity }}
+            aria-hidden="true"
+          />
+        )}
 
-            {/* ── Stage A: hero intro (0 – 25%) — uses .hero-screen CSS class ── */}
-            <div
-              id="hero-screen"
-              className="hero-screen max-md:flex max-md:flex-col max-md:h-[100svh] max-md:min-h-[100svh] max-md:max-h-[100svh] max-md:overflow-hidden max-md:justify-between md:flex md:flex-col md:justify-between"
-              style={{ willChange: "opacity, transform" }}
-            >
-              <div className="hero-main-row max-md:contents md:grid">
-                {/* Left glass card (Top card) */}
-                <div className="hero-glass-card hero-stage-card card-accent relative z-10 overflow-hidden isolate [transform:translateZ(0)] max-md:top-auto max-md:translate-y-0 max-md:py-6 max-md:px-5 max-md:pb-6 max-md:h-auto max-md:min-h-[240px] max-md:shrink-0 md:h-full md:min-h-0 md:p-0">
-                  <div className="hero-card-content">
-                    <div className="hero-badge">
-                      <span className="badge-dot" />
-                      <span>FLOW MEASUREMENT &amp; AUTOMATION</span>
+        {/* ── Overlay Layer: Cards & Placement ───────────────────────────── */}
+        <div className="absolute inset-0 z-10 pointer-events-none">
+
+          {/* ================================================================
+              DESKTOP VIEWPORT LAYOUT (window.innerWidth > 768px)
+              Designed for 1880x810, scaling cleanly across 1024 to 2560
+              ================================================================ */}
+          {!isMobile && (
+            <>
+              {/* ── STAGE 1: Centered container max-w-[min(1420px,86vw)] ────────── */}
+              <div
+                className="absolute left-1/2 -translate-x-1/2 top-[46%] -translate-y-1/2 w-[min(1420px,86vw)] z-20 flex items-stretch justify-between gap-8"
+                style={{
+                  maxHeight: "calc(100vh - 220px)",
+                  visibility: (desktopMotions.s1Panel.visible || desktopMotions.s1Slider.visible) ? "visible" : "hidden",
+                }}
+              >
+                {/* Left Panel: ~45% width */}
+                <div
+                  className="w-[45%] flex"
+                  style={{
+                    opacity: desktopMotions.s1Panel.opacity,
+                    transform: `translateY(${desktopMotions.s1Panel.y}px)`,
+                    pointerEvents: desktopMotions.s1Panel.opacity > 0.5 ? "auto" : "none",
+                    visibility: desktopMotions.s1Panel.visible ? "visible" : "hidden",
+                  }}
+                >
+                  <div className="hero-glass-card hero-stage-card card-accent shadow-2xl w-full bg-white/94 backdrop-blur-xl border border-black/[0.08] rounded-[20px] p-6 sm:p-8 flex flex-col justify-between">
+                    <div className="hero-card-content">
+                      <div className="hero-badge inline-flex items-center gap-2 px-3 py-1 rounded-full bg-[#8a302f]/10 text-[#8a302f] text-xs font-bold uppercase tracking-wider">
+                        <span className="w-1.5 h-1.5 rounded-full bg-[#8a302f]" />
+                        <span>FLOW MEASUREMENT &amp; AUTOMATION</span>
+                      </div>
+                      <h1 className="hero-title mt-4 text-2xl sm:text-[32px] font-extrabold leading-tight text-[#1a1a1a]">
+                        Flow Measurement &amp;<br />Control System Solutions
+                      </h1>
+                      <p className="hero-desc mt-3.5 text-sm sm:text-base text-neutral-600 leading-relaxed">
+                        Where flow measurement challenges meet solutions. Expert metering consultants with in-depth knowledge of API, AGA, and custody metering standards.
+                      </p>
                     </div>
-                    <h1 className="hero-title max-md:mt-3 max-md:text-[24px] max-md:leading-[1.25] md:mt-0">
-                      Flow Measurement &amp;<br />Control System Solutions
-                    </h1>
-                    <p className="hero-desc max-md:mt-3 max-md:text-[13px] max-md:leading-relaxed max-md:line-clamp-none max-md:max-h-none max-md:overflow-visible md:mt-0">
-                      Where flow measurement challenges meet solutions. Expert metering consultants
-                      with in-depth knowledge of API, AGA, and custody metering standards.
-                    </p>
-                  </div>
-                  <div className="hero-cta-group max-md:mt-5 max-md:gap-3 md:mt-auto md:gap-3">
-                    <Link href="/services/" className="btn btn-primary max-md:h-12 max-md:flex max-md:items-center max-md:justify-center md:h-auto" id="hero-btn-know-more">Know More &rarr;</Link>
-                    <Link href="/products/" className="btn btn-secondary max-md:h-12 max-md:flex max-md:items-center max-md:justify-center md:h-auto" id="hero-btn-products">Our Products</Link>
+                    <div className="hero-cta-group mt-6 flex items-center gap-3.5">
+                      <Link href="/services/" className="btn btn-primary" id="hero-btn-know-more">
+                        Know More &rarr;
+                      </Link>
+                      <Link href="/products/" className="btn btn-secondary" id="hero-btn-products">
+                        OUR PRODUCTS
+                      </Link>
+                    </div>
                   </div>
                 </div>
 
-                {/* Mobile flex-1 spacer between top card and image card */}
-                <div className="flex-1 max-md:block md:hidden pointer-events-none min-h-0 shrink" aria-hidden="true" />
-
-                {/* Right showcase slider (Image card) */}
-                <div className="hero-right-col max-md:h-auto max-md:min-h-0 max-md:max-h-none max-md:relative max-md:static max-md:top-auto max-md:translate-y-0 max-md:mt-auto max-md:mb-4 max-md:w-full max-md:shrink-0 md:relative md:top-auto md:translate-y-0 md:mt-0 md:mb-0 md:h-full">
+                {/* Right Slider Card: ~52% width, starts on slide 1 (Industrial) */}
+                <div
+                  className="w-[52%] flex flex-col justify-center"
+                  style={{
+                    opacity: desktopMotions.s1Slider.opacity,
+                    transform: `translateY(${desktopMotions.s1Slider.y}px)`,
+                    pointerEvents: desktopMotions.s1Slider.opacity > 0.5 ? "auto" : "none",
+                    visibility: desktopMotions.s1Slider.visible ? "visible" : "hidden",
+                  }}
+                  onMouseEnter={() => { isSliderPaused.current = true; }}
+                  onMouseLeave={() => { isSliderPaused.current = false; }}
+                >
                   <div
-                    className="hero-showcase-card max-md:relative max-md:static max-md:top-auto max-md:translate-y-0 max-md:h-[190px] max-md:min-h-[190px] max-md:max-h-[190px] md:relative md:top-auto md:translate-y-0 md:h-full md:min-h-0 md:max-h-none"
+                    className="hero-showcase-card shadow-2xl rounded-[24px] overflow-hidden bg-[#111622] border border-white/12 h-[380px] relative"
                     id="hero-showcase"
-                    onMouseEnter={() => { isSliderPausedRef.current = true; }}
-                    onMouseLeave={() => { isSliderPausedRef.current = false; }}
-                    onTouchStart={handleTouchStart}
-                    onTouchEnd={handleTouchEnd}
                   >
-                    {/* Top bar: title pill on left, ISO certificates on right */}
+                    {/* Top bar: Pill on left, ISO certifications on right */}
                     <div className="showcase-top-bar">
                       <div className="showcase-tag-pill">
                         <span className="play-icon">&#9658;</span>
-                        <span id="showcase-tag">{SHOWCASE_SLIDES[showcaseIndex].tag}</span>
+                        <span>{SHOWCASE_SLIDES[showcaseIndex].tag}</span>
                       </div>
                       <div className="showcase-certs">
                         {/* eslint-disable-next-line @next/next/no-img-element */}
@@ -1350,21 +960,19 @@ export default function ScrollSequenceHero() {
                         {/* eslint-disable-next-line @next/next/no-img-element */}
                         <img src="/about/cert-iso45001.png" alt="ISO 45001" className="showcase-cert-icon" />
                         {/* eslint-disable-next-line @next/next/no-img-element */}
-                        <img src="/about/cert-accurate-white.png" alt="Accredited" className="showcase-cert-icon" />
+                        <img src="/about/cert-uasl.png" alt="UASL" className="showcase-cert-icon" />
                       </div>
                     </div>
 
                     {/* Media stage (images & video) */}
-                    <div className="showcase-media-stage" id="showcase-media">
+                    <div className="showcase-media-stage">
                       {SHOWCASE_SLIDES.map((slide, i) => {
                         const isActive = i === showcaseIndex;
                         if (slide.type === "video") {
                           return (
                             <video
                               key={slide.index}
-                              ref={(el) => {
-                                videoRefs.current[i] = el;
-                              }}
+                              ref={(el) => { videoRefs.current[i] = el; }}
                               src={slide.src}
                               poster={slide.poster}
                               className={`showcase-media-item ${isActive ? "active" : ""}`}
@@ -1372,7 +980,6 @@ export default function ScrollSequenceHero() {
                               loop
                               playsInline
                               preload="metadata"
-                              data-index={slide.index}
                             />
                           );
                         }
@@ -1383,14 +990,13 @@ export default function ScrollSequenceHero() {
                             src={slide.src}
                             alt={slide.alt}
                             className={`showcase-media-item ${isActive ? "active" : ""}`}
-                            data-index={slide.index}
                           />
                         );
                       })}
                     </div>
 
-                    {/* Left category pills (Industrial, Automation, Metering, NDT & Test) */}
-                    <div className="showcase-tabs" role="tablist" aria-label="Hero showcase categories">
+                    {/* Category tabs anchored vertically to the right side */}
+                    <div className="showcase-tabs" role="tablist">
                       {SHOWCASE_SLIDES.map((slide, i) => {
                         const isActive = i === showcaseIndex;
                         return (
@@ -1401,223 +1007,647 @@ export default function ScrollSequenceHero() {
                             aria-selected={isActive}
                             className={`showcase-tab ${isActive ? "active" : ""}`}
                             onClick={() => handleSelectSlide(i)}
-                            aria-label={`Show ${slide.name} slide`}
                           >
                             {/* eslint-disable-next-line @next/next/no-img-element */}
-                            <img src={slide.thumb} alt="" className="tab-thumb" />
+                            <img src={slide.thumb} alt={slide.name} className="tab-thumb" />
                             <span>{slide.name}</span>
                           </button>
                         );
                       })}
                     </div>
 
-                    {/* Right-side navigation pill (← 03 / 04 NEXT →) matching reference */}
-                    <div className="showcase-nav-bar" role="group" aria-label="Slide navigation">
+                    {/* Slide navigation pill (← 02 / 04 NEXT →) anchored to bottom-right */}
+                    <div className="showcase-nav-bar">
                       <button
                         type="button"
                         className="showcase-arrow"
-                        id="showcase-prev"
-                        aria-label="Previous slide"
                         onClick={handlePrevSlide}
+                        aria-label="Previous slide"
                       >
                         &larr;
                       </button>
-                      <span className="showcase-counter" id="showcase-counter">
+                      <span className="showcase-counter">
                         {String(showcaseIndex + 1).padStart(2, "0")} / {String(SHOWCASE_SLIDES.length).padStart(2, "0")}
                       </span>
                       <button
                         type="button"
                         className="showcase-next-btn"
-                        id="showcase-next"
-                        aria-label="Next slide"
                         onClick={handleNextSlide}
+                        aria-label="Next slide"
                       >
-                        NEXT &rarr;
+                        <span>NEXT</span>
+                        <span>&rarr;</span>
                       </button>
                     </div>
                   </div>
                 </div>
               </div>
 
-              {/* Stats strip pinned at bottom */}
-              <div className="hero-stats-strip max-md:shrink-0 md:pb-0" id="hero-stats-strip">
-                <div className="stat-strip-item"><span className="stat-strip-prefix">/01</span><span className="stat-strip-num">18+</span><span className="stat-strip-label">Years Experience</span></div>
-                <div className="stat-strip-item"><span className="stat-strip-prefix">/02</span><span className="stat-strip-num">8</span><span className="stat-strip-label">Industries Served</span></div>
-                <div className="stat-strip-item"><span className="stat-strip-prefix">/03</span><span className="stat-strip-num">200+</span><span className="stat-strip-label">Approved Clients</span></div>
-                <div className="stat-strip-item"><span className="stat-strip-prefix">/04</span><span className="stat-strip-num">16+</span><span className="stat-strip-label">Global Vendors</span></div>
+              {/* Stage 1 Stats Bar: bottom 3vh, full container width, solid legible glass */}
+              <div
+                className="hero-stats-strip absolute bottom-[clamp(16px,3vh,32px)] left-0 right-0 mx-auto w-[min(1420px,86vw)] z-20 shadow-2xl bg-white/94 backdrop-blur-xl border border-black/[0.08] rounded-[20px] px-8 py-4.5 grid grid-cols-4 gap-6"
+                style={{
+                  opacity: desktopMotions.s1Stats.opacity,
+                  transform: `translateY(${desktopMotions.s1Stats.y}px)`,
+                  pointerEvents: desktopMotions.s1Stats.opacity > 0.5 ? "auto" : "none",
+                  visibility: desktopMotions.s1Stats.visible ? "visible" : "hidden",
+                }}
+              >
+                <div className="stat-strip-item flex flex-col">
+                  <span className="stat-strip-prefix font-mono text-xs font-bold text-[#8a302f] uppercase tracking-wider">/01</span>
+                  <span className="stat-strip-num text-2xl font-black text-[#111622]">{countYears}+</span>
+                  <span className="stat-strip-label text-xs font-semibold text-neutral-600 uppercase">Years Experience</span>
+                </div>
+                <div className="stat-strip-item flex flex-col">
+                  <span className="stat-strip-prefix font-mono text-xs font-bold text-[#8a302f] uppercase tracking-wider">/02</span>
+                  <span className="stat-strip-num text-2xl font-black text-[#111622]">{countIndustries}</span>
+                  <span className="stat-strip-label text-xs font-semibold text-neutral-600 uppercase">Industries Served</span>
+                </div>
+                <div className="stat-strip-item flex flex-col">
+                  <span className="stat-strip-prefix font-mono text-xs font-bold text-[#8a302f] uppercase tracking-wider">/03</span>
+                  <span className="stat-strip-num text-2xl font-black text-[#111622]">{countClients}+</span>
+                  <span className="stat-strip-label text-xs font-semibold text-neutral-600 uppercase">Approved Clients</span>
+                </div>
+                <div className="stat-strip-item flex flex-col">
+                  <span className="stat-strip-prefix font-mono text-xs font-bold text-[#8a302f] uppercase tracking-wider">/04</span>
+                  <span className="stat-strip-num text-2xl font-black text-[#111622]">{countVendors}+</span>
+                  <span className="stat-strip-label text-xs font-semibold text-neutral-600 uppercase">Global Vendors</span>
+                </div>
               </div>
-            </div>
 
-            {/* ── Stage B: what we do (22–64%) — uses .what-we-do-screen CSS ── */}
-            <div
-              id="what-we-do-screen"
-              className="what-we-do-screen max-md:flex max-md:flex-col max-md:h-[100svh] max-md:min-h-[100svh] max-md:max-h-[100svh] max-md:overflow-hidden max-md:justify-between md:flex md:items-center md:justify-center lg:relative lg:w-full lg:min-h-[100dvh] lg:px-12 xl:px-16 lg:overflow-x-hidden"
-              style={{ willChange: "opacity, transform", opacity: 0, visibility: "hidden" }}
-            >
-              <div className="what-we-do-container max-md:flex max-md:flex-col max-md:h-full max-md:justify-between md:flex md:flex-col lg:static lg:w-full lg:h-full lg:max-w-none lg:m-0 lg:p-0">
-                <div className="what-we-do-left hero-stage-card card-accent relative z-10 overflow-hidden isolate [transform:translateZ(0)] max-md:top-auto max-md:translate-y-0 max-md:py-6 max-md:px-5 max-md:pb-6 max-md:h-auto max-md:min-h-[240px] max-md:shrink-0 md:min-h-0 md:h-auto md:p-0 lg:!absolute lg:!left-12 xl:!left-16 lg:!top-1/2 lg:!-translate-y-1/2 lg:z-20 lg:!w-[min(380px,32vw)] lg:!max-w-[380px] lg:max-xl:!w-[min(350px,34vw)] lg:max-xl:!max-w-[350px] lg:!p-6 xl:!p-7 lg:box-border">
-                  <div className="what-we-do-eyebrow max-md:mt-0 max-md:mb-3 md:mt-0 md:mb-[12px]">
-                    <span className="eyebrow-bar" />
-                    <span>WHAT WE DO</span>
-                    <span className="eyebrow-bar" />
+              {/* ── STAGE 2: Left Panel at left: 4vw, Right Stack at right: 5vw ── */}
+              <div
+                className="absolute left-[4vw] top-1/2 -translate-y-1/2 w-[clamp(340px,24vw,440px)] z-20"
+                style={{
+                  opacity: desktopMotions.s2Panel.opacity,
+                  transform: `translateY(${desktopMotions.s2Panel.y}px)`,
+                  pointerEvents: desktopMotions.s2Panel.opacity > 0.5 ? "auto" : "none",
+                  visibility: desktopMotions.s2Panel.visible ? "visible" : "hidden",
+                  maxHeight: "calc(100vh - 180px)",
+                }}
+              >
+                <div className="what-we-do-left hero-stage-card card-accent shadow-2xl bg-white/94 backdrop-blur-xl border border-black/[0.08] rounded-[24px] p-7 sm:p-8">
+                  <div className="what-we-do-eyebrow mb-3 flex items-center gap-2">
+                    <span className="eyebrow-bar w-5 h-0.5 bg-[#8a302f]" />
+                    <span className="text-xs font-mono font-bold tracking-widest text-[#8a302f]">WHAT WE DO</span>
+                    <span className="eyebrow-bar w-5 h-0.5 bg-[#8a302f]" />
                   </div>
-                  <h2 className="what-we-do-title max-md:mt-3 max-md:text-[24px] max-md:leading-[1.25] md:mt-0">
+                  <h2 className="what-we-do-title text-2xl sm:text-[32px] font-extrabold text-[#1a1a1a] leading-tight">
                     Precision solutions for critical industries
                   </h2>
-                  <p className="what-we-do-desc max-md:mt-3 max-md:text-[13px] max-md:leading-relaxed max-md:line-clamp-none max-md:max-h-none max-md:overflow-visible md:mt-0">
-                    Precision-engineered turnkey architectures across flow measurement,
-                    in-situ inspection, and industrial automation — trusted by leading
-                    operators since 2008.
+                  <p className="what-we-do-desc mt-3.5 text-[14px] text-neutral-600 leading-relaxed">
+                    Precision-engineered turnkey architectures across flow measurement, in-situ inspection, and industrial automation — trusted by leading operators since 2008.
                   </p>
                 </div>
-
-                {/* Mobile flex-1 spacer absorbing leftover space */}
-                <div className="flex-1 max-md:block md:hidden pointer-events-none min-h-0 shrink" aria-hidden="true" />
-
-                {/* Mobile-only Vertical Stacked Card Deck (< 768px) */}
-                <div className="block md:hidden w-full px-0 mt-auto mb-4 shrink-0">
-                  <StackedCards items={WHAT_WE_DO_SERVICES} />
-                </div>
-
-                {/* Desktop / tablet original carousel row (768px - 1023px, hidden on desktop lg:) */}
-                <div className="hidden md:block lg:hidden">
-                  <div className="what-we-do-cards">
-                    <div className="solution-card card-interactive is-clickable">
-                      <div className="solution-card-top">
-                        <div className="solution-icon-wrap">
-                          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><circle cx="12" cy="12" r="10" /><path d="M12 6v6l4 2" /></svg>
-                        </div>
-                        <span className="solution-badge">01</span>
-                      </div>
-                      <h3 className="solution-title">Flow Measurement &amp; Control</h3>
-                      <Link href="/service/flow-measurement-solutions/" className="solution-link"><span>EXPLORE</span><span className="chevron">&rsaquo;</span></Link>
-                      <span className="solution-watermark">01</span>
-                    </div>
-                    <div className="solution-card card-interactive is-clickable">
-                      <div className="solution-card-top">
-                        <div className="solution-icon-wrap">
-                          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M10 2v7.31L4.15 19.8A2 2 0 0 0 5.86 23h12.28a2 2 0 0 0 1.71-3.2L14 9.31V2" /><line x1="8.5" y1="2" x2="15.5" y2="2" /><line x1="6" y1="18" x2="18" y2="18" /></svg>
-                        </div>
-                        <span className="solution-badge">02</span>
-                      </div>
-                      <h3 className="solution-title">Inspection &amp; Testing</h3>
-                      <Link href="/service/inspection-testing/" className="solution-link"><span>EXPLORE</span><span className="chevron">&rsaquo;</span></Link>
-                      <span className="solution-watermark">02</span>
-                    </div>
-                    <div className="solution-card card-interactive is-clickable">
-                      <div className="solution-card-top">
-                        <div className="solution-icon-wrap">
-                          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><rect x="4" y="4" width="16" height="16" rx="2" /><rect x="9" y="9" width="6" height="6" /><line x1="9" y1="2" x2="9" y2="4" /><line x1="15" y1="2" x2="15" y2="4" /><line x1="9" y1="20" x2="9" y2="23" /><line x1="15" y1="20" x2="15" y2="23" /></svg>
-                        </div>
-                        <span className="solution-badge">03</span>
-                      </div>
-                      <h3 className="solution-title">Industrial Automation</h3>
-                      <Link href="/service/industrial-automation/" className="solution-link"><span>EXPLORE</span><span className="chevron">&rsaquo;</span></Link>
-                      <span className="solution-watermark">03</span>
-                    </div>
-                  </div>
-                </div>
               </div>
 
-              {/* Desktop-only Vertical Tilted Service Cards Column (>= 1024px) */}
+              {/* Stage 2 Right Stack: 3 Tilted Cards */}
               <div
-                className={`hidden lg:flex lg:flex-col lg:absolute lg:right-10 xl:right-16 lg:top-1/2 lg:-translate-y-1/2 lg:w-[250px] xl:w-[290px] lg:-space-y-5 lg:z-20 ${
-                  activeStage === 2 ? "pointer-events-auto" : "pointer-events-none"
-                } [@media(max-height:800px)]:scale-90 [@media(max-height:800px)]:origin-right`}
+                className="absolute right-[5vw] top-1/2 -translate-y-1/2 w-[clamp(260px,17vw,320px)] flex flex-col gap-3.5 z-20"
+                style={{
+                  maxHeight: "calc(100vh - 180px)",
+                  visibility: (desktopMotions.s2Card1.visible || desktopMotions.s2Card2.visible || desktopMotions.s2Card3.visible) ? "visible" : "hidden",
+                }}
               >
-                {TILTED_SERVICES.map((service) => (
-                  <TiltedServiceCard
-                    key={service.number}
-                    index={service.index}
-                    title={service.title}
-                    icon={service.icon}
-                    href={service.href}
-                    number={service.number}
-                    rotation={service.rotation}
-                    offsetX={service.offsetX}
-                    isActive={activeStage === 2}
-                  />
-                ))}
-              </div>
-            </div>
-
-            {/* ── Stage C: custody metering (60–100%) — Mobile: top of screen with standard margin; Desktop: left max with standard margin ── */}
-            <div
-              id="custody-screen"
-              className="custody-screen absolute inset-0 w-full min-h-[100vh] h-[100svh] flex flex-col items-start justify-start lg:flex-row lg:items-center lg:justify-start pointer-events-none pt-[calc(var(--header-height,56px)+12px)] lg:pt-28 pb-8 z-10 box-border overflow-hidden px-3.5 sm:px-6 md:px-8 lg:px-12 xl:px-16"
-              style={{ willChange: "opacity, transform", opacity: 0, visibility: "hidden" }}
-            >
-              <div className="custody-container w-full max-w-[480px] lg:!w-[min(380px,32vw)] lg:!max-w-[380px] lg:max-xl:!w-[min(350px,34vw)] lg:max-xl:!max-w-[350px] m-0 p-0 flex items-start lg:items-center justify-start box-border">
-                <div
-                  id="card-c"
-                  className="card-c card-custody-automation hero-stage-card relative pointer-events-auto w-full max-w-full lg:!w-[min(380px,32vw)] lg:!max-w-[380px] lg:max-xl:!w-[min(350px,34vw)] lg:max-xl:!max-w-[350px] rounded-[20px] md:rounded-[24px] overflow-hidden isolate [transform:translateZ(0)] box-border"
+                {/* Card 01: Flow Measurement (frame 128) */}
+                <Link
+                  href={SERVICE_ITEMS[0].href}
+                  className="solution-card card-interactive is-clickable bg-white/94 backdrop-blur-md rounded-[20px] p-5 border border-black/[0.08] shadow-xl hover:-translate-y-1 transition-transform block relative overflow-hidden !min-h-0 !h-auto"
+                  style={{
+                    opacity: desktopMotions.s2Card1.opacity,
+                    transform: `translateY(${desktopMotions.s2Card1.y}px) rotate(${SERVICE_ITEMS[0].rotation}deg) translateX(${SERVICE_ITEMS[0].offsetX}px)`,
+                    pointerEvents: desktopMotions.s2Card1.opacity > 0.5 ? "auto" : "none",
+                    visibility: desktopMotions.s2Card1.visible ? "visible" : "hidden",
+                  }}
                 >
-                  {/* Top red accent bar following the card's rounded corners */}
-                  <div className="card-top-accent-bar" aria-hidden="true" />
-
-                  {/* Foreground content wrapper with equal padding and left-aligned items sharing the left edge */}
-                  <div className="card-content-wrapper w-full flex flex-col items-start text-left box-border">
-                    <div className="custody-eyebrow">
-                      <span className="eyebrow-bar" />
-                      <span>WHAT WE DO</span>
-                      <span className="eyebrow-bar" />
+                  <div className="solution-card-top flex items-center justify-between mb-2">
+                    <div className="solution-icon-wrap w-8 h-8 rounded-full border border-dashed border-[#8a302f]/40 bg-[#8a302f]/10 text-[#8a302f] flex items-center justify-center shrink-0">
+                      {SERVICE_ITEMS[0].icon}
                     </div>
-                    <h2 className="card-title">
-                      Engineered Excellence in<br />Custody Metering &amp; Automation
+                    <span className="solution-badge font-mono font-bold text-xs text-[#8a302f]">
+                      {SERVICE_ITEMS[0].number}
+                    </span>
+                  </div>
+                  <h3 className="solution-title font-bold text-base text-[#1a1a1a]">
+                    {SERVICE_ITEMS[0].title}
+                  </h3>
+                  <div className="solution-link mt-3 text-xs font-bold text-[#8a302f] flex items-center gap-1">
+                    <span>EXPLORE</span>
+                    <span className="chevron">&rsaquo;</span>
+                  </div>
+                  <span className="solution-watermark">{SERVICE_ITEMS[0].number}</span>
+                </Link>
+
+                {/* Card 02: Inspection & Testing (frame 148) */}
+                <Link
+                  href={SERVICE_ITEMS[1].href}
+                  className="solution-card card-interactive is-clickable bg-white/94 backdrop-blur-md rounded-[20px] p-5 border border-black/[0.08] shadow-xl hover:-translate-y-1 transition-transform block relative overflow-hidden !min-h-0 !h-auto"
+                  style={{
+                    opacity: desktopMotions.s2Card2.opacity,
+                    transform: `translateY(${desktopMotions.s2Card2.y}px) rotate(${SERVICE_ITEMS[1].rotation}deg) translateX(${SERVICE_ITEMS[1].offsetX}px)`,
+                    pointerEvents: desktopMotions.s2Card2.opacity > 0.5 ? "auto" : "none",
+                    visibility: desktopMotions.s2Card2.visible ? "visible" : "hidden",
+                  }}
+                >
+                  <div className="solution-card-top flex items-center justify-between mb-2">
+                    <div className="solution-icon-wrap w-8 h-8 rounded-full border border-dashed border-[#8a302f]/40 bg-[#8a302f]/10 text-[#8a302f] flex items-center justify-center shrink-0">
+                      {SERVICE_ITEMS[1].icon}
+                    </div>
+                    <span className="solution-badge font-mono font-bold text-xs text-[#8a302f]">
+                      {SERVICE_ITEMS[1].number}
+                    </span>
+                  </div>
+                  <h3 className="solution-title font-bold text-base text-[#1a1a1a]">
+                    {SERVICE_ITEMS[1].title}
+                  </h3>
+                  <div className="solution-link mt-3 text-xs font-bold text-[#8a302f] flex items-center gap-1">
+                    <span>EXPLORE</span>
+                    <span className="chevron">&rsaquo;</span>
+                  </div>
+                  <span className="solution-watermark">{SERVICE_ITEMS[1].number}</span>
+                </Link>
+
+                {/* Card 03: Industrial Automation (frame 168) */}
+                <Link
+                  href={SERVICE_ITEMS[2].href}
+                  className="solution-card card-interactive is-clickable bg-white/94 backdrop-blur-md rounded-[20px] p-5 border border-black/[0.08] shadow-xl hover:-translate-y-1 transition-transform block relative overflow-hidden !min-h-0 !h-auto"
+                  style={{
+                    opacity: desktopMotions.s2Card3.opacity,
+                    transform: `translateY(${desktopMotions.s2Card3.y}px) rotate(${SERVICE_ITEMS[2].rotation}deg) translateX(${SERVICE_ITEMS[2].offsetX}px)`,
+                    pointerEvents: desktopMotions.s2Card3.opacity > 0.5 ? "auto" : "none",
+                    visibility: desktopMotions.s2Card3.visible ? "visible" : "hidden",
+                  }}
+                >
+                  <div className="solution-card-top flex items-center justify-between mb-2">
+                    <div className="solution-icon-wrap w-8 h-8 rounded-full border border-dashed border-[#8a302f]/40 bg-[#8a302f]/10 text-[#8a302f] flex items-center justify-center shrink-0">
+                      {SERVICE_ITEMS[2].icon}
+                    </div>
+                    <span className="solution-badge font-mono font-bold text-xs text-[#8a302f]">
+                      {SERVICE_ITEMS[2].number}
+                    </span>
+                  </div>
+                  <h3 className="solution-title font-bold text-base text-[#1a1a1a]">
+                    {SERVICE_ITEMS[2].title}
+                  </h3>
+                  <div className="solution-link mt-3 text-xs font-bold text-[#8a302f] flex items-center gap-1">
+                    <span>EXPLORE</span>
+                    <span className="chevron">&rsaquo;</span>
+                  </div>
+                  <span className="solution-watermark">{SERVICE_ITEMS[2].number}</span>
+                </Link>
+              </div>
+
+              {/* ── STAGE 3: Left Panel at left: 3vw, Fades out at 236–250 ──────── */}
+              <div
+                className="absolute left-[3vw] top-1/2 -translate-y-1/2 w-[clamp(340px,24vw,440px)] z-20"
+                style={{
+                  opacity: desktopMotions.s3Panel.opacity,
+                  transform: `translateY(${desktopMotions.s3Panel.y}px)`,
+                  pointerEvents: desktopMotions.s3Panel.opacity > 0.5 ? "auto" : "none",
+                  visibility: desktopMotions.s3Panel.visible ? "visible" : "hidden",
+                  maxHeight: "calc(100vh - 180px)",
+                }}
+              >
+                <div className="hero-glass-card hero-stage-card card-accent shadow-2xl w-full bg-white/94 backdrop-blur-xl border border-black/[0.08] rounded-[24px] p-7 sm:p-8 !max-h-none !h-auto">
+                  <div className="hero-card-content">
+                    <div className="what-we-do-eyebrow mb-3 flex items-center gap-2">
+                      <span className="eyebrow-bar w-5 h-0.5 bg-[#8a302f]" />
+                      <span className="text-xs font-mono font-bold tracking-widest text-[#8a302f]">WHAT WE DO</span>
+                      <span className="eyebrow-bar w-5 h-0.5 bg-[#8a302f]" />
+                    </div>
+                    <h2 className="hero-title mt-4 text-2xl sm:text-[30px] font-extrabold leading-tight text-[#1a1a1a]">
+                      Engineered Excellence in Custody Metering &amp; Automation
                     </h2>
-                    <p className="card-desc">
+                    <p className="hero-desc mt-3.5 text-sm text-neutral-600 leading-relaxed">
                       Custody metering, industrial automation, and inspection &amp; testing — backed by strategic OEM partnerships across oil &amp; gas, power, and commercial sectors.
                     </p>
-                    <div className="card-cta-group">
-                      <Link href="/contacts/" className="btn btn-primary" id="btn-custody-contact">Contact Us &rarr;</Link>
-                      <Link href="/services/" className="btn btn-secondary" id="btn-custody-services">OUR SERVICES &rsaquo;</Link>
-                    </div>
+                  </div>
+                  <div className="hero-cta-group mt-6 flex items-center gap-3.5">
+                    <Link href="/contacts/" className="btn btn-primary" id="hero-stage3-btn-contact">
+                      Contact Us &rarr;
+                    </Link>
+                    <Link href="/services/" className="btn btn-secondary" id="hero-stage3-btn-services">
+                      OUR SERVICES &rsaquo;
+                    </Link>
                   </div>
                 </div>
               </div>
-            </div>
 
-            {/* ── End Overlay Layer ────────────────────────────────────────── */}
-          </div>
-
-          {/* ── End Reactive Hero Content Container ────────────────────────── */}
-        </div>
-
-        {/* ── Accessible Interactive Stage Indicator (3 Plain Dots) ────────── */}
-        <nav
-          ref={stageIndicatorRef}
-          className="hero-stage-indicator"
-          aria-label="Hero stages"
-        >
-          {[
-            { id: 1, name: "Flow Measurement" },
-            { id: 2, name: "Industrial Automation" },
-            { id: 3, name: "Inspection & Testing" },
-          ].map((stage) => {
-            const isActive = activeStage === stage.id;
-            return (
-              <button
-                key={stage.id}
-                type="button"
-                aria-label={`Show stage ${stage.id}: ${stage.name}`}
-                aria-current={isActive ? "true" : undefined}
-                className={`hero-stage-dot ${isActive ? "active" : ""}`}
-                onClick={() => scrollToStage(stage.id)}
+              {/* Stage 3 End Card Centered Two-Button Row at 72vh (frames 252–300) */}
+              <div
+                className="absolute top-[72vh] left-1/2 -translate-x-1/2 -translate-y-1/2 z-20 flex items-center justify-center gap-4 pointer-events-auto"
+                style={{
+                  opacity: desktopMotions.s3EndCtas.opacity,
+                  transform: `translate(-50%, calc(-50% + ${desktopMotions.s3EndCtas.y}px))`,
+                  pointerEvents: desktopMotions.s3EndCtas.opacity > 0.5 ? "auto" : "none",
+                  visibility: desktopMotions.s3EndCtas.visible ? "visible" : "hidden",
+                }}
               >
-                <span className="hero-stage-dot-shape" />
-              </button>
-            );
-          })}
-        </nav>
+                <Link
+                  href="/contacts/"
+                  className="btn btn-primary px-8 py-4 text-base font-bold shadow-2xl hover:scale-105 active:scale-95 transition-transform"
+                  id="hero-end-btn-contact"
+                >
+                  Contact Us &rarr;
+                </Link>
+                <Link
+                  href="/services/"
+                  className="btn btn-secondary px-8 py-4 text-base font-bold shadow-2xl hover:scale-105 active:scale-95 transition-transform bg-white/20 hover:bg-white/30 text-white border border-white/30"
+                  id="hero-end-btn-services"
+                >
+                  OUR SERVICES &rsaquo;
+                </Link>
+              </div>
 
-        {/* Optional dim overlay (COVER_DIM default 0 = disabled) */}
-        {COVER_DIM > 0 && (
-          <div
-            ref={dimOverlayRef}
-            className="absolute inset-0 pointer-events-none z-20 bg-black opacity-0"
-          />
-        )}
+              {/* ── Right-Edge Chapter Navigation Dots (3 Stages) ───────────── */}
+              <nav
+                className="absolute right-[20px] top-1/2 -translate-y-1/2 flex flex-col gap-3 z-30 pointer-events-auto"
+                aria-label="Hero navigation chapters"
+              >
+                {CHAPTER_DOTS.map((dot, idx) => {
+                  const isActive = currentStage === (idx + 1);
+                  return (
+                    <button
+                      key={dot.label}
+                      type="button"
+                      onClick={() => scrollToFrame(dot.frame)}
+                      aria-label={`Jump to stage ${idx + 1}: ${dot.label}`}
+                      className="group flex items-center justify-end gap-2 p-1 focus:outline-none"
+                    >
+                      <span className="text-[11px] font-mono text-white/70 opacity-0 group-hover:opacity-100 transition-opacity bg-black/60 px-2 py-0.5 rounded">
+                        {dot.label}
+                      </span>
+                      <span
+                        className={`block rounded-full transition-all duration-200 ${
+                          isActive
+                            ? "w-2.5 h-6 bg-[#8a302f]"
+                            : "w-2.5 h-2.5 bg-white/40 group-hover:bg-white"
+                        }`}
+                      />
+                    </button>
+                  );
+                })}
+              </nav>
+            </>
+          )}
 
+          {/* ── Right-Edge Chapter Navigation Dots (3 Stages - Desktop & Mobile) ───────────── */}
+          <nav
+            className="absolute right-2 sm:right-[20px] top-1/2 -translate-y-1/2 flex flex-col gap-2.5 sm:gap-3 z-30 pointer-events-auto"
+            aria-label="Hero navigation chapters"
+          >
+            {CHAPTER_DOTS.map((dot, idx) => {
+              const isActive = currentStage === (idx + 1);
+              return (
+                <button
+                  key={dot.label}
+                  type="button"
+                  onClick={() => scrollToFrame(dot.frame)}
+                  aria-label={`Jump to stage ${idx + 1}: ${dot.label}`}
+                  className="group flex items-center justify-end gap-1.5 p-1 focus:outline-none"
+                >
+                  <span className="text-[11px] font-mono text-white/70 opacity-0 group-hover:opacity-100 transition-opacity bg-black/60 px-2 py-0.5 rounded hidden sm:inline-block">
+                    {dot.label}
+                  </span>
+                  <span
+                    className={`block rounded-full transition-all duration-300 ${
+                      isActive
+                        ? "w-2 sm:w-2.5 h-5.5 sm:h-6 bg-[#8a302f]"
+                        : isMobile
+                          ? "w-2 h-2 bg-black/35"
+                          : "w-2.5 h-2.5 bg-white/40 group-hover:bg-white"
+                    }`}
+                  />
+                </button>
+              );
+            })}
+          </nav>
+
+          {/* ================================================================
+              MOBILE VIEWPORT LAYOUT (window.innerWidth <= 768px)
+              Top Card + Center 3D Frame Viewport + Bottom Component Area
+              ================================================================ */}
+          {isMobile && (
+            <>
+              {/* ── MOBILE STAGE 1: Top Card + Bottom Slider & Stats ───────── */}
+              {/* Top Card: Flow Measurement & Control System Solutions */}
+              <div
+                className="absolute top-[72px] sm:top-[76px] left-3.5 right-3.5 sm:left-4 sm:right-4 z-20 bg-white/95 backdrop-blur-xl rounded-[22px] p-4 sm:p-5 border border-black/[0.08] border-t-2 border-t-[#8a302f] shadow-xl"
+                style={{
+                  opacity: mobileMotions.s1TopPanel.opacity,
+                  transform: `translateY(${mobileMotions.s1TopPanel.y}px)`,
+                  pointerEvents: mobileMotions.s1TopPanel.opacity > 0.5 ? "auto" : "none",
+                  visibility: mobileMotions.s1TopPanel.visible ? "visible" : "hidden",
+                }}
+              >
+                <div className="inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded-full bg-[#8a302f]/10 text-[#8a302f] text-[10px] font-bold uppercase tracking-wider mb-1.5">
+                  <span className="w-1.5 h-1.5 rounded-full bg-[#8a302f]" />
+                  <span>FLOW MEASUREMENT &amp; AUTOMATION</span>
+                </div>
+                <h1 className="text-[18px] sm:text-[21px] font-extrabold text-[#1a1a1a] leading-tight">
+                  Flow Measurement &amp; Control System Solutions
+                </h1>
+                <p className="text-[11px] sm:text-[12px] text-neutral-600 mt-1.5 leading-relaxed line-clamp-3">
+                  Where flow measurement challenges meet solutions. Expert metering consultants with in-depth knowledge of API, AGA, and custody metering standards.
+                </p>
+                <div className="flex gap-2.5 mt-3 pt-0.5">
+                  <Link
+                    href="/services/"
+                    className="btn btn-primary py-2 px-4 text-[12px] font-bold rounded-full shadow-md text-center flex-1"
+                  >
+                    Know More &rarr;
+                  </Link>
+                  <Link
+                    href="/products/"
+                    className="btn btn-secondary py-2 px-4 text-[12px] font-bold rounded-full bg-white text-neutral-800 border border-neutral-300 text-center flex-1"
+                  >
+                    OUR PRODUCTS
+                  </Link>
+                </div>
+              </div>
+
+              {/* Bottom Area: Slider Card + Stats Card */}
+              <div
+                className="absolute bottom-2.5 left-3.5 right-3.5 sm:left-4 sm:right-4 z-20 flex flex-col gap-2 pointer-events-auto"
+                style={{
+                  opacity: mobileMotions.s1BottomArea.opacity,
+                  transform: `translateY(${mobileMotions.s1BottomArea.y}px)`,
+                  pointerEvents: mobileMotions.s1BottomArea.opacity > 0.5 ? "auto" : "none",
+                  visibility: mobileMotions.s1BottomArea.visible ? "visible" : "hidden",
+                }}
+              >
+                {/* Showcase Slider Card (matching Image 1) */}
+                <div
+                  className="hero-showcase-card shadow-2xl rounded-[18px] overflow-hidden bg-[#141820]/95 backdrop-blur-xl border border-white/12 h-[190px] sm:h-[210px] relative text-white"
+                  id="hero-showcase-mobile"
+                  onMouseEnter={() => { isSliderPaused.current = true; }}
+                  onMouseLeave={() => { isSliderPaused.current = false; }}
+                >
+                  <div className="showcase-top-bar">
+                    <div className="showcase-tag-pill">
+                      <span className="play-icon">&#9658;</span>
+                      <span>{SHOWCASE_SLIDES[showcaseIndex].tag}</span>
+                    </div>
+                    <div className="showcase-certs">
+                      {/* eslint-disable-next-line @next/next/no-img-element */}
+                      <img src="/about/cert-iso9001.png" alt="ISO 9001" className="showcase-cert-icon" />
+                      {/* eslint-disable-next-line @next/next/no-img-element */}
+                      <img src="/about/cert-iso14001.png" alt="ISO 14001" className="showcase-cert-icon" />
+                      {/* eslint-disable-next-line @next/next/no-img-element */}
+                      <img src="/about/cert-iso45001.png" alt="ISO 45001" className="showcase-cert-icon" />
+                    </div>
+                  </div>
+
+                  <div className="showcase-media-stage">
+                    {SHOWCASE_SLIDES.map((slide, i) => {
+                      const isActive = i === showcaseIndex;
+                      if (slide.type === "video") {
+                        return (
+                          <video
+                            key={slide.index}
+                            ref={(el) => { videoRefs.current[i] = el; }}
+                            src={slide.src}
+                            poster={slide.poster}
+                            className={`showcase-media-item ${isActive ? "active" : ""}`}
+                            muted
+                            loop
+                            playsInline
+                            preload="metadata"
+                          />
+                        );
+                      }
+                      return (
+                        // eslint-disable-next-line @next/next/no-img-element
+                        <img
+                          key={slide.index}
+                          src={slide.src}
+                          alt={slide.alt}
+                          className={`showcase-media-item ${isActive ? "active" : ""}`}
+                        />
+                      );
+                    })}
+                  </div>
+
+                  <div className="showcase-tabs" role="tablist">
+                    {SHOWCASE_SLIDES.map((slide, i) => {
+                      const isActive = i === showcaseIndex;
+                      return (
+                        <button
+                          key={slide.index}
+                          type="button"
+                          role="tab"
+                          aria-selected={isActive}
+                          className={`showcase-tab ${isActive ? "active" : ""}`}
+                          onClick={() => handleSelectSlide(i)}
+                        >
+                          {/* eslint-disable-next-line @next/next/no-img-element */}
+                          <img src={slide.thumb} alt={slide.name} className="tab-thumb" />
+                          <span>{slide.name}</span>
+                        </button>
+                      );
+                    })}
+                  </div>
+
+                  <div className="showcase-nav-bar">
+                    <button
+                      type="button"
+                      className="showcase-arrow"
+                      onClick={handlePrevSlide}
+                      aria-label="Previous slide"
+                    >
+                      &larr;
+                    </button>
+                    <span className="showcase-counter">
+                      {String(showcaseIndex + 1).padStart(2, "0")} / {String(SHOWCASE_SLIDES.length).padStart(2, "0")}
+                    </span>
+                    <button
+                      type="button"
+                      className="showcase-next-btn"
+                      onClick={handleNextSlide}
+                      aria-label="Next slide"
+                    >
+                      <span>NEXT</span>
+                      <span>&rarr;</span>
+                    </button>
+                  </div>
+                </div>
+
+                {/* Stats Card: 2x2 Clean Grid (matching Image 1) */}
+                <div className="bg-white/95 backdrop-blur-xl rounded-[18px] p-2.5 px-4 border border-black/[0.08] shadow-lg grid grid-cols-2 gap-x-4 gap-y-1">
+                  <div className="flex flex-col">
+                    <span className="text-[15px] font-black text-[#111622] leading-none">{countYears}+</span>
+                    <span className="text-[8.5px] font-bold text-neutral-500 uppercase tracking-tight mt-0.5">Years Experience</span>
+                  </div>
+                  <div className="flex flex-col">
+                    <span className="text-[15px] font-black text-[#111622] leading-none">{countIndustries}</span>
+                    <span className="text-[8.5px] font-bold text-neutral-500 uppercase tracking-tight mt-0.5">Industries Served</span>
+                  </div>
+                  <div className="flex flex-col">
+                    <span className="text-[15px] font-black text-[#111622] leading-none">{countClients}+</span>
+                    <span className="text-[8.5px] font-bold text-neutral-500 uppercase tracking-tight mt-0.5">Approved Clients</span>
+                  </div>
+                  <div className="flex flex-col">
+                    <span className="text-[15px] font-black text-[#111622] leading-none">{countVendors}+</span>
+                    <span className="text-[8.5px] font-bold text-neutral-500 uppercase tracking-tight mt-0.5">Global Vendors</span>
+                  </div>
+                </div>
+              </div>
+
+              {/* ── MOBILE STAGE 2: Top Card + Stacked Card Deck ───────────── */}
+              {/* Top Card: Precision solutions for critical industries */}
+              <div
+                className="absolute top-[72px] sm:top-[76px] left-3.5 right-3.5 sm:left-4 sm:right-4 z-20 bg-white/95 backdrop-blur-xl rounded-[22px] p-4 sm:p-5 border border-black/[0.08] border-t-2 border-t-[#8a302f] shadow-xl"
+                style={{
+                  opacity: mobileMotions.s2TopPanel.opacity,
+                  transform: `translateY(${mobileMotions.s2TopPanel.y}px)`,
+                  pointerEvents: mobileMotions.s2TopPanel.opacity > 0.5 ? "auto" : "none",
+                  visibility: mobileMotions.s2TopPanel.visible ? "visible" : "hidden",
+                }}
+              >
+                <div className="text-[10.5px] font-mono font-bold tracking-widest text-[#8a302f] flex items-center gap-1.5 mb-1.5">
+                  <span className="w-3.5 h-0.5 bg-[#8a302f]" />
+                  <span>WHAT WE DO</span>
+                  <span className="w-3.5 h-0.5 bg-[#8a302f]" />
+                </div>
+                <h2 className="text-[18px] sm:text-[21px] font-extrabold text-[#1a1a1a] leading-tight">
+                  Precision solutions for critical industries
+                </h2>
+                <p className="text-[11px] sm:text-[12px] text-neutral-600 mt-1.5 leading-relaxed line-clamp-3">
+                  Precision-engineered turnkey architectures across flow measurement, in-situ inspection, and industrial automation — trusted by leading operators since 2008.
+                </p>
+              </div>
+
+              {/* Bottom Area: Stacked Layered Card Deck (matching Images 2 & 3) */}
+              <div
+                className="absolute bottom-3 left-3.5 right-3.5 sm:left-4 sm:right-4 z-20 pointer-events-auto"
+                style={{
+                  opacity: mobileMotions.s2CardDeck.opacity,
+                  transform: `translateY(${mobileMotions.s2CardDeck.y}px)`,
+                  pointerEvents: mobileMotions.s2CardDeck.opacity > 0.5 ? "auto" : "none",
+                  visibility: mobileMotions.s2CardDeck.visible ? "visible" : "hidden",
+                }}
+              >
+                <div className="relative w-full h-[135px] flex items-end justify-center">
+                  {SERVICE_ITEMS.map((service, idx) => {
+                    const activeIdx = frame < 135 ? 0 : frame < 170 ? 1 : 2;
+                    const order = (idx - activeIdx + 3) % 3; // 0 = front, 1 = behind, 2 = furthest
+                    const translateY = order === 0 ? 0 : order === 1 ? -12 : -24;
+                    const scale = order === 0 ? 1 : order === 1 ? 0.96 : 0.92;
+                    const opacity = order === 0 ? 1 : order === 1 ? 0.75 : 0.45;
+                    const zIndex = order === 0 ? 10 : order === 1 ? 9 : 8;
+
+                    return (
+                      <Link
+                        key={service.number}
+                        href={service.href}
+                        className="absolute inset-x-0 bottom-0 bg-white/95 backdrop-blur-xl rounded-[20px] p-4 border border-black/[0.08] shadow-2xl transition-all duration-300 block overflow-hidden"
+                        style={{
+                          transform: `translateY(${translateY}px) scale(${scale})`,
+                          zIndex,
+                          opacity,
+                        }}
+                      >
+                        <div className="flex items-center justify-between mb-1.5">
+                          <div className="w-8 h-8 rounded-full border border-dashed border-[#8a302f]/40 bg-[#8a302f]/10 text-[#8a302f] flex items-center justify-center shrink-0">
+                            {service.icon}
+                          </div>
+                          <span className="font-mono font-bold text-xs text-[#8a302f]">
+                            {service.number}
+                          </span>
+                        </div>
+                        <h3 className="font-extrabold text-[15px] text-[#1a1a1a] leading-tight">
+                          {service.title}
+                        </h3>
+                        <div className="mt-2 text-xs font-bold text-[#8a302f] flex items-center gap-1">
+                          <span>EXPLORE</span>
+                          <span>&rsaquo;</span>
+                        </div>
+                        <span className="absolute right-3 -bottom-1 text-[44px] font-black text-black/[0.04] select-none pointer-events-none">
+                          {service.number}
+                        </span>
+                      </Link>
+                    );
+                  })}
+                </div>
+              </div>
+
+              {/* ── MOBILE STAGE 3: Top Card + Dark End Brand Card ─────────── */}
+              {/* Top Card: Custody Metering & Automation */}
+              <div
+                className="absolute top-[72px] sm:top-[76px] left-3.5 right-3.5 sm:left-4 sm:right-4 z-20 bg-white/95 backdrop-blur-xl rounded-[22px] p-4 sm:p-5 border border-black/[0.08] border-t-2 border-t-[#8a302f] shadow-xl"
+                style={{
+                  opacity: mobileMotions.s3TopPanel.opacity,
+                  transform: `translateY(${mobileMotions.s3TopPanel.y}px)`,
+                  pointerEvents: mobileMotions.s3TopPanel.opacity > 0.5 ? "auto" : "none",
+                  visibility: mobileMotions.s3TopPanel.visible ? "visible" : "hidden",
+                }}
+              >
+                <div className="text-[10.5px] font-mono font-bold tracking-widest text-[#8a302f] flex items-center gap-1.5 mb-1.5">
+                  <span className="w-3.5 h-0.5 bg-[#8a302f]" />
+                  <span>WHAT WE DO</span>
+                  <span className="w-3.5 h-0.5 bg-[#8a302f]" />
+                </div>
+                <h2 className="text-[18px] sm:text-[21px] font-extrabold text-[#1a1a1a] leading-tight">
+                  Engineered Excellence in Custody Metering &amp; Automation
+                </h2>
+                <p className="text-[11px] sm:text-[12px] text-neutral-600 mt-1.5 leading-relaxed line-clamp-3">
+                  Custody metering, industrial automation, and inspection &amp; testing — backed by strategic OEM partnerships across oil &amp; gas, power, and commercial sectors.
+                </p>
+                <div className="flex gap-2.5 mt-3 pt-0.5">
+                  <Link
+                    href="/contacts/"
+                    className="btn btn-primary py-2 px-4 text-[12px] font-bold rounded-full shadow-md text-center flex-1"
+                  >
+                    Contact Us &rarr;
+                  </Link>
+                  <Link
+                    href="/services/"
+                    className="btn btn-secondary py-2 px-4 text-[12px] font-bold rounded-full bg-white text-neutral-800 border border-neutral-300 text-center flex-1"
+                  >
+                    OUR SERVICES &rsaquo;
+                  </Link>
+                </div>
+              </div>
+
+              {/* Mobile Stage 3 End Card (frames 290–300) */}
+              <div
+                className="absolute inset-x-4 top-1/2 -translate-y-1/2 z-20 flex flex-col items-center justify-center text-center p-6 bg-[#111622]/95 backdrop-blur-xl rounded-[24px] border border-white/10 shadow-2xl"
+                style={{
+                  opacity: mobileMotions.s3EndCtas.opacity,
+                  transform: `translateY(${mobileMotions.s3EndCtas.y}px)`,
+                  pointerEvents: mobileMotions.s3EndCtas.opacity > 0.5 ? "auto" : "none",
+                  visibility: mobileMotions.s3EndCtas.visible ? "visible" : "hidden",
+                }}
+              >
+                {/* eslint-disable-next-line @next/next/no-img-element */}
+                <img src="/logo.svg" alt="Texas Technical Services" className="h-10 w-auto mb-3 invert" />
+                <h3 className="text-white text-lg font-bold tracking-tight">
+                  Texas Technical Services
+                </h3>
+                <p className="text-neutral-300 text-[12px] max-w-xs mt-1 leading-snug">
+                  Complete Automation &bull; Metering &bull; Instrumentation &bull; Digitalization Solutions
+                </p>
+                <div className="flex gap-3 mt-4 w-full max-w-xs">
+                  <Link
+                    href="/contacts/"
+                    className="btn btn-primary flex-1 py-2.5 text-[12px] text-center font-bold shadow-lg"
+                    id="hero-mobile-end-contact"
+                  >
+                    Contact Us &rarr;
+                  </Link>
+                  <Link
+                    href="/services/"
+                    className="btn btn-secondary flex-1 py-2.5 text-[12px] text-center font-bold shadow-lg bg-white/20 text-white border border-white/30"
+                    id="hero-mobile-end-services"
+                  >
+                    OUR SERVICES &rsaquo;
+                  </Link>
+                </div>
+              </div>
+            </>
+          )}
+
+        </div>
       </div>
     </section>
   );

@@ -297,7 +297,7 @@ export default function LiquidFlowMetersCatalog({
           height: 84%;
           object-fit: contain;
           transform: translate(-50%, -50%) scale(1);
-          mix-blend-mode: multiply;
+          mix-blend-mode: normal;
           filter: drop-shadow(0 18px 16px rgba(0, 0, 0, 0.2));
           transition: transform 0.8s cubic-bezier(0.22, 0.8, 0.2, 1);
         }
@@ -308,19 +308,22 @@ export default function LiquidFlowMetersCatalog({
 
         /* ── Cutout Image Treatment ── */
         .mountain-shot.is-cutout img.cutout-img {
-          width: 100%;
-          height: 100%;
-          padding: 10%;
+          position: absolute;
+          top: 50%;
+          left: 50%;
+          transform: translate(-50%, -50%) scale(1);
+          width: 88%;
+          height: 84%;
+          padding: 6%;
           box-sizing: border-box;
           object-fit: contain;
           mix-blend-mode: normal;
           filter: drop-shadow(0 18px 24px rgba(0, 0, 0, 0.25));
           transition: transform 0.4s cubic-bezier(0.22, 0.8, 0.2, 1);
-          transform: translate(-50%, -50%) scale(1);
         }
 
         .mountain-card:hover .mountain-shot.is-cutout img.cutout-img {
-          transform: translate(-50%, -50%) scale(1.04);
+          transform: translate(-50%, -50%) scale(1.06);
         }
 
         /* ── 38px Round Arrow Button ── */

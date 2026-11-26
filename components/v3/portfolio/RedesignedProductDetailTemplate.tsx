@@ -518,7 +518,6 @@ export default function RedesignedProductDetailTemplate({
                     product={p}
                     index={idx}
                     isVisible={true}
-                    variant="cutout"
                   />
                 </div>
               ))}
