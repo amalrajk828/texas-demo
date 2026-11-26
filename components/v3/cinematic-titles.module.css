@@ -1,0 +1,38 @@
+.overlay {
+  position: absolute;
+  inset: 0;
+  z-index: 4;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  padding: 0 clamp(1.35rem, 6vw, 7rem) max(1.5rem, env(safe-area-inset-bottom));
+  color: #fffaf2;
+  background: linear-gradient(0deg, rgb(10 12 14 / 88%), transparent 78%),
+    linear-gradient(90deg, rgb(10 12 14 / 35%), transparent 72%);
+}
+
+.copy { margin-bottom: clamp(1.4rem, 6vh, 5rem); }
+.label, .credits {
+  font: 600 clamp(.66rem, .8vw, .8rem)/1.4 ui-monospace, monospace;
+  letter-spacing: .13em;
+  text-transform: uppercase;
+}
+.label { display: flex; align-items: center; gap: .9rem; }
+.label i { width: 2rem; height: 3px; background: #ff8068; }
+.title {
+  margin: .16em 0 0;
+  font-size: clamp(2.5rem, min(10.6vw, 17vh), 11rem);
+  font-weight: 800;
+  line-height: .94;
+  letter-spacing: -.065em;
+}
+.credits {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-top: 1px solid rgb(255 255 255 / 35%);
+  padding-top: 1rem;
+}
+.credits a { color: inherit; text-underline-offset: .35em; text-decoration: underline; }
+.timeline { position: absolute; inset: auto 0 0; height: 2px; }
+.timeline i { display: block; height: 100%; background: #ff8068; transform-origin: left; }
