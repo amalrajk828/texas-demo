@@ -2,9 +2,13 @@
 
 import React, { useEffect, useRef, useState, useCallback, useMemo } from "react";
 import Link from "next/link";
+import CinematicTitles from "./CinematicTitles";
 
 // ── Shared Frame Count Constant (Exactly 300 Frames) ─────────────────────────
 export const TOTAL_FRAMES = 300;
+
+// Reserve scroll travel after the film: a logo hold, then a full-screen cover.
+const CINEMATIC_PLAYBACK_SHARE = 0.64;
 
 // ── Single Timeline Table (Single Source of Truth) ──────────────────────────
 // Format: [fadeInStart, fullyVisible, fadeOutStart, gone] in frame numbers (1 to 300)
@@ -229,7 +233,7 @@ function isAppleSafari(): boolean {
   return isIOS || isSafari;
 }
 
-export default function ScrollSequenceHero() {
+export default function ScrollSequenceHero({ cinematic = false }: { cinematic?: boolean }) {
   const trackRef = useRef<HTMLElement>(null);
   const stageRef = useRef<HTMLDivElement>(null);
   const canvasRef = useRef<HTMLCanvasElement>(null);
@@ -313,7 +317,7 @@ export default function ScrollSequenceHero() {
   }, []);
 
   // ── 2. Showcase Slider (Controlled Visibility & Reset) ────────────────────
-  const isSliderVisible = frame >= 1 && frame <= 100;
+  const isSliderVisible = !cinematic && frame >= 1 && frame <= 100;
 
   const resetSliderTimer = useCallback(() => {
     if (autoPlayTimer.current) clearInterval(autoPlayTimer.current);
@@ -546,10 +550,22 @@ export default function ScrollSequenceHero() {
     const sx = (imgW - sw) * 0.5;
     const sy = (imgH - sh) * 0.5;
 
-    ctx.drawImage(frameImg, sx, sy, sw, sh, 0, 0, targetW, targetH);
+    if (cinematic && mobile && frameIdx > 274) {
+      // Ease out of the portrait crop so tall phones keep the full wordmark.
+      const t = clamp((frameIdx - 274) / 25);
+      const fit = Math.min(targetW / imgW, targetH / imgH);
+      const endScale = scale + (fit - scale) * t * t * (3 - 2 * t);
+      const w = imgW * endScale;
+      const h = imgH * endScale;
+      ctx.fillStyle = "#070c12";
+      ctx.fillRect(0, 0, targetW, targetH);
+      ctx.drawImage(frameImg, (targetW - w) / 2, (targetH - h) / 2, w, h);
+    } else {
+      ctx.drawImage(frameImg, sx, sy, sw, sh, 0, 0, targetW, targetH);
+    }
     lastDrawnFrame.current = frameIdx;
     canvas.dataset.drawn = "true";
-  }, [getNearestFrame]);
+  }, [getNearestFrame, cinematic, getFrameUrl, loadSingleFrame]);
 
   // ── 6. Stats Count-Up Animation (Purely Reversible) ────────────────────────
   useEffect(() => {
@@ -607,13 +623,13 @@ export default function ScrollSequenceHero() {
       // Only skip if completely scrolled past the hero
       if (rect.bottom < 0) return;
 
-      const scrollRange = trackH - viewH;
+      const scrollRange = (trackH - viewH) * (cinematic ? CINEMATIC_PLAYBACK_SHARE : 1);
       const scrolled = -rect.top;
       const rawP = scrollRange > 0 ? clamp(scrolled / scrollRange, 0, 1) : 0;
 
       // Smooth progress with lerp
       const diff = rawP - currentProgress.current;
-      if (Math.abs(diff) < 0.0001) {
+      if ((cinematic && rawP === 1) || Math.abs(diff) < 0.0001) {
         currentProgress.current = rawP;
       } else {
         currentProgress.current += diff * EASE;
@@ -655,8 +671,8 @@ export default function ScrollSequenceHero() {
       if (track) {
         const trackH = track.offsetHeight;
         const viewH = window.innerHeight;
-        const scrollRange = trackH - viewH;
-        const targetY = p * scrollRange;
+        const scrollRange = (trackH - viewH) * (cinematic ? CINEMATIC_PLAYBACK_SHARE : 1);
+        const targetY = window.scrollY + track.getBoundingClientRect().top + p * scrollRange;
         const lenis = (window as unknown as { __lenis?: { scrollTo: (y: number, opts?: unknown) => void } }).__lenis;
         if (lenis) {
           lenis.scrollTo(targetY, { immediate: true });
@@ -675,7 +691,7 @@ export default function ScrollSequenceHero() {
       window.removeEventListener("scroll", onScroll);
       delete (window as unknown as { __setHeroFrame?: unknown }).__setHeroFrame;
     };
-  }, [drawCanvas]);
+  }, [drawCanvas, cinematic]);
 
   // Chapter jump handler
   const scrollToFrame = useCallback((targetFrame: number) => {
@@ -741,6 +757,7 @@ export default function ScrollSequenceHero() {
 
   // ── Reduced Motion Fallback ───────────────────────────────────────────────
   if (prefersReducedMotion) {
+    if (cinematic) return <section className="relative h-svh bg-[url('/hero-frames/frame_001.webp')] bg-cover bg-center"><CinematicTitles frame={1} still /></section>;
     return (
       <section className="relative w-full bg-[#111622] text-white py-20 px-4 sm:px-8">
         <div className="max-w-6xl mx-auto space-y-12">
@@ -771,7 +788,7 @@ export default function ScrollSequenceHero() {
       id="hero-track"
       className="relative w-full bg-[#0b0f19] select-none"
       style={{
-        height: "600vh",
+        height: cinematic ? "520vh" : "600vh",
       }}
       aria-label="Interactive Texas Technical Services presentation"
     >
@@ -859,6 +876,7 @@ export default function ScrollSequenceHero() {
           }}
         />
 
+        {cinematic ? <CinematicTitles frame={frame} /> : <>
         {/* Soft dark-to-transparent gradient on left side for text contrast */}
         <div
           className="absolute inset-0 pointer-events-none z-[2]"
@@ -1648,6 +1666,7 @@ export default function ScrollSequenceHero() {
           )}
 
         </div>
+        </>}
       </div>
     </section>
   );

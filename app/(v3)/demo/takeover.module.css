@@ -1,0 +1,26 @@
+.takeover {
+  position: relative;
+  z-index: 10;
+  /* This wrapper owns the overlap; the About sheet should start flush inside it. */
+  --hero-hold-cover: 0px;
+  display: flow-root;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .takeover {
+    margin-top: -100vh;
+  }
+
+  @supports (animation-timeline: view()) and (animation-range: entry 0% entry 60%) {
+    .takeover {
+      animation: film-dissolve 1s cubic-bezier(.2, .65, .35, 1) both;
+      animation-timeline: view(block);
+      animation-range: entry 0% entry 60%;
+    }
+  }
+}
+
+@keyframes film-dissolve {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
